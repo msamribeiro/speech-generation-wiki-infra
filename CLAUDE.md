@@ -67,9 +67,17 @@ wiki/                         # LLM-generated and LLM-maintained markdown
 
 scripts/
   fetch/                      # Fetchers: arxiv.py, arxiv_oai.py, acl.py, isca.py
-  filter/                     # Filter agent: agent.py
-  parse/                      # PDF pipeline: download_pdfs.py; convert_paper.py (Docling-based)
-  ingest/                     # Wiki page generation (planned)
+  filter/                     # Filter agent: agent.py (Anthropic SDK-based)
+  parse/                      # PDF pipeline: download_pdfs.py; convert_paper.py (Docling-based); batch_convert.py
+  discover/                   # Citation graph tools: citation_index.py
+  ingest/                     # Reserved (empty — ingest pipeline runs via Claude Code agents, not scripts)
+
+.claude/
+  agents/                     # Claude Code subagent specs
+    speech-generation-filter-agent.md
+    speech-generation-ingest-agent.md
+    speech-generation-ingest-orchestrator.md
+    speech-generation-integration-agent.md
 
 lib/                          # Shared library code (keyword_filter.py)
 config/                       # keyword_filter.yaml, parsing.yaml
@@ -360,7 +368,7 @@ last_updated: {date}
 
 ### 6. Overview (`wiki/overview.md`)
 
-The evolving synthesis. Updated after every 10 ingests or after a significant query. Sections:
+The evolving synthesis. Updated by the integration agent every ~25 ingested papers, or after a significant query that reveals a new pattern. Sections:
 
 1. **Dominant paradigms** — what architectural approaches dominate each task today
 2. **Emerging trends** — what is gaining traction in the most recent papers
@@ -381,7 +389,7 @@ When given a batch of candidate papers (from arXiv search, proceedings scrape, o
 2. Assign `relevance_score` (0.0–1.0) based on fit to TTS / VC / SCA.
 3. Write metadata JSON with `status: accepted` (score > 0.70), `status: review` (0.40–0.70), or `status: rejected` (< 0.40).
 4. Append to `raw/review_queue.md` for all `status: review` papers.
-5. Log: `## [YYYY-MM-DD] filter | {source} | {N} accepted, {M} review, {K} rejected`.
+5. Log: `- filter | {source} | {N} accepted, {M} review, {K} rejected` under today's `## YYYY-MM-DD` section.
 
 ### Ingest Workflow
 
@@ -407,17 +415,17 @@ Ingest is self-contained per paper (writes the paper page + index/log/venue row 
 > **Multi-agent pipeline note:** When using the `speech-generation-ingest-agent` subagent, it performs steps 1–3 and 7–10 only. Steps 4–6 and 11–12 are the **integration agent's** responsibility — they run separately every ~25 papers. Do not instruct the per-paper agent to perform steps 4–6; it will refuse by design.
 
 1. **Check `status`** — only proceed if `status: accepted`. If `status: review`, surface the review queue entry for user decision first.
-2. **Read the PDF** — full text: abstract, introduction, method, experiments, conclusion. For technical reports, also read appendices on training data and evaluation.
+2. **Read the parsed paper** — read `raw/parsed/{id}/paper.md` (Docling output) in full: abstract, introduction, method, experiments, conclusion. Also read `raw/parsed/{id}/metadata.json` for structured fields and `raw/parsed/{id}/references.json` for in-corpus citations. For technical reports, also check appendices on training data and evaluation.
 3. **Write the paper page** — fill every template field. Use `"not reported"` (never blank, never estimated) for missing values.
-4. **[Concept pass] Update concept pages** — identify 3–6 relevant concept pages. Update each: add the paper to the Papers table, and update "Current state of the art" if this paper advances it.
-5. **[Concept pass] Create new concept pages** if the paper uses a concept not yet in the wiki. Seed with what the paper provides; mark `# TODO: expand` on sections needing more papers.
-6. **[Concept pass] Update related paper pages** — read `raw/parsed/{id}/references.json`. For each reference with `in_corpus: true`, add a `[[wikilink]]` in the Wiki Connections section of both this paper and the cited paper. Out-of-corpus references are noted as plain text; they surface as corpus candidates via the Citation Discovery Workflow.
+4. **[Integration agent] Update concept pages** — identify 3–6 relevant concept pages. Update each: add the paper to the Papers table, and update "Current state of the art" if this paper advances it.
+5. **[Integration agent] Create new concept pages** if the paper uses a concept not yet in the wiki. Seed with what the paper provides; mark `# TODO: expand` on sections needing more papers.
+6. **[Integration agent] Cross-link related papers** — for each in-corpus citation, add a `[[wikilink]]` in the Wiki Connections section of both this paper and the cited paper. Out-of-corpus references are noted as plain text; they surface as corpus candidates via the Citation Discovery Workflow.
 7. **Update `wiki/index.md`** — add paper entry and any new concept or trend pages.
 8. **Update `wiki/log.md`** — append a bullet under today's `## YYYY-MM-DD` section: `- ingest | {id} | {title} | {venue} {year}`.
 9. **Set `status: ingested`** and `ingested_date` in the metadata JSON.
 10. **Update `wiki/venues/{venue-year}.md`**.
-11. **[Concept pass] Update `wiki/overview.md`** if a pattern has visibly shifted.
-12. **[Concept pass] Update relevant trend pages** if the paper extends a longitudinal analysis.
+11. **[Integration agent] Update `wiki/overview.md`** if a pattern has visibly shifted.
+12. **[Integration agent] Update relevant trend pages** if the paper extends a longitudinal analysis.
 
 ### Query Workflow
 
@@ -427,7 +435,7 @@ When asked a research question:
 2. Read those pages.
 3. Synthesize with citations using [[wikilinks]].
 4. **File valuable answers back**: comparisons → `wiki/comparisons/`, trend insights → `wiki/trends/` or `overview.md`.
-5. Log: `## [YYYY-MM-DD] query | {question summary}`.
+5. Log: `- query | {question summary}` under today's `## YYYY-MM-DD` section.
 
 ### Lint Workflow
 
@@ -441,7 +449,7 @@ When asked to lint the wiki:
 - Suggested new concept pages implicit in existing content but not yet created
 - Suggested comparison pages based on clusters using the same benchmark
 - Out-of-corpus papers cited by ≥ 3 corpus papers (prompt to run Citation Discovery Workflow)
-- Log: `## [YYYY-MM-DD] lint | {summary}`.
+- Log: `- lint | {summary}` under today's `## YYYY-MM-DD` section.
 
 ### Citation Discovery Workflow
 
@@ -451,21 +459,23 @@ When asked to discover candidate papers via the citation graph:
 2. Filter to entries with `in_corpus: false`, sorted by `citation_count` descending.
 3. Surface candidates cited by ≥ 3 corpus papers (or top 20 if fewer reach that threshold). For each: title (if known), arXiv ID or DOI, citation count, and the corpus papers that cite it.
 4. Present the list to the user for approval. Approved candidates get a `raw/metadata/{id}.json` with `status: pending` and are run through the Filter Workflow. The filter agent will assign a relevance score; foundational papers (WaveNet, VITS, HiFi-GAN, VALL-E, etc.) should score high regardless of publication date.
-5. Log: `## [YYYY-MM-DD] discover | {N} candidates surfaced, {M} added as pending`.
+5. Log: `- discover | {N} candidates surfaced, {M} added as pending` under today's `## YYYY-MM-DD` section.
 
 ---
 
-## Concept Pages to Seed Before First Ingest
+## Concept Page Registry
 
-Create these stubs before ingesting any paper so cross-references resolve immediately:
+All concept stubs in `wiki/concepts/` and their canonical slugs. All stubs were seeded before the first ingest; new ones are added by the integration agent as needed.
 
-**Core methods:** `flow-matching.md`, `diffusion-tts.md`, `autoregressive-codec-tts.md`, `transformer-enc-dec-tts.md`, `gan-vocoder.md`
+**Core methods:** `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder`
 
-**Capabilities:** `zero-shot-tts.md`, `voice-conversion.md`, `multilingual-tts.md`, `emotion-synthesis.md`, `prosody-control.md`, `streaming-tts.md`, `spoken-language-model.md`, `instruction-conditioned-tts.md`
+**Capabilities:** `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts`
 
-**Foundations:** `neural-codec.md`, `self-supervised-speech.md`, `disentanglement.md`, `speaker-adaptation.md`, `rlhf-speech.md`
+**Foundations:** `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech`
 
-**Evaluation:** `evaluation-metrics.md`, `subjective-evaluation.md`
+**Evaluation:** `evaluation-metrics` | `subjective-evaluation`
+
+When the integration agent encounters a `related_concepts` slug not in this list, it flags it to the user rather than creating an unsanctioned stub.
 
 ---
 
@@ -541,6 +551,6 @@ Never violated under any circumstances:
 4. **One paper, one page** — check the index before creating a new paper page. Deduplicate by arXiv ID first, then by title similarity.
 5. **Cite specifically** — use [[wikilinks]] to paper IDs, not just venue or year.
 6. **File answers back** — valuable query outputs must be written to the wiki, not left only in chat.
-7. **Log everything** — every filter, ingest, query, and lint produces a log entry.
+7. **Log everything** — every filter, ingest, integrate, parse, discover, query, and lint operation produces a log entry in `wiki/log.md`.
 8. **Respect status** — never ingest a paper with `status: pending`, `review`, or `rejected` without explicit user instruction.
 9. **Preserve provenance** — every metric value on a paper page must trace to a specific table or figure in the source PDF, not to another wiki page.
