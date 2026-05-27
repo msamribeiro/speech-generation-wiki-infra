@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-27 (session 13)
+Last updated: 2026-05-27 (session 14)
 
 ---
 
@@ -24,23 +24,23 @@ Last updated: 2026-05-27 (session 13)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | 🔄 In progress | 531/798 done. Queue batches 1–3 complete; 7 batches remaining (267 papers). |
-| Ingest (wiki pages) | 🔄 In progress | 11/798 ingested. 10 additional papers ingested in session 11 (2 batches of 5; concept pass skipped on batch 2). ~520 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 16/798 ingested. 15 additional papers ingested in sessions 11–12 (3 batches of 5; concept pass skipped on batches 2–3). ~515 more ready. |
 
 ---
 
-## Metadata counts (2026-05-26)
+## Metadata counts (2026-05-27)
 
 ```
 Total files:  1000
-  accepted:    787   ← 798 - 11 ingested
-  ingested:     11
+  accepted:    782   ← 798 - 16 ingested
+  ingested:     16
   review:        0   ← queue cleared
   rejected:    202   ← 201 + 1 withdrawn
 
 PDFs on disk:  798   ← raw/papers/ (all accepted papers have PDFs)
 Parsed:        531   ← raw/parsed/ (paper.md exists)
 Parse-pending: 267   ← queue batches 4–10
-Ready to ingest: ~520 ← parsed but not yet ingested
+Ready to ingest: ~515 ← parsed but not yet ingested
 ```
 
 ---
@@ -261,7 +261,7 @@ From the main Claude Code session, spawn the orchestrator agent with one of thes
 
 Paper-pages-only costs ~35–40k tokens/paper. Full per-paper concepts costs ~65–95k tokens/paper.
 
-### Ingest progress (session 12 — 2026-05-26)
+### Ingest progress (session 13 — 2026-05-27)
 
 | Batch | Papers | Method | Per-paper concepts | Orchestrator concept pass | Notes |
 |-------|--------|--------|-------------------|--------------------------|-------|
@@ -271,7 +271,9 @@ Paper-pages-only costs ~35–40k tokens/paper. Full per-paper concepts costs ~65
 
 **Session 12 note — "skip concept pass" ambiguity:** "Skip the concept pass" in the orchestrator refers only to the *post-batch orchestrator sweep*. Per-paper concept updates (CLAUDE.md ingest step 4) are a separate thing and happen regardless unless explicitly suppressed in the per-agent prompt. Batch 3 was run without suppressing them, so concept pages were updated for each of the 5 papers, at ~75k tokens per paper instead of the expected ~35–40k. See Invocation section below for the correct paper-pages-only prompt.
 
-**Pending:** Run `"Concept pass only"` (orchestrator) to catch up on batch 2.
+**Batch 3 verified (session 13):** All 5 papers confirmed fully ingested — `status: ingested`, `ingested_date: 2026-05-26`, wiki pages 90–153 lines, index entries present. No data loss.
+
+**Pending:** Run `"Concept pass only"` (orchestrator) to catch up on batches 2 and 3 (both had orchestrator concept pass skipped).
 
 ### Context budget (empirically measured — 2026-05-26)
 

@@ -490,17 +490,27 @@ Last updated: {date} | Papers: {N} | Concepts: {N} | Trends: {N}
 
 ## Log Format (`wiki/log.md`)
 
-One entry per operation. First token after the date must be `ingest`, `filter`, `review`, `query`, `lint`, or `discover`.
+Entries are grouped by date under `##` headings. Each entry is a bullet whose first token must be `ingest`, `filter`, `review`, `query`, `lint`, `discover`, or `parse`.
 
-```
-## [2025-12-01] ingest | google-audiopalm2-2025 | AudioPaLM 2 | technical-report 2025
-## [2025-12-02] filter | Interspeech 2025 | 41 accepted, 12 review, 28 rejected
-## [2025-12-02] review | Interspeech 2025 | 28 borderline resolved → 15 accepted, 13 rejected
-## [2025-12-03] query | Comparison of zero-shot TTS systems by SPK-SIM
-## [2025-12-05] lint | 2 orphan pages, 1 new concept suggested (streaming-inference)
+```markdown
+## 2025-12-01
+
+- ingest | google-audiopalm2-2025 | AudioPaLM 2 | technical-report 2025
+- filter | Interspeech 2025 | 41 accepted, 12 review, 28 rejected
+
+## 2025-12-02
+
+- review | Interspeech 2025 | 28 borderline resolved → 15 accepted, 13 rejected
+- query | Comparison of zero-shot TTS systems by SPK-SIM
+
+## 2025-12-05
+
+- lint | 2 orphan pages, 1 new concept suggested (streaming-inference)
 ```
 
-`filter` records the automated LLM pass output. `review` records the human decision on the borderline papers from `raw/review_queue.md`. Log both whenever the review queue is processed. `discover` records a Citation Discovery run.
+When appending: if the current date already has a `##` section, add bullets under it. If not, create a new `## YYYY-MM-DD` section at the end of the file.
+
+`filter` records the automated LLM pass output. `review` records the human decision on the borderline papers from `raw/review_queue.md`. Log both whenever the review queue is processed. `discover` records a Citation Discovery run. `parse` records a batch parse run.
 
 ---
 
