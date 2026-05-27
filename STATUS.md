@@ -23,7 +23,7 @@ Last updated: 2026-05-27 (session 14)
 | Filter — batch 3 (May 25) | ✅ Complete | Re-scan + citation-discovery: 101 papers, 67 accepted, 7 review, 27 rejected (66% accept rate). |
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
-| Parse (text extraction) | 🔄 In progress | 531/798 done. Queue batches 1–3 complete; 7 batches remaining (267 papers). |
+| Parse (text extraction) | 🔄 In progress | 571/798 done. Queue batches 1–4 complete; 6 batches remaining (227 papers). |
 | Ingest (wiki pages) | 🔄 In progress | 16/798 ingested. 15 additional papers ingested in sessions 11–12 (3 batches of 5; concept pass skipped on batches 2–3). ~515 more ready. |
 
 ---
@@ -38,8 +38,8 @@ Total files:  1000
   rejected:    202   ← 201 + 1 withdrawn
 
 PDFs on disk:  798   ← raw/papers/ (all accepted papers have PDFs)
-Parsed:        531   ← raw/parsed/ (paper.md exists)
-Parse-pending: 267   ← queue batches 4–10
+Parsed:        571   ← raw/parsed/ (paper.md exists)
+Parse-pending: 227   ← queue batches 5–10
 Ready to ingest: ~515 ← parsed but not yet ingested
 ```
 
@@ -168,7 +168,7 @@ Queue file: `raw/parsed/batch_queue.json`. Managed by `scripts/parse/make_batch_
 | 1 | 40 | 2025.acl-long.388 … 2512.18706 | complete | Quality report: `raw/parsed/batch_21_quality_report.md`. Patched `_REFS_HEADER_RE` for French "Références" and "Bibliographical/Language Resource References" headings; both re-parsed, all refs recovered. RapidOCR: 2025.coling-industry.29 (non-fatal). |
 | 2 | 40 | 2512.20156 … 2601.19952 | complete | Quality report: `raw/parsed/batch_22_quality_report.md`. RapidOCR warnings on 6 papers (non-fatal). PIL DecompressionBomb: 2601.15621 (non-fatal). Low refs: 2601.18694 (16, legitimate). |
 | 3 | 40 | 2601.20094 … 2602.23068 | complete | Quality report: `raw/parsed/batch_23_quality_report.md`. Patched `_REFS_HEADER_RE` for letter-prefix headings (e.g. "B. REFERENCES"); re-parsed 2602.06053, 33 refs recovered. RapidOCR: 2602.04683, 2602.13891 (non-fatal). |
-| 4 | 40 | 2602.23266 … 2603.14032 | pending |
+| 4 | 40 | 2602.23266 … 2603.14032 | complete | Quality report: `raw/parsed/batch_24_quality_report.md`. RapidOCR: 2602.23765, 2603.08574, 2603.08823, 2603.09120, 2603.11589 (non-fatal). Spot-check recommended: 2603.08574, 2603.11589 (4–6 consecutive OCR failures). |
 | 5 | 40 | 2603.14035 … 2604.06356 | pending |
 | 6 | 40 | 2604.06871 … 2604.22821 | pending |
 | 7 | 40 | 2604.25441 … interspeech-2025-0355 | pending |
@@ -299,4 +299,11 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
 6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
+
+---
+
+## Pipeline & codebase improvements
+
+1. **Ingest agent: image and table reasoning** — The ingest agent currently reads only `paper.md`. Extend it to enumerate `raw/parsed/{id}/assets/` (figure-N.png, table-N.csv) and incorporate key figures/tables into the wiki paper page — link architecture diagrams, extract result tables into the Metrics section, and surface any figures that clarify the method.
+2. **Writing style guidelines** — Define a shared style guide for all content-generating agents (ingest, integration, query). Write `docs/WRITING_STYLE.md` covering: tense conventions, how to introduce a contribution, how to write Novelty Assessments honestly, how to write cross-paper comparisons without overclaiming, and handling uncertainty. Reference it explicitly in each agent spec under `.claude/agents/`.
 
