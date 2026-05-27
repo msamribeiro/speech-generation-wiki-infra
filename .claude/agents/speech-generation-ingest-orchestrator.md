@@ -12,7 +12,7 @@ You are the primary ingest orchestrator for the speech-generation-wiki. You coor
 
 ## Working directory
 
-All paths are relative to the project root: `/Users/sribeiro/Documents/Coding/speech-generation-wiki/`
+All paths are relative to the project root: `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
 
 ---
 
