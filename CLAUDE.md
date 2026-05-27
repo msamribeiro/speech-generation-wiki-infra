@@ -385,22 +385,39 @@ When given a batch of candidate papers (from arXiv search, proceedings scrape, o
 
 ### Ingest Workflow
 
-**Running at scale:** Use the `speech-generation-ingest-orchestrator` agent, not this workflow directly. Invoke it with `"Ingest up to 5 papers"` (hard limit: 5 per call due to ~26k token cost per paper against a 200k context window). Skip the concept pass for throughput and run `"Concept pass only"` separately every ~25 papers. See STATUS.md §Ingest pipeline for timing benchmarks and the full bulk-ingestion workflow.
+**Running at scale — two-stage pipeline:**
+
+| Stage | Agent | Cadence | Cost |
+|-------|-------|---------|------|
+| **Ingest** | `speech-generation-ingest-orchestrator` → `speech-generation-ingest-agent` | Every session; 5 papers/call | ~20–25k tokens/paper |
+| **Integration** | `speech-generation-integration-agent` | Every ~25 ingested papers | ~60–120k tokens/run |
+
+Ingest is self-contained per paper (writes the paper page + index/log/venue row + metadata). Integration is cross-paper reasoning (updates concept pages, adds back-links between papers, refreshes venue narratives and overview). Run them separately.
+
+```
+# Repeat until ingest queue is clear
+→ speech-generation-ingest-orchestrator: "Ingest up to 5 papers"
+
+# After every ~25 papers
+→ speech-generation-integration-agent: "Run integration pass on last 25 papers"
+```
 
 **For a single paper** (by ID, PDF path, or URL):
+
+> **Multi-agent pipeline note:** When using the `speech-generation-ingest-agent` subagent, it performs steps 1–3 and 7–10 only. Steps 4–6 and 11–12 are the **integration agent's** responsibility — they run separately every ~25 papers. Do not instruct the per-paper agent to perform steps 4–6; it will refuse by design.
 
 1. **Check `status`** — only proceed if `status: accepted`. If `status: review`, surface the review queue entry for user decision first.
 2. **Read the PDF** — full text: abstract, introduction, method, experiments, conclusion. For technical reports, also read appendices on training data and evaluation.
 3. **Write the paper page** — fill every template field. Use `"not reported"` (never blank, never estimated) for missing values.
-4. **Update concept pages** — identify 3–6 relevant concept pages. Update each: add the paper to the Papers table, and update "Current state of the art" if this paper advances it.
-5. **Create new concept pages** if the paper uses a concept not yet in the wiki. Seed with what the paper provides; mark `# TODO: expand` on sections needing more papers.
-6. **Update related paper pages** — read `raw/parsed/{id}/references.json`. For each reference with `in_corpus: true`, add a `[[wikilink]]` in the Wiki Connections section of both this paper and the cited paper. Out-of-corpus references are noted as plain text; they surface as corpus candidates via the Citation Discovery Workflow.
+4. **[Concept pass] Update concept pages** — identify 3–6 relevant concept pages. Update each: add the paper to the Papers table, and update "Current state of the art" if this paper advances it.
+5. **[Concept pass] Create new concept pages** if the paper uses a concept not yet in the wiki. Seed with what the paper provides; mark `# TODO: expand` on sections needing more papers.
+6. **[Concept pass] Update related paper pages** — read `raw/parsed/{id}/references.json`. For each reference with `in_corpus: true`, add a `[[wikilink]]` in the Wiki Connections section of both this paper and the cited paper. Out-of-corpus references are noted as plain text; they surface as corpus candidates via the Citation Discovery Workflow.
 7. **Update `wiki/index.md`** — add paper entry and any new concept or trend pages.
-8. **Update `wiki/log.md`** — `## [YYYY-MM-DD] ingest | {id} | {title} | {venue} {year}`.
+8. **Update `wiki/log.md`** — append a bullet under today's `## YYYY-MM-DD` section: `- ingest | {id} | {title} | {venue} {year}`.
 9. **Set `status: ingested`** and `ingested_date` in the metadata JSON.
 10. **Update `wiki/venues/{venue-year}.md`**.
-11. **Update `wiki/overview.md`** if a pattern has visibly shifted.
-12. **Update relevant trend pages** if the paper extends a longitudinal analysis.
+11. **[Concept pass] Update `wiki/overview.md`** if a pattern has visibly shifted.
+12. **[Concept pass] Update relevant trend pages** if the paper extends a longitudinal analysis.
 
 ### Query Workflow
 
@@ -490,7 +507,7 @@ Last updated: {date} | Papers: {N} | Concepts: {N} | Trends: {N}
 
 ## Log Format (`wiki/log.md`)
 
-Entries are grouped by date under `##` headings. Each entry is a bullet whose first token must be `ingest`, `filter`, `review`, `query`, `lint`, `discover`, or `parse`.
+Entries are grouped by date under `##` headings. Each entry is a bullet whose first token must be `ingest`, `integrate`, `filter`, `review`, `query`, `lint`, `discover`, or `parse`.
 
 ```markdown
 ## 2025-12-01

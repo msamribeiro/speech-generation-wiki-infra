@@ -221,45 +221,30 @@ raw/parsed/{id}/
 
 ---
 
-## Ingest pipeline (session 10 — 2026-05-26)
+## Ingest pipeline (session 14 — 2026-05-27)
 
-Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls).
+Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). Two distinct stages — **ingest** (per-paper, cheap, parallel) and **integration** (cross-paper, expensive, sequential).
 
 ### Agents
 
 | Agent | Status | Purpose |
 |-------|--------|---------|
-| `.claude/agents/speech-generation-ingest-agent.md` | ✅ Built | Per-paper worker — reads paper.md, writes wiki page + all ancillary updates, emits INGEST_RESULT signal |
-| `.claude/agents/speech-generation-ingest-orchestrator.md` | ✅ Built | Primary orchestrator — discovers ready papers, spawns workers in parallel batches of 5, runs concept pass, logs batch summary |
+| `.claude/agents/speech-generation-ingest-agent.md` | ✅ Built | Per-paper worker — reads paper.md, writes wiki page, index row, venue row, log bullet, metadata status. Paper-scoped only. |
+| `.claude/agents/speech-generation-ingest-orchestrator.md` | ✅ Built | Ingest coordinator — discovers ready papers, spawns ingest agents in parallel batches of 5, logs batch summary. No cross-paper work. |
+| `.claude/agents/speech-generation-integration-agent.md` | ✅ Built | Cross-paper integration — updates concept pages, adds back-links between papers, refreshes venue narratives, overview.md. Run every ~25 papers. |
 
 ### Invocation
 
-From the main Claude Code session, spawn the orchestrator agent with one of these prompts:
-
 ```
-# Standard ingest call — repeat until queue is clear
+# Stage 1 — Ingest (repeat until queue is clear)
 → speech-generation-ingest-orchestrator: "Ingest up to 5 papers"
 
-# Faster throughput: skip orchestrator concept pass, run it separately every ~25 papers
-→ speech-generation-ingest-orchestrator: "Ingest up to 5 papers, skip the concept pass"
-→ speech-generation-ingest-orchestrator: "Concept pass only"
+# Stage 2 — Integration (run every ~25 ingested papers)
+→ speech-generation-integration-agent: "Run integration pass on last 25 papers"
 
-# Single paper (worker directly)
+# Single paper (ingest worker directly)
 → speech-generation-ingest-agent: "Ingest paper {id}"
 ```
-
-**WARNING — two distinct concept update mechanisms:**
-
-| Mechanism | Controlled by | How to suppress |
-|-----------|--------------|-----------------|
-| Per-paper concept updates (CLAUDE.md step 4) | Per-paper worker agent | Pass explicit instruction: *"write the paper page only — do not update concept pages"* |
-| Orchestrator concept pass (post-batch sweep) | Orchestrator | Pass *"skip the concept pass"* to orchestrator |
-
-"Skip the concept pass" only suppresses the orchestrator-level sweep. It does **not** stop per-paper concept updates, which the worker agent does by default as part of its core workflow. To get paper-pages-only ingest (lowest token cost), use this per-agent prompt addition:
-
-> *"Write the paper page only. Do not update concept pages, overview.md, or trend pages. Do update index.md, log.md, the venue page, and the metadata JSON."*
-
-Paper-pages-only costs ~35–40k tokens/paper. Full per-paper concepts costs ~65–95k tokens/paper.
 
 ### Ingest progress (session 13 — 2026-05-27)
 
@@ -269,23 +254,28 @@ Paper-pages-only costs ~35–40k tokens/paper. Full per-paper concepts costs ~65
 | 2 | 5 | orchestrator | yes (by design) | **skipped** | 2025.findings-emnlp.424, 2025.acl-demo.37, 2025.acl-industry.42, 2025.acl-long.1043, 2025.acl-long.1252, 2025.acl-long.1471 |
 | 3 | 5 | direct agents (sequential) | yes (not suppressed — see note) | n/a | 2025.acl-long.1498, .313, .346, .388, .598; ~379k tokens total |
 
-**Session 12 note — "skip concept pass" ambiguity:** "Skip the concept pass" in the orchestrator refers only to the *post-batch orchestrator sweep*. Per-paper concept updates (CLAUDE.md ingest step 4) are a separate thing and happen regardless unless explicitly suppressed in the per-agent prompt. Batch 3 was run without suppressing them, so concept pages were updated for each of the 5 papers, at ~75k tokens per paper instead of the expected ~35–40k. See Invocation section below for the correct paper-pages-only prompt.
+**Session 12 note (historical):** Prior to session 14, the orchestrator included an in-built concept pass that caused scope creep — ingest agents were also updating concept pages, doubling per-paper token cost (~75k instead of ~35–40k). Resolved in session 14 by separating ingest and integration into distinct agents.
 
 **Batch 3 verified (session 13):** All 5 papers confirmed fully ingested — `status: ingested`, `ingested_date: 2026-05-26`, wiki pages 90–153 lines, index entries present. No data loss.
 
-**Pending:** Run `"Concept pass only"` (orchestrator) to catch up on batches 2 and 3 (both had orchestrator concept pass skipped).
+**Pending:** Run integration pass on all 16 ingested papers to catch up on concept page updates (batches 1–3 had varying/incomplete concept coverage under the old architecture).
 
-### Context budget (empirically measured — 2026-05-26)
+### Context budget (empirically measured — 2026-05-26, updated session 14)
+
+**Ingest stage:**
 
 | Mode | Papers | Tokens (subagent) | Tool uses | Time |
 |------|--------|-------------------|-----------|------|
-| Orchestrator with concept pass | 5 | 146k (orchestrator) | 62 | ~23 min |
-| Orchestrator, concept pass skipped | 5 | 132k (orchestrator) | 32 | ~7 min |
-| Direct agent, full workflow (incl. per-paper concepts) | 1 | 64k–93k (avg ~76k) | 40–53 | 5–14 min |
-| Direct agent, paper page only (concepts suppressed) | 1 | ~35–40k (estimated) | ~25 | ~4 min |
+| Orchestrator (ingest only) | 5 | ~130k (orchestrator) | ~30 | ~7 min |
+| Direct ingest agent (paper page only) | 1 | ~35–40k | ~25 | ~4 min |
 
-- Token cost is dominated by file reads: paper.md (300–800 lines) + 4–6 concept page reads/writes per paper.
-- Suppressing per-paper concept updates roughly halves the per-paper token cost.
+**Integration stage (estimated):**
+
+| Mode | Papers | Tokens (subagent) |
+|------|--------|-------------------|
+| Concepts + cross-links | 25 | ~60–80k |
+| Full pass (+ venue + overview) | 15 | ~80–120k |
+
 - **5 papers per orchestrator call** is the validated safe limit (context overflow risk beyond 7).
 - The main session context does **not** accumulate between orchestrator calls — each is a fresh subagent.
 - Do **not** use "Ingest all ready papers" — hundreds of papers will overflow the context window.
@@ -303,8 +293,8 @@ Paper-pages-only costs ~35–40k tokens/paper. Full per-paper concepts costs ~65
 
 ## Next actions
 
-1. **Concept pass** — run `"Concept pass only"` via `speech-generation-ingest-orchestrator` to catch up on batch 2's skipped concept updates.
-2. **Continue ingest** — ~520 papers ready. Repeat `"Ingest up to 5 papers, skip the concept pass"` via orchestrator; run `"Concept pass only"` every ~25 papers.
+1. **Integration pass (catch-up)** — run integration pass on the 16 currently ingested papers: `speech-generation-integration-agent: "Run integration pass on last 16 papers"`.
+2. **Continue ingest** — ~515 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers.
 3. **Continue batch parse** — 267 papers remaining across queue batches 4–10 (40 papers each, batch 10 has 27). Workflow: `source .venv/bin/activate && python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → spawn quality subagent → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Can run in parallel with ingest.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.

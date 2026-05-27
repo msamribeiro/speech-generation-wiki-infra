@@ -10,6 +10,29 @@ You are a per-paper ingest worker for the speech-generation-wiki. You receive a 
 
 ---
 
+## ⚠️ Scope boundary — read this before anything else
+
+This agent is a **paper-page-only worker**. It has a narrow, fixed scope:
+
+**YOU DO:**
+- Write `wiki/papers/{id}.md`
+- Append a row to `wiki/index.md`
+- Create/update `wiki/venues/{venue-year}.md`
+- Append an entry to `wiki/log.md`
+- Update `raw/metadata/{id}.json` (`status` and `ingested_date` only)
+
+**YOU DO NOT:**
+- Read or edit any `wiki/concepts/` file
+- Read or edit `wiki/overview.md` or any `wiki/trends/` file
+- Read or edit any other `wiki/papers/` file (not even to add back-links)
+- Run a concept pass or any cross-paper synthesis
+
+CLAUDE.md's ingest workflow lists concept updates in steps 4–6. Those steps are **the orchestrator's responsibility** and are explicitly excluded from this agent's scope. Do not perform them regardless of what CLAUDE.md says.
+
+The only files you write are the five listed above. If you find yourself opening `wiki/concepts/`, stop — you are out of scope.
+
+---
+
 ## Working directory
 
 All paths are relative to the project root: `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
@@ -118,7 +141,7 @@ related_papers: [{in-corpus paper IDs cited by this paper}]
 
 ## Wiki Connections
 
-{Which concept pages does this paper most inform? Which prior corpus papers does it build on, challenge, or confirm? Use [[wikilinks]] for paper IDs and concept slugs.}
+{Write [[wikilinks]] for the 3–6 concept slugs from `related_concepts` and for any in-corpus paper IDs already identified in step 2. Do not open any other files to populate this section — use only what you already know from reading this paper.}
 ```
 
 ### 4. Append row to `wiki/index.md` Papers table
@@ -247,13 +270,22 @@ open('wiki/index.md','w').write(text)
 
 ### 6. Append to `wiki/log.md`
 
+Log entries are grouped by date. If today's `## YYYY-MM-DD` section already exists, append a bullet to it; otherwise create a new section at the end of the file.
+
 ```bash
 python3 -c "
 import json
 from datetime import date
 meta = json.load(open('raw/metadata/{ID}.json'))
-entry = f\"\n## [{date.today().isoformat()}] ingest | {meta['id']} | {meta.get('title','')} | {meta.get('venue','arXiv')} {meta.get('year','')}\"
-open('wiki/log.md','a').write(entry)
+today = date.today().isoformat()
+bullet = f\"- ingest | {meta['id']} | {meta.get('title','')} | {meta.get('venue','arXiv')} {meta.get('year','')}\"
+section = f'## {today}'
+text = open('wiki/log.md').read().rstrip('\n')
+if section in text:
+    text = text + '\n' + bullet
+else:
+    text = text + f'\n\n{section}\n\n' + bullet
+open('wiki/log.md','w').write(text + '\n')
 "
 ```
 
@@ -321,3 +353,4 @@ Use these exact terms in frontmatter fields. Map author terminology to the canon
 6. Write every ingest to `wiki/log.md` — never skip the log entry.
 7. The return signal must be the last line of output. Nothing after it.
 8. Do not modify files in `raw/papers/` or alter any metadata field except `status` and `ingested_date`.
+9. **Never open `wiki/concepts/`, `wiki/overview.md`, `wiki/trends/`, or any other `wiki/papers/` file.** Doing so is a scope violation. Concept synthesis belongs to the orchestrator.
