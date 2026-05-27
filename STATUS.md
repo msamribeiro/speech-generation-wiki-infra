@@ -293,9 +293,9 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Integration pass (catch-up)** — run integration pass on the 16 currently ingested papers: `speech-generation-integration-agent: "Run integration pass on last 16 papers"`.
-2. **Continue ingest** — ~515 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers.
-3. **Continue batch parse** — 267 papers remaining across queue batches 4–10 (40 papers each, batch 10 has 27). Workflow: `source .venv/bin/activate && python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → spawn quality subagent → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Can run in parallel with ingest.
+1. ~~**Integration pass (catch-up)**~~ ✅ Complete — integration pass run on all 25 ingested papers (15-paper pass on 2026-05-27: 16 concepts updated, 3 cross-links added, overview.md written, arxiv-2025 venue page updated).
+2. **Continue ingest** — ~546 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers.
+3. **Continue batch parse** — 227 papers remaining across queue batches 5–10 (40 papers each, batch 10 has 27). Workflow: `source .venv/bin/activate && python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → spawn quality subagent → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Can run in parallel with ingest.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
 6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
