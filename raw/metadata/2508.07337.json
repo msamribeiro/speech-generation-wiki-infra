@@ -1,0 +1,33 @@
+{
+  "id": "2508.07337",
+  "source_ids": {
+    "arxiv": "2508.07337"
+  },
+  "title": "KLASSify to Verify: Audio-Visual Deepfake Detection Using SSL-based Audio and Handcrafted Visual Features",
+  "authors": [
+    "Ivan Kukanov",
+    "Jun Wah Ng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.07337",
+  "pdf_url": "https://arxiv.org/pdf/2508.07337.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid development of audio-driven talking head generators and advanced Text-To-Speech (TTS) models has led to more sophisticated temporal deepfakes. These advances highlight the need for robust methods capable of detecting and localizing deepfakes, even under novel, unseen attack scenarios. Current state-of-the-art deepfake detectors, while accurate, are often computationally expensive and struggle to generalize to novel manipulation techniques. To address these challenges, we propose multimodal approaches for the AV-Deepfake1M 2025 challenge. For the visual modality, we leverage handcrafted features to improve interpretability and adaptability. For the audio modality, we adapt a self-supervised learning (SSL) backbone coupled with graph attention networks to capture rich audio representations, improving detection robustness. Our approach strikes a balance between performance and real-world deployment, focusing on resilience and potential interpretability. On the AV-Deepfake1M++ dataset, our multimodal system achieves AUC of 92.78% for deepfake classification task and IoU of 0.3536 for temporal localization using only the audio modality.",
+  "arxiv_comment": "7 pages, accepted to the 33rd ACM International Conference on Multimedia (MM'25)",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Audio-visual deepfake detection; speech generation is the threat model, not the contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

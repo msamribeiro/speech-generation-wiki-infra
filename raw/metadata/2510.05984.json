@@ -1,0 +1,38 @@
+{
+  "id": "2510.05984",
+  "source_ids": {
+    "arxiv": "2510.05984"
+  },
+  "title": "ECTSpeech: Enhancing Efficient Speech Synthesis via Easy Consistency Tuning",
+  "authors": [
+    "Tao Zhu",
+    "Yinfeng Yu",
+    "Liejun Wang",
+    "Fuchun Sun",
+    "Wendong Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.05984",
+  "pdf_url": "https://arxiv.org/pdf/2510.05984.pdf",
+  "pdf_path": "raw/papers/2510.05984.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Diffusion models have demonstrated remarkable performance in speech synthesis, but typically require multi-step sampling, resulting in low inference efficiency. Recent studies address this issue by distilling diffusion models into consistency models, enabling efficient one-step generation. However, these approaches introduce additional training costs and rely heavily on the performance of pre-trained teacher models. In this paper, we propose ECTSpeech, a simple and effective one-step speech synthesis framework that, for the first time, incorporates the Easy Consistency Tuning (ECT) strategy into speech synthesis. By progressively tightening consistency constraints on a pre-trained diffusion model, ECTSpeech achieves high-quality one-step generation while significantly reducing training complexity. In addition, we design a multi-scale gate module (MSGate) to enhance the denoiser's ability to fuse features at different scales. Experimental results on the LJSpeech dataset demonstrate that ECTSpeech achieves audio quality comparable to state-of-the-art methods under single-step sampling, while substantially reducing the model's training cost and complexity.",
+  "arxiv_comment": "Accepted for publication by Proceedings of the 2025 ACM Multimedia Asia Conference(MMAsia '25)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.91,
+  "relevance_note": "Consistency tuning for efficient one-step diffusion-based speech synthesis without extra training cost",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

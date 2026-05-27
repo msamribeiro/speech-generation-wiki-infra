@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0319",
+  "source_ids": {
+    "isca": "lu25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-319"
+  },
+  "title": "Improving Noise Robustness of LLM-based Zero-shot TTS via Discrete Acoustic Token Denoising",
+  "authors": [
+    "Ye-Xin Lu",
+    "Hui-Peng Du",
+    "Fei Liu",
+    "Yang Ai",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lu25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lu25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0319.pdf",
+  "pdf_source": "isca",
+  "abstract": "Large language model (LLM) based zero-shot text-to-speech (TTS) methods tend to preserve the acoustic environment of the audio prompt, leading to degradation in synthesized speech quality when the audio prompt contains noise. In this paper, we propose a novel neural codec-based speech denoiser and integrate it with the advanced LLM-based TTS model, LauraTTS, to achieve noise-robust zero-shot TTS. The proposed codec denoiser consists of an audio codec, a token denoiser, and an embedding refiner. The token denoiser predicts the first two groups of clean acoustic tokens from the noisy ones, which can serve as the acoustic prompt for LauraTTS to synthesize high-quality personalized speech or be converted to clean speech waveforms through the embedding refiner and codec decoder. Experimental results show that our proposed codec denoiser outperforms state-of-the-art speech enhancement (SE) methods, and the proposed noise-robust LauraTTS surpasses the approach using additional SE models.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Noise-robust zero-shot TTS with neural codec-based speech denoiser; advances TTS robustness.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

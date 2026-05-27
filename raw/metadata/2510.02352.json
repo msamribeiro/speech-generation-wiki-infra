@@ -1,0 +1,41 @@
+{
+  "id": "2510.02352",
+  "source_ids": {
+    "arxiv": "2510.02352"
+  },
+  "title": "Evaluating Bias in Spoken Dialogue LLMs for Real-World Decisions and Recommendations",
+  "authors": [
+    "Yihao Wu",
+    "Tianrui Wang",
+    "Yizhou Peng",
+    "Yi-Wen Chao",
+    "Xuyi Zhuang",
+    "Xinsheng Wang",
+    "Shunshun Yin",
+    "Ziyang Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.02352",
+  "pdf_url": "https://arxiv.org/pdf/2510.02352.pdf",
+  "pdf_path": "raw/papers/2510.02352.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While biases in large language models (LLMs), such as stereotypes and cultural tendencies in outputs, have been examined and identified, their presence and characteristics in spoken dialogue models (SDMs) with audio input and output remain largely unexplored. Paralinguistic features, such as age, gender, and accent, can affect model outputs; when compounded by multi-turn conversations, these effects may exacerbate biases, with potential implications for fairness in decision-making and recommendation tasks. In this paper, we systematically evaluate biases in speech LLMs and study the impact of multi-turn dialogues with repeated negative feedback. Bias is measured using Group Unfairness Score (GUS) for decisions and similarity-based normalized statistics rate (SNSR) for recommendations, across both open-source models like Qwen2.5-Omni and GLM-4-Voice, as well as closed-source APIs such as GPT-4o Audio and Gemini-2.5-Flash. Our analysis reveals that closed-source models generally exhibit lower bias, while open-source models are more sensitive to age and gender, and recommendation tasks tend to amplify cross-group disparities. We found that biased decisions may persist in multi-turn conversations. This work provides the first systematic study of biases in end-to-end spoken dialogue models, offering insights towards fair and reliable audio-based interactive systems. To facilitate further research, we release the FairDialogue dataset and evaluation code.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Bias study in spoken dialogue models with audio I/O; borderline - assesses SCA bias not advancing synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

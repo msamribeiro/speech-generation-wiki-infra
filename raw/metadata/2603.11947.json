@@ -1,0 +1,39 @@
+{
+  "id": "2603.11947",
+  "source_ids": {
+    "arxiv": "2603.11947"
+  },
+  "title": "Resurfacing Paralinguistic Awareness in Large Audio Language Models",
+  "authors": [
+    "Hao Yang",
+    "Minghan Wang",
+    "Tongtong Wu",
+    "Lizhen Qu",
+    "Ehsan Shareghi",
+    "Gholamreza Haffari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.11947",
+  "pdf_url": "https://arxiv.org/pdf/2603.11947.pdf",
+  "pdf_path": "raw/papers/2603.11947.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Audio Language Models (LALMs) have expanded the interaction with human to speech modality, which introduces great interactive potential, due to the paralinguistic cues implicitly indicating the user context. However, building on the current content-centred paradigm, LALMs usually neglect such paralinguistic cues and respond solely based on query content. In this work, to resurface the paralinguistic awareness in LALMs, we introduce five diverse layer-wise analyses to jointly identify paralinguistic layers and semantic understanding layers. Based on these insights, we propose a paralinguistic-enhanced fine-tuning (PE-FT) protocol accordingly to equip LALMs with paralinguistic-aware capabilities, including (1) selective-layer fine-tuning, and (2) an auxiliary dual-level classification head. Our experiments demonstrate that PE-FT protocol efficiently and effectively resurfaces the paralinguistic awareness, even surpassing the performance of the all-layer fine-tuning strategy.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Resurfacing paralinguistic awareness in LALMs enabling paralinguistic-responsive speech generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

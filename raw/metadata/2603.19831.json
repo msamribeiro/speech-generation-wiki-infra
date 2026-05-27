@@ -1,0 +1,37 @@
+{
+  "id": "2603.19831",
+  "source_ids": {
+    "arxiv": "2603.19831"
+  },
+  "title": "Gesture2Speech: How Far Can Hand Movements Shape Expressive Speech?",
+  "authors": [
+    "Lokesh Kumar",
+    "Nirmesh Shah",
+    "Ashishkumar P. Gudmalwar",
+    "Pankaj Wasnik"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.19831",
+  "pdf_url": "https://arxiv.org/pdf/2603.19831.pdf",
+  "pdf_path": "raw/papers/2603.19831.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Human communication seamlessly integrates speech and bodily motion, where hand gestures naturally complement vocal prosody to express intent, emotion, and emphasis. While recent text-to-speech (TTS) systems have begun incorporating multimodal cues such as facial expressions or lip movements, the role of hand gestures in shaping prosody remains largely underexplored. We propose a novel multimodal TTS framework, Gesture2Speech, that leverages visual gesture cues to modulate prosody in synthesized speech. Motivated by the observation that confident and expressive speakers coordinate gestures with vocal prosody, we introduce a multimodal Mixture-of-Experts (MoE) architecture that dynamically fuses linguistic content and gesture features within a dedicated style extraction module. The fused representation conditions an LLM-based speech decoder, enabling prosodic modulation that is temporally aligned with hand movements. We further design a gesture-speech alignment loss that explicitly models their temporal correspondence to ensure fine-grained synchrony between gestures and prosodic contours. Evaluations on the PATS dataset show that Gesture2Speech outperforms state-of-the-art baselines in both speech naturalness and gesture-speech synchrony. To the best of our knowledge, this is the first work to utilize hand gesture cues for prosody control in neural speech synthesis. Demo samples are available at https://research.sri-media-analysis.com/aaai26-beeu-gesture2speech/",
+  "arxiv_comment": "Accepted at The 2nd International Workshop on Bodily Expressed Emotion Understanding (BEEU) at AAAI 2026 [non-archival]",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Multimodal TTS framework incorporating hand gesture cues to shape prosody and expressive speech output",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

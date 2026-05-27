@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-cho25c_interspeech",
+  "source_ids": {
+    "isca": "cho25c_interspeech",
+    "doi": null
+  },
+  "title": "Unleashing   the  Inner Monster: Demonstrating High-Fidelity Human to Non-Human  Voice Conversion",
+  "authors": [
+    "Namhyun Cho",
+    "Sunmin Kim",
+    "Minsu Kang",
+    "Seolhee Lee",
+    "Choonghyeon Lee",
+    "Yangsun Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/cho25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/cho25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-cho25c_interspeech.pdf",
+  "pdf_source": "isca",
+  "abstract": "Non-human monsters in massive multiplayer online role-playing games (MMORPGs) are essential for immersive game environments and significantly enhance player engagement. However, producing high-quality monster sounds demands considerable time and financial resources. AI-driven voice conversion offers a potential solution, but existing models rely on standard human voice training and human-centric audio features, limiting their ability to generate realistic non-human voices. This study presents a human-to-non-human (H2NH) voice conversion model designed to address these challenges. The model effectively generated high-quality non-human sounds by recording the voices of participants and converting them in real-time into selected monster vocalizations.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Demo of high-fidelity human-to-non-human voice conversion for game sound design; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

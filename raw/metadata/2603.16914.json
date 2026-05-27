@@ -1,0 +1,36 @@
+{
+  "id": "2603.16914",
+  "source_ids": {
+    "arxiv": "2603.16914"
+  },
+  "title": "Quantizer-Aware Hierarchical Neural Codec Modeling for Speech Deepfake Detection",
+  "authors": [
+    "Jinyang Wu",
+    "Zihan Pan",
+    "Qiquan Zhang",
+    "Sailor Hardik Bhupendra",
+    "Soumik Mondal"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.16914",
+  "pdf_url": "https://arxiv.org/pdf/2603.16914.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs discretize speech via residual vector quantization (RVQ), forming a coarse-to-fine hierarchy across quantizers. While codec models have been explored for representation learning, their discrete structure remains underutilized in speech deepfake detection. In particular, different quantization levels capture complementary acoustic cues, where early quantizers encode coarse structure and later quantizers refine residual details that reveal synthesis artifacts. Existing systems either rely on continuous encoder features or ignore this quantizer-level hierarchy. We propose a hierarchy-aware representation learning framework that models quantizer-level contributions through learnable global weighting, enabling structured codec representations aligned with forensic cues. Keeping the speech encoder backbone frozen and updating only 4.4% additional parameters, our method achieves relative EER reductions of 46.2% on ASVspoof 2019 and 13.9% on ASVspoof5 over strong baselines.",
+  "arxiv_comment": "5 pages, 3 figures",
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "Quantizer-aware codec modeling for deepfake detection; uses codec structure but primary task is anti-spoofing.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

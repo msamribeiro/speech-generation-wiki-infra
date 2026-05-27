@@ -1,0 +1,36 @@
+{
+  "id": "2509.07323",
+  "source_ids": {
+    "arxiv": "2509.07323"
+  },
+  "title": "When Fine-Tuning is Not Enough: Lessons from HSAD on Hybrid and Adversarial Audio Spoof Detection",
+  "authors": [
+    "Bin Hu",
+    "Kunyang Huang",
+    "Daehan Kwak",
+    "Meng Xu",
+    "Kuan Huang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.07323",
+  "pdf_url": "https://arxiv.org/pdf/2509.07323.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of AI has enabled highly realistic speech synthesis and voice cloning, posing serious risks to voice authentication, smart assistants, and telecom security. While most prior work frames spoof detection as a binary task, real-world attacks often involve hybrid utterances that mix genuine and synthetic speech, making detection substantially more challenging. To address this gap, we introduce the Hybrid Spoofed Audio Dataset (HSAD), a benchmark containing 1,248 clean and 41,044 degraded utterances across four classes: human, cloned, zero-shot AI-generated, and hybrid audio. Each sample is annotated with spoofing method, speaker identity, and degradation metadata to enable fine-grained analysis. We evaluate six transformer-based models, including spectrogram encoders (MIT-AST, MattyB95-AST) and self-supervised waveform models (Wav2Vec2, HuBERT). Results reveal critical lessons: pretrained models overgeneralize and collapse under hybrid conditions; spoof-specific fine-tuning improves separability but struggles with unseen compositions; and dataset-specific adaptation on HSAD yields large performance gains (AST greater than 97 percent and F1 score is approximately 99 percent), though residual errors persist for complex hybrids. These findings demonstrate that fine-tuning alone is not sufficient-robust hybrid-aware benchmarks like HSAD are essential to expose calibration failures, model biases, and factors affecting spoof detection in adversarial environments. HSAD thus provides both a dataset and an analytic framework for building resilient and trustworthy voice authentication systems.",
+  "arxiv_comment": "13 pages, 11 figures.This work has been submitted to the IEEE for possible publication",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Hybrid adversarial audio spoof detection; speech generation is the attack vector, not the contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

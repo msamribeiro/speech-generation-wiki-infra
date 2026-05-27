@@ -1,0 +1,38 @@
+{
+  "id": "2508.11224",
+  "source_ids": {
+    "arxiv": "2508.11224"
+  },
+  "title": "Benchmarking Prosody Encoding in Discrete Speech Tokens",
+  "authors": [
+    "Kentaro Onda",
+    "Satoru Fukayama",
+    "Daisuke Saito",
+    "Nobuaki Minematsu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.11224",
+  "pdf_url": "https://arxiv.org/pdf/2508.11224.pdf",
+  "pdf_path": "raw/papers/2508.11224.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recently, discrete tokens derived from self-supervised learning (SSL) models via k-means clustering have been actively studied as pseudo-text in speech language models and as efficient intermediate representations for various tasks. However, these discrete tokens are typically learned in advance, separately from the training of language models or downstream tasks. As a result, choices related to discretization, such as the SSL model used or the number of clusters, must be made heuristically. In particular, speech language models are expected to understand and generate responses that reflect not only the semantic content but also prosodic features. Yet, there has been limited research on the ability of discrete tokens to capture prosodic information. To address this gap, this study conducts a comprehensive analysis focusing on prosodic encoding based on their sensitivity to the artificially modified prosody, aiming to provide practical guidelines for designing discrete tokens.",
+  "arxiv_comment": "Accepted by ASRU2025",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Benchmark for prosody encoding in discrete tokens for speech LMs and TTS evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

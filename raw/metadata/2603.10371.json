@@ -1,0 +1,39 @@
+{
+  "id": "2603.10371",
+  "source_ids": {
+    "arxiv": "2603.10371"
+  },
+  "title": "Speech Codec Probing from Semantic and Phonetic Perspectives",
+  "authors": [
+    "Xuan Shi",
+    "Chang Zeng",
+    "Tiantian Feng",
+    "Shih-Heng Wang",
+    "Jianbo Ma",
+    "Shrikanth Narayanan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.10371",
+  "pdf_url": "https://arxiv.org/pdf/2603.10371.pdf",
+  "pdf_path": "raw/papers/2603.10371.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech tokenizers are essential for connecting speech to large language models (LLMs) in multimodal systems. These tokenizers are expected to preserve both semantic and acoustic information for downstream understanding and generation. However, emerging evidence suggests that what is termed \"semantic\" in speech representations does not align with text-derived semantics: a mismatch that can degrade multimodal LLM performance. In this paper, we systematically analyze the information encoded by several widely used speech tokenizers, disentangling their semantic and phonetic content through word-level probing tasks, layerwise representation analysis, and cross-modal alignment metrics such as CKA. Our results show that current tokenizers primarily capture phonetic rather than lexical-semantic structure, and we derive practical implications for the design of next-generation speech tokenization methods.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Probing analysis of speech codec representations from semantic and phonetic perspectives for LLM integration",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

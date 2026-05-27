@@ -1,0 +1,42 @@
+{
+  "id": "2511.08723",
+  "source_ids": {
+    "arxiv": "2511.08723"
+  },
+  "title": "ParaS2S: Benchmarking and Aligning Spoken Language Models for Paralinguistic-aware Speech-to-Speech Interaction",
+  "authors": [
+    "Shu-wen Yang",
+    "Ming Tu",
+    "Andy T. Liu",
+    "Xinghua Qu",
+    "Hung-yi Lee",
+    "Lu Lu",
+    "Yuxuan Wang",
+    "Yonghui Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.08723",
+  "pdf_url": "https://arxiv.org/pdf/2511.08723.pdf",
+  "pdf_path": "raw/papers/2511.08723.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-Speech (S2S) models have shown promising dialogue capabilities, but their ability to handle paralinguistic cues - such as emotion, tone, and speaker attributes - and to respond appropriately in both content and style remains under-explored. Progress is further hindered by the scarcity of high-quality and expressive demonstrations. To address this, we introduce a new reinforcement learning (RL) framework for paralinguistic-aware S2S, ParaS2S, which evaluates and optimizes both response content and speaking style directly at the waveform level. We first construct ParaS2SBench, a benchmark that evaluates the naturalness of input-output pairs in terms of content and speaking style using expressive and challenging queries. For the automatic judge, we propose a PolyTone training strategy and a multi-stage framework, preventing the style hallucination of end-to-end audio LLM judging. Our judge correlates well with human preferences and is scalable, enabling the model to interact and learn from unlabeled speech via RL. Experiments show that existing S2S models fail to respond appropriately to paralinguistic attributes, performing no better than pipeline-based baselines. Our RL approach (ParaS2SAlign) achieves a 10% relative improvement in the appropriateness of response content and speaking style on ParaS2SBench over supervised fine-tuning (SFT), surpassing all prior models while requiring substantially fewer paired demonstrations than pure SFT. Our findings highlight the need for a scalable and accurate automatic evaluator for speech-to-speech interaction.",
+  "arxiv_comment": "To appear in ICLR 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "RLHF-aligned benchmark and speech-to-speech model for paralinguistic-aware spoken dialogue interaction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

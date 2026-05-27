@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2031",
+  "source_ids": {
+    "isca": "pathak25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2031"
+  },
+  "title": "Kinship in Speech: Leveraging Linguistic Relatedness for Zero-Shot TTS in Indian Languages",
+  "authors": [
+    "Utkarsh Pathak",
+    "Chandra Sai Krishna Gunda",
+    "Anusha Prakash",
+    "Keshav Agarwal",
+    "Hema A. Murthy"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/pathak25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/pathak25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2031.pdf",
+  "pdf_source": "isca",
+  "abstract": "Text-to-speech (TTS) systems typically require high-quality studio data and accurate transcriptions for training. India has 1369 languages, with 22 official using 13 scripts. Training a TTS system for all these languages, most of which have no digital resources, seems a Herculean task. Our work focuses on zero-shot synthesis, particularly for languages whose scripts and phonotactics come from different families. The novelty of our work is in the augmentation of a shared phone representation and modifying the text parsing rules to match the phonotactics of the target language, thus reducing the synthesiser overhead and enabling rapid adaptation. Intelligible and natural speech was generated for Sanskrit, Maharashtrian and Canara Konkani, Maithili and Kurukh by leveraging linguistic connections across languages with suitable synthesisers. Evaluations confirm the effectiveness of this approach, highlighting its potential to expand speech technology access for under-represented languages.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Zero-shot TTS for Indian languages exploiting linguistic script/phonotactic relatedness; advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

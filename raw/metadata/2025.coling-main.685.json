@@ -1,0 +1,47 @@
+{
+  "id": "2025.coling-main.685",
+  "source_ids": {
+    "acl": "2025.coling-main.685",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.coling-main.685"
+  },
+  "title": "VoxpopuliTTS: a large-scale multilingual TTS corpus for zero-shot speech generation",
+  "authors": [
+    "Wenrui Liu",
+    "Jionghao Bai",
+    "Xize Cheng",
+    "Jialong Zuo",
+    "Ziyue Jiang",
+    "Shengpeng Ji",
+    "Minghui Fang",
+    "Xiaoda Yang",
+    "Qian Yang",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.coling-main.685",
+  "pdf_url": "https://aclanthology.org/2025.coling-main.685.pdf",
+  "pdf_path": "raw/papers/2025.coling-main.685.pdf",
+  "pdf_source": "anthology",
+  "abstract": "In recent years, speech generation fields have achieved significant advancements, primarily due to improvements in large TTS (text-to-speech) systems and scalable TTS datasets. However, there is still a lack of large-scale multilingual TTS datasets, which limits the development of cross-language and multilingual TTS systems. Hence, we refine Voxpopuli dataset and propose VoxpopuliTTS dataset. This dataset comprises 30,000 hours of high-quality speech data, across 3 languages with multiple speakers and styles, suitable for various speech tasks such as TTS and ASR. To enhance the quality of speech data from Voxpopuli, we improve the existing processing pipeline by: 1) filtering out low-quality speech-text pairs based on ASR confidence scores, and 2) concatenating short transcripts by checking semantic information completeness to generate the long transcript. Experimental results demonstrate the effectiveness of the VoxpopuliTTS dataset and the proposed processing pipeline.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Large-scale multilingual TTS dataset derived from VoxPopuli; directly advances multilingual TTS training resources.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

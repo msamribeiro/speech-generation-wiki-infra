@@ -1,0 +1,38 @@
+{
+  "id": "2508.15565",
+  "source_ids": {
+    "arxiv": "2508.15565"
+  },
+  "title": "Any-to-any Speaker Attribute Perturbation for Asynchronous Voice Anonymization",
+  "authors": [
+    "Liping Chen",
+    "Chenyang Guo",
+    "Rui Wang",
+    "Kong Aik Lee",
+    "Zhenhua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.15565",
+  "pdf_url": "https://arxiv.org/pdf/2508.15565.pdf",
+  "pdf_path": "raw/papers/2508.15565.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speaker attribute perturbation offers a feasible approach to asynchronous voice anonymization by employing adversarially perturbed speech as anonymized output. In order to enhance the identity unlinkability among anonymized utterances from the same original speaker, the targeted attack training strategy is usually applied to anonymize the utterances to a common designated speaker. However, this strategy may violate the privacy of the designated speaker who is an actual speaker. To mitigate this risk, this paper proposes an any-to-any training strategy. It is accomplished by defining a batch mean loss to anonymize the utterances from various speakers within a training mini-batch to a common pseudo-speaker, which is approximated as the average speaker in the mini-batch. Based on this, a speaker-adversarial speech generation model is proposed, incorporating the supervision from both the untargeted attack and the any-to-any strategies. The speaker attribute perturbations are generated and incorporated into the original speech to produce its anonymized version. The effectiveness of the proposed model was justified in asynchronous voice anonymization through experiments conducted on the VoxCeleb datasets. Additional experiments were carried out to explore the potential limitations of speaker-adversarial speech in voice privacy protection. With them, we aim to provide insights for future research on its protective efficacy against black-box speaker extractors \\textcolor{black}{and adaptive attacks, as well as} generalization to out-of-domain datasets \\textcolor{black}{and stability}. Audio samples and open-source code are published in https://github.com/VoicePrivacy/any-to-any-speaker-attribute-perturbation.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Voice anonymization via speaker attribute perturbation; related to VC but primary goal is privacy protection",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

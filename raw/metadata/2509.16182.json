@@ -1,0 +1,38 @@
+{
+  "id": "2509.16182",
+  "source_ids": {
+    "arxiv": "2509.16182"
+  },
+  "title": "Rethinking Cross-Corpus Speech Emotion Recognition Benchmarking: Are Paralinguistic Pre-Trained Representations Sufficient?",
+  "authors": [
+    "Orchid Chetia Phukan",
+    "Mohd Mujtaba Akhtar",
+    "Girish",
+    "Swarup Ranjan Behera",
+    "Parabattina Bhagath",
+    "Pailla Balakrishna Reddy",
+    "Arun Balaji Buduru"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.16182",
+  "pdf_url": "https://arxiv.org/pdf/2509.16182.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent benchmarks evaluating pre-trained models (PTMs) for cross-corpus speech emotion recognition (SER) have overlooked PTM pre-trained for paralinguistic speech processing (PSP), raising concerns about their reliability, since SER is inherently a paralinguistic task. We hypothesize that PSP-focused PTM will perform better in cross-corpus SER settings. To test this, we analyze state-of-the-art PTMs representations including paralinguistic, monolingual, multilingual, and speaker recognition. Our results confirm that TRILLsson (a paralinguistic PTM) outperforms others, reinforcing the need to consider PSP-focused PTMs in cross-corpus SER benchmarks. This study enhances benchmark trustworthiness and guides PTMs evaluations for reliable cross-corpus SER.",
+  "arxiv_comment": "Accepted to APSIPA-ASC 2025",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Cross-corpus speech emotion recognition benchmark; emotion analysis task, not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-0575",
+  "source_ids": {
+    "isca": "li25g_interspeech",
+    "doi": "10.21437/Interspeech.2025-575"
+  },
+  "title": "VoiceMark: Zero-Shot Voice Cloning-Resistant Watermarking Approach Leveraging Speaker-Specific Latents",
+  "authors": [
+    "Haiyun Li",
+    "Zhiyong Wu",
+    "Xiaofeng Xie",
+    "Jingran Xie",
+    "Yaoxun Xu",
+    "Hanyang Peng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/li25g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/li25g_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0575.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice cloning (VC)-resistant watermarking is an emerging technique for tracing and preventing unauthorized cloning. Existing methods effectively trace traditional VC models by training them on watermarked audio but fail in zero-shot VC scenarios, where models synthesize audio from an audio prompt without training. To address this, we propose VoiceMark, the first zero-shot VC-resistant watermarking method that leverages speaker-specific latents as the watermark carrier, allowing the watermark to transfer through the zero-shot VC process into the synthesized audio. Additionally, we introduce VC-simulated augmentations and VAD-based loss to enhance robustness against distortions. Experiments on multiple zero-shot VC models demonstrate that VoiceMark achieves over 95% accuracy in watermark detection after zero-shot VC synthesis, significantly outperforming existing methods, which only reach around 50%.",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Zero-shot VC-resistant audio watermarking framework; advances security of TTS/VC systems.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

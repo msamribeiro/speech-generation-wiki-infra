@@ -1,0 +1,44 @@
+{
+  "id": "2509.14579",
+  "source_ids": {
+    "arxiv": "2509.14579"
+  },
+  "title": "Cross-Lingual F5-TTS: Towards Language-Agnostic Voice Cloning and Speech Synthesis",
+  "authors": [
+    "Qingyu Liu",
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Chunhui Wang",
+    "Yunting Yang",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Pengcheng Zhu",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14579",
+  "pdf_url": "https://arxiv.org/pdf/2509.14579.pdf",
+  "pdf_path": "raw/papers/2509.14579.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Flow-matching-based text-to-speech (TTS) models have shown high-quality speech synthesis. However, most current flow-matching-based TTS models still rely on reference transcripts corresponding to the audio prompt for synthesis. This dependency prevents cross-lingual voice cloning when audio prompt transcripts are unavailable, particularly for unseen languages. The key challenges for flow-matching-based TTS models to remove audio prompt transcripts are identifying word boundaries during training and determining appropriate duration during inference. In this paper, we introduce Cross-Lingual F5-TTS, a framework that enables cross-lingual voice cloning without audio prompt transcripts. Our method preprocesses audio prompts by forced alignment to obtain word boundaries, enabling direct synthesis from audio prompts while excluding transcripts during training. To address the duration modeling challenge, we train speaking rate predictors at different linguistic granularities to derive duration from speaker pace. Experiments show that our approach matches the performance of F5-TTS while enabling cross-lingual voice cloning.",
+  "arxiv_comment": "5 pages, 2 figures",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Cross-lingual flow-matching TTS removing dependency on reference transcripts",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

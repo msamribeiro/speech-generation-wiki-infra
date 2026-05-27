@@ -1,0 +1,38 @@
+{
+  "id": "2605.05927",
+  "source_ids": {
+    "arxiv": "2605.05927"
+  },
+  "title": "Minimizing Modality Gap from the Input Side: Your Speech LLM Can Be a Prosody-Aware Text LLM",
+  "authors": [
+    "Wenqian Cui",
+    "Xiao-Hui Li",
+    "Daxin Tan",
+    "Qiyong Zheng",
+    "Irwin King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.05927",
+  "pdf_url": "https://arxiv.org/pdf/2605.05927.pdf",
+  "pdf_path": "raw/papers/2605.05927.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech large language models (SLMs) are typically built from text large language model (TLM) checkpoints, yet they still suffer from a substantial modality gap. Prior work has mainly attempted to reduce this gap from the output side by making speech generation more text-like, but the gap remains. We argue that the key remaining bottleneck lies on the input side. We propose TextPro-SLM, an SLM that makes spoken input more closely resemble that of a prosody-aware text LLM. TextPro-SLM combines WhisperPro, a unified speech encoder that produces synchronized text tokens and prosody embeddings, with an LLM backbone trained to preserve the semantic capabilities of the original TLM while learning paralinguistic understanding. Experiments show that TextPro-SLM achieves the lowest modality gap among leading SLMs at both 3B and 7B scales, while also delivering strong overall performance on paralinguistic understanding tasks. These gains are achieved with only roughly 1,000 hours of LLM training audio, suggesting that reducing the modality gap from the input side is both effective and data-efficient.",
+  "arxiv_comment": "Work in progress",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "TextPro-SLM: prosody-preserving text representation to minimize modality gap in speech LLMs from input side",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

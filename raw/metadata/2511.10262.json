@@ -1,0 +1,42 @@
+{
+  "id": "2511.10262",
+  "source_ids": {
+    "arxiv": "2511.10262"
+  },
+  "title": "MTR-DuplexBench: Towards a Comprehensive Evaluation of Multi-Round Conversations for Full-Duplex Speech Language Models",
+  "authors": [
+    "He Zhang",
+    "Wenqian Cui",
+    "Haoning Xu",
+    "Xiaohui Li",
+    "Lei Zhu",
+    "Haoli Bai",
+    "Shaohua Ma",
+    "Irwin King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.10262",
+  "pdf_url": "https://arxiv.org/pdf/2511.10262.pdf",
+  "pdf_path": "raw/papers/2511.10262.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-Duplex Speech Language Models (FD-SLMs) enable real-time, overlapping conversational interactions, offering a more dynamic user experience compared to traditional half-duplex models. However, existing benchmarks primarily focus on evaluating single-round interactions, neglecting the complexities of multi-round communication. Evaluating FD-SLMs in multi-round settings poses significant challenges, including blurred turn boundaries in communication and context inconsistency during model inference. Also, existing benchmarks often focus solely on evaluating conversational features, neglecting other critical aspects. To address these gaps, we introduce MTR-DuplexBench, a novel benchmark designed for a comprehensive multi-round evaluation of FD-SLMs. MTR-DuplexBench not only segments continuous full-duplex dialogues into discrete turns for turn-by-turn assessment but also incorporates various evaluation aspects, including conversational features, dialogue quality, instruction following, and safety. Experimental results reveal that current FD-SLMs face difficulties in maintaining consistent performance across multiple rounds and evaluation dimensions, highlighting the necessity and effectiveness of our benchmark. Code and data are available at: https://github.com/ZhangHe0918/MTR-DuplexBench",
+  "arxiv_comment": "Accepted to Findings of ACL 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Multi-round conversation benchmark for evaluating full-duplex speech language models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

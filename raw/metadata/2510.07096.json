@@ -1,0 +1,38 @@
+{
+  "id": "2510.07096",
+  "source_ids": {
+    "arxiv": "2510.07096"
+  },
+  "title": "Modeling Sarcastic Speech: Semantic and Prosodic Cues in a Speech Synthesis Framework",
+  "authors": [
+    "Zhu Li",
+    "Yuqing Zhang",
+    "Xiyuan Gao",
+    "Shekhar Nayak",
+    "Matt Coler"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.07096",
+  "pdf_url": "https://arxiv.org/pdf/2510.07096.pdf",
+  "pdf_path": "raw/papers/2510.07096.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Sarcasm is a pragmatic phenomenon in which speakers convey meanings that diverge from literal content, relying on an interaction between semantics and prosodic expression. However, how these cues jointly contribute to the recognition of sarcasm remains poorly understood. We propose a computational framework that models sarcasm as the integration of semantic interpretation and prosodic realization. Semantic cues are derived from an LLaMA 3 model fine-tuned to capture discourse-level markers of sarcastic intent, while prosodic cues are extracted through semantically aligned utterances drawn from a database of sarcastic speech, providing prosodic exemplars of sarcastic delivery. Using a speech synthesis testbed, perceptual evaluations demonstrate that both semantic and prosodic cues independently enhance listeners' perception of sarcasm, with the strongest effects emerging when the two are combined. These findings highlight the complementary roles of semantics and prosody in pragmatic interpretation and illustrate how modeling can shed light on the mechanisms underlying sarcastic communication.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Computational framework modeling sarcasm through prosodic and semantic cues in speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

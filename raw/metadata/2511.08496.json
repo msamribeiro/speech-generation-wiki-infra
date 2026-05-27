@@ -1,0 +1,41 @@
+{
+  "id": "2511.08496",
+  "source_ids": {
+    "arxiv": "2511.08496"
+  },
+  "title": "HQ-SVC: Towards High-Quality Zero-Shot Singing Voice Conversion in Low-Resource Scenarios",
+  "authors": [
+    "Bingsong Bai",
+    "Yizhong Geng",
+    "Fengping Wang",
+    "Cong Wang",
+    "Puyuan Guo",
+    "Yingming Gao",
+    "Ya Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.08496",
+  "pdf_url": "https://arxiv.org/pdf/2511.08496.pdf",
+  "pdf_path": "raw/papers/2511.08496.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot singing voice conversion (SVC) transforms a source singer's timbre to an unseen target speaker's voice while preserving melodic content without fine-tuning. Existing methods model speaker timbre and vocal content separately, losing essential acoustic information that degrades output quality while requiring significant computational resources. To overcome these limitations, we propose HQ-SVC, an efficient framework for high-quality zero-shot SVC. HQ-SVC first extracts jointly content and speaker features using a decoupled codec. It then enhances fidelity through pitch and volume modeling, preserving critical acoustic information typically lost in separate modeling approaches, and progressively refines outputs via differentiable signal processing and diffusion techniques. Evaluations confirm HQ-SVC significantly outperforms state-of-the-art zero-shot SVC methods in conversion quality and efficiency. Beyond voice conversion, HQ-SVC achieves superior voice naturalness compared to specialized audio super-resolution methods while natively supporting voice super-resolution tasks.",
+  "arxiv_comment": "Accepted by AAAI 2026 main technical track",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "High-quality zero-shot singing voice conversion in low-resource scenarios without fine-tuning",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

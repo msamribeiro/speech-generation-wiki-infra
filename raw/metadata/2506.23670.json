@@ -1,0 +1,36 @@
+{
+  "id": "2506.23670",
+  "source_ids": {
+    "arxiv": "2506.23670"
+  },
+  "title": "Efficient Interleaved Speech Modeling through Knowledge Distillation",
+  "authors": [
+    "Mohammadmahdi Nouriborji",
+    "Morteza Rohanian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.23670",
+  "pdf_url": "https://arxiv.org/pdf/2506.23670.pdf",
+  "pdf_path": "raw/papers/2506.23670.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current speech language models exceed the size and latency constraints of many deployment environments. We build compact, expressive speech generation models through layer-aligned distillation, matching hidden states, attention maps, and softened logits to compress large multimodal transformers by 3x with minimal loss in performance. We introduce TinyWave, a family of 2B-parameter models for speech-to-speech and interleaved speech-text generation, trained on 50,000 hours of public audio. TinyWave supports (i) speech-only generation using phonetic or expressive tokens and (ii) mixed speech-text continuations. Evaluation on Libri-Light shows TinyWave within 1.4 normalized perplexity points of its teacher. Accuracy on spoken StoryCloze and SALMon reaches 93-97% of the teacher's performance, outperforming size-matched baselines. These models are optimized for deployment on commodity hardware, enabling applications in real-time conversational agents, assistive technologies, and low-resource environments. We release models, training code, and evaluation scripts to support reproducible research on compact, expressive speech generation.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Compact speech generation model (TinyWave 2B) via layer-aligned distillation; directly advances efficient TTS/SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2509.06926",
+  "source_ids": {
+    "arxiv": "2509.06926"
+  },
+  "title": "Continuous Audio Language Models",
+  "authors": [
+    "Simon Rouard",
+    "Manu Orsini",
+    "Axel Roebel",
+    "Neil Zeghidour",
+    "Alexandre Défossez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.06926",
+  "pdf_url": "https://arxiv.org/pdf/2509.06926.pdf",
+  "pdf_path": "raw/papers/2509.06926.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Audio Language Models (ALM) have emerged as the dominant paradigm for speech and music generation by representing audio as sequences of discrete tokens. Yet, unlike text tokens, which are invertible, audio tokens are extracted from lossy codecs with a limited bitrate. As a consequence, increasing audio quality requires generating more tokens, which imposes a trade-off between fidelity and computational cost. We address this issue by studying Continuous Audio Language Models (CALM). These models instantiate a large Transformer backbone that produces a contextual embedding at every timestep. This sequential information then conditions an MLP that generates the next continuous frame of an audio VAE through consistency modeling. By avoiding lossy compression, CALM achieves higher quality at lower computational cost than their discrete counterpart. Experiments on speech and music demonstrate improved efficiency and fidelity over state-of-the-art discrete audio language models, facilitating lightweight, high-quality audio generation. Samples are available at hf.co/spaces/kyutai/calm-samples. Finally, we release Pocket TTS, an open-source 100M-parameter text-to-speech model that can run faster than real time on a laptop CPU: github.com/kyutai-labs/pocket-tts.",
+  "arxiv_comment": "17 pages, 3 figures",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Audio language model using continuous latent space instead of discrete tokens",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

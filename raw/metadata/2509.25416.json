@@ -1,0 +1,38 @@
+{
+  "id": "2509.25416",
+  "source_ids": {
+    "arxiv": "2509.25416"
+  },
+  "title": "Emotion-Aligned Generation in Diffusion Text to Speech Models via Preference-Guided Optimization",
+  "authors": [
+    "Jiacheng Shi",
+    "Hongfei Du",
+    "Yangfan He",
+    "Y. Alicia Hong",
+    "Ye Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.25416",
+  "pdf_url": "https://arxiv.org/pdf/2509.25416.pdf",
+  "pdf_path": "raw/papers/2509.25416.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Emotional text-to-speech seeks to convey affect while preserving intelligibility and prosody, yet existing methods rely on coarse labels or proxy classifiers and receive only utterance-level feedback. We introduce Emotion-Aware Stepwise Preference Optimization (EASPO), a post-training framework that aligns diffusion TTS with fine-grained emotional preferences at intermediate denoising steps. Central to our approach is EASPM, a time-conditioned model that scores noisy intermediate speech states and enables automatic preference pair construction. EASPO optimizes generation to match these stepwise preferences, enabling controllable emotional shaping. Experiments show superior performance over existing methods in both expressiveness and naturalness.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Preference-guided optimization for emotion-aligned diffusion TTS with word-level prosody feedback",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

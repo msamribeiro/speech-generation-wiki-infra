@@ -1,0 +1,39 @@
+{
+  "id": "2025.vlsp-1.14",
+  "source_ids": {
+    "acl": "2025.vlsp-1.14",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.vlsp-1.14"
+  },
+  "title": "ViettelRoar: Voice conversion approach for VLSP 2025",
+  "authors": [
+    "Hong Nhat Tran",
+    "Tung Luong Nguyen",
+    "Thanh Hai Tran"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.vlsp-1.14",
+  "pdf_url": "https://aclanthology.org/2025.vlsp-1.14.pdf",
+  "pdf_path": "raw/papers/2025.vlsp-1.14.pdf",
+  "pdf_source": "anthology",
+  "abstract": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Voice conversion system for VLSP 2025 shared task; directly advances VC (no abstract).",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

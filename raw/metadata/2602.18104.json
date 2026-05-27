@@ -1,0 +1,37 @@
+{
+  "id": "2602.18104",
+  "source_ids": {
+    "arxiv": "2602.18104"
+  },
+  "title": "MeanVoiceFlow: One-step Nonparallel Voice Conversion with Mean Flows",
+  "authors": [
+    "Takuhiro Kaneko",
+    "Hirokazu Kameoka",
+    "Kou Tanaka",
+    "Yuto Kondo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.18104",
+  "pdf_url": "https://arxiv.org/pdf/2602.18104.pdf",
+  "pdf_path": "raw/papers/2602.18104.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In voice conversion (VC) applications, diffusion and flow-matching models have exhibited exceptional speech quality and speaker similarity performances. However, they are limited by slow conversion owing to their iterative inference. Consequently, we propose MeanVoiceFlow, a novel one-step nonparallel VC model based on mean flows, which can be trained from scratch without requiring pretraining or distillation. Unlike conventional flow matching that uses instantaneous velocity, mean flows employ average velocity to more accurately compute the time integral along the inference path in a single step. However, training the average velocity requires its derivative to compute the target velocity, which can cause instability. Therefore, we introduce a structural margin reconstruction loss as a zero-input constraint, which moderately regularizes the input-output behavior of the model without harmful statistical averaging. Furthermore, we propose conditional diffused-input training in which a mixture of noise and source data is used as input to the model during both training and inference. This enables the model to effectively leverage source information while maintaining consistency between training and inference. Experimental results validate the effectiveness of these techniques and demonstrate that MeanVoiceFlow achieves performance comparable to that of previous multi-step and distillation-based models, even when trained from scratch. Audio samples are available at https://www.kecl.ntt.co.jp/people/kaneko.takuhiro/projects/meanvoiceflow/.",
+  "arxiv_comment": "Accepted to ICASSP 2026. Project page: https://www.kecl.ntt.co.jp/people/kaneko.takuhiro/projects/meanvoiceflow/",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "One-step nonparallel voice conversion via mean flows enabling fast high-quality speaker timbre transfer",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

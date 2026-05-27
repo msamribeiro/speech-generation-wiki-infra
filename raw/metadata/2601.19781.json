@@ -1,0 +1,39 @@
+{
+  "id": "2601.19781",
+  "source_ids": {
+    "arxiv": "2601.19781"
+  },
+  "title": "Phonological Tokenizer: Prosody-Aware Phonetic Token via Multi-Objective Fine-Tuning with Differentiable K-Means",
+  "authors": [
+    "Kentaro Onda",
+    "Hayato Futami",
+    "Yosuke Kashiwagi",
+    "Emiru Tsunoo",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.19781",
+  "pdf_url": "https://arxiv.org/pdf/2601.19781.pdf",
+  "pdf_path": "raw/papers/2601.19781.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In recent years, there has been growing interest in representing speech with discrete tokens, which serve as pseudo-text for speech language models (speechLMs) and as efficient intermediate representations for downstream tasks. These tokens are typically categorized as acoustic and phonetic tokens: the former holds detailed acoustic information for reconstruction while the latter mainly captures linguistic content. In human speech communication, however, unnecessary acoustic details such as speaker information are abstracted, while both linguistic and prosodic information are utilized for speech comprehension and production. Given this, neither type of token seems an ideal representation for tasks sensitive to prosody, such as speechLMs. In this study, we propose the Phonological Tokenizer, a method that fine-tunes phonetic tokens via differentiable k-means with a multi-task objective of ASR and speech resynthesis. Experimental validation on diverse tasks confirms that our tokens retain phonological (both linguistic and prosodic) information while appropriately discarding speaker identity.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Prosody-aware phonetic tokenizer via multi-objective fine-tuning for improved speech language model representations",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

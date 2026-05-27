@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0246",
+  "source_ids": {
+    "isca": "chang25_interspeech",
+    "doi": "10.21437/Interspeech.2025-246"
+  },
+  "title": "DC-Spin: A Speaker-invariant Speech Tokenizer for Spoken Language Models",
+  "authors": [
+    "Heng-Jui Chang",
+    "Hongyu Gong",
+    "Changhan Wang",
+    "James Glass",
+    "Yu-An Chung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chang25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/chang25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0246.pdf",
+  "pdf_source": "isca",
+  "abstract": "Spoken language models (SLMs) have gained increasing attention with advancements in text-based, decoder-only language models. SLMs process text and speech, enabling simultaneous speech understanding and generation. This paper presents SpinHuBERT and Double-Codebook Speaker-invariant Clustering (DC-Spin) to improve speech tokenization for bridging audio signals and SLM tokens. DC-Spin extracts speaker-invariant tokens rich in phonetic information and resilient to input variations, enhancing zero-shot SLM tasks and speech resynthesis. Comparisons of tokenization methods and downstream task proxies show that tokens easily modeled by an n-gram LM or aligned with phonemes offer strong performance, offering insights for designing speech tokenizers for SLMs.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "DC-Spin: speaker-invariant speech tokenizer for spoken LMs; core codec/tokenization.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

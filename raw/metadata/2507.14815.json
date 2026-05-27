@@ -1,0 +1,39 @@
+{
+  "id": "2507.14815",
+  "source_ids": {
+    "arxiv": "2507.14815"
+  },
+  "title": "FastLongSpeech: Enhancing Large Speech-Language Models for Efficient Long-Speech Processing",
+  "authors": [
+    "Shoutao Guo",
+    "Shaolei Zhang",
+    "Qingkai Fang",
+    "Zhengrui Ma",
+    "Min Zhang",
+    "Yang Feng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.14815",
+  "pdf_url": "https://arxiv.org/pdf/2507.14815.pdf",
+  "pdf_path": "raw/papers/2507.14815.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of Large Language Models (LLMs) has spurred significant progress in Large Speech-Language Models (LSLMs), enhancing their capabilities in both speech understanding and generation. While existing LSLMs often concentrate on augmenting speech generation or tackling a diverse array of short-speech tasks, the efficient processing of long-form speech remains a critical yet underexplored challenge. This gap is primarily attributed to the scarcity of long-speech training datasets and the high computational costs associated with long sequences. To address these limitations, we introduce FastLongSpeech, a novel framework designed to extend LSLM capabilities for efficient long-speech processing without necessitating dedicated long-speech training data. FastLongSpeech incorporates an iterative fusion strategy that can compress excessively long-speech sequences into manageable lengths. To adapt LSLMs for long-speech inputs, it introduces a dynamic compression training approach, which exposes the model to short-speech sequences at varying compression ratios, thereby transferring the capabilities of LSLMs to long-speech tasks. To assess the long-speech capabilities of LSLMs, we develop a long-speech understanding benchmark called LongSpeech-Eval. Experiments show that our method exhibits strong performance in both long-speech and short-speech tasks, while greatly improving inference efficiency.",
+  "arxiv_comment": "NeurIPS 2025. The code is at https://github.com/ictnlp/FastLongSpeech. This model is at https://huggingface.co/ICTNLP/FastLongSpeech. The dataset is at https://huggingface.co/datasets/ICTNLP/LongSpeech-Eval",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Efficient processing of long-form speech in large speech LMs; advances speech LM architecture for SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2505.15772",
+  "source_ids": {
+    "arxiv": "2505.15772"
+  },
+  "title": "MIKU-PAL: An Automated and Standardized Multi-Modal Method for Speech Paralinguistic and Affect Labeling",
+  "authors": [
+    "Yifan Cheng",
+    "Ruoyi Zhang",
+    "Jiatong Shi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 5,
+  "published_date": "2025-05-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.15772",
+  "pdf_url": "https://arxiv.org/pdf/2505.15772.pdf",
+  "pdf_path": "raw/papers/2505.15772.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Acquiring large-scale emotional speech data with strong consistency remains a challenge for speech synthesis. This paper presents MIKU-PAL, a fully automated multimodal pipeline for extracting high-consistency emotional speech from unlabeled video data. Leveraging face detection and tracking algorithms, we developed an automatic emotion analysis system using a multimodal large language model (MLLM). Our results demonstrate that MIKU-PAL can achieve human-level accuracy (68.5% on MELD) and superior consistency (0.93 Fleiss kappa score) while being much cheaper and faster than human annotation. With the high-quality, flexible, and consistent annotation from MIKU-PAL, we can annotate fine-grained speech emotion categories of up to 26 types, validated by human annotators with 83% rationality ratings. Based on our proposed system, we further released a fine-grained emotional speech dataset MIKU-EmoBench(131.2 hours) as a new benchmark for emotional text-to-speech and visual voice cloning.",
+  "arxiv_comment": "Accepted by Interspeech",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Automated multimodal pipeline for extracting high-consistency emotional speech labels for TTS training; directly advances TTS data.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

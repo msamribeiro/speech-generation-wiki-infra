@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1639",
+  "source_ids": {
+    "isca": "jacquelin25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1639"
+  },
+  "title": "LombardTokenizer: Disentanglement and Control of Vocal Effort in a Neural Speech Codec",
+  "authors": [
+    "Maxime Jacquelin",
+    "MaÃ«va Garnier",
+    "Laurent Girin",
+    "RÃ©my Vincent",
+    "Olivier Perrotin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/jacquelin25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/jacquelin25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1639.pdf",
+  "pdf_source": "isca",
+  "abstract": "Disentangling distinct types of information in speech representations is crucial for improving speech synthesis and voice conversion systems. In this work, we introduce LombardTokenizer, a neural speech codec able to separate features related to vocal effort from other acoustic (and semantic) information. This model is built on SpeechTokenizer, a model proposed in the literature based on multi-stage quantisation, which focused on isolating semantic content in its first quantisation layer. We show that the level of vocal effort can be effectively captured in the second quantisation layer by conditioning the quantisation layer with neural encoders trained to represent vocal effort. Experimental results demonstrate that the proposed method significantly outperforms existing methods in speech conversion between neutral and Lombard speech, while maintaining excellent speech synthesis quality, offering improved control over vocal effort and naturalness of synthesised speech.",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Neural speech codec disentangling vocal effort information for synthesis control; advances codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

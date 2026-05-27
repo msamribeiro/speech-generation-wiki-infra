@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1536",
+  "source_ids": {
+    "isca": "m25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1536",
+    "arxiv": "2508.05102"
+  },
+  "title": "Fairness in Dysarthric Speech Synthesis: Understanding Intrinsic Bias in Dysarthric Speech Cloning using F5-TTS",
+  "authors": [
+    "Anuprabha M",
+    "Krishna Gurugubelli",
+    "Anil Kumar Vuppala"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/m25_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.05102.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1536.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Dysarthric speech poses significant challenges in developing assistive technologies, primarily due to the limited availability of data. Recent advances in neural speech synthesis, especially zero-shot voice cloning, facilitate synthetic speech generation for data augmentation; however, they may introduce biases towards dysarthric speech. In this paper, we investigate the effectiveness of state-of-the-art F5-TTS in cloning dysarthric speech using TORGO dataset, focusing on intelligibility, speaker similarity, and prosody preservation. We also analyze potential biases using fairness metrics like Disparate Impact and Parity Difference to assess disparities across dysarthric severity levels. Results show that F5-TTS exhibits a strong bias toward speech intelligibility over speaker and prosody preservation in dysarthric speech synthesis. Insights from this study can help integrate fairness-aware dysarthric speech synthesis, fostering the advancement of more inclusive speech technologies.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Investigates bias in zero-shot TTS for dysarthric speech cloning; directly advances fairness in assistive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2505.10599",
+  "source_ids": {
+    "arxiv": "2505.10599"
+  },
+  "title": "UDDETTS: Unifying Discrete and Dimensional Emotions for Controllable Emotional Text-to-Speech",
+  "authors": [
+    "Jiaxuan Liu",
+    "Yang Xiang",
+    "Han Zhao",
+    "Xiangang Li",
+    "Yingying Gao",
+    "Shilei Zhang",
+    "Zhenhua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.10599",
+  "pdf_url": "https://arxiv.org/pdf/2505.10599.pdf",
+  "pdf_path": "raw/papers/2505.10599.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent large language models (LLMs) have made great progress in the field of text-to-speech (TTS), but they still face major challenges in synthesizing fine-grained emotional speech in an interpretable manner. Traditional methods rely on discrete emotion labels to control emotion categories and intensities, which cannot capture the complexity and continuity of human emotional perception and expression. The lack of large-scale emotional speech datasets with balanced emotion distributions and fine-grained emotional annotations often causes overfitting in synthesis models and impedes effective emotion control. To address these issues, we propose UDDETTS, a universal LLM framework unifying discrete and dimensional emotions for controllable emotional TTS. This model introduces the interpretable Arousal-Dominance-Valence (ADV) space for dimensional emotion description and supports emotion control driven by either discrete emotion labels or nonlinearly quantified ADV values. Furthermore, a semi-supervised training strategy is designed to comprehensively utilize diverse speech datasets with different types of emotional annotations to train the UDDETTS. Experiments show that UDDETTS achieves linear emotion control along three interpretable dimensions, and exhibits superior end-to-end emotional speech synthesis capabilities. Code and demos are available at: https://anonymous.4open.science/w/UDDETTS.",
+  "arxiv_comment": "Under review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Unifies discrete and dimensional emotion control in LLM-based TTS; directly advances emotional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

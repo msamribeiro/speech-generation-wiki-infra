@@ -1,0 +1,38 @@
+{
+  "id": "2508.03333",
+  "source_ids": {
+    "arxiv": "2508.03333"
+  },
+  "title": "CTTS: Collective Test-Time Scaling",
+  "authors": [
+    "Zhende Song",
+    "Shengji Tang",
+    "Peng Ye",
+    "Jiayuan Fan",
+    "Lei Bai",
+    "Tao Chen",
+    "Wanli Ouyang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.03333",
+  "pdf_url": "https://arxiv.org/pdf/2508.03333.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Test-time scaling (TTS) has emerged as a promising, training-free approach for enhancing large language model (LLM) performance. However, the efficacy of existing methods, such as Best-of-N and Self-Consistency, is fundamentally constrained by the dominant single test-time scaling (STTS) paradigm, which relies on a single LLM agent interacting with a single reward model (SA-SR). Inspired by recent work showing that collective methods can surpass the performance ceiling of individual models, we introduce Collective Test-Time Scaling (CTTS). First, we systematically investigate three primary interaction paradigms of existing multiple models: single-agent-multi-reward (SA-MR), multi-agent-single-reward (MA-SR), and multi-agent-multi-reward (MA-MR). Extensive experiments reveal that the MA-MR paradigm is consistently superior. Based on this finding, we further propose CTTS-MM, a novel framework that operationalizes multi-agent and multi-reward collaboration. CTTS-MM integrates two key technical contributions: (1) for agent collaboration, an Agent Collaboration Search (ACS) that identifies the most effective combination of LLMs from a candidate pool; and (2) for reward model collaboration, a Mixture of Reward Models (MoR) strategy that leverages a Prior Reward model Ensemble Selection (PRES) algorithm to select the optimal ensemble. Evaluations across seven mainstream benchmarks demonstrate that CTTS-MM significantly outperforms leading STTS methods (+4.82% over Best-of-N) and surpasses even flagship proprietary LLMs (+7.06% over GPT-4.1) and open-source LLMs. These results highlight the substantial potential of collective scaling to push the frontier of LLM inference. Code will be released at https://github.com/magent4aci/CTTS-MM.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "TTS acronym means 'test-time scaling' not text-to-speech; general LLM paper.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

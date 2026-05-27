@@ -1,0 +1,41 @@
+{
+  "id": "2604.27607",
+  "source_ids": {
+    "arxiv": "2604.27607"
+  },
+  "title": "JaiTTS: A Thai Voice Cloning Model",
+  "authors": [
+    "Jullajak Karnjanaekarin",
+    "Pontakorn Trakuekul",
+    "Narongkorn Panitsrisit",
+    "Sumana Sumanakul",
+    "Vichayuth Nitayasomboon",
+    "Nithid Guntasin",
+    "Thanavin Denkavin",
+    "Attapol T. Rutherford"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.27607",
+  "pdf_url": "https://arxiv.org/pdf/2604.27607.pdf",
+  "pdf_path": "raw/papers/2604.27607.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present JaiTTS-v1.0, a state-of-the-art Thai voice cloning text-to-speech model built through continual training on a large Thai-centric speech corpus. The model architecture is adapted from VoxCPM, a tokenizer-free autoregressive TTS model. JaiTTS-v1.0 directly processes numerals and Thai-English code-switching, which is very common in realistic settings, without explicit text normalization. We test the models on short- and long-duration speech generation, which reflects many real-world use cases. JaiTTS-v1.0 achieves a state-of-the-art CER of 1.94%, surpassing the human ground truth of 1.98% for short-duration tasks while performing on par with human ground truth for long-duration tasks. In human judgment evaluations, our model wins 283 of 400 pairwise comparisons against commercial flagships, with only 58 losses. Our code and demo are available at https://github.com/JTS-AI-Team/JaiTTS .",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "State-of-the-art Thai voice cloning TTS with direct numeral/code-switch handling; advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

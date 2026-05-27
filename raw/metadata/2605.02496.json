@@ -1,0 +1,40 @@
+{
+  "id": "2605.02496",
+  "source_ids": {
+    "arxiv": "2605.02496"
+  },
+  "title": "Tibetan-TTS:Low-Resource Tibetan Speech Synthesis with Large Model Adaptation",
+  "authors": [
+    "Jiaxu He",
+    "Chao Wang",
+    "Jie Lian",
+    "Yuqing Cai",
+    "Yongxiang Li",
+    "Renzeg Duojie",
+    "Jie Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.02496",
+  "pdf_url": "https://arxiv.org/pdf/2605.02496.pdf",
+  "pdf_path": "raw/papers/2605.02496.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Tibetan text-to-speech (TTS) has long been challenged by scarce speech resources, significant dialectal variation, and the complex mapping between written text and spoken pronunciation. To address these issues, this work presents, to the best of our knowledge, the first large-model-based Tibetan TTS system in the industry, built upon a large speech synthesis model developed by Xingchen AGI Lab. The proposed system integrates data quality enhancement, Tibetan-oriented text representation and tokenizer adaptation, and cross-lingual adaptive training for low-resource Tibetan speech synthesis. Experimental results show that the system can generate stable, natural, and intelligible Tibetan speech under low-resource conditions. In subjective evaluation, the MOS scores of the syllable-level and BPE-based systems reach 4.28 and 4.35, while their pronunciation accuracies reach 97.6% and 96.6%, respectively, outperforming an external commercial Tibetan TTS interface. These results demonstrate that combining a large-model backbone with Tibetan-oriented text representation adaptation and cross-lingual adaptive training enables highly usable low-resource Tibetan speech synthesis, and also provides a technical foundation for future unified multi-dialect Tibetan speech synthesis.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "First large-model-based Tibetan TTS system addressing scarce resources, dialectal variation, and complex phonetics",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

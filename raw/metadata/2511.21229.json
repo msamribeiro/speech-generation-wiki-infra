@@ -1,0 +1,38 @@
+{
+  "id": "2511.21229",
+  "source_ids": {
+    "arxiv": "2511.21229"
+  },
+  "title": "Developing an Open Conversational Speech Corpus for the Isan Language",
+  "authors": [
+    "Adisai Na-Thalang",
+    "Chanakan Wittayasakpan",
+    "Kritsadha Phatcharoen",
+    "Supakit Buakaw"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.21229",
+  "pdf_url": "https://arxiv.org/pdf/2511.21229.pdf",
+  "pdf_path": "raw/papers/2511.21229.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces the development of the first open conversational speech dataset for the Isan language, the most widely spoken regional dialect in Thailand. Unlike existing speech corpora that are primarily based on read or scripted speech, this dataset consists of natural speech, thereby capturing authentic linguistic phenomena such as colloquials, spontaneous prosody, disfluencies, and frequent code-switching with central Thai. A key challenge in building this resource lies in the lack of a standardized orthography for Isan. Current writing practices vary considerably, due to the different lexical tones between Thai and Isan. This variability complicates the design of transcription guidelines and poses questions regarding consistency, usability, and linguistic authenticity. To address these issues, we establish practical transcription protocols that balance the need for representational accuracy with the requirements of computational processing. By releasing this dataset as an open resource, we aim to contribute to inclusive AI development, support research on underrepresented languages, and provide a basis for addressing the linguistic and technical challenges inherent in modeling conversational speech.",
+  "arxiv_comment": "31 pages, in Thai language, 3 figures, 25 tables",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "First open conversational speech corpus for Isan language; enables TTS/SCA for low-resource dialect.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

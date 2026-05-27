@@ -1,0 +1,34 @@
+{
+  "id": "2604.17642",
+  "source_ids": {
+    "arxiv": "2604.17642"
+  },
+  "title": "HCFD: A Benchmark for Audio Deepfake Detection in Healthcare",
+  "authors": [
+    "Mohd Mujtaba Akhtar",
+    "Girish",
+    "Muskaan Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.17642",
+  "pdf_url": "https://arxiv.org/pdf/2604.17642.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this study, we present Healthcare Codec-Fake Detection (HCFD), a new task for detecting codec-fakes under pathological speech conditions. We intentionally focus on codec based synthetic speech in this work, since neural codec decoding forms a core building block in modern speech generation pipelines. First, we release Healthcare CodecFake, the first pathology-aware dataset containing paired real and NAC-synthesized speech across multipl clinical conditions and codec families. Our evaluations show that SOTA codec-fake detectors trained primarily on healthy speech perform poorly on Healthcare CodecFake, highlighting the need for HCFD-specific models. Second, we demonstrate that PaSST outperforms existing speech-based models for HCFD, benefiting from its patch-based spectro-temporal representation. Finally, we propose PHOENIX-Mamba, a geometry-aware framework that models codec-fakes as multiple self-discovered modes in hyperbolic space and achieves the strongest performance on HCFD across clinical conditions and codecs. Experiments on HCFK show that PHOENIX-Mamba (PaSST) achieves the best overall performance, reaching 97.04 Acc on E-Dep, 96.73 on E-Alz, and 96.57 on E-Dys, while maintaining strong results on Chinese with 94.41 (Dep), 94.40 (Alz), and 93.20 (Dys). This geometry-aware formulation enables self-discovered clustering of heterogeneous codec-fake modes in hyperbolic space, facilitating robust discrimination under pathological speech variability. PHOENIX-Mamba achieves topmost performance on the HCFD task across clinical conditions and codecs.",
+  "arxiv_comment": "Accepted to ACL 2026",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Healthcare codec-fake detection under pathological speech; anti-spoofing focused dataset not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

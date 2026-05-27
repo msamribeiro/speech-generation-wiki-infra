@@ -1,0 +1,35 @@
+{
+  "id": "2512.01537",
+  "source_ids": {
+    "arxiv": "2512.01537"
+  },
+  "title": "Two-Dimensional Quantization for Geometry-Aware Audio Coding",
+  "authors": [
+    "Tal Shuster",
+    "Eliya Nachmani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.01537",
+  "pdf_url": "https://arxiv.org/pdf/2512.01537.pdf",
+  "pdf_path": "raw/papers/2512.01537.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent neural audio codecs have achieved impressive reconstruction quality, typically relying on quantization methods such as Residual Vector Quantization (RVQ), Vector Quantization (VQ) and Finite Scalar Quantization (FSQ). However, these quantization techniques limit the geometric structure of the latent space, make it harder to capture correlations between features leading to inefficiency in representation learning, codebook utilization and token rate. In this paper we introduce Two-Dimensional Quantization (Q2D2), a quantization scheme in which feature pairs are projected onto structured 2D grids, such as hexagonal, rhombic, or rectangular tiling and quantized to the nearest grid values, yielding an implicit codebook defined by the product of grid levels, with codebook sizes comparable to conventional methods. Despite its simple geometric formulation, Q2D2 improves audio compression efficiency, with low token rates and high codebook utilization while maintaining state of the art reconstruction quality. Specifically, Q2D2 achieves competitive to superior performance in various objective and subjective reconstruction metrics, across extensive experiments in speech, audio and music domains compared to state of the art models. Comprehensive ablation studies further confirm the effectiveness of our design choices.",
+  "arxiv_comment": "Accepted to ICML 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "2D quantization for geometry-aware audio coding; novel codec quantization contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

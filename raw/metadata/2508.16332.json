@@ -1,0 +1,43 @@
+{
+  "id": "2508.16332",
+  "source_ids": {
+    "arxiv": "2508.16332"
+  },
+  "title": "Vevo2: A Unified and Controllable Framework for Speech and Singing Voice Generation",
+  "authors": [
+    "Xueyao Zhang",
+    "Junan Zhang",
+    "Yuancheng Wang",
+    "Chaoren Wang",
+    "Yuanzhe Chen",
+    "Dongya Jia",
+    "Zhuo Chen",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.16332",
+  "pdf_url": "https://arxiv.org/pdf/2508.16332.pdf",
+  "pdf_path": "raw/papers/2508.16332.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Controllable human voice generation, particularly for expressive domains like singing, remains a significant challenge. This paper introduces Vevo2, a unified framework for controllable speech and singing voice generation. To tackle issues like the scarcity of annotated singing data and to enable flexible controllability, Vevo2 introduces two audio tokenizers: (1) a unified music-notation-free prosody tokenizer that captures prosody and melody from speech, singing, and even instrumental sounds, and (2) a unified content-style tokenizer that encodes linguistic content, prosody, and style for both speech and singing, while enabling timbre disentanglement. Vevo2 consists of an auto-regressive (AR) content-style modeling stage, which aims to enable controllability over text, prosody, and style, as well as a flow-matching acoustic modeling stage that allows for timbre control. Particularly, during the speech-singing joint training of the AR model, we propose both explicit and implicit prosody learning strategies to bridge speech and singing voice. Moreover, to further enhance the Vevo2's ability to follow text and prosody, we design a multi-objective post-training task that integrates both intelligibility and prosody similarity alignment. Experimental results show that the unified modeling in Vevo2 brings mutual benefits to both speech and singing voice generation. Additionally, Vevo2's effectiveness across a wide range of synthesis, conversion, and editing tasks for both speech and singing further demonstrates its strong generalization ability and versatility. Audio samples are are available at https://versasinger.github.io/.",
+  "arxiv_comment": "Accepted by the IEEE Transactions on Audio, Speech and Language Processing (TASLP)",
+  "task": [
+    "TTS",
+    "VC",
+    "singing"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Unified controllable framework for speech and singing voice generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

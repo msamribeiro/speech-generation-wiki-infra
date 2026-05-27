@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0401",
+  "source_ids": {
+    "isca": "lemaguer25_interspeech",
+    "doi": "10.21437/Interspeech.2025-401"
+  },
+  "title": "Enabling the replicability of speech synthesis perceptual evaluations",
+  "authors": [
+    "SÃ©bastien Le Maguer",
+    "GwÃ©nolÃ© LecorvÃ©",
+    "Damien Lolive",
+    "Naomi Harte",
+    "Juraj Å imko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lemaguer25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lemaguer25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0401.pdf",
+  "pdf_source": "isca",
+  "abstract": "How speech synthesis is evaluated is nowadays questioned. Not only have conventional listening tests as a whole been proven a poor match for modern synthesis, but more fundamentally, important information (e.g., the question asked to the listener) is frequently missing in the report of the outcome of the evaluation despite the impact on the interpretation of the test results. This can lead to uncertainty about the validity of these evaluations. To address this issue, we propose standardising the structure of any evaluation report. To facilitate this standardisation, our contribution is twofold: an open-source subjective evaluation platform; and a set of reporting guidelines. The platform is designed to enable the development of easily shareable evaluation recipes. The set of guidelines complements the platform to support researchers in reporting their evaluation choices and analysis in more detail while relying on the recipe to describe the actual evaluation process.",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Addresses replicability issues in TTS perceptual evaluation methods; directly advances TTS evaluation methodology.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

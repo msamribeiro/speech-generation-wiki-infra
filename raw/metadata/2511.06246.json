@@ -1,0 +1,37 @@
+{
+  "id": "2511.06246",
+  "source_ids": {
+    "arxiv": "2511.06246"
+  },
+  "title": "IDMap: A Pseudo-Speaker Generator Framework Based on Speaker Identity Index to Vector Mapping",
+  "authors": [
+    "Zeyan Liu",
+    "Liping Chen",
+    "Kong Aik Lee",
+    "Zhenhua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.06246",
+  "pdf_url": "https://arxiv.org/pdf/2511.06246.pdf",
+  "pdf_path": "raw/papers/2511.06246.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Facilitated by the speech generation framework that disentangles speech into content, speaker, and prosody, voice anonymization is accomplished by substituting the original speaker embedding vector with that of a pseudo-speaker. In this framework, the pseudo-speaker generation forms a fundamental challenge. Current pseudo-speaker generation methods demonstrate limitations in the uniqueness of pseudo-speakers, consequently restricting their effectiveness in voice privacy protection. Besides, existing model-based methods suffer from heavy computation costs. Especially, in the large-scale scenario where a huge number of pseudo-speakers are generated, the limitations of uniqueness and computational inefficiency become more significant. To this end, this paper proposes a framework for pseudo-speaker generation, which establishes a mapping from speaker identity index to speaker vector in the feedforward architecture, termed IDMap. Specifically, the framework is specified into two models: IDMap-MLP and IDMap-Diff. Experiments were conducted on both small- and large-scale evaluation datasets. Small-scale evaluations on the LibriSpeech dataset validated the effectiveness of the proposed IDMap framework in enhancing the uniqueness of pseudo-speakers, thereby improving voice privacy protection, while at a reduced computational cost. Large-scale evaluations on the MLS and Common Voice datasets further justified the superiority of the IDMap framework regarding the stability of the voice privacy protection capability as the number of pseudo-speakers increased. Audio samples and open-source code can be found in https://github.com/VoicePrivacy/IDMap.",
+  "arxiv_comment": "This work has been submitted to the IEEE for possible publication",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Pseudo-speaker generator for voice anonymization using identity index-to-vector mapping with improved uniqueness",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

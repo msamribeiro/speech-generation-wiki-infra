@@ -1,0 +1,43 @@
+{
+  "id": "2602.23333",
+  "source_ids": {
+    "arxiv": "2602.23333"
+  },
+  "title": "SemanticVocoder: Bridging Audio Generation and Audio Understanding via Semantic Latents",
+  "authors": [
+    "Zeyu Xie",
+    "Chenxing Li",
+    "Qiao Jin",
+    "Xuenan Xu",
+    "Guanrou Yang",
+    "Wenfu Wang",
+    "Mengyue Wu",
+    "Dong Yu",
+    "Yuexian Zou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.23333",
+  "pdf_url": "https://arxiv.org/pdf/2602.23333.pdf",
+  "pdf_path": "raw/papers/2602.23333.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent audio generation models typically rely on Variational Autoencoders (VAEs) and perform generation within the VAE latent space. Although VAEs excel at compression and reconstruction, their latents inherently encode low-level acoustic details rather than semantically discriminative information, leading to entangled event semantics and complicating the training of generative models. To address these issues, we discard VAE acoustic latents and introduce semantic encoder latents, thereby proposing SemanticVocoder, a generative vocoder that directly synthesizes waveforms from semantic latents. Equipped with SemanticVocoder, our text-to-audio generation model achieves a Frechet Distance of 12.823 and a Frechet Audio Distance of 1.709 on the AudioCaps test set, as the introduced semantic latents exhibit superior discriminability compared to acoustic VAE latents. Beyond improved generation performance, it also serves as a promising attempt towards unifying audio understanding and generation within a shared semantic space. Generated samples are available at https://zeyuxie29.github.io/SemanticVocoder/.",
+  "arxiv_comment": "Demo: https://zeyuxie29.github.io/SemanticVocoder/",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Semantic latent-based audio generation bridging generative modeling and audio understanding via disentangled representations",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

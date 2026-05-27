@@ -1,0 +1,39 @@
+{
+  "id": "2511.05143",
+  "source_ids": {
+    "arxiv": "2511.05143"
+  },
+  "title": "Synthesizing speech with selected perceptual voice qualities - A case study with creaky voice",
+  "authors": [
+    "Frederik Rautenberg",
+    "Fritz Seebauer",
+    "Jana Wiechmann",
+    "Michael Kuhlmann",
+    "Petra Wagner",
+    "Reinhold Haeb-Umbach"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.05143",
+  "pdf_url": "https://arxiv.org/pdf/2511.05143.pdf",
+  "pdf_path": "raw/papers/2511.05143.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The control of perceptual voice qualities in a text-to-speech (TTS) system is of interest for applications where unmanipu- lated and manipulated speech probes can serve to illustrate pho- netic concepts that are otherwise difficult to grasp. Here, we show that a TTS system, that is augmented with a global speaker attribute manipulation block based on normalizing flows1 , is capable of correctly manipulating the non-persistent, localized quality of creaky voice, thus avoiding the necessity of a, typi- cally unreliable, frame-wise creak predictor. Subjective listen- ing tests confirm successful creak manipulation at a slightly re- duced MOS score compared to the original recording.",
+  "arxiv_comment": "Proceedings of Interspeech",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "TTS system with normalizing-flow-based perceptual voice quality control demonstrated on creaky voice",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

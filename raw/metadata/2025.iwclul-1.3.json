@@ -1,0 +1,40 @@
+{
+  "id": "2025.iwclul-1.3",
+  "source_ids": {
+    "acl": "2025.iwclul-1.3",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.iwclul-1.3"
+  },
+  "title": "The world’s first South Sámi TTS – a revitalisation effort of an endangered language by reviving a legacy voice",
+  "authors": [
+    "Katri Hiovain-Asikainen",
+    "Thomas B. Kjærstad",
+    "Maja Lisa Kappfjell",
+    "Sjur N. Moshagen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.iwclul-1.3",
+  "pdf_url": "https://aclanthology.org/2025.iwclul-1.3.pdf",
+  "pdf_path": "raw/papers/2025.iwclul-1.3.pdf",
+  "pdf_source": "anthology",
+  "abstract": "South Sámi (ISO 639: SMA) is a severely endangered language spoken by the South Sámi people in Norway and Sweden. Estimates of the number of speakers vary from 500 to 600. Recent advances in speech technology and the general increase in popularity of spoken language and audio content have facilitated the development of modern speech technology tools also for minority languages, such as the Sámi languages. The current paper documents the development process of the world’s first South Sámi text-to-speech (TTS) system, using only digitized archive materials from 1989–1993 as the training material. To reach an end-user suitable quality of the TTS, we have used a neural, end-to-end approach with a rule-based text processing module. The aim of our project is to contribute to the language revitalization by offering tools for language users to use spoken language in new contexts. Since the modern written standard of South Sámi was established as late as in 1978, the rise of speech technology might encourage language use even for people who are not accustomed to the written standar.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "First TTS system for South Sámi, severely endangered language; directly advances low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

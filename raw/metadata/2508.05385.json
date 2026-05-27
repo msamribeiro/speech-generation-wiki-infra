@@ -1,0 +1,43 @@
+{
+  "id": "2508.05385",
+  "source_ids": {
+    "arxiv": "2508.05385"
+  },
+  "title": "A Scalable Pipeline for Enabling Non-Verbal Speech Generation and Understanding",
+  "authors": [
+    "Runchuan Ye",
+    "Yixuan Zhou",
+    "Renjie Yu",
+    "Zijian Lin",
+    "Kehan Li",
+    "Xiang Li",
+    "Xin Liu",
+    "Guoyang Zeng",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.05385",
+  "pdf_url": "https://arxiv.org/pdf/2508.05385.pdf",
+  "pdf_path": "raw/papers/2508.05385.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Non-verbal Vocalizations (NVs), such as laughter and sighs, are vital for conveying emotion and intention in human speech, yet most existing speech systems neglect them, which severely compromises communicative richness and emotional intelligence. Existing methods for NVs acquisition are either costly and unscalable (relying on manual annotation/recording) or unnatural (relying on rule-based synthesis). To address these limitations, we propose a highly scalable automatic annotation framework to label non-verbal phenomena from natural speech, which is low-cost, easily extendable, and inherently diverse and natural. This framework leverages a unified detection model to accurately identify NVs in natural speech and integrates them with transcripts via temporal-semantic alignment method. Using this framework, we created and released \\textbf{NonVerbalSpeech-38K}, a diverse, real-world dataset featuring 38,718 samples across 10 NV categories collected from in-the-wild media. Experimental results demonstrate that our dataset provides superior controllability for NVs generation and achieves comparable performance for NVs understanding.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Scalable pipeline for non-verbal speech generation and understanding",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2506.04397",
+  "source_ids": {
+    "arxiv": "2506.04397"
+  },
+  "title": "Can we reconstruct a dysarthric voice with the large speech model Parler TTS?",
+  "authors": [
+    "Ariadna Sanchez",
+    "Simon King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 6,
+  "published_date": "2025-06-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.04397",
+  "pdf_url": "https://arxiv.org/pdf/2506.04397.pdf",
+  "pdf_path": "raw/papers/2506.04397.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech disorders can make communication hard or even impossible for those who develop them. Personalised Text-to-Speech is an attractive option as a communication aid. We attempt voice reconstruction using a large speech model, with which we generate an approximation of a dysarthric speaker's voice prior to the onset of their condition. In particular, we investigate whether a state-of-the-art large speech model, Parler TTS, can generate intelligible speech while maintaining speaker identity. We curate a dataset and annotate it with relevant speaker and intelligibility information, and use this to fine-tune the model. Our results show that the model can indeed learn to generate from the distribution of this challenging data, but struggles to control intelligibility and to maintain consistent speaker identity. We propose future directions to improve controllability of this class of model, for the voice reconstruction task.",
+  "arxiv_comment": "Accepted at Interspeech 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Voice reconstruction using large TTS model for dysarthric speakers; directly advances personalized/assistive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

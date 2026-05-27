@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-1193",
+  "source_ids": {
+    "isca": "someki25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1193"
+  },
+  "title": "Context-Driven Dynamic Pruning for Large Speech Foundation Models",
+  "authors": [
+    "Masao Someki",
+    "Shikhar Bharadwaj",
+    "Atharva Anand Joshi",
+    "Chyi-Jiunn Lin",
+    "Jinchuan Tian",
+    "Jee-weon Jung",
+    "Markus MÃ¼ller",
+    "Nathan Susanj",
+    "Jing Liu",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/someki25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/someki25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech foundation models achieve strong generalization across languages and acoustic conditions, but require significant computational resources for inference. In the context of speech foundation models, pruning techniques have been studied that dynamically optimize model structures based on the target audio leveraging external context. In this work, we extend this line of research and propose context-driven dynamic pruning, a technique that optimizes the model computation depending on the context between different input frames and additional context during inference. We employ the Open Whisper-style Speech Model (OWSM) and incorporate speaker embeddings, acoustic event embeddings, and language information as additional context. By incorporating the speaker embedding, our method achieves a reduction of 56.7 GFLOPs while improving BLEU scores by a relative 25.7% compared to the fully fine-tuned OWSM model.",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Dynamic pruning for ASR speech foundation models; compression for recognition, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

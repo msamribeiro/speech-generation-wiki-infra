@@ -1,0 +1,34 @@
+{
+  "id": "2604.17647",
+  "source_ids": {
+    "arxiv": "2604.17647"
+  },
+  "title": "Prosody as Supervision: Bridging the Non-Verbal--Verbal for Multilingual Speech Emotion Recognition",
+  "authors": [
+    "Girish",
+    "Mohd Mujtaba Akhtar",
+    "Muskaan Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.17647",
+  "pdf_url": "https://arxiv.org/pdf/2604.17647.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this work, we introduce a paralinguistic supervision paradigm for low-resource multilingual speech emotion recognition (LRM-SER) that leverages non-verbal vocalizations to exploit prosody-centric emotion cues. Unlike conventional SER systems that rely heavily on labeled verbal speech and suffer from poor cross-lingual transfer, our approach reformulates LRM-SER as non-verbal-to-verbal transfer, where supervision from a labeled non-verbal source domain is adapted to unlabeled verbal speech across multiple target languages. To this end, we propose NOVA ARC, a geometry-aware framework that models affective structure in the Poincaré ball, discretizes paralinguistic patterns via a hyperbolic vector-quantized prosody codebook, and captures emotion intensity through a hyperbolic emotion lens. For unsupervised adaptation, NOVA-ARC performs optimal transport based prototype alignment between source emotion prototypes and target utterances, inducing soft supervision for unlabeled speech while being stabilized through consistency regularization. Experiments show that NOVA-ARC delivers the strongest performance under both non-verbal-to-verbal adaptation and the complementary verbal-to-verbal transfer setting, consistently outperforming Euclidean counterparts and strong SSL baselines. To the best of our knowledge, this work is the first to move beyond verbal-speech-centric supervision by introducing a non-verbal-to-verbal transfer paradigm for SER.",
+  "arxiv_comment": "Accepted to ACL 2026 (Main)",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Paralinguistic supervision for multilingual speech emotion recognition; primary task is SER not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

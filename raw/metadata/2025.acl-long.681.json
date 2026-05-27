@@ -1,0 +1,41 @@
+{
+  "id": "2025.acl-long.681",
+  "source_ids": {
+    "acl": "2025.acl-long.681",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.681"
+  },
+  "title": "SIFT-50M: A Large-Scale Multilingual Dataset for Speech Instruction Fine-Tuning",
+  "authors": [
+    "Prabhat Pandey",
+    "Rupak Vignesh Swaminathan",
+    "K V Vijay Girish",
+    "Arunasish Sen",
+    "Jian. Xie",
+    "Grant Strimel",
+    "Andreas Schwarz"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.681",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.681.pdf",
+  "pdf_path": "raw/papers/2025.acl-long.681.pdf",
+  "pdf_source": "anthology",
+  "abstract": "We introduce SIFT (Speech Instruction Fine-Tuning), a 50M-example dataset designed for instruction fine-tuning and pre-training of speech-text large language models (LLMs). SIFT-50M is built from publicly available speech corpora, which collectively contain 14K hours of speech, and leverages LLMs along with off-the-shelf expert models. The dataset spans five languages, encompassing a diverse range of speech understanding as well as controllable speech generation instructions. Using SIFT-50M, we train SIFT-LLM, which outperforms existing speech-text LLMs on instruction-following benchmarks while achieving competitive performance on foundational speech tasks. To support further research, we also introduce EvalSIFT, a benchmark dataset specifically designed to evaluate the instruction-following capabilities of speech-text LLMs.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Large-scale multilingual dataset for instruction fine-tuning speech-text LLMs; directly enables speech generation tasks.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

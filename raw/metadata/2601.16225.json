@@ -1,0 +1,40 @@
+{
+  "id": "2601.16225",
+  "source_ids": {
+    "arxiv": "2601.16225"
+  },
+  "title": "ES4R: Speech Encoding Based on Prepositive Affective Modeling for Empathetic Response Generation",
+  "authors": [
+    "Zhuoyue Gao",
+    "Xiaohui Wang",
+    "Xiaocui Yang",
+    "Wen Zhang",
+    "Daling Wang",
+    "Shi Feng",
+    "Yifei Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.16225",
+  "pdf_url": "https://arxiv.org/pdf/2601.16225.pdf",
+  "pdf_path": "raw/papers/2601.16225.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Empathetic speech dialogue requires not only understanding linguistic content but also perceiving rich paralinguistic information such as prosody, tone, and emotional intensity for affective understandings. Existing speech-to-speech large language models either rely on ASR transcription or use encoders to extract latent representations, often weakening affective information and contextual coherence in multi-turn dialogues. To address this, we propose \\textbf{ES4R}, a framework for speech-based empathetic response generation. Our core innovation lies in explicitly modeling structured affective context before speech encoding, rather than relying on implicit learning by the encoder or explicit emotion supervision. Specifically, we introduce a dual-level attention mechanism to capture turn-level affective states and dialogue-level affective dynamics. The resulting affective representations are then integrated with textual semantics through speech-guided cross-modal attention to generate empathetic responses. For speech output, we employ energy-based strategy selection and style fusion to achieve empathetic speech synthesis. ES4R consistently outperforms strong baselines in both automatic and human evaluations and remains robust across different LLM backbones.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Prepositive affective speech encoding for empathetic spoken dialogue response generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

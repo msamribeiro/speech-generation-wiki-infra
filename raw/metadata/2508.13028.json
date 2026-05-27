@@ -1,0 +1,40 @@
+{
+  "id": "2508.13028",
+  "source_ids": {
+    "arxiv": "2508.13028"
+  },
+  "title": "Integrating Feedback Loss from Bi-modal Sarcasm Detector for Sarcastic Speech Synthesis",
+  "authors": [
+    "Zhu Li",
+    "Yuqing Zhang",
+    "Xiyuan Gao",
+    "Devraj Raghuvanshi",
+    "Nagendra Kumar",
+    "Shekhar Nayak",
+    "Matt Coler"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.13028",
+  "pdf_url": "https://arxiv.org/pdf/2508.13028.pdf",
+  "pdf_path": "raw/papers/2508.13028.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Sarcastic speech synthesis, which involves generating speech that effectively conveys sarcasm, is essential for enhancing natural interactions in applications such as entertainment and human-computer interaction. However, synthesizing sarcastic speech remains a challenge due to the nuanced prosody that characterizes sarcasm, as well as the limited availability of annotated sarcastic speech data. To address these challenges, this study introduces a novel approach that integrates feedback loss from a bi-modal sarcasm detection model into the TTS training process, enhancing the model's ability to capture and convey sarcasm. In addition, by leveraging transfer learning, a speech synthesis model pre-trained on read speech undergoes a two-stage fine-tuning process. First, it is fine-tuned on a diverse dataset encompassing various speech styles, including sarcastic speech. In the second stage, the model is further refined using a dataset focused specifically on sarcastic speech, enhancing its ability to generate sarcasm-aware speech. Objective and subjective evaluations demonstrate that our proposed methods improve the quality, naturalness, and sarcasm-awareness of synthesized speech.",
+  "arxiv_comment": "Speech Synthesis Workshop 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Sarcastic speech synthesis framework using bimodal sarcasm detector feedback loss; directly advances expressive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

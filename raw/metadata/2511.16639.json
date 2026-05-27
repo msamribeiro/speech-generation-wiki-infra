@@ -1,0 +1,35 @@
+{
+  "id": "2511.16639",
+  "source_ids": {
+    "arxiv": "2511.16639"
+  },
+  "title": "Codec2Vec: Self-Supervised Speech Representation Learning Using Neural Speech Codecs",
+  "authors": [
+    "Wei-Cheng Tseng",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.16639",
+  "pdf_url": "https://arxiv.org/pdf/2511.16639.pdf",
+  "pdf_path": "raw/papers/2511.16639.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in neural audio codecs have not only enabled superior audio compression but also enhanced speech synthesis techniques. Researchers are now exploring their potential as universal acoustic feature extractors for a broader range of speech processing tasks. Building on this trend, we introduce Codec2Vec, the first speech representation learning framework that relies exclusively on discrete audio codec units. This approach offers several advantages, including improved data storage and transmission efficiency, faster training, and enhanced data privacy. We explore masked prediction with various training target derivation strategies to thoroughly understand the effectiveness of this framework. Evaluated on the SUPERB benchmark, Codec2Vec achieves competitive performance compared to continuous-input models while reducing storage requirements by up to 16.5x and training time by 2.3x, showcasing its scalability and efficiency.",
+  "arxiv_comment": "To be presented at ASRU 2025",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Codec2Vec: first speech representation learning framework using only neural codec tokens for diverse processing tasks",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

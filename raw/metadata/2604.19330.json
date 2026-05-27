@@ -1,0 +1,35 @@
+{
+  "id": "2604.19330",
+  "source_ids": {
+    "arxiv": "2604.19330"
+  },
+  "title": "Text-To-Speech with Chain-of-Details: modeling temporal dynamics in speech generation",
+  "authors": [
+    "Jianbo Ma",
+    "Richard Cartwright"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.19330",
+  "pdf_url": "https://arxiv.org/pdf/2604.19330.pdf",
+  "pdf_path": "raw/papers/2604.19330.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in Text-To-Speech (TTS) synthesis have seen the popularity of multi-stage approaches that first predict semantic tokens and then generate acoustic tokens. In this paper, we extend the coarse-to-fine generation paradigm to the temporal domain and introduce Chain-of-Details (CoD), a novel framework that explicitly models temporal coarse-to-fine dynamics in speech generation using a cascaded architecture. Our method progressively refines temporal details across multiple stages, with each stage targeting a specific temporal granularity. All temporal detail predictions are performed using a shared decoder, enabling efficient parameter utilization across different temporal resolutions. Notably, we observe that the lowest detail level naturally performs phonetic planning without the need for an explicit phoneme duration predictor. We evaluate our method on several datasets and compare it against several baselines. Experimental results show that CoD achieves competitive performance with significantly fewer parameters than existing approaches. Our findings demonstrate that explicit modeling of temporal dynamics with the CoD framework leads to more natural speech synthesis.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Chain-of-Details TTS explicitly modeling temporal coarse-to-fine dynamics for semantic and acoustic token generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

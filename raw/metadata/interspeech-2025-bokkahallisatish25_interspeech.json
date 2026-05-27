@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-bokkahallisatish25_interspeech",
+  "source_ids": {
+    "isca": "bokkahallisatish25_interspeech",
+    "doi": null
+  },
+  "title": "Hear Me Out: Interactive evaluation and bias discovery platform for speech-to-speech conversational AI",
+  "authors": [
+    "Shree Harsha Bokkahalli Satish",
+    "Gustav Eje Henter",
+    "Ãva SzÃ©kely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/bokkahallisatish25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/bokkahallisatish25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-bokkahallisatish25_interspeech.pdf",
+  "pdf_source": "isca",
+  "abstract": "A new wave of speech foundation models is emerging, capable of processing spoken language directly from audio. These models promise more expressive and emotionally aware interactions by retaining prosodic information throughout conversations. âHear Me Outâ evaluates their ability to preserve crucial vocal cues, enabling users to explore how variations in speaker characteristics and paralinguistic features influence AI responses. Through real-time voice conversion, users can ask a question and then re-ask it with a modified one, immediately observing differences in response tone, phrasing, and behavior. The system presents paired responses side by side, offering direct comparisons of AI interpretations of both the original and transformed voices, thereby highlighting potential biases. By creating inquiry into speaker modeling, contextual understanding, and fairness, this immersive experience encourages users to reflect on identity, voice, and also promote inclusive future research.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Interactive evaluation platform for speech-to-speech conversational AI; core SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2025.clicit-1.27",
+  "source_ids": {
+    "acl": "2025.clicit-1.27",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.clicit-1.27"
+  },
+  "title": "Veras Audire Et Reddere Voces: A Corpus of Prosodically-Correct Latin Poetic Audio from Large-Language-Model TTS",
+  "authors": [
+    "Michele Ciletti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.clicit-1.27",
+  "pdf_url": "https://aclanthology.org/2025.clicit-1.27.pdf",
+  "pdf_path": "raw/papers/2025.clicit-1.27.pdf",
+  "pdf_source": "anthology",
+  "abstract": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "TTS corpus for prosodically correct Latin poetry using LLM-based TTS; relevant as low-resource TTS dataset contribution (no abstract available).",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

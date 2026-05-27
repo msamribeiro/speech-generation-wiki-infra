@@ -1,0 +1,36 @@
+{
+  "id": "2510.20441",
+  "source_ids": {
+    "arxiv": "2510.20441"
+  },
+  "title": "UniSE: A Unified Framework for Decoder-only Autoregressive LM-based Speech Enhancement",
+  "authors": [
+    "Haoyin Yan",
+    "Chengwei Liu",
+    "Shaofei Xue",
+    "Xiaotao Liang",
+    "Zheng Xue"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.20441",
+  "pdf_url": "https://arxiv.org/pdf/2510.20441.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The development of neural audio codecs (NACs) has largely promoted applications of language models (LMs) to speech processing and understanding. However, there lacks the verification on the effectiveness of autoregressive (AR) LMbased models in unifying different sub-tasks of speech enhancement (SE). In this work, we propose UniSE, a unified decoder-only LM-based framework to handle different SE tasks including speech restoration, target speaker extraction and speech separation. It takes input speech features as conditions and generates discrete tokens of the target speech using AR modeling, which facilitates a compatibility between distinct learning patterns of multiple tasks. Experiments on several benchmarks indicate the proposed UniSE can achieve competitive performance compared to discriminative and generative baselines, showing the capacity of LMs in unifying SE tasks. The demo page is available here: https://github.com/hyyan2k/UniSE.",
+  "arxiv_comment": "5 pages, submitted to ICASSP 2026",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Autoregressive LM for speech enhancement; primary task is enhancement, not synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

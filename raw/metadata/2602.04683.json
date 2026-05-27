@@ -1,0 +1,40 @@
+{
+  "id": "2602.04683",
+  "source_ids": {
+    "arxiv": "2602.04683"
+  },
+  "title": "UniAudio 2.0: A Unified Audio Language Model with Text-Aligned Factorized Audio Tokenization",
+  "authors": [
+    "Dongchao Yang",
+    "Yuanyuan Wang",
+    "Dading Chong",
+    "Songxiang Liu",
+    "Xixin Wu",
+    "Helen Meng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.04683",
+  "pdf_url": "https://arxiv.org/pdf/2602.04683.pdf",
+  "pdf_path": "raw/papers/2602.04683.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We study two foundational problems in audio language models: (1) how to design an audio tokenizer that can serve as an intermediate representation for both understanding and generation; and (2) how to build an audio foundation model that generalizes in few-shot and zero-shot settings, analogous to large language models. To this end, we make the following two contributions. First, we propose ReasoningCodec, a discrete audio codec that factorizes audio into (i) reasoning tokens, which encode text-aligned, high-level analysis and planning representations for audio understanding and hierarchical generation, and (ii) reconstruction tokens, which encode semantic-rich acoustic cues for high-fidelity waveform reconstruction. This design achieves understanding performance comparable to strong continuous representations while improving generation quality and reconstruction fidelity over prior discrete tokenizers. Second, we introduce a unified autoregressive architecture for text and audio, together with multi-stage training and multi-task data construction. Using this framework, we train UniAudio 2.0 on 100B text tokens and 60B audio tokens. Across a wide range of speech, sound, and music tasks, UniAudio 2.0 performs competitively on in-domain evaluations and demonstrates strong few-shot and zero-shot generalization to unseen tasks. Demo, code, and checkpoints will be available at \\href{https://dongchaoyang.top/UniAudio2Demo/}{https://dongchaoyang.top/UniAudio2Demo/}.",
+  "arxiv_comment": null,
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "UniAudio 2.0: unified audio LM with text-aligned factorized tokenization; core codec + generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

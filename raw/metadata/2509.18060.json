@@ -1,0 +1,43 @@
+{
+  "id": "2509.18060",
+  "source_ids": {
+    "arxiv": "2509.18060"
+  },
+  "title": "TMD-TTS: A Unified Tibetan Multi-Dialect Text-to-Speech Framework for Ü-Tsang, Amdo and Kham Speech Dataset Generation",
+  "authors": [
+    "Yutong Liu",
+    "Ziyue Zhang",
+    "Ban Ma-bao",
+    "Renzeng Duojie",
+    "Yuqing Cai",
+    "Yongbin Yu",
+    "Xiangxiang Wang",
+    "Fan Gao",
+    "Cheng Huang",
+    "Nyima Tashi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.18060",
+  "pdf_url": "https://arxiv.org/pdf/2509.18060.pdf",
+  "pdf_path": "raw/papers/2509.18060.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Tibetan is a low-resource language with limited parallel speech corpora spanning its three major dialects (Ü-Tsang, Amdo, and Kham), limiting progress in speech modeling. To address this issue, we propose TMD-TTS, a unified Tibetan multi-dialect text-to-speech (TTS) framework that synthesizes parallel dialectal speech from explicit dialect labels. Our method features a dialect fusion module and a Dialect-Specialized Dynamic Routing Network (DSDR-Net) to capture fine-grained acoustic and linguistic variations across dialects. Extensive objective and subjective evaluations demonstrate that TMD-TTS significantly outperforms baselines in dialectal expressiveness. We further validate the quality and utility of the synthesized speech through a challenging Speech-to-Speech Dialect Conversion (S2SDC) task.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Unified Tibetan multi-dialect TTS framework; directly advances low-resource multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

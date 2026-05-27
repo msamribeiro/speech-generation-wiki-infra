@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-1531",
+  "source_ids": {
+    "isca": "zhou25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-1531"
+  },
+  "title": "Simple and Effective Content Encoder for Singing Voice Conversion via SSL-Embedding Dimension Reduction",
+  "authors": [
+    "Wangjin Zhou",
+    "Tianjiao Du",
+    "Chenglin Xu",
+    "Sheng Li",
+    "Yi Zhao",
+    "Tatsuya Kawahara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhou25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhou25e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1531.pdf",
+  "pdf_source": "isca",
+  "abstract": "In any-to-any singing voice conversion (SVC), singing content can be encoded using either token-based or embedding-based approaches. Token-based methods often struggle with accurate content reconstruction, while embedding-based methods face significant timbre leakage. To address this trade-off, we propose a novel self-supervised learning (SSL)-based content representation method. By randomly selecting a subset of channels during training to serve as the new embedding and fixing them for subsequent SVC training, our approach achieves superior content modeling compared to token-based methods while mitigating timbre leakage typically observed in embedding-based approaches. We validate the effectiveness and generalizability of our method across SSL-based embeddings, SSL-based soft embeddings, and ContentVec.",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Novel SSL content encoding via dimension reduction for any-to-any singing voice conversion; advances SVC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

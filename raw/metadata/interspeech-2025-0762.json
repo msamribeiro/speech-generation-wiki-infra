@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0762",
+  "source_ids": {
+    "isca": "tannander25_interspeech",
+    "doi": "10.21437/Interspeech.2025-762"
+  },
+  "title": "Intrasentential English in Swedish TTS: perceived English-accentedness",
+  "authors": [
+    "Christina TÃ¥nnander",
+    "David House",
+    "Jonas Beskow",
+    "Jens Edlund"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/tannander25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/tannander25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0762.pdf",
+  "pdf_source": "isca",
+  "abstract": "English names and expressions are frequently inserted into Swedish text. Humans intuitively adjust the degree of English pronunciation of such insertions. This work aims at a Swedish text-to-speech synthesis (TTS) capable of similar controlled adaptation. We focus on two key aspects: (1) the development of a TTS system with controllable degrees of perceived English-accentedness (PEA); and (2) the exploration of human preferences related to PEA. We trained a Swedish TTS voice on Swedish and English sentences with a conditioning parameter for language (English-accentedness, EA) on a scale from 0 to 1, and estimated a psychometric mapping of the perceived effect of EA to a perceptual scale (PEA) through perception tests. PEA was then used in Best-Worst listening tests presenting English insertions with varying PEA. The results confirm the effectiveness of the training and the PEA scale, and that listener preferences change with different insertions.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Swedish TTS with controllable English-accentedness for intrasentential code-switching; advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

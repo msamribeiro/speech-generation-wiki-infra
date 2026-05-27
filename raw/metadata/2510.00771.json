@@ -1,0 +1,35 @@
+{
+  "id": "2510.00771",
+  "source_ids": {
+    "arxiv": "2510.00771"
+  },
+  "title": "UniverSR: Unified and Versatile Audio Super-Resolution via Vocoder-Free Flow Matching",
+  "authors": [
+    "Woongjib Choi",
+    "Sangmin Lee",
+    "Hyungseob Lim",
+    "Hong-Goo Kang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.00771",
+  "pdf_url": "https://arxiv.org/pdf/2510.00771.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this paper, we present a vocoder-free framework for audio super-resolution that employs a flow matching generative model to capture the conditional distribution of complex-valued spectral coefficients. Unlike conventional two-stage diffusion-based approaches that predict a mel-spectrogram and then rely on a pre-trained neural vocoder to synthesize waveforms, our method directly reconstructs waveforms via the inverse Short-Time Fourier Transform (iSTFT), thereby eliminating the dependence on a separate vocoder. This design not only simplifies end-to-end optimization but also overcomes a critical bottleneck of two-stage pipelines, where the final audio quality is fundamentally constrained by vocoder performance. Experiments show that our model consistently produces high-fidelity 48 kHz audio across diverse upsampling factors, achieving state-of-the-art performance on both speech and general audio datasets.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Audio super-resolution / bandwidth extension is speech enhancement, not speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2601.20481",
+  "source_ids": {
+    "arxiv": "2601.20481"
+  },
+  "title": "Erasing Your Voice Before It's Heard: Training-free Speaker Unlearning for Zero-shot Text-to-Speech",
+  "authors": [
+    "Myungjin Lee",
+    "Eunji Shin",
+    "Jiyoung Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.20481",
+  "pdf_url": "https://arxiv.org/pdf/2601.20481.pdf",
+  "pdf_path": "raw/papers/2601.20481.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Modern zero-shot text-to-speech (TTS) models offer unprecedented expressivity but also pose serious crime risks, as they can synthesize voices of individuals who never consented. In this context, speaker unlearning aims to prevent the generation of specific speaker identities upon request. Existing approaches, reliant on retraining, are costly and limited to speakers seen in the training set. We present TruS, a training-free speaker unlearning framework that shifts the paradigm from data deletion to inference-time control. TruS steers identity-specific hidden activations to suppress target speakers while preserving other attributes (e.g., prosody and emotion). Experimental results show that TruS effectively prevents voice generation on both seen and unseen opt-out speakers, establishing a scalable safeguard for speech synthesis. The demo and code are available on http://mmai.ewha.ac.kr/trus.",
+  "arxiv_comment": "ICASSP'2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Training-free speaker unlearning for zero-shot TTS to prevent unauthorized voice synthesis upon request",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

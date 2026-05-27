@@ -1,0 +1,37 @@
+{
+  "id": "2603.09180",
+  "source_ids": {
+    "arxiv": "2603.09180"
+  },
+  "title": "DuplexCascade: Full-Duplex Speech-to-Speech Dialogue with VAD-Free Cascaded ASR-LLM-TTS Pipeline and Micro-Turn Optimization",
+  "authors": [
+    "Jianing Yang",
+    "Yusuke Fujita",
+    "Yui Sudo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.09180",
+  "pdf_url": "https://arxiv.org/pdf/2603.09180.pdf",
+  "pdf_path": "raw/papers/2603.09180.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialog systems with cascaded ASR-LLM-TTS modules retain strong LLM intelligence, but VAD segmentation often forces half-duplex turns and brittle control. On the other hand, VAD-free end-to-end model support full-duplex interaction but is hard to maintain conversational intelligence. In this paper, we present DuplexCascade, a VAD-free cascaded streaming pipeline for full-duplex speech-to-speech dialogue. Our key idea is to convert conventional utterance-wise long turns into chunk-wise micro-turn interactions, enabling rapid bidirectional exchange while preserving the strengths of a capable text LLM. To reliably coordinate turn-taking and response timing, we introduce a set of conversational special control tokens that steer the LLM's behavior under streaming constraints. On Full-DuplexBench and VoiceBench, DuplexCascade delivers state-of-the-art full-duplex turn-taking and strong conversational intelligence among open-source speech-to-speech dialogue systems.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "VAD-free cascaded full-duplex spoken dialogue pipeline; directly advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

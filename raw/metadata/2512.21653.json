@@ -1,0 +1,36 @@
+{
+  "id": "2512.21653",
+  "source_ids": {
+    "arxiv": "2512.21653"
+  },
+  "title": "Semantic Codebooks as Effective Priors for Neural Speech Compression",
+  "authors": [
+    "Liuyang Bai",
+    "Weiyi Lu",
+    "Li Guo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.21653",
+  "pdf_url": "https://arxiv.org/pdf/2512.21653.pdf",
+  "pdf_path": "raw/papers/2512.21653.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech codecs are traditionally optimized for waveform fidelity, allocating bits to preserve acoustic detail even when much of it can be inferred from linguistic structure. This leads to inefficient compression and suboptimal performance on downstream recognition tasks. We propose SemDAC, a semantic-aware neural audio codec that leverages semantic codebooks as effective priors for speech compression. In SemDAC, the first quantizer in a residual vector quantization (RVQ) stack is distilled from HuBERT features to produce semantic tokens that capture phonetic content, while subsequent quantizers model residual acoustics. A FiLM-conditioned decoder reconstructs audio conditioned on the semantic tokens, improving efficiency in the use of acoustic codebooks. Despite its simplicity, this design proves highly effective: SemDAC outperforms DAC across perceptual metrics and achieves lower WER when running Whisper on reconstructed speech, all while operating at substantially lower bitrates (e.g., 0.95 kbps vs. 2.5 kbps for DAC). These results demonstrate that semantic codebooks provide an effective inductive bias for neural speech compression, producing compact yet recognition-friendly representations.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Semantic-aware neural audio codec using semantic codebooks as priors for efficient speech compression",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

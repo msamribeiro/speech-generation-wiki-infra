@@ -1,0 +1,35 @@
+{
+  "id": "2603.09307",
+  "source_ids": {
+    "arxiv": "2603.09307"
+  },
+  "title": "Paralinguistic Emotion-Aware Validation Timing Detection in Japanese Empathetic Spoken Dialogue",
+  "authors": [
+    "Zi Haur Pang",
+    "Yahui Fu",
+    "Yuan Gao",
+    "Tatsuya Kawahara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.09307",
+  "pdf_url": "https://arxiv.org/pdf/2603.09307.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Emotional Validation is a psychotherapy communication technique that involves recognizing, understanding, and explicitly acknowledging another person's feelings and actions, which strengthens alliance and reduces negative affect. To maximize the emotional support provided by validation, it is crucial to deliver it with appropriate timing and frequency. This study investigates validation timing detection from the speech perspective. Leveraging both paralinguistic and emotional information, we propose a paralinguistic- and emotion-aware model for validation timing detection without relying on textual context. Specifically, we first conduct continued self-supervised training and fine-tuning on different HuBERT backbones to obtain (i) a paralinguistics-aware Self-Supervised Learning (SSL) encoder and (ii) a multi-task speech emotion classification encoder. We then fuse these encoders and further fine-tune the combined model on the downstream validation timing detection task. Experimental evaluations on the TUT Emotional Storytelling Corpus (TESC) compare multiple models, fusion mechanisms, and training strategies, and demonstrate that the proposed approach achieves significant improvements over conventional speech baselines. Our results indicate that non-linguistic speech cues, when integrated with affect-related representations, carry sufficient signal to decide when validation should be expressed, offering a speech-first pathway toward more empathetic human-robot interaction.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Emotional validation timing detection in Japanese dialogue; prosodic understanding task not speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

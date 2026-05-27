@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2586",
+  "source_ids": {
+    "isca": "kim25t_interspeech",
+    "doi": "10.21437/Interspeech.2025-2586",
+    "arxiv": "2511.14824"
+  },
+  "title": "Spotlight-TTS: Spotlighting the Style via Voiced-Aware Style Extraction and Style Direction Adjustment for Expressive Text-to-Speech",
+  "authors": [
+    "Nam-Gyu Kim",
+    "Deok-Hyeon Cho",
+    "Seung-Bin Kim",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kim25t_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2511.14824.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2586.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in expressive text-to-speech (TTS) have introduced diverse methods based on style embedding extracted from reference speech. However, synthesizing high-quality expressive speech remains challenging. We propose Spotlight-TTS, which exclusively emphasizes style via voiced-aware style extraction and style direction adjustment. Voiced-aware style extraction focuses on voiced regions highly related to style while maintaining continuity across different speech regions to improve expressiveness. We adjust the direction of the extracted style for optimal integration into the TTS model, which improves speech quality. Experimental results demonstrate that Spotlight-TTS achieves superior performance compared to baseline models in terms of expressiveness, overall speech quality, and style transfer capability. Our audio samples are publicly available.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Voiced-aware style extraction and adjustment for expressive TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

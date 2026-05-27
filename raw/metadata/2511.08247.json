@@ -1,0 +1,34 @@
+{
+  "id": "2511.08247",
+  "source_ids": {
+    "arxiv": "2511.08247"
+  },
+  "title": "ParliaBench: An Evaluation and Benchmarking Framework for LLM-Generated Parliamentary Speech",
+  "authors": [
+    "Marios Koniaris",
+    "Argyro Tsipi",
+    "Panayiotis Tsanakas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.08247",
+  "pdf_url": "https://arxiv.org/pdf/2511.08247.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Parliamentary speech generation presents specific challenges for large language models beyond standard text generation tasks. Unlike general text generation, parliamentary speeches require not only linguistic quality but also political authenticity and ideological consistency. Current language models lack specialized training for parliamentary contexts, and existing evaluation methods focus on standard NLP metrics rather than political authenticity. To address this, we present ParliaBench, a benchmark for parliamentary speech generation. We constructed a dataset of speeches from UK Parliament to enable systematic model training. We introduce an evaluation framework combining computational metrics with LLM-as-a-judge assessments for measuring generation quality across three dimensions: linguistic quality, semantic coherence, and political authenticity. We propose two novel embedding-based metrics, Political Spectrum Alignment and Party Alignment, to quantify ideological positioning. We fine-tuned five large language models (LLMs), generated 28k speeches, and evaluated them using our framework, comparing baseline and fine-tuned models. Results show that fine-tuning produces statistically significant improvements across the majority of metrics and our novel metrics demonstrate strong discriminative power for political dimensions.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Benchmark for parliamentary speech generation; text-based LLM task, no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

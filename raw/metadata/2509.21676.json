@@ -1,0 +1,34 @@
+{
+  "id": "2509.21676",
+  "source_ids": {
+    "arxiv": "2509.21676"
+  },
+  "title": "HuLA: Prosody-Aware Anti-Spoofing with Multi-Task Learning for Expressive and Emotional Synthetic Speech",
+  "authors": [
+    "Aurosweta Mahapatra",
+    "Ismail Rasim Ulgen",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.21676",
+  "pdf_url": "https://arxiv.org/pdf/2509.21676.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Current anti-spoofing systems remain vulnerable to expressive and emotional synthetic speech, since they rarely leverage prosody as a discriminative cue. Prosody is central to human expressiveness and emotion, and humans instinctively use prosodic cues such as F0 patterns and voiced/unvoiced structure to distinguish natural from synthetic speech. In this paper, we propose HuLA, a two-stage prosody-aware multi-task learning framework for spoof detection. In Stage 1, a self-supervised learning (SSL) backbone is trained on real speech with auxiliary tasks of F0 prediction and voiced/unvoiced classification, enhancing its ability to capture natural prosodic variation similar to human perceptual learning. In Stage 2, the model is jointly optimized for spoof detection and prosody tasks on both real and synthetic data, leveraging prosodic awareness to detect mismatches between natural and expressive synthetic speech. Experiments show that HuLA consistently outperforms strong baselines on challenging out-of-domain dataset, including expressive, emotional, and cross-lingual attacks. These results demonstrate that explicit prosodic supervision, combined with SSL embeddings, substantially improves robustness against advanced synthetic speech attacks.",
+  "arxiv_comment": "Submitted to IEEE Transactions on Affective Computing",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Prosody-aware anti-spoofing for emotional synthetic speech; detection is the contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

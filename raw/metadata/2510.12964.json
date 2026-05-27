@@ -1,0 +1,34 @@
+{
+  "id": "2510.12964",
+  "source_ids": {
+    "arxiv": "2510.12964"
+  },
+  "title": "VCTR: A Transformer-Based Model for Non-parallel Voice Conversion",
+  "authors": [
+    "Maharnab Saikia"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.12964",
+  "pdf_url": "https://arxiv.org/pdf/2510.12964.pdf",
+  "pdf_path": "raw/papers/2510.12964.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Non-parallel voice conversion aims to convert voice from a source domain to a target domain without paired training data. Cycle-Consistent Generative Adversarial Networks (CycleGAN) and Variational Autoencoders (VAE) have been used for this task, but these models suffer from difficult training and unsatisfactory results. Later, Contrastive Voice Conversion (CVC) was introduced, utilizing a contrastive learning-based approach to address these issues. However, these methods use CNN-based generators, which can capture local semantics but lacks the ability to capture long-range dependencies necessary for global semantics. In this paper, we propose VCTR, an efficient method for non-parallel voice conversion that leverages the Hybrid Perception Block (HPB) and Dual Pruned Self-Attention (DPSA) along with a contrastive learning-based adversarial approach. The code can be found in https://github.com/Maharnab-Saikia/VCTR.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Transformer-based non-parallel voice conversion using contrastive learning approach",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

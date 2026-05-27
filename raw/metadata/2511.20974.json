@@ -1,0 +1,56 @@
+{
+  "id": "2511.20974",
+  "source_ids": {
+    "arxiv": "2511.20974"
+  },
+  "title": "RosettaSpeech: Zero-Shot Speech-to-Speech Translation without Parallel Speech",
+  "authors": [
+    "Zhisheng Zheng",
+    "Xiaohang Sun",
+    "Tuan Dinh",
+    "Abhishek Yanamandra",
+    "Abhinav Jain",
+    "Zhu Liu",
+    "Sunil Hadap",
+    "Vimal Bhat",
+    "Manoj Aggarwal",
+    "Gerard Medioni"
+  ],
+  "authors_full": [
+    "Zhisheng Zheng",
+    "Xiaohang Sun",
+    "Tuan Dinh",
+    "Abhishek Yanamandra",
+    "Abhinav Jain",
+    "Zhu Liu",
+    "Sunil Hadap",
+    "Vimal Bhat",
+    "Manoj Aggarwal",
+    "Gerard Medioni",
+    "David Harwath"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.20974",
+  "pdf_url": "https://arxiv.org/pdf/2511.20974.pdf",
+  "pdf_path": "raw/papers/2511.20974.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end speech-to-speech translation (S2ST) systems typically struggle with a critical data bottleneck: the scarcity of parallel speech-to-speech corpora. To overcome this, we introduce RosettaSpeech, a novel zero-shot framework trained exclusively on monolingual speech-text data augmented by machine translation supervision. Unlike prior works that rely on complex cascaded pseudo-labeling, our approach strategically utilizes text as a semantic bridge during training to synthesize translation targets, thereby eliminating the need for parallel speech pairs while maintaining a direct, end-to-end inference pipeline. Empirical evaluations on the CVSS-C benchmark demonstrate that RosettaSpeech achieves state-of-the-art zero-shot performance, surpassing leading baselines by significant margins - achieving ASR-BLEU scores of 25.17 for German-to-English (+27% relative gain) and 29.86 for Spanish-to-English (+14%). Crucially, our model effectively preserves the source speaker's voice without ever seeing paired speech data. We further analyze the impact of data scaling and demonstrate the model's capability in many-to-one translation, offering a scalable solution for extending high-quality S2ST to \"text-rich, speech-poor\" languages.",
+  "arxiv_comment": "12 pages, 4 figures",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "RosettaSpeech: zero-shot S2ST without parallel speech; core generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

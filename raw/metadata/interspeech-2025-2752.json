@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2752",
+  "source_ids": {
+    "isca": "rastogi25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2752"
+  },
+  "title": "Towards Sentence Level Imagined Speech Generation from EEG signals",
+  "authors": [
+    "Sparsh Rastogi",
+    "Harsh Dadwal",
+    "Khushboo Modi",
+    "Jatin Bedi",
+    "Jasmeet Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/rastogi25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/rastogi25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Brain-Computer Interfaces (BCIs) have emerged as alternative means of communication for individuals with speech & motor impairments. These systems enable patients to express themselves without any articulation, by decoding speech from neural activity. However, most of the existing studies rely on invasive surgical procedures, with limited studies using non-invasive signals for phoneme or word level classification, thus covering a short vocabulary. To the best of our knowledge, this study presents the first demonstration of a framework for sentence level imagined speech synthesis from non-invasive electroencephalography (EEG) signals. Our model uses an Efficient-Net based masked auto-encoder approach for learning feature embeddings from EEG signals which are then used for fine-tuning BERT for next token generation. For this study, Large Spanish Speech EEG Dataset has been used with a mixed subject approach for both training & evaluation purposes, resulting into a 48.92% accuracy.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Sentence-level imagined speech generation from EEG for BCI; borderline - BCI-based TTS for communication.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

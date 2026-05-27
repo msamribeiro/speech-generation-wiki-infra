@@ -1,0 +1,42 @@
+{
+  "id": "2508.09702",
+  "source_ids": {
+    "arxiv": "2508.09702"
+  },
+  "title": "$\\text{M}^3\\text{PDB}$: A Multimodal, Multi-Label, Multilingual Prompt Database for Speech Generation",
+  "authors": [
+    "Boyu Zhu",
+    "Cheng Gong",
+    "Muyang Wu",
+    "Ruihao Jing",
+    "Fan Liu",
+    "Xiaolei Zhang",
+    "Chi Zhang",
+    "Xuelong Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.09702",
+  "pdf_url": "https://arxiv.org/pdf/2508.09702.pdf",
+  "pdf_path": "raw/papers/2508.09702.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in zero-shot speech generation have enabled models to synthesize speech that mimics speaker identity and speaking style from speech prompts. However, these models' effectiveness is significantly limited in real-world scenarios where high-quality speech prompts are absent, incomplete, or out of domain. This issue arises primarily from a significant quality mismatch between the speech data utilized for model training and the input prompt speech during inference. To address this, we introduce $\\text{M}^3\\text{PDB}$, the first large-scale, multi-modal, multi-label, and multilingual prompt database designed for robust prompt selection in speech generation. Our dataset construction leverages a novel multi-modal, multi-agent annotation framework, enabling precise and hierarchical labeling across diverse modalities. Furthermore, we propose a lightweight yet effective prompt selection strategy tailored for real-time, resource-constrained inference settings. Experimental results demonstrate that our proposed database and selection strategy effectively support various challenging speech generation scenarios. We hope our work can inspire the community to shift focus from improving performance on standard benchmarks to addressing more realistic and diverse application scenarios in speech generation. Code and dataset are available at: https://github.com/hizening/M3PDB.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Multimodal prompt database supporting zero-shot speech generation evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

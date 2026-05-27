@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-2206",
+  "source_ids": {
+    "isca": "phukan25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-2206"
+  },
+  "title": "Towards Fusion of Neural Audio Codec-based Representations with Spectral for Heart Murmur Classification via Bandit-based Cross-Attention Mechanism",
+  "authors": [
+    "Orchid Chetia Phukan",
+    "Girish",
+    "Mohd Mujtaba Akhtar",
+    "Swarup Ranjan Behera",
+    "Priyabrata Mallick",
+    "Santanu Roy",
+    "Arun Balaji Buduru",
+    "Rajesh Sharma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/phukan25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/phukan25c_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "In this study, we focus on heart murmur classification (HMC) and hypothesize that combining neural audio codec representations (NACRs) such as EnCodec with spectral features (SFs), such as MFCC, will yield superior performance. We believe such fusion will trigger their complementary behavior as NACRs excel at capturing fine-grained acoustic patterns such as rhythm changes, spectral features focus on frequency-domain properties such as harmonic structure, spectral energy distribution crucial for analyzing the complex of heart sounds. To this end, we propose, BAOMI, a novel framework banking on novel bandit-based cross-attention mechanism for effective fusion. Here, a agent provides more weightage to most important heads in multi-head cross-attention mechanism and helps in mitigating the noise. With BAOMI, we report the topmost performance in comparison to individual NACRs, SFs, and baseline fusion techniques and setting new state-of-the-art.",
+  "task": [],
+  "relevance_score": 0.18,
+  "relevance_note": "Heart murmur classification using EnCodec representations; medical audio classification, not speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

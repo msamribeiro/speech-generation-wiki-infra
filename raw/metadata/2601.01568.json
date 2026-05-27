@@ -1,0 +1,39 @@
+{
+  "id": "2601.01568",
+  "source_ids": {
+    "arxiv": "2601.01568"
+  },
+  "title": "MM-Sonate: Multimodal Controllable Audio-Video Generation with Zero-Shot Voice Cloning",
+  "authors": [
+    "Chunyu Qiang",
+    "Jun Wang",
+    "Xiaopeng Wang",
+    "Kang Yin",
+    "Yuxin Guo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.01568",
+  "pdf_url": "https://arxiv.org/pdf/2601.01568.pdf",
+  "pdf_path": "raw/papers/2601.01568.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Joint audio-video generation aims to synthesize synchronized multisensory content, yet current unified models struggle with fine-grained acoustic control, particularly for identity-preserving speech. Existing approaches either suffer from temporal misalignment due to cascaded generation or lack the capability to perform zero-shot voice cloning within a joint synthesis framework. In this work, we present MM-Sonate, a multimodal flow-matching framework that unifies controllable audio-video joint generation with zero-shot voice cloning capabilities. Unlike prior works that rely on coarse semantic descriptions, MM-Sonate utilizes a unified instruction-phoneme input to enforce strict linguistic and temporal alignment. To enable zero-shot voice cloning, we introduce a timbre injection mechanism that effectively decouples speaker identity from linguistic content. Furthermore, addressing the limitations of standard classifier-free guidance in multimodal settings, we propose a noise-based negative conditioning strategy that utilizes natural noise priors to significantly enhance acoustic fidelity. Empirical evaluations demonstrate that MM-Sonate establishes new state-of-the-art performance in joint generation benchmarks, significantly outperforming baselines in lip synchronization and speech intelligibility, while achieving voice cloning fidelity comparable to specialized Text-to-Speech systems.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Joint audio-video generation with zero-shot voice cloning for synchronized multimodal content synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

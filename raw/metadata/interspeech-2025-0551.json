@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-0551",
+  "source_ids": {
+    "isca": "zhang25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-551"
+  },
+  "title": "Monotonic Attention for Robust Text-to-Speech Synthesis in Large Language Model Frameworks",
+  "authors": [
+    "Yike Zhang",
+    "Yiming Li",
+    "Jie Chen",
+    "Qinghua Wu",
+    "Songjun Cao",
+    "Long Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhang25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhang25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0551.pdf",
+  "pdf_source": "isca",
+  "abstract": "Text-to-speech (TTS) synthesis using large language models (LLMs) has demonstrated promising performance and has recently garnered significant attention. Despite their impressive naturalness, these methods often lack monotonic alignment constraints, resulting in issues such as repetition, omissions, and misalignment in the synthesized output. This paper introduces a stepwise monotonic attention algorithm tailored for LLM-based architectures, to enhance the robustness of TTS synthesis and effectively address these issues. Compared with the best existing model, VALL-E R, the proposed approach requires no additional forced aligners and exhibits greater robustness on out-of-domain test sets. Furthermore, experiments show that the proposed method scales well to large model sizes and large-scale training sets.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Stepwise monotonic attention for LLM-based TTS preventing repetitions and omissions; directly advances TTS robustness.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2509.14882",
+  "source_ids": {
+    "arxiv": "2509.14882"
+  },
+  "title": "Llama-Mimi: Exploring the Limits of Flattened Speech Language Modeling",
+  "authors": [
+    "Issa Sugiura",
+    "Shuhei Kurita",
+    "Yusuke Oda",
+    "Ryuichiro Higashinaka"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14882",
+  "pdf_url": "https://arxiv.org/pdf/2509.14882.pdf",
+  "pdf_path": "raw/papers/2509.14882.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech Language Models (SpeechLMs) model tokenized speech to capture both semantic and acoustic information. When neural audio codecs based on Residual Vector Quantization (RVQ) are used as audio tokenizers, they produce multiple discrete tokens per time step, yielding inherently multi-level representations. To process these multi-level tokens together, prior work typically adopts hierarchical architectures to capture this structure. In contrast, recent progress in NLP has progressively reduced architectural inductive biases, moving toward simpler and more scalable single-Transformer architectures. In this work, we propose Llama-Mimi, which flattens multi-level RVQ tokens produced by the Mimi neural audio codec into a single sequence and models them autoregressively with a Transformer decoder. We show that Llama-Mimi outperforms a CSM-based hierarchical model on most tasks and achieves the best performance on acoustic consistency. Our models, code, and speech samples are publicly available.",
+  "arxiv_comment": "6 pages, 1 figures",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Explores flat vs hierarchical speech token processing in speech LMs; directly advances SCA/speech generation architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

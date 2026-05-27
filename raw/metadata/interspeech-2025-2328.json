@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-2328",
+  "source_ids": {
+    "isca": "wu25k_interspeech",
+    "doi": "10.21437/Interspeech.2025-2328"
+  },
+  "title": "A Watermark for Auto-Regressive Speech Generation Models",
+  "authors": [
+    "Yihan Wu",
+    "Ruibo Chen",
+    "Georgios Milis",
+    "Junfeng Guo",
+    "Heng Huang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/wu25k_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/wu25k_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2328.pdf",
+  "pdf_source": "isca",
+  "abstract": "As auto-regressive speech generation models have recently demonstrated exceptional ability in producing realistic and contextually appropriate spoken language, concerns about their potential misuse also grow. To mitigate these risks, our research introduces a pioneering statistical watermarking framework tailored for auto-regressive speech generation models. This framework integrates the statistical algorithms from existing watermark techniques to ensure that the audio outputs remain traceable and accountable without compromising audio quality. Besides, we identify the re-encoded mismatch, a significant hurdle in maintaining detection accuracy when audio outputs are re-encoded for verification. Through comprehensive experiments, we valid the detectability of our watermark and provide a detailed examination of how the re-encoded mismatch impacts watermark detection efficiency.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Statistical watermarking framework for autoregressive speech generation; advances TTS/security.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

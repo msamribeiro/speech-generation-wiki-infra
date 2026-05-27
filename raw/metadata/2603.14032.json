@@ -1,0 +1,36 @@
+{
+  "id": "2603.14032",
+  "source_ids": {
+    "arxiv": "2603.14032"
+  },
+  "title": "Beyond Two-stage Diffusion TTS: Joint Structure and Content Refinement via Jump Diffusion",
+  "authors": [
+    "Jiabao Ai",
+    "Minghui Zhao",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14032",
+  "pdf_url": "https://arxiv.org/pdf/2603.14032.pdf",
+  "pdf_path": "raw/papers/2603.14032.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Diffusion and flow matching TTS faces a tension between discrete temporal structure and continuous spectral modeling. Two-stage models diffuse on fixed alignments, often collapsing to mean prosody; single-stage models avoid explicit durations but suffer alignment instability. We propose a jump-diffusion framework where discrete jumps model temporal structure and continuous diffusion refines spectral content within one process. Even in its one-shot degenerate form, our framework achieves 3.37% WER vs. 4.38% for Grad-TTS with improved UTMOSv2 on LJSpeech. The full iterative UDD variant further enables adaptive prosody, autonomously inserting natural pauses in out-of-distribution slow speech rather than stretching uniformly. Audio samples are available at https://anonymousinterpseech.github.io/TTS_Demo/.",
+  "arxiv_comment": "5 pages, 5 figures. Audio samples available at https://anonymousinterpseech.github.io/TTS_Demo/",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Jump-diffusion TTS framework unifying discrete structure and continuous spectral diffusion in one model",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2604.25476",
+  "source_ids": {
+    "arxiv": "2604.25476"
+  },
+  "title": "PSP: An Interpretable Per-Dimension Accent Benchmark for Indic Text-to-Speech",
+  "authors": [
+    "Venkata Pushpak Teja Menta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.25476",
+  "pdf_url": "https://arxiv.org/pdf/2604.25476.pdf",
+  "pdf_path": "raw/papers/2604.25476.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Standard text-to-speech (TTS) evaluation measures intelligibility (WER, CER) and overall naturalness (MOS, UTMOS) but does not quantify accent. A synthesiser may score well on all four yet sound non-native on features that are phonemic in the target language. For Indic languages, these features include retroflex articulation, aspiration, vowel length, and the Tamil retroflex approximant (letter zha). We present PSP, the Phoneme Substitution Profile, an interpretable, per-phonological-dimension accent benchmark for Indic TTS. PSP decomposes accent into six complementary dimensions: retroflex collapse rate (RR), aspiration fidelity (AF), vowel-length fidelity (LF), Tamil-zha fidelity (ZF), Frechet Audio Distance (FAD), and prosodic signature divergence (PSD). The first four are measured via forced alignment plus native-speaker-centroid acoustic probes over Wav2Vec2-XLS-R layer-9 embeddings; the latter two are corpus-level distributional distances. In this v1 we benchmark four commercial and open-source systems (ElevenLabs v3, Cartesia Sonic-3, Sarvam Bulbul, Indic Parler-TTS) on Hindi, Telugu, and Tamil pilot sets, with a fifth system (Praxy Voice) included on all three languages, plus an R5->R6 case study on Telugu. Three findings: (i) retroflex collapse grows monotonically with phonological difficulty Hindi < Telugu < Tamil (~1%, ~40%, ~68%); (ii) PSP ordering diverges from WER ordering -- commercial WER-leaders do not uniformly lead on retroflex or prosodic fidelity; (iii) no single system is Pareto-optimal across all six dimensions. We release native reference centroids (500 clips per language), 1000-clip embeddings for FAD, 500-clip prosodic feature matrices for PSD, 300-utterance golden sets per language, scoring code under MIT, and centroids under CC-BY. Formal MOS-correlation is deferred to v2; v1 reports five internal-consistency signals plus a native-audio sanity check.",
+  "arxiv_comment": "8 pages, 7 tables. Companion paper to Praxy Voice (arXiv:submission id - 7506231). Code: https://github.com/praxelhq/psp-eval; Centroids: https://huggingface.co/datasets/Praxel/psp-native-centroids",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Per-dimension accent benchmark for Indic TTS measuring retroflex articulation, aspiration, and vowel length",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

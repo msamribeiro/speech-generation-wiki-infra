@@ -1,0 +1,59 @@
+{
+  "id": "2501.15907",
+  "source_ids": {
+    "arxiv": "2501.15907"
+  },
+  "title": "Emilia: A Large-Scale, Extensive, Multilingual, and Diverse Dataset for Speech Generation",
+  "authors": [
+    "Haorui He",
+    "Zengqiang Shang",
+    "Chaoren Wang",
+    "Xuyuan Li",
+    "Yicheng Gu",
+    "Hua Hua",
+    "Liwei Liu",
+    "Chen Yang",
+    "Jiaqi Li",
+    "Peiyang Shi"
+  ],
+  "authors_full": [
+    "Haorui He",
+    "Zengqiang Shang",
+    "Chaoren Wang",
+    "Xuyuan Li",
+    "Yicheng Gu",
+    "Hua Hua",
+    "Liwei Liu",
+    "Chen Yang",
+    "Jiaqi Li",
+    "Peiyang Shi",
+    "Yuancheng Wang",
+    "Kai Chen",
+    "Pengyuan Zhang",
+    "Zhizheng Wu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2501.15907",
+  "pdf_url": "https://arxiv.org/pdf/2501.15907.pdf",
+  "pdf_path": "raw/papers/2501.15907.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in speech generation have been driven by large-scale training datasets. However, current models struggle to capture the spontaneity and variability inherent in real-world human speech, as they are primarily trained on audio-book datasets limited to formal, read-aloud speaking styles. To address this limitation, we introduce Emilia-Pipe, an open-source preprocessing pipeline designed to extract high-quality training data from valuable yet under-explored in-the-wild sources that capture spontaneous human speech in real-world contexts. Using Emilia-Pipe, we construct Emilia, which comprises over 101k hours of speech across six languages: English, Chinese, German, French, Japanese, and Korean. Furthermore, we expand Emilia to Emilia-Large, a dataset exceeding 216k hours, making it one of the largest open-source speech generation resources available. Extensive experiments show that Emilia-trained models produce markedly more spontaneous, human-like speech than those trained on traditional audio-book datasets, while matching their intelligibility. These models better capture diverse speaker timbres and the full spectrum of real-world conversational styles. Our work also highlights the importance of scaling dataset size for advancing speech generation performance and validates the effectiveness of Emilia for both multilingual and crosslingual speech generation tasks.",
+  "arxiv_comment": "Full version of arXiv:2407.05361, dataset is available at: https://huggingface.co/datasets/amphion/Emilia-Dataset",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Emilia-Pipe: open-source pipeline and large-scale multilingual spontaneous speech dataset for generation; directly advances TTS datasets.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

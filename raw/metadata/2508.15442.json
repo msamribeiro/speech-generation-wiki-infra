@@ -1,0 +1,43 @@
+{
+  "id": "2508.15442",
+  "source_ids": {
+    "arxiv": "2508.15442",
+    "acl": "2025.emnlp-main.976",
+    "doi": "10.18653/v1/2025.emnlp-main.976",
+    "url_acl": "https://aclanthology.org/2025.emnlp-main.976"
+  },
+  "title": "Mitigating Hallucinations in LM-Based TTS Models via Distribution Alignment Using GFlowNets",
+  "authors": [
+    "Chenlin Liu",
+    "Minghui Fang",
+    "Patrick Zhang",
+    "Wei Zhou",
+    "Jie Gao",
+    "Jiqing Han"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-08-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.15442",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-main.976.pdf",
+  "pdf_path": "raw/papers/2508.15442.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Language Model (LM)-based Text-to-Speech (TTS) systems often generate hallucinated speech that deviates from input text. Existing mitigation strategies either demand excessive training resources or introduce significant inference latency. In this paper, we propose GFlOwNet-guided distribution AlignmenT (GOAT) for LM-based TTS, a post-training framework that mitigates hallucinations without relying on massive resources or inference cost. Specifically, we first conduct an uncertainty analysis, revealing a strong positive correlation between hallucination and model uncertainty. Based on this, we reformulate TTS generation as a trajectory flow optimization problem and introduce an enhanced Subtrajectory Balance objective together with a sharpened internal reward as target distribution. We further integrate reward temperature decay and learning rate optimization for stability and performance balance. Extensive experiments show that GOAT reduce over 50% character error rates on challenging test cases and lowering uncertainty by up to 58%, demonstrating its strong generalization ability and effectiveness.",
+  "arxiv_comment": "Accepted to EMNLP 2025 Main Conference (Oral)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Mitigating hallucinated speech in LM-based TTS using GFlowNet distribution alignment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

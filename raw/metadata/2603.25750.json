@@ -1,0 +1,39 @@
+{
+  "id": "2603.25750",
+  "source_ids": {
+    "arxiv": "2603.25750"
+  },
+  "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models",
+  "authors": [
+    "Kyudan Jung",
+    "Jihwan Kim",
+    "Soyoon Kim",
+    "Jeonghoon Kim",
+    "Jaegul Choo",
+    "Cheonbok Park"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.25750",
+  "pdf_url": "https://arxiv.org/pdf/2603.25750.pdf",
+  "pdf_path": "raw/papers/2603.25750.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "As the paradigm of AI shifts from text-based LLMs to Speech Language Models (SLMs), there is a growing demand for full-duplex systems capable of real-time, natural human-computer interaction. However, the development of such models is constrained by the scarcity of high-quality, multi-speaker conversational data, as existing large-scale resources are predominantly single-speaker or limited in volume. Addressing the complex dynamics of natural dialogue, such as overlapping and back-channeling remains a challenge, with standard processing pipelines suffering from diarization errors and ASR hallucinations. To bridge this gap, we present a robust and scalable open-source data processing pipeline designed for full-duplex model.",
+  "arxiv_comment": "34 pages, 7 figures, 11 tables",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Scalable multi-speaker conversational audio preprocessing pipeline for full-duplex speech LM training",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

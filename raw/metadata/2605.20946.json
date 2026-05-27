@@ -1,0 +1,40 @@
+{
+  "id": "2605.20946",
+  "source_ids": {
+    "arxiv": "2605.20946"
+  },
+  "title": "Thinking-while-speaking: A Controlled, Interleaved Reasoning Method for Real-Time Speech Generation",
+  "authors": [
+    "Xuan Du",
+    "Qiangyu Yan",
+    "Wenshuo Li",
+    "Borui Jiang",
+    "Changming Xiao",
+    "Han Shu",
+    "Xinghao Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.20946",
+  "pdf_url": "https://arxiv.org/pdf/2605.20946.pdf",
+  "pdf_path": "raw/papers/2605.20946.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The thinking-while-speaking paradigm aims to make AI communication more human. A key challenge is maintaining fluent speech while performing deep reasoning. Our method, InterRS, tackles this by inserting reasoning steps only during natural speech generation. This requires high-quality data where reasoning and speech are precisely aligned, and the length ratio are under controlled. We introduce a novel pipeline to generate such seamlessly interleaved audio data. To train our model, we combine interleaved SFT with refined data and reinforcement learning with two new rewards: a TA-Balance Reward to manage timing and thinking-answer ratio, and a Linguistic Quality Reward to refine expression. Experiments show our approach achieves 13% better performance on mathmatical and logic benchmarks while generating instant response like a spoken-language instruct model which outputs fast CoT response. Furthermore, our method generates more natural and fluent answers than prior methods.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Method for real-time speech generation with interleaved reasoning in SLMs; directly advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

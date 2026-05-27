@@ -1,0 +1,39 @@
+{
+  "id": "2509.14684",
+  "source_ids": {
+    "arxiv": "2509.14684"
+  },
+  "title": "DAIEN-TTS: Disentangled Audio Infilling for Environment-Aware Text-to-Speech Synthesis",
+  "authors": [
+    "Ye-Xin Lu",
+    "Yu Gu",
+    "Kun Wei",
+    "Hui-Peng Du",
+    "Yang Ai",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14684",
+  "pdf_url": "https://arxiv.org/pdf/2509.14684.pdf",
+  "pdf_path": "raw/papers/2509.14684.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents DAIEN-TTS, a zero-shot text-to-speech (TTS) framework that enables ENvironment-aware synthesis through Disentangled Audio Infilling. By leveraging separate speaker and environment prompts, DAIEN-TTS allows independent control over the timbre and the background environment of the synthesized speech. Built upon F5-TTS, the proposed DAIEN-TTS first incorporates a pretrained speech-environment separation (SES) module to disentangle the environmental speech into mel-spectrograms of clean speech and environment audio. Two random span masks of varying lengths are then applied to both mel-spectrograms, which, together with the text embedding, serve as conditions for infilling the masked environmental mel-spectrogram, enabling the simultaneous continuation of personalized speech and time-varying environmental audio. To further enhance controllability during inference, we adopt dual classifier-free guidance (DCFG) for the speech and environment components and introduce a signal-to-noise ratio (SNR) adaptation strategy to align the synthesized speech with the environment prompt. Experimental results demonstrate that DAIEN-TTS generates environmental personalized speech with high naturalness, strong speaker similarity, and high environmental fidelity.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Zero-shot TTS enabling independent control of speaker timbre and acoustic environment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

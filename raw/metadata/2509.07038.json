@@ -1,0 +1,36 @@
+{
+  "id": "2509.07038",
+  "source_ids": {
+    "arxiv": "2509.07038"
+  },
+  "title": "Controllable Singing Voice Synthesis using Phoneme-Level Energy Sequence",
+  "authors": [
+    "Yerin Ryu",
+    "Inseop Shin",
+    "Chanwoo Kim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.07038",
+  "pdf_url": "https://arxiv.org/pdf/2509.07038.pdf",
+  "pdf_path": "raw/papers/2509.07038.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Controllable Singing Voice Synthesis (SVS) aims to generate expressive singing voices reflecting user intent. While recent SVS systems achieve high audio quality, most rely on probabilistic modeling, limiting precise control over attributes such as dynamics. We address this by focusing on dynamic control--temporal loudness variation essential for musical expressiveness--and explicitly condition the SVS model on energy sequences extracted from ground-truth spectrograms, reducing annotation costs and improving controllability. We also propose a phoneme-level energy sequence for user-friendly control. To the best of our knowledge, this is the first attempt enabling user-driven dynamics control in SVS. Experiments show our method achieves over 50% reduction in mean absolute error of energy sequences for phoneme-level inputs compared to baseline and energy-predictor models, without compromising synthesis quality.",
+  "arxiv_comment": "Accepted to ASRU 2025",
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Controllable singing voice synthesis with precise dynamic control via phoneme-level energy",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

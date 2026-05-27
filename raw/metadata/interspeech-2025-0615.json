@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0615",
+  "source_ids": {
+    "isca": "geng25_interspeech",
+    "doi": "10.21437/Interspeech.2025-615"
+  },
+  "title": "A Perception-Based L2 Speech Intelligibility Indicator: Leveraging a Raterâs Shadowing and Sequence-to-sequence Voice Conversion",
+  "authors": [
+    "Haopeng Geng",
+    "Daisuke Saito",
+    "Nobuaki Minematsu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/geng25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/geng25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Evaluating L2 speech intelligibility is crucial for effective computer-assisted language learning (CALL). Conventional ASR-based methods often focus on native-likeness, which may fail to capture the actual intelligibility perceived by human listeners. In contrast, our work introduces a novel, perception-based L2 speech intelligibility indicator that leverages a native raterâs shadowing data within a sequence-to-sequence (seq2seq) voice conversion framework. By integrating an alignment mechanism and acoustic feature reconstruction, our approach simulates the auditory perception of native listeners, identifying segments in L2 speech that are likely to cause comprehension difficulties. Both objective and subjective evaluations indicate that our method aligns more closely with native judgments than traditional ASR-based metrics, offering a promising new direction for CALL systems in a global, multilingual contexts.",
+  "task": [
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "L2 speech intelligibility indicator using VC-based rater shadowing; borderline - VC is methodology for evaluation not primary synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

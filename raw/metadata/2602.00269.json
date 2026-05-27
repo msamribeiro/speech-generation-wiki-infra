@@ -1,0 +1,41 @@
+{
+  "id": "2602.00269",
+  "source_ids": {
+    "arxiv": "2602.00269"
+  },
+  "title": "VoxServe: Streaming-Centric Serving System for Speech Language Models",
+  "authors": [
+    "Keisuke Kamahori",
+    "Wei-Tzu Lee",
+    "Atindra Jha",
+    "Rohan Kadekodi",
+    "Stephanie Wang",
+    "Arvind Krishnamurthy",
+    "Baris Kasikci"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.00269",
+  "pdf_url": "https://arxiv.org/pdf/2602.00269.pdf",
+  "pdf_path": "raw/papers/2602.00269.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Deploying modern Speech Language Models (SpeechLMs) in streaming settings requires systems that provide low latency, high throughput, and strong guarantees of streamability. Existing systems fall short of supporting diverse models flexibly and efficiently. We present VoxServe, a unified serving system for SpeechLMs that optimizes streaming performance. VoxServe introduces a model-execution abstraction that decouples model architecture from system-level optimizations, thereby enabling support for diverse SpeechLM architectures within a single framework. Building on this abstraction, VoxServe implements streaming-aware scheduling and an asynchronous inference pipeline to improve end-to-end efficiency. Evaluations across multiple modern SpeechLMs show that VoxServe achieves 10-20x higher throughput than existing implementations at comparable latency while maintaining high streaming viability. The code of VoxServe is available at https://github.com/vox-serve/vox-serve.",
+  "arxiv_comment": "The code is available at https://github.com/vox-serve/vox-serve",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Streaming serving system optimizing latency and throughput for speech language model deployment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

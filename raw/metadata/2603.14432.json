@@ -1,0 +1,37 @@
+{
+  "id": "2603.14432",
+  "source_ids": {
+    "arxiv": "2603.14432"
+  },
+  "title": "Affectron: Emotional Speech Synthesis with Affective and Contextually Aligned Nonverbal Vocalizations",
+  "authors": [
+    "Deok-Hyeon Cho",
+    "Hyung-Seok Oh",
+    "Seung-Bin Kim",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14432",
+  "pdf_url": "https://arxiv.org/pdf/2603.14432.pdf",
+  "pdf_path": "raw/papers/2603.14432.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Nonverbal vocalizations (NVs), such as laughter and sighs, are central to the expression of affective cues in emotional speech synthesis. However, learning diverse and contextually aligned NVs remains challenging in open settings due to limited NV data and the lack of explicit supervision. Motivated by this challenge, we propose Affectron as a framework for affective and contextually aligned NV generation. Built on a small-scale open and decoupled corpus, Affectron introduces an NV-augmented training strategy that expands the distribution of NV types and insertion locations. We further incorporate NV structural masking into a speech backbone pre-trained on purely verbal speech to enable diverse and natural NV synthesis. Experimental results demonstrate that Affectron produces more expressive and diverse NVs than baseline systems while preserving the naturalness of the verbal speech stream.",
+  "arxiv_comment": "Accepted to Findings of ACL 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Affectron: framework for contextually aligned nonverbal vocalization generation in emotional speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2509.05863",
+  "source_ids": {
+    "arxiv": "2509.05863"
+  },
+  "title": "LatinX: Aligning a Multilingual TTS Model with Direct Preference Optimization",
+  "authors": [
+    "Luis Felipe Chary",
+    "Miguel Arjona Ramirez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.05863",
+  "pdf_url": "https://arxiv.org/pdf/2509.05863.pdf",
+  "pdf_path": "raw/papers/2509.05863.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present LatinX, a multilingual text-to-speech (TTS) model for cascaded speech-to-speech translation that preserves the source speaker's identity across languages. LatinX is a 12-layer decoder-only Transformer trained in three stages: (i) pre-training for text-to-audio mapping, (ii) supervised fine-tuning for zero-shot voice cloning, and (iii) alignment with Direct Preference Optimization (DPO) using automatically labeled pairs based on Word Error Rate (WER) and speaker-similarity metrics. Trained on English and Romance languages with emphasis on Portuguese, LatinX with DPO consistently reduces WER and improves objective similarity over the fine-tuned baseline. Human evaluations further indicate stronger perceived speaker similarity than a strong baseline (XTTSv2), revealing gaps between objective and subjective measures. We provide cross-lingual analyses and discuss balanced preference signals and lower-latency architectures as future work.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Multilingual TTS model with DPO alignment for cascaded speech-to-speech translation with speaker identity preservation; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

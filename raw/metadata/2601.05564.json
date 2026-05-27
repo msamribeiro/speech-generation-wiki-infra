@@ -1,0 +1,60 @@
+{
+  "id": "2601.05564",
+  "source_ids": {
+    "arxiv": "2601.05564"
+  },
+  "title": "The ICASSP 2026 HumDial Challenge: Benchmarking Human-like Spoken Dialogue Systems in the LLM Era",
+  "authors": [
+    "Zhixian Zhao",
+    "Shuiyuan Wang",
+    "Guojian Li",
+    "Hongfei Xue",
+    "Chengyou Wang",
+    "Shuai Wang",
+    "Longshuai Xiao",
+    "Zihan Zhang",
+    "Hui Bu",
+    "Xin Xu"
+  ],
+  "authors_full": [
+    "Zhixian Zhao",
+    "Shuiyuan Wang",
+    "Guojian Li",
+    "Hongfei Xue",
+    "Chengyou Wang",
+    "Shuai Wang",
+    "Longshuai Xiao",
+    "Zihan Zhang",
+    "Hui Bu",
+    "Xin Xu",
+    "Xinsheng Wang",
+    "Hexin Liu",
+    "Eng Siong Chng",
+    "Hung-yi Lee",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.05564",
+  "pdf_url": "https://arxiv.org/pdf/2601.05564.pdf",
+  "pdf_path": "raw/papers/2601.05564.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Driven by the rapid advancement of Large Language Models (LLMs), particularly Audio-LLMs and Omni-models, spoken dialogue systems have evolved significantly, progressively narrowing the gap between human-machine and human-human interactions. Achieving truly ``human-like'' communication necessitates a dual capability: emotional intelligence to perceive and resonate with users' emotional states, and robust interaction mechanisms to navigate the dynamic, natural flow of conversation, such as real-time turn-taking. Therefore, we launched the first Human-like Spoken Dialogue Systems Challenge (HumDial) at ICASSP 2026 to benchmark these dual capabilities. Anchored by a sizable dataset derived from authentic human conversations, this initiative establishes a fair evaluation platform across two tracks: (1) Emotional Intelligence, targeting long-term emotion understanding and empathetic generation; and (2) Full-Duplex Interaction, systematically evaluating real-time decision-making under `` listening-while-speaking'' conditions. This paper summarizes the dataset, track configurations, and the final results.",
+  "arxiv_comment": "Official summary paper for the ICASSP 2026 HumDial Challenge",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "ICASSP 2026 benchmark challenge for human-like spoken dialogue systems evaluating emotional intelligence and reasoning",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

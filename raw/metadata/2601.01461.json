@@ -1,0 +1,35 @@
+{
+  "id": "2601.01461",
+  "source_ids": {
+    "arxiv": "2601.01461"
+  },
+  "title": "Bridging the gap: A comparative exploration of Speech-LLM and end-to-end architecture for multilingual conversational ASR",
+  "authors": [
+    "Yuxiang Mei",
+    "Dongxing Xu",
+    "Jiaen Liang",
+    "Yanhua Long"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.01461",
+  "pdf_url": "https://arxiv.org/pdf/2601.01461.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The INTERSPEECH 2025 Challenge on Multilingual Conversational Speech Language Models (MLC-SLM) promotes multilingual conversational ASR with large language models (LLMs). Our previous SHNU-mASR system adopted a competitive parallel-speech-encoder architecture that integrated Whisper and mHuBERT with an LLM. However, it faced two challenges: simple feature concatenation may not fully exploit complementary information, and the performance gap between LLM-based ASR and end-to-end(E2E) encoder-decoder ASR remained unexplored. In this work, we present an enhanced LLM-based ASR framework that combines fine-tuned Whisper and mHuBERT encoders with an LLM to enrich speech representations. We first evaluate E2E Whisper models with LoRA and full fine-tuning on the MLC-SLM ASR task, and then propose cross-attention-based fusion mechanisms for the parallel-speech-encoder. On the official evaluation set of the MLC-SLM Challenge, our system achieves a CER/WER of 10.69%, ranking on par with the top-ranked Track 1 systems, even though it uses only 1,500 hours of baseline training data compared with their large-scale training sets. Nonetheless, we find that our final LLM-based ASR still does not match the performance of a fine-tuned E2E Whisper model, providing valuable empirical guidance for future Speech-LLM design. Our code is publicly available at https://github.com/1535176727/MLC-SLM.",
+  "arxiv_comment": "Accepted by ICASSP2026",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Speech-LLM architecture for multilingual conversational ASR challenge; primary task is recognition",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2508.04996",
+  "source_ids": {
+    "arxiv": "2508.04996"
+  },
+  "title": "REF-VC: Robust, Expressive and Fast Zero-Shot Voice Conversion with Diffusion Transformers",
+  "authors": [
+    "Yuepeng Jiang",
+    "Ziqian Ning",
+    "Shuai Wang",
+    "Chengjia Wang",
+    "Mengxiao Bi",
+    "Pengcheng Zhu",
+    "Zhonghua Fu",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.04996",
+  "pdf_url": "https://arxiv.org/pdf/2508.04996.pdf",
+  "pdf_path": "raw/papers/2508.04996.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In real-world voice conversion applications, environmental noise in source speech and user demands for expressive output pose critical challenges. Traditional ASR-based methods ensure noise robustness but suppress prosody richness, while SSL-based models improve expressiveness but suffer from timbre leakage and noise sensitivity. This paper proposes REF-VC, a noise-robust expressive voice conversion system. Key innovations include: (1) A random erasing strategy to mitigate the information redundancy inherent in SSL features, enhancing noise robustness and expressiveness; (2) Implicit alignment inspired by E2TTS to suppress non-essential feature reconstruction; (3) Integration of Shortcut Models to accelerate flow matching inference, significantly reducing to 4 steps. Experimental results demonstrate that REF-VC outperforms baselines such as Seed-VC in zero-shot scenarios on the noisy set, while also performing comparably to Seed-VC on the clean set. In addition, REF-VC can be compatible with singing voice conversion within one model.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Zero-shot voice conversion with diffusion transformers robust to noisy source speech",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

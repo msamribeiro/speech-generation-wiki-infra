@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2032",
+  "source_ids": {
+    "isca": "mondal25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-2032"
+  },
+  "title": "ExagTTS: An Approach Towards Controllable Word Stress Incorporated TTS for Exaggerated Synthesized Speech Aiding Second Language Learners",
+  "authors": [
+    "Anindita Mondal",
+    "Monica Surtani",
+    "Anil Kumar Vuppala",
+    "Parameswari Krishnamurthy",
+    "Chiranjeevi Yarra"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/mondal25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/mondal25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2032.pdf",
+  "pdf_source": "isca",
+  "abstract": "Computer-Assisted Language Learning systems provide speech exaggerating at mispronounced word locations as a feedback to the L2 learners. Traditionally, expert speakers recordings (which limit the scalability) are considered for this task though there are advancements in text-to-speech (TTS) that can generate native like natural sounding speech. To address these, this work proposes two novel controllable strategies for scalable speech exaggeration. One strategy is direct speech exaggeration that incorporates the proposed label conditioned tokenization in GlowTTS. Another strategy is cascading the state-of-the-art TTS to a WORLD vocoder with proposed energy and duration modifications. A subset of Tatoeba corpus, that we annotated with prominent words, is used for experimentation. Automatic and manual assessment reveals that the exaggerated speech quality from both direct and cascaded strategy with duration modification is closer to the prominent words in the native speaker's speech.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Controllable word-stress TTS for exaggerated speech aiding L2 language learners; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

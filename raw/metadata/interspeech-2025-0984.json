@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-0984",
+  "source_ids": {
+    "isca": "leschanowsky25_interspeech",
+    "doi": "10.21437/Interspeech.2025-984"
+  },
+  "title": "Benchmarking Neural Speech Codec Intelligibility with SITool",
+  "authors": [
+    "Anna Leschanowsky",
+    "Kishor Kayyar Lakshminarayana",
+    "Anjana Rajasekhar",
+    "Lyonel Behringer",
+    "Ibrahim Kilinc",
+    "Guillaume Fuchs",
+    "EmanuÃ«l A. P. Habets"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/leschanowsky25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/leschanowsky25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0984.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech intelligibility assessment is essential for evaluating neural speech codecs, yet most evaluation efforts focus on overall quality rather than intelligibility. Only a few publicly available tools exist for conducting standardized intelligibility tests, like the Diagnostic Rhyme Test (DRT) and Modified Rhyme Test (MRT). We introduce the Speech Intelligibility Toolkit for Subjective Evaluation (SITool), a Flask-based web application for conducting DRT and MRT in laboratory and crowdsourcing settings. We use SITool to benchmark 13 neural and traditional speech codecs, analyzing phoneme-level degradations and comparing subjective DRT results with objective intelligibility metrics. Our findings show that, while neural speech codecs can outperform traditional ones in subjective intelligibility, only STOI and ESTOI â not WER â significantly correlate with subjective results, although they struggle to capture gender and wordlist-specific variations observed in subjective evaluations.",
+  "task": [
+    "codec",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Speech intelligibility toolkit for subjective evaluation of neural speech codecs; advances codec evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

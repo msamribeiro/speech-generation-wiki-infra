@@ -1,0 +1,35 @@
+{
+  "id": "2508.11273",
+  "source_ids": {
+    "arxiv": "2508.11273"
+  },
+  "title": "EmoSSLSphere: Multilingual Emotional Speech Synthesis with Spherical Vectors and Discrete Speech Tokens",
+  "authors": [
+    "Joonyong Park",
+    "Kenichi Nakamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.11273",
+  "pdf_url": "https://arxiv.org/pdf/2508.11273.pdf",
+  "pdf_path": "raw/papers/2508.11273.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces EmoSSLSphere, a novel framework for multilingual emotional text-to-speech (TTS) synthesis that combines spherical emotion vectors with discrete token features derived from self-supervised learning (SSL). By encoding emotions in a continuous spherical coordinate space and leveraging SSL-based representations for semantic and acoustic modeling, EmoSSLSphere enables fine-grained emotional control, effective cross-lingual emotion transfer, and robust preservation of speaker identity. We evaluate EmoSSLSphere on English and Japanese corpora, demonstrating significant improvements in speech intelligibility, spectral fidelity, prosodic consistency, and overall synthesis quality. Subjective evaluations further confirm that our method outperforms baseline models in terms of naturalness and emotional expressiveness, underscoring its potential as a scalable solution for multilingual emotional TTS.",
+  "arxiv_comment": "In Proceedings of the 13th ISCA Speech Synthesis Workshop",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Multilingual emotional TTS with spherical emotion vectors and SSL-derived discrete tokens",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

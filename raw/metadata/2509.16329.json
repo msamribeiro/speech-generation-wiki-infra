@@ -1,0 +1,40 @@
+{
+  "id": "2509.16329",
+  "source_ids": {
+    "arxiv": "2509.16329"
+  },
+  "title": "Investigating Polyglot Speech Foundation Models for Learning Collective Emotion from Crowds",
+  "authors": [
+    "Orchid Chetia Phukan",
+    "Girish",
+    "Mohd Mujtaba Akhtar",
+    "Panchal Nayak",
+    "Priyabrata Mallick",
+    "Swarup Ranjan Behera",
+    "Parabattina Bhagath",
+    "Pailla Balakrishna Reddy",
+    "Arun Balaji Buduru"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.16329",
+  "pdf_url": "https://arxiv.org/pdf/2509.16329.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper investigates the polyglot (multilingual) speech foundation models (SFMs) for Crowd Emotion Recognition (CER). We hypothesize that polyglot SFMs, pre-trained on diverse languages, accents, and speech patterns, are particularly adept at navigating the noisy and complex acoustic environments characteristic of crowd settings, thereby offering a significant advantage for CER. To substantiate this, we perform a comprehensive analysis, comparing polyglot, monolingual, and speaker recognition SFMs through extensive experiments on a benchmark CER dataset across varying audio durations (1 sec, 500 ms, and 250 ms). The results consistently demonstrate the superiority of polyglot SFMs, outperforming their counterparts across all audio lengths and excelling even with extremely short-duration inputs. These findings pave the way for adaptation of SFMs in setting up new benchmarks for CER.",
+  "arxiv_comment": "Accepted to APSIPA-ASC 2025",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Polyglot SFMs for crowd emotion recognition; recognition task, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

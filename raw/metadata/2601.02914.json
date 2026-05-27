@@ -1,0 +1,37 @@
+{
+  "id": "2601.02914",
+  "source_ids": {
+    "arxiv": "2601.02914"
+  },
+  "title": "Vulnerabilities of Audio-Based Biometric Authentication Systems Against Deepfake Speech Synthesis",
+  "authors": [
+    "Mengze Hong",
+    "Di Jiang",
+    "Zeying Xie",
+    "Weiwei Zhao",
+    "Guan Wang",
+    "Chen Jason Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.02914",
+  "pdf_url": "https://arxiv.org/pdf/2601.02914.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "As audio deepfakes transition from research artifacts to widely available commercial tools, robust biometric authentication faces pressing security threats in high-stakes industries. This paper presents a systematic empirical evaluation of state-of-the-art speaker authentication systems based on a large-scale speech synthesis dataset, revealing two major security vulnerabilities: 1) modern voice cloning models trained on very small samples can easily bypass commercial speaker verification systems; and 2) anti-spoofing detectors struggle to generalize across different methods of audio synthesis, leading to a significant gap between in-domain performance and real-world robustness. These findings call for a reconsideration of security measures and stress the need for architectural innovations, adaptive defenses, and the transition towards multi-factor authentication.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Security evaluation of speaker authentication against deepfake speech; anti-spoofing not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

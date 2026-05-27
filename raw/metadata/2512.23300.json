@@ -1,0 +1,41 @@
+{
+  "id": "2512.23300",
+  "source_ids": {
+    "arxiv": "2512.23300",
+    "acl": "2025.acl-demo.21",
+    "doi": "10.18653/v1/2025.acl-demo.21",
+    "url_acl": "https://aclanthology.org/2025.acl-demo.21"
+  },
+  "title": "AI4Reading: Chinese Audiobook Interpretation System Based on Multi-Agent Collaboration",
+  "authors": [
+    "Minjiang Huang",
+    "Jipeng Qiang",
+    "Yi Zhu",
+    "Chaowei Zhang",
+    "Xiangyu Zhao",
+    "Kui Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-12-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.23300",
+  "pdf_url": "https://aclanthology.org/2025.acl-demo.21.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Audiobook interpretations are attracting increasing attention, as they provide accessible and in-depth analyses of books that offer readers practical insights and intellectual inspiration. However, their manual creation process remains time-consuming and resource-intensive. To address this challenge, we propose AI4Reading, a multi-agent collaboration system leveraging large language models (LLMs) and speech synthesis technology to generate podcast, like audiobook interpretations. The system is designed to meet three key objectives: accurate content preservation, enhanced comprehensibility, and a logical narrative structure. To achieve these goals, we develop a framework composed of 11 specialized agents,including topic analysts, case analysts, editors, a narrator, and proofreaders that work in concert to explore themes, extract real world cases, refine content organization, and synthesize natural spoken language. By comparing expert interpretations with our system's output, the results show that although AI4Reading still has a gap in speech generation quality, the generated interpretative scripts are simpler and more accurate.",
+  "arxiv_comment": "ACL 2025 demo",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Audiobook interpretation system with LLM+TTS pipeline; TTS is a black-box output component.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

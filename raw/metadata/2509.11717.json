@@ -1,0 +1,33 @@
+{
+  "id": "2509.11717",
+  "source_ids": {
+    "arxiv": "2509.11717"
+  },
+  "title": "CodecSep: Prompt-Driven Universal Sound Separation on Neural Audio Codec Latents",
+  "authors": [
+    "Adhiraj Banerjee",
+    "Vipul Arora"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.11717",
+  "pdf_url": "https://arxiv.org/pdf/2509.11717.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Text-guided sound separation enables flexible audio editing, assistive listening, and open-domain source extraction, but systems such as AudioSep remain too expensive for low-latency edge or codec-mediated deployment. Existing neural audio codec separators are efficient, yet largely restricted to fixed stems or closed taxonomies. We introduce CodecSep, a prompt-driven universal sound separation framework that extracts sources directly in neural audio codec latent space. CodecSep combines a frozen DAC backbone with a lightweight FiLM-conditioned Transformer masker driven by CLAP text embeddings, enabling open-vocabulary separation while preserving codec-native efficiency.   Across dnr-v2 and five open-domain benchmarks, CodecSep consistently improves over AudioSep in SI-SDR, remains competitive in ViSQOL, and achieves clear gains in human MOS-LQS. Controlled analyses show that fine-grained prompts outperform coarse labels, and that explicit latent masking is substantially more effective than decoder-style latent generation in codec space. Qualitative diagnostics show that neural audio codec latents retain source-dependent structure, which CodecSep exploits mainly through channel-wise source-conditioned modulation.   CodecSep also provides a practical code-stream deployment path. When audio is transmitted as neural audio codec codes, CodecSep maps codes to embeddings, separates directly in codec space, and outputs waveforms or re-quantized codes, avoiding the decode-separate-re-encode loop. In this regime, CodecSep requires only 1.35 GMACs end-to-end: about 54 times less compute than AudioSep in the same pipeline and 25 times lower separator-only compute, with much lower latency and memory. More broadly, CodecSep offers a blueprint for codec-native downstream audio processing.",
+  "arxiv_comment": "main content- 27 pages, total - 53 pages, 12 figure, pre-print, under review",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Text-guided sound separation on codec latents; source separation is the primary task",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

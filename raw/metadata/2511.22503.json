@@ -1,0 +1,39 @@
+{
+  "id": "2511.22503",
+  "source_ids": {
+    "arxiv": "2511.22503"
+  },
+  "title": "Joint Speech and Text Training for LLM-Based End-to-End Spoken Dialogue State Tracking",
+  "authors": [
+    "Katia Vendrame",
+    "Bolaji Yusuf",
+    "Santosh Kesiraju",
+    "Šimon Sedláček",
+    "Oldřich Plchot",
+    "Jan Černocký"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.22503",
+  "pdf_url": "https://arxiv.org/pdf/2511.22503.pdf",
+  "pdf_path": "raw/papers/2511.22503.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end spoken dialogue state tracking (DST) is made difficult by the tandem of having to handle speech input and data scarcity. Combining speech foundation encoders and large language models has been proposed in recent work as to alleviate some of this difficulty. Although this approach has been shown to result in strong spoken DST models, achieving state-of-the-art performance in realistic multi-turn DST, it struggles to generalize across domains and requires annotated spoken DST training data for each domain of interest. However, collecting such data for every target domain is both costly and difficult. Noting that textual DST data is more easily obtained for various domains, in this work, we propose jointly training on available spoken DST data and written textual data from other domains as a way to achieve cross-domain generalization. We conduct experiments which show the efficacy of our proposed method for getting good cross-domain DST performance without relying on spoken training data from the target domains.",
+  "arxiv_comment": "submitted to ICASSP 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Joint speech-text training for end-to-end spoken dialogue state tracking; understanding-focused with limited generation contribution",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

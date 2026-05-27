@@ -1,0 +1,58 @@
+{
+  "id": "2605.05611",
+  "source_ids": {
+    "arxiv": "2605.05611"
+  },
+  "title": "X-Voice: Enabling Everyone to Speak 30 Languages via Zero-Shot Cross-Lingual Voice Cloning",
+  "authors": [
+    "Rixi Xu",
+    "Qingyu Liu",
+    "Haitao Li",
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Yunting Yang",
+    "Jian Zhao",
+    "Ke Li",
+    "Berrak Sisman",
+    "Qinyuan Cheng"
+  ],
+  "authors_full": [
+    "Rixi Xu",
+    "Qingyu Liu",
+    "Haitao Li",
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Yunting Yang",
+    "Jian Zhao",
+    "Ke Li",
+    "Berrak Sisman",
+    "Qinyuan Cheng",
+    "Xipeng Qiu",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.05611",
+  "pdf_url": "https://arxiv.org/pdf/2605.05611.pdf",
+  "pdf_path": "raw/papers/2605.05611.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In this paper, we present X-Voice, a 0.4B multilingual zero-shot voice cloning model that clones arbitrary voices and enables everyone to speak 30 languages. X-Voice is trained on a 420K-hour multilingual corpus using the International Phonetic Alphabet (IPA) as a unified representation. To eliminate the reliance on prompt text without complex preprocessing like forced alignment, we design a two-stage training paradigm. In Stage 1, we establish X-Voice$_{\\text{s1}}$ through standard conditional flow-matching training and use it to synthesize 10K hours of speaker-consistent segments as audio prompts. In Stage 2, we fine-tune on these audio pairs with prompt text masked to derive X-Voice$_{\\text{s2}}$, which enables zero-shot voice cloning without requiring transcripts of audio prompts. Architecturally, we extend F5-TTS by implementing a dual-level injection of language identifiers and decoupling and scheduling of Classifier-Free Guidance to facilitate multilingual speech synthesis. Subjective and objective evaluation results demonstrate that X-Voice outperforms existing flow-matching based multilingual systems like LEMAS-TTS and achieves zero-shot cross-lingual cloning capabilities comparable to billion-scale models such as Qwen3-TTS. To facilitate research transparency and community advancement, we open-source all related resources.",
+  "arxiv_comment": "16 pages, 4 figures, 9 tables",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "X-Voice: 0.4B multilingual zero-shot voice cloning across 30 languages with IPA unified representation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

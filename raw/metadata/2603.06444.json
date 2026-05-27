@@ -1,0 +1,38 @@
+{
+  "id": "2603.06444",
+  "source_ids": {
+    "arxiv": "2603.06444"
+  },
+  "title": "Prosodic Boundary-Aware Streaming Generation for LLM-Based TTS with Streaming Text Input",
+  "authors": [
+    "Changsong Liu",
+    "Tianrui Wang",
+    "Ye Ni",
+    "Yizhou Peng",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.06444",
+  "pdf_url": "https://arxiv.org/pdf/2603.06444.pdf",
+  "pdf_path": "raw/papers/2603.06444.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Streaming TTS that receives streaming text is essential for interactive systems, yet this scheme faces two major challenges: unnatural prosody due to missing lookahead and long-form collapse due to unbounded context. We propose a prosodic-boundary-aware post-training strategy, adapting a pretrained LLM-based TTS model using weakly time-aligned data. Specifically, the model is adapted to learn early stopping at specified content boundaries when provided with limited future text. During inference, a sliding-window prompt carries forward previous text and speech tokens, ensuring bounded context and seamless concatenation. Evaluations show our method outperforms CosyVoice-Style interleaved baseline in both short and long-form scenarios. In long-text synthesis, especially, it achieves a 66.2% absolute reduction in word error rate (from 71.0% to 4.8%) and increases speaker and emotion similarity by 16.1% and 1.5% relatively, offering a robust solution for streaming TTS with incremental text.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Prosodic boundary-aware post-training for LLM-based TTS with streaming text input and reduced context collapse",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

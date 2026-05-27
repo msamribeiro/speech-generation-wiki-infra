@@ -1,0 +1,37 @@
+{
+  "id": "2601.03892",
+  "source_ids": {
+    "arxiv": "2601.03892"
+  },
+  "title": "Lightweight and perceptually-guided voice conversion for electro-laryngeal speech",
+  "authors": [
+    "Benedikt Mayrhofer",
+    "Franz Pernkopf",
+    "Philipp Aichinger",
+    "Martin Hagmüller"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.03892",
+  "pdf_url": "https://arxiv.org/pdf/2601.03892.pdf",
+  "pdf_path": "raw/papers/2601.03892.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Electro-laryngeal (EL) speech is characterized by constant pitch, limited prosody, and mechanical noise, reducing naturalness and intelligibility. We propose a lightweight adaptation of the state-of-the-art StreamVC framework to this setting by removing pitch and energy modules and combining self-supervised pretraining with supervised fine-tuning on parallel EL and healthy (HE) speech data, guided by perceptual and intelligibility losses. Objective and subjective evaluations across different loss configurations confirm their influence: the best model variant, based on WavLM features and human-feedback predictions (+WavLM+HF), drastically reduces character error rate (CER) of EL inputs, raises naturalness mean opinion score (nMOS) from 1.1 to 3.3, and consistently narrows the gap to HE ground-truth speech in all evaluated metrics. These findings demonstrate the feasibility of adapting lightweight voice conversion architectures to EL voice rehabilitation while also identifying prosody generation and intelligibility improvements as the main remaining bottlenecks.",
+  "arxiv_comment": "5 pages, 5 figures. Paper accepted for ICASSP 2026. Audio samples available at https://spsc-tugraz.github.io/lw-elvc-icassp26/",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Lightweight StreamVC adaptation for electro-laryngeal to normal speech conversion with perceptual guidance",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

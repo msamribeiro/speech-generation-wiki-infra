@@ -1,0 +1,39 @@
+{
+  "id": "2601.20362",
+  "source_ids": {
+    "arxiv": "2601.20362"
+  },
+  "title": "Switchcodec: Adaptive residual-expert sparse quantization for high-fidelity neural audio coding",
+  "authors": [
+    "Xiangbo Wang",
+    "Wenbin Jiang",
+    "Jin Wang",
+    "Yubo You",
+    "Sheng Fang",
+    "Fei Wen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.20362",
+  "pdf_url": "https://arxiv.org/pdf/2601.20362.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent neural audio compression models often rely on residual vector quantization for high-fidelity coding, but using a fixed number of per-frame codebooks is suboptimal for the wide variability of audio content-especially for signals that are either very simple or highly complex. To address this limitation, we propose SwitchCodec, a neural audio codec based on Residual Experts Vector Quantization (REVQ). REVQ combines a shared quantizer with dynamically routed expert quantizers that are activated according to the input audio, decoupling bitrate from codebook capacity and improving compression efficiency. This design ensures full training and utilization of each quantizer. In addition, a variable-bitrate mechanism adjusts the number of active expert quantizers at inference, enabling multi-bitrate operation without retraining. Experiments demonstrate that SwitchCodec surpasses existing baselines on both objective metrics and subjective listening tests.",
+  "arxiv_comment": "This manuscript contains critical errors in the experimental parameter settings and partial algorithm derivation in Section 3 and Section 4, which will lead to inaccurate conclusion interpretation. We need to withdraw the paper for comprehensive revision, re-calculation and experimental verification, and will resubmit after full correction",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Switchcodec: adaptive sparse quantization for neural audio coding; core codec.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2509.16010",
+  "source_ids": {
+    "arxiv": "2509.16010"
+  },
+  "title": "Fed-PISA: Federated Voice Cloning via Personalized Identity-Style Adaptation",
+  "authors": [
+    "Qi Wang",
+    "Shituo Ma",
+    "Guoxin Yu",
+    "Hanyang Peng",
+    "Yue Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.16010",
+  "pdf_url": "https://arxiv.org/pdf/2509.16010.pdf",
+  "pdf_path": "raw/papers/2509.16010.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice cloning for Text-to-Speech (TTS) aims to generate expressive and personalized speech from text using limited data from a target speaker. Federated Learning (FL) offers a collaborative and privacy-preserving framework for this task, but existing approaches suffer from high communication costs and tend to suppress stylistic heterogeneity, resulting in insufficient personalization. To address these issues, we propose Fed-PISA, which stands for Federated Personalized Identity-Style Adaptation. To minimize communication costs, Fed-PISA introduces a disentangled Low-Rank Adaptation (LoRA) mechanism: the speaker's timbre is retained locally through a private ID-LoRA, while only a lightweight style-LoRA is transmitted to the server, thereby minimizing parameter exchange. To harness heterogeneity, our aggregation method, inspired by collaborative filtering, is introduced to create custom models for each client by learning from stylistically similar peers. Experiments show that Fed-PISA improves style expressivity, naturalness, and speaker similarity, outperforming standard federated baselines with minimal communication costs.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Federated learning framework for privacy-preserving personalized voice cloning in TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

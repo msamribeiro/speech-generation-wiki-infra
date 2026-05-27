@@ -1,0 +1,42 @@
+{
+  "id": "2025.mcg-1.10",
+  "source_ids": {
+    "acl": "2025.mcg-1.10",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.mcg-1.10"
+  },
+  "title": "The First Workshop on Multilingual Counterspeech Generation at COLING 2025: Overview of the Shared Task",
+  "authors": [
+    "Helena Bonaldi",
+    "María Estrella Vallecillo-Rodríguez",
+    "Irune Zubiaga",
+    "Arturo Montejo-Raez",
+    "Aitor Soroa",
+    "María-Teresa Martín-Valdivia",
+    "Marco Guerini",
+    "Rodrigo Agerri"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.10",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.10.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper presents an overview of the Shared Task organized in the First Workshop on Multilingual Counterspeech Generation at COLING 2025. While interest in automatic approaches to Counterspeech generation has been steadily growing, the large majority of the published experimental work has been carried out for English. This is due to the scarcity of both non-English manually curated training data and to the crushing predominance of English in the generative Large Language Models (LLMs) ecosystem. The task’s goal is to promote and encourage research on Counterspeech generation in a multilingual setting (Basque, English, Italian, and Spanish) potentially leveraging background knowledge provided in the proposed dataset. The task attracted 11 participants, 9 of whom presented a paper describing their systems. Together with the task, we introduce a new multilingual counterspeech dataset with 2384 triplets of hate speech, counterspeech, and related background knowledge covering 4 languages. The dataset is available at: https://huggingface.co/datasets/LanD-FBK/ML_MTCONAN_KN.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Overview of multilingual counterspeech generation shared task; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

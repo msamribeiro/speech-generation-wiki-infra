@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0042",
+  "source_ids": {
+    "isca": "chen25_interspeech",
+    "doi": "10.21437/Interspeech.2025-42"
+  },
+  "title": "Towards Robust Speaker Recognition against Intrinsic Variation with Foundation Model Few-shot Tuning and Effective Speech Synthesis",
+  "authors": [
+    "Zhiyong Chen",
+    "Shuhang Wu",
+    "Xinnuo Li",
+    "Zhiqi Ai",
+    "Shugong Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chen25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/chen25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speaker recognition is essential for secure authentication and personalized voice assistants in smart home settings, but it faces challenges due to intrinsic speaker variability, such as aging and emotional fluctuations. Existing methods often rely on pretraining and require extensive data. To address these challenges, we propose a framework for time-varying and emotion-robust open-set identification (OSI) for smart home environments, utilizing few-shot foundation enrollment-time tuning and style-rich zero-shot text-to-speech (TTS) systems. We explore best practices for synthetic data selection and suitable open-set outlier-focused loss functions. Our proposed method improves handling emotional and aging variations in target speakers, enhancing robustness to intrinsic variability while maintaining resilience to unknown outliers. Experiments demonstrate strong generalization across multiple time-varying and emotionally rich benchmarks.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Speaker recognition with TTS data augmentation; TTS is a data augmentation tool for speaker ID, not the primary synthesis focus.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

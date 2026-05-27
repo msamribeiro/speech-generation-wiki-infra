@@ -1,0 +1,39 @@
+{
+  "id": "2603.22252",
+  "source_ids": {
+    "arxiv": "2603.22252"
+  },
+  "title": "SelfTTS: cross-speaker style transfer through explicit embedding disentanglement and self-refinement using self-augmentation",
+  "authors": [
+    "Lucas H. Ueda",
+    "João G. T. Lima",
+    "Pedro R. Corrêa",
+    "Flávio O. Simões",
+    "Mário U. Neto",
+    "Paula D. P. Costa"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.22252",
+  "pdf_url": "https://arxiv.org/pdf/2603.22252.pdf",
+  "pdf_path": "raw/papers/2603.22252.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents SelfTTS, a text-to-speech (TTS) model designed for cross-speaker style transfer that eliminates the need for external pre-trained speaker or emotion encoders. The architecture achieves emotional expressivity in neutral speakers through an explicit disentanglement strategy utilizing Gradient Reversal Layers (GRL) combined with cosine similarity loss to decouple speaker and emotion information. We introduce Multi Positive Contrastive Learning (MPCL) to induce clustered representations of speaker and emotion embeddings based on their respective labels. Furthermore, SelfTTS employs a self-refinement strategy via Self-Augmentation, exploiting the model's voice conversion capabilities to enhance the naturalness of synthesized speech. Experimental results demonstrate that SelfTTS achieves superior emotional naturalness (eMOS) and robust stability in target timbre and emotion compared to state-of-the-art baselines.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Cross-speaker style transfer TTS using GRL-based disentanglement and self-augmentation without external encoders",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2604.23742",
+  "source_ids": {
+    "arxiv": "2604.23742"
+  },
+  "title": "RTCFake: Speech Deepfake Detection in Real-Time Communication",
+  "authors": [
+    "Jun Xue",
+    "Zhuolin Yi",
+    "Yihuan Huang",
+    "Yanzhen Ren",
+    "Yujie Chen",
+    "Cunhang Fan",
+    "Zicheng Su",
+    "Yonghong Zhang",
+    "Bo Cai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.23742",
+  "pdf_url": "https://arxiv.org/pdf/2604.23742.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "With the rapid advancement of speech generation technologies, the threat posed by speech deepfakes in real-time communication (RTC) scenarios has intensified. However, existing detection studies mainly focus on offline simulations and struggle to cope with the complex distortions introduced during RTC transmission, including unknown speech enhancement processes (e.g., noise suppression) and codec compression. To address this challenge, we present the first large-scale speech deepfake dataset tailored for RTC scenarios, termed \\textit{RTCFake}, totaling approximately 600 hours. The dataset is constructed by transmitting speech through multiple mainstream social media and conferencing platforms (e.g., Zoom), enabling precise pairing between offline and online speech. In addition, we propose a phoneme-guided consistency learning (PCL) strategy that enforces models to learn platform-invariant semantic structural representations. In this paper, the RTCFake dataset is divided into training, development, and evaluation sets. The evaluation set further includes both unseen RTC platforms and unseen complex noise conditions, thereby providing a more realistic and challenging evaluation benchmark for speech deepfake detection. Furthermore, the proposed PCL strategy achieves significant improvements in both cross-platform generalization and noise robustness, offering an effective and generalizable modeling paradigm. The \\textit{RTCFake} dataset is provided in the {https://huggingface.co/datasets/JunXueTech/RTCFake}.",
+  "arxiv_comment": "Accepted by ACL 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Speech deepfake detection in real-time communication scenarios; anti-spoofing not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

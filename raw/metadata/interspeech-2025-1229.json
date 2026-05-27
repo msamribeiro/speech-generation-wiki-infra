@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1229",
+  "source_ids": {
+    "isca": "liu25j_interspeech",
+    "doi": "10.21437/Interspeech.2025-1229"
+  },
+  "title": "E2E-BPVC: End-to-End Background-Preserving Voice Conversion via In-Context Learning",
+  "authors": [
+    "Yihan Liu",
+    "Zhengyang Chen",
+    "Leying Zhang",
+    "Yanmin Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/liu25j_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/liu25j_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1229.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice conversion (VC) systems are commonly trained on clean speech and are unable to function properly in the presence of background sound. However, in many instances, the background sound of speech and the context in which the speech occurs are highly semantically relevant and should also be retained. Existing approaches address this issue by introducing a denoising module to separate speech from background sound before applying voice conversion, which increases complexity and may lead to extra distortion. In this paper, we propose an end-to-end background-preserving voice conversion (E2E-BPVC) framework for the first time. By leveraging in-context learning (ICL), our model simultaneously modifies speech timbre and retains background sounds without requiring a separate denoising step. Both objective and subjective evaluations demonstrate that our method achieves performance comparable to denoising-based BPVC frameworks while maintaining a more streamlined and efficient system design.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "End-to-end voice conversion preserving background sounds using in-context learning; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

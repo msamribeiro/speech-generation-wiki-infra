@@ -1,0 +1,37 @@
+{
+  "id": "2510.21209",
+  "source_ids": {
+    "arxiv": "2510.21209"
+  },
+  "title": "SpecTokenizer: A Lightweight Streaming Codec in the Compressed Spectrum Domain",
+  "authors": [
+    "Zixiang Wan",
+    "Guochang Zhang",
+    "Yifeng He",
+    "Jianqiang Wei"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.21209",
+  "pdf_url": "https://arxiv.org/pdf/2510.21209.pdf",
+  "pdf_path": "raw/papers/2510.21209.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural Audio Codecs (NACs) have gained growing attention in recent years as technologies for audio compression and audio representation in speech language models. While mainstream NACs typically require G-level computation and M-level parameters, the performance of lightweight and streaming NACs remains underexplored. This paper proposes SpecTokenizer, a lightweight streaming codec that operates in the compressed spectral domain. Composed solely of alternating CNN and RNN layers, SpecTokenizer achieves greater efficiency and better representational capability through multi-scale modeling in the compressed spectrum domain. At 4 kbps, the proposed SpecTokenizer achieves comparable or superior performance compared to the codec with state-of-the-art lightweight architecture while requiring only 20% of the computation and 10% of the parameters. Furthermore, it significantly outperforms the codec when using similar computational and storage resources.",
+  "arxiv_comment": "Accepted by Interspeech 2025; 5 pages, 1 figure, 5 tables",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Lightweight streaming codec in compressed spectrum domain for efficient speech language models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

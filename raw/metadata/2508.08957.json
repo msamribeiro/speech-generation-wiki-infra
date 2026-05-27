@@ -1,0 +1,39 @@
+{
+  "id": "2508.08957",
+  "source_ids": {
+    "arxiv": "2508.08957"
+  },
+  "title": "QAMRO: Quality-aware Adaptive Margin Ranking Optimization for Human-aligned Assessment of Audio Generation Systems",
+  "authors": [
+    "Chien-Chun Wang",
+    "Kuan-Tang Huang",
+    "Cheng-Yeh Yang",
+    "Hung-Shin Lee",
+    "Hsin-Min Wang",
+    "Berlin Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.08957",
+  "pdf_url": "https://arxiv.org/pdf/2508.08957.pdf",
+  "pdf_path": "raw/papers/2508.08957.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Evaluating audio generation systems, including text-to-music (TTM), text-to-speech (TTS), and text-to-audio (TTA), remains challenging due to the subjective and multi-dimensional nature of human perception. Existing methods treat mean opinion score (MOS) prediction as a regression problem, but standard regression losses overlook the relativity of perceptual judgments. To address this limitation, we introduce QAMRO, a novel Quality-aware Adaptive Margin Ranking Optimization framework that seamlessly integrates regression objectives from different perspectives, aiming to highlight perceptual differences and prioritize accurate ratings. Our framework leverages pre-trained audio-text models such as CLAP and Audiobox-Aesthetics, and is trained exclusively on the official AudioMOS Challenge 2025 dataset. It demonstrates superior alignment with human evaluations across all dimensions, significantly outperforming robust baseline models.",
+  "arxiv_comment": "Accepted to IEEE ASRU 2025",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "MOS prediction framework for evaluating TTS and audio generation systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

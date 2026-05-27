@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1777",
+  "source_ids": {
+    "isca": "li25v_interspeech",
+    "doi": "10.21437/Interspeech.2025-1777"
+  },
+  "title": "Unfolding A Few Structures for The Many: Memory-Efficient Compression of Conformer and Speech Foundation Models",
+  "authors": [
+    "Zhaoqing Li",
+    "Haoning Xu",
+    "Xurong Xie",
+    "Zengrui Jin",
+    "Tianzi Wang",
+    "Xunying Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/li25v_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/li25v_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "This paper presents a novel memory-efficient model compression approach for Conformer ASR and speech foundation systems. Our approach features a unique \"small-to-large\" design. A compact \"seed\" model containing a few Conformer or Transformer blocks is trained and unfolded many times to emulate the performance of larger uncompressed models with different logical depths. The seed model and many unfolded paths are jointly trained within a single unfolding cycle. The KL-divergence between the largest unfolded and smallest seed models is used in a self-distillation process to minimize their performance disparity. Experimental results show that our foldable model produces ASR performance comparable to individually constructed Conformer and wav2vec2/HuBERT speech foundation models under various depth configurations, while requiring only minimal memory and storage. Conformer and wav2vec2 models with a reduction of 35% and 30% parameters are obtained without loss of performance, respectively.",
+  "task": [],
+  "relevance_score": 0.12,
+  "relevance_note": "Memory-efficient compression of Conformer ASR systems; model compression for recognition.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

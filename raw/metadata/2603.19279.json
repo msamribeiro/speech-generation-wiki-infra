@@ -1,0 +1,33 @@
+{
+  "id": "2603.19279",
+  "source_ids": {
+    "arxiv": "2603.19279"
+  },
+  "title": "Multilingual Hate Speech Detection and Counterspeech Generation: A Comprehensive Survey and Practical Guide",
+  "authors": [
+    "Zahra Safdari Fesaghandis",
+    "Suman Kalyan Maity"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.19279",
+  "pdf_url": "https://arxiv.org/pdf/2603.19279.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Combating online hate speech in multilingual settings requires approaches that go beyond English-centric models and capture the cultural and linguistic diversity of global online discourse. This paper presents a comprehensive survey and practical guide to multilingual hate speech detection and counterspeech generation, integrating recent advances in natural language processing. We analyze why monolingual systems often fail in non-English and code-mixed contexts, missing implicit hate and culturally specific expressions. To address these challenges, we outline a structured three-phase framework - task design, data curation, and evaluation - drawing on state-of-the-art datasets, models, and metrics. The survey consolidates progress in multilingual resources and techniques while highlighting persistent obstacles, including data scarcity in low-resource languages, fairness and bias in system development, and the need for multimodal solutions. By bridging technical progress with ethical and cultural considerations, we provide researchers, practitioners, and policymakers with scalable guidelines for building context-aware, inclusive systems. Our roadmap contributes to advancing online safety through fairer, more effective detection and counterspeech generation across diverse linguistic environments.",
+  "arxiv_comment": "29 pages, 7 Tables",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Survey on multilingual hate speech and counterspeech; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

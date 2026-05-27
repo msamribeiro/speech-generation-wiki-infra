@@ -1,0 +1,41 @@
+{
+  "id": "2510.06927",
+  "source_ids": {
+    "arxiv": "2510.06927"
+  },
+  "title": "Position: Towards Responsible Evaluation for Text-to-Speech",
+  "authors": [
+    "Yifan Yang",
+    "Hui Wang",
+    "Bing Han",
+    "Shujie Liu",
+    "Jinyu Li",
+    "Yong Qin",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.06927",
+  "pdf_url": "https://arxiv.org/pdf/2510.06927.pdf",
+  "pdf_path": "raw/papers/2510.06927.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) technology have enabled systems to generate speech that is often indistinguishable from human speech, bringing benefits to accessibility, content creation, and human-computer interaction. However, current evaluation practices are increasingly inadequate for capturing the full range of capabilities, limitations, and societal impacts of modern TTS systems. This position paper introduces the concept of Responsible Evaluation and argues that it is essential and urgent for the next phase of TTS development, structured through three progressive levels: (1) ensuring the faithful and accurate reflection of a model's true capabilities and limitations, with more robust, discriminative, and comprehensive objective and subjective scoring methodologies; (2) enabling comparability, standardization, and transferability through standardized benchmarks, transparent reporting, and transferable evaluation metrics; and (3) assessing and mitigating ethical risks associated with forgery, misuse, privacy violations, and security vulnerabilities. Through this concept, we critically examine current evaluation practices, identify systemic shortcomings, and propose actionable recommendations. We hope this concept will not only foster more reliable and trustworthy TTS technology but also guide its development toward ethically sound and societally beneficial applications.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Position paper arguing for responsible and comprehensive TTS evaluation standards",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

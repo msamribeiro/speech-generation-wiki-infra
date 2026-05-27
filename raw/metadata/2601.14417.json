@@ -1,0 +1,40 @@
+{
+  "id": "2601.14417",
+  "source_ids": {
+    "arxiv": "2601.14417"
+  },
+  "title": "Quantifying Speaker Embedding Phonological Rule Interactions in Accented Speech Synthesis",
+  "authors": [
+    "Thanathai Lertpetchpun",
+    "Yoonjeong Lee",
+    "Thanapat Trachu",
+    "Jihwan Lee",
+    "Tiantian Feng",
+    "Dani Byrd",
+    "Shrikanth Narayanan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.14417",
+  "pdf_url": "https://arxiv.org/pdf/2601.14417.pdf",
+  "pdf_path": "raw/papers/2601.14417.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Many spoken languages, including English, exhibit wide variation in dialects and accents, making accent control an important capability for flexible text-to-speech (TTS) models. Current TTS systems typically generate accented speech by conditioning on speaker embeddings associated with specific accents. While effective, this approach offers limited interpretability and controllability, as embeddings also encode traits such as timbre and emotion. In this study, we analyze the interaction between speaker embeddings and linguistically motivated phonological rules in accented speech synthesis. Using American and British English as a case study, we implement rules for flapping, rhoticity, and vowel correspondences. We propose the phoneme shift rate (PSR), a novel metric quantifying how strongly embeddings preserve or override rule-based transformations. Experiments show that combining rules with embeddings yields more authentic accents, while embeddings can attenuate or overwrite rules, revealing entanglement between accent and speaker identity. Our findings highlight rules as a lever for accent control and a framework for evaluating disentanglement in speech generation.",
+  "arxiv_comment": "Accepted to ICASSP2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Quantifies speaker embedding phonological interactions in accented TTS; advances accent control in TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

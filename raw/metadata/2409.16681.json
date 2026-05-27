@@ -1,0 +1,39 @@
+{
+  "id": "2409.16681",
+  "source_ids": {
+    "arxiv": "2409.16681"
+  },
+  "title": "Emotional Dimension Control in Language Model-Based Text-to-Speech: Spanning a Broad Spectrum of Human Emotions",
+  "authors": [
+    "Kun Zhou",
+    "You Zhang",
+    "Dianwen Ng",
+    "Shengkui Zhao",
+    "Hao Wang",
+    "Bin Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2409.16681",
+  "pdf_url": "https://arxiv.org/pdf/2409.16681.pdf",
+  "pdf_path": "raw/papers/2409.16681.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Emotional text-to-speech (TTS) systems sturggle to capture the full spectrum of human emotions due to the inherent complexity of emotional expressions and the limited coverage of existing emotion labels. To address this, we propose a language model-based TTS framework that synthesizes speech across a broad range of emotional styles. Our approach enables flexible user control along three continuous dimensions - pleasure, arousal, and dominance (PAD). To enable this, we train an emotional dimension predictor that maps categorical emotion labels in speech datasets into the PAD space, grounded in established psychological research. Importantly, while the emotional dimension predictor leverages categorical labels, the TTS framework itself does not require explict emotion labels during training. Objective and subjective evaluations demonstrate that our framework effectively generates more expressive emotional styles and enhances both naturalness and diversity compared to baselines.",
+  "arxiv_comment": "ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "LM-based TTS framework with flexible continuous emotion dimension control; directly advances emotional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,57 @@
+{
+  "id": "2512.04720",
+  "source_ids": {
+    "arxiv": "2512.04720"
+  },
+  "title": "M3-TTS: Multi-modal DiT Alignment & Mel-latent for Zero-shot High-fidelity Speech Synthesis",
+  "authors": [
+    "Xiaopeng Wang",
+    "Chunyu Qiang",
+    "Ruibo Fu",
+    "Zhengqi Wen",
+    "Xuefei Liu",
+    "Yukun Liu",
+    "Yuzhe Liang",
+    "Kang Yin",
+    "Yuankun Xie",
+    "Heng Xie"
+  ],
+  "authors_full": [
+    "Xiaopeng Wang",
+    "Chunyu Qiang",
+    "Ruibo Fu",
+    "Zhengqi Wen",
+    "Xuefei Liu",
+    "Yukun Liu",
+    "Yuzhe Liang",
+    "Kang Yin",
+    "Yuankun Xie",
+    "Heng Xie",
+    "Chenxing Li",
+    "Chen Zhang",
+    "Changsheng Li"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.04720",
+  "pdf_url": "https://arxiv.org/pdf/2512.04720.pdf",
+  "pdf_path": "raw/papers/2512.04720.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Non-autoregressive (NAR) text-to-speech synthesis relies on length alignment between text sequences and audio representations, constraining naturalness and expressiveness. Existing methods depend on duration modeling or pseudo-alignment strategies that severely limit naturalness and computational efficiency. We propose M3-TTS, a concise and efficient NAR TTS paradigm based on multi-modal diffusion transformer (MM-DiT) architecture. M3-TTS employs joint diffusion transformer layers for cross-modal alignment, achieving stable monotonic alignment between variable-length text-speech sequences without pseudo-alignment requirements. Single diffusion transformer layers further enhance acoustic detail modeling. The framework integrates a mel-vae codec that provides 3* training acceleration. Experimental results on Seed-TTS and AISHELL-3 benchmarks demonstrate that M3-TTS achieves state-of-the-art NAR performance with the lowest word error rates (1.36\\% English, 1.31\\% Chinese) while maintaining competitive naturalness scores. Code and demos will be available at https://wwwwxp.github.io/M3-TTS.",
+  "arxiv_comment": "Submitted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Non-autoregressive zero-shot TTS using multi-modal DiT with mel-latent alignment for high naturalness",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

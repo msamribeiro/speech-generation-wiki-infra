@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2739",
+  "source_ids": {
+    "isca": "chen25q_interspeech",
+    "doi": "10.21437/Interspeech.2025-2739"
+  },
+  "title": "AF-Vocoder: Artifact-Free Neural Vocoder with Global Artifact Filter",
+  "authors": [
+    "Zhuangqi Chen",
+    "Xianjun Xia",
+    "Xiaohuai Le",
+    "Siyu Sun",
+    "Chuanzeng Huang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chen25q_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/chen25q_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2739.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent studies have demonstrated the advantage of generative adversarial network (GAN)-based vocoders in high-fidelity speech synthesis and fast inference speed. However, they often suffer from audible artifacts such as aliasing and blurring. In this paper, we propose AF-Vocoder, a novel GAN-based vocoder that can synthesize high-fidelity speech with fewer artifacts. Specifically, we introduce a frequency-domain artifacts filter named GAFilter to achieve artifact removal. GAFilter incorporates a learnable frequency filter, which enforces a desired inductive bias of frequency control for artifact-free speech synthesis. Experimental results show that the proposed AF-Vocoder outperforms other GAN-based vocoders in speech reconstruction quality and artifact suppression on various datasets including out-of-domain speakers.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "GAN vocoder with global artifact filter for high-fidelity artifact-free speech synthesis; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

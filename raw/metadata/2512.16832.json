@@ -1,0 +1,38 @@
+{
+  "id": "2512.16832",
+  "source_ids": {
+    "arxiv": "2512.16832"
+  },
+  "title": "What Do Prosody and Text Convey? Characterizing How Meaningful Information is Distributed Across Multiple Channels",
+  "authors": [
+    "Aditya Yadavalli",
+    "Tiago Pimentel",
+    "Tamar I Regev",
+    "Ethan Wilcox",
+    "Alex Warstadt"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.16832",
+  "pdf_url": "https://arxiv.org/pdf/2512.16832.pdf",
+  "pdf_path": "raw/papers/2512.16832.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Prosody -- the melody of speech -- conveys critical information often not captured by the words or text of a message. In this paper, we propose an information-theoretic approach to quantify how much information is expressed by prosody alone and not by text, and crucially, what that information is about. Our approach applies large speech and language models to estimate the mutual information between a particular dimension of an utterance's meaning (e.g., its emotion) and any of its communication channels (e.g., audio or text). We then use this approach to quantify how much information is conveyed by audio and text about sarcasm, emotion, and questionhood, using speech from television and podcasts. We find that for sarcasm and emotion the audio channel -- and by implication the prosodic channel -- transmits over an order of magnitude more information about these features than the text channel alone, at least when long-term context beyond the current sentence is unavailable. For questionhood, prosody provides comparatively less additional information. We conclude by outlining a program applying our approach to more dimensions of meaning, communication channels, and languages.",
+  "arxiv_comment": null,
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Information-theoretic study of what prosody conveys beyond text; insights for synthesis but primarily a speech analysis paper.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

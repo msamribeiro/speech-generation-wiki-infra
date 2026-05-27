@@ -1,0 +1,39 @@
+{
+  "id": "2601.04233",
+  "source_ids": {
+    "arxiv": "2601.04233"
+  },
+  "title": "LEMAS: Large A 150K-Hour Large-scale Extensible Multilingual Audio Suite with Generative Speech Models",
+  "authors": [
+    "Zhiyuan Zhao",
+    "Lijian Lin",
+    "Ye Zhu",
+    "Kai Xie",
+    "Yunfei Liu",
+    "Yu Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.04233",
+  "pdf_url": "https://arxiv.org/pdf/2601.04233.pdf",
+  "pdf_path": "raw/papers/2601.04233.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present the LEMAS-Dataset, which, to our knowledge, is currently the largest open-source multilingual speech corpus with word-level timestamps. Covering over 150,000 hours across 10 major languages, LEMAS-Dataset is constructed via a efficient data processing pipeline that ensures high-quality data and annotations. To validate the effectiveness of LEMAS-Dataset across diverse generative paradigms, we train two benchmark models with distinct architectures and task specializations on this dataset. LEMAS-TTS, built upon a non-autoregressive flow-matching framework, leverages the dataset's massive scale and linguistic diversity to achieve robust zero-shot multilingual synthesis. Our proposed accent-adversarial training and CTC loss mitigate cross-lingual accent issues, enhancing synthesis stability. Complementarily, LEMAS-Edit employs an autoregressive decoder-only architecture that formulates speech editing as a masked token infilling task. By exploiting precise word-level alignments to construct training masks and adopting adaptive decoding strategies, it achieves seamless, smooth-boundary speech editing with natural transitions. Experimental results demonstrate that models trained on LEMAS-Dataset deliver high-quality synthesis and editing performance, confirming the dataset's quality. We envision that this richly timestamp-annotated, fine-grained multilingual corpus will drive future advances in prompt-based speech generation systems.",
+  "arxiv_comment": "Demo page: https://lemas-project.github.io/LEMAS-Project",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "150K-hour multilingual open speech corpus validated across diverse generative speech paradigms",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

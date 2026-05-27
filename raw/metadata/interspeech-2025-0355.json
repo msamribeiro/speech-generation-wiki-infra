@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0355",
+  "source_ids": {
+    "isca": "tseng25_interspeech",
+    "doi": "10.21437/Interspeech.2025-355"
+  },
+  "title": "Probing the Robustness Properties of Neural Speech Codecs",
+  "authors": [
+    "Wei-Cheng Tseng",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/tseng25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/tseng25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0355.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural speech codecs have revolutionized speech coding, achieving higher compression while preserving audio fidelity. Beyond compression, they have emerged as tokenization strategies, enabling language modeling on speech and driving paradigm shifts across various speech processing tasks. Despite these advancements, their robustness in noisy environments remains underexplored, raising concerns about their generalization to real-world scenarios. In this work, we systematically evaluate neural speech codecs under various noise conditions, revealing non-trivial differences in their robustness. We further examine their linearity properties, uncovering non-linear distortions which partly explain observed variations in robustness. Lastly, we analyze their frequency response to identify factors affecting audio fidelity. Our findings provide critical insights into codec behavior and future codec design, as well as emphasizing the importance of noise robustness for their real-world integration1.",
+  "task": [
+    "codec",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Evaluates robustness of neural speech codecs in noisy environments as tokenizers; advances codec evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

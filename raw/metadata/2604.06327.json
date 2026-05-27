@@ -1,0 +1,42 @@
+{
+  "id": "2604.06327",
+  "source_ids": {
+    "arxiv": "2604.06327"
+  },
+  "title": "A Novel Automatic Framework for Speaker Drift Detection in Synthesized Speech",
+  "authors": [
+    "Jia-Hong Huang",
+    "Seulgi Kim",
+    "Yi Chieh Liu",
+    "Yixian Shen",
+    "Hongyi Zhu",
+    "Prayag Tiwari",
+    "Stevan Rudinac",
+    "Evangelos Kanoulas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.06327",
+  "pdf_url": "https://arxiv.org/pdf/2604.06327.pdf",
+  "pdf_path": "raw/papers/2604.06327.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent diffusion-based text-to-speech (TTS) models achieve high naturalness and expressiveness, yet often suffer from speaker drift, a subtle, gradual shift in perceived speaker identity within a single utterance. This underexplored phenomenon undermines the coherence of synthetic speech, especially in long-form or interactive settings. We introduce the first automatic framework for detecting speaker drift by formulating it as a binary classification task over utterance-level speaker consistency. Our method computes cosine similarity across overlapping segments of synthesized speech and prompts large language models (LLMs) with structured representations to assess drift. We provide theoretical guarantees for cosine-based drift detection and demonstrate that speaker embeddings exhibit meaningful geometric clustering on the unit sphere. To support evaluation, we construct a high-quality synthetic benchmark with human-validated speaker drift annotations. Experiments with multiple state-of-the-art LLMs confirm the viability of this embedding-to-reasoning pipeline. Our work establishes speaker drift as a standalone research problem and bridges geometric signal analysis with LLM-based perceptual reasoning in modern TTS.",
+  "arxiv_comment": "The paper has been accepted by the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "First automatic framework for detecting gradual speaker drift in synthesized speech for long-form TTS quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

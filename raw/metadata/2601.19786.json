@@ -1,0 +1,37 @@
+{
+  "id": "2601.19786",
+  "source_ids": {
+    "arxiv": "2601.19786"
+  },
+  "title": "Rethinking Discrete Speech Representation Tokens for Accent Generation",
+  "authors": [
+    "Jinzuomu Zhong",
+    "Yi Wang",
+    "Korin Richmond",
+    "Peter Bell"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.19786",
+  "pdf_url": "https://arxiv.org/pdf/2601.19786.pdf",
+  "pdf_path": "raw/papers/2601.19786.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Discrete Speech Representation Tokens (DSRTs) have become a foundational component in speech generation. While prior work has extensively studied phonetic and speaker information in DSRTs, how accent information is encoded in DSRTs remains largely unexplored. In this paper, we present the first systematic investigation of accent information in DSRTs. We propose a unified evaluation framework that measures both accessibility of accent information via a novel Accent ABX task and recoverability via cross-accent Voice Conversion (VC) resynthesis. Using this framework, we analyse DSRTs derived from several widely used speech representations. Our results reveal that: (1) choice of layers has the most significant impact on retaining accent information, (2) accent information is substantially reduced by ASR supervision; (3) naive codebook size reduction cannot effectively disentangle accent from phonetic and speaker information.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "First systematic investigation of accent information encoding in discrete speech tokens for accent generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

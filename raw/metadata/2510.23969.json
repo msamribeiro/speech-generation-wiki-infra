@@ -1,0 +1,36 @@
+{
+  "id": "2510.23969",
+  "source_ids": {
+    "arxiv": "2510.23969"
+  },
+  "title": "emg2speech: Synthesizing speech from electromyography using self-supervised speech models",
+  "authors": [
+    "Harshavardhana T. Gowda",
+    "Daniel C. Comstock",
+    "Lee M. Miller"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.23969",
+  "pdf_url": "https://arxiv.org/pdf/2510.23969.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present a neuromuscular speech interface that translates electromyographic (EMG) signals recorded from orofacial muscles during speech articulation directly into audio. We find that self-supervised speech (S3) representations are strongly linearly related to the electrical power of muscle activity: a simple linear mapping predicts EMG power from S3 representations with a correlation of r = 0.85. In addition, EMG power vectors associated with distinct articulatory gestures form structured, separable clusters. Together, these observations suggest that S3 models implicitly encode articulatory mechanisms, as reflected in EMG activity. Leveraging this structure, we map EMG signals into the S3 representation space and synthesize speech, enabling end-to-end EMG-to-speech generation without explicit articulatory modeling or vocoder training. We demonstrate this system with a participant with amyotrophic lateral sclerosis (ALS), converting orofacial EMG recorded while she silently articulated speech into audio.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Generates speech directly from EMG orofacial muscle signals; synthesis output but non-text input modality is borderline TTS",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2601.17761",
+  "source_ids": {
+    "arxiv": "2601.17761"
+  },
+  "title": "AR-Omni: A Unified Autoregressive Model for Any-to-Any Generation",
+  "authors": [
+    "Dongjie Cheng",
+    "Ruifeng Yuan",
+    "Yongqi Li",
+    "Runyang You",
+    "Wenjie Wang",
+    "Liqiang Nie",
+    "Lei Zhang",
+    "Wenjie Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.17761",
+  "pdf_url": "https://arxiv.org/pdf/2601.17761.pdf",
+  "pdf_path": "raw/papers/2601.17761.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Real-world perception and interaction are inherently multimodal, encompassing not only language but also vision and speech, which motivates the development of \"Omni\" MLLMs that support both multimodal inputs and multimodal outputs. While a sequence of omni MLLMs has emerged, most existing systems still rely on additional expert components to achieve multimodal generation, limiting the simplicity of unified training and inference. Autoregressive (AR) modeling, with a single token stream, a single next-token objective, and a single decoder, is an elegant and scalable foundation in the text domain. Motivated by this, we present AR-Omni, a unified any-to-any model in the autoregressive paradigm without any expert decoders. AR-Omni supports autoregressive text and image generation, as well as streaming speech generation, all under a single Transformer decoder. We further address three practical issues in unified AR modeling: modality imbalance via task-aware loss reweighting, visual fidelity via a lightweight token-level perceptual alignment loss for image tokens, and stability-creativity trade-offs via a finite-state decoding mechanism. Empirically, AR-Omni achieves strong quality across three modalities while remaining real-time, achieving a 0.88 real-time factor for speech generation.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Unified autoregressive model for any-to-any multimodal generation including speech; advances omni-modal SCA/TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

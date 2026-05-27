@@ -1,0 +1,34 @@
+{
+  "id": "2603.08216",
+  "source_ids": {
+    "arxiv": "2603.08216"
+  },
+  "title": "DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining",
+  "authors": [
+    "Shangeth Rajaa"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.08216",
+  "pdf_url": "https://arxiv.org/pdf/2603.08216.pdf",
+  "pdf_path": "raw/papers/2603.08216.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-speech models handle turn-taking naturally but offer limited support for tool-calling or complex reasoning, while production ASR-LLM-TTS voice pipelines offer these capabilities but rely on silence timeouts, which lead to unnatural turn-taking. We present DualTurn, which narrows this gap through generative pretraining on dual-channel conversational audio. The model generates both speakers' future audio autoregressively, implicitly learning conversational dynamics without any labels, and is then fine-tuned to predict interpretable turn-taking signals that map directly to agent actions. DualTurn monitors both channels continuously, anticipating turn boundaries and producing five agent actions. On standard benchmarks, DualTurn (0.5B) outperforms both VAP on agent action prediction (wF1 0.633 vs. 0.389) and a 3.1B audio-text model on word-level turn prediction (AUC 0.930 vs. 0.880), while anticipating turn boundaries earlier with fewer interruptions.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "DualTurn: turn-taking from dual-channel generative speech pretraining; core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0902",
+  "source_ids": {
+    "isca": "lameris25_interspeech",
+    "doi": "10.21437/Interspeech.2025-902"
+  },
+  "title": "VoiceQualityVC: A Voice Conversion System for Studying the Perceptual Effects of Voice Quality in Speech",
+  "authors": [
+    "Harm Lameris",
+    "Joakim Gustafsson",
+    "Ãva SzÃ©kely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lameris25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lameris25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0902.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice quality is an often overlooked aspect of speech with many communicative functions. Voice quality conveys both paralinguistic and pragmatic information, such as signalling speaker stance and aids in grounding. In this paper, we present VoiceQualityVC, a tool that can manipulate the voice quality of both natural and synthesized speech using voice quality features including CPPS, H1-H2, and H1-A3. VoiceQualityVC is a research tool for perceptual experiments into voice quality and UX experiments for voice design. We perform an objective evaluation demonstrating the control of these features as well as subjective listening tests of the paralinguistic attributes of intimacy, valence, and investment. In these listening tests breathy voice was rated as more intimate and more invested than modal voice and creaky voice was rated as less intimate and less positive. The code and models can be found at https://github.com/Hfkml/VQVC.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "VC tool for manipulating voice quality features (CPPS, H1-H2) in natural and synthesized speech; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

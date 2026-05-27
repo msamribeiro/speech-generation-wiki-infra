@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-gourav25_interspeech",
+  "source_ids": {
+    "isca": "gourav25_interspeech",
+    "doi": null
+  },
+  "title": "Code Mix TTS: An Approach to Infer Human Like Speech for Multi-Lingual Input Texts",
+  "authors": [
+    "Vishal Gourav",
+    "Phanindra Mankale"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/gourav25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/gourav25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-gourav25_interspeech.pdf",
+  "pdf_source": "isca",
+  "abstract": "We have come a far way in terms of producing high quality, human like audios for given input texts using TTS or Text to Speech Systems. We simply provide the TTS system with an input text and it generates an audio output. But, if we look at it closely, we provide the input text in a particular language only. However, as humans, while interacting with each other, do we actually speak in just one particular language? The answer is No, in most cases. Our speech in general, specially in multiple language countries, is a mix of native language of the specific country and a popular language(mostly English) and sometimes the other way round where we mix a bit of the native language words in our English conversation. In this paper, we talk about an approach to achieve the similar kind of \"Code Mix\" inference output for \"Multi-Lingual\" input texts from our TTS system without the need of any additional training data or fine tuning.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Code-mixed multilingual TTS system for natural multi-lingual speech synthesis; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

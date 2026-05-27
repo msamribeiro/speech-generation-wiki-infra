@@ -1,0 +1,39 @@
+{
+  "id": "2510.15364",
+  "source_ids": {
+    "arxiv": "2510.15364"
+  },
+  "title": "LDCodec: A high quality neural audio codec with low-complexity decoder",
+  "authors": [
+    "Jiawei Jiang",
+    "Linping Xu",
+    "Dejun Zhang",
+    "Qingbo Huang",
+    "Xianjun Xia",
+    "Yijian Xiao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.15364",
+  "pdf_url": "https://arxiv.org/pdf/2510.15364.pdf",
+  "pdf_path": "raw/papers/2510.15364.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio coding has been shown to outperform classical audio coding at extremely low bitrates. However, the practical application of neural audio codecs is still limited by their elevated complexity. To address this challenge, we have developed a high-quality neural audio codec with a low-complexity decoder, named LDCodec (Low-complexity Decoder Neural Audio Codec), specifically designed for on-demand streaming media clients, such as smartphones. Specifically, we introduced a novel residual unit combined with Long-term and Short-term Residual Vector Quantization (LSRVQ), subband-fullband frequency discriminators, and perceptual loss functions. This combination results in high-quality audio reconstruction with lower complexity. Both our subjective and objective tests demonstrated that our proposed LDCodec at 6kbps outperforms Opus at 12kbps.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Neural audio codec with low-complexity decoder for practical speech generation deployment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

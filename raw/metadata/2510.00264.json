@@ -1,0 +1,36 @@
+{
+  "id": "2510.00264",
+  "source_ids": {
+    "arxiv": "2510.00264"
+  },
+  "title": "Baseline Systems For The 2025 Low-Resource Audio Codec Challenge",
+  "authors": [
+    "Yusuf Ziya Isik",
+    "Rafał Łaganowski"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.00264",
+  "pdf_url": "https://arxiv.org/pdf/2510.00264.pdf",
+  "pdf_path": "raw/papers/2510.00264.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The Low-Resource Audio Codec (LRAC) Challenge aims to advance neural audio coding for deployment in resource-constrained environments. The first edition focuses on low-resource neural speech codecs that must operate reliably under everyday noise and reverberation, while satisfying strict constraints on computational complexity, latency, and bitrate. Track 1 targets transparency codecs, which aim to preserve the perceptual transparency of input speech under mild noise and reverberation. Track 2 addresses enhancement codecs, which combine coding and compression with denoising and dereverberation. This paper presents the official baseline systems for both tracks in the 2025 LRAC Challenge. The baselines are convolutional neural codec models with Residual Vector Quantization, trained end-to-end using a combination of adversarial and reconstruction objectives. We detail the data filtering and augmentation strategies, model architectures, optimization procedures, and checkpoint selection criteria.",
+  "arxiv_comment": "Low-Resource Audio Codec Challenge 2025",
+  "task": [
+    "codec",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Baseline systems for Low-Resource Audio Codec Challenge 2025; core codec evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

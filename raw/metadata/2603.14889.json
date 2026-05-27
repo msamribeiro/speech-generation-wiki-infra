@@ -1,0 +1,44 @@
+{
+  "id": "2603.14889",
+  "source_ids": {
+    "arxiv": "2603.14889"
+  },
+  "title": "SDiaReward: Modeling and Benchmarking Spoken Dialogue Rewards with Modality and Colloquialness",
+  "authors": [
+    "Jingyu Lu",
+    "Yuhan Wang",
+    "Fan Zhuo",
+    "Xize Cheng",
+    "Changhao Pan",
+    "Xueyi Pu",
+    "Yifu Chen",
+    "Chenyuhao Wen",
+    "Tianle Liang",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14889",
+  "pdf_url": "https://arxiv.org/pdf/2603.14889.pdf",
+  "pdf_path": "raw/papers/2603.14889.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The rapid evolution of end-to-end spoken dialogue systems demands transcending mere textual semantics to incorporate paralinguistic nuances and the spontaneous nature of human conversation. However, current methods struggle with two critical gaps: the modality gap, involving prosody and emotion, and the colloquialness gap, distinguishing written scripts from natural speech. To address these challenges, we introduce SDiaReward, an end-to-end multi-turn reward model trained on SDiaReward-Dataset, a novel collection of episode-level preference pairs explicitly targeting these gaps. It operates directly on full multi-turn speech episodes and is optimized with pairwise preference supervision, enabling joint assessment of modality and colloquialness in a single evaluator. We further establish ESDR-Bench, a stratified benchmark for robust episode-level evaluation. Experiments demonstrate that SDiaReward achieves state-of-the-art pairwise preference accuracy, significantly outperforming general-purpose audio LLMs. Further analysis suggests that SDiaReward captures relative conversational expressiveness beyond superficial synthesis cues, improving generalization across domains and recording conditions. Code, data, and demos are available at https://github.com/MM-Speech/SDiaReward/.",
+  "arxiv_comment": "Accepted to ACL 2026 Main Conference",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Spoken dialogue reward model benchmark addressing modality and colloquialness gaps in SDS evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

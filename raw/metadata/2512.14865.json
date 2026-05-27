@@ -1,0 +1,56 @@
+{
+  "id": "2512.14865",
+  "source_ids": {
+    "arxiv": "2512.14865"
+  },
+  "title": "Audio MultiChallenge: A Multi-Turn Evaluation of Spoken Dialogue Systems on Natural Human Interaction",
+  "authors": [
+    "Advait Gosai",
+    "Tyler Vuong",
+    "Utkarsh Tyagi",
+    "Steven Li",
+    "Wenjia You",
+    "Miheer Bavare",
+    "Arda Uçar",
+    "Zhongwang Fang",
+    "Brian Jang",
+    "Bing Liu"
+  ],
+  "authors_full": [
+    "Advait Gosai",
+    "Tyler Vuong",
+    "Utkarsh Tyagi",
+    "Steven Li",
+    "Wenjia You",
+    "Miheer Bavare",
+    "Arda Uçar",
+    "Zhongwang Fang",
+    "Brian Jang",
+    "Bing Liu",
+    "Yunzhong He"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.14865",
+  "pdf_url": "https://arxiv.org/pdf/2512.14865.pdf",
+  "pdf_path": "raw/papers/2512.14865.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end (E2E) spoken dialogue systems are increasingly replacing cascaded pipelines for voice-based human-AI interaction, processing raw audio directly without intermediate transcription. Existing benchmarks primarily evaluate these models on synthetic speech and single-turn tasks, leaving realistic multi-turn conversational ability underexplored. We introduce Audio MultiChallenge, an open-source benchmark to evaluate E2E spoken dialogue systems under natural multi-turn interaction patterns. Building on the text-based MultiChallenge framework, which evaluates Inference Memory, Instruction Retention, and Self Coherence, we introduce a new axis Voice Editing that tests robustness to mid-utterance speech repairs and backtracking. We further augment each axis to the audio modality, such as introducing Audio-Cue challenges for Inference Memory that require recalling ambient sounds and paralinguistic signals beyond semantic content. We curate 452 conversations from 47 speakers with 1,712 instance-specific rubrics through a hybrid audio-native agentic and human-in-the-loop pipeline that exposes model failures at scale while preserving natural disfluencies found in unscripted human speech. Our evaluation of proprietary and open-source models reveals that even frontier models struggle on our benchmark, with Gemini 3 Pro Preview (Thinking), our highest-performing model achieving a 54.65% pass rate. Error analysis shows that models fail most often on our new axes and that Self Coherence degrades with longer audio context. These failures reflect difficulty of tracking edits, audio cues, and long-range context in natural spoken dialogue. Audio MultiChallenge provides a reproducible testbed to quantify them and drive improvements in audio-native multi-turn interaction capability.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Multi-turn natural human interaction benchmark for end-to-end spoken dialogue systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

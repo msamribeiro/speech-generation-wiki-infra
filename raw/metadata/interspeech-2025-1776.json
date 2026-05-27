@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-1776",
+  "source_ids": {
+    "isca": "liang25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-1776"
+  },
+  "title": "SpeechSEC: A Unified Multi-Task Framework for Speech Synthesis, Editing, and Continuation",
+  "authors": [
+    "Liming Liang",
+    "Dongchao Yang",
+    "Xianwei Zhuang",
+    "Yuxin Xie",
+    "Luo Chen",
+    "Yuehan Jin",
+    "Yuexian Zou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/liang25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/liang25e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1776.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent advancements in non-autoregressive single-task speech synthesis have garnered significant attention. However,traditional single-task speech synthesis methods focus primarily on mapping semantic tokens to acoustic tokens, which overlooking the internal relationships within acoustic features. Addressing this gap, we propose SpeechSEC, a unified multi-task framework designed for Speech Synthesis, Editing, and Continuation tasks by dynamically adjusting input conditions. SpeechSEC not only surpasses previous state-of-the-art method in audio quality (4.20 vs 4.00), and voice preservation (0.72 vs 0.58) for synthesis task by acquiring shared knowledge, but also efficiently executes editing and continuation tasks with good performance via non-autoregressive techniques. Additionally, SpeechSEC exhibits a strong adaptability to current speech discretization methods, like Hubert, Descript-Audio-Codec and SpeechTokenizer, which showcases robustness of our approach. Audio samples are available.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Unified multi-task framework for speech synthesis, editing, and continuation; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

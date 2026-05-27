@@ -1,0 +1,34 @@
+{
+  "id": "2603.10324",
+  "source_ids": {
+    "arxiv": "2603.10324"
+  },
+  "title": "NasoVoce: A Nose-Mounted Low-Audibility Speech Interface for Always-Available Speech Interaction",
+  "authors": [
+    "Jun Rekimoto",
+    "Yu Nishimura",
+    "Bojian Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.10324",
+  "pdf_url": "https://arxiv.org/pdf/2603.10324.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Silent and whispered speech offer promise for always-available voice interaction with AI, yet existing methods struggle to balance vocabulary size, wearability, silence, and noise robustness. We present NasoVoce, a nose-bridge-mounted interface that integrates a microphone and a vibration sensor. Positioned at the nasal pads of smart glasses, it unobtrusively captures both acoustic and vibration signals. The nasal bridge, close to the mouth, allows access to bone- and skin-conducted speech and enables reliable capture of low-volume utterances such as whispered speech. While the microphone captures high-quality audio, it is highly sensitive to environmental noise. Conversely, the vibration sensor is robust to noise but yields lower signal quality. By fusing these complementary inputs, NasoVoce generates high-quality speech robust against interference. Evaluation with Whisper Large-v2, PESQ, STOI, and MUSHRA ratings confirms improved recognition and quality. NasoVoce demonstrates the feasibility of a practical interface for always-available, continuous, and discreet AI voice conversations.",
+  "arxiv_comment": "ACM CHI 2026 paper",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Nose-mounted hardware speech interface; HCI device, not a speech generation contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

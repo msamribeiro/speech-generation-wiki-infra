@@ -1,0 +1,40 @@
+{
+  "id": "2509.00675",
+  "source_ids": {
+    "arxiv": "2509.00675"
+  },
+  "title": "Speaker-Conditioned Phrase Break Prediction for Text-to-Speech with Phoneme-Level Pre-trained Language Model",
+  "authors": [
+    "Dong Yang",
+    "Yuki Saito",
+    "Takaaki Saeki",
+    "Tomoki Koriyama",
+    "Wataru Nakata",
+    "Detai Xin",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.00675",
+  "pdf_url": "https://arxiv.org/pdf/2509.00675.pdf",
+  "pdf_path": "raw/papers/2509.00675.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper advances phrase break prediction (also known as phrasing) in multi-speaker text-to-speech (TTS) systems. We integrate speaker-specific features by leveraging speaker embeddings to enhance the performance of the phrasing model. We further demonstrate that these speaker embeddings can capture speaker-related characteristics solely from the phrasing task. Besides, we explore the potential of pre-trained speaker embeddings for unseen speakers through a few-shot adaptation method. Furthermore, we pioneer the application of phoneme-level pre-trained language models to this TTS front-end task, which significantly boosts the accuracy of the phrasing model. Our methods are rigorously assessed through both objective and subjective evaluations, demonstrating their effectiveness.",
+  "arxiv_comment": "Under Review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Speaker-conditioned phrase break prediction for prosody in multi-speaker TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

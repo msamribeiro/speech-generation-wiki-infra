@@ -1,0 +1,36 @@
+{
+  "id": "2603.17061",
+  "source_ids": {
+    "arxiv": "2603.17061"
+  },
+  "title": "Collecting Prosody in the Wild: A Content-Controlled, Privacy-First Smartphone Protocol and Empirical Evaluation",
+  "authors": [
+    "Timo K. Koch",
+    "Florian Bemmann",
+    "Ramona Schoedel",
+    "Markus Buehner",
+    "Clemens Stachl"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.17061",
+  "pdf_url": "https://arxiv.org/pdf/2603.17061.pdf",
+  "pdf_path": "raw/papers/2603.17061.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Collecting everyday speech data for prosodic analysis is challenging due to the confounding of prosody and semantics, privacy constraints, and participant compliance. We introduce and empirically evaluate a content-controlled, privacy-first smartphone protocol that uses scripted read-aloud sentences to standardize lexical content (including prompt valence) while capturing natural variation in prosodic delivery. The protocol performs on-device prosodic feature extraction, deletes raw audio immediately, and transmits only derived features for analysis. We deployed the protocol in a large study (N = 560; 9,877 recordings), evaluated compliance and data quality, and conducted diagnostic prediction tasks on the extracted features, predicting speaker sex and concurrently reported momentary affective states (valence, arousal). We discuss implications and directions for advancing and deploying the protocol.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "Content-controlled smartphone protocol for collecting naturalistic prosody data; data collection not generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

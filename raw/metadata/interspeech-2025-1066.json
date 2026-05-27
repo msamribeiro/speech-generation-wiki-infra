@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-1066",
+  "source_ids": {
+    "isca": "sun25f_interspeech",
+    "doi": "10.21437/Interspeech.2025-1066"
+  },
+  "title": "Score-Based Training for Energy-Based TTS Models",
+  "authors": [
+    "Wanli Sun",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/sun25f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/sun25f_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1066.pdf",
+  "pdf_source": "isca",
+  "abstract": "Noise contrastive estimation (NCE) is a popular method for training energy-based models (EBM) with intractable normalisation terms. The key idea of NCE is to learn by comparing unnormalised log-likelihoods of the reference and noisy samples, thus avoiding explicitly computing normalisation terms. However, NCE critically relies on the quality of noisy samples. Recently, sliced score matching (SSM) has been popularised by closely related diffusion models (DM). Unlike NCE, SSM learns a gradient of log-likelihood, or score, by learning distribution of its projections on randomly chosen directions. However, both NCE and SSM disregard the form of log-likelihood function, which is problematic given that EBMs and DMs make use of first-order optimisation during inference. This paper proposes a new criterion that learns scores more suitable for first-order schemes. Experiments contrasts these approaches for training EBMs.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Novel sliced score matching training for energy-based TTS models; advances TTS training.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

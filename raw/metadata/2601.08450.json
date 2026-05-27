@@ -1,0 +1,35 @@
+{
+  "id": "2601.08450",
+  "source_ids": {
+    "arxiv": "2601.08450"
+  },
+  "title": "Decoding Order Matters in Autoregressive Speech Synthesis",
+  "authors": [
+    "Minghui Zhao",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.08450",
+  "pdf_url": "https://arxiv.org/pdf/2601.08450.pdf",
+  "pdf_path": "raw/papers/2601.08450.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Autoregressive speech synthesis often adopts a left-to-right order, yet generation order is a modelling choice. We investigate decoding order through masked diffusion framework, which progressively unmasks positions and allows arbitrary decoding orders during training and inference. By interpolating between identity and random permutations, we show that randomness in decoding order affects speech quality. We further compare fixed strategies, such as \\texttt{l2r} and \\texttt{r2l} with adaptive ones, such as Top-$K$, finding that fixed-order decoding, including the dominating left-to-right approach, is suboptimal, while adaptive decoding yields better performance. Finally, since masked diffusion requires discrete inputs, we quantise acoustic representations and find that even 1-bit quantisation can support reasonably high-quality speech.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Investigates decoding order effects in autoregressive speech synthesis via masked diffusion framework",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

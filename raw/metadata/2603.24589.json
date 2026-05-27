@@ -1,0 +1,42 @@
+{
+  "id": "2603.24589",
+  "source_ids": {
+    "arxiv": "2603.24589"
+  },
+  "title": "YingMusic-Singer-Plus: Controllable Singing Voice Synthesis with Flexible Lyric Manipulation and Annotation-free Melody Guidance",
+  "authors": [
+    "Chunbo Hao",
+    "Junjie Zheng",
+    "Guobin Ma",
+    "Yuepeng Jiang",
+    "Huakang Chen",
+    "Wenjie Tian",
+    "Gongyu Chen",
+    "Zihao Chen",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.24589",
+  "pdf_url": "https://arxiv.org/pdf/2603.24589.pdf",
+  "pdf_path": "raw/papers/2603.24589.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Regenerating singing voices with altered lyrics while preserving melody consistency remains challenging, as existing methods either offer limited controllability or require laborious manual alignment. We propose YingMusic-Singer-Plus, a fully diffusion-based model enabling melody-controllable singing voice synthesis with flexible lyric manipulation. The model takes three inputs: an optional timbre reference, a melody-providing singing clip, and modified lyrics, without manual alignment. Trained with curriculum learning and Group Relative Policy Optimization, YingMusic-Singer-Plus achieves stronger melody preservation and lyric adherence than Vevo2, the most comparable baseline supporting melody control without manual alignment. We also introduce LyricEditBench, the first benchmark for melody-preserving lyric modification evaluation. The code, weights, benchmark, and demos are publicly available at https://github.com/ASLP-lab/YingMusic-Singer-Plus.",
+  "arxiv_comment": null,
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "YingMusic-Singer-Plus: diffusion-based controllable SVS with flexible lyric manipulation and annotation-free melody",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

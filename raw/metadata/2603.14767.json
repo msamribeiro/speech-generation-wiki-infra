@@ -1,0 +1,35 @@
+{
+  "id": "2603.14767",
+  "source_ids": {
+    "arxiv": "2603.14767"
+  },
+  "title": "Investigating the Impact of Speech Enhancement on Audio Deepfake Detection in Noisy Environments",
+  "authors": [
+    "Anacin",
+    "Angela",
+    "Shruti Kshirsagar",
+    "Anderson R. Avila"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14767",
+  "pdf_url": "https://arxiv.org/pdf/2603.14767.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Logical Access (LA) attacks, also known as audio deepfake attacks, use Text-to-Speech (TTS) or Voice Conversion (VC) methods to generate spoofed speech data. This can represent a serious threat to Automatic Speaker Verification (ASV) systems, as intruders can use such attacks to bypass voice biometric security. In this study, we investigate the correlation between speech quality and the performance of audio spoofing detection systems (i.e., LA task). For that, the performance of two enhancement algorithms is evaluated based on two perceptual speech quality measures, namely Perceptual Evaluation of Speech Quality (PESQ) and Speech-to-Reverberation Modulation Ratio (SRMR), and in respect to their impact on the audio spoofing detection system. We adopted the LA dataset, provided in the ASVspoof 2019 Challenge, and corrupted its test set with different Signal-to-Noise Ratio (SNR) levels, while leaving the training data untouched. Enhancement was applied to attenuate the detrimental effects of noisy speech, and the performances of two models, Speech Enhancement Generative Adversarial Network (SEGAN) and Metric-Optimized Generative Adversarial Network Plus (MetricGAN+), were compared. Although we expect that speech quality will correlate well with speech applications' performance, it can also have as a side effect on downstream tasks if unwanted artifacts are introduced or relevant information is removed from the speech signal. Our results corroborate with this hypothesis, as we found that the enhancement algorithm leading to the highest speech quality scores, MetricGAN+, provided the lowest Equal Error Rate (EER) on the audio spoofing detection task, whereas the enhancement method with the lowest speech quality scores, SEGAN, led to the lowest EER, thus leading to better performance on the LA task.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Analysis of speech enhancement effect on deepfake detection performance; anti-spoofing not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

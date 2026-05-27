@@ -1,0 +1,43 @@
+{
+  "id": "2025.naacl-srw.6",
+  "source_ids": {
+    "acl": "2025.naacl-srw.6",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-srw.6",
+    "url_acl": "https://aclanthology.org/2025.naacl-srw.6"
+  },
+  "title": "Towards Codec-LM Co-design for Neural Codec Language Models",
+  "authors": [
+    "Shih-Lun Wu",
+    "Aakash Lahoti",
+    "Arjun D Desai",
+    "Karan Goel",
+    "Chris Donahue",
+    "Albert Gu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-srw.6",
+  "pdf_url": "https://aclanthology.org/2025.naacl-srw.6.pdf",
+  "pdf_path": "raw/papers/2025.naacl-srw.6.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Neural codec language models (or codec LMs) are emerging as a powerful framework for audio generation tasks like text-to-speech (TTS). These models leverage advancements in language modeling and residual vector quantization (RVQ)-based audio codecs, which compress audios into discrete codes for LMs to process. Despite the close interdependence of codecs and LMs in these systems, research on codecs and LMs has largely remained siloed. In this work, we propose three techniques for better codec-LM co-design: (i) a frame-wise codec encoder that improves both LM log-likelihood and end-to-end TTS metrics, (ii) LM codebook level dropout, a method to efficiently navigate a portion of the codec-LM design space by training a single LM, and (iii) increased codec frame duration, which we show can accelerate inference while maintaining end-to-end performance. Our experiments demonstrate that combining all three co-design techniques results in doubled inference speed, and improvements in intelligibility, audio quality, and speaker control in TTS relative to a siloed baseline.",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Investigates codec-LM co-design for neural codec language models for TTS; directly advances codec and TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

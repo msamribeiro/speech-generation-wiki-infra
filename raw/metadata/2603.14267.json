@@ -1,0 +1,39 @@
+{
+  "id": "2603.14267",
+  "source_ids": {
+    "arxiv": "2603.14267"
+  },
+  "title": "DiFlowDubber: Discrete Flow Matching for Automated Video Dubbing via Cross-Modal Alignment and Synchronization",
+  "authors": [
+    "Ngoc-Son Nguyen",
+    "Thanh V. T. Tran",
+    "Jeongsoo Choi",
+    "Hieu-Nghia Huynh-Nguyen",
+    "Truong-Son Hy",
+    "Van Nguyen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14267",
+  "pdf_url": "https://arxiv.org/pdf/2603.14267.pdf",
+  "pdf_path": "raw/papers/2603.14267.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Video dubbing requires content accuracy, expressive prosody, high-quality acoustics, and precise lip synchronization, yet existing approaches struggle on all four fronts. To address these issues, we propose DiFlowDubber, the first video dubbing framework built upon a discrete flow matching backbone with a novel two-stage training strategy. In the first stage, a zero-shot text-to-speech (TTS) system is pre-trained on large-scale corpora, where a deterministic architecture captures linguistic structures, and the Discrete Flow-based Prosody-Acoustic (DFPA) module models expressive prosody and realistic acoustic characteristics. In the second stage, we propose the Content-Consistent Temporal Adaptation (CCTA) to transfer TTS knowledge to the dubbing domain: its Synchronizer enforces cross-modal alignment for lip-synchronized speech. Complementarily, the Face-to-Prosody Mapper (FaPro) conditions prosody on facial expressions, whose outputs are then fused with those of the Synchronizer to construct rich, fine-grained multimodal embeddings that capture prosody-content correlations, guiding the DFPA to generate expressive prosody and acoustic tokens for content-consistent speech. Experiments on two benchmark datasets demonstrate that DiFlowDubber outperforms prior methods across multiple evaluation metrics.",
+  "arxiv_comment": "Accepted at CVPR 2026 Findings",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Discrete flow matching video dubbing with TTS stage and cross-modal alignment for lip synchronization",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,56 @@
+{
+  "id": "2508.02038",
+  "source_ids": {
+    "arxiv": "2508.02038"
+  },
+  "title": "Marco-Voice Technical Report",
+  "authors": [
+    "Fengping Tian",
+    "Chenyang Lyu",
+    "Xuanfan Ni",
+    "Haoqin Sun",
+    "Qingjuan Li",
+    "Zhiqiang Qian",
+    "Haijun Li",
+    "Longyue Wang",
+    "Zhao Xu",
+    "Weihua Luo"
+  ],
+  "authors_full": [
+    "Fengping Tian",
+    "Chenyang Lyu",
+    "Xuanfan Ni",
+    "Haoqin Sun",
+    "Qingjuan Li",
+    "Zhiqiang Qian",
+    "Haijun Li",
+    "Longyue Wang",
+    "Zhao Xu",
+    "Weihua Luo",
+    "Kaifu Zhang"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.02038",
+  "pdf_url": "https://arxiv.org/pdf/2508.02038.pdf",
+  "pdf_path": "raw/papers/2508.02038.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents a multifunctional speech synthesis system that integrates voice cloning and emotion control speech synthesis within a unified framework. The goal of this work is to address longstanding challenges in achieving highly expressive, controllable, and natural speech generation that faithfully preserves speaker identity across diverse linguistic and emotional contexts. Our approach introduces an effective speaker-emotion disentanglement mechanism with in-batch contrastive learning, enabling independent manipulation of speaker identity and eemotional style, as well as rotational emotional embedding integration method for smooth emotion control. To support comprehensive training and evaluation, we construct CSEMOTIONS, a high-quality emotional speech dataset containing 10 hours of Mandarin speech from six professional speakers across seven emotional categories. Extensive experiments demonstrate that our system, Marco-Voice, achieves substantial improvements in both objective and subjective metrics. Comprehensive evaluations and analysis were conducted, results show that MarcoVoice delivers competitive performance in terms of speech clarity and emotional richness, representing a substantial advance in the field of expressive neural speech synthesis. Our code and dataset are publicly available at https://github.com/AIDC-AI/Marco-Voice and https://huggingface.co/datasets/AIDC-AI/CSEMOTIONS respectively.",
+  "arxiv_comment": "Technical Report. Our code and dataset are publicly available at https://github.com/AIDC-AI/Marco-Voice and https://huggingface.co/datasets/AIDC-AI/CSEMOTIONS respectively",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Technical report for unified speech synthesis with voice cloning and emotion control",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

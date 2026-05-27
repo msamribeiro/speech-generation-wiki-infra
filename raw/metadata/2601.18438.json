@@ -1,0 +1,59 @@
+{
+  "id": "2601.18438",
+  "source_ids": {
+    "arxiv": "2601.18438"
+  },
+  "title": "UrgentMOS: Unified Multi-Metric and Preference Learning for Robust Speech Quality Assessment",
+  "authors": [
+    "Wei Wang",
+    "Wangyou Zhang",
+    "Chenda Li",
+    "Jiahe Wang",
+    "Samuele Cornell",
+    "Marvin Sach",
+    "Kohei Saijo",
+    "Yihui Fu",
+    "Zhaoheng Ni",
+    "Bing Han"
+  ],
+  "authors_full": [
+    "Wei Wang",
+    "Wangyou Zhang",
+    "Chenda Li",
+    "Jiahe Wang",
+    "Samuele Cornell",
+    "Marvin Sach",
+    "Kohei Saijo",
+    "Yihui Fu",
+    "Zhaoheng Ni",
+    "Bing Han",
+    "Xun Gong",
+    "Mengxiao Bi",
+    "Tim Fingscheidt",
+    "Shinji Watanabe",
+    "Yanmin Qian"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.18438",
+  "pdf_url": "https://arxiv.org/pdf/2601.18438.pdf",
+  "pdf_path": "raw/papers/2601.18438.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Automatic speech quality assessment has become increasingly important as modern speech generation systems continue to advance, while human listening tests remain costly, time-consuming, and difficult to scale. Most existing learning-based assessment models rely primarily on scarce human-annotated mean opinion score (MOS) data, which limits robustness and generalization, especially when training across heterogeneous datasets. In this work, we propose UrgentMOS, a unified speech quality assessment framework that jointly learns from diverse objective and perceptual quality metrics, while explicitly tolerating the absence of arbitrary subsets of metrics during training. By leveraging complementary quality facets under heterogeneous supervision, UrgentMOS enables effective utilization of partially annotated data and improves robustness when trained on large-scale, multi-source datasets. Beyond absolute score prediction, UrgentMOS explicitly models pairwise quality preferences by directly predicting comparative MOS (CMOS), making it well suited for preference-based evaluation scenarios commonly adopted in system benchmarking. Extensive experiments across a wide range of speech quality datasets, including simulated distortions, speech enhancement, and speech synthesis, demonstrate that UrgentMOS consistently achieves state-of-the-art performance in both absolute and comparative evaluation settings.",
+  "arxiv_comment": null,
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Unified multi-metric speech quality assessment combining MOS and preference learning for robust evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2601.18281",
+  "source_ids": {
+    "arxiv": "2601.18281"
+  },
+  "title": "Reflecting Twice before Speaking with Empathy: Self-Reflective Alternating Inference for Empathy-Aware End-to-End Spoken Dialogue",
+  "authors": [
+    "Yuhang Jia",
+    "Pei Liu",
+    "Haoqin Sun",
+    "Jiaming Zhou",
+    "Xuxin Cheng",
+    "Cao Liu",
+    "Ke Zeng",
+    "Xunliang Cai",
+    "Yong Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.18281",
+  "pdf_url": "https://arxiv.org/pdf/2601.18281.pdf",
+  "pdf_path": "raw/papers/2601.18281.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end Spoken Language Models (SLMs) hold great potential for paralinguistic perception, and numerous studies have aimed to enhance their capabilities, particularly for empathetic dialogue. However, current approaches largely depend on rigid supervised signals, such as ground-truth response in supervised fine-tuning or preference scores in reinforcement learning. Such reliance is fundamentally limited for modeling complex empathy, as there is no single \"correct\" response and a simple numerical score cannot fully capture the nuances of emotional expression or the appropriateness of empathetic behavior. To address these limitations, we sequentially introduce EmpathyEval, a descriptive natural-language-based evaluation model for assessing empathetic quality in spoken dialogues. Building upon EmpathyEval, we propose ReEmpathy, an end-to-end SLM that enhances empathetic dialogue through a novel Empathetic Self-Reflective Alternating Inference mechanism, which interleaves spoken response generation with free-form, empathy-related reflective reasoning. Extensive experiments demonstrate that ReEmpathy substantially improves empathy-sensitive spoken dialogue by enabling reflective reasoning, offering a promising approach toward more emotionally intelligent and empathy-aware human-computer interactions.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Self-reflective alternating inference for empathy-aware end-to-end spoken dialogue without rigid supervision",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

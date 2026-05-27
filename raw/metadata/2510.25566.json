@@ -1,0 +1,37 @@
+{
+  "id": "2510.25566",
+  "source_ids": {
+    "arxiv": "2510.25566"
+  },
+  "title": "PitchFlower: A flow-based neural audio codec with pitch controllability",
+  "authors": [
+    "Diego Torres",
+    "Axel Roebel",
+    "Nicolas Obin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.25566",
+  "pdf_url": "https://arxiv.org/pdf/2510.25566.pdf",
+  "pdf_path": "raw/papers/2510.25566.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present PitchFlower, a flow-based neural audio codec with explicit pitch controllability. Our approach enforces disentanglement through a simple perturbation: during training, F0 contours are flattened and randomly shifted, while the true F0 is provided as conditioning. A vector-quantization bottleneck prevents pitch recovery, and a flow-based decoder generates high quality audio. Experiments show that PitchFlower achieves more accurate pitch control than WORLD at much higher audio quality, and outperforms SiFiGAN in controllability while maintaining comparable quality. Beyond pitch, this framework provides a simple and extensible path toward disentangling other speech attributes.",
+  "arxiv_comment": "5 pages, 5 figures",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Flow-based neural audio codec with explicit pitch disentanglement and controllability for speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

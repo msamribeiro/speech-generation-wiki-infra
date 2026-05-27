@@ -1,0 +1,39 @@
+{
+  "id": "2510.14662",
+  "source_ids": {
+    "arxiv": "2510.14662",
+    "acl": "2025.starsem-1.5",
+    "doi": "10.18653/v1/2025.starsem-1.5",
+    "url_acl": "https://aclanthology.org/2025.starsem-1.5"
+  },
+  "title": "Semantic Prosody in Machine Translation: the English-Chinese Case of Passive Structures",
+  "authors": [
+    "Xinyue Ma",
+    "Pol Pastells",
+    "Mireia Farrús",
+    "Mariona Taulé"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.14662",
+  "pdf_url": "https://aclanthology.org/2025.starsem-1.5.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Semantic prosody is a collocational meaning formed through the co-occurrence of a linguistic unit and a consistent series of collocates, which should be treated separately from semantic meaning. Since words that are literal translations of each other may have different semantic prosody, more attention should be paid to this linguistic property to generate accurate translations. However, current machine translation models cannot handle this problem. To bridge the gap, we propose an approach to teach machine translation models about semantic prosody of a specific structure. We focus on Chinese BEI passives and create a dataset of English-Chinese sentence pairs with the purpose of demonstrating the negative semantic prosody of BEI passives. Then we fine-tune OPUS-MT, NLLB-600M and mBART50 models with our dataset for the English-Chinese translation task. Our results show that fine-tuned MT models perform better on using BEI passives for translating unfavourable content and avoid using it for neutral and favourable content. Also, in NLLB-600M, which is a multilingual model, this knowledge of semantic prosody can be transferred from English-Chinese translation to other language pairs, such as Spanish-Chinese.",
+  "arxiv_comment": "11 pages, 2 figures, *SEM workshop at EMNLP 2025 conference",
+  "task": [],
+  "relevance_score": 0.08,
+  "relevance_note": "Semantic prosody as collocational meaning in MT; linguistics/MT paper, no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

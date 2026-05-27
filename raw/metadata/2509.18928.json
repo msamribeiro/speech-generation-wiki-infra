@@ -1,0 +1,40 @@
+{
+  "id": "2509.18928",
+  "source_ids": {
+    "arxiv": "2509.18928"
+  },
+  "title": "Direct Preference Optimization for Speech Autoregressive Diffusion Models",
+  "authors": [
+    "Zhijun Liu",
+    "Dongya Jia",
+    "Xiaoqiang Wang",
+    "Chenpeng Du",
+    "Shuai Wang",
+    "Zhuo Chen",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.18928",
+  "pdf_url": "https://arxiv.org/pdf/2509.18928.pdf",
+  "pdf_path": "raw/papers/2509.18928.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Autoregressive diffusion models (ARDMs) have recently been applied to speech generation, achieving state-of-the-art (SOTA) performance in zero-shot text-to-speech. By autoregressively generating continuous speech tokens with next-token diffusion, these models offer a promising alternative to next-token prediction, avoiding the technical complexities associated with discrete speech tokenization. As a relatively new paradigm, research on reinforcement learning (RL)-based fine-tuning of speech ARDMs remains limited. In this paper, we propose Autoregressive Diffusion-Direct Preference Optimization (ARDM-DPO) to advance this research. By fine-tuning the recently proposed zero-shot text-to-speech model DiTAR with DPO, we achieve significant improvements in terms of speech expressiveness and robustness for long texts.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Direct preference optimization applied to autoregressive diffusion models for zero-shot TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

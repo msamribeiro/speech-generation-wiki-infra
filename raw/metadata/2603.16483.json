@@ -1,0 +1,58 @@
+{
+  "id": "2603.16483",
+  "source_ids": {
+    "arxiv": "2603.16483"
+  },
+  "title": "On the Emotion Understanding of Synthesized Speech",
+  "authors": [
+    "Yuan Ge",
+    "Haishu Zhao",
+    "Aokai Hao",
+    "Junxiang Zhang",
+    "Bei Li",
+    "Xiaoqian Liu",
+    "Chenglong Wang",
+    "Jianjin Wang",
+    "Bingsen Zhou",
+    "Bingyu Liu"
+  ],
+  "authors_full": [
+    "Yuan Ge",
+    "Haishu Zhao",
+    "Aokai Hao",
+    "Junxiang Zhang",
+    "Bei Li",
+    "Xiaoqian Liu",
+    "Chenglong Wang",
+    "Jianjin Wang",
+    "Bingsen Zhou",
+    "Bingyu Liu",
+    "Jingbo Zhu",
+    "Zhengtao Yu",
+    "Tong Xiao"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.16483",
+  "pdf_url": "https://arxiv.org/pdf/2603.16483.pdf",
+  "pdf_path": "raw/papers/2603.16483.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Emotion is a core paralinguistic feature in voice interaction. It is widely believed that emotion understanding models learn fundamental representations that transfer to synthesized speech, making emotion understanding results a plausible reward or evaluation metric for assessing emotional expressiveness in speech synthesis. In this work, we critically examine this assumption by systematically evaluating Speech Emotion Recognition (SER) on synthesized speech across datasets, discriminative and generative SER models, and diverse synthesis models. We find that current SER models can not generalize to synthesized speech, largely because speech token prediction during synthesis induces a representation mismatch between synthesized and human speech. Moreover, generative Speech Language Models (SLMs) tend to infer emotion from textual semantics while ignoring paralinguistic cues. Overall, our findings suggest that existing SER models often exploit non-robust shortcuts rather than capturing fundamental features, and paralinguistic understanding in SLMs remains challenging.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Critically examines emotion understanding models on synthesized speech as reward/evaluation for TTS; directly advances emotional TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

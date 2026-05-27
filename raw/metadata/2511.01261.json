@@ -1,0 +1,43 @@
+{
+  "id": "2511.01261",
+  "source_ids": {
+    "arxiv": "2511.01261"
+  },
+  "title": "Speech-DRAME: A Framework for Human-Aligned Benchmarks in Speech Role-Play",
+  "authors": [
+    "Jiatong Shi",
+    "Jionghao Han",
+    "Yichen Lu",
+    "Santiago Pascual",
+    "Pengfei Wu",
+    "Chenye Cui",
+    "Shinji Watanabe",
+    "Chao Weng",
+    "Cong Zhou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.01261",
+  "pdf_url": "https://arxiv.org/pdf/2511.01261.pdf",
+  "pdf_path": "raw/papers/2511.01261.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Role-play has become a key testbed for generative models, expanding from text-only dialogue to multimodal interaction. Extending role-play to speech captures prosody, emotion, and delivery, but also poses new evaluation challenges. Current pipelines often use audio large language models (ALLMs) as zero-shot judges, which miss paralinguistic cues, collapse multiple aspects into coarse scores, and rely on synthetic speech references that fail to reflect real-world roles. We present Speech-DRAME, a unified framework that contributes at three levels: (i) Speech-DRAME-EvalBench, an evaluation benchmark with bilingual human-annotated data and protocols for training and testing speech evaluation models (SEMs), (ii) DRAME-Eval, a fine-tuned evaluation model, which substantially outperforms zero-shot and few-shot ALLMs, and (iii) Speech-DRAME-RoleBench, a speech role-play benchmark that leverages DRAME-Eval as an automatic judge to compare speech foundation models (SFMs). Speech-DRAME distinguishes between two complementary evaluation strategies: Archetype Evaluation, a top-down approach measuring adherence to broad role archetypes, and Realism Evaluation, a bottom-up approach grounded in real human speech that emphasizes nuanced role quality. Compared to zero-shot ALLM judges, DRAME-Eval achieves stronger agreement with human ratings (Pearson correlation from 0.480 to 0.629 in archetypes, and 0.390 to 0.625 in realism). By integrating transparent benchmark resources, modeling approaches, and system-level evaluation, Speech-DRAME provides the first comprehensive, reproducible foundation for assessing spoken role-play.",
+  "arxiv_comment": "67 pages",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Evaluation framework for speech role-play capabilities of audio large language models with paralinguistic scoring",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

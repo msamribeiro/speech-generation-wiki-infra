@@ -1,0 +1,39 @@
+{
+  "id": "2602.05373",
+  "source_ids": {
+    "arxiv": "2602.05373"
+  },
+  "title": "Speech-XL: Towards Long-Form Speech Understanding in Large Speech Language Models",
+  "authors": [
+    "Haoqin Sun",
+    "Chenyang Lyu",
+    "Shiwan Zhao",
+    "Xuanfan Ni",
+    "Xiangyu Kong",
+    "Longyue Wang",
+    "Weihua Luo",
+    "Yong Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.05373",
+  "pdf_url": "https://arxiv.org/pdf/2602.05373.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Despite the growing success of Large Speech Language Models (LSLMs) in processing short-term acoustic signals, their extension to long-form audio understanding is severely bottlenecked. This limitation stems from the limited context length and the exorbitant memory footprints required for long-form inference. In this work, we propose Speech-XL, a new model that capitalizes on the intrinsic key-value (KV) sparsification capacity of Large Language Models (LLMs) to achieve high-ratio speech input compression. Specifically, we introduce a novel special token, the Speech Summarization Token (SST), for each speech interval to encapsulate the intra-interval speech information into its associated KV pairs. The SST module is trained via instruction fine-tuning, employing a curriculum learning strategy where the SST learns to compress information in a progressive manner--advancing from low-ratio (simple) to high-ratio (challenging) compression. Despite utilizing significantly less training data than other baselines, our model achieves highly competitive performance on major benchmarks, including LongSpeech and AUDIOMARATHON. By addressing the long-standing bottlenecks in long-form audio modeling, our approach offers a novel perspective on the condensation of extensive acoustic sequences.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Long-form speech understanding with speech LLMs; primary task is recognition not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

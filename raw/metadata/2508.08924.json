@@ -1,0 +1,36 @@
+{
+  "id": "2508.08924",
+  "source_ids": {
+    "arxiv": "2508.08924"
+  },
+  "title": "EGGCodec: A Robust Neural Encodec Framework for EGG Reconstruction and F0 Extraction",
+  "authors": [
+    "Rui Feng",
+    "Yuang Chen",
+    "Yu Hu",
+    "Jun Du",
+    "Jiahong Yuan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.08924",
+  "pdf_url": "https://arxiv.org/pdf/2508.08924.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This letter introduces EGGCodec, a robust neural Encodec framework engineered for electroglottography (EGG) signal reconstruction and F0 extraction. We propose a multi-scale frequency-domain loss function to capture the nuanced relationship between original and reconstructed EGG signals, complemented by a time-domain correlation loss to improve generalization and accuracy. Unlike conventional Encodec models that extract F0 directly from features, EGGCodec leverages reconstructed EGG signals, which more closely correspond to F0. By removing the conventional GAN discriminator, we streamline EGGCodec's training process without compromising efficiency, incurring only negligible performance degradation. Trained on a widely used EGG-inclusive dataset, extensive evaluations demonstrate that EGGCodec outperforms state-of-the-art F0 extraction schemes, reducing mean absolute error (MAE) from 14.14 Hz to 13.69 Hz, and improving voicing decision error (VDE) by 38.2\\%. Moreover, extensive ablation experiments validate the contribution of each component of EGGCodec.",
+  "arxiv_comment": "5 pages, 5 figures, to be appeared in IEEE Signal Processing Letters",
+  "task": [],
+  "relevance_score": 0.45,
+  "relevance_note": "Codec for EGG signal reconstruction and F0 extraction; specialized medical signal, not general speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,56 @@
+{
+  "id": "2602.06602",
+  "source_ids": {
+    "arxiv": "2602.06602"
+  },
+  "title": "Scaling Speech Tokenizers with Diffusion Autoencoders",
+  "authors": [
+    "Yuancheng Wang",
+    "Zhenyu Tang",
+    "Yun Wang",
+    "Arthur Hinsvark",
+    "Yingru Liu",
+    "Yinghao Li",
+    "Kainan Peng",
+    "Junyi Ao",
+    "Mingbo Ma",
+    "Mike Seltzer"
+  ],
+  "authors_full": [
+    "Yuancheng Wang",
+    "Zhenyu Tang",
+    "Yun Wang",
+    "Arthur Hinsvark",
+    "Yingru Liu",
+    "Yinghao Li",
+    "Kainan Peng",
+    "Junyi Ao",
+    "Mingbo Ma",
+    "Mike Seltzer",
+    "Qing He",
+    "Xubo Liu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.06602",
+  "pdf_url": "https://arxiv.org/pdf/2602.06602.pdf",
+  "pdf_path": "raw/papers/2602.06602.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech tokenizers are foundational to speech language models, yet existing approaches face two major challenges: (1) balancing trade-offs between encoding semantics for understanding and acoustics for reconstruction, and (2) achieving low bit rates and low token rates. We propose Speech Diffusion Tokenizer (SiTok), a diffusion autoencoder that jointly learns semantic-rich representations through supervised learning and enables high-fidelity audio reconstruction with diffusion. We scale SiTok to 1.6B parameters and train it on 2 million hours of speech. Experiments show that SiTok outperforms strong baselines on understanding, reconstruction and generation tasks, at an extremely low token rate of $12.5$ Hz and a bit-rate of 200 bits-per-second.",
+  "arxiv_comment": "ICLR 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Scaling speech tokenizers with diffusion autoencoders; core tokenization paper.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2505.20323",
+  "source_ids": {
+    "arxiv": "2505.20323"
+  },
+  "title": "PMOA-TTS: Introducing the PubMed Open Access Textual Times Series Corpus",
+  "authors": [
+    "Shahriar Noroozizadeh",
+    "Sayantan Kumar",
+    "George H. Chen",
+    "Jeremy C. Weiss"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.20323",
+  "pdf_url": "https://arxiv.org/pdf/2505.20323.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Clinical narratives encode temporal dynamics essential for modeling patient trajectories, yet large-scale temporally annotated resources are scarce. We introduce PMOA-TTS, a corpus of 124,699 single-patient PubMed Open Access case reports converted into structured textual timelines of (event, time) pairs using a scalable large-language-model pipeline (Llama 3.3 70B and DeepSeek-R1). The corpus comprises over 5.6 million timestamped events, alongside extracted demographics and diagnoses. Technical validation uses a clinician-curated gold set and three measures: semantic event matching, temporal concordance (c-index), and alignment error summarized with Area Under the Log-Time CDF (AULTC). We benchmark alternative prompting and model choices and provide documentation to support reproduction. PMOA-TTS enables research on timeline extraction, temporal reasoning, survival modeling and event forecasting from narrative text, and offers broad diagnostic and demographic coverage. Data and code are openly available in public repositories.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "TTS acronym stands for 'Textual Time Series' not text-to-speech; clinical NLP paper.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

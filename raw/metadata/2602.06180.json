@@ -1,0 +1,39 @@
+{
+  "id": "2602.06180",
+  "source_ids": {
+    "arxiv": "2602.06180"
+  },
+  "title": "STACodec: Semantic Token Assignment for Balancing Acoustic Fidelity and Semantic Information in Audio Codecs",
+  "authors": [
+    "Kaiyuan Zhang",
+    "Mohan Shi",
+    "Eray Eren",
+    "Natarajan Balaji Shankar",
+    "Zilai Wang",
+    "Abeer Alwan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.06180",
+  "pdf_url": "https://arxiv.org/pdf/2602.06180.pdf",
+  "pdf_path": "raw/papers/2602.06180.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs are widely used for audio compression and can be integrated into token-based language models. Traditional codecs preserve acoustic details well but lack semantic information. Recent hybrid codecs attempt to incorporate semantic information through distillation, but this often degrades reconstruction performance, making it difficult to achieve both. To address this limitation, we introduce STACodec, a unified codec that integrates semantic information from self-supervised learning (SSL) models into the first layer of residual vector quantization (RVQ-1) via semantic token assignment (STA). To further eliminate reliance on SSL-based semantic tokenizers and improve efficiency during inference, we propose a semantic pre-distillation (SPD) module, which predicts semantic tokens directly for assignment to the first RVQ layer during inference. Experimental results show that STACodec outperforms existing hybrid codecs in both audio reconstruction and downstream semantic tasks, demonstrating a better balance between acoustic fidelity and semantic capability.",
+  "arxiv_comment": "ICASSP 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "STACodec: semantic token assignment balancing acoustic fidelity and semantics; core codec.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

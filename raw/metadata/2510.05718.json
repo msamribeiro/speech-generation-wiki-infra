@@ -1,0 +1,38 @@
+{
+  "id": "2510.05718",
+  "source_ids": {
+    "arxiv": "2510.05718"
+  },
+  "title": "Investigation of perception inconsistency in speaker embedding for asynchronous voice anonymization",
+  "authors": [
+    "Rui Wang",
+    "Liping Chen",
+    "Kong Aik Lee",
+    "Zhengpeng Zha",
+    "Zhenhua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.05718",
+  "pdf_url": "https://arxiv.org/pdf/2510.05718.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Given the speech generation framework that represents the speaker attribute with an embedding vector, asynchronous voice anonymization can be achieved by modifying the speaker embedding derived from the original speech. However, the inconsistency between machine and human perceptions of the speaker attribute within the speaker embedding remains unexplored, limiting its performance in asynchronous voice anonymization. To this end, this study investigates this inconsistency via modifications to speaker embedding in the speech generation process. Experiments conducted on the FACodec and Diff-HierVC speech generation models discover a subspace whose removal alters machine perception while preserving its human perception of the speaker attribute in the generated speech. With these findings, an asynchronous voice anonymization is developed, achieving 100% human perception preservation rate while obscuring the machine perception. Audio samples can be found in https://voiceprivacy.github.io/speaker-embedding-eigen-decomposition/.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Investigates human-machine perception inconsistency in speaker embeddings for voice anonymization conversion",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

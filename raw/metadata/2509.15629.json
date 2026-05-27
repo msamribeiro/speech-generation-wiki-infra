@@ -1,0 +1,42 @@
+{
+  "id": "2509.15629",
+  "source_ids": {
+    "arxiv": "2509.15629"
+  },
+  "title": "The Singing Voice Conversion Challenge 2025: From Singer Identity Conversion To Singing Style Conversion",
+  "authors": [
+    "Lester Phillip Violeta",
+    "Xueyao Zhang",
+    "Jiatong Shi",
+    "Yusuke Yasuda",
+    "Wen-Chin Huang",
+    "Zhizheng Wu",
+    "Tomoki Toda"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.15629",
+  "pdf_url": "https://arxiv.org/pdf/2509.15629.pdf",
+  "pdf_path": "raw/papers/2509.15629.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present the findings of the latest iteration of the Singing Voice Conversion Challenge, a scientific event aiming to compare and understand different voice conversion systems in a controlled environment. Compared to previous iterations which solely focused on converting the singer identity, this year we also focused on converting the singing style of the singer. To create a controlled environment and thorough evaluations, we developed a new challenge database, introduced two tasks, open-sourced baselines, and conducted large-scale crowd-sourced listening tests and objective evaluations. The challenge was ran for two months and in total we evaluated 26 different systems. The results of the large-scale crowd-sourced listening test showed that top systems had comparable singer identity scores to ground truth samples. However, modeling the singing style and consequently achieving high naturalness still remains a challenge in this task, primarily due to the difficulty in modeling dynamic information in breathy, glissando, and vibrato singing styles.",
+  "arxiv_comment": null,
+  "task": [
+    "VC",
+    "singing",
+    "evaluation"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Singing voice conversion challenge 2025 advancing from identity to style conversion",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-0203",
+  "source_ids": {
+    "isca": "pan25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-203"
+  },
+  "title": "ClapFM-EVC: High-Fidelity and Flexible Emotional Voice Conversion with Dual Control from Natural Language and Speech",
+  "authors": [
+    "Yu Pan",
+    "Yanni Hu",
+    "Yuguang Yang",
+    "Jixun Yao",
+    "Jianhao Ye",
+    "Hongbin Zhou",
+    "Lei Ma",
+    "Jianjun Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/pan25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/pan25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0203.pdf",
+  "pdf_source": "isca",
+  "abstract": "Despite great advances, achieving high-fidelity emotional voice conversion (EVC) with flexible and interpretable control remains challenging. This paper introduces ClapFM-EVC, a novel EVC framework capable of generating high-quality converted speech driven by natural language prompts or reference speech with adjustable emotion intensity. We first propose EVC-CLAP, an emotional contrastive language-audio pre-training model, guided by natural language prompts and categorical labels, to extract and align fine-grained emotional elements across speech and text modalities. Then, a FuEncoder with an adaptive intensity gate is presented to seamless fuse emotional features with Phonetic PosteriorGrams from a pre-trained ASR model. To further improve emotion expressiveness and speech naturalness, we propose a flow matching model conditioned on these captured features to reconstruct Mel-spectrogram of source speech. Subjective and objective evaluations validate the effectiveness of ClapFM-EVC.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "High-fidelity emotional voice conversion with natural language and reference speech control; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

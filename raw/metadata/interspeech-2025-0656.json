@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-0656",
+  "source_ids": {
+    "isca": "geng25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-656"
+  },
+  "title": "EEG-based Voice Conversion : Hearing the Voice of Your Brain",
+  "authors": [
+    "Yizhong Geng",
+    "Wenxin Fu",
+    "Qihang Lu",
+    "Bingsong Bai",
+    "Cong Wang",
+    "Yingming Gao",
+    "Ya Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/geng25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/geng25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0656.pdf",
+  "pdf_source": "isca",
+  "abstract": "The connection between Electroencephalography (EEG) signals and human voice has gained significant attention, with studies demonstrating the feasibility of speech synthesis from EEG data. However, EEG-based voice conversion (VC) remains largely unexplored. To address this, we present the first EEG-based zero-shot VC system that converts speech into a target speakerâs voice without prior target data. Our method integrates an EEG feature extraction module with an alignment module to map EEG features to speaker-specific voice features. By leveraging an innovative three-stage training strategy and a pre-trained VC modelâtrained solely on speech dataâwe achieve zero-shot conversion. Experiments on the Single-Word-Production Dutch-iBIDS dataset confirm the systemâs ability to reliably convert speech to a target speakerâs voice. This work highlights the potential of EEG-based VC for advancing assistive communication and brain-computer interfaces. All demos are available in https://doi.org/10.5281/zenodo.15510829.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "First EEG-based zero-shot voice conversion system; advances novel BCI-based VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

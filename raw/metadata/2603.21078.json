@@ -1,0 +1,39 @@
+{
+  "id": "2603.21078",
+  "source_ids": {
+    "arxiv": "2603.21078"
+  },
+  "title": "Assessing the Ability of Neural TTS Systems to Model Consonant-Induced F0 Perturbation",
+  "authors": [
+    "Tianle Yang",
+    "Chengzhe Sun",
+    "Phil Rose",
+    "Cassandra L. Jacobs",
+    "Siwei Lyu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.21078",
+  "pdf_url": "https://arxiv.org/pdf/2603.21078.pdf",
+  "pdf_path": "raw/papers/2603.21078.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This study proposes a segmental-level prosodic probing framework to evaluate neural TTS models' ability to reproduce consonant-induced f0 perturbation, a fine-grained segmental-prosodic effect that reflects local articulatory mechanisms. We compare synthetic and natural speech realizations for thousands of words, stratified by lexical frequency, using Tacotron 2 and FastSpeech 2 trained on the same speech corpus (LJ Speech). These controlled analyses are then complemented by a large-scale evaluation spanning multiple advanced TTS systems. Results show accurate reproduction for high-frequency words but poor generalization to low-frequency items, suggesting that the examined TTS architectures rely more on lexical-level memorization than on abstract segmental-prosodic encoding. This finding highlights a limitation in such TTS systems' ability to generalize prosodic detail beyond seen data. The proposed probe offers a linguistically informed diagnostic framework that may inform future TTS evaluation methods, and has implications for interpretability and authenticity assessment in synthetic speech.",
+  "arxiv_comment": "Accepted for publication in Computer Speech & Language",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Segmental prosodic probing framework evaluating TTS models ability to reproduce consonant-induced F0 effects",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

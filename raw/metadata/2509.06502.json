@@ -1,0 +1,59 @@
+{
+  "id": "2509.06502",
+  "source_ids": {
+    "arxiv": "2509.06502"
+  },
+  "title": "FireRedChat: A Pluggable, Full-Duplex Voice Interaction System with Cascaded and Semi-Cascaded Implementations",
+  "authors": [
+    "Junjie Chen",
+    "Yao Hu",
+    "Junjie Li",
+    "Kangyue Li",
+    "Kun Liu",
+    "Wenpeng Li",
+    "Xu Li",
+    "Ziyuan Li",
+    "Feiyu Shen",
+    "Xu Tang"
+  ],
+  "authors_full": [
+    "Junjie Chen",
+    "Yao Hu",
+    "Junjie Li",
+    "Kangyue Li",
+    "Kun Liu",
+    "Wenpeng Li",
+    "Xu Li",
+    "Ziyuan Li",
+    "Feiyu Shen",
+    "Xu Tang",
+    "Manzhen Wei",
+    "Yichen Wu",
+    "Fenglong Xie",
+    "Kaituo Xu",
+    "Kun Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.06502",
+  "pdf_url": "https://arxiv.org/pdf/2509.06502.pdf",
+  "pdf_path": "raw/papers/2509.06502.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex voice interaction allows users and agents to speak simultaneously with controllable barge-in, enabling lifelike assistants and customer service. Existing solutions are either end-to-end, difficult to design and hard to control, or modular pipelines governed by turn-taking controllers that ease upgrades and per-module optimization; however, prior modular frameworks depend on non-open components and external providers, limiting holistic optimization. In this work, we present a complete, practical full-duplex voice interaction system comprising a turn-taking controller, an interaction module, and a dialogue manager. The controller integrates streaming personalized VAD (pVAD) to suppress false barge-ins from noise and non-primary speakers, precisely timestamp primary-speaker segments, and explicitly enable primary-speaker barge-ins; a semantic end-of-turn detector improves stop decisions. It upgrades heterogeneous half-duplex pipelines, cascaded, semi-cascaded, and speech-to-speech, to full duplex. Using internal models, we implement cascaded and semi-cascaded variants; the semi-cascaded one captures emotional and paralinguistic cues, yields more coherent responses, lowers latency and error propagation, and improves robustness. A dialogue manager extends capabilities via tool invocation and context management. We also propose three system-level metrics, barge-in, end-of-turn detection accuracy, and end-to-end latency, to assess naturalness, control accuracy, and efficiency. Experiments show fewer false interruptions, more accurate semantic ends, and lower latency approaching industrial systems, enabling robust, natural, real-time full-duplex interaction. Demos: https://fireredteam.github.io/demos/firered_chat.",
+  "arxiv_comment": "12 pages, 2 figures",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Full-duplex voice interaction system with cascaded and semi-cascaded implementations; core SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

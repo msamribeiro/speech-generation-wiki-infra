@@ -1,0 +1,42 @@
+{
+  "id": "2603.24430",
+  "source_ids": {
+    "arxiv": "2603.24430"
+  },
+  "title": "Iterate to Differentiate: Enhancing Discriminability and Reliability in Zero-Shot TTS Evaluation",
+  "authors": [
+    "Shengfan Shen",
+    "Di Wu",
+    "Xingchen Song",
+    "Dinghao Zhou",
+    "Liumeng Xue",
+    "Meng Meng",
+    "Jian Luan",
+    "Shuai Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.24430",
+  "pdf_url": "https://arxiv.org/pdf/2603.24430.pdf",
+  "pdf_path": "raw/papers/2603.24430.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Reliable evaluation of modern zero-shot text-to-speech (TTS) models remains challenging. Subjective tests are costly and hard to reproduce, while objective metrics often saturate, failing to distinguish SOTA systems. To address this, we propose Iterate to Differentiate (I2D), an evaluation framework that recursively synthesizes speech using the model's own outputs as references. Higher-quality models exhibit greater resilience to the distributional shift induced by iterative synthesis, resulting in slower performance degradation. I2D exploits this differential degradation to amplify performance gaps and reveal robustness. By aggregating objective metrics across iterations, I2D improves discriminability and alignment with human judgments, increasing system-level SRCC from 0.118 to 0.464 for UTMOSv2. Experiments on 11 models across Chinese, English, and emotion datasets demonstrate that I2D enables more reliable automated evaluation for zero-shot TTS.",
+  "arxiv_comment": "submitted to Interspeech 2026, under review",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Iterative self-reference evaluation framework improving discriminability for zero-shot TTS model comparison",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

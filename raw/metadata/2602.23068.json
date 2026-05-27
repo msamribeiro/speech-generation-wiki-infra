@@ -1,0 +1,42 @@
+{
+  "id": "2602.23068",
+  "source_ids": {
+    "arxiv": "2602.23068"
+  },
+  "title": "TADA: A Generative Framework for Speech Modeling via Text-Acoustic Dual Alignment",
+  "authors": [
+    "Trung Dang",
+    "Sharath Rao",
+    "Ananya Gupta",
+    "Christopher Gagne",
+    "Panagiotis Tzirakis",
+    "Alice Baird",
+    "Jakub Piotr Cłapa",
+    "Peter Chin",
+    "Alan Cowen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.23068",
+  "pdf_url": "https://arxiv.org/pdf/2602.23068.pdf",
+  "pdf_path": "raw/papers/2602.23068.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Modern Text-to-Speech (TTS) systems increasingly leverage Large Language Model (LLM) architectures to achieve scalable, high-fidelity, zero-shot generation. However, these systems typically rely on fixed-frame-rate acoustic tokenization, resulting in speech sequences that are significantly longer than, and asynchronous with their corresponding text. Beyond computational inefficiency, this sequence length disparity often triggers hallucinations in TTS and amplifies the modality gap in spoken language modeling (SLM). In this paper, we propose a novel tokenization scheme that establishes one-to-one synchronization between continuous acoustic features and text tokens, enabling unified, single-stream modeling within an LLM. We demonstrate that these synchronous tokens maintain high-fidelity audio reconstruction and can be effectively modeled in a latent space by a large language model with a flow matching head. Moreover, the ability to seamlessly toggle speech modality within the context enables text-only guidance--a technique that blends logits from text-only and text-speech modes to flexibly bridge the gap toward text-only LLM intelligence. Experimental results indicate that our approach achieves performance competitive with state-of-the-art TTS and SLM systems while virtually eliminating content hallucinations and preserving linguistic integrity, all at a significantly reduced inference cost.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Text-acoustic dual alignment TTS addressing fixed-frame-rate token inefficiency and sequence asynchrony",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

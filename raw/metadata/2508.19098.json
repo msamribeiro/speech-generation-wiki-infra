@@ -1,0 +1,38 @@
+{
+  "id": "2508.19098",
+  "source_ids": {
+    "arxiv": "2508.19098"
+  },
+  "title": "CLEAR: Continuous Latent Autoregressive Modeling for High-quality and Low-latency Speech Synthesis",
+  "authors": [
+    "Chun Yat Wu",
+    "Jiajun Deng",
+    "Guinan Li",
+    "Qiuqiang Kong",
+    "Simon Lui"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.19098",
+  "pdf_url": "https://arxiv.org/pdf/2508.19098.pdf",
+  "pdf_path": "raw/papers/2508.19098.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Autoregressive (AR) language models have emerged as powerful solutions for zero-shot text-to-speech (TTS) synthesis, capable of generating natural speech from a few seconds of audio prompts. However, conventional AR-based TTS systems relying on discrete audio tokens face the challenge of lossy compression during tokenization, requiring longer discrete token sequences to capture the same information as continuous ones, which adds inference latency and complicates AR modeling. To address this challenge, this paper proposes the Continuous Latent Autoregressive model (CLEAR), a unified zero-shot TTS framework that directly models continuous audio representations. More specifically, CLEAR introduces an enhanced variational autoencoder with shortcut connections, which achieves a high compression ratio to map waveforms into compact continuous latents. A lightweight MLP-based rectified flow head that operates independently for each hidden state is presented to model the continuous latent probability distribution, and trained jointly with the AR model within a single-stage framework. Experiments show that the proposed zero-shot CLEAR TTS can synthesize high-quality speech with low latency. Compared to state-of-the-art (SOTA) TTS models, CLEAR delivers competitive performance in robustness, speaker similarity and naturalness, while offering a lower real-time factor (RTF). In particular, CLEAR achieves SOTA results on the LibriSpeech test-clean dataset, with a word error rate of 1.88\\% and an RTF of 0.29. Moreover, CLEAR facilitates streaming speech synthesis with a first-frame delay of 96ms, while maintaining high-quality speech synthesis.",
+  "arxiv_comment": "Preprint",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Continuous latent autoregressive zero-shot TTS overcoming lossy discrete token compression",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

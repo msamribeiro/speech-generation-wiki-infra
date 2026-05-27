@@ -1,0 +1,41 @@
+{
+  "id": "2601.01459",
+  "source_ids": {
+    "arxiv": "2601.01459"
+  },
+  "title": "OV-InstructTTS: Towards Open-Vocabulary Instruct Text-to-Speech",
+  "authors": [
+    "Yong Ren",
+    "Jiangyan Yi",
+    "Jianhua Tao",
+    "Haiyang Sun",
+    "Zhengqi Wen",
+    "Hao Gu",
+    "Le Xu",
+    "Ye Bai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.01459",
+  "pdf_url": "https://arxiv.org/pdf/2601.01459.pdf",
+  "pdf_path": "raw/papers/2601.01459.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Instruct Text-to-Speech (InstructTTS) leverages natural language descriptions as style prompts to guide speech synthesis. However, existing InstructTTS methods mainly rely on a direct combination of audio-related labels or their diverse rephrasings, making it difficult to handle flexible, high-level instructions. Such rigid control is insufficient for users such as content creators who wish to steer generation with descriptive instructions. To address these constraints, we introduce OV-InstructTTS, a new paradigm for open-vocabulary InstructTTS. We propose a comprehensive solution comprising a newly curated dataset, OV-Speech, and a novel reasoning-driven framework. The OV-Speech dataset pairs speech with open-vocabulary instructions, each augmented with a reasoning process that connects high-level instructions to acoustic features. The reasoning-driven framework infers emotional, acoustic, and paralinguistic information from open-vocabulary instructions before synthesizing speech. Evaluations show that this reasoning-driven approach significantly improves instruction-following fidelity and speech expressiveness. We believe this work can inspire the next user-friendly InstructTTS systems with stronger generalization and real-world applicability. The dataset and demos are publicly available on our project page.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Open-vocabulary instruction TTS supporting flexible high-level natural language style instructions beyond label rephrasings",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

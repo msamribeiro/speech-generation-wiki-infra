@@ -1,0 +1,38 @@
+{
+  "id": "2511.01056",
+  "source_ids": {
+    "arxiv": "2511.01056"
+  },
+  "title": "WhisperVC: Decoupled Cross-Domain Alignment and Speech Generation for Low-Resource Whisper-to-Normal Conversion",
+  "authors": [
+    "Dong Liu",
+    "Juan Liu",
+    "Wei Ju",
+    "Yao Tian",
+    "Ming Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.01056",
+  "pdf_url": "https://arxiv.org/pdf/2511.01056.pdf",
+  "pdf_path": "raw/papers/2511.01056.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Whispered speech lacks vocal-fold excitation, making intelligible conversion challenging. We propose WhisperVC, a three-stage framework for low-resource whisper-to-normal (W2N) conversion that decouples cross-domain alignment from speech generation. Stage 1 uses limited paired whisper-normal data with a content encoder and a Conformer-based variational autoencoder (VAE) with soft-DTW alignment to learn domain-invariant semantic representations. Stage 2, trained only on normal speech, employs a Length-Channel Aligner and a two-stage speaker-conditioned mel generator for timbre and prosody modeling. Stage 3 fine-tunes a HiFi-GAN vocoder for waveform synthesis. Experimental results on AISHELL6-Whisper show competitive quality (DNSMOS 3.07, UTMOS 2.83, CER 16.93%) and WavLM speaker similarity (0.95). The framework also supports privacy-preserving communication as well as non-vocal communication and a rehabilitation tool for post-surgical vocal-fold patients. Samples are available online.",
+  "arxiv_comment": "submitted to Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Three-stage low-resource whisper-to-normal voice conversion decoupling domain alignment from speech generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

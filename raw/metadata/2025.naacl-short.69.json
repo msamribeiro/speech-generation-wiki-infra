@@ -1,0 +1,42 @@
+{
+  "id": "2025.naacl-short.69",
+  "source_ids": {
+    "acl": "2025.naacl-short.69",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-short.69",
+    "url_acl": "https://aclanthology.org/2025.naacl-short.69"
+  },
+  "title": "Developing multilingual speech synthesis system for Ojibwe, Mi’kmaq, and Maliseet",
+  "authors": [
+    "Shenran Wang",
+    "Changbing Yang",
+    "Michael l Parkhill",
+    "Chad Quinn",
+    "Christopher Hammerly",
+    "Jian Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-short.69",
+  "pdf_url": "https://aclanthology.org/2025.naacl-short.69.pdf",
+  "pdf_path": "raw/papers/2025.naacl-short.69.pdf",
+  "pdf_source": "anthology",
+  "abstract": "We present lightweight flow matching multilingual text-to-speech (TTS) systems for Ojibwe, Mi’kmaq, and Maliseet, three Indigenous languages in North America. Our results show that training a multilingual TTS model on three typologically similar languages can improve the performance over monolingual models, especially when data are scarce. Attention-free architectures are highly competitive with self-attention architecture with higher memory efficiency. Our research provides technical development to language revitalization for low-resource languages but also highlights the cultural gap in human evaluation protocols, calling for a more community-centered approach to human evaluation.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Lightweight flow matching multilingual TTS for three indigenous North American languages; directly advances low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

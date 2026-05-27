@@ -1,0 +1,40 @@
+{
+  "id": "2604.22821",
+  "source_ids": {
+    "arxiv": "2604.22821"
+  },
+  "title": "Audio2Tool: Speak, Call, Act -- A Dataset for Benchmarking Speech Tool Use",
+  "authors": [
+    "Ramit Pahwa",
+    "Apoorva Beedu",
+    "Parivesh Priye",
+    "Rutu Gandhi",
+    "Saloni Takawale",
+    "Aruna Baijal",
+    "Zengli Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.22821",
+  "pdf_url": "https://arxiv.org/pdf/2604.22821.pdf",
+  "pdf_path": "raw/papers/2604.22821.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice assistants increasingly rely on Speech Language Models (SpeechLMs) to interpret spoken queries and execute complex tasks, yet existing benchmarks lack domain breadth, acoustic diversity, and compositional reasoning complexity to evaluate tool-calling performance. We introduce Audio2Tool, a large-scale dataset comprising approximately 30,000 queries designed to assess tool-calling capabilities of SpeechLMs across three primary domains: Smart Car, Smart Home, and Wearables. Our benchmark features a multi-tier complexity hierarchy, ranging from simple direct commands to complex multi-intent and needle-in-a-haystack extraction to isolate distinct failure modes. To ensure realism, we employ zero-shot voice cloning text-to-speech synthesis and diverse noise profiles to simulate in-the-wild conditions. Evaluations of state-of-the-art SpeechLMs and ASR-LLM pipelines show strong performance on simple commands but significant degradation under compositional and acoustic challenges. Code and dataset are publicly available on the project page: https://audio2tool.github.io/.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Large-scale benchmark dataset for evaluating speech LM tool-calling with diverse acoustic query conditions",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

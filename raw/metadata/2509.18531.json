@@ -1,0 +1,37 @@
+{
+  "id": "2509.18531",
+  "source_ids": {
+    "arxiv": "2509.18531"
+  },
+  "title": "No Verifiable Reward for Prosody: Toward Preference-Guided Prosody Learning in TTS",
+  "authors": [
+    "Seungyoun Shin",
+    "Dongha Ahn",
+    "Jiwoo Kim",
+    "Sungwook Jeon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.18531",
+  "pdf_url": "https://arxiv.org/pdf/2509.18531.pdf",
+  "pdf_path": "raw/papers/2509.18531.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent work reports gains in neural text-to-speech (TTS) with Group Relative Policy Optimization (GRPO). However, in the absence of a verifiable reward for \\textit{prosody}, GRPO trained on transcription-oriented signals (CER/NLL) lowers error rates yet collapses prosody into monotone, unnatural speech; adding speaker-similarity further destabilizes training and degrades CER. We address this with an \\textit{iterative Direct Preference Optimization (DPO)} scheme that uses only a few hundred human-labeled preference pairs per round to directly optimize prosodic naturalness while regularizing to the current model. On \\textbf{KoCC-TTS}, a curated dataset of authentic Korean call center interactions capturing task-oriented dialogues, our method attains the highest human preference (ELO) with competitive CER, outperforming GRPO and strong commercial baselines. These results suggest that when prosody cannot be rewarded automatically, \\textit{human preference optimization} offers a practical and data-efficient path to natural and robust TTS. The demo page is available at \\href{https://tts.ch.dev}",
+  "arxiv_comment": "ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Preference-guided prosody learning for TTS preventing GRPO collapse into monotone output",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

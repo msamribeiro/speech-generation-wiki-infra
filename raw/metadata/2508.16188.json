@@ -1,0 +1,43 @@
+{
+  "id": "2508.16188",
+  "source_ids": {
+    "arxiv": "2508.16188",
+    "acl": "2025.findings-emnlp.140",
+    "doi": "10.18653/v1/2025.findings-emnlp.140",
+    "url_acl": "https://aclanthology.org/2025.findings-emnlp.140"
+  },
+  "title": "Seeing is Believing: Emotion-Aware Audio-Visual Language Modeling for Expressive Speech Generation",
+  "authors": [
+    "Weiting Tan",
+    "Jiachen Lian",
+    "Hirofumi Inaguma",
+    "Paden Tomasello",
+    "Philipp Koehn",
+    "Xutai Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-08-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.16188",
+  "pdf_url": "https://aclanthology.org/2025.findings-emnlp.140.pdf",
+  "pdf_path": "raw/papers/2508.16188.pdf",
+  "pdf_source": "anthology",
+  "abstract": "We present an Audio-Visual Language Model (AVLM) for expressive speech generation by integrating full-face visual cues into a pre-trained expressive speech model. We explore multiple visual encoders and multimodal fusion strategies during pre-training to identify the most effective integration approach. Subsequent fine-tuning on emotion recognition and expressive dialogue tasks yields substantial gains over speech-only baselines (e.g., +5 F1 in emotion recognition). AVLM highlights the value of expressive visual information in guiding speech generation and offers a foundation for end-to-end multimodal conversational systems.",
+  "arxiv_comment": "EMNLP 2025 (Findings)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Audio-visual LM for expressive speech generation using visual emotion cues",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

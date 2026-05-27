@@ -1,0 +1,41 @@
+{
+  "id": "2604.16056",
+  "source_ids": {
+    "arxiv": "2604.16056"
+  },
+  "title": "AST: Adaptive, Seamless, and Training-Free Precise Speech Editing",
+  "authors": [
+    "Sihan Lv",
+    "Yechen Jin",
+    "Zhen Li",
+    "Jintao Chen",
+    "Jinshan Zhang",
+    "Ying Li",
+    "Jianwei Yin",
+    "Meng Xi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.16056",
+  "pdf_url": "https://arxiv.org/pdf/2604.16056.pdf",
+  "pdf_path": "raw/papers/2604.16056.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-based speech editing aims to modify specific segments while preserving speaker identity and acoustic context. Existing methods rely on task-specific training, which incurs high data costs and struggles with temporal fidelity in unedited regions. Meanwhile, adapting Text-to-Speech (TTS) models often faces a trade-off between editing quality and consistency. To address these issues, we propose AST, an Adaptive, Seamless, and Training-free precise speech editing framework. Leveraging a pre-trained autoregressive TTS model, AST introduces Latent Recomposition to selectively stitch preserved source segments with newly synthesized targets. Furthermore, AST extends this latent manipulation to enable precise style editing for specific speech segments. To prevent artifacts at these edit boundaries, the framework incorporates Adaptive Weak Fact Guidance (AWFG). AWFG dynamically modulates a mel-space guidance signal, enforcing structural constraints only where necessary without disrupting the generative manifold. To fill the gap of publicly accessible benchmarks, we introduce LibriSpeech-Edit, a new and larger speech editing dataset. As existing metrics poorly evaluate temporal consistency in unedited regions, we propose Word-level Dynamic Time Warping (WDTW). Extensive experiments demonstrate that AST resolves the controllability-quality trade-off without extra training. Compared to the previous most temporally consistent baseline, AST improves consistency while reducing Word Error Rate by nearly 70%. Moreover, applying AST to a foundation TTS model reduces WDTW by 27%, achieving state-of-the-art speaker preservation and temporal fidelity.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Training-free speech editing using diffusion model temporal fidelity for precise text-guided segment modification",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

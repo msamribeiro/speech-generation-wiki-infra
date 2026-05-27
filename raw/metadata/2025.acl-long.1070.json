@@ -1,0 +1,38 @@
+{
+  "id": "2025.acl-long.1070",
+  "source_ids": {
+    "acl": "2025.acl-long.1070",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.1070"
+  },
+  "title": "IndicSynth: A Large-Scale Multilingual Synthetic Speech Dataset for Low-Resource Indian Languages",
+  "authors": [
+    "Divya V Sharma",
+    "Vijval Ekbote",
+    "Anubha Gupta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.1070",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1070.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Recent advances in synthetic speech generation technology have facilitated the generation of high-quality synthetic (fake) speech that emulates human voices. These technologies pose a threat of misuse for identity theft and the spread of misinformation. Consequently, the misuse of such powerful technologies necessitates the development of robust and generalizable audio deepfake detection (ADD) and anti-spoofing models. However, such models are often linguistically biased. Consequently, the models trained on datasets in one language exhibit a low accuracy when evaluated on out-of-domain languages. Such biases reduce the usability of these models and highlight the urgent need for multilingual synthetic speech datasets for bias mitigation research. However, most available datasets are in English or Chinese. The dearth of multilingual synthetic datasets hinders multilingual ADD and anti-spoofing research. Furthermore, the problem intensifies in countries with rich linguistic diversity, such as India. Therefore, we introduce IndicSynth, which contains 4,000 hours of synthetic speech from 989 target speakers, including 456 females and 533 males for 12 low-resourced Indian languages. The dataset includes rich metadata covering gender details and target speaker identifiers. Experimental results demonstrate that IndicSynth is a valuable contribution to multilingual ADD and anti-spoofing research. The dataset can be accessed from https://github.com/vdivyas/IndicSynth.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Creates a large-scale multilingual TTS dataset primarily as stimulus for deepfake detection; TTS is enabling but secondary.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

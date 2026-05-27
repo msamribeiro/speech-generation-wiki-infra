@@ -1,0 +1,41 @@
+{
+  "id": "2512.02523",
+  "source_ids": {
+    "arxiv": "2512.02523"
+  },
+  "title": "Generative Multi-modal Feedback for Singing Voice Synthesis Evaluation",
+  "authors": [
+    "Xueyan Li",
+    "Yuxin Wang",
+    "Mengjie Jiang",
+    "Qingzi Zhu",
+    "Jiang Zhang",
+    "Zoey Kim",
+    "Yazhe Niu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.02523",
+  "pdf_url": "https://arxiv.org/pdf/2512.02523.pdf",
+  "pdf_path": "raw/papers/2512.02523.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Singing voice synthesis (SVS) has advanced significantly, enabling models to generate vocals with accurate pitch and consistent style. As these capabilities improve, the need for reliable evaluation and optimization becomes increasingly critical. However, current methods like reward systems often rely on single numerical scores, struggle to capture various dimensions such as phrasing or expressiveness, and require costly annotations, limiting interpretability and generalization. To address these issues, we propose a generative feedback (i.e., reward model) framework that provides multi-dimensional language and audio feedback for SVS assessment. Our approach leverages an audio-language model to generate text and audio critiques-covering aspects such as melody, content, and auditory quality. The model is fine-tuned on a hybrid dataset combining human music reactions and synthetic critiques from a MLLMs, enhancing diversity and linguistic richness. Quantitative experiments validate the effectiveness of the proposed dataset and training strategy, demonstrating that the framework produces musically accurate and interpretable evaluations suitable for guiding generative model improvement. The code is at [https://github.com/opendilab/VocalCritic](https://github.com/opendilab/VocalCritic)",
+  "arxiv_comment": "16 pages, 5 figures",
+  "task": [
+    "singing",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Multi-modal feedback framework for evaluation and optimization of singing voice synthesis quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

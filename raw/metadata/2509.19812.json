@@ -1,0 +1,37 @@
+{
+  "id": "2509.19812",
+  "source_ids": {
+    "arxiv": "2509.19812"
+  },
+  "title": "Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation",
+  "authors": [
+    "Yang Cui",
+    "Peter Pan",
+    "Lei He",
+    "Sheng Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.19812",
+  "pdf_url": "https://arxiv.org/pdf/2509.19812.pdf",
+  "pdf_path": "raw/papers/2509.19812.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "With the rapid advancement of speech generative models, unauthorized voice cloning poses significant privacy and security risks. Speech watermarking offers a viable solution for tracing sources and preventing misuse. Current watermarking technologies fall mainly into two categories: DSP-based methods and deep learning-based methods. DSP-based methods are efficient but vulnerable to attacks, whereas deep learning-based methods offer robust protection at the expense of significantly higher computational cost. To improve the computational efficiency and enhance the robustness, we propose PKDMark, a lightweight deep learning-based speech watermarking method that leverages progressive knowledge distillation (PKD). Our approach proceeds in two stages: (1) training a high-performance teacher model using an invertible neural network-based architecture, and (2) transferring the teacher's capabilities to a compact student model through progressive knowledge distillation. This process reduces computational costs by 93.6% while maintaining high level of robust performance and imperceptibility. Experimental results demonstrate that our distilled model achieves an average detection F1 score of 99.6% with a PESQ of 4.30 in advanced distortions, enabling efficient speech watermarking for real-time speech synthesis applications.",
+  "arxiv_comment": "6 pages of main text, 1 page of references, 2 figures, 2 tables, accepted at ASRU 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Efficient watermarking system for synthesized speech traceability via progressive distillation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

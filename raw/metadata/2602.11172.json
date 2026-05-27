@@ -1,0 +1,35 @@
+{
+  "id": "2602.11172",
+  "source_ids": {
+    "arxiv": "2602.11172"
+  },
+  "title": "Synthesizing the Virtual Advocate: A Multi-Persona Speech Generation Framework for Diverse Linguistic Jurisdictions in Indic Languages",
+  "authors": [
+    "Aniket Deroy"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.11172",
+  "pdf_url": "https://arxiv.org/pdf/2602.11172.pdf",
+  "pdf_path": "raw/papers/2602.11172.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Legal advocacy requires a unique combination of authoritative tone, rhythmic pausing for emphasis, and emotional intelligence. This study investigates the performance of the Gemini 2.5 Flash TTS and Gemini 2.5 Pro TTS models in generating synthetic courtroom speeches across five Indic languages: Tamil, Telugu, Bengali, Hindi, and Gujarati. We propose a prompting framework that utilizes Gemini 2.5s native support for 5 languages and its context-aware pacing to produce distinct advocate personas. The evolution of Large Language Models (LLMs) has shifted the focus of TexttoSpeech (TTS) technology from basic intelligibility to context-aware, expressive synthesis. In the legal domain, synthetic speech must convey authority and a specific professional persona a task that becomes significantly more complex in the linguistically diverse landscape of India. The models exhibit a \"monotone authority,\" excelling at procedural information delivery but struggling with the dynamic vocal modulation and emotive gravitas required for persuasive advocacy. Performance dips in Bengali and Gujarati further highlight phonological frontiers for future refinement. This research underscores the readiness of multilingual TTS for procedural legal tasks while identifying the remaining challenges in replicating the persuasive artistry of human legal discourse. The code is available at-https://github.com/naturenurtureelite/Synthesizing-the-Virtual-Advocate/tree/main",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Evaluates Gemini TTS models for multi-persona Indic language legal speeches; relevant as TTS evaluation in specialized domain.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

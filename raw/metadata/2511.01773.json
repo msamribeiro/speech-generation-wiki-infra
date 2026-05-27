@@ -1,0 +1,34 @@
+{
+  "id": "2511.01773",
+  "source_ids": {
+    "arxiv": "2511.01773"
+  },
+  "title": "ADNAC: Audio Denoiser using Neural Audio Codec",
+  "authors": [
+    "Daniel Jimon",
+    "Mircea Vaida",
+    "Adriana Stan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.01773",
+  "pdf_url": "https://arxiv.org/pdf/2511.01773.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Audio denoising is critical in signal processing, enhancing intelligibility and fidelity for applications like restoring musical recordings. This paper presents a proof-of-concept for adapting a state-of-the-art neural audio codec, the Descript Audio Codec (DAC), for music denoising. This work overcomes the limitations of traditional architectures like U-Nets by training the model on a large-scale, custom-synthesized dataset built from diverse sources. Training is guided by a multi objective loss function that combines time-domain, spectral, and signal-level fidelity metrics. Ultimately, this paper aims to present a PoC for high-fidelity, generative audio restoration.",
+  "arxiv_comment": "Accepted and presented at the 13th International Conference on Speech Technology and Human-Computer Dialogue (SpeD), Cluj-Napoca, Romania, October 19-22, 2025. 4 pages, 1 figure. IEEE Catalog Number: CFP2555H-USB, ISBN: 979-8-3315-7485-7",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Adapts neural audio codec for audio denoising; primary task is audio enhancement (out of scope)",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

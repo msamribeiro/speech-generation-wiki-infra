@@ -1,0 +1,42 @@
+{
+  "id": "2025.findings-acl.470",
+  "source_ids": {
+    "acl": "2025.findings-acl.470",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-acl.470"
+  },
+  "title": "Does Your Voice Assistant Remember? Analyzing Conversational Context Recall and Utilization in Voice Interaction Models",
+  "authors": [
+    "Heeseung Kim",
+    "Che Hyun Lee",
+    "Sangkwon Park",
+    "Jiheum Yeom",
+    "Nohil Park",
+    "Sangwon Yu",
+    "Sungroh Yoon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-acl.470",
+  "pdf_url": "https://aclanthology.org/2025.findings-acl.470.pdf",
+  "pdf_path": "raw/papers/2025.findings-acl.470.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Recent advancements in multi-turn voice interaction models have improved user-model communication. However, while closed-source models effectively retain and recall past utterances, whether open-source models share this ability remains unexplored. To fill this gap, we systematically evaluate how well open-source interaction models utilize past utterances using ContextDialog, a benchmark we proposed for this purpose. Our findings show that speech-based models have more difficulty than text-based ones, especially when recalling information conveyed in speech, and even with retrieval-augmented generation, models still struggle with questions about past utterances. These insights highlight key limitations in open-source models and suggest ways to improve memory retention and retrieval robustness.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Evaluates context recall in voice interaction models; directly assesses SCA generation quality.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2601.14472",
+  "source_ids": {
+    "arxiv": "2601.14472"
+  },
+  "title": "Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum",
+  "authors": [
+    "Mohammed Salah Al-Radhi",
+    "Riad Larbi",
+    "Mátyás Bartalis",
+    "Géza Németh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.14472",
+  "pdf_url": "https://arxiv.org/pdf/2601.14472.pdf",
+  "pdf_path": "raw/papers/2601.14472.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural vocoders are central to speech synthesis; despite their success, most still suffer from limited prosody modeling and inaccurate phase reconstruction. We propose a vocoder that introduces prosody-guided harmonic attention to enhance voiced segment encoding and directly predicts complex spectral components for waveform synthesis via inverse STFT. Unlike mel-spectrogram-based approaches, our design jointly models magnitude and phase, ensuring phase coherence and improved pitch fidelity. To further align with perceptual quality, we adopt a multi-objective training strategy that integrates adversarial, spectral, and phase-aware losses. Experiments on benchmark datasets demonstrate consistent gains over HiFi-GAN and AutoVocoder: F0 RMSE reduced by 22 percent, voiced/unvoiced error lowered by 18 percent, and MOS scores improved by 0.15. These results show that prosody-guided attention combined with direct complex spectrum modeling yields more natural, pitch-accurate, and robust synthetic speech, setting a strong foundation for expressive neural vocoding.",
+  "arxiv_comment": "5 pages, 2 figures, 1 table. Accepted for presentation at ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Prosody-guided harmonic attention vocoder with direct complex spectrum prediction for phase-coherent synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

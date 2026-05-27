@@ -1,0 +1,28 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# PDFs and generated pipeline outputs (large binary files / arXiv TOS)
+raw/papers/
+raw/parsed/
+raw/assets/
+raw/anthology_xml_cache/
+
+# Runtime logs
+raw/download_log.jsonl
+raw/fetch_log.jsonl
+
+# Scratch files
+convert_paper_with_docling_tmp.py
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp

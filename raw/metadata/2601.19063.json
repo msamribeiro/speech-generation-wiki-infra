@@ -1,0 +1,40 @@
+{
+  "id": "2601.19063",
+  "source_ids": {
+    "arxiv": "2601.19063"
+  },
+  "title": "Optimizing Conversational Quality in Spoken Dialogue Systems with Reinforcement Learning from AI Feedback",
+  "authors": [
+    "Siddhant Arora",
+    "Jinchuan Tian",
+    "Jiatong Shi",
+    "Hayato Futami",
+    "Yosuke Kashiwagi",
+    "Emiru Tsunoo",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.19063",
+  "pdf_url": "https://arxiv.org/pdf/2601.19063.pdf",
+  "pdf_path": "raw/papers/2601.19063.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Reinforcement learning from human or AI feedback (RLHF/RLAIF) for speech-in/speech-out dialogue systems (SDS) remains underexplored, with prior work largely limited to single semantic rewards applied at the utterance level. Such setups overlook the multi-dimensional and multi-modal nature of conversational quality, which encompasses semantic coherence, audio naturalness, speaker consistency, emotion alignment, and turn-taking behavior. Moreover, they are fundamentally mismatched with duplex spoken dialogue systems that generate responses incrementally, where agents must make decisions based on partial utterances. We address these limitations with the first multi-reward RLAIF framework for SDS, combining semantic, audio-quality, and emotion-consistency rewards. To align utterance-level preferences with incremental, blockwise decoding in duplex models, we apply turn-level preference sampling and aggregate per-block log-probabilities within a single DPO objective. We present the first systematic study of preference learning for improving SDS quality in both multi-turn Chain-of-Thought and blockwise duplex models, and release a multi-reward DPO dataset to support reproducible research. Experiments show that single-reward RLAIF selectively improves its targeted metric, while joint multi-reward training yields consistent gains across semantic quality and audio naturalness. These results highlight the importance of holistic, multi-reward alignment for practical conversational SDS.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "RLAI framework optimizing multi-dimensional conversational quality in speech-in/speech-out dialogue systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

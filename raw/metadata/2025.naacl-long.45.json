@@ -1,0 +1,34 @@
+{
+  "id": "2025.naacl-long.45",
+  "source_ids": {
+    "acl": "2025.naacl-long.45",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-long.45"
+  },
+  "title": "Decoding Hate: Exploring Language Models’ Reactions to Hate Speech",
+  "authors": [
+    "Paloma Piot",
+    "Javier Parapar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-long.45",
+  "pdf_url": "https://aclanthology.org/2025.naacl-long.45.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Hate speech is a harmful form of online expression, often manifesting as derogatory posts. It is a significant risk in digital environments. With the rise of Large Language Models (LLMs), there is concern about their potential to replicate hate speech patterns, given their training on vast amounts of unmoderated internet data. Understanding how LLMs respond to hate speech is crucial for their responsible deployment. However, the behaviour of LLMs towards hate speech has been limited compared. This paper investigates the reactions of seven state-of-the-art LLMs (LLaMA 2, Vicuna, LLaMA 3, Mistral, GPT-3.5, GPT-4, and Gemini Pro) to hate speech. Through qualitative analysis, we aim to reveal the spectrum of responses these models produce, highlighting their capacity to handle hate speech inputs. We also discuss strategies to mitigate hate speech generation by LLMs, particularly through fine-tuning and guideline guardrailing. Finally, we explore the models’ responses to hate speech framed in politically correct language.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Study of LLM responses to hate speech; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

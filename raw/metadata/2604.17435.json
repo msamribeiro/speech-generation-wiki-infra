@@ -1,0 +1,39 @@
+{
+  "id": "2604.17435",
+  "source_ids": {
+    "arxiv": "2604.17435"
+  },
+  "title": "MoVE: Translating Laughter and Tears via Mixture of Vocalization Experts in Speech-to-Speech Translation",
+  "authors": [
+    "Szu-Chi Chen",
+    "I-Ning Tsai",
+    "Yi-Cheng Lin",
+    "Sung-Feng Huang",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.17435",
+  "pdf_url": "https://arxiv.org/pdf/2604.17435.pdf",
+  "pdf_path": "raw/papers/2604.17435.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent Speech-to-Speech Translation (S2ST) systems achieve strong semantic accuracy yet consistently strip away non-verbal vocalizations (NVs), such as laughter and crying that convey pragmatic intent, which severely limits real-world utility. We address this via three contributions. First, we propose a synthesis pipeline for building scalable expressive datasets to overcome the data scarcity limitation. Second, we propose MoVE, a Mixture-of-LoRA-Experts architecture with expressive-specialized adapters and a soft-weighting router that blends experts for capturing hybrid expressive states. Third, we show pretrained AudioLLMs enable striking data efficiency: 30 minutes of curated data is enough for strong performance. On English-Chinese S2ST, while comparing with strong baselines, MoVE reproduces target NVs in 76% of cases and achieves the highest human-rated naturalness and emotional fidelity among all compared systems, where existing S2ST systems preserve at most 14% of NVs.",
+  "arxiv_comment": "Submitted to Interspeech. Audio Demo and Dataset: https://47zzz.github.io/MoVE/",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "MoVE: S2ST with non-verbal vocalization preservation via mixture of experts; expressive generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

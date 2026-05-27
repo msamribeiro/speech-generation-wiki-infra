@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1747",
+  "source_ids": {
+    "isca": "kaneko25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1747",
+    "arxiv": "2508.17868"
+  },
+  "title": "FasterVoiceGrad: Faster One-step Diffusion-Based Voice Conversion with Adversarial Diffusion Conversion Distillation",
+  "authors": [
+    "Takuhiro Kaneko",
+    "Hirokazu Kameoka",
+    "Kou Tanaka",
+    "Yuto Kondo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kaneko25_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.17868.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1747.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "A diffusion-based voice conversion (VC) model (e.g., VoiceGrad) can achieve high speech quality and speaker similarity; however, its conversion process is slow owing to iterative sampling. FastVoiceGrad overcomes this limitation by distilling VoiceGrad into a one-step diffusion model. However, it still requires a computationally intensive content encoder to disentangle the speaker's identity and content, which slows conversion. Therefore, we propose FasterVoiceGrad, a novel one-step diffusion-based VC model obtained by simultaneously distilling a diffusion model and content encoder using adversarial diffusion conversion distillation (ADCD), where distillation is performed in the conversion process while leveraging adversarial and score distillation training. Experimental evaluations of one-shot VC demonstrated that FasterVoiceGrad achieves competitive VC performance compared to FastVoiceGrad, with 6.6-6.9 and 1.8 times faster speed on a GPU and CPU, respectively.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "One-step diffusion VC with adversarial diffusion conversion distillation for fast inference; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

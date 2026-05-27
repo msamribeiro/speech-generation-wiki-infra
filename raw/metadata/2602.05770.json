@@ -1,0 +1,37 @@
+{
+  "id": "2602.05770",
+  "source_ids": {
+    "arxiv": "2602.05770"
+  },
+  "title": "Zero-Shot TTS With Enhanced Audio Prompts: Bsc Submission For The 2026 Wildspoof Challenge TTS Track",
+  "authors": [
+    "Jose Giraldo",
+    "Alex Peiró-Lilja",
+    "Rodolfo Zevallos",
+    "Cristina España-Bonet"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.05770",
+  "pdf_url": "https://arxiv.org/pdf/2602.05770.pdf",
+  "pdf_path": "raw/papers/2602.05770.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We evaluate two non-autoregressive architectures, StyleTTS2 and F5-TTS, to address the spontaneous nature of in-the-wild speech. Our models utilize flexible duration modeling to improve prosodic naturalness. To handle acoustic noise, we implement a multi-stage enhancement pipeline using the Sidon model, which significantly outperforms standard Demucs in signal quality. Experimental results show that finetuning enhanced audios yields superior robustness, achieving up to 4.21 UTMOS and 3.47 DNSMOS. Furthermore, we analyze the impact of reference prompt quality and length on zero-shot synthesis performance, demonstrating the effectiveness of our approach for realistic speech generation.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Non-autoregressive zero-shot TTS submission for WildSpoof challenge with multi-stage enhancement pipeline",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

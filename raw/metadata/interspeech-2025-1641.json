@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1641",
+  "source_ids": {
+    "isca": "lu25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-1641"
+  },
+  "title": "Robust Neural Codec Language Modeling with Phoneme Position Prediction for Zero-Shot TTS",
+  "authors": [
+    "Chunhui Lu",
+    "Xue Wen",
+    "Liming Song",
+    "Junkwang Oh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lu25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lu25e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1641.pdf",
+  "pdf_source": "isca",
+  "abstract": "Though large language models (LLMs) based methods have achieved remarkable progress in zero-shot text-to-speech (TTS) synthesis, they suffer from robustness issues including mispronunciation, word skipping, and word repeating. To address these robustness challenges, we propose incorporating phoneme position prediction into the LLM-based TTS model. More concretely, given an input phoneme sequence as condition, our model autoregressively predicts acoustic codes and their corresponding phoneme positions within the input sequence synchronously. This mechanism ensures accurate and complete alignment between acoustic codes and phonemes. Experimental results demonstrate that our system significantly reduces phoneme skipping/repetition errors compared to strong baselines, achieving a 52.7% relative reduction in character error rate while maintaining comparable performance in zero-shot TTS evaluations.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Phoneme position prediction in LLM-based TTS to address robustness issues; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

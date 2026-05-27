@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0669",
+  "source_ids": {
+    "isca": "hartuv25_interspeech",
+    "doi": "10.21437/Interspeech.2025-669"
+  },
+  "title": "PAST: Phonetic-Acoustic Speech Tokenizer",
+  "authors": [
+    "Nadav Har-Tuv",
+    "Or Tal",
+    "Yossi Adi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/hartuv25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/hartuv25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0669.pdf",
+  "pdf_source": "isca",
+  "abstract": "We present PAST, a novel end-to-end framework that jointly models phonetic information alongside signal reconstruction, eliminating the need for external pretrained models. Unlike previous approaches that rely on pretrained self-supervised models, PAST employs supervised phonetic data, directly integrating domain knowledge into the tokenization process via auxiliary tasks. Additionally, we introduce a streamable, causal variant of PAST, enabling real-time speech applications. Results demonstrate that PAST surpasses existing evaluated baseline tokenizers across common evaluation metrics, including phonetic representation and speech reconstruction. Notably, PAST also achieves superior performance when serving as a speech representation for speech language models, further highlighting its effectiveness as a foundation for spoken language generation. To foster further research, we release the full implementation.",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "PAST: joint phonetic-acoustic speech tokenizer; core codec for TTS pipelines.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

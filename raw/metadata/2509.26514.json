@@ -1,0 +1,59 @@
+{
+  "id": "2509.26514",
+  "source_ids": {
+    "arxiv": "2509.26514"
+  },
+  "title": "BatonVoice: An Operationalist Framework for Enhancing Controllable Speech Synthesis with Linguistic Intelligence from LLMs",
+  "authors": [
+    "Yue Wang",
+    "Ruotian Ma",
+    "Xingyu Chen",
+    "Zhengliang Shi",
+    "Wanshun Chen",
+    "Huang Liu",
+    "Jiadi Yao",
+    "Qu Yang",
+    "Qingxuan Jiang",
+    "Fanghua Ye"
+  ],
+  "authors_full": [
+    "Yue Wang",
+    "Ruotian Ma",
+    "Xingyu Chen",
+    "Zhengliang Shi",
+    "Wanshun Chen",
+    "Huang Liu",
+    "Jiadi Yao",
+    "Qu Yang",
+    "Qingxuan Jiang",
+    "Fanghua Ye",
+    "Juntao Li",
+    "Min Zhang",
+    "Zhaopeng Tu",
+    "Xiaolong Li",
+    "Linus"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.26514",
+  "pdf_url": "https://arxiv.org/pdf/2509.26514.pdf",
+  "pdf_path": "raw/papers/2509.26514.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The rise of Large Language Models (LLMs) is reshaping multimodel models, with speech synthesis being a prominent application. However, existing approaches often underutilize the linguistic intelligence of these models, typically failing to leverage their powerful instruction-following capabilities. This limitation hinders the model's ability to follow text instructions for controllable Text-to-Speech~(TTS). To address this, we propose a new paradigm inspired by ``operationalism'' that decouples instruction understanding from speech generation. We introduce BatonVoice, a framework where an LLM acts as a ``conductor'', understanding user instructions and generating a textual ``plan'' -- explicit vocal features (e.g., pitch, energy). A separate TTS model, the ``orchestra'', then generates the speech from these features. To realize this component, we develop BatonTTS, a TTS model trained specifically for this task. Our experiments demonstrate that BatonVoice achieves strong performance in controllable and emotional speech synthesis, outperforming strong open- and closed-source baselines. Notably, our approach enables remarkable zero-shot cross-lingual generalization, accurately applying feature control abilities to languages unseen during post-training. This demonstrates that objectifying speech into textual vocal features can more effectively unlock the linguistic intelligence of LLMs.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Operationalist framework enhancing controllable TTS with LLM linguistic intelligence for instruction following; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

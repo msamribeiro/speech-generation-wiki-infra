@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-1020",
+  "source_ids": {
+    "isca": "portes25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1020"
+  },
+  "title": "Learning Optimal Prosody Embedding Codebook based on F0 and Energy",
+  "authors": [
+    "David PorteÅ¡",
+    "AleÅ¡ HorÃ¡k"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/portes25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/portes25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1020.pdf",
+  "pdf_source": "isca",
+  "abstract": "Both the Fundamental frequency (F0) and Energy are prominent features of prosody. Together, they have been used across a wide variety of speech-processing tasks. However, there is a lack of freely available pre-trained vector representations of these features. Therefore, in this paper, we provide the research community with high-quality joint embeddings of the frame-level F0 and Energy features, using the VQ-VAE architecture. By converting the F0 and Energy into a single stream of vector embeddings, we make it possible to seamlessly use prosody in modern architectures, such as multimodal LLMs. In order to ensure maximum embedding quality, we conduct a large-scale hyperparameter search, totaling over 150 experiments on the LibriTTS dataset. We outperform previous works on F0 embeddings, reaching FFE error below 1 percent, while simultaneously embedding the additional feature of Energy. We publish our best-performing models on the HuggingFace website.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Pre-trained joint F0/energy prosody embeddings as reusable representations; advances TTS prosody modeling.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

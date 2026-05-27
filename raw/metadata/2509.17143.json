@@ -1,0 +1,40 @@
+{
+  "id": "2509.17143",
+  "source_ids": {
+    "arxiv": "2509.17143"
+  },
+  "title": "MaskVCT: Masked Voice Codec Transformer for Zero-Shot Voice Conversion With Increased Controllability via Multiple Guidances",
+  "authors": [
+    "Junhyeok Lee",
+    "Helin Wang",
+    "Yaohan Guan",
+    "Thomas Thebaud",
+    "Laureano Moro-Velazquez",
+    "Jesús Villalba",
+    "Najim Dehak"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.17143",
+  "pdf_url": "https://arxiv.org/pdf/2509.17143.pdf",
+  "pdf_path": "raw/papers/2509.17143.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce MaskVCT, a zero-shot voice conversion (VC) model that offers multi-factor controllability through multiple classifier-free guidances (CFGs). While previous VC models rely on a fixed conditioning scheme, MaskVCT integrates diverse conditions in a single model. To further enhance robustness and control, the model can leverage continuous or quantized linguistic features to enhance intelligibility and speaker similarity, and can use or omit pitch contour to control prosody. These choices allow users to seamlessly balance speaker identity, linguistic content, and prosodic factors in a zero-shot VC setting. Extensive experiments demonstrate that MaskVCT achieves the best target speaker and accent similarities while obtaining competitive word and character error rates compared to existing baselines. Audio samples are available at https://maskvct.github.io/.",
+  "arxiv_comment": "ICASSP 2026 Accepted",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Zero-shot VC with multi-factor controllability via multiple classifier-free guidances",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

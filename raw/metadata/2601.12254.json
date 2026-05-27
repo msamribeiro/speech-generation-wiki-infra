@@ -1,0 +1,36 @@
+{
+  "id": "2601.12254",
+  "source_ids": {
+    "arxiv": "2601.12254"
+  },
+  "title": "Confidence-based Filtering for Speech Dataset Curation with Generative Speech Enhancement Using Discrete Tokens",
+  "authors": [
+    "Kazuki Yamauchi",
+    "Masato Murata",
+    "Shogo Seki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.12254",
+  "pdf_url": "https://arxiv.org/pdf/2601.12254.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Generative speech enhancement (GSE) models show great promise in producing high-quality clean speech from noisy inputs, enabling applications such as curating noisy text-to-speech (TTS) datasets into high-quality ones. However, GSE models are prone to hallucination errors, such as phoneme omissions and speaker inconsistency, which conventional error filtering based on non-intrusive speech quality metrics often fails to detect. To address this issue, we propose a non-intrusive method for filtering hallucination errors from discrete token-based GSE models. Our method leverages the log-probabilities of generated tokens as confidence scores to detect potential errors. Experimental results show that the confidence scores strongly correlate with a suite of intrusive SE metrics, and that our method effectively identifies hallucination errors missed by conventional filtering methods. Furthermore, we demonstrate the practical utility of our method: curating an in-the-wild TTS dataset with our confidence-based filtering improves the performance of subsequently trained TTS models.",
+  "arxiv_comment": "Accepted for ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Confidence-based hallucination filtering for generative speech enhancement applied to TTS dataset curation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

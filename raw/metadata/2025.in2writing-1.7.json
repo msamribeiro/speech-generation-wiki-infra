@@ -1,0 +1,36 @@
+{
+  "id": "2025.in2writing-1.7",
+  "source_ids": {
+    "acl": "2025.in2writing-1.7",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.in2writing-1.7"
+  },
+  "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
+  "authors": [
+    "Jiho Kim",
+    "Philippe Laban",
+    "Xiang Chen",
+    "Kenneth C. Arnold"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.in2writing-1.7",
+  "pdf_url": "https://aclanthology.org/2025.in2writing-1.7.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Writing well requires not only expressing ideas but also refining them through revision, a process facilitated by reflection. Prior research suggests that feedback delivered through dialogues, such as those in writing center tutoring sessions, can help writers reflect more thoughtfully on their work compared to static feedback. Recent advancements in multi-modal large language models (LLMs) now offer new possibilities for supporting interactive and expressive voice-based reflection in writing. In particular, we propose that LLM-generated static feedback can be repurposed as conversation starters, allowing writers to seek clarification, request examples, and ask follow-up questions, thereby fostering deeper reflection on their writing. We argue that voice-based interaction can naturally facilitate this conversational exchange, encouraging writers’ engagement with higher-order concerns, facilitating iterative refinement of their reflections, and reduce cognitive load compared to text-based interactions. To investigate these effects, we propose a formative study exploring how text vs. voice input influence writers’ reflection and subsequent revisions. Findings from this study will inform the design of intelligent and interactive writing tools, offering insights into how voice-based interactions with LLM-powered conversational agents can support reflection and revision.",
+  "task": [],
+  "relevance_score": 0.12,
+  "relevance_note": "Voice AI used instrumentally for writing reflection; HCI paper, not a speech generation contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

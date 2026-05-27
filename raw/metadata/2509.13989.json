@@ -1,0 +1,39 @@
+{
+  "id": "2509.13989",
+  "source_ids": {
+    "arxiv": "2509.13989"
+  },
+  "title": "Do You Hear What I Mean? Quantifying the Instruction-Perception Gap in Instruction-Guided Expressive Text-To-Speech Systems",
+  "authors": [
+    "Yi-Cheng Lin",
+    "Huang-Cheng Chou",
+    "Tzu-Chieh Wei",
+    "Kuan-Yu Chen",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.13989",
+  "pdf_url": "https://arxiv.org/pdf/2509.13989.pdf",
+  "pdf_path": "raw/papers/2509.13989.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Instruction-guided text-to-speech (ITTS) enables users to control speech generation through natural language prompts, offering a more intuitive interface than traditional TTS. However, the alignment between user style instructions and listener perception remains largely unexplored. This work first presents a perceptual analysis of ITTS controllability across two expressive dimensions (adverbs of degree and graded emotion intensity) and collects human ratings on speaker age and word-level emphasis attributes. To comprehensively reveal the instruction-perception gap, we provide a data collection with large-scale human evaluations, named Expressive VOice Control (E-VOC) corpus. Furthermore, we reveal that (1) gpt-4o-mini-tts is the most reliable ITTS model with great alignment between instruction and generated utterances across acoustic dimensions. (2) The 5 analyzed ITTS systems tend to generate Adult voices even when the instructions ask to use child or Elderly voices. (3) Fine-grained control remains a major challenge, indicating that most ITTS systems have substantial room for improvement in interpreting slightly different attribute instructions.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Evaluation of instruction-perception alignment in instruction-guided expressive TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

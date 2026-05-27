@@ -1,0 +1,36 @@
+{
+  "id": "2505.17320",
+  "source_ids": {
+    "arxiv": "2505.17320"
+  },
+  "title": "Comparative Evaluation of Expressive Japanese Character Text-to-Speech with VITS and Style-BERT-VITS2",
+  "authors": [
+    "Zackary Rackauckas",
+    "Julia Hirschberg"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.17320",
+  "pdf_url": "https://arxiv.org/pdf/2505.17320.pdf",
+  "pdf_path": "raw/papers/2505.17320.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Synthesizing expressive Japanese character speech poses unique challenges due to pitch-accent sensitivity and stylistic variability. This paper empirically evaluates two open-source text-to-speech models--VITS and Style-BERT-VITS2 JP Extra (SBV2JE)--on in-domain, character-driven Japanese speech. Using three character-specific datasets, we evaluate models across naturalness (mean opinion and comparative mean opinion score), intelligibility (word error rate), and speaker consistency. SBV2JE matches human ground truth in naturalness (MOS 4.37 vs. 4.38), achieves lower WER, and shows slight preference in CMOS. Enhanced by pitch-accent controls and a WavLM-based discriminator, SBV2JE proves effective for applications like language learning and character dialogue generation, despite higher computational demands.",
+  "arxiv_comment": "Accepted to IEEE UEMCON 2025",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Empirical comparison of VITS and Style-BERT-VITS2 for Japanese expressive TTS; advances evaluation of TTS systems.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

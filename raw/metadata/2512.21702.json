@@ -1,0 +1,36 @@
+{
+  "id": "2512.21702",
+  "source_ids": {
+    "arxiv": "2512.21702"
+  },
+  "title": "Zero-Shot to Zero-Lies: Detecting Bengali Deepfake Audio through Transfer Learning",
+  "authors": [
+    "Most. Sharmin Sultana Samu",
+    "Md. Rakibul Islam",
+    "Md. Zahid Hossain",
+    "Md. Kamrozzaman Bhuiyan",
+    "Farhad Uz Zaman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.21702",
+  "pdf_url": "https://arxiv.org/pdf/2512.21702.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid growth of speech synthesis and voice conversion systems has made deepfake audio a major security concern. Bengali deepfake detection remains largely unexplored. In this work, we study automatic detection of Bengali audio deepfakes using the BanglaFake dataset. We evaluate zeroshot inference with several pretrained models. These include Wav2Vec2-XLSR-53, Whisper, PANNsCNN14, WavLM and Audio Spectrogram Transformer. Zero-shot results show limited detection ability. The best model, Wav2Vec2-XLSR-53, achieves 53.80% accuracy, 56.60% AUC and 46.20% EER. We then f ine-tune multiple architectures for Bengali deepfake detection. These include Wav2Vec2-Base, LCNN, LCNN-Attention, ResNet18, ViT-B16 and CNN-BiLSTM. Fine-tuned models show strong performance gains. ResNet18 achieves the highest accuracy of 79.17%, F1 score of 79.12%, AUC of 84.37% and EER of 24.35%. Experimental results confirm that fine-tuning significantly improves performance over zero-shot inference. This study provides the first systematic benchmark of Bengali deepfake audio detection. It highlights the effectiveness of f ine-tuned deep learning models for this low-resource language.",
+  "arxiv_comment": "Accepted for publication in 2025 28th International Conference on Computer and Information Technology (ICCIT)",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Bengali audio deepfake detection via transfer learning; anti-spoofing detection not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

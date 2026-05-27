@@ -1,0 +1,40 @@
+{
+  "id": "2604.08709",
+  "source_ids": {
+    "arxiv": "2604.08709"
+  },
+  "title": "Enhancing Conversational TTS with Cascaded Prompting and ICL-Based Online Reinforcement Learning",
+  "authors": [
+    "Zhicheng Ouyang",
+    "Seong-Gyun Leem",
+    "Bach Viet Do",
+    "Haibin Wu",
+    "Ariya Rastrow",
+    "Yuzong Liu",
+    "Florian Metze"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.08709",
+  "pdf_url": "https://arxiv.org/pdf/2604.08709.pdf",
+  "pdf_path": "raw/papers/2604.08709.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Conversational AI has made significant progress, yet generating expressive and controllable text-to-speech (TTS) remains challenging. Specifically, controlling fine-grained voice styles and emotions is notoriously difficult and typically requires massive amounts of heavily annotated training data. To overcome this data bottleneck, we present a scalable, data-efficient cascaded framework that pairs textual style tokens with human-curated, high-quality audio prompts. This approach enables single-shot adaptation to fine-grained speaking styles and character voices. In the context of TTS, this audio prompting acts as In-Context Learning (ICL), guiding the model's prosody and timbre without requiring massive parameter updates or large-scale retraining. To further enhance generation quality and mitigate hallucinations, we introduce a novel ICL-based online reinforcement learning (RL) strategy. This strategy directly optimizes the autoregressive prosody model using subjective aesthetic rewards while being constrained by Connectionist Temporal Classification (CTC) alignment to preserve intelligibility. Comprehensive human perception evaluations demonstrate significant improvements in both the naturalness and expressivity of the synthesized speech, establishing the efficacy of our ICL-based online RL approach.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Conversational TTS with cascaded prompting and ICL-based online RL for fine-grained style and emotion control",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

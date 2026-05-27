@@ -1,0 +1,38 @@
+{
+  "id": "2603.24144",
+  "source_ids": {
+    "arxiv": "2603.24144"
+  },
+  "title": "Semantic-Aware Interruption Detection in Spoken Dialogue Systems: Benchmark, Metric, and Model",
+  "authors": [
+    "Kangxiang Xia",
+    "Bingshen Mu",
+    "Xian Shi",
+    "Jin Xu",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.24144",
+  "pdf_url": "https://arxiv.org/pdf/2603.24144.pdf",
+  "pdf_path": "raw/papers/2603.24144.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Achieving natural full-duplex interaction in spoken dialogue systems (SDS) remains a challenge due to the difficulty of accurately detecting user interruptions. Current solutions are polarized between \"trigger-happy\" VAD-based methods that misinterpret backchannels and robust end-to-end models that exhibit unacceptable response delays. Moreover, the absence of real-world benchmarks and holistic metrics hinders progress in the field. This paper presents a comprehensive frame-work to overcome these limitations. We first introduce SID-Bench, the first benchmark for semantic-aware interruption detection built entirely from real-world human dialogues. To provide a rigorous assessment of the responsiveness-robustness trade-off, we propose the Average Penalty Time (APT) metric, which assigns a temporal cost to both false alarms and late responses. Building on this framework, we design an LLM-based detection model optimized through a novel training paradigm to capture subtle semantic cues of intent. Experimental results show that our model significantly outperforms mainstream baselines, achieving a nearly threefold reduction in APT. By successfully resolving the long-standing tension between speed and stability, our work establishes a new state-of-the-art for intelligent interruption handling in SDS. To facilitate future research, SID-Bench and the associated code are available at: https://github.com/xkx-hub/SID-bench.",
+  "arxiv_comment": "Accepted by ICME 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Interruption detection benchmark and model for full-duplex spoken dialogue systems turn-taking",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

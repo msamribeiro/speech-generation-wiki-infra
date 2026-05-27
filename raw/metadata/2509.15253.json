@@ -1,0 +1,36 @@
+{
+  "id": "2509.15253",
+  "source_ids": {
+    "arxiv": "2509.15253"
+  },
+  "title": "Emotion-Aware Speech Generation with Character-Specific Voices for Comics",
+  "authors": [
+    "Zhiwen Qian",
+    "Jinhua Liang",
+    "Huan Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.15253",
+  "pdf_url": "https://arxiv.org/pdf/2509.15253.pdf",
+  "pdf_path": "raw/papers/2509.15253.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents an end-to-end pipeline for generating character-specific, emotion-aware speech from comics. The proposed system takes full comic volumes as input and produces speech aligned with each character's dialogue and emotional state. An image processing module performs character detection, text recognition, and emotion intensity recognition. A large language model performs dialogue attribution and emotion analysis by integrating visual information with the evolving plot context. Speech is synthesized through a text-to-speech model with distinct voice profiles tailored to each character and emotion. This work enables automated voiceover generation for comics, offering a step toward interactive and immersive comic reading experience.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "End-to-end pipeline for character-specific emotion-aware speech generation from comics",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

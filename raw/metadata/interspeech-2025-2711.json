@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-2711",
+  "source_ids": {
+    "isca": "kim25w_interspeech",
+    "doi": "10.21437/Interspeech.2025-2711"
+  },
+  "title": "Data Augmentation using Speech Synthesis for Speaker-Independent Dysarthria Severity Classification",
+  "authors": [
+    "Minseop Kim",
+    "Minsu Han",
+    "Seokyoung Hong",
+    "Myoung-wan Koo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kim25w_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kim25w_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Accurate dysarthria severity classification is essential for assessing motor speech disorders, and automation can improve efficiency and accessibility in clinical settings. While deep learning has significantly advanced this field, recent studies have increasingly leveraged large foundation ASR models. However, most studies focus on speaker-dependent (SD) classification, leaving speaker-independent (SI) classification as a major challenge due to limited datasets. SI classification is crucial in real-world scenarios where patient-specific information is unavailable. To address this, we applied two types of speech synthesis models for the first time in this task. We explore various strategies for integrating zero-shot text-to-speech (ZS-TTS) and voice conversion (VC) models to enhance SI classification and propose the most effective utilization settings. Our approach significantly improves the SI severity classification performance, paving the way for further research in this area.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "TTS data augmentation for dysarthria severity classification; TTS is a data tool for clinical task.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

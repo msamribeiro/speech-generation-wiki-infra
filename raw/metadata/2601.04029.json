@@ -1,0 +1,38 @@
+{
+  "id": "2601.04029",
+  "source_ids": {
+    "arxiv": "2601.04029"
+  },
+  "title": "SpeakerSleuth: Can Large Audio-Language Models Judge Speaker Consistency across Multi-turn Dialogues?",
+  "authors": [
+    "Jonggeun Lee",
+    "Junseong Pyo",
+    "Gyuhyeon Seo",
+    "Yohan Jo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.04029",
+  "pdf_url": "https://arxiv.org/pdf/2601.04029.pdf",
+  "pdf_path": "raw/papers/2601.04029.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Audio-Language Models (LALMs) as judges have emerged as a prominent approach for evaluating speech generation quality, yet their ability to assess speaker consistency across multi-turn dialogues remains unexplored. We present \\textbf{SpeakerSleuth}, a benchmark evaluating whether LALMs can reliably judge speaker consistency across multi-turn dialogues through three tasks reflecting real-world requirements. We construct 1,818 human-verified evaluation instances across four diverse datasets spanning synthetic and real speech, with controlled acoustic difficulty. Evaluating twelve widely-used LALMs, we find that models struggle to reliably detect acoustic inconsistencies. For instance, given audio samples of the same speaker's turns, some models overpredict inconsistency, whereas others are overly lenient. Models further struggle to identify the exact turns that are problematic. When other interlocutors' turns are provided as textual context, performance degrades dramatically as models prioritize textual coherence over acoustic cues, failing to detect even obvious gender switches for a speaker. On the other hand, models perform substantially better in comparing and ranking acoustic variants, demonstrating inherent acoustic discrimination capabilities. These findings expose a significant bias in LALMs: they tend to prioritize text over acoustics, revealing fundamental modality imbalances that need to be addressed to build reliable audio-language judges. Our code and data are available at https://github.com/holi-lab/SpeakerSleuth.",
+  "arxiv_comment": "Accepted at ACL 2026 (Main)",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Benchmark for large audio-language models evaluating speaker consistency in multi-turn dialogues; advances TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

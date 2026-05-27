@@ -1,0 +1,34 @@
+{
+  "id": "2509.20086",
+  "source_ids": {
+    "arxiv": "2509.20086"
+  },
+  "title": "OLaPh: Optimal Language Phonemizer",
+  "authors": [
+    "Johannes Wirth"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.20086",
+  "pdf_url": "https://arxiv.org/pdf/2509.20086.pdf",
+  "pdf_path": "raw/papers/2509.20086.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Phonemization is a critical component in text-to-speech synthesis. Traditional approaches rely on deterministic transformations and lexica, while neural methods offer potential for higher generalization on out-of-vocabulary (OOV) terms. This work introduces OLaPh (Optimal Language Phonemizer), a hybrid framework that integrates extensive multilingual lexica with advanced NLP techniques and a statistical subword segmentation function. Evaluations on the WikiPron benchmark show that the OLaPh framework significantly outperforms established baselines in overall accuracy and maintains robustness on OOV data through advanced fallback mechanisms. To further explore neural generalization, we utilize the framework to synthesize a high-consistency training corpus for an instruction-tuned Large Language Model (LLM). While the deterministic framework remains more accurate overall, the LLM demonstrates strong generalization, matching or partly exceeding the framework's performance. This suggests that the LLM successfully internalized phonetic intuitions from the synthetic data that transcend the framework's capabilities. Together, these tools provide a comprehensive, open-source resource for multilingual G2P research.",
+  "arxiv_comment": "11 pages, 1 figure, 4 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Hybrid multilingual phonemizer for TTS preprocessing; directly advances TTS text front-end.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

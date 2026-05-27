@@ -1,0 +1,37 @@
+{
+  "id": "2509.00685",
+  "source_ids": {
+    "arxiv": "2509.00685"
+  },
+  "title": "MPO: Multidimensional Preference Optimization for Language Model-based Text-to-Speech",
+  "authors": [
+    "Kangxiang Xia",
+    "Xinfa Zhu",
+    "Jixun Yao",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.00685",
+  "pdf_url": "https://arxiv.org/pdf/2509.00685.pdf",
+  "pdf_path": "raw/papers/2509.00685.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In recent years, text-to-speech (TTS) has seen impressive advancements through large-scale language models, achieving human-level speech quality. Integrating human feedback has proven effective for enhancing robustness in these systems. However, current approaches face challenges in optimizing TTS with preference data across multiple dimensions and often suffer from performance degradation due to overconfidence in rewards. We propose Multidimensional Preference Optimization (MPO) to better align TTS systems with human preferences. MPO introduces a preference set that streamlines the construction of data for multidimensional preference optimization, enabling alignment with multiple dimensions. Additionally, we incorporate regularization during training to address the typical degradation issues in DPO-based approaches. Our experiments demonstrate MPO's effectiveness, showing significant improvements in intelligibility, speaker similarity, and prosody compared to baseline systems.",
+  "arxiv_comment": "Accepted by NCMMSC2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Multidimensional preference optimization for LM-based TTS robustness and expressiveness",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

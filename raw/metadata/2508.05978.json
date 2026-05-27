@@ -1,0 +1,41 @@
+{
+  "id": "2508.05978",
+  "source_ids": {
+    "arxiv": "2508.05978"
+  },
+  "title": "DAFMSVC: One-Shot Singing Voice Conversion with Dual Attention Mechanism and Flow Matching",
+  "authors": [
+    "Wei Chen",
+    "Binzhu Sha",
+    "Dan Luo",
+    "Jing Yang",
+    "Zhuo Wang",
+    "Fan Fan",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.05978",
+  "pdf_url": "https://arxiv.org/pdf/2508.05978.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Singing Voice Conversion (SVC) transfers a source singer's timbre to a target while keeping melody and lyrics. The key challenge in any-to-any SVC is adapting unseen speaker timbres to source audio without quality degradation. Existing methods either face timbre leakage or fail to achieve satisfactory timbre similarity and quality in the generated audio. To address these challenges, we propose DAFMSVC, where the self-supervised learning (SSL) features from the source audio are replaced with the most similar SSL features from the target audio to prevent timbre leakage. It also incorporates a dual cross-attention mechanism for the adaptive fusion of speaker embeddings, melody, and linguistic content. Additionally, we introduce a flow matching module for high quality audio generation from the fused features. Experimental results show that DAFMSVC significantly enhances timbre similarity and naturalness, outperforming state-of-the-art methods in both subjective and objective evaluations.",
+  "arxiv_comment": "Accepted by INTERSPEECH 2025",
+  "task": [
+    "VC",
+    "singing"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "One-shot singing voice conversion using dual attention and flow matching",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0305"
+}

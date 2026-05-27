@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-0468",
+  "source_ids": {
+    "isca": "li25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-468"
+  },
+  "title": "DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation",
+  "authors": [
+    "Jiaqi Li",
+    "Xiaolong Lin",
+    "Zhekai Li",
+    "Shixi Huang",
+    "Yuancheng Wang",
+    "Chaoren Wang",
+    "Zhenpeng Zhan",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/li25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/li25e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0468.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural audio codecs form the foundational building blocks for language model (LM)-based speech generation. Typically, there is a trade-off between frame rate and audio quality. This study introduces a low-frame-rate, semantically enhanced codec model. Existing approaches distill semantically rich self-supervised (SSL) representations into the first-layer codec tokens. This work proposes DualCodec, a dual-stream encoding approach that integrates SSL and waveform representations within an end-to-end codec framework. In this setting, DualCodec enhances the semantic information in the first-layer codec and enables the codec system to maintain high audio quality while operating at a low frame rate. Note that a low-frame-rate codec improves the efficiency of speech generation. Experimental results on audio codec and speech generation tasks confirm the effectiveness of the proposed DualCodec compared to state-of-the-art codec systems, such as Mimi Codec, SpeechTokenizer, DAC, and Encodec.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Novel low-frame-rate, semantically-enhanced neural codec for speech generation; advances codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

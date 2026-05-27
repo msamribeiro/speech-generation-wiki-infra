@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1550",
+  "source_ids": {
+    "isca": "toyin25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1550"
+  },
+  "title": "ArVoice: A Multi-Speaker Dataset for Arabic Speech Synthesis",
+  "authors": [
+    "Hawau Toyin",
+    "Rufael Marew",
+    "Humaid Alblooshi",
+    "Samar M. Magdy",
+    "Hanan Aldarmaki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/toyin25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/toyin25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1550.pdf",
+  "pdf_source": "isca",
+  "abstract": "We introduce ArVoice, a multi-speaker Modern Standard Arabic (MSA) speech corpus with diacritized transcriptions, intended for multi-speaker speech synthesis, and can be useful for other tasks such as speech-based diacritic restoration, voice conversion, and deepfake detection. ArVoice comprises: (1) a new professionally recorded set from six voice talents with diverse demographics, (2) a modified subset of the Arabic Speech Corpus; and (3) high-quality synthetic speech from two commercial systems. The complete corpus consists of a total of 83.52 hours of speech across 11 voices; around 10 hours consist of human voices from 7 speakers. We train three open-source TTS and two voice conversion systems to illustrate the use cases of the dataset. The corpus is available for research use.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Multi-speaker Modern Standard Arabic TTS corpus with diacritized transcriptions; advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

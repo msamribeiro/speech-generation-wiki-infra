@@ -1,0 +1,37 @@
+{
+  "id": "2507.07518",
+  "source_ids": {
+    "arxiv": "2507.07518"
+  },
+  "title": "Triadic Multi-party Voice Activity Projection for Turn-taking in Spoken Dialogue Systems",
+  "authors": [
+    "Mikey Elmers",
+    "Koji Inoue",
+    "Divesh Lala",
+    "Tatsuya Kawahara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.07518",
+  "pdf_url": "https://arxiv.org/pdf/2507.07518.pdf",
+  "pdf_path": "raw/papers/2507.07518.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Turn-taking is a fundamental component of spoken dialogue, however conventional studies mostly involve dyadic settings. This work focuses on applying voice activity projection (VAP) to predict upcoming turn-taking in triadic multi-party scenarios. The goal of VAP models is to predict the future voice activity for each speaker utilizing only acoustic data. This is the first study to extend VAP into triadic conversation. We trained multiple models on a Japanese triadic dataset where participants discussed a variety of topics. We found that the VAP trained on triadic conversation outperformed the baseline for all models but that the type of conversation affected the accuracy. This study establishes that VAP can be used for turn-taking in triadic dialogue scenarios. Future work will incorporate this triadic VAP turn-taking model into spoken dialogue systems.",
+  "arxiv_comment": "Proceedings of Interspeech 2025",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.62,
+  "relevance_note": "Voice activity projection for triadic turn-taking; primarily spoken interaction analysis, with SCA implications.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

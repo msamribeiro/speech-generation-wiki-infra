@@ -1,0 +1,34 @@
+{
+  "id": "2601.07958",
+  "source_ids": {
+    "arxiv": "2601.07958"
+  },
+  "title": "LJ-Spoof: A Generatively Varied Corpus for Audio Anti-Spoofing and Synthesis Source Tracing",
+  "authors": [
+    "Surya Subramani",
+    "Hashim Ali",
+    "Hafiz Malik"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.07958",
+  "pdf_url": "https://arxiv.org/pdf/2601.07958.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speaker-specific anti-spoofing and synthesis-source tracing are central challenges in audio anti-spoofing. Progress has been hampered by the lack of datasets that systematically vary model architectures, synthesis pipelines, and generative parameters. To address this gap, we introduce LJ-Spoof, a speaker-specific, generatively diverse corpus that systematically varies prosody, vocoders, generative hyperparameters, bona fide prompt sources, training regimes, and neural post-processing. The corpus spans one speakers-including studio-quality recordings-30 TTS families, 500 generatively variant subsets, 10 bona fide neural-processing variants, and more than 3 million utterances. This variation-dense design enables robust speaker-conditioned anti-spoofing and fine-grained synthesis-source tracing. We further position this dataset as both a practical reference training resource and a benchmark evaluation suite for anti-spoofing and source tracing.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Anti-spoofing corpus systematically varying TTS pipelines; synthesis source tracing not generation research",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

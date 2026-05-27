@@ -1,0 +1,37 @@
+{
+  "id": "2510.25577",
+  "source_ids": {
+    "arxiv": "2510.25577"
+  },
+  "title": "Lost in Phonation: Voice Quality Variation as an Evaluation Dimension for Speech Foundation Models",
+  "authors": [
+    "Harm Lameris",
+    "Shree Harsha Bokkahalli Satish",
+    "Joakim Gustafson",
+    "Éva Székely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.25577",
+  "pdf_url": "https://arxiv.org/pdf/2510.25577.pdf",
+  "pdf_path": "raw/papers/2510.25577.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in speech foundation models (SFMs) have enabled the direct processing of spoken language from raw audio, bypassing intermediate textual representations. This capability allows SFMs to be exposed to, and potentially respond to, rich paralinguistic variations embedded in the input speech signal. One under-explored dimension of paralinguistic variation is voice quality, encompassing phonation types such as creaky and breathy voice. These phonation types are known to influence how listeners infer affective state, stance and social meaning in speech. Existing benchmarks for speech understanding largely rely on multiple-choice question answering (MCQA) formats, which are prone to failure and therefore unreliable in capturing the nuanced ways paralinguistic features influence model behaviour. In this paper, we probe SFMs through open-ended generation tasks and speech emotion recognition, evaluating whether model behaviours are consistent across different phonation inputs. We introduce a new parallel dataset featuring synthesized modifications to voice quality, designed to evaluate SFM responses to creaky and breathy voice. Our work provides the first examination of SFM sensitivity to these particular non-lexical aspects of speech perception.",
+  "arxiv_comment": "8 pages, 3 figures, 4 tables, submitted to LREC 2026",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Voice quality variation as evaluation dimension for SFMs; paralinguistic evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

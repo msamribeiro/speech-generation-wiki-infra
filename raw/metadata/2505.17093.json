@@ -1,0 +1,36 @@
+{
+  "id": "2505.17093",
+  "source_ids": {
+    "arxiv": "2505.17093"
+  },
+  "title": "P2VA: Converting Persona Descriptions into Voice Attributes for Fair and Controllable Text-to-Speech",
+  "authors": [
+    "Yejin Lee",
+    "Jaehoon Kang",
+    "Kyuhong Shim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.17093",
+  "pdf_url": "https://arxiv.org/pdf/2505.17093.pdf",
+  "pdf_path": "raw/papers/2505.17093.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While persona-driven large language models (LLMs) and prompt-based text-to-speech (TTS) systems have advanced significantly, a usability gap arises when users attempt to generate voices matching their desired personas from implicit descriptions. Most users lack specialized knowledge to specify detailed voice attributes, which often leads TTS systems to misinterpret their expectations. To address these gaps, we introduce Persona-to-Voice-Attribute (P2VA), the first framework enabling voice generation automatically from persona descriptions. Our approach employs two strategies: P2VA-C for structured voice attributes, and P2VA-O for richer style descriptions. Evaluation shows our P2VA-C reduces WER by 5% and improves MOS by 0.33 points. To the best of our knowledge, P2VA is the first framework to establish a connection between persona and voice synthesis. In addition, we discover that current LLMs embed societal biases in voice attributes during the conversion process. Our experiments and findings further provide insights into the challenges of building persona-voice systems.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Converts persona descriptions to voice attributes bridging TTS usability gap; directly advances instruction-conditioned TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2508.17031",
+  "source_ids": {
+    "arxiv": "2508.17031"
+  },
+  "title": "RephraseTTS: Dynamic Length Text based Speech Insertion with Speaker Style Transfer",
+  "authors": [
+    "Neeraj Matiyali",
+    "Siddharth Srivastava",
+    "Gaurav Sharma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.17031",
+  "pdf_url": "https://arxiv.org/pdf/2508.17031.pdf",
+  "pdf_path": "raw/papers/2508.17031.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose a method for the task of text-conditioned speech insertion, i.e. inserting a speech sample in an input speech sample, conditioned on the corresponding complete text transcript. An example use case of the task would be to update the speech audio when corrections are done on the corresponding text transcript. The proposed method follows a transformer-based non-autoregressive approach that allows speech insertions of variable lengths, which are dynamically determined during inference, based on the text transcript and tempo of the available partial input. It is capable of maintaining the speaker's voice characteristics, prosody and other spectral properties of the available speech input. Results from our experiments and user study on LibriTTS show that our method outperforms baselines based on an existing adaptive text to speech method. We also provide numerous qualitative results to appreciate the quality of the output from the proposed method.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "TTS-based speech insertion with speaker style transfer for audio editing",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

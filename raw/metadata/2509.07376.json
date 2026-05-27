@@ -1,0 +1,43 @@
+{
+  "id": "2509.07376",
+  "source_ids": {
+    "arxiv": "2509.07376",
+    "acl": "2025.findings-emnlp.152",
+    "doi": "10.18653/v1/2025.findings-emnlp.152",
+    "url_acl": "https://aclanthology.org/2025.findings-emnlp.152"
+  },
+  "title": "Progressive Facial Granularity Aggregation with Bilateral Attribute-based Enhancement for Face-to-Speech Synthesis",
+  "authors": [
+    "Yejin Jeon",
+    "Youngjae Kim",
+    "Jihyun Lee",
+    "Hyounghun Kim",
+    "Gary Geunbae Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-09-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.07376",
+  "pdf_url": "https://aclanthology.org/2025.findings-emnlp.152.pdf",
+  "pdf_path": "raw/papers/2509.07376.pdf",
+  "pdf_source": "anthology",
+  "abstract": "For individuals who have experienced traumatic events such as strokes, speech may no longer be a viable means of communication. While text-to-speech (TTS) can be used as a communication aid since it generates synthetic speech, it fails to preserve the user's own voice. As such, face-to-voice (FTV) synthesis, which derives corresponding voices from facial images, provides a promising alternative. However, existing methods rely on pre-trained visual encoders, and finetune them to align with speech embeddings, which strips fine-grained information from facial inputs such as gender or ethnicity, despite their known correlation with vocal traits. Moreover, these pipelines are multi-stage, which requires separate training of multiple components, thus leading to training inefficiency. To address these limitations, we utilize fine-grained facial attribute modeling by decomposing facial images into non-overlapping segments and progressively integrating them into a multi-granular representation. This representation is further refined through multi-task learning of speaker attributes such as gender and ethnicity at both the visual and acoustic domains. Moreover, to improve alignment robustness, we adopt a multi-view training strategy by pairing various visual perspectives of a speaker in terms of different angles and lighting conditions, with identical speech recordings. Extensive subjective and objective evaluations confirm that our approach substantially enhances face-voice congruence and synthesis stability.",
+  "arxiv_comment": "EMNLP Findings",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Face-to-speech synthesis restoring voice for individuals with speech impairments",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

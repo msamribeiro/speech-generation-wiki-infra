@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0433",
+  "source_ids": {
+    "isca": "kang25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-433"
+  },
+  "title": "When Humans Growl and Birds Speak: High-Fidelity Voice Conversion from Human to Animal and Designed Sounds",
+  "authors": [
+    "Minsu Kang",
+    "Seolhee Lee",
+    "Choonghyeon Lee",
+    "Namhyun Cho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kang25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kang25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0433.pdf",
+  "pdf_source": "isca",
+  "abstract": "Human to non-human voice conversion (H2NH-VC) transforms human speech into animal or designed vocalizations. Unlike prior studies focused on dog-sounds and 16 or 22.05kHz audio transformation, this work addresses a broader range of non-speech sounds, including natural sounds (lion-roars, birdsongs) and designed voice (synthetic growls). To accomodate generation of diverse non-speech sounds and 44.1kHz high-quality audio transformation, we introduce a preprocessing pipeline and an improved CVAE-based H2NH-VC model, both optimized for human and non-human voices. Experimental results showed that the proposed method outperformed baselines in quality, naturalness, and similarity MOS, achieving effective voice conversion across diverse non-human timbres.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "High-fidelity human-to-non-human voice conversion for animals/designed sounds; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

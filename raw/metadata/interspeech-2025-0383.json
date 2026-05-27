@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0383",
+  "source_ids": {
+    "isca": "suda25_interspeech",
+    "doi": "10.21437/Interspeech.2025-383"
+  },
+  "title": "Voice Conversion for Likability Control via Automated Rating of Speech Synthesis Corpora",
+  "authors": [
+    "Hitoshi Suda",
+    "Shinnosuke Takamichi",
+    "Satoru Fukayama"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/suda25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/suda25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0383.pdf",
+  "pdf_source": "isca",
+  "abstract": "Perceived voice likability plays a crucial role in various social interactions, such as partner selection and advertising. A system that provides reference likable voice samples tailored to target audiences would enable users to adjust their speaking style and voice quality, facilitating smoother communication. To this end, we propose a voice conversion method that controls the likability of input speech while preserving both speaker identity and linguistic content. To improve training data scalability, we train a likability predictor on an existing voice likability dataset and employ it to automatically annotate a large speech synthesis corpus with likability ratings. Experimental evaluations reveal a significant correlation between the predictorâs outputs and human-provided likability ratings. Subjective and objective evaluations further demonstrate that the proposed approach effectively controls voice likability while preserving both speaker identity and linguistic content.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Voice conversion method controlling perceived voice likability; directly advances VC for paralinguistic control.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

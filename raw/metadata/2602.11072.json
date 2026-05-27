@@ -1,0 +1,39 @@
+{
+  "id": "2602.11072",
+  "source_ids": {
+    "arxiv": "2602.11072"
+  },
+  "title": "Simultaneous Speech-to-Speech Translation Without Aligned Data",
+  "authors": [
+    "Tom Labiausse",
+    "Romain Fabre",
+    "Yannick Estève",
+    "Alexandre Défossez",
+    "Neil Zeghidour"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.11072",
+  "pdf_url": "https://arxiv.org/pdf/2602.11072.pdf",
+  "pdf_path": "raw/papers/2602.11072.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Simultaneous speech translation requires translating source speech into a target language in real-time while handling non-monotonic word dependencies. Traditional approaches rely on supervised training with word-level aligned data, which is difficult to collect at scale and thus depends on synthetic alignments using language-specific heuristics that are suboptimal. We propose Hibiki-Zero, which eliminates the need for word-level alignments entirely. This fundamentally simplifies the training pipeline and enables seamless scaling to diverse languages with varying grammatical structures, removing the bottleneck of designing language-specific alignment heuristics. We first train on sentence-level aligned data to learn speech translation at high latency, then apply a novel reinforcement learning strategy using GRPO to optimize latency while preserving translation quality. Hibiki-Zero achieves state-of-the-art performance in translation accuracy, latency, voice transfer, and naturalness across five X-to-English tasks. Moreover, we demonstrate that our model can be adapted to support a new input language with less than 1000h of speech. We provide examples, model weights, inference code and we release a benchmark containing 45h of multilingual data for speech translation evaluation.",
+  "arxiv_comment": "See inference code at: https://github.com/kyutai-labs/hibiki-zero",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Simultaneous S2ST without aligned data; core generation architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2602.13761",
+  "source_ids": {
+    "arxiv": "2602.13761"
+  },
+  "title": "ELEAT-SAGA: Early & Late Integration with Evading Alternating Training for Spoof-Robust Speaker Verification",
+  "authors": [
+    "Amro Asali",
+    "Yehuda Ben-Shimol",
+    "Itshak Lapidot"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.13761",
+  "pdf_url": "https://arxiv.org/pdf/2602.13761.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Spoofing-robust automatic speaker verification (SASV) seeks to build automatic speaker verification systems that are robust against both zero-effort impostor attacks and sophisticated spoofing techniques such as voice conversion (VC) and text-to-speech (TTS). In this work, we propose a novel SASV architecture that introduces score-aware gated attention (SAGA), SASV-SAGA, enabling dynamic modulation of speaker embeddings based on countermeasure (CM) scores. By integrating speaker embeddings and CM scores from pre-trained ECAPA-TDNN and AASIST models respectively, we explore several integration strategies including early, late, and full integration. We further introduce alternating training for multi-module (ATMM) and a refined variant, evading alternating training (EAT). Experimental results on the ASVspoof 2019 Logical Access (LA) and Spoofceleb datasets demonstrate significant improvements over baselines, achieving a spoofing aware speaker verification equal error rate (SASV-EER) of 1.22% and minimum normalized agnostic detection cost function (min a-DCF) of 0.0304 on the ASVspoof 2019 evaluation set. These results confirm the effectiveness of score-aware attention mechanisms and alternating training strategies in enhancing the robustness of SASV systems.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "SASV spoofing-robust speaker verification system with gated attention; anti-spoofing not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2601.02776",
+  "source_ids": {
+    "arxiv": "2601.02776"
+  },
+  "title": "UniSRCodec: Unified and Low-Bitrate Single Codebook Codec with Sub-Band Reconstruction",
+  "authors": [
+    "Zhisheng Zhang",
+    "Xiang Li",
+    "Yixuan Zhou",
+    "Jing Peng",
+    "Shengbo Cai",
+    "Guoyang Zeng",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.02776",
+  "pdf_url": "https://arxiv.org/pdf/2601.02776.pdf",
+  "pdf_path": "raw/papers/2601.02776.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural Audio Codecs (NACs) can reduce transmission overhead by performing compact compression and reconstruction, which also aim to bridge the gap between continuous and discrete signals. Existing NACs can be divided into two categories: multi-codebook and single-codebook codecs. Multi-codebook codecs face challenges such as structural complexity and difficulty in adapting to downstream tasks, while single-codebook codecs, though structurally simpler, suffer from low-fidelity, ineffective modeling of unified audio, and an inability to support modeling of high-frequency audio. We propose the UniSRCodec, a single-codebook codec capable of supporting high sampling rate, low-bandwidth, high fidelity, and unified. We analyze the inefficiency of waveform-based compression and introduce the time and frequency compression method using the Mel-spectrogram, and cooperate with a Vocoder to recover the phase information of the original audio. Moreover, we propose a sub-band reconstruction technique to achieve high-quality compression across both low and high frequency bands. Subjective and objective experimental results demonstrate that UniSRCodec achieves state-of-the-art (SOTA) performance among cross-domain single-codebook codecs with only a token rate of 40, and its reconstruction quality is comparable to that of certain multi-codebook methods. Our demo page is available at https://wxzyd123.github.io/unisrcodec.",
+  "arxiv_comment": "6 pages, 2 figures, and 3 tables",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Single-codebook unified neural audio codec with sub-band reconstruction for downstream task compatibility",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

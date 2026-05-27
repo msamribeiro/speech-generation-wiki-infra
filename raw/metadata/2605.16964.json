@@ -1,0 +1,43 @@
+{
+  "id": "2605.16964",
+  "source_ids": {
+    "arxiv": "2605.16964"
+  },
+  "title": "SemaVoice: Semantic-Aware Continuous Autoregressive Speech Synthesis",
+  "authors": [
+    "Huimeng Wang",
+    "Hui Lu",
+    "Jiajun Deng",
+    "Haoning Xu",
+    "Youjun Chen",
+    "Xueyuan Chen",
+    "Zhaoqing Li",
+    "Shuhai Peng",
+    "Shiyin Kang",
+    "Xunying Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.16964",
+  "pdf_url": "https://arxiv.org/pdf/2605.16964.pdf",
+  "pdf_path": "raw/papers/2605.16964.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Continuous autoregressive speech synthesis has recently emerged as a promising direction for zero-shot text-to-speech (TTS). However, existing methods still suffer from a fundamental mismatch between semantic-prosodic modeling and reconstruction-driven continuous speech representations. This mismatch causes TTS models to focus excessively on low-level acoustic textures at the expense of high-level semantic coherence, further exacerbating error accumulation in autoregressive generation. To address this challenge, we propose SemaVoice, a semantic-aware continuous autoregressive framework for high-fidelity zero-shot TTS. SemaVoice introduces a Speech Foundation Model (SFM) guided alignment mechanism that refines continuous speech representations to better capture both local semantic consistency and global structural relationships. These representations condition a patch-wise diffusion head within the autoregressive framework for high-quality speech synthesis. Experimental results on the Seed-TTS benchmark show that SemaVoice achieves an English WER of 1.71\\% and remains highly competitive with state-of-the-art open-source systems in both objective and subjective evaluations. The effectiveness of SFM guided alignment is further confirmed by significant improvements under varying representation granularities with a fixed information-rate constraint.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "SemaVoice: semantic-aware continuous autoregressive TTS resolving semantic-prosodic vs. acoustic mismatch",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

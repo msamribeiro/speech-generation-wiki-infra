@@ -1,0 +1,38 @@
+{
+  "id": "2603.09120",
+  "source_ids": {
+    "arxiv": "2603.09120"
+  },
+  "title": "Emotion-Aware Prefix: Towards Explicit Emotion Control in Voice Conversion Models",
+  "authors": [
+    "Haoyuan Yang",
+    "Mu Yang",
+    "Jiamin Xie",
+    "Szu-Jui Chen",
+    "John H. L. Hansen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.09120",
+  "pdf_url": "https://arxiv.org/pdf/2603.09120.pdf",
+  "pdf_path": "raw/papers/2603.09120.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in zero-shot voice conversion have exhibited potential in emotion control, yet the performance is suboptimal or inconsistent due to their limited expressive capacity. We propose Emotion-Aware Prefix for explicit emotion control in a two-stage voice conversion backbone. We significantly improve emotion conversion performance, doubling the baseline Emotion Conversion Accuracy (ECA) from 42.40% to 85.50% while maintaining linguistic integrity and speech quality, without compromising speaker identity. Our ablation study suggests that a joint control of both sequence modulation and acoustic realization is essential to synthesize distinct emotions. Furthermore, comparative analysis verifies the generalizability of proposed method, while it provides insights on the role of acoustic decoupling in maintaining speaker identity.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Emotion-aware prefix attention enabling explicit emotion control in zero-shot voice conversion models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

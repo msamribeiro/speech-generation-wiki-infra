@@ -1,0 +1,36 @@
+{
+  "id": "2509.13667",
+  "source_ids": {
+    "arxiv": "2509.13667"
+  },
+  "title": "A Distilled Low-Latency Neural Vocoder with Explicit Amplitude and Phase Prediction",
+  "authors": [
+    "Hui-Peng Du",
+    "Yang Ai",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.13667",
+  "pdf_url": "https://arxiv.org/pdf/2509.13667.pdf",
+  "pdf_path": "raw/papers/2509.13667.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The majority of mainstream neural vocoders primarily focus on speech quality and generation speed, while overlooking latency, which is a critical factor in real-time applications. Excessive latency leads to noticeable delays in user interaction, severely degrading the user experience and rendering such systems impractical for real-time use. Therefore, this paper proposes DLL-APNet, a Distilled Low-Latency neural vocoder which first predicts the Amplitude and Phase spectra explicitly from input mel spectrogram and then reconstructs the speech waveform via inverse short-time Fourier transform (iSTFT). The DLL-APNet vocoder leverages causal convolutions to constrain the utilization of information to current and historical contexts, effectively minimizing latency. To mitigate speech quality degradation caused by causal constraints, a knowledge distillation strategy is proposed, where a pre-trained non-causal teacher vocoder guides intermediate feature generation of the causal student DLL-APNet vocoder. Experimental results demonstrate that the proposed DLL-APNet vocoder produces higher-quality speech than other causal vocoders, while requiring fewer computational resources. Furthermore, the proposed DLL-APNet vocoder achieves speech quality on par with mainstream non-causal neural vocoders, validating its ability to deliver both high perceptual quality and low latency.",
+  "arxiv_comment": "Accepted by APSIPA ASC 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Distilled low-latency neural vocoder with explicit amplitude and phase prediction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

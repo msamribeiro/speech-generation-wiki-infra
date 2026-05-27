@@ -1,0 +1,35 @@
+{
+  "id": "2509.04667",
+  "source_ids": {
+    "arxiv": "2509.04667"
+  },
+  "title": "DarkStream: real-time speech anonymization with low latency",
+  "authors": [
+    "Waris Quamer",
+    "Ricardo Gutierrez-Osuna"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.04667",
+  "pdf_url": "https://arxiv.org/pdf/2509.04667.pdf",
+  "pdf_path": "raw/papers/2509.04667.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose DarkStream, a streaming speech synthesis model for real-time speaker anonymization. To improve content encoding under strict latency constraints, DarkStream combines a causal waveform encoder, a short lookahead buffer, and transformer-based contextual layers. To further reduce inference time, the model generates waveforms directly via a neural vocoder, thus removing intermediate mel-spectrogram conversions. Finally, DarkStream anonymizes speaker identity by injecting a GAN-generated pseudo-speaker embedding into linguistic features from the content encoder. Evaluations show our model achieves strong anonymization, yielding close to 50% speaker verification EER (near-chance performance) on the lazy-informed attack scenario, while maintaining acceptable linguistic intelligibility (WER within 9%). By balancing low-latency, robust privacy, and minimal intelligibility degradation, DarkStream provides a practical solution for privacy-preserving real-time speech communication.",
+  "arxiv_comment": "Accepted for presentation at ASRU 2025",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Streaming TTS-based real-time voice anonymization model",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

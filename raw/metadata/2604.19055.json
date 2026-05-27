@@ -1,0 +1,41 @@
+{
+  "id": "2604.19055",
+  "source_ids": {
+    "arxiv": "2604.19055"
+  },
+  "title": "ATRIE: Adaptive Tuning for Robust Inference and Emotion in Persona-Driven Speech Synthesis",
+  "authors": [
+    "Aoduo Li",
+    "Haoran Lv",
+    "Hongjian Xu",
+    "Shengmin Li",
+    "Sihao Qin",
+    "Zimeng Li",
+    "Chi Man Pun",
+    "Xuhang Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.19055",
+  "pdf_url": "https://arxiv.org/pdf/2604.19055.pdf",
+  "pdf_path": "raw/papers/2604.19055.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "High-fidelity character voice synthesis is a cornerstone of immersive multimedia applications, particularly for interacting with anime avatars and digital humans. However, existing systems struggle to maintain consistent persona traits across diverse emotional contexts. To bridge this gap, we present ATRIE, a unified framework utilizing a Persona-Prosody Dual-Track (P2-DT) architecture. Our system disentangles generation into a static Timbre Track (via Scalar Quantization) and a dynamic Prosody Track (via Hierarchical Flow-Matching), distilled from a 14B LLM teacher. This design enables robust identity preservation (Zero-Shot Speaker Verification EER: 0.04) and rich emotional expression. Evaluated on our extended AnimeTTS-Bench (50 characters), ATRIE achieves state-of-the-art performance in both generation and cross-modal retrieval (mAP: 0.75), establishing a new paradigm for persona-driven multimedia content creation.",
+  "arxiv_comment": "10 pages, 6 figures. Accepted to ACM ICMR 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "ATRIE: unified persona-prosody framework for consistent character voice synthesis across emotional contexts",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

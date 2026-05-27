@@ -1,0 +1,62 @@
+{
+  "id": "2512.18706",
+  "source_ids": {
+    "arxiv": "2512.18706"
+  },
+  "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+  "authors": [
+    "Zhanxun Liu",
+    "Yifan Duan",
+    "Mengmeng Wang",
+    "Pengchao Feng",
+    "Haotian Zhang",
+    "Xiaoyu Xing",
+    "Yijia Shan",
+    "Haina Zhu",
+    "Yuhang Dai",
+    "Chaochao Lu"
+  ],
+  "authors_full": [
+    "Zhanxun Liu",
+    "Yifan Duan",
+    "Mengmeng Wang",
+    "Pengchao Feng",
+    "Haotian Zhang",
+    "Xiaoyu Xing",
+    "Yijia Shan",
+    "Haina Zhu",
+    "Yuhang Dai",
+    "Chaochao Lu",
+    "Xipeng Qiu",
+    "Lei Xie",
+    "Lan Wang",
+    "Nan Yan",
+    "Zilong Zheng",
+    "Ziyang Ma",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.18706",
+  "pdf_url": "https://arxiv.org/pdf/2512.18706.pdf",
+  "pdf_path": "raw/papers/2512.18706.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present X-Talk, an open-source framework that champions a decoupled, modular design for LLM-driven speech-to-speech (S2S) systems. While the dominant trend favors end-to-end (E2E) modeling to optimize information flow, these \"omni-models\" often struggle to balance the competing objectives of complex speech tasks within a single network. X-Talk challenges this paradigm by demonstrating that a systematically optimized cascaded pipeline can achieve sub-second latency without sacrificing modular flexibility. Our framework seamlessly integrates specialized front-end components (e.g., VAD, speech enhancement) and diverse understanding models (e.g., ASR, emotion, and environmental sound analysis) with LLM capabilities like retrieval-augmented generation (RAG) and tool use. By revitalizing the cascaded approach, X-Talk highlights the underestimated potential of modular S2S systems and provides a robust foundation for future research and applications.",
+  "arxiv_comment": "14 pages",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "X-Talk: modular speech-to-speech dialogue system; core SCA architecture paper.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

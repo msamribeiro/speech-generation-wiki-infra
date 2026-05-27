@@ -1,0 +1,38 @@
+{
+  "id": "2601.02753",
+  "source_ids": {
+    "arxiv": "2601.02753"
+  },
+  "title": "Vclip: Face-based Speaker Generation by Face-voice Association Learning",
+  "authors": [
+    "Yao Shi",
+    "Yunfei Xu",
+    "Hongbin Suo",
+    "Yulong Wan",
+    "Haifeng Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.02753",
+  "pdf_url": "https://arxiv.org/pdf/2601.02753.pdf",
+  "pdf_path": "raw/papers/2601.02753.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper discusses the task of face-based speech synthesis, a kind of personalized speech synthesis where the synthesized voices are constrained to perceptually match with a reference face image. Due to the lack of TTS-quality audio-visual corpora, previous approaches suffer from either low synthesis quality or domain mismatch induced by a knowledge transfer scheme. This paper proposes a new approach called Vclip that utilizes the facial-semantic knowledge of the CLIP encoder on noisy audio-visual data to learn the association between face and voice efficiently, achieving 89.63% cross-modal verification AUC score on Voxceleb testset. The proposed method then uses a retrieval-based strategy, combined with GMM-based speaker generation module for a downstream TTS system, to produce probable target speakers given reference images. Experimental results demonstrate that the proposed Vclip system in conjunction with the retrieval step can bridge the gap between face and voice features for face-based speech synthesis. And using the feedback information distilled from downstream TTS helps to synthesize voices that match closely with reference faces. Demos available at sos1sos2sixteen.github.io/vclip.",
+  "arxiv_comment": "work done in 2023",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Face-based personalized speech synthesis learning face-voice associations from audio-visual data",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

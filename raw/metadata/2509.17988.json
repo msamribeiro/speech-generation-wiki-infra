@@ -1,0 +1,39 @@
+{
+  "id": "2509.17988",
+  "source_ids": {
+    "arxiv": "2509.17988"
+  },
+  "title": "Nord-Parl-TTS: Finnish and Swedish TTS Dataset from Parliament Speech",
+  "authors": [
+    "Zirui Li",
+    "Jens Edlund",
+    "Yicheng Gu",
+    "Nhan Phan",
+    "Lauri Juvela",
+    "Mikko Kurimo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.17988",
+  "pdf_url": "https://arxiv.org/pdf/2509.17988.pdf",
+  "pdf_path": "raw/papers/2509.17988.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech (TTS) development is limited by scarcity of high-quality, publicly available speech data for most languages outside a few high-resource languages. We present Nord-Parl-TTS, an open TTS dataset for Finnish and Swedish based on speech found in the wild. Using recordings of Nordic parliamentary proceedings, we extract 900 hours of Finnish and 5090 hours of Swedish speech suitable for TTS training. The dataset is built using an adapted version of the Emilia data processing pipeline and includes unified evaluation sets to support model development and benchmarking. By offering open, large-scale data for Finnish and Swedish, Nord-Parl-TTS narrows the resource gap in TTS between high- and lower-resourced languages.",
+  "arxiv_comment": "Accepted by ICASSP 2026. 5 pages, 2 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Open TTS dataset for Finnish and Swedish from parliamentary speech",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

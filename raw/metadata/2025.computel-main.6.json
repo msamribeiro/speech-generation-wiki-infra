@@ -1,0 +1,39 @@
+{
+  "id": "2025.computel-main.6",
+  "source_ids": {
+    "acl": "2025.computel-main.6",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.computel-main.6"
+  },
+  "title": "Evaluating Indigenous language speech synthesis for education: A participatory design workshop on Ojibwe text-to-speech",
+  "authors": [
+    "Viann Sum Yat Chan",
+    "Christopher Hammerly"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.computel-main.6",
+  "pdf_url": "https://aclanthology.org/2025.computel-main.6.pdf",
+  "pdf_path": "raw/papers/2025.computel-main.6.pdf",
+  "pdf_source": "anthology",
+  "abstract": "This paper reports methods and results from a participatory design workshop aimed at evaluating the use of speech synthesis and text-to-speech for Ojibwe language education. Using an existing text-to-speech feature as a starting point, we worked with two groups of Ojibwe language instructors using a guided trial of the speech synthesis system and a two hour semistructured workshop with the aim of creating a lesson plan that utilizes text-to-speech. We highlight the insights from this work, both in how to design and deliver speech synthesis systems for Indigenous language education, but also how to approach and design such a workshop to ensure a fruitful discourse.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Evaluates TTS for Ojibwe language education via participatory workshop; directly assesses indigenous language TTS quality and usability.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

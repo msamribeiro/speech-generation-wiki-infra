@@ -1,0 +1,37 @@
+{
+  "id": "2512.12851",
+  "source_ids": {
+    "arxiv": "2512.12851"
+  },
+  "title": "BUT Systems for WildSpoof Challenge: SASV in the Wild",
+  "authors": [
+    "Junyi Peng",
+    "Jin Li",
+    "Johan Rohdin",
+    "Lin Zhang",
+    "Miroslav Hlaváček",
+    "Oldrich Plchot"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.12851",
+  "pdf_url": "https://arxiv.org/pdf/2512.12851.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents the BUT submission to the WildSpoof Challenge, focusing on the Spoofing-robust Automatic Speaker Verification (SASV) track. We propose a SASV framework designed to bridge the gap between general audio understanding and specialized speech analysis. Our subsystem integrates diverse Self-Supervised Learning front-ends ranging from general audio models (e.g., Dasheng) to speech-specific encoders (e.g., WavLM). These representations are aggregated via a lightweight Multi-Head Factorized Attention back-end for corresponding subtasks. Furthermore, we introduce a feature domain augmentation strategy based on Distribution Uncertainty to explicitly model and mitigate the domain shift caused by unseen neural vocoders and recording environments. By fusing these robust CM scores with state-of-the-art ASV systems, our approach achieves superior minimization of the a-DCFs and EERs.",
+  "arxiv_comment": "4 pages",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "BUT system for WildSpoof spoofing-robust speaker verification challenge; purely anti-spoofing",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

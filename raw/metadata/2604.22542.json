@@ -1,0 +1,41 @@
+{
+  "id": "2604.22542",
+  "source_ids": {
+    "arxiv": "2604.22542"
+  },
+  "title": "Controllable Spoken Dialogue Generation: An LLM-Driven Grading System for K-12 Non-Native English Learners",
+  "authors": [
+    "Haidong Yuan",
+    "Haokun Zhao",
+    "Wanshi Xu",
+    "Songjun Cao",
+    "Qingyu Zhou",
+    "Long Ma",
+    "Hongjie Fan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.22542",
+  "pdf_url": "https://arxiv.org/pdf/2604.22542.pdf",
+  "pdf_path": "raw/papers/2604.22542.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large language models (LLMs) often fail to meet the pedagogical needs of K-12 English learners in non-native contexts due to a proficiency mismatch. To address this widespread challenge, we introduce a proficiency-aligned framework that adapts LLM outputs to learner abilities, using China's national curriculum (CSE) as a representative case. Our framework enables precise control over lexical complexity through a four-tier grading system, supported by a comprehensive suite of new resources: graded vocabulary lists and a multi-turn dialogue corpus.   Our core technical contribution is the \\textbf{DDPO} algorithm,Diversity Driven Policy Optimization, a multi-turn GRPO-based approach designed to preserve dialogue diversity while holistically optimizing dialogue quality. This method significantly outperforms conventional approaches, achieving low out-of-vocabulary rates and high diversity while enhancing conversational naturalness and pedagogical value. While grounded in the CSE, our framework is designed for flexibility and can be readily adapted to other educational standards. Our models, data, and code will all be open-sourced, providing a scalable platform for personalized English speaking practice that effectively addresses the unique challenges faced by K-12 learners in non-immersive environments.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Proficiency-aligned spoken dialogue for L2 learners; primarily education/NLP, TTS is a component.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

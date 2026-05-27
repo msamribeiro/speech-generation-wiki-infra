@@ -1,0 +1,59 @@
+{
+  "id": "2509.09716",
+  "source_ids": {
+    "arxiv": "2509.09716"
+  },
+  "title": "VStyle: A Benchmark for Voice Style Adaptation with Spoken Instructions",
+  "authors": [
+    "Jun Zhan",
+    "Mingyang Han",
+    "Yuxuan Xie",
+    "Chen Wang",
+    "Dong Zhang",
+    "Kexin Huang",
+    "Haoxiang Shi",
+    "DongXiao Wang",
+    "Tengtao Song",
+    "Qinyuan Cheng"
+  ],
+  "authors_full": [
+    "Jun Zhan",
+    "Mingyang Han",
+    "Yuxuan Xie",
+    "Chen Wang",
+    "Dong Zhang",
+    "Kexin Huang",
+    "Haoxiang Shi",
+    "DongXiao Wang",
+    "Tengtao Song",
+    "Qinyuan Cheng",
+    "Shimin Li",
+    "Jun Song",
+    "Xipeng Qiu",
+    "Bo Zheng"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.09716",
+  "pdf_url": "https://arxiv.org/pdf/2509.09716.pdf",
+  "pdf_path": "raw/papers/2509.09716.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken language models (SLMs) have emerged as a unified paradigm for speech understanding and generation, enabling natural human machine interaction. However, while most progress has focused on semantic accuracy and instruction following, the ability of SLMs to adapt their speaking style based on spoken instructions has received limited attention. We introduce Voice Style Adaptation (VSA), a new task that examines whether SLMs can modify their speaking style, such as timbre, prosody, or persona following natural language spoken commands. To study this task, we present VStyle, a bilingual (Chinese & English) benchmark covering four categories of speech generation: acoustic attributes, natural language instruction, role play, and implicit empathy. We also introduce the Large Audio Language Model as a Judge (LALM as a Judge) framework, which progressively evaluates outputs along textual faithfulness, style adherence, and naturalness, ensuring reproducible and objective assessment. Experiments on commercial systems and open source SLMs demonstrate that current models face clear limitations in controllable style adaptation, highlighting both the novelty and challenge of this task. By releasing VStyle and its evaluation toolkit, we aim to provide the community with a foundation for advancing human centered spoken interaction. The dataset and code are publicly available at \\href{https://junzhan2000.github.io/VStyle.github.io/}{project's homepage}.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Benchmark for voice style adaptation from spoken instructions in speech LMs",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2601.05554",
+  "source_ids": {
+    "arxiv": "2601.05554"
+  },
+  "title": "SPAM: Style Prompt Adherence Metric for Prompt-based TTS",
+  "authors": [
+    "Chanhee Cho",
+    "Nayeon Kim",
+    "Bugeun Kim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.05554",
+  "pdf_url": "https://arxiv.org/pdf/2601.05554.pdf",
+  "pdf_path": "raw/papers/2601.05554.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Prompt-based text-to-speech (TTS) aims to generate speech that adheres to fine-grained style cues provided in a text prompt. However, most prior works depend on neither plausible nor faithful measures to evaluate prompt adherence. That is, they cannot ensure whether the evaluation is grounded on the prompt and is similar to a human. Thus, we present a new automatic metric, the Style Prompt Adherence Metric, which explicitly satisfies both plausibility and faithfulness. Inspired by the CLAP, our approach factorizes speech into acoustic attributes and aligns them with the style prompt. Also, we trained the scorer with a supervised contrastive loss, which could provide a clearer distinction between different semantics. We conducted two experiments on two perspectives. The plausibility experiment showed that SPAM achieved a strong correlation with the mean opinion score (MOS). Also, the faithfulness experiment demonstrated that SPAM is successfully grounded to the given style prompt, as it can discriminate different semantics of the prompt. We believe that SPAM can provide a viable automatic solution for evaluating style prompt adherence of synthesized speech.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Automatic style prompt adherence metric grounded in human perception for prompt-based TTS evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

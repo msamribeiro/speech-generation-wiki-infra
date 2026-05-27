@@ -1,0 +1,41 @@
+{
+  "id": "2603.07513",
+  "source_ids": {
+    "arxiv": "2603.07513"
+  },
+  "title": "Bolbosh: Script-Aware Flow Matching for Kashmiri Text-to-Speech",
+  "authors": [
+    "Tajamul Ashraf",
+    "Burhaan Rasheed Zargar",
+    "Saeed Abdul Muizz",
+    "Ifrah Mushtaq",
+    "Nazima Mehdi",
+    "Iqra Altaf Gillani",
+    "Aadil Amin Kak",
+    "Janibul Bashir"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.07513",
+  "pdf_url": "https://arxiv.org/pdf/2603.07513.pdf",
+  "pdf_path": "raw/papers/2603.07513.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Kashmiri is spoken by around 7 million people but remains critically underserved in speech technology, despite its official status and rich linguistic heritage. The lack of robust Text-to-Speech (TTS) systems limits digital accessibility and inclusive human-computer interaction for native speakers. In this work, we present the first dedicated open-source neural TTS system designed for Kashmiri. We show that zero-shot multilingual baselines trained for Indic languages fail to produce intelligible speech, achieving a Mean Opinion Score (MOS) of only 1.86, largely due to inadequate modeling of Perso-Arabic diacritics and language-specific phonotactics. To address these limitations, we propose Bolbosh, a supervised cross-lingual adaptation strategy based on Optimal Transport Conditional Flow Matching (OT-CFM) within the Matcha-TTS framework. This enables stable alignment under limited paired data. We further introduce a three-stage acoustic enhancement pipeline consisting of dereverberation, silence trimming, and loudness normalization to unify heterogeneous speech sources and stabilize alignment learning. The model vocabulary is expanded to explicitly encode Kashmiri graphemes, preserving fine-grained vowel distinctions. Our system achieves a MOS of 3.63 and a Mel-Cepstral Distortion (MCD) of 3.73, substantially outperforming multilingual baselines and establishing a new benchmark for Kashmiri speech synthesis. Our results demonstrate that script-aware and supervised flow-based adaptation are critical for low-resource TTS in diacritic-sensitive languages. Code and data are available at: https://github.com/gaash-lab/Bolbosh.",
+  "arxiv_comment": "https://gaash-lab.github.io/Bolbosh/",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "First neural TTS system for Kashmiri using flow matching; directly advances low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

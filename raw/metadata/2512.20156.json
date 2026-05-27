@@ -1,0 +1,58 @@
+{
+  "id": "2512.20156",
+  "source_ids": {
+    "arxiv": "2512.20156"
+  },
+  "title": "Fun-Audio-Chat Technical Report",
+  "authors": [
+    "Tongyi Fun Team",
+    "Qian Chen",
+    "Luyao Cheng",
+    "Chong Deng",
+    "Xiangang Li",
+    "Jiaqing Liu",
+    "Chao-Hong Tan",
+    "Wen Wang",
+    "Junhao Xu",
+    "Jieping Ye"
+  ],
+  "authors_full": [
+    "Tongyi Fun Team",
+    "Qian Chen",
+    "Luyao Cheng",
+    "Chong Deng",
+    "Xiangang Li",
+    "Jiaqing Liu",
+    "Chao-Hong Tan",
+    "Wen Wang",
+    "Junhao Xu",
+    "Jieping Ye",
+    "Qinglin Zhang",
+    "Qiquan Zhang",
+    "Jingren Zhou"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.20156",
+  "pdf_url": "https://arxiv.org/pdf/2512.20156.pdf",
+  "pdf_path": "raw/papers/2512.20156.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in joint speech-text models show great potential for seamless voice interactions. However, existing models face critical challenges: temporal resolution mismatch between speech tokens (25Hz) and text tokens (~3Hz) dilutes semantic information, incurs high computational costs, and causes catastrophic forgetting of text LLM knowledge. We introduce Fun-Audio-Chat, a Large Audio Language Model addressing these limitations via two innovations from our previous work DrVoice. First, Dual-Resolution Speech Representations (DRSR): the Shared LLM processes audio at efficient 5Hz (via token grouping), while the Speech Refined Head generates high-quality tokens at 25Hz, balancing efficiency (~50% GPU reduction) and quality. Second, Core-Cocktail Training, a two-stage fine-tuning with intermediate merging that mitigates catastrophic forgetting. We then apply Multi-Task DPO Training to enhance robustness, audio understanding, instruction-following and voice empathy. This multi-stage post-training enables Fun-Audio-Chat to retain text LLM knowledge while gaining powerful audio understanding, reasoning, and generation. Unlike recent LALMs requiring large-scale audio-text pre-training, Fun-Audio-Chat leverages pre-trained models and extensive post-training. Fun-Audio-Chat 8B and MoE 30B-A3B achieve competitive performance on Speech-to-Text and Speech-to-Speech tasks, ranking top among similar-scale models on Spoken QA benchmarks. They also achieve competitive to superior performance on Audio Understanding, Speech Function Calling, Instruction-Following and Voice Empathy. We develop Fun-Audio-Chat-Duplex, a full-duplex variant with strong performance on Spoken QA and full-duplex interactions. We open-source Fun-Audio-Chat-8B with training and inference code, and provide an interactive demo, at https://github.com/FunAudioLLM/Fun-Audio-Chat .",
+  "arxiv_comment": "Authors are listed in alphabetical order, 21 pages, open-source at https://github.com/FunAudioLLM/Fun-Audio-Chat",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Fun-Audio-Chat: joint speech-text model for seamless voice interaction; core SCA + TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

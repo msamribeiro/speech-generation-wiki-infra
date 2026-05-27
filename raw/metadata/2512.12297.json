@@ -1,0 +1,35 @@
+{
+  "id": "2512.12297",
+  "source_ids": {
+    "arxiv": "2512.12297"
+  },
+  "title": "F5-TTS-RO: Extending F5-TTS to Romanian TTS via Lightweight Input Adaptation",
+  "authors": [
+    "Radu-Gabriel Chivereanu",
+    "Tiberiu Boros"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.12297",
+  "pdf_url": "https://arxiv.org/pdf/2512.12297.pdf",
+  "pdf_path": "raw/papers/2512.12297.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This work introduces a lightweight input-level adapter for the F5-TTS model that enables Romanian Language support. To preserve the existing capabilities of the model (voice cloning, English and Chinese support), we keep the original weights frozen, append a sub-network to the model and train it as an extension for the textual embedding matrix of the text encoder. For simplicity, we rely on ConvNeXt module implemented in F5-TTS to also model the co-dependencies between the new character-level embeddings. The module serves as a ``soft`` letter-to-sound layer, converting Romanian text into a continuous representation that the F5-TTS model uses to produce naturally sounding Romanian utterances. We evaluate the model with a pool of 20 human listeners across three tasks: (a) audio similarity between reference and generated speech, (b) pronunciation and naturalness and (c) Romanian-English code-switching. The results indicate that our approach maintains voice cloning capabilities and enables, to a certain extent, code-switching within the same utterance; however, residual English accent characteristics remain. We open-source our code and provide example audio samples at https://github.com/racai-ro/Ro-F5TTS.",
+  "arxiv_comment": "Accepted at The 20th International Conference on Linguistic Resources and Tools for Natural Language Processing",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Lightweight adapter extending F5-TTS to Romanian with frozen weights; advances multilingual/low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

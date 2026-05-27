@@ -1,0 +1,39 @@
+{
+  "id": "2604.12928",
+  "source_ids": {
+    "arxiv": "2604.12928"
+  },
+  "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+  "authors": [
+    "Chung-Ming Chien",
+    "Manu Orsini",
+    "Eugene Kharitonov",
+    "Neil Zeghidour",
+    "Karen Livescu",
+    "Alexandre Défossez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.12928",
+  "pdf_url": "https://arxiv.org/pdf/2604.12928.pdf",
+  "pdf_path": "raw/papers/2604.12928.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-speech language models have recently emerged to enhance the naturalness of conversational AI. In particular, full-duplex models are distinguished by their real-time interactivity, including handling of pauses, interruptions, and backchannels. However, improving their factuality remains an open challenge. While scaling the model size could address this gap, it would make real-time inference prohibitively expensive. In this work, we propose MoshiRAG, a modular approach that combines a compact full-duplex interface with selective retrieval to access more powerful knowledge sources. Our asynchronous framework enables the model to identify knowledge-demanding queries and ground its responses in external information. By leveraging the natural temporal gap between response onset and the delivery of core information, the retrieval process can be completed while maintaining a natural conversation flow. With this approach, MoshiRAG achieves factuality comparable to the best publicly released non-duplex speech language models while preserving the interactivity inherent to full-duplex systems. Moreover, our flexible design supports plug-and-play retrieval methods without retraining and demonstrates strong performance on out-of-domain mathematical reasoning tasks.",
+  "arxiv_comment": "Accepted to ICML 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Asynchronous knowledge retrieval for full-duplex speech LMs improving factuality without sacrificing real-time interaction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

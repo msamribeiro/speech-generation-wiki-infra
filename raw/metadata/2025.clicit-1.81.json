@@ -1,0 +1,41 @@
+{
+  "id": "2025.clicit-1.81",
+  "source_ids": {
+    "acl": "2025.clicit-1.81",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "FAMA: The First Large-Scale Open-Science Speech Foundation Model for English and Italian",
+  "authors": [
+    "Sara Papi",
+    "Marco Gaido",
+    "Luisa Bentivogli",
+    "Alessio Brutti",
+    "Mauro Cettolo",
+    "Roberto Gretter",
+    "Marco Matassoni",
+    "Mohamed Nabih Ali Mohamed Nawar",
+    "Matteo Negri"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.clicit-1.81",
+  "pdf_url": "https://aclanthology.org/2025.clicit-1.81.pdf",
+  "pdf_path": "raw/papers/2025.clicit-1.81.pdf",
+  "pdf_source": "anthology",
+  "abstract": null,
+  "task": [],
+  "relevance_score": 0.5,
+  "relevance_note": "No abstract available; title suggests a speech foundation model but scope (ASR vs generation) is unclear.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

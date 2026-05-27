@@ -1,0 +1,41 @@
+{
+  "id": "2509.24457",
+  "source_ids": {
+    "arxiv": "2509.24457"
+  },
+  "title": "Assessing speech quality metrics for evaluation of neural audio codecs under clean speech conditions",
+  "authors": [
+    "Wolfgang Mack",
+    "Nezih Topaloglu",
+    "Laura Lechler",
+    "Ivana Balić",
+    "Alexandra Craciun",
+    "Mansur Yesilbursa",
+    "Kamil Wojcicki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.24457",
+  "pdf_url": "https://arxiv.org/pdf/2509.24457.pdf",
+  "pdf_path": "raw/papers/2509.24457.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Objective speech-quality metrics are widely used to assess codec performance. However, for neural codecs, it is often unclear which metrics provide reliable quality estimates. To address this, we evaluated 45 objective metrics by correlating their scores with subjective listening scores for clean speech across 17 codec conditions. Neural-based metrics such as scoreq and utmos achieved the highest Pearson correlations with subjective scores. Further analysis across different subjective quality ranges revealed that non-intrusive metrics tend to saturate at high subjective quality levels.",
+  "arxiv_comment": null,
+  "task": [
+    "codec",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Systematic evaluation of 45 objective metrics for neural codec quality assessment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

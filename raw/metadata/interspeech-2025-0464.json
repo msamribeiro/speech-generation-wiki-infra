@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0464",
+  "source_ids": {
+    "isca": "zhao25d_interspeech",
+    "doi": "10.21437/Interspeech.2025-464"
+  },
+  "title": "Prosody-Adaptable Audio Codecs for Zero-Shot Voice Conversion via In-Context Learning",
+  "authors": [
+    "Junchuan Zhao",
+    "Xintong Wang",
+    "Ye Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhao25d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhao25d_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0464.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent advances in discrete audio codecs have significantly improved speech representation modeling, while codec language models have enabled in-context learning for zero-shot speech synthesis. Inspired by this, we propose a voice conversion (VC) model within the VALLE-X framework, leveraging its strong in-context learning capabilities for speaker adaptation. To enhance prosody control, we introduce a prosody-aware audio codec encoder (PACE) module, which isolates and refines prosody from other sources, improving expressiveness and control. By integrating PACE into our VC model, we achieve greater flexibility in prosody manipulation while preserving speaker timbre. Experimental evaluation results demonstrate that our approach outperforms baseline VC systems in prosody preservation, timbre consistency, and overall naturalness, surpassing baseline VC systems.",
+  "task": [
+    "VC",
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "VC model with prosody-enhanced codec in-context learning framework; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

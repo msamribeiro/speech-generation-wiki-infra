@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-2043",
+  "source_ids": {
+    "isca": "lobashev25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2043"
+  },
+  "title": "Training-Free Voice Conversion with Factorized Optimal Transport",
+  "authors": [
+    "Alexander Lobashev",
+    "Assel Yermekova",
+    "Maria Larchenko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lobashev25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lobashev25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2043.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper introduces Factorized MKL-VC, a training-free modification for kNN-VC pipeline. In contrast with original pipeline, our algorithm performs high quality any-to-any cross-lingual voice conversion with only 5 second of reference audio. MKL-VC replaces kNN regression with a factorized optimal transport map in WavLM embedding subspaces, derived from Monge-Kantorovich Linear solution.  Factorization addresses non-uniform variance across dimensions, ensuring effective feature transformation. Experiments on LibriSpeech and FLEURS datasets show MKL-VC significantly improves content preservation and robustness with short reference audio, outperforming kNN-VC. MKL-VC achieves performance comparable to FACodec, especially in cross-lingual voice conversion domain.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Training-free any-to-any cross-lingual VC with factorized optimal transport in WavLM space; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

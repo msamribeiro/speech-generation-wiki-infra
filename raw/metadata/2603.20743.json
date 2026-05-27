@@ -1,0 +1,42 @@
+{
+  "id": "2603.20743",
+  "source_ids": {
+    "arxiv": "2603.20743"
+  },
+  "title": "The Binding Effect: Analyzing How Multi-Dimensional Cues Form Gender Bias in Instruction TTS",
+  "authors": [
+    "Kuan-Yu Chen",
+    "Yi-Cheng Lin",
+    "Po-Chung Hsieh",
+    "Huang-Cheng Chou",
+    "Chih-Fan Hsu",
+    "Jeng-Lin Li",
+    "Hung-yi Lee",
+    "Jian-Jiun Ding"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.20743",
+  "pdf_url": "https://arxiv.org/pdf/2603.20743.pdf",
+  "pdf_path": "raw/papers/2603.20743.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current bias evaluations in Instruction Text-to-Speech (ITTS) often rely on univariate testing, overlooking the compositional structure of social cues. In this work, we investigate gender bias by modeling prompts as combinations of Social Status, Career stereotypes, and Persona descriptors. Analyzing open-source ITTS models, we uncover systematic interaction effects where social dimensions modulate one another, creating complex bias patterns missed by univariate baselines. Crucially, our findings indicate that these biases extend beyond surface-level artifacts, demonstrating strong associations with the semantic priors of pre-trained text encoders and the skewed distributions inherent in training data. We further demonstrate that generic diversity prompting is insufficient to override these entrenched patterns, underscoring the need for compositional analysis to diagnose latent risks in generative speech.",
+  "arxiv_comment": "5 pages, 1 figure, 6 tables, Submitted to INTERSPEECH 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Analysis of multi-dimensional gender bias interactions in instruction TTS models from composed social cues",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

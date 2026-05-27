@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1726",
+  "source_ids": {
+    "isca": "szekely25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1726"
+  },
+  "title": "Voice Reconstruction through Large-Scale TTS Models: Comparing Zero-Shot and Fine-tuning Approaches to Personalise TTS in Assistive Communication",
+  "authors": [
+    "Ãva SzÃ©kely",
+    "PÃ©ter Mihajlik",
+    "MÃ¡tÃ© Soma KÃ¡dÃ¡r",
+    "LÃ¡szlÃ³ TÃ³th"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/szekely25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/szekely25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1726.pdf",
+  "pdf_source": "isca",
+  "abstract": "Personalised synthetic speech can enhance communication for Augmentative and Alternative Communication (AAC) users, but achieving high-quality, speaker-specific voices depends on various factors such as the condition causing speech loss, and availability of recorded speech. Recent advancements in large-scale zero-shot TTS models may change the data requirements, as they have the potential to adapt to a wider range of inputs. This paper explores the potential of these pretrained models in various data availability scenarios, from extensive spontaneous speech to minimal or no unaffected speech. We evaluate a state-of-the-art TTS system on a case study involving a stroke survivor with dysarthria, leveraging both typical and atypical speech data. Additionally, we introduce a novel interactive approach using dysarthric speech as an audio prompt to enable user-guided prosody adaptation.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Evaluates zero-shot TTS for personalised speech for AAC/communication aid users; advances assistive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

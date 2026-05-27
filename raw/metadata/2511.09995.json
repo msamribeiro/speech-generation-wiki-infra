@@ -1,0 +1,55 @@
+{
+  "id": "2511.09995",
+  "source_ids": {
+    "arxiv": "2511.09995"
+  },
+  "title": "Time-Layer Adaptive Alignment for Speaker Similarity in Flow-Matching Based Zero-Shot TTS",
+  "authors": [
+    "Haoyu Li",
+    "Mingyang Han",
+    "Yu Xi",
+    "Dongxiao Wang",
+    "Hankun Wang",
+    "Haoxiang Shi",
+    "Boyu Li",
+    "Jun Song",
+    "Bo Zheng",
+    "Shuai Wang"
+  ],
+  "authors_full": [
+    "Haoyu Li",
+    "Mingyang Han",
+    "Yu Xi",
+    "Dongxiao Wang",
+    "Hankun Wang",
+    "Haoxiang Shi",
+    "Boyu Li",
+    "Jun Song",
+    "Bo Zheng",
+    "Shuai Wang",
+    "Kai Yu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.09995",
+  "pdf_url": "https://arxiv.org/pdf/2511.09995.pdf",
+  "pdf_path": "raw/papers/2511.09995.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Flow-Matching (FM)-based zero-shot text-to-speech (TTS) systems exhibit high-quality speech synthesis and robust generalization capabilities. However, the speaker representation ability of such systems remains underexplored, primarily due to the lack of explicit speaker-specific supervision in the FM framework. To this end, we conduct an empirical analysis of speaker information distribution and reveal its non-uniform allocation across time steps and network layers, underscoring the need for adaptive speaker alignment. Accordingly, we propose Time-Layer Adaptive Speaker Alignment (TLA-SA), a strategy that enhances speaker consistency by jointly leveraging temporal and hierarchical variations. Experimental results show that TLA-SA substantially improves speaker similarity over baseline systems on both research- and industrial-scale datasets and generalizes well across diverse model architectures, including decoder-only language model (LM)-based and free TTS systems. A demo is provided.",
+  "arxiv_comment": "Submitted to INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Time-layer adaptive alignment method improving speaker similarity in flow-matching zero-shot TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2511.22293",
+  "source_ids": {
+    "arxiv": "2511.22293"
+  },
+  "title": "GLA-Grad++: An Improved Griffin-Lim Guided Diffusion Model for Speech Synthesis",
+  "authors": [
+    "Teysir Baoueb",
+    "Xiaoyu Bie",
+    "Mathieu Fontaine",
+    "Gaël Richard"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.22293",
+  "pdf_url": "https://arxiv.org/pdf/2511.22293.pdf",
+  "pdf_path": "raw/papers/2511.22293.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in diffusion models have positioned them as powerful generative frameworks for speech synthesis, demonstrating substantial improvements in audio quality and stability. Nevertheless, their effectiveness in vocoders conditioned on mel spectrograms remains constrained, particularly when the conditioning diverges from the training distribution. The recently proposed GLA-Grad model introduced a phase-aware extension to the WaveGrad vocoder that integrated the Griffin-Lim algorithm (GLA) into the reverse process to reduce inconsistencies between generated signals and conditioning mel spectrogram. In this paper, we further improve GLA-Grad through an innovative choice in how to apply the correction. Particularly, we compute the correction term only once, with a single application of GLA, to accelerate the generation process. Experimental results demonstrate that our method consistently outperforms the baseline models, particularly in out-of-domain scenarios.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Griffin-Lim guided diffusion vocoder with improved conditioning robustness for mel-spectrogram speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

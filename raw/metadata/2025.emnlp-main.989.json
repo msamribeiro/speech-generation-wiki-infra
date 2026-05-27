@@ -1,0 +1,44 @@
+{
+  "id": "2025.emnlp-main.989",
+  "source_ids": {
+    "acl": "2025.emnlp-main.989",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.emnlp-main.989",
+    "url_acl": "https://aclanthology.org/2025.emnlp-main.989"
+  },
+  "title": "VocalNet: Speech LLMs with Multi-Token Prediction for Faster and High-Quality Generation",
+  "authors": [
+    "Yuhao Wang",
+    "Heyang Liu",
+    "Ziyang Cheng",
+    "Ronghua Wu",
+    "Qunshan Gu",
+    "Yanfeng Wang",
+    "Yu Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.emnlp-main.989",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-main.989.pdf",
+  "pdf_path": "raw/papers/2025.emnlp-main.989.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Speech large language models (LLMs) have emerged as a prominent research focus in speech processing. In this work, we introduce VocalNet, a series of high-performance speech LLMs featuring a scalable and model-agnostic training framework as well as a novel multi-token prediction (MTP) paradigm for speech generation. We first propose an efficient two-stage training framework that enables LLMs to acquire real-time speech interaction capabilities. Through extensive experiments on various training configurations, we ensure both simplicity and effectiveness in the training strategy. Furthermore, inspired by advances in language modeling, we introduce MTP into the domain of speech LLMs—an alternative to traditional next-token prediction (NTP)—which enables the model to predict multiple future tokens at each step. Through systematic analysis and improved implementation, we show that MTP not only accelerates inference speed but also significantly enhances speech quality. Experimental results demonstrate that VocalNet achieves performance comparable to state-of-the-art Omni LLMs while outperforming existing open-source speech LLMs, despite using limited training data.",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Novel speech LLM with multi-token prediction for faster, high-quality speech generation; directly advances SCA/TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

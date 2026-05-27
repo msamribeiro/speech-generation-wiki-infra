@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-2449",
+  "source_ids": {
+    "isca": "zheng25d_interspeech",
+    "doi": "10.21437/Interspeech.2025-2449"
+  },
+  "title": "Accelerating Flow-Matching-Based Text-to-Speech via Empirically Pruned Step Sampling",
+  "authors": [
+    "Qixi Zheng",
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Ziyang Ma",
+    "Xiaofei Wang",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zheng25d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zheng25d_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2449.pdf",
+  "pdf_source": "isca",
+  "abstract": "Flow-matching-based text-to-speech (TTS) models, such as Voicebox, E2 TTS, and F5-TTS, have attracted significant attention in recent years. These models require multiple sampling steps to reconstruct speech from noise, making inference speed a key challenge. Reducing the number of sampling steps can greatly improve inference efficiency. To this end, we introduce Fast F5-TTS, a training-free approach to accelerate the inference of flow-matching-based TTS models. By inspecting the sampling trajectory of F5-TTS, we identify redundant steps and propose Empirically Pruned Step Sampling (EPSS), a non-uniform time-step sampling strategy that effectively reduces the number of sampling steps. Our approach achieves a 7-step generation with an inference RTF of 0.030 on an NVIDIA RTX 3090 GPU, making it 4 times faster than the original F5-TTS while maintaining comparable performance. Furthermore, EPSS performs well on E2 TTS models, demonstrating its strong generalization ability.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Training-free step pruning for flow matching TTS (Fast F5-TTS); directly advances TTS inference speed.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

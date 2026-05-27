@@ -1,0 +1,39 @@
+{
+  "id": "2602.00443",
+  "source_ids": {
+    "arxiv": "2602.00443"
+  },
+  "title": "RVCBench: Benchmarking the Robustness of Voice Cloning Across Modern Audio Generation Models",
+  "authors": [
+    "Xinting Liao",
+    "Ruinan Jin",
+    "Hanlin Yu",
+    "Deval Pandya",
+    "Xiaoxiao Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.00443",
+  "pdf_url": "https://arxiv.org/pdf/2602.00443.pdf",
+  "pdf_path": "raw/papers/2602.00443.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Modern voice cloning (VC) can synthesize speech that closely matches a target speaker from only seconds of reference audio, enabling applications such as personalized speech interfaces and dubbing. In practical deployments, modern audio generation models inevitably encounter noisy reference audios, imperfect text prompts, and diverse downstream processing, which can significantly hurt robustness. Despite rapid progress in VC driven by autoregressive codec-token language models and diffusion-based models, robustness under realistic deployment shifts remains underexplored. This paper introduces RVCBench, a comprehensive benchmark that evaluates Robustness in VC across the full generation pipeline, including input variation, generation challenges, output post-processing, and adversarial perturbations, covering 10 robustness tasks, 225 speakers, 14,370 utterances, and 11 representative modern VC models. Our evaluation uncovers substantial robustness gaps in VC: performance can deteriorate sharply under common input shifts and post-processing; long-context and cross-lingual scenarios further expose stability limitations; and both passive noise and proactive perturbation influence generation robustness. Collectively, these findings provide a unified picture of how current VC models fail in practice and introduce a standardized, open-source testbed to support the development of more robust and deployable VC models. We open-source our project at https://github.com/Nanboy-Ronan/RVCBench.",
+  "arxiv_comment": "40 pages, 12figures",
+  "task": [
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Benchmark evaluating voice cloning robustness across noisy references and diverse audio generation models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-2326",
+  "source_ids": {
+    "isca": "phukan25g_interspeech",
+    "doi": "10.21437/Interspeech.2025-2326"
+  },
+  "title": "Towards Machine Unlearning for Paralinguistic Speech Processing",
+  "authors": [
+    "Orchid Chetia Phukan",
+    "Girish",
+    "Mohd Mujtaba Akhtar",
+    "Shubham Singh",
+    "Swarup Ranjan Behera",
+    "Vandana Rajan",
+    "Muskaan Singh",
+    "Arun Balaji Buduru",
+    "Rajesh Sharma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/phukan25g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/phukan25g_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "In this work, we pioneer the study of Machine Unlearning (MU) for Paralinguistic Speech Processing (PSP). We focus on two key PSP tasks: Speech Emotion Recognition (SER) and Depression Detection (DD). To this end, we propose, SISA++, a novel extension to previous state-of-the-art (SOTA) MU method, SISA by merging models trained on different shards with weight-averaging. With such modifications, we show that SISA++ preserves performance more in comparison to SISA after unlearning in benchmark SER (CREMA-D) and DD (E-DAIC) datasets. Also, to guide future research for easier adoption of MU for PSP, we present âcookbook recipesâ - actionable recommendations for selecting optimal feature representations and downstream architectures that can mitigate performance degradation after the unlearning process.",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Machine unlearning for SER and depression detection; primarily clinical speech analysis, not synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

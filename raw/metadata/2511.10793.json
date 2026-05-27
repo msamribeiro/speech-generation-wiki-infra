@@ -1,0 +1,39 @@
+{
+  "id": "2511.10793",
+  "source_ids": {
+    "arxiv": "2511.10793",
+    "acl": "2025.ijcnlp-long.104",
+    "doi": "10.18653/v1/2025.ijcnlp-long.104",
+    "url_acl": "https://aclanthology.org/2025.ijcnlp-long.104"
+  },
+  "title": "Curved Worlds, Clear Boundaries: Generalizing Speech Deepfake Detection using Hyperbolic and Spherical Geometry Spaces",
+  "authors": [
+    "Farhan Sheth",
+    "Girish",
+    "Mohd Mujtaba Akhtar",
+    "Muskaan Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.10793",
+  "pdf_url": "https://aclanthology.org/2025.ijcnlp-long.104.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "In this work, we address the challenge of generalizable audio deepfake detection (ADD) across diverse speech synthesis paradigms-including conventional text-to-speech (TTS) systems and modern diffusion or flow-matching (FM) based generators. Prior work has mostly targeted individual synthesis families and often fails to generalize across paradigms due to overfitting to generation-specific artifacts. We hypothesize that synthetic speech, irrespective of its generative origin, leaves behind shared structural distortions in the embedding space that can be aligned through geometry-aware modeling. To this end, we propose RHYME, a unified detection framework that fuses utterance-level embeddings from diverse pretrained speech encoders using non-Euclidean projections. RHYME maps representations into hyperbolic and spherical manifolds-where hyperbolic geometry excels at modeling hierarchical generator families, and spherical projections capture angular, energy-invariant cues such as periodic vocoder artifacts. The fused representation is obtained via Riemannian barycentric averaging, enabling synthesis-invariant alignment. RHYME outperforms individual PTMs and homogeneous fusion baselines, achieving top performance and setting new state-of-the-art in cross-paradigm ADD.",
+  "arxiv_comment": "Accepted to IJCNLP-AACL 2025",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Deepfake detection using hyperbolic geometry; anti-spoofing detection rather than speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

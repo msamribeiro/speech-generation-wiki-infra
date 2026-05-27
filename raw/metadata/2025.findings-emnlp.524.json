@@ -1,0 +1,38 @@
+{
+  "id": "2025.findings-emnlp.524",
+  "source_ids": {
+    "acl": "2025.findings-emnlp.524",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-emnlp.524"
+  },
+  "title": "Dub-S2ST: Textless Speech-to-Speech Translation for Seamless Dubbing",
+  "authors": [
+    "Jeongsoo Choi",
+    "Jaehun Kim",
+    "Joon Son Chung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-emnlp.524",
+  "pdf_url": "https://aclanthology.org/2025.findings-emnlp.524.pdf",
+  "pdf_path": "raw/papers/2025.findings-emnlp.524.pdf",
+  "pdf_source": "anthology",
+  "abstract": "This paper introduces a cross-lingual dubbing system that translates speech from one language to another while preserving key characteristics such as duration, speaker identity, and speaking speed. Despite the strong translation quality of existing speech translation approaches, they often overlook the transfer of speech patterns, leading to mismatches with source speech and limiting their suitability for dubbing applications. To address this, we propose a discrete diffusion-based speech-to-unit translation model with explicit duration control, enabling time-aligned translation. We then synthesize speech based on the translated units and source speaker’s identity using a conditional flow matching model. Additionally, we introduce a unit-based speed adaptation mechanism that guides the translation model to produce speech at a rate consistent with the source, without relying on any text. Extensive experiments demonstrate that our framework generates natural and fluent translations that align with the original speech’s duration and speaking pace, while achieving competitive translation performance.",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Textless S2ST dubbing preserving speaker identity, duration, and prosody; core VC + generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

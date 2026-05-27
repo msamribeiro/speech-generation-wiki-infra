@@ -1,0 +1,55 @@
+{
+  "id": "2510.09016",
+  "source_ids": {
+    "arxiv": "2510.09016"
+  },
+  "title": "DiTSinger: Scaling Singing Voice Synthesis with Diffusion Transformer and Implicit Alignment",
+  "authors": [
+    "Zongcai Du",
+    "Guilin Deng",
+    "Xiaofeng Guo",
+    "Xin Gao",
+    "Linke Li",
+    "Kaichang Cheng",
+    "Fubo Han",
+    "Siyu Yang",
+    "Peng Liu",
+    "Pan Zhong"
+  ],
+  "authors_full": [
+    "Zongcai Du",
+    "Guilin Deng",
+    "Xiaofeng Guo",
+    "Xin Gao",
+    "Linke Li",
+    "Kaichang Cheng",
+    "Fubo Han",
+    "Siyu Yang",
+    "Peng Liu",
+    "Pan Zhong",
+    "Qiang Fu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.09016",
+  "pdf_url": "https://arxiv.org/pdf/2510.09016.pdf",
+  "pdf_path": "raw/papers/2510.09016.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent progress in diffusion-based Singing Voice Synthesis (SVS) demonstrates strong expressiveness but remains limited by data scarcity and model scalability. We introduce a two-stage pipeline: a compact seed set of human-sung recordings is constructed by pairing fixed melodies with diverse LLM-generated lyrics, and melody-specific models are trained to synthesize over 500 hours of high-quality Chinese singing data. Building on this corpus, we propose DiTSinger, a Diffusion Transformer with RoPE and qk-norm, systematically scaled in depth, width, and resolution for enhanced fidelity. Furthermore, we design an implicit alignment mechanism that obviates phoneme-level duration labels by constraining phoneme-to-acoustic attention within character-level spans, thereby improving robustness under noisy or uncertain alignments. Extensive experiments validate that our approach enables scalable, alignment-free, and high-fidelity SVS.",
+  "arxiv_comment": "ICASSP26 under review. Demo page: https://nju-jet.github.io/DiTSinger",
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Diffusion Transformer singing voice synthesis with implicit alignment trained on LLM-generated data",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

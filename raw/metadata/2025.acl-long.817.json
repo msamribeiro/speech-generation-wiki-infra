@@ -1,0 +1,39 @@
+{
+  "id": "2025.acl-long.817",
+  "source_ids": {
+    "acl": "2025.acl-long.817",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.817"
+  },
+  "title": "SimulS2S-LLM: Unlocking Simultaneous Inference of Speech LLMs for Speech-to-Speech Translation",
+  "authors": [
+    "Keqi Deng",
+    "Wenxi Chen",
+    "Xie Chen",
+    "Phil Woodland"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.817",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.817.pdf",
+  "pdf_path": "raw/papers/2025.acl-long.817.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Simultaneous speech translation (SST) outputs translations in parallel with streaming speech input, balancing translation quality and latency. While large language models (LLMs) have been extended to handle the speech modality, streaming remains challenging as speech is pre-pended as a prompt for the entire generation process. To unlock LLM streaming capability, this paper proposes SimulS2S-LLM, which trains speech LLMs offline and employs a test-time policy to guide simultaneous inference. SimulS2S-LLM alleviates the mismatch between training and inference by extracting boundary-aware speech prompts that allows it to be better matched with text input data. SimulS2S-LLM achieves simultaneous speech-to-speech translation (Simul-S2ST) by predicting discrete output speech tokens and then synthesising output speech using a pre-trained vocoder. An incremental beam search is designed to expand the search space of speech token prediction without increasing latency. Experiments on the CVSS speech data show that SimulS2S-LLM offers a better translation quality-latency trade-off than existing methods that use the same training data, such as improving ASR-BLEU scores by 3 points at similar latency.",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Simultaneous speech-to-speech translation with LLMs; core speech generation task.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

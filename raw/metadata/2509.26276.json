@@ -1,0 +1,36 @@
+{
+  "id": "2509.26276",
+  "source_ids": {
+    "arxiv": "2509.26276"
+  },
+  "title": "Optimizing Speech Language Models for Acoustic Consistency",
+  "authors": [
+    "Morteza Rohanian",
+    "Michael Krauthammer"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.26276",
+  "pdf_url": "https://arxiv.org/pdf/2509.26276.pdf",
+  "pdf_path": "raw/papers/2509.26276.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We study speech language models that incorporate semantic initialization and planning losses to achieve robust and consistent generation. Our approach initializes speech tokens with self-supervised features, applies a light alignment loss, and trains with thinning and auxiliary objectives that target robustness and content planning. We train three models: a 0.7B speech-only model, a 1.0B speech-only model, and a 1.0B interleaved model with both text and speech. Acoustic studies show that the speech-only models achieve the highest consistency across speaker, gender, sentiment, room, and background factors, surpassing larger systems. Interleaving improves lexical and syntactic probes and semantic--acoustic alignment but reduces consistency. Linear probes show that our initialization biases the model toward content structure while trading off prosody detail. These results show that LM-side design and training mix control the balance between acoustic stability and semantic grounding without changes to the tokenizer or runtime architecture. A demo and model weights are available for exploration.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Speech language models optimized for acoustic consistency and robust speech generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

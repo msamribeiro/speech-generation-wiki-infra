@@ -1,0 +1,46 @@
+{
+  "id": "2025.acl-long.790",
+  "source_ids": {
+    "acl": "2025.acl-long.790",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.790",
+    "url_acl": "https://aclanthology.org/2025.acl-long.790"
+  },
+  "title": "Rhythm Controllable and Efficient Zero-Shot Voice Conversion via Shortcut Flow Matching",
+  "authors": [
+    "Jialong Zuo",
+    "Shengpeng Ji",
+    "Minghui Fang",
+    "Mingze Li",
+    "Ziyue Jiang",
+    "Xize Cheng",
+    "Xiaoda Yang",
+    "Chen Feiyang",
+    "Xinyu Duan",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.790",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.790.pdf",
+  "pdf_path": "raw/papers/2025.acl-long.790.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Zero-Shot Voice Conversion (VC) aims to transform the source speaker’s timbre into an arbitrary unseen one while retaining speech content. Most prior work focuses on preserving the source’s prosody, while fine-grained timbre information may leak through prosody, and transferring target prosody to synthesized speech is rarely studied. In light of this, we propose R-VC, a rhythm-controllable and efficient zero-shot voice conversion model. R-VC employs data perturbation techniques and discretize source speech into Hubert content tokens, eliminating much content-irrelevant information. By leveraging a Mask Generative Transformer for in-context duration modeling, our model adapts the linguistic content duration to the desired target speaking style, facilitating the transfer of the target speaker’s rhythm. Furthermore, R-VC introduces a powerful Diffusion Transformer (DiT) with shortcut flow matching during training, conditioning the network not only on the current noise level but also on the desired step size, enabling high timbre similarity and quality speech generation in fewer sampling steps, even in just two, thus minimizing latency. Experimental results show that R-VC achieves comparable speaker similarity to state-of-the-art VC methods with a smaller dataset, and surpasses them in terms of speech naturalness, intelligibility and style transfer performance.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Novel zero-shot voice conversion with rhythm control via shortcut flow matching; directly advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

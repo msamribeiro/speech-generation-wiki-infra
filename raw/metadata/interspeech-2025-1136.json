@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2025-1136",
+  "source_ids": {
+    "isca": "lin25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-1136"
+  },
+  "title": "Age-related changes in multisensory integration of emotions in an audiovisual face-prosody-semantics Stroop task",
+  "authors": [
+    "Yi Lin",
+    "Shumeng Ni",
+    "Yangfan Lu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lin25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lin25e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "The present study examined age-related changes in multisensory integration of emotions across facial, prosodic, and semantic channels. Older and younger adults performed an audiovisual Stroop task, in which happy or sad emotions were expressed simultaneously through the three channels. They selectively attended to one of the emotional channels while ignoring congruent or incongruent emotions from other channels. Results indicated that older adults showed an overall decline in emotion integration with greater deficits in the nonverbal channels (particularly prosody) compared to verbal semantics. These channel-specific patterns of age differences were more prominent when information was incongruent across channels compared to the cross-channel congruent condition. To sum up, age differences in multisensory emotion perception are shaped by the complex interactions between channel asymmetry and information congruity, which may be linked to age-related declines in cognitive control.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Psychology study of age-related multisensory emotion integration; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

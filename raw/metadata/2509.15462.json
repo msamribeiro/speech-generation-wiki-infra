@@ -1,0 +1,37 @@
+{
+  "id": "2509.15462",
+  "source_ids": {
+    "arxiv": "2509.15462"
+  },
+  "title": "A Novel Semantic Compression Approach for Ultra-low Bandwidth Voice Communication",
+  "authors": [
+    "Ryan Collette",
+    "Ross Greenwood",
+    "Serena Nicoll"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.15462",
+  "pdf_url": "https://arxiv.org/pdf/2509.15462.pdf",
+  "pdf_path": "raw/papers/2509.15462.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While existing speech audio codecs designed for compression exploit limited forms of temporal redundancy and allow for multi-scale representations, they tend to represent all features of audio in the same way. In contrast, generative voice models designed for text-to-speech and voice transfer tasks have recently proved effective at factorizing audio signals into high-level semantic representations of fundamentally distinct features. In this paper, we leverage such representations in a novel semantic communications approach to achieve lower bitrates without sacrificing perceptual quality or suitability for specific downstream tasks. Our technique matches or outperforms existing audio codecs on transcription, sentiment analysis, and speaker verification when encoding at 2-4x lower bitrate -- notably surpassing Encodec in perceptual quality and speaker verification while using up to 4x less bitrate.",
+  "arxiv_comment": "5 pages, 2 figures. This work has been submitted to the IEEE for possible publication",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Ultra-low bandwidth voice compression using generative TTS/VC models for semantic reconstruction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

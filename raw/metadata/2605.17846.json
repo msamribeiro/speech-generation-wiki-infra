@@ -1,0 +1,38 @@
+{
+  "id": "2605.17846",
+  "source_ids": {
+    "arxiv": "2605.17846"
+  },
+  "title": "UrduSpeech: A 156-Hour Urdu Speech Corpus with 12-Dimension Paralinguistic Annotations",
+  "authors": [
+    "Attia Nafees ul Haq",
+    "Zeyu Zhu",
+    "Jingbin Hu",
+    "ChunJiang He",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.17846",
+  "pdf_url": "https://arxiv.org/pdf/2605.17846.pdf",
+  "pdf_path": "raw/papers/2605.17846.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Despite 230 million speakers, Urdu remains critically under-resourced in speech technology. We introduce UrduSpeech: a large high-fidelity Urdu corpus comprising 156 hours of audio with 12-dimension paralinguistic metadata, encompassing US-Std, US-CS, US-EngPk. To address Right-to-Left script constraints and frequent code-switching, we developed UrduSpeech, a LLM-driven pipeline to curate data across 12 diverse categories, including news, drama, and rare literary forms like Bait-Bazi. We also release a 9-hour US-Benchmark set, manually corrected by native annotators to serve as a standard. Human quality assessment of the primary 156-hour corpus yielded a Mean Opinion Score (MOS) of 4.6 (std = 0.7) with inter-rater reliability confirmed by a 0.68 Cohen's Kappa, validating our curation pipeline's 97.6% confidence score. The corpus maintains a 60-40 gender balance across 71,792 utterances. Our work represents a significant leap toward linguistic inclusivity in global AI. The corpus and code are open-sourced, and a demo page is available.",
+  "arxiv_comment": "6 pages, 3 figures, 4 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "156-hour Urdu speech corpus with 12-dimension paralinguistic annotations supporting Urdu TTS development",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

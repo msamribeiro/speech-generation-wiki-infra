@@ -1,0 +1,36 @@
+{
+  "id": "2601.20432",
+  "source_ids": {
+    "arxiv": "2601.20432"
+  },
+  "title": "Self Voice Conversion as an Attack against Neural Audio Watermarking",
+  "authors": [
+    "Yigitcan Özer",
+    "Wanying Ge",
+    "Zhe Zhang",
+    "Xin Wang",
+    "Junichi Yamagishi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.20432",
+  "pdf_url": "https://arxiv.org/pdf/2601.20432.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Audio watermarking embeds auxiliary information into speech while maintaining speaker identity, linguistic content, and perceptual quality. Although recent advances in neural and digital signal processing-based watermarking methods have improved imperceptibility and embedding capacity, robustness is still primarily assessed against conventional distortions such as compression, additive noise, and resampling. However, the rise of deep learning-based attacks introduces novel and significant threats to watermark security. In this work, we investigate self voice conversion as a universal, content-preserving attack against audio watermarking systems. Self voice conversion remaps a speaker's voice to the same identity while altering acoustic characteristics through a voice conversion model. We demonstrate that this attack severely degrades the reliability of state-of-the-art watermarking approaches and highlight its implications for the security of modern audio watermarking techniques.",
+  "arxiv_comment": "7 pages; 2 figures; 2 tables; accepted at IEICE, SP/SLP 2026",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Voice conversion used as an attack to defeat audio watermarking; adversarial attack research not VC research",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2512.17356",
+  "source_ids": {
+    "arxiv": "2512.17356"
+  },
+  "title": "Training Text-to-Speech Model with Purely Synthetic Data: Feasibility, Sensitivity, and Generalization Capability",
+  "authors": [
+    "Tingxiao Zhou",
+    "Leying Zhang",
+    "Zhengyang Chen",
+    "Yanmin Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.17356",
+  "pdf_url": "https://arxiv.org/pdf/2512.17356.pdf",
+  "pdf_path": "raw/papers/2512.17356.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The potential of synthetic data in text-to-speech (TTS) model training has gained increasing attention, yet its rationality and effectiveness require systematic validation. In this study, we systematically investigate the feasibility of using purely synthetic data for TTS training and explore how various factors--including text richness, speaker diversity, noise levels, and speaking styles--affect model performance. Our experiments reveal that increasing speaker and text diversity significantly enhances synthesis quality and robustness. Cleaner training data with minimal noise further improves performance. Moreover, we find that standard speaking styles facilitate more effective model learning. Our experiments indicate that models trained on synthetic data have great potential to outperform those trained on real data under similar conditions, due to the absence of real-world imperfections and noise.",
+  "arxiv_comment": "14 pages, 5 figures, received by National Conference on Man-Machine Speech Communication (NCMMSC2025)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Systematic study of feasibility and generalization of TTS trained on purely synthetic data",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

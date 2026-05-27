@@ -1,0 +1,32 @@
+{
+  "id": "2603.20165",
+  "source_ids": {
+    "arxiv": "2603.20165"
+  },
+  "title": "Audio Avatar Fingerprinting: An Approach for Authorized Use of Voice Cloning in the Era of Synthetic Audio",
+  "authors": [
+    "Candice R. Gerstner"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.20165",
+  "pdf_url": "https://arxiv.org/pdf/2603.20165.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "With the advancements in AI speech synthesis, it is easier than ever before to generate realistic audio in a target voice. One only needs a few seconds of reference audio from the target, quite literally putting words in the target person's mouth. This imposes a new set of forensics-related challenges on speech-based authentication systems, videoconferencing, and audio-visual broadcasting platforms, where we want to detect synthetic speech. At the same time, leveraging AI speech synthesis can enhance the different modes of communication through features such as low-bandwidth communication and audio enhancements - leading to ever-increasing legitimate use-cases of synthetic audio. In this case, we want to verify if the synthesized voice is actually spoken by the user. This will require a mechanism to verify whether a given synthetic audio is driven by an authorized identity, or not. We term this task audio avatar fingerprinting. As a step towards audio forensics in these new and emerging situations, we analyze and extend an off-the-shelf speaker verification model developed outside of forensics context for the task of fake speech detection and audio avatar fingerprinting, the first experimentation of its kind. Furthermore, we observe that no existing dataset allows for the novel task of verifying the authorized use of synthetic audio - a limitation which we address by introducing a new speech forensics dataset for this novel task.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Audio fingerprinting approach for authorized voice cloning tracking; forensics research not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

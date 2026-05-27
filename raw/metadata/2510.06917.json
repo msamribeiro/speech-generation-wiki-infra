@@ -1,0 +1,43 @@
+{
+  "id": "2510.06917",
+  "source_ids": {
+    "arxiv": "2510.06917"
+  },
+  "title": "SHANKS: Simultaneous Hearing and Thinking for Spoken Language Models",
+  "authors": [
+    "Cheng-Han Chiang",
+    "Xiaofei Wang",
+    "Linjie Li",
+    "Chung-Ching Lin",
+    "Kevin Lin",
+    "Shujie Liu",
+    "Zhendong Wang",
+    "Zhengyuan Yang",
+    "Hung-yi Lee",
+    "Lijuan Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.06917",
+  "pdf_url": "https://arxiv.org/pdf/2510.06917.pdf",
+  "pdf_path": "raw/papers/2510.06917.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current large language models (LLMs) and spoken language models (SLMs) begin thinking and taking actions only after the user has finished their turn. This prevents the model from interacting during the user's turn and can lead to high response latency while it waits to think. Consequently, thinking after receiving the full input is not suitable for speech-to-speech interaction, where real-time, low-latency exchange is important. We address this by noting that humans naturally \"think while listening.\" In this paper, we propose SHANKS, a general inference framework that enables SLMs to generate unspoken chain-of-thought reasoning while listening to the user input. SHANKS streams the input speech in fixed-duration chunks and, as soon as a chunk is received, generates unspoken reasoning based on all previous speech and reasoning, while the user continues speaking. SHANKS uses this unspoken reasoning to decide whether to interrupt the user and to make tool calls to complete the task. We demonstrate that SHANKS enhances real-time user-SLM interaction in two scenarios: (1) when the user is presenting a step-by-step solution to a math problem, SHANKS can listen, reason, and interrupt when the user makes a mistake, achieving 37.1% higher interruption accuracy than a baseline that interrupts without thinking; and (2) in a tool-augmented dialogue, SHANKS can complete 56.9% of the tool calls before the user finishes their turn. Overall, SHANKS moves toward models that keep thinking throughout the conversation, not only after a turn ends. Animated illustrations of Shanks can be found at https://d223302.github.io/SHANKS/",
+  "arxiv_comment": "Work in progress",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "SHANKS: simultaneous hearing and thinking for spoken LMs; core SCA streaming architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

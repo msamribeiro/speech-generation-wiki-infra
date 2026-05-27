@@ -1,0 +1,39 @@
+{
+  "id": "2512.14687",
+  "source_ids": {
+    "arxiv": "2512.14687"
+  },
+  "title": "Spoken DialogSum: An Emotion-Rich Conversational Dataset for Spoken Dialogue Summarization",
+  "authors": [
+    "Yen-Ju Lu",
+    "Kunxiao Gao",
+    "Mingrui Liang",
+    "Helin Wang",
+    "Thomas Thebaud",
+    "Laureano Moro-Velazquez",
+    "Najim Dehak",
+    "Jesus Villalba"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.14687",
+  "pdf_url": "https://arxiv.org/pdf/2512.14687.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent audio language models can follow long conversations. However, research on emotion-aware or spoken dialogue summarization is constrained by the lack of data that links speech, summaries, and paralinguistic cues. We introduce Spoken DialogSum, the first corpus aligning raw conversational audio with factual summaries, emotion-rich summaries, and utterance-level labels for speaker age, gender, and emotion. The dataset is built in two stages: first, an LLM rewrites DialogSum scripts with Switchboard-style fillers and back-channels, then tags each utterance with emotion, pitch, and speaking rate. Second, an expressive TTS engine synthesizes speech from the tagged scripts, aligned with paralinguistic labels. Spoken DialogSum comprises 13,460 emotion-diverse dialogues, each paired with both a factual and an emotion-focused summary. We release an online demo at https://fatfat-emosum.github.io/EmoDialog-Sum-Audio-Samples/, with plans to release the full dataset in the near future. Baselines show that an Audio-LLM raises emotional-summary ROUGE-L by 28% relative to a cascaded ASR-LLM system, confirming the value of end-to-end speech modeling.",
+  "arxiv_comment": "12 pages, 2 figures",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Spoken dialogue summarization dataset with emotion labels; primary task is speech understanding/summarization",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2601.12966",
+  "source_ids": {
+    "arxiv": "2601.12966"
+  },
+  "title": "Lombard Speech Synthesis for Any Voice with Controllable Style Embeddings",
+  "authors": [
+    "Seymanur Akti",
+    "Alexander Waibel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.12966",
+  "pdf_url": "https://arxiv.org/pdf/2601.12966.pdf",
+  "pdf_path": "raw/papers/2601.12966.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The Lombard effect plays a key role in natural communication, particularly in noisy environments or when addressing hearing-impaired listeners. We present a controllable text-to-speech (TTS) system capable of synthesizing Lombard speech for any speaker without requiring explicit Lombard data during training. Our approach leverages style embeddings learned from a large, prosodically diverse dataset and analyzes their correlation with Lombard attributes using principal component analysis (PCA). By shifting the relevant PCA components, we manipulate the style embeddings and incorporate them into our TTS model to generate speech at desired Lombard levels. Evaluations demonstrate that our method preserves naturalness and speaker identity, enhances intelligibility under noise, and provides fine-grained control over prosody, offering a robust solution for controllable Lombard TTS for any speaker.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Zero-shot Lombard speech synthesis for any voice without explicit Lombard training data",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

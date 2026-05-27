@@ -1,0 +1,43 @@
+{
+  "id": "2512.04552",
+  "source_ids": {
+    "arxiv": "2512.04552"
+  },
+  "title": "RRPO: Robust Reward Policy Optimization for LLM-based Emotional TTS",
+  "authors": [
+    "Cong Wang",
+    "Changfeng Gao",
+    "Yang Xiang",
+    "Zhihao Du",
+    "Keyu An",
+    "Han Zhao",
+    "Qian Chen",
+    "Xiangang Li",
+    "Yingming Gao",
+    "Ya Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.04552",
+  "pdf_url": "https://arxiv.org/pdf/2512.04552.pdf",
+  "pdf_path": "raw/papers/2512.04552.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Differentiable reinforcement learning (RL) frameworks like DiffRO offer a powerful approach for controllable text-to-speech (TTS), but are vulnerable to reward hacking, particularly for nuanced tasks like emotion control. The policy model can exploit a vanilla Reward Model (RM) by generating acoustic artifacts to achieve spurious rewards, but at the cost of degrading perceptual quality. To address this, we propose Robust Reward Policy Optimization (RRPO), a novel framework that employs a hybrid regularization scheme. This scheme develops a robust RM whose reward signal is more reliably aligned with human perception, compelling the policy to abandon detrimental shortcuts and instead learn the complex features of genuine emotions. Our ablation study confirms the enhanced robustness of our RM, as evidenced by its strong cross-lingual generalization. The subjective evaluation demonstrates that this robust RM effectively mitigates reward hacking, leading to significant improvements in both emotional expressiveness and naturalness over all baselines. Demo page: https://lrwinr.github.io/RRPO-CosyVoice.",
+  "arxiv_comment": "Accepted by ICASSP 2026. Copyright 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Robust reward policy optimization preventing reward hacking in RLHF-based emotional TTS training",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

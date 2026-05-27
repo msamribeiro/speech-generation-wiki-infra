@@ -1,0 +1,36 @@
+{
+  "id": "2512.12129",
+  "source_ids": {
+    "arxiv": "2512.12129"
+  },
+  "title": "A comparative study of generative models for child voice conversion",
+  "authors": [
+    "Protima Nomo Sudro",
+    "Anton Ragni",
+    "Thomas Hain"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.12129",
+  "pdf_url": "https://arxiv.org/pdf/2512.12129.pdf",
+  "pdf_path": "raw/papers/2512.12129.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Generative models are a popular choice for adult-to-adult voice conversion (VC) because of their efficient way of modelling unlabelled data. To this point their usefulness in producing children speech and in particular adult to child VC has not been investigated. For adult to child VC, four generative models are compared: diffusion model, flow based model, variational autoencoders, and generative adversarial network. Results show that although converted speech outputs produce by those models appear plausible, they exhibit insufficient similarity with the target speaker characteristics. We introduce an efficient frequency warping technique that can be applied to the output of models, and which shows significant reduction of the mismatch between adult and child. The output of all the models are evaluated using both objective and subjective measures. In particular we compare specific speaker pairing using a unique corpus collected for dubbing of children speech.",
+  "arxiv_comment": "6 pages, 5 figures",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Comparative study of diffusion, flow, VAE, and GAN generative models for adult-to-child voice conversion",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

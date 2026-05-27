@@ -1,0 +1,38 @@
+{
+  "id": "2602.00594",
+  "source_ids": {
+    "arxiv": "2602.00594"
+  },
+  "title": "Kanade: A Simple Disentangled Tokenizer for Spoken Language Modeling",
+  "authors": [
+    "Zhijie Huang",
+    "Stephen McIntosh",
+    "Daisuke Saito",
+    "Nobuaki Minematsu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.00594",
+  "pdf_url": "https://arxiv.org/pdf/2602.00594.pdf",
+  "pdf_path": "raw/papers/2602.00594.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "A good language model starts with a good tokenizer. Tokenization is especially important for speech modeling, which must handle continuous signals that mix linguistic and non-linguistic information. A speech tokenizer should extract phonetics and prosody, suppress linguistically irrelevant information like speaker identity, and enable high-quality synthesis. We present Kanade, a single-layer disentangled speech tokenizer that realizes this ideal. Kanade separates out acoustic constants to create a single stream of tokens that captures rich phonetics and prosody. It does so without the need for auxiliary methods that existing disentangled codecs often rely on. Experiments show that Kanade achieves state-of-the-art speaker disentanglement and lexical availability, while maintaining excellent reconstruction quality.",
+  "arxiv_comment": "32 pages, 10 figures",
+  "task": [
+    "codec",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Kanade: disentangled tokenizer for spoken LM separating phonetics and prosody; core codec.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2025.naacl-long.110",
+  "source_ids": {
+    "acl": "2025.naacl-long.110",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-long.110",
+    "url_acl": "https://aclanthology.org/2025.naacl-long.110"
+  },
+  "title": "WaveFM: A High-Fidelity and Efficient Vocoder Based on Flow Matching",
+  "authors": [
+    "Tianze Luo",
+    "Xingchen Miao",
+    "Wenbo Duan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-long.110",
+  "pdf_url": "https://aclanthology.org/2025.naacl-long.110.pdf",
+  "pdf_path": "raw/papers/2025.naacl-long.110.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Flow matching offers a robust and stable approach to training diffusion models. However, directly applying flow matching to neural vocoders can result in subpar audio quality. In this work, we present WaveFM, a reparameterized flow matching model for mel-spectrogram conditioned speech synthesis, designed to enhance both sample quality and generation speed for diffusion vocoders. Since mel-spectrograms represent the energy distribution of waveforms, WaveFM adopts a mel-conditioned prior distribution instead of a standard Gaussian prior to minimize unnecessary transportation costs during synthesis. Moreover, while most diffusion vocoders rely on a single loss function, we argue that incorporating auxiliary losses, including a refined multi-resolution STFT loss, can further improve audio quality. To speed up inference without degrading sample quality significantly, we introduce a tailored consistency distillation method for WaveFM. Experiment results demonstrate that our model achieves superior performance in both quality and efficiency compared to previous diffusion vocoders, while enabling waveform generation in a single inference step.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Novel flow matching vocoder (WaveFM) with reparameterization for enhanced quality and speed; directly advances GAN/flow TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

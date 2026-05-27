@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-2815",
+  "source_ids": {
+    "isca": "francis25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2815"
+  },
+  "title": "From Static to Dynamic: Enhancing AAC with Generative Imagery and Zero-Shot TTS",
+  "authors": [
+    "Juliana Francis",
+    "Joakim Gustafsson",
+    "Ãva SzÃ©kely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/francis25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/francis25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2815.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper presents an Augmentative and Alternative Communication (AAC) approach for minimally verbal children with Autism Spectrum Disorder. Traditional AAC systems use fixed symbol sets and pre-defined Text-to-Speech (TTS) voices, this proposed method leverages text-to-image generation and zero-shot TTS to expand expressive capabilities. Users can create visual symbols for concepts and interests, enabling richer communication. Further, zero-shot TTS allows users to upload or record personalized voices, enabling users to have individualized output. By minimizing reliance on static symbols and voices, this approach aims to increase communicative agency, personal relevance, and social validity, areas often neglected in traditional interventions. Future research will explore long-term effects on communicative skills, user satisfaction, social engagement, and adaptability across various cultural and linguistic settings, aiming to develop more dynamic and personalized AAC solutions.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "AAC system combining text-to-image and zero-shot TTS for non-verbal children; advances assistive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

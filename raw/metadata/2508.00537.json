@@ -1,0 +1,35 @@
+{
+  "id": "2508.00537",
+  "source_ids": {
+    "arxiv": "2508.00537"
+  },
+  "title": "The Prosody of Emojis",
+  "authors": [
+    "Giulio Zhou",
+    "Tsz Kin Lam",
+    "Alexandra Birch",
+    "Barry Haddow"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.00537",
+  "pdf_url": "https://arxiv.org/pdf/2508.00537.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Prosodic features such as pitch, timing, and intonation are central to spoken communication, conveying emotion, intent, and discourse structure. In text-based settings, where these cues are absent, emojis act as visual surrogates that add affective and pragmatic nuance. This study examines how emojis influence prosodic realisation in speech and how listeners interpret prosodic cues to recover emoji meanings. Unlike previous work, we directly link prosody and emoji by analysing actual human speech data, collected through structured but open-ended production and perception tasks. This provides empirical evidence of how emoji semantics shape spoken delivery and perception. Results show that speakers adapt their prosody based on emoji cues, listeners can often identify the intended emoji from prosodic variation alone, and greater semantic differences between emojis correspond to increased prosodic divergence. These findings suggest that emojis can act as meaningful carriers of prosodic intent, offering insight into their communicative role in digitally mediated contexts.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Linguistic study of how emojis influence prosodic realization; psycholinguistics paper with minimal synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

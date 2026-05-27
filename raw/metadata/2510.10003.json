@@ -1,0 +1,43 @@
+{
+  "id": "2510.10003",
+  "source_ids": {
+    "arxiv": "2510.10003"
+  },
+  "title": "MTP-S2UT: Enhancing Speech-to-Speech Translation Quality with Multi-token Prediction",
+  "authors": [
+    "Jianjin Wang",
+    "Runsong Zhao",
+    "Xiaoqian Liu",
+    "Yuan Ge",
+    "Ziqiang Xu",
+    "Tong Xiao",
+    "Shengxiang Gao",
+    "Zhengtao Yu",
+    "Jingbo Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.10003",
+  "pdf_url": "https://arxiv.org/pdf/2510.10003.pdf",
+  "pdf_path": "raw/papers/2510.10003.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current direct speech-to-speech translation methods predominantly employ speech tokens as intermediate representations. However, a single speech token is not dense in semantics, so we generally need multiple tokens to express a complete semantic unit. To address this limitation, we introduce multi-token prediction (MTP) loss into speech-to-unit translation (S2UT) models, enabling models to predict multiple subsequent tokens at each position, thereby capturing more complete semantics and enhancing information density per position. Initial MTP implementations apply the loss at the final layer, which improves output representation but initiates information enrichment too late. We hypothesize that advancing the information enrichment process to intermediate layers can achieve earlier and more effective enhancement of hidden representation. Consequently, we propose MTP-S2UT loss, applying MTP loss to hidden representation where CTC loss is computed. Experiments demonstrate that all MTP loss variants consistently improve the quality of S2UT translation, with MTP-S2UT achieving the best performance.",
+  "arxiv_comment": "Copyright 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "MTP-S2UT: multi-token prediction for speech-to-speech translation; core generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

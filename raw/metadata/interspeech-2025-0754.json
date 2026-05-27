@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0754",
+  "source_ids": {
+    "isca": "li25i_interspeech",
+    "doi": "10.21437/Interspeech.2025-754"
+  },
+  "title": "EME-TTS: Unlocking the Emphasis and Emotion Link in Speech Synthesis",
+  "authors": [
+    "Haoxun Li",
+    "Leyuan Qu",
+    "Jiaxi Hu",
+    "Taihao Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/li25i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/li25i_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0754.pdf",
+  "pdf_source": "isca",
+  "abstract": "In recent years, emotional Text-to-Speech (TTS) synthesis and emphasis-controllable speech synthesis have advanced significantly. However, their interaction remains underexplored. We propose Emphasis Meets Emotion TTS (EME-TTS), a novel framework designed to address two key research questions: (1) how to effectively utilize emphasis to enhance the expressiveness of emotional speech, and (2) how to maintain the perceptual clarity and stability of target emphasis across different emotions. EME-TTS employs weakly supervised learning with emphasis pseudo-labels and variance-based emphasis features. Additionally, the proposed Emphasis Perception Enhancement (EPE) block enhances the interaction between emotional signals and emphasis positions. Experimental results show that EME-TTS, when combined with large language models for emphasis position prediction, enables more natural emotional speech synthesis while preserving stable and distinguishable target emphasis across emotions. Synthesized samples are available online.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Novel TTS framework linking emphasis and emotion for expressive speech; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

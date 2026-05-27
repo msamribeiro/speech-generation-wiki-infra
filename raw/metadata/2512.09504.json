@@ -1,0 +1,42 @@
+{
+  "id": "2512.09504",
+  "source_ids": {
+    "arxiv": "2512.09504"
+  },
+  "title": "DMP-TTS: Disentangled multi-modal Prompting for Controllable Text-to-Speech with Chained Guidance",
+  "authors": [
+    "Kang Yin",
+    "Chunyu Qiang",
+    "Sirui Zhao",
+    "Xiaopeng Wang",
+    "Yuzhe Liang",
+    "Pengfei Cai",
+    "Tong Xu",
+    "Chen Zhang",
+    "Enhong Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.09504",
+  "pdf_url": "https://arxiv.org/pdf/2512.09504.pdf",
+  "pdf_path": "raw/papers/2512.09504.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Controllable text-to-speech (TTS) systems face significant challenges in achieving independent manipulation of speaker timbre and speaking style, often suffering from entanglement between these attributes. We present DMP-TTS, a latent Diffusion Transformer (DiT) framework with explicit disentanglement and multi-modal prompting. A CLAP-based style encoder (Style-CLAP) aligns cues from reference audio and descriptive text in a shared space and is trained with contrastive learning plus multi-task supervision on style attributes. For fine-grained control during inference, we introduce chained classifier-free guidance (cCFG) trained with hierarchical condition dropout, enabling independent adjustment of content, timbre, and style guidance strengths. Additionally, we employ Representation Alignment (REPA) to distill acoustic-semantic features from a pretrained Whisper model into intermediate DiT representations, stabilizing training and accelerating convergence. Experiments show that DMP-TTS delivers stronger style controllability than open-source baselines while maintaining competitive intelligibility and naturalness. Code and demos will be available at https://y61329697.github.io/DMP-TTS/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Latent DiT-based TTS with CLAP-style encoder and multi-modal prompting for disentangled timbre-style control",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

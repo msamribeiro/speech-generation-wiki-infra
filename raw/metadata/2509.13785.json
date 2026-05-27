@@ -1,0 +1,56 @@
+{
+  "id": "2509.13785",
+  "source_ids": {
+    "arxiv": "2509.13785"
+  },
+  "title": "Summary on The Multilingual Conversational Speech Language Model Challenge: Datasets, Tasks, Baselines, and Methods",
+  "authors": [
+    "Bingshen Mu",
+    "Pengcheng Guo",
+    "Zhaokai Sun",
+    "Shuai Wang",
+    "Hexin Liu",
+    "Mingchen Shao",
+    "Lei Xie",
+    "Eng Siong Chng",
+    "Longshuai Xiao",
+    "Qiangze Feng"
+  ],
+  "authors_full": [
+    "Bingshen Mu",
+    "Pengcheng Guo",
+    "Zhaokai Sun",
+    "Shuai Wang",
+    "Hexin Liu",
+    "Mingchen Shao",
+    "Lei Xie",
+    "Eng Siong Chng",
+    "Longshuai Xiao",
+    "Qiangze Feng",
+    "Daliang Wang"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.13785",
+  "pdf_url": "https://arxiv.org/pdf/2509.13785.pdf",
+  "pdf_path": "raw/papers/2509.13785.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper summarizes the Interspeech2025 Multilingual Conversational Speech Language Model (MLC-SLM) challenge, which aims to advance the exploration of building effective multilingual conversational speech LLMs (SLLMs). We provide a detailed description of the task settings for the MLC-SLM challenge, the released real-world multilingual conversational speech dataset totaling approximately 1,604 hours, and the baseline systems for participants. The MLC-SLM challenge attracts 78 teams from 13 countries to participate, with 489 valid leaderboard results and 14 technical reports for the two tasks. We distill valuable insights on building multilingual conversational SLLMs based on submissions from participants, aiming to contribute to the advancement of the community.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Challenge summary for multilingual conversational speech LLMs with datasets and baselines",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

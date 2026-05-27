@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0706",
+  "source_ids": {
+    "isca": "wang25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-706"
+  },
+  "title": "Contextual Paralinguistic Data Creation for Multi-Modal Speech-LLM: Data Condensation and Spoken QA Generation",
+  "authors": [
+    "Qiongqiong Wang",
+    "Hardik B. Sailor",
+    "Tianchi Liu",
+    "Ai Ti Aw"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/wang25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/wang25e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0706.pdf",
+  "pdf_source": "isca",
+  "abstract": "Current speech-LLMs exhibit limited capability in contextual reasoning alongside paralinguistic understanding, primarily due to the lack of Question-Answer (QA) datasets that cover both aspects. We propose a novel framework for dataset generation from in-the-wild speech data, that integrates contextual reasoning with paralinguistic information. It consists of a pseudo paralinguistic label-based data condensation of in-the-wild speech and LLM-based Contextual Paralinguistic QA (CPQA) generation. The effectiveness is validated by a strong correlation in evaluations of the Qwen2-Audio-7B-Instruct model on a dataset created by our framework and human-generated CPQA dataset. The results also reveal the speech-LLM's limitations in handling empathetic reasoning tasks, highlighting the need for such datasets and more robust models. The proposed framework is first of its kind and has potential in training more robust speech-LLMs with paralinguistic reasoning capabilities.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Framework for creating contextual paralinguistic QA datasets for speech LLMs; advances SCA training data.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2510.04157",
+  "source_ids": {
+    "arxiv": "2510.04157"
+  },
+  "title": "GDiffuSE: Diffusion-based speech enhancement with noise model guidance",
+  "authors": [
+    "Efrayim Yanir",
+    "David Burshtein",
+    "Sharon Gannot"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.04157",
+  "pdf_url": "https://arxiv.org/pdf/2510.04157.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces a novel speech enhancement (SE) approach based on a denoising diffusion probabilistic model (DDPM), termed Guided diffusion for speech enhancement (GDiffuSE). In contrast to conventional methods that directly map noisy speech to clean speech, our method employs a lightweight helper model to estimate the noise distribution, which is then incorporated into the diffusion denoising process via a guidance mechanism. This design improves robustness by enabling seamless adaptation to unseen noise types and by leveraging large-scale DDPMs originally trained for speech generation in the context of SE. We evaluate our approach on noisy signals obtained by adding noise samples from the BBC sound effects database to LibriSpeech utterances, showing consistent improvements over state-of-the-art baselines under mismatched noise conditions. Examples are available at our project webpage.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Diffusion-based speech enhancement; out-of-scope speech enhancement task",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

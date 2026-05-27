@@ -1,0 +1,39 @@
+{
+  "id": "2025.iwsds-1.11",
+  "source_ids": {
+    "acl": "2025.iwsds-1.11",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.iwsds-1.11"
+  },
+  "title": "Paralinguistic Attitude Recognition for Spoken Dialogue Systems",
+  "authors": [
+    "Kouki Miyazawa",
+    "Zhi Zhu",
+    "Yoshinao Sato"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.iwsds-1.11",
+  "pdf_url": "https://aclanthology.org/2025.iwsds-1.11.pdf",
+  "pdf_path": "raw/papers/2025.iwsds-1.11.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Although paralinguistic information is critical for human communication, most spoken dialogue systems ignore such information, hindering natural communication between humans and machines. This study addresses the recognition of paralinguistic attitudes in user speech. Specifically, we focus on four essential attitudes for generating an appropriate system response, namely agreement, disagreement, questions, and stalling. The proposed model can help a dialogue system better understand what the user is trying to convey. In our experiments, we trained and evaluated a model that classified paralinguistic attitudes on a reading-speech dataset without using linguistic information. The proposed model outperformed human perception. Furthermore, experimental results indicate that speech enhancement alleviates the degradation of model performance caused by background noise, whereas reverberation remains a challenge.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.5,
+  "relevance_note": "Paralinguistic attitude recognition for spoken dialogue systems; primarily SER/understanding, with generation implications for SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

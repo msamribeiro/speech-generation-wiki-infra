@@ -1,0 +1,39 @@
+{
+  "id": "2509.18806",
+  "source_ids": {
+    "arxiv": "2509.18806"
+  },
+  "title": "Rethinking the joint estimation of magnitude and phase for time-frequency domain neural vocoders",
+  "authors": [
+    "Lingling Dai",
+    "Andong Li",
+    "Tong Lei",
+    "Meng Yu",
+    "Xiaodong Li",
+    "Chengshi Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.18806",
+  "pdf_url": "https://arxiv.org/pdf/2509.18806.pdf",
+  "pdf_path": "raw/papers/2509.18806.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Time-frequency (T-F) domain-based neural vocoders have shown promising results in synthesizing high-fidelity audio. Nevertheless, it remains unclear on the mechanism of effectively predicting magnitude and phase targets jointly. In this paper, we start from two representative T-F domain vocoders, namely Vocos and APNet2, which belong to the single-stream and dual-stream modes for magnitude and phase estimation, respectively. When evaluating their performance on a large-scale dataset, we accidentally observe severe performance collapse of APNet2. To stabilize its performance, in this paper, we introduce three simple yet effective strategies, each targeting the topological space, the source space, and the output space, respectively. Specifically, we modify the architectural topology for better information exchange in the topological space, introduce prior knowledge to facilitate the generation process in the source space, and optimize the backpropagation process for parameter updates with an improved output format in the output space. Experimental results demonstrate that our proposed method effectively facilitates the joint estimation of magnitude and phase in APNet2, thus bridging the performance disparities between the single-stream and dual-stream vocoders.",
+  "arxiv_comment": "Submitted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Analysis and improvement of joint magnitude-phase estimation in T-F domain neural vocoders",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

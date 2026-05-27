@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-2787",
+  "source_ids": {
+    "isca": "marcinek25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2787"
+  },
+  "title": "Towards Adaptable and Intelligible Speech Synthesis in Noisy Environments",
+  "authors": [
+    "Lubos Marcinek",
+    "Jonas Beskow",
+    "Joakim Gustafsson"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/marcinek25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/marcinek25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2787.pdf",
+  "pdf_source": "isca",
+  "abstract": "We present an investigation into adaptable speech synthesis for noisy environments. Leveraging a zero-shot TTS we synthesized a corpus of 1,200 speech samples from 100 sentences of varying complexity, each generated at six distinct levels of vocal effort. To simulate realistic listening conditions, the synthesized speech is merged with environmental noise recordings from a diverse range of indoor and transportation settings at nine different signal-to-noise ratios. We assess the intelligibility of the resulting noisy speech using the ASR word error rates across conditions. Additionally, the input text was evaluated using four metrics on sentence complexity and word predictability. A number of regression models that used noise type, SNR, vocal effort and text as input were trained to predict ASR WER. Results show that increased vocal effort improves intelligibility, with benefits up to 30% in adverse conditions, most most pronounced in environments with competing speech at low SNRs.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Zero-shot TTS at varied vocal effort levels for noisy environments; advances TTS adaptability.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

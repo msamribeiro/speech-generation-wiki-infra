@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0816",
+  "source_ids": {
+    "isca": "liu25h_interspeech",
+    "doi": "10.21437/Interspeech.2025-816"
+  },
+  "title": "Bridging Speech and Singing: Multi-stage Speech-Prompted Singing Voice Conversion with Speaker Embedding Adaptation",
+  "authors": [
+    "Mingda Liu",
+    "Jiatong Shi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/liu25h_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/liu25h_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0816.pdf",
+  "pdf_source": "isca",
+  "abstract": "Singing voice conversion (SVC) technology holds immense potential to transform the entertainment industry and advance human-computer interaction. Unlike previous SVC studies that primarily focus on the conversion between different singing voices, this work specifically investigates the conversion of speech timbre into singing. In this paper, we introduce a novel Singing Speech Alignment Network (SSAN) designed to align speaker and singer embeddings derived from input data. To effectively train the SVC model, we also propose a cycle training strategy that ensures the performance of SVC with speech prompts. Experimental results demonstrate that the proposed method (SSANSVC) achieves superior performance in both the naturalness of the synthesized singing and its similarity to the target speech.",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Multi-stage speech-to-singing voice conversion with speaker embedding adaptation; advances singing VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

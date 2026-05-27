@@ -1,0 +1,37 @@
+{
+  "id": "2506.12311",
+  "source_ids": {
+    "arxiv": "2506.12311"
+  },
+  "title": "Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time Text-to-Speech",
+  "authors": [
+    "Yakov Kolani",
+    "Maxim Melichov",
+    "Cobi Calev",
+    "Morris Alper"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.12311",
+  "pdf_url": "https://arxiv.org/pdf/2506.12311.pdf",
+  "pdf_path": "raw/papers/2506.12311.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Real-time text-to-speech (TTS) for Modern Hebrew is challenging due to the language's orthographic complexity. Existing solutions ignore crucial phonetic features such as stress that remain underspecified even when vowel marks are added. To address these limitations, we introduce Phonikud, a lightweight, open-source Hebrew grapheme-to-phoneme (G2P) system that outputs fully-specified IPA transcriptions. Our approach adapts an existing diacritization model with lightweight adaptors, incurring negligible additional latency. We also contribute the ILSpeech dataset of transcribed Hebrew speech with IPA annotations, serving as a benchmark for Hebrew G2P, as training data for TTS systems, and enabling audio-to-IPA for evaluating TTS performance while capturing important phonetic details. Our results demonstrate that Phonikud G2P conversion more accurately predicts phonemes from Hebrew text compared to prior methods, and that this enables training of effective real-time Hebrew TTS models with superior speed-accuracy trade-offs. We release our code, data, and models at https: //phonikud.github.io.",
+  "arxiv_comment": "Project page: https://phonikud.github.io",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Lightweight Hebrew G2P system for real-time TTS addressing prosodic features; directly advances TTS for Hebrew.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

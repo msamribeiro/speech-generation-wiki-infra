@@ -1,0 +1,36 @@
+{
+  "id": "2604.26136",
+  "source_ids": {
+    "arxiv": "2604.26136"
+  },
+  "title": "One Voice, Many Tongues: Cross-Lingual Voice Cloning for Scientific Speech",
+  "authors": [
+    "Amanuel Gizachew Abebe",
+    "Yasmin Moslem"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.26136",
+  "pdf_url": "https://arxiv.org/pdf/2604.26136.pdf",
+  "pdf_path": "raw/papers/2604.26136.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Preserving a speaker's voice identity while generating speech in a different language remains a fundamental challenge in spoken language technology, particularly in specialized domains such as scientific communication. In this paper, we address this challenge through our system submission to the International Conference on Spoken Language Translation (IWSLT 2026), the Cross-Lingual Voice Cloning shared task. First, we evaluate several state-of-the-art voice cloning models for cross-lingual speech generation of scientific texts in Arabic, Chinese, and French. Then, we build voice cloning systems based on the OmniVoice foundation model. We employ data augmentation via multi-model ensemble distillation from the ACL 60/60 corpus. We investigate the effect of using this synthetic data for fine-tuning, demonstrating consistent improvements in intelligibility (WER and CER) across languages while preserving speaker similarity.",
+  "arxiv_comment": "IWSLT 2026",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Cross-lingual voice cloning for scientific speech synthesis at IWSLT 2026 preserving speaker identity across languages",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2509.14298",
+  "source_ids": {
+    "arxiv": "2509.14298"
+  },
+  "title": "SpeechOp: Inference-Time Task Composition for Generative Speech Processing",
+  "authors": [
+    "Justin Lovelace",
+    "Rithesh Kumar",
+    "Jiaqi Su",
+    "Ke Chen",
+    "Kilian Q Weinberger",
+    "Zeyu Jin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14298",
+  "pdf_url": "https://arxiv.org/pdf/2509.14298.pdf",
+  "pdf_path": "raw/papers/2509.14298.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While generative Text-to-Speech (TTS) systems leverage vast ``in-the-wild\" data to achieve remarkable success, speech-to-speech processing tasks like enhancement face data limitations, which lead data-hungry generative approaches to distort speech content and speaker identity. To bridge this gap, we present SpeechOp, a multi-task latent diffusion model that transforms pre-trained TTS models into a universal speech processor capable of performing a wide range of speech tasks and composing them in novel ways at inference time. By adapting a pre-trained TTS model, SpeechOp inherits a rich understanding of natural speech, accelerating training and improving S2S task quality, while simultaneously enhancing core TTS performance. Finally, we introduce Implicit Task Composition (ITC), a novel pipeline where ASR-derived transcripts (e.g., from Whisper) guide SpeechOp's enhancement via our principled inference-time task composition. ITC achieves state-of-the-art content preservation by robustly combining web-scale speech understanding with SpeechOp's generative capabilities. Audio samples are available at https://justinlovelace.github.io/projects/speechop",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Inference-time task composition bridging TTS and speech enhancement",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

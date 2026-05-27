@@ -1,0 +1,32 @@
+{
+  "id": "2603.07285",
+  "source_ids": {
+    "arxiv": "2603.07285"
+  },
+  "title": "Fast and Flexible Audio Bandwidth Extension via Vocos",
+  "authors": [
+    "Yatharth Sharma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.07285",
+  "pdf_url": "https://arxiv.org/pdf/2603.07285.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We propose a Vocos-based bandwidth extension model that enhances audio at 8-48 kHz by generating missing high-frequency content. Inputs are resampled to 48 kHz and processed by a neural vocoder backbone, enabling a single network to support arbitrary upsampling ratios. A lightweight Linkwitz-Riley-inspired refiner merges the original low band with the generated high frequencies via a smooth crossover. On validation, the model achieves competitive log-spectral distance while running at a real-time factor of 0.0001 on an NVIDIA A100 GPU and 0.0053 on an 8-core CPU, demonstrating practical, high-quality BWE at extreme throughput.",
+  "arxiv_comment": "5 pages, 2 figures, 5 tables. Submitted to INTERSPEECH 2026. Code available at https://github.com/ysharma3501/LavaSR.git",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Vocos-based audio bandwidth extension; speech enhancement task (out of scope)",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

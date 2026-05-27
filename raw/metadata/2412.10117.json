@@ -1,0 +1,63 @@
+{
+  "id": "2412.10117",
+  "source_ids": {
+    "arxiv": "2412.10117"
+  },
+  "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+  "authors": [
+    "Zhihao Du",
+    "Yuxuan Wang",
+    "Qian Chen",
+    "Xian Shi",
+    "Xiang Lv",
+    "Tianyu Zhao",
+    "Zhifu Gao",
+    "Yexin Yang",
+    "Changfeng Gao",
+    "Hui Wang"
+  ],
+  "authors_full": [
+    "Zhihao Du",
+    "Yuxuan Wang",
+    "Qian Chen",
+    "Xian Shi",
+    "Xiang Lv",
+    "Tianyu Zhao",
+    "Zhifu Gao",
+    "Yexin Yang",
+    "Changfeng Gao",
+    "Hui Wang",
+    "Fan Yu",
+    "Huadai Liu",
+    "Zhengyan Sheng",
+    "Yue Gu",
+    "Chong Deng",
+    "Wen Wang",
+    "Shiliang Zhang",
+    "Zhijie Yan",
+    "Jingren Zhou"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 12,
+  "published_date": "2024-12-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2412.10117",
+  "pdf_url": "https://arxiv.org/pdf/2412.10117.pdf",
+  "pdf_path": "raw/papers/2412.10117.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In our previous work, we introduced CosyVoice, a multilingual speech synthesis model based on supervised discrete speech tokens. By employing progressive semantic decoding with two popular generative models, language models (LMs) and Flow Matching, CosyVoice demonstrated high prosody naturalness, content consistency, and speaker similarity in speech in-context learning. Recently, significant progress has been made in multi-modal large language models (LLMs), where the response latency and real-time factor of speech synthesis play a crucial role in the interactive experience. Therefore, in this report, we present an improved streaming speech synthesis model, CosyVoice 2, which incorporates comprehensive and systematic optimizations. Specifically, we introduce finite-scalar quantization to improve the codebook utilization of speech tokens. For the text-speech LM, we streamline the model architecture to allow direct use of a pre-trained LLM as the backbone. In addition, we develop a chunk-aware causal flow matching model to support various synthesis scenarios, enabling both streaming and non-streaming synthesis within a single model. By training on a large-scale multilingual dataset, CosyVoice 2 achieves human-parity naturalness, minimal response latency, and virtually lossless synthesis quality in the streaming mode. We invite readers to listen to the demos at https://funaudiollm.github.io/cosyvoice2.",
+  "arxiv_comment": "Tech report, work in progress",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.97,
+  "relevance_note": "CosyVoice 2: streaming speech synthesis with LLM; core TTS scaling paper.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

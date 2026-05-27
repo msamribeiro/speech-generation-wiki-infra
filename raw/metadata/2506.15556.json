@@ -1,0 +1,36 @@
+{
+  "id": "2506.15556",
+  "source_ids": {
+    "arxiv": "2506.15556"
+  },
+  "title": "PredGen: Accelerated Inference of Large Language Models through Input-Time Speculation for Real-Time Speech Interaction",
+  "authors": [
+    "Shufan Li",
+    "Aditya Grover"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.15556",
+  "pdf_url": "https://arxiv.org/pdf/2506.15556.pdf",
+  "pdf_path": "raw/papers/2506.15556.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Language Models (LLMs) are widely used in real-time voice chat applications, typically in combination with text-to-speech (TTS) systems to generate audio responses. However, their large size often leads to noticeable latency between the end of user input and the start of audio output, resulting in suboptimal user experiences. This latency is particularly evident when LLMs are deployed as single-user voice assistants on consumer-grade hardware with limited computing capacity. We discovered that this latency is primarily dominated by the time it takes for the LLMs to generate the first sentence, which is required as input by the TTS systems that synthesize audio responses on a sentence-by-sentence basis. To address this bottleneck, we propose Predictive Generation (PredGen), a novel framework that mitigates-or even eliminates-this delay through speculative decoding at input time. PredGen generates candidate responses while the user is still speaking, enabling the system to begin TTS processing with minimal delay. Simulated experiments on the Lmsys and MT-Bench datasets show that the proposed method can effectively reduce the latency by around 2x across a wide range of use cases, while incurring only minimal additional computation cost at input time-computation that would otherwise go unused.",
+  "arxiv_comment": "16 pages,4 figures",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Input-time speculation to accelerate LLM+TTS pipeline for real-time voice chat; advances streaming/low-latency SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

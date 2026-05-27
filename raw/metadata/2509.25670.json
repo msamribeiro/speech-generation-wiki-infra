@@ -1,0 +1,38 @@
+{
+  "id": "2509.25670",
+  "source_ids": {
+    "arxiv": "2509.25670"
+  },
+  "title": "LTA-L2S: Lexical Tone-Aware Lip-to-Speech Synthesis for Mandarin with Cross-Lingual Transfer Learning",
+  "authors": [
+    "Kang Yang",
+    "Yifan Liang",
+    "Fangkun Liu",
+    "Zhenping Xie",
+    "Chengshi Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.25670",
+  "pdf_url": "https://arxiv.org/pdf/2509.25670.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Lip-to-speech (L2S) synthesis for Mandarin is a significant challenge, hindered by complex viseme-to-phoneme mappings and the critical role of lexical tones in intelligibility. To address this issue, we propose Lexical Tone-Aware Lip-to-Speech (LTA-L2S). To tackle viseme-to-phoneme complexity, our model adapts an English pre-trained audio-visual self-supervised learning (SSL) model via a cross-lingual transfer learning strategy. This strategy not only transfers universal knowledge learned from extensive English data to the Mandarin domain but also circumvents the prohibitive cost of training such a model from scratch. To specifically model lexical tones and enhance intelligibility, we further employ a flow-matching model to generate the F0 contour. This generation process is guided by ASR-fine-tuned SSL speech units, which contain crucial suprasegmental information. The overall speech quality is then elevated through a two-stage training paradigm, where a flow-matching postnet refines the coarse spectrogram from the first stage. Extensive experiments demonstrate that LTA-L2S significantly outperforms existing methods in both speech intelligibility and tonal accuracy.",
+  "arxiv_comment": "Submitted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Lip-to-speech synthesis for Mandarin generates speech but input modality is visual rather than text",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

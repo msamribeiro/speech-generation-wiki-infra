@@ -1,0 +1,35 @@
+{
+  "id": "2510.19509",
+  "source_ids": {
+    "arxiv": "2510.19509"
+  },
+  "title": "Which Evaluation for Which Model? A Taxonomy for Speech Model Assessment",
+  "authors": [
+    "Maureen de Seyssel",
+    "Eeshan Gunesh Dhekane"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.19509",
+  "pdf_url": "https://arxiv.org/pdf/2510.19509.pdf",
+  "pdf_path": "raw/papers/2510.19509.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech foundation models have recently achieved remarkable capabilities across a wide range of tasks. However, their evaluation remains disjointed across tasks and model types. Different models excel at distinct aspects of speech processing and thus require different evaluation protocols. This paper proposes a unified taxonomy that addresses the question: Which evaluation is appropriate for which model? The taxonomy defines three orthogonal axes: the evaluation aspect being measured, the model capabilities required to attempt the task, and the task or protocol requirements needed to perform it. We classify a broad set of existing evaluations and benchmarks along these axes, spanning areas such as representation learning, speech generation, and interactive dialogue. By mapping each evaluation to the capabilities a model exposes (e.g., speech generation, real-time processing) and to its methodological demands (e.g., fine-tuning data, human judgment), the taxonomy provides a principled framework for aligning models with suitable evaluation methods. It also reveals systematic gaps, such as limited coverage of prosody, interaction, or reasoning, that highlight priorities for future benchmark design. Overall, this work offers a conceptual foundation and practical guide for selecting, interpreting, and extending evaluations of speech models.",
+  "arxiv_comment": "57 pages (26 main, 25 appendix, 6 references)",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Taxonomy for speech model assessment covering evaluation protocols across diverse speech tasks including generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

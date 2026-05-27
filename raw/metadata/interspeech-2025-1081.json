@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1081",
+  "source_ids": {
+    "isca": "hu25i_interspeech",
+    "doi": "10.21437/Interspeech.2025-1081"
+  },
+  "title": "Speaker Normalization and Content Restoration for Zero-Shot Voice Conversion with Attention-Enhanced Discriminator",
+  "authors": [
+    "Desheng Hu",
+    "Yang Xiang",
+    "Jian Lu",
+    "Xinhui Hu",
+    "Xinkang Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/hu25i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/hu25i_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1081.pdf",
+  "pdf_source": "isca",
+  "abstract": "Zero-shot voice conversion can be achieved by extracting the source linguistic content and the unseen target speaker information, then reconstructing mel-spectrograms from these representations. In this paper, we propose a novel zero-shot VC method. First, we disentangle content and speaker information by training the content encoder from scratch, integrating a supervised phoneme classification network with speaker normalization and content restoration modules. Second, we enhance the speaker encoder by applying consistency loss, ensuring the extraction of accurate and robust speaker representations. Finally, we introduce an attention-enhanced discriminator for adversarial training to generate high-fidelity mel-spectrograms. Experimental results demonstrate that our proposed method demonstrates outstanding VC performance in terms of both speech quality and speaker similarity for unseen speakers.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Zero-shot VC with attention-enhanced discriminator for better content/speaker disentanglement; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

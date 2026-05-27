@@ -1,0 +1,36 @@
+{
+  "id": "2602.01908",
+  "source_ids": {
+    "arxiv": "2602.01908"
+  },
+  "title": "LipSody: Lip-to-Speech Synthesis with Enhanced Prosody Consistency",
+  "authors": [
+    "Jaejun Lee",
+    "Yoori Oh",
+    "Kyogu Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.01908",
+  "pdf_url": "https://arxiv.org/pdf/2602.01908.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Lip-to-speech synthesis aims to generate speech audio directly from silent facial video by reconstructing linguistic content from lip movements, providing valuable applications in situations where audio signals are unavailable or degraded. While recent diffusion-based models such as LipVoicer have demonstrated impressive performance in reconstructing linguistic content, they often lack prosodic consistency. In this work, we propose LipSody, a lip-to-speech framework enhanced for prosody consistency. LipSody introduces a prosody-guiding strategy that leverages three complementary cues: speaker identity extracted from facial images, linguistic content derived from lip movements, and emotional context inferred from face video. Experimental results demonstrate that LipSody substantially improves prosody-related metrics, including global and local pitch deviations, energy consistency, and speaker similarity, compared to prior approaches.",
+  "arxiv_comment": "This paper has been accepted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Lip-to-speech synthesis from silent facial video with enhanced prosody consistency via diffusion model",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2603.07599",
+  "source_ids": {
+    "arxiv": "2603.07599"
+  },
+  "title": "StyleBench: Evaluating Speech Language Models on Conversational Speaking Style Control",
+  "authors": [
+    "Haishu Zhao",
+    "Aokai Hao",
+    "Yuan Ge",
+    "Zhenqiang Hong",
+    "Tong Xiao",
+    "Jingbo Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.07599",
+  "pdf_url": "https://arxiv.org/pdf/2603.07599.pdf",
+  "pdf_path": "raw/papers/2603.07599.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech language models (SLMs) have significantly extended the interactive capability of text-based Large Language Models (LLMs) by incorporating paralinguistic information. For more realistic interactive experience with customized styles, current SLMs have managed to interpret and control speaking style intensity from user prompts during the dialogue process. However, there remains a lack of systematic benchmarks that quantifies and evaluates the style intensity control ability in conversations. In this paper, we propose StyleBench, a multi-turn dialogue benchmark for comprehensively evaluating the style intensity control ability across four dimensions: emotion, speed, volume, and pitch. Our results reveal the performance gaps between leading SLMs and omni language models (OLMs), suggesting the underlying reasons and promising approaches for future exploration.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Benchmark for evaluating speech LMs on conversational style control; advances SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

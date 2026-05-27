@@ -1,0 +1,40 @@
+{
+  "id": "2025.arabicnlp-main.38",
+  "source_ids": {
+    "acl": "2025.arabicnlp-main.38",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.arabicnlp-main.38",
+    "url_acl": "https://aclanthology.org/2025.arabicnlp-main.38"
+  },
+  "title": "DialG2P: Dialectal Grapheme-to-Phoneme. Arabic as a Case Study",
+  "authors": [
+    "Majd Hawasly",
+    "Hamdy Mubarak",
+    "Ahmed Abdelali",
+    "Ahmed Ali"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.arabicnlp-main.38",
+  "pdf_url": "https://aclanthology.org/2025.arabicnlp-main.38.pdf",
+  "pdf_path": "raw/papers/2025.arabicnlp-main.38.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Grapheme-to-phoneme (G2P) models are essential components in text-to-speech (TTS) and pronunciation assessment applications. While standard forms of languages have gained attention in that regard, dialectal speech, which often serves as the primary means of spoken communication for many communities, as it is the case for Arabic, has not received the same level of focus. In this paper, we introduce an end-to-end dialectal G2P for Egyptian Arabic, a dialect without standard orthography. Our novel architecture accomplishes three tasks: (i) restores short vowels of the diacritical marks for the dialectal text; (ii) maps certain characters that happen only in the spoken version of the dialectal Arabic to their dialect-specific character transcriptions; and finally (iii) converts the previous step output to the corresponding phoneme sequence. We benchmark G2P on a modular cascaded system, a large language model, and our multi-task end-to-end architecture.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Dialectal Arabic G2P model essential for TTS pronunciation; directly enables better TTS for Arabic dialects.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

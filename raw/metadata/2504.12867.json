@@ -1,0 +1,59 @@
+{
+  "id": "2504.12867",
+  "source_ids": {
+    "arxiv": "2504.12867"
+  },
+  "title": "EmoVoice: LLM-based Emotional Text-To-Speech Model with Freestyle Text Prompting",
+  "authors": [
+    "Guanrou Yang",
+    "Chen Yang",
+    "Qian Chen",
+    "Ziyang Ma",
+    "Wenxi Chen",
+    "Wen Wang",
+    "Tianrui Wang",
+    "Yifan Yang",
+    "Zhikang Niu",
+    "Wenrui Liu"
+  ],
+  "authors_full": [
+    "Guanrou Yang",
+    "Chen Yang",
+    "Qian Chen",
+    "Ziyang Ma",
+    "Wenxi Chen",
+    "Wen Wang",
+    "Tianrui Wang",
+    "Yifan Yang",
+    "Zhikang Niu",
+    "Wenrui Liu",
+    "Fan Yu",
+    "Zhihao Du",
+    "Zhifu Gao",
+    "ShiLiang Zhang",
+    "Xie Chen"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2504.12867",
+  "pdf_url": "https://arxiv.org/pdf/2504.12867.pdf",
+  "pdf_path": "raw/papers/2504.12867.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Human speech goes beyond the mere transfer of information; it is a profound exchange of emotions and a connection between individuals. While Text-to-Speech (TTS) models have made huge progress, they still face challenges in controlling the emotional expression in the generated speech. In this work, we propose EmoVoice, a novel emotion-controllable TTS model that exploits large language models (LLMs) to enable fine-grained freestyle natural language emotion control, and a phoneme boost variant design that makes the model output phoneme tokens and audio tokens in parallel to enhance content consistency, inspired by chain-of-thought (CoT) and chain-of-modality (CoM) techniques. Besides, we introduce EmoVoice-DB, a high-quality 40-hour English emotion dataset featuring expressive speech and fine-grained emotion labels with natural language descriptions. EmoVoice achieves state-of-the-art performance on the English EmoVoice-DB test set using only synthetic training data, and on the Chinese Secap test set using our in-house data. We further investigate the reliability of existing emotion evaluation metrics and their alignment with human perceptual preferences, and explore using SOTA multimodal LLMs GPT-4o-audio and Gemini to assess emotional speech. Dataset, code, checkpoints, and demo samples are available at https://github.com/yanghaha0908/EmoVoice.",
+  "arxiv_comment": "Accepted at ACMMM 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Emotion-controllable TTS with LLM-based freestyle text prompting; directly advances emotional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

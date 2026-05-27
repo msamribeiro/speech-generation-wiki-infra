@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1122",
+  "source_ids": {
+    "isca": "kawamura25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1122"
+  },
+  "title": "BitTTS: Highly Compact Text-to-Speech Using 1.58-bit Quantization and Weight Indexing",
+  "authors": [
+    "Masaya Kawamura",
+    "Takuya Hasumi",
+    "Yuma Shirahata",
+    "Ryuichi Yamamoto"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kawamura25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kawamura25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1122.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper proposes a highly compact, lightweight text-to-speech (TTS) model for on-device applications. To reduce the model size, the proposed model introduces two techniques. First, we introduce quantization-aware training (QAT), which quantizes model parameters during training to as low as 1.58-bit. In this case, most of 32-bit model parameters are quantized to ternary values {-1, 0, 1}. Second, we propose a method named weight indexing. In this method, we save a group of 1.58-bit weights as a single int8 index. This allows for efficient storage of model parameters, even on hardware that treats values in units of 8-bit. Experimental results demonstrate that the proposed method achieved 83 % reduction in model size, while outperforming the baseline of similar model size without quantization in synthesis quality.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Highly compact TTS with 1.58-bit quantization and weight indexing for on-device use; advances TTS efficiency.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

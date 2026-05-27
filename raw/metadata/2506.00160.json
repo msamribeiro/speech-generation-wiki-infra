@@ -1,0 +1,38 @@
+{
+  "id": "2506.00160",
+  "source_ids": {
+    "arxiv": "2506.00160"
+  },
+  "title": "Verbal Werewolf: Engage Users with Verbalized Agentic Werewolf Game Framework",
+  "authors": [
+    "Qihui Fan",
+    "Wenbo Li",
+    "Enfu Nan",
+    "Yixiao Chen",
+    "Lei Lu",
+    "Pu Zhao",
+    "Yanzhi Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.00160",
+  "pdf_url": "https://arxiv.org/pdf/2506.00160.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The growing popularity of social deduction games has created an increasing need for intelligent frameworks where humans can collaborate with AI agents, particularly in post-pandemic contexts with heightened psychological and social pressures. Social deduction games like Werewolf, traditionally played through verbal communication, present an ideal application for Large Language Models (LLMs) given their advanced reasoning and conversational capabilities. Prior studies have shown that LLMs can outperform humans in Werewolf games, but their reliance on external modules introduces latency that left their contribution in academic domain only, and omit such game should be user-facing. We propose \\textbf{Verbal Werewolf}, a novel LLM-based Werewolf game system that optimizes two parallel pipelines: gameplay powered by state-of-the-art LLMs and a fine-tuned Text-to-Speech (TTS) module that brings text output to life. Our system operates in near real-time without external decision-making modules, leveraging the enhanced reasoning capabilities of modern LLMs like DeepSeek V3 to create a more engaging and anthropomorphic gaming experience that significantly improves user engagement compared to existing text-only frameworks.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.28,
+  "relevance_note": "Social deduction game framework with LLMs using verbal communication; speech output but not synthesis research.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2025.findings-naacl.471",
+  "source_ids": {
+    "acl": "2025.findings-naacl.471",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-naacl.471",
+    "url_acl": "https://aclanthology.org/2025.findings-naacl.471"
+  },
+  "title": "The Role of Prosody in Spoken Question Answering",
+  "authors": [
+    "Jie Chi",
+    "Maureen de Seyssel",
+    "Natalie Schluter"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-naacl.471",
+  "pdf_url": "https://aclanthology.org/2025.findings-naacl.471.pdf",
+  "pdf_path": "raw/papers/2025.findings-naacl.471.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Spoken language understanding research to date has generally carried a heavy text perspective. Most datasets are derived from text, which is then subsequently synthesized into speech, and most models typically rely on automatic transcriptions of speech. This is to the detriment of prosody–additional information carried by the speech signal beyond the phonetics of the words themselves and difficult to recover from text alone. In this work, we investigate the role of prosody in Spoken Question Answering. By isolating prosodic and lexical information on the SLUE-SQA-5 dataset, which consists of natural speech, we demonstrate that models trained on prosodic information alone can perform reasonably well by utilizing prosodic cues. However, we find that when lexical information is available, models tend to predominantly rely on it. Our findings suggest that while prosodic cues provide valuable supplementary information, more effective integration methods are required to ensure prosody contributes more significantly alongside lexical features.",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Investigates prosody impact in spoken QA; primarily spoken language understanding paper, not synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

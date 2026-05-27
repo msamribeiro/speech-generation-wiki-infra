@@ -1,0 +1,32 @@
+{
+  "id": "2602.22417",
+  "source_ids": {
+    "arxiv": "2602.22417"
+  },
+  "title": "Absorbing Discrete Diffusion for Speech Enhancement",
+  "authors": [
+    "Philippe Gonzalez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.22417",
+  "pdf_url": "https://arxiv.org/pdf/2602.22417.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Inspired by recent developments in neural speech coding and diffusion-based language modeling, we tackle speech enhancement by modeling the conditional distribution of clean speech codes given noisy speech codes using absorbing discrete diffusion. The proposed approach, which we call ADDSE, leverages both the expressive latent space of neural audio codecs and the non-autoregressive sampling procedure of diffusion models. To efficiently model the hierarchical structure of residual vector quantization codes, we propose RQDiT, which combines techniques from RQ-Transformer and diffusion Transformers for non-autoregressive modeling. Results show competitive performance in terms of non-intrusive objective metrics on two datasets, especially at low signal-to-noise ratios and with few sampling steps. Code and audio examples are available online.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Absorbing discrete diffusion for speech enhancement; primary task is enhancement, not synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

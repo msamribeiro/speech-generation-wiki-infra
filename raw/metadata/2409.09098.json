@@ -1,0 +1,38 @@
+{
+  "id": "2409.09098",
+  "source_ids": {
+    "arxiv": "2409.09098"
+  },
+  "title": "AccentBox: Towards High-Fidelity Zero-Shot Accent Generation",
+  "authors": [
+    "Jinzuomu Zhong",
+    "Korin Richmond",
+    "Zhiba Su",
+    "Siqi Sun"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 1,
+  "published_date": "2025-01-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2409.09098",
+  "pdf_url": "https://arxiv.org/pdf/2409.09098.pdf",
+  "pdf_path": "raw/papers/2409.09098.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While recent Zero-Shot Text-to-Speech (ZS-TTS) models have achieved high naturalness and speaker similarity, they fall short in accent fidelity and control. To address this issue, we propose zero-shot accent generation that unifies Foreign Accent Conversion (FAC), accented TTS, and ZS-TTS, with a novel two-stage pipeline. In the first stage, we achieve state-of-the-art (SOTA) on Accent Identification (AID) with 0.56 f1 score on unseen speakers. In the second stage, we condition a ZS-TTS system on the pretrained speaker-agnostic accent embeddings extracted by the AID model. The proposed system achieves higher accent fidelity on inherent/cross accent generation, and enables unseen accent generation.",
+  "arxiv_comment": "Accepted by ICASSP 2025",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Novel zero-shot accent generation unifying foreign accent conversion, accented TTS, and ZS-TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2503.04721",
+  "source_ids": {
+    "arxiv": "2503.04721"
+  },
+  "title": "Full-Duplex-Bench: A Benchmark to Evaluate Full-duplex Spoken Dialogue Models on Turn-taking Capabilities",
+  "authors": [
+    "Guan-Ting Lin",
+    "Jiachen Lian",
+    "Tingle Li",
+    "Qirui Wang",
+    "Gopala Anumanchipalli",
+    "Alexander H. Liu",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2503.04721",
+  "pdf_url": "https://arxiv.org/pdf/2503.04721.pdf",
+  "pdf_path": "raw/papers/2503.04721.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialogue modeling poses challenges beyond text-based language modeling, requiring real-time interaction, turn-taking, and backchanneling. While most Spoken Dialogue Models (SDMs) operate in half-duplex mode-processing one turn at a time - emerging full-duplex SDMs can listen and speak simultaneously, enabling more natural conversations. However, current evaluations remain limited, focusing mainly on turn-based metrics or coarse corpus-level analyses. To address this, we introduce Full-Duplex-Bench, a benchmark that systematically evaluates key interactive behaviors: pause handling, backchanneling, turn-taking, and interruption management. Our framework uses automatic metrics for consistent, reproducible assessment and provides a fair, fast evaluation setup. By releasing our benchmark and code, we aim to advance spoken dialogue modeling and foster the development of more natural and engaging SDMs.",
+  "arxiv_comment": "Accepted by ASRU 2025",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Benchmark for full-duplex spoken dialogue model turn-taking; directly advances SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

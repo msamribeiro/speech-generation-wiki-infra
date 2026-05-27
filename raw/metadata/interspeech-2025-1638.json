@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1638",
+  "source_ids": {
+    "isca": "xing25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1638"
+  },
+  "title": "EATS-Speech: Emotion-Adaptive Transformation and Priority Synthesis for Zero-Shot Text-to-Speech",
+  "authors": [
+    "Jingyuan Xing",
+    "Zhipeng Li",
+    "Shuaiqi Chen",
+    "Xiaofen Xing",
+    "Xiangmin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/xing25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/xing25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1638.pdf",
+  "pdf_source": "isca",
+  "abstract": "Zero-shot text-to-speech (TTS) supports diverse speech synthesis without speaker-specific data but struggles to accurately transfer emotions from reference to target text. Traditional approaches treat emotion as part of a global style, leading to inconsistent emotional expressiveness. To address this, we propose EATS-Speech, an Emotion-Adaptive Transformation Synthesis framework. EATS-Speech employs Emotion Priority Synthesis through a parallel pipeline that decomposes speech into non-emotion style, emotion, and content. It prioritizes emotion generation to enhance expressiveness. Furthermore, it introduces Emotion-Adaptive Transformation Synthesis, where an LLM-based converter learns text-emotion mapping patterns from the reference speech and transfers them to the target text. Experiments on the LibriTTS dataset demonstrate the improvements in emotional expressiveness and accurate emotion adaptation.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Emotion-adaptive transformation synthesis framework for zero-shot TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

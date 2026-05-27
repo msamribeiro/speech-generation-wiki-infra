@@ -1,0 +1,40 @@
+{
+  "id": "2025.iwsds-1.17",
+  "source_ids": {
+    "acl": "2025.iwsds-1.17",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.iwsds-1.17"
+  },
+  "title": "ScriptBoard: Designing modern spoken dialogue systems through visual programming",
+  "authors": [
+    "Divesh Lala",
+    "Mikey Elmers",
+    "Koji Inoue",
+    "Zi Haur Pang",
+    "Keiko Ochi",
+    "Tatsuya Kawahara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.iwsds-1.17",
+  "pdf_url": "https://aclanthology.org/2025.iwsds-1.17.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Implementation of spoken dialogue systems can be time-consuming, in particular for people who are not familiar with managing dialogue states and turn-taking in real-time. A GUI-based system where the user can quickly understand the dialogue flow allows rapid prototyping of experimental and real-world systems. In this demonstration we present ScriptBoard, a tool for creating dialogue scenarios which is independent of any specific robot platform. ScriptBoard has been designed with multi-party scenarios in mind and makes use of large language models to both generate dialogue and make decisions about the dialogue flow. This program promotes both flexibility and reproducibility in spoken dialogue research and provides everyone the opportunity to design and test their own dialogue scenarios.",
+  "task": [],
+  "relevance_score": 0.28,
+  "relevance_note": "GUI tool for creating spoken dialogue scenarios; engineering tool, not advancing synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

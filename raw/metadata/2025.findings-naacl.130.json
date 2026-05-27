@@ -1,0 +1,39 @@
+{
+  "id": "2025.findings-naacl.130",
+  "source_ids": {
+    "acl": "2025.findings-naacl.130",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-naacl.130",
+    "url_acl": "https://aclanthology.org/2025.findings-naacl.130"
+  },
+  "title": "DiVISe: Direct Visual-Input Speech Synthesis Preserving Speaker Characteristics And Intelligibility",
+  "authors": [
+    "Yifan Liu",
+    "Yu Fang",
+    "Zhouhan Lin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-naacl.130",
+  "pdf_url": "https://aclanthology.org/2025.findings-naacl.130.pdf",
+  "pdf_path": "raw/papers/2025.findings-naacl.130.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Video-to-speech (V2S) synthesis, the task of generating speech directly from silent video input, is inherently more challenging than other speech synthesis tasks due to the need to accurately reconstruct both speech content and speaker characteristics from visual cues alone. Recently, audio-visual pretraining has eliminated the need for additional acoustic hints in V2S, which previous methods often relied on to ensure training convergence. However, even with pretraining, existing methods continue to face challenges in achieving a balance between acoustic intelligibility and the preservation of speaker-specific characteristics. We analyzed this limitation and were motivated to introduce DiVISe (Direct Vsual-Input Speech Synthesis), an end-to-end V2S model that predicts Mel-spectrograms directly from video frames alone. Despite not taking any acoustic hints, DiVISe effectively preserves speaker characteristics in the generated audio, and achieves superior performance on both objective and subjective metrics across the LRS2 and LRS3 datasets. Our results demonstrate that DiVISe not only outperforms existing V2S models in acoustic intelligibility but also scales more effectively with increased data and model parameters. Code and weights will be made publicly available after acceptance of this paper.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Video-to-speech synthesis preserving speaker characteristics and intelligibility using audio-visual pretraining; directly advances conditional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

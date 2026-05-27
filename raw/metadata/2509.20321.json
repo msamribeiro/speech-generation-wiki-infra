@@ -1,0 +1,58 @@
+{
+  "id": "2509.20321",
+  "source_ids": {
+    "arxiv": "2509.20321"
+  },
+  "title": "Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones",
+  "authors": [
+    "Maria Teleki",
+    "Sai Janjur",
+    "Haoran Liu",
+    "Oliver Grabner",
+    "Ketan Verma",
+    "Thomas Docog",
+    "Xiangjue Dong",
+    "Lingfeng Shi",
+    "Cong Wang",
+    "Stephanie Birkelbach"
+  ],
+  "authors_full": [
+    "Maria Teleki",
+    "Sai Janjur",
+    "Haoran Liu",
+    "Oliver Grabner",
+    "Ketan Verma",
+    "Thomas Docog",
+    "Xiangjue Dong",
+    "Lingfeng Shi",
+    "Cong Wang",
+    "Stephanie Birkelbach",
+    "Jason Kim",
+    "Yin Zhang",
+    "Éva Székely",
+    "James Caverlee"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.20321",
+  "pdf_url": "https://arxiv.org/pdf/2509.20321.pdf",
+  "pdf_path": "raw/papers/2509.20321.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "LLMs serve as the backbone in SpeechLLMs, yet their behavior on spontaneous conversational input remains poorly understood. Conversational speech contains pervasive disfluencies -- interjections, edits, and parentheticals -- that are rare in the written corpora used for pre-training. Because gold disfluency removal is a deletion-only task, it serves as a controlled probe to determine whether a model performs faithful structural repair or biased reinterpretation. Using the DRES evaluation framework, we evaluate proprietary and open-source LLMs across architectures and scales. We show that model performance clusters into stable precision-recall regimes reflecting distinct editing policies. Notably, reasoning models systematically over-delete fluent content, revealing a bias toward semantic abstraction over structural fidelity. While fine-tuning achieves SOTA results, it harms generalization. Our findings demonstrate that robustness to speech is shaped by specific training objectives.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Analysis of SpeechLLM failures on conversational input; understanding paper, no synthesis contribution",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

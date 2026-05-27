@@ -1,0 +1,43 @@
+{
+  "id": "2601.09239",
+  "source_ids": {
+    "arxiv": "2601.09239"
+  },
+  "title": "DSA-Tokenizer: Disentangled Semantic-Acoustic Tokenization via Flow Matching-based Hierarchical Fusion",
+  "authors": [
+    "Hanlin Zhang",
+    "Daxin Tan",
+    "Dehua Tao",
+    "Xiao Chen",
+    "Haochen Tan",
+    "Yunhe Li",
+    "Yuchen Cao",
+    "Jianping Wang",
+    "Linqi Song"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.09239",
+  "pdf_url": "https://arxiv.org/pdf/2601.09239.pdf",
+  "pdf_path": "raw/papers/2601.09239.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech tokenizers serve as the cornerstone of discrete Speech Large Language Models (Speech LLMs). Existing tokenizers either prioritize semantic encoding, fuse semantic content with acoustic style inseparably, or achieve incomplete semantic-acoustic disentanglement. To achieve better disentanglement, we propose DSA-Tokenizer, which explicitly disentangles speech into discrete semantic and acoustic tokens via distinct optimization constraints. Specifically, semantic tokens are supervised by ASR to capture linguistic content, while acoustic tokens focus on mel-spectrograms restoration to encode style. To eliminate rigid length constraints between the two sequences, we introduce a hierarchical Flow-Matching decoder that further improve speech generation quality. Furthermore, We employ a joint reconstruction-recombination training strategy to enforce this separation. DSA-Tokenizer enables high fidelity reconstruction and flexible recombination through robust disentanglement, facilitating controllable generation in speech LLMs. Our analysis highlights disentangled tokenization as a pivotal paradigm for future speech modeling. Audio samples are avaialble at https://anonymous.4open.science/w/DSA_Tokenizer_demo/. The code and model will be made publicly available after the paper has been accepted.",
+  "arxiv_comment": "Submit to ACL ARR 2026 Jaunary",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Flow matching-based hierarchical tokenizer achieving explicit disentanglement of semantic and acoustic speech tokens",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

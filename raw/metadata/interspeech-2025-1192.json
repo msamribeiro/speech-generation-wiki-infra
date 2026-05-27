@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-1192",
+  "source_ids": {
+    "isca": "fujita25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1192"
+  },
+  "title": "Voice Impression Control in Zero-Shot TTS",
+  "authors": [
+    "Kenichi Fujita",
+    "Shota Horiguchi",
+    "Yusuke Ijima"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/fujita25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/fujita25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1192.pdf",
+  "pdf_source": "isca",
+  "abstract": "Para-/non-linguistic information in speech is pivotal in shaping the listeners' impression. Although zero-shot text-to-speech (TTS) has achieved high speaker fidelity, modulating subtle para-/non-linguistic information to control perceived voice characteristics, i.e., impressions, remains challenging. We have therefore developed a voice impression control method in zero-shot TTS that utilizes a low-dimensional vector to represent the intensities of various voice impression pairs (e.g., darkâbright). The results of both objective and subjective evaluations have demonstrated our method's effectiveness in impression control. Furthermore, generating this vector via a large language model enables target-impression generation from a natural language description of the desired impression, thus eliminating the need for manual optimization.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Interspeech version of voice impression control in zero-shot TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

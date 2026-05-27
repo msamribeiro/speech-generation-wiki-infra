@@ -1,0 +1,34 @@
+{
+  "id": "2512.00511",
+  "source_ids": {
+    "arxiv": "2512.00511"
+  },
+  "title": "A Low-Complexity Speech Codec Using Parametric Dithering for ASR",
+  "authors": [
+    "Ellison Murray",
+    "Morriel Kasher",
+    "Predrag Spasojevic"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.00511",
+  "pdf_url": "https://arxiv.org/pdf/2512.00511.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Dithering is a technique commonly used to improve the perceptual quality of lossy data compression. In this work, we analytically and experimentally justify the use of dithering for ASR input compression. We formalize an understanding of optimal ASR performance under lossy input compression and leverage this to propose a parametric dithering technique for a low-complexity speech compression pipeline. The method performs well at 1-bit resolution, showing a 25\\% relative CER improvement, while also demonstrating improvements of 32.4\\% and 33.5\\% at 2- and 3-bit resolution, respectively, with our second dither choice yielding a reduced data rate. The proposed codec is adaptable to meet performance targets or stay within entropy constraints.",
+  "arxiv_comment": "10 pages, 8 figures, Accepted 2026 Data Compression Conference",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Parametric dithering speech codec designed for ASR input compression; primary task is recognition, not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

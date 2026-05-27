@@ -1,0 +1,35 @@
+{
+  "id": "2509.14677",
+  "source_ids": {
+    "arxiv": "2509.14677"
+  },
+  "title": "SpeechMLC: Speech Multi-label Classification",
+  "authors": [
+    "Miseul Kim",
+    "Seyun Um",
+    "Hyeonjin Cha",
+    "Hong-goo Kang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14677",
+  "pdf_url": "https://arxiv.org/pdf/2509.14677.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this paper, we propose a multi-label classification framework to detect multiple speaking styles in a speech sample. Unlike previous studies that have primarily focused on identifying a single target style, our framework effectively captures various speaker characteristics within a unified structure, making it suitable for generalized human-computer interaction applications. The proposed framework integrates cross-attention mechanisms within a transformer decoder to extract salient features associated with each target label from the input speech. To mitigate the data imbalance inherent in multi-label speech datasets, we employ a data augmentation technique based on a speech generation model. We validate our model's effectiveness through multiple objective evaluations on seen and unseen corpora. In addition, we provide an analysis of the influence of human perception on classification accuracy by considering the impact of human labeling agreement on model performance.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2025",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Multi-label classification of speaking styles; speech analysis task, not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

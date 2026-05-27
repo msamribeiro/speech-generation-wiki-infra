@@ -1,0 +1,42 @@
+{
+  "id": "2503.06211",
+  "source_ids": {
+    "arxiv": "2503.06211"
+  },
+  "title": "Late Fusion and Multi-Level Fission Amplify Cross-Modal Transfer in Text-Speech LMs",
+  "authors": [
+    "Santiago Cuervo",
+    "Adel Moumen",
+    "Yanis Labrak",
+    "Sameer Khurana",
+    "Antoine Laurent",
+    "Mickael Rouvier",
+    "Phil Woodland",
+    "Ricard Marxer"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2503.06211",
+  "pdf_url": "https://arxiv.org/pdf/2503.06211.pdf",
+  "pdf_path": "raw/papers/2503.06211.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-Speech Language Models (TSLMs) -- language models trained to jointly process and generate text and speech -- are commonly trained through an early modality fusion/fission approach, in which both modalities are fed and predicted from a shared backbone via linear layers. We hypothesize that this approach limits cross-modal transfer by neglecting feature compositionality -- specifically, the finer-grained nature of speech representations compared to text -- preventing the emergence of a shared feature hierarchy within model layers. In this paper, we argue that this limitation can be addressed through late fusion and fission, with a fission process that accesses both high- and low-level features for speech generation. Our models implementing these principles, SmolTolk, rival or surpass state-of-the-art TSLMs trained with orders of magnitude more compute, and achieve significantly improved cross-modal performance relative to early fusion/fission baselines. Representation analyses further suggest that our method enhances the model's ability to abstract higher-level, more semantic features from speech, and leads to increasingly shared representation spaces across layers.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Late fusion and multi-level fission for text-speech LMs improving cross-modal transfer; advances speech LM architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2603.10713",
+  "source_ids": {
+    "arxiv": "2603.10713"
+  },
+  "title": "Probabilistic Verification of Voice Anti-Spoofing Models",
+  "authors": [
+    "Evgeny Kushnir",
+    "Alexandr Kozodaev",
+    "Dmitrii Korzh",
+    "Mikhail Pautov",
+    "Oleg Kiriukhin",
+    "Oleg Y. Rogov"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.10713",
+  "pdf_url": "https://arxiv.org/pdf/2603.10713.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in generative models have amplified the risk of malicious misuse of speech synthesis technologies, enabling adversaries to impersonate target speakers and access sensitive resources. Although speech deepfake detection has progressed rapidly, most existing countermeasures lack formal robustness guarantees or fail to generalize to unseen generation techniques. We propose PV-VASM, a probabilistic framework for verifying the robustness of voice anti-spoofing models (VASMs). PV-VASM estimates the probability of misclassification under text-to-speech (TTS), voice cloning (VC), and parametric signal transformations. The approach is model-agnostic and enables robustness verification against unseen speech synthesis techniques and input perturbations. We derive a theoretical upper bound on the error probability and validate the method across diverse experimental settings, demonstrating its effectiveness as a practical robustness verification tool.",
+  "arxiv_comment": "The paper was submitted for review to Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Probabilistic robustness verification for voice anti-spoofing detection models; anti-spoofing not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

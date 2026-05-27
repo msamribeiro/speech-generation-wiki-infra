@@ -1,0 +1,38 @@
+{
+  "id": "2603.24116",
+  "source_ids": {
+    "arxiv": "2603.24116"
+  },
+  "title": "How Open is Open TTS? A Practical Evaluation of Open Source TTS Tools",
+  "authors": [
+    "Teodora Răgman",
+    "Adrian Bogdan Stânea",
+    "Horia Cucu",
+    "Adriana Stan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.24116",
+  "pdf_url": "https://arxiv.org/pdf/2603.24116.pdf",
+  "pdf_path": "raw/papers/2603.24116.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Open-source text-to-speech (TTS) frameworks have emerged as highly adaptable platforms for developing speech synthesis systems across a wide range of languages. However, their applicability is not uniform -- particularly when the target language is under-resourced or when computational resources are constrained. In this study, we systematically assess the feasibility of building novel TTS models using four widely adopted open-source architectures: FastPitch, VITS, Grad-TTS, and Matcha-TTS. Our evaluation spans multiple dimensions, including qualitative aspects such as ease of installation, dataset preparation, and hardware requirements, as well as quantitative assessments of synthesis quality for Romanian. We employ both objective metrics and subjective listening tests to evaluate intelligibility, speaker similarity, and naturalness of the generated speech. The results reveal significant challenges in tool chain setup, data preprocessing, and computational efficiency, which can hinder adoption in low-resource contexts. By grounding the analysis in reproducible protocols and accessible evaluation criteria, this work aims to inform best practices and promote more inclusive, language-diverse TTS development.   All information needed to reproduce this study (i.e. code and data) are available in our git repository: https://gitlab.com/opentts_ragman/OpenTTS",
+  "arxiv_comment": "Published in IEEE Access https://ieeexplore.ieee.org/document/11269795",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Systematic evaluation of open-source TTS frameworks for low-resource language development",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

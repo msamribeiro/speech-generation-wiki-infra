@@ -1,0 +1,38 @@
+{
+  "id": "2604.06356",
+  "source_ids": {
+    "arxiv": "2604.06356"
+  },
+  "title": "In-Context Learning in Speech Language Models: Analyzing the Role of Acoustic Features, Linguistic Structure, and Induction Heads",
+  "authors": [
+    "Charlotte Pouw",
+    "Hosein Mohebbi",
+    "Afra Alishahi",
+    "Willem Zuidema"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.06356",
+  "pdf_url": "https://arxiv.org/pdf/2604.06356.pdf",
+  "pdf_path": "raw/papers/2604.06356.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In-Context Learning (ICL) has been extensively studied in text-only Language Models, but remains largely unexplored in the speech domain. Here, we investigate how linguistic and acoustic features affect ICL in Speech Language Models. We focus on the Text-to-Speech (TTS) task, which allows us to analyze ICL from two angles: (1) how accurately the model infers the task from the demonstrations (i.e., generating the correct spoken content), and (2) to what extent the model mimics the acoustic characteristics of the demonstration speech in its output. We find that speaking rate strongly affects ICL performance and is also mimicked in the output, whereas pitch range and intensity have little impact on performance and are not consistently reproduced. Finally, we investigate the role of induction heads in speech-based ICL and show that these heads play a causal role: ablating the top-k induction heads completely removes the model's ICL ability, mirroring findings from text-based ICL.",
+  "arxiv_comment": "Submitted to COLM 2026",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Investigates in-context learning in speech LMs for TTS, analyzing acoustic/linguistic features; advances TTS/SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

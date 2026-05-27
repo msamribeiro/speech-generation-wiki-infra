@@ -1,0 +1,43 @@
+{
+  "id": "2603.23938",
+  "source_ids": {
+    "arxiv": "2603.23938"
+  },
+  "title": "OmniACBench: A Benchmark for Evaluating Context-Grounded Acoustic Control in Omni-Modal Models",
+  "authors": [
+    "Seunghee Kim",
+    "Bumkyu Park",
+    "Kyudan Jung",
+    "Joosung Lee",
+    "Soyoon Kim",
+    "Jeonghoon Kim",
+    "Taeuk Kim",
+    "Hwiyeol Jo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.23938",
+  "pdf_url": "https://arxiv.org/pdf/2603.23938.pdf",
+  "pdf_path": "raw/papers/2603.23938.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Most testbeds for omni-modal models assess multimodal understanding via textual outputs, leaving it unclear whether these models can properly speak their answers. To study this, we introduce OmniACBench, a benchmark for evaluating context-grounded acoustic control in omni-modal models. Given a spoken instruction, a text script, and an image, a model must read the script aloud with an appropriate tone and manner. OmniACBench comprises 3,559 verified instances covering six acoustic features: speech rate, phonation, pronunciation, emotion, global accent, and timbre. Extensive experiments on eight models reveal their limitations in the proposed setting, despite their strong performance on prior textual-output evaluations. Our analyses show that the main bottleneck lies not in processing individual modalities, but in integrating multimodal context for faithful speech generation. Moreover, we identify three common failure modes-weak direct control, failed implicit inference, and failed multimodal grounding-providing insights for developing models that can verbalize responses effectively.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Benchmark for context-grounded acoustic control in omni-modal models reading scripts aloud; advances TTS/SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

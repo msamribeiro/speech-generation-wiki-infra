@@ -1,0 +1,37 @@
+{
+  "id": "2506.19441",
+  "source_ids": {
+    "arxiv": "2506.19441"
+  },
+  "title": "TTSDS2: Resources and Benchmark for Evaluating Human-Quality Text to Speech Systems",
+  "authors": [
+    "Christoph Minixhofer",
+    "Ondrej Klejch",
+    "Peter Bell"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.19441",
+  "pdf_url": "https://arxiv.org/pdf/2506.19441.pdf",
+  "pdf_path": "raw/papers/2506.19441.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Evaluation of Text to Speech (TTS) systems is challenging and resource-intensive. Subjective metrics such as Mean Opinion Score (MOS) are not easily comparable between works. Objective metrics are frequently used, but rarely validated against subjective ones. Both kinds of metrics are challenged by recent TTS systems capable of producing synthetic speech indistinguishable from real speech. In this work, we introduce Text to Speech Distribution Score 2 (TTSDS2), a more robust and improved version of TTSDS. Across a range of domains and languages, it is the only one out of 16 compared metrics to correlate with a Spearman correlation above 0.50 for every domain and subjective score evaluated. We also release a range of resources for evaluating synthetic speech close to real speech: A dataset with over 11,000 subjective opinion score ratings; a pipeline for continually recreating a multilingual test dataset to avoid data leakage; and a continually updated benchmark for TTS in 14 languages.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Benchmark and resource for evaluating TTS systems including metrics validation against subjective scores; directly advances TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

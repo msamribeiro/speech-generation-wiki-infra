@@ -1,0 +1,55 @@
+{
+  "id": "2509.14946",
+  "source_ids": {
+    "arxiv": "2509.14946"
+  },
+  "title": "SynParaSpeech: Automated Synthesis of Paralinguistic Datasets for Speech Generation and Understanding",
+  "authors": [
+    "Bingsong Bai",
+    "Qihang Lu",
+    "Wenbing Yang",
+    "Zihan Sun",
+    "Yueran Hou",
+    "Peilei Jia",
+    "Songbai Pu",
+    "Ruibo Fu",
+    "Yingming Gao",
+    "Ya Li"
+  ],
+  "authors_full": [
+    "Bingsong Bai",
+    "Qihang Lu",
+    "Wenbing Yang",
+    "Zihan Sun",
+    "Yueran Hou",
+    "Peilei Jia",
+    "Songbai Pu",
+    "Ruibo Fu",
+    "Yingming Gao",
+    "Ya Li",
+    "Jun Gao"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14946",
+  "pdf_url": "https://arxiv.org/pdf/2509.14946.pdf",
+  "pdf_path": "raw/papers/2509.14946.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Paralinguistic sounds, like laughter and sighs, are crucial for synthesizing more realistic and engaging speech. However, existing methods typically depend on proprietary datasets, while publicly available resources often suffer from incomplete speech, inaccurate or missing timestamps, and limited real-world relevance. To address these problems, we propose an automated framework for generating large-scale paralinguistic data and apply it to construct the SynParaSpeech dataset. The dataset comprises 6 paralinguistic categories with 118.75 hours of data and precise timestamps, all derived from natural conversational speech. Our contributions lie in introducing the first automated method for constructing large-scale paralinguistic datasets and releasing the SynParaSpeech corpus, which advances speech generation through more natural paralinguistic synthesis and enhances speech understanding by improving paralinguistic event detection. The dataset and audio samples are available at https://github.com/ShawnPi233/SynParaSpeech.",
+  "arxiv_comment": "Submitted to ICASSP 2026. Copyright 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Automated synthesis of paralinguistic datasets for speech generation and understanding research",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2509.22148",
+  "source_ids": {
+    "arxiv": "2509.22148"
+  },
+  "title": "Speaker Anonymisation for Speech-based Suicide Risk Detection",
+  "authors": [
+    "Ziyun Cui",
+    "Sike Jia",
+    "Yang Lin",
+    "Yinan Duan",
+    "Diyang Qu",
+    "Runsen Chen",
+    "Chao Zhang",
+    "Chang Lei",
+    "Wen Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.22148",
+  "pdf_url": "https://arxiv.org/pdf/2509.22148.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Adolescent suicide is a critical global health issue, and speech provides a cost-effective modality for automatic suicide risk detection. Given the vulnerable population, protecting speaker identity is particularly important, as speech itself can reveal personally identifiable information if the data is leaked or maliciously exploited. This work presents the first systematic study of speaker anonymisation for speech-based suicide risk detection. A broad range of anonymisation methods are investigated, including techniques based on traditional signal processing, neural voice conversion, and speech synthesis. A comprehensive evaluation framework is built to assess the trade-off between protecting speaker identity and preserving information essential for suicide risk detection. Results show that combining anonymisation methods that retain complementary information yields detection performance comparable to that of original speech, while achieving protection of speaker identity for vulnerable populations.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "VC-based speaker anonymization for clinical speech; generation is a privacy tool, not the primary contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2601.07303",
+  "source_ids": {
+    "arxiv": "2601.07303"
+  },
+  "title": "ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge Evaluation Plan",
+  "authors": [
+    "Xueping Zhang",
+    "Han Yin",
+    "Yang Xiao",
+    "Lin Zhang",
+    "Ting Dang",
+    "Rohan Kumar Das",
+    "Ming Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.07303",
+  "pdf_url": "https://arxiv.org/pdf/2601.07303.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Audio recorded in real-world environments often contains a mixture of foreground speech and background environmental sounds. With rapid advances in text-to-speech, voice conversion, and other generation models, either component can now be modified independently. Such component-level manipulations are harder to detect, as the remaining unaltered component can mislead the systems designed for whole deepfake audio, and they often sound more natural to human listeners. To address this gap, we have proposed CompSpoofV2 dataset and a separation-enhanced joint learning framework. CompSpoofV2 is a large-scale curated dataset designed for component-level audio anti-spoofing, which contains over 250k audio samples, with a total duration of approximately 283 hours. Based on the CompSpoofV2 and the separation-enhanced joint learning framework, we launch the Environment-Aware Speech and Sound Deepfake Detection Challenge (ESDD2), focusing on component-level spoofing, where both speech and environmental sounds may be manipulated or synthesized, creating a more challenging and realistic detection scenario. The challenge will be held in conjunction with the IEEE International Conference on Multimedia and Expo 2026 (ICME 2026).",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Environment-aware deepfake detection challenge; anti-spoofing not speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

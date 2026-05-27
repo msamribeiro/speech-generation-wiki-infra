@@ -1,0 +1,41 @@
+{
+  "id": "2025.emnlp-main.734",
+  "source_ids": {
+    "acl": "2025.emnlp-main.734",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.emnlp-main.734",
+    "url_acl": "https://aclanthology.org/2025.emnlp-main.734"
+  },
+  "title": "SPIRIT: Patching Speech Language Models against Jailbreak Attacks",
+  "authors": [
+    "Amirbek Djanibekov",
+    "Nurdaulet Mukhituly",
+    "Kentaro Inui",
+    "Hanan Aldarmaki",
+    "Nils Lukas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.emnlp-main.734",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-main.734.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Speech Language Models (SLMs) enable natural interactions via spoken instructions, which more effectively capture user intent by detecting nuances in speech. The richer speech signal introduces new security risks compared to text-based models, as adversaries can better bypass safety mechanisms by injecting imperceptible noise to speech. We analyze adversarial attacks under white-box access and find that SLMs are substantially more vulnerable to jailbreak attacks, which can achieve a perfect 100% attack success rate in some instances. To improve security, we propose post-hoc patching defenses used to intervene during inference by modifying the SLM’s activations that improve robustness up to 99% with (i) negligible impact on utility and (ii) without any re-training. We conduct ablation studies to maximize the efficacy of our defenses and improve the utility/security trade-off, validated with large-scale benchmarks unique to SLMs.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.42,
+  "relevance_note": "Security patching for speech LMs against adversarial jailbreak; primarily a security paper, tangentially relevant to SCA robustness.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

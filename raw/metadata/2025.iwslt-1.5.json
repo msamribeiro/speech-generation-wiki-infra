@@ -1,0 +1,41 @@
+{
+  "id": "2025.iwslt-1.5",
+  "source_ids": {
+    "acl": "2025.iwslt-1.5",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.iwslt-1.5",
+    "url_acl": "https://aclanthology.org/2025.iwslt-1.5"
+  },
+  "title": "SSR: Alignment-Aware Modality Connector for Speech Language Models",
+  "authors": [
+    "Weiting Tan",
+    "Hirofumi Inaguma",
+    "Ning Dong",
+    "Paden D. Tomasello",
+    "Xutai Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.iwslt-1.5",
+  "pdf_url": "https://aclanthology.org/2025.iwslt-1.5.pdf",
+  "pdf_path": "raw/papers/2025.iwslt-1.5.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Fusing speech into a pre-trained language model (SpeechLM) usually suffers from the inefficient encoding of long-form speech and catastrophic forgetting of pre-trained text modality. We propose SSR (Segmented Speech Representation Connector) for better modality fusion. Leveraging speech-text alignments, our approach segments and compresses speech features to match the granularity of text embeddings. Additionally, we introduce a two-stage training pipeline that includes the distillation and fine-tuning phases to mitigate catastrophic forgetting. SSR outperforms existing mechanisms for speech-text modality fusion, consistently achieving better speech understanding (e.g., +10 accuracy on StoryCloze and +20 on Speech-MMLU) while preserving pre-trained text ability.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Segmented speech representation connector for better speech-text modality fusion in speech LLMs; advances speech LM training.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2603.05373",
+  "source_ids": {
+    "arxiv": "2603.05373"
+  },
+  "title": "Hierarchical Decoding for Discrete Speech Synthesis with Multi-Resolution Spoof Detection",
+  "authors": [
+    "Junchuan Zhao",
+    "Minh Duc Vu",
+    "Ye Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.05373",
+  "pdf_url": "https://arxiv.org/pdf/2603.05373.pdf",
+  "pdf_path": "raw/papers/2603.05373.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural codec language models enable high-quality discrete speech synthesis, yet their inference remains vulnerable to token-level artifacts and distributional drift that degrade perceptual realism. Rather than relying on preference optimization or retraining, we propose MSpoof-TTS, a training-free inference framework that improves zero-shot synthesis through multi-resolution spoof guidance. We introduce a Multi-Resolution Token-based Spoof Detection framework that evaluates codec sequences at different temporal granularities to detect locally inconsistent or unnatural patterns. We then integrate the spoof detectors into a hierarchical decoding strategy, progressively pruning low-quality candidates and re-ranking hypotheses. This discriminator-guided generation enhances robustness without modifying model parameters. Experiments validate the effectiveness of our framework for robust and high-quality codec-based speech generation. Audio samples are available at https://danny-nus.github.io/MSpoofTTS.github.io/.",
+  "arxiv_comment": "7 pages, 3 figures, 3 tables, 2 algorithms",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Training-free multi-resolution spoof guidance improving quality of discrete codec LM speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

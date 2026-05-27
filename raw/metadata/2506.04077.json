@@ -1,0 +1,38 @@
+{
+  "id": "2506.04077",
+  "source_ids": {
+    "arxiv": "2506.04077"
+  },
+  "title": "A Novel Data Augmentation Approach for Automatic Speaking Assessment on Opinion Expressions",
+  "authors": [
+    "Chung-Chun Wang",
+    "Jhen-Ke Lin",
+    "Hao-Chien Lu",
+    "Hong-Yun Lin",
+    "Berlin Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.04077",
+  "pdf_url": "https://arxiv.org/pdf/2506.04077.pdf",
+  "pdf_path": "raw/papers/2506.04077.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Automated speaking assessment (ASA) on opinion expressions is often hampered by the scarcity of labeled recordings, which restricts prompt diversity and undermines scoring reliability. To address this challenge, we propose a novel training paradigm that leverages a large language models (LLM) to generate diverse responses of a given proficiency level, converts responses into synthesized speech via speaker-aware text-to-speech synthesis, and employs a dynamic importance loss to adaptively reweight training instances based on feature distribution differences between synthesized and real speech. Subsequently, a multimodal large language model integrates aligned textual features with speech signals to predict proficiency scores directly. Experiments conducted on the LTTC dataset show that our approach outperforms methods relying on real data or conventional augmentation, effectively mitigating low-resource constraints and enabling ASA on opinion expressions with cross-modal information.",
+  "arxiv_comment": "submitted to the ISCA SLaTE-2025 Workshop",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "TTS used to generate diverse stimuli for automated speaking assessment; TTS is a data augmentation tool not the primary contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

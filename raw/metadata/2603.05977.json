@@ -1,0 +1,35 @@
+{
+  "id": "2603.05977",
+  "source_ids": {
+    "arxiv": "2603.05977"
+  },
+  "title": "Activation Steering for Accent-Neutralized Zero-Shot Text-To-Speech",
+  "authors": [
+    "Mu Yang",
+    "John H. L. Hansen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.05977",
+  "pdf_url": "https://arxiv.org/pdf/2603.05977.pdf",
+  "pdf_path": "raw/papers/2603.05977.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot Text-to-Speech (TTS) models can generate speech that captures both the voice timbre and accent of a reference speaker. However, disentangling these attributes remains challenging, as the output often inherits both the accent and timbre from the reference. In this study, we introduce a novel, post-hoc, and training-free approach to neutralize accent while preserving the speaker's original timbre, utilizing inference-time activation steering. We first extract layer-specific \"steering vectors\" offline, which are derived from the internal activation differences within the TTS model between accented and native speech. During inference, the steering vectors are applied to guide the model to produce accent-neutralized, timbre-preserving speech. Empirical results demonstrate that the proposed steering vectors effectively mitigate the output accent and exhibit strong generalizability to unseen accented speakers, offering a practical solution for accent-free voice cloning.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Post-hoc training-free activation steering for accent neutralization in zero-shot TTS while preserving timbre",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

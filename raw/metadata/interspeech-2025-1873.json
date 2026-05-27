@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-1873",
+  "source_ids": {
+    "isca": "wang25v_interspeech",
+    "doi": "10.21437/Interspeech.2025-1873"
+  },
+  "title": "Can AI Understand Mandarin Speech Prosody?  A Framework and Benchmark Showcase",
+  "authors": [
+    "Zilong Wang",
+    "Xiaoxue Zhang",
+    "Xinyang Jiang",
+    "Kaitao Song",
+    "Jue Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/wang25v_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/wang25v_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1873.pdf",
+  "pdf_source": "isca",
+  "abstract": "How to model and estimate speech prosody is considered as a challenging task in understanding and generating natural speech. We introduce the Mandarin Speech Prosody Benchmark (MSPB), a linguistically grounded dataset for evaluating Speech Large Language Models (Speech LLMs) in Mandarin. MSPB comprises eight tasks covering crucial prosodic features and their interactions with syntax, semantics, and pragmatics. All MSPB items, designed per Mandarin linguistic principles and validated by experts, were phonetically recorded and verified. We evaluated six Speech LLMs (GPT-4o, Gemini-1.5-Pro, Gemini-2-Flash, Qwen2-Audio-7B-Instruct, GLM-4-Voice, MiniCPM-o 2.6). Although some models perform well with context-rich cues (e.g., irony), they generally struggle with subtle prosodic variations (e.g., focus marking) and underperform humans. MSPB provides a valuable tool to assess and enhance prosodic comprehension, underscoring the need for improved prosodic integration in future research.",
+  "task": [
+    "TTS",
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Linguistically grounded Mandarin prosody benchmark for speech LLMs; advances TTS and SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

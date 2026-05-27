@@ -1,0 +1,38 @@
+{
+  "id": "2604.17358",
+  "source_ids": {
+    "arxiv": "2604.17358"
+  },
+  "title": "Still Between Us? Evaluating and Improving Voice Assistant Robustness to Third-Party Interruptions",
+  "authors": [
+    "Dongwook Lee",
+    "Eunwoo Song",
+    "Che Hyun Lee",
+    "Heeseung Kim",
+    "Sungroh Yoon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.17358",
+  "pdf_url": "https://arxiv.org/pdf/2604.17358.pdf",
+  "pdf_path": "raw/papers/2604.17358.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While recent Spoken Language Models (SLMs) have been actively deployed in real-world scenarios, they lack the capability to discern Third-Party Interruptions (TPI) from the primary user's ongoing flow, leaving them vulnerable to contextual failures. To bridge this gap, we introduce TPI-Train, a dataset of 88K instances designed with speaker-aware hard negatives to enforce acoustic cue prioritization for interruption handling, and TPI-Bench, a comprehensive evaluation framework designed to rigorously measure the interruption-handling strategy and precise speaker discrimination in deceptive contexts. Experiments demonstrate that our dataset design mitigates semantic shortcut learning-a critical pitfall where models exploit semantic context while neglecting acoustic signals essential for discerning speaker changes. We believe our work establishes a foundational resource for overcoming text-dominated unimodal reliance in SLMs, paving the way for more robust multi-party spoken interaction. The code for the framework is publicly available at https://tpi-va.github.io",
+  "arxiv_comment": "ACL 2026 main conference",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Evaluates and improves voice assistant robustness to third-party interruptions; core SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

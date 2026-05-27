@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2025-0874",
+  "source_ids": {
+    "isca": "hu25f_interspeech",
+    "doi": "10.21437/Interspeech.2025-874"
+  },
+  "title": "Efficient and Direct Duplex Modeling for Speech-to-Speech Language Model",
+  "authors": [
+    "Ke Hu",
+    "Ehsan Hosseini-Asl",
+    "Chen Chen",
+    "Edresson Casanova",
+    "Subhankar Ghosh",
+    "Piotr Å»elasko",
+    "Zhehuai Chen",
+    "Jason Li",
+    "Jagadeesh Balam",
+    "Boris Ginsburg"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/hu25f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/hu25f_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0874.pdf",
+  "pdf_source": "isca",
+  "abstract": "Spoken dialogue is an intuitive form of human-computer interaction, yet current speech language models often remain constrained to turn-based exchanges, lacking real-time adaptability such as user barge-in. We propose a novel duplex speech to speech (S2S) architecture featuring continuous user inputs and codec agent outputs with channel fusion that directly models simultaneous user and agent streams. Using a pretrained streaming encoder for user input enables the first duplex S2S model without requiring speech pretrain. Separate architectures for agent and user modeling facilitate codec fine-tuning for better agent voices and halve the bitrate (0.6 kbps) compared to previous works. Experimental results show that the proposed model outperforms previous duplex models in reasoning, turn-taking, and barge-in abilities. The model requires significantly less speech data, as speech pretrain is skipped, which markedly simplifies the process of building a duplex S2S model from any LLMs. Finally, it is the first openly available duplex S2S model with training and inference code to foster reproducibility.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Novel duplex S2S architecture with continuous input/codec output and channel fusion; advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

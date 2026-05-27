@@ -1,0 +1,37 @@
+{
+  "id": "2507.22968",
+  "source_ids": {
+    "arxiv": "2507.22968"
+  },
+  "title": "C3: A Bilingual Benchmark for Spoken Dialogue Models Exploring Challenges in Complex Conversations",
+  "authors": [
+    "Chengqian Ma",
+    "Wei Tao",
+    "Yiwen Guo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.22968",
+  "pdf_url": "https://arxiv.org/pdf/2507.22968.pdf",
+  "pdf_path": "raw/papers/2507.22968.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken Dialogue Models (SDMs) have recently attracted significant attention for their ability to generate voice responses directly to users' spoken queries. Despite their increasing popularity, there exists a gap in research focused on comprehensively understanding their practical effectiveness in comprehending and emulating human conversations. This is especially true compared to text-based Large Language Models (LLMs), which benefit from extensive benchmarking. Human voice interactions are inherently more complex than text due to characteristics unique to spoken dialogue. Ambiguity poses one challenge, stemming from semantic factors like polysemy, as well as phonological aspects such as heterograph, heteronyms, and stress patterns. Additionally, context-dependency, like omission, coreference, and multi-turn interaction, adds further complexity to human conversational dynamics. To illuminate the current state of SDM development and to address these challenges, we present a benchmark dataset in this paper, which comprises 1,079 instances in English and Chinese. Accompanied by an LLM-based evaluation method that closely aligns with human judgment, this dataset facilitates a comprehensive exploration of the performance of SDMs in tackling these practical challenges.",
+  "arxiv_comment": "EMNLP 2025 main; Project Page: https://step-out.github.io/C3-web/",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "arXiv version of C3 benchmark for spoken dialogue models; directly advances SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

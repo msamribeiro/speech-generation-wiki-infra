@@ -1,0 +1,38 @@
+{
+  "id": "2601.23255",
+  "source_ids": {
+    "arxiv": "2601.23255"
+  },
+  "title": "Now You Hear Me: Audio Narrative Attacks Against Large Audio-Language Models",
+  "authors": [
+    "Ye Yu",
+    "Haibo Jin",
+    "Yaoning Yu",
+    "Jun Zhuang",
+    "Haohan Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.23255",
+  "pdf_url": "https://arxiv.org/pdf/2601.23255.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Large audio-language models increasingly operate on raw speech inputs, enabling more seamless integration across domains such as voice assistants, education, and clinical triage. This transition, however, introduces a distinct class of vulnerabilities that remain largely uncharacterized. We examine the security implications of this modality shift by designing a text-to-audio jailbreak that embeds disallowed directives within a narrative-style audio stream. The attack leverages an advanced instruction-following text-to-speech (TTS) model to exploit structural and acoustic properties, thereby circumventing safety mechanisms primarily calibrated for text. When delivered through synthetic speech, the narrative format elicits restricted outputs from state-of-the-art models, including Gemini 2.0 Flash, achieving a 98.26% success rate that substantially exceeds text-only baselines. These results highlight the need for safety frameworks that jointly reason over linguistic and paralinguistic representations, particularly as speech-based interfaces become more prevalent.",
+  "arxiv_comment": "to be published at EACL 2026 main conference",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.42,
+  "relevance_note": "Jailbreak attacks on audio-language models via TTS-embedded adversarial prompts; security paper, tangentially relevant to SCA.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

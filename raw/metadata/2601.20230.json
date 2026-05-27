@@ -1,0 +1,36 @@
+{
+  "id": "2601.20230",
+  "source_ids": {
+    "arxiv": "2601.20230"
+  },
+  "title": "Unit-Based Agent for Semi-Cascaded Full-Duplex Dialogue Systems",
+  "authors": [
+    "Haoyuan Yu",
+    "Yuxuan Chen",
+    "Minjie Cai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.20230",
+  "pdf_url": "https://arxiv.org/pdf/2601.20230.pdf",
+  "pdf_path": "raw/papers/2601.20230.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex voice interaction is crucial for natural human computer interaction. We present a framework that decomposes complex dialogue into minimal conversational units, enabling the system to process each unit independently and predict when to transit to the next. This framework is instantiated as a semi-cascaded full-duplex dialogue system built around a multimodal large language model, supported by auxiliary modules such as voice activity detection (VAD) and text-to-speech (TTS) synthesis. The resulting system operates in a train-free, plug-and-play manner. Experiments on the HumDial dataset demonstrate the effectiveness of our framework, which ranks second among all teams on the test set of the Human-like Spoken Dialogue Systems Challenge (Track 2: Full-Duplex Interaction). Code is available at the GitHub repository https://github.com/yu-haoyuan/fd-badcat.",
+  "arxiv_comment": "ICASSP 2026 (Grant Challenge). https://github.com/yu-haoyuan/fd-badcat",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Semi-cascaded full-duplex dialogue system with unit-based speech processing; advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

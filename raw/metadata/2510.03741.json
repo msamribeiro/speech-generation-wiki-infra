@@ -1,0 +1,37 @@
+{
+  "id": "2510.03741",
+  "source_ids": {
+    "arxiv": "2510.03741"
+  },
+  "title": "Désentrelacement Fréquentiel Doux pour les Codecs Audio Neuronaux",
+  "authors": [
+    "Benoît Giniès",
+    "Xiaoyu Bie",
+    "Olivier Fercoq",
+    "Gaël Richard"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.03741",
+  "pdf_url": "https://arxiv.org/pdf/2510.03741.pdf",
+  "pdf_path": "raw/papers/2510.03741.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While neural-based models have led to significant advancements in audio feature extraction, the interpretability of the learned representations remains a critical challenge. To address this, disentanglement techniques have been integrated into discrete neural audio codecs to impose structure on the extracted tokens. However, these approaches often exhibit strong dependencies on specific datasets or task formulations. In this work, we propose a disentangled neural audio codec that leverages spectral decomposition of time-domain signals to enhance representation interpretability. Experimental evaluations demonstrate that our method surpasses a state-of-the-art baseline in both reconstruction fidelity and perceptual quality.",
+  "arxiv_comment": "in French language, Groupe de Recherche et d'Etudes du Traitement du Signal et des Images (GRETSI 2025), Aug 2025, Strasbourg, France",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Soft frequency disentanglement for neural audio codecs; core codec architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

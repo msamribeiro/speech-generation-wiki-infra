@@ -1,0 +1,39 @@
+{
+  "id": "2025.iwsds-1.27",
+  "source_ids": {
+    "acl": "2025.iwsds-1.27",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.iwsds-1.27"
+  },
+  "title": "A Survey of Recent Advances on Turn-taking Modeling in Spoken Dialogue Systems",
+  "authors": [
+    "Galo Castillo-López",
+    "Gael de Chalendar",
+    "Nasredine Semmar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.iwsds-1.27",
+  "pdf_url": "https://aclanthology.org/2025.iwsds-1.27.pdf",
+  "pdf_path": "raw/papers/2025.iwsds-1.27.pdf",
+  "pdf_source": "anthology",
+  "abstract": "The rapid growth of dialogue systems adoption to serve humans in daily tasks has increased the realism expected from these systems. One trait of realism is the way speaking agents take their turns. We provide here a review of recent methods on turn-taking modeling and thoroughly describe the corpora used in these studies. We observe that 72% of the reviewed works in this survey do not compare their methods with previous efforts. We argue that one of the challenges in the field is the lack of well-established benchmarks to monitor progress. This work aims to provide the community with a better understanding of the current state of research around turn-taking modeling and future directions to build more realistic spoken conversational agents.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Survey of turn-taking modeling for spoken dialogue systems; relevant to SCA interaction design but not speech synthesis directly.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

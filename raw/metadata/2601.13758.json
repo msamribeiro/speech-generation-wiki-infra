@@ -1,0 +1,39 @@
+{
+  "id": "2601.13758",
+  "source_ids": {
+    "arxiv": "2601.13758"
+  },
+  "title": "GOMPSNR: Reflourish the Signal-to-Noise Ratio Metric for Audio Generation Tasks",
+  "authors": [
+    "Lingling Dai",
+    "Andong Li",
+    "Cheng Chi",
+    "Yifan Liang",
+    "Xiaodong Li",
+    "Chengshi Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.13758",
+  "pdf_url": "https://arxiv.org/pdf/2601.13758.pdf",
+  "pdf_path": "raw/papers/2601.13758.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In the field of audio generation, signal-to-noise ratio (SNR) has long served as an objective metric for evaluating audio quality. Nevertheless, recent studies have shown that SNR and its variants are not always highly correlated with human perception, prompting us to raise the questions: Why does SNR fail in measuring audio quality? And how to improve its reliability as an objective metric? In this paper, we identify the inadequate measurement of phase distance as a pivotal factor and propose to reformulate SNR with specially designed phase-distance terms, yielding an improved metric named GOMPSNR. We further extend the newly proposed formulation to derive two novel categories of loss function, corresponding to magnitude-guided phase refinement and joint magnitude-phase optimization, respectively. Besides, extensive experiments are conducted for an optimal combination of different loss functions. Experimental results on advanced neural vocoders demonstrate that our proposed GOMPSNR exhibits more reliable error measurement than SNR. Meanwhile, our proposed loss functions yield substantial improvements in model performance, and our wellchosen combination of different loss functions further optimizes the overall model capability.",
+  "arxiv_comment": "Accepted by AAAI 2026",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Improved geometric mean SNR metric better correlated with human perception for audio generation quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

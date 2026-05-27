@@ -1,0 +1,34 @@
+{
+  "id": "2601.04227",
+  "source_ids": {
+    "arxiv": "2601.04227"
+  },
+  "title": "Defense Against Synthetic Speech: Real-Time Detection of RVC Voice Conversion Attacks",
+  "authors": [
+    "Prajwal Chinchmalatpure",
+    "Suyash Chinchmalatpure",
+    "Siddharth Chavan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.04227",
+  "pdf_url": "https://arxiv.org/pdf/2601.04227.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Generative audio technologies now enable highly realistic voice cloning and real-time voice conversion, increasing the risk of impersonation, fraud, and misinformation in communication channels such as phone and video calls. This study investigates real-time detection of AI-generated speech produced using Retrieval-based Voice Conversion (RVC), evaluated on the DEEP-VOICE dataset, which includes authentic and voice-converted speech samples from multiple well-known speakers. To simulate realistic conditions, deepfake generation is applied to isolated vocal components, followed by the reintroduction of background ambiance to suppress trivial artifacts and emphasize conversion-specific cues. We frame detection as a streaming classification task by dividing audio into one-second segments, extracting time-frequency and cepstral features, and training supervised machine learning models to classify each segment as real or voice-converted. The proposed system enables low-latency inference, supporting both segment-level decisions and call-level aggregation. Experimental results show that short-window acoustic features can reliably capture discriminative patterns associated with RVC speech, even in noisy backgrounds. These findings demonstrate the feasibility of practical, real-time deepfake speech detection and underscore the importance of evaluating under realistic audio mixing conditions for robust deployment.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Real-time detection of RVC voice conversion attacks; deepfake detection not voice conversion research",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

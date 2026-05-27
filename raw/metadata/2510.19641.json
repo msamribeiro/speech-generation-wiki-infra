@@ -1,0 +1,37 @@
+{
+  "id": "2510.19641",
+  "source_ids": {
+    "arxiv": "2510.19641"
+  },
+  "title": "Style Attack Disguise: When Fonts Become a Camouflage for Adversarial Intent",
+  "authors": [
+    "Yangshijie Zhang",
+    "Xinda Wang",
+    "Jialin Liu",
+    "Wenqiang Wang",
+    "Zhicong Ma",
+    "Xingxing Jia"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.19641",
+  "pdf_url": "https://arxiv.org/pdf/2510.19641.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "With social media growth, users employ stylistic fonts and font-like emoji to express individuality, creating visually appealing text that remains human-readable. However, these fonts introduce hidden vulnerabilities in NLP models: while humans easily read stylistic text, models process these characters as distinct tokens, causing interference. We identify this human-model perception gap and propose a style-based attack, Style Attack Disguise (SAD). We design two sizes: light for query efficiency and strong for superior attack performance. Experiments on sentiment classification and machine translation across traditional models, LLMs, and commercial services demonstrate SAD's strong attack performance. We also show SAD's potential threats to multimodal tasks including text-to-image and text-to-speech generation.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "NLP adversarial attack using stylistic fonts; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

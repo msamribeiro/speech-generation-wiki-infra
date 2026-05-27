@@ -1,0 +1,36 @@
+{
+  "id": "2508.08715",
+  "source_ids": {
+    "arxiv": "2508.08715"
+  },
+  "title": "MultiGen: Child-Friendly Multilingual Speech Generator with LLMs",
+  "authors": [
+    "Xiaoxue Gao",
+    "Huayun Zhang",
+    "Nancy F. Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.08715",
+  "pdf_url": "https://arxiv.org/pdf/2508.08715.pdf",
+  "pdf_path": "raw/papers/2508.08715.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Generative speech models have demonstrated significant potential in improving human-machine interactions, offering valuable real-world applications such as language learning for children. However, achieving high-quality, child-friendly speech generation remains challenging, particularly for low-resource languages across diverse languages and cultural contexts. In this paper, we propose MultiGen, a multilingual speech generation model with child-friendly interaction, leveraging LLM architecture for speech generation tailored for low-resource languages. We propose to integrate age-appropriate multilingual speech generation using LLM architectures, which can be used to facilitate young children's communication with AI systems through culturally relevant context in three low-resource languages: Singaporean accent Mandarin, Malay, and Tamil. Experimental results from both objective metrics and subjective evaluations demonstrate the superior performance of the proposed MultiGen compared to baseline methods.",
+  "arxiv_comment": "5 pages",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Multilingual LLM-based speech generator for child-friendly low-resource language synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

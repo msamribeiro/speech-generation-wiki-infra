@@ -1,0 +1,43 @@
+{
+  "id": "2510.22588",
+  "source_ids": {
+    "arxiv": "2510.22588"
+  },
+  "title": "UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models",
+  "authors": [
+    "Wenming Tu",
+    "Guanrou Yang",
+    "Ruiqi Yan",
+    "Wenxi Chen",
+    "Ziyang Ma",
+    "Yipeng Kang",
+    "Kai Yu",
+    "Xie Chen",
+    "Zilong Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.22588",
+  "pdf_url": "https://arxiv.org/pdf/2510.22588.pdf",
+  "pdf_path": "raw/papers/2510.22588.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialogue models currently lack the ability for fine-grained speech style control, a critical capability for human-like interaction that is often overlooked in favor of purely functional capabilities like reasoning and question answering. To address this limitation, we introduce UltraVoice, the first large-scale speech dialogue dataset engineered for multiple fine-grained speech style control. Encompassing over 830 hours of speech dialogues, UltraVoice provides instructions across six key speech stylistic dimensions: emotion, speed, volume, accent, language, and composite styles. Fine-tuning leading models such as SLAM-Omni and VocalNet on UltraVoice significantly enhances their fine-grained speech stylistic controllability without degrading core conversational abilities. Specifically, our fine-tuned models achieve improvements of 29.12-42.33% in Mean Opinion Score (MOS) and 14.61-40.09 percentage points in Instruction Following Rate (IFR) on multi-dimensional control tasks designed in the UltraVoice. Moreover, on the URO-Bench benchmark, our fine-tuned models demonstrate substantial gains in core understanding, reasoning, and conversational abilities, with average improvements of +10.84% on the Basic setting and +7.87% on the Pro setting. Furthermore, the dataset's utility extends to training controllable Text-to-Speech (TTS) models, underscoring its high quality and broad applicability for expressive speech synthesis. The complete dataset and model checkpoints are available at: https://github.com/bigai-nlco/UltraVoice.",
+  "arxiv_comment": "23 pages, 4 figures",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Large-scale dataset and training framework for fine-grained speech style control in spoken dialogue models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

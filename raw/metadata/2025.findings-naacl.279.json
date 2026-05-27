@@ -1,0 +1,58 @@
+{
+  "id": "2025.findings-naacl.279",
+  "source_ids": {
+    "acl": "2025.findings-naacl.279",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-naacl.279",
+    "url_acl": "https://aclanthology.org/2025.findings-naacl.279"
+  },
+  "title": "BnTTS: Few-Shot Speaker Adaptation in Low-Resource Setting",
+  "authors": [
+    "Mohammad Jahid Ibna Basher",
+    "Md Kowsher",
+    "Md Saiful Islam",
+    "Rabindra Nath Nandi",
+    "Nusrat Jahan Prottasha",
+    "Mehadi Hasan Menon",
+    "Tareq Al Muntasir",
+    "Shammur Absar Chowdhury",
+    "Firoj Alam",
+    "Niloofar Yousefi"
+  ],
+  "authors_full": [
+    "Mohammad Jahid Ibna Basher",
+    "Md Kowsher",
+    "Md Saiful Islam",
+    "Rabindra Nath Nandi",
+    "Nusrat Jahan Prottasha",
+    "Mehadi Hasan Menon",
+    "Tareq Al Muntasir",
+    "Shammur Absar Chowdhury",
+    "Firoj Alam",
+    "Niloofar Yousefi",
+    "Ozlem Garibay"
+  ],
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-naacl.279",
+  "pdf_url": "https://aclanthology.org/2025.findings-naacl.279.pdf",
+  "pdf_path": "raw/papers/2025.findings-naacl.279.pdf",
+  "pdf_source": "anthology",
+  "abstract": "This paper introduces BnTTS (Bangla Text-To-Speech), the first framework for Bangla speaker adaptation-based TTS, designed to bridge the gap in Bangla speech synthesis using minimal training data. Building upon the XTTS architecture, our approach integrates Bangla into a multilingual TTS pipeline, with modifications to account for the phonetic and linguistic characteristics of the language. We pretrain BnTTS on 3.85k hours of Bangla speech dataset with corresponding text labels and evaluate performance in both zero-shot and few-shot settings on our proposed test dataset. Empirical evaluations in few-shot settings show that BnTTS significantly improves the naturalness, intelligibility, and speaker fidelity of synthesized Bangla speech. Compared to state-of-the-art Bangla TTS systems, BnTTS exhibits superior performance in Subjective Mean Opinion Score (SMOS), Naturalness, and Clarity metrics.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "First Bangla speaker-adaptation TTS framework for low-resource setting; directly advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

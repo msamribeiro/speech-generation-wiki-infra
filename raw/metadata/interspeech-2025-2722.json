@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2025-2722",
+  "source_ids": {
+    "isca": "singh25d_interspeech",
+    "doi": "10.21437/Interspeech.2025-2722"
+  },
+  "title": "Language-Agnostic Speech Tokenizer for Spoken Term Detection with Efficient Retrieval",
+  "authors": [
+    "Anup Singh",
+    "Kris Demuynck",
+    "Vipul Arora"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/singh25d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/singh25d_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "The surge in multilingual and code-switched spoken content demands efficient Query-by-Example Spoken Term Detection (STD) systems capable of handling diverse languages. Existing STD systems are monolingual; they typically require large labeled datasets for training and use costly DTW-based matching during inference, limiting their practicality. This paper proposes a novel speech tokenizer that converts speech into language-agnostic tokens. Furthermore, a multi-stage search algorithm enables fast and efficient retrieval from large datasets. In experimental evaluations, the tokens from the proposed tokenizer demonstrate strong speaker invariance, consistent performance across languages, and a capability to generalize effectively to unseen languages, outperforming the baselines significantly.",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Language-agnostic speech tokenizer for spoken term detection; retrieval application, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2025.acl-demo.37",
+  "source_ids": {
+    "acl": "2025.acl-demo.37",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-demo.37",
+    "url_acl": "https://aclanthology.org/2025.acl-demo.37"
+  },
+  "title": "RT-VC: Real-Time Zero-Shot Voice Conversion with Speech Articulatory Coding",
+  "authors": [
+    "Yisi Liu",
+    "Chenyang Wang",
+    "Hanjo Kim",
+    "Raniya Khan",
+    "Gopala Anumanchipalli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": "2026-05-26",
+  "url": "https://aclanthology.org/2025.acl-demo.37",
+  "pdf_url": "https://aclanthology.org/2025.acl-demo.37.pdf",
+  "pdf_path": "raw/papers/2025.acl-demo.37.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Voice conversion has emerged as a pivotal technology in numerous applications ranging from assistive communication to entertainment. In this paper, we present RT-VC, a zero-shot real-time voice conversion system that delivers ultra-low latency and high-quality performance. Our approach leverages an articulatory feature space to naturally disentangle content and speaker characteristics, facilitating more robust and interpretable voice transformations. Additionally, the integration of differentiable digital signal processing (DDSP) enables efficient vocoding directly from articulatory features, significantly reducing conversion latency. Experimental evaluations demonstrate that, while maintaining synthesis quality comparable to the current state-of-the-art (SOTA) method, RT-VC achieves a CPU latency of 61.4 ms, representing a 13.3% reduction in latency.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Core zero-shot real-time voice conversion system with articulatory disentanglement; directly advances VC.",
+  "status": "ingested",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

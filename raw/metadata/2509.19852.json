@@ -1,0 +1,42 @@
+{
+  "id": "2509.19852",
+  "source_ids": {
+    "arxiv": "2509.19852"
+  },
+  "title": "Eliminating stability hallucinations in llm-based tts models via attention guidance",
+  "authors": [
+    "ShiMing Wang",
+    "ZhiHao Du",
+    "Yang Xiang",
+    "TianYu Zhao",
+    "Han Zhao",
+    "Qian Chen",
+    "XianGang Li",
+    "HanJie Guo",
+    "ZhenHua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.19852",
+  "pdf_url": "https://arxiv.org/pdf/2509.19852.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper focuses on resolving stability hallucinations (e.g., repetitive or omitted speech) in LLM-based Text-to-Speech (TTS) models by improving and leveraging the attention mechanism. First, we analyzed the alignment mechanism between text tokens and speech tokens in LLMs. We then proposed a metric termed the Optimal Alignment Score (OAS), which employs the Viterbi algorithm to evaluate text-speech alignment quality. Subsequently, OAS was integrated into the training of CosyVoice2 to assist LLMs in learning continuous, stable alignment. Additionally, the pre-trained attention value is employed to guide the training of the student CosyVoice2 via chain-of-thought (CoT), which further reduces stability hallucinations in synthesized speech. Experiments on the Seed-TTS-Eval and CV3-Eval test sets demonstrate that the proposed methods can effectively reduce the stability hallucinations of CosyVoice2 without introducing additional negative effects. The appendix is available at https://wsmzzz.github.io/llm_attn.",
+  "arxiv_comment": "The authors are withdrawing this preprint as it was submitted prematurely without the final approval of all collaborating institutions. We apologize for any inconvenience",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "[WITHDRAWN by authors] Attention guidance eliminating repetitive or omitted speech hallucinations in LLM-based TTS",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

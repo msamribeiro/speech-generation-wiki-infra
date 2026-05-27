@@ -1,0 +1,39 @@
+{
+  "id": "2603.07550",
+  "source_ids": {
+    "arxiv": "2603.07550"
+  },
+  "title": "Learning-free L2-Accented Speech Generation using Phonological Rules",
+  "authors": [
+    "Thanathai Lertpetchpun",
+    "Yoonjeong Lee",
+    "Jihwan Lee",
+    "Tiantian Feng",
+    "Dani Byrd",
+    "Shrikanth Narayanan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.07550",
+  "pdf_url": "https://arxiv.org/pdf/2603.07550.pdf",
+  "pdf_path": "raw/papers/2603.07550.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Accent plays a crucial role in speaker identity and inclusivity in speech technologies. Existing accented text-to-speech (TTS) systems either require large-scale accented datasets or lack fine-grained phoneme-level controllability. We propose a accented TTS framework that combines phonological rules with a multilingual TTS model. The rules are applied to phoneme sequences to transform accent at the phoneme level while preserving intelligibility. The method requires no accented training data and enables explicit phoneme-level accent manipulation. We design rule sets for Spanish- and Indian-accented English, modeling systematic differences in consonants, vowels, and syllable structure arising from phonotactic constraints. We analyze the trade-off between phoneme-level duration alignment and accent as realized in speech timing. Experimental results demonstrate effective accent shift while maintaining speech quality.",
+  "arxiv_comment": "Submitted to Interspeech2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Rule-based accented TTS combining phonological rules with multilingual model; advances accented/multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

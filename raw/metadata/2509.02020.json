@@ -1,0 +1,40 @@
+{
+  "id": "2509.02020",
+  "source_ids": {
+    "arxiv": "2509.02020"
+  },
+  "title": "FireRedTTS-2: Towards Long Conversational Speech Generation for Podcast and Chatbot",
+  "authors": [
+    "Kun Xie",
+    "Feiyu Shen",
+    "Junjie Li",
+    "Fenglong Xie",
+    "Xu Tang",
+    "Yao Hu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-02",
+  "ingested_date": "2026-05-26",
+  "url": "https://arxiv.org/abs/2509.02020",
+  "pdf_url": "https://arxiv.org/pdf/2509.02020.pdf",
+  "pdf_path": "raw/papers/2509.02020.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current dialogue generation approaches typically require the complete dialogue text before synthesis and produce a single, inseparable speech containing all voices, making them unsuitable for interactive chat; moreover, they suffer from unstable synthesis, inaccurate speaker transitions, and incoherent prosody. In this work, we present FireRedTTS-2, a long-form streaming TTS system for multi-speaker dialogue generation, delivering stable, natural speech with reliable speaker switching and context-aware prosody. A new 12.5Hz streaming speech tokenizer accelerates training and inference, extends maximum dialogue length, encodes richer semantics to stabilize text-to-token modeling and supports high-fidelity streaming generation for real-time applications. We adopt a text-speech interleaved format, concatenating speaker-labeled text with aligned speech tokens in chronological order, and model it with a dual-transformer: a large decoder-only transformer predicts tokens at the first layer, and a smaller one completes subsequent layers. Experimental results show that FireRedTTS-2 integrates seamlessly with chat frameworks and, with minimal fine-tuning, produces emotionally expressive speech guided by implicit contextual cues. In podcast generation, it surpasses existing systems including MoonCast, Zipvoice-Dialogue, and MOSS-TTSD in objective intelligibility, speaker-turn reliability, and perceived naturalness with context-consistent prosody. Our demos are available at https://fireredteam.github.io/demos/firered_tts_2.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Long conversational speech generation for multi-speaker podcast and chatbot dialogue",
+  "status": "ingested",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

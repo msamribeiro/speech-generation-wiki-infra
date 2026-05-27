@@ -1,0 +1,35 @@
+{
+  "id": "2603.11678",
+  "source_ids": {
+    "arxiv": "2603.11678"
+  },
+  "title": "RAF: Relativistic Adversarial Feedback For Universal Speech Synthesis",
+  "authors": [
+    "Yongjoon Lee",
+    "Jung-Woo Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.11678",
+  "pdf_url": "https://arxiv.org/pdf/2603.11678.pdf",
+  "pdf_path": "raw/papers/2603.11678.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose Relativistic Adversarial Feedback (RAF), a novel training objective for GAN vocoders that improves in-domain fidelity and generalization to unseen scenarios. Although modern GAN vocoders employ advanced architectures, their training objectives often fail to promote generalizable representations. RAF addresses this problem by leveraging speech self-supervised learning models to assist discriminators in evaluating sample quality, encouraging the generator to learn richer representations. Furthermore, we utilize relativistic pairing for real and fake waveforms to improve the modeling of the training data distribution. Experiments across multiple datasets show consistent gains in both objective and subjective metrics on GAN-based vocoders. Importantly, the RAF-trained BigVGAN-base outperforms the LSGAN-trained BigVGAN in perceptual quality using only 12\\% of the parameters. Comparative studies further confirm the effectiveness of RAF as a training framework for GAN vocoders.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Relativistic adversarial feedback GAN vocoder using SSL models to improve in-domain fidelity and generalization",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

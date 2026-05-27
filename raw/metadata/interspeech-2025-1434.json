@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1434",
+  "source_ids": {
+    "isca": "biyani25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1434"
+  },
+  "title": "REWIND: Speech Time Reversal for Enhancing Speaker Representations in Diffusion-based Voice Conversion",
+  "authors": [
+    "Ishan D. Biyani",
+    "Nirmesh J. Shah",
+    "Ashishkumar P. Gudmalwar",
+    "Pankaj Wasnik",
+    "Rajiv R. Shah"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/biyani25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/biyani25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1434.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech time reversal refers to the process of reversing the entire speech signal in time, causing it to play backward. Such signals are completely unintelligible since the fundamental structures of phonemes and syllables are destroyed. However, they still retain tonal patterns that enable perceptual speaker identification despite losing linguistic content. In this paper, we propose leveraging speaker representations learned from time reversed speech as an augmentation strategy to enhance speaker representation. Notably, speaker and language disentanglement in voice conversion (VC) is essential to accurately preserve a speaker's unique vocal traits while minimizing interference from linguistic content. The effectiveness of the proposed approach is evaluated in the context of state-of-the-art diffusion-based VC models. Experimental results indicate that the proposed approach significantly improves speaker similarity-related scores while maintaining high speech quality.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Speech time reversal for speaker representations in diffusion-based VC; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

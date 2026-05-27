@@ -1,0 +1,36 @@
+{
+  "id": "2025.sigdial-1.44",
+  "source_ids": {
+    "acl": "2025.sigdial-1.44",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.sigdial-1.44"
+  },
+  "title": "Dialogue Scaffolding: Producing a Realistic Corpus of Human-Computer Open-Domain Dialogues Using a Spoken Dialogue System and ChatGPT",
+  "authors": [
+    "Kevin Bowden",
+    "Marilyn Walker"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.sigdial-1.44",
+  "pdf_url": "https://aclanthology.org/2025.sigdial-1.44.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Researchers in dialogue interaction have had a long-term interest in multi-domain human-computer conversations and how they differ from human-human conversations. Recently, research on dialogue has begun to rely more and more on corpus-based training of neural conversational models, and conversational LLMs such as ChatGPT. However, existing large open-domain dialogue corpora do not accurately capture the characteristics of social human-computer dialogue. This paper addresses this gap by synthesizing a new corpus of 4000 long social dialogues on 200 user-model based topics that we call User-Centric SocialChat (UCSC). We create UCSC with a novel method called Dialogue Scaffolding, where a real dialogue system, that competed successfully in the Alexa Prize, interacts with ChatGPT to generate conversations. The Dialogue Scaffolding method ensures that the dialogues closely resemble the social chat genre of human-computer dialogues. We evaluate UCSC to ensure quality and safety, and we measure lexical diversity and topic consistency to show that the conversations are not repetitive and stay on topic. We evaluate the utility of UCSC by fine-tuning a compact dialogue-level model, PerQy-DLM, and showing that it outperforms competitive fine-tuned models like COSMO, Vicuna, and RedPajama-Chat-3B.",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Corpus creation for open-domain dialogue; spoken dialogue data resource, not advancing synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

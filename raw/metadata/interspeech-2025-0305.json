@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2025-0305",
+  "source_ids": {
+    "isca": "chen25d_interspeech",
+    "doi": "10.21437/Interspeech.2025-305",
+    "arxiv": "2508.05978"
+  },
+  "title": "DAFMSVC: One-Shot Singing Voice Conversion with Dual Attention Mechanism and Flow Matching",
+  "authors": [
+    "Wei Chen",
+    "Binzhu Sha",
+    "Dan Luo",
+    "Jing Yang",
+    "Zhuo Wang",
+    "Fan Fan",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chen25d_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.05978.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0305.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Singing Voice Conversion (SVC) transfers a source singer's timbre to a target while keeping melody and lyrics. The key challenge in any-to-any SVC is adapting unseen speaker timbres to source audio without quality degradation. Existing methods either face timbre leakage or fail to achieve satisfactory timbre similarity and quality in the generated audio. To address these challenges, we propose DAFMSVC, where the self-supervised learning (SSL) features from the source audio are replaced with the most similar SSL features from the target audio to prevent timbre leakage. It also incorporates a dual-cross-attention mechanism for the adaptive fusion of speaker embeddings, melody, and linguistic content. Additionally, we introduce a flow matching module for high-quality audio generation from the fused features. Experimental results show that DAFMSVC significantly enhances timbre similarity and naturalness, outperforming state-of-the-art methods in both subjective and objective evaluations.",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "One-shot singing voice conversion with dual attention and flow matching; advances singing/VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

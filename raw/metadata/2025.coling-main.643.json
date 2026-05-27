@@ -1,0 +1,42 @@
+{
+  "id": "2025.coling-main.643",
+  "source_ids": {
+    "acl": "2025.coling-main.643",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.coling-main.643"
+  },
+  "title": "Voice synthesis in Polish and English - analyzing prediction differences in speaker verification systems",
+  "authors": [
+    "Joanna Gajewska",
+    "Alicja Martinek",
+    "Michał J. Ołowski",
+    "Ewelina Bartuzi-Trokielewicz"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.coling-main.643",
+  "pdf_url": "https://aclanthology.org/2025.coling-main.643.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Deep learning has significantly enhanced voice synthesis, yielding realistic audio capable of mimicking individual voices. This progress, however, raises security concerns due to the potential misuse of audio deepfakes. Our research examines the effects of deepfakes on speaker recognition systems across English and Polish corpora, assessing both Text-to-Speech and Voice Conversion methods. We focus on the biometric similarity’s role in the effectiveness of impersonations and find that synthetic voices can maintain personal traits, posing risks of unauthorized access. The study’s key contributions include analyzing voice synthesis across languages, evaluating biometric resemblance in voice conversion, and contrasting Text-to-Speech and Voice Conversion paradigms. These insights emphasize the need for improved biometric security against audio deepfake threats.",
+  "task": [
+    "TTS",
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.58,
+  "relevance_note": "Studies deepfake TTS and VC effects on speaker recognition across languages; deepfake detection focus with secondary TTS relevance.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

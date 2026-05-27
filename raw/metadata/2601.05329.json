@@ -1,0 +1,40 @@
+{
+  "id": "2601.05329",
+  "source_ids": {
+    "arxiv": "2601.05329"
+  },
+  "title": "CosyEdit: Unlocking End-to-End Speech Editing Capability from Zero-Shot Text-to-Speech Models",
+  "authors": [
+    "Junyang Chen",
+    "Yuhang Jia",
+    "Hui Wang",
+    "Jiaming Zhou",
+    "Yaxin Han",
+    "Mengying Feng",
+    "Yong Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.05329",
+  "pdf_url": "https://arxiv.org/pdf/2601.05329.pdf",
+  "pdf_path": "raw/papers/2601.05329.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Automatic speech editing aims to modify spoken content based on textual instructions, yet traditional cascade systems suffer from complex preprocessing pipelines and a reliance on explicit external temporal alignment. Addressing these limitations, we propose CosyEdit, an end-to-end speech editing model adapted from CosyVoice through task-specific fine-tuning and an optimized inference procedure, which internalizes speech-text alignment while ensuring high consistency between the speech before and after editing. By fine-tuning on only 250 hours of supervised data from our curated GigaEdit dataset, our 400M-parameter model achieves reliable speech editing performance. Experiments on the RealEdit benchmark indicate that CosyEdit not only outperforms several billion-parameter language model baselines but also matches the performance of state-of-the-art cascade approaches. These results demonstrate that, with task-specific fine-tuning and inference optimization, robust and efficient speech editing capabilities can be unlocked from a zero-shot TTS model, yielding a novel and cost-effective end-to-end solution for high-quality speech editing.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "End-to-end speech editing adapted from CosyVoice for seamless spoken content modification",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

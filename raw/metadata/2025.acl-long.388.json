@@ -1,0 +1,40 @@
+{
+  "id": "2025.acl-long.388",
+  "source_ids": {
+    "acl": "2025.acl-long.388",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.388"
+  },
+  "title": "Distilling an End-to-End Voice Assistant Without Instruction Training Data",
+  "authors": [
+    "William Held",
+    "Yanzhe Zhang",
+    "Minzhi Li",
+    "Weiyan Shi",
+    "Michael J Ryan",
+    "Diyi Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": "2026-05-26",
+  "url": "https://aclanthology.org/2025.acl-long.388",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.388.pdf",
+  "pdf_path": "raw/papers/2025.acl-long.388.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Voice assistants, such as Siri and Google Assistant, typically model audio and text separately, resulting in lost speech information and increased complexity. Recent efforts to address this with end-to-end Speech Large Language Models (speech-in, text-out) trained with supervised finetuning (SFT) have led to models “forgetting” capabilities from text-only LLMs. Our work proposes an alternative paradigm for training Speech LLMs without instruction data, using the response of a text-only LLM to transcripts as self-supervision. Importantly, this process can be performed without annotated responses. We show that our Distilled Voice Assistant (DiVA) generalizes to Spoken Question Answering, Classification, and Translation. Furthermore, DiVA better matches user preferences, achieving a 72% win rate compared with state-of-the-art models like Qwen 2 Audio, despite using >100x less training compute.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "End-to-end voice assistant distillation; speech generation is the primary output modality.",
+  "status": "ingested",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

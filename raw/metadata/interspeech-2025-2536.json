@@ -1,0 +1,59 @@
+{
+  "id": "interspeech-2025-2536",
+  "source_ids": {
+    "isca": "jung25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-2536"
+  },
+  "title": "The Text-to-speech in the Wild (TITW) Database",
+  "authors": [
+    "Jee-weon Jung",
+    "Wangyou Zhang",
+    "Soumi Maiti",
+    "Yihan Wu",
+    "Xin Wang",
+    "Ji-Hoon Kim",
+    "Yuta Matsunaga",
+    "Seyun Um",
+    "Jinchuan Tian",
+    "Hye-jin Shim"
+  ],
+  "authors_full": [
+    "Jee-weon Jung",
+    "Wangyou Zhang",
+    "Soumi Maiti",
+    "Yihan Wu",
+    "Xin Wang",
+    "Ji-Hoon Kim",
+    "Yuta Matsunaga",
+    "Seyun Um",
+    "Jinchuan Tian",
+    "Hye-jin Shim",
+    "Nicholas Evans",
+    "Joon Son Chung",
+    "Shinnosuke Takamichi",
+    "Shinji Watanabe"
+  ],
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/jung25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/jung25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2536.pdf",
+  "pdf_source": "isca",
+  "abstract": "Traditional Text-to-Speech (TTS) systems rely on studio-quality speech recorded in controlled settings. Recently, an effort known as \"noisy-TTS training\" has emerged, aiming to utilize in-the-wild data. However, the lack of dedicated datasets has been a significant limitation. We introduce the TTS In the Wild (TITW) dataset, which is publicly available, created through a fully automated pipeline applied to the VoxCeleb1 dataset. It comprises two training sets: TITW-Hard, derived from the transcription, segmentation, and selection of raw VoxCeleb1 data, and TITW-Easy, which incorporates additional enhancement and data selection based on DNSMOS. State-of-the-art TTS models achieve over 3.0 UTMOS score with TITW-Easy, while TITW-Hard remains difficult showing UTMOS below 2.8. Beyond TTS, TITWâs unique design, leveraging a automatic speaker recognition dataset, strengthens ethical efforts to counteract malicious use of TTS models by supporting tasks such as speech deepfake detection.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "TTS In the Wild dataset for noisy-TTS training; directly advances TTS dataset diversity.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

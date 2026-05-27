@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-2159",
+  "source_ids": {
+    "isca": "shim25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2159"
+  },
+  "title": "Generating Consistent Prosodic Patterns from Open-Source TTS Systems",
+  "authors": [
+    "Ha Eun Shim",
+    "Olivia Yung",
+    "Paige TuttÃ¶sÃ­",
+    "Boey Kwan",
+    "Angelica Lim",
+    "Yue Wang",
+    "H. Henny Yeung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/shim25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/shim25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2159.pdf",
+  "pdf_source": "isca",
+  "abstract": "Text-to-Speech (TTS) systems now closely approximate human speech prosody. Yet, current deep learning-based TTS systems may struggle to accurately represent some prosodic patterns, like phrase boundaries used to signal syntactic distinctions. Such prosodic parsing can reflect differences in meaning, hence, inconsistencies in synthesis can lead to miscommunications. In this study, we conduct a qualitative assessment of five open-source TTS systems and reveal that they fail to produce acoustic signals that accurately convey distinct prosodic boundaries when given punctuation contrasts (Study 1). To mitigate this gap, we propose a pipeline for improving output using a customized dataset (Study 2), which successfully generates predictable acoustic cues, but only for certain cases. Results suggest that TTS systems require additional training to effectively capture the prosodic subtleties. We conclude by discussing how TTS systems can better generate fine prosodic distinctions.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Quality study of prosodic pattern consistency in TTS for syntactic distinctions; advances TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

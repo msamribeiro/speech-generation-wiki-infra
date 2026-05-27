@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-2684",
+  "source_ids": {
+    "isca": "wang25ba_interspeech",
+    "doi": "10.21437/Interspeech.2025-2684"
+  },
+  "title": "Discl-VC: Disentangled Discrete Tokens and In-Context Learning for Controllable Zero-Shot Voice Conversion",
+  "authors": [
+    "Kaidi Wang",
+    "Wenhao Guan",
+    "Ziyue Jiang",
+    "Hukai Huang",
+    "Peijie Chen",
+    "Weijie Wu",
+    "Qingyang Hong",
+    "Lin Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/wang25ba_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/wang25ba_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2684.pdf",
+  "pdf_source": "isca",
+  "abstract": "Currently, zero-shot voice conversion systems are capable of synthesizing the voice of unseen speakers. However, most existing approaches struggle to accurately replicate the speaking style of the source speaker or mimic the distinctive speaking style of the target speaker, thereby limiting the controllability of voice conversion. In this work, we propose Discl-VC, a novel voice conversion framework that disentangles content and prosody information from self-supervised speech representations and synthesizes the target speaker's voice through in-context learning with a flow matching transformer. To enable precise control over the prosody of generated speech, we introduce a mask generative transformer that predicts discrete prosody tokens in a non-autoregressive manner based on prompts. Experimental results demonstrate the superior performance of Discl-VC in zero-shot voice conversion and its remarkable accuracy in prosody control for synthesized speech.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Zero-shot VC with disentangled discrete tokens and in-context learning for style control; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

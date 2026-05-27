@@ -1,0 +1,38 @@
+{
+  "id": "2603.00958",
+  "source_ids": {
+    "arxiv": "2603.00958"
+  },
+  "title": "S-VoCAL: A Dataset and Evaluation Framework for Inferring Speaking Voice Character Attributes in Literature",
+  "authors": [
+    "Abigail Berthe-Pardo",
+    "Gaspard Michel",
+    "Elena V. Epure",
+    "Christophe Cerisara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.00958",
+  "pdf_url": "https://arxiv.org/pdf/2603.00958.pdf",
+  "pdf_path": "raw/papers/2603.00958.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "With recent advances in Text-to-Speech (TTS) systems, synthetic audiobook narration has seen increased interest, reaching unprecedented levels of naturalness. However, larger gaps remain in synthetic narration systems' ability to impersonate fictional characters, and convey complex emotions or prosody. A promising direction to enhance character identification is the assignment of plausible voices to each fictional characters in a book. This step typically requires complex inference of attributes in book-length contexts, such as a character's age, gender, origin or physical health, which in turns requires dedicated benchmark datasets to evaluate extraction systems' performances. We present S-VoCAL (Speaking Voice Character Attributes in Literature), the first dataset and evaluation framework dedicated to evaluate the inference of voice-related fictional character attributes. S-VoCAL entails 8 attributes grounded in sociophonetic studies, and 952 character-book pairs derived from Project Gutenberg. Its evaluation framework addresses the particularities of each attribute, and includes a novel similarity metric based on recent Large Language Models embeddings. We demonstrate the applicability of S-VoCAL by applying a simple Retrieval-Augmented Generation (RAG) pipeline to the task of inferring character attributes. Our results suggest that the RAG pipeline reliably infers attributes such as Age or Gender, but struggles on others such as Origin or Physical Health. The dataset and evaluation code are available at https://github.com/AbigailBerthe/S-VoCAL .",
+  "arxiv_comment": "Accepted to LREC 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Dataset and framework for inferring voice character attributes for TTS in fiction/audiobooks; advances instruction-conditioned TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

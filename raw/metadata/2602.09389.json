@@ -1,0 +1,37 @@
+{
+  "id": "2602.09389",
+  "source_ids": {
+    "arxiv": "2602.09389"
+  },
+  "title": "TVTSyn: Content-Synchronous Time-Varying Timbre for Streaming Voice Conversion and Anonymization",
+  "authors": [
+    "Waris Quamer",
+    "Mu-Ruei Tseng",
+    "Ghady Nasrallah",
+    "Ricardo Gutierrez-Osuna"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.09389",
+  "pdf_url": "https://arxiv.org/pdf/2602.09389.pdf",
+  "pdf_path": "raw/papers/2602.09389.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Real-time voice conversion and speaker anonymization require causal, low-latency synthesis without sacrificing intelligibility or naturalness. Current systems have a core representational mismatch: content is time-varying, while speaker identity is injected as a static global embedding. We introduce a streamable speech synthesizer that aligns the temporal granularity of identity and content via a content-synchronous, time-varying timbre (TVT) representation. A Global Timbre Memory expands a global timbre instance into multiple compact facets; frame-level content attends to this memory, a gate regulates variation, and spherical interpolation preserves identity geometry while enabling smooth local changes. In addition, a factorized vector-quantized bottleneck regularizes content to reduce residual speaker leakage. The resulting system is streamable end-to-end, with <80 ms GPU latency. Experiments show improvements in naturalness, speaker transfer, and anonymization compared to SOTA streaming baselines, establishing TVT as a scalable approach for privacy-preserving and expressive speech synthesis under strict latency budgets.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Streaming voice conversion aligning temporal granularity of identity and content via time-varying timbre injection",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

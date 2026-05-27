@@ -1,0 +1,55 @@
+{
+  "id": "2509.22167",
+  "source_ids": {
+    "arxiv": "2509.22167"
+  },
+  "title": "Semantic-VAE: Semantic-Alignment Latent Representation for Better Speech Synthesis",
+  "authors": [
+    "Zhikang Niu",
+    "Shujie Hu",
+    "Jeongsoo Choi",
+    "Yushen Chen",
+    "Peining Chen",
+    "Pengcheng Zhu",
+    "Yunting Yang",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Chunhui Wang"
+  ],
+  "authors_full": [
+    "Zhikang Niu",
+    "Shujie Hu",
+    "Jeongsoo Choi",
+    "Yushen Chen",
+    "Peining Chen",
+    "Pengcheng Zhu",
+    "Yunting Yang",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Chunhui Wang",
+    "Xie Chen"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.22167",
+  "pdf_url": "https://arxiv.org/pdf/2509.22167.pdf",
+  "pdf_path": "raw/papers/2509.22167.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While mel-spectrograms have been widely utilized as intermediate representations in zero-shot text-to-speech (TTS), their inherent redundancy leads to inefficiency in learning text-speech alignment. Compact VAE-based latent representations have recently emerged as a stronger alternative, but they also face a fundamental optimization dilemma: higher-dimensional latent spaces improve reconstruction quality and speaker similarity, but degrade intelligibility, while lower-dimensional spaces improve intelligibility at the expense of reconstruction fidelity. To overcome this dilemma, we propose Semantic-VAE, a novel VAE framework that utilizes semantic alignment regularization in the latent space. This design alleviates the reconstruction-generation trade-off by capturing semantic structure in high-dimensional latent representations. Extensive experiments demonstrate that Semantic-VAE significantly improves synthesis quality and training efficiency. When integrated into F5-TTS, our method achieves 2.10% WER and 0.64 speaker similarity on LibriSpeech-PC, outperforming mel-based systems (2.23%, 0.60) and vanilla acoustic VAE baselines (2.65%, 0.59). We also release the code and models to facilitate further research.",
+  "arxiv_comment": "Submitted to ICASSP2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Semantic-aligned VAE latent representation improving text-speech alignment in zero-shot TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

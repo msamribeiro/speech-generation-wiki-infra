@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-1344",
+  "source_ids": {
+    "isca": "kwon25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1344"
+  },
+  "title": "Parameter-Efficient Fine-Tuning for Low-Resource Text-to-Speech via Cross-Lingual Continual Learning",
+  "authors": [
+    "Ki-Joong Kwon",
+    "Jun-Ho So",
+    "Sang-Hoon Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kwon25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kwon25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1344.pdf",
+  "pdf_source": "isca",
+  "abstract": "As generative models gain attention, it is crucial to adapt these models efficiently even with limited high-quality data and computational resources. In this work, we investigate a parameter-efficient fine-tuning (PEFT) for low-resource text-to-speech to transfer pre-trained knowledge to a new language leveraging only a single-speaker dataset and a single NVIDIA TITAN RTX GPU. We propose three types of adapters: Conditioning Adapter, Prompt Adapter, and DiT LoRA Adapter, where Conditioning Adapter enhances text embeddings, Prompt Adapter refines input representations, and DiT LoRA Adapter enables speech generation efficiency. We further explore the respective optimal configuration of adapters for single-speaker and multi-speaker scenarios. Consequently, under resource constraints, we successfully achieve effective adaptation to a new language using only 1.72% of the total parameters. Audio samples, source code and checkpoints will be available.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Parameter-efficient fine-tuning for low-resource TTS via cross-lingual continual learning; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

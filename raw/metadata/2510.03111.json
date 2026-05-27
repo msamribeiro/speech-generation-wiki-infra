@@ -1,0 +1,40 @@
+{
+  "id": "2510.03111",
+  "source_ids": {
+    "arxiv": "2510.03111"
+  },
+  "title": "Evaluation of preprocessing pipelines in the creation of in-the-wild TTS datasets",
+  "authors": [
+    "Matías Di Bernardo",
+    "Emmanuel Misley",
+    "Ignacio Correa",
+    "Mateo García Iacovelli",
+    "Simón Mellino",
+    "Gala Lucía Gonzalez Barrios"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.03111",
+  "pdf_url": "https://arxiv.org/pdf/2510.03111.pdf",
+  "pdf_path": "raw/papers/2510.03111.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This work introduces a reproducible, metric-driven methodology to evaluate preprocessing pipelines for in-the-wild TTS corpora generation. We apply a custom low-cost pipeline to the first in-the-wild Argentine Spanish collection and compare 24 pipeline configurations combining different denoising and quality filtering variants. Evaluation relies on complementary objective measures (PESQ, SI-SDR, SNR), acoustic descriptors (T30, C50), and speech-preservation metrics (F0-STD, MCD). Results expose trade-offs between dataset size, signal quality, and voice preservation; where denoising variants with permissive filtering provide the best overall compromise for our testbed. The proposed methodology allows selecting pipeline configurations without training TTS models for each subset, accelerating and reducing the cost of preprocessing development for low-resource settings.",
+  "arxiv_comment": "5 pages, 4 figures, Submitted to ICASSP 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Methodology for evaluating TTS data preprocessing pipelines; synthesis is the end goal but pipeline evaluation is primary",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

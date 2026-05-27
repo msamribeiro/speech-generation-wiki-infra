@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0438",
+  "source_ids": {
+    "isca": "kamper25_interspeech",
+    "doi": "10.21437/Interspeech.2025-438"
+  },
+  "title": "LinearVC: Linear Transformations of Self-Supervised Features Through the Lens of Voice Conversion",
+  "authors": [
+    "Herman Kamper",
+    "Benjamin van Niekerk",
+    "Julian ZaÃ¯di",
+    "Marc-AndrÃ© Carbonneau"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kamper25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kamper25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0438.pdf",
+  "pdf_source": "isca",
+  "abstract": "We introduce LinearVC, a simple voice conversion method that sheds light on the structure of self-supervised representations. First, we show that simple linear transformations of self-supervised features effectively convert voices. Next, we probe the geometry of the feature space by constraining the set of allowed transformations. We find that just rotating the features is sufficient for high-quality voice conversion. This suggests that content information is embedded in a low-dimensional subspace which can be linearly transformed to produce a target voice. To validate this hypothesis, we finally propose a method that explicitly factorizes content and speaker information using singular value decomposition; the resulting linear projection with a rank of just 100 gives competitive conversion results. Our work has implications for both practical voice conversion and a broader understanding of self-supervised speech representations.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Simple linear transformation VC in SSL feature space revealing geometry of representations; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

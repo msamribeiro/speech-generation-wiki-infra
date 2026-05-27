@@ -1,0 +1,37 @@
+{
+  "id": "2602.19574",
+  "source_ids": {
+    "arxiv": "2602.19574"
+  },
+  "title": "CTC-TTS: LLM-based dual-streaming text-to-speech with CTC alignment",
+  "authors": [
+    "Hanwen Liu",
+    "Saierdaer Yusuyin",
+    "Hao Huang",
+    "Zhijian Ou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.19574",
+  "pdf_url": "https://arxiv.org/pdf/2602.19574.pdf",
+  "pdf_path": "raw/papers/2602.19574.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large-language-model (LLM)-based text-to-speech (TTS) systems can generate natural speech, but most are not designed for low-latency dual-streaming synthesis. High-quality dual-streaming TTS depends on accurate text--speech alignment and well-designed training sequences that balance synthesis quality and latency. Prior work often relies on GMM-HMM based forced-alignment toolkits (e.g., MFA), which are pipeline-heavy and less flexible than neural aligners; fixed-ratio interleaving of text and speech tokens struggles to capture text--speech alignment regularities. We propose CTC-TTS, which replaces MFA with a CTC based aligner and introduces a bi-word based interleaving strategy. Two variants are designed: CTC-TTS-L (token concatenation along the sequence length) for higher quality and CTC-TTS-F (embedding stacking along the feature dimension) for lower latency. Experiments show that CTC-TTS outperforms fixed-ratio interleaving and MFA-based baselines on streaming synthesis and zero-shot tasks. Speech samples are available at https://ctctts.github.io/.",
+  "arxiv_comment": "Submitted to INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "LLM-based dual-streaming TTS with CTC alignment for low-latency natural speech generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

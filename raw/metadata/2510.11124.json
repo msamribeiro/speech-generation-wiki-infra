@@ -1,0 +1,43 @@
+{
+  "id": "2510.11124",
+  "source_ids": {
+    "arxiv": "2510.11124"
+  },
+  "title": "Perturbation Self-Supervised Representations for Cross-Lingual Emotion TTS: Stage-Wise Modeling of Emotion and Speaker",
+  "authors": [
+    "Cheng Gong",
+    "Chunyu Qiang",
+    "Tianrui Wang",
+    "Yu Jiang",
+    "Yuheng Lu",
+    "Ruihao Jing",
+    "Xiaoxiao Miao",
+    "Xiaolei Zhang",
+    "Longbiao Wang",
+    "Jianwu Dang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.11124",
+  "pdf_url": "https://arxiv.org/pdf/2510.11124.pdf",
+  "pdf_path": "raw/papers/2510.11124.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Cross-lingual emotional text-to-speech (TTS) aims to produce speech in one language that captures the emotion of a speaker from another language while maintaining the target voice's timbre. This process of cross-lingual emotional speech synthesis presents a complex challenge, necessitating flexible control over emotion, timbre, and language. However, emotion and timbre are highly entangled in speech signals, making fine-grained control challenging. To address this issue, we propose EMM-TTS, a novel two-stage cross-lingual emotional speech synthesis framework based on perturbed self-supervised learning (SSL) representations. In the first stage, the model explicitly and implicitly encodes prosodic cues to capture emotional expressiveness, while the second stage restores the timbre from perturbed SSL representations. We further investigate the effect of different speaker perturbation strategies-formant shifting and speaker anonymization-on the disentanglement of emotion and timbre. To strengthen speaker preservation and expressive control, we introduce Speaker Consistency Loss (SCL) and Speaker-Emotion Adaptive Layer Normalization (SEALN) modules. Additionally, we find that incorporating explicit acoustic features (e.g., F0, energy, and duration) alongside pretrained latent features improves voice cloning performance. Comprehensive multi-metric evaluations, including both subjective and objective measures, demonstrate that EMM-TTS achieves superior naturalness, emotion transferability, and timbre consistency across languages.",
+  "arxiv_comment": "Submitted to Expert Systems with Applications,11 pages",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Cross-lingual emotional TTS with SSL-based perturbation representations for stage-wise emotion-speaker modeling",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

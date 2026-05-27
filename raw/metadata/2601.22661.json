@@ -1,0 +1,43 @@
+{
+  "id": "2601.22661",
+  "source_ids": {
+    "arxiv": "2601.22661"
+  },
+  "title": "Evaluating and Rewarding LALMs for Expressive Role-Play TTS via Mean Continuation Log-Probability",
+  "authors": [
+    "Yong Ren",
+    "Jingbei Li",
+    "Haiyang Sun",
+    "Yujie Chen",
+    "Cheng Yi",
+    "Yechang Huang",
+    "Hao Gu",
+    "Ye Bai",
+    "Xuerui Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.22661",
+  "pdf_url": "https://arxiv.org/pdf/2601.22661.pdf",
+  "pdf_path": "raw/papers/2601.22661.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in Large Audio Language Models (LALMs) have extended Text-to-Speech (TTS) to interactive role-play scenarios, which demand high expressiveness and strict adherence to role-play instructions. However, existing models struggle to maintain stylistic consistency with character profiles and scene descriptions across multi-turn dialogues. A critical bottleneck is the lack of objective metrics for quantifying speaking style. To bridge this gap, we propose Mean Continuation Log-Probability (MCLP) as both an evaluation metric and a reward signal, validated on LALM-based Role-Play TTS (RP-TTS) tasks. Critically, we leverage the In-Context Learning capability of pre-trained LALMs to formulate MCLP via a continuation log-probability prediction. This metric quantifies stylistic consistency by measuring the likelihood of the ground-truth speech conditioned on the generated speech. Furthermore, we employ MCLP as a reinforcement learning reward to enhance the style alignment between generated speech and Role-Play instructions. To facilitate evaluation, we construct an RP-TTS dataset with rich scene and character annotations. Experimental results demonstrate that our method significantly outperforms strong LALM baselines on both objective and subjective metrics.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Log-probability metric and RLHF reward for expressive role-play TTS evaluation and alignment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

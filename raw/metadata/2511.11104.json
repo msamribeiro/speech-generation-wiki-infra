@@ -1,0 +1,40 @@
+{
+  "id": "2511.11104",
+  "source_ids": {
+    "arxiv": "2511.11104"
+  },
+  "title": "CLARITY: Contextual Linguistic Adaptation and Accent Retrieval for Dual-Bias Mitigation in Text-to-Speech Generation",
+  "authors": [
+    "Crystal Min Hui Poon",
+    "Pai Chet Ng",
+    "Xiaoxiao Miao",
+    "Immanuel Jun Kai Loh",
+    "Bowen Zhang",
+    "Haoyu Song",
+    "Ian Mcloughlin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.11104",
+  "pdf_url": "https://arxiv.org/pdf/2511.11104.pdf",
+  "pdf_path": "raw/papers/2511.11104.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Instruction-guided text-to-speech (TTS) research has reached a maturity level where excellent speech generation quality is possible on demand, yet two coupled biases persist in reducing perceived quality: accent bias, where models default towards dominant phonetic patterns, and linguistic bias, a misalignment in dialect-specific lexical or cultural information. These biases are interdependent and authentic accent generation requires both accent fidelity and correctly localized text. We present CLARITY (Contextual Linguistic Adaptation and Retrieval for Inclusive TTS sYnthesis), a backbone-agnostic framework to address both biases through dual-signal optimization. Firstly, we apply contextual linguistic adaptation to localize input text to align with the target dialect. Secondly, we propose retrieval-augmented accent prompting (RAAP) to ensure accent-consistent speech prompts. We evaluate CLARITY on twelve varieties of English accent via both subjective and objective analysis. Results clearly indicate that CLARITY improves accent accuracy and fairness, ensuring higher perceptual quality output\\footnote{Code and audio samples are available at https://github.com/ICT-SIT/CLARITY.",
+  "arxiv_comment": "under review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Instruction-guided TTS addressing accent and linguistic bias through contextual adaptation and dialect-specific retrieval",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

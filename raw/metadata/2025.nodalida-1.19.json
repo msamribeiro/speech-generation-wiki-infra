@@ -1,0 +1,37 @@
+{
+  "id": "2025.nodalida-1.19",
+  "source_ids": {
+    "acl": "2025.nodalida-1.19",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Towards large-scale speech foundation models for a low-resource minority language",
+  "authors": [
+    "Yaroslav Getman",
+    "Tamás Grósz",
+    "Katri Hiovain-Asikainen",
+    "Tommi Lehtonen",
+    "Mikko Kurimo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.nodalida-1.19",
+  "pdf_url": "https://aclanthology.org/2025.nodalida-1.19.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Modern ASR systems require massive amounts of training data. While ASR training data for most languages are scarce and expensive to transcribe, a practical solution is to collect huge amounts of raw untranscribed speech and pre-train the ASR model in a self-supervised manner. Unfortunately, for many low-resource minority languages, even untranscribed speech data are scarce. In this paper, we propose a solution for the Northern Sámi language with 22,400 hours of speech extracted from the Finnish radio and television archives. We evaluated the model performance with different decoding algorithms and examined the models’ internal behavior with interpretation-based techniques.",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Monolingual ASR foundation model for Finnish; primarily recognition, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

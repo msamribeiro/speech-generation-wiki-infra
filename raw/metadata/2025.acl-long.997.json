@@ -1,0 +1,43 @@
+{
+  "id": "2025.acl-long.997",
+  "source_ids": {
+    "acl": "2025.acl-long.997",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.997",
+    "url_acl": "https://aclanthology.org/2025.acl-long.997"
+  },
+  "title": "Align-SLM: Textless Spoken Language Models with Reinforcement Learning from AI Feedback",
+  "authors": [
+    "Guan-Ting Lin",
+    "Prashanth Gurunath Shivakumar",
+    "Aditya Gourav",
+    "Yile Gu",
+    "Ankur Gandhe",
+    "Hung-yi Lee",
+    "Ivan Bulyko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.997",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.997.pdf",
+  "pdf_path": "raw/papers/2025.acl-long.997.pdf",
+  "pdf_source": "anthology",
+  "abstract": "While textless Spoken Language Models (SLMs) have shown potential in end-to-end speech-to-speech modeling, they still lag behind text-based Large Language Models (LLMs) in terms of semantic coherence and relevance. This work introduces the Align-SLM framework, which leverages preference optimization inspired by Reinforcement Learning with Human Feedback (RLHF) to enhance the semantic understanding of SLMs. Our approach generates multiple speech continuations from a given prompt and uses LLM-based semantic metrics to create preference data for Direct Preference Optimization (DPO). We evaluate the framework using ZeroSpeech 2021 benchmarks for lexical and syntactic modeling, the spoken version of the StoryCloze dataset for semantic coherence, and other speech generation metrics, including the GPT4-o score and human evaluation. Experimental results show that our method achieves the state-of-the-art performance of SLMs for most benchmarks, highlighting the importance of preference optimization to improve the semantics of SLMs.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "RLHF-based alignment for textless spoken language models improving semantic coherence; directly advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

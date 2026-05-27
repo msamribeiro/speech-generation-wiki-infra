@@ -1,0 +1,56 @@
+{
+  "id": "2510.09592",
+  "source_ids": {
+    "arxiv": "2510.09592"
+  },
+  "title": "Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Reasoning in Spoken Language Models",
+  "authors": [
+    "Donghang Wu",
+    "Haoyang Zhang",
+    "Jun Chen",
+    "Xiangyu",
+    "Zhang",
+    "Hexin Liu",
+    "Eng Siong Chng",
+    "Fei Tian",
+    "Xuerui Yang",
+    "Xiangyu Zhang"
+  ],
+  "authors_full": [
+    "Donghang Wu",
+    "Haoyang Zhang",
+    "Jun Chen",
+    "Xiangyu",
+    "Zhang",
+    "Hexin Liu",
+    "Eng Siong Chng",
+    "Fei Tian",
+    "Xuerui Yang",
+    "Xiangyu Zhang",
+    "Daxin Jiang",
+    "Gang Yu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.09592",
+  "pdf_url": "https://arxiv.org/pdf/2510.09592.pdf",
+  "pdf_path": "raw/papers/2510.09592.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Real-time Spoken Language Models (SLMs) struggle to leverage Chain-of-Thought (CoT) reasoning due to the prohibitive latency of generating the entire thought process sequentially. Enabling SLMs to think while speaking, similar to humans, is attracting increasing attention. We present, for the first time, Mind-Paced Speaking (MPS), a brain-inspired framework that enables high-fidelity, real-time reasoning. Similar to how humans utilize distinct brain regions for thinking and responding, we propose a novel dual-brain approach, employing a \"Formulation Brain\" for high-level reasoning to pace and guide a separate \"Articulation Brain\" for fluent speech generation. This division of labor eliminates mode-switching, preserving the integrity of the reasoning process. Experiments show that MPS significantly outperforms existing think-while-speaking methods and achieves reasoning performance comparable to models that pre-compute the full CoT before speaking, while drastically reducing latency. Under a zero-latency configuration, the proposed method achieves an accuracy of 92.8% on the mathematical reasoning task Spoken-MQA and attains a score of 82.5 on the speech conversation task URO-Bench. MPS is the methodology underlying our released Step-Audio R1.1 system, effectively bridging the gap between high-quality reasoning and real-time interaction.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Brain-inspired framework enabling real-time reasoning during speech generation in SLMs; directly advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

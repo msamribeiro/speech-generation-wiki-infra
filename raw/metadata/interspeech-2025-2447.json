@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-2447",
+  "source_ids": {
+    "isca": "lin25h_interspeech",
+    "doi": "10.21437/Interspeech.2025-2447"
+  },
+  "title": "Accelerating Autoregressive Speech Synthesis Inference With Speech Speculative Decoding",
+  "authors": [
+    "Zijian Lin",
+    "Yang Zhang",
+    "Yougen Yuan",
+    "Yuming Yan",
+    "Jinjiang Liu",
+    "Zhiyong Wu",
+    "Pengfei Hu",
+    "Qun Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lin25h_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lin25h_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2447.pdf",
+  "pdf_source": "isca",
+  "abstract": "Modern autoregressive speech synthesis models leveraging language models have demonstrated remarkable performance. However, the sequential nature of next token prediction in these models leads to significant latency, hindering their deployment in scenarios where inference speed is critical. In this work, we propose Speech Speculative Decoding (SSD), a novel framework for autoregressive speech synthesis acceleration. Specifically, our method employs a lightweight draft model to generate candidate token sequences, which are subsequently verified in parallel by the target model using the proposed SSD framework. Experimental results demonstrate that SSD achieves a significant speedup of 1.4x compared with conventional autoregressive decoding, while maintaining high fidelity and naturalness. Subjective evaluations further validate the effectiveness of SSD in preserving the perceptual quality of the target model while accelerating inference.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Speech speculative decoding framework to accelerate autoregressive TTS inference; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

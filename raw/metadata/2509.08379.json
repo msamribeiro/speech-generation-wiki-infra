@@ -1,0 +1,37 @@
+{
+  "id": "2509.08379",
+  "source_ids": {
+    "arxiv": "2509.08379"
+  },
+  "title": "LatentVoiceGrad: Nonparallel Voice Conversion with Latent Diffusion/Flow-Matching Models",
+  "authors": [
+    "Hirokazu Kameoka",
+    "Takuhiro Kaneko",
+    "Kou Tanaka",
+    "Yuto Kondo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.08379",
+  "pdf_url": "https://arxiv.org/pdf/2509.08379.pdf",
+  "pdf_path": "raw/papers/2509.08379.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Previously, we introduced VoiceGrad, a nonparallel voice conversion (VC) technique enabling mel-spectrogram conversion from source to target speakers using a score-based diffusion model. The concept involves training a score network to predict the gradient of the log density of mel-spectrograms from various speakers. VC is executed by iteratively adjusting an input mel-spectrogram until resembling the target speaker's. However, challenges persist: audio quality needs improvement, and conversion is slower compared to modern VC methods designed to operate at very high speeds. To address these, we introduce latent diffusion models into VoiceGrad, proposing an improved version with reverse diffusion in the autoencoder bottleneck. Additionally, we propose using a flow matching model as an alternative to the diffusion model to further speed up the conversion process without compromising the conversion quality. Experimental results show enhanced speech quality and accelerated conversion compared to the original.",
+  "arxiv_comment": "Submitted to IEEE-TASLP",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Nonparallel voice conversion in latent space with diffusion and flow-matching",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

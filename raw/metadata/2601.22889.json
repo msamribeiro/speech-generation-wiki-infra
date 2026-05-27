@@ -1,0 +1,43 @@
+{
+  "id": "2601.22889",
+  "source_ids": {
+    "arxiv": "2601.22889"
+  },
+  "title": "DiffuSpeech: Silent Thought, Spoken Answer via Unified Speech-Text Diffusion",
+  "authors": [
+    "Yuxuan Lou",
+    "Ziming Wu",
+    "Yaochen Wang",
+    "Yong Liu",
+    "Yingxuan Ren",
+    "Fuming Lai",
+    "Shaobing Lian",
+    "Jie Tang",
+    "Yang You"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.22889",
+  "pdf_url": "https://arxiv.org/pdf/2601.22889.pdf",
+  "pdf_path": "raw/papers/2601.22889.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current speech language models generate responses directly without explicit reasoning, leading to errors that cannot be corrected once audio is produced. We introduce \\textbf{``Silent Thought, Spoken Answer''} -- a paradigm where speech LLMs generate internal text reasoning alongside spoken responses, with thinking traces informing speech quality. To realize this, we present \\method{}, the first diffusion-based speech-text language model supporting both understanding and generation, unifying discrete text and tokenized speech under a single masked diffusion framework. Unlike autoregressive approaches, \\method{} jointly generates reasoning traces and speech tokens through iterative denoising, with modality-specific masking schedules. We also construct \\dataset{}, the first speech QA dataset with paired text reasoning traces, containing 26K samples totaling 319 hours. Experiments show \\method{} achieves state-of-the-art speech-to-speech QA accuracy, outperforming the best baseline by up to 9 points, while attaining the best TTS quality among generative models (6.2\\% WER) and preserving language understanding (66.2\\% MMLU). Ablations confirm that both the diffusion architecture and thinking traces contribute to these gains.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Unified speech-text diffusion enabling chain-of-thought reasoning before speech generation in dialogue models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

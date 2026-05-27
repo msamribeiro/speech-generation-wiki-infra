@@ -1,0 +1,40 @@
+{
+  "id": "2509.21968",
+  "source_ids": {
+    "arxiv": "2509.21968"
+  },
+  "title": "AUV: Teaching Audio Universal Vector Quantization with Single Nested Codebook",
+  "authors": [
+    "Yushen Chen",
+    "Kai Hu",
+    "Long Zhou",
+    "Shulin Feng",
+    "Xusheng Yang",
+    "Hangting Chen",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.21968",
+  "pdf_url": "https://arxiv.org/pdf/2509.21968.pdf",
+  "pdf_path": "raw/papers/2509.21968.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose AUV, a unified neural audio codec with a single codebook, which enables a favourable reconstruction of speech and further extends to general audio, including vocal, music, and sound. AUV is capable of tackling any 16 kHz mixed-domain audio segment at bit rates around 700 bps. To accomplish this, we guide the matryoshka codebook with nested domain-specific partitions, assigned with corresponding teacher models to perform distillation, all in a single-stage training. A conformer-style encoder-decoder architecture with STFT features as audio representation is employed, yielding better audio quality. Comprehensive evaluations demonstrate that AUV exhibits comparable audio reconstruction ability to state-of-the-art domain-specific single-layer quantizer codecs, showcasing the potential of audio universal vector quantization with a single codebook. The pre-trained model and demo samples are available at https://swivid.github.io/AUV/.",
+  "arxiv_comment": "Submitted to ICASSP 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "AUV: universal audio codec with single nested codebook for mixed-domain audio; core codec.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

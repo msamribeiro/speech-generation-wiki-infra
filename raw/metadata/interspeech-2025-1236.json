@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1236",
+  "source_ids": {
+    "isca": "choi25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-1236"
+  },
+  "title": "Accelerating Diffusion-based Text-to-Speech Model Trainingwith Dual Modality Alignment",
+  "authors": [
+    "Jeongsoo Choi",
+    "Zhikang Niu",
+    "Ji-Hoon Kim",
+    "Chunhui Wang",
+    "Joon Son Chung",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/choi25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/choi25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1236.pdf",
+  "pdf_source": "isca",
+  "abstract": "The goal of this paper is to optimize the training process of diffusion-based text-to-speech models. While recent studies have achieved remarkable advancements, their training demands substantial time and computational costs, largely due to the implicit guidance of diffusion models in learning complex intermediate representations. To address this, we propose A-DMA, an effective strategy for Accelerating training with Dual Modality Alignment. Our method introduces a novel alignment pipeline leveraging both text and speech modalities: text-guided alignment, which incorporates contextual representations, and speech-guided alignment, which refines semantic representations. By aligning hidden states with discriminative features, our training scheme reduces the reliance on diffusion models for learning complex representations. Extensive experiments demonstrate that A-DMA doubles the convergence speed while achieving superior performance over baselines.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Accelerated diffusion TTS training via dual modality alignment; directly advances TTS training efficiency.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

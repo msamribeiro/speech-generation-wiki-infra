@@ -1,0 +1,41 @@
+{
+  "id": "2509.00503",
+  "source_ids": {
+    "arxiv": "2509.00503"
+  },
+  "title": "Entropy-based Coarse and Compressed Semantic Speech Representation Learning",
+  "authors": [
+    "Jialong Zuo",
+    "Guangyan Zhang",
+    "Minghui Fang",
+    "Shengpeng Ji",
+    "Xiaoqi Jiao",
+    "Jingyu Li",
+    "Yiwen Guo",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.00503",
+  "pdf_url": "https://arxiv.org/pdf/2509.00503.pdf",
+  "pdf_path": "raw/papers/2509.00503.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Discrete speech representation learning has recently attracted increasing interest in both acoustic and semantic modeling. Existing approaches typically encode 16 kHz waveforms into discrete tokens at a rate of 25 or 50 tokens per second. However, given that speech generally conveys only 2 to 5 words per second, such fine-grained tokenization introduces redundancy and hinders efficiency in downstream training and inference. Moreover, semantic speech representations at this frequency primarily capture phonetic-level information, while semantic understanding may not require such detailed token-level resolution. To address these limitations, we propose an entropy-based dynamic aggregation framework for learning compressed semantic speech representations. A speech language model is first pre-trained via next-token prediction on large-scale unlabeled data to capture frequent token patterns. Predictive entropy is then used to adaptively determine aggregation boundaries, followed by a cross-attention module that fuses information within each segment. By adjusting the entropy threshold, the granularity and compression ratio of the representations can be flexibly controlled. Experiments on ASR, speech-to-text translation, and voice conversion tasks demonstrate that the compressed representations perform on par with or better than dense token sequences, demonstrating the effectiveness of the proposed approach.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Entropy-based discrete speech tokenization achieving lower token rates with semantic preservation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

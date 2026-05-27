@@ -1,0 +1,39 @@
+{
+  "id": "2025.findings-acl.71",
+  "source_ids": {
+    "acl": "2025.findings-acl.71",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-acl.71",
+    "url_acl": "https://aclanthology.org/2025.findings-acl.71"
+  },
+  "title": "Data-Centric Improvements for Enhancing Multi-Modal Understanding in Spoken Conversation Modeling",
+  "authors": [
+    "Maximillian Chen",
+    "Ruoxi Sun",
+    "Sercan O Arik"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-acl.71",
+  "pdf_url": "https://aclanthology.org/2025.findings-acl.71.pdf",
+  "pdf_path": "raw/papers/2025.findings-acl.71.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Conversational assistants are increasingly popular across diverse real-world applications, highlighting the need for advanced multimodal speech modeling. Speech, as a natural mode of communication, encodes rich user-specific characteristics such as speaking rate and pitch, making it critical for effective interaction. Our work introduces a data-centric customization approach for efficiently enhancing multimodal understanding in conversational speech modeling. Central to our contributions is a novel multi-task learning paradigm that involves designing auxiliary tasks to utilize a small amount of speech data. Our approach achieves state-of-the-art performance on the Spoken-SQuAD benchmark, using only 10% of the training data with open-weight models, establishing a robust and efficient framework for audio-centric conversational modeling. We also introduce ASK-QA, the first dataset for multi-turn spoken dialogue with ambiguous user requests and dynamic evaluation inputs.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Data-centric approach for speech understanding and generation in conversational multimodal models; advances SCA training.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

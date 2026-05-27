@@ -1,0 +1,37 @@
+{
+  "id": "2602.14686",
+  "source_ids": {
+    "arxiv": "2602.14686"
+  },
+  "title": "Disentangling Pitch and Creak for Speaker Identity Preservation in Speech Synthesis",
+  "authors": [
+    "Frederik Rautenberg",
+    "Jana Wiechmann",
+    "Petra Wagner",
+    "Reinhold Haeb-Umbach"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.14686",
+  "pdf_url": "https://arxiv.org/pdf/2602.14686.pdf",
+  "pdf_path": "raw/papers/2602.14686.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce a system capable of faithfully modifying the perceptual voice quality of creak while preserving the speaker's perceived identity. While it is well known that high creak probability is typically correlated with low pitch, it is important to note that this is a property observed on a population of speakers but does not necessarily hold across all situations. Disentanglement of pitch from creak is achieved by augmentation of the training dataset of a speech synthesis system with a speaker manipulation block based on conditional continuous normalizing flow. The experiments show greatly improved speaker verification performance over a range of creak manipulation strengths.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Disentangles pitch and creak voice quality for controllable synthesis while preserving speaker identity",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

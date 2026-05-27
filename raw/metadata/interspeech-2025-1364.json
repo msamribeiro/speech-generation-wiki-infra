@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-1364",
+  "source_ids": {
+    "isca": "zhao25g_interspeech",
+    "doi": "10.21437/Interspeech.2025-1364"
+  },
+  "title": "VS-Singer: Vision-Guided Stereo Singing Voice Synthesis with Consistency SchrÃ¶dinger Bridge",
+  "authors": [
+    "Zijing Zhao",
+    "Kai Wang",
+    "Hao Huang",
+    "Ying Hu",
+    "Liang He",
+    "Jichen Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhao25g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhao25g_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1364.pdf",
+  "pdf_source": "isca",
+  "abstract": "To explore the potential advantages of utilizing spatial cues from images for generating stereo singing voices with room reverberation, we introduce VS-Singer, a vision-guided model designed to produce stereo singing voices with room reverberation from scene images. VS-Singer comprises three modules: firstly, a modal interaction network integrates spatial features into text encoding to create a linguistic representation enriched with spatial information. Secondly, the decoder employs a consistency SchrÃ¶dinger bridge to facilitate one-step sample generation. Moreover, we utilize the SFE module to improve the consistency of audio-visual matching. To our knowledge, this study is the first to combine stereo singing voice synthesis with visual acoustic matching within a unified framework. Experimental results demonstrate that VS-Singer can effectively generate stereo singing voices that align with the scene perspective in a single step.",
+  "task": [
+    "singing",
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Vision-guided stereo singing voice synthesis with Schrödinger Bridge; advances singing TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

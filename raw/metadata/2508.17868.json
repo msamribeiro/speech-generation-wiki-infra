@@ -1,0 +1,37 @@
+{
+  "id": "2508.17868",
+  "source_ids": {
+    "arxiv": "2508.17868"
+  },
+  "title": "FasterVoiceGrad: Faster One-step Diffusion-Based Voice Conversion with Adversarial Diffusion Conversion Distillation",
+  "authors": [
+    "Takuhiro Kaneko",
+    "Hirokazu Kameoka",
+    "Kou Tanaka",
+    "Yuto Kondo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.17868",
+  "pdf_url": "https://arxiv.org/pdf/2508.17868.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "A diffusion-based voice conversion (VC) model (e.g., VoiceGrad) can achieve high speech quality and speaker similarity; however, its conversion process is slow owing to iterative sampling. FastVoiceGrad overcomes this limitation by distilling VoiceGrad into a one-step diffusion model. However, it still requires a computationally intensive content encoder to disentangle the speaker's identity and content, which slows conversion. Therefore, we propose FasterVoiceGrad, a novel one-step diffusion-based VC model obtained by simultaneously distilling a diffusion model and content encoder using adversarial diffusion conversion distillation (ADCD), where distillation is performed in the conversion process while leveraging adversarial and score distillation training. Experimental evaluations of one-shot VC demonstrated that FasterVoiceGrad achieves competitive VC performance compared to FastVoiceGrad, with 6.6-6.9 and 1.8 times faster speed on a GPU and CPU, respectively.",
+  "arxiv_comment": "Accepted to Interspeech 2025. Project page: https://www.kecl.ntt.co.jp/people/kaneko.takuhiro/projects/fastervoicegrad/",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "One-step diffusion voice conversion with adversarial distillation for fast inference",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-1747"
+}

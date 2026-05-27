@@ -1,0 +1,34 @@
+{
+  "id": "2509.02771",
+  "source_ids": {
+    "arxiv": "2509.02771"
+  },
+  "title": "Analysis of Speaker Verification Performance Trade-offs with Neural Audio Codec Transmission",
+  "authors": [
+    "Nirmalya Mallick Thakur",
+    "Jia Qi Yip",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.02771",
+  "pdf_url": "https://arxiv.org/pdf/2509.02771.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs (NACs) have made significant advancements in recent years and are rapidly being adopted in many audio processing pipelines. However, they can introduce audio distortions which degrade speaker verification (SV) performance. This study investigates the impact of both traditional and neural audio codecs at varying bitrates on three state of-the-art SV models evaluated on the VoxCeleb1 dataset. Our findings reveal a consistent degradation in SV performance across all models and codecs as bitrates decrease. Notably, NACs do not fundamentally break SV performance when compared to traditional codecs. They outperform Opus by 6-8% at low-bitrates (< 12 kbps) and remain marginally behind at higher bitrates ($\\approx$ 24 kbps), with an EER increase of only 0.4-0.7%. The disparity at higher bitrates is likely due to the primary optimization of NACs for perceptual quality, which can inadvertently discard critical speaker-discriminative features, unlike Opus which was designed to preserve vocal characteristics. Our investigation suggests that NACs are a feasible alternative to traditional codecs, especially under bandwidth limitations. To bridge the gap at higher bitrates, future work should focus on developing speaker-aware NACs or retraining and adapting SV models.",
+  "arxiv_comment": "Accepted by APSIPA ASC 2025",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Analyzes codec distortions' impact on speaker verification; primary task is speaker verification",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

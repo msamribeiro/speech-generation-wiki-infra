@@ -1,0 +1,38 @@
+{
+  "id": "2508.04638",
+  "source_ids": {
+    "arxiv": "2508.04638"
+  },
+  "title": "Can NLP Tackle Hate Speech in the Real World? Stakeholder-Informed Feedback and Survey on Counterspeech",
+  "authors": [
+    "Tanvi Dinkar",
+    "Aiqi Jiang",
+    "Simona Frenda",
+    "Poppy Gerrard-Abbott",
+    "Nancie Gunson",
+    "Gavin Abercrombie",
+    "Ioannis Konstas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.04638",
+  "pdf_url": "https://arxiv.org/pdf/2508.04638.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Counterspeech, i.e. the practice of responding to online hate speech, has gained traction in NLP as a promising intervention. While early work emphasised collaboration with non-governmental organisation stakeholders, recent research trends have shifted toward automated pipelines that reuse a small set of legacy datasets, often without input from affected communities. This paper presents a systematic review of 74 NLP studies on counterspeech, analysing the extent to which stakeholder participation influences dataset creation, model development, and evaluation. To complement this analysis, we conducted a participatory case study with five NGOs specialising in online Gender-Based Violence (oGBV), identifying stakeholder-informed practices for counterspeech generation. Our findings reveal a growing disconnect between current NLP research and the needs of communities most impacted by toxic online content. We conclude with concrete recommendations for re-centring stakeholder expertise in counterspeech research.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Survey on counterspeech NLP; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

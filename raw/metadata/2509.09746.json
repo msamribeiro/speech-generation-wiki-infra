@@ -1,0 +1,40 @@
+{
+  "id": "2509.09746",
+  "source_ids": {
+    "arxiv": "2509.09746"
+  },
+  "title": "Deep Learning for Tuberculosis Screening in a High-burden Setting using Cough Analysis and Speech Foundation Models",
+  "authors": [
+    "Ning Ma",
+    "Bahman Mirheidari",
+    "Guy J. Brown",
+    "Nsala Sanjase",
+    "Minyoi M. Maimbolwa",
+    "Solomon Chifwamba",
+    "Seke Muzazu",
+    "Monde Muyoyeta",
+    "Mary Kagujje"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.09746",
+  "pdf_url": "https://arxiv.org/pdf/2509.09746.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Artificial intelligence (AI) systems can detect disease-related acoustic patterns in cough sounds, offering a scalable and cost-effective approach to tuberculosis (TB) screening in high-burden, resource-limited settings. Previous studies have been limited by small datasets, under-representation of symptomatic non-TB patients, and recordings collected in controlled environments. In this study, we enrolled 512 participants at two hospitals in Zambia, categorised into three groups: bacteriologically confirmed TB (TB+), symptomatic patients with other respiratory diseases (OR), and healthy controls (HC). Usable cough recordings with demographic and clinical data were obtained from 500 participants. Deep learning classifiers based on pre-trained speech foundation models were fine-tuned on cough recordings to predict diagnostic categories. The best-performing model, trained on 3-second audio clips, achieved an AUROC of 85.2% for distinguishing TB coughs from all other participants (TB+/Rest) and 80.1% for TB+ versus symptomatic OR participants (TB+/OR). Incorporating demographic and clinical features improved performance to 92.1% for TB+/Rest and 84.2% for TB+/OR. At a probability threshold of 0.38, the multimodal model reached 90.3% sensitivity and 73.1% specificity for TB+/Rest, meeting WHO target product profile benchmarks for TB screening. Adversarial testing and stratified analyses shows that the model was robust to confounding factors including background noise, recording time, and device variability. These results demonstrate the feasibility of cough-based AI for TB screening in real-world, low-resource settings.",
+  "arxiv_comment": "submitted to IEEE Journal of Biomedical and Health Informatics",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "TB screening from cough using SFMs; medical application, no generation contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

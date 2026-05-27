@@ -1,0 +1,41 @@
+{
+  "id": "2603.08977",
+  "source_ids": {
+    "arxiv": "2603.08977"
+  },
+  "title": "Universal Speech Content Factorization",
+  "authors": [
+    "Henry Li Xinyuan",
+    "Zexin Cai",
+    "Lin Zhang",
+    "Leibny Paola García-Perera",
+    "Berrak Sisman",
+    "Sanjeev Khudanpur",
+    "Nicholas Andrews",
+    "Matthew Wiesner"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.08977",
+  "pdf_url": "https://arxiv.org/pdf/2603.08977.pdf",
+  "pdf_path": "raw/papers/2603.08977.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose Universal Speech Content Factorization (USCF), a simple and invertible linear method for extracting a low-rank speech representation in which speaker timbre is suppressed while phonetic content is preserved. USCF extends Speech Content Factorization, a closed-set voice conversion (VC) method, to an open-set setting by learning a universal speech-to-content mapping via least-squares optimization and deriving speaker-specific transformations from only a few seconds of target speech. We show through embedding analysis that USCF effectively removes speaker-dependent variation. As a zero-shot VC system, USCF achieves competitive intelligibility, naturalness, and speaker similarity compared to methods that require substantially more target-speaker data or additional neural training. Finally, we demonstrate that as a training-efficient timbre-disentangled speech feature, USCF features can serve as the acoustic representation for training timbre-prompted text-to-speech models. Speech samples and code are publicly available.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Universal speech content factorization for open-set voice conversion suppressing timbre while preserving phonetics",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

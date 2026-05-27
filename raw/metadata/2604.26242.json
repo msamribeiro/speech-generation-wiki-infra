@@ -1,0 +1,32 @@
+{
+  "id": "2604.26242",
+  "source_ids": {
+    "arxiv": "2604.26242"
+  },
+  "title": "Recurrence-Based Nonlinear Vocal Dynamics as Digital Biomarkers for Depression Detection from Conversational Speech",
+  "authors": [
+    "Himadri S Samanta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.26242",
+  "pdf_url": "https://arxiv.org/pdf/2604.26242.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Digital biomarkers for depression have largely relied on static acoustic descriptors, pooled summary statistics, or conventional machine learning representations. Such approaches may miss nonlinear temporal organization embedded in conversational vocal dynamics. We hypothesized that depression is associated with altered recurrence structure in vocal state trajectories, reflecting changes in how the vocal system revisits acoustic states over time. Using the depression subset of the DAIC-WOZ corpus with 142 labeled participants, we modeled frame-level COVAREP trajectories as nonlinear dynamical systems and derived recurrence-based biomarkers from 74 vocal channels. Logistic regression with feature selection and stratified cross-validation evaluated classification performance. Recurrence-based biomarkers achieved a mean cross-validated AUC of 0.689, exceeding static acoustic baselines, entropy-dynamics features, Hurst exponent features, determinism features, and Lyapunov-like instability proxies. Permutation testing indicated statistical significance with $p=0.004$. Pooled cross-validated predictions yielded AUC 0.665 with a 95\\% bootstrap confidence interval of [0.568, 0.758]. These findings suggest that depression may be characterized by altered recurrence structure in conversational vocal dynamics and support nonlinear state-space analysis as a promising direction for digital psychiatric biomarkers.",
+  "arxiv_comment": "12 pages, 5 figures",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Vocal dynamics biomarkers for depression detection from speech; clinical biomarker analysis not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

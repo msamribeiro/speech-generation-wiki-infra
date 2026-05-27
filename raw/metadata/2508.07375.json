@@ -1,0 +1,40 @@
+{
+  "id": "2508.07375",
+  "source_ids": {
+    "arxiv": "2508.07375"
+  },
+  "title": "TurnGuide: Enhancing Meaningful Full Duplex Spoken Interactions via Dynamic Turn-Level Text-Speech Interleaving",
+  "authors": [
+    "Wenqian Cui",
+    "Lei Zhu",
+    "Xiaohui Li",
+    "Zhihan Guo",
+    "Haoli Bai",
+    "Lu Hou",
+    "Irwin King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.07375",
+  "pdf_url": "https://arxiv.org/pdf/2508.07375.pdf",
+  "pdf_path": "raw/papers/2508.07375.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-Duplex Speech Language Models (FD-SLMs) are specialized foundation models designed to enable natural, real-time spoken interactions by modeling complex conversational turn-taking such as interruptions, backchannels, and overlapping speech. End-to-end (e2e) FD-SLMs leverage real-world double-channel conversational data to capture nuanced two-speaker dialogue patterns for human-like interactions, but their conversational abilities often degrade compared to pure-text conversation due to prolonged speech sequences and limited high-quality spoken dialogue data. Although interleaved text-speech generation could mitigate this degradation, integrating discrete text tokens into continuous double-channel audio streams could disrupt the precise time alignment required for fluid interaction. To address this, we propose TurnGuide, a novel text-speech interleaved generation approach for e2e FD-SLMs that dynamically segments assistant speech into dialogue turns and interleaves turn-level text and speech generation. This approach allows FD-SLMs to integrate the semantic intelligence of LLMs without compromising the natural acoustic flow. Extensive experiments show that TurnGuide not only significantly improves e2e FD-SLMs to produce semantically meaningful, coherent speech but also achieves state-of-the-art performance on various turn-taking events. Demos are available at https://dreamtheater123.github.io/TurnGuide-Demo/. Code will be available at https://github.com/dreamtheater123/TurnGuide.",
+  "arxiv_comment": "Work in progress",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Full-duplex speech language model for natural turn-taking in spoken conversations",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

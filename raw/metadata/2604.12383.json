@@ -1,0 +1,41 @@
+{
+  "id": "2604.12383",
+  "source_ids": {
+    "arxiv": "2604.12383"
+  },
+  "title": "On the Distillation Loss Functions of Speech VAE for Unified Reconstruction, Understanding, and Generation",
+  "authors": [
+    "Changhao Cheng",
+    "Wei Wang",
+    "Wangyou Zhang",
+    "Dongya Jia",
+    "Jian Wu",
+    "Zhuo Chen",
+    "Yanmin Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.12383",
+  "pdf_url": "https://arxiv.org/pdf/2604.12383.pdf",
+  "pdf_path": "raw/papers/2604.12383.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Continuous speech representations based on Variational Autoencoders (VAEs) have emerged as a promising alternative to traditional spectrogram or discrete token based features for speech generation and reconstruction. Recent research has tried to enrich the structural information in VAE latent representations by aligning with self-supervised learning (SSL) features, aiming for better generation performance. However, it remains unclear whether the widely-used alignment approach based on time-axis distillation is optimal when considering more tasks. To address this problem, this paper systematically explores different alignment approaches and analyzes their impact on the performances over three axes: reconstruction, understanding, and generation. We investigate various design choices in the distillation loss. Extensive experiments show that the joint-marginal alignment approach with adaptive weighting can achieve the best overall performance while allowing for a controllable balance.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Distillation loss study for speech VAEs enabling unified reconstruction, understanding, and generation from continuous latents",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

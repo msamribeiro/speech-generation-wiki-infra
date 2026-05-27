@@ -1,0 +1,38 @@
+{
+  "id": "2508.01796",
+  "source_ids": {
+    "arxiv": "2508.01796"
+  },
+  "title": "Enhancing Spectrogram Realism in Singing Voice Synthesis via Explicit Bandwidth Extension Prior to Vocoder",
+  "authors": [
+    "Runxuan Yang",
+    "Kai Li",
+    "Guo Chen",
+    "Xiaolin Hu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.01796",
+  "pdf_url": "https://arxiv.org/pdf/2508.01796.pdf",
+  "pdf_path": "raw/papers/2508.01796.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper addresses the challenge of enhancing the realism of vocoder-generated singing voice audio by mitigating the distinguishable disparities between synthetic and real-life recordings, particularly in high-frequency spectrogram components. Our proposed approach combines two innovations: an explicit linear spectrogram estimation step using denoising diffusion process with DiT-based neural network architecture optimized for time-frequency data, and a redesigned vocoder based on Vocos specialized in handling large linear spectrograms with increased frequency bins. This integrated method can produce audio with high-fidelity spectrograms that are challenging for both human listeners and machine classifiers to differentiate from authentic recordings. Objective and subjective evaluations demonstrate that our streamlined approach maintains high audio quality while achieving this realism. This work presents a substantial advancement in overcoming the limitations of current vocoding techniques, particularly in the context of adversarial attacks on fake spectrogram detection.",
+  "arxiv_comment": "7 pages, 8 figures",
+  "task": [
+    "singing",
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Directly improves singing voice synthesis quality via bandwidth extension prior to vocoder",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

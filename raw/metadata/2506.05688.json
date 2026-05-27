@@ -1,0 +1,36 @@
+{
+  "id": "2506.05688",
+  "source_ids": {
+    "arxiv": "2506.05688"
+  },
+  "title": "Voice Impression Control in Zero-Shot TTS",
+  "authors": [
+    "Kenichi Fujita",
+    "Shota Horiguchi",
+    "Yusuke Ijima"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.05688",
+  "pdf_url": "https://arxiv.org/pdf/2506.05688.pdf",
+  "pdf_path": "raw/papers/2506.05688.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Para-/non-linguistic information in speech is pivotal in shaping the listeners' impression. Although zero-shot text-to-speech (TTS) has achieved high speaker fidelity, modulating subtle para-/non-linguistic information to control perceived voice characteristics, i.e., impressions, remains challenging. We have therefore developed a voice impression control method in zero-shot TTS that utilizes a low-dimensional vector to represent the intensities of various voice impression pairs (e.g., dark-bright). The results of both objective and subjective evaluations have demonstrated our method's effectiveness in impression control. Furthermore, generating this vector via a large language model enables target-impression generation from a natural language description of the desired impression, thus eliminating the need for manual optimization. Audio examples are available on our demo page (https://ntt-hilab-gensp.github.io/is2025voiceimpression/).",
+  "arxiv_comment": "5 pages,5 figures, Accepted to INTERSPEECH 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Method to control perceived voice impressions in zero-shot TTS using para-/non-linguistic control; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

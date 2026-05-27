@@ -1,0 +1,57 @@
+{
+  "id": "2508.19205",
+  "source_ids": {
+    "arxiv": "2508.19205"
+  },
+  "title": "VibeVoice Technical Report",
+  "authors": [
+    "Zhiliang Peng",
+    "Jianwei Yu",
+    "Wenhui Wang",
+    "Yaoyao Chang",
+    "Yutao Sun",
+    "Li Dong",
+    "Yi Zhu",
+    "Weijiang Xu",
+    "Hangbo Bao",
+    "Zehua Wang"
+  ],
+  "authors_full": [
+    "Zhiliang Peng",
+    "Jianwei Yu",
+    "Wenhui Wang",
+    "Yaoyao Chang",
+    "Yutao Sun",
+    "Li Dong",
+    "Yi Zhu",
+    "Weijiang Xu",
+    "Hangbo Bao",
+    "Zehua Wang",
+    "Shaohan Huang",
+    "Yan Xia",
+    "Furu Wei"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.19205",
+  "pdf_url": "https://arxiv.org/pdf/2508.19205.pdf",
+  "pdf_path": "raw/papers/2508.19205.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This report presents VibeVoice, a novel model designed to synthesize long-form speech with multiple speakers by employing next-token diffusion, which is a unified method for modeling continuous data by autoregressively generating latent vectors via diffusion. To enable this, we introduce a novel continuous speech tokenizer that, when compared to the popular Encodec model, improves data compression by 80 times while maintaining comparable performance. The tokenizer effectively preserves audio fidelity while significantly boosting computational efficiency for processing long sequences. Thus, VibeVoice can synthesize long-form speech for up to 90 minutes (in a 64K context window length) with a maximum of 4 speakers, capturing the authentic conversational ``vibe'' and surpassing open-source and proprietary dialogue models.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "VibeVoice: multi-speaker long-form TTS via next-token diffusion; core TTS paper.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

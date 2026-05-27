@@ -1,0 +1,46 @@
+{
+  "id": "2025.emnlp-main.1780",
+  "source_ids": {
+    "acl": "2025.emnlp-main.1780",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.emnlp-main.1780",
+    "url_acl": "https://aclanthology.org/2025.emnlp-main.1780"
+  },
+  "title": "BRSpeech-DF: A Deep Fake Synthetic Speech Dataset for Portuguese Zero-Shot TTS",
+  "authors": [
+    "Alexandre Costa Ferro Filho",
+    "Rafaello Virgilli",
+    "Lucas Alcantara Souza",
+    "F S de Oliveira",
+    "Marcelo Henrique Lopes Ferreira",
+    "Daniel Tunnermann",
+    "Gustavo Dos Reis Oliveira",
+    "Anderson Da Silva Soares",
+    "Arlindo Rodrigues Galvão Filho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.emnlp-main.1780",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-main.1780.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "The detection of audio deepfakes (ADD) has become increasingly important due to the rapid evolution of generative speech models. However, progress in this field remains uneven across languages, particularly for low-resource languages like Portuguese, which lack high-quality datasets. In this paper, we introduce BRSpeech-DF, the first publicly available ADD dataset for Portuguese, encompassing both Brazilian and European variants. The dataset contains over 458,000 utterances, including a smaller portion of real speech from 62 speakers and a large collection of synthetic samples generated using multiple zero-shot text-to-speech (TTS) models, each conditioned on the original speaker’s voice. By providing this resource, our objective is to support the development of robust, multilingual detection systems, thereby advancing equity in speech forensics and security research. BRSpeech-DF addresses a significant gap in annotated data for underrepresented languages, facilitating more inclusive and generalizable advancements in synthetic speech detection.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "First Portuguese audio deepfake detection dataset built with zero-shot TTS; primarily an ADD resource, secondary TTS relevance.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

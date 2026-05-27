@@ -1,0 +1,38 @@
+{
+  "id": "2508.03543",
+  "source_ids": {
+    "arxiv": "2508.03543"
+  },
+  "title": "EmoSteer-TTS: Fine-Grained and Training-Free Emotion-Controllable Text-to-Speech via Activation Steering",
+  "authors": [
+    "Tianxin Xie",
+    "Shan Yang",
+    "Chenxing Li",
+    "Dong Yu",
+    "Li Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.03543",
+  "pdf_url": "https://arxiv.org/pdf/2508.03543.pdf",
+  "pdf_path": "raw/papers/2508.03543.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech (TTS) has shown great progress in recent years. However, most existing TTS systems offer only coarse and rigid emotion control, typically via discrete emotion labels or a carefully crafted and detailed emotional text prompt, making fine-grained emotion manipulation either inaccessible or unstable. These models also require extensive, high-quality datasets for training. To address these limitations, we propose EmoSteer-TTS, a novel training-free approach, to achieve fine-grained speech emotion control (conversion, interpolation, erasure) by activation steering. We first empirically observe that modifying a subset of the internal activations within a flow matching-based TTS model can effectively alter the emotional tone of synthesized speech. Building on this insight, we then develop a training-free and efficient algorithm, including activation extraction, emotional token searching, and inference-time steering, which can be seamlessly integrated into a wide range of pretrained models (e.g., F5-TTS, CosyVoice2, and E2-TTS). In addition, to derive effective steering vectors, we construct a curated emotional speech dataset with diverse speakers. Extensive experiments demonstrate that EmoSteer-TTS enables fine-grained, interpretable, and continuous control over speech emotion, outperforming the state-of-the-art (SOTA). To the best of our knowledge, this is the first method that achieves training-free and continuous fine-grained emotion control in TTS. Demo samples are available at https://emosteer-tts-demo.pages.dev/.",
+  "arxiv_comment": "25 pages, 9 figures, 3 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Fine-grained emotion control in TTS via activation steering without training",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

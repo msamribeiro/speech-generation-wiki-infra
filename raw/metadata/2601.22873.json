@@ -1,0 +1,38 @@
+{
+  "id": "2601.22873",
+  "source_ids": {
+    "arxiv": "2601.22873"
+  },
+  "title": "EmoShift: Lightweight Activation Steering for Enhanced Emotion-Aware Speech Synthesis",
+  "authors": [
+    "Li Zhou",
+    "Hao Jiang",
+    "Junjie Li",
+    "Tianrui Wang",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.22873",
+  "pdf_url": "https://arxiv.org/pdf/2601.22873.pdf",
+  "pdf_path": "raw/papers/2601.22873.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Achieving precise and controllable emotional expression is crucial for producing natural and context-appropriate speech in text-to-speech (TTS) synthesis. However, many emotion-aware TTS systems, including large language model (LLM)-based designs, rely on scaling fixed emotion embeddings or external guidance, limiting their ability to model emotion-specific latent characteristics. To address this gap, we present EmoShift, a lightweight activation-steering framework incorporating a EmoSteer layer, which learns a steering vector for each target emotion in the output embedding space to capture its latent offset and maintain stable, appropriate expression across utterances and categories. With only 10M trainable parameters,less than 1/30 of full fine-tuning, EmoShift outperforms zero-shot and fully fine-tuned baselines in objective and subjective evaluations, enhancing emotional expressiveness while preserving naturalness and speaker similarity. Further analysis confirms the proposed EmoSteer layer's effectiveness and reveals its potential for controllable emotional intensity in speech synthesis.",
+  "arxiv_comment": "Activation Steering; Emotion-Aware TTS; Speech Synthesis; Accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Activation steering for lightweight fine-grained emotion control in LLM-based TTS without external guidance",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

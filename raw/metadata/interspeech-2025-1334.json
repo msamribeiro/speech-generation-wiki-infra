@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1334",
+  "source_ids": {
+    "isca": "alradhi25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1334",
+    "arxiv": "2508.03166"
+  },
+  "title": "MiSTR: Multi-Modal iEEG-to-Speech Synthesis with Transformer-Based Prosody Prediction and Neural Phase Reconstruction",
+  "authors": [
+    "Mohammed Al-Radhi",
+    "GÃ©za NÃ©meth",
+    "Branislav Gerazov"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/alradhi25_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.03166.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1334.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech synthesis from intracranial EEG (iEEG) signals offers a promising avenue for restoring communication in individuals with severe speech impairments. However, achieving intelligible and natural speech remains challenging due to limitations in feature representation, prosody modeling, and phase reconstruction. We introduce MiSTR, a deep-learning framework that integrates: 1) Wavelet-based feature extraction to capture fine-grained temporal, spectral, and neurophysiological representations of iEEG signals, 2) A Transformer-based decoder for prosody-aware spectrogram prediction, and 3) A neural phase vocoder enforcing harmonic consistency via adaptive spectral correction. Evaluated on a public iEEG dataset, MiSTR achieves state-of-the-art speech intelligibility, with a mean Pearson correlation of 0.91 between reconstructed and original Mel spectrograms, improving over existing neural speech synthesis baselines.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "iEEG-to-speech synthesis for communication restoration with transformer prosody prediction; advances BCI TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

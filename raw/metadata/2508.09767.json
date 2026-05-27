@@ -1,0 +1,34 @@
+{
+  "id": "2508.09767",
+  "source_ids": {
+    "arxiv": "2508.09767"
+  },
+  "title": "UtterTune: LoRA-Based Target-Language Pronunciation Edit and Control in Multilingual Text-to-Speech",
+  "authors": [
+    "Shuhei Kato"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.09767",
+  "pdf_url": "https://arxiv.org/pdf/2508.09767.pdf",
+  "pdf_path": "raw/papers/2508.09767.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose UtterTune, a lightweight adaptation method that fine-tunes a multilingual text-to-speech (TTS) system based on a large language model (LLM) architecture, designed to enhance the controllability of pronunciation in a target language while preserving performance in others. While LLM architectures have enabled TTS models to achieve remarkable naturalness, accurately modeling grapheme-to-phoneme (G2P) mapping and prosody remains challenging, especially when the model omits an explicit G2P module and directly processes minimally encoded text (e.g., byte-pair encoding). UtterTune leverages low-rank adaptation to enable the control of segmental pronunciation and pitch accent at the phoneme level for Japanese speech, the target language in this paper, while maintaining naturalness and speaker similarity in a zero-shot setting. Objective and subjective evaluations confirm its effectiveness.",
+  "arxiv_comment": "5 pages",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "LoRA-based pronunciation control for multilingual TTS systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

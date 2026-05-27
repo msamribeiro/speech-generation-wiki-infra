@@ -1,0 +1,39 @@
+{
+  "id": "2508.14713",
+  "source_ids": {
+    "arxiv": "2508.14713"
+  },
+  "title": "Long-Context Speech Synthesis with Context-Aware Memory",
+  "authors": [
+    "Zhipeng Li",
+    "Xiaofen Xing",
+    "Jingyuan Xing",
+    "Hangrui Hu",
+    "Heng Lu",
+    "Xiangmin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.14713",
+  "pdf_url": "https://arxiv.org/pdf/2508.14713.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In long-text speech synthesis, current approaches typically convert text to speech at the sentence-level and concatenate the results to form pseudo-paragraph-level speech. These methods overlook the contextual coherence of paragraphs, leading to reduced naturalness and inconsistencies in style and timbre across the long-form speech. To address these issues, we propose a Context-Aware Memory (CAM)-based long-context Text-to-Speech (TTS) model. The CAM block integrates and retrieves both long-term memory and local context details, enabling dynamic memory updates and transfers within long paragraphs to guide sentence-level speech synthesis. Furthermore, the prefix mask enhances the in-context learning ability by enabling bidirectional attention on prefix tokens while maintaining unidirectional generation. Experimental results demonstrate that the proposed method outperforms baseline and state-of-the-art long-context methods in terms of prosody expressiveness, coherence and context inference cost across paragraph-level speech.",
+  "arxiv_comment": "Accepted by Interspeech25",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "TTS with context-aware memory for prosody coherence in long-text synthesis",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0253"
+}

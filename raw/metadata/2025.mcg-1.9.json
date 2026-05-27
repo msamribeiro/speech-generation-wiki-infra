@@ -1,0 +1,35 @@
+{
+  "id": "2025.mcg-1.9",
+  "source_ids": {
+    "acl": "2025.mcg-1.9",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.mcg-1.9"
+  },
+  "title": "TrenTeam at Multilingual Counterspeech Generation: Multilingual Passage Re-Ranking Approaches for Knowledge-Driven Counterspeech Generation Against Hate",
+  "authors": [
+    "Daniel Russo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.9",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.9.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Hate speech (HS) in online spaces poses severe risks, including real-world violence and psychological harm to victims, necessitating effective countermeasures. Counterspeech (CS), which responds to hateful messages with opposing yet non-hostile narratives, offer a promising solution by mitigating HS while upholding free expression. However, the growing volume of HS demands automation, making Natural Language Processing a viable solution for the automatic generation of CS. Recent works have explored knowledge-driven approaches, leveraging external sources to improve the relevance and informativeness of responses. These methods typically involve multi-step pipelines combining retrieval and passage re-ranking modules. While effective, most studies have focused on English, with limited exploration of multilingual contexts. This paper addresses these gaps by proposing a multilingual, knowledge-driven approach to CS generation. We integrate state-of-the-art re-ranking mechanisms into the CS generation pipeline and evaluate them using the MT-CONAN-KN dataset, which includes hate speech, relevant knowledge sentences, and counterspeech in four languages: English, Italian, Spanish, and Basque. Our approach compares reranker-based systems employing multilingual cross-encoders and LLMs to a simpler end-to-end system where the language model directly handles both knowledge selection and CS generation. Results demonstrate that reranker-based systems outperformed end-to-end systems in syntactic and semantic similarity metrics, with LLM-based re-rankers delivering the strongest performance overall. This work is the result of our participation in the Shared Task on Multilingual Counterspeech Generation held at COLING 2025.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Counterspeech with knowledge-driven passage ranking; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

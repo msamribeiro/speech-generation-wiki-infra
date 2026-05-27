@@ -1,0 +1,37 @@
+{
+  "id": "2025.mcg-1.7",
+  "source_ids": {
+    "acl": "2025.mcg-1.7",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.mcg-1.7"
+  },
+  "title": "MilaNLP@Multilingual Counterspeech Generation: Evaluating Translation and Background Knowledge Filtering",
+  "authors": [
+    "Emanuele Moscato",
+    "Arianna Muti",
+    "Debora Nozza"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.7",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.7.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We describe our participation in the Multilingual Counterspeech Generation shared task, which aims to generate a counternarrative to counteract hate speech, given a hateful sentence and relevant background knowledge. Our team tested two different aspects: translating outputs from English vs generating outputs in the original languages and filtering pieces of the background knowledge provided vs including all the background knowledge. Our experiments show that filtering the background knowledge in the same prompt and leaving data in the original languages leads to more adherent counternarrative generations, except for Basque, where translating the output from English and filtering the background knowledge in a separate prompt yields better results. Our system ranked first in English, Italian, and Spanish and fourth in Basque.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Counterspeech with translation; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

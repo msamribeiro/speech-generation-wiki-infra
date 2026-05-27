@@ -1,0 +1,58 @@
+{
+  "id": "2603.08823",
+  "source_ids": {
+    "arxiv": "2603.08823"
+  },
+  "title": "Fish Audio S2 Technical Report",
+  "authors": [
+    "Shijia Liao",
+    "Yuxuan Wang",
+    "Songting Liu",
+    "Yifan Cheng",
+    "Ruoyi Zhang",
+    "Tianyu Li",
+    "Shidong Li",
+    "Yisheng Zheng",
+    "Xingwei Liu",
+    "Qingzheng Wang"
+  ],
+  "authors_full": [
+    "Shijia Liao",
+    "Yuxuan Wang",
+    "Songting Liu",
+    "Yifan Cheng",
+    "Ruoyi Zhang",
+    "Tianyu Li",
+    "Shidong Li",
+    "Yisheng Zheng",
+    "Xingwei Liu",
+    "Qingzheng Wang",
+    "Zhizhuo Zhou",
+    "Jiahua Liu",
+    "Xin Chen",
+    "Dawei Han"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.08823",
+  "pdf_url": "https://arxiv.org/pdf/2603.08823.pdf",
+  "pdf_path": "raw/papers/2603.08823.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Fish Audio S2, an open-sourced text-to-speech system featuring multi-speaker, multi-turn generation, and, most importantly, instruction-following control via natural-language descriptions. To scale training, we develop a multi-stage training recipe together with a staged data pipeline covering video captioning and speech captioning, voice-quality assessment, and reward modeling. To push the frontier of open-source TTS, we release our model weights, fine-tuning code, and an SGLang-based inference engine. The inference engine is production-ready for streaming, achieving an RTF of 0.195 and a time-to-first-audio below 100 ms.Our code and weights are available on GitHub (https://github.com/fishaudio/fish-speech) and Hugging Face (https://huggingface.co/fishaudio/s2-pro). We highly encourage readers to visit https://fish.audio to try custom voices.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Fish Audio S2: open-source multilingual instruction-following TTS with multi-stage training and reward modeling",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

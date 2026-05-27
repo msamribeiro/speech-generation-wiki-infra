@@ -1,0 +1,40 @@
+{
+  "id": "2603.12565",
+  "source_ids": {
+    "arxiv": "2603.12565"
+  },
+  "title": "Speech-Worthy Alignment for Japanese SpeechLLMs via Direct Preference Optimization",
+  "authors": [
+    "Mengjie Zhao",
+    "Lianbo Liu",
+    "Yusuke Fujita",
+    "Hao Shi",
+    "Yuan Gao",
+    "Roman Koshkin",
+    "Yui Sudo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.12565",
+  "pdf_url": "https://arxiv.org/pdf/2603.12565.pdf",
+  "pdf_path": "raw/papers/2603.12565.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "SpeechLLMs typically combine ASR-trained encoders with text-based LLM backbones, leading them to inherit written-style output patterns unsuitable for text-to-speech synthesis. This mismatch is particularly pronounced in Japanese, where spoken and written registers differ substantially in politeness markers, sentence-final particles, and syntactic complexity. We propose a preference-based alignment approach to adapt Japanese SpeechLLMs for speech-worthy outputs: text that is concise, conversational, and readily synthesized as natural speech. To rigorously evaluate this task, we introduce SpokenElyza, a benchmark for Japanese speech-worthiness derived from ELYZA-tasks-100 with auditory verification by native experts. Experiments show that our approach achieves substantial improvement on SpokenElyza while largely preserving performance on the original written-style evaluation. We will release SpokenElyza to support future research on Japanese spoken dialog systems.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "DPO-based speech-worthy alignment for Japanese SpeechLLMs bridging written-to-spoken register gap",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2601.12480",
+  "source_ids": {
+    "arxiv": "2601.12480"
+  },
+  "title": "A Unified Neural Codec Language Model for Selective Editable Text to Speech Generation",
+  "authors": [
+    "Hanchen Pei",
+    "Shujie Liu",
+    "Yanqing Liu",
+    "Jianwei Yu",
+    "Yuanhang Qian",
+    "Gongping Huang",
+    "Sheng Zhao",
+    "Yan Lu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.12480",
+  "pdf_url": "https://arxiv.org/pdf/2601.12480.pdf",
+  "pdf_path": "raw/papers/2601.12480.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural codec language models achieve impressive zero-shot Text-to-Speech (TTS) by fully imitating the acoustic characteristics of a short speech prompt, including timbre, prosody, and paralinguistic information. However, such holistic imitation limits their ability to isolate and control individual attributes. In this paper, we present a unified codec language model SpeechEdit that extends zero-shot TTS with a selective control mechanism. By default, SpeechEdit reproduces the complete acoustic profile inferred from the speech prompt, but it selectively overrides only the attributes specified by explicit control instructions. To enable controllable modeling, SpeechEdit is trained on our newly constructed LibriEdit dataset, which provides delta (difference-aware) training pairs derived from LibriHeavy. Experimental results show that our approach maintains naturalness and robustness while offering flexible and localized control over desired attributes. Audio samples are available at https://speech-editing.github.io/speech-editing/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Codec LM with selective attribute control enabling zero-shot TTS and targeted speech attribute editing",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

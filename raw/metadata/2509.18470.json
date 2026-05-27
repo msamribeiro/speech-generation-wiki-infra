@@ -1,0 +1,36 @@
+{
+  "id": "2509.18470",
+  "source_ids": {
+    "arxiv": "2509.18470"
+  },
+  "title": "Discrete-Time Diffusion-Like Models for Speech Synthesis",
+  "authors": [
+    "Xiaozhou Tan",
+    "Minghui Zhao",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.18470",
+  "pdf_url": "https://arxiv.org/pdf/2509.18470.pdf",
+  "pdf_path": "raw/papers/2509.18470.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Diffusion models have attracted a lot of attention in recent years. These models view speech generation as a continuous-time process. For efficient training, this process is typically restricted to additive Gaussian noising, which is limiting. For inference, the time is typically discretized, leading to the mismatch between continuous training and discrete sampling conditions. Recently proposed discrete-time processes, on the other hand, usually do not have these limitations, may require substantially fewer inference steps, and are fully consistent between training/inference conditions. This paper explores some diffusion-like discrete-time processes and proposes some new variants. These include processes applying additive Gaussian noise, multiplicative Gaussian noise, blurring noise and a mixture of blurring and Gaussian noises. The experimental results suggest that discrete-time processes offer comparable subjective and objective speech quality to their widely popular continuous counterpart, with more efficient and consistent training and inference schemas.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Discrete-time diffusion-like model for speech synthesis beyond continuous Gaussian noising",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

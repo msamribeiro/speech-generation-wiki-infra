@@ -1,0 +1,38 @@
+{
+  "id": "2510.13906",
+  "source_ids": {
+    "arxiv": "2510.13906"
+  },
+  "title": "Switchboard-Affect: Emotion Perception Labels from Conversational Speech",
+  "authors": [
+    "Amrit Romana",
+    "Jaya Narain",
+    "Tien Dung Tran",
+    "Andrea Davis",
+    "Jason Fong",
+    "Ramya Rasipuram",
+    "Vikramjit Mitra"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.13906",
+  "pdf_url": "https://arxiv.org/pdf/2510.13906.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Understanding the nuances of speech emotion dataset curation and labeling is essential for assessing speech emotion recognition (SER) model potential in real-world applications. Most training and evaluation datasets contain acted or pseudo-acted speech (e.g., podcast speech) in which emotion expressions may be exaggerated or otherwise intentionally modified. Furthermore, datasets labeled based on crowd perception often lack transparency regarding the guidelines given to annotators. These factors make it difficult to understand model performance and pinpoint necessary areas for improvement. To address this gap, we identified the Switchboard corpus as a promising source of naturalistic conversational speech, and we trained a crowd to label the dataset for categorical emotions (anger, contempt, disgust, fear, sadness, surprise, happiness, tenderness, calmness, and neutral) and dimensional attributes (activation, valence, and dominance). We refer to this label set as Switchboard-Affect (SWB-Affect). In this work, we present our approach in detail, including the definitions provided to annotators and an analysis of the lexical and paralinguistic cues that may have played a role in their perception. In addition, we evaluate state-of-the-art SER models, and we find variable performance across the emotion categories with especially poor generalization for anger. These findings underscore the importance of evaluation with datasets that capture natural affective variations in speech. We release the labels for SWB-Affect to enable further analysis in this domain.",
+  "arxiv_comment": "2025 13th International Conference on Affective Computing and Intelligent Interaction (ACII) https://github.com/apple/ml-switchboard-affect",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Speech emotion perception dataset for recognition; not related to speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1394",
+  "source_ids": {
+    "isca": "cho25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-1394"
+  },
+  "title": "DiEmo-TTS: Disentangled Emotion Representations via Self-Supervised Distillation for Cross-Speaker Emotion Transfer in Text-to-Speech",
+  "authors": [
+    "Deok-Hyeon Cho",
+    "Hyung-Seok Oh",
+    "Seung-Bin Kim",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/cho25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/cho25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1394.pdf",
+  "pdf_source": "isca",
+  "abstract": "Cross-speaker emotion transfer in speech synthesis relies on extracting speaker-independent emotion embeddings for accurate emotion modeling without retaining speaker traits. However, existing timbre compression methods fail to fully separate speaker and emotion characteristics, causing speaker leakage and degraded synthesis quality. To address this, we propose DiEmo-TTS, a self-supervised distillation method to minimize emotional information loss and preserve speaker identity. We introduce cluster-driven sampling and information perturbation to preserve emotion while removing irrelevant factors. To facilitate this process, we propose an emotion clustering and matching approach using emotional attribute prediction and speaker embeddings, enabling generalization to unlabeled data. Additionally, we designed a dual conditioning transformer to integrate style features better. Experimental results confirm the effectiveness of our method in learning speaker-irrelevant emotion embeddings.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Self-supervised distillation for disentangled emotion representations in cross-speaker TTS; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

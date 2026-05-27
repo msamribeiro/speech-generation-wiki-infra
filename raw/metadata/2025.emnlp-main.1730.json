@@ -1,0 +1,41 @@
+{
+  "id": "2025.emnlp-main.1730",
+  "source_ids": {
+    "acl": "2025.emnlp-main.1730",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.emnlp-main.1730",
+    "url_acl": "https://aclanthology.org/2025.emnlp-main.1730"
+  },
+  "title": "FillerSpeech: Towards Human-Like Text-to-Speech Synthesis with Filler Insertion and Filler Style Control",
+  "authors": [
+    "Seung-Bin Kim",
+    "Jun-Hyeok Cha",
+    "Hyung-Seok Oh",
+    "Heejin Choi",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.emnlp-main.1730",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-main.1730.pdf",
+  "pdf_path": "raw/papers/2025.emnlp-main.1730.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Recent advancements in speech synthesis have significantly improved the audio quality and pronunciation of synthesized speech. To further advance toward human-like conversational speech synthesis, this paper presents FillerSpeech, a novel speech synthesis framework that enables natural filler insertion and control over filler style. To address this, we construct a filler-inclusive speech data, derived from the open-source large-scale speech corpus. This data includes fillers with pitch and duration information. For the generation and style control of natural fillers, we propose a method that tokenizes the filler style and utilizes cross-attention with the input text. Furthermore, we introduce a large language model-based filler prediction method that enables natural insertion of fillers even when only text input is provided. The experimental results demonstrate that the constructed dataset is valid and that our proposed methods for filler style control and filler prediction are effective.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Novel TTS framework for natural filler insertion and filler style control in conversational speech; directly advances expressive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

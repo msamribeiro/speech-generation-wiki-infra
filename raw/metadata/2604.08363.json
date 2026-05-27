@@ -1,0 +1,37 @@
+{
+  "id": "2604.08363",
+  "source_ids": {
+    "arxiv": "2604.08363"
+  },
+  "title": "CapTalk: Unified Voice Design for Single-Utterance and Dialogue Speech Generation",
+  "authors": [
+    "Xiaosu Su",
+    "Zihan Sun",
+    "Peilei Jia",
+    "Jun Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.08363",
+  "pdf_url": "https://arxiv.org/pdf/2604.08363.pdf",
+  "pdf_path": "raw/papers/2604.08363.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice design from natural language descriptions is emerging as a new task in text-to-speech multimodal generation, aiming to synthesize speech with target timbre and speaking style without relying on reference audio. However, existing methods mainly focus on single-utterance generation, leaving conversational voice design largely unexplored. In this work, we extend voice design to dialogue, enabling better target speaker modeling and turn-level expressive control in natural conversational settings. We propose CapTalk, a unified caption-conditioned text-audio autoregressive framework for both single-utterance and dialogue voice design. CapTalk uses utterance-level captions for single-utterance voice design and speaker-level captions for dialogue speaker modeling, and further introduces a CoT control sequence in dialogue to explicitly plan turn-level dynamic attributes. To resolve the conflict between stable timbre preservation and context-adaptive expression, we propose a hierarchical variational conditioning module with an utterance-level speaker encoder to better balance stable timbre preservation and context-adaptive expression. This enables timbre reuse while keeping expression adaptive to the current utterance and, in dialogue, the surrounding context. We also build a comprehensive evaluation protocol for both single-utterance and dialogue settings. Experiments show that CapTalk achieves state-of-the-art performance on a single-utterance voice design benchmark and delivers better expression controllability and contextual appropriateness in multi-turn dialogue. Audio samples are available at: https://anonymous.4open.science/api/repo/Captalk-D601/file/index.html.",
+  "arxiv_comment": "14 pages, 2 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "CapTalk: unified voice design from natural language for single-utterance and multi-turn dialogue speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

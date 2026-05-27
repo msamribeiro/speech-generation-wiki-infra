@@ -1,0 +1,40 @@
+{
+  "id": "2025.chipsal-1.18",
+  "source_ids": {
+    "acl": "2025.chipsal-1.18",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.chipsal-1.18"
+  },
+  "title": "Impacts of Vocoder Selection on Tacotron-based Nepali Text-To-Speech Synthesis",
+  "authors": [
+    "Ganesh Dhakal Chhetri",
+    "Kiran Chandra Dahal",
+    "Prakash Poudyal"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.chipsal-1.18",
+  "pdf_url": "https://aclanthology.org/2025.chipsal-1.18.pdf",
+  "pdf_path": "raw/papers/2025.chipsal-1.18.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Text-to-speech (TTS) technology enhances human-computer interaction and increases content accessibility. Tacotron and other deep learning models have enhanced the naturalness of text-to-speech systems. The vocoder, which transforms mel-spectrograms into audio waveforms, significantly influences voice quality. This study evaluates Tacotron2 vocoders for Nepali text-to speech synthesis. While English language vocoders have been thoroughly examined, Nepali language vocoders remain underexplored. The study utilizes the WaveNet and MelGAN vocoders to generate speech from mel-spectrograms produced by Tacotron2 for Nepali text. In order to assess the quality of voice synthesis, this paper study the mel-cepstral distortion (MCD) and Mean Opinion Score (MOS) for speech produced by both vocoders. The comparative investigation of the Tacotron2 + MelGAN and Tacotron2 + WaveNet models, utilizing the Nepali OpenSLR and News male voice datasets, consistently reveals the advantage of Tacotron2 + MelGAN in terms of naturalness and accuracy. The Tacotron2 + MelGAN model achieved an average MOS score of 4.245 on the Nepali OpenSLR dataset and 2.885 on the male voice dataset.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Evaluates vocoders for Nepali TTS; directly advances low-resource TTS with vocoder analysis.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

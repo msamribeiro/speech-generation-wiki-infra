@@ -1,0 +1,36 @@
+{
+  "id": "2603.13518",
+  "source_ids": {
+    "arxiv": "2603.13518"
+  },
+  "title": "VoXtream2: Full-stream TTS with dynamic speaking rate control",
+  "authors": [
+    "Nikita Torgashov",
+    "Gustav Eje Henter",
+    "Gabriel Skantze"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.13518",
+  "pdf_url": "https://arxiv.org/pdf/2603.13518.pdf",
+  "pdf_path": "raw/papers/2603.13518.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-stream text-to-speech (TTS) for interactive systems must start speaking with minimal delay while remaining controllable as text arrives incrementally. We present VoXtream2, a zero-shot full-stream TTS model with dynamic speaking-rate control that can be updated mid-utterance on the fly. VoXtream2 combines a distribution matching mechanism over duration states with classifier-free guidance across conditioning signals to improve controllability and synthesis quality. Prompt-text masking enables textless audio prompting, removing the need for prompt transcription. Across standard zero-shot benchmarks and a dedicated speaking-rate test set, VoXtream2 achieves competitive objective and subjective results against public baselines despite a smaller model and less training data. In full-stream mode, it runs 4 times faster than real time with 74 ms first-packet latency on a consumer GPU.",
+  "arxiv_comment": "10 pages, 9 figures, Submitted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Zero-shot full-stream TTS with dynamic speaking-rate control adjustable mid-utterance during generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

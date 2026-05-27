@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-0455",
+  "source_ids": {
+    "isca": "yoon25_interspeech",
+    "doi": "10.21437/Interspeech.2025-455"
+  },
+  "title": "APTTS: Adversarial Post-training in Latent Flow Matching for Fast and High-fidelity Text-to-Speech",
+  "authors": [
+    "Hyungchan Yoon",
+    "Chanwoo Lee",
+    "Hoodong Lee",
+    "Stanley Jungkyu Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/yoon25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/yoon25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0455.pdf",
+  "pdf_source": "isca",
+  "abstract": "Although recent text-to-speech (TTS) models based on flow matching have achieved remarkable generation quality, their reliance on numerous sampling steps hinders practical deployment. In this work, we introduce an adversarial post-training strategy for flow matching TTS that significantly reduces the required sampling steps. Our approach treats a pre-trained flow matching model as a few-step generator, optimizing it with reconstruction and adversarial objectives. We integrate this technique into APTTS, our novel latent flow matching framework for zero-shot TTS, and demonstrate its superiority over state-of-the-art baselines with real-time applicability.  Furthermore, we validate the scalability of our adversarial post-training approach by applying it to Matcha-TTS, a publicly available flow matching model. Evaluations on a multi-speaker dataset show that our method enhances audio quality while reducing inference time, underscoring its potential as a scalable solution for real-time TTS.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Adversarial post-training reducing sampling steps in flow matching TTS; advances TTS efficiency.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

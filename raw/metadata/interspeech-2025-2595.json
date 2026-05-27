@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2595",
+  "source_ids": {
+    "isca": "shahidi25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2595"
+  },
+  "title": "Harnessing Text-to-Speech Voice Cloning Models for Improved Audiological Speech Assessment",
+  "authors": [
+    "Lidea Shahidi",
+    "Erdem Baha Topbas",
+    "Thu Ngan Dang",
+    "Tobias Goehring"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/shahidi25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/shahidi25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2595.pdf",
+  "pdf_source": "isca",
+  "abstract": "Conventional audiological speech assessments are limited in their predictive utility, due to the small number of available stimuli and the restricted communications experiences that they represent. To enhance the capabilities of audiological speech assessments, this work evaluates the ability of several text-to-speech voice cloning models on the task of replicating a standard UK open-set speech test used clinically. Models are evaluated using complementary measures of speech perception: speech intelligibility in background noise, speech quality, and speaker discrimination, in a large-scale online study (N = 73). To ensure speech intelligibility measurements are comparable, the psychometric functions are characterized for each model. Results indicate models which accurately and consistently replicate speaker characteristics and produce speech that is similarly intelligible and natural for audiological speech assessment.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Evaluates TTS voice cloning for replicating speech stimuli in audiological assessment; borderline - TTS is tool for clinical evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

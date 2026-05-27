@@ -1,0 +1,35 @@
+{
+  "id": "2510.05799",
+  "source_ids": {
+    "arxiv": "2510.05799"
+  },
+  "title": "Data-efficient Targeted Token-level Preference Optimization for LLM-based Text-to-Speech",
+  "authors": [
+    "Rikuto Kotoge",
+    "Yuichi Sasaki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.05799",
+  "pdf_url": "https://arxiv.org/pdf/2510.05799.pdf",
+  "pdf_path": "raw/papers/2510.05799.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Aligning text-to-speech (TTS) system outputs with human feedback through preference optimization has been shown to effectively improve the robustness and naturalness of language model-based TTS models. Current approaches primarily require paired desirable and undesirable samples at the utterance level. However, such pairs are often limited in TTS output data, and utterance-level formulation prevents fine-grained token-level optimization needed for accurate pronunciation alignment. In this study, we propose TKTO that eliminates the need for paired data, enabling a more data-efficient training paradigm, and directly targets token-level units, automatically providing fine-grained alignment signals without token-level annotations. TKTO improves the challenging Japanese TTS accuracy by 39% and reduces CER by 54%, automatically assigning 12.8 times stronger reward to targeted tokens.",
+  "arxiv_comment": "Accepted at ACL 2026 (Main)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Token-level preference optimization aligning LLM-based TTS with human feedback for robustness and naturalness",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1684",
+  "source_ids": {
+    "isca": "li25t_interspeech",
+    "doi": "10.21437/Interspeech.2025-1684"
+  },
+  "title": "SA-RAS: Speaker-Aware Style Retrieval Augmented Generation for Expressive Zero-Shot Text-to-Speech Synthesis",
+  "authors": [
+    "Xueru Li",
+    "Jingyuan Xing",
+    "Xiaofen Xing",
+    "Zhipeng Li",
+    "Xiangmin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/li25t_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/li25t_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1684.pdf",
+  "pdf_source": "isca",
+  "abstract": "Zero-shot text-to-speech (TTS) models can clone an unseen speaker by reference speech. Given multiple reference speeches, Retrieval Augmented Generation (RAG) shows potential in enhancing synthesis quality. The existing method faces two key limitations: semantically-biased retrieval tends to introduce style mismatch, and the deterministic mapping between text and speech fails to fully capture the unique style of the speaker. To solve these, we propose a Speaker-Aware Retrieval Augmented TTS Synthesis (SA-RAS) model. It consists of a two-stage TTS model, Split-TTS and a zero-shot CLAP. The former embeds style and timbre separately to obtain a style space for retrieval. The latter optimizes the correlation between text and style by incorporating speaker information into the retrieval model. Experiments prove that SA-RAS boosts the style expressiveness of synthesized speech.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Speaker-aware retrieval augmented generation for expressive zero-shot TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

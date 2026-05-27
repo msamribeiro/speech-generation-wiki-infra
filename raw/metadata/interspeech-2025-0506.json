@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0506",
+  "source_ids": {
+    "isca": "pepino25_interspeech",
+    "doi": "10.21437/Interspeech.2025-506"
+  },
+  "title": "EnCodecMAE: leveraging neural codecs for universal audio representation learning",
+  "authors": [
+    "Leonardo Pepino",
+    "Pablo Riera",
+    "Luciana Ferrer"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/pepino25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/pepino25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0506.pdf",
+  "pdf_source": "isca",
+  "abstract": "Universal audio representation learning aims to obtain foundational models that are useful for diverse tasks involving speech, music and environmental sounds. To achieve this, often methods inspired by self-supervised models from NLP (e.g., BERT), and vision, like masked autoencoders (MAE), are adapted to the audio domain. In this work, we explore the use of EnCodec, a neural audio codec, to generate discrete targets for a MAE-based universal audio model. We evaluate our approach, EnCodecMAE, across various tasks and find that, on average, it outperforms state-of-the-art audio representation models. Moreover, we analyze the impact of several factors on downstream performance, concluding that increasing model size leads to performance improvements, that the optimal input representation depends on the type of task, that self-training is benefical and that diversity in the training dataset is essential to achieve good performance across different audio tasks.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "EnCodecMAE uses neural codecs for universal audio representation learning; relevant to speech self-supervised representation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

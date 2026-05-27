@@ -1,0 +1,38 @@
+{
+  "id": "2508.08399",
+  "source_ids": {
+    "arxiv": "2508.08399"
+  },
+  "title": "Exploring Disentangled Neural Speech Codecs from Self-Supervised Representations",
+  "authors": [
+    "Ryo Aihara",
+    "Yoshiki Masuyama",
+    "Gordon Wichern",
+    "François G. Germain",
+    "Jonathan Le Roux"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.08399",
+  "pdf_url": "https://arxiv.org/pdf/2508.08399.pdf",
+  "pdf_path": "raw/papers/2508.08399.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs (NACs), which use neural networks to generate compact audio representations, have garnered interest for their applicability to many downstream tasks -- especially quantized codecs due to their compatibility with large language models. However, unlike text, speech conveys not only linguistic content but also rich paralinguistic features. Encoding these elements in an entangled fashion may be suboptimal, as it limits flexibility. For instance, voice conversion (VC) aims to convert speaker characteristics while preserving the original linguistic content, which requires a disentangled representation. Inspired by VC methods utilizing $k$-means quantization with self-supervised features to disentangle phonetic information, we develop a discrete NAC capable of structured disentanglement. Experimental evaluations show that our approach achieves reconstruction performance on par with conventional NACs that do not explicitly perform disentanglement, while also matching the effectiveness of conventional VC techniques.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Disentangled neural speech codecs with content-speaker separation from SSL features",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

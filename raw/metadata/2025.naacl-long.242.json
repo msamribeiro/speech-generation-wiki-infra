@@ -1,0 +1,40 @@
+{
+  "id": "2025.naacl-long.242",
+  "source_ids": {
+    "acl": "2025.naacl-long.242",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-long.242",
+    "url_acl": "https://aclanthology.org/2025.naacl-long.242"
+  },
+  "title": "StyleTTS-ZS: Efficient High-Quality Zero-Shot Text-to-Speech Synthesis with Distilled Time-Varying Style Diffusion",
+  "authors": [
+    "Yinghao Aaron Li",
+    "Xilin Jiang",
+    "Cong Han",
+    "Nima Mesgarani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-long.242",
+  "pdf_url": "https://aclanthology.org/2025.naacl-long.242.pdf",
+  "pdf_path": "raw/papers/2025.naacl-long.242.pdf",
+  "pdf_source": "anthology",
+  "abstract": "The rapid development of large-scale text-to-speech (TTS) models has led to significant advancements in modeling diverse speaker prosody and voices. However, these models often face issues such as slow inference speeds, reliance on complex pre-trained neural codec representations, and difficulties in achieving naturalness and high similarity to reference speakers. To address these challenges, this work introduces StyleTTS-ZS, an efficient zero-shot TTS model that leverages distilled time-varying style diffusion to capture diverse speaker identities and prosodies. We propose a novel approach that represents human speech using input text and fixed-length time-varying discrete style codes to capture diverse prosodic variations, trained adversarially with multi-modal discriminators. A diffusion model is then built to sample this time-varying style code for efficient latent diffusion. Using classifier-free guidance, StyleTTS-ZS achieves high similarity to the reference speaker in the style diffusion process. Furthermore, to expedite sampling, the style diffusion model is distilled with perceptual loss using only 10k samples, maintaining speech quality and similarity while reducing inference speed by 90%. Our model surpasses previous state-of-the-art large-scale zero-shot TTS models in both naturalness and similarity, offering a 10-20× faster sampling speed, making it an attractive alternative for efficient large-scale zero-shot TTS systems. The audio demo, code and models are available at https://styletts-zs.github.io/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Efficient zero-shot TTS via distilled time-varying style diffusion; directly advances zero-shot TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

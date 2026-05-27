@@ -1,0 +1,34 @@
+{
+  "id": "2604.25441",
+  "source_ids": {
+    "arxiv": "2604.25441"
+  },
+  "title": "Praxy Voice: Voice-Prompt Recovery + BUPS for Commercial-Class Indic TTS from a Frozen Non-Indic Base at Zero Commercial-Training-Data Cost",
+  "authors": [
+    "Venkata Pushpak Teja Menta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.25441",
+  "pdf_url": "https://arxiv.org/pdf/2604.25441.pdf",
+  "pdf_path": "raw/papers/2604.25441.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Commercial TTS systems produce near-native Indic audio, but the best open-source bases (Chatterbox, Indic Parler-TTS, IndicF5) trail them on measured phonological dimensions, and the most widely adopted multilingual base (Chatterbox, 23 languages) does not even tokenise Telugu or Tamil. We ask: what is the minimum intervention that brings such a non-Indic-native base to commercial-class output on Telugu, Tamil, and Hindi, without training a new acoustic decoder and without any commercial TTS training data? We combine three pieces: (1) BUPS, a Brahmic Unified Phoneme Space that deterministically romanises seven Indic scripts to ISO-15919 so Chatterbox's Latin tokeniser can process them; (2) a LoRA adapter on only the text-token predictor (Chatterbox's t3), trained on ~1,220h of licensed Indic audio with a Hindi-proxy language_id; (3) a voice-prompt recovery recipe -- an 8-11s same-language reference clip plus three sampling overrides (exaggeration 0.7, temperature 0.6, min_p 0.1; \"Config B\") -- that recovers commercial-class acoustic output with no acoustic-decoder training. On Hindi, the LoRA regresses accuracy and we instead use vanilla Chatterbox + Config B, giving a two-branch deployment. Evaluated on 10-utterance pilot sets with the companion PSP benchmark, Praxy Voice matches or slightly leads commercial baselines: 26.7% retroflex collapse on Telugu (vs Sarvam Bulbul 33.3%), 71% Tamil-zha collapse (vs commercial trio's 86%), 0.025 LLM-WER on Hindi (tied with Cartesia Sonic-3). For intra-sentential code-mix we add a third branch (IndicF5 + native-script transliteration) that drops code-mix LLM-WER from 0.80-0.85 to 0.14-0.27 across Hi/Te/Ta. We release R6 LoRA weights (Apache-2.0), inference code and router (MIT), and a Gradio demo.",
+  "arxiv_comment": "9 pages, 6 figures, 6 tables. Companion paper to PSP benchmark. Code: https://github.com/praxelhq/praxy ; Model: https://huggingface.co/Praxel/praxy-voice-r6 ; Demo: https://huggingface.co/spaces/Praxel/praxy-voice-demo",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Minimal intervention approach bringing frozen non-Indic TTS models to commercial-class Indic output quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

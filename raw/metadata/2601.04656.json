@@ -1,0 +1,39 @@
+{
+  "id": "2601.04656",
+  "source_ids": {
+    "arxiv": "2601.04656"
+  },
+  "title": "FlexiVoice: Enabling Flexible Style Control in Zero-Shot TTS with Natural Language Instructions",
+  "authors": [
+    "Dekun Chen",
+    "Xueyao Zhang",
+    "Yuancheng Wang",
+    "Kenan Dai",
+    "Li Ma",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.04656",
+  "pdf_url": "https://arxiv.org/pdf/2601.04656.pdf",
+  "pdf_path": "raw/papers/2601.04656.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This study proposes FlexiVoice, a text-to-speech (TTS) synthesis system capable of flexible style control with zero-shot voice cloning. The speaking style is controlled by a natural-language instruction and the voice timbre is provided by a speech reference in zero-shot manner. FlexiVoice is built with an LLM core, which takes text as input, and also takes an optional natural language instruction and an optional speech reference to control style and timbre, respectively. FlexiVoice is equipped with a novel Progressive Post-Training (PPT) scheme that progressively unlocks accurate and flexible controllability. In particular, it first employs Direct Preference Optimization (DPO) to enable FlexiVoice to accurately follow both natural language instruction and speech reference simultaneously. It then uses a multi-objective Group Relative Policy Optimization (GRPO) to disentangle style instruction, reference timbre, and textual content. Finally, it adapts instruction GRPO for more advanced instruction following. Experimental results show that FlexiVoice surpasses competing baselines and demonstrates strong capability in decoupling control factors. Human evaluations further confirm its naturalness, controllability, and robustness. Audio samples are available at https://flexi-voice.github.io.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Zero-shot TTS with LLM-core enabling flexible style control via natural language instructions",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

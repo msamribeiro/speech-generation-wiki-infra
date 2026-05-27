@@ -1,0 +1,35 @@
+{
+  "id": "2604.01832",
+  "source_ids": {
+    "arxiv": "2604.01832"
+  },
+  "title": "GAP-URGENet: A Generative-Predictive Fusion Framework for Universal Speech Enhancement",
+  "authors": [
+    "Xiaobin Rong",
+    "Yushi Wang",
+    "Zheng Wang",
+    "Jing Lu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.01832",
+  "pdf_url": "https://arxiv.org/pdf/2604.01832.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We introduce GAP-URGENet, a generative-predictive fusion framework developed for Track 1 of the ICASSP 2026 URGENT Challenge. The system integrates a generative branch, which performs full-stack speech restoration in a self-supervised representation domain and reconstructs the waveform via a neural vocoder, along with a predictive branch that performs spectrogram-domain enhancement, providing complementary cues. Outputs from both branches are fused by a post-processing module, which also performs bandwidth extension to generate the enhanced waveform at 48 kHz, later downsampled to the original sampling rate. This generative-predictive fusion improves robustness and perceptual quality, achieving top performance in the blind-test phase and ranking 1st in the objective evaluation. Audio examples are available at https://xiaobin-rong.github.io/gap-urgenet_demo.",
+  "arxiv_comment": "Awarded 1st place in the URGENT 2026 Challenge (objective phase), accepted by ICASSP 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Speech enhancement fusion framework for URGENT Challenge; primary task is enhancement (out of scope)",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2025.vlsp-1.13",
+  "source_ids": {
+    "acl": "2025.vlsp-1.13",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.vlsp-1.13"
+  },
+  "title": "The 2025 VLSP Task on Vietnamese Voice Conversion: Overview and Preliminary Results",
+  "authors": [
+    "Nguyen Thi Thu Trang",
+    "Huu Tuong Tu",
+    "Le Hoang Anh Tuan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.vlsp-1.13",
+  "pdf_url": "https://aclanthology.org/2025.vlsp-1.13.pdf",
+  "pdf_path": "raw/papers/2025.vlsp-1.13.pdf",
+  "pdf_source": "anthology",
+  "abstract": null,
+  "task": [
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Overview of 2025 VLSP Vietnamese voice conversion shared task; directly advances VC evaluation (no abstract).",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

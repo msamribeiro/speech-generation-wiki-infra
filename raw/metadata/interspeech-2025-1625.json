@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1625",
+  "source_ids": {
+    "isca": "yu25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-1625"
+  },
+  "title": "Mimic Blocker: Self-Supervised Adversarial Training for Voice Conversion Defense with Pretrained Feature Extractors",
+  "authors": [
+    "Gwangyeol Yu",
+    "Junhyeok Lee",
+    "Seoryeong Kim",
+    "Jimin Lee",
+    "Jehyuk Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/yu25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/yu25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1625.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice conversion (VC) enables natural speech synthesis with minimal data; however, it poses security risks, e.g., identity theft and privacy breaches. To address this, we propose Mimic Blocker, an active defense mechanism that prevents VC models from extracting speaker characteristics while preserving audio quality. Our method employs adversarial training, an audio quality preservation strategy, and an attack strategy. It relies on only publicly available pretrained feature extractors, which ensures model-agnostic protection. Furthermore, it enables self-supervised learning using only the original speaker's speech. Experimental results demonstrate that our method achieves robust defense performance in both white-box and black-box scenarios. Notably, the proposed approach maintains audio quality by generating noise imperceptible to human listeners, thereby enabling protection while retaining natural voice characteristics in practical applications.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Adversarial training to prevent VC models from cloning speaker characteristics; advances VC security.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2604.26347",
+  "source_ids": {
+    "arxiv": "2604.26347"
+  },
+  "title": "The False Resonance: A Critical Examination of Emotion Embedding Similarity for Speech Generation Evaluation",
+  "authors": [
+    "Yun-Shao Tsai",
+    "Yi-Cheng Lin",
+    "Huang-Cheng Chou",
+    "Tzu-Wen Hsu",
+    "Yun-Man Hsu",
+    "Chun Wei Chen",
+    "Shrikanth Narayanan",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.26347",
+  "pdf_url": "https://arxiv.org/pdf/2604.26347.pdf",
+  "pdf_path": "raw/papers/2604.26347.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Objective metrics for emotional expressiveness are vital for speech generation, particularly in expressive synthesis and voice conversion requiring emotional prosody transfer. To quantify this, the field widely relies on emotion similarity between reference and generated samples. This approach computes cosine similarity of embeddings from encoders like emotion2vec, assuming they capture affective cues despite linguistic and speaker variations. We challenge this assumption through controlled adversarial tasks and human alignment tests. Despite high classification accuracy, these latent spaces are unsuitable for zero-shot similarity evaluation. Representational limitations cause linguistic and speaker interference to overshadow emotional features, degrading discriminative ability. Consequently, the metric misaligns with human perception. This acoustic vulnerability reveals it rewards acoustic mimicry over genuine emotional synthesis.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Critical analysis of emotion embedding similarity metrics for expressive speech generation evaluation reliability",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2603.01467",
+  "source_ids": {
+    "arxiv": "2603.01467"
+  },
+  "title": "Conversational Speech Naturalness Predictor",
+  "authors": [
+    "Anfeng Xu",
+    "Yashesh Gaur",
+    "Naoyuki Kanda",
+    "Zhicheng Ouyang",
+    "Katerina Zmolikova",
+    "Desh Raj",
+    "Simone Merello",
+    "Anna Sun",
+    "Ozlem Kalinli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.01467",
+  "pdf_url": "https://arxiv.org/pdf/2603.01467.pdf",
+  "pdf_path": "raw/papers/2603.01467.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Evaluation of conversational naturalness is essential for developing human-like speech agents. However, existing speech naturalness predictors are often designed to assess utterances from a single speaker, failing to capture conversation-level naturalness qualities. In this paper, we present a framework for an automatic naturalness predictor for two-speaker, multi-turn conversations. We first show that existing naturalness estimators have low, or sometimes even negative, correlations with conversational naturalness, based on conversational recordings annotated with human ratings. We then propose a dual-channel naturalness estimator, in which we investigate multiple pre-trained encoders with data augmentation. Our proposed model achieves substantially higher correlation with human judgments compared to existing naturalness predictors for both in-domain and out-of-domain conditions.",
+  "arxiv_comment": "Under review for Interspeech 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Framework for automatic multi-turn conversation naturalness prediction for two-speaker spoken dialogue systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

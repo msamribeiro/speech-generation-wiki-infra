@@ -1,0 +1,46 @@
+{
+  "id": "2025.acl-long.682",
+  "source_ids": {
+    "acl": "2025.acl-long.682",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.682",
+    "url_acl": "https://aclanthology.org/2025.acl-long.682"
+  },
+  "title": "Recent Advances in Speech Language Models: A Survey",
+  "authors": [
+    "Wenqian Cui",
+    "Dianzhi Yu",
+    "Xiaoqi Jiao",
+    "Ziqiao Meng",
+    "Guangyan Zhang",
+    "Qichao Wang",
+    "Steven Y. Guo",
+    "Irwin King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.682",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.682.pdf",
+  "pdf_path": "raw/papers/2025.acl-long.682.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Text-based Large Language Models (LLMs) have recently gained significant attention, primarily for their capabilities in text-based interactions. However, natural human interaction often relies on speech, highlighting the need for voice-based models. In this context, Speech Language Models (SpeechLMs)—foundation models designed to understand and generate speech—emerge as a promising solution for end-to-end speech interaction. This survey offers a comprehensive overview of recent approaches to building SpeechLMs, outlining their core architectural components, training methodologies, evaluation strategies, and the challenges and potential directions for future research in this rapidly advancing field. The GitHub repository is available at https://github.com/dreamtheater123/Awesome-SpeechLM-Survey",
+  "task": [
+    "TTS",
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Comprehensive survey of Speech Language Models covering TTS, SCA, and generation architectures; directly relevant as systematic review.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

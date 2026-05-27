@@ -1,0 +1,37 @@
+{
+  "id": "2510.01157",
+  "source_ids": {
+    "arxiv": "2510.01157"
+  },
+  "title": "Where Do Backdoors Live? A Component-Level Analysis of Backdoor Propagation in Speech Language Models",
+  "authors": [
+    "Alexandrine Fortier",
+    "Thomas Thebaud",
+    "Jesús Villalba",
+    "Najim Dehak",
+    "Patrick Cardinal",
+    "Peter West"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.01157",
+  "pdf_url": "https://arxiv.org/pdf/2510.01157.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech language models (SLMs) are systems of systems: independent components that unite to achieve a common goal. Despite their heterogeneous nature, SLMs are often studied end-to-end; how information flows through the pipeline remains obscure. We investigate this question through the lens of backdoor attacks. We first establish that backdoors can propagate through the SLM, leaving all tasks highly vulnerable. From this, we design a component analysis to reveal the role each component takes in backdoor learning. We find that backdoor persistence or erasure is highly dependent on the targeted component. Beyond propagation, we examine how backdoors are encoded in shared multitask embeddings, showing that poisoned samples are not directly separable from benign ones, challenging a common separability assumption used in filtering defenses. Our findings emphasize the need to treat multimodal pipelines as intricate systems with unique vulnerabilities, not solely extensions of unimodal ones.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Backdoor security analysis of speech language model pipelines, not a generation contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

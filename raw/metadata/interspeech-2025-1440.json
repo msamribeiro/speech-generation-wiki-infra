@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-1440",
+  "source_ids": {
+    "isca": "zheng25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-1440"
+  },
+  "title": "FreeCodec: A Disentangled Neural Speech Codec with Fewer Tokens",
+  "authors": [
+    "Youqiang Zheng",
+    "Weiping Tu",
+    "Yueteng Kang",
+    "Jie Chen",
+    "Yike Zhang",
+    "Li Xiao",
+    "Yuhong Yang",
+    "Long Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zheng25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zheng25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1440.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural speech codec is a crucial component in generative tasks such as speech resynthesis and zero-shot TTS. However, most works exhibit degraded performance with fewer tokens due to low coding efficiency in modeling complex coupled information. In this paper, we propose a self-supervised disentangled neural speech codec named FreeCodec. It employs distinct frame-level encoders to decompose intrinsic speech properties into separate components and adopts enhanced decoders to reconstruct speech signals. By encoding and quantizing the different frame-level information with dedicated quantizers, FreeCodec gets higher encoding efficiency with 57 tokens. Furthermore, our proposed method can be applied flexibly in reconstruction and disentanglement scenarios with different training strategies. Subjective and objective experimental results demonstrate that our framework outperforms existing methods in both reconstruction and disentanglement tasks.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Self-supervised disentangled neural speech codec with fewer tokens and improved coding efficiency; advances codec.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

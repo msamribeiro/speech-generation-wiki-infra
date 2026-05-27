@@ -1,0 +1,45 @@
+{
+  "id": "2025.findings-acl.75",
+  "source_ids": {
+    "acl": "2025.findings-acl.75",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-acl.75"
+  },
+  "title": "Leveraging Unit Language Guidance to Advance Speech Modeling in Textless Speech-to-Speech Translation",
+  "authors": [
+    "Yuhao Zhang",
+    "Xiangnan Ma",
+    "Kaiqi Kou",
+    "Peizhuo Liu",
+    "Weiqiao Shan",
+    "Benyou Wang",
+    "Tong Xiao",
+    "Yuxin Huang",
+    "Zhengtao Yu",
+    "JingBo Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-acl.75",
+  "pdf_url": "https://aclanthology.org/2025.findings-acl.75.pdf",
+  "pdf_path": "raw/papers/2025.findings-acl.75.pdf",
+  "pdf_source": "anthology",
+  "abstract": "The success of building textless speech-to-speech translation (S2ST) models has attracted much attention. However, S2ST still faces two main challenges: 1) extracting linguistic features for various speech signals, called cross-modal (CM), and 2) learning alignment of difference languages in long sequences, called cross-lingual (CL). We propose the unit language to overcome the two modeling challenges. The unit language can be considered a text-like representation format, constructed using n-gram language modeling. We implement multi-task learning to utilize the unit language in guiding the speech modeling process. Our initial results reveal a conflict when applying source and target unit languages simultaneously. We propose task prompt modeling to mitigate this conflict. We conduct experiments on four languages of the Voxpupil dataset. Our method demonstrates significant improvements over a strong baseline and achieves performance comparable to models trained with text.",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Textless speech-to-speech translation with unit language guidance; core speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

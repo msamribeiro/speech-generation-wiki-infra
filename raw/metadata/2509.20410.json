@@ -1,0 +1,42 @@
+{
+  "id": "2509.20410",
+  "source_ids": {
+    "arxiv": "2509.20410"
+  },
+  "title": "Phoenix-VAD: Streaming Semantic Endpoint Detection for Full-Duplex Speech Interaction",
+  "authors": [
+    "Weijie Wu",
+    "Wenhao Guan",
+    "Kaidi Wang",
+    "Peijie Chen",
+    "Zhuanling Zha",
+    "Junbo Li",
+    "Jun Fang",
+    "Lin Li",
+    "Qingyang Hong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.20410",
+  "pdf_url": "https://arxiv.org/pdf/2509.20410.pdf",
+  "pdf_path": "raw/papers/2509.20410.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialogue models have significantly advanced intelligent human-computer interaction, yet they lack a plug-and-play full-duplex prediction module for semantic endpoint detection, hindering seamless audio interactions. In this paper, we introduce Phoenix-VAD, an LLM-based model that enables streaming semantic endpoint detection. Specifically, Phoenix-VAD leverages the semantic comprehension capability of the LLM and a sliding window training strategy to achieve reliable semantic endpoint detection while supporting streaming inference. Experiments on both semantically complete and incomplete speech scenarios indicate that Phoenix-VAD achieves excellent and competitive performance. Furthermore, this design enables the full-duplex prediction module to be optimized independently of the dialogue model, providing more reliable and flexible support for next-generation human-computer interaction.",
+  "arxiv_comment": "It requires internal PR approval",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Phoenix-VAD: streaming semantic endpoint detection enabling full-duplex dialogue; foundational SCA component.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

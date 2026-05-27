@@ -1,0 +1,39 @@
+{
+  "id": "2602.05207",
+  "source_ids": {
+    "arxiv": "2602.05207"
+  },
+  "title": "ARCHI-TTS: A flow-matching-based Text-to-Speech Model with Self-supervised Semantic Aligner and Accelerated Inference",
+  "authors": [
+    "Chunyat Wu",
+    "Jiajun Deng",
+    "Zhengxi Liu",
+    "Zheqi Dai",
+    "Haolin He",
+    "Qiuqiang Kong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.05207",
+  "pdf_url": "https://arxiv.org/pdf/2602.05207.pdf",
+  "pdf_path": "raw/papers/2602.05207.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Although diffusion-based, non-autoregressive text-to-speech (TTS) systems have demonstrated impressive zero-shot synthesis capabilities, their efficacy is still hindered by two key challenges: the difficulty of text-speech alignment modeling and the high computational overhead of the iterative denoising process. To address these limitations, we propose ARCHI-TTS that features a dedicated semantic aligner to ensure robust temporal and semantic consistency between text and audio. To overcome high computational inference costs, ARCHI-TTS employs an efficient inference strategy that reuses encoder features across denoising steps, drastically accelerating synthesis without performance degradation. An auxiliary CTC loss applied to the condition encoder further enhances the semantic understanding. Experimental results demonstrate that ARCHI-TTS achieves a WER of 1.98% on LibriSpeech-PC test-clean, and 1.47%/1.42% on SeedTTS test-en/test-zh with a high inference efficiency, consistently outperforming recent state-of-the-art TTS systems.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Non-autoregressive flow-matching TTS with self-supervised aligner and accelerated inference",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

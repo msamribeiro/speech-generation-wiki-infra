@@ -1,0 +1,56 @@
+{
+  "id": "2508.17623",
+  "source_ids": {
+    "arxiv": "2508.17623"
+  },
+  "title": "EMO-Reasoning: Benchmarking Emotional Reasoning Capabilities in Spoken Dialogue Systems",
+  "authors": [
+    "Jingwen Liu",
+    "Kan Jen Cheng",
+    "Jiachen Lian",
+    "Akshay Anand",
+    "Rishi Jain",
+    "Faith Qiao",
+    "Robin Netzorg",
+    "Huang-Cheng Chou",
+    "Tingle Li",
+    "Guan-Ting Lin"
+  ],
+  "authors_full": [
+    "Jingwen Liu",
+    "Kan Jen Cheng",
+    "Jiachen Lian",
+    "Akshay Anand",
+    "Rishi Jain",
+    "Faith Qiao",
+    "Robin Netzorg",
+    "Huang-Cheng Chou",
+    "Tingle Li",
+    "Guan-Ting Lin",
+    "Gopala Anumanchipalli"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.17623",
+  "pdf_url": "https://arxiv.org/pdf/2508.17623.pdf",
+  "pdf_path": "raw/papers/2508.17623.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech emotions play a crucial role in human-computer interaction, shaping engagement and context-aware communication. Despite recent advances in spoken dialogue systems, a holistic system for evaluating emotional reasoning is still lacking. To address this, we introduce EMO-Reasoning, a benchmark for assessing emotional coherence in dialogue systems. It leverages a curated dataset generated via text-to-speech to simulate diverse emotional states, overcoming the scarcity of emotional speech data. We further propose the Cross-turn Emotion Reasoning Score to assess the emotion transitions in multi-turn dialogues. Evaluating seven dialogue systems through continuous, categorical, and perceptual metrics, we show that our framework effectively detects emotional inconsistencies, providing insights for improving current dialogue systems. By releasing a systematic evaluation benchmark, we aim to advance emotion-aware spoken dialogue modeling toward more natural and adaptive interactions.",
+  "arxiv_comment": "Accepted at (ASRU 2025) 2025 IEEE Automatic Speech Recognition and Understanding Workshop",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Benchmark for emotional reasoning in spoken dialogue systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

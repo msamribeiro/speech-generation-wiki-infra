@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0815",
+  "source_ids": {
+    "isca": "akti25_interspeech",
+    "doi": "10.21437/Interspeech.2025-815"
+  },
+  "title": "Towards Better Disentanglement in Non-Autoregressive Zero-Shot Expressive Voice Conversion",
+  "authors": [
+    "Åeymanur Akti",
+    "Tuan-Nam Nguyen",
+    "Alexander Waibel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/akti25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/akti25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0815.pdf",
+  "pdf_source": "isca",
+  "abstract": "Expressive voice conversion aims to transfer both speaker identity and expressive attributes from a target speech to a given source speech. In this work, we improve over a self-supervised, non-autoregressive framework with a conditional variational autoencoder, focusing on reducing source timbre leakage and improving linguistic-acoustic disentanglement for better style transfer. To minimize style leakage, we use multilingual discrete speech units for content representation and reinforce embeddings with augmentation-based similarity loss and mix-style layer normalization. To enhance expressivity transfer, we incorporate local F0 information via cross-attention and extract style embeddings enriched with global pitch and energy features. Experiments show our model outperforms baselines in emotion and speaker similarity, demonstrating superior style adaptation and reduced source style leakage.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Improved disentanglement for zero-shot expressive voice conversion reducing timbre leakage; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

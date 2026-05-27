@@ -1,0 +1,34 @@
+{
+  "id": "2510.25178",
+  "source_ids": {
+    "arxiv": "2510.25178"
+  },
+  "title": "SFMS-ALR: Script-First Multilingual Speech Synthesis with Adaptive Locale Resolution",
+  "authors": [
+    "Dharma Teja Donepudi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.25178",
+  "pdf_url": "https://arxiv.org/pdf/2510.25178.pdf",
+  "pdf_path": "raw/papers/2510.25178.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Intra-sentence multilingual speech synthesis (code-switching TTS) remains a major challenge due to abrupt language shifts, varied scripts, and mismatched prosody between languages. Conventional TTS systems are typically monolingual and fail to produce natural, intelligible speech in mixed-language contexts. We introduce Script-First Multilingual Synthesis with Adaptive Locale Resolution (SFMS-ALR), an engine-agnostic framework for fluent, real-time code-switched speech generation. SFMS-ALR segments input text by Unicode script, applies adaptive language identification to determine each segment's language and locale, and normalizes prosody using sentiment-aware adjustments to preserve expressive continuity across languages. The algorithm generates a unified SSML representation with appropriate \"lang\" or \"voice\" spans and synthesizes the utterance in a single TTS request. Unlike end-to-end multilingual models, SFMS-ALR requires no retraining and integrates seamlessly with existing voices from Google, Apple, Amazon, and other providers. Comparative analysis with data-driven pipelines such as Unicom and Mask LID demonstrates SFMS-ALR's flexibility, interpretability, and immediate deployability. The framework establishes a modular baseline for high-quality, engine-independent multilingual TTS and outlines evaluation strategies for intelligibility, naturalness, and user preference.",
+  "arxiv_comment": "10 pages, 2 figures, 1 table. Demonstration prototype available at https://sfml-tts-proxy-253495793487.us-central1.run.app",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Script-first multilingual code-switching TTS with adaptive locale resolution for natural cross-lingual synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

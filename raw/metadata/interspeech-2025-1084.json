@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1084",
+  "source_ids": {
+    "isca": "lee25h_interspeech",
+    "doi": "10.21437/Interspeech.2025-1084"
+  },
+  "title": "Efficient Streaming TTS Acoustic Model with Depthwise RVQ Decoding Strategies in a Mamba Framework",
+  "authors": [
+    "Joun Yeop Lee",
+    "Sangjun Park",
+    "Byoung Jin Choi",
+    "Ji-Hyun Lee",
+    "Min-Kyung Kim",
+    "Hoon-Young Cho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lee25h_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lee25h_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1084.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent advances in neural codec-based text-to-speech (TTS) systems have achieved remarkable synthesized speech quality. However, their reliance on large model size and heavy computational requirements limits CPU-based on-device deployment. In this work, we present a Mamba-based streaming acoustic model with two novel depthwise decoding strategies for residual vector quantization (RVQ)-based codec: a Masked Language Model (MLM) approach and an Implicit Neural Representation (INR) approach. The MLM strategy iteratively refines tokens along the code depth axis to enhance speech quality, whereas the INR approach predicts all quantization levels in parallel to reduce computational costs. We further incorporate a speaker embedding conditioning mechanism for a zero-shot scenario, enabling robust performance on unseen speakers. Experimental results demonstrate comparable or even superior improvements in both objective and subjective metrics compared to other larger TTS baseline models.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Mamba-based streaming TTS acoustic model with novel RVQ decoding for CPU on-device deployment; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

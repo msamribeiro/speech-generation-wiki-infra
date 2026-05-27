@@ -1,0 +1,43 @@
+{
+  "id": "2511.00850",
+  "source_ids": {
+    "arxiv": "2511.00850"
+  },
+  "title": "MULTI-Bench: A Multi-Turn Interactive Benchmark for Assessing Emotional Intelligence ability of Spoken Dialogue Models",
+  "authors": [
+    "Yayue Deng",
+    "Guoqiang Hu",
+    "Haiyang Sun",
+    "Xiangyu Zhang",
+    "Haoyang Zhang",
+    "Fei Tian",
+    "Xuerui Yang",
+    "Gang Yu",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.00850",
+  "pdf_url": "https://arxiv.org/pdf/2511.00850.pdf",
+  "pdf_path": "raw/papers/2511.00850.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken Dialogue Models (SDMs) have advanced rapidly, yet their ability to sustain genuinely interactive multi-turn conversations remains underexplored, as most benchmarks focus on single-turn exchanges. We introduce Multi-Bench, the first benchmark explicitly designed to evaluate SDMs in multi-turn interactive dialogue with an emphasis on emotional intelligence. Multi-Bench employs a hierarchical structure with a basic track for emotion understanding and reasoning and an advanced track for emotion support and application. It comprises five carefully designed tasks and about 3.2K samples, ranging from emotion recognition to complex reasoning and interactive dialogue, supported by a reproducible evaluation framework. We evaluate six representative SDMs on eight subsets of Multi-Bench. Results show that while current SDMs achieve good performance on basic understanding tasks, they still have room for improvement in advanced multi-turn interactive dialogue and reasoning-related tasks, particularly in emotion awareness and application.",
+  "arxiv_comment": "Submitted to ICASSP 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "First multi-turn benchmark evaluating emotional intelligence in spoken dialogue models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

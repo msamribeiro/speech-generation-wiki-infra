@@ -1,0 +1,41 @@
+{
+  "id": "2602.06053",
+  "source_ids": {
+    "arxiv": "2602.06053"
+  },
+  "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+  "authors": [
+    "Rajarshi Roy",
+    "Jonathan Raiman",
+    "Sang-gil Lee",
+    "Teodor-Dumitru Ene",
+    "Robert Kirby",
+    "Sungwon Kim",
+    "Jaehyeon Kim",
+    "Bryan Catanzaro"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.06053",
+  "pdf_url": "https://arxiv.org/pdf/2602.06053.pdf",
+  "pdf_path": "raw/papers/2602.06053.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in duplex speech models have enabled natural, low-latency speech-to-speech interactions. However, existing models are restricted to a fixed role and voice, limiting their ability to support structured, role-driven real-world applications and personalized interactions. In this work, we introduce PersonaPlex, a duplex conversational speech model that incorporates hybrid system prompts, combining role conditioning with text prompts and voice cloning with speech samples. PersonaPlex is trained on a large-scale synthetic dataset of paired prompts and user-agent conversations, generated with open-source large language models (LLM) and text-to-speech (TTS) models. To evaluate role conditioning in real-world settings, we extend the Full-Duplex-Bench benchmark beyond a single assistant role to multi-role customer service scenarios. Experiments show that PersonaPlex achieves strong role-conditioned behavior, voice-conditioned speech, and natural conversational responsiveness, surpassing state-of-the-art duplex speech models and hybrid large language model-based speech systems in role adherence, speaker similarity, latency, and naturalness.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Duplex conversational speech model with persona, voice, and role control; directly advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

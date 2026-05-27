@@ -1,0 +1,36 @@
+{
+  "id": "2604.03279",
+  "source_ids": {
+    "arxiv": "2604.03279"
+  },
+  "title": "Rewriting TTS Inference Economics: Lightning V2 on Tenstorrent Achieves 4x Lower Cost Than NVIDIA L40S",
+  "authors": [
+    "Ranjith M. S.",
+    "Akshat Mandloi",
+    "Sudarshan Kamath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.03279",
+  "pdf_url": "https://arxiv.org/pdf/2604.03279.pdf",
+  "pdf_path": "raw/papers/2604.03279.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-Speech (TTS) models are significantly more numerically fragile than Large Language Models (LLMs) due to their continuous waveform generation and perceptual sensitivity to small numerical perturbations. While aggressive precision reduction techniques such as BlockFloat8 (BFP8) and low-fidelity (LoFi) compute have been widely adopted in language models, applying similar strategies to TTS systems often results in audible artifacts, phase instability, and spectral distortion.   In this work, we present Lightning V2, a production-grade TTS model co-optimized for Tenstorrent hardware. Through precision-aware architectural design and hardware-software co-optimization, we achieve over 95% LoFi computational fidelity and more than 80% BlockFloat8 deployment without measurable degradation in audio quality. Leveraging Tenstorrent's Network-on-Chip (NoC), distributed SRAM, and deterministic execution model, we reduce memory movement and redundant weight fetches, enabling efficient low-precision inference.   Compared to an NVIDIA L40S baseline, Lightning V2 achieves approximately 4x lower on-prem accelerator cost at equivalent throughput, while maintaining production audio fidelity. Our results demonstrate that precision co-design, combined with hardware-aware optimization, can fundamentally reshape the economics of real-time speech inference.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Hardware-level TTS efficiency analysis achieving 4x cost reduction via Tenstorrent accelerator optimization",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

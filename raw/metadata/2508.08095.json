@@ -1,0 +1,37 @@
+{
+  "id": "2508.08095",
+  "source_ids": {
+    "arxiv": "2508.08095"
+  },
+  "title": "Dual Information Speech Language Models for Emotional Conversations",
+  "authors": [
+    "Chun Wang",
+    "Chenyang Liu",
+    "Wenze Xu",
+    "Weihong Deng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.08095",
+  "pdf_url": "https://arxiv.org/pdf/2508.08095.pdf",
+  "pdf_path": "raw/papers/2508.08095.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Conversational systems relying on text-based large language models (LLMs) often overlook paralinguistic cues, essential for understanding emotions and intentions. Speech-language models (SLMs), which use speech as input, are emerging as a promising solution. However, SLMs built by extending frozen LLMs struggle to capture paralinguistic information and exhibit reduced context understanding. We identify entangled information and improper training strategies as key issues. To address these issues, we propose two heterogeneous adapters and suggest a weakly supervised training strategy. Our approach disentangles paralinguistic and linguistic information, enabling SLMs to interpret speech through structured representations. It also preserves contextual understanding by avoiding the generation of task-specific vectors through controlled randomness. This approach trains only the adapters on common datasets, ensuring parameter and data efficiency. Experiments demonstrate competitive performance in emotional conversation tasks, showcasing the model's ability to effectively integrate both paralinguistic and linguistic information within contextual settings.",
+  "arxiv_comment": "Presented at IEEE ICME 2025",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Speech LM capturing paralinguistic cues for emotionally aware spoken dialogue",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

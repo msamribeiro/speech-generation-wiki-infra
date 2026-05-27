@@ -1,0 +1,36 @@
+{
+  "id": "2510.13194",
+  "source_ids": {
+    "arxiv": "2510.13194"
+  },
+  "title": "StressTransfer: Stress-Aware Speech-to-Speech Translation with Emphasis Preservation",
+  "authors": [
+    "Xi Chen",
+    "Yuchen Song",
+    "Satoshi Nakamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.13194",
+  "pdf_url": "https://arxiv.org/pdf/2510.13194.pdf",
+  "pdf_path": "raw/papers/2510.13194.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose a stress-aware speech-to-speech translation (S2ST) system that preserves word-level emphasis by leveraging LLMs for cross-lingual emphasis conversion. Our method translates source-language stress into target-language tags that guide a controllable TTS model. To overcome data scarcity, we developed a pipeline to automatically generate aligned training data and introduce the \"LLM-as-Judge\" for evaluation. Experiments show our approach substantially outperforms baselines in preserving emphasis while maintaining comparable translation quality, speaker intent, and naturalness. Our work highlights the importance of prosody in translation and provides an effective, data-efficient solution for preserving paralinguistic cues in S2ST.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Stress-aware S2ST system preserving word-level emphasis with controllable TTS; advances TTS prosody control.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

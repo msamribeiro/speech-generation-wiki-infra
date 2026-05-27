@@ -1,0 +1,39 @@
+{
+  "id": "2605.12310",
+  "source_ids": {
+    "arxiv": "2605.12310"
+  },
+  "title": "Poly-SVC: Polyphony-Aware Singing Voice Conversion with Harmonic Modeling",
+  "authors": [
+    "Chen Geng",
+    "Meng Chen",
+    "Ruohua Zhou",
+    "Ruolan Liu",
+    "Weifeng Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.12310",
+  "pdf_url": "https://arxiv.org/pdf/2605.12310.pdf",
+  "pdf_path": "raw/papers/2605.12310.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Singing Voice Conversion (SVC) aims to transform a source singing voice into a target singer while preserving lyrics and melody. Most existing SVC methods depend on F0 extractors to capture the lead melody from clean vocals. However, no existing method can reliably extract clean vocals from accompanied recordings without leaving residual harmonies behind. In this paper, we innovatively propose Poly-SVC, a zero-shot, cross-lingual singing voice conversion system designed to process residual harmonies. Poly-SVC is composed of three key components: a Constant-Q Transform (CQT)-based pitch extractor to preserve both the lead melody and residual harmony, a random sampler to reduce interference information from the CQT and a diffusion decoder based on Conditional Flow Matching (CFM) that fuses pitch, content, and timbre features into natural-sounding polyphonic outputs. Experiments demonstrate that Poly-SVC surpasses the baseline models in naturalness, timbre similarity and harmony reconstruction across both harmony-rich and single-melody recordings.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Poly-SVC: polyphony-aware SVC with harmonic modeling for voice conversion from accompanied recordings",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

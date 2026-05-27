@@ -1,0 +1,41 @@
+{
+  "id": "2508.07426",
+  "source_ids": {
+    "arxiv": "2508.07426"
+  },
+  "title": "Scalable Controllable Accented TTS",
+  "authors": [
+    "Henry Li Xinyuan",
+    "Zexin Cai",
+    "Ashi Garg",
+    "Kevin Duh",
+    "Leibny Paola García-Perera",
+    "Sanjeev Khudanpur",
+    "Nicholas Andrews",
+    "Matthew Wiesner"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.07426",
+  "pdf_url": "https://arxiv.org/pdf/2508.07426.pdf",
+  "pdf_path": "raw/papers/2508.07426.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We tackle the challenge of scaling accented TTS systems, expanding their capabilities to include much larger amounts of training data and a wider variety of accent labels, even for accents that are poorly represented or unlabeled in traditional TTS datasets. To achieve this, we employ two strategies: 1. Accent label discovery via a speech geolocation model, which automatically infers accent labels from raw speech data without relying solely on human annotation; 2. Timbre augmentation through kNN voice conversion to increase data diversity and model robustness. These strategies are validated on CommonVoice, where we fine-tune XTTS-v2 for accented TTS with accent labels discovered or enhanced using geolocation. We demonstrate that the resulting accented TTS model not only outperforms XTTS-v2 fine-tuned on self-reported accent labels in CommonVoice, but also existing accented TTS benchmarks.",
+  "arxiv_comment": "Accepted at IEEE ASRU 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Scalable accent-controllable TTS covering a wide variety of accents including low-resource ones",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

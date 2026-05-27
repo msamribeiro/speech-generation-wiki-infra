@@ -1,0 +1,39 @@
+{
+  "id": "2604.01247",
+  "source_ids": {
+    "arxiv": "2604.01247"
+  },
+  "title": "Combining Masked Language Modeling and Cross-Modal Contrastive Learning for Prosody-Aware TTS",
+  "authors": [
+    "Kirill Borodin",
+    "Vasiliy Kudryavtsev",
+    "Maxim Maslov",
+    "Nikita Vasiliev",
+    "Mikhail Gorodnichev",
+    "Grach Mkrtchian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.01247",
+  "pdf_url": "https://arxiv.org/pdf/2604.01247.pdf",
+  "pdf_path": "raw/papers/2604.01247.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We investigate multi-stage pretraining for prosody modeling in diffusion-based TTS. A speaker-conditioned dual-stream encoder is trained with masked language modeling followed by SigLIP-style cross-modal contrastive learning using mixed-phoneme batches, with an additional same-phoneme refinement stage studied separately. We evaluate intrinsic text-audio retrieval and downstream synthesis in Grad-TTS and a latent diffusion TTS system. The two-stage curriculum (MLM + mixed-phoneme contrastive learning) achieves the best overall synthesis quality in terms of intelligibility, speaker similarity, and perceptual measures. Although same-phoneme refinement improves prosodic retrieval, it reduces phoneme discrimination and degrades synthesis. These findings indicate that improvements in embedding-space metrics do not necessarily translate to better generative performance and highlight the need to balance phoneme discrimination and prosodic sensitivity in TTS pretraining.",
+  "arxiv_comment": "This paper has been submitted to Interspeech 2026 for review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Multi-stage pretraining with masked LM and cross-modal contrastive learning for prosody-aware diffusion TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

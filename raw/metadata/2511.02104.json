@@ -1,0 +1,36 @@
+{
+  "id": "2511.02104",
+  "source_ids": {
+    "arxiv": "2511.02104"
+  },
+  "title": "Toward Objective and Interpretable Prosody Evaluation in Text-to-Speech: A Linguistically Motivated Approach",
+  "authors": [
+    "Cedric Chan",
+    "Jianjing Kuang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.02104",
+  "pdf_url": "https://arxiv.org/pdf/2511.02104.pdf",
+  "pdf_path": "raw/papers/2511.02104.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Prosody is essential for speech technology, shaping comprehension, naturalness, and expressiveness. However, current text-to-speech (TTS) systems still struggle to accurately capture human-like prosodic variation, in part because existing evaluation methods for prosody remain limited. Traditional metrics like Mean Opinion Score (MOS) are resource-intensive, inconsistent, and offer little insight into why a system sounds unnatural. This study introduces a linguistically informed, semi-automatic framework for evaluating TTS prosody through a two-tier architecture that mirrors human prosodic organization. The method uses quantitative linguistic criteria to evaluate synthesized speech against human speech corpora across multiple acoustic dimensions. By integrating discrete and continuous prosodic measures, it provides objective and interpretable metrics of both event placement and cue realization, while accounting for the natural variability observed across speakers and prosodic cues. Results show strong correlations with perceptual MOS ratings while revealing model-specific weaknesses that traditional perceptual tests alone cannot capture. This approach provides a principled path toward diagnosing, benchmarking, and ultimately improving the prosodic naturalness of next-generation TTS systems.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Linguistically motivated objective prosody evaluation metrics for TTS systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

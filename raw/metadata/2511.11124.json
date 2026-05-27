@@ -1,0 +1,37 @@
+{
+  "id": "2511.11124",
+  "source_ids": {
+    "arxiv": "2511.11124"
+  },
+  "title": "AV-Dialog: Spoken Dialogue Models with Audio-Visual Input",
+  "authors": [
+    "Tuochao Chen",
+    "Bandhav Veluri",
+    "Hongyu Gong",
+    "Shyamnath Gollakota"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.11124",
+  "pdf_url": "https://arxiv.org/pdf/2511.11124.pdf",
+  "pdf_path": "raw/papers/2511.11124.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Dialogue models falter in noisy, multi-speaker environments, often producing irrelevant responses and awkward turn-taking. We present AV-Dialog, the first multimodal dialog framework that uses both audio and visual cues to track the target speaker, predict turn-taking, and generate coherent responses. By combining acoustic tokenization with multi-task, multi-stage training on monadic, synthetic, and real audio-visual dialogue datasets, AV-Dialog achieves robust streaming transcription, semantically grounded turn-boundary detection and accurate responses, resulting in a natural conversational flow. Experiments show that AV-Dialog outperforms audio-only models under interference, reducing transcription errors, improving turn-taking prediction, and enhancing human-rated dialogue quality. These results highlight the power of seeing as well as hearing for speaker-aware interaction, paving the way for {spoken} dialogue agents that perform {robustly} in real-world, noisy environments.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Audio-visual spoken dialogue model using video cues for target speaker tracking and turn-taking",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

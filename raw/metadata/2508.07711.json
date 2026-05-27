@@ -1,0 +1,38 @@
+{
+  "id": "2508.07711",
+  "source_ids": {
+    "arxiv": "2508.07711"
+  },
+  "title": "Is GAN Necessary for Mel-Spectrogram-based Neural Vocoder?",
+  "authors": [
+    "Hui-Peng Du",
+    "Yang Ai",
+    "Rui-Chen Zheng",
+    "Ye-Xin Lu",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.07711",
+  "pdf_url": "https://arxiv.org/pdf/2508.07711.pdf",
+  "pdf_path": "raw/papers/2508.07711.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recently, mainstream mel-spectrogram-based neural vocoders rely on generative adversarial network (GAN) for high-fidelity speech generation, e.g., HiFi-GAN and BigVGAN. However, the use of GAN restricts training efficiency and model complexity. Therefore, this paper proposes a novel FreeGAN vocoder, aiming to answer the question of whether GAN is necessary for mel-spectrogram-based neural vocoders. The FreeGAN employs an amplitude-phase serial prediction framework, eliminating the need for GAN training. It incorporates amplitude prior input, SNAKE-ConvNeXt v2 backbone and frequency-weighted anti-wrapping phase loss to compensate for the performance loss caused by the absence of GAN. Experimental results confirm that the speech quality of FreeGAN is comparable to that of advanced GAN-based vocoders, while significantly improving training efficiency and complexity. Other explicit-phase-prediction-based neural vocoders can also work without GAN, leveraging our proposed methods.",
+  "arxiv_comment": "Accepted by IEEE Signal Processing Letters",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Non-adversarial mel-spectrogram vocoder challenging the necessity of GANs",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

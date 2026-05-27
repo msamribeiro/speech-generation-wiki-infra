@@ -1,0 +1,41 @@
+{
+  "id": "2509.22718",
+  "source_ids": {
+    "arxiv": "2509.22718"
+  },
+  "title": "PerformSinger: Multimodal Singing Voice Synthesis Leveraging Synchronized Lip Cues from Singing Performance Videos",
+  "authors": [
+    "Ke Gu",
+    "Zhicong Wu",
+    "Peng Bai",
+    "Sitong Qiao",
+    "Zhiqi Jiang",
+    "Junchen Lu",
+    "Xiaodong Shi",
+    "Xinyuan Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.22718",
+  "pdf_url": "https://arxiv.org/pdf/2509.22718.pdf",
+  "pdf_path": "raw/papers/2509.22718.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Existing singing voice synthesis (SVS) models largely rely on fine-grained, phoneme-level durations, which limits their practical application. These methods overlook the complementary role of visual information in duration prediction.To address these issues, we propose PerformSinger, a pioneering multimodal SVS framework, which incorporates lip cues from video as a visual modality, enabling high-quality \"duration-free\" singing voice synthesis. PerformSinger comprises parallel multi-branch multimodal encoders, a feature fusion module, a duration and variational prediction network, a mel-spectrogram decoder and a vocoder. The fusion module, composed of adapter and fusion blocks, employs a progressive fusion strategy within an aligned semantic space to produce high-quality multimodal feature representations, thereby enabling accurate duration prediction and high-fidelity audio synthesis. To facilitate the research, we design, collect and annotate a novel SVS dataset involving synchronized video streams and precise phoneme-level manual annotations. Extensive experiments demonstrate the state-of-the-art performance of our proposal in both subjective and objective evaluations. The code and dataset will be publicly available.",
+  "arxiv_comment": null,
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Multimodal singing voice synthesis using synchronized lip cues for duration prediction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

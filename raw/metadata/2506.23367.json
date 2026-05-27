@@ -1,0 +1,38 @@
+{
+  "id": "2506.23367",
+  "source_ids": {
+    "arxiv": "2506.23367"
+  },
+  "title": "You Sound a Little Tense: L2 Tailored Clear TTS Using Durational Vowel Properties",
+  "authors": [
+    "Paige Tuttösí",
+    "H. Henny Yeung",
+    "Yue Wang",
+    "Jean-Julien Aucouturier",
+    "Angelica Lim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.23367",
+  "pdf_url": "https://arxiv.org/pdf/2506.23367.pdf",
+  "pdf_path": "raw/papers/2506.23367.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present the first text-to-speech (TTS) system tailored to second language (L2) speakers. We use duration differences between American English tense (longer) and lax (shorter) vowels to create a \"clarity mode\" for Matcha-TTS. Our perception studies showed that French-L1, English-L2 listeners had fewer (at least 9.15%) transcription errors when using our clarity mode, and found it more encouraging and respectful than overall slowed down speech. Remarkably, listeners were not aware of these effects: despite the decreased word error rate in clarity mode, listeners still believed that slowing all target words was the most intelligible, suggesting that actual intelligibility does not correlate with perceived intelligibility. Additionally, we found that Whisper-ASR did not use the same cues as L2 speakers to differentiate difficult vowels and is not sufficient to assess the intelligibility of TTS systems for these individuals.",
+  "arxiv_comment": "Accepted to ISCA Speech Synthesis Workshop, 2025, Project webpage here: https://rosielab.github.io/clear_speech/ Code here: https://github.com/chocobearz/Matcha-TTS-L2-clarity",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "First L2-tailored TTS system using tense/lax vowel duration for clarity; advances TTS for language learning.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

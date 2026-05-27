@@ -1,0 +1,35 @@
+{
+  "id": "2025.mcg-1.8",
+  "source_ids": {
+    "acl": "2025.mcg-1.8",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.mcg-1.8"
+  },
+  "title": "Hyderabadi Pearls at Multilingual Counterspeech Generation : HALT : Hate Speech Alleviation using Large Language Models and Transformers",
+  "authors": [
+    "Md Shariq Farhan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.8",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.8.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper explores the potential of using fine- tuned Large Language Models (LLMs) for generating counter-narratives (CNs) to combat hate speech (HS). We focus on English and Basque, leveraging the ML_MTCONAN_KN dataset, which provides hate speech and counter-narrative pairs in multiple languages. Our study compares the performance of Mis- tral, Llama, and a Llama-based LLM fine- tuned on a Basque language dataset for CN generation. The generated CNs are evalu- ated using JudgeLM (a LLM to evaluate other LLMs in open-ended scenarios) along with traditional metrics such as ROUGE-L, BLEU, BERTScore, and other traditional metrics. The results demonstrate that fine-tuned LLMs can produce high-quality contextually relevant CNs for low-resource languages that are comparable to human-generated responses, offering a sig- nificant contribution to combating online hate speech across diverse linguistic settings.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Counterspeech generation with LLMs; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

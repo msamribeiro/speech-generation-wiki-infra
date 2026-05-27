@@ -1,0 +1,40 @@
+{
+  "id": "2025.findings-naacl.92",
+  "source_ids": {
+    "acl": "2025.findings-naacl.92",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-naacl.92",
+    "url_acl": "https://aclanthology.org/2025.findings-naacl.92"
+  },
+  "title": "Synthetic Audio Helps for Cognitive State Tasks",
+  "authors": [
+    "Adil Soubki",
+    "John Murzaku",
+    "Peter Zeng",
+    "Owen Rambow"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-naacl.92",
+  "pdf_url": "https://aclanthology.org/2025.findings-naacl.92.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "The NLP community has broadly focused on text-only approaches of cognitive state tasks, but audio can provide vital missing cues through prosody. We posit that text-to-speech models learn to track aspects of cognitive state in order to produce naturalistic audio, and that the signal audio models implicitly identify is orthogonal to the information that language models exploit. We present Synthetic Audio Data fine-tuning (SAD), a framework where we show that 7 tasks related to cognitive state modeling benefit from multimodal training on both text and zero-shot synthetic audio data from an off-the-shelf TTS system. We show an improvement over the text-only modality when adding synthetic audio data to text-only corpora. Furthermore, on tasks and corpora that do contain gold audio, we show our SAD framework achieves competitive performance with text and synthetic audio compared to text and gold audio.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "TTS-generated audio used to augment cognitive state detection; TTS is a data augmentation tool, primary contribution is cognitive state NLP.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

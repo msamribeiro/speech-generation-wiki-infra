@@ -1,0 +1,41 @@
+{
+  "id": "2509.06074",
+  "source_ids": {
+    "arxiv": "2509.06074",
+    "acl": "2025.emnlp-main.448",
+    "doi": "10.18653/v1/2025.emnlp-main.448",
+    "url_acl": "https://aclanthology.org/2025.emnlp-main.448"
+  },
+  "title": "Multimodal Fine-grained Context Interaction Graph Modeling for Conversational Speech Synthesis",
+  "authors": [
+    "Zhenqi Jia",
+    "Rui Liu",
+    "Berrak Sisman",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-09-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.06074",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-main.448.pdf",
+  "pdf_path": "raw/papers/2509.06074.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Conversational Speech Synthesis (CSS) aims to generate speech with natural prosody by understanding the multimodal dialogue history (MDH). The latest work predicts the accurate prosody expression of the target utterance by modeling the utterance-level interaction characteristics of MDH and the target utterance. However, MDH contains fine-grained semantic and prosody knowledge at the word level. Existing methods overlook the fine-grained semantic and prosodic interaction modeling. To address this gap, we propose MFCIG-CSS, a novel Multimodal Fine-grained Context Interaction Graph-based CSS system. Our approach constructs two specialized multimodal fine-grained dialogue interaction graphs: a semantic interaction graph and a prosody interaction graph. These two interaction graphs effectively encode interactions between word-level semantics, prosody, and their influence on subsequent utterances in MDH. The encoded interaction features are then leveraged to enhance synthesized speech with natural conversational prosody. Experiments on the DailyTalk dataset demonstrate that MFCIG-CSS outperforms all baseline models in terms of prosodic expressiveness. Code and speech samples are available at https://github.com/AI-S2-Lab/MFCIG-CSS.",
+  "arxiv_comment": "Accepted by EMNLP 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Fine-grained multimodal context interaction graph modeling for conversational speech synthesis; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

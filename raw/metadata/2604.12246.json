@@ -1,0 +1,33 @@
+{
+  "id": "2604.12246",
+  "source_ids": {
+    "arxiv": "2604.12246"
+  },
+  "title": "TokenSE: a Mamba-based discrete token speech enhancement framework for cochlear implants",
+  "authors": [
+    "Hsin-Tien Chiang",
+    "John H. L. Hansen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.12246",
+  "pdf_url": "https://arxiv.org/pdf/2604.12246.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech enhancement (SE) is critical for improving speech intelligibility and quality in real-world environments, particularly for cochlear implant (CI) users who experience severe degradations in speech understanding under noisy and reverberant conditions. In this study, we propose TokenSE, a discrete token-based SE framework operating in the neural audio codec space, which predicts clean codec token indices from degraded speech using a Mamba-based model. Unlike the earlier Transformer architecture, whose self-attention mechanism has a computational complexity that grows quadratically with sequence length, the input-dependent selection mechanism of Mamba achieves linear complexity, making it a compelling alternative to Transformers, especially for CI and hearing-aid (HA) applications. Objective evaluations show that TokenSE consistently outperforms baseline methods on both in-domain and out-of-domain datasets. Moreover, subjective listening experiments with CI users indicate clear benefit in speech intelligibility under adverse noisy and reverberant environments.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Mamba-based token speech enhancement for cochlear implants; enhancement task, clinical application.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

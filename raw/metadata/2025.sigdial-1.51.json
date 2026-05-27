@@ -1,0 +1,44 @@
+{
+  "id": "2025.sigdial-1.51",
+  "source_ids": {
+    "acl": "2025.sigdial-1.51",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.sigdial-1.51"
+  },
+  "title": "rrSDS 2.0: Incremental, Modular, Distributed, Multimodal Spoken Dialogue with Robotic Platforms",
+  "authors": [
+    "Anna Manaseryan",
+    "Porter Rigby",
+    "Brooke Matthews",
+    "Catherine Henry",
+    "Josue Torres-Fonseca",
+    "Ryan Whetten",
+    "Enoch Levandovsky",
+    "Casey Kennington"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.sigdial-1.51",
+  "pdf_url": "https://aclanthology.org/2025.sigdial-1.51.pdf",
+  "pdf_path": "raw/papers/2025.sigdial-1.51.pdf",
+  "pdf_source": "anthology",
+  "abstract": "This demo will showcase updates made to the ‘robot-ready spoken dialogue system’ built on the Retico framework. Updates include new modules, logging and real-time monitoring tools, integrations with the Coppelia Sim virtual robot platfrom, integrations with a benchmark, improved documentation, and pypi environment usage.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.42,
+  "relevance_note": "Modular spoken dialogue system demo framework; SCA infrastructure work with TTS as a component.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

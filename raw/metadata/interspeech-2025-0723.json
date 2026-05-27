@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0723",
+  "source_ids": {
+    "isca": "lee25f_interspeech",
+    "doi": "10.21437/Interspeech.2025-723"
+  },
+  "title": "Counterfactual Activation Editing for Post-hoc Prosody and Mispronunciation Correction in TTS Models",
+  "authors": [
+    "Kyowoon Lee",
+    "Artyom Stitsyuk",
+    "Gunu Jho",
+    "Inchul Hwang",
+    "Jaesik Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lee25f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lee25f_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0723.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent advances in Text-to-Speech (TTS) have significantly improved speech naturalness, increasing the demand for precise prosody control and mispronunciation correction. Existing approaches for prosody manipulation often depend on specialized modules or additional training, limiting their capacity for post-hoc adjustments. Similarly, traditional mispronunciation correction relies on grapheme-to-phoneme dictionaries, making it less practical in low-resource settings. We introduce Counterfactual Activation Editing, a model-agnostic method that manipulates internal representations in a pre-trained TTS model to achieve post-hoc control of prosody and pronunciation. Experimental results show that our method effectively adjusts prosodic features and corrects mispronunciations while preserving synthesis quality. This opens the door to inference-time refinement of TTS outputs without retraining, bridging the gap between pre-trained TTS models and editable speech synthesis.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Post-hoc prosody and mispronunciation correction in TTS via counterfactual activation editing; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

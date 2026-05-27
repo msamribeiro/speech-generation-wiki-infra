@@ -1,0 +1,40 @@
+{
+  "id": "2601.00303",
+  "source_ids": {
+    "arxiv": "2601.00303"
+  },
+  "title": "DepFlow: Disentangled Speech Generation to Mitigate Semantic Bias in Depression Detection",
+  "authors": [
+    "Yuxin Li",
+    "Xiangyu Zhang",
+    "Yifei Li",
+    "Zhiwei Guo",
+    "Haoyang Zhang",
+    "Eng Siong Chng",
+    "Cuntai Guan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.00303",
+  "pdf_url": "https://arxiv.org/pdf/2601.00303.pdf",
+  "pdf_path": "raw/papers/2601.00303.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech is a scalable and non-invasive biomarker for early mental health screening. However, widely used depression datasets like DAIC-WOZ exhibit strong coupling between linguistic sentiment and diagnostic labels, encouraging models to learn semantic shortcuts. As a result, model robustness may be compromised in real-world scenarios, such as Camouflaged Depression, where individuals maintain socially positive or neutral language despite underlying depressive states. To mitigate this semantic bias, we propose DepFlow, a three-stage depression-conditioned text-to-speech framework. First, a Depression Acoustic Encoder learns speaker- and content-invariant depression embeddings through adversarial training, achieving effective disentanglement while preserving depression discriminability (ROC-AUC: 0.693). Second, a flow-matching TTS model with FiLM modulation injects these embeddings into synthesis, enabling control over depressive severity while preserving content and speaker identity. Third, a prototype-based severity mapping mechanism provides smooth and interpretable manipulation across the depression continuum. Using DepFlow, we construct a Camouflage Depression-oriented Augmentation (CDoA) dataset that pairs depressed acoustic patterns with positive/neutral content from a sentiment-stratified text bank, creating acoustic-semantic mismatches underrepresented in natural data. Evaluated across three depression detection architectures, CDoA improves macro-F1 by 9%, 12%, and 5%, respectively, consistently outperforming conventional augmentation strategies in depression Detection. Beyond enhancing robustness, DepFlow provides a controllable synthesis platform for conversational systems and simulation-based evaluation, where real clinical data remains limited by ethical and coverage constraints.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.52,
+  "relevance_note": "Speech generation to mitigate semantic bias in depression detection; TTS is a data generation tool for clinical NLP.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2510.21685",
+  "source_ids": {
+    "arxiv": "2510.21685"
+  },
+  "title": "StylePitcher: Generating Style-Following and Expressive Pitch Curves for Versatile Singing Tasks",
+  "authors": [
+    "Jingyue Huang",
+    "Qihui Yang",
+    "Fei Yueh Chen",
+    "Julian McAuley",
+    "Randal Leistikow",
+    "Perry R. Cook",
+    "Yongyi Zang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.21685",
+  "pdf_url": "https://arxiv.org/pdf/2510.21685.pdf",
+  "pdf_path": "raw/papers/2510.21685.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Existing pitch curve generators face two main challenges: they often neglect singer-specific expressiveness, reducing their ability to capture individual singing styles. And they are typically developed as auxiliary modules for specific tasks such as pitch correction, singing voice synthesis, or voice conversion, which restricts their generalization capability. We propose StylePitcher, a general-purpose pitch curve generator that learns singer style from reference audio while preserving alignment with the intended melody. Built upon a rectified flow matching architecture, StylePitcher flexibly incorporates symbolic music scores and pitch context as conditions for generation, and can seamlessly adapt to diverse singing tasks without retraining. Objective and subjective evaluations across various singing tasks demonstrate that StylePitcher improves style similarity and audio quality while maintaining pitch accuracy comparable to task-specific baselines.",
+  "arxiv_comment": "Submitted to ICASSP 2026",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Unified pitch curve generation for singing voice synthesis and conversion capturing singer-specific expressiveness",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

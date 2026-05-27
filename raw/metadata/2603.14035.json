@@ -1,0 +1,35 @@
+{
+  "id": "2603.14035",
+  "source_ids": {
+    "arxiv": "2603.14035"
+  },
+  "title": "Probing neural audio codecs for distinctions among English nuclear tunes",
+  "authors": [
+    "Juan Pablo Vigneaux",
+    "Jennifer Cole"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14035",
+  "pdf_url": "https://arxiv.org/pdf/2603.14035.pdf",
+  "pdf_path": "raw/papers/2603.14035.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "State-of-the-art spoken dialogue models (Défossez et al. 2024; Schalkwyk et al. 2025) use neural audio codecs to \"tokenize\" audio signals into a lower-frequency stream of vectorial latent representations, each quantized using a hierarchy of vector codebooks. A transformer layer allows these representations to reflect some time- and context-dependent patterns. We train probes on labeled audio data from Cole et al. (2023) to test whether the pitch trajectories that characterize English phrase-final (nuclear) intonational tunes are among these patterns. Results: Linear probes trained on the unquantized latents or some of the associated codewords yield above-chance accuracy in distinguishing eight phonologically specified nuclear tunes with monotonal pitch accents (top average test accuracy (TATA): 0.31) and the five clusters of these tunes that are robust in human speech production and perception (TATA: 0.45). Greater accuracy (TATAs: 0.74-0.89) is attained for binary distinctions between classes of rising vs. falling tunes, respectively used for questions and assertions. Information about tunes is spread among all codebooks, which calls into question a distinction between 'semantic' and 'acoustic' codebooks found in the literature. Accuracies improve with nonlinear probes, but discrimination among the five clusters remains far from human performance, suggesting a fundamental limitation of current codecs.",
+  "arxiv_comment": "5 pages; 1 table; 3 figures. Accepted as conference paper at Speech Prosody 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Probing neural audio codecs for phonological tonal distinctions relevant to spoken dialogue model quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0143",
+  "source_ids": {
+    "isca": "vlasenko25_interspeech",
+    "doi": "10.21437/Interspeech.2025-143"
+  },
+  "title": "Multimodal Prosody Modeling: A Use Case for Multilingual Sentence Mode Prediction",
+  "authors": [
+    "Bogdan Vlasenko",
+    "Mathew Magimai Doss"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/vlasenko25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/vlasenko25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0143.pdf",
+  "pdf_source": "isca",
+  "abstract": "Prosody modeling has garnered significant attention from the speech processing community. Recent developments in multilingual latent spaces for representing linguistic and acoustic information have become a new trend in various research directions. Therefore, we decided to evaluate the ability of multilingual acoustic neural embeddings and knowledge-based features to preserve sentence-mode-related information at the suprasegmental level. For linguistic information modeling, we selected neural embeddings based on word- and phoneme-level latent space representations. The experimental study was conducted using Italian, French, and German audiobook recordings, as well as emotional speech samples from EMO-DB. Both intra- and inter-language experimental protocols were used to assess classification performance for uni- and multimodal (early fusion approach) features. For comparison, we used a sentence mode prediction system built on top of automatically generated WHISPER-based transcripts.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.52,
+  "relevance_note": "Prosody modeling for sentence mode prediction (interrogative vs declarative) in multilingual settings; primarily prosody analysis.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

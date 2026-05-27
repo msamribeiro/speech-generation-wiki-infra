@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0596",
+  "source_ids": {
+    "isca": "jeon25_interspeech",
+    "doi": "10.21437/Interspeech.2025-596",
+    "arxiv": "2508.10412"
+  },
+  "title": "Facilitating Personalized TTS for Dysarthric Speakers Using Knowledge Anchoring and Curriculum Learning",
+  "authors": [
+    "Yejin Jeon",
+    "Solee Im",
+    "Youngjae Kim",
+    "Gary Geunbae Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/jeon25_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.10412.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0596.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Dysarthric speakers experience substantial communication challenges due to impaired motor control of the speech apparatus, which leads to reduced speech intelligibility. This creates significant obstacles in dataset curation since actual recording of long, articulate sentences for the objective of training personalized TTS models becomes infeasible. Thus, the limited availability of audio data, in addition to the articulation errors that are present within the audio, complicates personalized speech synthesis for target dysarthric speaker adaptation. To address this, we frame the issue as a domain transfer task and introduce a knowledge anchoring framework that leverages a teacher-student model, enhanced by curriculum learning through audio augmentation. Experimental results show that the proposed zero-shot multi-speaker TTS model effectively generates synthetic speech with markedly reduced articulation errors and high speaker fidelity, while maintaining prosodic naturalness.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Knowledge anchoring and curriculum learning for personalized dysarthric TTS; advances assistive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

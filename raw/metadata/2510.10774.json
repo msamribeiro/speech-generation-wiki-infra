@@ -1,0 +1,36 @@
+{
+  "id": "2510.10774",
+  "source_ids": {
+    "arxiv": "2510.10774"
+  },
+  "title": "ParsVoice: A Large-Scale Multi-Speaker Persian Speech Corpus for Text-to-Speech Synthesis",
+  "authors": [
+    "Mohammad Javad Ranjbar Kalahroodi",
+    "Heshaam Faili",
+    "Azadeh Shakery"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.10774",
+  "pdf_url": "https://arxiv.org/pdf/2510.10774.pdf",
+  "pdf_path": "raw/papers/2510.10774.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Existing Persian speech datasets are typically smaller than their English counterparts, which creates a key limitation for developing Persian speech technologies. We address this gap by introducing ParsVoice, the largest Persian speech corpus designed specifically for text-to-speech(TTS) applications. We created an automated pipeline that transforms raw audiobook content into TTS-ready data, incorporating components such as a BERT-based sentence completion detector, a binary search boundary optimization method for precise audio-text alignment, and audio-text quality assessment frameworks tailored to Persian. The pipeline processes 2,000 audiobooks, yielding 3,526 hours of clean speech, which was further filtered into a 1,804-hour high-quality subset suitable for TTS, featuring more than 470 speakers. To validate the dataset, we fine-tuned XTTS for Persian, achieving a naturalness Mean Opinion Score (MOS) of 3.6/5 and a Speaker Similarity Mean Opinion Score (SMOS) of 4.0/5 demonstrating ParsVoice's effectiveness for training multi-speaker TTS systems. ParsVoice is the largest high-quality Persian speech dataset, offering speaker diversity and audio quality comparable to major English corpora. The complete dataset has been made publicly available to accelerate the development of Persian speech technologies. The ParsVoice dataset is publicly available at: https://huggingface.co/datasets/MohammadJRanjbar/ParsVoice.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Large-scale multi-speaker Persian speech corpus and pipeline specifically for TTS development",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

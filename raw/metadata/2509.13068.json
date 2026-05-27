@@ -1,0 +1,37 @@
+{
+  "id": "2509.13068",
+  "source_ids": {
+    "arxiv": "2509.13068"
+  },
+  "title": "MSR-Codec: A Low-Bitrate Multi-Stream Residual Codec for High-Fidelity Speech Generation with Information Disentanglement",
+  "authors": [
+    "Jingyu Li",
+    "Guangyan Zhang",
+    "Zhen Ye",
+    "Yiwen Guo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.13068",
+  "pdf_url": "https://arxiv.org/pdf/2509.13068.pdf",
+  "pdf_path": "raw/papers/2509.13068.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Audio codecs are a critical component of modern speech generation systems. This paper introduces a low-bitrate, multi-scale residual codec that encodes speech into four distinct streams: semantic, timbre, prosody, and residual. This architecture achieves high-fidelity speech reconstruction at competitive low bitrates while demonstrating an inherent ability for information disentanglement. We construct a two-stage language model for text-to-speech (TTS) synthesis using this codec, which, despite its lightweight design and minimal data requirements, achieves a state-of-the-art Word Error Rate (WER) and superior speaker similarity compared to several larger models. Furthermore, the codec's design proves highly effective for voice conversion, enabling independent manipulation of speaker timbre and prosody. Our inference code, pre-trained models, and audio samples are available at https://github.com/herbertLJY/MSRCodec.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Low-bitrate multi-stream codec with disentangled semantic, timbre, and prosody streams",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

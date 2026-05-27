@@ -1,0 +1,40 @@
+{
+  "id": "2601.18094",
+  "source_ids": {
+    "arxiv": "2601.18094"
+  },
+  "title": "OneVoice: One Model, Triple Scenarios-Towards Unified Zero-shot Voice Conversion",
+  "authors": [
+    "Zhichao Wang",
+    "Tao Li",
+    "Wenshuo Ge",
+    "Zihao Cui",
+    "Shilei Zhang",
+    "Junlan Feng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.18094",
+  "pdf_url": "https://arxiv.org/pdf/2601.18094.pdf",
+  "pdf_path": "raw/papers/2601.18094.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent progress of voice conversion~(VC) has achieved a new milestone in speaker cloning and linguistic preservation. But the field remains fragmented, relying on specialized models for linguistic-preserving, expressive, and singing scenarios. We propose OneVoice, a unified zero-shot framework capable of handling all three scenarios within a single model. OneVoice is built upon a continuous language model trained with VAE-free next-patch diffusion, ensuring high fidelity and efficient sequence modeling. Its core design for unification lies in a Mixture-of-Experts (MoE) designed to explicitly model shared conversion knowledge and scenario-specific expressivity. Expert selection is coordinated by a dual-path routing mechanism, including shared expert isolation and scenario-aware domain expert assignment with global-local cues. For precise conditioning, scenario-specific prosodic features are fused into each layer via a gated mechanism, allowing adaptive usage of prosody information. Furthermore, to enable the core idea and alleviate the imbalanced issue (abundant speech vs. scarce singing), we adopt a two-stage progressive training that includes foundational pre-training and scenario enhancement with LoRA-based domain experts. Experiments show that OneVoice matches or surpasses specialized models across all three scenarios, while verifying flexible control over scenarios and offering a fast decoding version as few as 2 steps. Code and model will be released soon.",
+  "arxiv_comment": "Work in progress",
+  "task": [
+    "VC",
+    "singing"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Unified zero-shot voice conversion framework handling linguistic-preserving, expressive, and singing scenarios",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

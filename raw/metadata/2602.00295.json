@@ -1,0 +1,34 @@
+{
+  "id": "2602.00295",
+  "source_ids": {
+    "arxiv": "2602.00295"
+  },
+  "title": "Multi-Speaker Conversational Audio Deepfake: Taxonomy, Dataset and Pilot Study",
+  "authors": [
+    "Alabi Ahmed",
+    "Vandana Janeja",
+    "Sanjay Purushotham"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.00295",
+  "pdf_url": "https://arxiv.org/pdf/2602.00295.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advances in text-to-speech (TTS) technologies have made audio deepfakes increasingly realistic and accessible, raising significant security and trust concerns. While existing research has largely focused on detecting single-speaker audio deepfakes, real-world malicious applications with multi-speaker conversational settings is also emerging as a major underexplored threat. To address this gap, we propose a conceptual taxonomy of multi-speaker conversational audio deepfakes, distinguishing between partial manipulations (one or multiple speakers altered) and full manipulations (entire conversations synthesized). As a first step, we introduce a new Multi-speaker Conversational Audio Deepfakes Dataset (MsCADD) of 2,830 audio clips containing real and fully synthetic two-speaker conversations, generated using VITS and SoundStorm-based NotebookLM models to simulate natural dialogue with variations in speaker gender, and conversational spontaneity. MsCADD is limited to text-to-speech (TTS) types of deepfake. We benchmark three neural baseline models; LFCC-LCNN, RawNet2, and Wav2Vec 2.0 on this dataset and report performance in terms of F1 score, accuracy, true positive rate (TPR), and true negative rate (TNR). Results show that these baseline models provided a useful benchmark, however, the results also highlight that there is a significant gap in multi-speaker deepfake research in reliably detecting synthetic voices under varied conversational dynamics. Our dataset and benchmarks provide a foundation for future research on deepfake detection in conversational scenarios, which is a highly underexplored area of research but also a major area of threat to trustworthy information in audio settings. The MsCADD dataset is publicly available to support reproducibility and benchmarking by the research community.",
+  "arxiv_comment": "This work was presented at the 2025 IEEE International Conference on Data Mining, ICDM 2025, November 12-15,2025, Washington DC, USA",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Multi-speaker conversational audio deepfake dataset and taxonomy; anti-spoofing research not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

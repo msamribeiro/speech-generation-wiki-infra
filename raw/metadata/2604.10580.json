@@ -1,0 +1,39 @@
+{
+  "id": "2604.10580",
+  "source_ids": {
+    "arxiv": "2604.10580"
+  },
+  "title": "Knowing What to Stress: A Discourse-Conditioned Text-to-Speech Benchmark",
+  "authors": [
+    "Arnon Turetzky",
+    "Avihu Dekel",
+    "Hagai Aronowitz",
+    "Ron Hoory",
+    "Yossi Adi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.10580",
+  "pdf_url": "https://arxiv.org/pdf/2604.10580.pdf",
+  "pdf_path": "raw/papers/2604.10580.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken meaning often depends not only on what is said, but also on which word is emphasized. The same sentence can convey correction, contrast, or clarification depending on where emphasis falls. Although modern text-to-speech (TTS) systems generate expressive speech, it remains unclear whether they infer contextually appropriate stress from discourse alone. To address this gap, we present Context-Aware Stress TTS (CAST), a benchmark for evaluating context-conditioned word-level stress in TTS. Items are defined as contrastive context pairs: identical sentences paired with distinct contexts requiring different stressed words. We evaluate state-of-the-art systems and find a consistent gap: text-only language models reliably recover the intended stress from context, yet TTS systems frequently fail to realize it in speech. We release the benchmark, evaluation framework, construction pipeline and a synthetic corpus to support future work on context-aware speech synthesis.",
+  "arxiv_comment": "Preprint",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Discourse-conditioned TTS benchmark evaluating whether models infer contextually appropriate emphasis from context",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2509.20802",
+  "source_ids": {
+    "arxiv": "2509.20802"
+  },
+  "title": "SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS",
+  "authors": [
+    "Tan Dat Nguyen",
+    "Jaehun Kim",
+    "Ji-Hoon Kim",
+    "Shukjae Choi",
+    "Youshin Lim",
+    "Joon Son Chung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.20802",
+  "pdf_url": "https://arxiv.org/pdf/2509.20802.pdf",
+  "pdf_path": "raw/papers/2509.20802.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The goal of this paper is to introduce SPADE, a framework for Structured Pruning and Adaptive Distillation for Efficient Large Language Model-based text-to-speech (LLM-TTS). Recent LLM-TTS systems achieve strong controllability and zero-shot generalization, but their large parameter counts and high latency limit real-world deployment. SPADE addresses this by combining (i) a pruning step guided by a word-error-rate-based layer importance index to remove non-essential Transformer layers, with (ii) multi-level knowledge distillation to restore autoregressive coherence. On zero-shot benchmarks, SPADE preserves near-parity perceptual quality while halving Transformer depth, reducing VRAM usage by up to 20%, and achieving up to 1.7x faster real-time factor with less than 5% of the original training data. These results show that compact LLM-TTS models can maintain naturalness and speaker similarity while enabling practical real-time speech generation. Audio samples are available at https://mm.kaist.ac.kr/projects/SPADE/.",
+  "arxiv_comment": "ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Structured pruning and distillation framework for efficient LLM-based TTS deployment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

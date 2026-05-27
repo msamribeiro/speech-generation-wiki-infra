@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0047",
+  "source_ids": {
+    "isca": "kim25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-47"
+  },
+  "title": "Revival with Voice: Multi-modal Controllable Text-to-Speech Synthesis",
+  "authors": [
+    "Minsu Kim",
+    "Pingchuan Ma",
+    "Honglie Chen",
+    "Stavros Petridis",
+    "Maja Pantic"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kim25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kim25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0047.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper explores multi-modal controllable Text-to-Speech Synthesis (TTS) where the voice can be generated from face image, and the characteristics of output speech (e.g., pace, noise level, distance, tone, place) can be controllable with natural text description. Specifically, we aim to mitigate the following three challenges in face-driven TTS systems. 1) To overcome the limited audio quality of audio-visual speech corpora, we propose a training method that additionally utilizes high-quality audio-only speech corpora. 2) To generate voices not only from real human faces but also from artistic portraits, we propose augmenting the input face image with stylization. 3) To consider one-to-many possibilities in face-to-voice mapping and ensure consistent voice generation at the same time, we propose to first employ sampling-based decoding and then use prompting with generated speech samples. Experimental results validate the proposed model's effectiveness in face-driven voice synthesis.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Multi-modal controllable TTS generating voice from face images with text description control; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

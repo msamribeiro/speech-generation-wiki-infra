@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1106",
+  "source_ids": {
+    "isca": "guo25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1106"
+  },
+  "title": "LSCodec: Low-Bitrate and Speaker-Decoupled Discrete Speech Codec",
+  "authors": [
+    "Yiwei Guo",
+    "Zhihan Li",
+    "Chenpeng Du",
+    "Hankun Wang",
+    "Xie Chen",
+    "Kai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/guo25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/guo25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1106.pdf",
+  "pdf_source": "isca",
+  "abstract": "Although discrete speech tokens have exhibited strong potential for language model-based speech generation, their high bitrates and redundant timbre information restrict the development of such models. In this work, we propose LSCodec, a discrete speech codec that has both low bitrate and speaker decoupling ability. LSCodec adopts a multi-stage unsupervised training framework with a speaker perturbation technique. A continuous information bottleneck is first established, followed by vector quantization that produces a discrete speaker-decoupled space. A discrete token vocoder finally refines acoustic details from LSCodec. By reconstruction evaluations, LSCodec demonstrates superior intelligibility and audio quality with only a single codebook and smaller vocabulary size than baselines. Voice conversion and speaker probing experiments prove the excellent speaker disentanglement of LSCodec, and ablation study verifies the effectiveness of the proposed training framework.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Novel discrete speech codec with low bitrate and speaker decoupling for speech generation; advances codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

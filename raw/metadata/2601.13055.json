@@ -1,0 +1,37 @@
+{
+  "id": "2601.13055",
+  "source_ids": {
+    "arxiv": "2601.13055"
+  },
+  "title": "VoCodec: An Efficient Lightweight Low-Bitrate Speech Codec",
+  "authors": [
+    "Leyan Yang",
+    "Ronghui Hu",
+    "Yang Xu",
+    "Jing Lu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.13055",
+  "pdf_url": "https://arxiv.org/pdf/2601.13055.pdf",
+  "pdf_path": "raw/papers/2601.13055.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in end-to-end neural speech codecs enable compressing audio at extremely low bitrates while maintaining high-fidelity reconstruction. Meanwhile, low computational complexity and low latency are crucial for real-time communication. In this paper, we propose VoCodec, a speech codec model featuring a computational complexity of only 349.29M multiply-accumulate operations per second (MACs/s) and a latency of 30 ms. With the competitive vocoder Vocos as its backbone, the proposed model ranked fourth on Track 1 in the 2025 LRAC Challenge and achieved the highest subjective evaluation score (MUSHRA) on the clean speech test set. Additionally, we cascade a lightweight neural network at the front end to extend its capability of speech enhancement. Experimental results demonstrate that the two systems achieve competitive performance across multiple evaluation metrics. Speech samples can be found at https://acceleration123.github.io/.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Efficient lightweight low-bitrate speech codec with 349M MAC/s complexity for real-time communication",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

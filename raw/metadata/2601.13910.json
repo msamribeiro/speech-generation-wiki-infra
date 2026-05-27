@@ -1,0 +1,44 @@
+{
+  "id": "2601.13910",
+  "source_ids": {
+    "arxiv": "2601.13910",
+    "acl": "2025.ijcnlp-long.24",
+    "doi": "10.18653/v1/2025.ijcnlp-long.24",
+    "url_acl": "https://aclanthology.org/2025.ijcnlp-long.24"
+  },
+  "title": "Synthetic Singers: A Review of Deep-Learning-based Singing Voice Synthesis Approaches",
+  "authors": [
+    "Changhao Pan",
+    "Dongyu Yao",
+    "Yu Zhang",
+    "Wenxiang Guo",
+    "Jingyu Lu",
+    "Zhiyuan Zhu",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": 1,
+  "published_date": "2026-01-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.13910",
+  "pdf_url": "https://aclanthology.org/2025.ijcnlp-long.24.pdf",
+  "pdf_path": "raw/papers/2601.13910.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Recent advances in singing voice synthesis (SVS) have attracted substantial attention from both academia and industry. With the advent of large language models and novel generative paradigms, producing controllable, high-fidelity singing voices has become an attainable goal. Yet the field still lacks a comprehensive survey that systematically analyzes deep-learning-based singing voice synthesis systems and their enabling technologies. To address the aforementioned issue, this survey first categorizes existing systems by task type and then organizes current architectures into two major paradigms: cascaded and end-to-end approaches. Moreover, we provide an in-depth analysis of core technologies, covering singing modeling and control techniques. Finally, we review relevant datasets, annotation tools, and evaluation benchmarks that support training and assessment. In appendix, we introduce training strategies and further discussion of SVS. This survey provides an up-to-date review of the literature on SVS models, which would be a useful reference for both researchers and engineers. Related materials are available at https://github.com/David-Pigeon/SyntheticSingers.",
+  "arxiv_comment": "Accepetd by IJCNLP-AACL 2025(Oral)",
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Comprehensive survey of deep-learning-based singing voice synthesis covering LLM and generative paradigm advances",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

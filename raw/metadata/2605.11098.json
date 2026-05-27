@@ -1,0 +1,39 @@
+{
+  "id": "2605.11098",
+  "source_ids": {
+    "arxiv": "2605.11098"
+  },
+  "title": "AffectCodec: Emotion-Preserving Neural Speech Codec for Expressive Speech Modeling",
+  "authors": [
+    "Jiacheng Shi",
+    "Hongfei Du",
+    "Xinyuan Song",
+    "Y. Alicia Hong",
+    "Yanfu Zhang",
+    "Ye Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.11098",
+  "pdf_url": "https://arxiv.org/pdf/2605.11098.pdf",
+  "pdf_path": "raw/papers/2605.11098.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural speech codecs provide discrete representations for speech language models, but emotional cues are often degraded during quantization. Existing codecs mainly optimize acoustic reconstruction, leaving emotion expressiveness insufficiently modeled at the representation level. We propose an emotion-guided neural speech codec that explicitly preserves emotional information while maintaining semantic fidelity and prosodic naturalness. Our framework combines emotion-semantic guided latent modulation, relation-preserving emotional-semantic distillation, and emotion-weighted semantic alignment to retain emotionally salient cues under compression. Extensive evaluations across speech reconstruction, emotion recognition, and downstream text-to-speech generation demonstrate improved emotion consistency and perceptual quality without sacrificing content accuracy.",
+  "arxiv_comment": "Accepted to ACL Findings 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "AffectCodec: emotion-guided neural speech codec explicitly preserving emotional cues during quantization",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

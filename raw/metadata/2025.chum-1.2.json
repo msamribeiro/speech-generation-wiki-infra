@@ -1,0 +1,35 @@
+{
+  "id": "2025.chum-1.2",
+  "source_ids": {
+    "acl": "2025.chum-1.2",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.chum-1.2"
+  },
+  "title": "Text Is Not All You Need: Multimodal Prompting Helps LLMs Understand Humor",
+  "authors": [
+    "Ashwin Baluja"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.chum-1.2",
+  "pdf_url": "https://aclanthology.org/2025.chum-1.2.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "While Large Language Models (LLMs) have demonstrated impressive natural language understanding capabilities across various text-based tasks, understanding humor has remained a persistent challenge. Humor is frequently multimodal, relying not only on the meaning of the words, but also their pronunciations, and even the speaker’s intonations. In this study, we explore a simple multimodal prompting approach to humor understanding and explanation. We present an LLM with both the text and the spoken form of a joke, generated using an off-the-shelf text-to-speech (TTS) system. Using multimodal cues improves the explanations of humor compared to textual prompts across all tested datasets.",
+  "task": [],
+  "relevance_score": 0.12,
+  "relevance_note": "LLM humor understanding with audio; no speech synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

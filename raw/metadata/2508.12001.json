@@ -1,0 +1,39 @@
+{
+  "id": "2508.12001",
+  "source_ids": {
+    "arxiv": "2508.12001"
+  },
+  "title": "FNH-TTS: A Fast, Natural, and Human-Like Speech Synthesis System with advanced prosodic modeling based on Mixture of Experts",
+  "authors": [
+    "Qingliang Meng",
+    "Yuqing Deng",
+    "Wei Liang",
+    "Limei Yu",
+    "Huizhi Liang",
+    "Tian Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.12001",
+  "pdf_url": "https://arxiv.org/pdf/2508.12001.pdf",
+  "pdf_path": "raw/papers/2508.12001.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Achieving natural and human-like speech synthesis with low inference costs remains a major challenge in speech synthesis research. This study focuses on human prosodic patterns and synthesized spectrum harmony, addressing the challenges of prosody modeling and artifact issues in non-autoregressive models. To enhance prosody modeling and synthesis quality, we introduce a new Duration Predictor based on the Mixture of Experts alongside a new Vocoder with two advanced multi-scale discriminators. We integrated the these new modules into the VITS system, forming our FNH-TTS system. Our experiments on LJSpeech, VCTK, and LibriTTS demonstrate the system's superiority in synthesis quality, phoneme duration prediction, Vocoder results, and synthesis speed. Our prosody visualization results show that FNH-TTS produces duration predictions that more closely align with natural human beings than other systems.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Fast non-autoregressive TTS with MoE prosody modeling for naturalness at low inference cost",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

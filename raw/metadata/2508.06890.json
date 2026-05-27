@@ -1,0 +1,37 @@
+{
+  "id": "2508.06890",
+  "source_ids": {
+    "arxiv": "2508.06890"
+  },
+  "title": "Maestro-EVC: Controllable Emotional Voice Conversion Guided by References and Explicit Prosody",
+  "authors": [
+    "Jinsung Yoon",
+    "Wooyeol Jeong",
+    "Jio Gim",
+    "Young-Joo Suh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.06890",
+  "pdf_url": "https://arxiv.org/pdf/2508.06890.pdf",
+  "pdf_path": "raw/papers/2508.06890.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Emotional voice conversion (EVC) aims to modify the emotional style of speech while preserving its linguistic content. In practical EVC, controllability, the ability to independently control speaker identity and emotional style using distinct references, is crucial. However, existing methods often struggle to fully disentangle these attributes and lack the ability to model fine-grained emotional expressions such as temporal dynamics. We propose Maestro-EVC, a controllable EVC framework that enables independent control of content, speaker identity, and emotion by effectively disentangling each attribute from separate references. We further introduce a temporal emotion representation and an explicit prosody modeling with prosody augmentation to robustly capture and transfer the temporal dynamics of the target emotion, even under prosody-mismatched conditions. Experimental results confirm that Maestro-EVC achieves high-quality, controllable, and emotionally expressive speech synthesis.",
+  "arxiv_comment": "Accepted at ASRU 2025",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Controllable emotional voice conversion with independent speaker and emotion references",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

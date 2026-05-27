@@ -1,0 +1,32 @@
+{
+  "id": "2605.03073",
+  "source_ids": {
+    "arxiv": "2605.03073"
+  },
+  "title": "The TTS-STT Flywheel: Synthetic Entity-Dense Audio Closes the Indic ASR Gap Where Commercial and Open-Source Systems Fail",
+  "authors": [
+    "Venkata Pushpak Teja Menta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.03073",
+  "pdf_url": "https://arxiv.org/pdf/2605.03073.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Niche-domain Indic ASR -- digit strings, currency amounts, addresses, brand names, English/Indic codemix -- is under-served by both open-source SOTA and commercial systems. On a synthesised entity-dense Telugu test set (held-out by synthesis system), vasista22/whisper-telugu-large-v2 (open SOTA) achieves Entity-Hit-Rate (EHR) 0.027 and Deepgram Nova-3 (commercial) 0.16. We close this gap with a self-contained TTS<->STT flywheel: an open-source Indic TTS pipeline synthesises ~22,000 entity-dense Indic-English code-mix utterances at <$50 marginal cost, and a LoRA fine-tune on top of vasista22 achieves EHR 0.473 on the held-out test (17x over open SOTA, 3x over commercial), with read-prose regression bounded to +6.6 pp WER on FLEURS-Te. Cross-language: beta-Hi 0.337 (7x vs vasista22) and beta-Ta 0.543 (22x vs vasista22, 22x vs Deepgram); on Hindi where Deepgram has substantial entity coverage, the flywheel underperforms commercial. All three beta models fall below pre-registered EHR targets (0.75 for Te, 0.65 for Hi/Ta); we report honestly. A native-human-recorded sanity check (n=20 Telugu) confirms transfer to real speech (beta-Te EHR 0.516 on native vs 0.473 on synth). An EDSA-isolation ablation (LoRA on FLEURS-Te alone) yields EHR 0.020 on the same held-out, attributing ~100% of the gain to the EDSA corpus. We additionally report a language-conditional finding: vanilla Whisper-large-v3 has Telugu-specific Script Collapse (SFR 0.46-0.71) that a per-language LoRA corrects (SFR 0.81-0.97), but the recipe is contraindicated on Hindi and Tamil where vanilla SFR >= 0.98. Code, holdouts, predictions, EDSA corpus, and entity dictionaries are released open-source.",
+  "arxiv_comment": "8 pages, 2 figures. Companion to arXiv:2604.25441 (Praxy Voice TTS), arXiv:2604.25476 (PSP), arXiv:2605.00777 (LASE)",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "TTS used as data augmentation for Indic ASR; primary task is ASR improvement not TTS research",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

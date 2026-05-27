@@ -1,0 +1,38 @@
+{
+  "id": "2605.01515",
+  "source_ids": {
+    "arxiv": "2605.01515"
+  },
+  "title": "MelShield: Robust Mel-Domain Audio Watermarking for Provenance Attribution of AI Generated Synthesized Speech",
+  "authors": [
+    "Yutong Jin",
+    "Qi Li",
+    "Lingshuang Liu",
+    "Jianbing Ni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.01515",
+  "pdf_url": "https://arxiv.org/pdf/2605.01515.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this paper, we propose MelShield, a robust, in-generation, keyed audio watermarking framework that embeds identifiable signals into AI-generated audio for copyright protection and reliable attribution. Specifically, MelShield operates in the Mel-spectrogram domain during the generation process, targeting intermediate acoustic representations in Mel-conditioned pipelines for text-to-speech (TTS) generation. The core idea is to treat the intermediate Mel-spectrogram as the host signal and embed a short binary payload via low-energy, keyed spread-spectrum perturbations distributed across carefully selected time-frequency regions prior to waveform synthesis. By performing watermarking before vocoder inference, MelShield remains plug-and-play for Mel-conditioned TTS architectures and does not require modification or retraining of the underlying TTS generation vocoder, such as DiffWave and HiFi-GAN. Moreover, the multi-user keyed construction enables scalable user-specific attribution, while the keyed verification mechanism limits unauthorized decoding, thereby reducing the risk of large-scale extractor probing and adversarial analysis. Extensive experiments on DiffWave and HiFi-GAN demonstrate that MelShield achieves reliable watermark extraction, approaching 100\\% bit accuracy, even under signal distortions, e.g., compression and additive noise, while preserving high perceptual audio quality.",
+  "arxiv_comment": "Accepted by ACISP 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Mel-domain audio watermarking framework for attribution and copyright of AI-generated TTS speech",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

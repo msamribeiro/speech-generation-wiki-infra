@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1779",
+  "source_ids": {
+    "isca": "ren25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-1779"
+  },
+  "title": "ReFlow-VC: Zero-shot Voice Conversion Based on Rectified Flow and Speaker Feature Optimization",
+  "authors": [
+    "Pengyu Ren",
+    "Wenhao Guan",
+    "Kaidi Wang",
+    "Peijie Chen",
+    "Qingyang Hong",
+    "Lin Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/ren25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/ren25b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1779.pdf",
+  "pdf_source": "isca",
+  "abstract": "In recent years, diffusion-based generative models have demonstrated remarkable performance in speech conversion, including Denoising Diffusion Probabilistic Models (DDPM) and others. However, the advantages of these models come at the cost of requiring a large number of sampling steps. This limitation hinders their practical application in real-world scenarios. In this paper, we introduce ReFlow-VC, a novel high-fidelity speech conversion method based on rectified flow. Specifically, ReFlow-VC is an Ordinary Differential Equation (ODE) model that transforms a Gaussian distribution to the true Mel-spectrogram distribution along the most direct path. Furthermore, we propose a modeling approach that optimizes speaker features by utilizing both content and pitch information, allowing speaker features to reflect the properties of the current speech more accurately. Experimental results show that ReFlow-VC performs exceptionally well in small datasets and zero-shot scenarios.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Zero-shot voice conversion with rectified flow and speaker feature optimization; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

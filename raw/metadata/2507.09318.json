@@ -1,0 +1,59 @@
+{
+  "id": "2507.09318",
+  "source_ids": {
+    "arxiv": "2507.09318"
+  },
+  "title": "ZipVoice-Dialog: Non-Autoregressive Spoken Dialogue Generation with Flow Matching",
+  "authors": [
+    "Han Zhu",
+    "Wei Kang",
+    "Liyong Guo",
+    "Zengwei Yao",
+    "Fangjun Kuang",
+    "Weiji Zhuang",
+    "Zhaoqing Li",
+    "Zhifeng Han",
+    "Dong Zhang",
+    "Xin Zhang"
+  ],
+  "authors_full": [
+    "Han Zhu",
+    "Wei Kang",
+    "Liyong Guo",
+    "Zengwei Yao",
+    "Fangjun Kuang",
+    "Weiji Zhuang",
+    "Zhaoqing Li",
+    "Zhifeng Han",
+    "Dong Zhang",
+    "Xin Zhang",
+    "Xingchen Song",
+    "Lingxuan Ye",
+    "Long Lin",
+    "Daniel Povey"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.09318",
+  "pdf_url": "https://arxiv.org/pdf/2507.09318.pdf",
+  "pdf_path": "raw/papers/2507.09318.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Generating spoken dialogue is inherently more complex than monologue text-to-speech (TTS), as it demands both realistic turn-taking and the maintenance of distinct speaker timbres. While existing autoregressive (AR) models have made progress, they often suffer from high inference latency and stability issues. To overcome these limitations, we propose ZipVoice-Dialog, a non-autoregressive (NAR) zero-shot spoken dialogue generation model based on flow-matching. Observing that applying vanilla flow-matching to dialogue generation leads to poor speech intelligibility and turn-taking precision, we introduce two simple yet effective methods to adapt flow-matching architectures for dialogue generation: (1) a curriculum learning strategy to ensure robust speech-text alignment, and (2) speaker-turn embeddings to govern precise speaker turn-taking. Additionally, we introduce dedicated strategies to support stereo dialogue generation. Recognizing the lack of training datasets in this field, we curate and release OpenDialog, the first large-scale (6.8k hours) open-source spoken dialogue dataset derived from in-the-wild speech data. Moreover, for fair and rigorous evaluations, we established a benchmark to comprehensively evaluate dialogue generation models. Experiments demonstrate the effectiveness of the proposed methods and dataset, showing that ZipVoice-Dialog achieves superior performance in inference speed, intelligibility, speaker turn-taking accuracy, and speaker similarity. Our code, model checkpoints, and the OpenDialog dataset are publicly available at https://github.com/k2-fsa/ZipVoice.",
+  "arxiv_comment": "ACL 2026 Findings",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Non-autoregressive zero-shot spoken dialogue generation with flow matching; directly advances TTS/SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

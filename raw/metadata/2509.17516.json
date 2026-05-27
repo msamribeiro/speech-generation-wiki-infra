@@ -1,0 +1,42 @@
+{
+  "id": "2509.17516",
+  "source_ids": {
+    "arxiv": "2509.17516"
+  },
+  "title": "Audiobook-CC: Controllable Long-context Speech Generation for Multicast Audiobook",
+  "authors": [
+    "Min Liu",
+    "JingJing Yin",
+    "Xiang Zhang",
+    "Siyu Hao",
+    "Yanni Hu",
+    "Bin Lin",
+    "Yuan Feng",
+    "Hongbin Zhou",
+    "Jianhao Ye"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.17516",
+  "pdf_url": "https://arxiv.org/pdf/2509.17516.pdf",
+  "pdf_path": "raw/papers/2509.17516.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Existing text-to-speech systems predominantly focus on single-sentence synthesis and lack adequate contextual modeling as well as fine-grained performance control capabilities for generating coherent multicast audiobooks. To address these limitations, we propose a context-aware and emotion controllable speech synthesis framework specifically engineered for multicast audiobooks with three key innovations: a context mechanism for contextual consistency, a disentanglement paradigm to decouple style control from speech prompts for semantic consistency, and self-distillation to boost emotional expressiveness and instruction controllability. Experimental results show superior performance across the generation of narration, dialogue, and the whole chapter, significantly outperforming existing baselines. Ablation studies are conducted to validate the effectiveness of our proposed methods. Demo samples can be found in https://everest-ai.github.io/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Context-aware emotion-controllable TTS for long-form multi-character audiobook synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

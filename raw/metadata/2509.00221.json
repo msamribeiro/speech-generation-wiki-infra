@@ -1,0 +1,34 @@
+{
+  "id": "2509.00221",
+  "source_ids": {
+    "arxiv": "2509.00221"
+  },
+  "title": "Speech Foundation Models Generalize to Time Series Tasks from Wearable Sensor Data",
+  "authors": [
+    "Jaya Narain",
+    "Zakaria Aldeneh",
+    "Shirley Ren"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.00221",
+  "pdf_url": "https://arxiv.org/pdf/2509.00221.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Both speech and sensor time series data encode information in both the time- and frequency- domains, like spectral powers and waveform shapelets. We show that speech foundation models learn representations that generalize beyond the speech domain and achieve state-of-the-art performance on diverse time-series tasks from wearable sensors. Probes trained on features extracted from HuBERT and wav2vec 2.0 outperform those extracted from self-supervised models trained directly on modality-specific datasets for mood classification, arrhythmia detection, and activity classification tasks. We find that the convolutional feature encoders of speech models are particularly relevant for wearable sensor applications. The proposed approach enhances performance on data-scarce time-series tasks using simple probing methods. This work takes a step toward developing generalized time-series models that unify speech and sensor modalities.",
+  "arxiv_comment": "Preprint, under review",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Transfers speech SFMs to wearable sensor time series; no speech generation contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

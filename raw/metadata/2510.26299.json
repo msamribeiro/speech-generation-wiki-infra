@@ -1,0 +1,34 @@
+{
+  "id": "2510.26299",
+  "source_ids": {
+    "arxiv": "2510.26299"
+  },
+  "title": "Modeling strategies for speech enhancement in the latent space of a neural audio codec",
+  "authors": [
+    "Sofiene Kammoun",
+    "Xavier Alameda-Pineda",
+    "Simon Leglaive"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.26299",
+  "pdf_url": "https://arxiv.org/pdf/2510.26299.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs (NACs) provide compact latent speech representations in the form of sequences of continuous vectors or discrete tokens. In this work, we investigate how these two types of speech representations compare when used as training targets for supervised speech enhancement. We consider both autoregressive and non-autoregressive speech enhancement models based on the Conformer architecture, as well as a simple baseline where the NAC encoder is simply fine-tuned for speech enhancement. Our experiments reveal three key findings: predicting continuous latent representations consistently outperforms discrete token prediction; autoregressive models achieve higher quality but at the expense of intelligibility and efficiency, making non-autoregressive models more attractive in practice; and adding encoder fine-tuning yields the strongest enhancement metrics overall, though at the cost of degraded codec reconstruction. The code and audio samples are available online.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Investigates speech enhancement in codec latent space; primary task is enhancement (out of scope)",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

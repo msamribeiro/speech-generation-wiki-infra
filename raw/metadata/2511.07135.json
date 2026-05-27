@@ -1,0 +1,36 @@
+{
+  "id": "2511.07135",
+  "source_ids": {
+    "arxiv": "2511.07135"
+  },
+  "title": "Generating Novel and Realistic Speakers for Voice Conversion",
+  "authors": [
+    "Meiying Melissa Chen",
+    "Zhenyu Wang",
+    "Zhiyao Duan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.07135",
+  "pdf_url": "https://arxiv.org/pdf/2511.07135.pdf",
+  "pdf_path": "raw/papers/2511.07135.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice conversion models modify timbre while preserving paralinguistic features, enabling applications like dubbing and identity protection. However, most VC systems require access to target utterances, limiting their use when target data is unavailable or when users desire conversion to entirely novel, unseen voices. To address this, we introduce a lightweight method SpeakerVAE to generate novel speakers for VC. Our approach uses a deep hierarchical variational autoencoder to model the speaker timbre space. By sampling from the trained model, we generate novel speaker representations for voice synthesis in a VC pipeline. The proposed method is a flexible plug-in module compatible with various VC models, without co-training or fine-tuning of the base VC system. We evaluated our approach with state-of-the-art VC models: FACodec and CosyVoice2. The results demonstrate that our method successfully generates novel, unseen speakers with quality comparable to that of the training speakers.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "SpeakerVAE generates novel unseen speaker voices for voice conversion without access to target utterances",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2025.wmt-1.41",
+  "source_ids": {
+    "acl": "2025.wmt-1.41",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.wmt-1.41",
+    "url_acl": "https://aclanthology.org/2025.wmt-1.41"
+  },
+  "title": "NTTSU at WMT2025 General Translation Task",
+  "authors": [
+    "Zhang Yin",
+    "Hiroyuki Deguchi",
+    "Haruto Azami",
+    "Guanyu Ouyang",
+    "Kosei Buma",
+    "Yingyi Fu",
+    "Katsuki Chousa",
+    "Takehito Utsuro"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.wmt-1.41",
+  "pdf_url": "https://aclanthology.org/2025.wmt-1.41.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper presents the submission of NTTSU for the constrained track of the English–Japanese and Japanese–Chinese at the WMT2025 general translation task.For each translation direction, we build translation models from a large language model by combining continual pretraining, supervised fine-tuning, and preference optimization based on the translation quality and adequacy.We finally generate translations via context-aware MBR decoding to maximize translation quality and document-level consistency.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Machine translation system submission; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

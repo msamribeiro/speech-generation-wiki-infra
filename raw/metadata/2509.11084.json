@@ -1,0 +1,37 @@
+{
+  "id": "2509.11084",
+  "source_ids": {
+    "arxiv": "2509.11084"
+  },
+  "title": "Length-Aware Rotary Position Embedding for Text-Speech Alignment",
+  "authors": [
+    "Hyeongju Kim",
+    "Juheon Lee",
+    "Jinhyeok Yang",
+    "Jacob Morton"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.11084",
+  "pdf_url": "https://arxiv.org/pdf/2509.11084.pdf",
+  "pdf_path": "raw/papers/2509.11084.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Many recent text-to-speech (TTS) systems are built on transformer architectures and employ cross-attention mechanisms for text-speech alignment. Within these systems, rotary position embedding (RoPE) is commonly used to encode positional information in text and speech representations. In this work, we introduce length-aware RoPE (LARoPE), a simple yet effective extension of RoPE that improves text-speech alignment. Unlike RoPE, which relies on absolute indices, LARoPE computes relative distances between query and key positions using length-normalized indices. Experimental results show that LARoPE consistently outperforms RoPE, offering faster loss convergence, more accurate text-speech alignment, and higher overall TTS quality. Furthermore, LARoPE demonstrates greater resilience to variations in utterance duration and maintains stable performance in extended speech generation up to 30 seconds, whereas RoPE suffers from notable degradation. Notably, our method achieves a state-of-the-art word error rate on a standard zero-shot TTS benchmark.",
+  "arxiv_comment": "5 pages, 3 figures, preprint",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Length-aware RoPE for improved text-speech alignment in transformer-based TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

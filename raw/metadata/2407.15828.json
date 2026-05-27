@@ -1,0 +1,39 @@
+{
+  "id": "2407.15828",
+  "source_ids": {
+    "arxiv": "2407.15828"
+  },
+  "title": "J-CHAT: Japanese Large-scale Spoken Dialogue Corpus for Spoken Dialogue Language Modeling",
+  "authors": [
+    "Wataru Nakata",
+    "Kentaro Seki",
+    "Hitomi Yanaka",
+    "Yuki Saito",
+    "Shinnosuke Takamichi",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2407.15828",
+  "pdf_url": "https://arxiv.org/pdf/2407.15828.pdf",
+  "pdf_path": "raw/papers/2407.15828.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialogue is essential for human-AI interactions, providing expressive capabilities beyond text. Developing effective spoken dialogue systems (SDSs) requires large-scale, high-quality, and diverse spoken dialogue corpora. However, existing datasets are often limited in size, spontaneity, or linguistic coherence. To address these limitations, we introduce J-CHAT, a 76,000-hour open-source Japanese spoken dialogue corpus. Constructed using an automated, language-independent methodology, J-CHAT ensures acoustic cleanliness, diversity, and natural spontaneity. The corpus is built from YouTube and podcast data, with extensive filtering and denoising to enhance quality. Experimental results with generative spoken dialogue language models trained on J-CHAT demonstrate its effectiveness for SDS development. By providing a robust foundation for training advanced dialogue models, we anticipate that J-CHAT will drive progress in human-AI dialogue research and applications.",
+  "arxiv_comment": "8 pages, 3 figures",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "76k-hour Japanese spoken dialogue corpus for spoken dialogue language modeling; directly enables SCA training.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

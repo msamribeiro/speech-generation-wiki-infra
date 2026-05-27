@@ -1,0 +1,39 @@
+{
+  "id": "2508.15931",
+  "source_ids": {
+    "arxiv": "2508.15931"
+  },
+  "title": "QvTAD: Differential Relative Attribute Learning for Voice Timbre Attribute Detection",
+  "authors": [
+    "Zhiyu Wu",
+    "Jingyi Fang",
+    "Yufei Tang",
+    "Yuanzhong Zheng",
+    "Yaoxuan Wang",
+    "Haojun Fei"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.15931",
+  "pdf_url": "https://arxiv.org/pdf/2508.15931.pdf",
+  "pdf_path": "raw/papers/2508.15931.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice Timbre Attribute Detection (vTAD) plays a pivotal role in fine-grained timbre modeling for speech generation tasks. However, it remains challenging due to the inherently subjective nature of timbre descriptors and the severe label imbalance in existing datasets. In this work, we present QvTAD, a novel pairwise comparison framework based on differential attention, designed to enhance the modeling of perceptual timbre attributes. To address the label imbalance in the VCTK-RVA dataset, we introduce a graph-based data augmentation strategy that constructs a Directed Acyclic Graph and employs Disjoint-Set Union techniques to automatically mine unobserved utterance pairs with valid attribute comparisons. Our framework leverages speaker embeddings from a pretrained FACodec, and incorporates a Relative Timbre Shift-Aware Differential Attention module. This module explicitly models attribute-specific contrasts between paired utterances via differential denoising and contrast amplification mechanisms. Experimental results on the VCTK-RVA benchmark demonstrate that QvTAD achieves substantial improvements across multiple timbre descriptors, with particularly notable gains in cross-speaker generalization scenarios.",
+  "arxiv_comment": "Accepted by National Conference on Man-Machine Speech Communication, NCMMSC'2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Fine-grained timbre attribute detection model supporting controllable speech generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

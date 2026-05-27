@@ -1,0 +1,43 @@
+{
+  "id": "2025.acl-long.556",
+  "source_ids": {
+    "acl": "2025.acl-long.556",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-long.556",
+    "url_acl": "https://aclanthology.org/2025.acl-long.556"
+  },
+  "title": "Locate-and-Focus: Enhancing Terminology Translation in Speech Language Models",
+  "authors": [
+    "Suhang Wu",
+    "Jialong Tang",
+    "Chengyi Yang",
+    "Pei Zhang",
+    "Baosong Yang",
+    "Junhui Li",
+    "Junfeng Yao",
+    "Min Zhang",
+    "Jinsong Su"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-long.556",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.556.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Direct speech translation (ST) has garnered increasing attention nowadays, yet the accurate translation of terminology within utterances remains a great challenge. In this regard, current studies mainly concentrate on leveraging various translation knowledge into ST models. However, these methods often struggle with interference from irrelevant noise and can not fully utilize the translation knowledge. To address these issues, in this paper, we propose a novel Locate-and-Focus method for terminology translation. It first effectively locates the speech clips containing terminologies within the utterance to construct translation knowledge, minimizing irrelevant information for the ST model. Subsequently, it associates the translation knowledge with the utterance and hypothesis from both audio and textual modalities, allowing the ST model to better focus on translation knowledge during translation. Experimental results across various datasets demonstrate that our method effectively locates terminologies within utterances and enhances the success rate of terminology translation, while maintaining robust general translation performance.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Direct speech translation paper focused on terminology; no speech synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

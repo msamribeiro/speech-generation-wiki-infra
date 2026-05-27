@@ -1,0 +1,39 @@
+{
+  "id": "2510.07979",
+  "source_ids": {
+    "arxiv": "2510.07979"
+  },
+  "title": "IntMeanFlow: Few-step Speech Generation with Integral Velocity Distillation",
+  "authors": [
+    "Wei Wang",
+    "Rong Cao",
+    "Yi Guo",
+    "Zhengyang Chen",
+    "Kuan Chen",
+    "Yuanyuan Huo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.07979",
+  "pdf_url": "https://arxiv.org/pdf/2510.07979.pdf",
+  "pdf_path": "raw/papers/2510.07979.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Flow-based generative models have greatly improved text-to-speech (TTS) synthesis quality, but inference speed remains limited by the iterative sampling process and multiple function evaluations (NFE). The recent MeanFlow model accelerates generation by modeling average velocity instead of instantaneous velocity. However, its direct application to TTS encounters challenges, including GPU memory overhead from Jacobian-vector products (JVP) and training instability due to self-bootstrap processes. To address these issues, we introduce IntMeanFlow, a framework for few-step speech generation with integral velocity distillation. By approximating average velocity with the teacher's instantaneous velocity over a temporal interval, IntMeanFlow eliminates the need for JVPs and self-bootstrap, improving stability and reducing GPU memory usage. We also propose the Optimal Step Sampling Search (O3S) algorithm, which identifies the model-specific optimal sampling steps, improving speech synthesis without additional inference overhead. Experiments show that IntMeanFlow achieves 1-NFE inference for token-to-spectrogram and 3-NFE for text-to-spectrogram tasks while maintaining high-quality synthesis. Demo samples are available at https://vvwangvv.github.io/intmeanflow.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Integral velocity distillation for few-step flow-based TTS generation with improved speed-quality trade-off",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

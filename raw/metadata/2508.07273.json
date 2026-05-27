@@ -1,0 +1,42 @@
+{
+  "id": "2508.07273",
+  "source_ids": {
+    "arxiv": "2508.07273"
+  },
+  "title": "Incorporating Contextual Paralinguistic Understanding in Large Speech-Language Models",
+  "authors": [
+    "Qiongqiong Wang",
+    "Hardik B. Sailor",
+    "Jeremy H. M. Wong",
+    "Tianchi Liu",
+    "Shuo Sun",
+    "Wenyu Zhang",
+    "Muhammad Huzaifah",
+    "Nancy Chen",
+    "Ai Ti Aw"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.07273",
+  "pdf_url": "https://arxiv.org/pdf/2508.07273.pdf",
+  "pdf_path": "raw/papers/2508.07273.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current large speech language models (Speech-LLMs) often exhibit limitations in empathetic reasoning, primarily due to the absence of training datasets that integrate both contextual content and paralinguistic cues. In this work, we propose two approaches to incorporate contextual paralinguistic information into model training: (1) an explicit method that provides paralinguistic metadata (e.g., emotion annotations) directly to the LLM, and (2) an implicit method that automatically generates novel training question-answer (QA) pairs using both categorical and dimensional emotion annotations alongside speech transcriptions. Our implicit method boosts performance (LLM-judged) by 38.41% on a human-annotated QA benchmark, reaching 46.02% when combined with the explicit approach, showing effectiveness in contextual paralinguistic understanding. We also validate the LLM judge by demonstrating its correlation with classification metrics, providing support for its reliability.",
+  "arxiv_comment": "Accepted at (ASRU 2025) 2025 IEEE Automatic Speech Recognition and Understanding Workshop",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Speech LLM extended with contextual paralinguistic reasoning for dialogue",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

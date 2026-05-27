@@ -1,0 +1,36 @@
+{
+  "id": "2509.20378",
+  "source_ids": {
+    "arxiv": "2509.20378"
+  },
+  "title": "Beyond Global Emotion: Fine-Grained Emotional Speech Synthesis with Dynamic Word-Level Modulation",
+  "authors": [
+    "Sirui Wang",
+    "Andong Chen",
+    "Tiejun Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.20378",
+  "pdf_url": "https://arxiv.org/pdf/2509.20378.pdf",
+  "pdf_path": "raw/papers/2509.20378.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Emotional text-to-speech (E-TTS) is central to creating natural and trustworthy human-computer interaction. Existing systems typically rely on sentence-level control through predefined labels, reference audio, or natural language prompts. While effective for global emotion expression, these approaches fail to capture dynamic shifts within a sentence. To address this limitation, we introduce Emo-FiLM, a fine-grained emotion modeling framework for LLM-based TTS. Emo-FiLM aligns frame-level features from emotion2vec to words to obtain word-level emotion annotations, and maps them through a Feature-wise Linear Modulation (FiLM) layer, enabling word-level emotion control by directly modulating text embeddings. To support evaluation, we construct the Fine-grained Emotion Dynamics Dataset (FEDD) with detailed annotations of emotional transitions. Experiments show that Emo-FiLM outperforms existing approaches on both global and fine-grained tasks, demonstrating its effectiveness and generality for expressive speech synthesis.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.91,
+  "relevance_note": "Novel word-level emotion modulation for TTS beyond sentence-level; directly advances emotional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

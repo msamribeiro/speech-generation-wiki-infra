@@ -1,0 +1,40 @@
+{
+  "id": "2025.naacl-short.65",
+  "source_ids": {
+    "acl": "2025.naacl-short.65",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-short.65",
+    "url_acl": "https://aclanthology.org/2025.naacl-short.65"
+  },
+  "title": "kNN Retrieval for Simple and Effective Zero-Shot Multi-speaker Text-to-Speech",
+  "authors": [
+    "Karl El Hajal",
+    "Ajinkya Kulkarni",
+    "Enno Hermann",
+    "Mathew Magimai Doss"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-short.65",
+  "pdf_url": "https://aclanthology.org/2025.naacl-short.65.pdf",
+  "pdf_path": "raw/papers/2025.naacl-short.65.pdf",
+  "pdf_source": "anthology",
+  "abstract": "While recent zero-shot multi-speaker text-to-speech (TTS) models achieve impressive results, they typically rely on extensive transcribed speech datasets from numerous speakers and intricate training pipelines. Meanwhile, self-supervised learning (SSL) speech features have emerged as effective intermediate representations for TTS. Further, SSL features from different speakers that are linearly close share phonetic information while maintaining individual speaker identity. In this study, we introduce kNN-TTS, a simple and effective framework for zero-shot multi-speaker TTS using retrieval methods which leverage the linear relationships between SSL features. Objective and subjective evaluations show that our models, trained on transcribed speech from a single speaker only, achieve performance comparable to state-of-the-art models that are trained on significantly larger training datasets. The low training data requirements mean that kNN-TTS is well suited for the development of multi-speaker TTS systems for low-resource domains and languages. We also introduce an interpolation parameter which enables fine-grained voice morphing. Demo samples are available at https://idiap.github.io/knn-tts .",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "kNN retrieval-based zero-shot multi-speaker TTS with SSL features; directly advances zero-shot TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

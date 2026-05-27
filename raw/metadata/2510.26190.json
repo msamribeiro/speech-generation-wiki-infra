@@ -1,0 +1,38 @@
+{
+  "id": "2510.26190",
+  "source_ids": {
+    "arxiv": "2510.26190"
+  },
+  "title": "SP-MCQA: Evaluating Intelligibility of TTS Beyond the Word Level",
+  "authors": [
+    "Hitomi Jin Ling Tee",
+    "Chaoren Wang",
+    "Zijie Zhang",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.26190",
+  "pdf_url": "https://arxiv.org/pdf/2510.26190.pdf",
+  "pdf_path": "raw/papers/2510.26190.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The evaluation of intelligibility for TTS has reached a bottleneck, as existing assessments heavily rely on word-by-word accuracy metrics such as WER, which fail to capture the complexity of real-world speech or reflect human comprehension needs. To address this, we propose Spoken-Passage Multiple-Choice Question Answering, a novel subjective approach evaluating the accuracy of key information in synthesized speech, and release SP-MCQA-Eval, an 8.76-hour news-style benchmark dataset for SP-MCQA evaluation. Our experiments reveal that low WER does not necessarily guarantee high key-information accuracy, exposing a gap between traditional metrics and practical intelligibility. SP-MCQA shows that even state-of-the-art (SOTA) models still lack robust text normalization and phonetic accuracy. This work underscores the urgent need for high-level, more life-like evaluation criteria now that many systems already excel at WER yet may fall short on real-world intelligibility.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes spoken-passage QA as a TTS intelligibility evaluation beyond word-level WER",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

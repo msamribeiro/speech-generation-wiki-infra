@@ -1,0 +1,34 @@
+{
+  "id": "2512.00937",
+  "source_ids": {
+    "arxiv": "2512.00937"
+  },
+  "title": "Arabic TTS with FastPitch: Reproducible Baselines, Adversarial Training, and Oversmoothing Analysis",
+  "authors": [
+    "Lars Nippert"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.00937",
+  "pdf_url": "https://arxiv.org/pdf/2512.00937.pdf",
+  "pdf_path": "raw/papers/2512.00937.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Arabic text-to-speech (TTS) remains challenging due to limited resources and complex phonological patterns. We present reproducible baselines for Arabic TTS built on the FastPitch architecture and introduce cepstral-domain metrics for analyzing oversmoothing in mel-spectrogram prediction. While traditional Lp reconstruction losses yield smooth but over-averaged outputs, the proposed metrics reveal their temporal and spectral effects throughout training. To address this, we incorporate a lightweight adversarial spectrogram loss, which trains stably and substantially reduces oversmoothing. We further explore multi-speaker Arabic TTS by augmenting FastPitch with synthetic voices generated using XTTSv2, resulting in improved prosodic diversity without loss of stability. The code, pretrained models, and training recipes are publicly available at: https://github.com/nipponjo/tts-arabic-pytorch.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Reproducible Arabic TTS baselines with adversarial training and cepstral oversmoothing analysis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

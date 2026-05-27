@@ -1,0 +1,39 @@
+{
+  "id": "2025.mcg-1.1",
+  "source_ids": {
+    "acl": "2025.mcg-1.1",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "PANDA - Paired Anti-hate Narratives Dataset from Asia: Using an LLM-as-a-Judge to Create the First Chinese Counterspeech Dataset",
+  "authors": [
+    "Michael Bennie",
+    "Demi Zhang",
+    "Bushi Xiao",
+    "Jing Cao",
+    "Chryseis Xinyi Liu",
+    "Jian Meng",
+    "Alayo Tripp"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.1",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.1.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Despite the global prevalence of Modern Standard Chinese language, counterspeech (CS) resources for Chinese remain virtually nonexistent. To address this gap in East Asian counterspeech research we introduce the a corpus of Modern Standard Mandarin counterspeech that focuses on combating hate speech in Mainland China. This paper proposes a novel approach of generating CS by using an LLM-as-a-Judge, simulated annealing, LLMs zero-shot CN generation and a round-robin algorithm. This is followed by manual verification for quality and contextual relevance. This paper details the methodology for creating effective counterspeech in Chinese and other non-Eurocentric languages, including unique cultural patterns of which groups are maligned and linguistic patterns in what kinds of discourse markers are programmatically marked as hate speech (HS). Analysis of the generated corpora, we provide strong evidence for the lack of open-source, properly labeled Chinese hate speech data and the limitations of using an LLM-as-Judge to score possible answers in Chinese. Moreover, the present corpus servers as the first East Asian language based CS corpus and provides an essential resource for future research on counterspeech generation and evaluation.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Chinese counterspeech dataset generation; no speech synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

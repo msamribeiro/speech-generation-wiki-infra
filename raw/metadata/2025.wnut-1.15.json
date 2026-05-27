@@ -1,0 +1,37 @@
+{
+  "id": "2025.wnut-1.15",
+  "source_ids": {
+    "acl": "2025.wnut-1.15",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.wnut-1.15",
+    "url_acl": "https://aclanthology.org/2025.wnut-1.15"
+  },
+  "title": "From Conversational Speech to Readable Text: Post-Processing Noisy Transcripts in a Low-Resource Setting",
+  "authors": [
+    "Arturs Znotins",
+    "Normunds Gruzitis",
+    "Roberts Dargis"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.wnut-1.15",
+  "pdf_url": "https://aclanthology.org/2025.wnut-1.15.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We present ongoing research on automatic post-processing approaches to enhance the readability of noisy speech transcripts in low-resource languages, with a focus on conversational speech in Latvian. We compare transformer-based sequence-labeling models and large language models (LLMs) for the standard punctuation and capitalization restoration task, while also considering automatic correction of mispronounced words and disfluency, and partial inverse text normalization. Our results show that very small LLMs (approx. 2B parameters), fine-tuned on a modest text corpus, can achieve near state-of-the-art performance, rivaling orders of magnitude larger LLMs. Additionally, we demonstrate that a fine-tuned Whisper model, leveraging acoustic cues, outperforms text-only systems on challenging conversational data, even for a low-resource language. Error analysis reveals recurring pitfalls in sentence boundary determination and disfluency handling, emphasizing the importance of consistent annotation and domain adaptation for robust post-processing. Our findings highlight the feasibility of developing efficient post-processing solutions that significantly refine ASR output in low-resource settings, while opening new possibilities for editing and formatting speech transcripts beyond mere restoration of punctuation and capitalization.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Post-processing of ASR transcripts in Latvian; not speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

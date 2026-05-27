@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-2765",
+  "source_ids": {
+    "isca": "srinivasavaradhan25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2765",
+    "arxiv": "2508.04179"
+  },
+  "title": "The State Of TTS: A Case Study with Human Fooling Rates",
+  "authors": [
+    "Praveen Srinivasa Varadhan",
+    "Sherry Thomas",
+    "Sai Teja M S",
+    "Suvrat Bhooshan",
+    "Mitesh M. Khapra"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/srinivasavaradhan25_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.04179.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2765.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While subjective evaluations in recent years indicate rapid progress in TTS, can current TTS systems truly pass a human deception test in a Turing-like evaluation? We introduce Human Fooling Rate (HFR), a metric that directly measures how often machine-generated speech is mistaken for human. Our large-scale evaluation of open-source and commercial TTS models reveals critical insights: (i) CMOS-based claims of human parity often fail under deception testing, (ii) TTS progress should be benchmarked on datasets where human speech achieves high HFRs, as evaluating against monotonous or less expressive reference samples sets a low bar, (iii) Commercial models approach human deception in zero-shot settings, while open-source systems still struggle with natural conversational speech; (iv) Fine-tuning on high-quality data improves realism but does not fully bridge the gap. Our findings underscore the need for more realistic, human-centric evaluations alongside existing subjective tests.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Large-scale evaluation of TTS systems with Human Fooling Rate metric; directly advances TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

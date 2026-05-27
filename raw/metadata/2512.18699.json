@@ -1,0 +1,41 @@
+{
+  "id": "2512.18699",
+  "source_ids": {
+    "arxiv": "2512.18699"
+  },
+  "title": "Task Vector in TTS: Toward Emotionally Expressive Dialectal Speech Synthesis",
+  "authors": [
+    "Pengchao Feng",
+    "Yao Xiao",
+    "Ziyang Ma",
+    "Zhikang Niu",
+    "Shuai Fan",
+    "Yao Li",
+    "Sheng Wang",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.18699",
+  "pdf_url": "https://arxiv.org/pdf/2512.18699.pdf",
+  "pdf_path": "raw/papers/2512.18699.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) have yielded remarkable improvements in naturalness and intelligibility. Building on these achievements, research has increasingly shifted toward enhancing the expressiveness of generated speech, such as dialectal and emotional TTS. However, cross-style synthesis combining both dialect and emotion remains challenging and largely unexplored, mainly due to the scarcity of dialectal data with emotional labels. To address this, we propose Hierarchical Expressive Vector (HE-Vector), a two-stage method for Emotional Dialectal TTS. In the first stage, we construct different task vectors to model dialectal and emotional styles independently, and then enhance single-style synthesis by adjusting their weights, a method we refer to as Expressive Vector (E-Vector). For the second stage, we hierarchically integrate these vectors to achieve controllable emotionally expressive dialect synthesis without requiring jointly labeled data, corresponding to Hierarchical Expressive Vector (HE-Vector). Experimental results demonstrate that HE-Vectors achieve superior performance in dialect synthesis, and promising results in synthesizing emotionally expressive dialectal speech in a zero-shot setting.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Task vector approach for emotionally expressive dialectal speech synthesis without paired cross-style data",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

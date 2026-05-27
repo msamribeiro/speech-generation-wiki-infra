@@ -1,0 +1,39 @@
+{
+  "id": "2602.02591",
+  "source_ids": {
+    "arxiv": "2602.02591"
+  },
+  "title": "VividVoice: A Unified Framework for Scene-Aware Visually-Driven Speech Synthesis",
+  "authors": [
+    "Chengyuan Ma",
+    "Jiawei Jin",
+    "Ruijie Xiong",
+    "Chunxiang Jin",
+    "Canxiang Yan",
+    "Wenming Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.02591",
+  "pdf_url": "https://arxiv.org/pdf/2602.02591.pdf",
+  "pdf_path": "raw/papers/2602.02591.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce and define a novel task-Scene-Aware Visually-Driven Speech Synthesis, aimed at addressing the limitations of existing speech generation models in creating immersive auditory experiences that align with the real physical world. To tackle the two core challenges of data scarcity and modality decoupling, we propose VividVoice, a unified generative framework. First, we constructed a large-scale, high-quality hybrid multimodal dataset, Vivid-210K, which, through an innovative programmatic pipeline, establishes a strong correlation between visual scenes, speaker identity, and audio for the first time. Second, we designed a core alignment module, D-MSVA, which leverages a decoupled memory bank architecture and a cross-modal hybrid supervision strategy to achieve fine-grained alignment from visual scenes to timbre and environmental acoustic features. Both subjective and objective experimental results provide strong evidence that VividVoice significantly outperforms existing baseline models in terms of audio fidelity, content clarity, and multimodal consistency. Our demo is available at https://chengyuann.github.io/VividVoice/.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Scene-aware visually-driven speech synthesis framework generating speech aligned with physical environment cues",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2508.04179",
+  "source_ids": {
+    "arxiv": "2508.04179"
+  },
+  "title": "The State Of TTS: A Case Study with Human Fooling Rates",
+  "authors": [
+    "Praveen Srinivasa Varadhan",
+    "Sherry Thomas",
+    "Sai Teja M. S.",
+    "Suvrat Bhooshan",
+    "Mitesh M. Khapra"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.04179",
+  "pdf_url": "https://arxiv.org/pdf/2508.04179.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "While subjective evaluations in recent years indicate rapid progress in TTS, can current TTS systems truly pass a human deception test in a Turing-like evaluation? We introduce Human Fooling Rate (HFR), a metric that directly measures how often machine-generated speech is mistaken for human. Our large-scale evaluation of open-source and commercial TTS models reveals critical insights: (i) CMOS-based claims of human parity often fail under deception testing, (ii) TTS progress should be benchmarked on datasets where human speech achieves high HFRs, as evaluating against monotonous or less expressive reference samples sets a low bar, (iii) Commercial models approach human deception in zero-shot settings, while open-source systems still struggle with natural conversational speech; (iv) Fine-tuning on high-quality data improves realism but does not fully bridge the gap. Our findings underscore the need for more realistic, human-centric evaluations alongside existing subjective tests.",
+  "arxiv_comment": "Accepted at InterSpeech 2025",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "TTS evaluation introducing Human Fooling Rate as a synthesis quality measure",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-2765"
+}

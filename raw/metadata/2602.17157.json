@@ -1,0 +1,35 @@
+{
+  "id": "2602.17157",
+  "source_ids": {
+    "arxiv": "2602.17157"
+  },
+  "title": "CC-G2PnP: Streaming Grapheme-to-Phoneme and prosody with Conformer-CTC for unsegmented languages",
+  "authors": [
+    "Yuma Shirahata",
+    "Ryuichi Yamamoto"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.17157",
+  "pdf_url": "https://arxiv.org/pdf/2602.17157.pdf",
+  "pdf_path": "raw/papers/2602.17157.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose CC-G2PnP, a streaming grapheme-to-phoneme and prosody (G2PnP) model to connect large language model and text-to-speech in a streaming manner. CC-G2PnP is based on Conformer-CTC architecture. Specifically, the input grapheme tokens are processed chunk by chunk, which enables streaming inference of phonemic and prosodic (PnP) labels. By guaranteeing minimal look-ahead size to each input token, the proposed model can consider future context in each token, which leads to stable PnP label prediction. Unlike previous streaming methods that depend on explicit word boundaries, the CTC decoder in CC-G2PnP effectively learns the alignment between graphemes and phonemes during training, making it applicable to unsegmented languages. Experiments on a Japanese dataset, which has no explicit word boundaries, show that CC-G2PnP significantly outperforms the baseline streaming G2PnP model in the accuracy of PnP label prediction.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Streaming G2P with prosody prediction via Conformer-CTC for low-latency LLM-to-TTS pipeline connection",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

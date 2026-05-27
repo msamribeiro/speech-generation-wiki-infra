@@ -1,0 +1,59 @@
+{
+  "id": "2511.03601",
+  "source_ids": {
+    "arxiv": "2511.03601"
+  },
+  "title": "Step-Audio-EditX Technical Report",
+  "authors": [
+    "Chao Yan",
+    "Boyong Wu",
+    "Peng Yang",
+    "Pengfei Tan",
+    "Guoqiang Hu",
+    "Li Xie",
+    "Yuxin Zhang",
+    "Xiangyu",
+    "Zhang",
+    "Fei Tian"
+  ],
+  "authors_full": [
+    "Chao Yan",
+    "Boyong Wu",
+    "Peng Yang",
+    "Pengfei Tan",
+    "Guoqiang Hu",
+    "Li Xie",
+    "Yuxin Zhang",
+    "Xiangyu",
+    "Zhang",
+    "Fei Tian",
+    "Xuerui Yang",
+    "Xiangyu Zhang",
+    "Daxin Jiang",
+    "Shuchang Zhou",
+    "Gang Yu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.03601",
+  "pdf_url": "https://arxiv.org/pdf/2511.03601.pdf",
+  "pdf_path": "raw/papers/2511.03601.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present Step-Audio-EditX, the first open-source LLM-based audio model excelling at expressive and iterative audio editing encompassing emotion, speaking style, and paralinguistics alongside robust zero-shot text-to-speech (TTS) capabilities. Our core innovation lies in leveraging only large-margin synthetic data, which circumvents the need for embedding-based priors or auxiliary modules. This large-margin learning approach enables both iterative control and high expressivity across voices, and represents a fundamental pivot from the conventional focus on representation-level disentanglement. Evaluation results demonstrate that Step-Audio-EditX surpasses both MiniMax-2.6-hd and Doubao-Seed-TTS-2.0 in emotion editing and other fine-grained control tasks.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "LLM-based audio model combining expressive audio editing with robust zero-shot TTS capabilities",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

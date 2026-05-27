@@ -1,0 +1,38 @@
+{
+  "id": "2603.05852",
+  "source_ids": {
+    "arxiv": "2603.05852"
+  },
+  "title": "How Well Do Current Speech Deepfake Detection Methods Generalize to the Real World?",
+  "authors": [
+    "Daixian Li",
+    "Jun Xue",
+    "Yanzhen Ren",
+    "Zhuolin Yi",
+    "Yihuan Huang",
+    "Guanxiang Feng",
+    "Yi Chai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.05852",
+  "pdf_url": "https://arxiv.org/pdf/2603.05852.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in speech synthesis and voice conversion have greatly improved the naturalness and authenticity of generated audio. Meanwhile, evolving encoding, compression, and transmission mechanisms on social media platforms further obscure deepfake artifacts. These factors complicate reliable detection in real-world environments, underscoring the need for representative evaluation benchmarks. To this end, we introduce ML-ITW (Multilingual In-The-Wild), a multilingual dataset covering 14 languages, seven major platforms, and 180 public figures, totaling 28.39 hours of audio. We evaluate three detection paradigms: end-to-end neural models, self-supervised feature-based (SSL) methods, and audio large language models (Audio LLMs). Experimental results reveal significant performance degradation across diverse languages and real-world acoustic conditions, highlighting the limited generalization ability of existing detectors in practical scenarios. The ML-ITW dataset is publicly available.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Speech deepfake detection benchmark for real-world conditions; anti-spoofing evaluation not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

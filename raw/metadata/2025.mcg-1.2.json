@@ -1,0 +1,35 @@
+{
+  "id": "2025.mcg-1.2",
+  "source_ids": {
+    "acl": "2025.mcg-1.2",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.mcg-1.2"
+  },
+  "title": "RSSN at Multilingual Counterspeech Generation: Leveraging Lightweight Transformers for Efficient and Context-Aware Counter-Narrative Generation",
+  "authors": [
+    "Ravindran V"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.2",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.2.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper presents a system for counter-speech generation, developed for the COLING 2025 shared task. By leveraging lightweight transformer models, DistilBART and T5-small, we optimize computational efficiency while maintaining strong performance. The work includes an in-depth analysis of a multilingual dataset, addressing hate speech instances across diverse languages and target groups. Through systematic error analysis, we identify challenges such as lack of specificity and context misinterpretation in generated counter-narratives. Evaluation metrics like BLEU, ROUGE, and BERTScore demonstrate the effectiveness of our approaches, while comparative insights highlight complementary strengths in fluency, contextual integration, and creativity. Future directions focus on enhancing preprocessing, integrating external knowledge sources, and improving scalability.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Counterspeech generation with transformer models; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

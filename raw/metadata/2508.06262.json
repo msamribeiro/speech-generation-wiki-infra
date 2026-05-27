@@ -1,0 +1,39 @@
+{
+  "id": "2508.06262",
+  "source_ids": {
+    "arxiv": "2508.06262"
+  },
+  "title": "Llasa+: Free Lunch for Accelerated and Streaming Llama-Based Speech Synthesis",
+  "authors": [
+    "Wenjie Tian",
+    "Xinfa Zhu",
+    "Hanke Xie",
+    "Zhen Ye",
+    "Wei Xue",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.06262",
+  "pdf_url": "https://arxiv.org/pdf/2508.06262.pdf",
+  "pdf_path": "raw/papers/2508.06262.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent progress in text-to-speech (TTS) has achieved impressive naturalness and flexibility, especially with the development of large language model (LLM)-based approaches. However, existing autoregressive (AR) structures and large-scale models, such as Llasa, still face significant challenges in inference latency and streaming synthesis. To deal with the limitations, we introduce Llasa+, an accelerated and streaming TTS model built on Llasa. Specifically, to accelerate the generation process, we introduce two plug-and-play Multi-Token Prediction (MTP) modules following the frozen backbone. These modules allow the model to predict multiple tokens in one AR step. Additionally, to mitigate potential error propagation caused by inaccurate MTP, we design a novel verification algorithm that leverages the frozen backbone to validate the generated tokens, thus allowing Llasa+ to achieve speedup without sacrificing generation quality. Furthermore, we design a causal decoder that enables streaming speech reconstruction from tokens. Extensive experiments show that Llasa+ achieves a 1.48X speedup without sacrificing generation quality, despite being trained only on LibriTTS. Moreover, the MTP-and-verification framework can be applied to accelerate any LLM-based model. All codes and models are publicly available at https://github.com/ASLP-lab/LLaSA_Plus.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Accelerated and streaming LLM-based TTS with no quality degradation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

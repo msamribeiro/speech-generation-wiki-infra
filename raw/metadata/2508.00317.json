@@ -1,0 +1,34 @@
+{
+  "id": "2508.00317",
+  "source_ids": {
+    "arxiv": "2508.00317"
+  },
+  "title": "Advancing Speech Quality Assessment Through Scientific Challenges and Open-source Activities",
+  "authors": [
+    "Wen-Chin Huang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.00317",
+  "pdf_url": "https://arxiv.org/pdf/2508.00317.pdf",
+  "pdf_path": "raw/papers/2508.00317.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech quality assessment (SQA) refers to the evaluation of speech quality, and developing an accurate automatic SQA method that reflects human perception has become increasingly important, in order to keep up with the generative AI boom. In recent years, SQA has progressed to a point that researchers started to faithfully use automatic SQA in research papers as a rigorous measurement of goodness for speech generation systems. We believe that the scientific challenges and open-source activities of late have stimulated the growth in this field. In this paper, we review recent challenges as well as open-source implementations and toolkits for SQA, and highlight the importance of maintaining such activities to facilitate the development of not only SQA itself but also generative AI for speech.",
+  "arxiv_comment": "APSIPA ASC 2025 perspective paper",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Survey of speech quality evaluation methods directly supporting speech generation research",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-0779",
+  "source_ids": {
+    "isca": "roychowdhury25_interspeech",
+    "doi": "10.21437/Interspeech.2025-779"
+  },
+  "title": "Intelligibility of Text-to-Speech Systems for Mathematical Expressions",
+  "authors": [
+    "Sujoy Roychowdhury",
+    "Ranjani H.G.",
+    "Sumit Soman",
+    "Nishtha Paul",
+    "Subhadip Bandyopadhyay",
+    "Siddhanth Iyengar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/roychowdhury25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/roychowdhury25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0779.pdf",
+  "pdf_source": "isca",
+  "abstract": "There has been limited evaluation of advanced Text-to-Speech (TTS) models with Mathematical eXpressions (MX) as inputs. In this work, we design experiments to evaluate quality and intelligibility of five TTS models through listening and transcribing tests for various categories of MX. We use two Large Language Models (LLMs) to generate English pronunciation from LaTeX MX as TTS models cannot process LaTeX directly. We use Mean Opinion Score from user ratings and quantify intelligibility through transcription correctness using three metrics. We also compare listener preference of TTS outputs with respect to human expert rendition of same MX. Results establish that output of TTS models for MX is not necessarily intelligible, the gap in intelligibility varies across TTS models and MX category. For most categories, performance of TTS models is significantly worse than that of expert rendition. The effect of choice of LLM is limited. This establishes the need to improve TTS models for MX.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Evaluates TTS quality and intelligibility for mathematical expressions; advances TTS evaluation for specialized domains.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2508.05102",
+  "source_ids": {
+    "arxiv": "2508.05102"
+  },
+  "title": "Fairness in Dysarthric Speech Synthesis: Understanding Intrinsic Bias in Dysarthric Speech Cloning using F5-TTS",
+  "authors": [
+    "M Anuprabha",
+    "Krishna Gurugubelli",
+    "Anil Kumar Vuppala"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.05102",
+  "pdf_url": "https://arxiv.org/pdf/2508.05102.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Dysarthric speech poses significant challenges in developing assistive technologies, primarily due to the limited availability of data. Recent advances in neural speech synthesis, especially zero-shot voice cloning, facilitate synthetic speech generation for data augmentation; however, they may introduce biases towards dysarthric speech. In this paper, we investigate the effectiveness of state-of-the-art F5-TTS in cloning dysarthric speech using TORGO dataset, focusing on intelligibility, speaker similarity, and prosody preservation. We also analyze potential biases using fairness metrics like Disparate Impact and Parity Difference to assess disparities across dysarthric severity levels. Results show that F5-TTS exhibits a strong bias toward speech intelligibility over speaker and prosody preservation in dysarthric speech synthesis. Insights from this study can help integrate fairness-aware dysarthric speech synthesis, fostering the advancement of more inclusive speech technologies.",
+  "arxiv_comment": "Accepted at Interspeech 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Bias analysis in zero-shot voice cloning for dysarthric speakers",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-1536"
+}

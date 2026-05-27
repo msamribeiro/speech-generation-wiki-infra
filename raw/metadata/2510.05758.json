@@ -1,0 +1,39 @@
+{
+  "id": "2510.05758",
+  "source_ids": {
+    "arxiv": "2510.05758"
+  },
+  "title": "EMORL-TTS: Reinforcement Learning for Fine-Grained Emotion Control in LLM-based TTS",
+  "authors": [
+    "Haoxun Li",
+    "Yu Liu",
+    "Yuqing Sun",
+    "Hanlei Shi",
+    "Leyuan Qu",
+    "Taihao Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.05758",
+  "pdf_url": "https://arxiv.org/pdf/2510.05758.pdf",
+  "pdf_path": "raw/papers/2510.05758.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent LLM-based TTS systems achieve strong quality and zero-shot ability, but lack fine-grained emotional control due to their reliance on discrete speech tokens. Existing approaches either limit emotions to categorical labels or cannot generalize to LLM-based architectures. We propose EMORL-TTS (Fine-grained Emotion-controllable TTS with Reinforcement Learning), a framework that unifies global intensity control in the VAD space with local emphasis regulation. Our method combines supervised fine-tuning with reinforcement learning guided by task-specific rewards for emotion category, intensity, and emphasis. Moreover, we further investigate how emphasis placement modulates fine-grained emotion intensity. Experiments show that EMORL-TTS improves emotion accuracy, intensity differentiation, and emphasis clarity, while preserving synthesis quality comparable to strong LLM-based baselines.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "RLHF-based framework for fine-grained emotion control in LLM-based TTS using reinforcement learning",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2508.02974",
+  "source_ids": {
+    "arxiv": "2508.02974"
+  },
+  "title": "Real-time speech enhancement in noise for throat microphone using neural audio codec as foundation model",
+  "authors": [
+    "Julien Hauret",
+    "Thomas Joubaud",
+    "Éric Bavu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.02974",
+  "pdf_url": "https://arxiv.org/pdf/2508.02974.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present a real-time speech enhancement demo using speech captured with a throat microphone. This demo aims to showcase the complete pipeline, from recording to deep learning-based post-processing, for speech captured in noisy environments with a body-conducted microphone. The throat microphone records skin vibrations, which naturally attenuate external noise, but this robustness comes at the cost of reduced audio bandwidth. To address this challenge, we fine-tune Kyutai's Mimi--a neural audio codec supporting real-time inference--on Vibravox, a dataset containing paired air-conducted and throat microphone recordings. We compare this enhancement strategy against state-of-the-art models and demonstrate its superior performance. The inference runs in an interactive interface that allows users to toggle enhancement, visualize spectrograms, and monitor processing latency.",
+  "arxiv_comment": "2 pages, 2 figures",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Primarily speech enhancement using codec as foundation; synthesis is not the contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

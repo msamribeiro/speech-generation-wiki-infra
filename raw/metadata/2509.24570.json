@@ -1,0 +1,41 @@
+{
+  "id": "2509.24570",
+  "source_ids": {
+    "arxiv": "2509.24570"
+  },
+  "title": "ISSE: An Instruction-Guided Speech Style Editing Dataset And Benchmark",
+  "authors": [
+    "Yun Chen",
+    "Qi Chen",
+    "Zheqi Dai",
+    "Arshdeep Singh",
+    "Philip J. B. Jackson",
+    "Mark D. Plumbley"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.24570",
+  "pdf_url": "https://arxiv.org/pdf/2509.24570.pdf",
+  "pdf_path": "raw/papers/2509.24570.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech style editing refers to modifying the stylistic properties of speech while preserving its linguistic content and speaker identity. However, most existing approaches depend on explicit labels or reference audio, which limits both flexibility and scalability. More recent attempts to use natural language descriptions remain constrained by oversimplified instructions and coarse style control. To address these limitations, we introduce an Instruction-guided Speech Style Editing Dataset (ISSE). The dataset comprises nearly 400 hours of speech and over 100,000 source-target pairs, each aligned with diverse and detailed textual editing instructions. We also build a systematic instructed speech data generation pipeline leveraging large language model, expressive text-to-speech and voice conversion technologies to construct high-quality paired samples. Furthermore, we train an instruction-guided autoregressive speech model on ISSE and evaluate it in terms of instruction adherence, timbre preservation, and content consistency. Experimental results demonstrate that ISSE enables accurate, controllable, and generalizable speech style editing compared to other datasets. The project page of ISSE is available at https://ychenn1.github.io/ISSE/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Dataset and benchmark for instruction-guided speech style editing",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

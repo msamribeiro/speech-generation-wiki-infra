@@ -1,0 +1,41 @@
+{
+  "id": "2507.20091",
+  "source_ids": {
+    "arxiv": "2507.20091"
+  },
+  "title": "ProsodyLM: Uncovering the Emerging Prosody Processing Capabilities in Speech Language Models",
+  "authors": [
+    "Kaizhi Qian",
+    "Xulin Fan",
+    "Junrui Ni",
+    "Slava Shechtman",
+    "Mark Hasegawa-Johnson",
+    "Chuang Gan",
+    "Yang Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.20091",
+  "pdf_url": "https://arxiv.org/pdf/2507.20091.pdf",
+  "pdf_path": "raw/papers/2507.20091.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech language models refer to language models with speech processing and understanding capabilities. One key desirable capability for speech language models is the ability to capture the intricate interdependency between content and prosody. The existing mainstream paradigm of training speech language models, which converts speech into discrete tokens before feeding them into LLMs, is sub-optimal in learning prosody information -- we find that the resulting LLMs do not exhibit obvious emerging prosody processing capabilities via pre-training alone. To overcome this, we propose ProsodyLM, which introduces a simple tokenization scheme amenable to learning prosody. Each speech utterance is first transcribed into text, followed by a sequence of word-level prosody tokens. Compared with conventional speech tokenization schemes, the proposed tokenization scheme retains more complete prosody information, and is more understandable to text-based LLMs. We find that ProsodyLM can learn surprisingly diverse emerging prosody processing capabilities through pre-training alone, ranging from harnessing the prosody nuances in generated speech, such as contrastive focus, understanding emotion and stress in an utterance, to maintaining prosody consistency in long contexts.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Investigates prosody understanding and generation in speech LMs; directly advances SCA and prosody-conditioned TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

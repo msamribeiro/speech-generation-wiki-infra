@@ -1,0 +1,55 @@
+{
+  "id": "2512.05126",
+  "source_ids": {
+    "arxiv": "2512.05126"
+  },
+  "title": "SyncVoice: Towards Video Dubbing with Vision-Augmented Pretrained TTS Model",
+  "authors": [
+    "Kaidi Wang",
+    "Yi He",
+    "Wenhao Guan",
+    "Weijie Wu",
+    "Hongwu Ding",
+    "Xiong Zhang",
+    "Di Wu",
+    "Meng Meng",
+    "Jian Luan",
+    "Lin Li"
+  ],
+  "authors_full": [
+    "Kaidi Wang",
+    "Yi He",
+    "Wenhao Guan",
+    "Weijie Wu",
+    "Hongwu Ding",
+    "Xiong Zhang",
+    "Di Wu",
+    "Meng Meng",
+    "Jian Luan",
+    "Lin Li",
+    "Qingyang Hong"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.05126",
+  "pdf_url": "https://arxiv.org/pdf/2512.05126.pdf",
+  "pdf_path": "raw/papers/2512.05126.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Video dubbing aims to generate high-fidelity speech that is precisely temporally aligned with the visual content. Existing methods still suffer from limitations in speech naturalness and audio-visual synchronization, and are limited to monolingual settings. To address these challenges, we propose SyncVoice, a vision-augmented video dubbing framework built upon a pretrained text-to-speech (TTS) model. By fine-tuning the TTS model on audio-visual data, we achieve strong audiovisual consistency. We propose a Dual Speaker Encoder to effectively mitigate inter-language interference in cross-lingual speech synthesis and explore the application of video dubbing in video translation scenarios. Experimental results show that SyncVoice achieves high-fidelity speech generation with strong synchronization performance, demonstrating its potential in video dubbing tasks.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Vision-augmented TTS framework for multilingual video dubbing with precise audio-visual temporal alignment",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

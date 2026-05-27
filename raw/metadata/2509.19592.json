@@ -1,0 +1,42 @@
+{
+  "id": "2509.19592",
+  "source_ids": {
+    "arxiv": "2509.19592"
+  },
+  "title": "Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation",
+  "authors": [
+    "Roy Fejgin",
+    "Paarth Neekhara",
+    "Xuesong Yang",
+    "Edresson Casanova",
+    "Ryan Langman",
+    "Jaehyeon Kim",
+    "Subhankar Ghosh",
+    "Shehzeen Hussain",
+    "Jason Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.19592",
+  "pdf_url": "https://arxiv.org/pdf/2509.19592.pdf",
+  "pdf_path": "raw/papers/2509.19592.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech generation models based on large language models (LLMs) typically operate on discrete acoustic codes, which differ fundamentally from text tokens due to their multicodebook structure. At each timestep, models must predict N codebook entries jointly, introducing dependencies that challenge simple parallel prediction approaches. Parallel prediction assumes independence among codebooks, yielding efficient decoding but often at the cost of reduced fidelity. To address this, hierarchical strategies employ a local transformer (LT) to refine predictions and capture intra-timestep dependencies. In this work, we systematically investigate two LT architectures: an autoregressive transformer that generates codebooks sequentially, and a MaskGIT-based transformer that performs iterative masked prediction. Both designs further enable frame stacking, where the primary transformer predicts multiple frames jointly, and the LT decodes their codebooks, offering improvements in speed without compromising perceptual quality. Through extensive analysis, we characterize the tradeoffs between parallel and iterative sampling strategies across different throughput and quality regimes. Finally, we propose practical guidelines for selecting decoding strategies based on deployment priorities such as computational efficiency and synthesis fidelity.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Frame-stacked local transformer for efficient multi-codebook speech generation in LLM-TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

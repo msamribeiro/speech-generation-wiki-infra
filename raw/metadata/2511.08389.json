@@ -1,0 +1,33 @@
+{
+  "id": "2511.08389",
+  "source_ids": {
+    "arxiv": "2511.08389"
+  },
+  "title": "Unifying Model and Layer Fusion for Speech Foundation Models",
+  "authors": [
+    "Yi-Jen Shih",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.08389",
+  "pdf_url": "https://arxiv.org/pdf/2511.08389.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech Foundation Models have gained significant attention recently. Prior works have shown that the fusion of representations from multiple layers of the same model or the fusion of multiple models can improve performance on downstream tasks. We unify these two fusion strategies by proposing an interface module that enables fusion across multiple upstream speech models while integrating information across their layers. We conduct extensive experiments on different self-supervised and supervised models across various speech tasks, including ASR and paralinguistic analysis, and demonstrate that our method outperforms prior fusion approaches. We further analyze its scalability concerning model size and count, highlighting the importance of selecting appropriate upstream models. Our results show that the proposed interface provides an additional performance boost when given a suitable upstream model selection, making it a promising approach for utilizing Speech Foundation Models.",
+  "arxiv_comment": "Accepted by IEEE ASRU 2025",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Layer and model fusion for SFMs; representation learning, no generation contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

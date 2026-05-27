@@ -1,0 +1,40 @@
+{
+  "id": "2603.14853",
+  "source_ids": {
+    "arxiv": "2603.14853"
+  },
+  "title": "WhispSynth: Scaling Multilingual Whisper Corpus through Real Data Curation and A Novel Pitch-free Generative Framework",
+  "authors": [
+    "Tianyi Tan",
+    "Jiaxin Ye",
+    "Yuanming Zhang",
+    "Xiaohuai Le",
+    "Xianjun Xia",
+    "Chuanzeng Huang",
+    "Jing Lu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14853",
+  "pdf_url": "https://arxiv.org/pdf/2603.14853.pdf",
+  "pdf_path": "raw/papers/2603.14853.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Whisper generation is constrained by the difficulty of data collection. Because whispered speech has low acoustic amplitude, high-fidelity recording is challenging. In this paper, we introduce WhispSynth, a large-scale multilingual corpus constructed via a novel high-fidelity generative framework. Specifically, we propose a pipeline integrating Differentiable Digital Signal Processing (DDSP)-based pitch-free method with Text-to-Speech (TTS) models. This framework refines a comprehensive collection of resources, including our newly constructed WhispNJU dataset, into 118 hours of high-fidelity whispered speech from 479 speakers. Unlike standard synthetic or noisy real data, our data engine faithfully preserves source vocal timbre and linguistic content while ensuring acoustic consistency, providing a robust foundation for text-to-whisper research. Experimental results demonstrate that WhispSynth exhibits significantly higher quality than existing corpora. Moreover, our CosyWhisper, tuned with WhispSynth, achieves speech naturalness on par with ground-truth samples. The official implementation and related resources are available at https://github.com/tan90xx/cosywhisper.",
+  "arxiv_comment": "Under Review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "WhispSynth: DDSP-based generative framework producing large-scale multilingual whispered speech corpus",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2601.17085",
+  "source_ids": {
+    "arxiv": "2601.17085"
+  },
+  "title": "Recovering Performance in Speech Emotion Recognition from Discrete Tokens via Multi-Layer Fusion and Paralinguistic Feature Integration",
+  "authors": [
+    "Esther Sun",
+    "Abinay Reddy Naini",
+    "Carlos Busso"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.17085",
+  "pdf_url": "https://arxiv.org/pdf/2601.17085.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Discrete speech tokens offer significant advantages for storage and language model integration, but their application in speech emotion recognition (SER) is limited by paralinguistic information loss during quantization. This paper presents a comprehensive investigation of discrete tokens for SER. Using a fine-tuned WavLM-Large model, we systematically quantify performance degradation across different layer configurations and k-means quantization granularities. To recover the information loss, we propose two key strategies: (1) attention-based multi-layer fusion to recapture complementary information from different layers, and (2) integration of openSMILE features to explicitly reintroduce paralinguistic cues. We also compare mainstream neural codec tokenizers (SpeechTokenizer, DAC, EnCodec) and analyze their behaviors when fused with acoustic features. Our findings demonstrate that through multi-layer fusion and acoustic feature integration, discrete tokens can close the performance gap with continuous representations in SER tasks.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Discrete token analysis for speech emotion recognition; primary task is SER not speech generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

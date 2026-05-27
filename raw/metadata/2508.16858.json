@@ -1,0 +1,39 @@
+{
+  "id": "2508.16858",
+  "source_ids": {
+    "arxiv": "2508.16858"
+  },
+  "title": "WildSpoof Challenge Evaluation Plan",
+  "authors": [
+    "Yihan Wu",
+    "Jee-weon Jung",
+    "Hye-jin Shim",
+    "Xin Cheng",
+    "Xin Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.16858",
+  "pdf_url": "https://arxiv.org/pdf/2508.16858.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The WildSpoof Challenge aims to advance the use of in-the-wild data in two intertwined speech processing tasks. It consists of two parallel tracks: (1) Text-to-Speech (TTS) synthesis for generating spoofed speech, and (2) Spoofing-robust Automatic Speaker Verification (SASV) for detecting spoofed speech. While the organizers coordinate both tracks and define the data protocols, participants treat them as separate and independent tasks. The primary objectives of the challenge are: (i) to promote the use of in-the-wild data for both TTS and SASV, moving beyond conventional clean and controlled datasets and considering real-world scenarios; and (ii) to encourage interdisciplinary collaboration between the spoofing generation (TTS) and spoofing detection (SASV) communities, thereby fostering the development of more integrated, robust, and realistic systems.",
+  "arxiv_comment": "ICASSP 2026 challenge",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "Challenge with TTS synthesis as one of two tracks; the other is anti-spoofing",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

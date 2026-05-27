@@ -1,0 +1,34 @@
+{
+  "id": "2508.09728",
+  "source_ids": {
+    "arxiv": "2508.09728"
+  },
+  "title": "MetaGuardian: Enhancing Voice Assistant Security through Advanced Acoustic Metamaterials",
+  "authors": [
+    "Zhiyuan Ning",
+    "Zheng Wang",
+    "Zhanyong Tang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.09728",
+  "pdf_url": "https://arxiv.org/pdf/2508.09728.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present MetaGuardian, a voice assistant (VA) protection system based on acoustic metamaterials. MetaGuardian can be directly integrated into the enclosures of various smart devices, effectively defending against inaudible, adversarial and laser attacks without relying on additional software support or altering the underlying hardware, ensuring usability. To achieve this, MetaGuardian leverages the mutual impedance effects between metamaterial units to extend the signal filtering range to 16-40 kHz to effectively block wide-band inaudible attacks. Additionally, it adopts a carefully designed coiled space structure to precisely interfere with adversarial attacks while ensuring the normal functioning of VAs. Furthermore, MetaGuardian offers a universal structural design, allowing itself to be flexibly adapted to various smart devices, striking a balance between portability and protection effectiveness. In controled evaluation environments, MetaGuardian achieves a high defense success rate against various attack types, including adversarial, inaudible and laser attacks.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Acoustic metamaterial protection for voice assistants; hardware security, not speech generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

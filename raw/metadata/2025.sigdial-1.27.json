@@ -1,0 +1,41 @@
+{
+  "id": "2025.sigdial-1.27",
+  "source_ids": {
+    "acl": "2025.sigdial-1.27",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.sigdial-1.27"
+  },
+  "title": "EmoNews: A Spoken Dialogue System for Expressive News Conversations",
+  "authors": [
+    "Ryuki Matsuura",
+    "Shikhar Bharadwaj",
+    "Jiarui Liu",
+    "Dhatchinamoorthi Kunde Govindarajan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.sigdial-1.27",
+  "pdf_url": "https://aclanthology.org/2025.sigdial-1.27.pdf",
+  "pdf_path": "raw/papers/2025.sigdial-1.27.pdf",
+  "pdf_source": "anthology",
+  "abstract": "We develop a task-oriented spoken dialogue system (SDS) that regulates emotional speech based on contextual cues to enable more empathetic news conversations. Despite advancements in emotional text-to-speech (TTS) techniques, task-oriented emotional SDSs remain underexplored due to the compartmentalized nature of SDS and emotional TTS research, as well as the lack of standardized evaluation metrics for social goals. We address these challenges by developing an emotional SDS for news conversations that utilizes a large language model (LLM)-based sentiment analyzer to identify appropriate emotions and PromptTTS to synthesize context-appropriate emotional speech. We also propose subjective evaluation scale for emotional SDSs and judge the emotion regulation performance of the proposed and baseline systems. Experiments showed that our emotional SDS outperformed a baseline system in terms of the emotion regulation and engagement. These results suggest the critical role of speech emotion for more engaging conversations. All our source code is open-sourced.",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Task-oriented spoken dialogue system with contextual emotional TTS for news conversations; advances SCA with emotional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

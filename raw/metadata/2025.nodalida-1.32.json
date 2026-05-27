@@ -1,0 +1,42 @@
+{
+  "id": "2025.nodalida-1.32",
+  "source_ids": {
+    "acl": "2025.nodalida-1.32",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.nodalida-1.32"
+  },
+  "title": "Estonian isolated-word text-to-speech synthesiser",
+  "authors": [
+    "Indrek Kiissel",
+    "Liisi Piits",
+    "Heete Sahkai",
+    "Indrek Hein",
+    "Liis Ermus",
+    "Meelis Mihkla"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.nodalida-1.32",
+  "pdf_url": "https://aclanthology.org/2025.nodalida-1.32.pdf",
+  "pdf_path": "raw/papers/2025.nodalida-1.32.pdf",
+  "pdf_source": "anthology",
+  "abstract": "This paper presents the development and evaluation of an Estonian isolated-word text-to-speech (TTS) synthesiser. Unlike conventional TTS systems that convert continuous text into speech, this system focuses on the synthesis of isolated words, which is crucial for applications such as pronunciation training, speech therapy, and (learners’) dictionaries. The system addresses two key challenges: generating natural prosody for isolated words and context-free disambiguation of homographs. We conducted a perception test to evaluate the performance of the TTS system in terms of pronunciation accuracy. We used 16 pairs of homographs that differ in palatalisation and 16 pairs of homographs that differ in quantity. Given that all the test items were correctly recognised by a majority of the evaluators, the performance of the synthesiser can be considered very good.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Estonian isolated-word TTS synthesiser for pronunciation training; directly advances low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

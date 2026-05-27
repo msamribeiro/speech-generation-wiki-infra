@@ -1,0 +1,38 @@
+{
+  "id": "2510.11646",
+  "source_ids": {
+    "arxiv": "2510.11646"
+  },
+  "title": "BridgeCode: A Dual Speech Representation Paradigm for Autoregressive Zero-Shot Text-to-Speech Synthesis",
+  "authors": [
+    "Jingyuan Xing",
+    "Mingru Yang",
+    "Zhipeng Li",
+    "Xiaofen Xing",
+    "Xiangmin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.11646",
+  "pdf_url": "https://arxiv.org/pdf/2510.11646.pdf",
+  "pdf_path": "raw/papers/2510.11646.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Autoregressive (AR) frameworks have recently achieved remarkable progress in zero-shot text-to-speech (TTS) by leveraging discrete speech tokens and large language model techniques. Despite their success, existing AR-based zero-shot TTS systems face two critical limitations: (i) an inherent speed-quality trade-off, as sequential token generation either reduces frame rates at the cost of expressiveness or enriches tokens at the cost of efficiency, and (ii) a text-oriented supervision mismatch, as cross-entropy loss penalizes token errors uniformly without considering the fine-grained acoustic similarity among adjacent tokens. To address these challenges, we propose BridgeTTS, a novel AR-TTS framework built upon the dual speech representation paradigm BridgeCode. BridgeTTS reduces AR iterations by predicting sparse tokens while reconstructing rich continuous features for high-quality synthesis. Joint optimization of token-level and feature-level objectives further enhances naturalness and intelligibility. Experiments demonstrate that BridgeTTS achieves competitive quality and speaker similarity while significantly accelerating synthesis. Speech demos are available at https://test1562.github.io/demo/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Dual speech representation AR framework addressing speed-quality trade-off in zero-shot TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

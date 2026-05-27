@@ -1,0 +1,40 @@
+{
+  "id": "2507.13563",
+  "source_ids": {
+    "arxiv": "2507.13563"
+  },
+  "title": "Balalaika: Data-Centric, Prosody-Aware Annotation Pipeline for Russian Speech",
+  "authors": [
+    "Kirill Borodin",
+    "Nikita Vasiliev",
+    "Vasiliy Kudryavtsev",
+    "Maxim Maslov",
+    "Mikhail Gorodnichev",
+    "Grach Mkrtchian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.13563",
+  "pdf_url": "https://arxiv.org/pdf/2507.13563.pdf",
+  "pdf_path": "raw/papers/2507.13563.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Balalaika, an open-source, data-centric pipeline for processing audio and producing prosody-aware annotations. It combines semantic VAD for context-preserving segmentation, multi-ASR ensembling with ROVER consensus decoding, while retaining optional word-level timestamps, followed by automatic quality and speaker-purity filtering. The text is further enriched with punctuation restoration, lexical stress and \"\\textipa{e}/\\textipa{He}\" normalization, and IPA phonemes. Using Balalaika, we build a 5.1k-hour multi-source Russian corpus with rich annotations, and show consistent gains under equalized training budgets for both speech denoising and TTS; ablations confirm complementary benefits of stress and punctuation and improved synthesis with stricter MOS filtering. The datasets are publicly available at \\href{https://huggingface.co/collections/lab260/balalaika-dataset}{\\underline{\\textbf{HuggingFace}}}",
+  "arxiv_comment": "The work is still in progress. Submitted to Interspeech 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Open-source pipeline for Russian speech annotation with prosody-aware labels for TTS training; advances TTS data preparation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

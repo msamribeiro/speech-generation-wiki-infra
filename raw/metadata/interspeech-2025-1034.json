@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-1034",
+  "source_ids": {
+    "isca": "berger25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1034"
+  },
+  "title": "Non-Standard Accent TTS Support via Large Multi-Accent Frontend Pronunciation Knowledge Transfer",
+  "authors": [
+    "Noe Berger",
+    "Siqi Sun",
+    "Korin Richmond"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/berger25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/berger25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1034.pdf",
+  "pdf_source": "isca",
+  "abstract": "Mainstream text-to-speech (TTS) applications rarely offer non-standard accented voice options, perhaps in part due to practical challenges associated with the acquisition of prerequisite training data. Building on prior research, this work demonstrates that a large multi-accent neural frontend model can reduce pronunciation training data requirements by 95% for robust performance in low-resource accents. We further show that pronunciation knowledge transfer is weakly influenced by accent similarity, quantified using a Levenshtein distance-based metric. The large multi-accent paradigm thus emerges as an effective strategy for improving non-standard accent voice-building accessibility, provided source accents are selected to maximize similarity with target accents where possible.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Large multi-accent neural frontend enabling accent TTS with 95% less pronunciation data; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

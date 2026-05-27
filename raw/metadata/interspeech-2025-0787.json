@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-0787",
+  "source_ids": {
+    "isca": "lobato25_interspeech",
+    "doi": "10.21437/Interspeech.2025-787"
+  },
+  "title": "Gradual modeling of the Lombard effect by modifying speaker embeddings from a Text-To-Speech model",
+  "authors": [
+    "Thiago Henrique Gomes Lobato",
+    "Magnus SchÃ¤fer"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lobato25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lobato25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0787.pdf",
+  "pdf_source": "isca",
+  "abstract": "This work proposes to modify clean speech into Lombard-like speech by modifying speaker embeddings used to condition a text-to-speech model. A feedforward network learns to map embeddings of plain speech to those of Lombard speech using paired data from the Audio-Visual Lombard Grid corpus. Signal level is then increased as per ITU-T P.1150, and a neural vocoder performs time stretching. We show that the resulting speech retains most of the speakerâs identity while incorporating relevant Lombard characteristics. Additionally, by properly interpolating embeddings, we propose an approach to gradually model Lombard speech as a function of the background noise level. Listening tests show about a 1.12-point Mean opinion score (MOS) increase in speech plausibility in a loud background context, with only a 0.5-point MOS decrease in speaker similarity compared to an ideal Lombard speech interpolation.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Modifies TTS speaker embeddings to generate Lombard-like speech; advances TTS for challenging environments.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

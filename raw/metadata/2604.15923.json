@@ -1,0 +1,40 @@
+{
+  "id": "2604.15923",
+  "source_ids": {
+    "arxiv": "2604.15923"
+  },
+  "title": "Hierarchical Codec Diffusion for Video-to-Speech Generation",
+  "authors": [
+    "Jiaxin Ye",
+    "Gaoxiang Cong",
+    "Chenhui Wang",
+    "Xin-Cheng Wen",
+    "Zhaoyang Li",
+    "Boyuan Cao",
+    "Hongming Shan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.15923",
+  "pdf_url": "https://arxiv.org/pdf/2604.15923.pdf",
+  "pdf_path": "raw/papers/2604.15923.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Video-to-Speech (VTS) generation aims to synthesize speech from a silent video without auditory signals. However, existing VTS methods disregard the hierarchical nature of speech, which spans coarse speaker-aware semantics to fine-grained prosodic details. This oversight hinders direct alignment between visual and speech features at specific hierarchical levels during property matching. In this paper, leveraging the hierarchical structure of Residual Vector Quantization (RVQ)-based codec, we propose HiCoDiT, a novel Hierarchical Codec Diffusion Transformer that exploits the inherent hierarchy of discrete speech tokens to achieve strong audio-visual alignment. Specifically, since lower-level tokens encode coarse speaker-aware semantics and higher-level tokens capture fine-grained prosody, HiCoDiT employs low-level and high-level blocks to generate tokens at different levels. The low-level blocks condition on lip-synchronized motion and facial identity to capture speaker-aware content, while the high-level blocks use facial expression to modulate prosodic dynamics. Finally, to enable more effective coarse-to-fine conditioning, we propose a dual-scale adaptive instance layer normalization that jointly captures global vocal style through channel-wise normalization and local prosody dynamics through temporal-wise normalization. Extensive experiments demonstrate that HiCoDiT outperforms baselines in fidelity and expressiveness, highlighting the potential of discrete modelling for VTS. The code and speech demo are both available at https://github.com/Jiaxin-Ye/HiCoDiT.",
+  "arxiv_comment": "CVPR 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Hierarchical codec diffusion for video-to-speech synthesis aligning visual and speech features at multiple semantic levels",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

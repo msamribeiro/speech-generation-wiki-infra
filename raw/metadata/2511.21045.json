@@ -1,0 +1,40 @@
+{
+  "id": "2511.21045",
+  "source_ids": {
+    "arxiv": "2511.21045"
+  },
+  "title": "CartoonSing: Unifying Human and Nonhuman Timbres in Singing Generation",
+  "authors": [
+    "Jionghao Han",
+    "Jiatong Shi",
+    "Zhuoyan Tao",
+    "Yuxun Tang",
+    "Yiwen Zhao",
+    "Gus Xia",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.21045",
+  "pdf_url": "https://arxiv.org/pdf/2511.21045.pdf",
+  "pdf_path": "raw/papers/2511.21045.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Singing voice synthesis (SVS) and singing voice conversion (SVC) have achieved remarkable progress in generating natural-sounding human singing. However, existing systems are restricted to human timbres and have limited ability to synthesize voices outside the human range, which are increasingly demanded in creative applications such as video games, movies, and virtual characters. We introduce Non-Human Singing Generation (NHSG), covering non-human singing voice synthesis (NHSVS) and non-human singing voice conversion (NHSVC), as a novel machine learning task for generating musically coherent singing with non-human timbral characteristics. NHSG is particularly challenging due to the scarcity of non-human singing data, the lack of symbolic alignment, and the wide timbral gap between human and non-human voices. To address these challenges, we propose CartoonSing, a unified framework that integrates singing voice synthesis and conversion while bridging human and non-human singing generation. CartoonSing employs a two-stage pipeline: a score representation encoder trained with annotated human singing and a timbre-aware vocoder that reconstructs waveforms for both human and non-human audio. Experiments demonstrate that CartoonSing successfully generates non-human singing voices, generalizes to novel timbres, and extends conventional SVS and SVC toward creative, non-human singing generation.",
+  "arxiv_comment": null,
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "CartoonSing: singing generation and conversion extended to nonhuman timbres for creative applications",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

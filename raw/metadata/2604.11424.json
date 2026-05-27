@@ -1,0 +1,44 @@
+{
+  "id": "2604.11424",
+  "source_ids": {
+    "arxiv": "2604.11424"
+  },
+  "title": "Bridging What the Model Thinks and How It Speaks: Self-Aware Speech Language Models for Expressive Speech Generation",
+  "authors": [
+    "Kuang Wang",
+    "Lai Wei",
+    "Qibing Bai",
+    "Ping Lin",
+    "Wenkai Fang",
+    "Feng Jiang",
+    "Zhongjie Jiang",
+    "Jun Huang",
+    "Yannan Wang",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.11424",
+  "pdf_url": "https://arxiv.org/pdf/2604.11424.pdf",
+  "pdf_path": "raw/papers/2604.11424.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech Language Models (SLMs) exhibit strong semantic understanding, yet their generated speech often sounds flat and fails to convey expressive intent, undermining user engagement. We term this mismatch the semantic understanding-acoustic realization gap. We attribute this gap to two key deficiencies: (1) intent transmission failure, where SLMs fail to provide the stable utterance-level intent needed for expressive delivery; and (2) realization-unaware training, where no feedback signal verifies whether acoustic outputs faithfully reflect intended expression. To address these issues, we propose SA-SLM (Self-Aware Speech Language Model), built on the principle that the model should be aware of what it thinks during generation and how it speaks during training. SA-SLM addresses this gap through two core contributions: (1) Intent-Aware Bridging, which uses a Variational Information Bottleneck (VIB) objective to translate the model's internal semantics into temporally smooth expressive intent, making speech generation aware of what the model intends to express; and (2) Realization-Aware Alignment, which repurposes the model as its own critic to verify and align acoustic realization with intended expressive intent via rubric-based feedback. Trained on only 800 hours of expressive speech data, our 3B parameter SA-SLM surpasses all open-source baselines and comes within 0.08 points of GPT-4o-Audio in overall expressiveness on the EchoMind benchmark.",
+  "arxiv_comment": "16 pages, 4 figures, 6 tables. Project page: https://wangkevin02.github.io/SASLM/",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Addresses semantic understanding-acoustic realization gap in speech LMs for expressive generation; advances SCA/TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

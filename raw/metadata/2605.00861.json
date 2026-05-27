@@ -1,0 +1,36 @@
+{
+  "id": "2605.00861",
+  "source_ids": {
+    "arxiv": "2605.00861"
+  },
+  "title": "Voice Mapping of Text-to-Speech Systems: A Metric-Based Approach for Voice Quality Assessment",
+  "authors": [
+    "Huanchen Cai",
+    "Sten Ternström"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.00861",
+  "pdf_url": "https://arxiv.org/pdf/2605.00861.pdf",
+  "pdf_path": "raw/papers/2605.00861.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This study investigates voice mapping as an evaluation framework for text-to-speech (TTS) synthesis quality. The study analyzes six TTS models, including historical and recent ones. The metrics are crest factor, spectrum balance, and cepstral peak prominence (CPPs). We investigated 6 influential TTS models: Merlin, Tacotron 2, Transformer TTS, FastSpeech 2, Glow-TTS, and VITS. The results demonstrate that voice range serves as a primary indicator of model capability, with VITS showing the largest range among tested models. Glow-TTS exhibited superior performance in soft phonation, indicated by higher spectrum balance, despite limited voice range. The results showed that the CPPs values between 7-8 dB indicate natural voice quality, while with CPPs exceeding 10 dB, the speech tends to sound robotic. These findings underscore the need for voice mapping to evaluate vocal effort, and capture how TTS systems handle voice dynamic and expressiveness.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Voice mapping evaluation using crest factor, spectrum balance, and CPPs metrics across six TTS architectures",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

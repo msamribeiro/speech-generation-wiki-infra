@@ -1,0 +1,55 @@
+{
+  "id": "2510.08373",
+  "source_ids": {
+    "arxiv": "2510.08373"
+  },
+  "title": "DialoSpeech: Dual-Speaker Dialogue Generation with LLM and Flow Matching",
+  "authors": [
+    "Hanke Xie",
+    "Dake Guo",
+    "Chengyou Wang",
+    "Yue Li",
+    "Wenjie Tian",
+    "Xinfa Zhu",
+    "Xinsheng Wang",
+    "Xiulin Li",
+    "Guanqiong Miao",
+    "Bo Liu"
+  ],
+  "authors_full": [
+    "Hanke Xie",
+    "Dake Guo",
+    "Chengyou Wang",
+    "Yue Li",
+    "Wenjie Tian",
+    "Xinfa Zhu",
+    "Xinsheng Wang",
+    "Xiulin Li",
+    "Guanqiong Miao",
+    "Bo Liu",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.08373",
+  "pdf_url": "https://arxiv.org/pdf/2510.08373.pdf",
+  "pdf_path": "raw/papers/2510.08373.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) synthesis, particularly those leveraging large language models (LLMs), have significantly improved expressiveness and naturalness. However, generating human-like, interactive dialogue speech remains challenging. Current systems face limitations due to the scarcity of dual-track data and difficulties in achieving naturalness, contextual coherence, and interactional dynamics, such as turn-taking, overlapping speech, and speaker consistency, in multi-turn conversations. To address these challenges, we propose DialoSpeech, a dual-track architecture combining a large language model with Chunked Flow Matching for expressive, human-like dialogue speech synthesis. DialoSpeech generates natural multi-turn conversations with coherent speaker turns and natural overlaps, supporting both Chinese and English and cross-lingual speech synthesis. We introduce a data processing pipeline to construct dual-track dialogue datasets, facilitating scalable training and experimental validation. Experiments show that our model outperforms baselines, offering a solution for generating human-like spoken dialogues. Audio samples are available at https://tiamojames.github.io/DialoSpeech",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Dual-speaker dialogue TTS using LLM and flow matching for contextually coherent conversational speech",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

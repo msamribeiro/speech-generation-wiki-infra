@@ -1,0 +1,38 @@
+{
+  "id": "2601.14960",
+  "source_ids": {
+    "arxiv": "2601.14960"
+  },
+  "title": "VCNAC: A Variable-Channel Neural Audio Codec for Mono, Stereo, and Surround Sound",
+  "authors": [
+    "Florian Grötschla",
+    "Arunasish Sen",
+    "Alessandro Lombardi",
+    "Guillermo Cámbara",
+    "Andreas Schwarz"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.14960",
+  "pdf_url": "https://arxiv.org/pdf/2601.14960.pdf",
+  "pdf_path": "raw/papers/2601.14960.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present VCNAC, a variable channel neural audio codec. Our approach features a single encoder and decoder parametrization that enables native inference for different channel setups, from mono speech to cinematic 5.1 channel surround audio. Channel compatibility objectives ensure that multi-channel content maintains perceptual quality when decoded to fewer channels. The shared representation enables training of generative language models on a single set of codebooks while supporting inference-time scalability across modalities and channel configurations. Evaluation using objective spatial audio metrics and subjective listening tests demonstrates that our unified approach maintains high reconstruction quality across mono, stereo, and surround audio configurations.",
+  "arxiv_comment": "Submitted to EUSIPCO 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Variable-channel neural audio codec supporting mono through 5.1 surround audio in a single model",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

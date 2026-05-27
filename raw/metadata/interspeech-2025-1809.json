@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-1809",
+  "source_ids": {
+    "isca": "abdullah25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1809"
+  },
+  "title": "Voice Conversion Improves Cross-Domain Robustness  for Spoken Arabic Dialect Identification",
+  "authors": [
+    "Badr M. Abdullah",
+    "Matthew Baas",
+    "Bernd MÃ¶bius",
+    "Dietrich Klakow"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/abdullah25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/abdullah25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Arabic dialect identification (ADI) systems are essential for large-scale data collection pipelines that enable the development of inclusive speech technologies for Arabic language varieties. However, the reliability of current ADI systems is limited by poor generalization to out-of-domain speech. In this paper, we present an effective approach based on voice conversion for training ADI models that achieves state-of-the-art performance and significantly improves robustness in cross-domain scenarios. Evaluated on a newly collected real-world test set spanning four different domains, our approach yields consistent improvements of up to +34.1% in accuracy across domains. Furthermore, we present an analysis of our approach and demonstrate that voice conversion helps mitigate the speaker bias in the ADI dataset. We release our robust ADI model and cross-domain evaluation dataset to support the development of inclusive speech technologies for Arabic.",
+  "task": [],
+  "relevance_score": 0.38,
+  "relevance_note": "VC used as data augmentation for Arabic dialect identification; VC is tool for classification, not synthesis focus.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-0261",
+  "source_ids": {
+    "isca": "halim25_interspeech",
+    "doi": "10.21437/Interspeech.2025-261"
+  },
+  "title": "Token-Level Logits Matter: A Closer Look at Speech Foundation Models for Ambiguous Emotion Recognition",
+  "authors": [
+    "Jule Valendo Halim",
+    "Siyi Wang",
+    "Hong Jia",
+    "Ting Dang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/halim25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/halim25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Emotional intelligence in conversational AI is crucial across domains like human-computer interaction. While numerous models have been developed, they often overlook the complexity and ambiguity inherent in human emotions. In the era of large speech foundation models (SFMs), understanding their capability in recognizing ambiguous emotions is essential for the development of next-generation emotion-aware models. This study examines the effectiveness of SFMs in ambiguous emotion recognition. We designed prompts for ambiguous emotion prediction and introduced two novel approaches to infer ambiguous emotion distributions: one analysing generated text responses and the other examining the internal processing of SFMs through token-level logits. Our findings suggest that while SFMs may not consistently generate accurate text responses for ambiguous emotions, they can interpret such emotions at the token level based on prior knowledge, demonstrating robustness across different prompts.",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Token-level logits for ambiguous emotion recognition; recognition task, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,59 @@
+{
+  "id": "2025.naacl-demo.21",
+  "source_ids": {
+    "acl": "2025.naacl-demo.21",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.naacl-demo.21",
+    "url_acl": "https://aclanthology.org/2025.naacl-demo.21"
+  },
+  "title": "ESPnet-SDS: Unified Toolkit and Demo for Spoken Dialogue Systems",
+  "authors": [
+    "Siddhant Arora",
+    "Yifan Peng",
+    "Jiatong Shi",
+    "Jinchuan Tian",
+    "William Chen",
+    "Shikhar Bharadwaj",
+    "Hayato Futami",
+    "Yosuke Kashiwagi",
+    "Emiru Tsunoo",
+    "Shuichiro Shimizu"
+  ],
+  "authors_full": [
+    "Siddhant Arora",
+    "Yifan Peng",
+    "Jiatong Shi",
+    "Jinchuan Tian",
+    "William Chen",
+    "Shikhar Bharadwaj",
+    "Hayato Futami",
+    "Yosuke Kashiwagi",
+    "Emiru Tsunoo",
+    "Shuichiro Shimizu",
+    "Vaibhav Srivastav",
+    "Shinji Watanabe"
+  ],
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.naacl-demo.21",
+  "pdf_url": "https://aclanthology.org/2025.naacl-demo.21.pdf",
+  "pdf_path": "raw/papers/2025.naacl-demo.21.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Advancements in audio foundation models (FMs) have fueled interest in end-to-end (E2E) spoken dialogue systems, but different web interfaces for each system makes it challenging to compare and contrast them effectively. Motivated by this, we introduce an open-source, user-friendly toolkit designed to build unified web interfaces for various cascaded and E2E spoken dialogue systems. Our demo further provides users with the option to get on-the-fly automated evaluation metrics such as (1) latency, (2) ability to understand user input, (3) coherence, diversity, and relevance of system response, and (4) intelligibility and audio quality of system output. Using the evaluation metrics, we compare various cascaded and E2E spoken dialogue systems with a human-human conversation dataset as a proxy. Our analysis demonstrates that the toolkit allows researchers to effortlessly compare and contrast different technologies, providing valuable insights such as current E2E systems having poorer audio quality and less diverse responses. An example demo produced using our toolkit is publicly available here: https://huggingface.co/spaces/Siddhant/Voice_Assistant_Demo.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Unified toolkit for cascaded and E2E spoken dialogue systems; directly advances SCA infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

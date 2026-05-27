@@ -1,0 +1,38 @@
+{
+  "id": "2025.africanlp-1.15",
+  "source_ids": {
+    "acl": "2025.africanlp-1.15",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.africanlp-1.15",
+    "url_acl": "https://aclanthology.org/2025.africanlp-1.15"
+  },
+  "title": "Retrieval-Augmented Generation Meets Local Languages for Improved Drug Information Access and Comprehension.",
+  "authors": [
+    "Ahmad Ibrahim Ismail",
+    "Bashirudeen Opeyemi Ibrahim",
+    "Olubayo Adekanmbi",
+    "Ife Adebara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.africanlp-1.15",
+  "pdf_url": "https://aclanthology.org/2025.africanlp-1.15.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Medication errors are among the leading causes of avoidable harm in healthcare systems across the world. A large portion of these errors stem from inefficient information retrieval processes and lack of comprehension of drug information. In low-resource settings, these issues are exacerbated by limited access to updated and reliable sources, technological constraints, and linguistic barriers. Innovations to improve the retrieval and comprehension of drug-related information are therefore poised to reduce medication errors and improve patient outcomes. This research employed open-source Retrieval-Augmented Generation (RAG) integrated with multilingual translation and Text-to-Speech (TTS) systems. Using open-source tools, a corpus was created from prominent sources of medical information in Nigeria and stored as high-level text embeddings in a Chroma database. Upon user query, relevant drug information is retrieved and synthesized using a large language model. This can be translated into Yoruba, Igbo, and Hausa languages, and converted into speech through the TTS system, addressing the linguistic accessibility gap. Evaluation of the system by domain experts indicated impressive overall performance in translation, achieving an average accuracy of 73%, and the best performance observed in Hausa and Yoruba. TTS results were moderately effective (mean = 57%), with Igbo scoring highest in speech clarity (68%). However, tonal complexity, especially in Yoruba, posed challenges for accurate pronunciation, highlighting the need for language-specific model fine-tuning. Addressing these linguistic nuances is essential to optimize comprehension and practical utility in diverse healthcare settings. The results demonstrates systems the potential to improve access to drug information, enhance comprehension, and reduce linguistic barriers. These technologies could substantially mitigate medication errors and improve patient safety. This study offers valuable insights and practical guidelines for future implementations aimed at strengthening global medication safety practices.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "RAG-based drug information access in African languages; no speech synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

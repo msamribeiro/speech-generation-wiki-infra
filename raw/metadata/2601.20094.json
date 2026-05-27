@@ -1,0 +1,58 @@
+{
+  "id": "2601.20094",
+  "source_ids": {
+    "arxiv": "2601.20094"
+  },
+  "title": "T-Mimi: A Transformer-based Mimi Decoder for Real-Time On-Phone TTS",
+  "authors": [
+    "Haibin Wu",
+    "Bach Viet Do",
+    "Naveen Suda",
+    "Julian Chan",
+    "Madhavan C R",
+    "Gene-Ping Yang",
+    "Yi-Chiao Wu",
+    "Naoyuki Kanda",
+    "Yossef Adi",
+    "Xin Lei"
+  ],
+  "authors_full": [
+    "Haibin Wu",
+    "Bach Viet Do",
+    "Naveen Suda",
+    "Julian Chan",
+    "Madhavan C R",
+    "Gene-Ping Yang",
+    "Yi-Chiao Wu",
+    "Naoyuki Kanda",
+    "Yossef Adi",
+    "Xin Lei",
+    "Yue Liu",
+    "Florian Metze",
+    "Yuzong Liu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.20094",
+  "pdf_url": "https://arxiv.org/pdf/2601.20094.pdf",
+  "pdf_path": "raw/papers/2601.20094.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs provide promising acoustic features for speech synthesis, with representative streaming codecs like Mimi providing high-quality acoustic features for real-time Text-to-Speech (TTS) applications. However, Mimi's decoder, which employs a hybrid transformer and convolution architecture, introduces significant latency bottlenecks on edge devices due to the the compute intensive nature of deconvolution layers which are not friendly for mobile-CPUs, such as the most representative framework XNNPACK. This paper introduces T-Mimi, a novel modification of the Mimi codec decoder that replaces its convolutional components with a purely transformer-based decoder, inspired by the TS3-Codec architecture. This change dramatically reduces on-device TTS latency from 42.1ms to just 4.4ms. Furthermore, we conduct quantization aware training and derive a crucial finding: the final two transformer layers and the concluding linear layers of the decoder, which are close to the waveform, are highly sensitive to quantization and must be preserved at full precision to maintain audio quality.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Transformer-based Mimi codec decoder for real-time on-device TTS reducing edge inference latency",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

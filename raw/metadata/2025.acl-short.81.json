@@ -1,0 +1,40 @@
+{
+  "id": "2025.acl-short.81",
+  "source_ids": {
+    "acl": "2025.acl-short.81",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.acl-short.81",
+    "url_acl": "https://aclanthology.org/2025.acl-short.81"
+  },
+  "title": "Zero-Shot Text-to-Speech for Vietnamese",
+  "authors": [
+    "Thi Vu",
+    "Linh The Nguyen",
+    "Dat Quoc Nguyen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.acl-short.81",
+  "pdf_url": "https://aclanthology.org/2025.acl-short.81.pdf",
+  "pdf_path": "raw/papers/2025.acl-short.81.pdf",
+  "pdf_source": "anthology",
+  "abstract": "This paper introduces PhoAudiobook, a newly curated dataset comprising 941 hours of high-quality audio for Vietnamese text-to-speech. Using PhoAudiobook, we conduct experiments on three leading zero-shot TTS models: VALL-E, VoiceCraft, and XTTS-V2. Our findings demonstrate that PhoAudiobook consistently enhances model performance across various metrics. Moreover, VALL-E and VoiceCraft exhibit superior performance in synthesizing short sentences, highlighting their robustness in handling diverse linguistic contexts. We publicly release PhoAudiobook to facilitate further research and development in Vietnamese text-to-speech.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "New Vietnamese TTS dataset (PhoAudiobook, 941h) and benchmarks three zero-shot TTS models; advances multilingual low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

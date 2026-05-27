@@ -1,0 +1,39 @@
+{
+  "id": "2509.04093",
+  "source_ids": {
+    "arxiv": "2509.04093"
+  },
+  "title": "Open-Source Full-Duplex Conversational Datasets for Natural and Interactive Speech Synthesis",
+  "authors": [
+    "Zhitong Zhou",
+    "Qingqing Zhang",
+    "Lei Luo",
+    "Jiechen Liu",
+    "Ruohua Zhou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.04093",
+  "pdf_url": "https://arxiv.org/pdf/2509.04093.pdf",
+  "pdf_path": "raw/papers/2509.04093.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex, spontaneous conversational data are essential for enhancing the naturalness and interactivity of synthesized speech in conversational TTS systems. We present two open-source dual-track conversational speech datasets, one in Chinese and one in English, designed to enhance the naturalness of synthesized speech by providing more realistic conversational data. The two datasets contain a total of 15 hours of natural, spontaneous conversations recorded in isolated rooms, which produces separate high-quality audio tracks for each speaker. The conversations cover diverse daily topics and domains, capturing realistic interaction patterns including frequent overlaps, backchannel responses, laughter, and other non-verbal vocalizations. We introduce the data collection procedure, transcription and annotation methods. We demonstrate the utility of these corpora by fine-tuning a baseline TTS model with the proposed datasets. The fine-tuned TTS model achieves higher subjective and objective evaluation metrics compared to the baseline, indicating improved naturalness and conversational realism in synthetic speech. All data, annotations, and supporting code for fine-tuning and evaluation are made available to facilitate further research in conversational speech synthesis.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Open-source full-duplex conversational datasets for TTS and spoken dialogue training",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

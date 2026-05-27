@@ -1,0 +1,40 @@
+{
+  "id": "2511.10112",
+  "source_ids": {
+    "arxiv": "2511.10112"
+  },
+  "title": "FabasedVC: Enhancing Voice Conversion with Text Modality Fusion and Phoneme-Level SSL Features",
+  "authors": [
+    "Wenyu Wang",
+    "Zhetao Hu",
+    "Yiquan Zhou",
+    "Jiacheng Xu",
+    "Zhiyu Wu",
+    "Chen Li",
+    "Shihao Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.10112",
+  "pdf_url": "https://arxiv.org/pdf/2511.10112.pdf",
+  "pdf_path": "raw/papers/2511.10112.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In voice conversion (VC), it is crucial to preserve complete semantic information while accurately modeling the target speaker's timbre and prosody. This paper proposes FabasedVC to achieve VC with enhanced similarity in timbre, prosody, and duration to the target speaker, as well as improved content integrity. It is an end-to-end VITS-based VC system that integrates relevant textual modality information, phoneme-level self-supervised learning (SSL) features, and a duration predictor. Specifically, we employ a text feature encoder to encode attributes such as text, phonemes, tones and BERT features. We then process the frame-level SSL features into phoneme-level features using two methods: average pooling and attention mechanism based on each phoneme's duration. Moreover, a duration predictor is incorporated to better align the speech rate and prosody of the target speaker. Experimental results demonstrate that our method outperforms competing systems in terms of naturalness, similarity, and content integrity.",
+  "arxiv_comment": "Accepted by ACMMM-Asia 2025",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "VITS-based voice conversion integrating text modality and phoneme-level SSL features for improved semantic fidelity",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

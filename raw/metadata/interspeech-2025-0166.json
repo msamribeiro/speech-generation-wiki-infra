@@ -1,0 +1,55 @@
+{
+  "id": "interspeech-2025-0166",
+  "source_ids": {
+    "isca": "kang25_interspeech",
+    "doi": "10.21437/Interspeech.2025-166"
+  },
+  "title": "Frozen Large Language Models Can Perceive Paralinguistic Aspects of Speech",
+  "authors": [
+    "Wonjune Kang",
+    "Junteng Jia",
+    "Chunyang Wu",
+    "Wei Zhou",
+    "Egor Lakomkin",
+    "Yashesh Gaur",
+    "Leda Sari",
+    "Suyoun Kim",
+    "Ke Li",
+    "Jay Mahadeokar"
+  ],
+  "authors_full": [
+    "Wonjune Kang",
+    "Junteng Jia",
+    "Chunyang Wu",
+    "Wei Zhou",
+    "Egor Lakomkin",
+    "Yashesh Gaur",
+    "Leda Sari",
+    "Suyoun Kim",
+    "Ke Li",
+    "Jay Mahadeokar",
+    "Ozlem Kalinli"
+  ],
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/kang25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/kang25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0166.pdf",
+  "pdf_source": "isca",
+  "abstract": "This work studies the capabilities of a large language model (LLM) to understand paralinguistic aspects of speech without fine-tuning its weights. We utilize an end-to-end system with a speech encoder, which is trained to produce token embeddings such that the LLM's response to an expressive speech prompt is aligned with its response to a semantically matching text prompt that has also been conditioned on the user's speaking style. This framework enables the encoder to generate tokens that capture both linguistic and paralinguistic information and effectively convey them to the LLM, even when the LLM's weights remain completely frozen. To the best of our knowledge, our work is the first to explore how to induce a frozen LLM to understand more than just linguistic content from speech inputs in a general interaction setting. Experiments demonstrate that our system is able to produce higher quality and more empathetic responses to expressive speech prompts compared to several baselines.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Interspeech version of frozen LLM paralinguistic perception; advances speech LM understanding.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

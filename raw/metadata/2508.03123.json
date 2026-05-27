@@ -1,0 +1,38 @@
+{
+  "id": "2508.03123",
+  "source_ids": {
+    "arxiv": "2508.03123"
+  },
+  "title": "Fine-Tuning Text-to-Speech Diffusion Models Using Reinforcement Learning with Human Feedback",
+  "authors": [
+    "Jingyi Chen",
+    "Ju Seung Byun",
+    "Micha Elsner",
+    "Pichao Wang",
+    "Andrew Perrault"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.03123",
+  "pdf_url": "https://arxiv.org/pdf/2508.03123.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Diffusion models produce high-fidelity speech but are inefficient for real-time use due to long denoising steps and challenges in modeling intonation and rhythm. To improve this, we propose Diffusion Loss-Guided Policy Optimization (DLPO), an RLHF framework for TTS diffusion models. DLPO integrates the original training loss into the reward function, preserving generative capabilities while reducing inefficiencies. Using naturalness scores as feedback, DLPO aligns reward optimization with the diffusion model's structure, improving speech quality. We evaluate DLPO on WaveGrad 2, a non-autoregressive diffusion-based TTS model. Results show significant improvements in objective metrics (UTMOS 3.65, NISQA 4.02) and subjective evaluations, with DLPO audio preferred 67\\% of the time. These findings demonstrate DLPO's potential for efficient, high-quality diffusion TTS in real-time, resource-limited settings.",
+  "arxiv_comment": "4 pages, 1 figure, INTERSPEECH 2025. arXiv admin note: text overlap with arXiv:2405.14632",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "Core TTS paper applying RLHF to diffusion-based speech synthesis",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0063"
+}

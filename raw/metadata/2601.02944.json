@@ -1,0 +1,35 @@
+{
+  "id": "2601.02944",
+  "source_ids": {
+    "arxiv": "2601.02944"
+  },
+  "title": "XLSR-MamBo: Scaling the Hybrid Mamba-Attention Backbone for Audio Deepfake Detection",
+  "authors": [
+    "Kwok-Ho Ng",
+    "Tingting Song",
+    "Yongdong Wu",
+    "Zhihua Xia"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.02944",
+  "pdf_url": "https://arxiv.org/pdf/2601.02944.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Advanced speech synthesis technologies have enabled highly realistic speech generation, posing security risks that motivate research into audio deepfake detection (ADD). While state space models (SSMs) offer linear complexity, pure causal SSMs architectures often struggle with the content-based retrieval required to capture global frequency-domain artifacts. To address this, we explore the scaling properties of hybrid architectures by proposing XLSR-MamBo, a modular framework integrating an XLSR front-end with synergistic Mamba-Attention backbones. We systematically evaluate four topological designs using advanced SSM variants, Mamba, Mamba2, Hydra, and Gated DeltaNet. Experimental results demonstrate that the MamBo-3-Hydra-N3 configuration achieves competitive performance compared to other state-of-the-art systems on the ASVspoof 2021 LA, DF, and In-the-Wild benchmarks. This performance benefits from Hydra's native bidirectional modeling, which captures holistic temporal dependencies more efficiently than the heuristic dual-branch strategies employed in prior works. Furthermore, evaluations on the DFADD dataset demonstrate robust generalization to unseen diffusion- and flow-matching-based synthesis methods. Crucially, our analysis reveals that scaling backbone depth effectively mitigates the performance variance and instability observed in shallower models. These results demonstrate the hybrid framework's ability to capture artifacts in spoofed speech signals, providing an effective method for ADD.",
+  "arxiv_comment": "11 pages, 3 figures, Accepted by ACL 2026 Findings",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Hybrid Mamba-attention model for audio deepfake detection; anti-spoofing detection (out of scope)",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

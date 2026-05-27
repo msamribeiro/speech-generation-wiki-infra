@@ -1,0 +1,60 @@
+{
+  "id": "2603.15981",
+  "source_ids": {
+    "arxiv": "2603.15981"
+  },
+  "title": "Aligning Paralinguistic Understanding and Generation in Speech LLMs via Multi-Task Reinforcement Learning",
+  "authors": [
+    "Jingxiang Chen",
+    "Minseok Kim",
+    "Seong-Gyun Leem",
+    "Yin Huang",
+    "Rashi Rungta",
+    "Zhicheng Ouyang",
+    "Haibin Wu",
+    "Surya Teja Appini",
+    "Ankur Bansal",
+    "Yang Bai"
+  ],
+  "authors_full": [
+    "Jingxiang Chen",
+    "Minseok Kim",
+    "Seong-Gyun Leem",
+    "Yin Huang",
+    "Rashi Rungta",
+    "Zhicheng Ouyang",
+    "Haibin Wu",
+    "Surya Teja Appini",
+    "Ankur Bansal",
+    "Yang Bai",
+    "Yue Liu",
+    "Florian Metze",
+    "Ahmed A Aly",
+    "Anuj Kumar",
+    "Ariya Rastrow",
+    "Zhaojiang Lin"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.15981",
+  "pdf_url": "https://arxiv.org/pdf/2603.15981.pdf",
+  "pdf_path": "raw/papers/2603.15981.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech large language models (LLMs) observe paralinguistic cues such as prosody, emotion, and non-verbal sounds--crucial for intent understanding. However, leveraging these cues faces challenges: limited training data, annotation difficulty, and models exploiting lexical shortcuts over paralinguistic signals. We propose multi-task reinforcement learning (RL) with chain-of-thought prompting that elicits explicit affective reasoning. To address data scarcity, we introduce a paralinguistics-aware speech LLM (PALLM) that jointly optimizes sentiment classification from audio and paralinguistics-aware response generation via a two-stage pipeline. Experiments demonstrate that our approach improves paralinguistics understanding over both supervised baselines and strong proprietary models (Gemini-2.5-Pro, GPT-4o-audio) by 8-12% on Expresso, IEMOCAP, and RAVDESS. The results show that modeling paralinguistic reasoning with multi-task RL is crucial for building emotionally intelligent speech LLMs.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Multi-task RL with chain-of-thought for paralinguistic understanding and generation in speech LLMs; advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

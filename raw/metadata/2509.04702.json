@@ -1,0 +1,44 @@
+{
+  "id": "2509.04702",
+  "source_ids": {
+    "arxiv": "2509.04702"
+  },
+  "title": "OleSpeech-IV: A Large-Scale Multispeaker and Multilingual Conversational Speech Dataset with Diverse Topics",
+  "authors": [
+    "Wei Chu",
+    "Yuanzhe Dong",
+    "Ke Tan",
+    "Dong Han",
+    "Xavier Menendez-Pidal",
+    "Ruchao Fan",
+    "Chenfeng Miao",
+    "Chanwoo Kim",
+    "Bhiksha Raj",
+    "Rita Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.04702",
+  "pdf_url": "https://arxiv.org/pdf/2509.04702.pdf",
+  "pdf_path": "raw/papers/2509.04702.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "OleSpeech-IV dataset is a large-scale multispeaker and multilingual conversational speech dataset with diverse topics. The audio content comes from publicly-available English podcasts, talk shows, teleconferences, and other conversations. Speaker names, turns, and transcripts are human-sourced and refined by a proprietary pipeline, while additional information such as timestamps and confidence scores is derived from the pipeline. The IV denotes its position as Tier IV in the Olewave dataset series. In addition, we have open-sourced a subset, OleSpeech-IV-2025-EN-AR-100, for non-commercial research use.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Large-scale multispeaker multilingual conversational speech dataset; directly enables TTS and SCA training.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

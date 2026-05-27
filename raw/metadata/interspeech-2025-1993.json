@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1993",
+  "source_ids": {
+    "isca": "zhao25k_interspeech",
+    "doi": "10.21437/Interspeech.2025-1993"
+  },
+  "title": "Defending Unauthorized Voice Cloning with Watermark-Aware Codecs",
+  "authors": [
+    "Jiankun Zhao",
+    "Lingwei Meng",
+    "Chengxi Deng",
+    "Helen Meng",
+    "Xixin Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhao25k_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhao25k_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1993.pdf",
+  "pdf_source": "isca",
+  "abstract": "The proliferation of zero-shot TTS models increases the risk of malicious voice cloning using copyrighted speech prompts. Although audio watermarking provides an effective way for encoding copyright information, attackers may still use watermarked speech as prompts to synthesize unwatermarked speech with the same speaker identity. To protect copyrighted voices from being cloned, this study introduces a method to train open-source TTS models to reject watermarked speech prompts for cloning. We observe that mainstream zero-shot TTS models typically rely on pre-trained codec encoders to process speech prompts. By training the codec to ``mute\" when encountering watermarked audio, the quality of generated speech will degrade. In this way, we implicitly prevent zero-shot TTS models from cloning watermarked voices. Experiments show that our approach is robust against various attacks while maintaining high-quality TTS ability given unwatermarked speech prompts.",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Codec-based watermarking to prevent unauthorized zero-shot TTS voice cloning; advances TTS/VC security.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

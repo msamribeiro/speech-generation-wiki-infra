@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-0347",
+  "source_ids": {
+    "isca": "takagi25_interspeech",
+    "doi": "10.21437/Interspeech.2025-347"
+  },
+  "title": "PeriodCodec: A Pitch-Controllable Neural Audio Codec Using Periodic Signals for Singing Voice Synthesis",
+  "authors": [
+    "Masato Takagi",
+    "Miku Nishihara",
+    "Yukiya Hono",
+    "Kei Hashimoto",
+    "Yoshihiko Nankaku",
+    "Keiichi Tokuda"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/takagi25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/takagi25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0347.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural audio codecs (NACs) have attracted considerable attention in the field of text-to-speech.  However, previous methods don't offer a mechanism for explicit controlling the fundamental frequency (F0), hence they are not suitable for singing voice synthesis. To overcome this limitation, we propose a NAC that can control F0 by introducing explicit periodic signals into the decoder. This architecture enables direct manipulation of F0 during the synthesis process. Experimental results show that our proposed method achieves F0 control and improves synthesis quality compared to previous methods. Furthermore, by including singing voices in the training data set, we showed that both F0 controllability and the quality of singing voices are improved, enabling the construction of a NAC suitable for singing voice synthesis tasks.",
+  "task": [
+    "codec",
+    "singing"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Neural audio codec with explicit F0 control via periodic signals for singing voice synthesis; advances codec/singing.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

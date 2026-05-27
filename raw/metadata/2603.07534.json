@@ -1,0 +1,39 @@
+{
+  "id": "2603.07534",
+  "source_ids": {
+    "arxiv": "2603.07534"
+  },
+  "title": "Accent Vector: Controllable Accent Manipulation for Multilingual TTS Without Accented Data",
+  "authors": [
+    "Thanathai Lertpetchpun",
+    "Thanapat Trachu",
+    "Jihwan Lee",
+    "Tiantian Feng",
+    "Dani Byrd",
+    "Shrikanth Narayanan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.07534",
+  "pdf_url": "https://arxiv.org/pdf/2603.07534.pdf",
+  "pdf_path": "raw/papers/2603.07534.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Accent is an integral part of society, reflecting multiculturalism and shaping how individuals express identity. The majority of English speakers are non-native (L2) speakers, yet current Text-To-Speech (TTS) systems primarily model American-accented English due limited accented data. We propose \\textit{Accent Vector}, a controllable representation that enables accent manipulation in multilingual TTS without requiring accented training data. \\textit{Accent Vector} is derived by fine-tuning a TTS system on native speech of a different language (i.e. non-English) and computing task vectors capturing accent characteristics (i.e. in English). By scaling and interpolating the vector, we achieve fine-grained control over accent strength and generate mixed-accent speech. In addition, it generalizes beyond English, enabling accent control across multiple languages. Objective and human evaluations confirm the effectiveness of Accent Vector for fine-grained and compositional accent control.",
+  "arxiv_comment": "Submitted to Interspeech2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Controllable accent representation for multilingual TTS without accented training data; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

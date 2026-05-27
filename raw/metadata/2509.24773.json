@@ -1,0 +1,43 @@
+{
+  "id": "2509.24773",
+  "source_ids": {
+    "arxiv": "2509.24773"
+  },
+  "title": "VSSFlow: Unifying Video-conditioned Sound and Speech Generation via Joint Learning",
+  "authors": [
+    "Xin Cheng",
+    "Yuyue Wang",
+    "Xihua Wang",
+    "Yihan Wu",
+    "Kaisi Guan",
+    "Yijing Chen",
+    "Peng Zhang",
+    "Xiaojiang Liu",
+    "Meng Cao",
+    "Ruihua Song"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.24773",
+  "pdf_url": "https://arxiv.org/pdf/2509.24773.pdf",
+  "pdf_path": "raw/papers/2509.24773.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Video-conditioned audio generation, including Video-to-Sound (V2S) and Visual Text-to-Speech (VisualTTS), has traditionally been treated as distinct tasks, leaving the potential for a unified generative framework largely underexplored. In this paper, we bridge this gap with VSSFlow, a unified flow-matching framework that seamlessly solve both problems. To effectively handle multiple input signals within a Diffusion Transformer (DiT) architecture, we propose a disentangled condition aggregation mechanism leveraging distinct intrinsic properties of attention layers: cross-attention for semantic conditions, and self-attention for temporally-intensive conditions. Besides, contrary to the prevailing belief that joint training for the two tasks leads to performance degradation, we demonstrate that VSSFlow maintains superior performance during end-to-end joint learning process. Furthermore, we use a straightforward feature-level data synthesis method, demonstrating that our framework provides a robust foundation that easily adapts to joint sound and speech generation using synthetic data. Extensive experiments on V2S, VisualTTS and joint generation benchmarks show that VSSFlow effectively unifies these tasks and surpasses state-of-the-art domain-specific baselines, underscoring the critical potential of unified generative models. Project page: https://vasflow1.github.io/vasflow/",
+  "arxiv_comment": "Paper Under Review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Unified flow-matching model for video-conditioned speech and sound generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2602.14664",
+  "source_ids": {
+    "arxiv": "2602.14664"
+  },
+  "title": "Probing Human Articulatory Constraints in End-to-End TTS with Reverse and Mismatched Speech-Text Directions",
+  "authors": [
+    "Parth Khadse",
+    "Sunil Kumar Kopparapu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.14664",
+  "pdf_url": "https://arxiv.org/pdf/2602.14664.pdf",
+  "pdf_path": "raw/papers/2602.14664.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "An end-to-end (e2e) text-to-speech (TTS) system is a deep architecture that learns to associate a text string with acoustic speech patterns from a curated dataset. It is expected that all aspects associated with speech production, such as phone duration, speaker characteristics, and intonation among other things are captured in the trained TTS model to enable the synthesized speech to be natural and intelligible. Human speech is complex, involving smooth transitions between articulatory configurations (ACs). Due to anatomical constraints, some ACs are challenging to mimic or transition between. In this paper, we experimentally study if the constraints imposed by human anatomy have an implication on training an e2e-TTS systems. We experiment with two e2e-TTS architectures, namely, Tacotron-2 an autoregressive model and VITS-TTS a non-autoregressive model. In this study, we build TTS systems using (a) forward text, forward speech (conventional, e2e-TTS), (b) reverse text, reverse speech (r-e2e-TTS), and (c) reverse text, forward speech (rtfs-e2e-TTS). Experiments demonstrate that e2e-TTS systems are purely data-driven. Interestingly, the generated speech by r-e2e-TTS systems exhibits better fidelity, better perceptual intelligibility, and better naturalness",
+  "arxiv_comment": "A shorter version of this paper appeared in ACPR 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Probing articulatory and prosodic constraints learned implicitly by end-to-end TTS systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1115",
+  "source_ids": {
+    "isca": "wu25g_interspeech",
+    "doi": "10.21437/Interspeech.2025-1115"
+  },
+  "title": "MPE-TTS: Customized Emotion Zero-Shot Text-To-Speech Using Multi-Modal Prompt",
+  "authors": [
+    "Zhichao Wu",
+    "Yueteng Kang",
+    "Songjun Cao",
+    "Long Ma",
+    "Qiulin Li",
+    "Qun Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/wu25g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/wu25g_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1115.pdf",
+  "pdf_source": "isca",
+  "abstract": "Most existing Zero-Shot Text-To-Speech (ZS-TTS) systems generate the unseen speech based on single prompt, such as reference speech or text descriptions, which limits their flexibility. We propose a customized emotion ZS-TTS system based on multi-modal prompt. The system disentangles speech into the content, timbre, emotion and prosody, allowing emotion prompts to be provided as text, image or speech. To extract emotion information from different prompts, we propose a multi-modal prompt emotion encoder. Additionally, we introduce an prosody predictor to fit the distribution of prosody and propose an emotion consistency loss to preserve emotion information in the predicted prosody. A diffusion-based acoustic model is employed to generate the target mel-spectrogram. Both objective and subjective experiments demonstrate that our system outperforms existing systems in terms of naturalness and similarity.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Multi-modal prompted zero-shot TTS with text/image/speech emotion control; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

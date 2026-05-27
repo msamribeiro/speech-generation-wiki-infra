@@ -1,0 +1,36 @@
+{
+  "id": "2509.15969",
+  "source_ids": {
+    "arxiv": "2509.15969"
+  },
+  "title": "VoXtream: Full-Stream Text-to-Speech with Extremely Low Latency",
+  "authors": [
+    "Nikita Torgashov",
+    "Gustav Eje Henter",
+    "Gabriel Skantze"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.15969",
+  "pdf_url": "https://arxiv.org/pdf/2509.15969.pdf",
+  "pdf_path": "raw/papers/2509.15969.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present VoXtream, a fully autoregressive, zero-shot streaming text-to-speech (TTS) system for real-time use that begins speaking from the first word. VoXtream directly maps incoming phonemes to audio tokens using a monotonic alignment scheme and a limited look-ahead that does not delay onset. Built around an incremental phoneme transformer, a temporal transformer predicting semantic and duration tokens, and a depth transformer producing acoustic tokens, VoXtream achieves, to our knowledge, the lowest initial delay among publicly available streaming TTS: 102 ms on GPU. Despite being trained on a mid-scale 9k-hour corpus, it matches or surpasses larger baselines on several metrics, while delivering competitive quality in both output- and full-streaming settings. Demo and code are available at https://herimor.github.io/voxtream.",
+  "arxiv_comment": "5 pages, 1 figure, accepted to IEEE ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Fully autoregressive zero-shot streaming TTS with extremely low first-word latency",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

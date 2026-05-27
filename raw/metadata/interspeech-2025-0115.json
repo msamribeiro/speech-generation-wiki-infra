@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2025-0115",
+  "source_ids": {
+    "isca": "sadok25_interspeech",
+    "doi": "10.21437/Interspeech.2025-115"
+  },
+  "title": "Bringing Interpretability to Neural Audio Codecs",
+  "authors": [
+    "Samir Sadok",
+    "Julien Hauret",
+    "Ãric Bavu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/sadok25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/sadok25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0115.pdf",
+  "pdf_source": "isca",
+  "abstract": "The advent of neural audio codecs has increased in popularity due to their potential for efficiently modeling audio with transformers. Such advanced codecs represent audio from a highly continuous waveform to low-sampled discrete units. In contrast to semantic units, acoustic units may lack interpretability because their training objectives primarily focus on reconstruction performance. This paper proposes a two-step approach to explore the encoding of speech information within the codec tokens. The primary goal of the analysis stage is to gain deeper insight into how speech attributes such as content, identity, and pitch are encoded. The synthesis stage then trains an AnCoGen network for post-hoc explanation of codecs to extract speech attributes from the respective tokens directly.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Interpretability analysis of neural audio codecs for speech generation; advances understanding of codecs.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

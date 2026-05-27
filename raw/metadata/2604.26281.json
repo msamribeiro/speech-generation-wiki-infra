@@ -1,0 +1,38 @@
+{
+  "id": "2604.26281",
+  "source_ids": {
+    "arxiv": "2604.26281"
+  },
+  "title": "DiffAnon: Diffusion-based Prosody Control for Voice Anonymization",
+  "authors": [
+    "Ismail Rasim Ulgen",
+    "Zexin Cai",
+    "Nicholas Andrews",
+    "Philipp Koehn",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.26281",
+  "pdf_url": "https://arxiv.org/pdf/2604.26281.pdf",
+  "pdf_path": "raw/papers/2604.26281.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "To preserve or not to preserve prosody is a central question in voice anonymization. Prosody conveys meaning and affect, yet is tightly coupled with speaker identity. Existing methods either discard prosody for privacy or lack a principled mechanism to control the utility-privacy trade-off, operating at fixed design points. We propose DiffAnon, a diffusion-based anonymization method with classifier-free guidance (CFG) that provides explicit, continuous inference-time control over prosody preservation. DiffAnon refines acoustic detail over semantic embeddings of an RVQ codec, enabling smooth interpolation between anonymization strength and prosodic fidelity within a single model. To the best of our knowledge, it is the first voice anonymization framework to provide structured, interpolatable inference-time prosody control. Experiments demonstrate structured trade-off behavior, achieving strong utility while maintaining competitive privacy across controllable operating points.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Diffusion-based voice anonymization with controllable prosody preservation for tunable utility-privacy trade-off",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

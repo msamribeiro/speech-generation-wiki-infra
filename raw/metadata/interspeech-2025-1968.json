@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2025-1968",
+  "source_ids": {
+    "isca": "deng25b_interspeech",
+    "doi": "10.21437/Interspeech.2025-1968"
+  },
+  "title": "An interpretable speech foundation model for depression detection by revealing prediction-relevant acoustic features from long speech",
+  "authors": [
+    "Qingkun Deng",
+    "Saturnino Luz",
+    "Sofia de la Fuente Garcia"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/deng25b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/deng25b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech-based depression detection tools could aid early screening. Here, we propose an interpretable speech foundation model approach to enhance the clinical applicability of such tools. We introduce a speech-level Audio Spectrogram Transformer (AST) to detect depression using long-duration speech instead of short segments, along with a novel interpretation method that reveals prediction-relevant acoustic features for clinician interpretation. Our experiments show the proposed model outperforms a segment-level AST, highlighting the impact of segment-level labeling noise and the advantage of leveraging longer speech duration for more reliable depression detection. Through interpretation, we observe our model identifies reduced loudness and F0 as relevant depression signals, aligning with documented clinical findings. This interpretability supports a responsible AI approach for speech-based depression detection, rendering such tools more clinically applicable.",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Interpretable SFM for depression detection; clinical mental health application, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

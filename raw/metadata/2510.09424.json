@@ -1,0 +1,36 @@
+{
+  "id": "2510.09424",
+  "source_ids": {
+    "arxiv": "2510.09424"
+  },
+  "title": "The Speech-LLM Takes It All: A Truly Fully End-to-End Spoken Dialogue State Tracking Approach",
+  "authors": [
+    "Nizar El Ghazal",
+    "Antoine Caubrière",
+    "Valentin Vielzeuf"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.09424",
+  "pdf_url": "https://arxiv.org/pdf/2510.09424.pdf",
+  "pdf_path": "raw/papers/2510.09424.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents a comparative study of context management strategies for end-to-end Spoken Dialog State Tracking using Speech-LLMs. We systematically evaluate traditional multimodal context (combining text history and spoken current turn), full spoken history, and compressed spoken history approaches. Our experiments on the SpokenWOZ corpus demonstrate that providing the full spoken conversation as input yields the highest performance among models of similar size, significantly surpassing prior methods. Furthermore, we show that attention-pooling-based compression of the spoken history offers a strong trade-off, maintaining competitive accuracy with reduced context size. Detailed analysis confirms that improvements stem from more effective context utilization.",
+  "arxiv_comment": "Accepted for presentation at LREC 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "End-to-end spoken dialogue state tracking using speech LLMs; understanding-focused with limited generation contribution",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

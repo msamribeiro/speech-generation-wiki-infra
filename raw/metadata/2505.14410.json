@@ -1,0 +1,38 @@
+{
+  "id": "2505.14410",
+  "source_ids": {
+    "arxiv": "2505.14410"
+  },
+  "title": "Pairwise Evaluation of Accent Similarity in Speech Synthesis",
+  "authors": [
+    "Jinzuomu Zhong",
+    "Suyuan Liu",
+    "Dan Wells",
+    "Korin Richmond"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 5,
+  "published_date": "2025-05-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.14410",
+  "pdf_url": "https://arxiv.org/pdf/2505.14410.pdf",
+  "pdf_path": "raw/papers/2505.14410.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Despite growing interest in generating high-fidelity accents, evaluating accent similarity in speech synthesis has been underexplored. We aim to enhance both subjective and objective evaluation methods for accent similarity. Subjectively, we refine the XAB listening test by adding components that achieve higher statistical significance with fewer listeners and lower costs. Our method involves providing listeners with transcriptions, having them highlight perceived accent differences, and implementing meticulous screening for reliability. Objectively, we utilise pronunciation-related metrics, based on distances between vowel formants and phonetic posteriorgrams, to evaluate accent generation. Comparative experiments reveal that these metrics, alongside accent similarity, speaker similarity, and Mel Cepstral Distortion, can be used. Moreover, our findings underscore significant limitations of common metrics like Word Error Rate in assessing underrepresented accents.",
+  "arxiv_comment": "Accepted by INTERSPEECH 2025",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Novel XAB listening test refinement and automatic metric for accent similarity evaluation in TTS; directly advances TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

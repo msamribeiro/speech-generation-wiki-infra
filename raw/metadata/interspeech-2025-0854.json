@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-0854",
+  "source_ids": {
+    "isca": "zalkow25_interspeech",
+    "doi": "10.21437/Interspeech.2025-854"
+  },
+  "title": "Bridging the TrainingâInference Gap in TTS: Training Strategies for Robust Generative Postprocessing for Low-Resource Speakers",
+  "authors": [
+    "Frank Zalkow",
+    "Paolo Sani",
+    "Kishor Kayyar Lakshminarayana",
+    "EmanuÃ«l A. P. Habets",
+    "Nicola Pia",
+    "Christian Dittmar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zalkow25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zalkow25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0854.pdf",
+  "pdf_source": "isca",
+  "abstract": "Modern text-to-speech synthesis systems usually consist of an acoustic model generating speech features, e.g., mel spectrograms, and a vocoder converting them into speech waveforms. The vocoder is typically trained with ground-truth features but receives features from the acoustic model during inference, leading to a mismatch between training and inference. To address this issue, previous work proposed employing generative postprocessing models to make the synthetic features appear more natural. While such systems can produce speech nearly indistinguishable from real speech when sufficient training data is available, their performance degrades with limited data. To mitigate this limitation, we propose a training data generation procedure using a subsampling strategy and multiple acoustic models. We evaluate it through listening tests, demonstrating consistent improvements in the naturalness of the synthetic speech across different postprocessing models and low-resource target speakers.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Addresses training-inference mismatch in TTS vocoder for low-resource speakers; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

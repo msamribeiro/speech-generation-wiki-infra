@@ -1,0 +1,38 @@
+{
+  "id": "2603.16924",
+  "source_ids": {
+    "arxiv": "2603.16924"
+  },
+  "title": "SimulU: Training-free Policy for Long-form Simultaneous Speech-to-Speech Translation",
+  "authors": [
+    "Amirbek Djanibekov",
+    "Luisa Bentivogli",
+    "Matteo Negri",
+    "Sara Papi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.16924",
+  "pdf_url": "https://arxiv.org/pdf/2603.16924.pdf",
+  "pdf_path": "raw/papers/2603.16924.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Simultaneous speech-to-speech translation (SimulS2S) is essential for real-time multilingual communication, with increasing integration into meeting and streaming platforms. Despite this, SimulS2S remains underexplored in research, where current solutions often rely on resource-intensive training procedures and operate on short-form, pre-segmented utterances, failing to generalize to continuous speech. To bridge this gap, we propose SimulU, the first training-free policy for long-form SimulS2S. SimulU adopts history management and speech output selection strategies that exploit cross-attention in pre-trained end-to-end models to regulate both input history and output generation. Evaluations on MuST-C across 8 languages show that SimulU achieves a better or comparable quality-latency trade-off against strong cascaded models. By eliminating the need for ad-hoc training, SimulU offers a promising path to end-to-end SimulS2S in realistic, long-form scenarios.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "SimulU: training-free simultaneous S2ST; core generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2025-2573",
+  "source_ids": {
+    "isca": "lodagala25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2573"
+  },
+  "title": "SawtArabi: A Benchmark Corpus for Arabic TTS.  Standard, Dialectal and Code-Switching",
+  "authors": [
+    "Vasista Sai Lodagala",
+    "Lamya Alkanhal",
+    "Daniel Izham",
+    "Shivam Mehta",
+    "Shammur Absar Chowdhury",
+    "Aqeelah Makki",
+    "Hamdy S. Hussein",
+    "Gustav Eje Henter",
+    "Ahmed Ali"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/lodagala25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/lodagala25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2573.pdf",
+  "pdf_source": "isca",
+  "abstract": "Curating Text-to-Speech (TTS) datasets is a strenuous task given the quality considerations. While it is hard to find high-quality TTS datasets in languages other than English, it is rare to come across code-switching (CS) datasets. As a part of this work, we curate a 4-hour Arabic-English TTS corpus consisting of code-switched Egyptian-English, monolingual Modern Standard Arabic (MSA), Egyptian, and English, all recorded by the same voice talent. We demonstrate the importance of vowelization and the need for better phonemization of Arabic text. To this effect, we present the modified espeak-ng phonemizer that handles various irregularities of espeak-ng over Arabic text. Upon training baseline TTS systems over this benchmark, we demonstrate its efficacy through extensive subjective evaluations.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Arabic TTS corpus with code-switching, dialectal and MSA speech; directly advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "2509.16589",
+  "source_ids": {
+    "arxiv": "2509.16589",
+    "acl": "2025.findings-emnlp.760",
+    "doi": "10.18653/v1/2025.findings-emnlp.760",
+    "url_acl": "https://aclanthology.org/2025.findings-emnlp.760"
+  },
+  "title": "Benchmarking Contextual and Paralinguistic Reasoning in Speech-LLMs: A Case Study with In-the-Wild Data",
+  "authors": [
+    "Qiongqiong Wang",
+    "Hardik Bhupendra Sailor",
+    "Tianchi Liu",
+    "Wenyu Zhang",
+    "Muhammad Huzaifah",
+    "Nattadaporn Lertcheva",
+    "Shuo Sun",
+    "Nancy F. Chen",
+    "Jinyang Wu",
+    "AiTi Aw"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-09-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.16589",
+  "pdf_url": "https://aclanthology.org/2025.findings-emnlp.760.pdf",
+  "pdf_path": "raw/papers/2509.16589.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Recent speech-LLMs have shown impressive performance in tasks like transcription and translation, yet they remain limited in understanding the paralinguistic aspects of speech crucial for social and emotional intelligence. We propose CP-Bench, a benchmark for evaluating speech-LLMs on contextual paralinguistic reasoning the integration of verbal content with non-verbal cues like emotion and prosody. The benchmark includes two curated question answering (QA) datasets requiring both linguistic and empathetic understanding. We evaluate state-of-the-art speech-LLMs from both open and closed-source models and perform a comprehensive analysis across different question types. The top two models were further analyzed under temperature tuning to understand its effect on this task. Our benchmark reveals a key gap in existing evaluations and offers insights into building more context-aware and emotionally intelligent speech-capable LLMs.",
+  "arxiv_comment": "Accepted in EMNLP Findings 2025",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Benchmark for speech LLMs on contextual paralinguistic reasoning with in-the-wild data; advances SCA evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

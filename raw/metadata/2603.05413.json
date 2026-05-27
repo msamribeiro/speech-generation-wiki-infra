@@ -1,0 +1,59 @@
+{
+  "id": "2603.05413",
+  "source_ids": {
+    "arxiv": "2603.05413"
+  },
+  "title": "Building Enterprise Realtime Voice Agents from Scratch: A Technical Tutorial",
+  "authors": [
+    "Jielin Qiu",
+    "Zixiang Chen",
+    "Liangwei Yang",
+    "Ming Zhu",
+    "Zhiwei Liu",
+    "Juntao Tan",
+    "Wenting Zhao",
+    "Rithesh Murthy",
+    "Roshan Ram",
+    "Akshara Prabhakar"
+  ],
+  "authors_full": [
+    "Jielin Qiu",
+    "Zixiang Chen",
+    "Liangwei Yang",
+    "Ming Zhu",
+    "Zhiwei Liu",
+    "Juntao Tan",
+    "Wenting Zhao",
+    "Rithesh Murthy",
+    "Roshan Ram",
+    "Akshara Prabhakar",
+    "Shelby Heinecke",
+    "Caiming Xiong",
+    "Silvio Savarese",
+    "Huan Wang"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.05413",
+  "pdf_url": "https://arxiv.org/pdf/2603.05413.pdf",
+  "pdf_path": "raw/papers/2603.05413.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present a technical tutorial for building enterprise-grade realtime voice agents from first principles. While end-to-end speech-to-speech models may ultimately provide the best latency for voice agents, fully self-hosted end-to-end solutions are not yet available. We evaluate the closest candidate, Qwen3-Omni, across three configurations: its cloud-only DashScope Realtime API achieves $\\sim$702ms audio-to-audio latency with streaming, but is not self-hostable; its local vLLM deployment supports only the Thinker (text generation from audio, 516ms), not the Talker (audio synthesis); and its local Transformers deployment runs the full pipeline but at $\\sim$146s -- far too slow for realtime. The cascaded streaming pipeline (STT $\\rightarrow$ LLM $\\rightarrow$ TTS) therefore remains the practical architecture for self-hosted realtime voice agents, and the focus of this tutorial. We build a complete voice agent using Deepgram (streaming STT), vLLM-served LLMs with function calling (streaming text generation), and ElevenLabs (streaming TTS), achieving a measured time-to-first-audio of 755ms (best case 729ms) with full function calling support. We release the full codebase as a 9-chapter progressive tutorial with working, tested code for every component.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Technical tutorial for building enterprise realtime voice agents; practical SCA system paper.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

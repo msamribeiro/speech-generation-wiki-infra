@@ -1,0 +1,40 @@
+{
+  "id": "2604.08562",
+  "source_ids": {
+    "arxiv": "2604.08562"
+  },
+  "title": "Neural networks for Text-to-Speech evaluation",
+  "authors": [
+    "Ilya Trofimenko",
+    "David Kocharyan",
+    "Aleksandr Zaitsev",
+    "Pavel Repnikov",
+    "Mark Levin",
+    "Nikita Shevtsov"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.08562",
+  "pdf_url": "https://arxiv.org/pdf/2604.08562.pdf",
+  "pdf_path": "raw/papers/2604.08562.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Ensuring that Text-to-Speech (TTS) systems deliver human-perceived quality at scale is a central challenge for modern speech technologies. Human subjective evaluation protocols such as Mean Opinion Score (MOS) and Side-by-Side (SBS) comparisons remain the de facto gold standards, yet they are expensive, slow, and sensitive to pervasive assessor biases. This study addresses these barriers by formulating, and implementing a suite of novel neural models designed to approximate expert judgments in both relative (SBS) and absolute (MOS) settings. For relative assessment, we propose NeuralSBS, a HuBERT-backed model achieving 73.7% accuracy (on SOMOS dataset). For absolute assessment, we introduce enhancements to MOSNet using custom sequence-length batching, as well as WhisperBert, a multimodal stacking ensemble that combines Whisper audio features and BERT textual embeddings via weak learners. Our best MOS models achieve a Root Mean Square Error (RMSE) of ~0.40, significantly outperforming the human inter-rater RMSE baseline of 0.62. Furthermore, our ablation studies reveal that naively fusing text via cross-attention can degrade performance, highlighting the effectiveness of ensemble-based stacking over direct latent fusion. We additionally report negative results with SpeechLM-based architectures and zero-shot LLM evaluators (Qwen2-Audio, Gemini 2.5 flash preview), reinforcing the necessity of dedicated metric learning frameworks.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Neural network reward models for TTS quality assessment covering MOS and side-by-side subjective evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

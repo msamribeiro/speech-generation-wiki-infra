@@ -1,0 +1,61 @@
+{
+  "id": "2510.02044",
+  "source_ids": {
+    "arxiv": "2510.02044"
+  },
+  "title": "Stream RAG: Instant and Accurate Spoken Dialogue Systems with Streaming Tool Usage",
+  "authors": [
+    "Siddhant Arora",
+    "Haidar Khan",
+    "Kai Sun",
+    "Xin Luna Dong",
+    "Sajal Choudhary",
+    "Seungwhan Moon",
+    "Xinyuan Zhang",
+    "Adithya Sagar",
+    "Surya Teja Appini",
+    "Kaushik Patnaik"
+  ],
+  "authors_full": [
+    "Siddhant Arora",
+    "Haidar Khan",
+    "Kai Sun",
+    "Xin Luna Dong",
+    "Sajal Choudhary",
+    "Seungwhan Moon",
+    "Xinyuan Zhang",
+    "Adithya Sagar",
+    "Surya Teja Appini",
+    "Kaushik Patnaik",
+    "Sanat Sharma",
+    "Shinji Watanabe",
+    "Anuj Kumar",
+    "Ahmed Aly",
+    "Yue Liu",
+    "Florian Metze",
+    "Zhaojiang Lin"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.02044",
+  "pdf_url": "https://arxiv.org/pdf/2510.02044.pdf",
+  "pdf_path": "raw/papers/2510.02044.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end speech-in speech-out dialogue systems are emerging as a powerful alternative to traditional ASR-LLM-TTS pipelines, generating more natural, expressive responses with significantly lower latency. However, these systems remain prone to hallucinations due to limited factual grounding. While text-based dialogue systems address this challenge by integrating tools such as web search and knowledge graph APIs, we introduce the first approach to extend tool use directly into speech-in speech-out systems. A key challenge is that tool integration substantially increases response latency, disrupting conversational flow. To mitigate this, we propose Streaming Retrieval-Augmented Generation (Streaming RAG), a novel framework that reduces user-perceived latency by predicting tool queries in parallel with user speech, even before the user finishes speaking. Specifically, we develop a post-training pipeline that teaches the model when to issue tool calls during ongoing speech and how to generate spoken summaries that fuse audio queries with retrieved text results, thereby improving both accuracy and responsiveness. To evaluate our approach, we construct AudioCRAG, a benchmark created by converting queries from the publicly available CRAG dataset into speech form. Experimental results demonstrate that our streaming RAG approach increases QA accuracy by up to 200% relative (from 11.1% to 34.2% absolute) and further enhances user experience by reducing tool use latency by 20%. Importantly, our streaming RAG approach is modality-agnostic and can be applied equally to typed input, paving the way for more agentic, real-time AI assistants.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "End-to-end speech-in/speech-out dialogue system with streaming tool use for factual grounding",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

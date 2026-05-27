@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1098",
+  "source_ids": {
+    "isca": "ogura25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1098"
+  },
+  "title": "GST-BERT-TTS: Prosody Prediction Without Accentual Labels For Multi-Speaker TTS Using BERT With Global Style Tokens",
+  "authors": [
+    "Tadashi Ogura",
+    "Takuma Okamoto",
+    "Yamato Ohtani",
+    "Erica Cooper",
+    "Tomoki Toda",
+    "Hisashi Kawai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/ogura25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/ogura25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1098.pdf",
+  "pdf_source": "isca",
+  "abstract": "Prosody prediction is crucial for pitch-accent languages like Japanese in text-to-speech (TTS) synthesis. Traditional methods rely on accent labels, which are often incomplete and do not generalize well. BERT-based models, such as fo-BERT, enable fundamental frequency prediction without accent labels but have been limited to single-speaker TTS. We propose GST-BERT-TTS, a novel method for multi-speaker TTS that integrates speaker-specific style embeddings from global style tokens (GST) into the token embeddings in BERT. The proposed method can realize speaker-aware fundamental frequency (fo) prediction in an accent label-free setting. Additionally, we extend fo-BERT to predict not only log fo but also energy and duration, improving speech expressiveness. Experiments using a Japanese multi-speaker TTS corpus demonstrate that GST-BERT-TTS improves the prosody prediction accuracy and synthesis quality compared with fo-BERT.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "BERT-based prosody prediction without accent labels for multi-speaker Japanese TTS; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

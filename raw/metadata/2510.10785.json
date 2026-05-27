@@ -1,0 +1,37 @@
+{
+  "id": "2510.10785",
+  "source_ids": {
+    "arxiv": "2510.10785"
+  },
+  "title": "FAC-FACodec: Controllable Zero-Shot Foreign Accent Conversion with Factorized Speech Codec",
+  "authors": [
+    "Yurii Halychanskyi",
+    "Cameron Churchwell",
+    "Yutong Wen",
+    "Volodymyr Kindratenko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.10785",
+  "pdf_url": "https://arxiv.org/pdf/2510.10785.pdf",
+  "pdf_path": "raw/papers/2510.10785.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Previous accent conversion (AC) methods, including foreign accent conversion (FAC), lack explicit control over the degree of modification. Because accent modification can alter the perceived speaker identity, balancing conversion strength and identity preservation is crucial. We present an AC framework that provides an explicit, user-controllable parameter to adjust the strength of pronunciation-level accent modification. Results show performance comparable to recent AC systems, stronger preservation of speaker identity, and unique support for controllable accent conversion.",
+  "arxiv_comment": "5 pages, 2 figures. Accepted to ICASSP 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Zero-shot foreign accent conversion with controllable conversion strength via factorized speech codec",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

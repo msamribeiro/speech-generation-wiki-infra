@@ -1,0 +1,36 @@
+{
+  "id": "2601.13835",
+  "source_ids": {
+    "arxiv": "2601.13835"
+  },
+  "title": "The Role of Prosodic and Lexical Cues in Turn-Taking with Self-Supervised Speech Representations",
+  "authors": [
+    "Sam OConnor Russell",
+    "Delphine Charuau",
+    "Naomi Harte"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.13835",
+  "pdf_url": "https://arxiv.org/pdf/2601.13835.pdf",
+  "pdf_path": "raw/papers/2601.13835.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Fluid turn-taking remains a key challenge in human-robot interaction. Self-supervised speech representations (S3Rs) have driven many advances, but it remains unclear whether S3R-based turn-taking models rely on prosodic cues, lexical cues or both. We introduce a vocoder-based approach to control prosody and lexical cues in speech more cleanly than prior work. This allows us to probe the voice-activity projection model, an S3R-based turn-taking model. We find that prediction on prosody-matched, unintelligible noise is similar to accuracy on clean speech. This reveals both prosodic and lexical cues support turn-taking, but either can be used in isolation. Hence, future models may only require prosody, providing privacy and potential performance benefits. When either prosodic or lexical information is disrupted, the model exploits the other without further training, indicating they are encoded in S3Rs with limited interdependence. Results are consistent in CPC-based and wav2vec2.0 S3Rs. We discuss our findings and highlight a number of directions for future work. All code is available to support future research.",
+  "arxiv_comment": "Accepted to ICASSP 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "Studies prosodic vs lexical cues in SSL-based turn-taking with vocoder-controlled speech; borderline - advances turn-taking for SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

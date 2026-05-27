@@ -1,0 +1,59 @@
+{
+  "id": "2507.05177",
+  "source_ids": {
+    "arxiv": "2507.05177",
+    "acl": "2025.emnlp-demos.70",
+    "doi": "10.18653/v1/2025.emnlp-demos.70",
+    "url_acl": "https://aclanthology.org/2025.emnlp-demos.70"
+  },
+  "title": "OpenS2S: Advancing Fully Open-Source End-to-End Empathetic Large Speech Language Model",
+  "authors": [
+    "Chen Wang",
+    "Tianyu Peng",
+    "Wen Yang",
+    "Yinan Bai",
+    "Guangfu Wang",
+    "Jun Lin",
+    "Lanpeng Jia",
+    "Lingxiang Wu",
+    "Jinqiao Wang",
+    "Chengqing Zong"
+  ],
+  "authors_full": [
+    "Chen Wang",
+    "Tianyu Peng",
+    "Wen Yang",
+    "Yinan Bai",
+    "Guangfu Wang",
+    "Jun Lin",
+    "Lanpeng Jia",
+    "Lingxiang Wu",
+    "Jinqiao Wang",
+    "Chengqing Zong",
+    "Jiajun Zhang"
+  ],
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-10-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.05177",
+  "pdf_url": "https://aclanthology.org/2025.emnlp-demos.70.pdf",
+  "pdf_path": "raw/papers/2507.05177.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Empathetic interaction is a cornerstone of human-machine communication, due to the need for understanding speech enriched with paralinguistic cues and generating emotional and expressive responses. However, the most powerful empathetic LSLMs are increasingly closed off, leaving the crucial details about the architecture, data and development opaque to researchers. Given the critical need for transparent research into the LSLMs and empathetic behavior, we present OpenS2S, a fully open-source, transparent and end-to-end LSLM designed to enable empathetic speech interactions. Based on our empathetic speech-to-text model BLSP-Emo, OpenS2S further employs a streaming interleaved decoding architecture to achieve low-latency speech generation. To facilitate end-to-end training, OpenS2S incorporates an automated data construction pipeline that synthesizes diverse, high-quality empathetic speech dialogues at low cost. By leveraging large language models to generate empathetic content and controllable text-to-speech systems to introduce speaker and emotional variation, we construct a scalable training corpus with rich paralinguistic diversity and minimal human supervision. We release the fully open-source OpenS2S model, including the dataset, model weights, pre-training and fine-tuning codes, to empower the broader research community and accelerate innovation in empathetic speech systems. The project webpage can be accessed at https://casia-lm.github.io/OpenS2S",
+  "arxiv_comment": "Technical Report, Update on OpenS2S_v1.5",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "arXiv version of OpenS2S empathetic speech LLM; directly advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

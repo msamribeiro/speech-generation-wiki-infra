@@ -1,0 +1,38 @@
+{
+  "id": "2509.09631",
+  "source_ids": {
+    "arxiv": "2509.09631"
+  },
+  "title": "DiFlow-TTS: Compact and Low-Latency Zero-Shot Text-to-Speech with Factorized Discrete Flow Matching",
+  "authors": [
+    "Ngoc-Son Nguyen",
+    "Thanh V. T. Tran",
+    "Hieu-Nghia Huynh-Nguyen",
+    "Truong-Son Hy",
+    "Van Nguyen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.09631",
+  "pdf_url": "https://arxiv.org/pdf/2509.09631.pdf",
+  "pdf_path": "raw/papers/2509.09631.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces DiFlow-TTS, a novel zero-shot text-to-speech (TTS) system that employs discrete flow matching for generative speech modeling. We position this work as an entry point that may facilitate further advances in this research direction. Through extensive empirical evaluation, we analyze both the strengths and limitations of this approach across key aspects, including naturalness, expressive attributes, speaker identity, and inference latency. To this end, we leverage factorized speech representations and design a deterministic Phoneme-Content Mapper for modeling linguistic content, together with a Factorized Discrete Flow Denoiser that jointly models multiple discrete token streams corresponding to prosody and acoustics to capture expressive speech attributes. Experimental results demonstrate that DiFlow-TTS achieves strong performance across multiple metrics while maintaining a compact model size, up to 11.7 times smaller, and enabling low-latency inference that is up to 34 times faster than recent state-of-the-art baselines. Audio samples are available on our demo page: https://diflow-tts.github.io.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Zero-shot TTS with factorized discrete flow matching for compact low-latency synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

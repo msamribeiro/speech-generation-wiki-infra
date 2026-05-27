@@ -1,0 +1,37 @@
+{
+  "id": "2025.coling-main.455",
+  "source_ids": {
+    "acl": "2025.coling-main.455",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Speech Foundation Models and Crowdsourcing for Efficient, High-Quality Data Collection",
+  "authors": [
+    "Beomseok Lee",
+    "Marco Gaido",
+    "Ioan Calapodescu",
+    "Laurent Besacier",
+    "Matteo Negri"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.coling-main.455",
+  "pdf_url": "https://aclanthology.org/2025.coling-main.455.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "While crowdsourcing is an established solution for facilitating and scaling the collection of speech data, the involvement of non-experts necessitates protocols to ensure final data quality. To reduce the costs of these essential controls, this paper investigates the use of Speech Foundation Models (SFMs) to automate the validation process, examining for the first time the cost/quality trade-off in data acquisition. Experiments conducted on French, German, and Korean data demonstrate that SFM-based validation has the potential to reduce reliance on human validation, resulting in an estimated cost saving of over 40.0% without degrading final data quality. These findings open new opportunities for more efficient, cost-effective, and scalable speech data acquisition.",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Uses SFMs for crowdsourced data quality control; primary task is data collection methodology, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

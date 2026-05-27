@@ -1,0 +1,37 @@
+{
+  "id": "2509.23147",
+  "source_ids": {
+    "arxiv": "2509.23147"
+  },
+  "title": "BFA: Real-time Multilingual Text-to-speech Forced Alignment",
+  "authors": [
+    "Abdul Rehman",
+    "Jingyao Cai",
+    "Jian-Jun Zhang",
+    "Xiaosong Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.23147",
+  "pdf_url": "https://arxiv.org/pdf/2509.23147.pdf",
+  "pdf_path": "raw/papers/2509.23147.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present Bournemouth Forced Aligner (BFA), a system that combines a Contextless Universal Phoneme Encoder (CUPE) with a connectionist temporal classification (CTC)based decoder. BFA introduces explicit modelling of inter-phoneme gaps and silences and hierarchical decoding strategies, enabling fine-grained boundary prediction. Evaluations on TIMIT and Buckeye corpora show that BFA achieves competitive recall relative to Montreal Forced Aligner at relaxed tolerance levels, while predicting both onset and offset boundaries for richer temporal structure. BFA processes speech up to 240x faster than MFA, enabling faster than real-time alignment. This combination of speed and silence-aware alignment opens opportunities for interactive speech applications previously constrained by slow aligners.",
+  "arxiv_comment": "Under review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Real-time multilingual forced aligner for TTS supporting phoneme-level duration control",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

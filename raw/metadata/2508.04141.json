@@ -1,0 +1,38 @@
+{
+  "id": "2508.04141",
+  "source_ids": {
+    "arxiv": "2508.04141"
+  },
+  "title": "Parallel GPT: Harmonizing the Independence and Interdependence of Acoustic and Semantic Information for Zero-Shot Text-to-Speech",
+  "authors": [
+    "Jingyuan Xing",
+    "Zhipeng Li",
+    "Jialong Mai",
+    "Xiaofen Xing",
+    "Xiangmin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.04141",
+  "pdf_url": "https://arxiv.org/pdf/2508.04141.pdf",
+  "pdf_path": "raw/papers/2508.04141.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Advances in speech representation and large language models have enhanced zero-shot text-to-speech (TTS) performance. However, existing zero-shot TTS models face challenges in capturing the complex correlations between acoustic and semantic features, resulting in a lack of expressiveness and similarity. The primary reason lies in the complex relationship between semantic and acoustic features, which manifests independent and interdependent aspects.This paper introduces a TTS framework that combines both autoregressive (AR) and non-autoregressive (NAR) modules to harmonize the independence and interdependence of acoustic and semantic information. The AR model leverages the proposed Parallel Tokenizer to synthesize the top semantic and acoustic tokens simultaneously. In contrast, considering the interdependence, the Coupled NAR model predicts detailed tokens based on the general AR model's output. Parallel GPT, built on this architecture, is designed to improve zero-shot text-to-speech synthesis through its parallel structure. Experiments on English and Chinese datasets demonstrate that the proposed model significantly outperforms the quality and efficiency of the synthesis of existing zero-shot TTS models. Speech demos are available at https://t1235-ch.github.io/pgpt/.",
+  "arxiv_comment": "Submitted to IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Zero-shot TTS addressing acoustic-semantic correlation with parallel generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

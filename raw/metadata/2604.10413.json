@@ -1,0 +1,37 @@
+{
+  "id": "2604.10413",
+  "source_ids": {
+    "arxiv": "2604.10413"
+  },
+  "title": "Sign-to-Speech Prosody Transfer via Sign Reconstruction-based GAN",
+  "authors": [
+    "Toranosuke Manabe",
+    "Yuto Shibata",
+    "Shinnosuke Takamichi",
+    "Yoshimitsu Aoki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.10413",
+  "pdf_url": "https://arxiv.org/pdf/2604.10413.pdf",
+  "pdf_path": "raw/papers/2604.10413.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Deep learning models have improved sign language-to-text translation and made it easier for non-signers to understand signed messages. When the goal is spoken communication, a naive approach is to convert signed messages into text and then synthesize speech via Text-to-Speech (TTS). However, this two-stage pipeline inevitably treat text as a bottleneck representation, causing the loss of rich non-verbal information originally conveyed in the signing. To address this limitation, we propose a novel task, \\emph{Sign-to-Speech Prosody Transfer}, which aims to capture the global prosodic nuances expressed in sign language and directly integrate them into synthesized speech. A major challenge is that aligning sign and speech requires expert knowledge, making annotation extremely costly and preventing the construction of large parallel corpora. To overcome this, we introduce \\emph{SignRecGAN}, a scalable training framework that leverages unimodal datasets without cross-modal annotations through adversarial learning and reconstruction losses. Furthermore, we propose \\emph{S2PFormer}, a new model architecture that preserves the expressive power of existing TTS models while enabling the injection of sign-derived prosody into the synthesized speech. Extensive experiments demonstrate that the proposed method can synthesize speech that faithfully reflects the emotional content of sign language, thereby opening new possibilities for more natural sign language communication. Our code will be available upon acceptance.",
+  "arxiv_comment": "Accepted to ICPR 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Sign-to-speech prosody transfer via GAN preserving paralinguistic richness lost in cascaded sign-to-text-to-speech pipeline",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

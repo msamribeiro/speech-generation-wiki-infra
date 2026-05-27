@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-1101",
+  "source_ids": {
+    "isca": "chou25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1101"
+  },
+  "title": "ZSDEVC: Zero-Shot Diffusion-based Emotional Voice Conversion with Disentangled Mechanism",
+  "authors": [
+    "Hsing-Hang Chou",
+    "Yun-Shao Lin",
+    "Ching-Chin Sung",
+    "Yu Tsao",
+    "Chi-Chun Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chou25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/chou25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1101.pdf",
+  "pdf_source": "isca",
+  "abstract": "The human voice conveys not just words but also emotional states and individuality. Emotional voice conversion (EVC) modifies emotional expressions while preserving linguistic content and speaker identity, improving applications like human-machine interaction. While deep learning has advanced EVC models for specific target speakers on well-crafted emotional datasets, existing methods often face issues with emotion accuracy and speech distortion. In addition, the zero-shot scenario, in which emotion conversion is applied to unseen speakers, remains underexplored. This work introduces a novel diffusion framework with disentangled mechanisms and expressive guidance, trained on a large emotional speech dataset and evaluated on unseen speakers across in-domain and out-of-domain datasets. Experimental results show that our method produces expressive speech with high emotional accuracy, naturalness, and quality, showcasing its potential for broader EVC applications.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Zero-shot diffusion-based emotional voice conversion with disentangled mechanism; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

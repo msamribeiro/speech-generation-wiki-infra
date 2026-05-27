@@ -1,0 +1,43 @@
+{
+  "id": "2508.07302",
+  "source_ids": {
+    "arxiv": "2508.07302"
+  },
+  "title": "XEmoRAG: Cross-Lingual Emotion Transfer with Controllable Intensity Using Retrieval-Augmented Generation",
+  "authors": [
+    "Tianlun Zuo",
+    "Jingbin Hu",
+    "Yuke Li",
+    "Xinfa Zhu",
+    "Hai Li",
+    "Ying Yan",
+    "Junhui Liu",
+    "Danming Xie",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.07302",
+  "pdf_url": "https://arxiv.org/pdf/2508.07302.pdf",
+  "pdf_path": "raw/papers/2508.07302.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot emotion transfer in cross-lingual speech synthesis refers to generating speech in a target language, where the emotion is expressed based on reference speech from a different source language. However, this task remains challenging due to the scarcity of parallel multilingual emotional corpora, the presence of foreign accent artifacts, and the difficulty of separating emotion from language-specific prosodic features. In this paper, we propose XEmoRAG, a novel framework to enable zero-shot emotion transfer from Chinese to Thai using a large language model (LLM)-based model, without relying on parallel emotional data. XEmoRAG extracts language-agnostic emotional embeddings from Chinese speech and retrieves emotionally matched Thai utterances from a curated emotional database, enabling controllable emotion transfer without explicit emotion labels. Additionally, a flow-matching alignment module minimizes pitch and duration mismatches, ensuring natural prosody. It also blends Chinese timbre into the Thai synthesis, enhancing rhythmic accuracy and emotional expression, while preserving speaker characteristics and emotional consistency. Experimental results show that XEmoRAG synthesizes expressive and natural Thai speech using only Chinese reference audio, without requiring explicit emotion labels. These results highlight XEmoRAG's capability to achieve flexible and low-resource emotional transfer across languages. Our demo is available at https://tlzuo-lesley.github.io/Demo-page/ .",
+  "arxiv_comment": "Accepted by ASRU 2025",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Zero-shot cross-lingual emotion transfer in speech synthesis via retrieval-augmented generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

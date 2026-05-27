@@ -1,0 +1,40 @@
+{
+  "id": "2510.20513",
+  "source_ids": {
+    "arxiv": "2510.20513"
+  },
+  "title": "Decoding the Ear: A Framework for Objectifying Expressiveness from Human Preference Through Efficient Alignment",
+  "authors": [
+    "Zhiyu Lin",
+    "Jingwen Yang",
+    "Jiale Zhao",
+    "Meng Liu",
+    "Sunzhu Li",
+    "Benyou Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.20513",
+  "pdf_url": "https://arxiv.org/pdf/2510.20513.pdf",
+  "pdf_path": "raw/papers/2510.20513.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent speech-to-speech (S2S) models generate intelligible speech but still lack natural expressiveness, largely due to the absence of a reliable evaluation metric. Existing approaches, such as subjective MOS ratings, low-level acoustic features, and emotion recognition are costly, limited, or incomplete. To address this, we present DeEAR (Decoding the Expressive Preference of eAR), a framework that converts human preference for speech expressiveness into an objective score. Grounded in phonetics and psychology, DeEAR evaluates speech across three dimensions: Emotion, Prosody, and Spontaneity, achieving strong alignment with human perception (Spearman's Rank Correlation Coefficient, SRCC = 0.86) using fewer than 500 annotated samples. Beyond reliable scoring, DeEAR enables fair benchmarking and targeted data curation. It not only distinguishes expressiveness gaps across S2S models but also selects 14K expressive utterances to form ExpressiveSpeech, which improves the expressive score (from 2.0 to 23.4 on a 100-point scale) of S2S models. Demos and codes are available at https://github.com/FreedomIntelligence/ExpressiveSpeech",
+  "arxiv_comment": "Submitted to ICASSP 2026. Demos and codes are available at https://github.com/FreedomIntelligence/ExpressiveSpeech",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Expressiveness evaluation metric via human preference alignment; directly addresses TTS quality assessment.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

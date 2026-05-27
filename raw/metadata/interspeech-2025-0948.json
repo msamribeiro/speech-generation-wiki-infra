@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-0948",
+  "source_ids": {
+    "isca": "qi25_interspeech",
+    "doi": "10.21437/Interspeech.2025-948"
+  },
+  "title": "PromptEVC: Controllable Emotional Voice Conversion with Natural Language Prompts",
+  "authors": [
+    "Tianhua Qi",
+    "Shiyan Wang",
+    "Cheng Lu",
+    "Tengfei Song",
+    "Hao Yang",
+    "Zhanglin Wu",
+    "Wenming Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/qi25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/qi25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0948.pdf",
+  "pdf_source": "isca",
+  "abstract": "Controllable emotional voice conversion (EVC) aims to manipulate emotional expressions to increase the diversity of synthesized speech. Existing methods typically rely on predefined labels, reference audios, or prespecified factor values, often overlooking individual differences in emotion perception and expression. In this paper, we introduce PromptEVC that utilizes natural language prompts for precise and flexible emotion control. To bridge text descriptions with emotional speech, we propose emotion descriptor and prompt mapper to generate fine-grained emotion embeddings, trained jointly with reference embeddings. To enhance naturalness, we present a prosody modeling and control pipeline that adjusts the rhythm based on linguistic content and emotional cues. Additionally, a speaker encoder is incorporated to preserve identity. Experimental results demonstrate that PromptEVC outperforms state-of-the-art controllable EVC methods in emotion conversion, intensity control, mixed emotion synthesis, and prosody manipulation.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Controllable emotional voice conversion with natural language prompts; advances VC/TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

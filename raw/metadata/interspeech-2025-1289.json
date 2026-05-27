@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-1289",
+  "source_ids": {
+    "isca": "zhang25k_interspeech",
+    "doi": "10.21437/Interspeech.2025-1289"
+  },
+  "title": "Unlocking Temporal Flexibility: Neural Speech Codec with Variable Frame Rate",
+  "authors": [
+    "Hanglei Zhang",
+    "Yiwei Guo",
+    "Zhihan Li",
+    "Xiang Hao",
+    "Xie Chen",
+    "Kai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhang25k_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhang25k_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1289.pdf",
+  "pdf_source": "isca",
+  "abstract": "Most neural speech codecs achieve bitrate adjustment through intra-frame mechanisms, such as codebook dropout, at a Constant Frame Rate (CFR). However, speech segments inherently have time-varying information density (e.g., silent intervals versus voiced regions). This property makes CFR not optimal in terms of bitrate and token sequence length, hindering efficiency in real-time applications. In this work, we propose a Temporally Flexible Coding (TFC) technique, introducing variable frame rate (VFR) into neural speech codecs for the first time. TFC enables seamlessly tunable average frame rates and dynamically allocates frame rates based on temporal entropy. Experimental results show that a codec with TFC achieves optimal reconstruction quality with high flexibility, and maintains competitive performance even at lower frame rates. Our approach is promising for the integration with other efforts to develop low-frame-rate neural speech codecs for more efficient downstream tasks.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Neural speech codec with variable frame rate exploiting speech information density; advances codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

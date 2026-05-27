@@ -1,0 +1,38 @@
+{
+  "id": "2604.11803",
+  "source_ids": {
+    "arxiv": "2604.11803"
+  },
+  "title": "Saar-Voice: A Multi-Speaker Saarbrücken Dialect Speech Corpus",
+  "authors": [
+    "Lena S. Oberkircher",
+    "Jesujoba O. Alabi",
+    "Dietrich Klakow",
+    "Jürgen Trouvain"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.11803",
+  "pdf_url": "https://arxiv.org/pdf/2604.11803.pdf",
+  "pdf_path": "raw/papers/2604.11803.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Natural language processing (NLP) and speech technologies have made significant progress in recent years; however, they remain largely focused on standardized language varieties. Dialects, despite their cultural significance and widespread use, are underrepresented in linguistic resources and computational models, resulting in performance disparities. To address this gap, we introduce Saar-Voice, a six-hour speech corpus for the Saarbrücken dialect of German. The dataset was created by first collecting text through digitized books and locally sourced materials. A subset of this text was recorded by nine speakers, and we conducted analyses on both the textual and speech components to assess the dataset's characteristics and quality. We discuss methodological challenges related to orthographic and speaker variation, and explore grapheme-to-phoneme (G2P) conversion. The resulting corpus provides aligned textual and audio representations. This serves as a foundation for future research on dialect-aware text-to-speech (TTS), particularly in low-resource scenarios, including zero-shot and few-shot model adaptation.",
+  "arxiv_comment": "accepted at DialRes-LREC26",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.62,
+  "relevance_note": "Multi-speaker dialect speech corpus for Saarbrücken dialect; primarily corpus resource, borderline TTS enabling.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

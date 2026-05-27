@@ -1,0 +1,38 @@
+{
+  "id": "2509.13670",
+  "source_ids": {
+    "arxiv": "2509.13670"
+  },
+  "title": "A High-Quality and Low-Complexity Streamable Neural Speech Codec with Knowledge Distillation",
+  "authors": [
+    "En-Wei Zhang",
+    "Hui-Peng Du",
+    "Xiao-Hang Jiang",
+    "Yang Ai",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.13670",
+  "pdf_url": "https://arxiv.org/pdf/2509.13670.pdf",
+  "pdf_path": "raw/papers/2509.13670.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While many current neural speech codecs achieve impressive reconstructed speech quality, they often neglect latency and complexity considerations, limiting their practical deployment in downstream tasks such as real-time speech communication and efficient speech compression. In our previous work, we proposed StreamCodec, which enables streamable speech coding by leveraging model causalization and a scalar-vector-combined quantization strategy, but its reconstructed quality and complexity still have room for improvement. Therefore, this paper proposes an improved iteration of StreamCodec, named StreamCodec2. The StreamCodec2 supports streamable and lightweight speech coding by adopting a fully causal architecture and reducing the convolutional channels. To compensate for the speech quality degradation caused by model causalization and pruning, we introduce a non-causal, high-complexity teacher codec to guide the training of StreamCodec2 through knowledge distillation. Experimental results demonstrate that our proposed StreamCodec2, trained with the knowledge distillation strategy, can achieve high-quality speech reconstruction while maintaining low latency (only 20 ms), low computational complexity (only 910 MFLOPs), and low model complexity (only 5.4 M parameters).",
+  "arxiv_comment": "Accepted by APSIPA ASC 2025",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Low-complexity streamable neural speech codec with knowledge distillation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

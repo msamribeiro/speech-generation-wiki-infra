@@ -1,0 +1,39 @@
+{
+  "id": "2601.03170",
+  "source_ids": {
+    "arxiv": "2601.03170"
+  },
+  "title": "TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control for Text-to-Speech Synthesis",
+  "authors": [
+    "Qifan Liang",
+    "Yuansen Liu",
+    "Ruixin Wei",
+    "Nan Lu",
+    "Junchuan Zhao",
+    "Ye Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.03170",
+  "pdf_url": "https://arxiv.org/pdf/2601.03170.pdf",
+  "pdf_path": "raw/papers/2601.03170.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While controllable Text-to-Speech (TTS) has achieved notable progress, most existing methods remain limited to inter-utterance-level control, making fine-grained intra-utterance expression challenging due to their reliance on non-public datasets or complex multi-stage training. In this paper, we propose TED-TTS, a training-free controllable framework for pretrained zero-shot TTS to enable intra-utterance emotion and duration expression. Specifically, we propose a segment-aware emotion conditioning strategy that combines causal masking with monotonic stream alignment filtering to isolate emotion conditioning and schedule mask transitions, enabling smooth intra-utterance emotion shifts while preserving global semantic coherence. Based on this, we further propose a segment-aware duration steering strategy to combine local duration embedding steering with global EOS logit modulation, allowing local duration adjustment while ensuring globally consistent termination. To eliminate the need for segment-level manual prompt engineering, we construct a 30,000-sample multi-emotion and duration-annotated text dataset to enable LLM-based automatic prompt construction. Extensive experiments demonstrate that our training-free method not only achieves state-of-the-art intra-utterance consistency in multi-emotion and duration control, but also maintains baseline-level speech quality of the underlying TTS model. Code and audio samples are available.",
+  "arxiv_comment": "24 pages, 9 figures, 7 tables, 3 lists",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Training-free intra-utterance emotion and duration control framework for pretrained zero-shot TTS models",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

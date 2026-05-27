@@ -1,0 +1,39 @@
+{
+  "id": "2510.24372",
+  "source_ids": {
+    "arxiv": "2510.24372"
+  },
+  "title": "Bayesian Speech Synthesizers Can Learn from Multiple Teachers",
+  "authors": [
+    "Ziyang Zhang",
+    "Yifan Gao",
+    "Xuenan Xu",
+    "Baoxiang Li",
+    "Wen Wu",
+    "Chao Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.24372",
+  "pdf_url": "https://arxiv.org/pdf/2510.24372.pdf",
+  "pdf_path": "raw/papers/2510.24372.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-Speech (TTS) is inherently a \"one-to-many\" mapping characterized by intrinsic uncertainty, yet current paradigms often oversimplify it into a deterministic regression task. While continuous-valued autoregressive (AR) models have recently emerged as a promising alternative to discrete codec-based approaches, they typically rely on a fixed-variance prior, fundamentally constraining generation to a static point estimate that ignores the dynamic variability of natural speech. To bridge this gap, we propose BELLE (Bayesian evidential learning with language modelling), a framework that shifts from deterministic prediction to principled Bayesian inference without increasing model parameters or inference latency. By modeling the acoustic target as a Normal-Inverse-Gamma distribution, BELLE captures data-dependent aleatoric uncertainty. To enable accurate variance estimation on standard single-reference datasets, we introduce a \"one-to-many\" training strategy that leverages synthetic samples as a statistical support set, allowing the model to learn robust distributional properties rather than merely imitating teacher artifacts. Experiments demonstrate that BELLE, trained on only ~5k hours of data, outperforms leading open-source models trained on 50k hours (achieving a 25.8% relative WER reduction) and naturally supports high-quality streaming generation. Audio samples are available at https://belletts.github.io/Belle/.",
+  "arxiv_comment": "Code is available at https://github.com/OpenTSLab/BELLE",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Bayesian continuous-valued autoregressive TTS modeling intrinsic one-to-many uncertainty in speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

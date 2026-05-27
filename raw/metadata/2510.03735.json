@@ -1,0 +1,37 @@
+{
+  "id": "2510.03735",
+  "source_ids": {
+    "arxiv": "2510.03735"
+  },
+  "title": "Soft Disentanglement in Frequency Bands for Neural Audio Codecs",
+  "authors": [
+    "Benoit Ginies",
+    "Xiaoyu Bie",
+    "Olivier Fercoq",
+    "Gaël Richard"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.03735",
+  "pdf_url": "https://arxiv.org/pdf/2510.03735.pdf",
+  "pdf_path": "raw/papers/2510.03735.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In neural-based audio feature extraction, ensuring that representations capture disentangled information is crucial for model interpretability. However, existing disentanglement methods often rely on assumptions that are highly dependent on data characteristics or specific tasks. In this work, we introduce a generalizable approach for learning disentangled features within a neural architecture. Our method applies spectral decomposition to time-domain signals, followed by a multi-branch audio codec that operates on the decomposed components. Empirical evaluations demonstrate that our approach achieves better reconstruction and perceptual performance compared to a state-of-the-art baseline while also offering potential advantages for inpainting tasks.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Frequency-band disentanglement method for neural audio codecs improving representation quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

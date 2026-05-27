@@ -1,0 +1,55 @@
+{
+  "id": "2511.18487",
+  "source_ids": {
+    "arxiv": "2511.18487"
+  },
+  "title": "InstructAudio: Unified speech and music generation with natural language instruction",
+  "authors": [
+    "Chunyu Qiang",
+    "Kang Yin",
+    "Xiaopeng Wang",
+    "Yuzhe Liang",
+    "Jiahui Zhao",
+    "Ruibo Fu",
+    "Tianrui Wang",
+    "Cheng Gong",
+    "Chen Zhang",
+    "Longbiao Wang"
+  ],
+  "authors_full": [
+    "Chunyu Qiang",
+    "Kang Yin",
+    "Xiaopeng Wang",
+    "Yuzhe Liang",
+    "Jiahui Zhao",
+    "Ruibo Fu",
+    "Tianrui Wang",
+    "Cheng Gong",
+    "Chen Zhang",
+    "Longbiao Wang",
+    "Jianwu Dang"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.18487",
+  "pdf_url": "https://arxiv.org/pdf/2511.18487.pdf",
+  "pdf_path": "raw/papers/2511.18487.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech (TTS) and text-to-music (TTM) models face significant limitations in instruction-based control. TTS systems usually depend on reference audio for timbre, offer only limited text-level attribute control, and rarely support dialogue generation. TTM systems are constrained by input conditioning requirements that depend on expert knowledge annotations. The high heterogeneity of these input control conditions makes them difficult to joint modeling with speech synthesis. Despite sharing common acoustic modeling characteristics, these two tasks have long been developed independently, leaving open the challenge of achieving unified modeling through natural language instructions. We introduce InstructAudio, a unified framework that enables instruction-based (natural language descriptions) control of acoustic attributes including timbre (gender, age), paralinguistic (emotion, style, accent), and musical (genre, instrument, rhythm, atmosphere). It supports expressive speech, music, and dialogue generation in English and Chinese. The model employs joint and single diffusion transformer layers with a standardized instruction-phoneme input format, trained on 50K hours of speech and 20K hours of music data, enabling multi-task learning and cross-modal alignment. Fig. 1 visualizes performance comparisons with mainstream TTS and TTM models, demonstrating that InstructAudio achieves optimal results on most metrics. To our best knowledge, InstructAudio represents the first instruction-controlled framework unifying speech and music generation. Audio samples are available at: https://qiangchunyu.github.io/InstructAudio/",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Unified instruction-conditioned framework for TTS and text-to-music with natural language style control",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

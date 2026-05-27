@@ -1,0 +1,34 @@
+{
+  "id": "2512.16395",
+  "source_ids": {
+    "arxiv": "2512.16395"
+  },
+  "title": "BEST-STD2.0: Balanced and Efficient Speech Tokenizer for Spoken Term Detection",
+  "authors": [
+    "Anup Singh",
+    "Vipul Arora",
+    "Kris Demuynck"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.16395",
+  "pdf_url": "https://arxiv.org/pdf/2512.16395.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Fast and accurate spoken content retrieval is vital for applications such as voice search. Query-by-Example Spoken Term Detection (STD) involves retrieving matching segments from an audio database given a spoken query. Token-based STD systems, which use discrete speech representations, enable efficient search but struggle with robustness to noise and reverberation, and with inefficient token utilization. We address these challenges by proposing a noise and reverberation-augmented training strategy to improve tokenizer robustness. In addition, we introduce optimal transport-based regularization to ensure balanced token usage and enhance token efficiency. To further speed up retrieval, we adopt a TF-IDF-based search mechanism. Empirical evaluations demonstrate that the proposed method outperforms STD baselines across various distortion levels while maintaining high search efficiency.",
+  "arxiv_comment": "Accepted in ICASSP 2026",
+  "task": [],
+  "relevance_score": 0.48,
+  "relevance_note": "Speech tokenizer for spoken term detection; tokenizer is the contribution but application is retrieval, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

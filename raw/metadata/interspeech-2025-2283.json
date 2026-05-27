@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2283",
+  "source_ids": {
+    "isca": "zhong25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-2283"
+  },
+  "title": "Pairwise Evaluation of Accent Similarity in Speech Synthesis",
+  "authors": [
+    "Jinzuomu Zhong",
+    "Suyuan Liu",
+    "Dan Wells",
+    "Korin Richmond"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/zhong25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/zhong25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2283.pdf",
+  "pdf_source": "isca",
+  "abstract": "Despite growing interest in generating high-fidelity accents, evaluating accent similarity in speech synthesis has been underexplored. We aim to enhance both subjective and objective evaluation methods for accent similarity. Subjectively, we refine the XAB listening test by adding components that achieve higher statistical significance with fewer listeners and lower costs. Our method involves providing listeners with transcriptions, having them highlight perceived accent differences, and implementing meticulous screening for reliability. Objectively, we utilise pronunciation-related metrics, based on distances between vowel formants and phonetic posteriorgrams, to evaluate accent generation. Comparative experiments reveal that these metrics, alongside accent similarity, speaker similarity, and Mel Cepstral Distortion, can be used. Moreover, our findings underscore significant limitations of common metrics like Word Error Rate in assessing underrepresented accents.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Interspeech version of pairwise accent similarity evaluation; advances TTS evaluation methodology.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

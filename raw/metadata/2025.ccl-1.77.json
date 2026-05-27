@@ -1,0 +1,42 @@
+{
+  "id": "2025.ccl-1.77",
+  "source_ids": {
+    "acl": "2025.ccl-1.77",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.ccl-1.77"
+  },
+  "title": "HFSD-V2C: Zero-Shot Visual Voice Cloning Via Hierarchical Face-Styled Diffusion Model",
+  "authors": [
+    "Yaping Liu",
+    "Linqin Wang",
+    "Shengxiang Gao",
+    "Zhengtao Yu",
+    "Ling Dong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.ccl-1.77",
+  "pdf_url": "https://aclanthology.org/2025.ccl-1.77.pdf",
+  "pdf_path": "raw/papers/2025.ccl-1.77.pdf",
+  "pdf_source": "anthology",
+  "abstract": "\"The goal of this work is zero-shot visual voice cloning (ZS-V2C), which aims to generate speech samples with unseen speaker identity and prosody derived from a video clip and an acoustic reference. ZS-V2C presents greater challenges as: 1) unseen speaker modeling; and 2) unseen prosody modeling. Unlike previous works, we propose a novel ZS-V2C framework that incorporates a hierarchical face-styled diffusion model (HFSD-V2C). Specifically, first, we leverage cross-modal biometrics to predict unseen speaker embeddings based on facial features. Then, we jointly model the unseen prosodic features at the text, speech and video levels. Finally, a diffusion model is constructed based on the embeddings of the unseen speaker and prosodic features,enabling the generation of expressive and diverse speech. Extensive experiments on the LRS2and GRID benchmark dataset demonstrate the superior performance of our proposed method.\"",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Zero-shot visual voice cloning framework generating speech from face video; directly advances conditional TTS/VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2603.16280",
+  "source_ids": {
+    "arxiv": "2603.16280"
+  },
+  "title": "CAST-TTS: A Simple Cross-Attention Framework for Unified Timbre Control in TTS",
+  "authors": [
+    "Zihao Zheng",
+    "Wen Wu",
+    "Chao Zhang",
+    "Mengyue Wu",
+    "Xuenan Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.16280",
+  "pdf_url": "https://arxiv.org/pdf/2603.16280.pdf",
+  "pdf_path": "raw/papers/2603.16280.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current Text-to-Speech (TTS) systems typically use separate models for speech-prompted and text-prompted timbre control. While unifying both control signals into a single model is desirable, the challenge of cross-modal alignment often results in overly complex architectures and training objective. To address this challenge, we propose CAST-TTS, a simple yet effective framework for unified timbre control. Features are extracted from speech prompts and text prompts using pre-trained encoders. The multi-stage training strategy efficiently aligns the speech and projected text representations within a shared embedding space. A single cross-attention mechanism then allows the model to use either of these representations to control the timbre. Extensive experiments validate that the unified cross-attention mechanism is critical for achieving high-quality synthesis. CAST-TTS achieves performance comparable to specialized single-input models while operating within a unified architecture. The demo page can be accessed at https://HiRookie9.github.io/CAST-TTS-Page.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Simple cross-attention framework unifying speech-prompted and text-prompted timbre control in a single TTS model",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

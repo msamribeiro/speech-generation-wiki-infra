@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-1494",
+  "source_ids": {
+    "isca": "que25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1494"
+  },
+  "title": "VisualSpeech: Enhancing Prosody Modeling in TTS Using Video",
+  "authors": [
+    "Shumin Que",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/que25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/que25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1494.pdf",
+  "pdf_source": "isca",
+  "abstract": "Text-to-Speech (TTS) synthesis faces the inherent challenge of producing multiple speech outputs with varying prosody given a single text input. While previous research has addressed this by predicting prosodic information from both text and speech, additional contextual information, such as video, remains under-utilized despite being available in many applications. This paper investigates the potential of integrating visual context to enhance prosody prediction. We propose a novel model, VisualSpeech, which incorporates visual and textual information for improving prosody generation in TTS. Empirical results indicate that incorporating visual features improves prosodic modeling, enhancing the expressiveness of the synthesized speech.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Interspeech version of VisualSpeech video-enhanced prosody modeling for TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2509.09748",
+  "source_ids": {
+    "arxiv": "2509.09748"
+  },
+  "title": "DiTReducio: A Training-Free Acceleration for DiT-Based TTS via Progressive Calibration",
+  "authors": [
+    "Yanru Huo",
+    "Ziyue Jiang",
+    "Zuoli Tang",
+    "Qingyang Hong",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.09748",
+  "pdf_url": "https://arxiv.org/pdf/2509.09748.pdf",
+  "pdf_path": "raw/papers/2509.09748.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While Diffusion Transformers (DiT) have advanced non-autoregressive (NAR) speech synthesis, their high computational demands remain an limitation. Existing DiT-based text-to-speech (TTS) model acceleration approaches mainly focus on reducing sampling steps through distillation techniques, yet they remain constrained by training costs. We introduce DiTReducio, a training-free acceleration framework that compresses computations in DiT-based TTS models via progressive calibration. We propose two compression methods, Temporal Skipping and Branch Skipping, to eliminate redundant computations during inference. Moreover, based on two characteristic attention patterns identified within DiT layers, we devise a pattern-guided strategy to selectively apply the compression methods. Our method allows flexible modulation between generation quality and computational efficiency through adjustable compression thresholds. Experimental evaluations conducted on F5-TTS and MegaTTS 3 demonstrate that DiTReducio achieves a 75.4% reduction in FLOPs and improves the Real-Time Factor (RTF) by 37.1%, while preserving generation quality.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Training-free acceleration for diffusion transformer TTS via progressive layer calibration",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

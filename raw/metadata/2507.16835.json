@@ -1,0 +1,39 @@
+{
+  "id": "2507.16835",
+  "source_ids": {
+    "arxiv": "2507.16835"
+  },
+  "title": "Evaluating Speech-to-Text x LLM x Text-to-Speech Combinations for AI Interview Systems",
+  "authors": [
+    "Rumi Allbert",
+    "Nima Yazdani",
+    "Ali Ansari",
+    "Aruj Mahajan",
+    "Amirhossein Afsharrad",
+    "Seyed Shahabeddin Mousavi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.16835",
+  "pdf_url": "https://arxiv.org/pdf/2507.16835.pdf",
+  "pdf_path": "raw/papers/2507.16835.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice-based conversational AI systems increasingly rely on cascaded architectures that combine speech-to-text (STT), large language models (LLMs), and text-to-speech (TTS) components. We present a large-scale empirical comparison of STT x LLM x TTS stacks using data sampled from over 300,000 AI-conducted job interviews. We used an LLM-as-a-Judge automated evaluation framework to assess conversational quality, technical accuracy, and skill assessment capabilities. Our analysis of five production configurations reveals that a stack combining Google's STT, GPT-4.1, and Cartesia's TTS outperforms alternatives in both objective quality metrics and user satisfaction scores. Surprisingly, we find that objective quality metrics correlate weakly with user satisfaction scores, suggesting that user experience in voice-based AI systems depends on factors beyond technical performance. Our findings provide practical guidance for selecting components in multimodal conversations and contribute a validated evaluation methodology for human-AI interactions.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.58,
+  "relevance_note": "Empirical comparison of cascaded STT-LLM-TTS stacks for AI interviews; TTS is evaluated as a component, not advanced.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

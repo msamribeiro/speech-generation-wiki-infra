@@ -1,0 +1,38 @@
+{
+  "id": "2601.02073",
+  "source_ids": {
+    "arxiv": "2601.02073"
+  },
+  "title": "Towards Prosodically Informed Mizo TTS without Explicit Tone Markings",
+  "authors": [
+    "Abhijit Mohanta",
+    "Remruatpuii",
+    "Priyankoo Sarmah",
+    "Rohit Sinha",
+    "Wendy Lalhminghlui"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.02073",
+  "pdf_url": "https://arxiv.org/pdf/2601.02073.pdf",
+  "pdf_path": "raw/papers/2601.02073.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper reports on the development of a text-to-speech (TTS) system for Mizo, a low-resource, tonal, and Tibeto-Burman language spoken primarily in the Indian state of Mizoram. The TTS was built with only 5.18 hours of data; however, in terms of subjective and objective evaluations, the outputs were considered perceptually acceptable and intelligible. A baseline model using Tacotron2 was built, and then, with the same data, another TTS model was built with VITS. In both subjective and objective evaluations, the VITS model outperformed the Tacotron2 model. In terms of tone synthesis, the VITS model showed significantly lower tone errors than the Tacotron2 model. The paper demonstrates that a non-autoregressive, end-to-end framework can achieve synthesis of acceptable perceptual quality and intelligibility.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Low-resource Mizo TTS with prosodic and tonal handling for an underrepresented Tibeto-Burman language",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

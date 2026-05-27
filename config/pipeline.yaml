@@ -1,0 +1,53 @@
+# Fetcher pipeline configuration.
+# Update date_from periodically to advance the rolling window.
+
+# Date window
+date_from: "2024-11-01"
+date_to: null               # null = today
+
+# Target venues per fetcher
+arxiv:
+  categories: ["cs.SD", "eess.AS", "cs.CL"]
+
+acl:
+  venues: ["ACL", "EMNLP", "NAACL", "findings-ACL", "findings-EMNLP", "findings-NAACL"]
+  years: [2024, 2025]
+  include_workshops: true   # all ACL co-located workshops; keyword filter handles relevance
+
+openreview:
+  venues:
+    - id: "NeurIPS.cc/2025/Conference"
+      name: "NeurIPS"
+      year: 2025
+    - id: "ICLR.cc/2025/Conference"
+      name: "ICLR"
+      year: 2025
+    - id: "ICML.cc/2025/Conference"
+      name: "ICML"
+      year: 2025
+
+interspeech:
+  years: [2024, 2025]
+
+icassp:
+  years: [2024, 2025]
+
+# PDF resolution
+unpaywall_email: "msam.web@outlook.com"   # required by Unpaywall ToS
+
+# Paths
+raw_dir: "raw"
+metadata_dir: "raw/metadata"
+papers_dir: "raw/papers"
+
+# Rate limiting (seconds between requests)
+rate_limits:
+  arxiv: 3.0
+  isca: 2.0
+  ieee: 1.0
+  openreview: 1.0
+  semantic_scholar: 1.0
+
+# Environment variables (set in shell, not here):
+#   IEEE_API_KEY
+#   SEMANTIC_SCHOLAR_API_KEY   (optional; raises rate limits substantially)

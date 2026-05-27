@@ -1,0 +1,35 @@
+{
+  "id": "2511.03423",
+  "source_ids": {
+    "arxiv": "2511.03423"
+  },
+  "title": "Seeing What You Say: Expressive Image Generation from Speech",
+  "authors": [
+    "Jiyoung Lee",
+    "Song Park",
+    "Sanghyuk Chun",
+    "Soo-Whan Chung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.03423",
+  "pdf_url": "https://arxiv.org/pdf/2511.03423.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper proposes VoxStudio, the first unified and end-to-end speech-to-image model that generates expressive images directly from spoken descriptions by jointly aligning linguistic and paralinguistic information. At its core is a speech information bottleneck (SIB) module, which compresses raw speech into compact semantic tokens, preserving prosody and emotional nuance. By operating directly on these tokens, VoxStudio eliminates the need for an additional speech-to-text system, which often ignores the hidden details beyond text, e.g., tone or emotion. We also release VoxEmoset, a large-scale paired emotional speech-image dataset built via an advanced TTS engine to affordably generate richly expressive utterances. Comprehensive experiments on the SpokenCOCO, Flickr8kAudio, and VoxEmoset benchmarks demonstrate the feasibility of our method and highlight key challenges, including emotional consistency and linguistic ambiguity, paving the way for future research.",
+  "arxiv_comment": "In progress",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Speech-to-image generation model; output modality is images not speech",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

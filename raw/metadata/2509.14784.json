@@ -1,0 +1,43 @@
+{
+  "id": "2509.14784",
+  "source_ids": {
+    "arxiv": "2509.14784"
+  },
+  "title": "MELA-TTS: Joint transformer-diffusion model with representation alignment for speech synthesis",
+  "authors": [
+    "Keyu An",
+    "Zhiyu Zhang",
+    "Changfeng Gao",
+    "Yabin Li",
+    "Zhendong Peng",
+    "Haoxu Wang",
+    "Zhihao Du",
+    "Han Zhao",
+    "Zhifu Gao",
+    "Xiangang Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14784",
+  "pdf_url": "https://arxiv.org/pdf/2509.14784.pdf",
+  "pdf_path": "raw/papers/2509.14784.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This work introduces MELA-TTS, a novel joint transformer-diffusion framework for end-to-end text-to-speech synthesis. By autoregressively generating continuous mel-spectrogram frames from linguistic and speaker conditions, our architecture eliminates the need for speech tokenization and multi-stage processing pipelines. To address the inherent difficulties of modeling continuous features, we propose a representation alignment module that aligns output representations of the transformer decoder with semantic embeddings from a pretrained ASR encoder during training. This mechanism not only speeds up training convergence, but also enhances cross-modal coherence between the textual and acoustic domains. Comprehensive experiments demonstrate that MELA-TTS achieves state-of-the-art performance across multiple evaluation metrics while maintaining robust zero-shot voice cloning capabilities, in both offline and streaming synthesis modes. Our results establish a new benchmark for continuous feature generation approaches in TTS, offering a compelling alternative to discrete-token-based paradigms.",
+  "arxiv_comment": "accepted by ICASSP 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Joint transformer-diffusion TTS eliminating tokenization with continuous mel-spectrogram generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

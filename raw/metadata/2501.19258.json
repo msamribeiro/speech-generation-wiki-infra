@@ -1,0 +1,35 @@
+{
+  "id": "2501.19258",
+  "source_ids": {
+    "arxiv": "2501.19258"
+  },
+  "title": "VisualSpeech: Enhancing Prosody Modeling in TTS Using Video",
+  "authors": [
+    "Shumin Que",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2501.19258",
+  "pdf_url": "https://arxiv.org/pdf/2501.19258.pdf",
+  "pdf_path": "raw/papers/2501.19258.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-Speech (TTS) synthesis faces the inherent challenge of producing multiple speech outputs with varying prosody given a single text input. While previous research has addressed this by predicting prosodic information from both text and speech, additional contextual information, such as video, remains under-utilized despite being available in many applications. This paper investigates the potential of integrating visual context to enhance prosody prediction. We propose a novel model, VisualSpeech, which incorporates visual and textual information for improving prosody generation in TTS. Empirical results indicate that incorporating visual features improves prosodic modeling, enhancing the expressiveness of the synthesized speech. Audio samples are available at https://ariameetgit.github.io/VISUALSPEECH-SAMPLES/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Investigates video-conditioned prosody modeling for TTS; directly advances prosody control in TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

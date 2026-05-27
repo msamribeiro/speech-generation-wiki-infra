@@ -1,0 +1,40 @@
+{
+  "id": "2025.findings-emnlp.1381",
+  "source_ids": {
+    "acl": "2025.findings-emnlp.1381",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-emnlp.1381"
+  },
+  "title": "UniSpeaker: A Unified Approach for Multimodality-driven Speaker Generation",
+  "authors": [
+    "Zhengyan Sheng",
+    "Zhihao Du",
+    "Heng Lu",
+    "ShiLiang Zhang",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-emnlp.1381",
+  "pdf_url": "https://aclanthology.org/2025.findings-emnlp.1381.pdf",
+  "pdf_path": "raw/papers/2025.findings-emnlp.1381.pdf",
+  "pdf_source": "anthology",
+  "abstract": "While recent advances in reference-based speaker cloning have significantly improved the authenticity of synthetic speech, speaker generation driven by multimodal cues such as visual appearance, textual descriptions, and other biometric signals remains in its early stages. To pioneer truly multimodal-controllable speaker generation, we propose UniSpeaker, the first framework supporting unified voice synthesis from arbitrary modality combinations. Specifically, self-distillation is firstly applied to a large-scale speech generation model for speaker disentanglement. To overcome data sparsity and one-to-many mapping challenges, a novel KV-Former based unified voice aggregator is introduced, where multiple modalities are projected into a shared latent space through soft contrastive learning to ensure accurate alignment with user-specified vocal characteristics. Additionally, to advance the field, the first Multimodal Voice Control (MVC) benchmark is established to evaluate voice suitability, diversity, and quality. When tested across five MVC tasks, UniSpeaker is shown to surpass existing modality-specific models. Speech samples and the MVC benchmark are available at https://UniSpeaker.github.io.",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Unified framework for speaker generation driven by visual, textual, and biometric cues; directly advances conditional TTS/VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

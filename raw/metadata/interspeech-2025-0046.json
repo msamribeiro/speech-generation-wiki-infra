@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-0046",
+  "source_ids": {
+    "isca": "getman25_interspeech",
+    "doi": "10.21437/Interspeech.2025-46"
+  },
+  "title": "Is your model big enough? Training and interpreting large-scale monolingual speech foundation models",
+  "authors": [
+    "Yaroslav Getman",
+    "TamÃ¡s GrÃ³sz",
+    "Tommi Lehtonen",
+    "Mikko Kurimo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/getman25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/getman25_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Self-supervised learning has been widely used in developing speech foundation models. Most languages, however, are only represented in multilingual foundations. We introduce monolingual self-supervised foundation models pre-trained on more than 150,000 hours of Finnish speech and propose a new interpretation technique to understand their capabilities. To our knowledge, this is the largest monolingual data used for self-supervised non-English speech representation learning. Our models demonstrate superior downstream low-resource ASR performance and improved generalization compared to prior work, with absolute WER reductions of up to 14%. Moreover, our proposed interpretation technique, Layer Utilization Rate (LUR), enables us to assess the percentage of neurons in each layer highly contributing towards the output. Empirical results show that the proposed LUR metric can be used to indicate the potential of the fine-tuned model's size and architecture to generalize to unseen domains.",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Monolingual ASR foundation model for Finnish; self-supervised ASR, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

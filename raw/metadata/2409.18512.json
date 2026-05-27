@@ -1,0 +1,42 @@
+{
+  "id": "2409.18512",
+  "source_ids": {
+    "arxiv": "2409.18512"
+  },
+  "title": "Expressive Prompting: Improving Emotion Intensity and Speaker Consistency in Zero-Shot TTS",
+  "authors": [
+    "Haoyu Wang",
+    "Chunyu Qiang",
+    "Tianrui Wang",
+    "Cheng Gong",
+    "Yu Jiang",
+    "Yuheng Lu",
+    "Chen Zhang",
+    "Longbiao Wang",
+    "Jianwu Dang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2409.18512",
+  "pdf_url": "https://arxiv.org/pdf/2409.18512.pdf",
+  "pdf_path": "raw/papers/2409.18512.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in speech synthesis have enabled large language model (LLM)-based systems to perform zero-shot generation with controllable content, timbre, speaker identity, and emotion through input prompts. As a result, these models heavily rely on prompt design to guide the generation process. However, existing prompt selection methods often fail to ensure that prompts contain sufficiently stable speaker identity cues and appropriate emotional intensity indicators, which are crucial for expressive speech synthesis. To address this challenge, we propose a two-stage prompt selection strategy specifically designed for expressive speech synthesis. In the static stage (before synthesis), we first evaluate prompt candidates using pitch-based prosodic features, perceptual audio quality, and text-emotion coherence scores evaluated by an LLM. We further assess the candidates under a specific TTS model by measuring character error rate, speaker similarity, and emotional similarity between the synthesized and prompt speech. In the dynamic stage (during synthesis), we use a textual similarity model to select the prompt that is most aligned with the current input text. Experimental results demonstrate that our strategy effectively selects prompt to synthesize speech with both high-intensity emotional expression and robust speaker identity, leading to more expressive and stable zero-shot TTS performance. Audio samples and codes will be available at https://whyrrrrun.github.io/ExpPro.github.io/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Improved prompt selection for emotion intensity and speaker consistency in zero-shot TTS; directly advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,33 @@
+{
+  "id": "2309.17035",
+  "source_ids": {
+    "arxiv": "2309.17035"
+  },
+  "title": "Contextualising Levels of Language Resourcedness that affect NLP tasks",
+  "authors": [
+    "C. Maria Keet",
+    "Langa Khumalo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2309.17035",
+  "pdf_url": "https://arxiv.org/pdf/2309.17035.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Several widely used software applications involve some form of processing of natural language, with tasks ranging from digitising hardcopies and text processing to speech generation. Varied language resources are used to develop software systems to accomplish a wide range of natural language processing (NLP) tasks, such as the ubiquitous spellcheckers and chatbots. Languages are typically characterised as either low (LRL) or high resourced languages (HRL) with African languages having been characterised as resource-scarce languages and English by far the most well-resourced language. But what lies in-between? We argue that the dichotomous typology of LRL and HRL for all languages is problematic. Through a clear understanding of language resources situated in a society, a matrix is developed that characterises languages as Very LRL, LRL, RL, HRL and Very HRL. The characterisation is based on the typology of contextual features for each category, rather than counting tools. The motivation is provided for each feature and each characterisation. The contextualisation of resourcedness, with a focus on African languages in this paper, and an increased understanding of where on the scale the language used in a project is, may assist in, among others, better planning of research and implementation projects. We thus argue in this paper that the characterisation of language resources within a given scale in a project is an indispensable component, particularly for those in the lower half of the scale.",
+  "arxiv_comment": "27 pages, 2 tables",
+  "task": [],
+  "relevance_score": 0.12,
+  "relevance_note": "Survey of NLP tasks and language resourcedness; speech generation mentioned in passing, not a synthesis paper.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

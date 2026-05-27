@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-0353",
+  "source_ids": {
+    "isca": "xu25e_interspeech",
+    "doi": "10.21437/Interspeech.2025-353"
+  },
+  "title": "Effective and Efficient One-pass Compression of Speech Foundation Models Using Sparsity-aware Self-pinching Gates",
+  "authors": [
+    "Haoning Xu",
+    "Zhaoqing Li",
+    "Youjun Chen",
+    "Huimeng Wang",
+    "Guinan Li",
+    "Mengzhe Geng",
+    "Chengxi Deng",
+    "Xunying Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/xu25e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/xu25e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "This paper presents a novel approach for speech foundation models compression that tightly integrates model pruning and parameter update into a single stage. Highly compact layer-level tied self-pinching gates each containing only a single learnable threshold are jointly trained with uncompressed models and used in fine-grained neuron level pruning. Experiments conducted on the LibriSpeech-100hr corpus suggest that our approach reduces the number of parameters of wav2vec2.0-base and HuBERT-large models by 65% and 60% respectively, while incurring no statistically significant word error rate (WER) increase on the test-clean dataset. Compared to previously published methods on the same task, our approach not only achieves the lowest WER of 7.05% on the test-clean dataset under a comparable model compression ratio of 4.26x, but also operates with at least 25% less model compression time.",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "One-pass compression of speech foundation models; model pruning for ASR, not generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

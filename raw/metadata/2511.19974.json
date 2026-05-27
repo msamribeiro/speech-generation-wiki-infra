@@ -1,0 +1,34 @@
+{
+  "id": "2511.19974",
+  "source_ids": {
+    "arxiv": "2511.19974"
+  },
+  "title": "Continual Audio Deepfake Detection via Universal Adversarial Perturbation",
+  "authors": [
+    "Wangjie Li",
+    "Lin Li",
+    "Qingyang Hong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.19974",
+  "pdf_url": "https://arxiv.org/pdf/2511.19974.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of speech synthesis and voice conversion technologies has raised significant security concerns in multimedia forensics. Although current detection models demonstrate impressive performance, they struggle to maintain effectiveness against constantly evolving deepfake attacks. Additionally, continually fine-tuning these models using historical training data incurs substantial computational and storage costs. To address these limitations, we propose a novel framework that incorporates Universal Adversarial Perturbation (UAP) into audio deepfake detection, enabling models to retain knowledge of historical spoofing distribution without direct access to past data. Our method integrates UAP seamlessly with pre-trained self-supervised audio models during fine-tuning. Extensive experiments validate the effectiveness of our approach, showcasing its potential as an efficient solution for continual learning in audio deepfake detection.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Continual audio deepfake detection via adversarial perturbations; anti-spoofing detection (out of scope)",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

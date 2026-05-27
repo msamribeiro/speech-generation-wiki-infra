@@ -1,0 +1,37 @@
+{
+  "id": "2512.00451",
+  "source_ids": {
+    "arxiv": "2512.00451"
+  },
+  "title": "STCTS: Generative Semantic Compression for Ultra-Low Bitrate Speech via Explicit Text-Prosody-Timbre Decomposition",
+  "authors": [
+    "Siyu Wang",
+    "Haitao Li",
+    "Donglai Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.00451",
+  "pdf_url": "https://arxiv.org/pdf/2512.00451.pdf",
+  "pdf_path": "raw/papers/2512.00451.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice communication in bandwidth-constrained environments--maritime, satellite, and tactical networks--remains prohibitively expensive. Traditional codecs struggle below 1 kbps, while existing semantic approaches (STT-TTS) sacrifice prosody and speaker identity. We present STCTS, a generative semantic compression framework enabling natural voice communication at 80 bps. STCTS explicitly decomposes speech into linguistic content, prosodic expression, and speaker timbre, applying tailored compression: context-aware text encoding (70 bps), sparse prosody transmission via TTS interpolation (<14 bps at 0.1-1 Hz), and amortized speaker embedding.   Evaluations on LibriSpeech demonstrate a 75x bitrate reduction versus Opus (6 kbps) and 12x versus EnCodec (1 kbps), while maintaining perceptual quality (NISQA MOS > 4.26), graceful degradation under packet loss and noise resilience. We also discover a bimodal quality distribution with prosody sampling rate: sparse and dense updates both achieve high quality, while mid-range rates degrade due to perceptual discontinuities--guiding optimal configuration design. Beyond efficiency, our modular architecture supports privacy-preserving encryption, human-interpretable transmission, and flexible deployment on edge devices, offering a robust solution for ultra-low bandwidth scenarios.",
+  "arxiv_comment": "The complete source code and online speech reconstruction demo is publicly available at https://github.com/dywsy21/STCTS",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Generative semantic speech compression at 80bps via explicit text-prosody-timbre decomposition and TTS reconstruction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

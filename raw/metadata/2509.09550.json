@@ -1,0 +1,38 @@
+{
+  "id": "2509.09550",
+  "source_ids": {
+    "arxiv": "2509.09550"
+  },
+  "title": "Finite Scalar Quantization Enables Redundant and Transmission-Robust Neural Audio Compression at Low Bit-rates",
+  "authors": [
+    "Harry Julian",
+    "Rachel Beeson",
+    "Lohith Konathala",
+    "Johanna Ulin",
+    "Jiameng Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.09550",
+  "pdf_url": "https://arxiv.org/pdf/2509.09550.pdf",
+  "pdf_path": "raw/papers/2509.09550.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural Audio Codecs (NACs) have become increasingly adopted in speech processing tasks due to their excellent rate-distortion performance and compatibility with Large Language Models (LLMs) as discrete feature representations for audio generation. While most existing codecs rely on Residual Vector Quantization (RVQ), Finite Scalar Quantization (FSQ) has recently emerged as a compelling alternative that simplifies training and natively supports single codebooks. We introduce NeuCodec, an FSQ-based NAC, and show that FSQ encodes baked-in redundancy which produces an encoding which is robust when transmitted through noisy channels. First, through an encoder distillation experiment, we show that two different encoders can learn to encode identical audio into vastly different code sequences whilst maintaining comparable reconstruction quality with the same quantizer and decoder. Second, we demonstrate that FSQ has vastly superior bit-level perturbation robustness by comparing the performance of RVQ and FSQ codecs when simulating the transmission of code sequences through a noisy channel.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "FSQ-based robust neural audio codec at low bitrates; core codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

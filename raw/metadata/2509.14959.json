@@ -1,0 +1,36 @@
+{
+  "id": "2509.14959",
+  "source_ids": {
+    "arxiv": "2509.14959"
+  },
+  "title": "Discrete optimal transport is a strong audio adversarial attack",
+  "authors": [
+    "Anton Selitskiy",
+    "Akib Shahriyar",
+    "Jishnuraj Prakasan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14959",
+  "pdf_url": "https://arxiv.org/pdf/2509.14959.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this paper, we introduce the discrete optimal transport voice conversion ($k$DOT-VC) method. Comparison with $k$NN-VC, SinkVC, and Gaussian optimal transport (MKL) demonstrates stronger domain adaptation abilities of our method. We use the probabilistic nature of optimal transport (OT) and show that $k$DOT-VC is an effective black-box adversarial attack against modern audio anti-spoofing countermeasures (CMs). Our attack operates as a post-processing, distribution-alignment step: frame-level {WavLM} embeddings of generated speech are aligned to an unpaired bona fide pool via entropic OT and a top-$k$ barycentric projection, then decoded with a neural vocoder. Ablation analysis indicates that distribution-level alignment is a powerful and stable attack for deployed CMs.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Discrete optimal transport VC method framed as adversarial attack; synthesis contribution unclear from abstract",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

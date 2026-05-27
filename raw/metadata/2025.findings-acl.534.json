@@ -1,0 +1,42 @@
+{
+  "id": "2025.findings-acl.534",
+  "source_ids": {
+    "acl": "2025.findings-acl.534",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-acl.534",
+    "url_acl": "https://aclanthology.org/2025.findings-acl.534"
+  },
+  "title": "Unlocking Speech Instruction Data Potential with Query Rewriting",
+  "authors": [
+    "Yonghua Hei",
+    "Yibo Yan",
+    "Shuliang Liu",
+    "Huiyu Zhou",
+    "Linfeng Zhang",
+    "Xuming Hu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-acl.534",
+  "pdf_url": "https://aclanthology.org/2025.findings-acl.534.pdf",
+  "pdf_path": "raw/papers/2025.findings-acl.534.pdf",
+  "pdf_source": "anthology",
+  "abstract": "End-to-end Large Speech Language Models (**LSLMs**) demonstrate strong potential in response latency and speech comprehension capabilities, showcasing general intelligence across speech understanding tasks. However, the ability to follow speech instructions has not been fully realized due to the lack of datasets and heavily biased training tasks. Leveraging the rich ASR datasets, previous approaches have used Large Language Models (**LLMs**) to continue the linguistic information of speech to construct speech instruction datasets. Yet, due to the gap between LLM-generated results and real human responses, the continuation methods further amplify these shortcomings. Given the high costs of collecting and annotating speech instruction datasets by humans, using speech synthesis to construct large-scale speech instruction datasets has become a balanced and robust alternative. Although modern Text-To-Speech (**TTS**) models have achieved near-human-level synthesis quality, it is challenging to appropriately convert out-of-distribution text instruction to speech due to the limitations of the training data distribution in TTS models. To address this issue, we propose a query rewriting framework with multi-LLM knowledge fusion, employing multiple agents to annotate and validate the synthesized speech, making it possible to construct high-quality speech instruction datasets without relying on human annotation. Experiments show that this method can transform text instructions into distributions more suitable for TTS models for speech synthesis through zero-shot rewriting, increasing data usability from 72% to 93%. It also demonstrates unique advantages in rewriting tasks that require complex knowledge and context-related abilities.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Rewriting ASR data for speech instruction following in large speech LMs; primarily data/training advancement for speech LLMs.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

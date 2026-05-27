@@ -1,0 +1,40 @@
+{
+  "id": "2510.13293",
+  "source_ids": {
+    "arxiv": "2510.13293"
+  },
+  "title": "Cross-modal Consistency Guidance for Robust Emotion Control in Auto-Regressive TTS Models",
+  "authors": [
+    "Yizhou Peng",
+    "Yukun Ma",
+    "Chong Zhang",
+    "Yi-Wen Chao",
+    "Chongjia Ni",
+    "Bin Ma",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.13293",
+  "pdf_url": "https://arxiv.org/pdf/2510.13293.pdf",
+  "pdf_path": "raw/papers/2510.13293.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While Text-to-Speech (TTS) systems enable emotional control via natural-language instructions, expressiveness, naturalness, and speech quality degrade when the target emotion conflicts with the textual semantics. We propose a Cross-modal Consistency Guided Classifier-Free Guidance (CCG-CFG) method with dynamic scales based on the degree of inconsistency between the text emotion and the explicit speech emotion, replacing the dropout condition with the text emotion. We also distill the CCG-CFG guidance signal using a hard-sample mining strategy, improving the TTS model's emotional alignment capability. Evaluations on five emotional corpora and two TTS benchmarks show that our approaches applied to CosyVoice2 achieve up to a 12% absolute improvement in emotion-recognition accuracy and a 10% relative improvement in subjective scores, outperforming baselines including HierSpeech++, Qwen3-TTS, and original CosyVoice2, while preserving intelligibility, naturalness, and high speech quality.",
+  "arxiv_comment": "Updated and resubmitted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Cross-modal consistency guidance for emotion control in AR TTS when text emotion conflicts speech; advances emotional TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

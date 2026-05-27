@@ -1,0 +1,36 @@
+{
+  "id": "2511.21270",
+  "source_ids": {
+    "arxiv": "2511.21270"
+  },
+  "title": "Multi-Reward GRPO for Stable and Prosodic Single-Codebook TTS LLMs at Scale",
+  "authors": [
+    "Yicheng Zhong",
+    "Peiji Yang",
+    "Zhisheng Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.21270",
+  "pdf_url": "https://arxiv.org/pdf/2511.21270.pdf",
+  "pdf_path": "raw/papers/2511.21270.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in Large Language Models (LLMs) have transformed text-to-speech (TTS) synthesis, inspiring autoregressive frameworks that represent speech as sequences of discrete codec tokens. Among them, single-codebook TTS LLMs have emerged as compact and streamable architectures that jointly model semantic and acoustic integration. However, despite their efficiency, these models often exhibit unstable prosody, speaker drift, and degraded naturalness. To address these issues, we propose a multi-reward Group Relative Policy Optimization (GRPO) framework that directly optimizes the token generation policy of single-codebook TTS LLMs. Beyond standard intelligibility and speaker similarity objectives, our design integrates three rule-based rewards: a length penalty for duration consistency, an entropy regularization reward for decoding stability, and an LLM-annotated prosody alignment reward that explicitly supervises rhythm. In this prosody reward, an external reasoning LLM predicts multiple plausible pause structures via in-context learning, providing a human-preference-aligned supervisory signal for GRPO training. To assess universality, we further attach a flow-matching (FM) decoder on top of the GRPO-optimized AR backbone and observe consistent additional gains, indicating that our reinforcement optimization enhances the intrinsic AR policy. We further conduct a scalability analysis across data sizes and model scales, revealing that the proposed method consistently enhances prosodic stability, speaker similarity, and overall speech naturalness in single-codebook TTS LLMs.",
+  "arxiv_comment": "4 pages, 2 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Multi-reward GRPO training for stable and prosodic single-codebook TTS LLMs at scale",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

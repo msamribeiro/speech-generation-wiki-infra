@@ -1,0 +1,34 @@
+{
+  "id": "2512.09000",
+  "source_ids": {
+    "arxiv": "2512.09000"
+  },
+  "title": "LG Uplus System with Multi-Speaker IDs and Discriminator-based Sub-Judges for the WildSpoof Challenge",
+  "authors": [
+    "Jinyoung Park",
+    "Won Jang",
+    "Jiwoong Park"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.09000",
+  "pdf_url": "https://arxiv.org/pdf/2512.09000.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper describes our submission to the WildSpoof Challenge Track 2, which focuses on spoof-aware speaker verification (SASV) in the presence of high-quality text-to-speech (TTS) attacks. We adopt a ResNet-221 back-bone and study two speaker-labeling strategies, namelyDual-Speaker IDs and Multi-Speaker IDs, to explicitly enlarge the margin between bona fide and generated speech in the embedding space. In addition, we propose discriminator-based sub-judge systems that reuse internal features from HiFi-GAN and BigVGAN discriminators, aggregated via multi-query multi-head attentive statistics pooling(MQMHA). Experimental results on the SpoofCeleb corpus show that our system design is effective in improving agnostic detection cost function (a-DCF).",
+  "arxiv_comment": "3 pages, 2 figures, 2 tables",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "System submission for WildSpoof spoofing-robust speaker verification challenge; anti-spoofing not generation",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2025-raju25_interspeech",
+  "source_ids": {
+    "isca": "raju25_interspeech",
+    "doi": null
+  },
+  "title": "End-to-End Indian Language Dubbing with Zero-Shot Speaker Preservation",
+  "authors": [
+    "Giri Raju",
+    "Sandeep Konam"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/raju25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/raju25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-raju25_interspeech.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper presents an end-to-end AI-driven dubbing platform designed specifically for Indian languages. The system leverages state-of-the-art speech models (ASR, MT, TTS) to streamline the dubbing process, minimizing manual effort while enabling precise output control. It generates high-quality, natural-sounding speech, preserving speaker characteristics through zero-shot synthesis irrespective of accent, age, or gender. Already successfully deployed with creators and educators, the platform enhances content accessibility and cross-lingual adaptation in education and entertainment for India's diverse linguistic communities.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "End-to-end Indian language dubbing with zero-shot speaker-preserving TTS; advances multilingual TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

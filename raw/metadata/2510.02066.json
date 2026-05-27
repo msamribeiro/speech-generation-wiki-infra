@@ -1,0 +1,40 @@
+{
+  "id": "2510.02066",
+  "source_ids": {
+    "arxiv": "2510.02066"
+  },
+  "title": "Chain-of-Thought Reasoning in Streaming Full-Duplex End-to-End Spoken Dialogue Systems",
+  "authors": [
+    "Siddhant Arora",
+    "Jinchuan Tian",
+    "Hayato Futami",
+    "Jiatong Shi",
+    "Yosuke Kashiwagi",
+    "Emiru Tsunoo",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.02066",
+  "pdf_url": "https://arxiv.org/pdf/2510.02066.pdf",
+  "pdf_path": "raw/papers/2510.02066.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Most end-to-end (E2E) spoken dialogue systems (SDS) rely on voice activity detection (VAD) for turn-taking, but VAD fails to distinguish between pauses and turn completions. Duplex SDS models address this by predicting output continuously, including silence tokens, thus removing the need for explicit VAD. However, they often have complex dual-channel architecture and lag behind cascaded models in semantic reasoning. To overcome these challenges, we propose SCoT: a Streaming Chain-of-Thought (CoT) framework for Duplex SDS, alternating between processing fixed-duration user input and generating responses in a blockwise manner. Using frame-level alignments, we create intermediate targets-aligned user transcripts and system responses for each block. Experiments show that our approach produces more coherent and interpretable responses than existing duplex methods while supporting lower-latency and overlapping interactions compared to turn-by-turn systems.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Full-duplex spoken dialogue system with chain-of-thought reasoning and continuous prediction",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

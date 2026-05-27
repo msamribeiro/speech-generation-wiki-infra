@@ -1,0 +1,43 @@
+{
+  "id": "2604.21406",
+  "source_ids": {
+    "arxiv": "2604.21406"
+  },
+  "title": "Full-Duplex Interaction in Spoken Dialogue Systems: A Comprehensive Study from the ICASSP 2026 HumDial Challenge",
+  "authors": [
+    "Chengyou Wang",
+    "Hongfei Xue",
+    "Guojian Li",
+    "Zhixian Zhao",
+    "Shuiyuan Wang",
+    "Shuai Wang",
+    "Xin Xu",
+    "Hui Bu",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.21406",
+  "pdf_url": "https://arxiv.org/pdf/2604.21406.pdf",
+  "pdf_path": "raw/papers/2604.21406.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex interaction, where speakers and listeners converse simultaneously, is a key element of human communication often missing from traditional spoken dialogue systems. These systems, based on rigid turn-taking paradigms, struggle to respond naturally in dynamic conversations. The Full-Duplex Interaction Track of ICASSP 2026 Human-like Spoken Dialogue Systems Challenge (HumDial Challenge) aims to advance the evaluation of full-duplex systems by offering a framework for handling real-time interruptions, speech overlap, and dynamic turn negotiation. We introduce a comprehensive benchmark for full-duplex spoken dialogue systems, built from the HumDial Challenge. We release a high-quality dual-channel dataset of real human-recorded conversations, capturing interruptions, overlapping speech, and feedback mechanisms. This dataset forms the basis for the HumDial-FDBench benchmark, which assesses a system's ability to handle interruptions while maintaining conversational flow. Additionally, we create a public leaderboard to compare the performance of open-source and proprietary models, promoting transparent, reproducible evaluation. These resources support the development of more responsive, adaptive, and human-like dialogue systems.",
+  "arxiv_comment": "5 pages, 1 figures",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Full-duplex interaction track analysis from ICASSP 2026 HumDial Challenge studying simultaneous speech systems",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

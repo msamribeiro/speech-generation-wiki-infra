@@ -1,0 +1,37 @@
+{
+  "id": "2512.18791",
+  "source_ids": {
+    "arxiv": "2512.18791"
+  },
+  "title": "Smark: A Watermark for Text-to-Speech Diffusion Models via Discrete Wavelet Transform",
+  "authors": [
+    "Yichuan Zhang",
+    "Chengxin Li",
+    "Yujie Gu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.18791",
+  "pdf_url": "https://arxiv.org/pdf/2512.18791.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-Speech (TTS) diffusion models generate high-quality speech, which raises challenges for the model intellectual property protection and speech tracing for legal use. Audio watermarking is a promising solution. However, due to the structural differences among various TTS diffusion models, existing watermarking methods are often designed for a specific model and degrade audio quality, which limits their practical applicability. To address this dilemma, this paper proposes a universal watermarking scheme for TTS diffusion models, termed Smark. This is achieved by designing a lightweight watermark embedding framework that operates in the common reverse diffusion paradigm shared by all TTS diffusion models. To mitigate the impact on audio quality, Smark utilizes the discrete wavelet transform (DWT) to embed watermarks into the relatively stable low-frequency regions of the audio, which ensures seamless watermark-audio integration and is resistant to removal during the reverse diffusion process. Extensive experiments are conducted to evaluate the audio quality and watermark performance in various simulated real-world attack scenarios. The experimental results show that Smark achieves superior performance in both audio quality and watermark extraction accuracy.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "DWT-based watermarking method for TTS diffusion models protecting IP while preserving audio quality",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

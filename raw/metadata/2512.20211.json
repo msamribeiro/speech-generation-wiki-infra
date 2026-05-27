@@ -1,0 +1,40 @@
+{
+  "id": "2512.20211",
+  "source_ids": {
+    "arxiv": "2512.20211"
+  },
+  "title": "Aliasing-Free Neural Audio Synthesis",
+  "authors": [
+    "Yicheng Gu",
+    "Junan Zhang",
+    "Chaoren Wang",
+    "Jerry Li",
+    "Zhizheng Wu",
+    "Lauri Juvela"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.20211",
+  "pdf_url": "https://arxiv.org/pdf/2512.20211.pdf",
+  "pdf_path": "raw/papers/2512.20211.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In neural audio synthesis, neural vocoders and codecs are models that reconstruct waveforms from acoustic and latent representations, which are essential to the resulting audio quality. While current models are capable of generating perceptually natural speech, they still struggle with high-fidelity music and singing voice synthesis, as severe aliasing artifacts are introduced by non-linear activation functions and upsampling layers in existing architectures. Although various anti-aliasing techniques have been proposed in digital signal processing, their integration into neural vocoders and codecs remains under-explored. This paper incorporates differentiable anti-aliasing techniques into the activation and upsampling modules to bridge this gap, and thus presents Pupu-Vocoder and Pupu-Codec. We build a test signal benchmark to evaluate the anti-aliased modules, and validate our proposed models on speech, singing voice, music, and audio. Experimental results show that Pupu-Vocoder and Pupu-Codec outperform existing systems on singing voice, music, and audio, while achieving comparable performance on speech. Demos, codes, and checkpoints are available at VocodexElysium.github.io/AliasingFreeNeuralAudioSynthesis/.",
+  "arxiv_comment": "Accepted by TASLP",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Anti-aliasing framework for neural vocoders and codecs improving high-fidelity music and singing synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "2025.findings-acl.1051",
+  "source_ids": {
+    "acl": "2025.findings-acl.1051",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-acl.1051",
+    "url_acl": "https://aclanthology.org/2025.findings-acl.1051"
+  },
+  "title": "LLMVoX: Autoregressive Streaming Text-to-Speech Model for Any LLM",
+  "authors": [
+    "Sambal Shikhar",
+    "Mohammed Irfan Kurpath",
+    "Sahal Shaji Mullappilly",
+    "Jean Lahoud",
+    "Fahad Shahbaz Khan",
+    "Rao Muhammad Anwer",
+    "Salman Khan",
+    "Hisham Cholakkal"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-27",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-acl.1051",
+  "pdf_url": "https://aclanthology.org/2025.findings-acl.1051.pdf",
+  "pdf_path": "raw/papers/2025.findings-acl.1051.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Recent advancements in speech-to-speech dialogue systems leverage LLMs for multimodal interactions, yet they remain hindered by fine-tuning requirements, high computational overhead, and text-speech misalignment. Existing speech-enabled LLMs often degrade conversational quality by modifying the LLM, thereby compromising its linguistic capabilities. In contrast, we propose LLMVoX, a lightweight 30M-parameter, LLM-agnostic, autoregressive streaming TTS system that generates high-quality speech with low latency, while fully preserving the capabilities of the base LLM. Our approach achieves a significantly lower Word Error Rate compared to speech-enabled LLMs, while operating at comparable latency. By decoupling speech synthesis from LLM processing via a multi-queue token streaming system, LLMVoX enables seamless, infinite-length dialogues. Its plug-and-play design also facilitates extension to various tasks with different backbones. Furthermore, LLMVoX generalizes to new languages with minimal dataset adaptation, attaining a low Character Error Rate on an Arabic speech task. Evaluations demonstrate that LLMVoX matches or surpasses existing speech-enabled LLMs in both speech quality and latency, while maintaining the original linguistic strengths of the LLM. Additionally, we have integrated LLMVoX with a Vision-Language Model to create an omni-model with speech, text, and vision capabilities, without requiring additional multimodal training.",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Lightweight 30M autoregressive streaming TTS module attachable to any LLM without fine-tuning; directly advances TTS/SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-07-27"
+}

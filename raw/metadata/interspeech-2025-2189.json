@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2025-2189",
+  "source_ids": {
+    "isca": "eren25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2189",
+    "arxiv": "2508.09389"
+  },
+  "title": "ProMode: A Speech Prosody Model Conditioned on Acoustic and Textual Inputs",
+  "authors": [
+    "Eray Eren",
+    "Qingju Liu",
+    "Hyeongwoo Kim",
+    "Pablo Garrido",
+    "Abeer Alwan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/eren25_interspeech.html",
+  "pdf_url": "https://arxiv.org/pdf/2508.09389.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2189.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Prosody conveys rich emotional and semantic information of the speech signal as well as individual idiosyncrasies. We propose a stand-alone model that maps text-to-prosodic features such as F0 and energy and can be used in downstream tasks such as TTS. The ProMode encoder takes as input acoustic features and time-aligned textual content, both are partially masked, and obtains a fixed-length latent prosodic embedding. The decoder predicts acoustics in the masked region using both the encoded prosody input and unmasked textual content. Trained on the GigaSpeech dataset, we compare our method with state-of-the-art style encoders. For F0 and energy predictions, we show consistent improvements for our model at different levels of granularity. We also integrate these predicted prosodic features into a TTS system and conduct perceptual tests, which show higher prosody preference compared to the baselines, demonstrating the modelâs potential in tasks where prosody modeling is important.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Stand-alone prosody model mapping text to F0/energy for TTS; directly advances TTS prosody modeling.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

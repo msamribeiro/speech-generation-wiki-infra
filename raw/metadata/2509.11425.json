@@ -1,0 +1,42 @@
+{
+  "id": "2509.11425",
+  "source_ids": {
+    "arxiv": "2509.11425"
+  },
+  "title": "FuseCodec: Semantic-Contextual Fusion and Supervision for Neural Codecs",
+  "authors": [
+    "Md Mubtasim Ahasan",
+    "Rafat Hasan Khan",
+    "Tasnim Mohiuddin",
+    "Aman Chadha",
+    "Tariq Iqbal",
+    "M Ashraful Amin",
+    "Amin Ahsan Ali",
+    "Md Mofijul Islam",
+    "A K M Mahbubur Rahman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.11425",
+  "pdf_url": "https://arxiv.org/pdf/2509.11425.pdf",
+  "pdf_path": "raw/papers/2509.11425.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech tokenization enables discrete representation and facilitates speech language modeling. However, existing neural codecs capture low-level acoustic features, overlooking the semantic and contextual cues inherent to human speech. While recent efforts introduced semantic representations from self-supervised speech models or incorporated contextual representations from pre-trained language models, challenges remain in aligning and unifying the semantic and contextual representations. We introduce FuseCodec, which unifies acoustic, semantic, and contextual representations through strong cross-modal alignment and globally informed supervision. We propose three complementary techniques: (i) Latent Representation Fusion, integrating semantic and contextual features directly into the encoder latent space for robust and unified representation learning; (ii) Global Semantic-Contextual Supervision, supervising discrete tokens with globally pooled and broadcasted representations to enhance temporal consistency and cross-modal alignment; and (iii) Temporally Aligned Contextual Supervision, strengthening alignment by dynamically matching contextual and speech tokens within a local window for fine-grained token-level supervision. We further introduce FuseCodec-TTS, demonstrating our methodology's applicability to zero-shot speech synthesis. Empirically, FuseCodec achieves state-of-the-art performance in LibriSpeech, surpassing EnCodec, SpeechTokenizer, and DAC in transcription accuracy, perceptual quality, intelligibility, and speaker similarity. Results highlight the effectiveness of contextually and semantically guided tokenization for speech tokenization and downstream tasks. Code and pretrained models are available at https://github.com/mubtasimahasan/FuseCodec.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Neural speech codec with semantic-contextual fusion for speech language modeling",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2508.13603",
+  "source_ids": {
+    "arxiv": "2508.13603"
+  },
+  "title": "Who Gets the Mic? Investigating Gender Bias in the Speaker Assignment of a Speech-LLM",
+  "authors": [
+    "Dariia Puhach",
+    "Amir H. Payberah",
+    "Éva Székely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.13603",
+  "pdf_url": "https://arxiv.org/pdf/2508.13603.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Similar to text-based Large Language Models (LLMs), Speech-LLMs exhibit emergent abilities and context awareness. However, whether these similarities extend to gender bias remains an open question. This study proposes a methodology leveraging speaker assignment as an analytic tool for bias investigation. Unlike text-based models, which encode gendered associations implicitly, Speech-LLMs must produce a gendered voice, making speaker selection an explicit bias cue. We evaluate Bark, a Text-to-Speech (TTS) model, analyzing its default speaker assignments for textual prompts. If Bark's speaker selection systematically aligns with gendered associations, it may reveal patterns in its training data or model design. To test this, we construct two datasets: (i) Professions, containing gender-stereotyped occupations, and (ii) Gender-Colored Words, featuring gendered connotations. While Bark does not exhibit systematic bias, it demonstrates gender awareness and has some gender inclinations.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Gender bias study in speech LLMs' speaker assignment; borderline - bias in TTS/SCA output generation.",
+  "status": "rejected",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

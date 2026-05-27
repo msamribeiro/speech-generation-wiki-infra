@@ -1,0 +1,39 @@
+{
+  "id": "2512.22491",
+  "source_ids": {
+    "arxiv": "2512.22491"
+  },
+  "title": "ManchuTTS: Towards High-Quality Manchu Speech Synthesis via Flow Matching and Hierarchical Text Representation",
+  "authors": [
+    "Suhua Wang",
+    "Zifan Wang",
+    "Xiaoxin Sun",
+    "D. J. Wang",
+    "Zhanbo Liu",
+    "Xin Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.22491",
+  "pdf_url": "https://arxiv.org/pdf/2512.22491.pdf",
+  "pdf_path": "raw/papers/2512.22491.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "As an endangered language, Manchu presents unique challenges for speech synthesis, including severe data scarcity and strong phonological agglutination. This paper proposes ManchuTTS(Manchu Text to Speech), a novel approach tailored to Manchu's linguistic characteristics. To handle agglutination, this method designs a three-tier text representation (phoneme, syllable, prosodic) and a cross-modal hierarchical attention mechanism for multi-granular alignment. The synthesis model integrates deep convolutional networks with a flow-matching Transformer, enabling efficient, non-autoregressive generation. This method further introduce a hierarchical contrastive loss to guide structured acoustic-linguistic correspondence. To address low-resource constraints, This method construct the first Manchu TTS dataset and employ a data augmentation strategy. Experiments demonstrate that ManchuTTS attains a MOS of 4.52 using a 5.2-hour training subset derived from our full 6.24-hour annotated corpus, outperforming all baseline models by a notable margin. Ablations confirm hierarchical guidance improves agglutinative word pronunciation accuracy (AWPA) by 31% and prosodic naturalness by 27%.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Novel TTS for Manchu endangered language with hierarchical text representation and flow matching; advances TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

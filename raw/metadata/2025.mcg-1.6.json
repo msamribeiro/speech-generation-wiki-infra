@@ -1,0 +1,38 @@
+{
+  "id": "2025.mcg-1.6",
+  "source_ids": {
+    "acl": "2025.mcg-1.6",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.mcg-1.6"
+  },
+  "title": "HW-TSC at Multilingual Counterspeech Generation",
+  "authors": [
+    "Xinglin Lyu",
+    "Haolin Wang",
+    "Min Zhang",
+    "Hao Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.mcg-1.6",
+  "pdf_url": "https://aclanthology.org/2025.mcg-1.6.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Multilingual counterspeech generation (MCSG) contributes to generating counterspeech with respectful, non-offensive information that is specific and truthful for the given hate speech, especially those for languages other than English. Generally, the training data of MCSG in low-source language is rare and hard to curate. Even with the impressive large language models (LLMs), it is a struggle to generate an appreciative counterspeech under the multilingual scenario. In this paper, we design a pipeline with a generation-reranking mode to effectively generate counterspeech under the multilingual scenario via LLM. Considering the scarcity of training data, we first utilize the training-free strategy, i.e., in-context learning (ICL), to generate the candidate counterspeechs. Then, we propose to rerank those candidate counterspeech via the Elo rating algorithm and a fine-tuned reward model. Experimental results on four languages, including English (EN), Italian (IT), Basque (EU) and Spanish (ES), our system achieves a comparative or even better performance in four metrics compared to the winner in this shared task.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Multilingual counterspeech generation; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

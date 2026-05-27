@@ -1,0 +1,36 @@
+{
+  "id": "2509.04072",
+  "source_ids": {
+    "arxiv": "2509.04072"
+  },
+  "title": "Computational Narrative Understanding for Expressive Text-to-Speech",
+  "authors": [
+    "Gaspard Michel",
+    "Elena V. Epure",
+    "Christophe Cerisara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.04072",
+  "pdf_url": "https://arxiv.org/pdf/2509.04072.pdf",
+  "pdf_path": "raw/papers/2509.04072.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) have been driven by large, multi-domain speech corpora, yet the expressive potential of audiobook data remains underexamined. We argue that human-narrated audiobooks, particularly fictional works, contain rich and diverse prosodic cues arising from the natural alternation between neutral narration and expressive character dialogue. Building from this observation, we introduce LibriQuote, a large-scale 5.3K hours of expressive speech drawn from character quotations. Each quote is supplemented with contextual pseudo-labels for speech verbs and adverbs that characterize the intended delivery of direct speech (e.g., \"he whispered softly\"). We found that fine-tuning a flow-matching model on LibriQuote yields substantial improvements in expressivity and intelligibility, while training from scratch enhances expressiveness of an autoregressive TTS model. Benchmarking on LibriQuote-test highlights significant variability across systems in generating expressive speech. We publicly release the dataset, code, and evaluation resources to facilitate reproducibility. Audio samples can be found at https://libriquote.github.io/.",
+  "arxiv_comment": "Findings of ACL 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Expressive TTS leveraging audiobook narrative understanding for prosody generation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

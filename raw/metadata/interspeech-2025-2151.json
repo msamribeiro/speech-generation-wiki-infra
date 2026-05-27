@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-2151",
+  "source_ids": {
+    "isca": "serajian25_interspeech",
+    "doi": "10.21437/Interspeech.2025-2151"
+  },
+  "title": "FaVC: A Validated, Transcribed, Parallel Farsi Speech Dataset for Voice Conversion",
+  "authors": [
+    "Mina Serajian",
+    "Saeed Najafzadeh Rahaghi",
+    "Hadi Veisi",
+    "Saman Haratizadeh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/serajian25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/serajian25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2151.pdf",
+  "pdf_source": "isca",
+  "abstract": "In this paper, we created the first transcribed, parallel, balanced Farsi dataset (FaVC) that can be used for all tasks of speech synthesis, including both parallel and non-parallel voice conversion. FaVC is a balanced dataset that provides all phonemes of the Farsi language in all possible phonetic combinations. A metadata file is provided, including Farsi transcriptions, normal text, and IPA phoneme transcriptions of all audio files. The first Farsi voice conversion results using FaVC are also reported in this paper. The results indicate that by using FaVC, performance is as good as the chosen baseline methods for voice conversion in English. Moreover, objective evaluations of a voice conversion system that requires a parallel speech corpus can be performed using this dataset.",
+  "task": [
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "First transcribed parallel Farsi speech dataset for voice conversion; directly advances VC data resources.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

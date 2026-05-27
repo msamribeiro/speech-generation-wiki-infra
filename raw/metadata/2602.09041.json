@@ -1,0 +1,41 @@
+{
+  "id": "2602.09041",
+  "source_ids": {
+    "arxiv": "2602.09041"
+  },
+  "title": "DSFlow: Dual Supervision and Step-Aware Architecture for One-Step Flow Matching Speech Synthesis",
+  "authors": [
+    "Bin Lin",
+    "Peng Yang",
+    "Chao Yan",
+    "Xiaochen Liu",
+    "Wei Wang",
+    "Boyong Wu",
+    "Pengfei Tan",
+    "Xuerui Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.09041",
+  "pdf_url": "https://arxiv.org/pdf/2602.09041.pdf",
+  "pdf_path": "raw/papers/2602.09041.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Flow-matching models have enabled high-quality text-to-speech synthesis, but their iterative sampling process during inference incurs substantial computational cost. Although distillation is widely used to reduce the number of inference steps, existing methods often suffer from process variance due to endpoint error accumulation. Moreover, directly reusing continuous-time architectures for discrete, fixed-step generation introduces structural parameter inefficiencies. To address these challenges, we introduce DSFlow, a modular distillation framework for few-step and one-step synthesis. DSFlow reformulates generation as a discrete prediction task and explicitly adapts the student model to the target inference regime. It improves training stability through a dual supervision strategy that combines endpoint matching with deterministic mean-velocity alignment, enforcing consistent generation trajectories across inference steps. In addition, DSFlow improves parameter efficiency by replacing continuous-time timestep conditioning with lightweight step-aware tokens, aligning model capacity with the significantly reduced timestep space of the discrete task. Extensive experiments across diverse flow-based text-to-speech architectures demonstrate that DSFlow consistently outperforms standard distillation approaches, achieving strong few-step and one-step synthesis quality while reducing model parameters and inference cost.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Dual supervision and step-aware one-step flow matching distillation for fast high-quality TTS inference",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2605.17652",
+  "source_ids": {
+    "arxiv": "2605.17652"
+  },
+  "title": "Beyond Transcripts: Iterative Peer-Editing with Audio Unlocks High-Quality Human Summaries of Conversational Speech",
+  "authors": [
+    "Kaavya Chaparala",
+    "Thomas Thebaud",
+    "Jesús Villalba López",
+    "Laureano Moro-Velazquez",
+    "Peter Viechnicki",
+    "Najim Dehak"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.17652",
+  "pdf_url": "https://arxiv.org/pdf/2605.17652.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "There are not enough established benchmarks for the task fo speech summarization. Creating new benchmarks demands human annotation, as LLMs could embed systemic errors and bias into datasets. We test ten annotation workflows varying input modality (audio, transcript, or both) and the inclusion of editing (self or peer-editing) to investigate potential quality tradeoffs from using human annotators to summarize audio. We compare human audio-based summaries to human transcript-based summaries to track the impact of the different information modalities on summary quality. We also compare the human outputs against four LLM benchmarks (three text, one audio) to examine whether human-written summaries are less informative than highly fluent automated outputs. We find that audio-based summaries are less informative and more compressed than transcript summaries. However, iterative peer-editing with audio mitigates this difference, enabling audio-based summaries to be as informative as their transcript counterparts and LLM summaries. These findings validate iterative peer-editing among human annotators for the creation of benchmarks informed by both lexical and prosodic information. This enables crucial dataset collection even in setting where transcripts are unavailable.",
+  "arxiv_comment": "Accepted in LREC 2026",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Human annotation workflows for speech summarization; speech understanding not synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

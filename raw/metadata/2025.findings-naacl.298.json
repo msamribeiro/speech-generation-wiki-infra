@@ -1,0 +1,39 @@
+{
+  "id": "2025.findings-naacl.298",
+  "source_ids": {
+    "acl": "2025.findings-naacl.298",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-naacl.298",
+    "url_acl": "https://aclanthology.org/2025.findings-naacl.298"
+  },
+  "title": "Gender Bias in Instruction-Guided Speech Synthesis Models",
+  "authors": [
+    "Chun-Yi Kuan",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NAACL",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-29",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-naacl.298",
+  "pdf_url": "https://aclanthology.org/2025.findings-naacl.298.pdf",
+  "pdf_path": "raw/papers/2025.findings-naacl.298.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Recent advancements in controllable expressive speech synthesis, especially in text-to-speech (TTS) models, have allowed for the generation of speech with specific styles guided by textual descriptions, known as style prompts. While this development enhances the flexibility and naturalness of synthesized speech, there remains a significant gap in understanding how these models handle vague or abstract style prompts. This study investigates the potential gender bias in how models interpret occupation-related prompts, specifically examining their responses to instructions like “Act like a nurse”. We explore whether these models exhibit tendencies to amplify gender stereotypes when interpreting such prompts. Our experimental results reveal the model’s tendency to exhibit gender bias for certain occupations. Moreover, models of different sizes show varying degrees of this bias across these occupations.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Investigates gender bias in instruction-conditioned TTS style-guided models; directly relevant to evaluation and fairness in TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-04-29"
+}

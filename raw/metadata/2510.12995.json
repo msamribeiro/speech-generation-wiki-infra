@@ -1,0 +1,41 @@
+{
+  "id": "2510.12995",
+  "source_ids": {
+    "arxiv": "2510.12995"
+  },
+  "title": "Continuous-Token Diffusion for Speaker-Referenced TTS in Multimodal LLMs",
+  "authors": [
+    "Xinlu He",
+    "Swayambhu Nath Ray",
+    "Harish Mallidi",
+    "Jia-Hong Huang",
+    "Ashwin Bellur",
+    "Chander Chandak",
+    "M. Maruf",
+    "Venkatesh Ravichandran"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.12995",
+  "pdf_url": "https://arxiv.org/pdf/2510.12995.pdf",
+  "pdf_path": "raw/papers/2510.12995.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Unified architectures in multimodal large language models (MLLM) have shown promise in handling diverse tasks within a single framework. In the text-to-speech (TTS) task, current MLLM-based approaches rely on discrete token representations, which disregard the inherently continuous nature of speech and can lead to loss of fine-grained acoustic information. In this work, we investigate the TTS within the MLLM paradigm using continuous speech representations. We design a dual-head architecture and implement two complementary training strategies for a robust model. (1) A diffusion head generating continuous speech representations is added on the MLLM, which is on frame-level and strictly autoregressive. (2) The original language model head is retained to preserve multitask capability and to control the start and end of speech synthesis. (3) Masked training is employed to address exposure bias in autoregressive decoding. (4) To stabilize optimization, we propose a two-stage scheme where the LM is frozen in the second stage, ensuring the diffusion head learns from a fixed input distribution. Evaluations on LibriSpeech(PC) test-clean show that our approach achieves state-of-the-art autoregressive performance, with a WER of 1.95%, speaker similarity of 0.54, and UTMOS of 4.00. The two-stage training yields a 46% relative WER reduction over the one-stage training baseline. These results highlight the effectiveness of combining autoregressive modeling with continuous-token diffusion, supported by a two-stage training procedure.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Continuous-token diffusion for TTS in multimodal LLMs preserving fine-grained acoustic information",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

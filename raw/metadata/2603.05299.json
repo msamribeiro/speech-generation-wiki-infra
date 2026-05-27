@@ -1,0 +1,36 @@
+{
+  "id": "2603.05299",
+  "source_ids": {
+    "arxiv": "2603.05299"
+  },
+  "title": "WavSLM: Single-Stream Speech Language Modeling via WavLM Distillation",
+  "authors": [
+    "Luca Della Libera",
+    "Cem Subakan",
+    "Mirco Ravanelli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.05299",
+  "pdf_url": "https://arxiv.org/pdf/2603.05299.pdf",
+  "pdf_path": "raw/papers/2603.05299.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large language models show that simple autoregressive training can yield scalable and coherent generation, but extending this paradigm to speech remains challenging due to the entanglement of semantic and acoustic information. Most existing speech language models rely on text supervision, hierarchical token streams, or complex hybrid architectures, departing from the single-stream generative pretraining paradigm that has proven effective in text. In this work, we introduce WavSLM, a speech language model trained by quantizing and distilling self-supervised WavLM representations into a single codebook and optimizing an autoregressive next-chunk prediction objective. WavSLM jointly models semantic and acoustic information within a single token stream without text supervision or text pretraining. Despite its simplicity, it achieves competitive performance on consistency benchmarks and speech generation while using fewer parameters, less training data, and supporting streaming inference. Demo samples are available at https://lucadellalib.github.io/wavslm-web/.",
+  "arxiv_comment": "6 pages, 1 figure",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Single-stream speech language model via WavLM distillation without text supervision or hierarchical tokens",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2512.20296",
+  "source_ids": {
+    "arxiv": "2512.20296"
+  },
+  "title": "TAVID: Text-Driven Audio-Visual Interactive Dialogue Generation",
+  "authors": [
+    "Ji-Hoon Kim",
+    "Junseok Ahn",
+    "Doyeop Kwak",
+    "Joon Son Chung",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.20296",
+  "pdf_url": "https://arxiv.org/pdf/2512.20296.pdf",
+  "pdf_path": "raw/papers/2512.20296.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The objective of this paper is to jointly synthesize interactive videos and conversational speech from text and reference images. With the ultimate goal of building human-like conversational systems, recent studies have explored talking or listening head generation as well as conversational speech generation. However, these works are typically studied in isolation, overlooking the multimodal nature of human conversation, which involves tightly coupled audio-visual interactions. In this paper, we introduce TAVID, a unified framework that generates both interactive faces and conversational speech in a synchronized manner. TAVID integrates face and speech generation pipelines through two cross-modal mappers (i.e., a motion mapper and a speaker mapper), which enable bidirectional exchange of complementary information between the audio and visual modalities. We evaluate our system across four dimensions: talking face realism, listening head responsiveness, dyadic interaction fluency, and speech quality. Extensive experiments demonstrate the effectiveness of our approach across all these aspects.",
+  "arxiv_comment": "Project page: https://mm.kaist.ac.kr/projects/TAVID",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Joint text-driven synthesis of interactive videos and conversational speech from reference images",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

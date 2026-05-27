@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2025-0196",
+  "source_ids": {
+    "isca": "wen25_interspeech",
+    "doi": "10.21437/Interspeech.2025-196"
+  },
+  "title": "SPCODEC: Split and Prediction for Neural Speech Codec",
+  "authors": [
+    "Liang Wen",
+    "Lizhong Wang",
+    "Yuxing Zheng",
+    "Weijing Shi",
+    "Kwang Pyo Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/wen25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/wen25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0196.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent advancements in time-domain end-to-end neural speech codecs have significantly improved performance. However, existing codecs fail to fully exploit the correlations across different frequency bands in speech, leading to inefficiencies and reduced interpretability. In this paper, we introduce SPCODEC, a time-domain end-to-end neural speech codec featuring a latent split-and-prediction scheme. The model consists of a fully convolutional encoder-decoder and a group residual vector quantization module enhanced with a split-and-prediction mechanism. This mechanism disentangles low- and high-frequency representations and employs prediction to effectively reduce feature redundancy. SPCODEC achieves state-of-the-art MOS-POLQA scores of 4.0 at 6/8 kbps and 4.5 at 10.66/16 kbps for wideband and super-wideband speech, significantly outperforming both neural and traditional codecs.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Novel neural speech codec with split-and-prediction scheme exploiting frequency correlations; advances codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

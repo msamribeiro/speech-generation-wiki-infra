@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-0756",
+  "source_ids": {
+    "isca": "chao25_interspeech",
+    "doi": "10.21437/Interspeech.2025-756"
+  },
+  "title": "A-SMiLE: Affective Sparse Mixture-of-Experts Adapter with Multi-Task Learning for Spoken Dialogue Models",
+  "authors": [
+    "Yi-Wen Chao",
+    "Yizhou Peng",
+    "Dianwen Ng",
+    "Yukun Ma",
+    "Chongjia Ni",
+    "Eng Siong Chng",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chao25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/chao25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-0756.pdf",
+  "pdf_source": "isca",
+  "abstract": "Large language models have made remarkable progress in generating coherent and contextually relevant dialogue. However, they still struggle to capture fine-grained paralinguistic cues, limiting emotional coherence and contextual appropriateness. To address this challenge, we propose an Affective Sparse Mixture-of-experts adapter with multi-task Learning (A-SMiLE) to enhance the spoken dialogue model's capability for affective perception across multiple dimensions. Our approach integrates Valence, Arousal, and Dominance (VAD) modeling with response generation, thereby ensuring expressive and contextually aware interactions. Evaluations on DailyTalk and a hard-case benchmark demonstrate significant improvements over baselines in both emotion prediction and response generation. It shows the potential of cognitive-inspired affective modeling to enhance intelligent speech interactions on the spoken dialogue models.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Affective MoE adapter for spoken dialogue models with fine-grained paralinguistic control; advances SCA.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

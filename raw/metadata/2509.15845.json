@@ -1,0 +1,55 @@
+{
+  "id": "2509.15845",
+  "source_ids": {
+    "arxiv": "2509.15845"
+  },
+  "title": "Deep Dubbing: End-to-End Auto-Audiobook System with Text-to-Timbre and Context-Aware Instruct-TTS",
+  "authors": [
+    "Ziqi Dai",
+    "Yiting Chen",
+    "Jiacheng Xu",
+    "Liufei Xie",
+    "Yuchen Wang",
+    "Zhenchuan Yang",
+    "Bingsong Bai",
+    "Yangsheng Gao",
+    "Wenjiang Zhou",
+    "Weifeng Zhao"
+  ],
+  "authors_full": [
+    "Ziqi Dai",
+    "Yiting Chen",
+    "Jiacheng Xu",
+    "Liufei Xie",
+    "Yuchen Wang",
+    "Zhenchuan Yang",
+    "Bingsong Bai",
+    "Yangsheng Gao",
+    "Wenjiang Zhou",
+    "Weifeng Zhao",
+    "Ruohua Zhou"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.15845",
+  "pdf_url": "https://arxiv.org/pdf/2509.15845.pdf",
+  "pdf_path": "raw/papers/2509.15845.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The pipeline for multi-participant audiobook production primarily consists of three stages: script analysis, character voice timbre selection, and speech synthesis. Among these, script analysis can be automated with high accuracy using NLP models, whereas character voice timbre selection still relies on manual effort. Speech synthesis uses either manual dubbing or text-to-speech (TTS). While TTS boosts efficiency, it struggles with emotional expression, intonation control, and contextual scene adaptation. To address these challenges, we propose DeepDubbing, an end-to-end automated system for multi-participant audiobook production. The system comprises two main components: a Text-to-Timbre (TTT) model and a Context-Aware Instruct-TTS (CA-Instruct-TTS) model. The TTT model generates role-specific timbre embeddings conditioned on text descriptions. The CA-Instruct-TTS model synthesizes expressive speech by analyzing contextual dialogue and incorporating fine-grained emotional instructions. This system enables the automated generation of multi-participant audiobooks with both timbre-matched character voices and emotionally expressive narration, offering a novel solution for audiobook production.",
+  "arxiv_comment": "Submitted to ICASSP 2026.Copyright 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, including reprinting/republishing, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work. DOI will be added upon IEEE Xplore publication",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Context-aware instruction-conditioned TTS for automated multi-character audiobook production",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2603.04219",
+  "source_ids": {
+    "arxiv": "2603.04219"
+  },
+  "title": "ZeSTA: Zero-Shot TTS Augmentation with Domain-Conditioned Training for Data-Efficient Personalized Speech Synthesis",
+  "authors": [
+    "Youngwon Choi",
+    "Jinwoo Oh",
+    "Hwayeon Kim",
+    "Hyeonyu Kim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.04219",
+  "pdf_url": "https://arxiv.org/pdf/2603.04219.pdf",
+  "pdf_path": "raw/papers/2603.04219.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We investigate the use of zero-shot text-to-speech (ZS-TTS) as a data augmentation source for low-resource personalized speech synthesis. While synthetic augmentation can provide linguistically rich and phonetically diverse speech, naively mixing large amounts of synthetic speech with limited real recordings often leads to speaker similarity degradation during fine-tuning. To address this issue, we propose ZeSTA, a simple domain-conditioned training framework that distinguishes real and synthetic speech via a lightweight domain embedding, combined with real-data oversampling to stabilize adaptation under extremely limited target data, without modifying the base architecture. Experiments on LibriTTS and an in-house dataset with two ZS-TTS sources demonstrate that our approach improves speaker similarity over naive synthetic augmentation while preserving intelligibility and perceptual quality.",
+  "arxiv_comment": "6 pages, submitted to INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Domain-conditioned zero-shot TTS augmentation for data-efficient low-resource personalized speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

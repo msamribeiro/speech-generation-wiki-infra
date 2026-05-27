@@ -1,0 +1,56 @@
+{
+  "id": "2407.05407",
+  "source_ids": {
+    "arxiv": "2407.05407"
+  },
+  "title": "CosyVoice: A Scalable Multilingual Zero-shot Text-to-speech Synthesizer based on Supervised Semantic Tokens",
+  "authors": [
+    "Zhihao Du",
+    "Qian Chen",
+    "Shiliang Zhang",
+    "Kai Hu",
+    "Heng Lu",
+    "Yexin Yang",
+    "Hangrui Hu",
+    "Siqi Zheng",
+    "Yue Gu",
+    "Ziyang Ma"
+  ],
+  "authors_full": [
+    "Zhihao Du",
+    "Qian Chen",
+    "Shiliang Zhang",
+    "Kai Hu",
+    "Heng Lu",
+    "Yexin Yang",
+    "Hangrui Hu",
+    "Siqi Zheng",
+    "Yue Gu",
+    "Ziyang Ma",
+    "Zhifu Gao",
+    "Zhijie Yan"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 7,
+  "published_date": "2024-07-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2407.05407",
+  "pdf_url": "https://arxiv.org/pdf/2407.05407.pdf",
+  "pdf_path": "raw/papers/2407.05407.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent years have witnessed a trend that large language model (LLM) based text-to-speech (TTS) emerges into the mainstream due to their high naturalness and zero-shot capacity. In this paradigm, speech signals are discretized into token sequences, which are modeled by an LLM with text as prompts and reconstructed by a token-based vocoder to waveforms. Obviously, speech tokens play a critical role in LLM-based TTS models. Current speech tokens are learned in an unsupervised manner, which lacks explicit semantic information and alignment to the text. In this paper, we propose to represent speech with supervised semantic tokens, which are derived from a multilingual speech recognition model by inserting vector quantization into the encoder. Based on the tokens, we further propose a scalable zero-shot TTS synthesizer, CosyVoice, which consists of an LLM for text-to-token generation and a conditional flow matching model for token-to-speech synthesis. Experimental results show that supervised semantic tokens significantly outperform existing unsupervised tokens in terms of content consistency and speaker similarity for zero-shot voice cloning. Moreover, we find that utilizing large-scale data further improves the synthesis performance, indicating the scalable capacity of CosyVoice. To the best of our knowledge, this is the first attempt to involve supervised speech tokens into TTS models.",
+  "arxiv_comment": "work in progress. arXiv admin note: substantial text overlap with arXiv:2407.04051",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.97,
+  "relevance_note": "CosyVoice: scalable multilingual zero-shot TTS with supervised semantic tokens; core TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

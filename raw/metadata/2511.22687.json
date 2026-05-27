@@ -1,0 +1,40 @@
+{
+  "id": "2511.22687",
+  "source_ids": {
+    "arxiv": "2511.22687"
+  },
+  "title": "PURE Codec: Progressive Unfolding of Residual Entropy for Speech Codec Learning",
+  "authors": [
+    "Jiatong Shi",
+    "Haoran Wang",
+    "William Chen",
+    "Chenda Li",
+    "Wangyou Zhang",
+    "Jinchuan Tian",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.22687",
+  "pdf_url": "https://arxiv.org/pdf/2511.22687.pdf",
+  "pdf_path": "raw/papers/2511.22687.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural speech codecs have achieved strong performance in low-bitrate compression, but residual vector quantization (RVQ) often suffers from unstable training and ineffective decomposition, limiting reconstruction quality and efficiency. We propose PURE Codec (Progressive Unfolding of Residual Entropy), a novel framework that guides multi-stage quantization using a pre-trained speech enhancement model. The first quantization stage reconstructs low-entropy, denoised speech embeddings, while subsequent stages encode residual high-entropy components. This design improves training stability significantly. Experiments demonstrate that PURE consistently outperforms conventional RVQ-based codecs in reconstruction and downstream speech language model-based text-to-speech, particularly under noisy training conditions.",
+  "arxiv_comment": "Accepted by ASRU2025",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Progressive residual entropy unfolding codec improving RVQ training stability and decomposition quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

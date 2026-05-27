@@ -1,0 +1,42 @@
+{
+  "id": "2509.04685",
+  "source_ids": {
+    "arxiv": "2509.04685"
+  },
+  "title": "Say More with Less: Variable-Frame-Rate Speech Tokenization via Adaptive Clustering and Implicit Duration Coding",
+  "authors": [
+    "Rui-Chen Zheng",
+    "Wenrui Liu",
+    "Hui-Peng Du",
+    "Qinglin Zhang",
+    "Chong Deng",
+    "Qian Chen",
+    "Wen Wang",
+    "Yang Ai",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.04685",
+  "pdf_url": "https://arxiv.org/pdf/2509.04685.pdf",
+  "pdf_path": "raw/papers/2509.04685.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Existing speech tokenizers typically assign a fixed number of tokens per second, regardless of the varying information density or temporal fluctuations in the speech signal. This uniform token allocation mismatches the intrinsic structure of speech, where information is distributed unevenly over time. To address this, we propose VARSTok, a VAriable-frame-Rate Speech Tokenizer that adapts token allocation based on local feature similarity. VARSTok introduces two key innovations: (1) a temporal-aware density peak clustering algorithm that adaptively segments speech into variable-length units, and (2) a novel implicit duration coding scheme that embeds both content and temporal span into a single token index, eliminating the need for auxiliary duration predictors. Extensive experiments show that VARSTok significantly outperforms strong fixed-rate baselines. Notably, it achieves superior reconstruction naturalness while using up to 23% fewer tokens than a 40 Hz fixed-frame-rate baseline. VARSTok further yields lower word error rates and improved naturalness in zero-shot text-to-speech synthesis. To the best of our knowledge, this is the first work to demonstrate that a fully dynamic, variable-frame-rate acoustic speech tokenizer can be seamlessly integrated into downstream speech language models.",
+  "arxiv_comment": "Accepted to AAAI 2026. Project page: https://zhengrachel.github.io/VARSTok",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Variable-frame-rate speech tokenizer reducing token count via adaptive clustering",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

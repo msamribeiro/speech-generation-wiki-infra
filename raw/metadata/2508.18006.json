@@ -1,0 +1,36 @@
+{
+  "id": "2508.18006",
+  "source_ids": {
+    "arxiv": "2508.18006"
+  },
+  "title": "Unseen Speaker and Language Adaptation for Lightweight Text-To-Speech with Adapters",
+  "authors": [
+    "Alessio Falai",
+    "Ziyao Zhang",
+    "Akos Gangoly"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.18006",
+  "pdf_url": "https://arxiv.org/pdf/2508.18006.pdf",
+  "pdf_path": "raw/papers/2508.18006.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In this paper we investigate cross-lingual Text-To-Speech (TTS) synthesis through the lens of adapters, in the context of lightweight TTS systems. In particular, we compare the tasks of unseen speaker and language adaptation with the goal of synthesising a target voice in a target language, in which the target voice has no recordings therein. Results from objective evaluations demonstrate the effectiveness of adapters in learning language-specific and speaker-specific information, allowing pre-trained models to learn unseen speaker identities or languages, while avoiding catastrophic forgetting of the original model's speaker or language information. Additionally, to measure how native the generated voices are in terms of accent, we propose and validate an objective metric inspired by mispronunciation detection techniques in second-language (L2) learners. The paper also provides insights into the impact of adapter placement, configuration and the number of speakers used.",
+  "arxiv_comment": "Accepted at IEEE MLSP 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Adapter-based cross-lingual TTS for unseen speakers and languages",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

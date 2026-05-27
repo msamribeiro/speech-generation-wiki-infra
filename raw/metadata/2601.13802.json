@@ -1,0 +1,42 @@
+{
+  "id": "2601.13802",
+  "source_ids": {
+    "arxiv": "2601.13802"
+  },
+  "title": "Habibi: Laying the Open-Source Foundation of Unified-Dialectal Arabic Speech Synthesis",
+  "authors": [
+    "Yushen Chen",
+    "Junzhe Liu",
+    "Yujie Tu",
+    "Zhikang Niu",
+    "Yuzhe Liang",
+    "Chunyu Qiang",
+    "Chen Zhang",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.13802",
+  "pdf_url": "https://arxiv.org/pdf/2601.13802.pdf",
+  "pdf_path": "raw/papers/2601.13802.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Arabic spans over 30 spoken varieties, yet no open-source text-to-speech system unifies them. Key barriers include substantial cross-dialect lexical and phonological divergence, scarce synthesis-grade data, and the absence of a standardized multi-dialect evaluation benchmark. We present Habibi, a unified-dialectal Arabic TTS framework that addresses all three. Through a multi-step curation pipeline, we repurpose open-source ASR corpora into TTS training data covering 12+ regional dialects. A linguistically-informed curriculum learning strategy - progressing from Modern Standard Arabic to dialectal data - enables robust zero-shot synthesis without text diacritization. We further release the first standardized multi-dialect Arabic TTS benchmark, comprising over 11,000 utterances across 7 dialect subsets with manually verified transcripts. On this benchmark, our unified model matches or surpasses per-dialect specialized models. Both automatic metrics and human evaluations confirm that Habibi is highly competitive with ElevenLabs' Eleven v3 (alpha) in intelligibility, speaker similarity, and naturalness. Extensive ablations (~8,000 H100 GPU hours, 30+ configurations) validate each design choice. We open-source all checkpoints, training and inference code, and benchmark data - the first such release for multi-dialect Arabic TTS - at https://SWivid.github.io/Habibi/ .",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Unified-dialectal Arabic TTS framework spanning over 30 Arabic varieties with standardized multi-dialect evaluation",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

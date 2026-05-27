@@ -1,0 +1,56 @@
+{
+  "id": "2604.22225",
+  "source_ids": {
+    "arxiv": "2604.22225"
+  },
+  "title": "TTS-PRISM: A Perceptual Reasoning and Interpretable Speech Model for Fine-Grained Diagnosis",
+  "authors": [
+    "Xi Wang",
+    "Jie Wang",
+    "Xingchen Song",
+    "Baijun Song",
+    "Jingran Xie",
+    "Jiahe Shao",
+    "Zijian Lin",
+    "Di Wu",
+    "Meng Meng",
+    "Jian Luan"
+  ],
+  "authors_full": [
+    "Xi Wang",
+    "Jie Wang",
+    "Xingchen Song",
+    "Baijun Song",
+    "Jingran Xie",
+    "Jiahe Shao",
+    "Zijian Lin",
+    "Di Wu",
+    "Meng Meng",
+    "Jian Luan",
+    "Zhiyong Wu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.22225",
+  "pdf_url": "https://arxiv.org/pdf/2604.22225.pdf",
+  "pdf_path": "raw/papers/2604.22225.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While generative text-to-speech (TTS) models approach human-level quality, monolithic metrics fail to diagnose fine-grained acoustic artifacts or explain perceptual collapse. To address this, we propose TTS-PRISM, a multi-dimensional diagnostic framework for Mandarin. First, we establish a 12-dimensional schema spanning stability to advanced expressiveness. Second, we design a targeted synthesis pipeline with adversarial perturbations and expert anchors to build a high-quality diagnostic dataset. Third, schema-driven instruction tuning embeds explicit scoring criteria and reasoning into an efficient end-to-end model. Experiments on a 1,600-sample Gold Test Set show TTS-PRISM outperforms generalist models in human alignment. Profiling six TTS paradigms establishes intuitive diagnostic flags that reveal fine-grained capability differences. TTS-PRISM is open-source, with code and checkpoints at https://github.com/xiaomi-research/tts-prism.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "TTS-PRISM: 12-dimensional diagnostic framework for Mandarin TTS artifact detection and perceptual quality",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

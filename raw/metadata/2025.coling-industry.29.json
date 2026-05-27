@@ -1,0 +1,39 @@
+{
+  "id": "2025.coling-industry.29",
+  "source_ids": {
+    "acl": "2025.coling-industry.29",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "CarMem: Enhancing Long-Term Memory in LLM Voice Assistants through Category-Bounding",
+  "authors": [
+    "Johannes Kirmayr",
+    "Lukas Stappen",
+    "Phillip Schneider",
+    "Florian Matthes",
+    "Elisabeth Andre"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.coling-industry.29",
+  "pdf_url": "https://aclanthology.org/2025.coling-industry.29.pdf",
+  "pdf_path": "raw/papers/2025.coling-industry.29.pdf",
+  "pdf_source": "anthology",
+  "abstract": "In today’s assistant landscape, personalisation enhances interactions, fosters long-term relationships, and deepens engagement. However, many systems struggle with retaining user preferences, leading to repetitive user requests and disengagement. Furthermore, the unregulated and opaque extraction of user preferences in industry applications raises significant concerns about privacy and trust, especially in regions with stringent regulations like Europe. In response to these challenges, we propose a long-term memory system for voice assistants, structured around predefined categories. This approach leverages Large Language Models to efficiently extract, store, and retrieve preferences within these categories, ensuring both personalisation and transparency. We also introduce a synthetic multi-turn, multi-session conversation dataset (CarMem), grounded in real industry data, tailored to an in-car voice assistant setting. Benchmarked on the dataset, our system achieves an F1-score of .78 to .95 in preference extraction, depending on category granularity. Our maintenance strategy reduces redundant preferences by 95% and contradictory ones by 92%, while the accuracy of optimal retrieval is at .87. Collectively, the results demonstrate the system’s suitability for industrial applications.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.42,
+  "relevance_note": "Memory management in LLM voice assistants; contribution is NLP/memory, not the speech generation component.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

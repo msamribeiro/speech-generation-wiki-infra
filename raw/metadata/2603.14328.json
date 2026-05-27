@@ -1,0 +1,37 @@
+{
+  "id": "2603.14328",
+  "source_ids": {
+    "arxiv": "2603.14328"
+  },
+  "title": "CodecMOS-Accent: A MOS Benchmark of Resynthesized and TTS Speech from Neural Codecs Across English Accents",
+  "authors": [
+    "Wen-Chin Huang",
+    "Nicholas Sanders",
+    "Erica Cooper"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14328",
+  "pdf_url": "https://arxiv.org/pdf/2603.14328.pdf",
+  "pdf_path": "raw/papers/2603.14328.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present the CodecMOS-Accent dataset, a mean opinion score (MOS) benchmark designed to evaluate neural audio codec (NAC) models and the large language model (LLM)-based text-to-speech (TTS) models trained upon them, especially across non-standard speech like accented speech. The dataset comprises 4,000 codec resynthesis and TTS samples from 24 systems, featuring 32 speakers spanning ten accents. A large-scale subjective test was conducted to collect 19,600 annotations from 25 listeners across three dimensions: naturalness, speaker similarity, and accent similarity. This dataset does not only represent an up-to-date study of recent speech synthesis system performance but reveals insights including a tight relationship between speaker and accent similarity, the predictive power of objective metrics, and a perceptual bias when listeners share the same accent with the speaker. This dataset is expected to foster research on more human-centric evaluation for NAC and accented TTS.",
+  "arxiv_comment": "Preprint",
+  "task": [
+    "codec",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "MOS benchmark evaluating neural codec and LLM-based TTS across ten English accent groups",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2602.05443",
+  "source_ids": {
+    "arxiv": "2602.05443"
+  },
+  "title": "Wave-Trainer-Fit: Neural Vocoder with Trainable Prior and Fixed-Point Iteration towards High-Quality Speech Generation from SSL features",
+  "authors": [
+    "Hien Ohnaka",
+    "Yuma Shirahata",
+    "Masaya Kawamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2602.05443",
+  "pdf_url": "https://arxiv.org/pdf/2602.05443.pdf",
+  "pdf_path": "raw/papers/2602.05443.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose WaveTrainerFit, a neural vocoder that performs high-quality waveform generation from data-driven features such as SSL features. WaveTrainerFit builds upon the WaveFit vocoder, which integrates diffusion model and generative adversarial network. Furthermore, the proposed method incorporates the following key improvements: 1. By introducing trainable priors, the inference process starts from noise close to the target speech instead of Gaussian noise. 2. Reference-aware gain adjustment is performed by imposing constraints on the trainable prior to matching the speech energy. These improvements are expected to reduce the complexity of waveform modeling from data-driven features, enabling high-quality waveform generation with fewer inference steps. Through experiments, we showed that WaveTrainerFit can generate highly natural waveforms with improved speaker similarity from data-driven features, while requiring fewer iterations than WaveFit. Moreover, we showed that the proposed method works robustly with respect to the depth at which SSL features are extracted. Code and pre-trained models are available from https://github.com/line/WaveTrainerFit.",
+  "arxiv_comment": "Accepted by IEEE ICASSP 2026. 5 pages, 3 figures, and 2 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Neural vocoder with trainable diffusion priors and fixed-point iteration for high-quality SSL feature synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

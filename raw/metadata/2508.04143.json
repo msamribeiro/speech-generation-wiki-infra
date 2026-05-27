@@ -1,0 +1,35 @@
+{
+  "id": "2508.04143",
+  "source_ids": {
+    "arxiv": "2508.04143"
+  },
+  "title": "Multilingual Source Tracing of Speech Deepfakes: A First Benchmark",
+  "authors": [
+    "Xi Xuan",
+    "Yang Xiao",
+    "Rohan Kumar Das",
+    "Tomi Kinnunen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.04143",
+  "pdf_url": "https://arxiv.org/pdf/2508.04143.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent progress in generative AI has made it increasingly easy to create natural-sounding deepfake speech from just a few seconds of audio. While these tools support helpful applications, they also raise serious concerns by making it possible to generate convincing fake speech in many languages. Current research has largely focused on detecting fake speech, but little attention has been given to tracing the source models used to generate it. This paper introduces the first benchmark for multilingual speech deepfake source tracing, covering both mono- and cross-lingual scenarios. We comparatively investigate DSP- and SSL-based modeling; examine how SSL representations fine-tuned on different languages impact cross-lingual generalization performance; and evaluate generalization to unseen languages and speakers. Our findings offer the first comprehensive insights into the challenges of identifying speech generation models when training and inference languages differ. The dataset, protocol and code are available at https://github.com/xuanxixi/Multilingual-Source-Tracing.",
+  "arxiv_comment": "Accepted at Interspeech SPSC 2025 - 5th Symposium on Security and Privacy in Speech Communication (Oral)",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Deepfake source tracing benchmark; speech generation is the threat model, not the contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

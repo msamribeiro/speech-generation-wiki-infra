@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2025-1210",
+  "source_ids": {
+    "isca": "su25c_interspeech",
+    "doi": "10.21437/Interspeech.2025-1210"
+  },
+  "title": "DiffEmotionVC: A Dual-Granularity Disentangled Diffusion Framework for Any-to-Any Emotional Voice Conversion",
+  "authors": [
+    "Xiaosu Su",
+    "BoWen Yang",
+    "Xiaowei Yi",
+    "Yun Cao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/su25c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/su25c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1210.pdf",
+  "pdf_source": "isca",
+  "abstract": "Emotional Voice Conversion (EVC) plays a vital role in improving human-computer interaction but faces challenges due to the complexity of emotion features, which are entangled with speaker and content characteristics. To overcome these challenges, we propose DiffEmotionVC, a diffusion-based framework for any-to-any EVC. Our approach integrates a dual-granularity emotion encoder that captures both utterance-level emotional context and frame-level acoustic details. It also employs an orthogonality-constrained condition encoder that disentangles emotion features through gated cross-attention while preserving feature independence with an orthogonal loss. Additionally, multi-objective diffusion training enhances both reconstruction fidelity and emotion discriminability via contrastive learning. Experimental results show a UTMOS score of 4.04 and 80% emotion recognition accuracy, demonstrating the framework's effectiveness in speech quality and optimizing emotional expression.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Diffusion-based any-to-any emotional voice conversion with dual-granularity emotion encoder; advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

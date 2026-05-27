@@ -1,0 +1,40 @@
+{
+  "id": "2509.19231",
+  "source_ids": {
+    "arxiv": "2509.19231"
+  },
+  "title": "Finding My Voice: Generative Reconstruction of Disordered Speech for Automated Clinical Evaluation",
+  "authors": [
+    "Karen Rosero",
+    "Eunjung Yeo",
+    "David R. Mortensen",
+    "Cortney Van't Slot",
+    "Rami R. Hallac",
+    "Carlos Busso"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.19231",
+  "pdf_url": "https://arxiv.org/pdf/2509.19231.pdf",
+  "pdf_path": "raw/papers/2509.19231.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present ChiReSSD, a speech reconstruction framework that preserves children speaker's identity while suppressing mispronunciations. Unlike prior approaches trained on healthy adult speech, ChiReSSD adapts to the voices of children with speech sound disorders (SSD), with particular emphasis on pitch and prosody. We evaluate our method on the STAR dataset and report substantial improvements in lexical accuracy and speaker identity preservation. Furthermore, we automatically predict the phonetic content in the original and reconstructed pairs, where the proportion of corrected consonants is comparable to the percentage of correct consonants (PCC), a clinical speech assessment metric. Our experiments show Pearson correlation of 0.63 between automatic and human expert annotations, highlighting the potential to reduce the manual transcription burden. In addition, experiments on the TORGO dataset demonstrate effective generalization for reconstructing adult dysarthric speech. Our results indicate that disentangled, style-based TTS reconstruction can provide identity-preserving speech across diverse clinical populations.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Voice-preserving speech reconstruction framework for children with speech sound disorders",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

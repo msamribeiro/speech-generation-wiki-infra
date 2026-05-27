@@ -1,0 +1,39 @@
+{
+  "id": "2604.10065",
+  "source_ids": {
+    "arxiv": "2604.10065"
+  },
+  "title": "ASPIRin: Action Space Projection for Interactivity-Optimized Reinforcement Learning in Full-Duplex Speech Language Models",
+  "authors": [
+    "Chi-Yuan Hsiao",
+    "Ke-Han Lu",
+    "Yu-Kuan Fu",
+    "Guan-Ting Lin",
+    "Hsiao-Tsung Hung",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.10065",
+  "pdf_url": "https://arxiv.org/pdf/2604.10065.pdf",
+  "pdf_path": "raw/papers/2604.10065.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end full-duplex Speech Language Models (SLMs) require precise turn-taking for natural interaction. However, optimizing temporal dynamics via standard raw-token reinforcement learning (RL) degrades semantic quality, causing severe generative collapse and repetition. We propose ASPIRin, an interactivity-optimized RL framework that explicitly decouples when to speak from what to say. Using Action Space Projection, ASPIRin maps the text vocabulary into a coarse-grained binary state (active speech vs. inactive silence). By applying Group Relative Policy Optimization (GRPO) with rule-based rewards, it balances user interruption and response latency. Empirical evaluations show ASPIRin optimizes interactivity across turn-taking, backchanneling, and pause handling. Crucially, isolating timing from token selection preserves semantic coherence and reduces the portion of duplicate n-grams by over 50% compared to standard GRPO, effectively eliminating degenerative repetition.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Action space projection RL for precise turn-taking in full-duplex speech LMs without semantic quality collapse",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2512.03486",
+  "source_ids": {
+    "arxiv": "2512.03486"
+  },
+  "title": "A Universal Harmonic Discriminator for High-quality GAN-based Vocoder",
+  "authors": [
+    "Nan Xu",
+    "Zhaolong Huang",
+    "Xiao Zeng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2512.03486",
+  "pdf_url": "https://arxiv.org/pdf/2512.03486.pdf",
+  "pdf_path": "raw/papers/2512.03486.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "With the emergence of GAN-based vocoders, the discriminator, as a crucial component, has been developed recently. In our work, we focus on improving the time-frequency based discriminator. Particularly, Short-Time Fourier Transform (STFT) representation is usually used as input of time-frequency based discriminator. However, the STFT spectrogram has the same frequency resolution at different frequency bins, which results in an inferior performance, especially for singing voices. Motivated by this, we propose a universal harmonic discriminator for dynamic frequency resolution modeling and harmonic tracking. Specifically, we design a harmonic filter with learnable triangular band-pass filter banks, where each frequency bin has a flexible bandwidth. Additionally, we add a half-harmonic to capture fine-grained harmonic relationships at low-frequency band. Experiments on speech and singing datasets validate the effectiveness of the proposed discriminator on both subjective and objective metrics.",
+  "arxiv_comment": "Accepted by ASRU2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Universal harmonic discriminator improving time-frequency GAN vocoder quality for speech synthesis",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

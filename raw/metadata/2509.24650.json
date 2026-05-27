@@ -1,0 +1,57 @@
+{
+  "id": "2509.24650",
+  "source_ids": {
+    "arxiv": "2509.24650"
+  },
+  "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+  "authors": [
+    "Yixuan Zhou",
+    "Guoyang Zeng",
+    "Xin Liu",
+    "Xiang Li",
+    "Renjie Yu",
+    "Ziyang Wang",
+    "Runchuan Ye",
+    "Weiyue Sun",
+    "Jiancheng Gui",
+    "Kehan Li"
+  ],
+  "authors_full": [
+    "Yixuan Zhou",
+    "Guoyang Zeng",
+    "Xin Liu",
+    "Xiang Li",
+    "Renjie Yu",
+    "Ziyang Wang",
+    "Runchuan Ye",
+    "Weiyue Sun",
+    "Jiancheng Gui",
+    "Kehan Li",
+    "Zhiyong Wu",
+    "Zhiyuan Liu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.24650",
+  "pdf_url": "https://arxiv.org/pdf/2509.24650.pdf",
+  "pdf_path": "raw/papers/2509.24650.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Generative models for speech synthesis face a fundamental trade-off: discrete tokens ensure stability but sacrifice expressivity, while continuous signals retain acoustic richness but suffer from error accumulation due to task entanglement. This challenge has driven the field towards multi-stage pipelines that rely on pre-trained speech tokenizers, but these create a semantic-acoustic divide, limiting holistic and expressive speech generation. We resolve these dilemma through hierarchical semantic-acoustic modeling with semi-discrete residual representations and present a novel tokenizer-free TTS model VoxCPM. Our framework introduces a differentiable quantization bottleneck that induces natural specialization: a Text-Semantic Language Model (TSLM) generates semantic-prosodic plans, while a Residual Acoustic Model (RALM) recovers fine-grained acoustic details. This hierarchical semantic-acoustic representation guides a local diffusion-based decoder to generate high-fidelity speech latents. Critically, the entire architecture is trained end-to-end under a simple diffusion objective, eliminating dependency on external speech tokenizers. Trained on a massive 1.8 million hours of bilingual corpus, our VoxCPM-0.5B model achieves state-of-the-art zero-shot TTS performance among open-source systems, demonstrating that our approach delivers expressive and stable synthesis. Besides, VoxCPM shows the capability to comprehend text to infer and generate appropriate prosody and style, delivering speech with context-aware expressiveness and natural flow. To facilitate community-driven research and development, VoxCPM is publicly accessible under Apache 2.0.",
+  "arxiv_comment": "Technical Report",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Tokenizer-free TTS framework for context-aware speech generation and realistic voice cloning",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

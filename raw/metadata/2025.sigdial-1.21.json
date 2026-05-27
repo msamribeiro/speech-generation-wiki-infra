@@ -1,0 +1,38 @@
+{
+  "id": "2025.sigdial-1.21",
+  "source_ids": {
+    "acl": "2025.sigdial-1.21",
+    "arxiv": null,
+    "doi": null,
+    "url_acl": "https://aclanthology.org/2025.sigdial-1.21"
+  },
+  "title": "Transition Relevance Point Detection for Spoken Dialogue Systems with Self-Attention Transformer",
+  "authors": [
+    "Kouki Miyazawa",
+    "Yoshinao Sato"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2025,
+  "month": null,
+  "published_date": "2025-01-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.sigdial-1.21",
+  "pdf_url": "https://aclanthology.org/2025.sigdial-1.21.pdf",
+  "pdf_path": "raw/papers/2025.sigdial-1.21.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Most conventional spoken dialogue systems determine when to respond based on the elapsed time of silence following user speech utterances. This approach often results in failures of turn-taking, disrupting smooth communications with users. This study addresses the detection of when it is acceptable for the dialogue system to start speaking. Specifically, we aim to detect transition relevant points (TRPs) rather than predict whether the dialogue participants will actually start speaking. To achieve this, we employ a self-supervised speech representation using contrastive predictive coding and a self-attention transformer. The proposed model, TRPDformer, was trained and evaluated on the corpus of everyday Japanese conversation. TRPDformer outperformed a baseline model based on the elapsed time of silence. Furthermore, third-party listeners rated the timing of system responses determined using the proposed model as superior to that of the baseline in a preference test.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "TRP detection for spoken dialogue systems; focused on turn-taking timing, relevant to SCA but not synthesis specifically.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-01-01"
+}

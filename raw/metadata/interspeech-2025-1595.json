@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2025-1595",
+  "source_ids": {
+    "isca": "futami25_interspeech",
+    "doi": "10.21437/Interspeech.2025-1595"
+  },
+  "title": "Scheduled Interleaved Speech-Text Training for Speech-to-Speech Translation with LLMs",
+  "authors": [
+    "Hayato Futami",
+    "Emiru Tsunoo",
+    "Yosuke Kashiwagi",
+    "Yuki Ito",
+    "Hassan Shahmohammadi",
+    "Siddhant Arora",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/futami25_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/futami25_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-1595.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech-to-speech translation (S2ST) has been advanced with large language models (LLMs), which are fine-tuned on discrete speech units. In such approaches, modality adaptation from text to speech has been an issue. LLMs are trained on text-only data, which presents challenges to adapt them to speech modality with limited speech-to-speech data. To address the training difficulty, we propose scheduled interleaved speech-text training in this study. We use interleaved speech-text units instead of speech units during training, where aligned text tokens are interleaved at the word level. We gradually decrease the ratio of text as training progresses, to facilitate progressive modality adaptation from text to speech. We conduct experimental evaluations by fine-tuning LLaMA3.2-1B for S2ST on the CVSS dataset. We show that the proposed method consistently improves the translation performances, especially for languages with limited training data.",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Scheduled interleaved speech-text training for S2ST with LLMs; core generation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-24",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2603.05887",
+  "source_ids": {
+    "arxiv": "2603.05887"
+  },
+  "title": "Reconstruct! Don't Encode: Self-Supervised Representation Reconstruction Loss for High-Intelligibility and Low-Latency Streaming Neural Audio Codec",
+  "authors": [
+    "Junhyeok Lee",
+    "Xiluo He",
+    "Jihwan Lee",
+    "Helin Wang",
+    "Shrikanth Narayanan",
+    "Thomas Thebaud",
+    "Laureano Moro-Velazquez",
+    "Jesús Villalba",
+    "Najim Dehak"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.05887",
+  "pdf_url": "https://arxiv.org/pdf/2603.05887.pdf",
+  "pdf_path": "raw/papers/2603.05887.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs optimized for mel-spectrogram reconstruction often fail to preserve intelligibility. While semantic encoder distillation improves encoded representations, it does not guarantee content preservation in reconstructed speech. In this work, we demonstrate that self-supervised representation reconstruction (SSRR) loss fundamentally improves codec training and performance. First, SSRR significantly accelerates convergence, enabling competitive results using only a single GPU. Second, it enhances intelligibility by reconstructing distilled self-supervised representations from codec outputs. Third, SSRR enables high intelligibility without additional lookahead in streaming Transformer-based codecs, allowing a zero-lookahead architecture for real-time deployment. As a result, our JHCodec achieves state-of-the-art performance while maintaining minimal latency and reduced training cost. We open-source the full implementation, training pipeline, and demo on Github https://github.com/jhcodec843/jhcodec.",
+  "arxiv_comment": "Submitted to Interspeech 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "SSRR reconstruction loss improving speech codec intelligibility and content preservation beyond mel-spectrogram training",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

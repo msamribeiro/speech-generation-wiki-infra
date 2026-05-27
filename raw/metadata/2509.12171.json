@@ -1,0 +1,41 @@
+{
+  "id": "2509.12171",
+  "source_ids": {
+    "arxiv": "2509.12171"
+  },
+  "title": "Preservation of Language Understanding Capabilities in Speech-aware Large Language Models",
+  "authors": [
+    "Marek Kubis",
+    "Paweł Skórzewski",
+    "Iwona Christop",
+    "Mateusz Czyżnikiewicz",
+    "Jakub Kubiak",
+    "Łukasz Bondaruk",
+    "Marcin Lewandowski"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.12171",
+  "pdf_url": "https://arxiv.org/pdf/2509.12171.pdf",
+  "pdf_path": "raw/papers/2509.12171.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The paper presents C3T (Cross-modal Capabilities Conservation Test), a new benchmark for assessing the performance of speech-aware large language models. The benchmark utilizes textual tasks and a voice cloning text-to-speech model to quantify the extent to which language understanding capabilities are preserved when the model is accessed via speech input. C3T quantifies the fairness of the model for different categories of speakers and its robustness across text and speech modalities.",
+  "arxiv_comment": "5 pages, 1 figure; benchmark code available at https://github.com/SamsungLabs/C3T",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "Benchmark using TTS to test language understanding preservation in speech LLMs; borderline - assesses speech LMs through TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

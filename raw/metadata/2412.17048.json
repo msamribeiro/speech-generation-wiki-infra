@@ -1,0 +1,39 @@
+{
+  "id": "2412.17048",
+  "source_ids": {
+    "arxiv": "2412.17048"
+  },
+  "title": "Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective",
+  "authors": [
+    "Hankun Wang",
+    "Haoran Wang",
+    "Yiwei Guo",
+    "Zhihan Li",
+    "Chenpeng Du",
+    "Kai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-27",
+  "ingested_date": "2026-05-26",
+  "url": "https://arxiv.org/abs/2412.17048",
+  "pdf_url": "https://arxiv.org/pdf/2412.17048.pdf",
+  "pdf_path": "raw/papers/2412.17048.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Although text-based large language models exhibit human-level writing ability and remarkable intelligence, speech language models (SLMs) still struggle to generate semantically coherent outputs. There are several potential reasons for this performance degradation: (A) speech tokens mainly provide phonetic information rather than semantic information, (B) the length of speech sequences is much longer than that of text sequences, and (C) paralinguistic information, such as prosody, introduces additional complexity and variability. In this paper, we explore the influence of three key factors separately by transiting the modality from text to speech in an evolving manner. Our findings reveal that the impact of the three factors varies. Factor A has a relatively minor impact, factor B influences syntactical and semantic modeling more obviously, and factor C exerts the most significant impact, particularly in the basic lexical modeling. Based on these findings, we provide insights into the unique challenges of training SLMs and highlight pathways to develop more effective end-to-end SLMs.",
+  "arxiv_comment": "5 pages, 3 figures, 4 tables. Accepted to IEEE ICASSP 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Analyzes why speech LMs fail at semantic coherence (phonetic vs semantic token gap); directly advances understanding of SCA/SLM.",
+  "status": "ingested",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

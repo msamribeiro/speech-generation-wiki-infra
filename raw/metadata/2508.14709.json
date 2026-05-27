@@ -1,0 +1,38 @@
+{
+  "id": "2508.14709",
+  "source_ids": {
+    "arxiv": "2508.14709"
+  },
+  "title": "Improving Resource-Efficient Speech Enhancement via Neural Differentiable DSP Vocoder Refinement",
+  "authors": [
+    "Heitor R. Guimarães",
+    "Ke Tan",
+    "Juan Azcarreta",
+    "Jesus Alvarez",
+    "Prabhav Agrawal",
+    "Ashutosh Pandey",
+    "Buye Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2508.14709",
+  "pdf_url": "https://arxiv.org/pdf/2508.14709.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Deploying speech enhancement (SE) systems in wearable devices, such as smart glasses, is challenging due to the limited computational resources on the device. Although deep learning methods have achieved high-quality results, their computational cost limits their feasibility on embedded platforms. This work presents an efficient end-to-end SE framework that leverages a Differentiable Digital Signal Processing (DDSP) vocoder for high-quality speech synthesis. First, a compact neural network predicts enhanced acoustic features from noisy speech: spectral envelope, fundamental frequency (F0), and periodicity. These features are fed into the DDSP vocoder to synthesize the enhanced waveform. The system is trained end-to-end with STFT and adversarial losses, enabling direct optimization at the feature and waveform levels. Experimental results show that our method improves intelligibility and quality by 4% (STOI) and 19% (DNSMOS) over strong baselines without significantly increasing computation, making it well-suited for real-time applications.",
+  "arxiv_comment": "Accepted to the 2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)",
+  "task": [],
+  "relevance_score": 0.42,
+  "relevance_note": "Speech enhancement using a DSP vocoder for refinement; synthesis is a sub-component, not the focus",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

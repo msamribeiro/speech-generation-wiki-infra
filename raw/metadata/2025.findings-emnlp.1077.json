@@ -1,0 +1,40 @@
+{
+  "id": "2025.findings-emnlp.1077",
+  "source_ids": {
+    "acl": "2025.findings-emnlp.1077",
+    "arxiv": null,
+    "doi": "10.18653/v1/2025.findings-emnlp.1077",
+    "url_acl": "https://aclanthology.org/2025.findings-emnlp.1077"
+  },
+  "title": "EZ-VC: Easy Zero-shot Any-to-Any Voice Conversion",
+  "authors": [
+    "Advait Joglekar",
+    "Divyanshu Singh",
+    "Rooshil Rohit Bhatia",
+    "Srinivasan Umesh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "EMNLP",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-05",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2025.findings-emnlp.1077",
+  "pdf_url": "https://aclanthology.org/2025.findings-emnlp.1077.pdf",
+  "pdf_path": "raw/papers/2025.findings-emnlp.1077.pdf",
+  "pdf_source": "anthology",
+  "abstract": "Voice Conversion research in recent times has increasingly focused on improving the zero-shot capabilities of existing methods. Despite remarkable advancements, current architectures still tend to struggle in zero-shot cross-lingual settings. They are also often unable to generalize for speakers of unseen languages and accents. In this paper, we adopt a simple yet effective approach that combines discrete speech representations from self-supervised models with a non-autoregressive Diffusion-Transformer based conditional flow matching speech decoder. We show that this architecture allows us to train a voice-conversion model in a purely textless, self-supervised fashion. Our technique works without requiring multiple encoders to disentangle speech features. Our model also manages to excel in zero-shot cross-lingual settings even for unseen languages. We provide our code, model checkpoint and demo samples here: https://github.com/ez-vc/ez-vc",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Simple yet effective zero-shot any-to-any cross-lingual voice conversion; directly advances VC.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2025-11-05"
+}

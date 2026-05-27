@@ -1,0 +1,37 @@
+{
+  "id": "2509.17021",
+  "source_ids": {
+    "arxiv": "2509.17021"
+  },
+  "title": "Bridging the gap between training and inference in LM-based TTS models",
+  "authors": [
+    "Ruonan Zhang",
+    "Lingzhou Mu",
+    "Xixin Wu",
+    "Kai Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.17021",
+  "pdf_url": "https://arxiv.org/pdf/2509.17021.pdf",
+  "pdf_path": "raw/papers/2509.17021.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in text-to-speech (TTS) have shown that language model (LM) based systems offer competitive performance compared to traditional approaches. However, in training, TTS models use ground-truth (GT) tokens as prefixes to predict the next token, while in inference these tokens are not available, a gap between training and inference that is often neglected. In this study, we propose a prompt-guided hybrid training scheme to mitigate exposure bias in popular LM-based TTS systems. Our core idea is to adopt a hybrid training paradigm that combines teacher forcing with free running, thereby introducing self-generated tokens into the training process. This makes the training mode more consistent with inference, reducing the training-inference gap. In addition, we incorporate an EOS prediction mechanism during training to detect incorrect sequence termination and adaptively control the free running process. Experimental results provide a comprehensive evaluation of the impact of exposure bias on LM-based TTS, and demonstrate that our method effectively narrows the training-inference gap, thereby improving the quality of synthesized long-form speech.",
+  "arxiv_comment": "5 pages, 4 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Addresses exposure bias between teacher-forced training and autoregressive inference in LM-based TTS",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

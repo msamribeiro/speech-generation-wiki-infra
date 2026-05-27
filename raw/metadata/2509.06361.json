@@ -1,0 +1,38 @@
+{
+  "id": "2509.06361",
+  "source_ids": {
+    "arxiv": "2509.06361"
+  },
+  "title": "Speaker Privacy and Security in the Big Data Era: Protection and Defense against Deepfake",
+  "authors": [
+    "Liping Chen",
+    "Kong Aik Lee",
+    "Zhen-Hua Ling",
+    "Xin Wang",
+    "Rohan Kumar Das",
+    "Tomoki Toda",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.06361",
+  "pdf_url": "https://arxiv.org/pdf/2509.06361.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In the era of big data, remarkable advancements have been achieved in personalized speech generation techniques that utilize speaker attributes, including voice and speaking style, to generate deepfake speech. This has also amplified global security risks from deepfake speech misuse, resulting in considerable societal costs worldwide. To address the security threats posed by deepfake speech, techniques have been developed focusing on both the protection of voice attributes and the defense against deepfake speech. Among them, the voice anonymization technique has been developed to protect voice attributes from extraction for deepfake generation, while deepfake detection and watermarking have been utilized to defend against the misuse of deepfake speech. This paper provides a short and concise overview of the three techniques, describing the methodologies, advancements, and challenges. A comprehensive version, offering additional discussions, will be published in the near future.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Survey on deepfake detection and speaker privacy; synthesis is the threat, not the contribution",
+  "status": "rejected",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

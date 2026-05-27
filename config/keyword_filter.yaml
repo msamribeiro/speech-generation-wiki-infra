@@ -1,0 +1,55 @@
+# Coarse keyword filter applied at fetch time (title + abstract).
+# A paper passes if it matches at least one term in any include group
+# and none of the terms in the exclude list.
+
+include:
+  core:
+    - "text-to-speech"
+    - "text to speech"
+    - "speech synthesis"
+    - "speech synthesizer"
+    - "voice conversion"
+    - "speech generation"
+    - "TTS"
+    - "neural vocoder"
+    - "voice cloning"
+  conversational:
+    - "spoken dialogue"
+    - "conversational speech"
+    - "speech language model"
+    - "speech LM"
+    - "speech-to-speech"
+    - "speech interaction"
+    - "voice interaction"
+    - "spoken chatbot"
+    - "speech foundation model"
+  codec:
+    - "neural audio codec"
+    - "audio codec"
+    - "speech codec"
+    - "speech tokenizer"
+    - "audio tokenizer"
+    - "EnCodec"
+    - "SoundStream"
+    - "vocoder"
+  related:
+    - "zero-shot speaker"
+    - "speaker adaptation"
+    - "prosody"
+    - "paralinguistic"
+    - "singing voice synthesis"
+    - "voice assistant"
+    - "voicemos"
+
+exclude:
+  # Terms indicating the paper is primarily about something else
+  - "speech recognition"
+  - "automatic speech recognition"
+  - "speaker diarization"
+  - "source separation"
+  - "music transcription"
+  - "keyword spotting"
+
+# Minimum match thresholds
+title_min_matches: 1
+abstract_min_matches: 2

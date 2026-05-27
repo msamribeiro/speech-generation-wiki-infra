@@ -1,0 +1,38 @@
+{
+  "id": "2603.17231",
+  "source_ids": {
+    "arxiv": "2603.17231"
+  },
+  "title": "Neuron-Level Emotion Control in Speech-Generative Large Audio-Language Models",
+  "authors": [
+    "Xiutian Zhao",
+    "Ismail Rasim Ulgen",
+    "Philipp Koehn",
+    "Björn Schuller",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.17231",
+  "pdf_url": "https://arxiv.org/pdf/2603.17231.pdf",
+  "pdf_path": "raw/papers/2603.17231.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large audio-language models (LALMs) can produce expressive speech, yet reliable emotion control remains elusive: conversions often miss the target affect and may degrade linguistic fidelity through refusals, hallucinations, or paraphrase. We present, to our knowledge, the first neuron-level study of emotion control in speech-generative LALMs and demonstrate that compact emotion-sensitive neurons (ESNs) are causally actionable, enabling training-free emotion steering at inference time. ESNs are identified via success-filtered activation aggregation enforcing both emotion realization and content preservation. Across three LALMs (Qwen2.5-Omni-7B, MiniCPM-o 4.5, Kimi-Audio), ESN interventions yield emotion-specific gains that generalize to unseen speakers and are supported by automatic and human evaluation. Controllability depends on selector design, mask sparsity, filtering, and intervention strength. Our results establish a mechanistic framework for training-free emotion control in speech generation.",
+  "arxiv_comment": "11 pages, 10 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Neuron-level emotion control in speech-generative LALMs via compact emotion-sensitive neuron identification",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

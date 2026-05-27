@@ -1,0 +1,38 @@
+{
+  "id": "2510.20677",
+  "source_ids": {
+    "arxiv": "2510.20677"
+  },
+  "title": "R2-SVC: Towards Real-World Robust and Expressive Zero-shot Singing Voice Conversion",
+  "authors": [
+    "Junjie Zheng",
+    "Gongyu Chen",
+    "Chaofan Ding",
+    "Zihao Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.20677",
+  "pdf_url": "https://arxiv.org/pdf/2510.20677.pdf",
+  "pdf_path": "raw/papers/2510.20677.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In real-world singing voice conversion (SVC) applications, environmental noise and the demand for expressive output pose significant challenges. Conventional methods, however, are typically designed without accounting for real deployment scenarios, as both training and inference usually rely on clean data. This mismatch hinders practical use, given the inevitable presence of diverse noise sources and artifacts from music separation. To tackle these issues, we propose R2-SVC, a robust and expressive SVC framework. First, we introduce simulation-based robustness enhancement through random fundamental frequency ($F_0$) perturbations and music separation artifact simulations (e.g., reverberation, echo), substantially improving performance under noisy conditions. Second, we enrich speaker representation using domain-specific singing data: alongside clean vocals, we incorporate DNSMOS-filtered separated vocals and public singing corpora, enabling the model to preserve speaker timbre while capturing singing style nuances. Third, we integrate the Neural Source-Filter (NSF) model to explicitly represent harmonic and noise components, enhancing the naturalness and controllability of converted singing. R2-SVC achieves state-of-the-art results on multiple SVC benchmarks under both clean and noisy conditions.",
+  "arxiv_comment": "5 pages, 2 figures",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Robust singing voice conversion handling real-world noise while preserving expressiveness",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

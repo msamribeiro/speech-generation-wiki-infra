@@ -1,0 +1,33 @@
+{
+  "id": "2603.21038",
+  "source_ids": {
+    "arxiv": "2603.21038"
+  },
+  "title": "Reading Between the Lines: How Electronic Nonverbal Cues shape Emotion Decoding",
+  "authors": [
+    "Taara Kumar",
+    "Kokil Jaidka"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.21038",
+  "pdf_url": "https://arxiv.org/pdf/2603.21038.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "As text-based computer-mediated communication (CMC) increasingly structures everyday interaction, a central question re-emerges with new urgency: How do users reconstruct nonverbal expression in environments where embodied cues are absent? This paper provides a systematic, theory-driven account of electronic nonverbal cues (eNVCs) - textual analogues of kinesics, vocalics, and paralinguistics - in public microblog communication. Across three complementary studies, we advance conceptual, empirical, and methodological contributions. Study 1 develops a unified taxonomy of eNVCs grounded in foundational nonverbal communication theory and introduces a scalable Python toolkit for their automated detection. Study 2, a within-subject survey experiment, offers controlled causal evidence that eNVCs substantially improve emotional decoding accuracy and lower perceived ambiguity, while also identifying boundary conditions, such as sarcasm, under which these benefits weaken or disappear. Study 3, through focus group discussions, reveals the interpretive strategies users employ when reasoning about digital prosody, including drawing meaning from the absence of expected cues and defaulting toward negative interpretations in ambiguous contexts. Together, these studies establish eNVCs as a coherent and measurable class of digital behaviors, refine theoretical accounts of cue richness and interpretive effort, and provide practical tools for affective computing, user modeling, and emotion-aware interface design. The eNVC detection toolkit is available as a Python and R package at https://github.com/kokiljaidka/envc.",
+  "arxiv_comment": "Accepted at AAAI ICWSM 2026",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Systematic study of electronic nonverbal cues in text-based computer-mediated communication; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

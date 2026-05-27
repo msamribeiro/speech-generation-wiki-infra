@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2025-2726",
+  "source_ids": {
+    "isca": "chen25p_interspeech",
+    "doi": "10.21437/Interspeech.2025-2726"
+  },
+  "title": "DS-Codec: Dual-Stage Training with Mirror-to-NonMirror Architecture Switching for Speech Codec",
+  "authors": [
+    "Peijie Chen",
+    "Wenhao Guan",
+    "Kaidi Wang",
+    "Weijie Wu",
+    "Hukai Huang",
+    "Qingyang Hong",
+    "Lin Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 8,
+  "published_date": "2025-08-17",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2025/chen25p_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2025/chen25p_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2025-2726.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural speech codecs are essential for advancing text-to-speech (TTS) systems. With the recent success of large language models in text generation, developing high-quality speech tokenizers has become increasingly important. This paper introduces DS-Codec, a novel neural speech codec featuring a dual-stage training framework with mirror and non-mirror architectures switching, designed to achieve superior speech reconstruction. We conduct extensive experiments and ablation studies to evaluate the effectiveness of our training strategy and compare the performance of the two architectures. Our results show that the mirrored structure significantly enhances the robustness of the learned codebooks, and the training strategy balances the advantages between mirrored and non-mirrored structures, leading to improved high-fidelity speech reconstruction.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Novel dual-stage training with mirror/non-mirror architecture switching for speech codec; advances codec.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2504.20581",
+  "source_ids": {
+    "arxiv": "2504.20581"
+  },
+  "title": "ClonEval: An Open Voice Cloning Benchmark",
+  "authors": [
+    "Iwona Christop",
+    "Tomasz Kuczyński",
+    "Marek Kubis"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2504.20581",
+  "pdf_url": "https://arxiv.org/pdf/2504.20581.pdf",
+  "pdf_path": "raw/papers/2504.20581.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present a novel benchmark for voice cloning text-to-speech models. The benchmark consists of an evaluation protocol, an open-source library for assessing the performance of voice cloning models, and an accompanying leaderboard. The paper discusses design considerations and presents a detailed description of the evaluation procedure. The usage of the software library is explained, along with the organization of results on the leaderboard.",
+  "arxiv_comment": "Under review at ICASSP",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Open benchmark and evaluation library for voice cloning TTS; directly advances TTS evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-05-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

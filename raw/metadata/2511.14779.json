@@ -1,0 +1,42 @@
+{
+  "id": "2511.14779",
+  "source_ids": {
+    "arxiv": "2511.14779"
+  },
+  "title": "The Impact of Prosodic Segmentation on Speech Synthesis of Spontaneous Speech",
+  "authors": [
+    "Julio Cesar Galdino",
+    "Sidney Evaldo Leal",
+    "Leticia Gabriella De Souza",
+    "Rodrigo de Freitas Lima",
+    "Antonio Nelson Fornari Mendes Moreira",
+    "Arnaldo Candido Junior",
+    "Miguel Oliveira",
+    "Edresson Casanova",
+    "Sandra M. Aluísio"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.14779",
+  "pdf_url": "https://arxiv.org/pdf/2511.14779.pdf",
+  "pdf_path": "raw/papers/2511.14779.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spontaneous speech presents several challenges for speech synthesis, particularly in capturing the natural flow of conversation, including turn-taking, pauses, and disfluencies. Although speech synthesis systems have made significant progress in generating natural and intelligible speech, primarily through architectures that implicitly model prosodic features such as pitch, intensity, and duration, the construction of datasets with explicit prosodic segmentation and their impact on spontaneous speech synthesis remains largely unexplored. This paper evaluates the effects of manual and automatic prosodic segmentation annotations in Brazilian Portuguese on the quality of speech synthesized by a non-autoregressive model, FastSpeech 2. Experimental results show that training with prosodic segmentation produced slightly more intelligible and acoustically natural speech. While automatic segmentation tends to create more regular segments, manual prosodic segmentation introduces greater variability, which contributes to more natural prosody. Analysis of neutral declarative utterances showed that both training approaches reproduced the expected nuclear accent pattern, but the prosodic model aligned more closely with natural pre-nuclear contours. To support reproducibility and future research, all datasets, source codes, and trained models are publicly available under the CC BY-NC-ND 4.0 license.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Investigates prosodic segmentation impact on spontaneous speech synthesis; directly advances TTS prosody modeling.",
+  "status": "accepted",
+  "fetched_date": "2026-05-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

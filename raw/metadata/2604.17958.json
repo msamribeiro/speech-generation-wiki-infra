@@ -1,0 +1,60 @@
+{
+  "id": "2604.17958",
+  "source_ids": {
+    "arxiv": "2604.17958"
+  },
+  "title": "MINT-Bench: A Comprehensive Multilingual Benchmark for Instruction-Following Text-to-Speech",
+  "authors": [
+    "Huakang Chen",
+    "Jingbin Hu",
+    "Liumeng Xue",
+    "Qirui Zhan",
+    "Wenhao Li",
+    "Guobin Ma",
+    "Hanke Xie",
+    "Dake Guo",
+    "Linhan Ma",
+    "Yuepeng Jiang"
+  ],
+  "authors_full": [
+    "Huakang Chen",
+    "Jingbin Hu",
+    "Liumeng Xue",
+    "Qirui Zhan",
+    "Wenhao Li",
+    "Guobin Ma",
+    "Hanke Xie",
+    "Dake Guo",
+    "Linhan Ma",
+    "Yuepeng Jiang",
+    "Bengu Wu",
+    "Pengyuan Xie",
+    "Chuan Xie",
+    "Qiang Zhang",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.17958",
+  "pdf_url": "https://arxiv.org/pdf/2604.17958.pdf",
+  "pdf_path": "raw/papers/2604.17958.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Instruction-following text-to-speech (TTS) has emerged as an important capability for controllable and expressive speech generation, yet its evaluation remains underdeveloped due to limited benchmark coverage, weak diagnostic granularity, and insufficient multilingual support. We present \\textbf{MINT-Bench}, a comprehensive multilingual benchmark for instruction-following TTS. MINT-Bench is built upon a hierarchical multi-axis taxonomy, a scalable multi-stage data construction pipeline, and a hierarchical hybrid evaluation protocol that jointly assesses content consistency, instruction following, and perceptual quality. Experiments across ten languages show that current systems remain far from solved: frontier commercial systems lead overall, while leading open-source models become highly competitive and can even outperform commercial counterparts in localized settings such as Chinese. The benchmark further reveals that harder compositional and paralinguistic controls remain major bottlenecks for current systems. We release MINT-Bench together with the data construction and evaluation toolkit to support future research on controllable, multilingual, and diagnostically grounded TTS evaluation. The leaderboard and demo are available at https://longwaytog0.github.io/MINT-Bench/",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "MINT-Bench: multilingual instruction-following TTS evaluation benchmark with fine-grained diagnostic coverage",
+  "status": "accepted",
+  "fetched_date": "2026-05-19",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}
