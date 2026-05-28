@@ -31,8 +31,8 @@
     "evaluation"
   ],
   "relevance_score": 0.8,
-  "relevance_note": "arXiv version of intonational phrasing analysis in TTS; directly advances TTS evaluation.",
-  "status": "accepted",
+  "relevance_note": "arXiv version of intonational phrasing analysis in TTS; directly advances TTS evaluation. [duplicate of 2025.conll-1.9 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

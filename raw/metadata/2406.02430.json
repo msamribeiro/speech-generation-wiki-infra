@@ -70,7 +70,7 @@
   "year": 2024,
   "month": 6,
   "published_date": "2024-06-04",
-  "ingested_date": null,
+  "ingested_date": "2026-05-28",
   "url": "https://arxiv.org/abs/2406.02430",
   "pdf_url": "https://arxiv.org/pdf/2406.02430.pdf",
   "pdf_path": "raw/papers/2406.02430.pdf",
@@ -82,9 +82,10 @@
   ],
   "relevance_score": 0.97,
   "relevance_note": "Seed-TTS: large-scale autoregressive TTS foundation model; core speech generation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": null
 }

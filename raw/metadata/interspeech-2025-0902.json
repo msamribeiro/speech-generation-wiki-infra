@@ -8,7 +8,7 @@
   "authors": [
     "Harm Lameris",
     "Joakim Gustafsson",
-    "Ãva SzÃ©kely"
+    "\u00c3\u0089va Sz\u00c3\u00a9kely"
   ],
   "authors_full": null,
   "organization": null,
@@ -32,5 +32,6 @@
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": "2026-05-27"
 }

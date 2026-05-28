@@ -200,7 +200,31 @@ If the target papers shift any section materially — a new dominant paradigm, e
 
 ---
 
-## Step 6 — Log the integration run
+## Step 6 — Set `integrated_date` in metadata
+
+For each paper processed in this run, set `integrated_date` to today in its metadata JSON if it is not already set:
+
+```bash
+python3 -c "
+import json
+from datetime import date
+today = date.today().isoformat()
+ids = {paper_ids_list}
+for pid in ids:
+    path = f'raw/metadata/{pid}.json'
+    with open(path) as f:
+        m = json.load(f)
+    if not m.get('integrated_date'):
+        m['integrated_date'] = today
+        with open(path, 'w') as f:
+            json.dump(m, f, indent=2)
+print(f'integrated_date set for {len(ids)} papers')
+"
+```
+
+---
+
+## Step 7 — Log the integration run
 
 ```bash
 python3 -c "
@@ -222,7 +246,7 @@ open('wiki/log.md','w').write(text + '\n')
 
 ---
 
-## Step 7 — Print summary
+## Step 8 — Print summary
 
 ```
 === Integration pass complete ===
@@ -237,7 +261,7 @@ Concept stubs missing (need seeding): {list or "none"}
 ## Invariants
 
 1. Never create or overwrite `wiki/papers/` pages — the ingest agent owns those.
-2. Never change any `raw/metadata/` file.
+2. Only write `integrated_date` to `raw/metadata/` files — no other fields.
 3. If a concept stub is missing, flag it — do not create it. Concept stubs are seeded deliberately.
 4. Process concept page writes sequentially to avoid concurrent-write conflicts.
 5. Only add cross-links for papers that have confirmed `wiki/papers/{id}.md` files.

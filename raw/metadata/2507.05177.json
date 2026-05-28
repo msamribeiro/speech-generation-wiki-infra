@@ -49,8 +49,8 @@
     "SCA"
   ],
   "relevance_score": 0.9,
-  "relevance_note": "arXiv version of OpenS2S empathetic speech LLM; directly advances SCA.",
-  "status": "accepted",
+  "relevance_note": "arXiv version of OpenS2S empathetic speech LLM; directly advances SCA. [duplicate of 2025.emnlp-demos.70 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

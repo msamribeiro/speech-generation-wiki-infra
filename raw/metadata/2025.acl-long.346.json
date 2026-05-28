@@ -43,7 +43,7 @@
   "pdf_url": "https://aclanthology.org/2025.acl-long.346.pdf",
   "pdf_path": "raw/papers/2025.acl-long.346.pdf",
   "pdf_source": "anthology",
-  "abstract": "In this paper, we present ControlSpeech, a text-to-speech (TTS) system capable of fully cloning the speaker’s voice and enabling arbitrary control and adjustment of speaking style. Prior zero-shot TTS models only mimic the speaker’s voice without further control and adjustment capabilities while prior controllable TTS models cannot perform speaker-specific voice generation. Therefore, ControlSpeech focuses on a more challenging task—a TTS system with controllable timbre, content, and style at the same time. ControlSpeech takes speech prompts, content prompts, and style prompts as inputs and utilizes bidirectional attention and mask-based parallel decoding to capture codec representations corresponding to timbre, content, and style in a discrete decoupling codec space. Moreover, we analyze the many-to-many issue in textual style control and propose the Style Mixture Semantic Density (SMSD) module, which is based on Gaussian mixture density networks, to resolve this problem. To facilitate empirical validations, we make available a new style controllable dataset called VccmDataset. Our experimental results demonstrate that ControlSpeech exhibits comparable or state-of-the-art (SOTA) performance in terms of controllability, timbre similarity, audio quality, robustness, and generalizability. Codes are available at https://github.com/jishengpeng/ControlSpeech.",
+  "abstract": "In this paper, we present ControlSpeech, a text-to-speech (TTS) system capable of fully cloning the speaker\u2019s voice and enabling arbitrary control and adjustment of speaking style. Prior zero-shot TTS models only mimic the speaker\u2019s voice without further control and adjustment capabilities while prior controllable TTS models cannot perform speaker-specific voice generation. Therefore, ControlSpeech focuses on a more challenging task\u2014a TTS system with controllable timbre, content, and style at the same time. ControlSpeech takes speech prompts, content prompts, and style prompts as inputs and utilizes bidirectional attention and mask-based parallel decoding to capture codec representations corresponding to timbre, content, and style in a discrete decoupling codec space. Moreover, we analyze the many-to-many issue in textual style control and propose the Style Mixture Semantic Density (SMSD) module, which is based on Gaussian mixture density networks, to resolve this problem. To facilitate empirical validations, we make available a new style controllable dataset called VccmDataset. Our experimental results demonstrate that ControlSpeech exhibits comparable or state-of-the-art (SOTA) performance in terms of controllability, timbre similarity, audio quality, robustness, and generalizability. Codes are available at https://github.com/jishengpeng/ControlSpeech.",
   "task": [
     "TTS"
   ],
@@ -54,5 +54,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-07-27"
+  "conference_date": "2025-07-27",
+  "integrated_date": "2026-05-27"
 }

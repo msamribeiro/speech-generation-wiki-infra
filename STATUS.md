@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-27 (session 14)
+Last updated: 2026-05-28 (session 15)
 
 ---
 
@@ -20,27 +20,30 @@ Last updated: 2026-05-27 (session 14)
 | Filter — batch 2 (May 22) | ✅ Complete | ACL + cs.CL batch: 300 accepted, 39 review, 56 rejected. |
 | Human review — batch 2 (May 22) | ✅ Complete | 39 resolved → 25 accepted, 14 rejected. |
 | Duplicate resolution (arXiv ↔ ACL) | ✅ Complete | 1 additional duplicate found (2502.19732 → 2025.findings-emnlp.716). |
+| Duplicate resolution — full corpus scan (May 28) | ✅ Complete | 15 total arXiv/proceedings duplicates resolved (including F5-TTS 2410.06885). Proceedings ID is canonical throughout. 6 parsed output dirs remapped. |
 | Filter — batch 3 (May 25) | ✅ Complete | Re-scan + citation-discovery: 101 papers, 67 accepted, 7 review, 27 rejected (66% accept rate). |
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
-| Parse (text extraction) | 🔄 In progress | 571/798 done. Queue batches 1–4 complete; 6 batches remaining (227 papers). |
-| Ingest (wiki pages) | 🔄 In progress | 16/798 ingested. 15 additional papers ingested in sessions 11–12 (3 batches of 5; concept pass skipped on batches 2–3). ~515 more ready. |
+| Parse (text extraction) | 🔄 In progress | 611/783 done (after dedup). Queue batches 6–10 pending; 6 remapped from arXiv to proceedings IDs. |
+| Ingest (wiki pages) | 🔄 In progress | 29/783 ingested. 4 ingested today (Seed-TTS, CosyVoice, CosyVoice 2, MELLE). ~496 more ready. |
 
 ---
 
-## Metadata counts (2026-05-27)
+## Metadata counts (2026-05-28)
 
 ```
 Total files:  1000
-  accepted:    782   ← 798 - 16 ingested
-  ingested:     16
+  accepted:    754   ← after dedup (783 unique papers - 29 ingested)
+  ingested:     29   ← wiki page written
+    integrated: 25   ← integrated_date set (integration pass run 2026-05-27)
+    pending:     4   ← ingested today; integration pass not yet run
   review:        0   ← queue cleared
-  rejected:    202   ← 201 + 1 withdrawn
+  rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
-PDFs on disk:  798   ← raw/papers/ (all accepted papers have PDFs)
-Parsed:        571   ← raw/parsed/ (paper.md exists)
-Parse-pending: 227   ← queue batches 5–10
-Ready to ingest: ~515 ← parsed but not yet ingested
+PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
+Parsed:        577   ← raw/parsed/ (571 original + 6 remapped from arXiv to proceedings IDs)
+Parse-pending: 206   ← queue batches 5–10 minus 6 remapped
+Ready to ingest: ~496 ← parsed but not yet ingested
 ```
 
 ---
@@ -169,7 +172,7 @@ Queue file: `raw/parsed/batch_queue.json`. Managed by `scripts/parse/make_batch_
 | 2 | 40 | 2512.20156 … 2601.19952 | complete | Quality report: `raw/parsed/batch_22_quality_report.md`. RapidOCR warnings on 6 papers (non-fatal). PIL DecompressionBomb: 2601.15621 (non-fatal). Low refs: 2601.18694 (16, legitimate). |
 | 3 | 40 | 2601.20094 … 2602.23068 | complete | Quality report: `raw/parsed/batch_23_quality_report.md`. Patched `_REFS_HEADER_RE` for letter-prefix headings (e.g. "B. REFERENCES"); re-parsed 2602.06053, 33 refs recovered. RapidOCR: 2602.04683, 2602.13891 (non-fatal). |
 | 4 | 40 | 2602.23266 … 2603.14032 | complete | Quality report: `raw/parsed/batch_24_quality_report.md`. RapidOCR: 2602.23765, 2603.08574, 2603.08823, 2603.09120, 2603.11589 (non-fatal). Spot-check recommended: 2603.08574, 2603.11589 (4–6 consecutive OCR failures). |
-| 5 | 40 | 2603.14035 … 2604.06356 | pending |
+| 5 | 40 | 2603.14035 … 2604.06356 | complete | Quality report: `raw/parsed/batch_25_quality_report.md`. RapidOCR: 2603.14853 (×4), 2603.22252 (×2), 2603.23938 (×5), 2603.24144 (×1) (non-fatal). Low refs: 2603.19798 (16), 2604.03279 (17) (legitimate). |
 | 6 | 40 | 2604.06871 … 2604.22821 | pending |
 | 7 | 40 | 2604.25441 … interspeech-2025-0355 | pending |
 | 8 | 40 | interspeech-2025-0383 … interspeech-2025-1081 | pending |
@@ -294,8 +297,8 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 ## Next actions
 
 1. ~~**Integration pass (catch-up)**~~ ✅ Complete — integration pass run on all 25 ingested papers (15-paper pass on 2026-05-27: 16 concepts updated, 3 cross-links added, overview.md written, arxiv-2025 venue page updated).
-2. **Continue ingest** — ~546 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers.
-3. **Continue batch parse** — 227 papers remaining across queue batches 5–10 (40 papers each, batch 10 has 27). Workflow: `source .venv/bin/activate && python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → spawn quality subagent → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Can run in parallel with ingest.
+2. **Continue ingest** — ~496 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers. Next integration pass due after 21 more papers (25 - 4 ingested today).
+3. **Continue batch parse** — queue batches 5–10 pending (~206 papers; 6 already remapped from arXiv IDs). Workflow: `source .venv/bin/activate && python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → spawn quality subagent → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Can run in parallel with ingest.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
 6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
@@ -306,4 +309,5 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 1. **Ingest agent: image and table reasoning** — The ingest agent currently reads only `paper.md`. Extend it to enumerate `raw/parsed/{id}/assets/` (figure-N.png, table-N.csv) and incorporate key figures/tables into the wiki paper page — link architecture diagrams, extract result tables into the Metrics section, and surface any figures that clarify the method.
 2. **Writing style guidelines** — Define a shared style guide for all content-generating agents (ingest, integration, query). Write `docs/WRITING_STYLE.md` covering: tense conventions, how to introduce a contribution, how to write Novelty Assessments honestly, how to write cross-paper comparisons without overclaiming, and handling uncertainty. Reference it explicitly in each agent spec under `.claude/agents/`.
+3. **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicate pairs were found and resolved manually on 2026-05-28. Add a title-based dedup gate so this is caught automatically. Options: (a) a `scripts/discover/dedup_check.py` script that scans all non-rejected metadata for normalised-title collisions and can be run after each fetch batch; (b) a `--dedup-check` flag on `batch_convert.py` that refuses to parse a paper whose title already exists under a proceedings ID. Canonical priority rule: proceedings ID (ACL, EMNLP, Interspeech, etc.) > arXiv ID. When swapping, remap `raw/parsed/{arxiv_id}/` → `raw/parsed/{proc_id}/` rather than re-parsing.
 

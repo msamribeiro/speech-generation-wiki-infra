@@ -27,8 +27,8 @@
     "TTS"
   ],
   "relevance_score": 0.9,
-  "relevance_note": "Method to control perceived voice impressions in zero-shot TTS using para-/non-linguistic control; directly advances TTS.",
-  "status": "accepted",
+  "relevance_note": "Method to control perceived voice impressions in zero-shot TTS using para-/non-linguistic control; directly advances TTS. [duplicate of interspeech-2025-1192 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

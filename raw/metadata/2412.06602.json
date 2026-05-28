@@ -30,8 +30,8 @@
     "evaluation"
   ],
   "relevance_score": 0.93,
-  "relevance_note": "Comprehensive survey of controllable TTS in the LLM era; arXiv version of same survey.",
-  "status": "accepted",
+  "relevance_note": "Comprehensive survey of controllable TTS in the LLM era; arXiv version of same survey. [duplicate of 2025.emnlp-main.40 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

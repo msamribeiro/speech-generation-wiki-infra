@@ -40,7 +40,7 @@
   "year": 2026,
   "month": 1,
   "published_date": "2026-01-22",
-  "ingested_date": null,
+  "ingested_date": "2026-05-28",
   "url": "https://arxiv.org/abs/2601.15621",
   "pdf_url": "https://arxiv.org/pdf/2601.15621.pdf",
   "pdf_path": "raw/papers/2601.15621.pdf",
@@ -52,9 +52,10 @@
   ],
   "relevance_score": 0.95,
   "relevance_note": "Qwen3-TTS: state-of-the-art multilingual controllable TTS family trained on 5M hours across 10 languages",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": null
 }

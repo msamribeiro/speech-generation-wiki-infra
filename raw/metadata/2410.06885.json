@@ -35,8 +35,8 @@
     "TTS"
   ],
   "relevance_score": 0.97,
-  "relevance_note": "F5-TTS: non-autoregressive TTS via flow matching with DiT; core TTS architecture paper.",
-  "status": "accepted",
+  "relevance_note": "F5-TTS: non-autoregressive TTS via flow matching with DiT; core TTS architecture paper. [duplicate of 2025.acl-long.313 \u2014 ACL canonical ID]",
+  "status": "rejected",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,

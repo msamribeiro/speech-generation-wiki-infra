@@ -106,6 +106,7 @@ Every paper in `raw/metadata/` must have a JSON file named `{id}.json`. The ID i
   "month": 11,
   "published_date": "YYYY-MM-DD — date of first public availability",
   "ingested_date": "YYYY-MM-DD or null — set on ingest",
+  "integrated_date": "YYYY-MM-DD or null — set by integration agent after first integration pass",
   "url": "string — arXiv or proceedings URL",
   "pdf_path": "raw/papers/filename.pdf",
   "task": ["list — one or more of the task values listed below"],
@@ -124,7 +125,8 @@ pending   → filter agent assigns relevance score
 review    → borderline (0.40–0.70): added to review_queue.md for human decision
 accepted  → human confirmed relevant (or score > 0.70): ready to ingest
 rejected  → human confirmed irrelevant (or score < 0.40): skip
-ingested  → wiki paper page written and all cross-references updated
+ingested  → wiki paper page written; integration pass pending
+integrated_date → set by integration agent after first integration pass (separate from status)
 ```
 
 ---

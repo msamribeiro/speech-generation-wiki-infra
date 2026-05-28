@@ -46,8 +46,8 @@
     "SCA"
   ],
   "relevance_score": 0.72,
-  "relevance_note": "Studies frozen LLM's ability to perceive paralinguistic speech aspects via trained encoder; advances speech LM understanding.",
-  "status": "accepted",
+  "relevance_note": "Studies frozen LLM's ability to perceive paralinguistic speech aspects via trained encoder; advances speech LM understanding. [duplicate of interspeech-2025-0166 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

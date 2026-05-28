@@ -32,8 +32,8 @@
     "evaluation"
   ],
   "relevance_score": 0.9,
-  "relevance_note": "arXiv version of ParaSpeechCaps scaling style-prompted TTS datasets; directly advances instruction-conditioned TTS.",
-  "status": "accepted",
+  "relevance_note": "arXiv version of ParaSpeechCaps scaling style-prompted TTS datasets; directly advances instruction-conditioned TTS. [duplicate of 2025.emnlp-main.180 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

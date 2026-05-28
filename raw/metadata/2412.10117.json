@@ -43,7 +43,7 @@
   "year": 2024,
   "month": 12,
   "published_date": "2024-12-13",
-  "ingested_date": null,
+  "ingested_date": "2026-05-28",
   "url": "https://arxiv.org/abs/2412.10117",
   "pdf_url": "https://arxiv.org/pdf/2412.10117.pdf",
   "pdf_path": "raw/papers/2412.10117.pdf",
@@ -55,9 +55,10 @@
   ],
   "relevance_score": 0.97,
   "relevance_note": "CosyVoice 2: streaming speech synthesis with LLM; core TTS scaling paper.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": null
 }

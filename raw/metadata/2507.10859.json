@@ -32,8 +32,8 @@
     "evaluation"
   ],
   "relevance_score": 0.72,
-  "relevance_note": "arXiv version of benchmark for voice assistants with multimodal interactions; advances SCA evaluation.",
-  "status": "accepted",
+  "relevance_note": "arXiv version of benchmark for voice assistants with multimodal interactions; advances SCA evaluation. [duplicate of 2025.emnlp-main.1447 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

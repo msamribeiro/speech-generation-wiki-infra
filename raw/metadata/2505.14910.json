@@ -37,8 +37,8 @@
     "TTS"
   ],
   "relevance_score": 0.88,
-  "relevance_note": "arXiv version of TCSinger 2 multilingual zero-shot singing voice synthesis; directly advances singing TTS.",
-  "status": "accepted",
+  "relevance_note": "arXiv version of TCSinger 2 multilingual zero-shot singing voice synthesis; directly advances singing TTS. [duplicate of 2025.findings-acl.687 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

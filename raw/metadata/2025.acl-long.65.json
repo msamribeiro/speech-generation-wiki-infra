@@ -39,7 +39,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-27",
-  "ingested_date": null,
+  "ingested_date": "2026-05-28",
   "url": "https://aclanthology.org/2025.acl-long.65",
   "pdf_url": "https://aclanthology.org/2025.acl-long.65.pdf",
   "pdf_path": "raw/papers/2025.acl-long.65.pdf",
@@ -50,10 +50,11 @@
   ],
   "relevance_score": 0.97,
   "relevance_note": "Novel continuous-valued token language modeling for TTS (MELLE), bypasses vector quantization; significant architecture contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-07-27"
+  "conference_date": "2025-07-27",
+  "integrated_date": null
 }

@@ -33,8 +33,8 @@
     "evaluation"
   ],
   "relevance_score": 0.85,
-  "relevance_note": "arXiv version of URO-Bench for end-to-end spoken dialogue model evaluation; directly advances SCA evaluation.",
-  "status": "accepted",
+  "relevance_note": "arXiv version of URO-Bench for end-to-end spoken dialogue model evaluation; directly advances SCA evaluation. [duplicate of 2025.findings-emnlp.933 \u2014 proceedings canonical]",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,

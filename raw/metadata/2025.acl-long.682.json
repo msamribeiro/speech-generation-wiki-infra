@@ -29,7 +29,7 @@
   "pdf_url": "https://aclanthology.org/2025.acl-long.682.pdf",
   "pdf_path": "raw/papers/2025.acl-long.682.pdf",
   "pdf_source": "anthology",
-  "abstract": "Text-based Large Language Models (LLMs) have recently gained significant attention, primarily for their capabilities in text-based interactions. However, natural human interaction often relies on speech, highlighting the need for voice-based models. In this context, Speech Language Models (SpeechLMs)—foundation models designed to understand and generate speech—emerge as a promising solution for end-to-end speech interaction. This survey offers a comprehensive overview of recent approaches to building SpeechLMs, outlining their core architectural components, training methodologies, evaluation strategies, and the challenges and potential directions for future research in this rapidly advancing field. The GitHub repository is available at https://github.com/dreamtheater123/Awesome-SpeechLM-Survey",
+  "abstract": "Text-based Large Language Models (LLMs) have recently gained significant attention, primarily for their capabilities in text-based interactions. However, natural human interaction often relies on speech, highlighting the need for voice-based models. In this context, Speech Language Models (SpeechLMs)\u2014foundation models designed to understand and generate speech\u2014emerge as a promising solution for end-to-end speech interaction. This survey offers a comprehensive overview of recent approaches to building SpeechLMs, outlining their core architectural components, training methodologies, evaluation strategies, and the challenges and potential directions for future research in this rapidly advancing field. The GitHub repository is available at https://github.com/dreamtheater123/Awesome-SpeechLM-Survey",
   "task": [
     "TTS",
     "SCA",
@@ -42,5 +42,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-07-27"
+  "conference_date": "2025-07-27",
+  "integrated_date": "2026-05-27"
 }
