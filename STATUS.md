@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-28 (session 15)
+Last updated: 2026-05-28 (session 16)
 
 ---
 
@@ -25,7 +25,7 @@ Last updated: 2026-05-28 (session 15)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | 🔄 In progress | 611/783 done (after dedup). Queue batches 6–10 pending; 6 remapped from arXiv to proceedings IDs. |
-| Ingest (wiki pages) | 🔄 In progress | 29/783 ingested. 4 ingested today (Seed-TTS, CosyVoice, CosyVoice 2, MELLE). ~496 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 39/783 ingested. 5 ingested today (Vevo2, Marco-Voice, OmniVoice, EmoSteer-TTS, Flamed-TTS). ~491 more ready. |
 
 ---
 
@@ -33,17 +33,17 @@ Last updated: 2026-05-28 (session 15)
 
 ```
 Total files:  1000
-  accepted:    754   ← after dedup (783 unique papers - 29 ingested)
-  ingested:     29   ← wiki page written
+  accepted:    744   ← after dedup (783 unique papers - 39 ingested)
+  ingested:     39   ← wiki page written
     integrated: 25   ← integrated_date set (integration pass run 2026-05-27)
-    pending:     4   ← ingested today; integration pass not yet run
+    pending:    14   ← awaiting integration pass (next due after 11 more papers)
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
 Parsed:        577   ← raw/parsed/ (571 original + 6 remapped from arXiv to proceedings IDs)
-Parse-pending: 206   ← queue batches 5–10 minus 6 remapped
-Ready to ingest: ~496 ← parsed but not yet ingested
+Parse-pending: 206   ← queue batches 6–10 pending
+Ready to ingest: ~491 ← parsed but not yet ingested
 ```
 
 ---
@@ -297,7 +297,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 ## Next actions
 
 1. ~~**Integration pass (catch-up)**~~ ✅ Complete — integration pass run on all 25 ingested papers (15-paper pass on 2026-05-27: 16 concepts updated, 3 cross-links added, overview.md written, arxiv-2025 venue page updated).
-2. **Continue ingest** — ~496 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers. Next integration pass due after 21 more papers (25 - 4 ingested today).
+2. **Continue ingest** — ~491 papers ready. Repeat `speech-generation-ingest-orchestrator: "Ingest up to 5 papers"`; run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` every ~25 papers. Next integration pass due after 11 more papers (25 - 14 pending).
 3. **Continue batch parse** — queue batches 5–10 pending (~206 papers; 6 already remapped from arXiv IDs). Workflow: `source .venv/bin/activate && python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → spawn quality subagent → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Can run in parallel with ingest.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
