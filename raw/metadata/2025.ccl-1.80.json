@@ -27,7 +27,7 @@
   "pdf_url": "https://aclanthology.org/2025.ccl-1.80.pdf",
   "pdf_path": "raw/papers/2025.ccl-1.80.pdf",
   "pdf_source": "anthology",
-  "abstract": "\"This paper addresses the challenges of data scarcity and limited speaker resources in Lao-English code-switched speech synthesis. We propose a neural encoder-decoder-based method for mixed-lingual speech synthesis. The method first extracts phoneme-level speech representations and employs a dot-product attention mechanism to map Lao and English phonemes into a shared la-tent space, thereby enhancing the model’s capability to represent cross-lingual phonetic information. In addition, language ID embedding module is extended to explicitly indicate the language of each input token, helping the model distinguish and adapt to language-specific pronunciation characteristics. Experiments are conducted on the open-source English dataset LibriTTS anda proprietary Lao speech corpus. Both subjective evaluations (MOS, AB preference tests) and objective metrics (RMSE) demonstrate that the proposed approach significantly outperforms the baseline VALL-E X model in terms of naturalness and language-switching fluency. Furthermore, ablation studies confirm that both the shared phoneme latent space and the language ID mod-ule play critical roles in improving synthesis quality. This approach offers a novel solution for integrating low-resource languages into mixed-lingual speech synthesis.\"",
+  "abstract": "\"This paper addresses the challenges of data scarcity and limited speaker resources in Lao-English code-switched speech synthesis. We propose a neural encoder-decoder-based method for mixed-lingual speech synthesis. The method first extracts phoneme-level speech representations and employs a dot-product attention mechanism to map Lao and English phonemes into a shared la-tent space, thereby enhancing the model\u2019s capability to represent cross-lingual phonetic information. In addition, language ID embedding module is extended to explicitly indicate the language of each input token, helping the model distinguish and adapt to language-specific pronunciation characteristics. Experiments are conducted on the open-source English dataset LibriTTS anda proprietary Lao speech corpus. Both subjective evaluations (MOS, AB preference tests) and objective metrics (RMSE) demonstrate that the proposed approach significantly outperforms the baseline VALL-E X model in terms of naturalness and language-switching fluency. Furthermore, ablation studies confirm that both the shared phoneme latent space and the language ID mod-ule play critical roles in improving synthesis quality. This approach offers a novel solution for integrating low-resource languages into mixed-lingual speech synthesis.\"",
   "task": [
     "TTS"
   ],
@@ -38,5 +38,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01"
+  "conference_date": "2025-01-01",
+  "integrated_date": "2026-05-29"
 }
