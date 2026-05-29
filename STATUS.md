@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-29 (session 19)
+Last updated: 2026-05-29 (session 20)
 
 ---
 
@@ -24,7 +24,7 @@ Last updated: 2026-05-29 (session 19)
 | Filter — batch 3 (May 25) | ✅ Complete | Re-scan + citation-discovery: 101 papers, 67 accepted, 7 review, 27 rejected (66% accept rate). |
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
-| Parse (text extraction) | 🔄 In progress | 681/783 done (in-corpus). Queue batches 8–10 pending (~102 papers). 15 orphan parsed dirs from rejected duplicates (non-blocking). |
+| Parse (text extraction) | 🔄 In progress | 721/783 done (in-corpus). Queue batches 9–10 pending (~67 papers). 15 orphan parsed dirs from rejected duplicates (non-blocking). |
 | Ingest (wiki pages) | 🔄 In progress | 70/783 ingested. +5 this session (DiffStyleTTS, DNASpeech, Vietnamese ZS-TTS, Lao CS-TTS, LLaMA-Omni 2). ~460 more ready. |
 
 ---
@@ -41,9 +41,9 @@ Total files:  1000
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
-Parsed:        681   ← in-corpus paper.md files (696 total; 15 orphan dirs from rejected duplicates)
-Parse-pending: ~102  ← queue batches 8–10 pending
-Ready to ingest: ~611 ← parsed but not yet ingested
+Parsed:        721   ← in-corpus paper.md files (736 total; 15 orphan dirs from rejected duplicates)
+Parse-pending: ~67   ← queue batches 9–10 pending
+Ready to ingest: ~651 ← parsed but not yet ingested
 ```
 
 ---
@@ -175,7 +175,7 @@ Queue file: `raw/parsed/batch_queue.json`. Managed by `scripts/parse/make_batch_
 | 5 | 40 | 2603.14035 … 2604.06356 | complete | Quality report: `raw/parsed/batch_25_quality_report.md`. RapidOCR: 2603.14853 (×4), 2603.22252 (×2), 2603.23938 (×5), 2603.24144 (×1) (non-fatal). Low refs: 2603.19798 (16), 2604.03279 (17) (legitimate). |
 | 6 | 40 | 2604.06871 … 2604.22821 | complete | Quality report: `raw/parsed/batch_26_quality_report.md`. RapidOCR: 2604.11424 (×4, non-fatal). 0 refs: 2604.13288 (no References header, non-blocking). |
 | 7 | 40 | 2604.25441 … interspeech-2025-0355 | complete | Quality report: `raw/parsed/batch_27_quality_report.md`. RapidOCR: 2605.05611 (×1), 2605.20946 (×2), interspeech-2025-0115 (×2) (non-fatal). Clean run. |
-| 8 | 40 | interspeech-2025-0383 … interspeech-2025-1081 | pending |
+| 8 | 40 | interspeech-2025-0383 … interspeech-2025-1081 | complete | Quality report: `raw/parsed/batch_8_quality_report.md`. RapidOCR: 0408, 0433, 0669, 0756 (non-fatal). Clean run. |
 | 9 | 40 | interspeech-2025-1084 … interspeech-2025-2031 | pending |
 | 10 | 27 | interspeech-2025-2032 … interspeech-2025-raju25_interspeech | pending |
 
@@ -298,7 +298,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 1. ~~**Integration pass (catch-up)**~~ ✅ Complete — all 70 ingested papers integrated (10+15 on 2026-05-27, 45 on 2026-05-29; 17 concept pages updated, 23 cross-links added).
 2. **Continue ingest** — ~611 papers ready (681 parsed − 70 ingested). Use parallel direct subagents with Mitigation B (see `INGEST_OPT_EXPERIMENT.md`): workers write paper pages only; main session does batch cleanup pass for index/log/venue files. Run integration every ~25 papers.
-3. **Continue batch parse** — queue batches 8–10 pending (~102 papers; Interspeech-heavy). Workflow: `.venv/bin/python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → quality check → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Note: use `.venv/bin/python` directly (not `source .venv/bin/activate &&`) to avoid Python 3.9 fallback in background tasks.
+3. **Continue batch parse** — queue batches 9–10 pending (~67 papers; Interspeech-heavy). Workflow: `.venv/bin/python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → quality check → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Note: use `.venv/bin/python` directly (not `source .venv/bin/activate &&`) to avoid Python 3.9 fallback in background tasks.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
 6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
