@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-29 (session 18)
+Last updated: 2026-05-29 (session 19)
 
 ---
 
@@ -35,8 +35,8 @@ Last updated: 2026-05-29 (session 18)
 Total files:  1000
   accepted:    713   ← after dedup (783 unique papers - 70 ingested)
   ingested:     70   ← wiki page written
-    integrated: 25   ← integrated_date set (integration pass run 2026-05-27)
-    pending:    45   ← awaiting integration pass (overdue — 45 > 25)
+    integrated: 70   ← all integrated (passes: 10+15 on 2026-05-27, 45 on 2026-05-29)
+    pending:     0   ← integration backlog cleared
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
@@ -296,10 +296,9 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. ~~**Integration pass (catch-up)**~~ ✅ Complete — integration pass run on all 25 ingested papers (15-paper pass on 2026-05-27: 16 concepts updated, 3 cross-links added, overview.md written, arxiv-2025 venue page updated).
-2. **Integration pass due now** — 45 papers pending integration (> 25 threshold). Run `speech-generation-integration-agent: "Run integration pass on last 25 papers"` before continuing ingest.
-3. **Continue ingest** — ~611 papers ready (681 parsed − 70 ingested). Use parallel direct subagents with Mitigation B (see `INGEST_OPT_EXPERIMENT.md`): workers write paper pages only; main session does batch cleanup pass for index/log/venue files.
-4. **Continue batch parse** — queue batches 8–10 pending (~102 papers; Interspeech-heavy). Workflow: `.venv/bin/python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → quality check → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Note: use `.venv/bin/python` directly (not `source .venv/bin/activate &&`) to avoid Python 3.9 fallback in background tasks.
+1. ~~**Integration pass (catch-up)**~~ ✅ Complete — all 70 ingested papers integrated (10+15 on 2026-05-27, 45 on 2026-05-29; 17 concept pages updated, 23 cross-links added).
+2. **Continue ingest** — ~611 papers ready (681 parsed − 70 ingested). Use parallel direct subagents with Mitigation B (see `INGEST_OPT_EXPERIMENT.md`): workers write paper pages only; main session does batch cleanup pass for index/log/venue files. Run integration every ~25 papers.
+3. **Continue batch parse** — queue batches 8–10 pending (~102 papers; Interspeech-heavy). Workflow: `.venv/bin/python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → quality check → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Note: use `.venv/bin/python` directly (not `source .venv/bin/activate &&`) to avoid Python 3.9 fallback in background tasks.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
 6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
