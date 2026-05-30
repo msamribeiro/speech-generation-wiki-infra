@@ -25,7 +25,7 @@ Last updated: 2026-05-30 (session 21, parse batches 9–10)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 95/783 ingested. +25 this session (5 batches of 5 Interspeech 2025 TTS papers). **Integration threshold reached (25).** ~626 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 100/783 ingested. +30 this session (6 batches of 5 TTS papers across Interspeech, NAACL, ACL, EMNLP, arXiv, COLING). **Integration threshold exceeded (30 pending).** ~621 more ready. |
 
 ---
 
@@ -33,10 +33,10 @@ Last updated: 2026-05-30 (session 21, parse batches 9–10)
 
 ```
 Total files:  1000
-  accepted:    688   ← after dedup (783 unique papers - 95 ingested)
-  ingested:     95   ← wiki page written
+  accepted:    683   ← after dedup (783 unique papers - 100 ingested)
+  ingested:    100   ← wiki page written
     integrated: 70   ← all 70 pre-session papers integrated
-    pending:    25   ← integration backlog; threshold reached — run integration pass now
+    pending:    30   ← integration backlog; threshold exceeded — run integration pass now
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
