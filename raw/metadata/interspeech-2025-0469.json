@@ -26,7 +26,7 @@
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/naseem25_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-0469.pdf",
   "pdf_source": "isca",
-  "abstract": "Existing Punjabi text-to-speech (TTS) solutions focus on Gurumukhi script, requiring transliteration from Shahmukhi. This leads to letter substitutions and omissions, resulting in pronunciation errors. In this study, speech corpus, phonetic lexicon, and text analysis module for Punjabi Shahmukhi were developed. Two model architectures: Tacotron 1 and Tacotron 2 with WaveGlow were used to build TTS models. In addition to Punjabi, Urdu TTS models were also developed. These models were benchmarked against Urdu and Punjabi Gurumukhi TTS models provided by Metaâs Massively Multilingual Speech (MMS) which is a top profile multilingual speech project. Objective and subjective evaluations indicate that tacotron based Urdu and Punjabi models outperform MMS in intelligibility, naturalness, and phonetic accuracy, enhancing TTS quality for these languages.",
+  "abstract": "Existing Punjabi text-to-speech (TTS) solutions focus on Gurumukhi script, requiring transliteration from Shahmukhi. This leads to letter substitutions and omissions, resulting in pronunciation errors. In this study, speech corpus, phonetic lexicon, and text analysis module for Punjabi Shahmukhi were developed. Two model architectures: Tacotron 1 and Tacotron 2 with WaveGlow were used to build TTS models. In addition to Punjabi, Urdu TTS models were also developed. These models were benchmarked against Urdu and Punjabi Gurumukhi TTS models provided by Meta\u00e2\u0080\u0099s Massively Multilingual Speech (MMS) which is a top profile multilingual speech project. Objective and subjective evaluations indicate that tacotron based Urdu and Punjabi models outperform MMS in intelligibility, naturalness, and phonetic accuracy, enhancing TTS quality for these languages.",
   "task": [
     "TTS",
     "evaluation"
@@ -37,5 +37,6 @@
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": "2026-05-30"
 }

@@ -21,7 +21,7 @@
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/sosawelford25_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-0973.pdf",
   "pdf_source": "isca",
-  "abstract": "This work addresses the development of a database for the automatic assessment of textâtoâspeech (TTS) systems in Spanish, aiming to improve the accuracy of naturalness prediction models. The dataset consists of 4,326 audio samples from 52 different TTS systems and human voices and is, up to our knowledge, the first of its kind in Spanish. To label the audios, a subjective test was designed based on the ITUâT Rec. P.807 standard and completed by 92 participants. Furthermore, the utility of the collected dataset was validated by training automatic naturalness prediction systems. We explored two approaches: fine-tuning an existing model originally trained for English, and training small downstream networks on top of frozen self-supervised speech models. Our models achieve a mean absolute error of 0.8 on a five-point MOS scale. Further analysis demonstrates the quality and diversity of the developed dataset, and its potential to advance TTS research in Spanish.",
+  "abstract": "This work addresses the development of a database for the automatic assessment of text\u00e2\u0080\u0090to\u00e2\u0080\u0090speech (TTS) systems in Spanish, aiming to improve the accuracy of naturalness prediction models. The dataset consists of 4,326 audio samples from 52 different TTS systems and human voices and is, up to our knowledge, the first of its kind in Spanish. To label the audios, a subjective test was designed based on the ITU\u00e2\u0080\u0090T Rec. P.807 standard and completed by 92 participants. Furthermore, the utility of the collected dataset was validated by training automatic naturalness prediction systems. We explored two approaches: fine-tuning an existing model originally trained for English, and training small downstream networks on top of frozen self-supervised speech models. Our models achieve a mean absolute error of 0.8 on a five-point MOS scale. Further analysis demonstrates the quality and diversity of the developed dataset, and its potential to advance TTS research in Spanish.",
   "task": [
     "TTS",
     "evaluation"
@@ -32,5 +32,6 @@
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": "2026-05-30"
 }

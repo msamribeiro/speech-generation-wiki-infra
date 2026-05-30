@@ -4,12 +4,12 @@
     "isca": "zalkow25_interspeech",
     "doi": "10.21437/Interspeech.2025-854"
   },
-  "title": "Bridging the TrainingâInference Gap in TTS: Training Strategies for Robust Generative Postprocessing for Low-Resource Speakers",
+  "title": "Bridging the Training\u00e2\u0080\u0093Inference Gap in TTS: Training Strategies for Robust Generative Postprocessing for Low-Resource Speakers",
   "authors": [
     "Frank Zalkow",
     "Paolo Sani",
     "Kishor Kayyar Lakshminarayana",
-    "EmanuÃ«l A. P. Habets",
+    "Emanu\u00c3\u00abl A. P. Habets",
     "Nicola Pia",
     "Christian Dittmar"
   ],
@@ -35,5 +35,6 @@
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "integrated_date": "2026-05-30"
 }
