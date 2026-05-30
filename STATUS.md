@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-29 (session 20)
+Last updated: 2026-05-30 (session 21)
 
 ---
 
@@ -25,25 +25,25 @@ Last updated: 2026-05-29 (session 20)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | 🔄 In progress | 721/783 done (in-corpus). Queue batches 9–10 pending (~67 papers). 15 orphan parsed dirs from rejected duplicates (non-blocking). |
-| Ingest (wiki pages) | 🔄 In progress | 70/783 ingested. +5 this session (DiffStyleTTS, DNASpeech, Vietnamese ZS-TTS, Lao CS-TTS, LLaMA-Omni 2). ~460 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 90/783 ingested. +20 this session (4 batches of 5 Interspeech 2025 TTS papers). ~631 more ready. |
 
 ---
 
-## Metadata counts (2026-05-29)
+## Metadata counts (2026-05-30)
 
 ```
 Total files:  1000
-  accepted:    713   ← after dedup (783 unique papers - 70 ingested)
-  ingested:     70   ← wiki page written
-    integrated: 70   ← all integrated (passes: 10+15 on 2026-05-27, 45 on 2026-05-29)
-    pending:     0   ← integration backlog cleared
+  accepted:    693   ← after dedup (783 unique papers - 90 ingested)
+  ingested:     90   ← wiki page written
+    integrated: 70   ← all 70 pre-session papers integrated
+    pending:    20   ← integration backlog (session 21); run integration pass at 25
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
 Parsed:        721   ← in-corpus paper.md files (736 total; 15 orphan dirs from rejected duplicates)
 Parse-pending: ~67   ← queue batches 9–10 pending
-Ready to ingest: ~651 ← parsed but not yet ingested
+Ready to ingest: ~631 ← parsed but not yet ingested
 ```
 
 ---
@@ -296,8 +296,8 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. ~~**Integration pass (catch-up)**~~ ✅ Complete — all 70 ingested papers integrated (10+15 on 2026-05-27, 45 on 2026-05-29; 17 concept pages updated, 23 cross-links added).
-2. **Continue ingest** — ~611 papers ready (681 parsed − 70 ingested). Use parallel direct subagents with Mitigation B (see `INGEST_OPT_EXPERIMENT.md`): workers write paper pages only; main session does batch cleanup pass for index/log/venue files. Run integration every ~25 papers.
+1. **Integration pass** — 20 papers in backlog (threshold: 25). Run after 5 more are ingested. Ingest 5 more first, then: `speech-generation-integration-agent: "Run integration pass on last 25 papers"`. Flag for the agent: APTTS + RapFlow-TTS form a few-step ODE acceleration cluster for `flow-matching` concept page; VoiceMark/MIKU-PAL/DiffRO all cite CosyVoice+F5-TTS (in-corpus cross-links ready).
+2. **Continue ingest** — ~631 papers ready (721 parsed − 90 ingested). Use parallel direct subagents with Mitigation B (see `INGEST_OPT_EXPERIMENT.md`): workers write paper pages only; main session does batch cleanup pass for index/log/venue files. Run integration every ~25 papers. Next up: `interspeech-2025-0469` (deferred by user this session) then `interspeech-2025-0854` onwards (Interspeech TTS queue still has 21 papers remaining).
 3. **Continue batch parse** — queue batches 9–10 pending (~67 papers; Interspeech-heavy). Workflow: `.venv/bin/python scripts/parse/batch_convert.py --ids <ids> 2>&1 | tee /tmp/batch_N.log` → quality check → save report → update STATUS.md. Get batch IDs from `raw/parsed/batch_queue.json`. Note: use `.venv/bin/python` directly (not `source .venv/bin/activate &&`) to avoid Python 3.9 fallback in background tasks.
 4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
 5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
