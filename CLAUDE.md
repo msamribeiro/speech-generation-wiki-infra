@@ -60,10 +60,17 @@ wiki/                         # LLM-generated and LLM-maintained markdown
   log.md                      # Append-only chronological log
   overview.md                 # Evolving synthesis and thesis (current state)
   papers/                     # One page per ingested paper
+    assets/                   # Selected figures copied from raw/parsed/ during ingest
+      {id}/                   # One subdirectory per paper that has embedded figures
+        figure-N.png          # Architecture/system diagram selected by ingest agent
   concepts/                   # Technology and method concept pages
+    _evidence/                # Machine-oriented concept evidence digests (YAML, one per concept slug)
   comparisons/                # Cross-paper comparison tables
-  venues/                     # One summary page per conference/venue or org
-  trends/                     # Year-on-year longitudinal analysis pages
+  venues/                     # One summary page per conference/venue or org; named {year}-{venue-slug}.md
+  reports/                    # Temporal synthesis layer
+    monthly/                  # Monthly field reports (reports/monthly/YYYY-MM.md)
+    quarterly/                # Quarterly field reports (reports/quarterly/YYYY-QN.md)
+    yearly/                   # Annual state-of-field reports (reports/yearly/YYYY.md)
 
 scripts/
   fetch/                      # Fetchers: arxiv.py, arxiv_oai.py, acl.py, isca.py
@@ -189,6 +196,21 @@ Use these exact terms throughout the wiki. When a paper uses a different label, 
 - `fine-tuning` — adapter or full fine-tuning of a pre-trained foundation model
 - `continual-learning` — incremental learning without catastrophic forgetting
 
+### Field Significance
+
+Used in paper page frontmatter and `## Field Significance` prose section.
+
+`level`: `low` | `moderate` | `high` | `foundational`
+
+`type` (one or more):
+- `engineering-integration` — applies existing techniques to a new context without architectural novelty
+- `architectural-novelty` — introduces a new model structure, training objective, or inference procedure
+- `empirical-benchmark` — primary contribution is evaluation at scale or on a new benchmark
+- `conceptual-contribution` — reframes how the field thinks about a problem
+- `negative-result` — shows that a widely-held belief or approach does not hold
+- `evaluation-contribution` — introduces a new metric, test set, or listening test methodology
+- `dataset-contribution` — primary contribution is a new dataset
+
 ### Evaluation Metrics (canonical names)
 - `MOS` — mean opinion score (naturalness)
 - `SMOS` — speaker similarity MOS
@@ -243,13 +265,15 @@ demo_available: true | false | null
 url: {original paper URL — arXiv abstract page or proceedings URL}
 related_concepts: [{concept slugs}]
 related_papers: [{paper IDs}]
+field_significance:
+  level: low | moderate | high | foundational
+  type: [{one or more from the field_significance type vocabulary}]
 ---
 
-# {Title}
-
-**Paper:** [{url}]({url})
-
-**One-sentence contribution:** {The single most important thing this paper does.}
+> [!abstract] {venue} · {year} · {venue_type capitalized}
+> **{First Author} et al.** ({organization}) · [→ Paper]({url}) · Demo: ✓/✗/? · Code: ✓/✗/?
+>
+> {The single most important thing this paper does.}
 
 ## Problem
 
@@ -259,6 +283,9 @@ related_papers: [{paper IDs}]
 
 {How does the system work? Cover: input representation, architecture, conditioning mechanism, training objective, inference procedure. Include model size and codec choice if reported. Synthesize from reading — do not copy the abstract.}
 
+{If an architecture figure was selected (see figure selection rules), embed it here after the first explanatory paragraph:}
+![{Figure N caption from paper.}](assets/{id}/figure-N.png)
+
 ## Key Results
 
 {Headline numbers. Compare to baselines. Note which benchmarks were used and whether comparisons are fair (same test set, same conditions).}
@@ -267,9 +294,22 @@ related_papers: [{paper IDs}]
 
 {What is genuinely new vs. incremental? Is the contribution primarily architectural, training-recipe, data-scale, or engineering? Be honest.}
 
+## Field Significance
+
+{For foundational or high papers, wrap the prose in a callout — use `> [!important]` for foundational, `> [!tip]` for high. For moderate or low, write plain prose.}
+
+{level} — {1–3 sentences. What does this paper contribute to the field beyond its own results? Distinguish foundational works, strong empirical evidence, engineering integrations, and incremental variations. Note if this is primarily important as confirmatory evidence or as a cautionary/negative result.}
+
+## Claims
+
+{2–5 generalised propositions about speech generation that this paper provides evidence for, against, or complicates. Each claim must be one sentence, stated at the field level (not about this paper specifically), and reusable across multiple papers. See WRITING_STYLE.md §3 for the full rules.}
+
+- {Claim 1.}
+- {Claim 2.}
+
 ## Limitations and Open Questions
 
-{What does the paper not address? What would a follow-up need to tackle?}
+{What does the paper not address? What would a follow-up need to tackle? If there is a critical limitation that materially restricts the paper's claims or reproducibility, surface it first as a `> [!warning]` callout, then continue with the remaining limitations as prose or a list.}
 
 ## Wiki Connections
 
@@ -278,50 +318,101 @@ related_papers: [{paper IDs}]
 
 ### 2. Concept Page (`wiki/concepts/{slug}.md`)
 
+`status` allowed values: `emerging` | `established` | `dominant` | `declining` | `contested` | `mature-infrastructure`
+
 ```markdown
 ---
 slug: {slug}
 title: {Human-readable title}
 aliases: [{alternative names used in the literature}]
+status: emerging | established | dominant | declining | contested | mature-infrastructure
 related_concepts: [{slugs of related concept pages}]
 last_updated: {YYYY-MM-DD}
 ---
 
-# {Title}
+## Executive Summary
 
-## What it is
+> [!abstract]
+> {2–3 sentences. What is this concept, where does it stand today, and why does it matter? Write for a researcher who has 30 seconds. Update whenever the field-level picture changes materially.}
 
-{Plain-language description of the concept and its role in speech synthesis.}
+## Current Status
 
-## Why it matters
+{status-label} — {1–2 sentences on current adoption rate, trajectory, and position relative to competing approaches.}
 
-{Why is this important in TTS/VC/SCA specifically? What problem does it solve that alternatives do not?}
+## Why This Matters
 
-## Current state of the art
+{What problem does this concept solve that alternatives do not? Why did the field develop or adopt it?}
 
-{The leading approaches as of the most recently ingested papers. Cite specific papers with [[wikilinks]].}
+## Core Idea
 
-## Key variants and sub-approaches
+{Plain-language description. Assume familiarity with TTS/ML fundamentals but not this specific approach.}
 
-{The main sub-families. For each: what distinguishes it, which papers use it, and its trade-offs.}
+## Methods and Variants
 
-## Comparison to alternatives
+{The main sub-families within this concept. For each: what distinguishes it, which papers exemplify it, and its trade-offs. Use [[wikilinks]] for papers.}
 
-{How does this compare to competing paradigms? Trade-offs in quality, speed, data efficiency, controllability.}
+## Major Claims
 
-## Year-on-year trajectory
+Claims are generalised propositions aggregated from paper evidence. The full claim registry with supporting paper lists is in `wiki/concepts/_evidence/{slug}.yaml`.
 
-{How has this concept evolved across the ingested papers? Note shifts in dominant approach, scale, or evaluation standard. Update as new papers arrive.}
+### Strongly Supported
 
-## Open questions
+- {Claim backed by ≥3 independent papers with fair evaluations.}
+  Supporting: [[id]], [[id]]
 
-{What is unresolved? Where do ingested papers disagree?}
+### Emerging
 
-## Papers
+- {Claim backed by 1–2 papers, or with methodological caveats.}
+  Supporting: [[id]]
 
-| ID | Title | Venue | Year | Key use of this concept |
-|----|-------|-------|------|------------------------|
-| [[id]] | Title | Venue | 2025 | Description |
+### Contested
+
+> [!warning]
+> {Claim where the evidence is mixed or papers actively disagree.}
+> Supporting: [[id]] / Contradicting: [[id]]
+
+## Relationship to Other Concepts
+
+### Replaces or Supersedes
+- [[concept_slug]] — {in what context}
+
+### Extends or Builds On
+- [[concept_slug]] — {how}
+
+### Competes With
+- [[concept_slug]] — {key trade-off between them}
+
+### Commonly Paired With
+- [[concept_slug]] — {why they appear together}
+
+## Representative Papers
+
+### Foundational
+- [[id]] — {why foundational; 1 sentence}
+
+### Influential
+- [[id]] — {key contribution or impact}
+
+### Recent Highlights
+- [[id]] — {key contribution}
+
+### Cautionary / Negative Evidence
+- [[id]] — {what this paper challenges or complicates}
+
+## Open Questions
+
+- {What is unresolved?}
+- {Where do papers disagree?}
+
+## Trend Summary
+
+{Short interpretive paragraph on how this concept has evolved across ingested papers. Note shifts in dominant approach, scale, evaluation standard, and adoption rate. Update as new papers arrive.}
+
+## All Papers
+
+| ID | Title | Venue | Year | Role in this concept |
+|----|-------|-------|------|---------------------|
+| [[id]] | Title | Venue | 2025 | {1-phrase description} |
 ```
 
 ### 3. Comparison Page (`wiki/comparisons/{slug}.md`)
@@ -331,53 +422,99 @@ Generated in response to a query and filed back. Always includes:
 - A markdown table (one row per system/paper, columns for the dimensions being compared)
 - A short interpretive paragraph after the table noting what the comparison reveals
 
-### 4. Venue Page (`wiki/venues/{venue-year}.md`)
+### 4. Concept Evidence Digest (`wiki/concepts/_evidence/{slug}.yaml`)
 
-One page per venue-year (e.g. `interspeech-2025.md`) or per org-year for technical reports (e.g. `google-2025.md`). Covers: total papers ingested, dominant tasks, dominant architectures, standout papers, and any trends specific to that community or organization.
+Machine-oriented intermediate artifact. One YAML file per concept slug. Maintained by the integration agent after each pass. Never shown directly to readers — it is the compact synthesis input for concept page regeneration and report generation. Enables scalable concept synthesis without loading all paper pages into one context window.
 
-### 5. Trend Page (`wiki/trends/{slug}.md`)
+```yaml
+concept: {slug}
+last_updated: YYYY-MM-DD
+paper_count: N
 
-For longitudinal analysis across multiple years. Created when enough papers span 2+ years to support a meaningful comparison.
+papers:
+  - id: {paper_id}
+    year: YYYY
+    task: [TTS]
+    architecture: [flow-matching]
+    relevance: high | medium | low
+    contribution_type: architectural-novelty  # from field_significance type vocabulary
+    claims:
+      - {Candidate claim extracted from this paper.}
+    evidence:
+      - {Key supporting fact or result, 1 sentence.}
+    limitations:
+      - {Limitation relevant to this concept.}
+
+claim_clusters:
+  - claim: {Canonical claim at the concept level, synthesised across papers.}
+    status: strongly_supported | emerging | contested
+    supporting_papers: [{paper_id}, ...]
+    contradicting_papers: []
+    notes: {Optional nuance.}
+
+open_questions:
+  - {Unresolved question surfaced by one or more papers.}
+
+trend_notes:
+  - {Temporal observation about this concept, e.g. "adoption increasing since 2024".}
+```
+
+**When to create:** when a concept reaches 5+ papers. **When to update:** every integration pass, for each concept touched. **When to use:** as primary input when rewriting a concept page; never load all related paper pages directly.
+
+### 5. Report Page (`wiki/reports/{period}/{slug}.md`)
+
+Temporal synthesis pages. Generated periodically, not after every ingest. Answer: *what changed during this period?* Do not list papers sequentially — synthesise change, direction, and momentum.
 
 ```markdown
 ---
-slug: {slug}
-title: {e.g. "Architecture trends in TTS 2023–2025"}
-concepts: [{related concept slugs}]
-years_covered: [2023, 2024, 2025]
-last_updated: {date}
+period: YYYY-MM | YYYY-QN | YYYY
+type: monthly | quarterly | yearly
+concepts_covered: [{slugs}]
+papers_included: N
+date_generated: YYYY-MM-DD
 ---
 
-# {Title}
+# Speech Generation Report — {Period}
 
-## Summary
+## Executive Summary
 
-{1–2 paragraph narrative of how this dimension has evolved.}
+## Major Developments
 
-## Year-by-year breakdown
+## Emerging Concepts
 
-### {Year}
-{What was dominant, what was emerging, what key papers defined the year.}
+## Architectural Shifts
 
-## Metric progression
+## Capability Shifts
 
-{If measurable: how did benchmark numbers move year over year.}
+## Contested Claims
 
-## What drove the change
+## Open Questions
 
-{Architectural shifts, dataset availability, compute scale, influence of adjacent fields.}
+## Surprises
+
+## Representative Papers
+
+## Forecast
+
+## Appendix: Papers Included
 ```
 
-### 6. Overview (`wiki/overview.md`)
+### 6. Venue Page (`wiki/venues/{year}-{venue-slug}.md`)
 
-The evolving synthesis. Updated by the integration agent every ~25 ingested papers, or after a significant query that reveals a new pattern. Sections:
+One page per venue-year (e.g. `2025-interspeech.md`) or per org-year for technical reports (e.g. `2025-google.md`). Named `{year}-{venue-slug}` so that directory listings and the index sort chronologically. Covers: total papers ingested, dominant tasks, dominant architectures, standout papers, and any trends specific to that community or organization.
 
-1. **Dominant paradigms** — what architectural approaches dominate each task today
-2. **Emerging trends** — what is gaining traction in the most recent papers
-3. **Points of tension** — where the literature actively disagrees
-4. **Gaps** — what is underexplored relative to adjacent fields
-5. **Key concept hubs** — the most-linked concept pages
-6. **Year-on-year perspective** — trajectory summary once multiple years are covered
+### 7. Overview (`wiki/overview.md`)
+
+The evolving synthesis. Updated by the integration agent every ~25 ingested papers, or after a significant query that reveals a new pattern. Generated from concept pages, reports, and evidence digests — not directly from paper pages. Sections:
+
+1. **Executive Summary** — 2–3 sentence field-level state
+2. **Dominant paradigms** — what architectural approaches dominate each task today
+3. **Emerging trends** — what is gaining traction in the most recent papers
+4. **Points of tension** — where the literature actively disagrees
+5. **Gaps** — what is underexplored relative to adjacent fields
+6. **Key concept hubs** — the most-linked concept pages
+7. **Year-on-year perspective** — trajectory summary once multiple years are covered
+8. **Open questions** — unresolved debates aggregated across concepts
 
 ---
 
@@ -391,7 +528,7 @@ When given a batch of candidate papers (from arXiv search, proceedings scrape, o
 2. Assign `relevance_score` (0.0–1.0) based on fit to TTS / VC / SCA.
 3. Write metadata JSON with `status: accepted` (score > 0.70), `status: review` (0.40–0.70), or `status: rejected` (< 0.40).
 4. Append to `raw/review_queue.md` for all `status: review` papers.
-5. Log: `- filter | {source} | {N} accepted, {M} review, {K} rejected` under today's `## YYYY-MM-DD` section.
+5. Log: `- filter | {source} | {N} accepted, {M} review, {K} rejected` under today's `## YYYY-MM-DD` section in `raw/pipeline_log.md`.
 
 ### Ingest Workflow
 
@@ -414,7 +551,7 @@ Ingest is self-contained per paper (writes the paper page + index/log/venue row 
 
 **For a single paper** (by ID, PDF path, or URL):
 
-> **Multi-agent pipeline note:** When using the `speech-generation-ingest-agent` subagent, it performs steps 1–3 and 7–10 only. Steps 4–6 and 11–12 are the **integration agent's** responsibility — they run separately every ~25 papers. Do not instruct the per-paper agent to perform steps 4–6; it will refuse by design.
+> **Multi-agent pipeline note:** When using the `speech-generation-ingest-agent` subagent, it performs steps 1–3 and 7–10 only. Steps 4–6 and 11–12 are the **integration agent's** responsibility — they run separately every ~25 papers. Do not instruct the per-paper agent to perform steps 4–6; it will refuse by design. The integration agent also maintains `wiki/concepts/_evidence/` digests (step 12b) — these are not paper-agent territory.
 
 1. **Check `status`** — only proceed if `status: accepted`. If `status: review`, surface the review queue entry for user decision first.
 2. **Read the parsed paper** — read `raw/parsed/{id}/paper.md` (Docling output) in full: abstract, introduction, method, experiments, conclusion. Also read `raw/parsed/{id}/metadata.json` for structured fields and `raw/parsed/{id}/references.json` for in-corpus citations. For technical reports, also check appendices on training data and evaluation.
@@ -422,12 +559,12 @@ Ingest is self-contained per paper (writes the paper page + index/log/venue row 
 4. **[Integration agent] Update concept pages** — identify 3–6 relevant concept pages. Update each: add the paper to the Papers table, and update "Current state of the art" if this paper advances it.
 5. **[Integration agent] Create new concept pages** if the paper uses a concept not yet in the wiki. Seed with what the paper provides; mark `# TODO: expand` on sections needing more papers.
 6. **[Integration agent] Cross-link related papers** — for each in-corpus citation, add a `[[wikilink]]` in the Wiki Connections section of both this paper and the cited paper. Out-of-corpus references are noted as plain text; they surface as corpus candidates via the Citation Discovery Workflow.
-7. **Update `wiki/index.md`** — add paper entry and any new concept or trend pages.
+7. **Update `wiki/index.md`** — add paper entry.
 8. **Update `wiki/log.md`** — append a bullet under today's `## YYYY-MM-DD` section: `- ingest | {id} | {title} | {venue} {year}`.
 9. **Set `status: ingested`** and `ingested_date` in the metadata JSON.
 10. **Update `wiki/venues/{venue-year}.md`**.
 11. **[Integration agent] Update `wiki/overview.md`** if a pattern has visibly shifted.
-12. **[Integration agent] Update relevant trend pages** if the paper extends a longitudinal analysis.
+12. **[Integration agent] Update concept evidence digests** (`wiki/concepts/_evidence/{slug}.yaml`) — for each concept touched, merge concept-specific notes (claims, evidence, limitations) from this paper into the digest. Create the digest file if it does not exist and the concept now has ≥5 papers.
 
 ### Query Workflow
 
@@ -436,8 +573,8 @@ When asked a research question:
 1. Read `wiki/index.md` to find relevant pages.
 2. Read those pages.
 3. Synthesize with citations using [[wikilinks]].
-4. **File valuable answers back**: comparisons → `wiki/comparisons/`, trend insights → `wiki/trends/` or `overview.md`.
-5. Log: `- query | {question summary}` under today's `## YYYY-MM-DD` section.
+4. **File valuable answers back**: comparisons → `wiki/comparisons/`, temporal/trend analyses → `wiki/reports/` or the relevant concept page's trend summary section.
+5. Log: `- query | {question summary}` under today's `## YYYY-MM-DD` section in `wiki/log.md`.
 
 ### Lint Workflow
 
@@ -447,11 +584,12 @@ When asked to lint the wiki:
 - Concept pages with fewer than 2 papers (merge candidates)
 - Paper pages with `"not reported"` fields that could now be filled from related papers
 - Concept "Current state of the art" sections that reference papers no longer the most recent
-- Missing trend pages for concepts with papers spanning 2+ years
+- Concept evidence digests that are missing for concepts with ≥5 papers
+- Concept evidence digests whose `paper_count` is behind the concept page Papers table
 - Suggested new concept pages implicit in existing content but not yet created
 - Suggested comparison pages based on clusters using the same benchmark
 - Out-of-corpus papers cited by ≥ 3 corpus papers (prompt to run Citation Discovery Workflow)
-- Log: `- lint | {summary}` under today's `## YYYY-MM-DD` section.
+- Log: `- lint | {summary}` under today's `## YYYY-MM-DD` section in `raw/pipeline_log.md`.
 
 ### Citation Discovery Workflow
 
@@ -461,7 +599,7 @@ When asked to discover candidate papers via the citation graph:
 2. Filter to entries with `in_corpus: false`, sorted by `citation_count` descending.
 3. Surface candidates cited by ≥ 3 corpus papers (or top 20 if fewer reach that threshold). For each: title (if known), arXiv ID or DOI, citation count, and the corpus papers that cite it.
 4. Present the list to the user for approval. Approved candidates get a `raw/metadata/{id}.json` with `status: pending` and are run through the Filter Workflow. The filter agent will assign a relevance score; foundational papers (WaveNet, VITS, HiFi-GAN, VALL-E, etc.) should score high regardless of publication date.
-5. Log: `- discover | {N} candidates surfaced, {M} added as pending` under today's `## YYYY-MM-DD` section.
+5. Log: `- discover | {N} candidates surfaced, {M} added as pending` under today's `## YYYY-MM-DD` section in `raw/pipeline_log.md`.
 
 ---
 
@@ -486,7 +624,7 @@ When the integration agent encounters a `related_concepts` slug not in this list
 ```markdown
 # Wiki Index
 
-Last updated: {date} | Papers: {N} | Concepts: {N} | Trends: {N}
+Last updated: {date} | Papers: {N} | Concepts: {N} | Reports: {N}
 
 ## Papers
 
@@ -504,42 +642,56 @@ Last updated: {date} | Papers: {N} | Concepts: {N} | Trends: {N}
 | Slug | Question | Papers | Date |
 |------|----------|--------|------|
 
-## Trends
+## Reports
 
-| Slug | Title | Years | Last updated |
-|------|-------|-------|-------------|
+| Page | Type | Period | Papers covered |
+|------|------|--------|---------------|
 
 ## Venues
 
 | Page | Venue | Year | Papers ingested |
 |------|-------|------|----------------|
+| [[{year}-{venue-slug}]] | {Venue} | {year} | N |
 ```
 
 ---
 
-## Log Format (`wiki/log.md`)
+## Log Format
 
-Entries are grouped by date under `##` headings. Each entry is a bullet whose first token must be `ingest`, `integrate`, `filter`, `review`, `query`, `lint`, `discover`, or `parse`.
+Two separate logs serve two different audiences.
+
+### `wiki/log.md` — Reader-facing changelog
+
+Rendered on the public wiki site. Records only operations that change visible wiki content. Entry types: `ingest`, `integrate`, `report`, `query`.
 
 ```markdown
 ## 2025-12-01
 
 - ingest | google-audiopalm2-2025 | AudioPaLM 2 | technical-report 2025
+- integrate | 25 papers | 8 concepts updated | 3 digests updated | 14 cross-links added
+
+## 2025-12-02
+
+- query | Comparison of zero-shot TTS systems by SPK-SIM
+```
+
+### `raw/pipeline_log.md` — Infra-facing operations log
+
+Lives in the infra repo only; never rendered on the site. Records pipeline operations that do not directly change wiki content. Entry types: `filter`, `review`, `parse`, `discover`, `lint`.
+
+```markdown
+## 2025-12-01
+
 - filter | Interspeech 2025 | 41 accepted, 12 review, 28 rejected
+- parse | batch 7 | 40 papers | 0 failed
 
 ## 2025-12-02
 
 - review | Interspeech 2025 | 28 borderline resolved → 15 accepted, 13 rejected
-- query | Comparison of zero-shot TTS systems by SPK-SIM
-
-## 2025-12-05
-
-- lint | 2 orphan pages, 1 new concept suggested (streaming-inference)
+- lint | 2 orphan pages, 1 missing evidence digest (flow-matching)
 ```
 
-When appending: if the current date already has a `##` section, add bullets under it. If not, create a new `## YYYY-MM-DD` section at the end of the file.
-
-`filter` records the automated LLM pass output. `review` records the human decision on the borderline papers from `raw/review_queue.md`. Log both whenever the review queue is processed. `discover` records a Citation Discovery run. `parse` records a batch parse run.
+Both logs use the same format: date sections under `## YYYY-MM-DD`, one bullet per operation. When appending: if today's section already exists, add bullets under it; otherwise create a new section at the end.
 
 ---
 
@@ -553,6 +705,7 @@ Never violated under any circumstances:
 4. **One paper, one page** — check the index before creating a new paper page. Deduplicate by arXiv ID first, then by title similarity.
 5. **Cite specifically** — use [[wikilinks]] to paper IDs, not just venue or year.
 6. **File answers back** — valuable query outputs must be written to the wiki, not left only in chat.
-7. **Log everything** — every filter, ingest, integrate, parse, discover, query, and lint operation produces a log entry in `wiki/log.md`.
+7. **Log everything** — `ingest`, `integrate`, `report`, and `query` operations log to `wiki/log.md`; `filter`, `parse`, `discover`, `lint`, and `review` operations log to `raw/pipeline_log.md`. Never mix the two.
 8. **Respect status** — never ingest a paper with `status: pending`, `review`, or `rejected` without explicit user instruction.
 9. **Preserve provenance** — every metric value on a paper page must trace to a specific table or figure in the source PDF, not to another wiki page.
+10. **Evidence digests are derived, not authoritative** — never edit a digest directly to change a claim's status; update claim status only through a new integration pass that reads the underlying paper pages. The digest is a cache; the paper pages are the ground truth.

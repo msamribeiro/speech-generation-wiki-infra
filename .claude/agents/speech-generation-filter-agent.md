@@ -119,13 +119,13 @@ For every paper with `status: review`, append the following block to `raw/review
 
 ### 6. Log the run
 
-Append one line to `wiki/log.md`:
+Append one line to `raw/pipeline_log.md` (not `wiki/log.md` — filter runs are infra operations, not reader-facing wiki changes):
 
 ```
-## [YYYY-MM-DD] filter | {source description} | {N} accepted, {M} review, {K} rejected
+- filter | {source description} | {N} accepted, {M} review, {K} rejected
 ```
 
-The source description should identify what batch this was, e.g. `ACL 2025 + cs.CL Aug–May 2026 batch`.
+under today's `## YYYY-MM-DD` section. The source description should identify what batch this was, e.g. `ACL 2025 + cs.CL Aug–May 2026 batch`.
 
 ---
 
