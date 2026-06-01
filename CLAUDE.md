@@ -114,6 +114,14 @@ Every paper in `raw/metadata/` must have a JSON file named `{id}.json`. The ID i
   "published_date": "YYYY-MM-DD — date of first public availability",
   "ingested_date": "YYYY-MM-DD or null — set on ingest",
   "integrated_date": "YYYY-MM-DD or null — set by integration agent after first integration pass",
+  "generation_history": [
+    {
+      "date": "YYYY-MM-DD",
+      "op": "ingest | re-ingest | quality-pass",
+      "model": "claude-sonnet-4-6",
+      "commit": "abc1234"
+    }
+  ],
   "url": "string — arXiv or proceedings URL",
   "pdf_path": "raw/papers/filename.pdf",
   "task": ["list — one or more of the task values listed below"],
@@ -268,6 +276,10 @@ related_papers: [{paper IDs}]
 field_significance:
   level: low | moderate | high | foundational
   type: [{one or more from the field_significance type vocabulary}]
+generation:
+  date: {YYYY-MM-DD}
+  model: {model-id, e.g. claude-sonnet-4-6}
+  commit: {7-char infra repo git hash}
 ---
 
 > [!abstract] {venue} · {year} · {venue_type capitalized}
@@ -561,7 +573,7 @@ Ingest is self-contained per paper (writes the paper page + index/log/venue row 
 6. **[Integration agent] Cross-link related papers** — for each in-corpus citation, add a `[[wikilink]]` in the Wiki Connections section of both this paper and the cited paper. Out-of-corpus references are noted as plain text; they surface as corpus candidates via the Citation Discovery Workflow.
 7. **Update `wiki/index.md`** — add paper entry.
 8. **Update `wiki/log.md`** — append a bullet under today's `## YYYY-MM-DD` section: `- ingest | {id} | {title} | {venue} {year}`.
-9. **Set `status: ingested`** and `ingested_date` in the metadata JSON.
+9. **Set `status: ingested`**, `ingested_date`, and append to `generation_history` in the metadata JSON.
 10. **Update `wiki/venues/{venue-year}.md`**.
 11. **[Integration agent] Update `wiki/overview.md`** if a pattern has visibly shifted.
 12. **[Integration agent] Update concept evidence digests** (`wiki/concepts/_evidence/{slug}.yaml`) — for each concept touched, merge concept-specific notes (claims, evidence, limitations) from this paper into the digest. Create the digest file if it does not exist and the concept now has ≥5 papers.
@@ -589,6 +601,7 @@ When asked to lint the wiki:
 - Suggested new concept pages implicit in existing content but not yet created
 - Suggested comparison pages based on clusters using the same benchmark
 - Out-of-corpus papers cited by ≥ 3 corpus papers (prompt to run Citation Discovery Workflow)
+- Paper pages missing a `generation` frontmatter block (pre-v2 template; candidates for re-ingest)
 - Log: `- lint | {summary}` under today's `## YYYY-MM-DD` section in `raw/pipeline_log.md`.
 
 ### Citation Discovery Workflow
@@ -699,7 +712,7 @@ Both logs use the same format: date sections under `## YYYY-MM-DD`, one bullet p
 
 Never violated under any circumstances:
 
-1. **Never alter the content of source documents** — PDFs in `raw/papers/` and the substantive content of `raw/metadata/` JSONs are the source of truth. Pipeline scripts may write new files to `raw/` (PDFs, parsed output, logs) and update pipeline-state fields in metadata (`status`, `pdf_path`, `ingested_date`), but must never alter what a paper says or manually override filter scores without explicit user instruction.
+1. **Never alter the content of source documents** — PDFs in `raw/papers/` and the substantive content of `raw/metadata/` JSONs are the source of truth. Pipeline scripts may write new files to `raw/` (PDFs, parsed output, logs) and update pipeline-state fields in metadata (`status`, `pdf_path`, `ingested_date`, `integrated_date`, `generation_history`), but must never alter what a paper says or manually override filter scores without explicit user instruction.
 2. **Never invent numbers** — if a metric is not in the paper, write `"not reported"`. Never estimate or hallucinate.
 3. **Canonical vocabulary only** — map all terms to the controlled vocabulary. Note the authors' original term in parentheses.
 4. **One paper, one page** — check the index before creating a new paper page. Deduplicate by arXiv ID first, then by title similarity.

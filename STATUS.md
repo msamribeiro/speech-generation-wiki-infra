@@ -341,6 +341,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 - **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch batch. Canonical priority: proceedings > arXiv.
 - **Tiered wiki pages** — Full vs. summary tiers as corpus scales. Low-citation incremental papers compressed to one paragraph; promotable on in-corpus citation gain. Pruning pass every ~100 ingested.
 - **Opus quality pass** — Targeted rewrites for papers with ≥10 in-corpus citations and concept pages with ≥15 entries. Mark with `quality_pass: opus | YYYY-MM-DD`. Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec.
+- **Generation tracking for concept pages** — `generation` frontmatter block and `generation_history` are currently implemented for paper pages only (2026-06-01). Concept pages, venue pages, and overview.md need the same treatment. When implemented, the integration agent spec and CLAUDE.md concept page template both need updating.
 - **Quartz explorer: exclude `papers/`** — One-line `filterFn` change in site repo prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
 - **First field report** — Once ~200+ papers ingested, generate first quarterly or batch report. Validates the report format and overview/concept → report synthesis pipeline.
 

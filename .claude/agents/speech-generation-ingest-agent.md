@@ -88,7 +88,15 @@ for r in in_corpus:
 "
 ```
 
-### 2b. Select and copy architecture figures
+### 2b. Capture generation metadata
+
+```bash
+git rev-parse --short HEAD
+```
+
+Record the result as `COMMIT`. The model is always `claude-sonnet-4-6` (matches this agent spec's `model:` frontmatter). Use both in the paper page `generation` block (step 3) and the metadata `generation_history` entry (step 7). Set `op` to `re-ingest` if `generation_history` already exists and is non-empty in the metadata JSON; otherwise `ingest`.
+
+### 2c. Select and copy architecture figures
 
 Figures are **optional**. Include them only when the paper proposes a novel architecture, module, or component — and only when a figure directly conveys that design. Do not include figures for papers whose primary contribution is empirical (evaluation, benchmarking, dataset, scaling), or for engineering integrations that combine existing components without a new structural design.
 
@@ -154,6 +162,10 @@ related_papers: [{in-corpus paper IDs cited by this paper}]
 field_significance:
   level: "{low | moderate | high | foundational}"
   type: [{one or more from the field_significance vocabulary below}]
+generation:
+  date: {TODAY}
+  model: claude-sonnet-4-6
+  commit: "{COMMIT from step 2b}"
 ---
 
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Workshop | Preprint | Technical Report}
@@ -361,12 +373,19 @@ open('wiki/log.md','w').write(text)
 
 ```bash
 python3 -c "
-import json
+import json, subprocess
 from datetime import date
 path = 'raw/metadata/{ID}.json'
 d = json.load(open(path))
 d['status'] = 'ingested'
 d['ingested_date'] = date.today().isoformat()
+try:
+    commit = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD'], text=True).strip()
+except Exception:
+    commit = 'unknown'
+op = 're-ingest' if d.get('generation_history') else 'ingest'
+entry = {'date': date.today().isoformat(), 'op': op, 'model': 'claude-sonnet-4-6', 'commit': commit}
+d.setdefault('generation_history', []).append(entry)
 open(path,'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "
 ```

@@ -55,5 +55,13 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "integrated_date": "2026-05-27"
+  "integrated_date": "2026-05-27",
+  "generation_history": [
+    {
+      "date": "2026-06-01",
+      "op": "re-ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "828cda8"
+    }
+  ]
 }
