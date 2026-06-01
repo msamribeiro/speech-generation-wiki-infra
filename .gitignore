@@ -18,6 +18,7 @@ raw/fetch_log.jsonl
 
 # Scratch files
 convert_paper_with_docling_tmp.py
+docs/THOUGHTS_FOR_IMPROVEMENTS.md
 
 # macOS
 .DS_Store
