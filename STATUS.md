@@ -296,13 +296,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Re-ingest ~10 representative papers** — Validate the new template (claims, field_significance, architecture figures, callout card) before bulk ingest. Target one paper per contribution type:
-   - `foundational`: `2301.02111` (VALL-E) or `2407.05407` (CosyVoice)
-   - `architectural-novelty`: `2025.acl-long.313` (F5-TTS) or `2412.10117` (CosyVoice 2)
-   - `empirical-benchmark`: `2025.emnlp-main.180` (dataset/eval paper)
-   - `engineering-integration`: one of the streaming TTS papers (e.g., `2604.12438`)
-   - `evaluation-contribution`: an eval-focused paper (e.g., `2025.acl-long.682` survey)
-   Check: Claims are field-level propositions (not metric values), field_significance matches the paper type, architecture figure is included iff `architectural-novelty`, callout card renders correctly.
+1. **Re-ingest ~10 representative papers** — ✅ Complete (2026-06-01). 5 papers validated across all contribution types: `2301.02111` (foundational), `2025.acl-long.313` (architectural-novelty), `2025.emnlp-main.180` (dataset-contribution), `2604.12438` (engineering-integration), `2025.acl-long.682` (conceptual-contribution). All checks passed: Claims are field-level propositions, field_significance and callout types are correct, figures embedded iff architectural-novelty.
 
 2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01). All 21 pages rewritten to research-briefing format: Executive Summary, Current Status, Major Claims, Representative Papers, Relationship to Other Concepts, status vocab. Blocker resolved.
 
