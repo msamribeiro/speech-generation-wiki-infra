@@ -25,25 +25,25 @@ Last updated: 2026-06-01 (session 22, schema and wiki design pass)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 100/783 ingested. +30 this session (6 batches of 5 TTS papers across Interspeech, NAACL, ACL, EMNLP, arXiv, COLING). **Integration threshold exceeded (30 pending).** ~621 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 100/783 ingested. All 100 integrated (integration pass 4 complete 2026-05-30). ~683 more ready. New template (claims, field_significance, evidence digests) requires re-ingest of existing pages. |
 
 ---
 
-## Metadata counts (2026-05-30)
+## Metadata counts (2026-06-01)
 
 ```
 Total files:  1000
   accepted:    683   ← after dedup (783 unique papers - 100 ingested)
   ingested:    100   ← wiki page written
-    integrated: 70   ← all 70 pre-session papers integrated
-    pending:    30   ← integration backlog; threshold exceeded — run integration pass now
+    integrated: 100  ← all 100 integrated (integration pass 4 complete 2026-05-30)
+    pending:      0  ← queue clear; next integration pass after 25 more ingested
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
 Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30)
 Parse-pending:   0   ← all queue batches done
-Ready to ingest: ~693 ← parsed but not yet ingested
+Ready to ingest: 683 ← parsed but not yet ingested
 ```
 
 ---
