@@ -57,7 +57,7 @@ raw/                          # Source documents — PDFs and metadata are writt
 
 wiki/                         # LLM-generated and LLM-maintained markdown
   index.md                    # Master catalog of all wiki pages
-  log.md                      # Append-only chronological log
+  log.md                      # Reverse-chronological log (newest entries at top)
   overview.md                 # Evolving synthesis and thesis (current state)
   papers/                     # One page per ingested paper
     assets/                   # Selected figures copied from raw/parsed/ during ingest
@@ -691,7 +691,7 @@ Lives in the infra repo only; never rendered on the site. Records pipeline opera
 - lint | 2 orphan pages, 1 missing evidence digest (flow-matching)
 ```
 
-Both logs use the same format: date sections under `## YYYY-MM-DD`, one bullet per operation. When appending: if today's section already exists, add bullets under it; otherwise create a new section at the end.
+Both logs use the same format: date sections under `## YYYY-MM-DD`, one bullet per operation. Entries are in **reverse chronological order** — newest date section at the top (immediately after the `---` divider), oldest at the bottom. When writing: if today's section already exists, append the bullet to it; otherwise insert a new `## YYYY-MM-DD` section at the top.
 
 ---
 

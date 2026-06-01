@@ -279,19 +279,22 @@ print(f'integrated_date set for {len(ids)} papers')
 
 ```bash
 python3 -c "
+import re
 from datetime import date
 n_papers   = {papers_processed}
 n_concepts = {concepts_updated}
+n_digests  = {digests_updated}
 n_links    = {cross_links_added}
 today      = date.today().isoformat()
 bullet = f'- integrate | {n_papers} papers | {n_concepts} concepts updated | {n_digests} digests updated | {n_links} cross-links added'
 section = f'## {today}'
-text = open('wiki/log.md').read().rstrip('\n')
+text = open('wiki/log.md').read()
 if section in text:
-    text = text + '\n' + bullet
+    text = text.rstrip('\n') + '\n' + bullet + '\n'
 else:
-    text = text + f'\n\n{section}\n\n' + bullet
-open('wiki/log.md','w').write(text + '\n')
+    new_section = f'{section}\n\n{bullet}\n\n'
+    text = re.sub(r'(---\n\n)(## \d)', r'\1' + new_section + r'\2', text, count=1)
+open('wiki/log.md','w').write(text)
 "
 ```
 

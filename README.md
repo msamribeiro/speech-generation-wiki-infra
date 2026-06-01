@@ -1,8 +1,10 @@
 # Speech Synthesis Research Wiki
 
+![Speech Generation Wiki](wiki/assets/speech-generation-wiki.png)
+
 A living systematic review of the state of the art in synthetic speech, covering **text-to-speech (TTS)**, **voice conversion (VC)**, and **spoken conversational agents (SCA)**. Papers are ingested on a rolling basis from arXiv, Interspeech, ACL/EMNLP/NAACL, and industry technical reports.
 
-The wiki compiles structured paper pages, concept pages, comparison tables, and year-on-year trend analyses under `wiki/`. The raw corpus (metadata, PDFs, parsed text) lives under `raw/` and is never modified by wiki content generation.
+The wiki compiles structured paper pages, concept pages, comparison tables, and periodic field reports under `wiki/`. The raw corpus (metadata, PDFs, parsed text) lives under `raw/` and is never modified by wiki content generation.
 
 See `CLAUDE.md` for the full schema and operating contract.
 
@@ -18,21 +20,25 @@ raw/                  # Immutable source documents
   review_queue.md     # Borderline papers awaiting manual review
 
 wiki/                 # LLM-maintained markdown knowledge base
-  index.md            # Master catalog
-  log.md              # Append-only operation log
-  overview.md         # Evolving synthesis
+  index.md            # Landing page — concept navigation and entry points
+  overview.md         # Evolving synthesis of dominant paradigms and trends
+  log.md              # Reverse-chronological reader-facing changelog
   papers/             # One page per ingested paper
+    index.md          # Full paper catalog
   concepts/           # Technology and method concept pages
+    index.md          # Concept directory
+    _evidence/        # Concept evidence digests (YAML; used for scalable synthesis)
   comparisons/        # Cross-paper comparison tables
-  venues/             # Per-conference summaries
-  trends/             # Longitudinal analysis pages
+  venues/             # Per-conference summaries (named {year}-{venue})
+  reports/            # Periodic field reports (monthly, quarterly, yearly)
 
 scripts/
   fetch/              # Fetchers: arXiv, ACL Anthology, Interspeech
   filter/             # Filter agent (assigns relevance scores)
-  parse/              # PDF download and parsing pipeline
+  parse/              # PDF download and parsing pipeline (Docling-based)
   discover/           # Citation discovery (citation index, corpus expansion)
-  ingest/             # Wiki page generation (planned)
+
+.claude/agents/       # Claude Code subagent specs (ingest, integration, filter)
 
 lib/                  # Shared library code
 config/               # keyword_filter.yaml and parsing.yaml
@@ -141,15 +147,16 @@ python scripts/parse/download_pdfs.py --max-errors 3
 ## Pipeline overview
 
 ```
-1. FETCH      — scripts/fetch/          → raw/metadata/*.json  (status: pending)
-2. FILTER     — scripts/filter/         → status: accepted | review | rejected
-3. REVIEW     — manual (review_queue.md)→ status: accepted | rejected
+1. FETCH      — scripts/fetch/              → raw/metadata/*.json  (status: pending)
+2. FILTER     — scripts/filter/agent.py     → status: accepted | review | rejected
+3. REVIEW     — manual (raw/review_queue.md)→ status: accepted | rejected
 4. DOWNLOAD   — scripts/parse/download_pdfs.py → raw/papers/*.pdf
-5. PARSE      — scripts/parse/          → raw/parsed/*/full_text.md   [planned]
-6. INGEST     — scripts/ingest/         → wiki/papers/*.md             [planned]
+5. PARSE      — scripts/parse/batch_convert.py → raw/parsed/{id}/paper.md
+6. INGEST     — Claude Code ingest agent    → wiki/papers/{id}.md
+7. INTEGRATE  — Claude Code integration agent → concept pages, evidence digests, cross-links
 ```
 
-Each stage is independently resumable. Re-running any script skips work that is already done (files that exist, statuses already set).
+Stages 1–5 use Python scripts and are independently resumable — re-running skips work already done. Stages 6–7 use Claude Code subagent specs under `.claude/agents/` and are invoked from a Claude Code session. See `CLAUDE.md` for the full ingest and integration workflow.
 
 ---
 

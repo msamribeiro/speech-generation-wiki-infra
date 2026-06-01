@@ -339,18 +339,21 @@ Log entries are grouped by date. If today's `## YYYY-MM-DD` section already exis
 
 ```bash
 python3 -c "
-import json
+import json, re
 from datetime import date
 meta = json.load(open('raw/metadata/{ID}.json'))
 today = date.today().isoformat()
 bullet = f\"- ingest | {meta['id']} | {meta.get('title','')} | {meta.get('venue','arXiv')} {meta.get('year','')}\"
 section = f'## {today}'
-text = open('wiki/log.md').read().rstrip('\n')
+text = open('wiki/log.md').read()
 if section in text:
-    text = text + '\n' + bullet
+    # Append bullet to existing today section
+    text = text.rstrip('\n') + '\n' + bullet + '\n'
 else:
-    text = text + f'\n\n{section}\n\n' + bullet
-open('wiki/log.md','w').write(text + '\n')
+    # Prepend new date section after the divider that precedes date entries
+    new_section = f'{section}\n\n{bullet}\n\n'
+    text = re.sub(r'(---\n\n)(## \d)', r'\1' + new_section + r'\2', text, count=1)
+open('wiki/log.md','w').write(text)
 "
 ```
 
