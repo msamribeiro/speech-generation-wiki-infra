@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-05-30 (session 21, parse batches 9–10)
+Last updated: 2026-06-01 (session 22, schema and wiki design pass)
 
 ---
 
@@ -296,21 +296,39 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Integration pass** — 20 papers in backlog (threshold: 25). Run after 5 more are ingested. Ingest 5 more first, then: `speech-generation-integration-agent: "Run integration pass on last 25 papers"`. Flag for the agent: APTTS + RapFlow-TTS form a few-step ODE acceleration cluster for `flow-matching` concept page; VoiceMark/MIKU-PAL/DiffRO all cite CosyVoice+F5-TTS (in-corpus cross-links ready).
-2. **Continue ingest** — ~631 papers ready (721 parsed − 90 ingested). Use parallel direct subagents with Mitigation B (see `INGEST_OPT_EXPERIMENT.md`): workers write paper pages only; main session does batch cleanup pass for index/log/venue files. Run integration every ~25 papers. Next up: `interspeech-2025-0469` (deferred by user this session) then `interspeech-2025-0854` onwards (Interspeech TTS queue still has 21 papers remaining).
-3. **Batch parse complete** — 783/783 in-corpus papers parsed. Next: re-run `scripts/discover/citation_index.py` to incorporate citations from newly parsed Interspeech papers, then regenerate `raw/parsed/batch_queue.json` after the next fetch top-up.
-4. **Citation discovery — next candidates** — Top unactioned speech-relevant entries: Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch with `python scripts/fetch/arxiv.py --ids <ids>`, then filter + download. Re-run `scripts/discover/citation_index.py` after each parse batch.
-5. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority given current backlog.
-6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
+1. **Re-ingest ~10 representative papers** — The new template (claims, field_significance, merged callout card, architecture figures) requires a re-ingest pass on papers that exemplify different paper types (foundational, architectural, empirical, engineering integration). Existing 100 pages have the structural changes applied (H1 stripped, callout format updated) but lack claims and field_significance fields.
+2. **Continue ingest** — ~683 papers ready. Use parallel direct subagents (Mitigation B). Workers write paper pages only; main session does batch cleanup. Run integration every ~25 papers. Next up: `interspeech-2025-0469` then `interspeech-2025-0854` onwards.
+3. **Integration pass** — 0 pending (all 100 integrated after pass 4). Next pass after 25 more ingested; first pass to also create concept evidence digests.
+4. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch, filter, download. Re-run `scripts/discover/citation_index.py` after each parse batch.
+5. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list from flooding the sidebar.
+6. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority.
+7. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
 
 ---
 
 ## Pipeline & codebase improvements
 
-1. **Ingest agent: image and table reasoning** — The ingest agent currently reads only `paper.md`. Extend it to enumerate `raw/parsed/{id}/assets/` (figure-N.png, table-N.csv) and incorporate key figures/tables into the wiki paper page — link architecture diagrams, extract result tables into the Metrics section, and surface any figures that clarify the method.
-2. **Writing style guidelines** — Define a shared style guide for all content-generating agents (ingest, integration, query). Write `docs/WRITING_STYLE.md` covering: tense conventions, how to introduce a contribution, how to write Novelty Assessments honestly, how to write cross-paper comparisons without overclaiming, and handling uncertainty. Reference it explicitly in each agent spec under `.claude/agents/`.
-3. **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicate pairs were found and resolved manually on 2026-05-28. Add a title-based dedup gate so this is caught automatically. Options: (a) a `scripts/discover/dedup_check.py` script that scans all non-rejected metadata for normalised-title collisions and can be run after each fetch batch; (b) a `--dedup-check` flag on `batch_convert.py` that refuses to parse a paper whose title already exists under a proceedings ID. Canonical priority rule: proceedings ID (ACL, EMNLP, Interspeech, etc.) > arXiv ID. When swapping, remap `raw/parsed/{arxiv_id}/` → `raw/parsed/{proc_id}/` rather than re-parsing.
-4. **Tiered wiki pages** — As the corpus scales to thousands of papers, introduce full vs. summary tiers. Low-citation incremental papers get compressed to a single paragraph; frontmatter and URL always preserved; paper can be promoted back to full tier if it gains in-corpus citations. A periodic pruning pass (every ~100 ingested) identifies candidates (0 in-corpus citations, 6+ months old, no concept back-link).
-5. **Opus quality pass for foundational papers and mature concept pages** — Targeted Opus rewrites for papers with ≥10 in-corpus citations and concept pages with ≥15 paper entries. Not for routine ingest. Mark upgraded pages with `quality_pass: opus | YYYY-MM-DD` in frontmatter. Current candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec.
-6. **Markdown callouts in wiki pages** — Use `> [!NOTE]`, `> [!WARNING]`, `> [!TIP]` admonition blocks to surface key information at a glance. Specify in `docs/WRITING_STYLE.md` which sections warrant callouts (Novelty Assessment, Limitations) and encode in agent specs.
+### Completed (2026-06-01, session 22)
+
+- ✅ **Writing style guidelines** — `docs/WRITING_STYLE.md` created; covers claims, field significance, synthesis vs enumeration, callouts, tense, uncertainty. Referenced in ingest and integration agent specs.
+- ✅ **Claims extraction** — `## Claims` section (2–5 generalised propositions) added to paper page template and ingest agent spec. Controlled vocabulary for claim style in WRITING_STYLE.md §3.
+- ✅ **Field significance** — `field_significance.level` + `field_significance.type` frontmatter + `## Field Significance` prose section added to paper page template and ingest agent.
+- ✅ **Concept page redesign** — Research briefing format: Executive Summary, Current Status (with status vocab), Methods and Variants, Major Claims (Strongly Supported / Emerging / Contested), Relationship to Other Concepts (typed), Representative Papers (tiered), Open Questions, Trend Summary, All Papers table.
+- ✅ **Concept evidence digests** — Schema defined (`wiki/concepts/_evidence/{slug}.yaml`); integration agent Step 3 writes/updates digests after each pass; directory created.
+- ✅ **Architecture figures in paper pages** — Ingest agent Step 2b selects 0–2 architecture figures per paper (only for `architectural-novelty` papers); copies to `wiki/papers/assets/{id}/`; embeds in `## Method`.
+- ✅ **Callout system** — Quartz callout support confirmed. 4 callout types defined with precise trigger rules in WRITING_STYLE.md §11. Applied retroactively to 100 paper pages; concept page template updated.
+- ✅ **Merged paper card** — `> [!abstract]` callout combining venue badge, authors, paper link, availability flags, and one-sentence contribution. Applied to all 100 existing pages.
+- ✅ **Title deduplication fix** — `article-title` Quartz plugin caused double titles. Stripped H1 from 121 pages (100 papers + 21 concepts); templates updated to omit H1 going forward.
+- ✅ **Log split** — `wiki/log.md` is now reader-facing only (ingest, integrate, report, query). Infra operations (filter, parse, discover, lint, review) go to `raw/pipeline_log.md`. 26 entries migrated.
+- ✅ **Venue page naming** — Renamed `{venue}-{year}` → `{year}-{venue}` for chronological sorting. 9 files renamed; index updated; agent specs updated.
+- ✅ **Quartz display names** — Frontmatter `title:` added to top-level wiki files and all folder `index.md` pages so Quartz explorer shows clean names instead of slugs.
+- ✅ **Wiki landing page** — `wiki/index.md` redesigned: banner image, `> [!abstract]` callout, concept navigation by category, links to All Concepts / Venues / Reports / Papers. Paper/concept/venue tables migrated to `wiki/papers/index.md`, `wiki/concepts/index.md`, `wiki/venues/index.md`. Agent specs updated to write to folder indexes.
+- ✅ **`trends/` eliminated** — Replaced by: concept page Trend Summary sections + `wiki/reports/` (monthly/quarterly/yearly). No files to migrate (directory was empty).
+
+### Pending
+
+- **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch batch. Canonical priority: proceedings > arXiv.
+- **Tiered wiki pages** — Full vs. summary tiers as corpus scales. Low-citation incremental papers compressed to one paragraph; promotable on in-corpus citation gain. Pruning pass every ~100 ingested.
+- **Opus quality pass** — Targeted rewrites for papers with ≥10 in-corpus citations and concept pages with ≥15 entries. Mark with `quality_pass: opus | YYYY-MM-DD`. Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec.
+- **Quartz explorer: exclude `papers/`** — One-line `filterFn` change in site repo prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
 
