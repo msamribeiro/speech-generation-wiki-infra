@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-01 (session 22, schema and wiki design pass)
+Last updated: 2026-06-01 (session 23, concept page migration)
 
 ---
 
@@ -304,7 +304,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
    - `evaluation-contribution`: an eval-focused paper (e.g., `2025.acl-long.682` survey)
    Check: Claims are field-level propositions (not metric values), field_significance matches the paper type, architecture figure is included iff `architectural-novelty`, callout card renders correctly.
 
-2. **Migrate 21 concept pages to new template** — ⚠️ Blocker for the next integration pass. The existing concept pages use the old structure (`## What it is`, `## Current state of the art`, `## Key variants`, etc.). The integration agent now writes to the new section names (`## Executive Summary`, `## Major Claims`, `## Relationship to Other Concepts`, etc.). Run the integration agent in concept-page-rewrite mode, or rewrite concept pages manually using the new template in CLAUDE.md §2 before the next integration pass.
+2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01). All 21 pages rewritten to research-briefing format: Executive Summary, Current Status, Major Claims, Representative Papers, Relationship to Other Concepts, status vocab. Blocker resolved.
 
 3. **Continue ingest** — 683 papers ready. Use parallel direct subagents (Mitigation B). Workers write paper pages only; main session does batch cleanup. Run integration every ~25 papers. Next up: `interspeech-2025-0469` then `interspeech-2025-0854` onwards.
 
@@ -343,7 +343,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ### Pending
 
-- **Concept page migration** — 21 existing pages still use old template structure; must be rewritten to research briefing format before next integration pass. See CLAUDE.md §2 for new template.
+- **Concept page migration** — ✅ Complete (2026-06-01). All 21 pages migrated to research briefing format.
 - **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch batch. Canonical priority: proceedings > arXiv.
 - **Tiered wiki pages** — Full vs. summary tiers as corpus scales. Low-citation incremental papers compressed to one paragraph; promotable on in-corpus citation gain. Pruning pass every ~100 ingested.
 - **Opus quality pass** — Targeted rewrites for papers with ≥10 in-corpus citations and concept pages with ≥15 entries. Mark with `quality_pass: opus | YYYY-MM-DD`. Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec.
