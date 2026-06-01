@@ -296,13 +296,29 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Re-ingest ~10 representative papers** — The new template (claims, field_significance, merged callout card, architecture figures) requires a re-ingest pass on papers that exemplify different paper types (foundational, architectural, empirical, engineering integration). Existing 100 pages have the structural changes applied (H1 stripped, callout format updated) but lack claims and field_significance fields.
-2. **Continue ingest** — ~683 papers ready. Use parallel direct subagents (Mitigation B). Workers write paper pages only; main session does batch cleanup. Run integration every ~25 papers. Next up: `interspeech-2025-0469` then `interspeech-2025-0854` onwards.
-3. **Integration pass** — 0 pending (all 100 integrated after pass 4). Next pass after 25 more ingested; first pass to also create concept evidence digests.
-4. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Fetch, filter, download. Re-run `scripts/discover/citation_index.py` after each parse batch.
-5. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list from flooding the sidebar.
-6. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority.
-7. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
+1. **Re-ingest ~10 representative papers** — Validate the new template (claims, field_significance, architecture figures, callout card) before bulk ingest. Target one paper per contribution type:
+   - `foundational`: `2301.02111` (VALL-E) or `2407.05407` (CosyVoice)
+   - `architectural-novelty`: `2025.acl-long.313` (F5-TTS) or `2412.10117` (CosyVoice 2)
+   - `empirical-benchmark`: `2025.emnlp-main.180` (dataset/eval paper)
+   - `engineering-integration`: one of the streaming TTS papers (e.g., `2604.12438`)
+   - `evaluation-contribution`: an eval-focused paper (e.g., `2025.acl-long.682` survey)
+   Check: Claims are field-level propositions (not metric values), field_significance matches the paper type, architecture figure is included iff `architectural-novelty`, callout card renders correctly.
+
+2. **Migrate 21 concept pages to new template** — ⚠️ Blocker for the next integration pass. The existing concept pages use the old structure (`## What it is`, `## Current state of the art`, `## Key variants`, etc.). The integration agent now writes to the new section names (`## Executive Summary`, `## Major Claims`, `## Relationship to Other Concepts`, etc.). Run the integration agent in concept-page-rewrite mode, or rewrite concept pages manually using the new template in CLAUDE.md §2 before the next integration pass.
+
+3. **Continue ingest** — 683 papers ready. Use parallel direct subagents (Mitigation B). Workers write paper pages only; main session does batch cleanup. Run integration every ~25 papers. Next up: `interspeech-2025-0469` then `interspeech-2025-0854` onwards.
+
+4. **Integration pass (first with new schema)** — After 25 more ingested and concept pages migrated. This pass will: (a) update concept pages to new section names where needed, (b) create all 21 initial concept evidence digests (all concepts already have ≥5 papers, so all qualify), (c) add cross-links. First digest creation is a milestone — monitor quality before running at scale.
+
+5. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Re-run `scripts/discover/citation_index.py` first to refresh counts, then: fetch → filter → download → parse → ingest.
+
+6. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list flooding sidebar. Papers remain accessible via `papers/index.md`, concept pages, venue pages, and search.
+
+7. **Generate first field report** — Once ~200+ papers are ingested, generate the first quarterly or batch report using the template in CLAUDE.md §5. This validates the report format and the overview/concept → report synthesis pipeline.
+
+8. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority.
+
+9. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
 
 ---
 
@@ -327,8 +343,21 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ### Pending
 
+- **Concept page migration** — 21 existing pages still use old template structure; must be rewritten to research briefing format before next integration pass. See CLAUDE.md §2 for new template.
 - **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch batch. Canonical priority: proceedings > arXiv.
 - **Tiered wiki pages** — Full vs. summary tiers as corpus scales. Low-citation incremental papers compressed to one paragraph; promotable on in-corpus citation gain. Pruning pass every ~100 ingested.
 - **Opus quality pass** — Targeted rewrites for papers with ≥10 in-corpus citations and concept pages with ≥15 entries. Mark with `quality_pass: opus | YYYY-MM-DD`. Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec.
 - **Quartz explorer: exclude `papers/`** — One-line `filterFn` change in site repo prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
+- **First field report** — Once ~200+ papers ingested, generate first quarterly or batch report. Validates the report format and overview/concept → report synthesis pipeline.
+
+### Product and use-case directions
+
+Extended design notes are in `docs/THOUGHTS_FOR_IMPROVEMENTS.md` (not yet committed; retained for reference). Key directions from that document not yet planned:
+
+- **RAG-powered research assistant** — use wiki as structured retrieval substrate (controlled vocabulary, YAML frontmatter, wikilinks, concept graph) to answer queries like "open-source flow-matching TTS systems and their WER on LibriSpeech test-clean".
+- **Living benchmark observatory** — dynamic leaderboards from the metrics frontmatter; detect metric inflation (are scores improving, or are papers switching to easier test sets?).
+- **Research gap map** — aggregate limitations, open questions, future work, and contested claims across all concept pages into a navigable gap map. High value for researchers and grant writing.
+- **Living survey paper** — the wiki can support annual survey papers and topic-specific surveys; the living nature makes updates cheaper than static surveys.
+- **Organisation / lab intelligence** — use `organization` + `venue` + `year` metadata to answer: what is Google publishing in TTS this year vs last, is Microsoft shifting from diffusion to flow matching, which academic groups drive voice conversion.
+- **Automated related-work generation** — given a new paper's abstract, retrieve relevant concepts and papers; generate related work organised by theme, not chronology.
 
