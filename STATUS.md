@@ -306,7 +306,9 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 4. **Continue ingest** — 658 papers ready. Chronological strategy: proceed by published_date through H2 2025 (Jul → Dec) before 2026. Sequential batches of 5, show selection first. Next candidates: continue August 2025 pool from 2508.12001 onwards (2508.11273 and 2508.12001 already ingested — check index). First field report target: ~150 ingested (~2025-08 half done).
 
-5. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Re-run `scripts/discover/citation_index.py` first to refresh counts, then: fetch → filter → download → parse → ingest.
+5. **Seed `fine-tuning` concept stub** — `2508.09767` (UtterTune) references a `fine-tuning` concept slug that isn't in the registry. As LoRA/adapter-based speaker adaptation appears increasingly in the corpus, a dedicated stub would cover: LoRA fine-tuning, adapter tuning, speaker personalization workflows, and continual/incremental learning. Decide whether to seed it now or wait until 2–3 more papers map to it.
+
+6. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Re-run `scripts/discover/citation_index.py` first to refresh counts, then: fetch → filter → download → parse → ingest.
 
 6. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list flooding sidebar. Papers remain accessible via `papers/index.md`, concept pages, venue pages, and search.
 
