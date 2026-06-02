@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-11",
-  "ingested_date": null,
+  "ingested_date": "2026-06-02",
   "url": "https://arxiv.org/abs/2508.07711",
   "pdf_url": "https://arxiv.org/pdf/2508.07711.pdf",
   "pdf_path": "raw/papers/2508.07711.pdf",
@@ -30,9 +30,17 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Non-adversarial mel-spectrogram vocoder challenging the necessity of GANs",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-02",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "f0299ef"
+    }
+  ]
 }

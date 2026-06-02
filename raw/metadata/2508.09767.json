@@ -14,7 +14,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-13",
-  "ingested_date": null,
+  "ingested_date": "2026-06-02",
   "url": "https://arxiv.org/abs/2508.09767",
   "pdf_url": "https://arxiv.org/pdf/2508.09767.pdf",
   "pdf_path": "raw/papers/2508.09767.pdf",
@@ -26,9 +26,17 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "LoRA-based pronunciation control for multilingual TTS systems",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-02",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "f0299ef"
+    }
+  ]
 }

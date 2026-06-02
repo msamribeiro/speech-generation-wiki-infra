@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-01 (session 23, concept page migration)
+Last updated: 2026-06-02 (session 26, ingest run: +25 papers)
 
 ---
 
@@ -25,25 +25,25 @@ Last updated: 2026-06-01 (session 23, concept page migration)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 100/783 ingested. All 100 integrated (integration pass 4 complete 2026-05-30). ~683 more ready. New template (claims, field_significance, evidence digests) requires re-ingest of existing pages. |
+| Ingest (wiki pages) | 🔄 In progress | 125/783 ingested. 100 integrated (passes 1–4, 2026-05-30); 25 pending integration (ingested 2026-06-02). Integration threshold reached (25/25). ~658 more ready. |
 
 ---
 
-## Metadata counts (2026-06-01)
+## Metadata counts (2026-06-02)
 
 ```
 Total files:  1000
-  accepted:    683   ← after dedup (783 unique papers - 100 ingested)
-  ingested:    100   ← wiki page written
-    integrated: 100  ← all 100 integrated (integration pass 4 complete 2026-05-30)
-    pending:      0  ← queue clear; next integration pass after 25 more ingested
+  accepted:    658   ← 683 - 25 ingested this session
+  ingested:    125   ← wiki page written
+    integrated: 100  ← passes 1–4 complete (2026-05-30)
+    pending:     25  ← ingested 2026-06-02; integration pass due
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
 Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30)
 Parse-pending:   0   ← all queue batches done
-Ready to ingest: 683 ← parsed but not yet ingested
+Ready to ingest: 658 ← parsed but not yet ingested
 ```
 
 ---
@@ -296,13 +296,13 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Re-ingest ~10 representative papers** — ✅ Complete (2026-06-01). 5 papers validated across all contribution types: `2301.02111` (foundational), `2025.acl-long.313` (architectural-novelty), `2025.emnlp-main.180` (dataset-contribution), `2604.12438` (engineering-integration), `2025.acl-long.682` (conceptual-contribution). All checks passed: Claims are field-level propositions, field_significance and callout types are correct, figures embedded iff architectural-novelty.
+1. **Re-ingest ~10 representative papers** — ✅ Complete (2026-06-01).
 
-2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01). All 21 pages rewritten to research-briefing format: Executive Summary, Current Status, Major Claims, Representative Papers, Relationship to Other Concepts, status vocab. Blocker resolved.
+2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01).
 
-3. **Continue ingest** — 683 papers ready. Use parallel direct subagents (Mitigation B). Workers write paper pages only; main session does batch cleanup. Run integration every ~25 papers. Next up: `interspeech-2025-0469` then `interspeech-2025-0854` onwards.
+3. **Integration pass 5 (first with new schema)** — 🔴 Due now (25/25 threshold reached, 2026-06-02). 25 new papers ingested: 2503.04721, 2504.12867, 2507.20091, 2507.22746, 2508.00317, 2508.01796, 2508.02013, 2508.02849, 2508.04585, 2508.04996, 2508.05207, 2508.05385, 2508.06870, 2508.06890, 2508.07302, 2508.07426, 2508.07711, 2508.08399, 2508.08715, 2508.08961, 2508.09767, 2508.11326, 2508.14049, interspeech-2025-0196, interspeech-2025-0203. This pass will: (a) create all 21 initial concept evidence digests (milestone — monitor quality before scale), (b) update concept pages with new papers, (c) add cross-links between related papers.
 
-4. **Integration pass (first with new schema)** — After 25 more ingested and concept pages migrated. This pass will: (a) update concept pages to new section names where needed, (b) create all 21 initial concept evidence digests (all concepts already have ≥5 papers, so all qualify), (c) add cross-links. First digest creation is a milestone — monitor quality before running at scale.
+4. **Continue ingest** — 658 papers ready. Sequential batches of 5, show selection first. Continue August 2025 pool; next candidates start around 2508.11273 / 2508.12001 onwards.
 
 5. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Re-run `scripts/discover/citation_index.py` first to refresh counts, then: fetch → filter → download → parse → ingest.
 

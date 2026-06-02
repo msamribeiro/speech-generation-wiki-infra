@@ -8,7 +8,7 @@
     "Ryo Aihara",
     "Yoshiki Masuyama",
     "Gordon Wichern",
-    "François G. Germain",
+    "Fran\u00e7ois G. Germain",
     "Jonathan Le Roux"
   ],
   "authors_full": null,
@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-11",
-  "ingested_date": null,
+  "ingested_date": "2026-06-02",
   "url": "https://arxiv.org/abs/2508.08399",
   "pdf_url": "https://arxiv.org/pdf/2508.08399.pdf",
   "pdf_path": "raw/papers/2508.08399.pdf",
@@ -30,9 +30,17 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Disentangled neural speech codecs with content-speaker separation from SSL features",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-02",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "f0299ef"
+    }
+  ]
 }

@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-07",
-  "ingested_date": null,
+  "ingested_date": "2026-06-02",
   "url": "https://arxiv.org/abs/2507.20091",
   "pdf_url": "https://arxiv.org/pdf/2507.20091.pdf",
   "pdf_path": "raw/papers/2507.20091.pdf",
@@ -33,9 +33,17 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "Investigates prosody understanding and generation in speech LMs; directly advances SCA and prosody-conditioned TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-02",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "f0299ef"
+    }
+  ]
 }

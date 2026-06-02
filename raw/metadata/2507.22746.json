@@ -23,7 +23,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-01",
-  "ingested_date": null,
+  "ingested_date": "2026-06-02",
   "url": "https://arxiv.org/abs/2507.22746",
   "pdf_url": "https://arxiv.org/pdf/2507.22746.pdf",
   "pdf_path": "raw/papers/2507.22746.pdf",
@@ -35,9 +35,17 @@
   ],
   "relevance_score": 0.93,
   "relevance_note": "Novel Dragon-FM TTS combining AR and diffusion with KV caching and flow matching; directly advances TTS architecture.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-02",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "f0299ef"
+    }
+  ]
 }
