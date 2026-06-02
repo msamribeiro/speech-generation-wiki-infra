@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-02 (session 26, ingest run: +25 papers)
+Last updated: 2026-06-02 (session 27, integration pass 5 complete)
 
 ---
 
@@ -25,7 +25,7 @@ Last updated: 2026-06-02 (session 26, ingest run: +25 papers)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 125/783 ingested. 100 integrated (passes 1–4, 2026-05-30); 25 pending integration (ingested 2026-06-02). Integration threshold reached (25/25). ~658 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 125/783 ingested. 125 integrated (passes 1–5 complete, 2026-06-02). 19/21 concept evidence digests seeded. ~658 more ready. |
 
 ---
 
@@ -33,10 +33,9 @@ Last updated: 2026-06-02 (session 26, ingest run: +25 papers)
 
 ```
 Total files:  1000
-  accepted:    658   ← 683 - 25 ingested this session
+  accepted:    658   ← not yet ingested
   ingested:    125   ← wiki page written
-    integrated: 100  ← passes 1–4 complete (2026-05-30)
-    pending:     25  ← ingested 2026-06-02; integration pass due
+    integrated: 125  ← passes 1–5 complete (2026-06-02); 0 pending
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
@@ -44,6 +43,9 @@ PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PD
 Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30)
 Parse-pending:   0   ← all queue batches done
 Ready to ingest: 658 ← parsed but not yet ingested
+
+Evidence digests: 19/21 seeded (rlhf-speech, transformer-enc-dec-tts have 0 mapped papers yet)
+Missing concept stub: fine-tuning (referenced by 2508.09767 — seed deliberately if warranted)
 ```
 
 ---
@@ -300,9 +302,9 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01).
 
-3. **Integration pass 5 (first with new schema)** — 🔴 Due now (25/25 threshold reached, 2026-06-02). 25 new papers ingested: 2503.04721, 2504.12867, 2507.20091, 2507.22746, 2508.00317, 2508.01796, 2508.02013, 2508.02849, 2508.04585, 2508.04996, 2508.05207, 2508.05385, 2508.06870, 2508.06890, 2508.07302, 2508.07426, 2508.07711, 2508.08399, 2508.08715, 2508.08961, 2508.09767, 2508.11326, 2508.14049, interspeech-2025-0196, interspeech-2025-0203. This pass will: (a) create all 21 initial concept evidence digests (milestone — monitor quality before scale), (b) update concept pages with new papers, (c) add cross-links between related papers.
+3. **Integration pass 5** — ✅ Complete (2026-06-02). 20 concepts updated, 19 evidence digests seeded, 8 cross-links added. Missing stub: `fine-tuning` (flag to user).
 
-4. **Continue ingest** — 658 papers ready. Sequential batches of 5, show selection first. Continue August 2025 pool; next candidates start around 2508.11273 / 2508.12001 onwards.
+4. **Continue ingest** — 658 papers ready. Chronological strategy: proceed by published_date through H2 2025 (Jul → Dec) before 2026. Sequential batches of 5, show selection first. Next candidates: continue August 2025 pool from 2508.12001 onwards (2508.11273 and 2508.12001 already ingested — check index). First field report target: ~150 ingested (~2025-08 half done).
 
 5. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Re-run `scripts/discover/citation_index.py` first to refresh counts, then: fetch → filter → download → parse → ingest.
 
