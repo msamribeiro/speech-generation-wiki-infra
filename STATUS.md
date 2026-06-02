@@ -308,13 +308,18 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 5. **Seed `fine-tuning` concept stub** — `2508.09767` (UtterTune) references a `fine-tuning` concept slug that isn't in the registry. As LoRA/adapter-based speaker adaptation appears increasingly in the corpus, a dedicated stub would cover: LoRA fine-tuning, adapter tuning, speaker personalization workflows, and continual/incremental learning. Decide whether to seed it now or wait until 2–3 more papers map to it.
 
-6. **Citation discovery — next candidates** — Moshi (53x, 2410.00037), GLM-4-Voice (35x, 2412.02612), VALL-E 2 (34x, 2406.05370), Llama-omni (28x, 2409.06666). Re-run `scripts/discover/citation_index.py` first to refresh counts, then: fetch → filter → download → parse → ingest.
+6. **Corpus top-up fetch batch** — consolidates all pending fetch work into one pass before the next ingest phase:
 
-6. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list flooding sidebar. Papers remain accessible via `papers/index.md`, concept pages, venue pages, and search.
+   - **July 2025 arXiv backfill** — current arXiv fetch started 2025-08-01; July 2025 is missing. Run `scripts/fetch/arxiv.py --date-from 2025-07-01 --date-to 2025-07-31` (cs.SD + eess.AS) and the OAI-PMH script for cs.CL over the same window. Needed for full H2 2025 coverage.
+   - **NeurIPS 2025 + related proceedings** — NeurIPS, ICML, ICLR are in the venue list but have no fetcher yet. NeurIPS 2025 proceedings are available via the NeurIPS website; ICML/ICLR via their proceedings pages or PMLR. Need either a new fetcher script or manual metadata entry for accepted speech/audio papers. ~50–150 papers expected across the three venues.
+   - **Citation discovery** — re-run `scripts/discover/citation_index.py` first to refresh counts, then fetch the top candidates: Moshi (53×, 2410.00037), GLM-4-Voice (35×, 2412.02612), VALL-E 2 (34×, 2406.05370), Llama-omni (28×, 2409.06666). Use `scripts/fetch/arxiv.py --ids <ids>`.
+   - **cs.CL re-scan** — run OAI-PMH fetch over Aug 2025–present to catch any cs.CL papers missed or published after the last sweep. ~15–30 marginal papers expected.
 
-7. **Generate first field report** — Once ~200+ papers are ingested, generate the first quarterly or batch report using the template in CLAUDE.md §5. This validates the report format and the overview/concept → report synthesis pipeline.
+   Suggested order: July backfill → cs.CL re-scan → citation discovery → NeurIPS/ICML/ICLR. After each: filter → download → parse, then fold into the ingest queue.
 
-8. **cs.CL re-scan (deferred)** — ~15–30 marginal papers expected; low priority.
+7. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list flooding sidebar. Papers remain accessible via `papers/index.md`, concept pages, venue pages, and search.
+
+8. **Generate first field report** — Once ~200+ papers are ingested, generate the first quarterly or batch report using the template in CLAUDE.md §5. This validates the report format and the overview/concept → report synthesis pipeline.
 
 9. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
 
