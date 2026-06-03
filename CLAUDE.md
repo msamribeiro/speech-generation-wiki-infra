@@ -314,10 +314,10 @@ generation:
 
 ## Claims
 
-{2–5 generalised propositions about speech generation that this paper provides evidence for, against, or complicates. Each claim must be one sentence, stated at the field level (not about this paper specifically), and reusable across multiple papers. See WRITING_STYLE.md §3 for the full rules.}
+{2–5 generalised propositions about speech generation that this paper provides evidence for, against, or complicates. Each claim must be one sentence, stated at the field level (not about this paper specifically), and reusable across multiple papers. See WRITING_STYLE.md §3 for the full rules. Each claim is followed by an inline italic section citation — the section(s) of the source paper where the supporting evidence appears.}
 
-- {Claim 1.}
-- {Claim 2.}
+- {Claim 1.} *(§N.N)*
+- {Claim 2.} *(§N.N, Table N)*
 
 ## Limitations and Open Questions
 

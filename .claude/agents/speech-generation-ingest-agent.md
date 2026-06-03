@@ -204,10 +204,11 @@ generation:
 - be one sentence
 - be stated at the field level (not "this paper shows..." — claim the general proposition)
 - be reusable across multiple papers (another paper could support or refute it)
-- avoid raw metric values, model names, and paper-specific details}
+- avoid raw metric values, model names, and paper-specific details
+- be followed by an inline section citation in italics: *(§N.N)*, *(§N.N, Table N)*, *(§N.N, Figure N)*, etc. — cite the section(s) of the source paper where the supporting evidence appears. This grounds each claim in the paper and allows readers to verify it directly.}
 
-- {Claim 1.}
-- {Claim 2.}
+- {Claim 1.} *({§section or Table/Figure reference})*
+- {Claim 2.} *({§section or Table/Figure reference})*
 
 ## Limitations and Open Questions
 
