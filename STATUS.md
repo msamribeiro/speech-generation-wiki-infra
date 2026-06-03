@@ -299,36 +299,39 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Re-ingest ~10 representative papers** — ✅ Complete (2026-06-01).
+1. **Continue ingest** — 633 papers ready. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: batch 3 papers 7–10 queued (`2508.07375`, `2508.16790`, `interspeech-2025-1289`, `interspeech-2025-0984`), then continue Aug 2025 pool. Show selection first, ingest sequentially one agent at a time.
 
-2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01).
+2. **Seed `singing` and `fine-tuning` concept stubs** — both referenced by ingested papers but absent from the CLAUDE.md registry. Seed before the next integration pass or cross-links will silently drop. `singing`: 6 papers already mapped. `fine-tuning`: 2 papers (LoRA/PEFT trend growing).
 
-3. **Integration passes 5–6** — ✅ Complete (pass 5: 2026-06-02; pass 6: 2026-06-04). Pass 6: 26 papers, 18 concepts updated, 17 digests updated, 6 cross-links added. Missing stubs: `fine-tuning`, `singing` (see Metadata counts above).
+3. **Corpus top-up fetch** — July 2025 arXiv backfill → cs.CL re-scan (Aug 2025–present) → citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers). After each: filter → download → parse. Regenerate `batch_queue.json` after fetch.
 
-4. **Continue ingest** — 658 papers ready. Chronological strategy: proceed by published_date through H2 2025 (Jul → Dec) before 2026. Sequential batches of 5, show selection first. Next candidates: continue August 2025 pool from 2508.12001 onwards (2508.11273 and 2508.12001 already ingested — check index). First field report target: ~150 ingested (~2025-08 half done).
+4. **Fix "Factor A/B/C" terminology** — paper-internal labels from `2412.17048` leaked into 5 concept pages, 5 evidence digests, and `2025.acl-long.1498.md`. Replace with plain language (A = phonetic vs. semantic content, B = token rate/length, C = paralinguistic variability). Source page `2412.17048.md` is correct; do not change it.
 
-5. **Seed `fine-tuning` concept stub** — `2508.09767` (UtterTune) references a `fine-tuning` concept slug that isn't in the registry. As LoRA/adapter-based speaker adaptation appears increasingly in the corpus, a dedicated stub would cover: LoRA fine-tuning, adapter tuning, speaker personalization workflows, and continual/incremental learning. Decide whether to seed it now or wait until 2–3 more papers map to it.
+5. **Generate first field report** — trigger at ~200 ingested papers (~50 more needed). Use template in CLAUDE.md §5. Validates the report pipeline.
 
-6. **Corpus top-up fetch batch** — consolidates all pending fetch work into one pass before the next ingest phase:
+6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
 
-   - **July 2025 arXiv backfill** — current arXiv fetch started 2025-08-01; July 2025 is missing. Run `scripts/fetch/arxiv.py --date-from 2025-07-01 --date-to 2025-07-31` (cs.SD + eess.AS) and the OAI-PMH script for cs.CL over the same window. Needed for full H2 2025 coverage.
-   - **NeurIPS 2025 + related proceedings** — NeurIPS, ICML, ICLR are in the venue list but have no fetcher yet. NeurIPS 2025 proceedings are available via the NeurIPS website; ICML/ICLR via their proceedings pages or PMLR. Need either a new fetcher script or manual metadata entry for accepted speech/audio papers. ~50–150 papers expected across the three venues.
-   - **Citation discovery** — re-run `scripts/discover/citation_index.py` first to refresh counts, then fetch the top candidates: Moshi (53×, 2410.00037), GLM-4-Voice (35×, 2412.02612), VALL-E 2 (34×, 2406.05370), Llama-omni (28×, 2409.06666). Use `scripts/fetch/arxiv.py --ids <ids>`.
-   - **cs.CL re-scan** — run OAI-PMH fetch over Aug 2025–present to catch any cs.CL papers missed or published after the last sweep. ~15–30 marginal papers expected.
+---
 
-   Suggested order: July backfill → cs.CL re-scan → citation discovery → NeurIPS/ICML/ICLR. After each: filter → download → parse, then fold into the ingest queue.
+## Backlog
 
-7. **Exclude `papers/` from Quartz explorer sidebar** — one-line `filterFn` change in site repo's `quartz.config.yaml`; prevents 800+ paper list flooding sidebar. Papers remain accessible via `papers/index.md`, concept pages, venue pages, and search.
+Quick-scan list of improvement ideas. Review at session start; pick up when bandwidth allows.
 
-8. **Generate first field report** — Once ~200+ papers are ingested, generate the first quarterly or batch report using the template in CLAUDE.md §5. This validates the report format and the overview/concept → report synthesis pipeline.
+### Wiki content quality
 
-9. **Correct "Factor A/B/C" terminology propagation** — `2412.17048` ("Why Do SLMs Fail…") uses Factor A/B/C as internal labels for its controlled experiment (A = phonetic vs. semantic content, B = sequence length/token rate, C = paralinguistic variability). These labels have leaked into concept pages and evidence digests as if they were field-level terms. Affected files:
-   - Concept pages: `autoregressive-codec-tts.md`, `neural-codec.md`, `self-supervised-speech.md`, `spoken-language-model.md`, `speech-to-speech.md`
-   - Evidence digests: same 5 slugs
-   - Paper page: `2025.acl-long.1498.md` (cited the paper and adopted the shorthand)
-   The source page `2412.17048.md` is correct and should not be changed. In all other files, replace Factor A/B/C with the actual meaning in plain language.
+- **Static counts go stale** — paper/concept counts hardcoded in `wiki/index.md`, `overview.md`, venue pages, evidence digests (`paper_count`), and concept page All Papers tables drift after every pass. Fix options: (a) compute at Quartz build time via plugin or pre-build script — single source of truth, never stale; (b) add a post-integration agent checklist to re-derive counts in the key index pages. Option (a) is cleaner long-term.
+- **Generation tracking for concept/venue pages** — `generation` frontmatter + `generation_history` implemented for paper pages only. Concept pages, venue pages, and `overview.md` need the same before any Opus quality pass begins. Requires updating integration agent spec and CLAUDE.md template.
+- **Opus quality pass** — targeted rewrites for foundational papers (≥10 in-corpus citations) and mature concept pages (≥15 papers). Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec. Mark with `quality_pass: opus | YYYY-MM-DD`. Blocked on generation tracking above.
+- **Tiered wiki pages** — full vs. summary tiers as corpus scales. Compress low-citation incremental papers to one paragraph; retain frontmatter and URL. Promotable on citation gain. Pruning pass every ~100 ingested.
 
-10. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
+### Infrastructure / site
+
+- **Quartz explorer: exclude `papers/`** — one-line `filterFn` in site repo `quartz.config.yaml` prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
+- **Dedup check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch. Canonical priority: proceedings > arXiv.
+
+### Product directions
+
+See `docs/THOUGHTS_FOR_IMPROVEMENTS.md` for extended notes. Key directions: RAG research assistant, living benchmark leaderboards, research gap map, living survey paper, org/lab intelligence, automated related-work generation.
 
 ---
 
@@ -336,39 +339,18 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ### Completed (2026-06-01, session 22)
 
-- ✅ **Writing style guidelines** — `docs/WRITING_STYLE.md` created; covers claims, field significance, synthesis vs enumeration, callouts, tense, uncertainty. Referenced in ingest and integration agent specs.
-- ✅ **Claims extraction** — `## Claims` section (2–5 generalised propositions) added to paper page template and ingest agent spec. Controlled vocabulary for claim style in WRITING_STYLE.md §3.
-- ✅ **Field significance** — `field_significance.level` + `field_significance.type` frontmatter + `## Field Significance` prose section added to paper page template and ingest agent.
-- ✅ **Concept page redesign** — Research briefing format: Executive Summary, Current Status (with status vocab), Methods and Variants, Major Claims (Strongly Supported / Emerging / Contested), Relationship to Other Concepts (typed), Representative Papers (tiered), Open Questions, Trend Summary, All Papers table.
-- ✅ **Concept evidence digests** — Schema defined (`wiki/concepts/_evidence/{slug}.yaml`); integration agent Step 3 writes/updates digests after each pass; directory created.
-- ✅ **Architecture figures in paper pages** — Ingest agent Step 2b selects 0–2 architecture figures per paper (only for `architectural-novelty` papers); copies to `wiki/papers/assets/{id}/`; embeds in `## Method`.
-- ✅ **Callout system** — Quartz callout support confirmed. 4 callout types defined with precise trigger rules in WRITING_STYLE.md §11. Applied retroactively to 100 paper pages; concept page template updated.
-- ✅ **Merged paper card** — `> [!abstract]` callout combining venue badge, authors, paper link, availability flags, and one-sentence contribution. Applied to all 100 existing pages.
-- ✅ **Title deduplication fix** — `article-title` Quartz plugin caused double titles. Stripped H1 from 121 pages (100 papers + 21 concepts); templates updated to omit H1 going forward.
-- ✅ **Log split** — `wiki/log.md` is now reader-facing only (ingest, integrate, report, query). Infra operations (filter, parse, discover, lint, review) go to `raw/pipeline_log.md`. 26 entries migrated.
-- ✅ **Venue page naming** — Renamed `{venue}-{year}` → `{year}-{venue}` for chronological sorting. 9 files renamed; index updated; agent specs updated.
-- ✅ **Quartz display names** — Frontmatter `title:` added to top-level wiki files and all folder `index.md` pages so Quartz explorer shows clean names instead of slugs.
-- ✅ **Wiki landing page** — `wiki/index.md` redesigned: banner image, `> [!abstract]` callout, concept navigation by category, links to All Concepts / Venues / Reports / Papers. Paper/concept/venue tables migrated to `wiki/papers/index.md`, `wiki/concepts/index.md`, `wiki/venues/index.md`. Agent specs updated to write to folder indexes.
-- ✅ **`trends/` eliminated** — Replaced by: concept page Trend Summary sections + `wiki/reports/` (monthly/quarterly/yearly). No files to migrate (directory was empty).
-
-### Pending
-
-- **Concept page migration** — ✅ Complete (2026-06-01). All 21 pages migrated to research briefing format.
-- **Deduplication check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch batch. Canonical priority: proceedings > arXiv.
-- **Tiered wiki pages** — Full vs. summary tiers as corpus scales. Low-citation incremental papers compressed to one paragraph; promotable on in-corpus citation gain. Pruning pass every ~100 ingested.
-- **Opus quality pass** — Targeted rewrites for papers with ≥10 in-corpus citations and concept pages with ≥15 entries. Mark with `quality_pass: opus | YYYY-MM-DD`. Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec.
-- **Generation tracking for concept pages** — `generation` frontmatter block and `generation_history` are currently implemented for paper pages only (2026-06-01). Concept pages, venue pages, and overview.md need the same treatment. When implemented, the integration agent spec and CLAUDE.md concept page template both need updating.
-- **Quartz explorer: exclude `papers/`** — One-line `filterFn` change in site repo prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
-- **First field report** — Once ~200+ papers ingested, generate first quarterly or batch report. Validates the report format and overview/concept → report synthesis pipeline.
-
-### Product and use-case directions
-
-Extended design notes are in `docs/THOUGHTS_FOR_IMPROVEMENTS.md` (not yet committed; retained for reference). Key directions from that document not yet planned:
-
-- **RAG-powered research assistant** — use wiki as structured retrieval substrate (controlled vocabulary, YAML frontmatter, wikilinks, concept graph) to answer queries like "open-source flow-matching TTS systems and their WER on LibriSpeech test-clean".
-- **Living benchmark observatory** — dynamic leaderboards from the metrics frontmatter; detect metric inflation (are scores improving, or are papers switching to easier test sets?).
-- **Research gap map** — aggregate limitations, open questions, future work, and contested claims across all concept pages into a navigable gap map. High value for researchers and grant writing.
-- **Living survey paper** — the wiki can support annual survey papers and topic-specific surveys; the living nature makes updates cheaper than static surveys.
-- **Organisation / lab intelligence** — use `organization` + `venue` + `year` metadata to answer: what is Google publishing in TTS this year vs last, is Microsoft shifting from diffusion to flow matching, which academic groups drive voice conversion.
-- **Automated related-work generation** — given a new paper's abstract, retrieve relevant concepts and papers; generate related work organised by theme, not chronology.
+- ✅ Writing style guidelines (`docs/WRITING_STYLE.md`)
+- ✅ Claims extraction (`## Claims` section, 2–5 generalised propositions)
+- ✅ Field significance frontmatter + prose section
+- ✅ Concept page redesign (research briefing format)
+- ✅ Concept evidence digests (`wiki/concepts/_evidence/{slug}.yaml`)
+- ✅ Architecture figures in paper pages (architectural-novelty only, 0–2 per paper)
+- ✅ Callout system (4 types with precise trigger rules)
+- ✅ Merged paper card (`> [!abstract]` callout)
+- ✅ Title deduplication fix (H1 stripped from 121 pages)
+- ✅ Log split (`wiki/log.md` reader-facing; `raw/pipeline_log.md` infra-facing)
+- ✅ Venue page naming (`{year}-{venue}` for chronological sorting)
+- ✅ Quartz display names (frontmatter `title:` on all index pages)
+- ✅ Wiki landing page redesign + folder index split
+- ✅ `trends/` eliminated (replaced by concept Trend Summary + `wiki/reports/`)
 
