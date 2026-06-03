@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-02 (session 27, integration pass 5 complete)
+Last updated: 2026-06-04 (session 28, integration pass 6 complete)
 
 ---
 
@@ -25,7 +25,7 @@ Last updated: 2026-06-02 (session 27, integration pass 5 complete)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 125/783 ingested. 125 integrated (passes 1–5 complete, 2026-06-02). 19/21 concept evidence digests seeded. ~658 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 150/783 ingested. 150 integrated (passes 1–6 complete, 2026-06-04). 19/21 evidence digests seeded + 17 updated in pass 6. ~633 more ready. |
 
 ---
 
@@ -33,19 +33,20 @@ Last updated: 2026-06-02 (session 27, integration pass 5 complete)
 
 ```
 Total files:  1000
-  accepted:    658   ← not yet ingested
-  ingested:    125   ← wiki page written
-    integrated: 125  ← passes 1–5 complete (2026-06-02); 0 pending
+  accepted:    633   ← not yet ingested
+  ingested:    150   ← wiki page written
+    integrated: 150  ← passes 1–6 complete (2026-06-04); 0 pending
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
 Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30)
 Parse-pending:   0   ← all queue batches done
-Ready to ingest: 658 ← parsed but not yet ingested
+Ready to ingest: 633 ← parsed but not yet ingested
 
-Evidence digests: 19/21 seeded (rlhf-speech, transformer-enc-dec-tts have 0 mapped papers yet)
-Missing concept stub: fine-tuning (referenced by 2508.09767 — seed deliberately if warranted)
+Evidence digests: 19/21 seeded; 17 updated in pass 6 (rlhf-speech, transformer-enc-dec-tts have 0 mapped papers yet)
+Missing concept stubs: fine-tuning (referenced by 2508.09767, interspeech-2025-1344 — seed when 2–3 more papers map to it)
+                       singing (referenced by interspeech-2025-0816 and 5 others — flagged by pass 6)
 ```
 
 ---
@@ -302,7 +303,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 2. **Migrate 21 concept pages to new template** — ✅ Complete (2026-06-01).
 
-3. **Integration pass 5** — ✅ Complete (2026-06-02). 20 concepts updated, 19 evidence digests seeded, 8 cross-links added. Missing stub: `fine-tuning` (flag to user).
+3. **Integration passes 5–6** — ✅ Complete (pass 5: 2026-06-02; pass 6: 2026-06-04). Pass 6: 26 papers, 18 concepts updated, 17 digests updated, 6 cross-links added. Missing stubs: `fine-tuning`, `singing` (see Metadata counts above).
 
 4. **Continue ingest** — 658 papers ready. Chronological strategy: proceed by published_date through H2 2025 (Jul → Dec) before 2026. Sequential batches of 5, show selection first. Next candidates: continue August 2025 pool from 2508.12001 onwards (2508.11273 and 2508.12001 already ingested — check index). First field report target: ~150 ingested (~2025-08 half done).
 
@@ -321,7 +322,13 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 8. **Generate first field report** — Once ~200+ papers are ingested, generate the first quarterly or batch report using the template in CLAUDE.md §5. This validates the report format and the overview/concept → report synthesis pipeline.
 
-9. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
+9. **Correct "Factor A/B/C" terminology propagation** — `2412.17048` ("Why Do SLMs Fail…") uses Factor A/B/C as internal labels for its controlled experiment (A = phonetic vs. semantic content, B = sequence length/token rate, C = paralinguistic variability). These labels have leaked into concept pages and evidence digests as if they were field-level terms. Affected files:
+   - Concept pages: `autoregressive-codec-tts.md`, `neural-codec.md`, `self-supervised-speech.md`, `spoken-language-model.md`, `speech-to-speech.md`
+   - Evidence digests: same 5 slugs
+   - Paper page: `2025.acl-long.1498.md` (cited the paper and adopted the shorthand)
+   The source page `2412.17048.md` is correct and should not be changed. In all other files, replace Factor A/B/C with the actual meaning in plain language.
+
+10. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
 
 ---
 

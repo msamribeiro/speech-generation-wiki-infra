@@ -21,21 +21,30 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-17",
-  "ingested_date": null,
+  "ingested_date": "2026-06-03",
   "url": "https://www.isca-archive.org/interspeech_2025/peng25b_interspeech.html",
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/peng25b_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-0739.pdf",
   "pdf_source": "isca",
-  "abstract": "Full-duplex spoken dialogue systems (FDSDS) enable more natural humanâmachine interactions by allowing real-time user interruptions and backchanneling, compared to traditional SDS that rely on turn-taking. However, existing benchmarks lack metrics for FD scenes, e.g., evaluating model performance during user interruptions. In this paper, we present a comprehensive FD benchmarking pipeline utilizing LLMs, TTS, and ASR to address this gap. It assesses FDSDSâs ability to handle user interruptions, manage delays, and maintain robustness in challenging scenarios with diverse novel metrics. We applied our benchmark to three open-source FDSDS (Moshi, Freeze-omni, and VITA-1.5) using over 40 hours of generated speech, with 293 simulated conversations and 1,200 interruptions. The results show that all models continue to face challenges, such as failing to respond to user interruptions, under frequent disruptions and noisy conditions. Demonstrations, data, and code will be released.",
+  "abstract": "Full-duplex spoken dialogue systems (FDSDS) enable more natural human\u00e2\u0080\u0093machine interactions by allowing real-time user interruptions and backchanneling, compared to traditional SDS that rely on turn-taking. However, existing benchmarks lack metrics for FD scenes, e.g., evaluating model performance during user interruptions. In this paper, we present a comprehensive FD benchmarking pipeline utilizing LLMs, TTS, and ASR to address this gap. It assesses FDSDS\u00e2\u0080\u0099s ability to handle user interruptions, manage delays, and maintain robustness in challenging scenarios with diverse novel metrics. We applied our benchmark to three open-source FDSDS (Moshi, Freeze-omni, and VITA-1.5) using over 40 hours of generated speech, with 293 simulated conversations and 1,200 interruptions. The results show that all models continue to face challenges, such as failing to respond to user interruptions, under frequent disruptions and noisy conditions. Demonstrations, data, and code will be released.",
   "task": [
     "SCA",
     "evaluation"
   ],
   "relevance_score": 0.87,
   "relevance_note": "Comprehensive benchmark pipeline for full-duplex spoken dialogue systems; advances SCA evaluation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-03",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "55d0339"
+    }
+  ],
+  "integrated_date": "2026-06-03"
 }

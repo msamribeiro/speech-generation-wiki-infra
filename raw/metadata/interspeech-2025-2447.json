@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-17",
-  "ingested_date": null,
+  "ingested_date": "2026-06-03",
   "url": "https://www.isca-archive.org/interspeech_2025/lin25h_interspeech.html",
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/lin25h_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-2447.pdf",
@@ -33,9 +33,18 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Speech speculative decoding framework to accelerate autoregressive TTS inference; directly advances TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-03",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "55d0339"
+    }
+  ],
+  "integrated_date": "2026-06-03"
 }
