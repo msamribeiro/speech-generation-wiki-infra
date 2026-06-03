@@ -319,6 +319,7 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 
 ### Wiki content quality
 
+- **Claims provenance** — each claim bullet in `## Claims` should cite the section(s) of the source paper it is grounded in, e.g. `- Claim text. *(§4.1, Table 2)*`. Grounds agent extraction, deters hallucination, and lets readers verify directly. Requires updating the paper page template in CLAUDE.md, the ingest agent spec, and WRITING_STYLE.md §3.
 - **Static counts go stale** — paper/concept counts hardcoded in `wiki/index.md`, `overview.md`, venue pages, evidence digests (`paper_count`), and concept page All Papers tables drift after every pass. Fix options: (a) compute at Quartz build time via plugin or pre-build script — single source of truth, never stale; (b) add a post-integration agent checklist to re-derive counts in the key index pages. Option (a) is cleaner long-term.
 - **Generation tracking for concept/venue pages** — `generation` frontmatter + `generation_history` implemented for paper pages only. Concept pages, venue pages, and `overview.md` need the same before any Opus quality pass begins. Requires updating integration agent spec and CLAUDE.md template.
 - **Opus quality pass** — targeted rewrites for foundational papers (≥10 in-corpus citations) and mature concept pages (≥15 papers). Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec. Mark with `quality_pass: opus | YYYY-MM-DD`. Blocked on generation tracking above.
