@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-04 (session 28, integration pass 6 complete)
+Last updated: 2026-06-04 (session 29, 21 papers ingested)
 
 ---
 
@@ -25,7 +25,7 @@ Last updated: 2026-06-04 (session 28, integration pass 6 complete)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 154/783 ingested. 150 integrated (passes 1–6 complete, 2026-06-04). 19/23 evidence digests seeded. ~629 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 175/783 ingested. 150 integrated (passes 1–6 complete, 2026-06-04); 25 pending. 19/23 evidence digests seeded. ~608 more ready. |
 
 ---
 
@@ -33,9 +33,9 @@ Last updated: 2026-06-04 (session 28, integration pass 6 complete)
 
 ```
 Total files:  1000
-  accepted:    633   ← not yet ingested
-  ingested:    150   ← wiki page written
-    integrated: 150  ← passes 1–6 complete (2026-06-04); 0 pending
+  accepted:    612   ← not yet ingested
+  ingested:    175   ← wiki page written
+    integrated: 150  ← passes 1–6 complete (2026-06-04); 25 pending
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
