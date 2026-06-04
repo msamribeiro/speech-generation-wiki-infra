@@ -25,7 +25,7 @@ Last updated: 2026-06-04 (session 28, integration pass 6 complete)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 150/783 ingested. 150 integrated (passes 1–6 complete, 2026-06-04). 19/21 evidence digests seeded + 17 updated in pass 6. ~633 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 154/783 ingested. 150 integrated (passes 1–6 complete, 2026-06-04). 19/23 evidence digests seeded. ~629 more ready. |
 
 ---
 
@@ -298,11 +298,13 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Continue ingest** — 633 papers ready. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: batch 3 papers 7–10 queued (`2508.07375`, `2508.16790`, `interspeech-2025-1289`, `interspeech-2025-0984`), then continue Aug 2025 pool. Show selection first, ingest sequentially one agent at a time.
+1. **Continue ingest** — 629 papers ready. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2508.07273` onwards. Show selection first, ingest sequentially one agent at a time.
 
-2. **Seed `singing` and `fine-tuning` concept stubs** — both referenced by ingested papers but absent from the CLAUDE.md registry. Seed before the next integration pass or cross-links will silently drop. `singing`: 6 papers already mapped. `fine-tuning`: 2 papers (LoRA/PEFT trend growing).
+2. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
 
-3. **Corpus top-up fetch** — July 2025 arXiv backfill → cs.CL re-scan (Aug 2025–present) → citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers). After each: filter → download → parse. Regenerate `batch_queue.json` after fetch.
+3. **Investigate ACL/workshop `published_date` issue** — 22 ACL workshop papers have `published_date: 2025-01-01` (year-only placeholder from the scraper). They sort to the front of the chronological queue but represent July/August 2025 conference papers. Decide: (a) patch dates from ACL Anthology metadata, (b) ingest them as-is accepting the sort order quirk, or (c) manually correct the most significant ones before ingesting. Check `scripts/fetch/acl.py` to understand why dates weren't captured.
+
+4. **Corpus top-up fetch** — July 2025 arXiv backfill → cs.CL re-scan (Aug 2025–present) → citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers). After each: filter → download → parse. Regenerate `batch_queue.json` after fetch.
 
 4. **Fix "Factor A/B/C" terminology** — paper-internal labels from `2412.17048` leaked into 5 concept pages, 5 evidence digests, and `2025.acl-long.1498.md`. Replace with plain language (A = phonetic vs. semantic content, B = token rate/length, C = paralinguistic variability). Source page `2412.17048.md` is correct; do not change it.
 
