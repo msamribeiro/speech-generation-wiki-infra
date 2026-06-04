@@ -45,8 +45,7 @@ Parse-pending:   0   ← all queue batches done
 Ready to ingest: 633 ← parsed but not yet ingested
 
 Evidence digests: 19/21 seeded; 17 updated in pass 6 (rlhf-speech, transformer-enc-dec-tts have 0 mapped papers yet)
-Missing concept stubs: fine-tuning (referenced by 2508.09767, interspeech-2025-1344 — seed when 2–3 more papers map to it)
-                       singing (referenced by interspeech-2025-0816 and 5 others — flagged by pass 6)
+Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (23 total concept pages)
 ```
 
 ---
