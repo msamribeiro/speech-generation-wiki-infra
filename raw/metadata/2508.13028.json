@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-18",
-  "ingested_date": null,
+  "ingested_date": "2026-06-04",
   "url": "https://arxiv.org/abs/2508.13028",
   "pdf_url": "https://arxiv.org/pdf/2508.13028.pdf",
   "pdf_path": "raw/papers/2508.13028.pdf",
@@ -32,9 +32,17 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Sarcastic speech synthesis framework using bimodal sarcasm detector feedback loss; directly advances expressive TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-04",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "ed87524"
+    }
+  ]
 }

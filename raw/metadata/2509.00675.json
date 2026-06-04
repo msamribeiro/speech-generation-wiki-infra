@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-31",
-  "ingested_date": null,
+  "ingested_date": "2026-06-04",
   "url": "https://arxiv.org/abs/2509.00675",
   "pdf_url": "https://arxiv.org/pdf/2509.00675.pdf",
   "pdf_path": "raw/papers/2509.00675.pdf",
@@ -32,9 +32,17 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Speaker-conditioned phrase break prediction for prosody in multi-speaker TTS",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-04",
+      "op": "ingest",
+      "model": "claude-sonnet-4-6",
+      "commit": "ed87524"
+    }
+  ]
 }
