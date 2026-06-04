@@ -12,7 +12,7 @@
     "Lyonel Behringer",
     "Ibrahim Kilinc",
     "Guillaume Fuchs",
-    "EmanuÃ«l A. P. Habets"
+    "Emanu\u00c3\u00abl A. P. Habets"
   ],
   "authors_full": null,
   "organization": null,
@@ -26,7 +26,7 @@
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/leschanowsky25_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-0984.pdf",
   "pdf_source": "isca",
-  "abstract": "Speech intelligibility assessment is essential for evaluating neural speech codecs, yet most evaluation efforts focus on overall quality rather than intelligibility. Only a few publicly available tools exist for conducting standardized intelligibility tests, like the Diagnostic Rhyme Test (DRT) and Modified Rhyme Test (MRT). We introduce the Speech Intelligibility Toolkit for Subjective Evaluation (SITool), a Flask-based web application for conducting DRT and MRT in laboratory and crowdsourcing settings. We use SITool to benchmark 13 neural and traditional speech codecs, analyzing phoneme-level degradations and comparing subjective DRT results with objective intelligibility metrics. Our findings show that, while neural speech codecs can outperform traditional ones in subjective intelligibility, only STOI and ESTOI â not WER â significantly correlate with subjective results, although they struggle to capture gender and wordlist-specific variations observed in subjective evaluations.",
+  "abstract": "Speech intelligibility assessment is essential for evaluating neural speech codecs, yet most evaluation efforts focus on overall quality rather than intelligibility. Only a few publicly available tools exist for conducting standardized intelligibility tests, like the Diagnostic Rhyme Test (DRT) and Modified Rhyme Test (MRT). We introduce the Speech Intelligibility Toolkit for Subjective Evaluation (SITool), a Flask-based web application for conducting DRT and MRT in laboratory and crowdsourcing settings. We use SITool to benchmark 13 neural and traditional speech codecs, analyzing phoneme-level degradations and comparing subjective DRT results with objective intelligibility metrics. Our findings show that, while neural speech codecs can outperform traditional ones in subjective intelligibility, only STOI and ESTOI \u00e2\u0080\u0093 not WER \u00e2\u0080\u0093 significantly correlate with subjective results, although they struggle to capture gender and wordlist-specific variations observed in subjective evaluations.",
   "task": [
     "codec",
     "evaluation"
@@ -44,6 +44,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "6312840"
+    },
+    {
+      "date": "2026-06-05",
+      "op": "integrate",
+      "model": "claude-sonnet-4-6",
+      "commit": "9e9813a"
     }
-  ]
+  ],
+  "integrated_date": "2026-06-05"
 }

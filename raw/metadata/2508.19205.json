@@ -60,6 +60,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "ed87524"
+    },
+    {
+      "date": "2026-06-05",
+      "op": "integrate",
+      "model": "claude-sonnet-4-6",
+      "commit": "9e9813a"
     }
-  ]
+  ],
+  "integrated_date": "2026-06-05"
 }
