@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-04 (session 29, 21 papers ingested)
+Last updated: 2026-06-05 (integration pass 7, 25 papers integrated)
 
 ---
 
@@ -25,7 +25,7 @@ Last updated: 2026-06-04 (session 29, 21 papers ingested)
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
 | Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 175/783 ingested. 150 integrated (passes 1–6 complete, 2026-06-04); 25 pending. 19/23 evidence digests seeded. ~608 more ready. |
+| Ingest (wiki pages) | 🔄 In progress | 175/783 ingested. 175 integrated (passes 1–7 complete, 2026-06-05); 0 pending. 19/23 evidence digests seeded (transformer-enc-dec-tts + rlhf-speech missing). ~608 more ready. |
 
 ---
 
@@ -35,16 +35,16 @@ Last updated: 2026-06-04 (session 29, 21 papers ingested)
 Total files:  1000
   accepted:    612   ← not yet ingested
   ingested:    175   ← wiki page written
-    integrated: 150  ← passes 1–6 complete (2026-06-04); 25 pending
+    integrated: 175  ← passes 1–7 complete (2026-06-05); 0 pending
   review:        0   ← queue cleared
   rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
 
 PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
 Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30)
 Parse-pending:   0   ← all queue batches done
-Ready to ingest: 633 ← parsed but not yet ingested
+Ready to ingest: 608 ← parsed but not yet ingested
 
-Evidence digests: 19/21 seeded; 17 updated in pass 6 (rlhf-speech, transformer-enc-dec-tts have 0 mapped papers yet)
+Evidence digests: 19/23 seeded; 14 updated in pass 7 (transformer-enc-dec-tts + rlhf-speech still missing — flag for lint pass)
 Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (23 total concept pages)
 ```
 
@@ -298,7 +298,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Continue ingest** — 629 papers ready. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2508.07273` onwards. Show selection first, ingest sequentially one agent at a time.
+1. **Continue ingest** — 608 papers ready. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards (after the 25 just integrated). Show selection first, ingest sequentially one agent at a time.
 
 2. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
 
