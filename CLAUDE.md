@@ -73,7 +73,7 @@ wiki/                         # LLM-generated and LLM-maintained markdown
     yearly/                   # Annual state-of-field reports (reports/yearly/YYYY.md)
 
 scripts/
-  fetch/                      # Fetchers: arxiv.py, arxiv_oai.py, acl.py, isca.py
+  fetch/                      # Fetchers: arxiv.py, arxiv_oai.py, acl.py, isca.py, openreview.py
   filter/                     # Filter agent: agent.py (Anthropic SDK-based)
   parse/                      # PDF pipeline: download_pdfs.py; convert_paper.py (Docling-based); batch_convert.py
   discover/                   # Citation graph tools: citation_index.py
@@ -88,7 +88,10 @@ scripts/
 
 lib/                          # Shared library code (keyword_filter.py)
 config/                       # keyword_filter.yaml, parsing.yaml
-docs/                         # Design documents (FETCHERS_DESIGN.md, PARSING_PIPELINE_DESIGN.md)
+docs/                         # Design documents and operational records
+  corpus-expansions/          # One file per corpus expansion session (YYYY-MM-DD.md)
+                              # Documents fetch batches, commands, dedup decisions, and counts
+                              # Named by session date; add -2 suffix if two sessions on the same day
 
 README.md                     # Setup guide, script reference, pipeline overview
 STATUS.md                     # Current corpus counts and next actions
@@ -705,6 +708,12 @@ Lives in the infra repo only; never rendered on the site. Records pipeline opera
 ```
 
 Both logs use the same format: date sections under `## YYYY-MM-DD`, one bullet per operation. Entries are in **reverse chronological order** — newest date section at the top (immediately after the `---` divider), oldest at the bottom. When writing: if today's section already exists, append the bullet to it; otherwise insert a new `## YYYY-MM-DD` section at the top.
+
+### Session artifacts
+
+Large fetch and download operations should pipe output to a tee file during the session (e.g. `... 2>&1 | tee raw/fetch_log_batch.txt`) for live monitoring and resume-token recovery. These files are **gitignored** (`raw/fetch_log_*.txt`, `raw/download_log_*.txt`) and should be deleted after the session closes — their content is already summarised in `raw/pipeline_log.md`.
+
+Corpus expansion plans (batch lists, commands, dedup decisions) belong in `docs/corpus-expansions/YYYY-MM-DD.md`, committed once at the end of the expansion session. These are the durable record of *why* a corpus expansion was shaped the way it was.
 
 ---
 
