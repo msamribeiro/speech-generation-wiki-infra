@@ -16,6 +16,10 @@ raw/anthology_xml_cache/
 raw/download_log.jsonl
 raw/fetch_log.jsonl
 
+# Session fetch/download tee logs (transient; summarised in raw/pipeline_log.md)
+raw/fetch_log_*.txt
+raw/download_log_*.txt
+
 # Scratch files
 convert_paper_with_docling_tmp.py
 docs/THOUGHTS_FOR_IMPROVEMENTS.md
