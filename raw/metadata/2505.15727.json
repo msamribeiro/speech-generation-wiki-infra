@@ -1,0 +1,44 @@
+{
+  "id": "2505.15727",
+  "source_ids": {
+    "arxiv": "2505.15727"
+  },
+  "title": "VocalBench: Benchmarking the Vocal Conversational Abilities for Speech Interaction Models",
+  "authors": [
+    "Heyang Liu",
+    "Yuhao Wang",
+    "Ziyang Cheng",
+    "Hongcheng Liu",
+    "Yiqi Li",
+    "Yixuan Hou",
+    "Ronghua Wu",
+    "Qunshan Gu",
+    "Yanfeng Wang",
+    "Yu Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.15727",
+  "pdf_url": "https://arxiv.org/pdf/2505.15727.pdf",
+  "pdf_path": "raw/papers/2505.15727.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech large language models (SpeechLLMs) have extended human-machine interactions from the text modality to the dynamic speech domain. Spoken dialogues convey diverse information, including semantic concepts, acoustic variations, paralanguage cues, and environmental context. However, existing evaluations of speech interaction models lack instances mimicking real scenarios and predominantly focus on the performance of distinct aspects, lacking a comprehensive comparison of critical capabilities between current routines. To address this gap, we propose VocalBench to assess the speech conversational abilities, comprising around 24k carefully curated instances of both English and Mandarin across four key dimensions - semantic quality, acoustic performance, conversational abilities, and robustness, covering 14 user-oriented characters. Experiments on 27 mainstream models reveal the common challenges for current routes, and highlight the need for new insights into next-generation speech interactive systems.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Introduces VocalBench, a comprehensive benchmark for evaluating speech LLMs including synthesis quality, paralinguistics, and acoustic understanding.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

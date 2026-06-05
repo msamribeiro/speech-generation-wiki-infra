@@ -1,0 +1,38 @@
+{
+  "id": "2503.11026",
+  "source_ids": {
+    "arxiv": "2503.11026"
+  },
+  "title": "MAVFlow: Preserving Paralinguistic Elements with Conditional Flow Matching for Zero-Shot AV2AV Multilingual Translation",
+  "authors": [
+    "Sungwoo Cho",
+    "Jeongsoo Choi",
+    "Sungnyun Kim",
+    "Se-Young Yun"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2503.11026",
+  "pdf_url": "https://arxiv.org/pdf/2503.11026.pdf",
+  "pdf_path": "raw/papers/2503.11026.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Despite recent advances in text-to-speech (TTS) models, audio-visual-to-audio-visual (AV2AV) translation still faces a critical challenge: maintaining speaker consistency between the original and translated vocal and facial features. To address this issue, we propose a conditional flow matching (CFM) zero-shot audio-visual renderer that utilizes strong dual guidance from both audio and visual modalities. By leveraging multimodal guidance with CFM, our model robustly preserves speaker-specific characteristics and enhances zero-shot AV2AV translation abilities. For the audio modality, we enhance the CFM process by integrating robust speaker embeddings with x-vectors, which serve to bolster speaker consistency. Additionally, we convey emotional nuances to the face rendering module. The guidance provided by both audio and visual cues remains independent of semantic or linguistic content, allowing our renderer to effectively handle zero-shot translation tasks for monolingual speakers in different languages. We empirically demonstrate that the inclusion of high-quality mel-spectrograms conditioned on facial information not only enhances the quality of the synthesized speech but also positively influences facial generation, leading to overall performance improvements in LSE and FID score. Our code is available at https://github.com/Peter-SungwooCho/MAVFlow.",
+  "arxiv_comment": "Accepted to ICCV 2025",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Proposes a conditional flow matching renderer for zero-shot audio-visual-to-audio-visual translation preserving speaker identity, advancing multilingual VC/TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

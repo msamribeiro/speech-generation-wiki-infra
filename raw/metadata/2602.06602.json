@@ -48,9 +48,9 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "Scaling speech tokenizers with diffusion autoencoders; core tokenization paper.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-llMfmDtWka"
 }

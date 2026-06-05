@@ -32,9 +32,9 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Novel speech language modeling via continuous latent representations with energy distance objective; directly advances SCA/TTS.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "neurips-2025-pDWwz9F7Zh"
 }

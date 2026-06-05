@@ -1,0 +1,33 @@
+{
+  "id": "iclr-2025-8bF1Vaj9tm",
+  "source_ids": {
+    "openreview": "8bF1Vaj9tm"
+  },
+  "title": "ViSAGe: Video-to-Spatial Audio Generation",
+  "authors": [
+    "Jaeyeon Kim",
+    "Heeseung Yun",
+    "Gunhee Kim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=8bF1Vaj9tm",
+  "pdf_url": "https://openreview.net/pdf?id=8bF1Vaj9tm",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Spatial audio is essential for enhancing the immersiveness of audio-visual experiences, yet its production typically demands complex recording systems and specialized expertise. In this work, we address a novel problem of generating first-order ambisonics, a widely used spatial audio format, directly from silent videos. To support this task, we introduce YT-Ambigen, a dataset comprising 102K 5-second YouTube video clips paired with corresponding first-order ambisonics. We also propose new evaluation metrics to assess the spatial aspect of generated audio based on audio energy maps and saliency metrics. Furthermore, we present Video-to-Spatial Audio Generation (ViSAGe), an end-to-end framework that generates first-order ambisonics from silent video frames by leveraging CLIP visual features, autoregressive neural audio codec modeling with both directional and visual guidance. Experimental results demonstrate that ViSAGe produces plausible and coherent first-order ambisonics, outperforming two-stage approaches consisting of video-to-audio generation and audio spatialization. Qualitative examples further illustrate that ViSAGe generates temporally aligned high-quality spatial audio that adapts to viewpoint changes.",
+  "task": [],
+  "relevance_score": 0.22,
+  "relevance_note": "ViSAGe generates first-order ambisonic spatial audio from silent video — spatial audio generation from video with no connection to TTS, VC, or SCA.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

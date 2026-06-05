@@ -1,0 +1,39 @@
+{
+  "id": "2601.13742",
+  "source_ids": {
+    "arxiv": "2601.13742"
+  },
+  "title": "Hearing Between the Lines: Unlocking the Reasoning Power of LLMs for Speech Evaluation",
+  "authors": [
+    "Arjun Chandra",
+    "Kevin Miller",
+    "Venkatesh Ravichandran",
+    "Constantinos Papayiannis",
+    "Venkatesh Saligrama"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.13742",
+  "pdf_url": "https://arxiv.org/pdf/2601.13742.pdf",
+  "pdf_path": "raw/papers/2601.13742.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Language Model (LLM) judges exhibit strong reasoning capabilities but are limited to textual content. This leaves current automatic Speech-to-Speech (S2S) evaluation methods reliant on opaque and expensive Audio Language Models (ALMs). In this work, we propose TRACE (Textual Reasoning over Audio Cues for Evaluation), a novel framework that enables LLM judges to reason over audio cues to achieve cost-efficient and human-aligned S2S evaluation. To demonstrate the strength of the framework, we first introduce a Human Chain-of-Thought (HCoT) annotation protocol to improve the diagnostic capability of existing judge benchmarks by separating evaluation into explicit dimensions: content (C), voice quality (VQ), and paralinguistics (P). Using this data, TRACE constructs a textual blueprint of inexpensive audio signals and prompts an LLM to render dimension-wise judgments, fusing them into an overall rating via a deterministic policy. TRACE achieves higher agreement with human raters than ALMs and transcript-only LLM judges while being significantly more cost-effective. We will release the HCoT annotations and the TRACE framework to enable scalable and human-aligned S2S evaluation.",
+  "arxiv_comment": "EACL 2026 Findings",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.68,
+  "relevance_note": "TRACE enables LLM judges to reason over audio cues for S2S evaluation — contributes an evaluation framework for speech output quality but the methodology is primarily about LLM judging rather than advancing synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

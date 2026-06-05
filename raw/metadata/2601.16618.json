@@ -1,0 +1,38 @@
+{
+  "id": "2601.16618",
+  "source_ids": {
+    "arxiv": "2601.16618"
+  },
+  "title": "PROST-LLM: Progressively Enhancing the Speech-to-Speech Translation Capability in LLMs",
+  "authors": [
+    "Jing Xu",
+    "Jiaqi Wang",
+    "Daxin Tan",
+    "Xiao Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 1,
+  "published_date": "2026-01-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2601.16618",
+  "pdf_url": "https://arxiv.org/pdf/2601.16618.pdf",
+  "pdf_path": "raw/papers/2601.16618.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Although Large Language Models (LLMs) excel in many tasks, their application to Speech-to-Speech Translation (S2ST) is underexplored and hindered by data scarcity. To bridge this gap, we propose PROST-LLM (PROgressive Speech-to-speech Translation) to enhance the S2ST capabilities in LLMs progressively. First, we fine-tune the LLMs with the CVSS corpus, employing designed tri-task learning and chain of modality methods to boost the initial performance. Then, leveraging the fine-tuned model, we generate preference pairs through self-sampling and back-translation without human evaluation. Finally, these preference pairs are used for preference optimization to enhance the model's S2ST capability further. Extensive experiments confirm the effectiveness of our proposed PROST-LLM in improving the S2ST capability of LLMs.",
+  "arxiv_comment": "Accepted by ICASSP 2026",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "PROST-LLM advances speech-to-speech translation by progressively fine-tuning LLMs with tri-task learning and chain-of-modality, producing direct speech output.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

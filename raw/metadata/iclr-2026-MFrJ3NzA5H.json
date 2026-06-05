@@ -1,0 +1,39 @@
+{
+  "id": "iclr-2026-MFrJ3NzA5H",
+  "source_ids": {
+    "openreview": "MFrJ3NzA5H",
+    "arxiv": "2509.06926"
+  },
+  "title": "Continuous Audio Language Models",
+  "authors": [
+    "Simon Rouard",
+    "Manu Orsini",
+    "Axel Roebel",
+    "Neil Zeghidour",
+    "Alexandre Défossez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=MFrJ3NzA5H",
+  "pdf_url": "https://openreview.net/pdf?id=MFrJ3NzA5H",
+  "pdf_path": "raw/papers/iclr-2026-MFrJ3NzA5H.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Audio Language Models (ALM) have emerged as the dominant paradigm for speech and music generation by representing audio as sequences of discrete tokens. Yet, unlike text tokens, which are invertible, audio tokens are extracted from lossy codecs with a limited bitrate. As a consequence, increasing audio quality requires generating more tokens, which imposes a trade-off between fidelity and computational cost. We address this issue by studying Continuous Audio Language Models (CALM). These models instantiate a large Transformer backbone that produces a contextual embedding at every timestep. This sequential information then conditions an MLP that generates the next continuous frame of an audio VAE through consistency modeling. By avoiding lossy compression, CALM achieves higher quality at lower computational cost than their discrete counterpart. Experiments on speech and music demonstrate improved efficiency and fidelity over state-of-the-art discrete audio language models, facilitating lightweight, high-quality audio generation. Samples are available at iclr-continuous-audio-language-models.github.io. Finally, we release Pocket TTS, an open-source 100M-parameter text-to-speech model that can run faster than real time on a laptop CPU: github.com/kyutai-labs/pocket-tts.",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "CALM proposes continuous-space audio language models that bypass discrete tokenization, addressing quality-compute trade-offs in speech and music generation — core architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

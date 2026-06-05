@@ -1,0 +1,32 @@
+{
+  "id": "neurips-2025-rew03VaNUJ",
+  "source_ids": {
+    "openreview": "rew03VaNUJ"
+  },
+  "title": "Improving Target Sound Extraction via Disentangled Codec Representations with Privileged Knowledge Distillation",
+  "authors": [
+    "Dail Kim",
+    "Joon-Hyuk Chang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=rew03VaNUJ",
+  "pdf_url": "https://openreview.net/pdf?id=rew03VaNUJ",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Target sound extraction aims to isolate target sound sources from an input mixture using a target clue to identify the sounds of interest. To address the challenge posed by the wide variety of sounds, recent work has introduced privileged knowledge distillation (PKD), which utilizes privileged information (PI) about the target sound, available only during training. While PKD has shown promise, existing approaches often suffer from overfitting of the teacher model for the overly rich PI and ineffective knowledge transfer to the student model. In this paper, we propose Disentangled Codec Knowledge Distillation (DCKD) to mitigate these issues by regulating the amount and the flow of target sound information within the teacher model. We begin by extracting a compressed representation of the target sound using a neural audio codec to regulate the amount of PI. Disentangled representation learning is then applied to remove class information and extract fine-grained temporal information as PI. Subsequently, an n-hot vector as the class information and the class-independent PI are used to condition the early and later layers of the teacher model, respectively, forming a regulated coarse-to-fine target information flow. The resulting representation is transferred to the student model through feature-level knowledge distillation. Experimental results show that DCKD consistently improves existing methods across model architectures under the multi-target selection condition.",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Proposes using disentangled codec representations for target sound extraction/separation; while it uses codec representations, the contribution is to sound separation, not speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

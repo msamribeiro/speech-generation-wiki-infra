@@ -1,0 +1,36 @@
+{
+  "id": "iclr-2026-XrmXvv75KP",
+  "source_ids": {
+    "openreview": "XrmXvv75KP"
+  },
+  "title": "SwiftTS: A Swift Selection Framework for Time Series Pre-trained Models via Multi-task Meta-Learning",
+  "authors": [
+    "Tengxue Zhang",
+    "Biao Ouyang",
+    "Yang Shu",
+    "Xinyang Chen",
+    "Chenjuan Guo",
+    "Bin Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=XrmXvv75KP",
+  "pdf_url": "https://openreview.net/pdf?id=XrmXvv75KP",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Pre-trained models exhibit strong generalization to various downstream tasks. However, given the numerous models available in the model hub, identifying the most suitable one by individually fine-tuning is time-consuming. In this paper, we propose \\textbf{SwiftTS}, a swift selection framework for time series pre-trained models. To avoid expensive forward propagation through all candidates, SwiftTS adopts a learning-guided approach that leverages historical dataset-model performance pairs across diverse horizons to predict model performance on unseen datasets. It employs a lightweight dual-encoder architecture that embeds time series and candidate models with rich characteristics, computing patchwise compatibility scores between data and model embeddings for efficient selection. To further enhance the generalization across datasets and horizons, we introduce a horizon-adaptive expert composition module that dynamically adjusts expert weights, and the transferable cross-task learning with cross-dataset and cross-horizon task sampling to enhance out-of-distribution (OOD) robustness. Extensive experiments on 14 downstream datasets and 8 pre-trained models demonstrate that SwiftTS achieves state-of-the-art performance in time series pre-trained model selection. The code and datasets are available at \\href{}{https://github.com/decisionintelligence/SwiftTS}.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "SwiftTS is a framework for selecting time-series pre-trained models via meta-learning; TTS in the title stands for time series, not text-to-speech — not relevant.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

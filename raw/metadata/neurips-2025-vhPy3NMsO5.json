@@ -1,0 +1,37 @@
+{
+  "id": "neurips-2025-vhPy3NMsO5",
+  "source_ids": {
+    "openreview": "vhPy3NMsO5"
+  },
+  "title": "OmniResponse: Online Multimodal Conversational Response Generation in Dyadic Interactions",
+  "authors": [
+    "Cheng Luo",
+    "Jianghui Wang",
+    "Bing Li",
+    "Siyang Song",
+    "Bernard Ghanem"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=vhPy3NMsO5",
+  "pdf_url": "https://openreview.net/pdf?id=vhPy3NMsO5",
+  "pdf_path": "raw/papers/neurips-2025-vhPy3NMsO5.pdf",
+  "pdf_source": "openreview",
+  "abstract": "In this paper, we introduce Online Multimodal Conversational Response Generation (OMCRG), a novel task designed to produce synchronized verbal and non-verbal listener feedback online, based on the speaker's multimodal inputs. OMCRG captures natural dyadic interactions and introduces new challenges in aligning generated audio with listeners' facial responses. To tackle these challenges, we incorporate text as an intermediate modality to connect audio and facial responses. We propose OmniResponse, a Multimodal Large Language Model (MLLM) that autoregressively generates accurate multimodal listener responses. OmniResponse leverages a pretrained LLM enhanced with two core components: Chrono-Text Markup, which precisely timestamps generated text tokens, and TempoVoice, a controllable online text-to-speech (TTS) module that outputs speech synchronized with facial responses. To advance OMCRG research, we offer ResponseNet, a dataset of 696 detailed dyadic interactions featuring synchronized split-screen videos, multichannel audio, transcripts, and annotated facial behaviors. Comprehensive evaluations on ResponseNet demonstrate that OmniResponse outperforms baseline models in terms of semantic speech content, audio-visual synchronization, and generation quality. Our dataset, code, and models are publicly available at https://omniresponse.github.io/.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.58,
+  "relevance_note": "OmniResponse generates synchronized verbal and non-verbal conversational responses (audio + facial); speech audio generation is one component but the focus is multimodal dyadic interaction rather than advancing synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -2,7 +2,7 @@
   "id": "2025.findings-emnlp.1394",
   "source_ids": {
     "acl": "2025.findings-emnlp.1394",
-    "arxiv": null,
+    "arxiv": "2410.15017",
     "doi": "10.18653/v1/2025.findings-emnlp.1394"
   },
   "title": "DM-Codec: Distilling Multimodal Representations for Speech Tokenization",

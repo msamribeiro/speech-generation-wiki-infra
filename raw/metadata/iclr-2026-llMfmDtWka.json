@@ -1,0 +1,57 @@
+{
+  "id": "iclr-2026-llMfmDtWka",
+  "source_ids": {
+    "openreview": "llMfmDtWka",
+    "arxiv": "2602.06602"
+  },
+  "title": "Scaling Speech Tokenizers with Diffusion Autoencoders",
+  "authors": [
+    "Yuancheng Wang",
+    "Zhenyu Tang",
+    "Yun Wang",
+    "Arthur Hinsvark",
+    "Yingru Liu",
+    "Yinghao Aaron Li",
+    "Kainan Peng",
+    "Junyi Ao",
+    "Mingbo Ma",
+    "Mike Seltzer"
+  ],
+  "authors_full": [
+    "Yuancheng Wang",
+    "Zhenyu Tang",
+    "Yun Wang",
+    "Arthur Hinsvark",
+    "Yingru Liu",
+    "Yinghao Aaron Li",
+    "Kainan Peng",
+    "Junyi Ao",
+    "Mingbo Ma",
+    "Mike Seltzer",
+    "Qing He",
+    "Xubo Liu"
+  ],
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=llMfmDtWka",
+  "pdf_url": "https://openreview.net/pdf?id=llMfmDtWka",
+  "pdf_path": "raw/papers/iclr-2026-llMfmDtWka.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Speech tokenizers are foundational to speech language models, yet existing approaches face two major challenges: (1) balancing trade-offs between encoding semantics for understanding and acoustics for reconstruction, and (2) achieving low bit rates and low token rates. We propose Speech Diffusion Tokenizer (SiTok), a diffusion autoencoder that jointly learns semantic-rich representations through supervised learning and enables high-fidelity audio reconstruction with diffusion. We scale SiTok to 1.6B parameters and train it on 2 million hours of speech. Experiments show that SiTok outperforms strong baselines on understanding, reconstruction and generation tasks, at an extremely low token rate of 12.5 Hz and a bit-rate of 200 bits-per-second.",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "SiTok proposes a diffusion autoencoder speech tokenizer that jointly learns semantic and acoustic representations, scaling to lower bit and token rates — core codec/tokenizer contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

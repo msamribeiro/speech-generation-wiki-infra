@@ -1,0 +1,36 @@
+{
+  "id": "iclr-2026-wbttgzp7MT",
+  "source_ids": {
+    "openreview": "wbttgzp7MT"
+  },
+  "title": "EmotionThinker: Prosody-Aware Reinforcement Learning for Explainable Speech Emotion Reasoning",
+  "authors": [
+    "Dingdong WANG",
+    "Shujie LIU",
+    "Tianhua Zhang",
+    "Youjun Chen",
+    "Jinyu Li",
+    "Helen M. Meng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=wbttgzp7MT",
+  "pdf_url": "https://openreview.net/pdf?id=wbttgzp7MT",
+  "pdf_path": "raw/papers/iclr-2026-wbttgzp7MT.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Emotional information in speech plays a unique role in multimodal perception. However, current Speech Large Language Models (SpeechLLMs), similar to conventional speech emotion recognition (SER) systems, still treat emotion understanding as a simple classification problem. This provides limited interpretability of predictions, while leaving the LLMs’ expressive and reasoning capabilities underutilized. In this work, we take the first step to reformulate SER as a deep reasoning problem through reinforcement learning (RL). We propose EmotionThinker, which is designed to generate accurate emotion predictions with interpretable explanations grounded in fine-grained acoustic cues. To achieve this, we first construct EmotionCoT-35K, an emotional reasoning dataset with Chain-of-Thought annotations and detailed captions. Second, we observe that current SpeechLLMs exhibit weak prosody perception, whereas prosodic cues constitute fundamental signals for interpreting emotions. To address this, we develop the prosody-enhanced foundation model EmotionThinker-Base, and demonstrate that prosody enhancement improves emotion understanding. Third, we introduce Group-Relative-Policy-Optimization with Progressive-Trust-aware-Reasoning-Reward (GRPO-PTR}) for RL. Different from standard GRPO, which relies only on rule-based outcome rewards, GRPO-PTR progressively introduces reasoning reward, dynamically adjusts it with a trustworthiness weight reflecting the alignment between reasoning and outcome, and evaluates the overall reasoning quality with a reward model based on multi-dimensional criteria. EmotionThinker outperforms previous state-of-the-art evaluation models both in emotion accuracy and explanation quality, advancing SER toward interpretable multimodal reasoning. Project page: https://github.com/dingdongwang/EmotionThinker",
+  "task": [],
+  "relevance_score": 0.45,
+  "relevance_note": "EmotionThinker applies RL to speech emotion reasoning/recognition with prosody awareness; primarily a speech understanding/SER paper with only incidental connection to synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

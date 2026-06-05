@@ -2,7 +2,8 @@
   "id": "interspeech-2025-1940",
   "source_ids": {
     "isca": "mayer25_interspeech",
-    "doi": "10.21437/Interspeech.2025-1940"
+    "doi": "10.21437/Interspeech.2025-1940",
+    "arxiv": "2507.00227"
   },
   "title": "Investigating Stochastic Methods for Prosody Modeling in Speech Synthesis",
   "authors": [

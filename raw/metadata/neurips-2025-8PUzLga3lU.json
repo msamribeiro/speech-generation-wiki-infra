@@ -1,0 +1,59 @@
+{
+  "id": "neurips-2025-8PUzLga3lU",
+  "source_ids": {
+    "openreview": "8PUzLga3lU"
+  },
+  "title": "VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction",
+  "authors": [
+    "Chaoyou Fu",
+    "Haojia Lin",
+    "Xiong Wang",
+    "YiFan Zhang",
+    "Yunhang Shen",
+    "Xiaoyu Liu",
+    "Haoyu Cao",
+    "Zuwei Long",
+    "Heting Gao",
+    "Ke Li"
+  ],
+  "authors_full": [
+    "Chaoyou Fu",
+    "Haojia Lin",
+    "Xiong Wang",
+    "YiFan Zhang",
+    "Yunhang Shen",
+    "Xiaoyu Liu",
+    "Haoyu Cao",
+    "Zuwei Long",
+    "Heting Gao",
+    "Ke Li",
+    "Long MA",
+    "Xiawu Zheng",
+    "Rongrong Ji",
+    "Xing Sun",
+    "Caifeng Shan",
+    "Ran He"
+  ],
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=8PUzLga3lU",
+  "pdf_url": "https://openreview.net/pdf?id=8PUzLga3lU",
+  "pdf_path": "raw/papers/neurips-2025-8PUzLga3lU.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Recent Multimodal Large Language Models (MLLMs) have typically focused on integrating visual and textual modalities, with less emphasis placed on the role of speech in enhancing interaction. However, speech plays a crucial role in multimodal dialogue systems, and implementing high-performance in both vision and speech tasks remains a challenge due to the fundamental modality differences. In this paper, we propose a carefully designed multi-stage training methodology that progressively trains LLM to understand both visual and speech information, ultimately enabling fluent vision and speech interaction. Our approach not only preserves strong vision-language capacity, but also enables efficient speech-to-speech dialogue capabilities without separate ASR and TTS modules, significantly accelerating multimodal end-to-end response speed. By comparing against state-of-the-art counterparts across benchmarks for image, video, and speech, we demonstrate that our omni model is equipped with both strong visual and speech capabilities, making omni understanding and interaction.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "VITA-1.5 is primarily a vision-speech multimodal LLM for interaction; speech synthesis capability is present but the contribution is dominated by vision-language alignment rather than advancing synthesis methods.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

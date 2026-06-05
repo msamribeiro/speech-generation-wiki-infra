@@ -1,0 +1,35 @@
+{
+  "id": "2505.20868",
+  "source_ids": {
+    "arxiv": "2505.20868"
+  },
+  "title": "Spotlight-TTS: Spotlighting the Style via Voiced-Aware Style Extraction and Style Direction Adjustment for Expressive Text-to-Speech",
+  "authors": [
+    "Nam-Gyu Kim",
+    "Deok-Hyeon Cho",
+    "Seung-Bin Kim",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 6,
+  "published_date": "2025-06-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.20868",
+  "pdf_url": "https://arxiv.org/pdf/2505.20868.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in expressive text-to-speech (TTS) have introduced diverse methods based on style embedding extracted from reference speech. However, synthesizing high-quality expressive speech remains challenging. We propose Spotlight-TTS, which exclusively emphasizes style via voiced-aware style extraction and style direction adjustment. Voiced-aware style extraction focuses on voiced regions highly related to style while maintaining continuity across different speech regions to improve expressiveness. We adjust the direction of the extracted style for optimal integration into the TTS model, which improves speech quality. Experimental results demonstrate that Spotlight-TTS achieves superior performance compared to baseline models in terms of expressiveness, overall speech quality, and style transfer capability. Our audio samples are publicly available.",
+  "arxiv_comment": "Proceedings of Interspeech 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-2586"
+}

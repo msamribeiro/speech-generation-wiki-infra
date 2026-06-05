@@ -1,0 +1,37 @@
+{
+  "id": "2507.16875",
+  "source_ids": {
+    "arxiv": "2507.16875"
+  },
+  "title": "Technical report: Impact of Duration Prediction on Speaker-specific TTS for Indian Languages",
+  "authors": [
+    "Isha Pandey",
+    "Pranav Gaikwad",
+    "Amruta Parulekar",
+    "Ganesh Ramakrishnan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.16875",
+  "pdf_url": "https://arxiv.org/pdf/2507.16875.pdf",
+  "pdf_path": "raw/papers/2507.16875.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "High-quality speech generation for low-resource languages, such as many Indian languages, remains a significant challenge due to limited data and diverse linguistic structures. Duration prediction is a critical component in many speech generation pipelines, playing a key role in modeling prosody and speech rhythm. While some recent generative approaches choose to omit explicit duration modeling, often at the cost of longer training times. We retain and explore this module to better understand its impact in the linguistically rich and data-scarce landscape of India. We train a non-autoregressive Continuous Normalizing Flow (CNF) based speech model using publicly available Indian language data and evaluate multiple duration prediction strategies for zero-shot, speaker-specific generation. Our comparative analysis on speech-infilling tasks reveals nuanced trade-offs: infilling based predictors improve intelligibility in some languages, while speaker-prompted predictors better preserve speaker characteristics in others. These findings inform the design and selection of duration strategies tailored to specific languages and tasks, underscoring the continued value of interpretable components like duration prediction in adapting advanced generative architectures to low-resource, multilingual settings.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Technical report investigating duration prediction for speaker-specific TTS in Indian languages, advancing multilingual low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

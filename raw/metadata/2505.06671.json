@@ -1,0 +1,35 @@
+{
+  "id": "2505.06671",
+  "source_ids": {
+    "arxiv": "2505.06671"
+  },
+  "title": "RADE: A Neural Codec for Transmitting Speech over HF Radio Channels",
+  "authors": [
+    "David Rowe",
+    "Jean-Marc Valin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.06671",
+  "pdf_url": "https://arxiv.org/pdf/2505.06671.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech compression is commonly used to send voice over radio channels in applications such as mobile telephony and two-way push-to-talk (PTT) radio. In classical systems, the speech codec is combined with forward error correction, modulation and radio hardware. In this paper we describe an autoencoder that replaces many of the traditional signal processing elements with a neural network. The encoder takes a vocoder feature set (short term spectrum, pitch, voicing), and produces discrete time, but continuously valued quadrature amplitude modulation (QAM) symbols. We use orthogonal frequency domain multiplexing (OFDM) to send and receive these symbols over high frequency (HF) radio channels. The decoder converts received QAM symbols to vocoder features suitable for synthesis. The autoencoder has been trained to be robust to additive Gaussian noise and multipath channel impairments while simultaneously maintaining a Peak To Average Power Ratio (PAPR) of less than 1 dB. Over simulated and real world HF radio channels we have achieved output speech intelligibility that clearly surpasses existing analog and digital radio systems over a range of SNRs.",
+  "arxiv_comment": "Proc. WASPAA 2025, 5 pages",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.4,
+  "relevance_note": "Proposes a neural codec replacing traditional radio signal processing for HF channels; technically a neural codec but the application domain (radio comms) is far from speech synthesis infrastructure.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

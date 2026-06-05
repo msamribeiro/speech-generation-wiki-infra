@@ -1,0 +1,38 @@
+{
+  "id": "2507.06116",
+  "source_ids": {
+    "arxiv": "2507.06116"
+  },
+  "title": "Speech Quality Assessment Model Based on Mixture of Experts: System-Level Performance Enhancement and Utterance-Level Challenge Analysis",
+  "authors": [
+    "Xintong Hu",
+    "Yixuan Chen",
+    "Rui Yang",
+    "Wenxiang Guo",
+    "Changhao Pan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.06116",
+  "pdf_url": "https://arxiv.org/pdf/2507.06116.pdf",
+  "pdf_path": "raw/papers/2507.06116.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Automatic speech quality assessment plays a crucial role in the development of speech synthesis systems, but existing models exhibit significant performance variations across different granularity levels of prediction tasks. This paper proposes an enhanced MOS prediction system based on self-supervised learning speech models, incorporating a Mixture of Experts (MoE) classification head and utilizing synthetic data from multiple commercial generation models for data augmentation. Our method builds upon existing self-supervised models such as wav2vec2, designing a specialized MoE architecture to address different types of speech quality assessment tasks. We also collected a large-scale synthetic speech dataset encompassing the latest text-to-speech, speech conversion, and speech enhancement systems. However, despite the adoption of the MoE architecture and expanded dataset, the model's performance improvements in sentence-level prediction tasks remain limited. Our work reveals the limitations of current methods in handling sentence-level quality assessment, provides new technical pathways for the field of automatic speech quality assessment, and also delves into the fundamental causes of performance differences across different assessment granularities.",
+  "arxiv_comment": null,
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Proposes MoE-based MOS prediction system with SSL features and synthetic data augmentation, advancing automatic speech quality assessment for synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

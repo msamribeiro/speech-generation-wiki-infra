@@ -1,0 +1,34 @@
+{
+  "id": "iclr-2025-cuFzE8Jlvb",
+  "source_ids": {
+    "openreview": "cuFzE8Jlvb"
+  },
+  "title": "Continuous Autoregressive Modeling with Stochastic Monotonic Alignment for Speech Synthesis",
+  "authors": [
+    "Weiwei Lin",
+    "Chenhang HE"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=cuFzE8Jlvb",
+  "pdf_url": "https://openreview.net/pdf?id=cuFzE8Jlvb",
+  "pdf_path": "raw/papers/iclr-2025-cuFzE8Jlvb.pdf",
+  "pdf_source": "openreview",
+  "abstract": "We propose a novel autoregressive modeling approach for speech synthesis, combining a variational autoencoder (VAE) with a multi-modal latent space and an autoregressive model that uses Gaussian Mixture Models (GMM) as the conditional probability distribution. Unlike previous methods that rely on residual vector quantization, our model leverages continuous speech representations from the VAE's latent space, greatly simplifying the training and inference pipelines. We also introduce a stochastic monotonic alignment mechanism to enforce strict monotonic alignments. Our approach significantly outperforms the state-of-the-art autoregressive model VALL-E in both subjective and objective evaluations, achieving these results with only 10.3\\% of VALL-E's parameters. This demonstrates the potential of continuous speech language models as a more efficient alternative to existing quantization-based speech language models. Sample audio can be found at \\url{https://tinyurl.com/gmm-lm-tts}.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Proposes a novel continuous autoregressive TTS model with VAE + GMM-based latent modeling and stochastic monotonic alignment, directly advancing TTS architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -29,9 +29,9 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Complex-valued neural network vocoder for iSTFT-based waveform generation with improved computational efficiency",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-U4GXPqm3Va"
 }

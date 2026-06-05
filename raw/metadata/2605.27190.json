@@ -1,0 +1,39 @@
+{
+  "id": "2605.27190",
+  "source_ids": {
+    "arxiv": "2605.27190"
+  },
+  "title": "Learning When to Think While Listening in Large Audio-Language Models",
+  "authors": [
+    "Zhiyuan Song",
+    "Weici Zhao",
+    "Yang Xiao",
+    "Suhao Yu",
+    "Cheng Zhu",
+    "Jiatao Gu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.27190",
+  "pdf_url": "https://arxiv.org/pdf/2605.27190.pdf",
+  "pdf_path": "raw/papers/2605.27190.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in Large Audio-Language Models (LALMs) have made real-time, streaming spoken interaction increasingly practical. In this setting, reasoning quality and responsiveness are tightly coupled: delaying reasoning until the speech endpoint can improve answer quality but moves deliberation into user-visible response delay, while answering too early risks committing before decisive evidence arrives. We introduce a learnable wait-think-answer control formulation for LALMs. Motivated by the incremental nature of human conversation, the controller decides under partial audio evidence when to wait, when to externalize a compact reasoning update, and when to answer. Using Qwen2.5-Omni-7B as the base model, we construct aligned wait-think-answer traces from spoken reasoning data, train the controller with supervised fine-tuning (SFT), and then apply Decoupled Clip and Dynamic Sampling Policy Optimization (DAPO). The reward combines answer correctness, action validity, update timing, latency synchronization, reasoning quality, and chain consistency, optimizing the complete wait-think-answer trajectory and not the final answer alone. On a six-task synthetic spoken reasoning question answering (SRQA) benchmark, the six-reward DAPO controller improves the row-weighted accuracy from 67.6% to 70.3% while reducing post-endpoint final-think length by 14% under the same Qwen deployment harness. On a 186-item human-recorded Real Audio Bench, a transfer check beyond text-to-speech (TTS)-rendered speech, the controller family remains functional: SFT achieves the strongest accuracy, while the six-reward DAPO controller is the only learned variant whose final-think length falls below the base. These results suggest that a streaming model should learn when to make intermediate reasoning explicit during the audio stream.",
+  "arxiv_comment": "19 pages, 4 figures, 6 tables",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.42,
+  "relevance_note": "Introduces a wait-think-answer control for large audio-language models in streaming settings — primarily about reasoning latency in audio LLMs rather than advancing speech synthesis or generation.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

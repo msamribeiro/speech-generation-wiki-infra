@@ -1,0 +1,38 @@
+{
+  "id": "iclr-2025-u2QdCiOgwA",
+  "source_ids": {
+    "openreview": "u2QdCiOgwA"
+  },
+  "title": "Context-aware Dynamic Pruning for Speech Foundation Models",
+  "authors": [
+    "Masao Someki",
+    "Yifan Peng",
+    "Siddhant Arora",
+    "Markus Müller",
+    "Athanasios Mouchtaris",
+    "Grant Strimel",
+    "Jing Liu",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=u2QdCiOgwA",
+  "pdf_url": "https://openreview.net/pdf?id=u2QdCiOgwA",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Foundation models, such as large language models, have achieved remarkable success in natural language processing and are evolving into models capable of handling multiple modalities. Listening ability, in particular, is crucial for many applications, leading to research on building speech foundation models. However, the high computational cost of these large models presents a significant challenge for real-world applications. Although substantial efforts have been made to reduce computational costs, such as through pruning techniques, the majority of these approaches are applied primarily during the training phase for specific downstream tasks. In this study, we hypothesize that optimal pruned networks may vary based on contextual factors such as speaker characteristics, languages, and tasks. To address this, we propose a dynamic pruning technique that adapts to these contexts during inference without altering the underlying model. We demonstrated that we could successfully reduce inference time by approximately 30\\% while maintaining accuracy in multilingual/multi-task scenarios. We also found that the obtained pruned structure offers meaningful interpretations based on the context, e.g., task-related information emerging as the dominant factor for efficient pruning.",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Context-aware dynamic pruning for speech foundation models; focuses on efficiency for ASR/understanding tasks, with no direct TTS or synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

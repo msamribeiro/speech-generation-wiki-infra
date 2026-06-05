@@ -2,7 +2,8 @@
   "id": "interspeech-2025-0754",
   "source_ids": {
     "isca": "li25i_interspeech",
-    "doi": "10.21437/Interspeech.2025-754"
+    "doi": "10.21437/Interspeech.2025-754",
+    "arxiv": "2507.12015"
   },
   "title": "EME-TTS: Unlocking the Emphasis and Emotion Link in Speech Synthesis",
   "authors": [

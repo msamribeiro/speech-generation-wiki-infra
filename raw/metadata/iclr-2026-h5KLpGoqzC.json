@@ -1,0 +1,55 @@
+{
+  "id": "iclr-2026-h5KLpGoqzC",
+  "source_ids": {
+    "openreview": "h5KLpGoqzC"
+  },
+  "title": "Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual Representations for Expressive End-to-End Speech Synthesis",
+  "authors": [
+    "Yixuan Zhou",
+    "Guoyang Zeng",
+    "Xin Liu",
+    "Xiang Li",
+    "Renjie Yu",
+    "Ziyang Wang",
+    "Runchuan Ye",
+    "Weiyue Sun",
+    "Jiancheng Gui",
+    "Kehan Li"
+  ],
+  "authors_full": [
+    "Yixuan Zhou",
+    "Guoyang Zeng",
+    "Xin Liu",
+    "Xiang Li",
+    "Renjie Yu",
+    "Ziyang Wang",
+    "Runchuan Ye",
+    "Weiyue Sun",
+    "Jiancheng Gui",
+    "Kehan Li",
+    "Zhiyong Wu",
+    "Zhiyuan Liu"
+  ],
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=h5KLpGoqzC",
+  "pdf_url": "https://openreview.net/pdf?id=h5KLpGoqzC",
+  "pdf_path": "raw/papers/iclr-2026-h5KLpGoqzC.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Generative models for speech synthesis face a fundamental trade-off: discrete tokens ensure stability but sacrifice expressivity, while continuous signals retain acoustic richness but suffer from error accumulation due to task entanglement. This challenge has driven the field towards multi-stage pipelines that rely on pre-trained discrete speech tokenizers, but these create a semantic-acoustic divide, limiting holistic and expressive speech generation.  We resolve these dilemma through hierarchical semantic-acoustic modeling with semi-discrete residual representations.Our framework introduces a differentiable quantization bottleneck that induces natural specialization: a Text-Semantic Language Model (TSLM) generates semantic-prosodic plans, while a Residual Acoustic Model (RALM) recovers fine-grained acoustic details.This hierarchical semantic-acoustic representation guides a local diffusion-based decoder to generate high-fidelity speech latents.  Critically, the entire architecture is trained end-to-end under a simple diffusion objective, eliminating dependency on external discrete speech tokenizers. Trained on over 1 million hours of speech, our 0.5B-parameter model achieves state-of-the-art zero-shot TTS performance among open-source systems, demonstrating that our approach delivers expressive and stable synthesis. Audio samples are available at: https://voxcpm.github.io/VoxCPM-demopage/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Proposes hierarchical semi-discrete residual representations that bridge semantic and acoustic modeling for expressive end-to-end TTS, directly addressing a core architecture challenge.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

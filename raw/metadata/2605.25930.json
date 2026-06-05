@@ -1,0 +1,39 @@
+{
+  "id": "2605.25930",
+  "source_ids": {
+    "arxiv": "2605.25930"
+  },
+  "title": "CosyEdit2: Speech-Editing-Oriented Reinforcement Learning Unlocks Better Zero-Shot TTS",
+  "authors": [
+    "Junyang Chen",
+    "Yuhang Jia",
+    "Hui Wang",
+    "Jiaming Zhou",
+    "Yongchang Gan",
+    "Yong Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.25930",
+  "pdf_url": "https://arxiv.org/pdf/2605.25930.pdf",
+  "pdf_path": "raw/papers/2605.25930.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech editing and zero-shot Text-to-Speech (TTS) share a similar generative foundation conditioned on speech prompts, yet speech editing demands far stricter local acoustic consistency with surrounding unedited content. While prior work has shown that Supervised Fine-Tuning (SFT) enables TTS models to acquire functional editing capability, this approach remains fundamentally bottlenecked by imperfect paired editing data and coarse-grained optimization signals. To address these limitations, we propose CosyEdit2, a speech editing model built on a two-stage post-training framework that progresses from supervised editing initialization to editing-oriented Group Relative Policy Optimization (GRPO) over target-speech-free data. Extensive experiments demonstrate that CosyEdit2 not only substantially advances speech editing performance, but also unlocks better zero-shot TTS capability, revealing a deeper mutual relationship between the two tasks. Audio samples are available at https://cjy1018.github.io/CosyEdit2.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "CosyEdit2 applies reinforcement learning to speech editing and zero-shot TTS, achieving superior local acoustic consistency over SFT baselines through RL-based optimization.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

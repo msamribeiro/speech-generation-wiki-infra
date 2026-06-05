@@ -29,9 +29,9 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Streaming voice conversion aligning temporal granularity of identity and content via time-varying timbre injection",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-Tf4Lfw85lS"
 }

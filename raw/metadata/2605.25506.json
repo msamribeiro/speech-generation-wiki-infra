@@ -1,0 +1,38 @@
+{
+  "id": "2605.25506",
+  "source_ids": {
+    "arxiv": "2605.25506"
+  },
+  "title": "WaveNeXt 2: ConvNeXt-Based Fast Neural Vocoders With Residual Denoising and Sub-Modeling for GAN and Diffusion Models",
+  "authors": [
+    "Wangzixi Zhou",
+    "Takuma Okamoto",
+    "Yamato Ohtani",
+    "Sakriani Sakti",
+    "Hisashi Kawai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.25506",
+  "pdf_url": "https://arxiv.org/pdf/2605.25506.pdf",
+  "pdf_path": "raw/papers/2605.25506.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Most neural vocoders are limited to one type: either GAN or diffusion-based. While state-of-the-art models like Vocos and WaveNeXt use powerful ConvNeXt-based generators, they have only been used in GAN frameworks and have limited performance in multi-speaker settings. Moreover, diffusion models, despite training faster than GANs, have slow CPU inference. In this paper, we introduce WaveNeXt 2, a unified ConvNeXt-based framework compatible with both GAN and diffusion vocoders. Its core innovation is residual denoising and sub-modeling, where each sub-model progressively refines the waveform. Experimental results in the multi-speaker dataset demonstrate the effectiveness of our approach: (1) GAN-WaveNeXt 2 is much faster than HiFi-GAN and WaveFit, and (2) Diff-WaveNeXt 2 also delivers much faster inference and competitive synthesis quality compared with FastDiff with 4 steps. The Diff-WaveNeXt 2 is very training-efficient, training in only 32 hours, making it ideal for resource-constrained applications.",
+  "arxiv_comment": "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "WaveNeXt 2 introduces a unified ConvNeXt-based vocoder framework compatible with both GAN and diffusion training, with residual denoising for improved multi-speaker performance.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-05 (integration pass 7, 25 papers integrated)
+Last updated: 2026-06-05 (integration pass 7; corpus top-up fetch complete)
 
 ---
 
@@ -8,12 +8,13 @@ Last updated: 2026-06-05 (integration pass 7, 25 papers integrated)
 
 | Step | Status | Notes |
 |------|--------|-------|
-| arXiv fetch (cs.SD + eess.AS) | ✅ Complete | 2025-08-01 → 2026-05-25. 504 + 70 re-scan = 574 written. |
-| arXiv fetch (cs.CL) | ✅ Complete | Via OAI-PMH. Aug–Nov: 41; Dec–Feb: 32; Mar–May: 42. Total: 115 new. cs.CL re-scan deferred (low marginal yield vs. cost). |
+| arXiv fetch (cs.SD + eess.AS) | ✅ Complete | 2025-08-01 → 2026-05-25. 504 + 70 re-scan = 574 written. July 2025 backfill + May tail added 2026-06-05 (+75 written). Full coverage: 2025-07-01 → 2026-05-31. Note: switched to OAI-PMH (search API rate-limited). |
+| arXiv fetch (cs.CL) | ✅ Complete | Via OAI-PMH. Aug–Nov: 41; Dec–Feb: 32; Mar–May: 42. Total: 115. Re-scan with expanded keywords done 2026-06-05: Jul backfill +3, Aug–Nov +12, Dec–Feb +5, Mar–May +13 = 33 new. Full coverage: 2025-07-01 → 2026-05-31. |
 | ISCA fetch (Interspeech 2025) | ✅ Complete | 128 + 12 re-scan = 140 papers written. |
 | Deduplication (arXiv ↔ ISCA) | ✅ Complete | 11 duplicates resolved; ISCA is canonical. |
 | ACL Anthology fetch (2025) | ✅ Complete | 14,669 scanned; 113 + 14 re-scan = 127 new written, 136 arXiv records enriched total. |
 | Citation discovery fetch (targeted) | ✅ Complete | 5 papers fetched by arXiv ID via `--ids` flag: VALL-E, CosyVoice ×2, Seed-TTS, F5-TTS. |
+| ICLR + NeurIPS fetch (OpenReview) | ✅ Complete | New fetcher `scripts/fetch/openreview.py`. ICLR 2025: 13 written. NeurIPS 2025: 16 written. ICLR 2026: 27 written. Total: 56 new pending. Dedup pass pending. |
 | Keyword filter expansion | ✅ Complete | +11 terms added to `config/keyword_filter.yaml` (2026-05-25). See Infrastructure section. |
 | Filter — batch 1 (May 12) | ✅ Complete | arXiv batch: 404 accepted, 31 review, 69 rejected. |
 | Human review — batch 1 (May 19) | ✅ Complete | 31 resolved → 15 accepted, 16 rejected. |
@@ -21,28 +22,30 @@ Last updated: 2026-06-05 (integration pass 7, 25 papers integrated)
 | Human review — batch 2 (May 22) | ✅ Complete | 39 resolved → 25 accepted, 14 rejected. |
 | Duplicate resolution (arXiv ↔ ACL) | ✅ Complete | 1 additional duplicate found (2502.19732 → 2025.findings-emnlp.716). |
 | Duplicate resolution — full corpus scan (May 28) | ✅ Complete | 15 total arXiv/proceedings duplicates resolved (including F5-TTS 2410.06885). Proceedings ID is canonical throughout. 6 parsed output dirs remapped. |
+| Duplicate resolution — top-up fetch (Jun 5) | ✅ Complete | 16 duplicates found in 108 new papers (title match + arXiv ID cross-ref). All arXiv versions marked rejected. 15 source_ids.arxiv backfilled. 1 three-way case: 2505.20868 + 2511.14824 → interspeech-2025-2586. |
 | Filter — batch 3 (May 25) | ✅ Complete | Re-scan + citation-discovery: 101 papers, 67 accepted, 7 review, 27 rejected (66% accept rate). |
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
-| PDF download | ✅ Complete | 799 PDFs on disk (799 accepted; 1 withdrawn/404: 2601.20362 → rejected). |
-| Parse (text extraction) | ✅ Complete | 783/783 done (in-corpus). All queue batches 1–10 finished. Quality reports saved in `raw/parsed/`. |
-| Ingest (wiki pages) | 🔄 In progress | 175/783 ingested. 175 integrated (passes 1–7 complete, 2026-06-05); 0 pending. 19/23 evidence digests seeded (transformer-enc-dec-tts + rlhf-speech missing). ~608 more ready. |
+| PDF download | ✅ Complete | 910 PDFs on disk (799 prior + 111 new). 2 new 404s flagged needs_manual_pdf: 2503.20999, 2511.08230 (likely withdrawn from arXiv). |
+| Parse (text extraction) | 🔄 In progress | 783/783 original corpus done. 111 new papers queued in batches 11–13 (raw/parsed/batch_queue.json); parse pending. |
+| Ingest (wiki pages) | 🔄 In progress | 175/783 ingested. 175 integrated (passes 1–7 complete, 2026-06-05); 0 pending. 19/23 evidence digests seeded (transformer-enc-dec-tts + rlhf-speech missing). ~523 original + 111 new = ~634 ready after parse. |
 
 ---
 
-## Metadata counts (2026-06-02)
+## Metadata counts (2026-06-05)
 
 ```
-Total files:  1000
-  accepted:    612   ← not yet ingested
-  ingested:    175   ← wiki page written
-    integrated: 175  ← passes 1–7 complete (2026-06-05); 0 pending
+Total files:  1164
+  accepted:    698   ← ready for parse → ingest (2 withdrawn arXiv papers moved to rejected)
+  ingested:    176   ← wiki page written (2 flagged is_duplicate; wiki page migration deferred)
+    integrated: 175  ← passes 1–7 complete (2026-06-05); 1 pending integration
+  pending:       0   ← cleared
   review:        0   ← queue cleared
-  rejected:    217   ← 202 + 15 arXiv/proceedings duplicates resolved
+  rejected:    289   ← 287 prior + 2 confirmed withdrawn (2503.20999, 2511.08230)
 
-PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; 15 duplicate arXiv PDFs may remain)
-Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30)
-Parse-pending:   0   ← all queue batches done
-Ready to ingest: 608 ← parsed but not yet ingested
+PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; duplicate arXiv PDFs may remain)
+Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30; 148 new pending-parse after dedup + filter)
+Parse-pending:   0   ← existing corpus all done; 148 new papers need dedup → filter → download → parse
+Ready to ingest: ~607 ← parsed but not yet ingested (exact count after filter pass)
 
 Evidence digests: 19/23 seeded; 14 updated in pass 7 (transformer-enc-dec-tts + rlhf-speech still missing — flag for lint pass)
 Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (23 total concept pages)
@@ -97,6 +100,7 @@ GitHub repository (`acl-org/acl-anthology`).
 | `scripts/fetch/arxiv_oai.py` | OAI-PMH bulk fetcher — use for cs.CL and future large-category sweeps |
 | `scripts/fetch/acl.py` | ACL Anthology fetcher via GitHub XML; supports `--all-workshops` |
 | `scripts/fetch/isca.py` | ISCA/Interspeech HTML scraper |
+| `scripts/fetch/openreview.py` | OpenReview API v2 fetcher — ICLR and NeurIPS; `--venue ICLR\|NeurIPS --year YYYY` |
 | `scripts/filter/agent.py` | Standalone Anthropic SDK filter; requires `ANTHROPIC_API_KEY` |
 | `scripts/parse/download_pdfs.py` | Downloads PDFs for all accepted papers; resumable, per-domain rate limiting |
 | `scripts/discover/citation_index.py` | Builds `raw/citation_index.json` from all parsed `references.json` files; flags speech-relevant candidates; run periodically after parse batches |
@@ -298,19 +302,21 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Continue ingest** — 608 papers ready. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards (after the 25 just integrated). Show selection first, ingest sequentially one agent at a time.
+1. **Parse batches 11–13** — run `batch_convert.py` for batches 11–13 (111 papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025). Same workflow as prior batches: run → quality report → fix failures → run `make_batch_queue.py --sync`. OpenReview PDFs may have different layouts; watch for Docling quirks.
 
-2. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
+2. **Continue ingest** — ~523 original corpus papers ready (parsed, not yet ingested). Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
 
-3. **Investigate ACL/workshop `published_date` issue** — 22 ACL workshop papers have `published_date: 2025-01-01` (year-only placeholder from the scraper). They sort to the front of the chronological queue but represent July/August 2025 conference papers. Decide: (a) patch dates from ACL Anthology metadata, (b) ingest them as-is accepting the sort order quirk, or (c) manually correct the most significant ones before ingesting. Check `scripts/fetch/acl.py` to understand why dates weren't captured.
+4. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
 
-4. **Corpus top-up fetch** — July 2025 arXiv backfill → cs.CL re-scan (Aug 2025–present) → citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers). After each: filter → download → parse. Regenerate `batch_queue.json` after fetch.
+5. **Investigate ACL/workshop `published_date` issue** — 22 ACL workshop papers have `published_date: 2025-01-01` (year-only placeholder from the scraper). They sort to the front of the chronological queue but represent July/August 2025 conference papers. Decide: (a) patch dates from ACL Anthology metadata, (b) ingest them as-is accepting the sort order quirk, or (c) manually correct the most significant ones before ingesting. Check `scripts/fetch/acl.py` to understand why dates weren't captured.
 
-4. **Fix "Factor A/B/C" terminology** — paper-internal labels from `2412.17048` leaked into 5 concept pages, 5 evidence digests, and `2025.acl-long.1498.md`. Replace with plain language (A = phonetic vs. semantic content, B = token rate/length, C = paralinguistic variability). Source page `2412.17048.md` is correct; do not change it.
+6. ~~**Corpus top-up fetch (arXiv + cs.CL re-scan)**~~ — ✅ done 2026-06-05. Full coverage 2025-07-01 → 2026-05-31. See `raw/fetch_plan_2026-06.md`. Remaining: citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers).
 
-5. **Generate first field report** — trigger at ~200 ingested papers (~50 more needed). Use template in CLAUDE.md §5. Validates the report pipeline.
+7. **Fix "Factor A/B/C" terminology** — paper-internal labels from `2412.17048` leaked into 5 concept pages, 5 evidence digests, and `2025.acl-long.1498.md`. Replace with plain language (A = phonetic vs. semantic content, B = token rate/length, C = paralinguistic variability). Source page `2412.17048.md` is correct; do not change it.
 
-6. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
+8. **Generate first field report** — trigger at ~200 ingested papers (~25 more needed after next ingest batch). Use template in CLAUDE.md §5. Validates the report pipeline.
+
+9. **Periodic maintenance** — re-run fetchers, filter, and `citation_index.py` monthly.
 
 ---
 
@@ -325,6 +331,11 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 - **Generation tracking for concept/venue pages** — `generation` frontmatter + `generation_history` implemented for paper pages only. Concept pages, venue pages, and `overview.md` need the same before any Opus quality pass begins. Requires updating integration agent spec and CLAUDE.md template.
 - **Opus quality pass** — targeted rewrites for foundational papers (≥10 in-corpus citations) and mature concept pages (≥15 papers). Candidates: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec. Mark with `quality_pass: opus | YYYY-MM-DD`. Blocked on generation tracking above.
 - **Tiered wiki pages** — full vs. summary tiers as corpus scales. Compress low-citation incremental papers to one paragraph; retain frontmatter and URL. Promotable on citation gain. Pruning pass every ~100 ingested.
+
+- **Wiki page migration for 2 ingested arXiv/conference duplicates** — two papers were ingested under arXiv IDs but now have conference versions as canonical (proceedings > arXiv policy). Wiki pages need renaming + re-ingest under conference IDs, then arXiv metadata entries can be fully retired.
+  - `wiki/papers/2510.00981.md` → `iclr-2026-kYkfCs4ZAH` (FlexiCodec)
+  - `wiki/papers/2508.16790.md` → `neurips-2025-wHsFqmM1rp` (TaDiCodec)
+  Both metadata files currently carry `is_duplicate: true` + `canonical_id` as breadcrumbs. Do after concept integration pass to avoid broken links.
 
 ### Infrastructure / site
 

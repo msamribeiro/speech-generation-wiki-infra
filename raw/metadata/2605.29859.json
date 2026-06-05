@@ -1,0 +1,43 @@
+{
+  "id": "2605.29859",
+  "source_ids": {
+    "arxiv": "2605.29859"
+  },
+  "title": "MELD: Mel-Spectrogram-Based Speech Language Modeling with Discrete Latent Variables",
+  "authors": [
+    "Sung-Lin Yeh",
+    "Wei Zhou",
+    "Gil Keren",
+    "Duc Le",
+    "Zhong Meng",
+    "Hao Tang",
+    "Jay Mahadeokar",
+    "Ozlem Kalinli",
+    "Alexandre Mourachko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.29859",
+  "pdf_url": "https://arxiv.org/pdf/2605.29859.pdf",
+  "pdf_path": "raw/papers/2605.29859.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent speech language models rely on encoders that are optimized separately from autoregressive models. Since these encoders are unaware of the downstream objectives, the extracted representations may not be optimal for downstream tasks. To address this limitation, we introduce a discrete latent variable model on mel spectrograms that jointly optimizes the encoder and the speech language model. Joint optimization not only brings improvements over codec-based and other mel-spectrogram-based baselines on zero-shot Text-to-Speech (TTS) and Speech-to-Text (STT) tasks, but also effectively alleviates common issues in autoregressive mel-spectrogram modeling, such as prolonged silence generation and word omissions.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "MELD introduces a mel-spectrogram-based speech LM with joint encoder-LM optimization via discrete latent variables, advancing unified speech modeling for generation.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

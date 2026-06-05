@@ -29,9 +29,9 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "MambaVoiceCloning: fully SSM-based diffusion TTS removing attention layers across text, rhythm, and prosody",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-0oXyMbPMtP"
 }

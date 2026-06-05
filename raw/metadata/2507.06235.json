@@ -1,0 +1,39 @@
+{
+  "id": "2507.06235",
+  "source_ids": {
+    "arxiv": "2507.06235"
+  },
+  "title": "Super Kawaii Vocalics: Amplifying the \"Cute\" Factor in Computer Voice",
+  "authors": [
+    "Yuto Mandai",
+    "Katie Seaborn",
+    "Tomoyasu Nakano",
+    "Xin Sun",
+    "Yijia Wang",
+    "Jun Kato"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 5,
+  "published_date": "2025-05-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.06235",
+  "pdf_url": "https://arxiv.org/pdf/2507.06235.pdf",
+  "pdf_path": "raw/papers/2507.06235.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "\"Kawaii\" is the Japanese concept of cute, which carries sociocultural connotations related to social identities and emotional responses. Yet, virtually all work to date has focused on the visual side of kawaii, including in studies of computer agents and social robots. In pursuit of formalizing the new science of kawaii vocalics, we explored what elements of voice relate to kawaii and how they might be manipulated, manually and automatically. We conducted a four-phase study (grand N = 512) with two varieties of computer voices: text-to-speech (TTS) and game character voices. We found kawaii \"sweet spots\" through manipulation of fundamental and formant frequencies, but only for certain voices and to a certain extent. Findings also suggest a ceiling effect for the kawaii vocalics of certain voices. We offer empirical validation of the preliminary kawaii vocalics model and an elementary method for manipulating kawaii perceptions of computer voice.",
+  "arxiv_comment": "CHI '25",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.5,
+  "relevance_note": "Studies acoustic elements of kawaii voice and their manipulation; advances understanding of voice style but primarily a perceptual/HCI study rather than a synthesis contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

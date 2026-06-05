@@ -1,0 +1,42 @@
+{
+  "id": "2506.09874",
+  "source_ids": {
+    "arxiv": "2506.09874"
+  },
+  "title": "UmbraTTS: Adapting Text-to-Speech to Environmental Contexts with Flow Matching",
+  "authors": [
+    "Neta Glazer",
+    "Aviv Navon",
+    "Yael Segal",
+    "Aviv Shamsian",
+    "Hilit Segev",
+    "Asaf Buchnick",
+    "Menachem Pirchi",
+    "Gil Hetz",
+    "Joseph Keshet"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.09874",
+  "pdf_url": "https://arxiv.org/pdf/2506.09874.pdf",
+  "pdf_path": "raw/papers/2506.09874.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in Text-to-Speech (TTS) have enabled highly natural speech synthesis, yet integrating speech with complex background environments remains challenging. We introduce UmbraTTS, a flow-matching based TTS model that jointly generates both speech and environmental audio, conditioned on text and acoustic context. Our model allows fine-grained control over background volume and produces diverse, coherent, and context-aware audio scenes. A key challenge is the lack of data with speech and background audio aligned in natural context. To overcome the lack of paired training data, we propose a self-supervised framework that extracts speech, background audio, and transcripts from unannotated recordings. Extensive evaluations demonstrate that UmbraTTS significantly outperformed existing baselines, producing natural, high-quality, environmentally aware audios.",
+  "arxiv_comment": "ICML Workshop on Machine Learning for Audio 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Introduces UmbraTTS, a flow-matching TTS model that jointly generates speech and environmental audio, contributing a novel conditioning approach to TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "iclr-2026-eLsEjjFODE",
+  "source_ids": {
+    "openreview": "eLsEjjFODE",
+    "arxiv": "2509.14298"
+  },
+  "title": "SpeechOp: Inference-Time Task Composition for Generative Speech Processing",
+  "authors": [
+    "Justin Lovelace",
+    "Rithesh Kumar",
+    "Jiaqi Su",
+    "Ke Chen",
+    "Kilian Q Weinberger",
+    "Zeyu Jin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=eLsEjjFODE",
+  "pdf_url": "https://openreview.net/pdf?id=eLsEjjFODE",
+  "pdf_path": "raw/papers/iclr-2026-eLsEjjFODE.pdf",
+  "pdf_source": "openreview",
+  "abstract": "While generative Text-to-Speech (TTS) systems leverage vast \"in-the-wild\" data to achieve remarkable success, speech-to-speech processing tasks like enhancement face data limitations, which lead data-hungry generative approaches to distort speech content and speaker identity. To bridge this gap, we present SpeechOp, a multi-task latent diffusion model that transforms pre-trained TTS models into a universal speech processor capable of performing a wide range of speech tasks and composing them in novel ways at inference time. By adapting a pre-trained TTS model, SpeechOp inherits a rich understanding of natural speech, accelerating training and improving S2S task quality, while simultaneously enhancing core TTS performance. Finally, we introduce Implicit Task Composition (ITC), a novel pipeline where ASR-derived transcripts (e.g., from Whisper) guide SpeechOp's enhancement via our principled inference-time task composition. ITC achieves state-of-the-art content preservation by robustly combining web-scale speech understanding with SpeechOp's generative capabilities.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "SpeechOp repurposes pre-trained TTS diffusion models as universal speech processors via inference-time task composition — novel method advancing speech synthesis and enhancement jointly.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

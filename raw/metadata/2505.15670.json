@@ -1,0 +1,43 @@
+{
+  "id": "2505.15670",
+  "source_ids": {
+    "arxiv": "2505.15670"
+  },
+  "title": "SALM-Duplex: Efficient and Direct Duplex Modeling for Speech-to-Speech Language Model",
+  "authors": [
+    "Ke Hu",
+    "Ehsan Hosseini-Asl",
+    "Chen Chen",
+    "Edresson Casanova",
+    "Subhankar Ghosh",
+    "Piotr Żelasko",
+    "Zhehuai Chen",
+    "Jason Li",
+    "Jagadeesh Balam",
+    "Boris Ginsburg"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.15670",
+  "pdf_url": "https://arxiv.org/pdf/2505.15670.pdf",
+  "pdf_path": "raw/papers/2505.15670.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialogue is an intuitive form of human-computer interaction, yet current speech language models often remain constrained to turn-based exchanges, lacking real-time adaptability such as user barge-in. We propose a novel duplex speech to speech (S2S) architecture featuring continuous user inputs and codec agent outputs with channel fusion that directly models simultaneous user and agent streams. Using a pretrained streaming encoder for user input enables the first duplex S2S model without requiring speech pretrain. Separate architectures for agent and user modeling facilitate codec fine-tuning for better agent voices and halve the bitrate (0.6 kbps) compared to previous works. Experimental results show that the proposed model outperforms previous duplex models in reasoning, turn-taking, and barge-in abilities. The model requires significantly less speech data, as speech pretrain is skipped, which markedly simplifies the process of building a duplex S2S model from any LLMs. Finally, it is the first openly available duplex S2S model with training and inference code to foster reproducibility.",
+  "arxiv_comment": "Accepted to Interspeech 2025",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Proposes SALM-Duplex, a full-duplex speech-to-speech architecture with codec agent outputs and channel fusion, directly advancing SCA systems.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

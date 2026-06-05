@@ -54,9 +54,9 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Dual-resolution speech representation model for parallel speech-text voice conversation; advances SCA.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-h5AiVx0Aiv"
 }

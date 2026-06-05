@@ -1,0 +1,35 @@
+{
+  "id": "2507.11777",
+  "source_ids": {
+    "arxiv": "2507.11777"
+  },
+  "title": "Towards Scalable AASIST: Refining Graph Attention for Speech Deepfake Detection",
+  "authors": [
+    "Ivan Viakhirev",
+    "Daniil Sirota",
+    "Aleksandr Smirnov",
+    "Kirill Borodin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.11777",
+  "pdf_url": "https://arxiv.org/pdf/2507.11777.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Advances in voice conversion and text-to-speech synthesis have made automatic speaker verification (ASV) systems more susceptible to spoofing attacks. This work explores modest refinements to the AASIST anti-spoofing architecture. It incorporates a frozen Wav2Vec 2.0 encoder to retain self-supervised speech representations in limited-data settings, substitutes the original graph attention block with a standardized multi-head attention module using heterogeneous query projections, and replaces heuristic frame-segment fusion with a trainable, context-aware integration layer. When evaluated on the ASVspoof 5 corpus, the proposed system reaches a 7.6\\% equal error rate (EER), improving on a re-implemented AASIST baseline under the same training conditions. Ablation experiments suggest that each architectural change contributes to the overall performance, indicating that targeted adjustments to established models may help strengthen speech deepfake detection in practical scenarios. The code is publicly available at https://github.com/KORALLLL/AASIST_SCALING.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.18,
+  "relevance_note": "Proposes refinements to AASIST anti-spoofing architecture for deepfake detection; deepfake detection is not speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

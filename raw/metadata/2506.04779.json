@@ -33,9 +33,9 @@
   ],
   "relevance_score": 0.65,
   "relevance_note": "Benchmark for spoken language understanding with paralinguistic reasoning; primarily evaluation for SLU, not synthesis.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-yHzCDP1tXw"
 }

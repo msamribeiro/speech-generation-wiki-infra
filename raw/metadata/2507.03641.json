@@ -1,0 +1,36 @@
+{
+  "id": "2507.03641",
+  "source_ids": {
+    "arxiv": "2507.03641"
+  },
+  "title": "Improving Low-Resource Dialect Classification Using Retrieval-based Voice Conversion",
+  "authors": [
+    "Lea Fischbach",
+    "Akbar Karimi",
+    "Caroline Kleen",
+    "Alfred Lameli",
+    "Lucie Flek"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.03641",
+  "pdf_url": "https://arxiv.org/pdf/2507.03641.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Deep learning models for dialect identification are often limited by the scarcity of dialectal data. To address this challenge, we propose to use Retrieval-based Voice Conversion (RVC) as an effective data augmentation method for a low-resource German dialect classification task. By converting audio samples to a uniform target speaker, RVC minimizes speaker-related variability, enabling models to focus on dialect-specific linguistic and phonetic features. Our experiments demonstrate that RVC enhances classification performance when utilized as a standalone augmentation method. Furthermore, combining RVC with other augmentation methods such as frequency masking and segment removal leads to additional performance gains, highlighting its potential for improving dialect classification in low-resource scenarios.",
+  "arxiv_comment": "Accepted to Interspeech 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-1017"
+}

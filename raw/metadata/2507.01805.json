@@ -1,0 +1,33 @@
+{
+  "id": "2507.01805",
+  "source_ids": {
+    "arxiv": "2507.01805"
+  },
+  "title": "A Dataset for Automatic Assessment of TTS Quality in Spanish",
+  "authors": [
+    "Alejandro Sosa Welford",
+    "Leonardo Pepino"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.01805",
+  "pdf_url": "https://arxiv.org/pdf/2507.01805.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This work addresses the development of a database for the automatic assessment of text-to-speech (TTS) systems in Spanish, aiming to improve the accuracy of naturalness prediction models. The dataset consists of 4,326 audio samples from 52 different TTS systems and human voices and is, up to our knowledge, the first of its kind in Spanish. To label the audios, a subjective test was designed based on the ITU-T Rec. P.807 standard and completed by 92 participants. Furthermore, the utility of the collected dataset was validated by training automatic naturalness prediction systems. We explored two approaches: fine-tuning an existing model originally trained for English, and training small downstream networks on top of frozen self-supervised speech models. Our models achieve a mean absolute error of 0.8 on a five-point MOS scale. Further analysis demonstrates the quality and diversity of the developed dataset, and its potential to advance TTS research in Spanish.",
+  "arxiv_comment": "5 pages, 2 figures. Accepted at Interspeech 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0973"
+}

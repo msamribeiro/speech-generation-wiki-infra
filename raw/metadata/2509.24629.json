@@ -49,9 +49,9 @@
   ],
   "relevance_score": 0.93,
   "relevance_note": "Fine-grained word-level emotional expression control in zero-shot TTS",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "neurips-2025-SYcggdxX6W"
 }

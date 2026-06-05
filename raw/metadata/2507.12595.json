@@ -1,0 +1,35 @@
+{
+  "id": "2507.12595",
+  "source_ids": {
+    "arxiv": "2507.12595"
+  },
+  "title": "Enhancing In-Domain and Out-Domain EmoFake Detection via Cooperative Multilingual Speech Foundation Models",
+  "authors": [
+    "Orchid Chetia Phukan",
+    "Mohd Mujtaba Akhtar",
+    "Girish",
+    "Arun Balaji Buduru"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.12595",
+  "pdf_url": "https://arxiv.org/pdf/2507.12595.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this work, we address EmoFake Detection (EFD). We hypothesize that multilingual speech foundation models (SFMs) will be particularly effective for EFD due to their pre-training across diverse languages, enabling a nuanced understanding of variations in pitch, tone, and intensity. To validate this, we conduct a comprehensive comparative analysis of state-of-the-art (SOTA) SFMs. Our results shows the superiority of multilingual SFMs for same language (in-domain) as well as cross-lingual (out-domain) evaluation. To our end, we also propose, THAMA for fusion of foundation models (FMs) motivated by related research where combining FMs have shown improved performance. THAMA leverages the complementary conjunction of tucker decomposition and hadamard product for effective fusion. With THAMA, synergized with cooperative multilingual SFMs achieves topmost performance across in-domain and out-domain settings, outperforming individual FMs, baseline fusion techniques, and prior SOTA methods.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Studies fake emotion detection (EmoFake) using speech foundation models; anti-spoofing/detection paper with no synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

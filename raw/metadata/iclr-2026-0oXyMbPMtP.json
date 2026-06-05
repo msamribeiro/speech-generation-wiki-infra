@@ -1,0 +1,37 @@
+{
+  "id": "iclr-2026-0oXyMbPMtP",
+  "source_ids": {
+    "openreview": "0oXyMbPMtP",
+    "arxiv": "2604.00292"
+  },
+  "title": "MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control",
+  "authors": [
+    "Sahil Kumar",
+    "Namrataben Patel",
+    "Honggang Wang",
+    "Youshan Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=0oXyMbPMtP",
+  "pdf_url": "https://openreview.net/pdf?id=0oXyMbPMtP",
+  "pdf_path": "raw/papers/iclr-2026-0oXyMbPMtP.pdf",
+  "pdf_source": "openreview",
+  "abstract": "MambaVoiceCloning (MVC) asks whether the conditioning path of diffusion-based TTS can be made fully SSM-only at inference—removing all attention and explicit RNN-style recurrence layers across text, rhythm, and prosody—while preserving or improving quality under controlled conditions. MVC combines a gated bidirectional Mamba text encoder, a Temporal Bi-Mamba supervised by a lightweight alignment teacher discarded after training, and an Expressive Mamba with AdaLN modulation, yielding linear-time $\\mathcal{O}(T)$ conditioning with bounded activation memory and practical finite look-ahead streaming. Unlike prior Mamba--TTS systems that remain hybrid at inference, MVC removes attention-based duration and style modules under a fixed StyleTTS2 mel--diffusion--vocoder backbone. Trained on LJSpeech/LibriTTS and evaluated on VCTK, CSS10 (ES/DE/FR), and long-form Gutenberg passages, MVC achieves modest but statistically reliable gains over StyleTTS2, VITS, and Mamba--attention hybrids in MOS/CMOS, F$_0$ RMSE, MCD, and WER, while reducing encoder parameters to 21M and improving throughput by $1.6\\times$. Diffusion remains the dominant latency source, but SSM-only conditioning improves memory footprint, stability, and deployability.  Code available at: \\url{https://github.com/sahilkumar15/MVC}.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Proposes a fully SSM-based (Mamba) diffusion TTS architecture with linear-time inference, replacing attention in all conditioning paths — core architectural contribution to TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

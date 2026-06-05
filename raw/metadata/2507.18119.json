@@ -1,0 +1,60 @@
+{
+  "id": "2507.18119",
+  "source_ids": {
+    "arxiv": "2507.18119"
+  },
+  "title": "GOAT-SLM: A Spoken Language Model with Paralinguistic and Speaker Characteristic Awareness",
+  "authors": [
+    "Hongjie Chen",
+    "Zehan Li",
+    "Yaodong Song",
+    "Wenming Deng",
+    "Yitong Yao",
+    "Yuxin Zhang",
+    "Hang Lv",
+    "Xuechao Zhu",
+    "Jian Kang",
+    "Jie Lian"
+  ],
+  "authors_full": [
+    "Hongjie Chen",
+    "Zehan Li",
+    "Yaodong Song",
+    "Wenming Deng",
+    "Yitong Yao",
+    "Yuxin Zhang",
+    "Hang Lv",
+    "Xuechao Zhu",
+    "Jian Kang",
+    "Jie Lian",
+    "Jie Li",
+    "Chao Wang",
+    "Shuangyong Song",
+    "Yongxiang Li",
+    "Zhongjiang He",
+    "Xuelong Li"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.18119",
+  "pdf_url": "https://arxiv.org/pdf/2507.18119.pdf",
+  "pdf_path": "raw/papers/2507.18119.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in end-to-end spoken language models (SLMs) have significantly improved the ability of AI systems to engage in natural spoken interactions. However, most existing models treat speech merely as a vehicle for linguistic content, often overlooking the rich paralinguistic and speaker characteristic cues embedded in human speech, such as dialect, age, emotion, and non-speech vocalizations. In this work, we introduce GOAT-SLM, a novel spoken language model with paralinguistic and speaker characteristic awareness, designed to extend spoken language modeling beyond text semantics. GOAT-SLM adopts a dual-modality head architecture that decouples linguistic modeling from acoustic realization, enabling robust language understanding while supporting expressive and adaptive speech generation. To enhance model efficiency and versatility, we propose a modular, staged training strategy that progressively aligns linguistic, paralinguistic, and speaker characteristic information using large-scale speech-text corpora. Experimental results on TELEVAL, a multi-dimensional evaluation benchmark, demonstrate that GOAT-SLM achieves well-balanced performance across both semantic and non-semantic tasks, and outperforms existing open-source models in handling emotion, dialectal variation, and age-sensitive interactions. This work highlights the importance of modeling beyond linguistic content and advances the development of more natural, adaptive, and socially aware spoken language systems.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Introduces GOAT-SLM, a spoken language model with paralinguistic and speaker characteristic awareness, advancing SCA systems with richer speech understanding and generation.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -9,10 +9,14 @@ If the queue file already exists, only NEW pending papers (not already in any
 batch) are appended as new batches at the end.  Existing batches and their
 statuses are preserved.
 
+Use --sync to reconcile batch statuses with actual disk state (paper.md
+presence). Run this after completing a batch to keep the queue readable.
+
 Usage:
     python scripts/parse/make_batch_queue.py
-    python scripts/parse/make_batch_queue.py --batch-size 10
-    python scripts/parse/make_batch_queue.py --refresh   # rebuild from scratch
+    python scripts/parse/make_batch_queue.py --batch-size 40
+    python scripts/parse/make_batch_queue.py --sync        # update statuses from disk
+    python scripts/parse/make_batch_queue.py --refresh     # rebuild from scratch
 """
 
 import argparse
@@ -55,13 +59,73 @@ def _chunked(lst: list, size: int) -> list[list]:
     return [lst[i : i + size] for i in range(0, len(lst), size)]
 
 
+def _batch_status_from_disk(papers: list[str]) -> tuple[str, int, int]:
+    """
+    Derive batch status from disk state.
+    Returns (status, succeeded, failed) where status is one of:
+      "done"    — all papers have paper.md and no error.json
+      "partial" — some papers done, some pending or failed
+      "failed"  — all papers have error.json
+      "pending" — no papers have paper.md yet
+    """
+    done = failed = pending = 0
+    for pid in papers:
+        paper_md   = RAW_PARSED / pid / "paper.md"
+        error_json = RAW_PARSED / pid / "error.json"
+        if paper_md.exists() and not error_json.exists():
+            done += 1
+        elif error_json.exists():
+            failed += 1
+        else:
+            pending += 1
+
+    total = len(papers)
+    if done == total:
+        status = "done"
+    elif failed == total:
+        status = "failed"
+    elif pending == total:
+        status = "pending"
+    else:
+        status = "partial"
+
+    return status, done, failed
+
+
+def _sync_queue(queue: dict) -> int:
+    """Update all batch statuses from disk. Returns number of batches changed."""
+    changed = 0
+    for b in queue["batches"]:
+        status, succeeded, failed = _batch_status_from_disk(b["papers"])
+        if b["status"] != status or b["succeeded"] != succeeded or b["failed"] != failed:
+            b["status"]    = status
+            b["succeeded"] = succeeded
+            b["failed"]    = failed if failed else None
+            changed += 1
+    return changed
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--batch-size", type=int, default=20, metavar="N")
     parser.add_argument("--refresh", action="store_true", help="Rebuild queue from scratch (discards status history)")
+    parser.add_argument("--sync",    action="store_true", help="Reconcile batch statuses with disk state (paper.md presence)")
     args = parser.parse_args()
 
     RAW_PARSED.mkdir(parents=True, exist_ok=True)
+
+    # --sync: update existing queue statuses from disk, then exit
+    if args.sync:
+        if not QUEUE_FILE.exists():
+            print("No queue file found — run without --sync first.")
+            return
+        queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
+        changed = _sync_queue(queue)
+        QUEUE_FILE.write_text(json.dumps(queue, indent=2), encoding="utf-8")
+        print(f"Synced. {changed} batch(es) updated.")
+        print()
+        _print_summary(queue)
+        return
 
     eligible = _load_eligible_papers()
 
@@ -97,6 +161,7 @@ def main() -> None:
         new_papers = [pid for pid in eligible if pid not in existing_ids]
         if not new_papers:
             print(f"Queue already up-to-date. {len(queue['batches'])} batches, no new papers.")
+            _print_summary(queue)
             return
 
         next_id = max(b["id"] for b in queue["batches"]) + 1
@@ -114,23 +179,26 @@ def main() -> None:
         action = f"Appended {len(new_papers)} new papers in {len(_chunked(new_papers, args.batch_size))} batch(es)"
 
     QUEUE_FILE.write_text(json.dumps(queue, indent=2), encoding="utf-8")
+    print(f"{action}.")
+    _print_summary(queue)
 
+
+def _print_summary(queue: dict) -> None:
+    from collections import Counter
     n_batches = len(queue["batches"])
     n_papers  = queue["total_papers"]
-    print(f"{action}.")
+    status_counts = Counter(b["status"] for b in queue["batches"])
+
     print(f"Queue file  : {QUEUE_FILE}")
     print(f"Papers      : {n_papers}")
-    print(f"Batches     : {n_batches}  (batch size {args.batch_size})")
+    print(f"Batches     : {n_batches}  ({', '.join(f'{v} {k}' for k, v in sorted(status_counts.items()))})")
     print()
     print("Batch summary:")
+    status_tag = {"pending": "[ ]", "running": "[~]", "done": "[✓]", "partial": "[!]", "failed": "[✗]"}
     for b in queue["batches"]:
-        status_tag = {
-            "pending":  "[ ]",
-            "running":  "[~]",
-            "done":     "[✓]",
-            "partial":  "[!]",
-        }.get(b["status"], "[?]")
-        print(f"  {status_tag} Batch {b['id']:>3} — {len(b['papers'])} papers  ({b['papers'][0]} … {b['papers'][-1]})")
+        tag   = status_tag.get(b["status"], "[?]")
+        count = f"{b['succeeded']}/{len(b['papers'])}" if b.get("succeeded") is not None else f"{len(b['papers'])} papers"
+        print(f"  {tag} Batch {b['id']:>3} — {count:>12}  ({b['papers'][0]} … {b['papers'][-1]})")
 
 
 if __name__ == "__main__":

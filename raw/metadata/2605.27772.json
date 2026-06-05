@@ -1,0 +1,36 @@
+{
+  "id": "2605.27772",
+  "source_ids": {
+    "arxiv": "2605.27772"
+  },
+  "title": "Do Audio LLMs Listen or Read? Analyzing and Mitigating Paralinguistic Failures with VoxParadox",
+  "authors": [
+    "Jiacheng Pang",
+    "Ashutosh Chaubey",
+    "Mohammad Soleymani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.27772",
+  "pdf_url": "https://arxiv.org/pdf/2605.27772.pdf",
+  "pdf_path": "raw/papers/2605.27772.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Audio large language models (Audio LLMs) demonstrate strong performance on speech understanding tasks, yet their ability to understand paralinguistic information remains limited. To systematically quantify this issue, we introduce VoxParadox, an adversarial benchmark with 2,000 verified examples, spanning 10 paralinguistic tasks, created with controlled speech synthesis to intentionally mismatch transcript claims and speaking style, enabling direct measurement of speech paralinguistic understanding. Evaluation of a diverse set of Audio LLMs reveals consistently low accuracy on acoustic ground truth and a strong tendency to follow language-implied (incorrect) answers. To understand the cause of this gap, we perform layer-wise probing and find that (i) paralinguistic cues can degrade in deeper encoder layers and at the encoder--LLM interface, and (ii) even when such cues are available in audio tokens, the language model frequently ignores them. To address these problems, we propose Prompt-Conditioned Layer Mixer (PCLM), which adaptively combines information from multiple audio layers based on the input prompt, and pair it with Direct Preference Optimization (DPO) to explicitly prefer acoustically supported options over language-implied alternatives. These methods substantially improve Audio LLM paralinguistic understanding, improving Audio Flamingo 3 from 17.40% to 65.20% on VoxParadox, and from 37.74% to 54.78% on MMSU paralinguistic subset. Our project page is available at https://voxparadox.github.io/.",
+  "arxiv_comment": "Accepted as a conference paper at ICML 2026. Project page: https://voxparadox.github.io/",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.5,
+  "relevance_note": "VoxParadox is an adversarial benchmark testing paralinguistic understanding in audio LLMs using controlled TTS stimuli — the primary contribution is audio LLM evaluation, with TTS used as a test construction tool rather than advanced.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2507.04349",
+  "source_ids": {
+    "arxiv": "2507.04349"
+  },
+  "title": "TTS-CtrlNet: Time varying emotion aligned text-to-speech generation with ControlNet",
+  "authors": [
+    "Jaeseok Jeong",
+    "Yuna Lee",
+    "Mingi Kwon",
+    "Youngjung Uh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.04349",
+  "pdf_url": "https://arxiv.org/pdf/2507.04349.pdf",
+  "pdf_path": "raw/papers/2507.04349.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) have enabled natural speech synthesis, but fine-grained, time-varying emotion control remains challenging. Existing methods often allow only utterance-level control and require full model fine-tuning with a large emotion speech dataset, which can degrade performance. Inspired by adding conditional control to the existing model in ControlNet (Zhang et al, 2023), we propose the first ControlNet-based approach for controllable flow-matching TTS (TTS-CtrlNet), which freezes the original model and introduces a trainable copy of it to process additional conditions. We show that TTS-CtrlNet can boost the pretrained large TTS model by adding intuitive, scalable, and time-varying emotion control while inheriting the ability of the original model (e.g., zero-shot voice cloning & naturalness). Furthermore, we provide practical recipes for adding emotion control: 1) optimal architecture design choice with block analysis, 2) emotion-specific flow step, and 3) flexible control scale.   Experiments show that ours can effectively add an emotion controller to existing TTS, and achieves state-of-the-art performance with emotion similarity scores: Emo-SIM and Aro-Val SIM. The project page is available at: https://curryjung.github.io/ttsctrlnet_project_page",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Proposes TTS-CtrlNet, the first ControlNet-based approach for time-varying emotion control in flow-matching TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2605.29209",
+  "source_ids": {
+    "arxiv": "2605.29209"
+  },
+  "title": "The WER Trap: Shattering the Illusion of Unified Tokens in Speech Language Models",
+  "authors": [
+    "Xiangyu Zhang",
+    "Yuxin Li",
+    "Haoyang Zhang",
+    "Shiqi Han",
+    "Hexin Liu",
+    "Qiquan Zhang",
+    "Beena Ahmed",
+    "Julien Epps"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.29209",
+  "pdf_url": "https://arxiv.org/pdf/2605.29209.pdf",
+  "pdf_path": "raw/papers/2605.29209.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The pursuit of a \"unified\" discrete token for both speech understanding and generation has led the Speech Language Model (SLM) community to heavily rely on Word Error Rate (WER) -- the core metric for Whisper-style tokenizers -- as the definitive proxy for representation quality. This fosters the assumption that low-WER tokens inherently preserve the information necessary for intelligible acoustic synthesis. We argue this is fundamentally deceptive. While high-frequency tokens succeed in generation tasks due to implicit information leakage, isolating pure semantic information at ultra-low frame rates strips away the finegrained articulation and micro-dynamics essential for ODE-based generation. Empirically validating this requires extreme compression without sacrificing WER -- a methodological bottleneck, as standard fixed-stride downsampling arbitrarily truncates phonetic boundaries. To overcome this, we develop a dynamic compression tokenizer that intelligently aligns representations with semantic boundaries, achieving ultra-low frame rates with exceptionally low WER. Using these isolated \"pure\" semantic tokens, we expose the WER trap: when conditioning generative models -- even with oracle duration alignments -- the reconstructed speech suffers from severe articulation blur and is rendered acoustically unintelligible. Our findings demonstrate that semantic categorization rewarded by low WER is inherently orthogonal to the continuous phonetic trajectories required for synthesis, shattering the illusion of the unified token and advocating for explicitly decoupled speech representations.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Demonstrates that low-WER speech tokens do not preserve information necessary for intelligible synthesis, revealing a fundamental flaw in unified token assumptions for speech LMs.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

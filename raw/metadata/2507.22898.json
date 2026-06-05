@@ -1,0 +1,41 @@
+{
+  "id": "2507.22898",
+  "source_ids": {
+    "arxiv": "2507.22898"
+  },
+  "title": "Voice-guided Orchestrated Intelligence for Clinical Evaluation (VOICE): A Voice AI Agent System for Prehospital Stroke Assessment",
+  "authors": [
+    "Julian Acosta",
+    "Scott Adams",
+    "Julius Kernbach",
+    "Romain Hardy",
+    "Sung Eun Kim",
+    "Luyang Luo",
+    "Xiaoman Zhang",
+    "Shreya Johri",
+    "Mohammed Baharoon",
+    "Pranav Rajpurkar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 6,
+  "published_date": "2025-06-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.22898",
+  "pdf_url": "https://arxiv.org/pdf/2507.22898.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We developed a voice-driven artificial intelligence (AI) system that guides anyone - from paramedics to family members - through expert-level stroke evaluations using natural conversation, while also enabling smartphone video capture of key examination components for documentation and potential expert review. This addresses a critical gap in emergency care: current stroke recognition by first responders is inconsistent and often inaccurate, with sensitivity for stroke detection as low as 58%, causing life-threatening delays in treatment. Three non-medical volunteers used our AI system to assess ten simulated stroke patients, including cases with likely large vessel occlusion (LVO) strokes and stroke-like conditions, while we measured diagnostic accuracy, completion times, user confidence, and expert physician review of the AI-generated reports. The AI system correctly identified 84% of individual stroke signs and detected 75% of likely LVOs, completing evaluations in just over 6 minutes. Users reported high confidence (median 4.5/5) and ease of use (mean 4.67/5). The system successfully identified 86% of actual strokes but also incorrectly flagged 2 of 3 non-stroke cases as strokes. When an expert physician reviewed the AI reports with videos, they identified the correct diagnosis in 100% of cases, but felt confident enough to make preliminary treatment decisions in only 40% of cases due to observed AI errors including incorrect scoring and false information. While the current system's limitations necessitate human oversight, ongoing rapid advancements in speech-to-speech AI models suggest that future versions are poised to enable highly accurate assessments. Achieving human-level voice interaction could transform emergency medical care, putting expert-informed assessment capabilities in everyone's hands.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Medical AI voice agent for stroke assessment — uses speech I/O as a delivery mechanism but does not advance speech synthesis research.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

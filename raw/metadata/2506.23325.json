@@ -1,0 +1,42 @@
+{
+  "id": "2506.23325",
+  "source_ids": {
+    "arxiv": "2506.23325"
+  },
+  "title": "XY-Tokenizer: Mitigating the Semantic-Acoustic Conflict in Low-Bitrate Speech Codecs",
+  "authors": [
+    "Yitian Gong",
+    "Luozhijie Jin",
+    "Ruifan Deng",
+    "Dong Zhang",
+    "Xin Zhang",
+    "Qinyuan Cheng",
+    "Zhaoye Fei",
+    "Shimin Li",
+    "Xipeng Qiu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.23325",
+  "pdf_url": "https://arxiv.org/pdf/2506.23325.pdf",
+  "pdf_path": "raw/papers/2506.23325.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech codecs serve as bridges between speech signals and large language models. An ideal codec for speech language models should not only preserve acoustic information but also capture rich semantic information. However, existing speech codecs struggle to balance high-quality audio reconstruction with ease of modeling by language models. In this study, we analyze the limitations of previous codecs in balancing semantic richness and acoustic fidelity. We propose XY-Tokenizer, a novel codec that mitigates the conflict between semantic and acoustic capabilities through multi-stage, multi-task learning. Experimental results demonstrate that XY-Tokenizer achieves performance in both semantic and acoustic tasks comparable to that of state-of-the-art codecs operating at similar bitrates, even though those existing codecs typically excel in only one aspect. Specifically, XY-Tokenizer achieves strong text alignment, surpassing distillation-based semantic modeling methods such as SpeechTokenizer and Mimi, while maintaining a speaker similarity score of 0.83 between reconstructed and original audio. The reconstruction performance of XY-Tokenizer is comparable to that of BigCodec, the current state-of-the-art among acoustic-only codecs, which achieves a speaker similarity score of 0.84 at a similar bitrate. Code and models are available at https://github.com/gyt1145028706/XY-Tokenizer.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Proposes XY-Tokenizer, a novel codec architecture explicitly designed to balance semantic richness and acoustic fidelity for speech language models.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

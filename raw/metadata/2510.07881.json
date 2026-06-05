@@ -1,0 +1,41 @@
+{
+  "id": "2510.07881",
+  "source_ids": {
+    "arxiv": "2510.07881"
+  },
+  "title": "CS3-Bench: Evaluating and Enhancing Speech-to-Speech LLMs for Mandarin-English Code-Switching",
+  "authors": [
+    "Heyang Liu",
+    "Yuhao Wang",
+    "Ziyang Cheng",
+    "Ronghua Wu",
+    "Qunshan Gu",
+    "Yanfeng Wang",
+    "Yu Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.07881",
+  "pdf_url": "https://arxiv.org/pdf/2510.07881.pdf",
+  "pdf_path": "raw/papers/2510.07881.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The advancement of multimodal large language models has accelerated the development of speech-to-speech interaction systems. While natural monolingual interaction has been achieved, we find existing models exhibit deficiencies in language alignment. In our proposed Code-Switching Speech-to-Speech Benchmark (CS3-Bench), experiments on 7 mainstream models demonstrate a relative performance drop of up to 66% in knowledge-intensive question answering and varying degrees of misunderstanding in open-ended conversations. Starting from a model with severe performance deterioration, we propose both data constructions and training approaches to improve the language alignment capabilities, specifically employing Chain of Recognition (CoR) to enhance understanding and Keyword Highlighting (KH) to guide generation. Our approach improves the knowledge accuracy from 25.14% to 46.13%, with open-ended understanding rate from 64.5% to 86.5%, and significantly reduces pronunciation errors in the secondary language. CS3-Bench is available at https://huggingface.co/datasets/VocalNet/CS3-Bench.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "CS3-Bench evaluates Mandarin-English code-switching in speech-to-speech LLMs — covers speech output quality but the primary focus is language alignment/code-switching rather than synthesis advancement.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

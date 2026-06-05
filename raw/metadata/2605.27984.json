@@ -1,0 +1,38 @@
+{
+  "id": "2605.27984",
+  "source_ids": {
+    "arxiv": "2605.27984"
+  },
+  "title": "KVoiceBench, KOpenAudioBench, and KMMAU: Agent-Driven Korean Speech Benchmarks for Evaluating SpeechLMs",
+  "authors": [
+    "Haechan Kim",
+    "Seungjun Chung",
+    "Inkyu Park",
+    "Jihoo Lee",
+    "Jonghyun Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.27984",
+  "pdf_url": "https://arxiv.org/pdf/2605.27984.pdf",
+  "pdf_path": "raw/papers/2605.27984.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech language models (SpeechLMs) have achieved substantial progress by extending large language models (LLMs) to the speech modality. However, SpeechLM evaluation remains heavily centered on English, limiting reliable assessment of multilingual speech capabilities. Straightforward benchmark transfer through ASR, translation, normalization, and TTS can corrupt language-specific instructions, answer constraints, and spoken forms; for audio understanding, transferring source-language audio also fails to preserve target-language speaker attributes, accents, and paralinguistic properties. To address these limitations, we propose two human-agent benchmark-construction frameworks: one transfers source-language SpokenQA benchmarks into target-language SpokenQA benchmarks, and the other converts target-language ASR corpora into audio understanding benchmarks using transcriptions and speaker metadata. Using these frameworks, we construct and publicly release three Korean speech benchmarks: KVoiceBench and KOpenAudioBench for Korean SpokenQA, and KMMAU for Korean audio understanding, comprising 12,345 samples in total. We evaluate eight recent SpeechLMs and find that English-Korean performance gaps vary substantially across models and task families, and that SpokenQA and audio understanding rankings diverge, revealing complementary weaknesses invisible to English-only evaluation.",
+  "arxiv_comment": "16 pages, 4 figures",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.58,
+  "relevance_note": "Korean speech benchmarks for SpeechLMs — TTS is used as one data generation tool among several; the primary contribution is multilingual SpeechLM evaluation rather than synthesis advancement.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

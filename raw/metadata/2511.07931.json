@@ -48,9 +48,9 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Human preference dataset and reward model for speech naturalness judgment to enable RLHF for speech synthesis",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-I9ED9VWZq6"
 }

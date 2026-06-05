@@ -1,0 +1,36 @@
+{
+  "id": "2507.09282",
+  "source_ids": {
+    "arxiv": "2507.09282"
+  },
+  "title": "ClaritySpeech: Dementia Obfuscation in Speech",
+  "authors": [
+    "Dominika Woszczyk",
+    "Ranya Aloufi",
+    "Soteris Demetriou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.09282",
+  "pdf_url": "https://arxiv.org/pdf/2507.09282.pdf",
+  "pdf_path": "raw/papers/2507.09282.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Dementia, a neurodegenerative disease, alters speech patterns, creating communication barriers and raising privacy concerns. Current speech technologies, such as automatic speech transcription (ASR), struggle with dementia and atypical speech, further challenging accessibility. This paper presents a novel dementia obfuscation in speech framework, ClaritySpeech, integrating ASR, text obfuscation, and zero-shot text-to-speech (TTS) to correct dementia-affected speech while preserving speaker identity in low-data environments without fine-tuning. Results show a 16% and 10% drop in mean F1 score across various adversarial settings and modalities (audio, text, fusion) for ADReSS and ADReSSo, respectively, maintaining 50% speaker similarity. We also find that our system improves WER (from 0.73 to 0.08 for ADReSS and 0.15 for ADReSSo) and speech quality from 1.65 to ~2.15, enhancing privacy and accessibility.",
+  "arxiv_comment": "Accepted at Interspeech 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Presents ClaritySpeech for dementia obfuscation using ZS-TTS; uses TTS as a pipeline component for speech correction but the primary contribution is the dementia obfuscation framework.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "neurips-2025-1cURNMriee",
+  "source_ids": {
+    "openreview": "1cURNMriee"
+  },
+  "title": "StreamFlow: Streaming Audio Generation from Discrete Tokens via Streaming Flow Matching",
+  "authors": [
+    "Ha-Yeong Choi",
+    "Sang-Hoon Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=1cURNMriee",
+  "pdf_url": "https://openreview.net/pdf?id=1cURNMriee",
+  "pdf_path": "raw/papers/neurips-2025-1cURNMriee.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Diffusion models have demonstrated remarkable generative capabilities, and Conditional Flow Matching (CFM) has improved their inference efficiency by following optimal transport paths. However, CFM-based models still require multiple iterative sampling steps, which makes them unsuitable for real-time or streaming generation scenarios. In this paper, we introduce StreamFlow, a novel streaming generative model designed for real-time audio generation from discrete tokens. StreamFlow leverages a causal noising training framework along the time axis and predicts multi-time vector fields at once on each stream, enabling streaming inference with minimal latency. To further improve generalization, we propose Scale-DiT, a Diffusion Transformer architecture that enhances robustness by modeling, normalizing, and scaling feature differences prior to skip connections. This significantly improves the robustness and performance of DiT without increasing the parameter size. We validate the effectiveness of StreamFlow through audio reconstruction tasks using discrete tokens from EnCodec and Mimi, demonstrating both high-fidelity synthesis and streaming capability. Furthermore, we successfully incorporated our model into fully-duplex streaming speech language models of Moshi by replacing the Mimi decoder.",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "StreamFlow proposes a causal streaming flow matching model for real-time audio generation from discrete tokens, directly advancing streaming TTS and codec-based synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

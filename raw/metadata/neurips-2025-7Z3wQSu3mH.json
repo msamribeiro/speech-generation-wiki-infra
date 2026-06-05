@@ -1,0 +1,36 @@
+{
+  "id": "neurips-2025-7Z3wQSu3mH",
+  "source_ids": {
+    "openreview": "7Z3wQSu3mH"
+  },
+  "title": "FocalCodec: Low-Bitrate Speech Coding via Focal Modulation Networks",
+  "authors": [
+    "Luca Della Libera",
+    "Francesco Paissan",
+    "Cem Subakan",
+    "Mirco Ravanelli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=7Z3wQSu3mH",
+  "pdf_url": "https://openreview.net/pdf?id=7Z3wQSu3mH",
+  "pdf_path": "raw/papers/neurips-2025-7Z3wQSu3mH.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Large language models have revolutionized natural language processing through self-supervised pretraining on massive datasets. Inspired by this success, researchers have explored adapting these methods to speech by discretizing continuous audio into tokens using neural audio codecs. However, existing approaches face limitations, including high bitrates, the loss of either semantic or acoustic information, and the reliance on multi-codebook designs when trying to capture both, which increases architectural complexity for downstream tasks. To address these challenges, we introduce FocalCodec, an efficient low-bitrate codec based on focal modulation that utilizes a single binary codebook to compress speech between 0.16 and 0.65 kbps. FocalCodec delivers competitive performance in speech resynthesis and voice conversion at lower bitrates than the current state-of-the-art, while effectively handling multilingual speech and noisy environments. Evaluation on downstream tasks shows that FocalCodec successfully preserves sufficient semantic and acoustic information, while also being well-suited for generative modeling. Demo samples and code are available at https://lucadellalib.github.io/focalcodec-web/.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "FocalCodec proposes a single-codebook neural speech codec using focal modulation networks that achieves low bitrate while preserving both semantic and acoustic information — core codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

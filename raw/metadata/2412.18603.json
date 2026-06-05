@@ -1,0 +1,39 @@
+{
+  "id": "2412.18603",
+  "source_ids": {
+    "arxiv": "2412.18603"
+  },
+  "title": "Long-Form Speech Generation with Spoken Language Models",
+  "authors": [
+    "Se Jin Park",
+    "Julian Salazar",
+    "Aren Jansen",
+    "Keisuke Kinoshita",
+    "Yong Man Ro",
+    "RJ Skerry-Ryan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2412.18603",
+  "pdf_url": "https://arxiv.org/pdf/2412.18603.pdf",
+  "pdf_path": "raw/papers/2412.18603.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We consider the generative modeling of speech over multiple minutes, a requirement for long-form multimedia generation and audio-native voice assistants. However, textless spoken language models struggle to generate plausible speech past tens of seconds, due to high temporal resolution of speech tokens causing loss of coherence, architectural issues with long-sequence training or extrapolation, and memory costs at inference time. From these considerations we derive SpeechSSM, the first speech language model family to learn from and sample long-form spoken audio (e.g., 16 minutes of read or extemporaneous speech) in a single decoding session without text intermediates. SpeechSSMs leverage recent advances in linear-time sequence modeling to greatly surpass current Transformer spoken LMs in coherence and efficiency on multi-minute generations while still matching them at the utterance level. As we found current spoken language evaluations uninformative, especially in this new long-form setting, we also introduce: LibriSpeech-Long, a benchmark for long-form speech evaluation; new embedding-based and LLM-judged metrics; and quality measurements over length and time. Speech samples, the LibriSpeech-Long dataset, and any future code or model releases can be found at https://google.github.io/tacotron/publications/speechssm/.",
+  "arxiv_comment": "Accepted to ICML 2025 (oral)",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Introduces SpeechSSM, the first speech language model using state-space modeling for long-form speech generation, directly advancing SCA/SLM architecture.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

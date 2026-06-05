@@ -1,0 +1,34 @@
+{
+  "id": "2507.05911",
+  "source_ids": {
+    "arxiv": "2507.05911"
+  },
+  "title": "Differentiable Reward Optimization for LLM based TTS system",
+  "authors": [
+    "Changfeng Gao",
+    "Zhihao Du",
+    "Shiliang Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.05911",
+  "pdf_url": "https://arxiv.org/pdf/2507.05911.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper proposes a novel Differentiable Reward Optimization (DiffRO) method aimed at enhancing the performance of neural codec language models based text-to-speech (TTS) systems. In contrast to conventional reinforcement learning from human feedback (RLHF) approaches applied to TTS, DiffRO directly compute the rewards based on neural codec tokens, rather than relying on synthesized audio. Furthermore, we employ the Gumbel-Softmax technique to render the reward function differentiable, thereby streamlining the RLHF training process. Additionally, we introduce a multi-task reward (MTR) model which can provide feedback from different perspectives and find that it can augment the system's capability to follow instructions effectively.Experimental results indicate that DiffRO significantly improves the pronunciation accuracy of the TTS system, achieving state-of-the-art (SOTA) WER results on the seed-tts-eval benchmark. Moreover, with the integration of the MTR model, we demonstrate the ability to control emotional and quality attributes in a zero-shot manner.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0704"
+}

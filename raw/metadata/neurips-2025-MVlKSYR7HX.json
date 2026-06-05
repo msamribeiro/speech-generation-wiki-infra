@@ -1,0 +1,54 @@
+{
+  "id": "neurips-2025-MVlKSYR7HX",
+  "source_ids": {
+    "openreview": "MVlKSYR7HX"
+  },
+  "title": "MoonCast: High-Quality Zero-Shot Podcast Generation",
+  "authors": [
+    "Zeqian Ju",
+    "Dongchao Yang",
+    "Kai Shen",
+    "Yichong Leng",
+    "Zhengtao Wang",
+    "Songxiang Liu",
+    "Xinyu Zhou",
+    "Tao Qin",
+    "Xiangyang Li",
+    "Jianwei Yu"
+  ],
+  "authors_full": [
+    "Zeqian Ju",
+    "Dongchao Yang",
+    "Kai Shen",
+    "Yichong Leng",
+    "Zhengtao Wang",
+    "Songxiang Liu",
+    "Xinyu Zhou",
+    "Tao Qin",
+    "Xiangyang Li",
+    "Jianwei Yu",
+    "Xu Tan"
+  ],
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=MVlKSYR7HX",
+  "pdf_url": "https://openreview.net/pdf?id=MVlKSYR7HX",
+  "pdf_path": "raw/papers/neurips-2025-MVlKSYR7HX.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Recent advances in text-to-speech synthesis have achieved notable success in generating high-quality short utterances for individual speakers. However, these systems still face challenges when extending their capabilities to long, multi-speaker, and spontaneous dialogues, typical of real-world scenarios such as podcasts. These limitations arise from two primary challenges: 1) long speech: podcasts typically span several minutes, exceeding the upper limit of most existing work; 2) spontaneity: podcasts are marked by their spontaneous, oral nature, which sharply contrasts with formal, written contexts; existing works often fall short in capturing this spontaneity. In this paper, we propose MoonCast, a solution for high-quality zero-shot podcast generation, aiming to synthesize spontaneous podcast-style speech from text-only sources (e.g., stories, technical reports, news in TXT, PDF, or Web URL formats) using the voices of unseen speakers.   To enable long audio generation, we employ a language model with parameter, data, and context scaling to process sequences in an innovative format designed for modeling entire multi-speaker, multi-turn speech interactions. To enhance spontaneity, we observe that ASR transcripts capture spontaneous speech details (e.g., filler words indicating hesitations, and specific punctuation and spaces reflecting breathing pauses), suggesting that these transcripts can serve as a partial indicator of speech spontaneity. Building upon this assumption, we utilize a script generation module to generate scripts incorporating these spontaneous elements. Experiments show MoonCast outperforms baselines, with notable improvements in contextual coherence and spontaneity.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "MoonCast proposes a zero-shot TTS system for high-quality long-form multi-speaker podcast generation, addressing spontaneity and turn-taking — direct TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

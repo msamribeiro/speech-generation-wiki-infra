@@ -1,0 +1,39 @@
+{
+  "id": "iclr-2025-uxDFlPGRLX",
+  "source_ids": {
+    "openreview": "uxDFlPGRLX"
+  },
+  "title": "FlowDec: A flow-based full-band general audio codec with high perceptual quality",
+  "authors": [
+    "Simon Welker",
+    "Matthew Le",
+    "Ricky T. Q. Chen",
+    "Wei-Ning Hsu",
+    "Timo Gerkmann",
+    "Alexander Richard",
+    "YI-CHIAO WU"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=uxDFlPGRLX",
+  "pdf_url": "https://openreview.net/pdf?id=uxDFlPGRLX",
+  "pdf_path": "raw/papers/iclr-2025-uxDFlPGRLX.pdf",
+  "pdf_source": "openreview",
+  "abstract": "We propose FlowDec, a neural full-band audio codec for general audio sampled at 48 kHz that combines non-adversarial codec training with a stochastic postfilter based on a novel conditional flow matching method. Compared to the prior work ScoreDec which is based on score matching, we generalize from speech to general audio and move from 24 kbit/s to as low as 4 kbit/s, while improving output quality and reducing the required postfilter DNN evaluations from 60 to 6 without any fine-tuning or distillation techniques. We provide theoretical insights and geometric intuitions for our approach in comparison to ScoreDec as well as another recent work that uses flow matching, and conduct ablation studies on our proposed components. We show that FlowDec is a competitive alternative to the recent GAN-dominated stream of neural codecs, achieving FAD scores better than those of the established GAN-based codec DAC and listening test scores that are on par, and producing qualitatively more natural reconstructions for speech and harmonic structures in music.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "FlowDec proposes a flow matching-based neural audio codec for full-band 48kHz audio, combining non-adversarial codec training with a stochastic postfilter — core codec infrastructure contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

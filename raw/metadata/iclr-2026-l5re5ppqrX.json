@@ -1,0 +1,43 @@
+{
+  "id": "iclr-2026-l5re5ppqrX",
+  "source_ids": {
+    "openreview": "l5re5ppqrX",
+    "arxiv": "2510.22758"
+  },
+  "title": "EchoMind: An Interrelated Multi-level Benchmark for Evaluating Empathetic Speech Language Models",
+  "authors": [
+    "Li Zhou",
+    "Lutong Yu",
+    "You Lyu",
+    "Yihang Lin",
+    "Zefeng Zhao",
+    "Junyi Ao",
+    "Yuhao Zhang",
+    "Benyou Wang",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=l5re5ppqrX",
+  "pdf_url": "https://openreview.net/pdf?id=l5re5ppqrX",
+  "pdf_path": "raw/papers/iclr-2026-l5re5ppqrX.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Speech Language Models (SLMs) have made significant progress in spoken language understanding. Yet it remains unclear whether they can fully perceive non lexical vocal cues alongside spoken words, and respond with empathy that aligns with both emotional and contextual factors.  Existing benchmarks typically evaluate linguistic, acoustic, reasoning, or dialogue abilities in isolation, overlooking the integration of these skills that is crucial for human‑like, emotionally intelligent conversation. We present EchoMind, the first interrelated, multi‑level benchmark that simulates the cognitive process of empathetic dialogue through sequential, context‑linked tasks: spoken‑content understanding, vocal‑cue perception, integrated reasoning, and response generation.  All tasks share identical and semantically neutral scripts that are free of explicit emotional or contextual cues, and controlled variations in vocal style are used to test the effect of delivery independent of the transcript. EchoMind is grounded in an empathy‑oriented framework spanning 3 coarse and 12 fine‑grained dimensions, encompassing 39 vocal attributes, and evaluated using both objective and subjective metrics.  Testing 12 advanced SLMs reveals that even state‑of‑the‑art models struggle with high-expressive vocal cues, limiting empathetic response quality. Analyses of prompt strength, speech source, and ideal vocal cue recognition reveal persistent weaknesses in instruction‑following, resilience to natural speech variability, and effective use of vocal cues for empathy.  These results underscore the need for SLMs that integrate linguistic content with diverse vocal cues to achieve truly empathetic conversational ability.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "EchoMind is a multi-level benchmark for empathetic SLMs evaluating perception and response generation; primarily evaluates SLM understanding with speech generation as a secondary component.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

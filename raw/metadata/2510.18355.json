@@ -1,0 +1,35 @@
+{
+  "id": "2510.18355",
+  "source_ids": {
+    "arxiv": "2510.18355"
+  },
+  "title": "KrishokBondhu: A Retrieval-Augmented Voice-Based Agricultural Advisory Call Center for Bengali Farmers",
+  "authors": [
+    "Mohd Ruhul Ameen",
+    "Akif Islam",
+    "Farjana Aktar",
+    "M. Saifuzzaman Rafat"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2510.18355",
+  "pdf_url": "https://arxiv.org/pdf/2510.18355.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In Bangladesh, many farmers still struggle to access timely, expert-level agricultural guidance. This paper presents KrishokBondhu, a voice-enabled, call-centre-integrated advisory platform built on a Retrieval-Augmented Generation (RAG) framework for Bengali-speaking farmers. The system combines agricultural handbooks, extension manuals, and NGO publications, processes them through an OCR-based pipeline, and indexes the curated content in a vector database for semantic retrieval. Through a phone-based interface, farmers can receive real-time, context-aware advice: speech-to-text converts the Bengali query, the RAG module retrieves relevant information, a large language model (Gemma 3-4B) generates a grounded response, and text-to-speech delivers the answer in spoken Bengali. In a pilot evaluation, KrishokBondhu produced high-quality responses for 72.7% of diverse agricultural queries. Compared to the KisanQRS benchmark, it achieved a composite score of 4.53 versus 3.13 on a 5-point scale, with a 44.7% improvement and especially large gains in contextual richness and completeness, while maintaining comparable relevance and technical specificity. Semantic-similarity analysis further showed a strong correlation between retrieved context and answer quality. KrishokBondhu demonstrates the feasibility of combining call-centre accessibility, multilingual voice interaction, and modern RAG techniques to deliver expert-level agricultural guidance to remote Bangladeshi farmers.",
+  "arxiv_comment": "Accepted at the 2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence and Networking (QPAIN 2026)",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "RAG-based voice advisory platform for Bengali farmers — speech synthesis is a black-box component, no contribution to synthesis research.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

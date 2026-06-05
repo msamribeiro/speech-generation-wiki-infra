@@ -1,0 +1,36 @@
+{
+  "id": "2605.25504",
+  "source_ids": {
+    "arxiv": "2605.25504"
+  },
+  "title": "Toward Natural Emotional Text-To-Speech System with Fine-Grained Non-Verbal Expression Control",
+  "authors": [
+    "Wangzixi Zhou",
+    "Bagus Tris Atmaja",
+    "Sakriani Sakti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.25504",
+  "pdf_url": "https://arxiv.org/pdf/2605.25504.pdf",
+  "pdf_path": "raw/papers/2605.25504.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While current emotional Text-to-Speech (TTS) models have successfully controlled verbal prosody, they often ignore non-verbal vocalizations (NVs), which are essential for authentic human emotion. Although some non-verbal datasets have recently emerged, they often lack high-quality, fine-grained annotations, which restricts a model's ability to precisely control NV generation. To address this limitation, we propose a novel approach for fine-grained non-verbal expression synthesis. We curate and reprocess female NV utterances from the EARS corpus, develop a new annotation scheme using tags to encode NV types, frequencies, and durations, and build an emotional TTS benchmark to demonstrate its effectiveness. Our evaluation shows that while our NV approach leads to minor trade-offs in perceived naturalness, it significantly improves expressiveness (eMOS 4.20) and emotional recognition accuracy (78.8%). Emotion-specific analysis further reveals that NV cues are highly effective for high-arousal emotions like happy (82.5%) and fear (82.7%), and almost perfectly convey sadness (98.3%).",
+  "arxiv_comment": "2025 28th Conference of the Oriental COCOSDA International Committee for the Co-ordination and Standardisation of Speech Databases and Assessment Techniques (O-COCOSDA)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Proposes fine-grained non-verbal expression control for emotional TTS with a curated dataset and novel model, advancing authentic emotion synthesis beyond verbal prosody.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

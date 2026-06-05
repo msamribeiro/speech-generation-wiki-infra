@@ -38,7 +38,7 @@
   "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null,
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-kYkfCs4ZAH",
   "integrated_date": "2026-05-27"
 }

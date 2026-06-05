@@ -1,0 +1,42 @@
+{
+  "id": "2507.09070",
+  "source_ids": {
+    "arxiv": "2507.09070"
+  },
+  "title": "SemAlignVC: Enhancing zero-shot timbre conversion using semantic alignment",
+  "authors": [
+    "Shivam Mehta",
+    "Yingru Liu",
+    "Zhenyu Tang",
+    "Kainan Peng",
+    "Vimal Manohar",
+    "Shun Zhang",
+    "Mike Seltzer",
+    "Qing He",
+    "Mingbo Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.09070",
+  "pdf_url": "https://arxiv.org/pdf/2507.09070.pdf",
+  "pdf_path": "raw/papers/2507.09070.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot voice conversion (VC) synthesizes speech in a target speaker's voice while preserving linguistic and paralinguistic content. However, timbre leakage-where source speaker traits persist-remains a challenge, especially in neural codec and LLM-based VC, where quantized representations entangle speaker identity with content. We introduce SemAlignVC, an architecture designed to prevent timbre leakage using SemAlign, a novel method that aligns text and audio representations to ensure speaker-independent semantic encoding. This disentangled representation conditions an autoregressive transformer for high-fidelity conversion without explicit speaker embeddings. Experiments show SemAlignVC significantly reduces timbre leakage, outperforming baselines in speaker timbre similarity, intelligibility, and naturalness, making it a robust, privacy-preserving, and generalizable VC solution. Audio samples can be accessed at https://shivammehta25.github.io/SemAlignVC/",
+  "arxiv_comment": "6 pages, 2 figures, Accepted at the ISCA Speech Synthesis Workshop (SSW) 2025",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Proposes SemAlignVC with semantic alignment to prevent timbre leakage in zero-shot voice conversion using LLM-based codec.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

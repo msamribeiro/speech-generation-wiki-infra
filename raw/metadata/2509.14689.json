@@ -1,0 +1,33 @@
+{
+  "id": "2509.14689",
+  "source_ids": {
+    "arxiv": "2509.14689"
+  },
+  "title": "HARNESS: Lightweight Distilled Arabic Speech Foundation Models",
+  "authors": [
+    "Vrunda N. sukhadia",
+    "Shammur Absar Chowdhury"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.14689",
+  "pdf_url": "https://arxiv.org/pdf/2509.14689.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Large pre-trained speech models excel in downstream tasks but their deployment is impractical for resource-limited environments. In this paper, we introduce HArnESS, the first Arabic-centric self-supervised speech model family, designed to capture Arabic speech nuances. Using iterative self-distillation, we train large bilingual HArnESS (HL) SSL models and then distill knowledge into compressed student models (HS, HST), preserving Arabic-specific representations. We use low-rank approximation to further compact the teacher's discrete supervision into shallow, thin models. We evaluate HArnESS on Arabic ASR, Speaker Emotion Recognition (SER), and Dialect Identification (DID), demonstrating effectiveness against HuBERT and XLS-R. With minimal fine-tuning, HArnESS achieves SOTA or comparable performance, making it a lightweight yet powerful alternative for real-world use. We release our distilled models and findings to support responsible research and deployment in low-resource settings.",
+  "arxiv_comment": "5 pages, 4 figures",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Arabic self-supervised speech foundation models focused on ASR and downstream understanding tasks — no speech synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

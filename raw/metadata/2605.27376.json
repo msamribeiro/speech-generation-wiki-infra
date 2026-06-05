@@ -1,0 +1,37 @@
+{
+  "id": "2605.27376",
+  "source_ids": {
+    "arxiv": "2605.27376"
+  },
+  "title": "Unlocking Fine-Grained and Within-Utterance Speaking Style Control in Prompt-Based Text-to-Speech Models",
+  "authors": [
+    "Jaehoon Kang",
+    "Yejin Lee",
+    "Yoonji Park",
+    "Kyuhong Shim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.27376",
+  "pdf_url": "https://arxiv.org/pdf/2605.27376.pdf",
+  "pdf_path": "raw/papers/2605.27376.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While prompt-based text-to-speech (TTS) models enable natural language-driven speaking style control, they often provide limited fine-grained control and apply a single global style across an utterance. This restricts practical use cases that require continuous style attribute interpolation across utterances and time-varying style transitions within a single utterance. In this paper, we propose novel techniques to achieve both capabilities in existing prompt-based TTS models. For inter-utterance style interpolation, we compute direction vectors between contrastive style prompts in the embedding space and perform simple interpolation, enabling smooth transitions between style characteristics. For intra-utterance style transition, we first identify a strong attention bias toward early tokens in autoregressive TTS decoders, causing the initial audio realization to dominate subsequent generation. To mitigate this effect, we introduce KV-cache swapping and sliding-window attention masking. Experiments demonstrate that our proposed inter-utterance interpolation achieves a 99-100% success rate in gender conversion, up to 36 Hz pitch variation, and up to 1.6 syllables-per-second speed change. Our intra-utterance transition maintains a speaker similarity of 0.81-0.91 and achieves perceptual smoothness scores of 3.48-4.48.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Proposes fine-grained and within-utterance speaking style control techniques for prompt-based TTS, enabling continuous style interpolation and time-varying style transitions.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

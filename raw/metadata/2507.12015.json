@@ -1,0 +1,35 @@
+{
+  "id": "2507.12015",
+  "source_ids": {
+    "arxiv": "2507.12015"
+  },
+  "title": "EME-TTS: Unlocking the Emphasis and Emotion Link in Speech Synthesis",
+  "authors": [
+    "Haoxun Li",
+    "Leyuan Qu",
+    "Jiaxi Hu",
+    "Taihao Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.12015",
+  "pdf_url": "https://arxiv.org/pdf/2507.12015.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In recent years, emotional Text-to-Speech (TTS) synthesis and emphasis-controllable speech synthesis have advanced significantly. However, their interaction remains underexplored. We propose Emphasis Meets Emotion TTS (EME-TTS), a novel framework designed to address two key research questions: (1) how to effectively utilize emphasis to enhance the expressiveness of emotional speech, and (2) how to maintain the perceptual clarity and stability of target emphasis across different emotions. EME-TTS employs weakly supervised learning with emphasis pseudo-labels and variance-based emphasis features. Additionally, the proposed Emphasis Perception Enhancement (EPE) block enhances the interaction between emotional signals and emphasis positions. Experimental results show that EME-TTS, when combined with large language models for emphasis position prediction, enables more natural emotional speech synthesis while preserving stable and distinguishable target emphasis across emotions. Synthesized samples are available on-line.",
+  "arxiv_comment": "Accepted by INTERSPEECH 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0754"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "iclr-2025-hQvX9MBowC",
+  "source_ids": {
+    "openreview": "hQvX9MBowC"
+  },
+  "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
+  "authors": [
+    "Keon Lee",
+    "Dong Won Kim",
+    "Jaehyeon Kim",
+    "Seungjun Chung",
+    "Jaewoong Cho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=hQvX9MBowC",
+  "pdf_url": "https://openreview.net/pdf?id=hQvX9MBowC",
+  "pdf_path": "raw/papers/iclr-2025-hQvX9MBowC.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Large-scale latent diffusion models (LDMs) excel in content generation across various modalities, but their reliance on phonemes and durations in text-to-speech (TTS) limits scalability and access from other fields. While recent studies show potential in removing these domain-specific factors, performance remains suboptimal. In this work, we introduce DiTTo-TTS, a Diffusion Transformer (DiT)-based TTS model, to investigate whether LDM-based TTS can achieve state-of-the-art performance without domain-specific factors. Through rigorous analysis and empirical exploration, we find that (1) DiT with minimal modifications outperforms U-Net, (2) variable-length modeling with a speech length predictor significantly improves results over fixed-length approaches, and (3) conditions like semantic alignment in speech latent representations are key to further enhancement. By scaling our training data to 82K hours and the model size to 790M parameters, we achieve superior or comparable zero-shot performance to state-of-the-art TTS models in naturalness, intelligibility, and speaker similarity, all without relying on domain-specific factors. Speech samples are available at https://ditto-tts.github.io.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "DiTTo-TTS proposes a diffusion transformer TTS model that removes domain-specific phoneme/duration dependencies, achieving state-of-the-art TTS scalability.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2605.23373",
+  "source_ids": {
+    "arxiv": "2605.23373"
+  },
+  "title": "AffectCodec: Emotion-Preserving Neural Speech Codec with Block-Diagonal Residual FSQ",
+  "authors": [
+    "Zhaoyang Meng",
+    "Zhengyao Ma",
+    "Kecan Mao",
+    "Yingming Gao",
+    "Ya Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.23373",
+  "pdf_url": "https://arxiv.org/pdf/2605.23373.pdf",
+  "pdf_path": "raw/papers/2605.23373.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural speech codecs have become the discrete interface between raw audio and speech language models, yet they remain optimized primarily for acoustic reconstruction fidelity, which leaves emotion-relevant cues vulnerable to being discarded during quantization, limiting the affective capacity of downstream models. We trace this degradation to two mechanisms: reconstruction-driven bit allocation under limited bitrate and cross-stream leakage in concatenation-based codecs, where acoustic gradients can overwrite nominally emotion-reserved dimensions. We propose AffectCodec, an emotion-preserving neural speech codec built on Block-Diagonal Residual Finite Scalar Quantization (BD-RFSQ). By imposing block-diagonal input and output projections over emotion and acoustic subspaces, BD-RFSQ transforms bit allocation from implicit and loss-driven to explicit and structurally guaranteed, while still preserving a flat token interface for downstream speech language models. AffectCodec further combines this structurally constrained quantizer with multi-granularity emotion conditioning and multi-rate training, enabling robust affect preservation at low bitrates. Experiments across multiple emotional speech benchmarks show that AffectCodec substantially improves emotion preservation, especially in the low-bitrate regime, while maintaining competitive acoustic quality and intelligibility. These results suggest that structurally protected quantization is an effective principle for preserving emotion-relevant information and may provide a general route toward attribute-aware neural speech compression.",
+  "arxiv_comment": null,
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "AffectCodec introduces an emotion-preserving neural speech codec with block-diagonal residual FSQ, directly addressing codec design for downstream emotion-aware speech synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

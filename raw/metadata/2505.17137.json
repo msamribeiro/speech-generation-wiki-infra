@@ -1,0 +1,36 @@
+{
+  "id": "2505.17137",
+  "source_ids": {
+    "arxiv": "2505.17137"
+  },
+  "title": "Cog-TiPRO: Iterative Prompt Refinement with LLMs to Detect Cognitive Decline via Longitudinal Voice Assistant Commands",
+  "authors": [
+    "Kristin Qi",
+    "Youxiang Zhu",
+    "Caroline Summerour",
+    "John A. Batsis",
+    "Xiaohui Liang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.17137",
+  "pdf_url": "https://arxiv.org/pdf/2505.17137.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Early detection of cognitive decline is crucial for enabling interventions that can slow neurodegenerative disease progression. Traditional diagnostic approaches rely on labor-intensive clinical assessments, which are impractical for frequent monitoring. Our pilot study investigates voice assistant systems (VAS) as non-invasive tools for detecting cognitive decline through longitudinal analysis of speech patterns in voice commands. Over an 18-month period, we collected voice commands from 35 older adults, with 15 participants providing daily at-home VAS interactions. To address the challenges of analyzing these short, unstructured and noisy commands, we propose Cog-TiPRO, a framework that combines (1) LLM-driven iterative prompt refinement for linguistic feature extraction, (2) HuBERT-based acoustic feature extraction, and (3) transformer-based temporal modeling. Using iTransformer, our approach achieves 73.80% accuracy and 72.67% F1-score in detecting MCI, outperforming its baseline by 27.13%. Through our LLM approach, we identify linguistic features that uniquely characterize everyday command usage patterns in individuals experiencing cognitive decline.",
+  "arxiv_comment": "IEEE Global Communications Conference (GlobeCom) 2025",
+  "task": [],
+  "relevance_score": 0.12,
+  "relevance_note": "Uses voice commands for cognitive decline detection; TTS is not involved and speech synthesis is irrelevant to the paper.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

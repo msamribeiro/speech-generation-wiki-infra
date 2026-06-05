@@ -1,0 +1,40 @@
+{
+  "id": "2507.20731",
+  "source_ids": {
+    "arxiv": "2507.20731"
+  },
+  "title": "Learning Neural Vocoder from Range-Null Space Decomposition",
+  "authors": [
+    "Andong Li",
+    "Tong Lei",
+    "Zhihang Sun",
+    "Rilin Chen",
+    "Erwei Yin",
+    "Xiaodong Li",
+    "Chengshi Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.20731",
+  "pdf_url": "https://arxiv.org/pdf/2507.20731.pdf",
+  "pdf_path": "raw/papers/2507.20731.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Despite the rapid development of neural vocoders in recent years, they usually suffer from some intrinsic challenges like opaque modeling, and parameter-performance trade-off. In this study, we propose an innovative time-frequency (T-F) domain-based neural vocoder to resolve the above-mentioned challenges. To be specific, we bridge the connection between the classical signal range-null decomposition (RND) theory and vocoder task, and the reconstruction of target spectrogram can be decomposed into the superimposition between the range-space and null-space, where the former is enabled by a linear domain shift from the original mel-scale domain to the target linear-scale domain, and the latter is instantiated via a learnable network for further spectral detail generation. Accordingly, we propose a novel dual-path framework, where the spectrum is hierarchically encoded/decoded, and the cross- and narrow-band modules are elaborately devised for efficient sub-band and sequential modeling. Comprehensive experiments are conducted on the LJSpeech and LibriTTS benchmarks. Quantitative and qualitative results show that while enjoying lightweight network parameters, the proposed approach yields state-of-the-art performance among existing advanced methods. Our code and the pretrained model weights are available at https://github.com/Andong-Li-speech/RNDVoC.",
+  "arxiv_comment": "10 pages, 7 figures, IJCAI2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Introduces a novel T-F domain neural vocoder based on range-null space decomposition, directly advancing vocoder architecture for TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

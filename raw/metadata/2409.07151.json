@@ -1,0 +1,37 @@
+{
+  "id": "2409.07151",
+  "source_ids": {
+    "arxiv": "2409.07151"
+  },
+  "title": "Zero-Shot Text-to-Speech as Golden Speech Generator: A Systematic Framework and its Applicability in Automatic Pronunciation Assessment",
+  "authors": [
+    "Tien-Hong Lo",
+    "Meng-Ting Tsai",
+    "Yao-Ting Sung",
+    "Berlin Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2409.07151",
+  "pdf_url": "https://arxiv.org/pdf/2409.07151.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Second language (L2) learners can improve their pronunciation by imitating golden speech, especially when the speech that aligns with their respective speech characteristics. This study explores the hypothesis that learner-specific golden speech generated with zero-shot text-to-speech (ZS-TTS) techniques can be harnessed as an effective metric for measuring the pronunciation proficiency of L2 learners. Building on this exploration, the contributions of this study are at least two-fold: 1) design and development of a systematic framework for assessing the ability of a synthesis model to generate golden speech, and 2) in-depth investigations of the effectiveness of using golden speech in automatic pronunciation assessment (APA). Comprehensive experiments conducted on the L2-ARCTIC and Speechocean762 benchmark datasets suggest that our proposed modeling can yield significant performance improvements with respect to various assessment metrics in relation to some prior arts. To our knowledge, this study is the first to explore the role of golden speech in both ZS-TTS and APA, offering a promising regime for computer-assisted pronunciation training (CAPT).",
+  "arxiv_comment": "SLaTE 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Uses ZS-TTS as a tool to generate golden speech for L2 pronunciation assessment; the synthesis contribution is secondary to the pronunciation assessment task.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

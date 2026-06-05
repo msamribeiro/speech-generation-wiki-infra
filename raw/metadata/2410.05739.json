@@ -1,0 +1,38 @@
+{
+  "id": "2410.05739",
+  "source_ids": {
+    "arxiv": "2410.05739"
+  },
+  "title": "End-to-end multi-channel speaker extraction and binaural speech synthesis",
+  "authors": [
+    "Cheng Chi",
+    "Xiaoyu Li",
+    "Yuxuan Ke",
+    "Qunping Ni",
+    "Yao Ge",
+    "Xiaodong Li",
+    "Chengshi Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2410.05739",
+  "pdf_url": "https://arxiv.org/pdf/2410.05739.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech clarity and spatial audio immersion are the two most critical factors in enhancing remote conferencing experiences. Existing methods are often limited: either due to the lack of spatial information when using only one microphone, or because their performance is highly dependent on the accuracy of direction-of-arrival estimation when using microphone array. To overcome this issue, we introduce an end-to-end deep learning framework that has the capacity of mapping multi-channel noisy and reverberant signals to clean and spatialized binaural speech directly. This framework unifies source extraction, noise suppression, and binaural rendering into one network. In this framework, a novel magnitude-weighted interaural level difference loss function is proposed that aims to improve the accuracy of spatial rendering. Extensive evaluations show that our method outperforms established baselines in terms of both speech quality and spatial fidelity.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.32,
+  "relevance_note": "Primarily a speech enhancement and spatial audio paper; binaural speech synthesis is a side output, not the core contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

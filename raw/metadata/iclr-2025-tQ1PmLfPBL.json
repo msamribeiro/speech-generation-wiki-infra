@@ -1,0 +1,35 @@
+{
+  "id": "iclr-2025-tQ1PmLfPBL",
+  "source_ids": {
+    "openreview": "tQ1PmLfPBL"
+  },
+  "title": "PeriodWave: Multi-Period Flow Matching for High-Fidelity Waveform Generation",
+  "authors": [
+    "Sang-Hoon Lee",
+    "Ha-Yeong Choi",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=tQ1PmLfPBL",
+  "pdf_url": "https://openreview.net/pdf?id=tQ1PmLfPBL",
+  "pdf_path": "raw/papers/iclr-2025-tQ1PmLfPBL.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Recently, universal waveform generation tasks have been investigated conditioned on various out-of-distribution scenarios. Although one-step GAN-based methods have shown their strength in fast waveform generation, they are vulnerable to train-inference mismatch scenarios such as two-stage text-to-speech. Meanwhile, diffusion-based models have shown their powerful generative performance in other domains; however, they stay out of the limelight due to slow inference speed in waveform generation tasks. Above all, there is no generator architecture that can explicitly disentangle the natural periodic features of high-resolution waveform signals. In this paper, we propose PeriodWave, a novel universal waveform generation model from Mel-spectrogram and neural audio codec. First, we introduce a period-aware flow matching estimator that effectively captures the periodic features of the waveform signal when estimating the vector fields. Additionally, we utilize a multi-period estimator that avoids overlaps to capture different periodic features of waveform signals. Although increasing the number of periods can improve the performance significantly, this requires more computational costs. To reduce this issue, we also propose a single period-conditional universal estimator that can feed-forward parallel by period-wise batch inference. Additionally, we first introduce FreeU to reduce the high-frequency noise for waveform generation. Furthermore, we demonstrate the effectiveness of the proposed method in neural audio codec decoding task, and present the streaming generation framework of non-autoregressive model for speech language models. The experimental results demonstrated that our model outperforms the previous models in reconstruction tasks from Mel-spectrogram and discrete token, and text-to-speech tasks. Source code is available at https://github.com/sh-lee-prml/PeriodWave",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "PeriodWave proposes multi-period flow matching for high-fidelity waveform generation, directly advancing neural vocoder design for TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

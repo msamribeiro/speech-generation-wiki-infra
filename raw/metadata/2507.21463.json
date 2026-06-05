@@ -1,0 +1,36 @@
+{
+  "id": "2507.21463",
+  "source_ids": {
+    "arxiv": "2507.21463"
+  },
+  "title": "SpeechFake: A Large-Scale Multilingual Speech Deepfake Dataset Incorporating Cutting-Edge Generation Methods",
+  "authors": [
+    "Wen Huang",
+    "Yanmei Gu",
+    "Zhiming Wang",
+    "Huijia Zhu",
+    "Yanmin Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.21463",
+  "pdf_url": "https://arxiv.org/pdf/2507.21463.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "As speech generation technology advances, the risk of misuse through deepfake audio has become a pressing concern, which underscores the critical need for robust detection systems. However, many existing speech deepfake datasets are limited in scale and diversity, making it challenging to train models that can generalize well to unseen deepfakes. To address these gaps, we introduce SpeechFake, a large-scale dataset designed specifically for speech deepfake detection. SpeechFake includes over 3 million deepfake samples, totaling more than 3,000 hours of audio, generated using 40 different speech synthesis tools. The dataset encompasses a wide range of generation techniques, including text-to-speech, voice conversion, and neural vocoder, incorporating the latest cutting-edge methods. It also provides multilingual support, spanning 46 languages. In this paper, we offer a detailed overview of the dataset's creation, composition, and statistics. We also present baseline results by training detection models on SpeechFake, demonstrating strong performance on both its own test sets and various unseen test sets. Additionally, we conduct experiments to rigorously explore how generation methods, language diversity, and speaker variation affect detection performance. We believe SpeechFake will be a valuable resource for advancing speech deepfake detection and developing more robust models for evolving generation techniques.",
+  "arxiv_comment": "Published in ACL 2025. Dataset available at: https://github.com/YMLLG/SpeechFake",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2025.acl-long.493"
+}

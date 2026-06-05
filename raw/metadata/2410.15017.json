@@ -1,0 +1,40 @@
+{
+  "id": "2410.15017",
+  "source_ids": {
+    "arxiv": "2410.15017"
+  },
+  "title": "DM-Codec: Distilling Multimodal Representations for Speech Tokenization",
+  "authors": [
+    "Md Mubtasim Ahasan",
+    "Md Fahim",
+    "Tasnim Mohiuddin",
+    "A K M Mahbubur Rahman",
+    "Aman Chadha",
+    "Tariq Iqbal",
+    "M Ashraful Amin",
+    "Md Mofijul Islam",
+    "Amin Ahsan Ali"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2410.15017",
+  "pdf_url": "https://arxiv.org/pdf/2410.15017.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in speech-language models have yielded significant improvements in speech tokenization and synthesis. However, effectively mapping the complex, multidimensional attributes of speech into discrete tokens remains challenging. This process demands acoustic, semantic, and contextual information for precise speech representations. Existing speech representations generally fall into two categories: acoustic tokens from audio codecs and semantic tokens from speech self-supervised learning models. Although recent efforts have unified acoustic and semantic tokens for improved performance, they overlook the crucial role of contextual representation in comprehensive speech modeling. Our empirical investigations reveal that the absence of contextual representations results in elevated Word Error Rate (WER) and Word Information Lost (WIL) scores in speech transcriptions. To address these limitations, we propose two novel distillation approaches: (1) a language model (LM)-guided distillation method that incorporates contextual information, and (2) a combined LM and self-supervised speech model (SM)-guided distillation technique that effectively distills multimodal representations (acoustic, semantic, and contextual) into a comprehensive speech tokenizer, termed DM-Codec. The DM-Codec architecture adopts a streamlined encoder-decoder framework with a Residual Vector Quantizer (RVQ) and incorporates the LM and SM during the training process. Experiments show DM-Codec significantly outperforms state-of-the-art speech tokenization models, reducing WER by up to 13.46%, WIL by 9.82%, and improving speech quality by 5.84% and intelligibility by 1.85% on the LibriSpeech benchmark dataset. Code, samples, and checkpoints are available at https://github.com/mubtasimahasan/DM-Codec.",
+  "arxiv_comment": "Accepted at EMNLP 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2025.findings-emnlp.1394"
+}

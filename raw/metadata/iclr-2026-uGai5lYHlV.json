@@ -1,0 +1,36 @@
+{
+  "id": "iclr-2026-uGai5lYHlV",
+  "source_ids": {
+    "openreview": "uGai5lYHlV",
+    "arxiv": "2506.19441"
+  },
+  "title": "TTSDS2: Resources and Benchmark for Evaluating Human-Quality Text to Speech Systems",
+  "authors": [
+    "Christoph Minixhofer",
+    "Ondrej Klejch",
+    "Peter Bell"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=uGai5lYHlV",
+  "pdf_url": "https://openreview.net/pdf?id=uGai5lYHlV",
+  "pdf_path": "raw/papers/iclr-2026-uGai5lYHlV.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Evaluation of Text to Speech (TTS) systems is challenging and resource-intensive. Subjective metrics such as Mean Opinion Score (MOS) are not easily comparable between works. Objective metrics are frequently used, but rarely validated against subjective ones. Both kinds of metrics are challenged by recent TTS systems capable of producing synthetic speech indistinguishable from real speech. In this work, we introduce Text to Speech Distribution Score 2 (TTSDS2), a more robust and improved version of TTSDS. Across a range of domains and languages, it is the only one out of 16 compared metrics to correlate with a Spearman correlation above 0.50 for every domain and subjective score evaluated. We also release a range of resources for evaluating synthetic speech close to real speech: A dataset with over 11,000 subjective opinion score ratings; a pipeline for recreating a multilingual test dataset to avoid data leakage; and a benchmark for TTS in 14 languages.",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "TTSDS2 introduces a validated objective TTS evaluation benchmark designed for modern systems that approach human-level quality — core evaluation methodology contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

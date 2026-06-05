@@ -2,7 +2,8 @@
   "id": "interspeech-2025-0704",
   "source_ids": {
     "isca": "gao25d_interspeech",
-    "doi": "10.21437/Interspeech.2025-704"
+    "doi": "10.21437/Interspeech.2025-704",
+    "arxiv": "2507.05911"
   },
   "title": "Differentiable Reward Optimization for LLM based TTS system",
   "authors": [

@@ -1,0 +1,35 @@
+{
+  "id": "2501.03441",
+  "source_ids": {
+    "arxiv": "2501.03441"
+  },
+  "title": "Finding A Voice: Exploring the Potential of African American Dialect and Voice Generation for Chatbots",
+  "authors": [
+    "Sarah E. Finch",
+    "Ellie S. Paek",
+    "Ikseon Choi",
+    "Jinho D. Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2501.03441",
+  "pdf_url": "https://arxiv.org/pdf/2501.03441.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "As chatbots become integral to daily life, personalizing systems is key for fostering trust, engagement, and inclusivity. This study examines how linguistic similarity affects chatbot performance, focusing on integrating African American English (AAE) into virtual agents to better serve the African American community. We develop text-based and spoken chatbots using large language models and text-to-speech technology, then evaluate them with AAE speakers against standard English chatbots. Our results show that while text-based AAE chatbots often underperform, spoken chatbots benefit from an African American voice and AAE elements, improving performance and preference. These findings underscore the complexities of linguistic personalization and the dynamics between text and speech modalities, highlighting technological limitations that affect chatbots' AA speech generation and pointing to promising future research directions.",
+  "arxiv_comment": "Accepted to ACL 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2025.acl-long.1252"
+}

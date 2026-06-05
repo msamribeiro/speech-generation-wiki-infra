@@ -1,0 +1,40 @@
+{
+  "id": "neurips-2025-pDWwz9F7Zh",
+  "source_ids": {
+    "openreview": "pDWwz9F7Zh",
+    "arxiv": "2505.13181"
+  },
+  "title": "Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space",
+  "authors": [
+    "Zhengrui Ma",
+    "Yang Feng",
+    "Chenze Shao",
+    "Fandong Meng",
+    "Jie Zhou",
+    "Min zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=pDWwz9F7Zh",
+  "pdf_url": "https://openreview.net/pdf?id=pDWwz9F7Zh",
+  "pdf_path": "raw/papers/neurips-2025-pDWwz9F7Zh.pdf",
+  "pdf_source": "openreview",
+  "abstract": "We introduce \\emph{SLED}, an alternative approach to speech language modeling by encoding speech waveforms into sequences of continuous latent representations and modeling them autoregressively using an energy distance objective. The energy distance offers an analytical measure of the distributional gap by contrasting simulated and target samples, enabling efficient training to capture the underlying continuous autoregressive distribution. By bypassing reliance on residual vector quantization, SLED avoids discretization errors and eliminates the need for the complicated hierarchical architectures common in existing speech language models. It simplifies the overall modeling pipeline while preserving the richness of speech information and maintaining inference efficiency. Empirical results demonstrate that SLED achieves strong performance in both zero-shot and streaming speech synthesis, showing its potential for broader applications in general-purpose speech language models. Demos and code are available at \\url{https://github.com/ictnlp/SLED-TTS}.",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "SLED proposes continuous autoregressive speech language modeling using energy distance, bypassing discrete quantization for more efficient speech generation — direct SCA/TTS architecture contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

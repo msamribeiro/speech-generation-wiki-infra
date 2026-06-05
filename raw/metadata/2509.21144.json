@@ -34,9 +34,9 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "UniSS: expressive S2ST preserving speaker identity and emotion; core VC + generation.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-5o0ZvYzh6B"
 }

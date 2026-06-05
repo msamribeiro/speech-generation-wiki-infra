@@ -1,0 +1,36 @@
+{
+  "id": "2507.02606",
+  "source_ids": {
+    "arxiv": "2507.02606"
+  },
+  "title": "De-AntiFake: Rethinking the Protective Perturbations Against Voice Cloning Attacks",
+  "authors": [
+    "Wei Fan",
+    "Kejiang Chen",
+    "Chang Liu",
+    "Weiming Zhang",
+    "Nenghai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.02606",
+  "pdf_url": "https://arxiv.org/pdf/2507.02606.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of speech generation models has heightened privacy and security concerns related to voice cloning (VC). Recent studies have investigated disrupting unauthorized voice cloning by introducing adversarial perturbations. However, determined attackers can mitigate these protective perturbations and successfully execute VC. In this study, we conduct the first systematic evaluation of these protective perturbations against VC under realistic threat models that include perturbation purification. Our findings reveal that while existing purification methods can neutralize a considerable portion of the protective perturbations, they still lead to distortions in the feature space of VC models, which degrades the performance of VC. From this perspective, we propose a novel two-stage purification method: (1) Purify the perturbed speech; (2) Refine it using phoneme guidance to align it with the clean speech distribution. Experimental results demonstrate that our method outperforms state-of-the-art purification methods in disrupting VC defenses. Our study reveals the limitations of adversarial perturbation-based VC defenses and underscores the urgent need for more robust solutions to mitigate the security and privacy risks posed by VC. The code and audio samples are available at https://de-antifake.github.io.",
+  "arxiv_comment": "Accepted by ICML 2025",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Studies adversarial perturbation attacks against voice cloning protection; the contribution is security/adversarial robustness, not speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

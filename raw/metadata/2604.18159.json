@@ -1,0 +1,37 @@
+{
+  "id": "2604.18159",
+  "source_ids": {
+    "arxiv": "2604.18159"
+  },
+  "title": "FreezeEmpath: Efficient Training for Empathetic Spoken Chatbots with Frozen LLMs",
+  "authors": [
+    "Yun Hong",
+    "Yan Zhou",
+    "Yang Feng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.18159",
+  "pdf_url": "https://arxiv.org/pdf/2604.18159.pdf",
+  "pdf_path": "raw/papers/2604.18159.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Empathy is essential for fostering natural interactions in spoken dialogue systems, as it enables machines to recognize the emotional tone of human speech and deliver empathetic responses. Recent research has made significant progress in developing empathetic spoken chatbots based on large language models (LLMs). However, several challenges still exist when training such models, including reliance on costly empathetic speech instruction data and a lack of emotional expressiveness in the generated speech. Finetuning LLM with cross-modal empathetic instruction data may also lead to catastrophic forgetting and a degradation of its general capability. To address these challenges, we propose FreezeEmpath, an end-to-end empathetic spoken chatbot trained in a simple and efficient manner. The entire training process relies solely on existing speech instruction data and speech emotion recognition (SER) data, while keeping the LLM's parameters frozen. Experiments demonstrate that FreezeEmpath is able to generate emotionally expressive speech and outperforms other empathetic models in empathetic dialogue, SER, and SpokenQA tasks, demonstrating the effectiveness of our training strategy.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "FreezeEmpath proposes efficient training of empathetic spoken chatbots with frozen LLMs, advancing emotional expressiveness in speech generation for dialogue systems.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

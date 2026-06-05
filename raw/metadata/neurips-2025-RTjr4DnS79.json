@@ -1,0 +1,39 @@
+{
+  "id": "neurips-2025-RTjr4DnS79",
+  "source_ids": {
+    "openreview": "RTjr4DnS79"
+  },
+  "title": "Metis: A Foundation Speech Generation Model with Masked Generative Pre-training",
+  "authors": [
+    "Yuancheng Wang",
+    "Jiachen Zheng",
+    "Junan Zhang",
+    "Xueyao Zhang",
+    "Huan Liao",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=RTjr4DnS79",
+  "pdf_url": "https://openreview.net/pdf?id=RTjr4DnS79",
+  "pdf_path": "raw/papers/neurips-2025-RTjr4DnS79.pdf",
+  "pdf_source": "openreview",
+  "abstract": "We introduce ***Metis***, a foundation model for unified speech generation. Unlike previous task-specific or multi-task models, Metis follows a pre-training and fine-tuning paradigm. It is pre-trained on large-scale unlabeled speech data using masked generative modeling and then fine-tuned to adapt to diverse speech generation tasks. Specifically,  (1) Metis utilizes two discrete speech representations: SSL tokens derived from speech self-supervised learning (SSL) features, and acoustic tokens directly quantized from waveforms.  (2) Metis performs masked generative pre-training on SSL tokens, utilizing 300K hours of diverse speech data, without any additional condition.  (3) Through fine-tuning with task-specific conditions, Metis achieves efficient adaptation to various speech generation tasks while supporting multimodal input, even when using limited data and trainable parameters. Experiments demonstrate that Metis can serve as a foundation model for unified speech generation: Metis outperforms state-of-the-art task-specific or multi-task systems across five speech generation tasks, including zero-shot text-to-speech, voice conversion, target speaker extraction, speech enhancement, and lip-to-speech, even with fewer than 20M trainable parameters or 300 times less training data. Audio samples are are available at https://metis-demo.github.io/. We release the code and model checkpoints at https://github.com/open-mmlab/Amphion.",
+  "task": [
+    "TTS",
+    "VC"
+  ],
+  "relevance_score": 0.93,
+  "relevance_note": "Metis introduces a foundation model for unified speech generation using masked generative pre-training on unlabeled speech, enabling multi-task TTS/VC fine-tuning — foundational contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

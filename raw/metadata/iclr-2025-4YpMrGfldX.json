@@ -1,0 +1,39 @@
+{
+  "id": "iclr-2025-4YpMrGfldX",
+  "source_ids": {
+    "openreview": "4YpMrGfldX"
+  },
+  "title": "Scaling Transformers for Low-Bitrate High-Quality Speech Coding",
+  "authors": [
+    "Julian D Parker",
+    "Anton Smirnov",
+    "Jordi Pons",
+    "CJ Carr",
+    "Zack Zukowski",
+    "Zach Evans",
+    "Xubo Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=4YpMrGfldX",
+  "pdf_url": "https://openreview.net/pdf?id=4YpMrGfldX",
+  "pdf_path": "raw/papers/iclr-2025-4YpMrGfldX.pdf",
+  "pdf_source": "openreview",
+  "abstract": "The tokenization of audio with neural audio codec models is a vital part of modern AI pipelines for the generation or understanding of speech, alone or in a multimodal context. Traditionally such tokenization models have concentrated on low parameter-count architectures using only components with strong inductive biases. In this work we show that by applying a transformer architecture with large parameter count to this problem, and applying a flexible Finite Scalar Quantization (FSQ) based bottleneck, it is possible to reach state-of-the-art speech quality at extremely low bit-rates of $400$ or $700$ bits-per-second. The trained models strongly out-perform existing baselines in both objective and subjective tests.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Demonstrates that scaling transformer parameter count with FSQ quantization achieves high-quality speech coding at low bitrates, a core neural codec contribution for TTS pipelines.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

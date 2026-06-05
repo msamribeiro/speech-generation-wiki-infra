@@ -1,0 +1,34 @@
+{
+  "id": "2507.07954",
+  "source_ids": {
+    "arxiv": "2507.07954"
+  },
+  "title": "Input Conditioned Layer Dropping in Speech Foundation Models",
+  "authors": [
+    "Abdul Hannan",
+    "Daniele Falavigna",
+    "Alessio Brutti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.07954",
+  "pdf_url": "https://arxiv.org/pdf/2507.07954.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Curating foundation speech models for edge and IoT settings, where computational resources vary over time, requires dynamic architectures featuring adaptable reduction strategies. One emerging approach is layer dropping ($\\mathcal{LD}$) which skips fraction of the layers of a backbone network during inference to reduce the computational load. This allows transforming static models into dynamic ones. However, existing approaches exhibit limitations either in the mode of selecting layers or by significantly modifying the neural architecture. To this end, we propose input-driven $\\mathcal{LD}$ that employs the network's input features and a lightweight layer selecting network to determine the optimum combination of processing layers. Extensive experimentation on 4 speech and audio public benchmarks, using two different pre-trained foundation models, demonstrates the effectiveness of our approach, thoroughly outperforming random dropping and producing on-par (or better) results to early exit.",
+  "arxiv_comment": "Accepted at IEEE MLSP 2025",
+  "task": [],
+  "relevance_score": 0.22,
+  "relevance_note": "Proposes input-conditioned layer dropping for speech foundation models targeting ASR/SSL efficiency; speech synthesis is not involved.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

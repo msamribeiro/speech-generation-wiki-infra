@@ -1,0 +1,38 @@
+{
+  "id": "2506.23049",
+  "source_ids": {
+    "arxiv": "2506.23049"
+  },
+  "title": "AURA: Agent for Understanding, Reasoning, and Automated Tool Use in Voice-Driven Tasks",
+  "authors": [
+    "Leander Melroy Maben",
+    "Gayathri Ganesh Lakshmy",
+    "Srijith Radhakrishnan",
+    "Siddhant Arora",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 6,
+  "published_date": "2025-06-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.23049",
+  "pdf_url": "https://arxiv.org/pdf/2506.23049.pdf",
+  "pdf_path": "raw/papers/2506.23049.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Despite advances in language and speech technologies, no open-source system enables full speech-to-speech, multi-turn dialogue with integrated tool use and agentic reasoning. We introduce AURA (Agent for Understanding, Reasoning, and Automated Tool Use), the first open-source, speech-native assistant capable of completing complex, goal-driven tasks through dynamic tool invocation and multi-turn conversation. AURA combines open-weight ASR, TTS, and LLMs in a cascaded pipeline and supports tools such as calendar booking, contact lookup, web search, and email. Its modular design allows easy integration of new tools using natural language prompts and action classes. On VoiceBench, AURA scores 92.75% on OpenBookQA-outperforming all open-weight systems and nearing GPT-4o-and 4.39 on AlpacaEval, competitive with other open-weight systems. Human evaluation shows 90% task success on complex, multi-turn speech tasks.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "Introduces AURA, an open-source speech-native agent using a cascaded ASR+LLM+TTS pipeline; TTS is a black-box component and the main contribution is agentic reasoning, not speech synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2604.13067",
+  "source_ids": {
+    "arxiv": "2604.13067"
+  },
+  "title": "From Seeing it to Experiencing it: Interactive Evaluation of Intersectional Voice Bias in Human-AI Speech Interaction",
+  "authors": [
+    "Shree Harsha Bokkahalli Satish",
+    "Maria Teleki",
+    "Christoph Minixhofer",
+    "Ondrej Klejch",
+    "Peter Bell",
+    "Éva Székely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2604.13067",
+  "pdf_url": "https://arxiv.org/pdf/2604.13067.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "SpeechLLMs process spoken language directly from audio, but accent and vocal identity cues can lead to biased behaviour. Current bias evaluations often miss how such bias manifests in end-to-end speech interactions and how users experience it. We distinguish quality-of-service disparities (e.g., off-topic or low-effort responses) from content-level bias in coherent outputs, and examine intersectional effects of accent and perceived gender. In this work, we explore a two-part evaluation approach: (1) a controlled test cohort spanning six accents and two gender presentations, analysed with judge-free prompt-response metrics, and (2) an interactive study design using voice conversion to let users experience identical content through different vocal identities. Across two studies (Interactive, N=24; Observational, N=19), we find that voice conversion increases trust and acceptability for benign responses and encourages perspective-taking, while automated analysis in search of quality-of-service disparities, reveals {accent x gender} disparities in alignment and verbosity across SpeechLLMs. These results highlight voice conversion for probing and experiencing intersectional voice bias while our evaluation suite provides richer bias evaluations for spoken conversational AI.",
+  "arxiv_comment": "6 pages, 3 figures, 1 table, Accepted to CHI Extended Abstracts Poster session 2026",
+  "task": [],
+  "relevance_score": 0.32,
+  "relevance_note": "Evaluates intersectional voice bias (accent, gender) in SpeechLLM responses — speech understanding/bias paper with no synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "neurips-2025-AsRB5nmlOD",
+  "source_ids": {
+    "openreview": "AsRB5nmlOD"
+  },
+  "title": "SALMONN-omni: A Standalone Speech LLM without Codec Injection for Full-duplex Conversation",
+  "authors": [
+    "Wenyi Yu",
+    "Siyin Wang",
+    "Xiaoyu Yang",
+    "Xianzhao Chen",
+    "Xiaohai Tian",
+    "Jun Zhang",
+    "Guangzhi Sun",
+    "Lu Lu",
+    "Yuxuan Wang",
+    "Chao Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=AsRB5nmlOD",
+  "pdf_url": "https://openreview.net/pdf?id=AsRB5nmlOD",
+  "pdf_path": "raw/papers/neurips-2025-AsRB5nmlOD.pdf",
+  "pdf_source": "openreview",
+  "abstract": "In order to enable fluid and natural human-machine speech interaction, existing full-duplex conversational systems often adopt modular architectures with auxiliary components such as voice activity detectors, interrupters, conversation state predictors, or multiple LLMs. These systems, however, suffer from error accumulation across modules and struggle with key challenges such as context-dependent barge-in and echo cancellation. Recent approaches, most notably Moshi, simplify the pipeline by injecting audio codecs into the token space of a single LLM. However, such methods still incur significant performance degradation when operating on the speech rather than text modality. In this paper, we introduce SALMONN-omni, the first single, standalone full-duplex speech LLM that operates without audio codecs in its token space. It features a novel dynamic thinking mechanism within the LLM backbone, enabling the model to learn when to transition between speaking and listening states. Experiments on widely used benchmarks for spoken question answering and open-domain dialogue show that SALMONN-omni achieves at least 30\\% relative performance improvement over existing open-source full-duplex models and performs highly competitively to half-duplex and turn-based systems, despite using substantially less training data. Moreover, SALMONN-omni demonstrates strong performance in complex conversational scenarios, including turn-taking, backchanneling, echo cancellation and context-dependent barge-in, with further improvements achieved through reinforcement learning. Some demo conversations between user and SALMONN-omni are provided in the following repository https://github.com/bytedance/SALMONN.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "SALMONN-omni proposes a standalone full-duplex conversational speech LLM architecture without codec injection, addressing echo cancellation and barge-in in a single model — core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

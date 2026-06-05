@@ -1,0 +1,42 @@
+{
+  "id": "iclr-2026-Pv5l6cvfno",
+  "source_ids": {
+    "openreview": "Pv5l6cvfno",
+    "arxiv": "2602.24080"
+  },
+  "title": "Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction",
+  "authors": [
+    "Xiang Li",
+    "Jiabao Gao",
+    "Sipei Lin",
+    "Xuan Zhou",
+    "Chi Zhang",
+    "Bo Cheng",
+    "Jiale Han",
+    "Benyou Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=Pv5l6cvfno",
+  "pdf_url": "https://openreview.net/pdf?id=Pv5l6cvfno",
+  "pdf_path": "raw/papers/iclr-2026-Pv5l6cvfno.pdf",
+  "pdf_source": "openreview",
+  "abstract": "The pursuit of human-like conversational agents has long been guided by the Turing test. For modern speech-to-speech (S2S) systems, a critical yet unanswered question is whether they can converse like humans. To tackle this, we conduct the first Turing test for S2S systems, collecting 2,968 human judgments on dialogues between 9 state-of-the-art S2S systems and 28 human participants. Our results deliver a clear finding: no existing evaluated S2S system passes the test, revealing a significant gap in human-likeness. To diagnose this failure, we develop a fine-grained taxonomy of 18 human-likeness dimensions and crowd-annotate our collected dialogues accordingly. Our analysis shows that the bottleneck is not semantic understanding but stems from paralinguistic features, emotional expressivity, and conversational persona. Furthermore, we find that off-the-shelf AI models perform unreliably as Turing test judges. In response, we propose an interpretable model that leverages the fine-grained human-likeness ratings and delivers accurate and transparent human-vs-machine discrimination, offering a powerful tool for automatic human-likeness evaluation. Our work establishes the first human-likeness evaluation for S2S systems and moves beyond binary outcomes to enable detailed diagnostic insights, paving the way for human-like improvements in conversational AI systems.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Conducts the first Turing test for speech-to-speech systems collecting 2,968 human judgments, providing an evaluation framework for SCA human-likeness — solid evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

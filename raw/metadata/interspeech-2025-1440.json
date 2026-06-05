@@ -2,7 +2,8 @@
   "id": "interspeech-2025-1440",
   "source_ids": {
     "isca": "zheng25b_interspeech",
-    "doi": "10.21437/Interspeech.2025-1440"
+    "doi": "10.21437/Interspeech.2025-1440",
+    "arxiv": "2412.01053"
   },
   "title": "FreeCodec: A Disentangled Neural Speech Codec with Fewer Tokens",
   "authors": [

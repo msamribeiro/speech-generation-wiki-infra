@@ -57,9 +57,9 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "WearVox: egocentric voice assistant benchmark for wearables; SCA evaluation.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-QpaNErg7ug"
 }

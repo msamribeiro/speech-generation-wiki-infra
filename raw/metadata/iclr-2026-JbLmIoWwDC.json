@@ -1,0 +1,35 @@
+{
+  "id": "iclr-2026-JbLmIoWwDC",
+  "source_ids": {
+    "openreview": "JbLmIoWwDC"
+  },
+  "title": "Gogo: Group-wise granularity-ordered codec for stable and efficient speech generation",
+  "authors": [
+    "Weidong Chen",
+    "Helen M. Meng",
+    "Xixin Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=JbLmIoWwDC",
+  "pdf_url": "https://openreview.net/pdf?id=JbLmIoWwDC",
+  "pdf_path": "raw/papers/iclr-2026-JbLmIoWwDC.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Current speech language models require their core component, the speech codec, to discretize continuous speech signals into tokens that not only capture high-level cues for autoregressive modeling but also preserve sufficient acoustic details for perceptual quality. To address this need, we propose Gogo, a group-wise granularity-ordered codec that quantizes each group of frames into tokens arranged from coarse to fine, where coarse tokens encode high-level abstractions and fine tokens progressively recover low-level details. Building on the granularity-ordering property of Gogo, we introduce GogoSpeech, a two-stage speech language model that performs speech generation by first constructing a coarse speech backbone at an extremely low token rate and then enriching the backbone with fine-grained acoustic details. Considering the inherently non-uniform information distribution in speech signals, we further design a Group Relative Policy Optimization (GRPO)-trained token allocator that adaptively allocates token budgets to groups based on group-wise complexity. Experimental results demonstrate that Gogo delivers state-of-the-art reconstruction performance across most metrics at a token rate of 47. Moreover, evaluations on zero-shot text-to-speech tasks show that GogoSpeech enables efficient generation by adaptively reducing the average token rate, and attains state-of-the-art results in long-form speech generation.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Gogo proposes a novel group-wise granularity-ordered neural speech codec that separates coarse and fine tokens for improved autoregressive speech generation — core codec infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

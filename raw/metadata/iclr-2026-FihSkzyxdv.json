@@ -1,0 +1,56 @@
+{
+  "id": "iclr-2026-FihSkzyxdv",
+  "source_ids": {
+    "openreview": "FihSkzyxdv"
+  },
+  "title": "VibeVoice: Expressive Podcast Generation with Next-Token Diffusion",
+  "authors": [
+    "Zhiliang Peng",
+    "Jianwei Yu",
+    "Wenhui Wang",
+    "Yaoyao Chang",
+    "Yutao Sun",
+    "Li Dong",
+    "Yi Zhu",
+    "Weijiang Xu",
+    "Hangbo Bao",
+    "Zehua Wang"
+  ],
+  "authors_full": [
+    "Zhiliang Peng",
+    "Jianwei Yu",
+    "Wenhui Wang",
+    "Yaoyao Chang",
+    "Yutao Sun",
+    "Li Dong",
+    "Yi Zhu",
+    "Weijiang Xu",
+    "Hangbo Bao",
+    "Zehua Wang",
+    "Shaohan Huang",
+    "Yan Xia",
+    "Furu Wei"
+  ],
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=FihSkzyxdv",
+  "pdf_url": "https://openreview.net/pdf?id=FihSkzyxdv",
+  "pdf_path": "raw/papers/iclr-2026-FihSkzyxdv.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Generating long-form, multi-speaker conversational audio like podcasts poses significant challenges for traditional Text-to-Speech (TTS) systems, particularly in scalability, speaker consistency, and natural turn-taking. We present VibeVoice , a novel model designed to synthesize expressive, long-form speech with multiple speakers in a zero-shot manner. A core component of our approach is the continuous speech tokenizers operating at an ultra-low frame rate of 7.5. This tokenizer effectively preserves audio fidelity while significantly boosting computational efficiency for processing long sequences. To facilitate training on authentic conversational dynamics, we have developed an annotation pipeline that generates pseudo transcriptions and turn-taking labels for extensive podcast data. Leveraging this data and our efficient tokenizer, VibeVoice  employs the next-token diffusion framework. This enables VibeVoice  to: (1) synthesize long-form speech (up to 30 minutes) with up to 4 speakers, surpassing the typical 1-2 speaker limits of many prior models; and (2) achieve a high degree of naturalness in turn-taking, pacing, and the rendition of subtle non-lexical cues (such as breaths and lip smacks), which are crucial for listener immersion and capturing the authentic vibe of expressive conversations.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "VibeVoice proposes a zero-shot multi-speaker TTS model for long-form podcast generation using continuous speech tokenizers and next-token diffusion, directly advancing TTS at scale.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

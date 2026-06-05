@@ -1,0 +1,36 @@
+{
+  "id": "neurips-2025-WwzurufeFN",
+  "source_ids": {
+    "openreview": "WwzurufeFN"
+  },
+  "title": "E-BATS: Efficient Backpropagation-Free Test-Time Adaptation for Speech Foundation Models",
+  "authors": [
+    "Jiaheng Dong",
+    "Hong Jia",
+    "Soumyajit Chatterjee",
+    "Abhirup Ghosh",
+    "James Bailey",
+    "Ting Dang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=WwzurufeFN",
+  "pdf_url": "https://openreview.net/pdf?id=WwzurufeFN",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Speech Foundation Models encounter significant performance degradation when deployed in real-world scenarios involving acoustic domain shifts, such as background noise and speaker accents. Test-time adaptation (TTA) has recently emerged as a viable strategy to address such domain shifts at inference time without requiring access to source data or labels. However, existing TTA approaches, particularly those relying on backpropagation, are memory-intensive, limiting their applicability in speech tasks and resource-constrained settings. Although backpropagation-free methods offer improved efficiency, existing ones exhibit poor accuracy. This is because they are predominantly developed for vision tasks, which fundamentally differ from speech task formulations, noise characteristics, and model architecture, posing unique transferability challenges. In this paper, we introduce E-BAT, first Efficient BAckpropagation-free TTA framework designed explicitly for speech foundation models. E-BAT achieves a balance between adaptation effectiveness and memory efficiency through three key components: (i) lightweight prompt adaptation for a forward-pass-based feature alignment, (ii) a multi-scale loss to capture both global (utterance-level) and local distribution shifts (token-level) and (iii) a test-time exponential moving average mechanism for stable adaptation across utterances. Experiments conducted on four noisy speech datasets spanning sixteen acoustic conditions demonstrate consistent improvements, with 4.1\\%--13.5% accuracy gains over backpropogation-free baselines and 2.0$\\times$–6.4$\\times$ GPU memory savings compared to backpropogation-based methods. By enabling scalable and robust adaptation under acoustic variability, this work paves the way for developing more efficient adaptation approaches for practical speech processing systems in real-world environments.",
+  "task": [],
+  "relevance_score": 0.28,
+  "relevance_note": "E-BATS proposes backpropagation-free test-time adaptation for speech foundation models under domain shift; focused on ASR/recognition robustness with no synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

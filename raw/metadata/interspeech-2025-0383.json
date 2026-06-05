@@ -2,7 +2,8 @@
   "id": "interspeech-2025-0383",
   "source_ids": {
     "isca": "suda25_interspeech",
-    "doi": "10.21437/Interspeech.2025-383"
+    "doi": "10.21437/Interspeech.2025-383",
+    "arxiv": "2507.01356"
   },
   "title": "Voice Conversion for Likability Control via Automated Rating of Speech Synthesis Corpora",
   "authors": [

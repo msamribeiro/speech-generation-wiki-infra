@@ -1,0 +1,36 @@
+{
+  "id": "2503.20999",
+  "source_ids": {
+    "arxiv": "2503.20999"
+  },
+  "title": "Text-Driven Voice Conversion via Latent State-Space Modeling",
+  "authors": [
+    "Wen Li",
+    "Sofia Martinez",
+    "Priyanka Shah"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2503.20999",
+  "pdf_url": "https://arxiv.org/pdf/2503.20999.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Text-driven voice conversion allows customization of speaker characteristics and prosodic elements using textual descriptions. However, most existing methods rely heavily on direct text-to-speech training, limiting their flexibility in controlling nuanced style elements or timbral features. In this paper, we propose a novel \\textbf{Latent State-Space} approach for text-driven voice conversion (\\textbf{LSS-VC}). Our method treats each utterance as an evolving dynamical system in a continuous latent space. Drawing inspiration from mamba, which introduced a state-space model for efficient text-driven \\emph{image} style transfer, we adapt a loosely related methodology for \\emph{voice} style transformation. Specifically, we learn a voice latent manifold where style and content can be manipulated independently by textual style prompts. We propose an adaptive cross-modal fusion mechanism to inject style information into the voice latent representation, enabling interpretable and fine-grained control over speaker identity, speaking rate, and emphasis. Extensive experiments show that our approach significantly outperforms recent baselines in both subjective and objective quality metrics, while offering smoother transitions between styles, reduced artifacts, and more precise text-based style control.",
+  "arxiv_comment": "arXiv admin note: This paper has been withdrawn by arXiv due to disputed and unverifiable authorship and affiliation",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Proposes LSS-VC, a novel latent state-space model for text-driven voice conversion controlling timbre and prosody. [Withdrawn from arXiv — no PDF available.]",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": true,
+  "is_duplicate": false,
+  "canonical_id": null
+}

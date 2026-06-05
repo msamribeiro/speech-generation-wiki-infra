@@ -1,0 +1,42 @@
+{
+  "id": "iclr-2026-5o0ZvYzh6B",
+  "source_ids": {
+    "openreview": "5o0ZvYzh6B",
+    "arxiv": "2509.21144"
+  },
+  "title": "UniSS: Unified Expressive Speech-to-Speech Translation with Your Voice",
+  "authors": [
+    "Sitong Cheng",
+    "Bianweizhen",
+    "Xinsheng Wang",
+    "Ruibin Yuan",
+    "Jianyi Chen",
+    "Shunshun Yin",
+    "Yike Guo",
+    "Wei Xue"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=5o0ZvYzh6B",
+  "pdf_url": "https://openreview.net/pdf?id=5o0ZvYzh6B",
+  "pdf_path": "raw/papers/iclr-2026-5o0ZvYzh6B.pdf",
+  "pdf_source": "openreview",
+  "abstract": "The ultimate goal of expressive speech-to-speech translation (S2ST) is to accurately translate spoken content while preserving the speaker identity and emotional style. However, progress in this field is largely hindered by three key challenges: the scarcity of paired speech data that retains expressive styles, the complexity of multi-stage processing pipelines, and the limited transfer of translation capabilities from large language models (LLMs). In this work, we address these challenges by introducing UniSS, a novel single-stage framework for expressive S2ST. Our approach features carefully designed speech semantic and style modeling, enabling seamless integration with existing text-based LLM frameworks to develop a unified text-speech language model. To transfer translation capabilities from text to speech, we propose a cross-modal chain-of-thought prompting process that progressively aligns audio semantics with text and ensures style preservation in the decoded results. Furthermore, we construct and release a large-scale, high-quality expressive S2ST dataset, UniST, comprising 44.8k hours of data. Experimental results show that UniSS significantly outperforms previous methods in translation fidelity and speech quality while preserving voice, emotion, and duration consistency. Our work establishes a simpler and more effective paradigm for building the next generation of expressive S2ST systems. Audio samples are available at https://cmots.github.io/uniss-demo/.",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "UniSS addresses expressive speech-to-speech translation preserving speaker identity and emotional style; primarily S2ST but with strong VC and TTS synthesis components.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

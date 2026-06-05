@@ -1,0 +1,33 @@
+{
+  "id": "iclr-2025-KL8Sm4xRn7",
+  "source_ids": {
+    "openreview": "KL8Sm4xRn7"
+  },
+  "title": "Improving Semantic Understanding in Speech Language Models via Brain-tuning",
+  "authors": [
+    "Omer Moussa",
+    "Dietrich Klakow",
+    "Mariya Toneva"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=KL8Sm4xRn7",
+  "pdf_url": "https://openreview.net/pdf?id=KL8Sm4xRn7",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Speech language models align with human brain responses to natural language to an impressive degree. However, current models rely heavily on low-level speech features, indicating they lack brain-relevant semantics which limits their utility as model organisms of semantic processing in the brain. In this work, we address this limitation by inducing brain-relevant bias directly into the models via fine-tuning with fMRI recordings of people listening to natural stories--a process we name brain-tuning. After testing it on 3 different pretrained model families, we show that brain-tuning not only improves overall alignment with new brain recordings in semantic language regions, but also reduces the reliance on low-level speech features for this alignment. Excitingly, we further show that brain-tuning leads to 1) consistent improvements in performance on semantic downstream tasks and 2) a representational space with increased semantic preference. Our results provide converging evidence, for the first time, that incorporating brain signals into the training of language models improves the models’ semantic understanding. We make the code available at https://github.com/bridge-ai-neuro/brain-tuning.",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Brain-tuning of speech language models using fMRI data — cognitive neuroscience study of SLM alignment with human brain responses, not a synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

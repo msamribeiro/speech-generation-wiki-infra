@@ -1,0 +1,34 @@
+{
+  "id": "2505.20899",
+  "source_ids": {
+    "arxiv": "2505.20899"
+  },
+  "title": "Dub-S2ST: Textless Speech-to-Speech Translation for Seamless Dubbing",
+  "authors": [
+    "Jeongsoo Choi",
+    "Jaehun Kim",
+    "Joon Son Chung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2505.20899",
+  "pdf_url": "https://arxiv.org/pdf/2505.20899.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces a cross-lingual dubbing system that translates speech from one language to another while preserving key characteristics such as duration, speaker identity, and speaking speed. Despite the strong translation quality of existing speech translation approaches, they often overlook the transfer of speech patterns, leading to mismatches with source speech and limiting their suitability for dubbing applications. To address this, we propose a discrete diffusion-based speech-to-unit translation model with explicit duration control, enabling time-aligned translation. We then synthesize speech based on the translated units and source speaker's identity using a conditional flow matching model. Additionally, we introduce a unit-based speed adaptation mechanism that guides the translation model to produce speech at a rate consistent with the source, without relying on any text. Extensive experiments demonstrate that our framework generates natural and fluent translations that align with the original speech's duration and speaking pace, while achieving competitive translation performance. The code is available at https://github.com/kaistmm/Dub-S2ST.",
+  "arxiv_comment": "EMNLP 2025 Findings",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2025.findings-emnlp.524"
+}

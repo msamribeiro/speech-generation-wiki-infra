@@ -2,7 +2,7 @@
   "id": "2025.findings-emnlp.241",
   "source_ids": {
     "acl": "2025.findings-emnlp.241",
-    "arxiv": null,
+    "arxiv": "2505.00028",
     "doi": "10.18653/v1/2025.findings-emnlp.241"
   },
   "title": "Enhancing Speech-to-Speech Dialogue Modeling with End-to-End Retrieval-Augmented Generation",

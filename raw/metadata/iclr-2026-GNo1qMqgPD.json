@@ -1,0 +1,38 @@
+{
+  "id": "iclr-2026-GNo1qMqgPD",
+  "source_ids": {
+    "openreview": "GNo1qMqgPD"
+  },
+  "title": "VoxPrivacy: A Benchmark for Evaluating Interactional Privacy of Speech Language Models",
+  "authors": [
+    "Yuxiang Wang",
+    "HongYu Liu",
+    "Dekun Chen",
+    "Xueyao Zhang",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=GNo1qMqgPD",
+  "pdf_url": "https://openreview.net/pdf?id=GNo1qMqgPD",
+  "pdf_path": "raw/papers/iclr-2026-GNo1qMqgPD.pdf",
+  "pdf_source": "openreview",
+  "abstract": "As Speech Language Models (SLMs) transition from personal devices to shared, multi-user environments such as smart homes, a new challenge emerges: the model is expected to distinguish between users to manage information flow appropriately. Without this capability, an SLM could reveal one user’s confidential schedule to another—a privacy failure we term **interactional privacy**. Thus, the ability to generate speaker-aware responses becomes essential for SLM safe deployment. Current SLM benchmarks test dialogue ability but overlook speaker identity. Multi-speaker benchmarks check who said what without assessing whether SLMs adapt their responses. Privacy benchmarks focus on globally sensitive data (e.g., bank passwords) while neglecting contextually sensitive information (e.g., a user’s private appointment). To address this gap, we introduce **VoxPrivacy**, the first benchmark designed to evaluate interactional privacy in SLMs. VoxPrivacy spans three tiers of increasing difficulty, from following direct secrecy commands to proactively protecting privacy. Our evaluation of nine SLMs on a 32-hour bilingual dataset reveals a widespread vulnerability: most open-source models perform close to random chance (around 50\\% accuracy) on conditional privacy decisions, while even strong closed-source systems still fall short on proactive privacy inference. We further validate these findings on Real-VoxPrivacy, a human-recorded subset, confirming that the failures observed on synthetic data persist in real speech. We also demonstrate a viable path forward: by fine-tuning on a new 4,000-hour training set, we improve the model’s privacy-preserving capabilities while achieving fair robustness. To support future work, we are releasing the VoxPrivacy benchmark, the large-scale training set, and the fine-tuned model to help the development of safer and more context-aware SLMs.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "VoxPrivacy is a benchmark for interactional privacy in speech language models; primarily an SLM safety/evaluation paper with speech generation as a component, not a synthesis advancement.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

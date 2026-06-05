@@ -2,7 +2,8 @@
   "id": "interspeech-2025-1017",
   "source_ids": {
     "isca": "fischbach25_interspeech",
-    "doi": "10.21437/Interspeech.2025-1017"
+    "doi": "10.21437/Interspeech.2025-1017",
+    "arxiv": "2507.03641"
   },
   "title": "Improving Low-Resource Dialect Classification Using Retrieval-based Voice Conversion",
   "authors": [

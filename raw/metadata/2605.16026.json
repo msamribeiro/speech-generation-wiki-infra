@@ -1,0 +1,41 @@
+{
+  "id": "2605.16026",
+  "source_ids": {
+    "arxiv": "2605.16026"
+  },
+  "title": "From Flat Language Labels to Typological Priors: Structured Language Conditioning for Multilingual Speech-to-Speech Translation",
+  "authors": [
+    "Yu Pan",
+    "Yang Hou",
+    "Xiongfei Wu",
+    "Liang Zhang",
+    "Yves Le Traon",
+    "Lei Ma",
+    "Jianjun Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.16026",
+  "pdf_url": "https://arxiv.org/pdf/2605.16026.pdf",
+  "pdf_path": "raw/papers/2605.16026.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Compositional speech-to-speech translation (S2ST) systems built upon speech large language models (SpeechLLMs) have recently shown promising performance. However, existing S2ST systems often either neglect source-language information or encode it through a language-as-label paradigm, representing each source language as an independent flat embedding. Such a design overlooks systematic linguistic structure shared across languages, which may limit data-efficient multilingual adaptation when supervised S2ST data are scarce. To address this issue, we propose S2ST-Omni 2, a many-to-one compositional S2ST framework that systematically reformulates multilingual language conditioning from flat language labels to structured typological priors. Specifically, S2ST-Omni 2 revisits language conditioning at three levels: typology-informed hierarchical language encoding for structured source-language representation, dynamically-gated language-aware Dual-CTC for content-adaptive acoustic modulation, and typology-aware LLM prompting for decoder-side linguistic guidance. Experiments on CVSS-C show that S2ST-Omni 2 achieves superior average performance among representative S2ST approaches across BLEU, COMET, ASR-BLEU, and BLASER 2.0 under the adopted evaluation protocol. Ablation studies indicate that the proposed representation-level, acoustic-level, and decoding-level strategies provide complementary benefits. Moreover, controlled data-budget analyses and a Japanese-to-English evaluation using only approximately 3 hours of supervised training data suggest that explicit typological priors provide useful inductive biases for data-efficient multilingual S2ST.",
+  "arxiv_comment": "Submitted to IEEE/ACM TASLP. This work extends S2ST-Omni, accepted to Findings of ACL 2026",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Proposes typological prior-based structured language conditioning for multilingual S2ST using SpeechLLMs, advancing multilingual speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

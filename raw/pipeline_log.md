@@ -2,6 +2,30 @@
 
 Infra-only operations (filter, parse, discover, lint, review). Not rendered on the wiki site.
 
+## 2026-06-05
+
+- fetch | cs.SD (OAI-PMH) | 2025-07-01→2025-07-31 | 353 discovered, 52 written | July backfill; arXiv search API rate-limited (all retries), switched permanently to OAI-PMH for cs.SD + eess.AS
+- fetch | eess.AS (OAI-PMH) | 2025-07-01→2025-07-31 | 401 discovered, 9 written, 50 skipped (cross-listed with cs.SD)
+- fetch | cs.CL (OAI-PMH) | 2025-07-01→2025-07-31 | 1867 discovered, 3 written, 18 skipped | July backfill (new window, never previously scanned)
+- fetch | cs.CL (OAI-PMH) | 2025-08-01→2025-11-30 | 9330 discovered, 12 written, 115 skipped | re-scan with expanded keyword list (+11 terms added 2026-05-25)
+- fetch | cs.CL (OAI-PMH) | 2025-12-01→2026-02-28 | 6579 discovered, 5 written, 68 skipped | re-scan
+- fetch | cs.CL (OAI-PMH) | 2026-03-01→2026-05-31 | 10571 discovered, 13 written, 97 skipped | re-scan + new top-up to 2026-05-31
+- fetch | cs.SD (OAI-PMH) | 2026-05-25→2026-05-31 | 94 discovered, 6 written, 7 skipped | May tail (prev fetch ended 2026-05-25)
+- fetch | eess.AS (OAI-PMH) | 2026-05-25→2026-05-31 | 60 discovered, 8 written, 5 skipped | May tail
+- fetch | total | 108 new pending papers written across all batches; corpus now fully covers 2025-07-01→2026-05-31
+- dedup | 108 new pending papers checked (arXiv ID cross-ref + normalized title match) | 16 duplicates found: all arXiv preprints of existing Interspeech/ACL/EMNLP proceedings entries | 16 arXiv versions marked rejected/is_duplicate; 15 source_ids.arxiv backfilled on proceedings side; 1 three-way case (2505.20868 + 2511.14824 → interspeech-2025-2586) | 92 net-new pending papers remain
+- fetch | ICLR 2025 (OpenReview API) | 3703 discovered, 13 written | new fetcher: scripts/fetch/openreview.py; conference ID canonical (iclr-2025-{forum_id}); arXiv extraction best-effort
+- fetch | NeurIPS 2025 (OpenReview API) | 5286 discovered, 16 written
+- fetch | ICLR 2026 (OpenReview API) | 5352 discovered, 27 written
+- fetch | total | 56 new pending papers written (ICLR 2025 + NeurIPS 2025 + ICLR 2026); dedup pass pending
+- dedup | 148 pending papers checked (title match; arXiv ID where available) | 22 duplicates found | 20 arXiv papers marked rejected/is_duplicate (19 accepted + 1 pending); 22 source_ids.arxiv backfilled on conference papers | 2 ingested arXiv papers (2510.00981, 2508.16790) marked is_duplicate but status kept ingested — wiki page migration deferred | net pending: 147
+- filter | arXiv batch 1 (2409–2507, 49 papers) | 32 accepted, 8 review, 9 rejected
+- filter | arXiv batch 2 + ICLR 2025 (49 papers) | 31 accepted, 8 review, 10 rejected
+- filter | ICLR 2025 + ICLR 2026 + NeurIPS 2025 batch 3 (49 papers) | 34 accepted, 5 review, 10 rejected
+- review | arXiv + ICLR + NeurIPS batch (22 borderline) | 17 accepted, 5 rejected (incl. 2409.07151) | review queue cleared | corpus: 698 accepted, 289 rejected
+- download | 113 new PDFs | 111 downloaded (69 arXiv, 42 OpenReview) | 2 confirmed withdrawn → rejected (2503.20999, 2511.08230) | 3 OpenReview 429s recovered via retry
+- parse | batch queue updated | batches 11–13 appended (40+40+31 = 111 papers) | --sync run: batches 1–10 marked done, batch 1 partial (39/40)
+
 ## 2026-05-12
 
 - filter | arXiv | 404 accepted, 31 review, 69 rejected

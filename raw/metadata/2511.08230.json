@@ -1,0 +1,43 @@
+{
+  "id": "2511.08230",
+  "source_ids": {
+    "arxiv": "2511.08230"
+  },
+  "title": "VocalBench-zh: Decomposing and Benchmarking the Speech Conversational Abilities in Mandarin Context",
+  "authors": [
+    "Heyang Liu",
+    "Ziyang Cheng",
+    "Yuhao Wang",
+    "Hongcheng Liu",
+    "Yiqi Li",
+    "Ronghua Wu",
+    "Qunshan Gu",
+    "Yanfeng Wang",
+    "Yu Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 11,
+  "published_date": "2025-11-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2511.08230",
+  "pdf_url": "https://arxiv.org/pdf/2511.08230.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The development of multi-modal large language models (LLMs) leads to intelligent approaches capable of speech interactions. As one of the most widely spoken languages globally, Mandarin is supported by most models to enhance their applicability and reach. However, the scarcity of comprehensive speech-to-speech (S2S) benchmarks in Mandarin contexts impedes systematic evaluation for developers and hinders fair model comparison for users. In this work, we propose VocalBench-zh, an ability-level divided evaluation suite adapted to Mandarin context consisting of 10 well-crafted subsets and over 10K high-quality instances, covering 12 user-oriented characters. The evaluation experiment on 14 mainstream models reveals the common challenges for current routes, and highlights the need for new insights into next-generation speech interactive systems. The evaluation codes and datasets will be available at https://github.com/SJTU-OmniAgent/VocalBench-zh.",
+  "arxiv_comment": "This article will serve as an extension of the preceding work, \"VocalBench: Benchmarking the Vocal Conversational Abilities for Speech Interaction Models\" (arXiv:2505.15727). Therefore, we have chosen to withdraw to avoid potential duplicate publication. We will update the previously open-sourced paper of VocalBench in several weeks to include the content of VocalBench-zh",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.65,
+  "relevance_note": "VocalBench-zh introduces a Mandarin S2S evaluation benchmark covering speech conversational abilities — relevant as evaluation infrastructure for systems that generate speech, but primarily an ASR/dialogue benchmark extended to speech output. [Withdrawn from arXiv — no PDF available.]",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": true,
+  "is_duplicate": false,
+  "canonical_id": null
+}

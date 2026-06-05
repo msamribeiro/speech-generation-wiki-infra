@@ -1,0 +1,36 @@
+{
+  "id": "2507.04817",
+  "source_ids": {
+    "arxiv": "2507.04817"
+  },
+  "title": "Fast-VGAN: Lightweight Voice Conversion with Explicit Control of F0 and Duration Parameters",
+  "authors": [
+    "Mathilde Abrassart",
+    "Nicolas Obin",
+    "Axel Roebel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.04817",
+  "pdf_url": "https://arxiv.org/pdf/2507.04817.pdf",
+  "pdf_path": "raw/papers/2507.04817.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Precise control over speech characteristics, such as pitch, duration, and speech rate, remains a significant challenge in the field of voice conversion. The ability to manipulate parameters like pitch and syllable rate is an important element for effective identity conversion, but can also be used independently for voice transformation, achieving goals that were historically addressed by vocoder-based methods.   In this work, we explore a convolutional neural network-based approach that aims to provide means for modifying fundamental frequency (F0), phoneme sequences, intensity, and speaker identity. Rather than relying on disentanglement techniques, our model is explicitly conditioned on these factors to generate mel spectrograms, which are then converted into waveforms using a universal neural vocoder. Accordingly, during inference, F0 contours, phoneme sequences, and speaker embeddings can be freely adjusted, allowing for intuitively controlled voice transformations.   We evaluate our approach on speaker conversion and expressive speech tasks using both perceptual and objective metrics. The results suggest that the proposed method offers substantial flexibility, while maintaining high intelligibility and speaker similarity.",
+  "arxiv_comment": "8 pages, 4 figures",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes Fast-VGAN, a lightweight CNN-based voice conversion model with explicit F0 and duration control.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

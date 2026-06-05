@@ -1,0 +1,35 @@
+{
+  "id": "2507.19137",
+  "source_ids": {
+    "arxiv": "2507.19137"
+  },
+  "title": "Assessment of Personality Dimensions Across Situations Using Conversational Speech",
+  "authors": [
+    "Alice Zhang",
+    "Skanda Muralidhar",
+    "Daniel Gatica-Perez",
+    "Mathew Magimai-Doss"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.19137",
+  "pdf_url": "https://arxiv.org/pdf/2507.19137.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Prior research indicates that users prefer assistive technologies whose personalities align with their own. This has sparked interest in automatic personality perception (APP), which aims to predict an individual's perceived personality traits. Previous studies in APP have treated personalities as static traits, independent of context. However, perceived personalities can vary by context and situation as shown in psychological research. In this study, we investigate the relationship between conversational speech and perceived personality for participants engaged in two work situations (a neutral interview and a stressful client interaction). Our key findings are: 1) perceived personalities differ significantly across interactions, 2) loudness, sound level, and spectral flux features are indicative of perceived extraversion, agreeableness, conscientiousness, and openness in neutral interactions, while neuroticism correlates with these features in stressful contexts, 3) handcrafted acoustic features and non-verbal features outperform speaker embeddings in inference of perceived personality, and 4) stressful interactions are more predictive of neuroticism, aligning with existing psychological research.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Automatic personality perception from conversational speech — no connection to speech synthesis, voice conversion, or speech generation.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

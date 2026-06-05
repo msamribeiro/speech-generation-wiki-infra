@@ -1,0 +1,37 @@
+{
+  "id": "2507.04598",
+  "source_ids": {
+    "arxiv": "2507.04598"
+  },
+  "title": "Multi-Step Prediction and Control of Hierarchical Emotion Distribution in Text-to-Speech Synthesis",
+  "authors": [
+    "Sho Inoue",
+    "Kun Zhou",
+    "Shuai Wang",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.04598",
+  "pdf_url": "https://arxiv.org/pdf/2507.04598.pdf",
+  "pdf_path": "raw/papers/2507.04598.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We investigate hierarchical emotion distribution (ED) for achieving multi-level quantitative control of emotion rendering in text-to-speech synthesis (TTS). We introduce a novel multi-step hierarchical ED prediction module that quantifies emotion variance at the utterance, word, and phoneme levels. By predicting emotion variance in a multi-step manner, we leverage global emotional context to refine local emotional variations, thereby capturing the intrinsic hierarchical structure of speech emotion. Our approach is validated through its integration into a variance adaptor and an external module design compatible with various TTS systems. Both objective and subjective evaluations demonstrate that the proposed framework significantly enhances emotional expressiveness and enables precise control of emotion rendering across multiple speech granularities.",
+  "arxiv_comment": "Accepted to APSIPA Transactions on Signal and Information Processing",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Introduces hierarchical emotion distribution prediction for multi-level quantitative emotion control in TTS at utterance, word, and phoneme levels.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

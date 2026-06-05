@@ -1,0 +1,42 @@
+{
+  "id": "2509.22243",
+  "source_ids": {
+    "arxiv": "2509.22243"
+  },
+  "title": "FLEXI: Benchmarking Full-duplex Human-LLM Speech Interaction",
+  "authors": [
+    "Yuan Ge",
+    "Saihan Chen",
+    "Jingqi Xiao",
+    "Xiaoqian Liu",
+    "Tong Xiao",
+    "Yan Xiang",
+    "Zhengtao Yu",
+    "Jingbo Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2509.22243",
+  "pdf_url": "https://arxiv.org/pdf/2509.22243.pdf",
+  "pdf_path": "raw/papers/2509.22243.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-Duplex Speech-to-Speech Large Language Models (LLMs) are foundational to natural human-computer interaction, enabling real-time spoken dialogue systems. However, benchmarking and modeling these models remains a fundamental challenge. We introduce FLEXI, the first benchmark for full-duplex LLM-human spoken interaction that explicitly incorporates model interruption in emergency scenarios. FLEXI systematically evaluates the latency, quality, and conversational effectiveness of real-time dialogue through six diverse human-LLM interaction scenarios, revealing significant gaps between open source and commercial models in emergency awareness, turn terminating, and interaction latency. Finally, we suggest that next token-pair prediction offers a promising path toward achieving truly seamless and human-like full-duplex interaction.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "FLEXI is the first benchmark for full-duplex LLM-human spoken interaction, evaluating latency, speech quality, and conversational effectiveness of real-time dialogue systems.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

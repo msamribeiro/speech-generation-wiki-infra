@@ -32,9 +32,9 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Inference-time task composition bridging TTS and speech enhancement",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-eLsEjjFODE"
 }

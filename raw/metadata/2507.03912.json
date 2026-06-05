@@ -1,0 +1,34 @@
+{
+  "id": "2507.03912",
+  "source_ids": {
+    "arxiv": "2507.03912"
+  },
+  "title": "Prosody Labeling with Phoneme-BERT and Speech Foundation Models",
+  "authors": [
+    "Tomoki Koriyama"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.03912",
+  "pdf_url": "https://arxiv.org/pdf/2507.03912.pdf",
+  "pdf_path": "raw/papers/2507.03912.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper proposes a model for automatic prosodic label annotation, where the predicted labels can be used for training a prosody-controllable text-to-speech model. The proposed model utilizes not only rich acoustic features extracted by a self-supervised-learning (SSL)-based model or a Whisper encoder, but also linguistic features obtained from phoneme-input pretrained linguistic foundation models such as PnG BERT and PL-BERT. The concatenation of acoustic and linguistic features is used to predict phoneme-level prosodic labels. In the experimental evaluation on Japanese prosodic labels, including pitch accents and phrase break indices, it was observed that the combination of both speech and linguistic foundation models enhanced the prediction accuracy compared to using either a speech or linguistic input alone. Specifically, we achieved 89.8% prediction accuracy in accent labels, 93.2% in high-low pitch accents, and 94.3% in break indices.",
+  "arxiv_comment": "Accepted to Speech Synthesis Workshop 2025 (SSW13)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes automatic prosodic label annotation using phoneme-BERT and SSL models to train prosody-controllable TTS systems.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

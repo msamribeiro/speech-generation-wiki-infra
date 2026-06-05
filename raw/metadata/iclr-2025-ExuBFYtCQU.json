@@ -1,0 +1,42 @@
+{
+  "id": "iclr-2025-ExuBFYtCQU",
+  "source_ids": {
+    "openreview": "ExuBFYtCQU"
+  },
+  "title": "MaskGCT: Zero-Shot Text-to-Speech with Masked Generative Codec Transformer",
+  "authors": [
+    "Yuancheng Wang",
+    "Haoyue Zhan",
+    "Liwei Liu",
+    "Ruihong Zeng",
+    "Haotian Guo",
+    "Jiachen Zheng",
+    "Qiang Zhang",
+    "Xueyao Zhang",
+    "Shunsi Zhang",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=ExuBFYtCQU",
+  "pdf_url": "https://openreview.net/pdf?id=ExuBFYtCQU",
+  "pdf_path": "raw/papers/iclr-2025-ExuBFYtCQU.pdf",
+  "pdf_source": "openreview",
+  "abstract": "The recent large-scale text-to-speech (TTS) systems are usually grouped as autoregressive and non-autoregressive systems. The autoregressive systems implicitly model duration but exhibit certain deficiencies in robustness and lack of duration controllability. Non-autoregressive systems require explicit alignment information between text and speech during training and predict durations for linguistic units (e.g. phone), which may compromise their naturalness. In this paper, we introduce $\\textbf{Mask}$ed $\\textbf{G}$enerative $\\textbf{C}$odec $\\textbf{T}$ransformer (MaskGCT), a fully non-autoregressive TTS model that eliminates the need for explicit alignment information between text and speech supervision, as well as phone-level duration prediction. MaskGCT is a two-stage model: in the first stage, the model uses text to predict semantic tokens extracted from a speech self-supervised learning (SSL) model, and in the second stage, the model predicts acoustic tokens conditioned on these semantic tokens. MaskGCT follows the mask-and-predict learning paradigm. During training, MaskGCT learns to predict masked semantic or acoustic tokens based on given conditions and prompts. During inference, the model generates tokens of a specified length in a parallel manner.  Experiments with 100K hours of in-the-wild speech demonstrate that MaskGCT outperforms the current state-of-the-art zero-shot TTS systems in terms of quality, similarity, and intelligibility. Audio samples are available at https://maskgct.github.io/. We release our code and model checkpoints at https://github.com/open-mmlab/Amphion/blob/main/models/tts/maskgct.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.97,
+  "relevance_note": "MaskGCT introduces masked generative codec transformers for zero-shot TTS, eliminating explicit alignment requirements and achieving strong naturalness and speaker similarity at scale.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

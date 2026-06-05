@@ -1,0 +1,41 @@
+{
+  "id": "iclr-2026-17DNmdQ9aU",
+  "source_ids": {
+    "openreview": "17DNmdQ9aU",
+    "arxiv": "2509.22220"
+  },
+  "title": "StableToken: A Noise-Robust Semantic Speech Tokenizer for Resilient SpeechLLMs",
+  "authors": [
+    "Yuhan Song",
+    "Linhao Zhang",
+    "Chuhan Wu",
+    "Aiwei Liu",
+    "Wei Jia",
+    "Houfeng Wang",
+    "Zhou Xiao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=17DNmdQ9aU",
+  "pdf_url": "https://openreview.net/pdf?id=17DNmdQ9aU",
+  "pdf_path": "raw/papers/iclr-2026-17DNmdQ9aU.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Prevalent semantic speech tokenizers, designed to capture linguistic content, are surprisingly fragile. We find they are not robust to meaning-irrelevant acoustic perturbations; even at high Signal-to-Noise Ratios (SNRs) where speech is perfectly intelligible, their output token sequences can change drastically, increasing the learning burden for downstream LLMs. This instability stems from two flaws: a brittle single-path quantization architecture and a distant training signal indifferent to intermediate token stability. To address this, we introduce StableToken, a tokenizer that achieves stability through a consensus-driven mechanism. Its multi-branch architecture processes audio in parallel, and these representations are merged via a powerful bit-wise voting mechanism to form a single, stable token sequence. StableToken sets a new state-of-the-art in token stability, drastically reducing Unit Edit Distance (UED) under diverse noise conditions. This foundational stability translates directly to downstream benefits, significantly improving the robustness of SpeechLLMs on a variety of tasks. Our code and model are publicly available at https://github.com/Tencent/StableToken.",
+  "task": [
+    "SCA",
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes a noise-robust semantic speech tokenizer that improves stability of speech LLM inputs, directly advancing the foundation infrastructure for SCA and TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

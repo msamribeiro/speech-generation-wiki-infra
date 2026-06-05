@@ -1,0 +1,38 @@
+{
+  "id": "2507.10985",
+  "source_ids": {
+    "arxiv": "2507.10985"
+  },
+  "title": "Pronunciation Deviation Analysis Through Voice Cloning and Acoustic Comparison",
+  "authors": [
+    "Andrew Valdivia",
+    "Yueming Zhang",
+    "Hailu Xu",
+    "Amir Ghasemkhani",
+    "Xin Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.10985",
+  "pdf_url": "https://arxiv.org/pdf/2507.10985.pdf",
+  "pdf_path": "raw/papers/2507.10985.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents a novel approach for detecting mispronunciations by analyzing deviations between a user's original speech and their voice-cloned counterpart with corrected pronunciation. We hypothesize that regions with maximal acoustic deviation between the original and cloned utterances indicate potential mispronunciations. Our method leverages recent advances in voice cloning to generate a synthetic version of the user's voice with proper pronunciation, then performs frame-by-frame comparisons to identify problematic segments. Experimental results demonstrate the effectiveness of this approach in pinpointing specific pronunciation errors without requiring predefined phonetic rules or extensive training data for each target language.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Uses voice cloning to generate a corrected reference for mispronunciation detection; voice cloning is instrumental to pronunciation assessment, not the primary contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

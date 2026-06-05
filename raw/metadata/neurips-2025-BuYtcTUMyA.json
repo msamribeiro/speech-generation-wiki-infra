@@ -1,0 +1,52 @@
+{
+  "id": "neurips-2025-BuYtcTUMyA",
+  "source_ids": {
+    "openreview": "BuYtcTUMyA"
+  },
+  "title": "AgentTTS: Large Language Model Agent for Test-time Compute-optimal Scaling Strategy in Complex Tasks",
+  "authors": [
+    "Fali Wang",
+    "Hui Liu",
+    "Zhenwei DAI",
+    "Jingying Zeng",
+    "Zhiwei Zhang",
+    "Zongyu Wu",
+    "Chen Luo",
+    "Zhen Li",
+    "Xianfeng Tang",
+    "Qi He"
+  ],
+  "authors_full": [
+    "Fali Wang",
+    "Hui Liu",
+    "Zhenwei DAI",
+    "Jingying Zeng",
+    "Zhiwei Zhang",
+    "Zongyu Wu",
+    "Chen Luo",
+    "Zhen Li",
+    "Xianfeng Tang",
+    "Qi He",
+    "Suhang Wang"
+  ],
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=BuYtcTUMyA",
+  "pdf_url": "https://openreview.net/pdf?id=BuYtcTUMyA",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Test-time scaling (TTS) enhances the performance of large language models (LLMs) by allocating additional compute resources during inference. However, existing research primarily investigates TTS in single-stage tasks; while many real-world problems are multi-stage complex tasks, composed of a sequence of heterogeneous subtasks with each subtask requires LLM of specific capability. Therefore, we study a novel problem: the test-time compute-optimal scaling in multi-stage complex tasks, aiming to select suitable models and allocate budgets per subtask to maximize overall performance. TTS in multi-stage tasks introduces two fundamental challenges: (i) The combinatorial search space of model and budget allocations, combined with the high cost of inference, makes brute-force search impractical. (ii) The optimal model and budget allocations across subtasks are interdependent, increasing the complexity of the compute-optimal search. To address this gap, we conduct extensive pilot experiments on four tasks across six datasets, deriving three empirical insights characterizing the behavior of LLMs in multi-stage complex tasks. Informed by these insights, we propose AgentTTS, an LLM-agent-based framework that autonomously searches for compute-optimal allocations through iterative feedback-driven interactions with the execution environment. Experimental results demonstrate that AgentTTS significantly outperforms traditional and other LLM-based baselines in search efficiency, and shows improved robustness to varying training set sizes and enhanced interpretability.",
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "AgentTTS is a test-time compute scaling framework for LLM agents in multi-stage tasks; TTS stands for test-time scaling, not text-to-speech — not relevant.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

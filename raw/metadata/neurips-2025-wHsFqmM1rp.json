@@ -1,0 +1,40 @@
+{
+  "id": "neurips-2025-wHsFqmM1rp",
+  "source_ids": {
+    "openreview": "wHsFqmM1rp",
+    "arxiv": "2508.16790"
+  },
+  "title": "TaDiCodec: Text-aware Diffusion Speech Tokenizer for Speech Language Modeling",
+  "authors": [
+    "Yuancheng Wang",
+    "Dekun Chen",
+    "Xueyao Zhang",
+    "Junan Zhang",
+    "Jiaqi Li",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=wHsFqmM1rp",
+  "pdf_url": "https://openreview.net/pdf?id=wHsFqmM1rp",
+  "pdf_path": "raw/papers/neurips-2025-wHsFqmM1rp.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Speech tokenizers serve as foundational components for speech language models, yet current designs exhibit several limitations, including:  (1) dependence on multi-layer residual vector quantization structures or high frame rates, (2) reliance on auxiliary pre-trained models for semantic distillation, and (3) requirements for complex two-stage training processes. In this work, we introduce the **T**ext-**a**ware **Di**ffusion Transformer Speech **Codec** (***TaDiCodec***), a novel approach designed to overcome these challenges. TaDiCodec employs end-to-end optimization for quantization and reconstruction through a diffusion autoencoder, while integrating text guidance into the diffusion decoder to enhance reconstruction quality and achieve optimal compression. TaDiCodec achieves an extremely low frame rate of **6.25 Hz** and a corresponding bitrate of **0.0875 kbps** with a **single-layer codebook** for 24 kHz speech,  while maintaining superior performance on critical speech generation evaluation metrics such as Word Error Rate (WER), speaker similarity (SIM), and speech quality (UTMOS), Notably, TaDiCodec employs a single-stage, end-to-end training paradigm, and obviating the need for auxiliary pre-trained models. We also validate the compatibility of TaDiCodec in language model based zero-shot text-to-speech with both autoregressive modeling and masked generative modeling, demonstrating its effectiveness and efficiency for speech language modeling, as well as a significantly small *reconstruction-generation gap*. To facilitate reproducibility and further research, we will make our source code and pre-trained checkpoints publicly available. Audio samples are are available at https://tadicodec.github.io/. We release code and model checkpoints at https://github.com/AmphionTeam/TaDiCodec.",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "TaDiCodec proposes a text-aware diffusion transformer speech codec for speech LMs, unifying semantic and acoustic tokenization without multi-layer RVQ — core codec/tokenizer contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

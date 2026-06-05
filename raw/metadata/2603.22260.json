@@ -1,0 +1,37 @@
+{
+  "id": "2603.22260",
+  "source_ids": {
+    "arxiv": "2603.22260"
+  },
+  "title": "Greater accessibility can amplify discrimination in generative AI",
+  "authors": [
+    "Carolin Holtermann",
+    "Minh Duc Bui",
+    "Kaitlyn Zhou",
+    "Valentin Hofmann",
+    "Katharina von der Wense",
+    "Anne Lauscher"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.22260",
+  "pdf_url": "https://arxiv.org/pdf/2603.22260.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Hundreds of millions of people rely on large language models (LLMs) for education, work, and even healthcare. Yet these models are known to reproduce and amplify social biases present in their training data. Moreover, text-based interfaces remain a barrier for many, for example, users with limited literacy, motor impairments, or mobile-only devices. Voice interaction promises to expand accessibility, but unlike text, speech carries identity cues that users cannot easily mask, raising concerns about whether accessibility gains may come at the cost of equitable treatment. Here we show that audio-enabled LLMs exhibit systematic gender discrimination, shifting responses toward gender-stereotyped adjectives and occupations solely on the basis of speaker voice, and amplifying bias beyond that observed in text-based interaction. Thus, voice interfaces do not merely extend text models to a new modality but introduce distinct bias mechanisms tied to paralinguistic cues. Complementary survey evidence ($n=1,000$) shows that infrequent chatbot users are most hesitant to undisclosed attribute inference and most likely to disengage when such practices are revealed. To demonstrate a potential mitigation strategy, we show that pitch manipulation can systematically regulate gender-discriminatory outputs. Overall, our findings reveal a critical tension in AI development: efforts to expand accessibility through voice interfaces simultaneously create new pathways for discrimination, demanding that fairness and accessibility be addressed in tandem.",
+  "arxiv_comment": "Preprint",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Fairness and bias study examining LLM behavior with voice vs. text input — speech synthesis is incidental to the primary fairness research question.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

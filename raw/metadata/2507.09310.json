@@ -1,0 +1,38 @@
+{
+  "id": "2507.09310",
+  "source_ids": {
+    "arxiv": "2507.09310"
+  },
+  "title": "Voice Conversion for Lombard Speaking Style with Implicit and Explicit Acoustic Feature Conditioning",
+  "authors": [
+    "Dominika Woszczyk",
+    "Manuel Sam Ribeiro",
+    "Thomas Merritt",
+    "Daniel Korzekwa"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.09310",
+  "pdf_url": "https://arxiv.org/pdf/2507.09310.pdf",
+  "pdf_path": "raw/papers/2507.09310.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-Speech (TTS) systems in Lombard speaking style can improve the overall intelligibility of speech, useful for hearing loss and noisy conditions. However, training those models requires a large amount of data and the Lombard effect is challenging to record due to speaker and noise variability and tiring recording conditions. Voice conversion (VC) has been shown to be a useful augmentation technique to train TTS systems in the absence of recorded data from the target speaker in the target speaking style. In this paper, we are concerned with Lombard speaking style transfer. Our goal is to convert speaker identity while preserving the acoustic attributes that define the Lombard speaking style. We compare voice conversion models with implicit and explicit acoustic feature conditioning. We observe that our proposed implicit conditioning strategy achieves an intelligibility gain comparable to the model conditioned on explicit acoustic features, while also preserving speaker similarity.",
+  "arxiv_comment": "Presented at Clarity Challenge 2023",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes voice conversion for Lombard speaking style with implicit and explicit acoustic conditioning, advancing VC for speech intelligibility.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2507.01348",
+  "source_ids": {
+    "arxiv": "2507.01348"
+  },
+  "title": "SpeechAccentLLM: A Unified Framework for Foreign Accent Conversion and Text to Speech",
+  "authors": [
+    "Zhuangfei Cheng",
+    "Guangyan Zhang",
+    "Zehai Tu",
+    "Yangyang Song",
+    "Shuiyang Mao",
+    "Xiaoqi Jiao",
+    "Jingyu Li",
+    "Yiwen Guo",
+    "Jiasong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.01348",
+  "pdf_url": "https://arxiv.org/pdf/2507.01348.pdf",
+  "pdf_path": "raw/papers/2507.01348.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Foreign accent conversion (FAC) in speech processing remains a challenging task. Building on the remarkable success of large language models (LLMs) in Text-to-Speech (TTS) tasks, this study investigates the adaptation of LLM-based techniques for FAC, which we term SpeechAccentLLM. At the core of this framework, we introduce SpeechCodeVAE, the first model to integrate connectionist temporal classification (CTC) directly into codebook discretization for speech content tokenization. This novel architecture generates tokens with a unique \"locality\" property, as validated by experiments demonstrating optimal trade-offs among content faithfulness, temporal coherence, and structural recoverability. Then, to address data scarcity for the FAC module, we adopted a multitask learning strategy that jointly trains the FAC and TTS modules. Beyond mitigating data limitations, this approach yielded accelerated convergence and superior speech quality compared to standalone FAC training. Moreover, leveraging the salient properties of our discrete speech representations, we introduce SpeechRestorer, a postprocessing architecture designed to refine LLM-generated outputs. This module effectively mitigates stochastic errors prevalent in LLM inference pipelines while enhancing prosodic continuity, as validated by ablation experiments.",
+  "arxiv_comment": "10 pages, includes references, 4 figures, 4 tables",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Presents SpeechAccentLLM with SpeechCodeVAE, advancing LLM-based foreign accent conversion and TTS with a novel CTC-codebook integration.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -2,7 +2,7 @@
   "id": "2025.findings-emnlp.524",
   "source_ids": {
     "acl": "2025.findings-emnlp.524",
-    "arxiv": null,
+    "arxiv": "2505.20899",
     "doi": "10.18653/v1/2025.findings-emnlp.524"
   },
   "title": "Dub-S2ST: Textless Speech-to-Speech Translation for Seamless Dubbing",

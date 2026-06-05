@@ -1,0 +1,39 @@
+{
+  "id": "iclr-2025-PYmrUQmMEw",
+  "source_ids": {
+    "openreview": "PYmrUQmMEw"
+  },
+  "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
+  "authors": [
+    "Qingkai Fang",
+    "Shoutao Guo",
+    "Yan Zhou",
+    "Zhengrui Ma",
+    "Shaolei Zhang",
+    "Yang Feng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=PYmrUQmMEw",
+  "pdf_url": "https://openreview.net/pdf?id=PYmrUQmMEw",
+  "pdf_path": "raw/papers/iclr-2025-PYmrUQmMEw.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Models like GPT-4o enable real-time interaction with large language models (LLMs) through speech, significantly enhancing user experience compared to traditional text-based interaction. However, there is still a lack of exploration on how to build speech interaction models based on open-source LLMs. To address this, we propose LLaMA-Omni, a novel model architecture designed for low-latency and high-quality speech interaction with LLMs. LLaMA-Omni integrates a pretrained speech encoder, a speech adaptor, an LLM, and a streaming speech decoder. It eliminates the need for speech transcription, and can simultaneously generate text and speech responses directly from speech instructions with extremely low latency. We build our model based on the latest Llama-3.1-8B-Instruct model. To align the model with speech interaction scenarios, we construct a dataset named InstructS2S-200K, which includes 200K speech instructions and corresponding speech responses. Experimental results show that compared to previous speech-language models, LLaMA-Omni provides better responses in both content and style, with a response latency as low as 226ms. Additionally, training LLaMA-Omni takes less than 3 days on just 4 GPUs, paving the way for the efficient development of speech-language models in the future.",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "LLaMA-Omni integrates a pretrained speech encoder and streaming speech decoder into an open-source LLM for low-latency real-time speech interaction, advancing SCA with simultaneous response text and speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2507.15272",
+  "source_ids": {
+    "arxiv": "2507.15272"
+  },
+  "title": "A2TTS: TTS for Low Resource Indian Languages",
+  "authors": [
+    "Ayush Singh Bhadoriya",
+    "Abhishek Nikunj Shinde",
+    "Isha Pandey",
+    "Ganesh Ramakrishnan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.15272",
+  "pdf_url": "https://arxiv.org/pdf/2507.15272.pdf",
+  "pdf_path": "raw/papers/2507.15272.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present a speaker conditioned text-to-speech (TTS) system aimed at addressing challenges in generating speech for unseen speakers and supporting diverse Indian languages. Our method leverages a diffusion-based TTS architecture, where a speaker encoder extracts embeddings from short reference audio samples to condition the DDPM decoder for multispeaker generation. To further enhance prosody and naturalness, we employ a cross-attention based duration prediction mechanism that utilizes reference audio, enabling more accurate and speaker consistent timing. This results in speech that closely resembles the target speaker while improving duration modeling and overall expressiveness. Additionally, to improve zero-shot generation, we employed classifier free guidance, allowing the system to generate speech more near speech for unknown speakers. Using this approach, we trained language-specific speaker-conditioned models. Using the IndicSUPERB dataset for multiple Indian languages such as Bengali, Gujarati, Hindi, Marathi, Malayalam, Punjabi and Tamil.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes A2TTS, a diffusion-based multi-speaker TTS system for low-resource Indian languages with cross-attention duration prediction.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

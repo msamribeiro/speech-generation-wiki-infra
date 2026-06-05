@@ -1,0 +1,37 @@
+{
+  "id": "neurips-2025-SoRe80Tg48",
+  "source_ids": {
+    "openreview": "SoRe80Tg48"
+  },
+  "title": "Shallow Flow Matching for Coarse-to-Fine Text-to-Speech Synthesis",
+  "authors": [
+    "Dong Yang",
+    "YIYI CAI",
+    "Yuki Saito",
+    "Lixu Wang",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-10",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=SoRe80Tg48",
+  "pdf_url": "https://openreview.net/pdf?id=SoRe80Tg48",
+  "pdf_path": "raw/papers/neurips-2025-SoRe80Tg48.pdf",
+  "pdf_source": "openreview",
+  "abstract": "We propose Shallow Flow Matching (SFM), a novel mechanism that enhances flow matching (FM)-based text-to-speech (TTS) models within a coarse-to-fine generation paradigm. Unlike conventional FM modules, which use the coarse representations from the weak generator as conditions, SFM constructs intermediate states along the FM paths from these representations. During training, we introduce an orthogonal projection method to adaptively determine the temporal position of these states, and apply a principled construction strategy based on a single-segment piecewise flow. The SFM inference starts from the intermediate state rather than pure noise, thereby focusing computation on the latter stages of the FM paths. We integrate SFM into multiple TTS models with a lightweight SFM head. Experiments demonstrate that SFM yields consistent gains in speech naturalness across both objective and subjective evaluations, and significantly accelerates inference when using adaptive-step ODE solvers. Demo and codes are available at https://ydqmkkx.github.io/SFMDemo/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Proposes Shallow Flow Matching (SFM) for coarse-to-fine TTS synthesis, introducing orthogonal projection to determine intermediate state positions in flow paths — direct TTS/flow-matching contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

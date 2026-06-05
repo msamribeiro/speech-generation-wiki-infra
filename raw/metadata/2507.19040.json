@@ -1,0 +1,38 @@
+{
+  "id": "2507.19040",
+  "source_ids": {
+    "arxiv": "2507.19040"
+  },
+  "title": "FD-Bench: A Full-Duplex Benchmarking Pipeline Designed for Full Duplex Spoken Dialogue Systems",
+  "authors": [
+    "Yizhou Peng",
+    "Yi-Wen Chao",
+    "Dianwen Ng",
+    "Yukun Ma",
+    "Chongjia Ni",
+    "Bin Ma",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.19040",
+  "pdf_url": "https://arxiv.org/pdf/2507.19040.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue systems (FDSDS) enable more natural human-machine interactions by allowing real-time user interruptions and backchanneling, compared to traditional SDS that rely on turn-taking. However, existing benchmarks lack metrics for FD scenes, e.g., evaluating model performance during user interruptions. In this paper, we present a comprehensive FD benchmarking pipeline utilizing LLMs, TTS, and ASR to address this gap. It assesses FDSDS's ability to handle user interruptions, manage delays, and maintain robustness in challenging scenarios with diverse novel metrics. We applied our benchmark to three open-source FDSDS (Moshi, Freeze-omni, and VITA-1.5) using over 40 hours of generated speech, with 293 simulated conversations and 1,200 interruptions. The results show that all models continue to face challenges, such as failing to respond to user interruptions, under frequent disruptions and noisy conditions. Demonstrations, data, and code will be released.",
+  "arxiv_comment": "Accepted to Interspeech 2025. 5 pages",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0739"
+}

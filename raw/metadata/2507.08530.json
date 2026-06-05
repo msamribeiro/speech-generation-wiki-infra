@@ -1,0 +1,39 @@
+{
+  "id": "2507.08530",
+  "source_ids": {
+    "arxiv": "2507.08530"
+  },
+  "title": "MIDI-VALLE: Improving Expressive Piano Performance Synthesis Through Neural Codec Language Modelling",
+  "authors": [
+    "Jingjing Tang",
+    "Xin Wang",
+    "Zhe Zhang",
+    "Junichi Yamagishi",
+    "Geraint Wiggins",
+    "George Fazekas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.08530",
+  "pdf_url": "https://arxiv.org/pdf/2507.08530.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Generating expressive audio performances from music scores requires models to capture both instrument acoustics and human interpretation. Traditional music performance synthesis pipelines follow a two-stage approach, first generating expressive performance MIDI from a score, then synthesising the MIDI into audio. However, the synthesis models often struggle to generalise across diverse MIDI sources, musical styles, and recording environments. To address these challenges, we propose MIDI-VALLE, a neural codec language model adapted from the VALLE framework, which was originally designed for zero-shot personalised text-to-speech (TTS) synthesis. For performance MIDI-to-audio synthesis, we improve the architecture to condition on a reference audio performance and its corresponding MIDI. Unlike previous TTS-based systems that rely on piano rolls, MIDI-VALLE encodes both MIDI and audio as discrete tokens, facilitating a more consistent and robust modelling of piano performances. Furthermore, the model's generalisation ability is enhanced by training on an extensive and diverse piano performance dataset. Evaluation results show that MIDI-VALLE significantly outperforms a state-of-the-art baseline, achieving over 75% lower Frechet Audio Distance on the ATEPP and Maestro datasets. In the listening test, MIDI-VALLE received 202 votes compared to 58 for the baseline, demonstrating improved synthesis quality and generalisation across diverse performance MIDI inputs.",
+  "arxiv_comment": "Accepted by ISMIR 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Proposes MIDI-VALLE for expressive piano performance synthesis using neural codec LM (VALL-E style); the approach directly borrows TTS methods but the domain is music/piano, not speech.",
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2507.08012",
+  "source_ids": {
+    "arxiv": "2507.08012"
+  },
+  "title": "RepeaTTS: Towards Feature Discovery through Repeated Fine-Tuning",
+  "authors": [
+    "Atli Sigurgeirsson",
+    "Simon King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.08012",
+  "pdf_url": "https://arxiv.org/pdf/2507.08012.pdf",
+  "pdf_path": "raw/papers/2507.08012.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "A Prompt-based Text-To-Speech model allows a user to control different aspects of speech, such as speaking rate and perceived gender, through natural language instruction. Although user-friendly, such approaches are on one hand constrained: control is limited to acoustic features exposed to the model during training, and too flexible on the other: the same inputs yields uncontrollable variation that are reflected in the corpus statistics.   We investigate a novel fine-tuning regime to address both of these issues at the same time by exploiting the uncontrollable variance of the model. Through principal component analysis of thousands of synthesised samples, we determine latent features that account for the highest proportion of the output variance and incorporate them as new labels for secondary fine-tuning. We evaluate the proposed methods on two models trained on an expressive Icelandic speech corpus, one with emotional disclosure and one without. In the case of the model without emotional disclosure, the method yields both continuous and discrete features that improve overall controllability of the model.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.83,
+  "relevance_note": "Presents RepeaTTS, a repeated fine-tuning regime for feature discovery in prompt-based TTS to improve controllability of acoustic attributes.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2507.01356",
+  "source_ids": {
+    "arxiv": "2507.01356"
+  },
+  "title": "Voice Conversion for Likability Control via Automated Rating of Speech Synthesis Corpora",
+  "authors": [
+    "Hitoshi Suda",
+    "Shinnosuke Takamichi",
+    "Satoru Fukayama"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2507.01356",
+  "pdf_url": "https://arxiv.org/pdf/2507.01356.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Perceived voice likability plays a crucial role in various social interactions, such as partner selection and advertising. A system that provides reference likable voice samples tailored to target audiences would enable users to adjust their speaking style and voice quality, facilitating smoother communication. To this end, we propose a voice conversion method that controls the likability of input speech while preserving both speaker identity and linguistic content. To improve training data scalability, we train a likability predictor on an existing voice likability dataset and employ it to automatically annotate a large speech synthesis corpus with likability ratings. Experimental evaluations reveal a significant correlation between the predictor's outputs and human-provided likability ratings. Subjective and objective evaluations further demonstrate that the proposed approach effectively controls voice likability while preserving both speaker identity and linguistic content.",
+  "arxiv_comment": "Accepted at Interspeech 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": null,
+  "status": "rejected",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2025-0383"
+}

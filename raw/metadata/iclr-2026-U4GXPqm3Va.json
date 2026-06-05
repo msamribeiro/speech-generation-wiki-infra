@@ -1,0 +1,37 @@
+{
+  "id": "iclr-2026-U4GXPqm3Va",
+  "source_ids": {
+    "openreview": "U4GXPqm3Va",
+    "arxiv": "2603.11589"
+  },
+  "title": "Toward Complex-Valued Neural Networks for Waveform Generation",
+  "authors": [
+    "Hyung-Seok Oh",
+    "Deok-Hyeon Cho",
+    "Seung-Bin Kim",
+    "Seong-Whan Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-27",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=U4GXPqm3Va",
+  "pdf_url": "https://openreview.net/pdf?id=U4GXPqm3Va",
+  "pdf_path": "raw/papers/iclr-2026-U4GXPqm3Va.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Neural vocoders have recently advanced waveform generation, yielding natural and expressive audio. Among these approaches, iSTFT-based vocoders have recently gained attention. They predict a complex-valued spectrogram and then synthesize the waveform via iSTFT, thereby avoiding learned upsampling stages that can increase computational cost. However, current approaches use real-valued networks that process the real and imaginary parts independently. This separation limits their ability to capture the inherent structure of complex spectrograms. We present ComVo, a Complex-valued neural Vocoder whose generator and discriminator use native complex arithmetic. This enables an adversarial training framework that provides structured feedback in complex-valued representations. To guide phase transformations in a structured manner, we introduce phase quantization, which discretizes phase values and regularizes the training process. Finally, we propose a block-matrix computation scheme to improve training efficiency by reducing redundant operations. Experiments demonstrate that ComVo achieves higher synthesis quality than comparable real-valued baselines, and that its block-matrix scheme reduces training time by 25%. Audio samples and code are available at https://hs-oh-prml.github.io/ComVo/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes complex-valued neural networks for iSTFT-based vocoders, enabling joint optimization of real and imaginary parts for higher-fidelity waveform generation — direct vocoder/TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

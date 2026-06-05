@@ -1,0 +1,37 @@
+{
+  "id": "iclr-2025-868masI331",
+  "source_ids": {
+    "openreview": "868masI331"
+  },
+  "title": "HALL-E: Hierarchical Neural Codec Language Model for Minute-Long Zero-Shot Text-to-Speech Synthesis",
+  "authors": [
+    "Yuto Nishimura",
+    "Takumi Hirose",
+    "Masanari Ohi",
+    "Hideki Nakayama",
+    "Nakamasa Inoue"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICLR",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-24",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=868masI331",
+  "pdf_url": "https://openreview.net/pdf?id=868masI331",
+  "pdf_path": "raw/papers/iclr-2025-868masI331.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Recently, Text-to-speech (TTS) models based on large language models (LLMs) that translate natural language text into sequences of discrete audio tokens have gained great research attention, with advances in neural audio codec (NAC) mod- els using residual vector quantization (RVQ). However, long-form speech synthe- sis remains a significant challenge due to the high frame rate, which increases the length of audio tokens and makes it difficult for autoregressive language models to generate audio tokens for even a minute of speech. To address this challenge, this paper introduces two novel post-training approaches: 1) Multi-Resolution Re- quantization (MReQ) and 2) HALL-E. MReQ is a framework to reduce the frame rate of pre-trained NAC models. Specifically, it incorporates multi-resolution residual vector quantization (MRVQ) module that hierarchically reorganizes dis- crete audio tokens through teacher-student distillation. HALL-E is an LLM-based TTS model designed to predict hierarchical tokens of MReQ. Specifically, it incor- porates the technique of using MRVQ sub-modules and continues training from a pre-trained LLM-based TTS model. Furthermore, to promote TTS research, we create MinutesSpeech, a new benchmark dataset consisting of 40k hours of filtered speech data for training and evaluating speech synthesis ranging from 3s up to 180s. In experiments, we demonstrated the effectiveness of our approaches by ap- plying our post-training framework to VALL-E. We achieved the frame rate down to as low as 8 Hz, enabling the stable minitue-long speech synthesis in a single inference step. Audio samples, dataset, codes and pre-trained models are available at https://yutonishimura-v2.github.io/HALL-E_DEMO.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.95,
+  "relevance_note": "HALL-E introduces a hierarchical neural codec LM that addresses the long-form synthesis challenge in autoregressive TTS by using multi-scale token prediction.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

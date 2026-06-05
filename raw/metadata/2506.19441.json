@@ -29,9 +29,9 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Benchmark and resource for evaluating TTS systems including metrics validation against subjective scores; directly advances TTS evaluation.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-uGai5lYHlV"
 }

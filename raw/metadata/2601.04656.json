@@ -31,9 +31,9 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Zero-shot TTS with LLM-core enabling flexible style control via natural language instructions",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-F7GmbfyVg9"
 }

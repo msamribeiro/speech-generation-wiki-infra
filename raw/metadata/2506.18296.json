@@ -1,0 +1,39 @@
+{
+  "id": "2506.18296",
+  "source_ids": {
+    "arxiv": "2506.18296"
+  },
+  "title": "JIS: A Speech Corpus of Japanese Idol Speakers with Various Speaking Styles",
+  "authors": [
+    "Yuto Kondo",
+    "Hirokazu Kameoka",
+    "Kou Tanaka",
+    "Takuhiro Kaneko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2506.18296",
+  "pdf_url": "https://arxiv.org/pdf/2506.18296.pdf",
+  "pdf_path": "raw/papers/2506.18296.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We construct Japanese Idol Speech Corpus (JIS) to advance research in speech generation AI, including text-to-speech synthesis (TTS) and voice conversion (VC). JIS will facilitate more rigorous evaluations of speaker similarity in TTS and VC systems since all speakers in JIS belong to a highly specific category: \"young female live idols\" in Japan, and each speaker is identified by a stage name, enabling researchers to recruit listeners familiar with these idols for listening experiments. With its unique speaker attributes, JIS will foster compelling research, including generating voices tailored to listener preferences-an area not yet widely studied. JIS will be distributed free of charge to promote research in speech generation AI, with usage restricted to non-commercial, basic research. We describe the construction of JIS, provide an overview of Japanese live idol culture to support effective and ethical use of JIS, and offer a basic analysis to guide application of JIS.",
+  "arxiv_comment": "Accepted on Interspeech 2025",
+  "task": [
+    "TTS",
+    "VC",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Constructs the Japanese Idol Speech (JIS) corpus specifically designed to advance TTS/VC evaluation, with rigorous speaker similarity testing.",
+  "status": "accepted",
+  "fetched_date": "2026-06-05",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

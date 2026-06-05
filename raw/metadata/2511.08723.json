@@ -34,9 +34,9 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "RLHF-aligned benchmark and speech-to-speech model for paralinguistic-aware spoken dialogue interaction",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-CcmDDh070o"
 }

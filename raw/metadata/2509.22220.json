@@ -32,9 +32,9 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "StableToken: noise-robust semantic speech tokenizer for speech LLMs; core codec.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-17DNmdQ9aU"
 }

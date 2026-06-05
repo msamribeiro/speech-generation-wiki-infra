@@ -31,9 +31,9 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Audio language model using continuous latent space instead of discrete tokens",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-MFrJ3NzA5H"
 }
