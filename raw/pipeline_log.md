@@ -2,6 +2,12 @@
 
 Infra-only operations (filter, parse, discover, lint, review). Not rendered on the wiki site.
 
+## 2026-06-06
+
+- parse | batch 13 | 31 papers | 0 failed | RapidOCR warnings (non-fatal): iclr-2026-JbLmIoWwDC (×4), iclr-2026-U4GXPqm3Va (×6), iclr-2026-wbttgzp7MT (×1), neurips-2025-AsRB5nmlOD (×2), neurips-2025-vhPy3NMsO5 (×1)
+- parse | batch 12 | 40 papers | 0 failed | RapidOCR warnings (non-fatal): 2510.07881, 2605.25962 (×5), 2605.27190, iclr-2025-dGSOn7sdWg (×3), iclr-2025-tQ1PmLfPBL
+- parse | batch 11 | 40 papers | 0 failed | RapidOCR warnings (non-fatal): 2506.23325, 2507.04349, 2507.20140
+
 ## 2026-06-05
 
 - fetch | cs.SD (OAI-PMH) | 2025-07-01→2025-07-31 | 353 discovered, 52 written | July backfill; arXiv search API rate-limited (all retries), switched permanently to OAI-PMH for cs.SD + eess.AS

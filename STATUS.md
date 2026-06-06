@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-05 (integration pass 7; corpus top-up fetch complete)
+Last updated: 2026-06-06 (parse batches 11–13 complete; all 875 papers parsed)
 
 ---
 
@@ -26,26 +26,26 @@ Last updated: 2026-06-05 (integration pass 7; corpus top-up fetch complete)
 | Filter — batch 3 (May 25) | ✅ Complete | Re-scan + citation-discovery: 101 papers, 67 accepted, 7 review, 27 rejected (66% accept rate). |
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 910 PDFs on disk (799 prior + 111 new). 2 new 404s flagged needs_manual_pdf: 2503.20999, 2511.08230 (likely withdrawn from arXiv). |
-| Parse (text extraction) | 🔄 In progress | 783/783 original corpus done. 111 new papers queued in batches 11–13 (raw/parsed/batch_queue.json); parse pending. |
-| Ingest (wiki pages) | 🔄 In progress | 175/783 ingested. 175 integrated (passes 1–7 complete, 2026-06-05); 0 pending. 19/23 evidence digests seeded (transformer-enc-dec-tts + rlhf-speech missing). ~523 original + 111 new = ~634 ready after parse. |
+| Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
+| Ingest (wiki pages) | 🔄 In progress | 176/875 ingested. 175 integrated (passes 1–7 complete, 2026-06-05); 1 pending integration. 19/23 evidence digests seeded (transformer-enc-dec-tts + rlhf-speech missing). 699 ready to ingest. |
 
 ---
 
-## Metadata counts (2026-06-05)
+## Metadata counts (2026-06-06)
 
 ```
 Total files:  1164
-  accepted:    698   ← ready for parse → ingest (2 withdrawn arXiv papers moved to rejected)
+  accepted:    699   ← parsed, ready to ingest
   ingested:    176   ← wiki page written (2 flagged is_duplicate; wiki page migration deferred)
     integrated: 175  ← passes 1–7 complete (2026-06-05); 1 pending integration
   pending:       0   ← cleared
   review:        0   ← queue cleared
-  rejected:    289   ← 287 prior + 2 confirmed withdrawn (2503.20999, 2511.08230)
+  rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
 
-PDFs on disk:  ~784  ← raw/papers/ (accepted + ingested; duplicate arXiv PDFs may remain)
-Parsed:        783   ← in-corpus paper.md files (parse complete, 2026-05-30; 148 new pending-parse after dedup + filter)
-Parse-pending:   0   ← existing corpus all done; 148 new papers need dedup → filter → download → parse
-Ready to ingest: ~607 ← parsed but not yet ingested (exact count after filter pass)
+PDFs on disk:  ~875  ← raw/papers/ (accepted + ingested)
+Parsed:        875   ← all in-corpus paper.md files complete (2026-06-06)
+Parse-pending:   0   ← parse pipeline fully complete
+Ready to ingest: 699 ← parsed + accepted, not yet ingested
 
 Evidence digests: 19/23 seeded; 14 updated in pass 7 (transformer-enc-dec-tts + rlhf-speech still missing — flag for lint pass)
 Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (23 total concept pages)
@@ -302,9 +302,11 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-1. **Parse batches 11–13** — run `batch_convert.py` for batches 11–13 (111 papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025). Same workflow as prior batches: run → quality report → fix failures → run `make_batch_queue.py --sync`. OpenReview PDFs may have different layouts; watch for Docling quirks.
+1. ~~**Parse batches 11–13**~~ — ✅ done 2026-06-06. All 111 new papers parsed, 0 failures. Parse pipeline complete (875/875).
 
-2. **Continue ingest** — ~523 original corpus papers ready (parsed, not yet ingested). Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
+2. **Continue ingest** — 699 papers ready to ingest (2026-06-06). Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
+
+3. **Seed `transformer-enc-dec-tts` and `rlhf-speech` evidence digests** — 19/23 concept digests seeded; these two are missing. Run integration agent targeting those two concepts once enough papers have been ingested to populate them meaningfully (check concept page All Papers tables for current counts).
 
 4. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
 
