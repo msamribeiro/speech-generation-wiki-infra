@@ -1,3 +1,8 @@
+## 2026-06-07
+
+- discover | 16476 entries (570 merge groups collapsed, 5 fuzzy candidates), 894 corpus papers
+
+
 # Pipeline Log
 
 Infra-only operations (filter, parse, discover, lint, review). Not rendered on the wiki site.

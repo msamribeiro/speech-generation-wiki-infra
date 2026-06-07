@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "note": "Manual merge overrides for citation_index.py. Applied after the deterministic post-hoc merge pass. Add new groups here when fuzzy candidates are confirmed as the same paper/dataset. canonical_key must be present in the built entries; missing merge_keys are silently skipped.",
+  "groups": [
+    {
+      "note": "SpeechTokenizer (Xin Zhang et al., ICLR 2024, arXiv:2308.16692). The word 'large' is omitted from the title in some citations, producing a split title: entry that the normalized-title merge cannot join to the arxiv: entry (which has no title from structured refs).",
+      "canonical_key": "arxiv:2308.16692",
+      "merge_keys": [
+        "title:speechtokenizerunifiedspeechtokenizerforspeechlanguagemodels"
+      ]
+    },
+    {
+      "note": "CSTR VCTK Corpus (Yamagishi, Veaux, MacDonald). Multiple version strings (v0.92, 2017, Superseded) and DOIs treated as the same dataset per user decision. canonical is the Edinburgh DataShare DOI.",
+      "canonical_key": "doi:10.7488/ds/2645",
+      "merge_keys": [
+        "title:cstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkitversion092",
+        "title:supersededcstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkit",
+        "title:supersededcstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkitversion092",
+        "doi:10.57702/bw3hjwag",
+        "title:strvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkit"
+      ]
+    }
+  ]
+}

@@ -343,6 +343,8 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 
 - **Quartz explorer: exclude `papers/`** — one-line `filterFn` in site repo `quartz.config.yaml` prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
 - **Dedup check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch. Canonical priority: proceedings > arXiv.
+- ✅ **Citation index: remove prefilter + fix deduplication** — done 2026-06-07. Post-hoc merge pass collapses 570 groups (602 entries merged away); manual overrides file (`raw/citation_merge_overrides.json`) handles edge cases (SpeechTokenizer title variant, CSTR VCTK versions). Default `--min-citations` lowered to 1 (full index: 16,476 entries, 8.5 MB). 5 fuzzy candidates surfaced in output, all confirmed as genuinely different papers (Qwen family, DNSMOS/DNSMOS P.835, Step-Audio variants). Log target fixed (was writing to `wiki/log.md`, now correctly writes to `raw/pipeline_log.md`).
+- **Parse quality review** — 8 papers flagged for offline PDF spot-check; report at `raw/parsed/parse_quality_review.md`. Waiting on user results before any `--force` re-runs.
 
 ### Product directions
 
