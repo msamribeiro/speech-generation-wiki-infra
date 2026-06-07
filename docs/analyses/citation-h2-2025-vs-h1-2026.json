@@ -1,0 +1,2529 @@
+{
+  "generated": "2026-06-07",
+  "label_a": "H2 2025",
+  "label_b": "H1 2026",
+  "window_a": [
+    "2025-07-01",
+    "2025-12-31"
+  ],
+  "window_b": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "papers_a": 524,
+  "papers_b": 289,
+  "top_n": 100,
+  "overlap": 75,
+  "a_only_count": 25,
+  "b_only_count": 25,
+  "top_a": [
+    {
+      "key": "arxiv:2212.04356",
+      "rate": 0.229,
+      "title": "Robust speech recognition via large-scale weak supervision",
+      "year": 2022,
+      "rank": 1
+    },
+    {
+      "key": "arxiv:2210.13438",
+      "rate": 0.2176,
+      "title": "High fidelity neural audio compression",
+      "year": 2022,
+      "rank": 2
+    },
+    {
+      "key": "arxiv:2410.00037",
+      "rate": 0.208,
+      "title": "Moshi: a speechtext foundation model for real-time dialogue",
+      "year": 2024,
+      "rank": 3
+    },
+    {
+      "key": "arxiv:2204.02152",
+      "rate": 0.2023,
+      "title": "Utmos: Utokyo-sarulab system for voicemos challenge 2022",
+      "year": 2022,
+      "rank": 4
+    },
+    {
+      "key": "arxiv:1904.02882",
+      "rate": 0.1927,
+      "title": "Libritts: A corpus derived from librispeech for text-to-speech",
+      "year": 2019,
+      "rank": 5
+    },
+    {
+      "key": "arxiv:2010.05646",
+      "rate": 0.1813,
+      "title": "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis",
+      "year": 2010,
+      "rank": 6
+    },
+    {
+      "key": "arxiv:2403.03100",
+      "rate": 0.1565,
+      "title": "NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models",
+      "year": 2024,
+      "rank": 7
+    },
+    {
+      "key": "arxiv:2301.02111",
+      "rate": 0.1508,
+      "title": "Neural codec language models are zero-shot text to speech synthesizers",
+      "year": 2023,
+      "rank": 8
+    },
+    {
+      "key": "arxiv:2106.07447",
+      "rate": 0.1469,
+      "title": "Hubert: Self-supervised speech representation learning by masked prediction of hidden units",
+      "year": 2021,
+      "rank": 9
+    },
+    {
+      "key": "arxiv:2110.13900",
+      "rate": 0.1412,
+      "title": "Wavlm: Large-scale self-supervised pre-training for full stack speech processing",
+      "year": 2021,
+      "rank": 10
+    },
+    {
+      "key": "arxiv:2006.04558",
+      "rate": 0.1279,
+      "title": "Fastspeech 2: Fast and high-quality end-to-end text to speech",
+      "year": 2006,
+      "rank": 11
+    },
+    {
+      "key": "arxiv:2412.10117",
+      "rate": 0.1221,
+      "title": "Cosyvoice 2: Scalable streaming speech synthesis with large language models",
+      "year": 2024,
+      "rank": 12
+    },
+    {
+      "key": "arxiv:2412.02612",
+      "rate": 0.1145,
+      "title": "Glm-4-voice: Towards intelligent and human-like endto-end spoken chatbot",
+      "year": 2024,
+      "rank": 13
+    },
+    {
+      "key": "doi:10.1109/TASLP.2021.3129994",
+      "rate": 0.1145,
+      "title": "SoundStream: An End-to-End Neural Audio Codec",
+      "year": 2021,
+      "rank": 14
+    },
+    {
+      "key": "arxiv:2503.20215",
+      "rate": 0.1088,
+      "title": "Qwen2. 5-omni technical report",
+      "year": 2025,
+      "rank": 15
+    },
+    {
+      "key": "doi:10.1109/ICASSP.2015.7178964",
+      "rate": 0.1088,
+      "title": "Librispeech: An ASR corpus based on public domain audio books,",
+      "year": 2015,
+      "rank": 16
+    },
+    {
+      "key": "arxiv:2407.05407",
+      "rate": 0.1031,
+      "title": "Cosyvoice: A scalable multilingual zero-shot text-to-speech synthesizer based on supervised semantic tokens",
+      "year": 2024,
+      "rank": 17
+    },
+    {
+      "key": "arxiv:2303.08774",
+      "rate": 0.1011,
+      "title": "Gpt-4 technical report",
+      "year": 2023,
+      "rank": 18
+    },
+    {
+      "key": "arxiv:2406.02430",
+      "rate": 0.1011,
+      "title": "Seedtts: A family of high-quality versatile speech generation models",
+      "year": 2024,
+      "rank": 19
+    },
+    {
+      "key": "arxiv:2503.01710",
+      "rate": 0.0992,
+      "title": "Spark-tts: An efficient llm-based text-to-speech model with single-stream decoupled speech tokens",
+      "year": 2025,
+      "rank": 20
+    },
+    {
+      "key": "arxiv:2210.02747",
+      "rate": 0.0992,
+      "title": "Flow matching for generative modeling",
+      "year": 2022,
+      "rank": 21
+    },
+    {
+      "key": "arxiv:2308.16692",
+      "rate": 0.0973,
+      "title": "Speechtokenizer: Unified speech tokenizer for speech large language models",
+      "year": 2024,
+      "rank": 22
+    },
+    {
+      "key": "arxiv:2306.00814",
+      "rate": 0.0954,
+      "title": "Vocos: Closing the gap between time-domain and fourierbased neural vocoders for high-quality audio synthesis",
+      "year": 2024,
+      "rank": 23
+    },
+    {
+      "key": "arxiv:2407.21783",
+      "rate": 0.0916,
+      "title": "The llama 3 herd of models",
+      "year": 2024,
+      "rank": 24
+    },
+    {
+      "key": "title:highfidelityaudiocompressionwithimprovedrvqgan",
+      "rate": 0.0897,
+      "title": "High-fidelity audio compression with improved rvqgan",
+      "year": 2024,
+      "rank": 25
+    },
+    {
+      "key": "arxiv:2409.00750",
+      "rate": 0.0897,
+      "title": "Maskgct: Zero-shot text-to-speech with masked generative codec transformer",
+      "year": 2024,
+      "rank": 26
+    },
+    {
+      "key": "arxiv:2406.05370",
+      "rate": 0.0878,
+      "title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+      "year": 2024,
+      "rank": 27
+    },
+    {
+      "key": "arxiv:1711.05101",
+      "rate": 0.0859,
+      "title": "Decoupled weight decay regularization",
+      "year": 2017,
+      "rank": 28
+    },
+    {
+      "key": "arxiv:2206.04658",
+      "rate": 0.0859,
+      "title": "Bigvgan: A universal neural vocoder with large-scale training",
+      "year": 2022,
+      "rank": 29
+    },
+    {
+      "key": "arxiv:2410.06885",
+      "rate": 0.0859,
+      "title": "F5-tts: A fairytaler that fakes fluent and faithful speech with flow matching",
+      "year": 2025,
+      "rank": 30
+    },
+    {
+      "key": "arxiv:2407.05361",
+      "rate": 0.084,
+      "title": "Emilia: An extensive, multilingual, and diverse speech dataset for large-scale speech generation",
+      "year": 2024,
+      "rank": 31
+    },
+    {
+      "key": "arxiv:2305.11000",
+      "rate": 0.084,
+      "title": "Speechgpt: Empowering large language models with intrinsic cross-modal conversational abilities",
+      "year": 2023,
+      "rank": 32
+    },
+    {
+      "key": "arxiv:2502.04128",
+      "rate": 0.0821,
+      "title": "Llasa: Scaling train-time and inferencetime compute for llama-based speech synthesis",
+      "year": 2025,
+      "rank": 33
+    },
+    {
+      "key": "arxiv:2411.00774",
+      "rate": 0.0821,
+      "title": "Freeze-omni: A smart and low latency speech-to-speech dialogue model with frozen llm",
+      "year": 2024,
+      "rank": 34
+    },
+    {
+      "key": "arxiv:2403.16973",
+      "rate": 0.0821,
+      "title": "Voicecraft: Zero-shot speech editing and text-to-speech in the wild",
+      "year": 2024,
+      "rank": 35
+    },
+    {
+      "key": "arxiv:2106.06103",
+      "rate": 0.0821,
+      "title": "Conditional variational autoencoder with adversarial learning for end-to-end text-to-speech",
+      "year": 2021,
+      "rank": 36
+    },
+    {
+      "key": "arxiv:2409.06666",
+      "rate": 0.0802,
+      "title": "Llama-omni: Seamless speech interaction with large language models",
+      "year": 2024,
+      "rank": 37
+    },
+    {
+      "key": "arxiv:2312.15185",
+      "rate": 0.0782,
+      "title": "Emotion2vec: Self-supervised pre-training for speech emotion representation",
+      "year": 2023,
+      "rank": 38
+    },
+    {
+      "key": "arxiv:2408.16725",
+      "rate": 0.0782,
+      "title": "Mini-omni: Language models can hear, talk while thinking in streaming",
+      "year": 2024,
+      "rank": 39
+    },
+    {
+      "key": "arxiv:2407.10759",
+      "rate": 0.0782,
+      "title": "Qwen2-audio technical report",
+      "year": 2024,
+      "rank": 40
+    },
+    {
+      "key": "arxiv:1912.06670",
+      "rate": 0.0763,
+      "title": "Common voice: A massively-multilingual speech corpus",
+      "year": 2019,
+      "rank": 41
+    },
+    {
+      "key": "arxiv:2408.16532",
+      "rate": 0.0744,
+      "title": "Wavtokenizer: An efficient acoustic discrete codec tokenizer for audio language modeling",
+      "year": 2025,
+      "rank": 42
+    },
+    {
+      "key": "arxiv:2311.07919",
+      "rate": 0.0725,
+      "title": "Qwen-audio: Advancing universal audio understanding via unified large-scale audio-language models",
+      "year": 2023,
+      "rank": 43
+    },
+    {
+      "key": "arxiv:1706.03762",
+      "rate": 0.0725,
+      "title": "Attention Is All You Need",
+      "year": 2023,
+      "rank": 44
+    },
+    {
+      "key": "arxiv:2209.03143",
+      "rate": 0.0725,
+      "title": "Audiolm: a language modeling approach to audio generation",
+      "year": 2023,
+      "rank": 45
+    },
+    {
+      "key": "arxiv:2005.07143",
+      "rate": 0.0706,
+      "title": "Ecapa-tdnn: Emphasized channel attention, propagation and aggregation in tdnn based speaker verification",
+      "year": 2005,
+      "rank": 46
+    },
+    {
+      "key": "title:wav2vec20aframeworkforselfsupervisedlearningofspeechrepresentations",
+      "rate": 0.0687,
+      "title": "Wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+      "year": 2020,
+      "rank": 47
+    },
+    {
+      "key": "arxiv:2409.03283",
+      "rate": 0.0687,
+      "title": "Fireredtts: A foundation text-to-speech framework for industry-level generative speech applications",
+      "year": null,
+      "rank": 48
+    },
+    {
+      "key": "arxiv:2504.18425",
+      "rate": 0.0687,
+      "title": "Kimiaudio technical report",
+      "year": 2025,
+      "rank": 49
+    },
+    {
+      "key": "arxiv:2302.13971",
+      "rate": 0.0687,
+      "title": "Llama: Open and efficient foundation language models",
+      "year": 2023,
+      "rank": 50
+    },
+    {
+      "key": "arxiv:2406.18009",
+      "rate": 0.0687,
+      "title": "E2 tts: Embarrassingly easy fully non-autoregressive zero-shot tts",
+      "year": 2024,
+      "rank": 51
+    },
+    {
+      "key": "arxiv:2306.15687",
+      "rate": 0.0668,
+      "title": "Voicebox: Text-guided multilingual universal speech generation at scale",
+      "year": 2023,
+      "rank": 52
+    },
+    {
+      "key": "arxiv:2305.02765",
+      "rate": 0.0668,
+      "title": "Hifi-codec: Group-residual vector quantization for high fidelity audio codec",
+      "year": 2023,
+      "rank": 53
+    },
+    {
+      "key": "arxiv:2412.15115",
+      "rate": 0.0649,
+      "title": "Qwen2.5 technical report",
+      "year": 2025,
+      "rank": 54
+    },
+    {
+      "key": "arxiv:1412.6980",
+      "rate": 0.0649,
+      "title": "Adam: A Method for Stochastic Optimization",
+      "year": 2014,
+      "rank": 55
+    },
+    {
+      "key": "arxiv:2304.09116",
+      "rate": 0.0649,
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "year": 2023,
+      "rank": 56
+    },
+    {
+      "key": "arxiv:2505.17589",
+      "rate": 0.063,
+      "title": "Cosyvoice 3: Towards in-the-wild speech generation via scaling-up and post-training",
+      "year": 2025,
+      "rank": 57
+    },
+    {
+      "key": "arxiv:2406.04904",
+      "rate": 0.063,
+      "title": "Xtts: a massively multilingual zero-shot text-to-speech model",
+      "year": 2024,
+      "rank": 58
+    },
+    {
+      "key": "arxiv:2303.03926",
+      "rate": 0.0611,
+      "title": "Speak foreign languages with your own voice: Cross-lingual neural codec language modeling",
+      "year": 2023,
+      "rank": 59
+    },
+    {
+      "key": "arxiv:2409.05377",
+      "rate": 0.0611,
+      "title": "Bigcodec: Pushing the limits of low-bitrate neural speech codec",
+      "year": 2024,
+      "rank": 60
+    },
+    {
+      "key": "title:neuraldiscreterepresentationlearning",
+      "rate": 0.0611,
+      "title": "Neural discrete representation learning",
+      "year": 2017,
+      "rank": 61
+    },
+    {
+      "key": "arxiv:2012.03411",
+      "rate": 0.0592,
+      "title": "Mls: A large-scale multilingual dataset for speech research",
+      "year": 2012,
+      "rank": 62
+    },
+    {
+      "key": "arxiv:2410.21276",
+      "rate": 0.0592,
+      "title": "GPT-4o system card",
+      "year": 2024,
+      "rank": 63
+    },
+    {
+      "key": "arxiv:2501.06282",
+      "rate": 0.0573,
+      "title": "MinMo: A multimodal large language model for seamless voice interaction",
+      "year": 2025,
+      "rank": 64
+    },
+    {
+      "key": "title:perceptualevaluationofspeechqualitypesqanewmethodforspeechqualityassessmentoftelephonenetworksandcodecs",
+      "rate": 0.0553,
+      "title": "Perceptual evaluation of speech quality (pesq)-a new method for speech quality assessment of telephone networks and codecs",
+      "year": 2001,
+      "rank": 65
+    },
+    {
+      "key": "arxiv:2207.12598",
+      "rate": 0.0553,
+      "title": "Classifier-free diffusion guidance",
+      "year": 2022,
+      "rank": 66
+    },
+    {
+      "key": "arxiv:1712.05884",
+      "rate": 0.0534,
+      "title": "Natural TTS synthesis by conditioning wavenet on mel spectrogram predictions",
+      "year": 2018,
+      "rank": 67
+    },
+    {
+      "key": "arxiv:2112.02418",
+      "rate": 0.0534,
+      "title": "Yourtts: Towards zero-shot multi-speaker tts and zero-shot voice conversion for everyone",
+      "year": 2023,
+      "rank": 68
+    },
+    {
+      "key": "arxiv:2410.17196",
+      "rate": 0.0515,
+      "title": "Voicebench: Benchmarking llm-based voice assistants",
+      "year": null,
+      "rank": 69
+    },
+    {
+      "key": "arxiv:2305.09636",
+      "rate": 0.0515,
+      "title": "Soundstorm: Efficient parallel audio generation",
+      "year": 2023,
+      "rank": 70
+    },
+    {
+      "key": "arxiv:2402.08093",
+      "rate": 0.0515,
+      "title": "BASE TTS: Lessons from building a billion-parameter text-to-speech model on 100k hours of data",
+      "year": 2024,
+      "rank": 71
+    },
+    {
+      "key": "arxiv:2309.03199",
+      "rate": 0.0496,
+      "title": "Matcha-tts: A fast TTS architecture with conditional flow matching",
+      "year": 2023,
+      "rank": 72
+    },
+    {
+      "key": "arxiv:2306.12925",
+      "rate": 0.0496,
+      "title": "Audiopalm: A large language model that can speak and listen",
+      "year": 2023,
+      "rank": 73
+    },
+    {
+      "key": "arxiv:2407.08551",
+      "rate": 0.0496,
+      "title": "Autoregressive speech synthesis without vector quantization",
+      "year": 2024,
+      "rank": 74
+    },
+    {
+      "key": "arxiv:2106.15561",
+      "rate": 0.0477,
+      "title": "A survey on neural speech synthesis",
+      "year": 2021,
+      "rank": 75
+    },
+    {
+      "key": "arxiv:2206.08317",
+      "rate": 0.0477,
+      "title": "Paraformer: Fast and accurate parallel transformer for non-autoregressive end-to-end speech recognition",
+      "year": 2022,
+      "rank": 76
+    },
+    {
+      "key": "arxiv:2407.04051",
+      "rate": 0.0477,
+      "title": "Funaudiollm: Voice understanding and generation foundation models for natural interaction between humans and llms",
+      "year": 2024,
+      "rank": 77
+    },
+    {
+      "key": "arxiv:2312.05187",
+      "rate": 0.0477,
+      "title": "Seamless: Multilingual Expressive and Streaming Speech Translation",
+      "year": 2023,
+      "rank": 78
+    },
+    {
+      "key": "arxiv:2005.08100",
+      "rate": 0.0477,
+      "title": "Conformer: Convolution-augmented transformer for speech recognition",
+      "year": 2005,
+      "rank": 79
+    },
+    {
+      "key": "arxiv:2411.19842",
+      "rate": 0.0458,
+      "title": "Scaling transformers for low-bitrate high-quality speech coding",
+      "year": 2024,
+      "rank": 80
+    },
+    {
+      "key": "title:theljspeechdataset",
+      "rate": 0.0458,
+      "title": "The lj speech dataset",
+      "year": 2017,
+      "rank": 81
+    },
+    {
+      "key": "arxiv:2109.13821",
+      "rate": 0.0439,
+      "title": "Diffusion-based voice conversion with fast maximum likelihood sampling scheme",
+      "year": 2021,
+      "rank": 82
+    },
+    {
+      "key": "arxiv:2106.09685",
+      "rate": 0.0439,
+      "title": "LoRA: Low-rank adaptation of large language models",
+      "year": 2021,
+      "rank": 83
+    },
+    {
+      "key": "arxiv:2502.11946",
+      "rate": 0.0439,
+      "title": "Step-audio: Unified understanding and generation in intelligent speech interaction",
+      "year": 2025,
+      "rank": 84
+    },
+    {
+      "key": "arxiv:2505.09388",
+      "rate": 0.0439,
+      "title": "Qwen3 technical report",
+      "year": 2025,
+      "rank": 85
+    },
+    {
+      "key": "arxiv:2104.00355",
+      "rate": 0.0439,
+      "title": "Speech resynthesis from discrete disentangled self-supervised representations",
+      "year": 2021,
+      "rank": 86
+    },
+    {
+      "key": "arxiv:2412.15649",
+      "rate": 0.042,
+      "title": "Slam-omni: Timbrecontrollable voice interaction system with single-stage training",
+      "year": 2024,
+      "rank": 87
+    },
+    {
+      "key": "arxiv:2402.01912",
+      "rate": 0.042,
+      "title": "Natural Language Guidance of HighFidelity Text-to-Speech with Synthetic Annotations",
+      "year": 2024,
+      "rank": 88
+    },
+    {
+      "key": "arxiv:2402.05755",
+      "rate": 0.042,
+      "title": "SpiRit-LM: Interleaved spoken and written language model",
+      "year": 2024,
+      "rank": 89
+    },
+    {
+      "key": "arxiv:2309.15505",
+      "rate": 0.042,
+      "title": "Finite scalar quantization: Vq-vae made simple",
+      "year": 2023,
+      "rank": 90
+    },
+    {
+      "key": "doi:10.1109/ICASSP49357.2023.10095191",
+      "rate": 0.042,
+      "title": "Freevc: Towards high-quality text-free one-shot  voice  conversion",
+      "year": 2023,
+      "rank": 91
+    },
+    {
+      "key": "doi:10.1109/icassp40776.2020.9052942",
+      "rate": 0.042,
+      "title": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
+      "year": 2020,
+      "rank": 92
+    },
+    {
+      "key": "arxiv:2305.18802",
+      "rate": 0.042,
+      "title": "Libritts-r: A restored multispeaker text-to-speech corpus",
+      "year": 2023,
+      "rank": 93
+    },
+    {
+      "key": "arxiv:2212.09748",
+      "rate": 0.042,
+      "title": "Scalable diffusion models with transformers",
+      "year": 2023,
+      "rank": 94
+    },
+    {
+      "key": "arxiv:2310.00704",
+      "rate": 0.042,
+      "title": "Uniaudio: An audio foundation model toward universal audio generation",
+      "year": 2024,
+      "rank": 95
+    },
+    {
+      "key": "arxiv:1609.03499",
+      "rate": 0.042,
+      "title": "Wavenet: A generative model for raw audio",
+      "year": 2016,
+      "rank": 96
+    },
+    {
+      "key": "arxiv:2411.13577",
+      "rate": 0.042,
+      "title": "WavChat: A survey of spoken dialogue models",
+      "year": 2024,
+      "rank": 97
+    },
+    {
+      "key": "arxiv:2305.07243",
+      "rate": 0.0401,
+      "title": "Better speech synthesis through scaling",
+      "year": 2023,
+      "rank": 98
+    },
+    {
+      "key": "arxiv:2502.17239",
+      "rate": 0.0401,
+      "title": "Baichuanaudio: A unified framework for end-to-end speech interaction",
+      "year": 2025,
+      "rank": 99
+    },
+    {
+      "key": "arxiv:2410.11190",
+      "rate": 0.0401,
+      "title": "Mini-omni2: Towards open-source gpt4o with vision, speech and duplex capabilities",
+      "year": 2024,
+      "rank": 100
+    }
+  ],
+  "top_b": [
+    {
+      "key": "arxiv:2410.00037",
+      "rate": 0.308,
+      "title": "Moshi: a speechtext foundation model for real-time dialogue",
+      "year": 2024,
+      "rank": 1
+    },
+    {
+      "key": "arxiv:2212.04356",
+      "rate": 0.2422,
+      "title": "Robust speech recognition via large-scale weak supervision",
+      "year": 2022,
+      "rank": 2
+    },
+    {
+      "key": "arxiv:2503.20215",
+      "rate": 0.2042,
+      "title": "Qwen2. 5-omni technical report",
+      "year": 2025,
+      "rank": 3
+    },
+    {
+      "key": "arxiv:2210.13438",
+      "rate": 0.1834,
+      "title": "High fidelity neural audio compression",
+      "year": 2022,
+      "rank": 4
+    },
+    {
+      "key": "arxiv:2204.02152",
+      "rate": 0.1799,
+      "title": "Utmos: Utokyo-sarulab system for voicemos challenge 2022",
+      "year": 2022,
+      "rank": 5
+    },
+    {
+      "key": "arxiv:2504.18425",
+      "rate": 0.1696,
+      "title": "Kimiaudio technical report",
+      "year": 2025,
+      "rank": 6
+    },
+    {
+      "key": "arxiv:2505.17589",
+      "rate": 0.1626,
+      "title": "Cosyvoice 3: Towards in-the-wild speech generation via scaling-up and post-training",
+      "year": 2025,
+      "rank": 7
+    },
+    {
+      "key": "arxiv:2503.01710",
+      "rate": 0.1592,
+      "title": "Spark-tts: An efficient llm-based text-to-speech model with single-stream decoupled speech tokens",
+      "year": 2025,
+      "rank": 8
+    },
+    {
+      "key": "arxiv:2412.02612",
+      "rate": 0.1592,
+      "title": "Glm-4-voice: Towards intelligent and human-like endto-end spoken chatbot",
+      "year": 2024,
+      "rank": 9
+    },
+    {
+      "key": "arxiv:2110.13900",
+      "rate": 0.1557,
+      "title": "Wavlm: Large-scale self-supervised pre-training for full stack speech processing",
+      "year": 2021,
+      "rank": 10
+    },
+    {
+      "key": "arxiv:1904.02882",
+      "rate": 0.1488,
+      "title": "Libritts: A corpus derived from librispeech for text-to-speech",
+      "year": 2019,
+      "rank": 11
+    },
+    {
+      "key": "arxiv:2407.10759",
+      "rate": 0.1384,
+      "title": "Qwen2-audio technical report",
+      "year": 2024,
+      "rank": 12
+    },
+    {
+      "key": "arxiv:2409.00750",
+      "rate": 0.1315,
+      "title": "Maskgct: Zero-shot text-to-speech with masked generative codec transformer",
+      "year": 2024,
+      "rank": 13
+    },
+    {
+      "key": "arxiv:2407.21783",
+      "rate": 0.1073,
+      "title": "The llama 3 herd of models",
+      "year": 2024,
+      "rank": 14
+    },
+    {
+      "key": "arxiv:2505.09388",
+      "rate": 0.1073,
+      "title": "Qwen3 technical report",
+      "year": 2025,
+      "rank": 15
+    },
+    {
+      "key": "arxiv:2502.04128",
+      "rate": 0.1073,
+      "title": "Llasa: Scaling train-time and inferencetime compute for llama-based speech synthesis",
+      "year": 2025,
+      "rank": 16
+    },
+    {
+      "key": "arxiv:2410.21276",
+      "rate": 0.1038,
+      "title": "GPT-4o system card",
+      "year": 2024,
+      "rank": 17
+    },
+    {
+      "key": "arxiv:2408.16725",
+      "rate": 0.0969,
+      "title": "Mini-omni: Language models can hear, talk while thinking in streaming",
+      "year": 2024,
+      "rank": 18
+    },
+    {
+      "key": "arxiv:2412.15115",
+      "rate": 0.0934,
+      "title": "Qwen2.5 technical report",
+      "year": 2025,
+      "rank": 19
+    },
+    {
+      "key": "arxiv:2403.03100",
+      "rate": 0.0934,
+      "title": "NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models",
+      "year": 2024,
+      "rank": 20
+    },
+    {
+      "key": "arxiv:2507.06261",
+      "rate": 0.0934,
+      "title": "Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities",
+      "year": 2025,
+      "rank": 21
+    },
+    {
+      "key": "arxiv:2010.05646",
+      "rate": 0.09,
+      "title": "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis",
+      "year": 2010,
+      "rank": 22
+    },
+    {
+      "key": "doi:10.1109/TASLP.2021.3129994",
+      "rate": 0.09,
+      "title": "SoundStream: An End-to-End Neural Audio Codec",
+      "year": 2021,
+      "rank": 23
+    },
+    {
+      "key": "arxiv:2410.17196",
+      "rate": 0.09,
+      "title": "Voicebench: Benchmarking llm-based voice assistants",
+      "year": null,
+      "rank": 24
+    },
+    {
+      "key": "arxiv:2106.07447",
+      "rate": 0.0865,
+      "title": "Hubert: Self-supervised speech representation learning by masked prediction of hidden units",
+      "year": 2021,
+      "rank": 25
+    },
+    {
+      "key": "arxiv:1711.05101",
+      "rate": 0.083,
+      "title": "Decoupled weight decay regularization",
+      "year": 2017,
+      "rank": 26
+    },
+    {
+      "key": "arxiv:2411.01156",
+      "rate": 0.0796,
+      "title": "Fish-speech: Leveraging large language models for advanced multilingual text-to-speech synthesis",
+      "year": 2024,
+      "rank": 27
+    },
+    {
+      "key": "arxiv:2410.06885",
+      "rate": 0.0796,
+      "title": "F5-tts: A fairytaler that fakes fluent and faithful speech with flow matching",
+      "year": 2025,
+      "rank": 28
+    },
+    {
+      "key": "arxiv:2408.16532",
+      "rate": 0.0796,
+      "title": "Wavtokenizer: An efficient acoustic discrete codec tokenizer for audio language modeling",
+      "year": 2025,
+      "rank": 29
+    },
+    {
+      "key": "doi:10.1109/ICASSP.2015.7178964",
+      "rate": 0.0796,
+      "title": "Librispeech: An ASR corpus based on public domain audio books,",
+      "year": 2015,
+      "rank": 30
+    },
+    {
+      "key": "title:highfidelityaudiocompressionwithimprovedrvqgan",
+      "rate": 0.0796,
+      "title": "High-fidelity audio compression with improved rvqgan",
+      "year": 2024,
+      "rank": 31
+    },
+    {
+      "key": "arxiv:2507.16632",
+      "rate": 0.0796,
+      "title": "Step-audio 2 technical report",
+      "year": 2025,
+      "rank": 32
+    },
+    {
+      "key": "arxiv:2409.06666",
+      "rate": 0.0727,
+      "title": "Llama-omni: Seamless speech interaction with large language models",
+      "year": 2024,
+      "rank": 33
+    },
+    {
+      "key": "arxiv:2210.02747",
+      "rate": 0.0727,
+      "title": "Flow matching for generative modeling",
+      "year": 2022,
+      "rank": 34
+    },
+    {
+      "key": "arxiv:2308.16692",
+      "rate": 0.0692,
+      "title": "Speechtokenizer: Unified speech tokenizer for speech large language models",
+      "year": 2024,
+      "rank": 35
+    },
+    {
+      "key": "arxiv:2006.04558",
+      "rate": 0.0692,
+      "title": "Fastspeech 2: Fast and high-quality end-to-end text to speech",
+      "year": 2006,
+      "rank": 36
+    },
+    {
+      "key": "arxiv:2209.03143",
+      "rate": 0.0692,
+      "title": "Audiolm: a language modeling approach to audio generation",
+      "year": 2023,
+      "rank": 37
+    },
+    {
+      "key": "arxiv:2502.11946",
+      "rate": 0.0692,
+      "title": "Step-audio: Unified understanding and generation in intelligent speech interaction",
+      "year": 2025,
+      "rank": 38
+    },
+    {
+      "key": "arxiv:2303.08774",
+      "rate": 0.0657,
+      "title": "Gpt-4 technical report",
+      "year": 2023,
+      "rank": 39
+    },
+    {
+      "key": "arxiv:2501.12948",
+      "rate": 0.0657,
+      "title": "Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning",
+      "year": 2025,
+      "rank": 40
+    },
+    {
+      "key": "arxiv:2409.05377",
+      "rate": 0.0657,
+      "title": "Bigcodec: Pushing the limits of low-bitrate neural speech codec",
+      "year": 2024,
+      "rank": 41
+    },
+    {
+      "key": "arxiv:2402.03300",
+      "rate": 0.0657,
+      "title": "Deepseekmath: Pushing the limits of mathematical reasoning in open language models",
+      "year": 2024,
+      "rank": 42
+    },
+    {
+      "key": "arxiv:2411.00774",
+      "rate": 0.0657,
+      "title": "Freeze-omni: A smart and low latency speech-to-speech dialogue model with frozen llm",
+      "year": 2024,
+      "rank": 43
+    },
+    {
+      "key": "arxiv:2411.13577",
+      "rate": 0.0623,
+      "title": "WavChat: A survey of spoken dialogue models",
+      "year": 2024,
+      "rank": 44
+    },
+    {
+      "key": "arxiv:2504.08528",
+      "rate": 0.0623,
+      "title": "On the landscape of spoken language models: A comprehensive survey",
+      "year": 2025,
+      "rank": 45
+    },
+    {
+      "key": "arxiv:2406.05370",
+      "rate": 0.0588,
+      "title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+      "year": 2024,
+      "rank": 46
+    },
+    {
+      "key": "arxiv:2312.15185",
+      "rate": 0.0588,
+      "title": "Emotion2vec: Self-supervised pre-training for speech emotion representation",
+      "year": 2023,
+      "rank": 47
+    },
+    {
+      "key": "arxiv:2306.00814",
+      "rate": 0.0588,
+      "title": "Vocos: Closing the gap between time-domain and fourierbased neural vocoders for high-quality audio synthesis",
+      "year": 2024,
+      "rank": 48
+    },
+    {
+      "key": "arxiv:2412.19437",
+      "rate": 0.0588,
+      "title": "Deepseek-v3 technical report",
+      "year": 2024,
+      "rank": 49
+    },
+    {
+      "key": "arxiv:2407.05361",
+      "rate": 0.0588,
+      "title": "Emilia: An extensive, multilingual, and diverse speech dataset for large-scale speech generation",
+      "year": 2024,
+      "rank": 50
+    },
+    {
+      "key": "arxiv:2005.07143",
+      "rate": 0.0588,
+      "title": "Ecapa-tdnn: Emphasized channel attention, propagation and aggregation in tdnn based speaker verification",
+      "year": 2005,
+      "rank": 51
+    },
+    {
+      "key": "arxiv:2306.15687",
+      "rate": 0.0554,
+      "title": "Voicebox: Text-guided multilingual universal speech generation at scale",
+      "year": 2023,
+      "rank": 52
+    },
+    {
+      "key": "arxiv:2106.06103",
+      "rate": 0.0554,
+      "title": "Conditional variational autoencoder with adversarial learning for end-to-end text-to-speech",
+      "year": 2021,
+      "rank": 53
+    },
+    {
+      "key": "arxiv:2301.02111",
+      "rate": 0.0554,
+      "title": "Neural codec language models are zero-shot text to speech synthesizers",
+      "year": 2023,
+      "rank": 54
+    },
+    {
+      "key": "arxiv:2505.07916",
+      "rate": 0.0554,
+      "title": "MiniMax-Speech: Intrinsic zero-shot text-to-speech with a learnable speaker encoder",
+      "year": 2025,
+      "rank": 55
+    },
+    {
+      "key": "arxiv:2406.04904",
+      "rate": 0.0554,
+      "title": "Xtts: a massively multilingual zero-shot text-to-speech model",
+      "year": 2024,
+      "rank": 56
+    },
+    {
+      "key": "arxiv:2407.04051",
+      "rate": 0.0519,
+      "title": "Funaudiollm: Voice understanding and generation foundation models for natural interaction between humans and llms",
+      "year": 2024,
+      "rank": 57
+    },
+    {
+      "key": "arxiv:2106.06909",
+      "rate": 0.0519,
+      "title": "Gigaspeech: An evolving, multidomain asr corpus with 10,000 hours of transcribed audio",
+      "year": 2021,
+      "rank": 58
+    },
+    {
+      "key": "arxiv:2409.03283",
+      "rate": 0.0519,
+      "title": "Fireredtts: A foundation text-to-speech framework for industry-level generative speech applications",
+      "year": null,
+      "rank": 59
+    },
+    {
+      "key": "arxiv:2501.06282",
+      "rate": 0.0519,
+      "title": "MinMo: A multimodal large language model for seamless voice interaction",
+      "year": 2025,
+      "rank": 60
+    },
+    {
+      "key": "arxiv:2206.04658",
+      "rate": 0.0519,
+      "title": "Bigvgan: A universal neural vocoder with large-scale training",
+      "year": 2022,
+      "rank": 61
+    },
+    {
+      "key": "arxiv:1912.06670",
+      "rate": 0.0519,
+      "title": "Common voice: A massively-multilingual speech corpus",
+      "year": 2019,
+      "rank": 62
+    },
+    {
+      "key": "arxiv:2305.11000",
+      "rate": 0.0519,
+      "title": "Speechgpt: Empowering large language models with intrinsic cross-modal conversational abilities",
+      "year": 2023,
+      "rank": 63
+    },
+    {
+      "key": "arxiv:2305.18802",
+      "rate": 0.0484,
+      "title": "Libritts-r: A restored multispeaker text-to-speech corpus",
+      "year": 2023,
+      "rank": 64
+    },
+    {
+      "key": "arxiv:2411.19842",
+      "rate": 0.0484,
+      "title": "Scaling transformers for low-bitrate high-quality speech coding",
+      "year": 2024,
+      "rank": 65
+    },
+    {
+      "key": "arxiv:2305.09636",
+      "rate": 0.0484,
+      "title": "Soundstorm: Efficient parallel audio generation",
+      "year": 2023,
+      "rank": 66
+    },
+    {
+      "key": "arxiv:2402.01912",
+      "rate": 0.0484,
+      "title": "Natural Language Guidance of HighFidelity Text-to-Speech with Synthetic Annotations",
+      "year": 2024,
+      "rank": 67
+    },
+    {
+      "key": "arxiv:2502.06490",
+      "rate": 0.0484,
+      "title": "Recent advances in discrete speech tokens: A review",
+      "year": 2025,
+      "rank": 68
+    },
+    {
+      "key": "arxiv:2106.09685",
+      "rate": 0.0484,
+      "title": "LoRA: Low-rank adaptation of large language models",
+      "year": 2021,
+      "rank": 69
+    },
+    {
+      "key": "arxiv:1703.10135",
+      "rate": 0.045,
+      "title": "Tacotron: Towards endto-end speech synthesis",
+      "year": 2017,
+      "rank": 70
+    },
+    {
+      "key": "arxiv:1609.03499",
+      "rate": 0.045,
+      "title": "Wavenet: A generative model for raw audio",
+      "year": 2016,
+      "rank": 71
+    },
+    {
+      "key": "arxiv:2305.07243",
+      "rate": 0.045,
+      "title": "Better speech synthesis through scaling",
+      "year": 2023,
+      "rank": 72
+    },
+    {
+      "key": "arxiv:2502.17239",
+      "rate": 0.045,
+      "title": "Baichuanaudio: A unified framework for end-to-end speech interaction",
+      "year": 2025,
+      "rank": 73
+    },
+    {
+      "key": "arxiv:2406.18009",
+      "rate": 0.045,
+      "title": "E2 tts: Embarrassingly easy fully non-autoregressive zero-shot tts",
+      "year": 2024,
+      "rank": 74
+    },
+    {
+      "key": "arxiv:2506.13053",
+      "rate": 0.045,
+      "title": "ZipVoice: Fast and high-quality zero-shot text-tospeech with flow matching",
+      "year": 2025,
+      "rank": 75
+    },
+    {
+      "key": "arxiv:2311.07919",
+      "rate": 0.045,
+      "title": "Qwen-audio: Advancing universal audio understanding via unified large-scale audio-language models",
+      "year": 2023,
+      "rank": 76
+    },
+    {
+      "key": "arxiv:2505.02625",
+      "rate": 0.045,
+      "title": "Llama-omni2: Llm-based real-time spoken chatbot with autoregressive streaming speech synthesis",
+      "year": 2025,
+      "rank": 77
+    },
+    {
+      "key": "arxiv:2010.15258",
+      "rate": 0.045,
+      "title": "Dnsmos: A non-intrusive perceptual objective speech quality metric to evaluate noise suppressors",
+      "year": 2021,
+      "rank": 78
+    },
+    {
+      "key": "arxiv:2304.09116",
+      "rate": 0.0415,
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "year": 2023,
+      "rank": 79
+    },
+    {
+      "key": "arxiv:2105.06337",
+      "rate": 0.0415,
+      "title": "Grad-tts: A diffusion probabilistic model for text-to-speech",
+      "year": 2021,
+      "rank": 80
+    },
+    {
+      "key": "title:wav2vec20aframeworkforselfsupervisedlearningofspeechrepresentations",
+      "rate": 0.0415,
+      "title": "Wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+      "year": 2020,
+      "rank": 81
+    },
+    {
+      "key": "arxiv:1706.03762",
+      "rate": 0.0415,
+      "title": "Attention Is All You Need",
+      "year": 2023,
+      "rank": 82
+    },
+    {
+      "key": "arxiv:2104.09494",
+      "rate": 0.0415,
+      "title": "Nisqa: A deep cnn-self-attention model for multidimensional speech quality prediction with crowdsourced datasets",
+      "year": 2021,
+      "rank": 83
+    },
+    {
+      "key": "title:neuraldiscreterepresentationlearning",
+      "rate": 0.0415,
+      "title": "Neural discrete representation learning",
+      "year": 2017,
+      "rank": 84
+    },
+    {
+      "key": "arxiv:2402.05755",
+      "rate": 0.0415,
+      "title": "SpiRit-LM: Interleaved spoken and written language model",
+      "year": 2024,
+      "rank": 85
+    },
+    {
+      "key": "arxiv:2301.12503",
+      "rate": 0.0415,
+      "title": "Audioldm: Text-to-audio generation with latent diffusion models",
+      "year": 2023,
+      "rank": 86
+    },
+    {
+      "key": "arxiv:2207.12598",
+      "rate": 0.0415,
+      "title": "Classifier-free diffusion guidance",
+      "year": 2022,
+      "rank": 87
+    },
+    {
+      "key": "arxiv:1712.05884",
+      "rate": 0.0381,
+      "title": "Natural TTS synthesis by conditioning wavenet on mel spectrogram predictions",
+      "year": 2018,
+      "rank": 88
+    },
+    {
+      "key": "arxiv:2303.03926",
+      "rate": 0.0381,
+      "title": "Speak foreign languages with your own voice: Cross-lingual neural codec language modeling",
+      "year": 2023,
+      "rank": 89
+    },
+    {
+      "key": "doi:10.21437/Interspeech.2017-1386",
+      "rate": 0.0381,
+      "title": "Montreal Forced Aligner: Trainable Text-Speech Alignment Using Kaldi",
+      "year": 2017,
+      "rank": 90
+    },
+    {
+      "key": "arxiv:2312.05187",
+      "rate": 0.0381,
+      "title": "Seamless: Multilingual Expressive and Streaming Speech Translation",
+      "year": 2023,
+      "rank": 91
+    },
+    {
+      "key": "arxiv:2411.18803",
+      "rate": 0.0381,
+      "title": "TS3Codec: Transformer-Based simple streaming single codec",
+      "year": 2024,
+      "rank": 92
+    },
+    {
+      "key": "arxiv:2409.09305",
+      "rate": 0.0381,
+      "title": "The t05 system for the voicemos challenge 2024: Transfer learning from deep image classifier to naturalness mos prediction of high-quality synthetic speech",
+      "year": 2024,
+      "rank": 93
+    },
+    {
+      "key": "arxiv:2502.05512",
+      "rate": 0.0381,
+      "title": "Indextts: An industrial-level controllable and efficient zero-shot text-to-speech system",
+      "year": 2025,
+      "rank": 94
+    },
+    {
+      "key": "arxiv:2506.10274",
+      "rate": 0.0381,
+      "title": "Discrete Audio Tokens: More Than a Survey!",
+      "year": 2025,
+      "rank": 95
+    },
+    {
+      "key": "arxiv:2306.12925",
+      "rate": 0.0381,
+      "title": "Audiopalm: A large language model that can speak and listen",
+      "year": 2023,
+      "rank": 96
+    },
+    {
+      "key": "arxiv:2502.07243",
+      "rate": 0.0381,
+      "title": "Vevo: Controllable zero-shot voice imitation with self-supervised disentanglement",
+      "year": 2025,
+      "rank": 97
+    },
+    {
+      "key": "arxiv:2507.08128",
+      "rate": 0.0381,
+      "title": "Audio flamingo 3: Advancing audio intelligence with fully open large audio language models",
+      "year": 2025,
+      "rank": 98
+    },
+    {
+      "key": "arxiv:2506.16381",
+      "rate": 0.0346,
+      "title": "Instructttseval: Benchmarking complex natural-language instruction following in text-tospeech systems",
+      "year": 2025,
+      "rank": 99
+    },
+    {
+      "key": "arxiv:2309.15505",
+      "rate": 0.0346,
+      "title": "Finite scalar quantization: Vq-vae made simple",
+      "year": 2023,
+      "rank": 100
+    }
+  ],
+  "in_both": [
+    {
+      "key": "arxiv:2505.17589",
+      "title": "Cosyvoice 3: Towards in-the-wild speech generation via scaling-up and post-training",
+      "year": 2025,
+      "rank_a": 57,
+      "rank_b": 7,
+      "rate_a": 0.063,
+      "rate_b": 0.1626,
+      "ratio": 2.582
+    },
+    {
+      "key": "arxiv:2504.18425",
+      "title": "Kimiaudio technical report",
+      "year": 2025,
+      "rank_a": 49,
+      "rank_b": 6,
+      "rate_a": 0.0687,
+      "rate_b": 0.1696,
+      "ratio": 2.468
+    },
+    {
+      "key": "arxiv:2505.09388",
+      "title": "Qwen3 technical report",
+      "year": 2025,
+      "rank_a": 85,
+      "rank_b": 15,
+      "rate_a": 0.0439,
+      "rate_b": 0.1073,
+      "ratio": 2.444
+    },
+    {
+      "key": "arxiv:2503.20215",
+      "title": "Qwen2. 5-omni technical report",
+      "year": 2025,
+      "rank_a": 15,
+      "rank_b": 3,
+      "rate_a": 0.1088,
+      "rate_b": 0.2042,
+      "ratio": 1.877
+    },
+    {
+      "key": "arxiv:2407.10759",
+      "title": "Qwen2-audio technical report",
+      "year": 2024,
+      "rank_a": 40,
+      "rank_b": 12,
+      "rate_a": 0.0782,
+      "rate_b": 0.1384,
+      "ratio": 1.769
+    },
+    {
+      "key": "arxiv:2410.21276",
+      "title": "GPT-4o system card",
+      "year": 2024,
+      "rank_a": 63,
+      "rank_b": 17,
+      "rate_a": 0.0592,
+      "rate_b": 0.1038,
+      "ratio": 1.755
+    },
+    {
+      "key": "arxiv:2410.17196",
+      "title": "Voicebench: Benchmarking llm-based voice assistants",
+      "year": null,
+      "rank_a": 69,
+      "rank_b": 24,
+      "rate_a": 0.0515,
+      "rate_b": 0.09,
+      "ratio": 1.746
+    },
+    {
+      "key": "arxiv:2503.01710",
+      "title": "Spark-tts: An efficient llm-based text-to-speech model with single-stream decoupled speech tokens",
+      "year": 2025,
+      "rank_a": 20,
+      "rank_b": 8,
+      "rate_a": 0.0992,
+      "rate_b": 0.1592,
+      "ratio": 1.604
+    },
+    {
+      "key": "arxiv:2502.11946",
+      "title": "Step-audio: Unified understanding and generation in intelligent speech interaction",
+      "year": 2025,
+      "rank_a": 84,
+      "rank_b": 38,
+      "rate_a": 0.0439,
+      "rate_b": 0.0692,
+      "ratio": 1.577
+    },
+    {
+      "key": "arxiv:2411.13577",
+      "title": "WavChat: A survey of spoken dialogue models",
+      "year": 2024,
+      "rank_a": 97,
+      "rank_b": 44,
+      "rate_a": 0.042,
+      "rate_b": 0.0623,
+      "ratio": 1.483
+    },
+    {
+      "key": "arxiv:2410.00037",
+      "title": "Moshi: a speechtext foundation model for real-time dialogue",
+      "year": 2024,
+      "rank_a": 3,
+      "rank_b": 1,
+      "rate_a": 0.208,
+      "rate_b": 0.308,
+      "ratio": 1.48
+    },
+    {
+      "key": "arxiv:2409.00750",
+      "title": "Maskgct: Zero-shot text-to-speech with masked generative codec transformer",
+      "year": 2024,
+      "rank_a": 26,
+      "rank_b": 13,
+      "rate_a": 0.0897,
+      "rate_b": 0.1315,
+      "ratio": 1.466
+    },
+    {
+      "key": "arxiv:2412.15115",
+      "title": "Qwen2.5 technical report",
+      "year": 2025,
+      "rank_a": 54,
+      "rank_b": 19,
+      "rate_a": 0.0649,
+      "rate_b": 0.0934,
+      "ratio": 1.44
+    },
+    {
+      "key": "arxiv:2412.02612",
+      "title": "Glm-4-voice: Towards intelligent and human-like endto-end spoken chatbot",
+      "year": 2024,
+      "rank_a": 13,
+      "rank_b": 9,
+      "rate_a": 0.1145,
+      "rate_b": 0.1592,
+      "ratio": 1.39
+    },
+    {
+      "key": "arxiv:2502.04128",
+      "title": "Llasa: Scaling train-time and inferencetime compute for llama-based speech synthesis",
+      "year": 2025,
+      "rank_a": 33,
+      "rank_b": 16,
+      "rate_a": 0.0821,
+      "rate_b": 0.1073,
+      "ratio": 1.307
+    },
+    {
+      "key": "arxiv:2408.16725",
+      "title": "Mini-omni: Language models can hear, talk while thinking in streaming",
+      "year": 2024,
+      "rank_a": 39,
+      "rank_b": 18,
+      "rate_a": 0.0782,
+      "rate_b": 0.0969,
+      "ratio": 1.238
+    },
+    {
+      "key": "arxiv:2407.21783",
+      "title": "The llama 3 herd of models",
+      "year": 2024,
+      "rank_a": 24,
+      "rank_b": 14,
+      "rate_a": 0.0916,
+      "rate_b": 0.1073,
+      "ratio": 1.171
+    },
+    {
+      "key": "arxiv:2305.18802",
+      "title": "Libritts-r: A restored multispeaker text-to-speech corpus",
+      "year": 2023,
+      "rank_a": 93,
+      "rank_b": 64,
+      "rate_a": 0.042,
+      "rate_b": 0.0484,
+      "ratio": 1.154
+    },
+    {
+      "key": "arxiv:2402.01912",
+      "title": "Natural Language Guidance of HighFidelity Text-to-Speech with Synthetic Annotations",
+      "year": 2024,
+      "rank_a": 88,
+      "rank_b": 67,
+      "rate_a": 0.042,
+      "rate_b": 0.0484,
+      "ratio": 1.154
+    },
+    {
+      "key": "arxiv:2305.07243",
+      "title": "Better speech synthesis through scaling",
+      "year": 2023,
+      "rank_a": 98,
+      "rank_b": 72,
+      "rate_a": 0.0401,
+      "rate_b": 0.045,
+      "ratio": 1.122
+    },
+    {
+      "key": "arxiv:2502.17239",
+      "title": "Baichuanaudio: A unified framework for end-to-end speech interaction",
+      "year": 2025,
+      "rank_a": 99,
+      "rank_b": 73,
+      "rate_a": 0.0401,
+      "rate_b": 0.045,
+      "ratio": 1.122
+    },
+    {
+      "key": "arxiv:2106.09685",
+      "title": "LoRA: Low-rank adaptation of large language models",
+      "year": 2021,
+      "rank_a": 83,
+      "rank_b": 69,
+      "rate_a": 0.0439,
+      "rate_b": 0.0484,
+      "ratio": 1.104
+    },
+    {
+      "key": "arxiv:2110.13900",
+      "title": "Wavlm: Large-scale self-supervised pre-training for full stack speech processing",
+      "year": 2021,
+      "rank_a": 10,
+      "rank_b": 10,
+      "rate_a": 0.1412,
+      "rate_b": 0.1557,
+      "ratio": 1.103
+    },
+    {
+      "key": "arxiv:2407.04051",
+      "title": "Funaudiollm: Voice understanding and generation foundation models for natural interaction between humans and llms",
+      "year": 2024,
+      "rank_a": 77,
+      "rank_b": 57,
+      "rate_a": 0.0477,
+      "rate_b": 0.0519,
+      "ratio": 1.088
+    },
+    {
+      "key": "arxiv:2409.05377",
+      "title": "Bigcodec: Pushing the limits of low-bitrate neural speech codec",
+      "year": 2024,
+      "rank_a": 60,
+      "rank_b": 41,
+      "rate_a": 0.0611,
+      "rate_b": 0.0657,
+      "ratio": 1.077
+    },
+    {
+      "key": "arxiv:1609.03499",
+      "title": "Wavenet: A generative model for raw audio",
+      "year": 2016,
+      "rank_a": 96,
+      "rank_b": 71,
+      "rate_a": 0.042,
+      "rate_b": 0.045,
+      "ratio": 1.071
+    },
+    {
+      "key": "arxiv:2408.16532",
+      "title": "Wavtokenizer: An efficient acoustic discrete codec tokenizer for audio language modeling",
+      "year": 2025,
+      "rank_a": 42,
+      "rank_b": 29,
+      "rate_a": 0.0744,
+      "rate_b": 0.0796,
+      "ratio": 1.069
+    },
+    {
+      "key": "arxiv:2212.04356",
+      "title": "Robust speech recognition via large-scale weak supervision",
+      "year": 2022,
+      "rank_a": 1,
+      "rank_b": 2,
+      "rate_a": 0.229,
+      "rate_b": 0.2422,
+      "ratio": 1.058
+    },
+    {
+      "key": "arxiv:2411.19842",
+      "title": "Scaling transformers for low-bitrate high-quality speech coding",
+      "year": 2024,
+      "rank_a": 80,
+      "rank_b": 65,
+      "rate_a": 0.0458,
+      "rate_b": 0.0484,
+      "ratio": 1.058
+    },
+    {
+      "key": "arxiv:2402.05755",
+      "title": "SpiRit-LM: Interleaved spoken and written language model",
+      "year": 2024,
+      "rank_a": 89,
+      "rank_b": 85,
+      "rate_a": 0.042,
+      "rate_b": 0.0415,
+      "ratio": 0.989
+    },
+    {
+      "key": "arxiv:1711.05101",
+      "title": "Decoupled weight decay regularization",
+      "year": 2017,
+      "rank_a": 28,
+      "rank_b": 26,
+      "rate_a": 0.0859,
+      "rate_b": 0.083,
+      "ratio": 0.967
+    },
+    {
+      "key": "arxiv:2209.03143",
+      "title": "Audiolm: a language modeling approach to audio generation",
+      "year": 2023,
+      "rank_a": 45,
+      "rank_b": 37,
+      "rate_a": 0.0725,
+      "rate_b": 0.0692,
+      "ratio": 0.954
+    },
+    {
+      "key": "arxiv:2305.09636",
+      "title": "Soundstorm: Efficient parallel audio generation",
+      "year": 2023,
+      "rank_a": 70,
+      "rank_b": 66,
+      "rate_a": 0.0515,
+      "rate_b": 0.0484,
+      "ratio": 0.94
+    },
+    {
+      "key": "arxiv:2410.06885",
+      "title": "F5-tts: A fairytaler that fakes fluent and faithful speech with flow matching",
+      "year": 2025,
+      "rank_a": 30,
+      "rank_b": 28,
+      "rate_a": 0.0859,
+      "rate_b": 0.0796,
+      "ratio": 0.927
+    },
+    {
+      "key": "arxiv:2409.06666",
+      "title": "Llama-omni: Seamless speech interaction with large language models",
+      "year": 2024,
+      "rank_a": 37,
+      "rank_b": 33,
+      "rate_a": 0.0802,
+      "rate_b": 0.0727,
+      "ratio": 0.907
+    },
+    {
+      "key": "arxiv:2501.06282",
+      "title": "MinMo: A multimodal large language model for seamless voice interaction",
+      "year": 2025,
+      "rank_a": 64,
+      "rank_b": 60,
+      "rate_a": 0.0573,
+      "rate_b": 0.0519,
+      "ratio": 0.907
+    },
+    {
+      "key": "arxiv:2204.02152",
+      "title": "Utmos: Utokyo-sarulab system for voicemos challenge 2022",
+      "year": 2022,
+      "rank_a": 4,
+      "rank_b": 5,
+      "rate_a": 0.2023,
+      "rate_b": 0.1799,
+      "ratio": 0.889
+    },
+    {
+      "key": "title:highfidelityaudiocompressionwithimprovedrvqgan",
+      "title": "High-fidelity audio compression with improved rvqgan",
+      "year": 2024,
+      "rank_a": 25,
+      "rank_b": 31,
+      "rate_a": 0.0897,
+      "rate_b": 0.0796,
+      "ratio": 0.887
+    },
+    {
+      "key": "arxiv:2406.04904",
+      "title": "Xtts: a massively multilingual zero-shot text-to-speech model",
+      "year": 2024,
+      "rank_a": 58,
+      "rank_b": 56,
+      "rate_a": 0.063,
+      "rate_b": 0.0554,
+      "ratio": 0.879
+    },
+    {
+      "key": "arxiv:2210.13438",
+      "title": "High fidelity neural audio compression",
+      "year": 2022,
+      "rank_a": 2,
+      "rank_b": 4,
+      "rate_a": 0.2176,
+      "rate_b": 0.1834,
+      "ratio": 0.843
+    },
+    {
+      "key": "arxiv:2005.07143",
+      "title": "Ecapa-tdnn: Emphasized channel attention, propagation and aggregation in tdnn based speaker verification",
+      "year": 2005,
+      "rank_a": 46,
+      "rank_b": 51,
+      "rate_a": 0.0706,
+      "rate_b": 0.0588,
+      "ratio": 0.833
+    },
+    {
+      "key": "arxiv:2306.15687",
+      "title": "Voicebox: Text-guided multilingual universal speech generation at scale",
+      "year": 2023,
+      "rank_a": 52,
+      "rank_b": 52,
+      "rate_a": 0.0668,
+      "rate_b": 0.0554,
+      "ratio": 0.829
+    },
+    {
+      "key": "arxiv:2309.15505",
+      "title": "Finite scalar quantization: Vq-vae made simple",
+      "year": 2023,
+      "rank_a": 90,
+      "rank_b": 100,
+      "rate_a": 0.042,
+      "rate_b": 0.0346,
+      "ratio": 0.824
+    },
+    {
+      "key": "arxiv:2411.00774",
+      "title": "Freeze-omni: A smart and low latency speech-to-speech dialogue model with frozen llm",
+      "year": 2024,
+      "rank_a": 34,
+      "rank_b": 43,
+      "rate_a": 0.0821,
+      "rate_b": 0.0657,
+      "ratio": 0.801
+    },
+    {
+      "key": "arxiv:2312.05187",
+      "title": "Seamless: Multilingual Expressive and Streaming Speech Translation",
+      "year": 2023,
+      "rank_a": 78,
+      "rank_b": 91,
+      "rate_a": 0.0477,
+      "rate_b": 0.0381,
+      "ratio": 0.798
+    },
+    {
+      "key": "doi:10.1109/TASLP.2021.3129994",
+      "title": "SoundStream: An End-to-End Neural Audio Codec",
+      "year": 2021,
+      "rank_a": 14,
+      "rank_b": 23,
+      "rate_a": 0.1145,
+      "rate_b": 0.09,
+      "ratio": 0.786
+    },
+    {
+      "key": "arxiv:1904.02882",
+      "title": "Libritts: A corpus derived from librispeech for text-to-speech",
+      "year": 2019,
+      "rank_a": 5,
+      "rank_b": 11,
+      "rate_a": 0.1927,
+      "rate_b": 0.1488,
+      "ratio": 0.772
+    },
+    {
+      "key": "arxiv:2306.12925",
+      "title": "Audiopalm: A large language model that can speak and listen",
+      "year": 2023,
+      "rank_a": 73,
+      "rank_b": 96,
+      "rate_a": 0.0496,
+      "rate_b": 0.0381,
+      "ratio": 0.767
+    },
+    {
+      "key": "arxiv:2409.03283",
+      "title": "Fireredtts: A foundation text-to-speech framework for industry-level generative speech applications",
+      "year": null,
+      "rank_a": 48,
+      "rank_b": 59,
+      "rate_a": 0.0687,
+      "rate_b": 0.0519,
+      "ratio": 0.755
+    },
+    {
+      "key": "arxiv:2312.15185",
+      "title": "Emotion2vec: Self-supervised pre-training for speech emotion representation",
+      "year": 2023,
+      "rank_a": 38,
+      "rank_b": 47,
+      "rate_a": 0.0782,
+      "rate_b": 0.0588,
+      "ratio": 0.752
+    },
+    {
+      "key": "arxiv:2207.12598",
+      "title": "Classifier-free diffusion guidance",
+      "year": 2022,
+      "rank_a": 66,
+      "rank_b": 87,
+      "rate_a": 0.0553,
+      "rate_b": 0.0415,
+      "ratio": 0.75
+    },
+    {
+      "key": "doi:10.1109/ICASSP.2015.7178964",
+      "title": "Librispeech: An ASR corpus based on public domain audio books,",
+      "year": 2015,
+      "rank_a": 16,
+      "rank_b": 30,
+      "rate_a": 0.1088,
+      "rate_b": 0.0796,
+      "ratio": 0.732
+    },
+    {
+      "key": "arxiv:2210.02747",
+      "title": "Flow matching for generative modeling",
+      "year": 2022,
+      "rank_a": 21,
+      "rank_b": 34,
+      "rate_a": 0.0992,
+      "rate_b": 0.0727,
+      "ratio": 0.732
+    },
+    {
+      "key": "arxiv:1712.05884",
+      "title": "Natural TTS synthesis by conditioning wavenet on mel spectrogram predictions",
+      "year": 2018,
+      "rank_a": 67,
+      "rank_b": 88,
+      "rate_a": 0.0534,
+      "rate_b": 0.0381,
+      "ratio": 0.712
+    },
+    {
+      "key": "arxiv:2308.16692",
+      "title": "Speechtokenizer: Unified speech tokenizer for speech large language models",
+      "year": 2024,
+      "rank_a": 22,
+      "rank_b": 35,
+      "rate_a": 0.0973,
+      "rate_b": 0.0692,
+      "ratio": 0.711
+    },
+    {
+      "key": "arxiv:2407.05361",
+      "title": "Emilia: An extensive, multilingual, and diverse speech dataset for large-scale speech generation",
+      "year": 2024,
+      "rank_a": 31,
+      "rank_b": 50,
+      "rate_a": 0.084,
+      "rate_b": 0.0588,
+      "ratio": 0.701
+    },
+    {
+      "key": "title:neuraldiscreterepresentationlearning",
+      "title": "Neural discrete representation learning",
+      "year": 2017,
+      "rank_a": 61,
+      "rank_b": 84,
+      "rate_a": 0.0611,
+      "rate_b": 0.0415,
+      "ratio": 0.68
+    },
+    {
+      "key": "arxiv:1912.06670",
+      "title": "Common voice: A massively-multilingual speech corpus",
+      "year": 2019,
+      "rank_a": 41,
+      "rank_b": 62,
+      "rate_a": 0.0763,
+      "rate_b": 0.0519,
+      "ratio": 0.68
+    },
+    {
+      "key": "arxiv:2106.06103",
+      "title": "Conditional variational autoencoder with adversarial learning for end-to-end text-to-speech",
+      "year": 2021,
+      "rank_a": 36,
+      "rank_b": 53,
+      "rate_a": 0.0821,
+      "rate_b": 0.0554,
+      "ratio": 0.675
+    },
+    {
+      "key": "arxiv:2406.05370",
+      "title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+      "year": 2024,
+      "rank_a": 27,
+      "rank_b": 46,
+      "rate_a": 0.0878,
+      "rate_b": 0.0588,
+      "ratio": 0.67
+    },
+    {
+      "key": "arxiv:2406.18009",
+      "title": "E2 tts: Embarrassingly easy fully non-autoregressive zero-shot tts",
+      "year": 2024,
+      "rank_a": 51,
+      "rank_b": 74,
+      "rate_a": 0.0687,
+      "rate_b": 0.045,
+      "ratio": 0.655
+    },
+    {
+      "key": "arxiv:2303.08774",
+      "title": "Gpt-4 technical report",
+      "year": 2023,
+      "rank_a": 18,
+      "rank_b": 39,
+      "rate_a": 0.1011,
+      "rate_b": 0.0657,
+      "ratio": 0.65
+    },
+    {
+      "key": "arxiv:2304.09116",
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "year": 2023,
+      "rank_a": 56,
+      "rank_b": 79,
+      "rate_a": 0.0649,
+      "rate_b": 0.0415,
+      "ratio": 0.64
+    },
+    {
+      "key": "arxiv:2303.03926",
+      "title": "Speak foreign languages with your own voice: Cross-lingual neural codec language modeling",
+      "year": 2023,
+      "rank_a": 59,
+      "rank_b": 89,
+      "rate_a": 0.0611,
+      "rate_b": 0.0381,
+      "ratio": 0.623
+    },
+    {
+      "key": "arxiv:2311.07919",
+      "title": "Qwen-audio: Advancing universal audio understanding via unified large-scale audio-language models",
+      "year": 2023,
+      "rank_a": 43,
+      "rank_b": 76,
+      "rate_a": 0.0725,
+      "rate_b": 0.045,
+      "ratio": 0.62
+    },
+    {
+      "key": "arxiv:2305.11000",
+      "title": "Speechgpt: Empowering large language models with intrinsic cross-modal conversational abilities",
+      "year": 2023,
+      "rank_a": 32,
+      "rank_b": 63,
+      "rate_a": 0.084,
+      "rate_b": 0.0519,
+      "ratio": 0.618
+    },
+    {
+      "key": "arxiv:2306.00814",
+      "title": "Vocos: Closing the gap between time-domain and fourierbased neural vocoders for high-quality audio synthesis",
+      "year": 2024,
+      "rank_a": 23,
+      "rank_b": 48,
+      "rate_a": 0.0954,
+      "rate_b": 0.0588,
+      "ratio": 0.616
+    },
+    {
+      "key": "arxiv:2206.04658",
+      "title": "Bigvgan: A universal neural vocoder with large-scale training",
+      "year": 2022,
+      "rank_a": 29,
+      "rank_b": 61,
+      "rate_a": 0.0859,
+      "rate_b": 0.0519,
+      "ratio": 0.604
+    },
+    {
+      "key": "title:wav2vec20aframeworkforselfsupervisedlearningofspeechrepresentations",
+      "title": "Wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+      "year": 2020,
+      "rank_a": 47,
+      "rank_b": 81,
+      "rate_a": 0.0687,
+      "rate_b": 0.0415,
+      "ratio": 0.604
+    },
+    {
+      "key": "arxiv:2403.03100",
+      "title": "NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models",
+      "year": 2024,
+      "rank_a": 7,
+      "rank_b": 20,
+      "rate_a": 0.1565,
+      "rate_b": 0.0934,
+      "ratio": 0.597
+    },
+    {
+      "key": "arxiv:2106.07447",
+      "title": "Hubert: Self-supervised speech representation learning by masked prediction of hidden units",
+      "year": 2021,
+      "rank_a": 9,
+      "rank_b": 25,
+      "rate_a": 0.1469,
+      "rate_b": 0.0865,
+      "ratio": 0.589
+    },
+    {
+      "key": "arxiv:1706.03762",
+      "title": "Attention Is All You Need",
+      "year": 2023,
+      "rank_a": 44,
+      "rank_b": 82,
+      "rate_a": 0.0725,
+      "rate_b": 0.0415,
+      "ratio": 0.573
+    },
+    {
+      "key": "arxiv:2006.04558",
+      "title": "Fastspeech 2: Fast and high-quality end-to-end text to speech",
+      "year": 2006,
+      "rank_a": 11,
+      "rank_b": 36,
+      "rate_a": 0.1279,
+      "rate_b": 0.0692,
+      "ratio": 0.541
+    },
+    {
+      "key": "arxiv:2010.05646",
+      "title": "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis",
+      "year": 2010,
+      "rank_a": 6,
+      "rank_b": 22,
+      "rate_a": 0.1813,
+      "rate_b": 0.09,
+      "ratio": 0.496
+    },
+    {
+      "key": "arxiv:2301.02111",
+      "title": "Neural codec language models are zero-shot text to speech synthesizers",
+      "year": 2023,
+      "rank_a": 8,
+      "rank_b": 54,
+      "rate_a": 0.1508,
+      "rate_b": 0.0554,
+      "ratio": 0.367
+    }
+  ],
+  "b_only": [
+    {
+      "key": "arxiv:2507.06261",
+      "title": "Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities",
+      "year": 2025,
+      "rank": 21,
+      "rate": 0.0934
+    },
+    {
+      "key": "arxiv:2411.01156",
+      "title": "Fish-speech: Leveraging large language models for advanced multilingual text-to-speech synthesis",
+      "year": 2024,
+      "rank": 27,
+      "rate": 0.0796
+    },
+    {
+      "key": "arxiv:2507.16632",
+      "title": "Step-audio 2 technical report",
+      "year": 2025,
+      "rank": 32,
+      "rate": 0.0796
+    },
+    {
+      "key": "arxiv:2501.12948",
+      "title": "Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning",
+      "year": 2025,
+      "rank": 40,
+      "rate": 0.0657
+    },
+    {
+      "key": "arxiv:2402.03300",
+      "title": "Deepseekmath: Pushing the limits of mathematical reasoning in open language models",
+      "year": 2024,
+      "rank": 42,
+      "rate": 0.0657
+    },
+    {
+      "key": "arxiv:2504.08528",
+      "title": "On the landscape of spoken language models: A comprehensive survey",
+      "year": 2025,
+      "rank": 45,
+      "rate": 0.0623
+    },
+    {
+      "key": "arxiv:2412.19437",
+      "title": "Deepseek-v3 technical report",
+      "year": 2024,
+      "rank": 49,
+      "rate": 0.0588
+    },
+    {
+      "key": "arxiv:2505.07916",
+      "title": "MiniMax-Speech: Intrinsic zero-shot text-to-speech with a learnable speaker encoder",
+      "year": 2025,
+      "rank": 55,
+      "rate": 0.0554
+    },
+    {
+      "key": "arxiv:2106.06909",
+      "title": "Gigaspeech: An evolving, multidomain asr corpus with 10,000 hours of transcribed audio",
+      "year": 2021,
+      "rank": 58,
+      "rate": 0.0519
+    },
+    {
+      "key": "arxiv:2502.06490",
+      "title": "Recent advances in discrete speech tokens: A review",
+      "year": 2025,
+      "rank": 68,
+      "rate": 0.0484
+    },
+    {
+      "key": "arxiv:1703.10135",
+      "title": "Tacotron: Towards endto-end speech synthesis",
+      "year": 2017,
+      "rank": 70,
+      "rate": 0.045
+    },
+    {
+      "key": "arxiv:2506.13053",
+      "title": "ZipVoice: Fast and high-quality zero-shot text-tospeech with flow matching",
+      "year": 2025,
+      "rank": 75,
+      "rate": 0.045
+    },
+    {
+      "key": "arxiv:2505.02625",
+      "title": "Llama-omni2: Llm-based real-time spoken chatbot with autoregressive streaming speech synthesis",
+      "year": 2025,
+      "rank": 77,
+      "rate": 0.045
+    },
+    {
+      "key": "arxiv:2010.15258",
+      "title": "Dnsmos: A non-intrusive perceptual objective speech quality metric to evaluate noise suppressors",
+      "year": 2021,
+      "rank": 78,
+      "rate": 0.045
+    },
+    {
+      "key": "arxiv:2105.06337",
+      "title": "Grad-tts: A diffusion probabilistic model for text-to-speech",
+      "year": 2021,
+      "rank": 80,
+      "rate": 0.0415
+    },
+    {
+      "key": "arxiv:2104.09494",
+      "title": "Nisqa: A deep cnn-self-attention model for multidimensional speech quality prediction with crowdsourced datasets",
+      "year": 2021,
+      "rank": 83,
+      "rate": 0.0415
+    },
+    {
+      "key": "arxiv:2301.12503",
+      "title": "Audioldm: Text-to-audio generation with latent diffusion models",
+      "year": 2023,
+      "rank": 86,
+      "rate": 0.0415
+    },
+    {
+      "key": "doi:10.21437/Interspeech.2017-1386",
+      "title": "Montreal Forced Aligner: Trainable Text-Speech Alignment Using Kaldi",
+      "year": 2017,
+      "rank": 90,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2411.18803",
+      "title": "TS3Codec: Transformer-Based simple streaming single codec",
+      "year": 2024,
+      "rank": 92,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2409.09305",
+      "title": "The t05 system for the voicemos challenge 2024: Transfer learning from deep image classifier to naturalness mos prediction of high-quality synthetic speech",
+      "year": 2024,
+      "rank": 93,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2502.05512",
+      "title": "Indextts: An industrial-level controllable and efficient zero-shot text-to-speech system",
+      "year": 2025,
+      "rank": 94,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2506.10274",
+      "title": "Discrete Audio Tokens: More Than a Survey!",
+      "year": 2025,
+      "rank": 95,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2502.07243",
+      "title": "Vevo: Controllable zero-shot voice imitation with self-supervised disentanglement",
+      "year": 2025,
+      "rank": 97,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2507.08128",
+      "title": "Audio flamingo 3: Advancing audio intelligence with fully open large audio language models",
+      "year": 2025,
+      "rank": 98,
+      "rate": 0.0381
+    },
+    {
+      "key": "arxiv:2506.16381",
+      "title": "Instructttseval: Benchmarking complex natural-language instruction following in text-tospeech systems",
+      "year": 2025,
+      "rank": 99,
+      "rate": 0.0346
+    }
+  ],
+  "a_only": [
+    {
+      "key": "arxiv:2412.10117",
+      "title": "Cosyvoice 2: Scalable streaming speech synthesis with large language models",
+      "year": 2024,
+      "rank": 12,
+      "rate": 0.1221
+    },
+    {
+      "key": "arxiv:2407.05407",
+      "title": "Cosyvoice: A scalable multilingual zero-shot text-to-speech synthesizer based on supervised semantic tokens",
+      "year": 2024,
+      "rank": 17,
+      "rate": 0.1031
+    },
+    {
+      "key": "arxiv:2406.02430",
+      "title": "Seedtts: A family of high-quality versatile speech generation models",
+      "year": 2024,
+      "rank": 19,
+      "rate": 0.1011
+    },
+    {
+      "key": "arxiv:2403.16973",
+      "title": "Voicecraft: Zero-shot speech editing and text-to-speech in the wild",
+      "year": 2024,
+      "rank": 35,
+      "rate": 0.0821
+    },
+    {
+      "key": "arxiv:2302.13971",
+      "title": "Llama: Open and efficient foundation language models",
+      "year": 2023,
+      "rank": 50,
+      "rate": 0.0687
+    },
+    {
+      "key": "arxiv:2305.02765",
+      "title": "Hifi-codec: Group-residual vector quantization for high fidelity audio codec",
+      "year": 2023,
+      "rank": 53,
+      "rate": 0.0668
+    },
+    {
+      "key": "arxiv:1412.6980",
+      "title": "Adam: A Method for Stochastic Optimization",
+      "year": 2014,
+      "rank": 55,
+      "rate": 0.0649
+    },
+    {
+      "key": "arxiv:2012.03411",
+      "title": "Mls: A large-scale multilingual dataset for speech research",
+      "year": 2012,
+      "rank": 62,
+      "rate": 0.0592
+    },
+    {
+      "key": "title:perceptualevaluationofspeechqualitypesqanewmethodforspeechqualityassessmentoftelephonenetworksandcodecs",
+      "title": "Perceptual evaluation of speech quality (pesq)-a new method for speech quality assessment of telephone networks and codecs",
+      "year": 2001,
+      "rank": 65,
+      "rate": 0.0553
+    },
+    {
+      "key": "arxiv:2112.02418",
+      "title": "Yourtts: Towards zero-shot multi-speaker tts and zero-shot voice conversion for everyone",
+      "year": 2023,
+      "rank": 68,
+      "rate": 0.0534
+    },
+    {
+      "key": "arxiv:2402.08093",
+      "title": "BASE TTS: Lessons from building a billion-parameter text-to-speech model on 100k hours of data",
+      "year": 2024,
+      "rank": 71,
+      "rate": 0.0515
+    },
+    {
+      "key": "arxiv:2309.03199",
+      "title": "Matcha-tts: A fast TTS architecture with conditional flow matching",
+      "year": 2023,
+      "rank": 72,
+      "rate": 0.0496
+    },
+    {
+      "key": "arxiv:2407.08551",
+      "title": "Autoregressive speech synthesis without vector quantization",
+      "year": 2024,
+      "rank": 74,
+      "rate": 0.0496
+    },
+    {
+      "key": "arxiv:2106.15561",
+      "title": "A survey on neural speech synthesis",
+      "year": 2021,
+      "rank": 75,
+      "rate": 0.0477
+    },
+    {
+      "key": "arxiv:2206.08317",
+      "title": "Paraformer: Fast and accurate parallel transformer for non-autoregressive end-to-end speech recognition",
+      "year": 2022,
+      "rank": 76,
+      "rate": 0.0477
+    },
+    {
+      "key": "arxiv:2005.08100",
+      "title": "Conformer: Convolution-augmented transformer for speech recognition",
+      "year": 2005,
+      "rank": 79,
+      "rate": 0.0477
+    },
+    {
+      "key": "title:theljspeechdataset",
+      "title": "The lj speech dataset",
+      "year": 2017,
+      "rank": 81,
+      "rate": 0.0458
+    },
+    {
+      "key": "arxiv:2109.13821",
+      "title": "Diffusion-based voice conversion with fast maximum likelihood sampling scheme",
+      "year": 2021,
+      "rank": 82,
+      "rate": 0.0439
+    },
+    {
+      "key": "arxiv:2104.00355",
+      "title": "Speech resynthesis from discrete disentangled self-supervised representations",
+      "year": 2021,
+      "rank": 86,
+      "rate": 0.0439
+    },
+    {
+      "key": "arxiv:2412.15649",
+      "title": "Slam-omni: Timbrecontrollable voice interaction system with single-stage training",
+      "year": 2024,
+      "rank": 87,
+      "rate": 0.042
+    },
+    {
+      "key": "doi:10.1109/ICASSP49357.2023.10095191",
+      "title": "Freevc: Towards high-quality text-free one-shot  voice  conversion",
+      "year": 2023,
+      "rank": 91,
+      "rate": 0.042
+    },
+    {
+      "key": "doi:10.1109/icassp40776.2020.9052942",
+      "title": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
+      "year": 2020,
+      "rank": 92,
+      "rate": 0.042
+    },
+    {
+      "key": "arxiv:2212.09748",
+      "title": "Scalable diffusion models with transformers",
+      "year": 2023,
+      "rank": 94,
+      "rate": 0.042
+    },
+    {
+      "key": "arxiv:2310.00704",
+      "title": "Uniaudio: An audio foundation model toward universal audio generation",
+      "year": 2024,
+      "rank": 95,
+      "rate": 0.042
+    },
+    {
+      "key": "arxiv:2410.11190",
+      "title": "Mini-omni2: Towards open-source gpt4o with vision, speech and duplex capabilities",
+      "year": 2024,
+      "rank": 100,
+      "rate": 0.0401
+    }
+  ]
+}
