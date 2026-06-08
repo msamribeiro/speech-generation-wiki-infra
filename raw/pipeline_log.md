@@ -1,3 +1,10 @@
+## 2026-06-08
+
+- integrate | seeded evidence digests | transformer-enc-dec-tts (11 papers) | rlhf-speech (15 papers)
+- parse | citation-discovery PDFs | 162/162 downloaded, 0 failures | all arxiv source | batches 14–18 added to raw/parsed/batch_queue.json (pending parse)
+- discover | citation-discovery corpus_role patch | 162 metadata files patched with corpus_role field | 12-value vocabulary (tts-vc 42, foundation-lm 20, evaluation 18, sca 15, multimodal 15, audio-lm 11, ml-method 10, codec 9, dataset 9, survey 8, asr 4, speaker 1)
+- discover | citation-discovery fetch | 162 papers written with status=accepted | source: docs/analyses/discovery-quarterly-fetch-manifest.md | bypassed filter; discovery_source="citation-discovery" field set | 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved via arXiv API)
+
 ## 2026-06-07
 
 - discover | 16476 entries (570 merge groups collapsed, 5 fuzzy candidates), 894 corpus papers

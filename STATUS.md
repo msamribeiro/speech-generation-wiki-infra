@@ -302,9 +302,15 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
+0. **Parse citation-discovery papers** — 162 papers queued as batches 14–18 in `raw/parsed/batch_queue.json`. Run batches sequentially with `batch_convert.py --ids <ids>`. Note: many of these are long papers (LLaMA 3, Gemini 2.5 each ~10 MB) — expect slower parse times than typical batches.
+
+
+
 1. ~~**Parse batches 11–13**~~ — ✅ done 2026-06-06. All 111 new papers parsed, 0 failures. Parse pipeline complete (875/875).
 
 2. **Continue ingest** — 699 papers ready to ingest (2026-06-06). Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
+
+3. ~~**Fetch citation-discovery candidates**~~ — ✅ done 2026-06-08. All 162 arXiv IDs written with `status: accepted`, `discovery_source: "citation-discovery"`, and per-quarter citation counts. Script: `scripts/fetch/citation_discovery_fetch.py`. 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved). These papers bypassed the keyword filter; they are onboarded because they are highly cited by in-corpus papers. Task assignments (TTS/VC/SCA/codec/etc.) and PDF downloads still pending before ingest.
 
 3. **Seed `transformer-enc-dec-tts` and `rlhf-speech` evidence digests** — 19/23 concept digests seeded; these two are missing. Run integration agent targeting those two concepts once enough papers have been ingested to populate them meaningfully (check concept page All Papers tables for current counts).
 
@@ -341,7 +347,7 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 
 ### Infrastructure / site
 
-- **Quartz explorer: exclude `papers/`** — one-line `filterFn` in site repo `quartz.config.yaml` prevents 800+ paper list flooding sidebar. Discovery via concepts, venues, search, and `papers/index.md`.
+- ✅ **Quartz explorer: exclude `papers/`** — done 2026-06-08. `filterFn` added to `quartz.ts` in site repo (excludes `papers/` and `tags/`; YAML can't express functions).
 - **Dedup check at fetch/pre-parse stage** — 15 arXiv/proceedings duplicates resolved manually 2026-05-28. Add `scripts/discover/dedup_check.py` for title-based collision detection after each fetch. Canonical priority: proceedings > arXiv.
 - ✅ **Citation index: remove prefilter + fix deduplication** — done 2026-06-07. Post-hoc merge pass collapses 570 groups (602 entries merged away); manual overrides file (`raw/citation_merge_overrides.json`) handles edge cases (SpeechTokenizer title variant, CSTR VCTK versions). Default `--min-citations` lowered to 1 (full index: 16,476 entries, 8.5 MB). 5 fuzzy candidates surfaced in output, all confirmed as genuinely different papers (Qwen family, DNSMOS/DNSMOS P.835, Step-Audio variants). Log target fixed (was writing to `wiki/log.md`, now correctly writes to `raw/pipeline_log.md`).
 - **Parse quality review** — 8 papers flagged for offline PDF spot-check; report at `raw/parsed/parse_quality_review.md`. Waiting on user results before any `--force` re-runs.
