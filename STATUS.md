@@ -48,7 +48,7 @@ Parsed:        875   ← standard in-corpus papers (2026-06-06)
 Parse-pending: 162   ← citation-discovery papers; batches 14–18 queued in batch_queue.json
 Ready to ingest: 699 ← parsed + accepted (standard corpus), not yet ingested
 
-Evidence digests: 21/23 seeded (singing + fine-tuning below 5-paper threshold; seed when each reaches 5)
+Evidence digests: 23/23 seeded (all complete 2026-06-08; singing + fine-tuning below 5-paper threshold but stubs exist)
 Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (23 total concept pages)
 ```
 
@@ -313,7 +313,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 3. ~~**Fetch citation-discovery candidates**~~ — ✅ done 2026-06-08. All 162 arXiv IDs written with `status: accepted`, `discovery_source: "citation-discovery"`, and per-quarter citation counts. Script: `scripts/fetch/citation_discovery_fetch.py`. 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved). These papers bypassed the keyword filter; they are onboarded because they are highly cited by in-corpus papers. Task assignments (TTS/VC/SCA/codec/etc.) and PDF downloads still pending before ingest.
 
-3. **Seed `transformer-enc-dec-tts` and `rlhf-speech` evidence digests** — 19/23 concept digests seeded; these two are missing. Run integration agent targeting those two concepts once enough papers have been ingested to populate them meaningfully (check concept page All Papers tables for current counts).
+3. ~~**Seed `transformer-enc-dec-tts` and `rlhf-speech` evidence digests**~~ — ✅ done 2026-06-08. transformer-enc-dec-tts (11 papers, 6 claim clusters), rlhf-speech (15 papers, 7 claim clusters). All 23/23 evidence digests seeded.
 
 4. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
 
