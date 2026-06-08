@@ -29,7 +29,7 @@ Last updated: 2026-06-08 (parse pipeline complete — all 861 accepted papers pa
 | Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
 | Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse complete 2026-06-08. |
 | Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). Batches 14–18. 0 failures. 1 manual refs fix: 2001.08361 (Scaling Laws, table-layout refs recovered). Quality reports: batch_14–18_cd_quality_report.md. |
-| Ingest (wiki pages) | 🔄 In progress | 176/875 ingested (standard corpus). 175 integrated (passes 1–7 complete, 2026-06-05); 1 pending integration. 23/23 evidence digests seeded. 699 standard papers ready to ingest. |
+| Ingest (wiki pages) | 🔄 In progress | 176/875 ingested (standard corpus). 176/176 integrated (passes 1–7 complete, 2026-06-05). 23/23 evidence digests seeded. 699 standard papers ready to ingest. |
 
 ---
 
@@ -39,7 +39,7 @@ Last updated: 2026-06-08 (parse pipeline complete — all 861 accepted papers pa
 Total files:  1326
   accepted:    861   ← 699 parsed (standard) + 162 parsed (citation-discovery)
   ingested:    176   ← wiki page written (2 flagged is_duplicate; wiki page migration deferred)
-    integrated: 175  ← passes 1–7 complete (2026-06-05); 1 pending integration
+    integrated: 176  ← passes 1–7 complete (2026-06-05)
   pending:       0   ← cleared
   review:        0   ← queue cleared
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
@@ -304,13 +304,21 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 ## Next actions
 
-0. **Parse citation-discovery papers** — 162 papers queued as batches 14–18 in `raw/parsed/batch_queue.json`. Run batches sequentially with `batch_convert.py --ids <ids>`. Note: many of these are long papers (LLaMA 3, Gemini 2.5 each ~10 MB) — expect slower parse times than typical batches.
+0. ~~**Parse citation-discovery papers**~~ — ✅ done 2026-06-08. 162/162 parsed (batches 14–18), 0 failures. 1 manual refs fix: 2001.08361 (two-column table layout). Quality reports: `raw/parsed/batch_14–18_cd_quality_report.md`. Citation graph rebuilt: 21,262 entries across 1,056-paper corpus. Ingest strategy documented in `docs/analyses/cd-ingest-strategy.md`.
 
 
 
 1. ~~**Parse batches 11–13**~~ — ✅ done 2026-06-06. All 111 new papers parsed, 0 failures. Parse pipeline complete (875/875).
 
 2. **Continue ingest** — 699 papers ready to ingest (2026-06-06). Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
+
+3. **Resolve CD ingest strategy open questions** — 4 decisions pending in `docs/analyses/cd-ingest-strategy.md` before CD ingest begins: (1) RAG for LLMs survey — Tier 1 or Tier 2? (2) MusicLM + AudioLDM — Tier 1 or Tier 2? (3) lightweight stub implementation — `lightweight: true` flag in ingest agent vs. manual vs. new agent? (4) add `ingest_tier` field to Tier 3 metadata files?
+
+4. **CD ingest preparation** (after open questions resolved) — Mark 13 Tier 3 papers in `raw/metadata/`; add 3 fuzzy title merge candidates to `raw/citation_merge_overrides.json` (CSTR VCTK, AISHELL-3, GSLM); implement lightweight stub mode in per-paper ingest agent spec.
+
+5. **Ingest Tier 1 CD papers (~92–95 papers)** — Interleave with standard corpus by `published_date`; same 2-at-a-time cadence and full template. Final count after open questions 1–2 resolved. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
+
+6. **Ingest Tier 2 CD papers (~54–57 papers)** — After ~200 standard papers ingested. Lightweight stubs: frontmatter + abstract callout + 1-paragraph context + wiki connections. Up to 5 at a time. Final count after open questions resolved.
 
 3. ~~**Fetch citation-discovery candidates**~~ — ✅ done 2026-06-08. All 162 arXiv IDs written with `status: accepted`, `discovery_source: "citation-discovery"`, and per-quarter citation counts. Script: `scripts/fetch/citation_discovery_fetch.py`. 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved). These papers bypassed the keyword filter; they are onboarded because they are highly cited by in-corpus papers. Task assignments (TTS/VC/SCA/codec/etc.) and PDF downloads still pending before ingest.
 
@@ -346,6 +354,12 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
   - `wiki/papers/2510.00981.md` → `iclr-2026-kYkfCs4ZAH` (FlexiCodec)
   - `wiki/papers/2508.16790.md` → `neurips-2025-wHsFqmM1rp` (TaDiCodec)
   Both metadata files currently carry `is_duplicate: true` + `canonical_id` as breadcrumbs. Do after concept integration pass to avoid broken links.
+
+### Citation-discovery ingest
+
+- **Lightweight ingest mode** — Add `lightweight: true` prompt flag to `.claude/agents/speech-generation-ingest-agent.md` so Tier 2 CD stubs get a short-form page (frontmatter + abstract callout + 1-paragraph context + wiki connections; no Claims, Novelty Assessment, or Key Results). Blocked on open question 3 resolution. Requires updating CLAUDE.md Ingest Workflow note and the agent spec.
+- **`ingest_tier` metadata field** — Add `ingest_tier: 3` to 13 Tier 3 metadata files (foundation-lm: 1810.04805, 2005.14165, 2402.03300, 2503.01743, 2503.19786, 2412.08635, 2506.07900; ml-method: 1412.6980, 1711.05101, 1607.06450, 2002.05202, 2001.08361, 2308.10248). Low effort; blocked on open question 4 resolution.
+- **Citation merge candidates** — Add 3 entries to `raw/citation_merge_overrides.json`: CSTR VCTK capitalization variants, AISHELL-3 capitalization variants, GSLM "On generative spoken language modeling" title variant. Low effort; can be done any time.
 
 ### Infrastructure / site
 
