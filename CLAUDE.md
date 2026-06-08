@@ -130,7 +130,14 @@ Every paper in `raw/metadata/` must have a JSON file named `{id}.json`. The ID i
   "task": ["list — one or more of the task values listed below"],
   "relevance_score": 0.95,
   "relevance_note": "string — brief reason for score, especially for borderline cases",
-  "status": "one of: pending | review | accepted | rejected | ingested"
+  "status": "one of: pending | review | accepted | rejected | ingested",
+
+  // Citation-discovery papers only (discovery_source = "citation-discovery"):
+  "discovery_source": "citation-discovery",
+  "corpus_role": "one of the corpus_role values listed below — null for standard filter papers",
+  "corpus_citation_count": 208,
+  "citation_counts_by_quarter": {"Q3_2025": 56, "Q4_2025": 45, "Q1_2026": 48, "Q2_2026": 38},
+  "sr_match": "true | false | null — whether the paper matched the keyword filter"
 }
 ```
 
@@ -146,6 +153,27 @@ rejected  → human confirmed irrelevant (or score < 0.40): skip
 ingested  → wiki paper page written; integration pass pending
 integrated_date → set by integration agent after first integration pass (separate from status)
 ```
+
+### `corpus_role` allowed values (citation-discovery papers only)
+
+Classifies a paper by its **functional role in the speech synthesis ecosystem** — coarser than `task`, and designed for trend tracking over time (e.g. which foundation LLMs or codecs the field is building on, and how that shifts quarterly).
+
+| Value | Description | Examples |
+|-------|-------------|---------|
+| `tts-vc` | TTS or voice conversion system | HiFi-GAN, FastSpeech 2, VALL-E 2, MaskGCT |
+| `sca` | Spoken conversational agent / full-duplex speech LM | Moshi, LLaMA-Omni, Freeze-Omni |
+| `codec` | Neural audio codec | EnCodec, SpeechTokenizer, BigCodec |
+| `audio-lm` | Audio/speech LM not primarily TTS | AudioLM, SoundStorm, SpeechGPT |
+| `foundation-lm` | General-purpose LLM used as TTS/SCA backbone | LLaMA, GPT-4, Qwen, DeepSeek, Gemini |
+| `asr` | Automatic speech recognition system | Whisper, Paraformer |
+| `speaker` | Speaker verification or recognition model | ECAPA-TDNN |
+| `dataset` | Training or evaluation corpus | LibriTTS, Common Voice, Emilia |
+| `evaluation` | Benchmark, metric, or evaluation toolkit | UTMOS, VoiceBench, MMAU |
+| `ml-method` | General ML technique | Adam, flow matching, layer norm, FSQ |
+| `survey` | Survey or overview paper | WavChat, "A Survey on Neural Speech Synthesis" |
+| `multimodal` | Vision+speech or multi-task audio-language model | Qwen-Audio, SeamlessM4T, VITA |
+
+`corpus_role` is `null` for papers onboarded through the standard keyword filter. It is only populated by `scripts/fetch/citation_discovery_fetch.py`.
 
 ---
 
