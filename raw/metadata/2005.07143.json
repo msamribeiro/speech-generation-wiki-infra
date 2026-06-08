@@ -1,0 +1,46 @@
+{
+  "id": "2005.07143",
+  "source_ids": {
+    "arxiv": "2005.07143"
+  },
+  "title": "ECAPA-TDNN: Emphasized Channel Attention, Propagation and Aggregation in TDNN Based Speaker Verification",
+  "authors": [
+    "Brecht Desplanques",
+    "Jenthe Thienpondt",
+    "Kris Demuynck"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2020,
+  "month": 5,
+  "published_date": "2020-05-14",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2005.07143",
+  "pdf_url": "https://arxiv.org/pdf/2005.07143.pdf",
+  "pdf_path": "raw/papers/2005.07143.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current speaker verification techniques rely on a neural network to extract speaker representations. The successful x-vector architecture is a Time Delay Neural Network (TDNN) that applies statistics pooling to project variable-length utterances into fixed-length speaker characterizing embeddings. In this paper, we propose multiple enhancements to this architecture based on recent trends in the related fields of face verification and computer vision. Firstly, the initial frame layers can be restructured into 1-dimensional Res2Net modules with impactful skip connections. Similarly to SE-ResNet, we introduce Squeeze-and-Excitation blocks in these modules to explicitly model channel interdependencies. The SE block expands the temporal context of the frame layer by rescaling the channels according to global properties of the recording. Secondly, neural networks are known to learn hierarchical features, with each layer operating on a different level of complexity. To leverage this complementary information, we aggregate and propagate features of different hierarchical levels. Finally, we improve the statistics pooling module with channel-dependent frame attention. This enables the network to focus on different subsets of frames during each of the channel's statistics estimation. The proposed ECAPA-TDNN architecture significantly outperforms state-of-the-art TDNN based systems on the VoxCeleb test sets and the 2019 VoxCeleb Speaker Recognition Challenge.",
+  "arxiv_comment": "proceedings of INTERSPEECH 2020",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 54× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 54,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 8,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "speaker"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1607.06450",
+  "source_ids": {
+    "arxiv": "1607.06450"
+  },
+  "title": "Layer Normalization",
+  "authors": [
+    "Jimmy Lei Ba",
+    "Jamie Ryan Kiros",
+    "Geoffrey E. Hinton"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2016,
+  "month": 7,
+  "published_date": "2016-07-21",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1607.06450",
+  "pdf_url": "https://arxiv.org/pdf/1607.06450.pdf",
+  "pdf_path": "raw/papers/1607.06450.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons. A recently introduced technique called batch normalization uses the distribution of the summed input to a neuron over a mini-batch of training cases to compute a mean and variance which are then used to normalize the summed input to that neuron on each training case. This significantly reduces the training time in feed-forward neural networks. However, the effect of batch normalization is dependent on the mini-batch size and it is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch normalization into layer normalization by computing the mean and variance used for normalization from all of the summed inputs to the neurons in a layer on a single training case. Like batch normalization, we also give each neuron its own adaptive bias and gain which are applied after the normalization but before the non-linearity. Unlike batch normalization, layer normalization performs exactly the same computation at training and test times. It is also straightforward to apply to recurrent neural networks by computing the normalization statistics separately at each time step. Layer normalization is very effective at stabilizing the hidden state dynamics in recurrent networks. Empirically, we show that layer normalization can substantially reduce the training time compared with previously published techniques.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 7× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 7,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "ml-method"
+}

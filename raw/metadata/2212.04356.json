@@ -1,0 +1,49 @@
+{
+  "id": "2212.04356",
+  "source_ids": {
+    "arxiv": "2212.04356"
+  },
+  "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+  "authors": [
+    "Alec Radford",
+    "Jong Wook Kim",
+    "Tao Xu",
+    "Greg Brockman",
+    "Christine McLeavey",
+    "Ilya Sutskever"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2022,
+  "month": 12,
+  "published_date": "2022-12-06",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2212.04356",
+  "pdf_url": "https://arxiv.org/pdf/2212.04356.pdf",
+  "pdf_path": "raw/papers/2212.04356.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We study the capabilities of speech processing systems trained simply to predict large amounts of transcripts of audio on the internet. When scaled to 680,000 hours of multilingual and multitask supervision, the resulting models generalize well to standard benchmarks and are often competitive with prior fully supervised results but in a zero-shot transfer setting without the need for any fine-tuning. When compared to humans, the models approach their accuracy and robustness. We are releasing models and inference code to serve as a foundation for further work on robust speech processing.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 196× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 196,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 16,
+    "Q1_2026": 10,
+    "Q2_2026": 10
+  },
+  "sr_match": false,
+  "corpus_role": "asr"
+}

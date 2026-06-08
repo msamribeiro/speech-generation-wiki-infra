@@ -1,0 +1,49 @@
+{
+  "id": "2409.06666",
+  "source_ids": {
+    "arxiv": "2409.06666"
+  },
+  "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
+  "authors": [
+    "Qingkai Fang",
+    "Shoutao Guo",
+    "Yan Zhou",
+    "Zhengrui Ma",
+    "Shaolei Zhang",
+    "Yang Feng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 9,
+  "published_date": "2024-09-10",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2409.06666",
+  "pdf_url": "https://arxiv.org/pdf/2409.06666.pdf",
+  "pdf_path": "raw/papers/2409.06666.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Models like GPT-4o enable real-time interaction with large language models (LLMs) through speech, significantly enhancing user experience compared to traditional text-based interaction. However, there is still a lack of exploration on how to build speech interaction models based on open-source LLMs. To address this, we propose LLaMA-Omni, a novel model architecture designed for low-latency and high-quality speech interaction with LLMs. LLaMA-Omni integrates a pretrained speech encoder, a speech adaptor, an LLM, and a streaming speech decoder. It eliminates the need for speech transcription, and can simultaneously generate text and speech responses directly from speech instructions with extremely low latency. We build our model based on the latest Llama-3.1-8B-Instruct model. To align the model with speech interaction scenarios, we construct a dataset named InstructS2S-200K, which includes 200K speech instructions and corresponding speech responses. Experimental results show that compared to previous speech-language models, LLaMA-Omni provides better responses in both content and style, with a response latency as low as 226ms. Additionally, training LLaMA-Omni takes less than 3 days on just 4 GPUs, paving the way for the efficient development of speech-language models in the future.",
+  "arxiv_comment": "ICLR 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 70× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 70,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 18,
+    "Q4_2025": 20,
+    "Q1_2026": 13,
+    "Q2_2026": 8
+  },
+  "sr_match": true,
+  "corpus_role": "sca"
+}

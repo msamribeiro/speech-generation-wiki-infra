@@ -1,0 +1,44 @@
+{
+  "id": "2411.09943",
+  "source_ids": {
+    "arxiv": "2411.09943"
+  },
+  "title": "Zero-shot Voice Conversion with Diffusion Transformers",
+  "authors": [
+    "Songting Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 11,
+  "published_date": "2024-11-15",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2411.09943",
+  "pdf_url": "https://arxiv.org/pdf/2411.09943.pdf",
+  "pdf_path": "raw/papers/2411.09943.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot voice conversion aims to transform a source speech utterance to match the timbre of a reference speech from an unseen speaker. Traditional approaches struggle with timbre leakage, insufficient timbre representation, and mismatches between training and inference tasks. We propose Seed-VC, a novel framework that addresses these issues by introducing an external timbre shifter during training to perturb the source speech timbre, mitigating leakage and aligning training with inference. Additionally, we employ a diffusion transformer that leverages the entire reference speech context, capturing fine-grained timbre features through in-context learning. Experiments demonstrate that Seed-VC outperforms strong baselines like OpenVoice and CosyVoice, achieving higher speaker similarity and lower word error rates in zero-shot voice conversion tasks. We further extend our approach to zero-shot singing voice conversion by incorporating fundamental frequency (F0) conditioning, resulting in comparative performance to current state-of-the-art methods. Our findings highlight the effectiveness of Seed-VC in overcoming core challenges, paving the way for more accurate and versatile voice conversion systems.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 25× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 25,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 10,
+    "Q4_2025": 8,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

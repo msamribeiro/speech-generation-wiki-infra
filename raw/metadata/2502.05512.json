@@ -1,0 +1,48 @@
+{
+  "id": "2502.05512",
+  "source_ids": {
+    "arxiv": "2502.05512"
+  },
+  "title": "IndexTTS: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System",
+  "authors": [
+    "Wei Deng",
+    "Siyi Zhou",
+    "Jingchen Shu",
+    "Jinchao Wang",
+    "Lu Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 2,
+  "published_date": "2025-02-08",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2502.05512",
+  "pdf_url": "https://arxiv.org/pdf/2502.05512.pdf",
+  "pdf_path": "raw/papers/2502.05512.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recently, large language model (LLM) based text-to-speech (TTS) systems have gradually become the mainstream in the industry due to their high naturalness and powerful zero-shot voice cloning capabilities.Here, we introduce the IndexTTS system, which is mainly based on the XTTS and Tortoise model. We add some novel improvements. Specifically, in Chinese scenarios, we adopt a hybrid modeling method that combines characters and pinyin, making the pronunciations of polyphonic characters and long-tail characters controllable. We also performed a comparative analysis of the Vector Quantization (VQ) with Finite-Scalar Quantization (FSQ) for codebook utilization of acoustic speech tokens. To further enhance the effect and stability of voice cloning, we introduce a conformer-based speech conditional encoder and replace the speechcode decoder with BigVGAN2. Compared with XTTS, it has achieved significant improvements in naturalness, content consistency, and zero-shot voice cloning. As for the popular TTS systems in the open-source, such as Fish-Speech, CosyVoice2, FireRedTTS and F5-TTS, IndexTTS has a relatively simple training process, more controllable usage, and faster inference speed. Moreover, its performance surpasses that of these systems. Our demos are available at https://index-tts.github.io.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 29× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 29,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 9,
+    "Q1_2026": 0,
+    "Q2_2026": 8
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

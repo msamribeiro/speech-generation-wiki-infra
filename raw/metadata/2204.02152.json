@@ -1,0 +1,49 @@
+{
+  "id": "2204.02152",
+  "source_ids": {
+    "arxiv": "2204.02152"
+  },
+  "title": "UTMOS: UTokyo-SaruLab System for VoiceMOS Challenge 2022",
+  "authors": [
+    "Takaaki Saeki",
+    "Detai Xin",
+    "Wataru Nakata",
+    "Tomoki Koriyama",
+    "Shinnosuke Takamichi",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2022,
+  "month": 4,
+  "published_date": "2022-04-05",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2204.02152",
+  "pdf_url": "https://arxiv.org/pdf/2204.02152.pdf",
+  "pdf_path": "raw/papers/2204.02152.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present the UTokyo-SaruLab mean opinion score (MOS) prediction system submitted to VoiceMOS Challenge 2022. The challenge is to predict the MOS values of speech samples collected from previous Blizzard Challenges and Voice Conversion Challenges for two tracks: a main track for in-domain prediction and an out-of-domain (OOD) track for which there is less labeled data from different listening tests. Our system is based on ensemble learning of strong and weak learners. Strong learners incorporate several improvements to the previous fine-tuning models of self-supervised learning (SSL) models, while weak learners use basic machine-learning methods to predict scores from SSL features. In the Challenge, our system had the highest score on several metrics for both the main and OOD tracks. In addition, we conducted ablation studies to investigate the effectiveness of our proposed methods.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2022",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 163× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 163,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 31,
+    "Q4_2025": 24,
+    "Q1_2026": 15,
+    "Q2_2026": 8
+  },
+  "sr_match": true,
+  "corpus_role": "evaluation"
+}

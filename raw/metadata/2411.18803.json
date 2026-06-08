@@ -1,0 +1,47 @@
+{
+  "id": "2411.18803",
+  "source_ids": {
+    "arxiv": "2411.18803"
+  },
+  "title": "TS3-Codec: Transformer-Based Simple Streaming Single Codec",
+  "authors": [
+    "Haibin Wu",
+    "Naoyuki Kanda",
+    "Sefik Emre Eskimez",
+    "Jinyu Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 11,
+  "published_date": "2024-11-27",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2411.18803",
+  "pdf_url": "https://arxiv.org/pdf/2411.18803.pdf",
+  "pdf_path": "raw/papers/2411.18803.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs (NACs) have garnered significant attention as key technologies for audio compression as well as audio representation for speech language models. While mainstream NAC models are predominantly convolution-based, the performance of NACs with a purely transformer-based, and convolution-free architecture remains unexplored. This paper introduces TS3-Codec, a Transformer-Based Simple Streaming Single Codec. TS3-Codec consists of only a stack of transformer layers with a few linear layers, offering greater simplicity and expressiveness by fully eliminating convolution layers that require careful hyperparameter tuning and large computations. Under the streaming setup, the proposed TS3-Codec achieves comparable or superior performance compared to the codec with state-of-the-art convolution-based architecture while requiring only 12% of the computation and 77% of bitrate. Furthermore, it significantly outperforms the convolution-based codec when using similar computational resources.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 25× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 25,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 7,
+    "Q1_2026": 8,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "codec"
+}

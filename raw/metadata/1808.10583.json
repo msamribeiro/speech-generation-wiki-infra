@@ -1,0 +1,47 @@
+{
+  "id": "1808.10583",
+  "source_ids": {
+    "arxiv": "1808.10583"
+  },
+  "title": "AISHELL-2: Transforming Mandarin ASR Research Into Industrial Scale",
+  "authors": [
+    "Jiayu Du",
+    "Xingyu Na",
+    "Xuechen Liu",
+    "Hui Bu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2018,
+  "month": 8,
+  "published_date": "2018-08-31",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1808.10583",
+  "pdf_url": "https://arxiv.org/pdf/1808.10583.pdf",
+  "pdf_path": "raw/papers/1808.10583.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "AISHELL-1 is by far the largest open-source speech corpus available for Mandarin speech recognition research. It was released with a baseline system containing solid training and testing pipelines for Mandarin ASR. In AISHELL-2, 1000 hours of clean read-speech data from iOS is published, which is free for academic usage. On top of AISHELL-2 corpus, an improved recipe is developed and released, containing key components for industrial applications, such as Chinese word segmentation, flexible vocabulary expension and phone set transformation etc. Pipelines support various state-of-the-art techniques, such as time-delayed neural networks and Lattic-Free MMI objective funciton. In addition, we also release dev and test data from other channels(Android and Mic). For research community, we hope that AISHELL-2 corpus can be a solid resource for topics like transfer learning and robust ASR. For industry, we hope AISHELL-2 recipe can be a helpful reference for building meaningful industrial systems and products.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 12× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 12,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "dataset"
+}

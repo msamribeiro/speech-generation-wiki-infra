@@ -1,0 +1,51 @@
+{
+  "id": "1904.02882",
+  "source_ids": {
+    "arxiv": "1904.02882"
+  },
+  "title": "LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech",
+  "authors": [
+    "Heiga Zen",
+    "Viet Dang",
+    "Rob Clark",
+    "Yu Zhang",
+    "Ron J. Weiss",
+    "Ye Jia",
+    "Zhifeng Chen",
+    "Yonghui Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2019,
+  "month": 4,
+  "published_date": "2019-04-05",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1904.02882",
+  "pdf_url": "https://arxiv.org/pdf/1904.02882.pdf",
+  "pdf_path": "raw/papers/1904.02882.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces a new speech corpus called \"LibriTTS\" designed for text-to-speech use. It is derived from the original audio and text materials of the LibriSpeech corpus, which has been used for training and evaluating automatic speech recognition systems. The new corpus inherits desired properties of the LibriSpeech corpus while addressing a number of issues which make LibriSpeech less than ideal for text-to-speech work. The released corpus consists of 585 hours of speech data at 24kHz sampling rate from 2,456 speakers and the corresponding texts. Experimental results show that neural end-to-end TTS models trained from the LibriTTS corpus achieved above 4.0 in mean opinion scores in naturalness in five out of six evaluation speakers. The corpus is freely available for download from http://www.openslr.org/60/.",
+  "arxiv_comment": "Submitted for Interspeech 2019, 7 pages",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 157× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 157,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 37,
+    "Q4_2025": 13,
+    "Q1_2026": 13,
+    "Q2_2026": 10
+  },
+  "sr_match": true,
+  "corpus_role": "dataset"
+}

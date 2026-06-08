@@ -1,0 +1,53 @@
+{
+  "id": "2503.14345",
+  "source_ids": {
+    "arxiv": "2503.14345"
+  },
+  "title": "MoonCast: High-Quality Zero-Shot Podcast Generation",
+  "authors": [
+    "Zeqian Ju",
+    "Dongchao Yang",
+    "Jianwei Yu",
+    "Kai Shen",
+    "Yichong Leng",
+    "Zhengtao Wang",
+    "Xu Tan",
+    "Xinyu Zhou",
+    "Tao Qin",
+    "Xiangyang Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 3,
+  "published_date": "2025-03-18",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2503.14345",
+  "pdf_url": "https://arxiv.org/pdf/2503.14345.pdf",
+  "pdf_path": "raw/papers/2503.14345.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech synthesis have achieved notable success in generating high-quality short utterances for individual speakers. However, these systems still face challenges when extending their capabilities to long, multi-speaker, and spontaneous dialogues, typical of real-world scenarios such as podcasts. These limitations arise from two primary challenges: 1) long speech: podcasts typically span several minutes, exceeding the upper limit of most existing work; 2) spontaneity: podcasts are marked by their spontaneous, oral nature, which sharply contrasts with formal, written contexts; existing works often fall short in capturing this spontaneity. In this paper, we propose MoonCast, a solution for high-quality zero-shot podcast generation, aiming to synthesize natural podcast-style speech from text-only sources (e.g., stories, technical reports, news in TXT, PDF, or Web URL formats) using the voices of unseen speakers. To generate long audio, we adopt a long-context language model-based audio modeling approach utilizing large-scale long-context speech data. To enhance spontaneity, we utilize a podcast generation module to generate scripts with spontaneous details, which have been empirically shown to be as crucial as the text-to-speech modeling itself. Experiments demonstrate that MoonCast outperforms baselines, with particularly notable improvements in spontaneity and coherence.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 14× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 14,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 6,
+    "Q1_2026": 0,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "tts-vc"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "2509.08753",
+  "source_ids": {
+    "arxiv": "2509.08753"
+  },
+  "title": "Streaming Sequence-to-Sequence Learning with Delayed Streams Modeling",
+  "authors": [
+    "Neil Zeghidour",
+    "Eugene Kharitonov",
+    "Manu Orsini",
+    "Václav Volhejn",
+    "Gabriel de Marmiesse",
+    "Edouard Grave",
+    "Patrick Pérez",
+    "Laurent Mazaré",
+    "Alexandre Défossez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 9,
+  "published_date": "2025-09-10",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2509.08753",
+  "pdf_url": "https://arxiv.org/pdf/2509.08753.pdf",
+  "pdf_path": "raw/papers/2509.08753.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Delayed Streams Modeling (DSM), a flexible formulation for streaming, multimodal sequence-to-sequence learning. Sequence-to-sequence generation is often cast in an offline manner, where the model consumes the complete input sequence before generating the first output timestep. Alternatively, streaming sequence-to-sequence rely on learning a policy for choosing when to advance on the input stream, or write to the output stream. DSM instead models already time-aligned streams with a decoder-only language model. By moving the alignment to a pre-processing step,and introducing appropriate delays between streams, DSM provides streaming inference of arbitrary output sequences, from any input combination, making it applicable to many sequence-to-sequence problems. In particular, given text and audio streams, automatic speech recognition (ASR) corresponds to the text stream being delayed, while the opposite gives a text-to-speech (TTS) model. We perform extensive experiments for these two major sequence-to-sequence tasks, showing that DSM provides state-of-the-art performance and latency while supporting arbitrary long sequences, being even competitive with offline baselines. Code, samples and demos are available at https://github.com/kyutai-labs/delayed-streams-modeling",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 11× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 11,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 5,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "asr"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "2501.07246",
+  "source_ids": {
+    "arxiv": "2501.07246"
+  },
+  "title": "Audio-CoT: Exploring Chain-of-Thought Reasoning in Large Audio Language Model",
+  "authors": [
+    "Ziyang Ma",
+    "Zhuo Chen",
+    "Yuping Wang",
+    "Eng Siong Chng",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 1,
+  "published_date": "2025-01-13",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2501.07246",
+  "pdf_url": "https://arxiv.org/pdf/2501.07246.pdf",
+  "pdf_path": "raw/papers/2501.07246.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Audio-Language Models (LALMs) have demonstrated remarkable performance in tasks involving audio perception and understanding, such as speech recognition and audio captioning. However, their reasoning capabilities - critical for solving complex real-world problems - remain underexplored. In this work, we conduct the first exploration into integrating Chain-of-Thought (CoT) reasoning into LALMs to enhance their reasoning ability across auditory modalities. We evaluate representative CoT methods, analyzing their performance in both information extraction and reasoning tasks across sound, music, and speech domains. Our findings reveal that CoT methods significantly improve performance on easy and medium tasks but encounter challenges with hard tasks, where reasoning chains can confuse the model rather than improve accuracy. Additionally, we identify a positive correlation between reasoning path length and accuracy, demonstrating the potential of scaling inference for advanced instruction-following and reasoning. This study not only highlights the promise of CoT in enhancing LALM reasoning capabilities but also identifies key limitations and provides actionable directions for future research.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 8× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 8,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "multimodal"
+}

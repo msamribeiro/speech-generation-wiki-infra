@@ -1,0 +1,52 @@
+{
+  "id": "2406.05370",
+  "source_ids": {
+    "arxiv": "2406.05370"
+  },
+  "title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+  "authors": [
+    "Sanyuan Chen",
+    "Shujie Liu",
+    "Long Zhou",
+    "Yanqing Liu",
+    "Xu Tan",
+    "Jinyu Li",
+    "Sheng Zhao",
+    "Yao Qian",
+    "Furu Wei"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 6,
+  "published_date": "2024-06-08",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2406.05370",
+  "pdf_url": "https://arxiv.org/pdf/2406.05370.pdf",
+  "pdf_path": "raw/papers/2406.05370.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces VALL-E 2, the latest advancement in neural codec language models that marks a milestone in zero-shot text-to-speech synthesis (TTS), achieving human parity for the first time. Based on its predecessor, VALL-E, the new iteration introduces two significant enhancements: Repetition Aware Sampling refines the original nucleus sampling process by accounting for token repetition in the decoding history. It not only stabilizes the decoding but also circumvents the infinite loop issue. Grouped Code Modeling organizes codec codes into groups to effectively shorten the sequence length, which not only boosts inference speed but also addresses the challenges of long sequence modeling. Our experiments on the LibriSpeech and VCTK datasets show that VALL-E 2 surpasses previous systems in speech robustness, naturalness, and speaker similarity. It is the first of its kind to reach human parity on these benchmarks. Moreover, VALL-E 2 consistently synthesizes high-quality speech, even for sentences that are traditionally challenging due to their complexity or repetitive phrases. The advantages of this work could contribute to valuable endeavors, such as generating speech for individuals with aphasia or people with amyotrophic lateral sclerosis. See https://aka.ms/valle2 for demos of VALL-E 2.",
+  "arxiv_comment": "Demo posted",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 70× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 70,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 32,
+    "Q4_2025": 14,
+    "Q1_2026": 8,
+    "Q2_2026": 9
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

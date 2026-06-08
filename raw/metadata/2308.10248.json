@@ -1,0 +1,50 @@
+{
+  "id": "2308.10248",
+  "source_ids": {
+    "arxiv": "2308.10248"
+  },
+  "title": "Steering Language Models With Activation Engineering",
+  "authors": [
+    "Alexander Matt Turner",
+    "Lisa Thiergart",
+    "Gavin Leech",
+    "David Udell",
+    "Juan J. Vazquez",
+    "Ulisse Mini",
+    "Monte MacDiarmid"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 8,
+  "published_date": "2023-08-20",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2308.10248",
+  "pdf_url": "https://arxiv.org/pdf/2308.10248.pdf",
+  "pdf_path": "raw/papers/2308.10248.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Prompt engineering and finetuning aim to maximize language model performance on a given metric (like toxicity reduction). However, these methods do not fully elicit a model's capabilities. To reduce this gap, we introduce activation engineering: the inference-time modification of activations in order to control (or steer) model outputs. Specifically, we introduce the Activation Addition (ActAdd) technique, which contrasts the intermediate activations on prompt pairs (such as \"Love\" versus \"Hate\") to compute a steering vector (Subramani et al. 2022). By tactically adding in e.g. the \"Love\" - \"Hate\" steering vector during the forward pass, we achieve SOTA on negative-to-positive sentiment shift and detoxification using models including LLaMA-3 and OPT. ActAdd yields inference-time control over high-level output properties (like topic and sentiment) while preserving performance on off-target tasks. ActAdd is lightweight: it does not require any machine optimization and works with a single pair of data points, which enables rapid iteration over steering. ActAdd demonstrates the power of activation engineering.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 4× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 4,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "ml-method"
+}

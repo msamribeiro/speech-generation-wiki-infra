@@ -1,0 +1,51 @@
+{
+  "id": "2406.14294",
+  "source_ids": {
+    "arxiv": "2406.14294"
+  },
+  "title": "DASB - Discrete Audio and Speech Benchmark",
+  "authors": [
+    "Pooneh Mousavi",
+    "Jarod Duret",
+    "Darius Petermann",
+    "Artem Ploujnikov",
+    "Luca Della Libera",
+    "Anastasia Kuznetsova",
+    "Cem Subakan",
+    "Mirco Ravanelli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 6,
+  "published_date": "2024-06-20",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2406.14294",
+  "pdf_url": "https://arxiv.org/pdf/2406.14294.pdf",
+  "pdf_path": "raw/papers/2406.14294.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Discrete audio tokens have recently gained considerable attention for their potential to bridge audio and language processing, enabling multimodal language models that can both generate and understand audio. However, preserving key information such as phonetic content, speaker identity, and paralinguistic cues remains a major challenge. Identifying the optimal tokenizer and configuration is further complicated by inconsistent evaluation settings across existing studies. To address this, we introduce the Discrete Audio and Speech Benchmark (DASB), a comprehensive framework for benchmarking discrete audio tokens across speech, general audio, and music domains on a range of discriminative and generative tasks. Our results show that discrete representations are less robust than continuous ones and require careful tuning of factors such as model architecture, data size, learning rate, and capacity. Semantic tokens generally outperform acoustic tokens, but a gap remains between discrete tokens and continuous features, highlighting the need for further research. DASB codes, evaluation setup, and leaderboards are publicly available at https://poonehmousavi.github.io/DASB-website/.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 20× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 20,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 6,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "evaluation"
+}

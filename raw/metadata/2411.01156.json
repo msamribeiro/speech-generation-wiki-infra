@@ -1,0 +1,50 @@
+{
+  "id": "2411.01156",
+  "source_ids": {
+    "arxiv": "2411.01156"
+  },
+  "title": "Fish-Speech: Leveraging Large Language Models for Advanced Multilingual Text-to-Speech Synthesis",
+  "authors": [
+    "Shijia Liao",
+    "Yuxuan Wang",
+    "Tianyu Li",
+    "Yifan Cheng",
+    "Ruoyi Zhang",
+    "Rongzhi Zhou",
+    "Yijin Xing"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 11,
+  "published_date": "2024-11-02",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2411.01156",
+  "pdf_url": "https://arxiv.org/pdf/2411.01156.pdf",
+  "pdf_path": "raw/papers/2411.01156.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-Speech (TTS) systems face ongoing challenges in processing complex linguistic features, handling polyphonic expressions, and producing natural-sounding multilingual speech - capabilities that are crucial for future AI applications. In this paper, we present Fish-Speech, a novel framework that implements a serial fast-slow Dual Autoregressive (Dual-AR) architecture to enhance the stability of Grouped Finite Scalar Vector Quantization (GFSQ) in sequence generation tasks. This architecture improves codebook processing efficiency while maintaining high-fidelity outputs, making it particularly effective for AI interactions and voice cloning.   Fish-Speech leverages Large Language Models (LLMs) for linguistic feature extraction, eliminating the need for traditional grapheme-to-phoneme (G2P) conversion and thereby streamlining the synthesis pipeline and enhancing multilingual support. Additionally, we developed FF-GAN through GFSQ to achieve superior compression ratios and near 100\\% codebook utilization.   Our approach addresses key limitations of current TTS systems while providing a foundation for more sophisticated, context-aware speech synthesis. Experimental results show that Fish-Speech significantly outperforms baseline models in handling complex linguistic scenarios and voice cloning tasks, demonstrating its potential to advance TTS technology in AI applications. The implementation is open source at \\href{https://github.com/fishaudio/fish-speech}{https://github.com/fishaudio/fish-speech}.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 35× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 35,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 13,
+    "Q2_2026": 8
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

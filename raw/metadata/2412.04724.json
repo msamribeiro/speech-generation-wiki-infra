@@ -1,0 +1,50 @@
+{
+  "id": "2412.04724",
+  "source_ids": {
+    "arxiv": "2412.04724"
+  },
+  "title": "StableVC: Style Controllable Zero-Shot Voice Conversion with Conditional Flow Matching",
+  "authors": [
+    "Jixun Yao",
+    "Yuguang Yang",
+    "Yu Pan",
+    "Ziqian Ning",
+    "Jiaohao Ye",
+    "Hongbin Zhou",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 12,
+  "published_date": "2024-12-06",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2412.04724",
+  "pdf_url": "https://arxiv.org/pdf/2412.04724.pdf",
+  "pdf_path": "raw/papers/2412.04724.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot voice conversion (VC) aims to transfer the timbre from the source speaker to an arbitrary unseen speaker while preserving the original linguistic content. Despite recent advancements in zero-shot VC using language model-based or diffusion-based approaches, several challenges remain: 1) current approaches primarily focus on adapting timbre from unseen speakers and are unable to transfer style and timbre to different unseen speakers independently; 2) these approaches often suffer from slower inference speeds due to the autoregressive modeling methods or the need for numerous sampling steps; 3) the quality and similarity of the converted samples are still not fully satisfactory. To address these challenges, we propose a style controllable zero-shot VC approach named StableVC, which aims to transfer timbre and style from source speech to different unseen target speakers. Specifically, we decompose speech into linguistic content, timbre, and style, and then employ a conditional flow matching module to reconstruct the high-quality mel-spectrogram based on these decomposed features. To effectively capture timbre and style in a zero-shot manner, we introduce a novel dual attention mechanism with an adaptive gate, rather than using conventional feature concatenation. With this non-autoregressive design, StableVC can efficiently capture the intricate timbre and style from different unseen speakers and generate high-quality speech significantly faster than real-time. Experiments demonstrate that our proposed StableVC outperforms state-of-the-art baseline systems in zero-shot VC and achieves flexible control over timbre and style from different unseen speakers. Moreover, StableVC offers approximately 25x and 1.65x faster sampling compared to autoregressive and diffusion-based baselines.",
+  "arxiv_comment": "Accepted by AAAI 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 16× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 16,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 8,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

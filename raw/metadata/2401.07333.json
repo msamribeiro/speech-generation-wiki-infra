@@ -1,0 +1,48 @@
+{
+  "id": "2401.07333",
+  "source_ids": {
+    "arxiv": "2401.07333"
+  },
+  "title": "ELLA-V: Stable Neural Codec Language Modeling with Alignment-guided Sequence Reordering",
+  "authors": [
+    "Yakun Song",
+    "Zhuo Chen",
+    "Xiaofei Wang",
+    "Ziyang Ma",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 1,
+  "published_date": "2024-01-14",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2401.07333",
+  "pdf_url": "https://arxiv.org/pdf/2401.07333.pdf",
+  "pdf_path": "raw/papers/2401.07333.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The language model (LM) approach based on acoustic and linguistic prompts, such as VALL-E, has achieved remarkable progress in the field of zero-shot audio generation. However, existing methods still have some limitations: 1) repetitions, transpositions, and omissions in the output synthesized speech due to limited alignment constraints between audio and phoneme tokens; 2) challenges of fine-grained control over the synthesized speech with autoregressive (AR) language model; 3) infinite silence generation due to the nature of AR-based decoding, especially under the greedy strategy. To alleviate these issues, we propose ELLA-V, a simple but efficient LM-based zero-shot text-to-speech (TTS) framework, which enables fine-grained control over synthesized audio at the phoneme level. The key to ELLA-V is interleaving sequences of acoustic and phoneme tokens, where phoneme tokens appear ahead of the corresponding acoustic tokens. The experimental findings reveal that our model outperforms VALL-E in terms of accuracy and delivers more stable results using both greedy and sampling-based decoding strategies. The code of ELLA-V will be open-sourced after cleanups. Audio samples are available at https://ereboas.github.io/ELLAV/.",
+  "arxiv_comment": "Working in progress",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 24× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 24,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 9,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "tts-vc"
+}

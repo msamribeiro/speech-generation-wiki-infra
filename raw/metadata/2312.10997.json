@@ -1,0 +1,53 @@
+{
+  "id": "2312.10997",
+  "source_ids": {
+    "arxiv": "2312.10997"
+  },
+  "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+  "authors": [
+    "Yunfan Gao",
+    "Yun Xiong",
+    "Xinyu Gao",
+    "Kangxiang Jia",
+    "Jinliu Pan",
+    "Yuxi Bi",
+    "Yi Dai",
+    "Jiawei Sun",
+    "Meng Wang",
+    "Haofen Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 12,
+  "published_date": "2023-12-18",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2312.10997",
+  "pdf_url": "https://arxiv.org/pdf/2312.10997.pdf",
+  "pdf_path": "raw/papers/2312.10997.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development.",
+  "arxiv_comment": "Ongoing Work",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 5× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 5,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 6,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": null,
+  "corpus_role": "survey"
+}

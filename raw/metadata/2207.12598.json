@@ -1,0 +1,45 @@
+{
+  "id": "2207.12598",
+  "source_ids": {
+    "arxiv": "2207.12598"
+  },
+  "title": "Classifier-Free Diffusion Guidance",
+  "authors": [
+    "Jonathan Ho",
+    "Tim Salimans"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2022,
+  "month": 7,
+  "published_date": "2022-07-26",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2207.12598",
+  "pdf_url": "https://arxiv.org/pdf/2207.12598.pdf",
+  "pdf_path": "raw/papers/2207.12598.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Classifier guidance is a recently introduced method to trade off mode coverage and sample fidelity in conditional diffusion models post training, in the same spirit as low temperature sampling or truncation in other types of generative models. Classifier guidance combines the score estimate of a diffusion model with the gradient of an image classifier and thereby requires training an image classifier separate from the diffusion model. It also raises the question of whether guidance can be performed without a classifier. We show that guidance can be indeed performed by a pure generative model without such a classifier: in what we call classifier-free guidance, we jointly train a conditional and an unconditional diffusion model, and we combine the resulting conditional and unconditional score estimates to attain a trade-off between sample quality and diversity similar to that obtained using classifier guidance.",
+  "arxiv_comment": "A short version of this paper appeared in the NeurIPS 2021 Workshop on Deep Generative Models and Downstream Applications: https://openreview.net/pdf?id=qw8AKxfYbI",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 47× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 47,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 12,
+    "Q4_2025": 7,
+    "Q1_2026": 0,
+    "Q2_2026": 5
+  },
+  "sr_match": false,
+  "corpus_role": "ml-method"
+}

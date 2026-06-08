@@ -1,0 +1,47 @@
+{
+  "id": "2309.15505",
+  "source_ids": {
+    "arxiv": "2309.15505"
+  },
+  "title": "Finite Scalar Quantization: VQ-VAE Made Simple",
+  "authors": [
+    "Fabian Mentzer",
+    "David Minnen",
+    "Eirikur Agustsson",
+    "Michael Tschannen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 9,
+  "published_date": "2023-09-27",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2309.15505",
+  "pdf_url": "https://arxiv.org/pdf/2309.15505.pdf",
+  "pdf_path": "raw/papers/2309.15505.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose to replace vector quantization (VQ) in the latent representation of VQ-VAEs with a simple scheme termed finite scalar quantization (FSQ), where we project the VAE representation down to a few dimensions (typically less than 10). Each dimension is quantized to a small set of fixed values, leading to an (implicit) codebook given by the product of these sets. By appropriately choosing the number of dimensions and values each dimension can take, we obtain the same codebook size as in VQ. On top of such discrete representations, we can train the same models that have been trained on VQ-VAE representations. For example, autoregressive and masked transformer models for image generation, multimodal generation, and dense prediction computer vision tasks. Concretely, we employ FSQ with MaskGIT for image generation, and with UViM for depth estimation, colorization, and panoptic segmentation. Despite the much simpler design of FSQ, we obtain competitive performance in all these tasks. We emphasize that FSQ does not suffer from codebook collapse and does not need the complex machinery employed in VQ (commitment losses, codebook reseeding, code splitting, entropy penalties, etc.) to learn expressive discrete representations.",
+  "arxiv_comment": "Code: https://github.com/google-research/google-research/tree/master/fsq",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 35× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 35,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 8,
+    "Q4_2025": 11,
+    "Q1_2026": 0,
+    "Q2_2026": 3
+  },
+  "sr_match": false,
+  "corpus_role": "ml-method"
+}

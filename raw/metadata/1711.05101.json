@@ -1,0 +1,45 @@
+{
+  "id": "1711.05101",
+  "source_ids": {
+    "arxiv": "1711.05101"
+  },
+  "title": "Decoupled Weight Decay Regularization",
+  "authors": [
+    "Ilya Loshchilov",
+    "Frank Hutter"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2017,
+  "month": 11,
+  "published_date": "2017-11-14",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1711.05101",
+  "pdf_url": "https://arxiv.org/pdf/1711.05101.pdf",
+  "pdf_path": "raw/papers/1711.05101.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "L$_2$ regularization and weight decay regularization are equivalent for standard stochastic gradient descent (when rescaled by the learning rate), but as we demonstrate this is \\emph{not} the case for adaptive gradient algorithms, such as Adam. While common implementations of these algorithms employ L$_2$ regularization (often calling it \"weight decay\" in what may be misleading due to the inequivalence we expose), we propose a simple modification to recover the original formulation of weight decay regularization by \\emph{decoupling} the weight decay from the optimization steps taken w.r.t. the loss function. We provide empirical evidence that our proposed modification (i) decouples the optimal choice of weight decay factor from the setting of the learning rate for both standard SGD and Adam and (ii) substantially improves Adam's generalization performance, allowing it to compete with SGD with momentum on image classification datasets (on which it was previously typically outperformed by the latter). Our proposed decoupled weight decay has already been adopted by many researchers, and the community has implemented it in TensorFlow and PyTorch; the complete source code for our experiments is available at https://github.com/loshchil/AdamW-and-SGDW",
+  "arxiv_comment": "Published as a conference paper at ICLR 2019",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 72× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 72,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 12,
+    "Q1_2026": 9,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "ml-method"
+}

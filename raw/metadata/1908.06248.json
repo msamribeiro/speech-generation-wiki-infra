@@ -1,0 +1,49 @@
+{
+  "id": "1908.06248",
+  "source_ids": {
+    "arxiv": "1908.06248"
+  },
+  "title": "JVS corpus: free Japanese multi-speaker voice corpus",
+  "authors": [
+    "Shinnosuke Takamichi",
+    "Kentaro Mitsui",
+    "Yuki Saito",
+    "Tomoki Koriyama",
+    "Naoko Tanji",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2019,
+  "month": 8,
+  "published_date": "2019-08-17",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1908.06248",
+  "pdf_url": "https://arxiv.org/pdf/1908.06248.pdf",
+  "pdf_path": "raw/papers/1908.06248.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Thanks to improvements in machine learning techniques, including deep learning, speech synthesis is becoming a machine learning task. To accelerate speech synthesis research, we are developing Japanese voice corpora reasonably accessible from not only academic institutions but also commercial companies. In 2017, we released the JSUT corpus, which contains 10 hours of reading-style speech uttered by a single speaker, for end-to-end text-to-speech synthesis. For more general use in speech synthesis research, e.g., voice conversion and multi-speaker modeling, in this paper, we construct the JVS corpus, which contains voice data of 100 speakers in three styles (normal, whisper, and falsetto). The corpus contains 30 hours of voice data including 22 hours of parallel normal voices. This paper describes how we designed the corpus and summarizes the specifications. The corpus is available at our project page.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 9× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 9,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 8,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "dataset"
+}

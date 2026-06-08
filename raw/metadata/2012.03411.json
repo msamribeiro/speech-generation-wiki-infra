@@ -1,0 +1,48 @@
+{
+  "id": "2012.03411",
+  "source_ids": {
+    "arxiv": "2012.03411"
+  },
+  "title": "MLS: A Large-Scale Multilingual Dataset for Speech Research",
+  "authors": [
+    "Vineel Pratap",
+    "Qiantong Xu",
+    "Anuroop Sriram",
+    "Gabriel Synnaeve",
+    "Ronan Collobert"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2020,
+  "month": 12,
+  "published_date": "2020-12-07",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2012.03411",
+  "pdf_url": "https://arxiv.org/pdf/2012.03411.pdf",
+  "pdf_path": "raw/papers/2012.03411.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces Multilingual LibriSpeech (MLS) dataset, a large multilingual corpus suitable for speech research. The dataset is derived from read audiobooks from LibriVox and consists of 8 languages, including about 44.5K hours of English and a total of about 6K hours for other languages. Additionally, we provide Language Models (LM) and baseline Automatic Speech Recognition (ASR) models and for all the languages in our dataset. We believe such a large transcribed dataset will open new avenues in ASR and Text-To-Speech (TTS) research. The dataset will be made freely available for anyone at http://www.openslr.org.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 43× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 43,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 10,
+    "Q4_2025": 9,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "dataset"
+}

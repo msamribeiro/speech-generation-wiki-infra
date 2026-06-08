@@ -1,0 +1,51 @@
+{
+  "id": "2311.07919",
+  "source_ids": {
+    "arxiv": "2311.07919"
+  },
+  "title": "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models",
+  "authors": [
+    "Yunfei Chu",
+    "Jin Xu",
+    "Xiaohuan Zhou",
+    "Qian Yang",
+    "Shiliang Zhang",
+    "Zhijie Yan",
+    "Chang Zhou",
+    "Jingren Zhou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 11,
+  "published_date": "2023-11-14",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2311.07919",
+  "pdf_url": "https://arxiv.org/pdf/2311.07919.pdf",
+  "pdf_path": "raw/papers/2311.07919.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recently, instruction-following audio-language models have received broad attention for audio interaction with humans. However, the absence of pre-trained audio models capable of handling diverse audio types and tasks has hindered progress in this field. Consequently, most existing works have only been able to support a limited range of interaction capabilities. In this paper, we develop the Qwen-Audio model and address this limitation by scaling up audio-language pre-training to cover over 30 tasks and various audio types, such as human speech, natural sounds, music, and songs, to facilitate universal audio understanding abilities. However, directly co-training all tasks and datasets can lead to interference issues, as the textual labels associated with different datasets exhibit considerable variations due to differences in task focus, language, granularity of annotation, and text structure. To overcome the one-to-many interference, we carefully design a multi-task training framework by conditioning on a sequence of hierarchical tags to the decoder for encouraging knowledge sharing and avoiding interference through shared and specified tags respectively. Remarkably, Qwen-Audio achieves impressive performance across diverse benchmark tasks without requiring any task-specific fine-tuning, surpassing its counterparts. Building upon the capabilities of Qwen-Audio, we further develop Qwen-Audio-Chat, which allows for input from various audios and text inputs, enabling multi-turn dialogues and supporting various audio-central scenarios.",
+  "arxiv_comment": "The code, checkpoints and demo are released at https://github.com/QwenLM/Qwen-Audio",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 59× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 59,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 26,
+    "Q4_2025": 9,
+    "Q1_2026": 5,
+    "Q2_2026": 8
+  },
+  "sr_match": false,
+  "corpus_role": "multimodal"
+}

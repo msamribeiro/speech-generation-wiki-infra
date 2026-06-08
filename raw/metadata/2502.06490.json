@@ -1,0 +1,53 @@
+{
+  "id": "2502.06490",
+  "source_ids": {
+    "arxiv": "2502.06490"
+  },
+  "title": "Recent Advances in Discrete Speech Tokens: A Review",
+  "authors": [
+    "Yiwei Guo",
+    "Zhihan Li",
+    "Hankun Wang",
+    "Bohan Li",
+    "Chongtian Shao",
+    "Hanglei Zhang",
+    "Chenpeng Du",
+    "Xie Chen",
+    "Shujie Liu",
+    "Kai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 2,
+  "published_date": "2025-02-10",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2502.06490",
+  "pdf_url": "https://arxiv.org/pdf/2502.06490.pdf",
+  "pdf_path": "raw/papers/2502.06490.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of speech generation technologies in the era of large language models (LLMs) has established discrete speech tokens as a foundational paradigm for speech representation. These tokens, characterized by their discrete, compact, and concise nature, are not only advantageous for efficient transmission and storage, but also inherently compatible with the language modeling framework, enabling seamless integration of speech into text-dominated LLM architectures. Current research categorizes discrete speech tokens into two principal classes: acoustic tokens and semantic tokens, each of which has evolved into a rich research domain characterized by unique design philosophies and methodological approaches. This survey systematically synthesizes the existing taxonomy and recent innovations in discrete speech tokenization, conducts a critical examination of the strengths and limitations of each paradigm, and presents systematic experimental comparisons across token types. Furthermore, we identify persistent challenges in the field and propose potential research directions, aiming to offer actionable insights to inspire future advancements in the development and application of discrete speech tokens.",
+  "arxiv_comment": "26 pages, 8 figures, 3 tables. Accepted to IEEE TPAMI",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 32× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 32,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 8,
+    "Q1_2026": 5,
+    "Q2_2026": 5
+  },
+  "sr_match": false,
+  "corpus_role": "survey"
+}

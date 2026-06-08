@@ -1,0 +1,53 @@
+{
+  "id": "2001.08361",
+  "source_ids": {
+    "arxiv": "2001.08361"
+  },
+  "title": "Scaling Laws for Neural Language Models",
+  "authors": [
+    "Jared Kaplan",
+    "Sam McCandlish",
+    "Tom Henighan",
+    "Tom B. Brown",
+    "Benjamin Chess",
+    "Rewon Child",
+    "Scott Gray",
+    "Alec Radford",
+    "Jeffrey Wu",
+    "Dario Amodei"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2020,
+  "month": 1,
+  "published_date": "2020-01-23",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2001.08361",
+  "pdf_url": "https://arxiv.org/pdf/2001.08361.pdf",
+  "pdf_path": "raw/papers/2001.08361.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We study empirical scaling laws for language model performance on the cross-entropy loss. The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude. Other architectural details such as network width or depth have minimal effects within a wide range. Simple equations govern the dependence of overfitting on model/dataset size and the dependence of training speed on model size. These relationships allow us to determine the optimal allocation of a fixed compute budget. Larger models are significantly more sample-efficient, such that optimally compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence.",
+  "arxiv_comment": "19 pages, 15 figures",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 8× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 8,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "ml-method"
+}

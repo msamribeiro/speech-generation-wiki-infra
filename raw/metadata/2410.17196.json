@@ -1,0 +1,49 @@
+{
+  "id": "2410.17196",
+  "source_ids": {
+    "arxiv": "2410.17196"
+  },
+  "title": "VoiceBench: Benchmarking LLM-Based Voice Assistants",
+  "authors": [
+    "Yiming Chen",
+    "Xianghu Yue",
+    "Chen Zhang",
+    "Xiaoxue Gao",
+    "Robby T. Tan",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 10,
+  "published_date": "2024-10-22",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2410.17196",
+  "pdf_url": "https://arxiv.org/pdf/2410.17196.pdf",
+  "pdf_path": "raw/papers/2410.17196.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Building on the success of large language models (LLMs), recent advancements such as GPT-4o have enabled real-time speech interactions through LLM-based voice assistants, offering a significantly improved user experience compared to traditional text-based interactions. However, the absence of benchmarks designed to evaluate these speech interaction capabilities has hindered progress of LLM-based voice assistants development. Current evaluations focus primarily on automatic speech recognition (ASR) or general knowledge evaluation with clean speeches, neglecting the more intricate, real-world scenarios that involve diverse speaker characteristics, environmental and content factors. To address this, we introduce VoiceBench, the first benchmark designed to provide a multi-faceted evaluation of LLM-based voice assistants. VoiceBench also includes both real and synthetic spoken instructions that incorporate the above three key real-world variations. Extensive experiments reveal the limitations of current LLM-based voice assistant models and offer valuable insights for future research and development in this field.",
+  "arxiv_comment": "Work in progress. Data is available at https://github.com/MatthewCYM/VoiceBench",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 60× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 60,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 13,
+    "Q4_2025": 14,
+    "Q1_2026": 12,
+    "Q2_2026": 14
+  },
+  "sr_match": true,
+  "corpus_role": "evaluation"
+}

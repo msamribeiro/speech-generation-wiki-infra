@@ -1,0 +1,47 @@
+{
+  "id": "2206.08317",
+  "source_ids": {
+    "arxiv": "2206.08317"
+  },
+  "title": "Paraformer: Fast and Accurate Parallel Transformer for Non-autoregressive End-to-End Speech Recognition",
+  "authors": [
+    "Zhifu Gao",
+    "Shiliang Zhang",
+    "Ian McLoughlin",
+    "Zhijie Yan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2022,
+  "month": 6,
+  "published_date": "2022-06-16",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2206.08317",
+  "pdf_url": "https://arxiv.org/pdf/2206.08317.pdf",
+  "pdf_path": "raw/papers/2206.08317.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Transformers have recently dominated the ASR field. Although able to yield good performance, they involve an autoregressive (AR) decoder to generate tokens one by one, which is computationally inefficient. To speed up inference, non-autoregressive (NAR) methods, e.g. single-step NAR, were designed, to enable parallel generation. However, due to an independence assumption within the output tokens, performance of single-step NAR is inferior to that of AR models, especially with a large-scale corpus. There are two challenges to improving single-step NAR: Firstly to accurately predict the number of output tokens and extract hidden variables; secondly, to enhance modeling of interdependence between output tokens. To tackle both challenges, we propose a fast and accurate parallel transformer, termed Paraformer. This utilizes a continuous integrate-and-fire based predictor to predict the number of tokens and generate hidden variables. A glancing language model (GLM) sampler then generates semantic embeddings to enhance the NAR decoder's ability to model context interdependence. Finally, we design a strategy to generate negative samples for minimum word error rate training to further improve performance. Experiments using the public AISHELL-1, AISHELL-2 benchmark, and an industrial-level 20,000 hour task demonstrate that the proposed Paraformer can attain comparable performance to the state-of-the-art AR transformer, with more than 10x speedup.",
+  "arxiv_comment": "5 pages, 3 figures, accepted by INTERSPEECH 2022",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 35× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 35,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 8,
+    "Q1_2026": 0,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "asr"
+}

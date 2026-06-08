@@ -1,0 +1,52 @@
+{
+  "id": "1609.03499",
+  "source_ids": {
+    "arxiv": "1609.03499"
+  },
+  "title": "WaveNet: A Generative Model for Raw Audio",
+  "authors": [
+    "Aaron van den Oord",
+    "Sander Dieleman",
+    "Heiga Zen",
+    "Karen Simonyan",
+    "Oriol Vinyals",
+    "Alex Graves",
+    "Nal Kalchbrenner",
+    "Andrew Senior",
+    "Koray Kavukcuoglu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2016,
+  "month": 9,
+  "published_date": "2016-09-12",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1609.03499",
+  "pdf_url": "https://arxiv.org/pdf/1609.03499.pdf",
+  "pdf_path": "raw/papers/1609.03499.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper introduces WaveNet, a deep neural network for generating raw audio waveforms. The model is fully probabilistic and autoregressive, with the predictive distribution for each audio sample conditioned on all previous ones; nonetheless we show that it can be efficiently trained on data with tens of thousands of samples per second of audio. When applied to text-to-speech, it yields state-of-the-art performance, with human listeners rating it as significantly more natural sounding than the best parametric and concatenative systems for both English and Mandarin. A single WaveNet can capture the characteristics of many different speakers with equal fidelity, and can switch between them by conditioning on the speaker identity. When trained to model music, we find that it generates novel and often highly realistic musical fragments. We also show that it can be employed as a discriminative model, returning promising results for phoneme recognition.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 41× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 41,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 9,
+    "Q4_2025": 9,
+    "Q1_2026": 8,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "tts-vc"
+}

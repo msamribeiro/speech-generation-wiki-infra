@@ -1,0 +1,52 @@
+{
+  "id": "2506.13053",
+  "source_ids": {
+    "arxiv": "2506.13053"
+  },
+  "title": "ZipVoice: Fast and High-Quality Zero-Shot Text-to-Speech with Flow Matching",
+  "authors": [
+    "Han Zhu",
+    "Wei Kang",
+    "Zengwei Yao",
+    "Liyong Guo",
+    "Fangjun Kuang",
+    "Zhaoqing Li",
+    "Weiji Zhuang",
+    "Long Lin",
+    "Daniel Povey"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 6,
+  "published_date": "2025-06-16",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2506.13053",
+  "pdf_url": "https://arxiv.org/pdf/2506.13053.pdf",
+  "pdf_path": "raw/papers/2506.13053.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Existing large-scale zero-shot text-to-speech (TTS) models deliver high speech quality but suffer from slow inference speeds due to massive parameters. To address this issue, this paper introduces ZipVoice, a high-quality flow-matching-based zero-shot TTS model with a compact model size and fast inference speed. Key designs include: 1) a Zipformer-based vector field estimator to maintain adequate modeling capabilities under constrained size; 2) Average upsampling-based initial speech-text alignment and Zipformer-based text encoder to improve speech intelligibility; 3) A flow distillation method to reduce sampling steps and eliminate the inference overhead associated with classifier-free guidance. Experiments on 100k hours multilingual datasets show that ZipVoice matches state-of-the-art models in speech quality, while being 3 times smaller and up to 30 times faster than a DiT-based flow-matching baseline. Codes, model checkpoints and demo samples are publicly available at https://github.com/k2-fsa/ZipVoice.",
+  "arxiv_comment": "Accepted in ASRU 2025",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 24× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 24,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 6,
+    "Q1_2026": 7,
+    "Q2_2026": 5
+  },
+  "sr_match": false,
+  "corpus_role": "tts-vc"
+}

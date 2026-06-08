@@ -1,0 +1,53 @@
+{
+  "id": "2504.08528",
+  "source_ids": {
+    "arxiv": "2504.08528"
+  },
+  "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
+  "authors": [
+    "Siddhant Arora",
+    "Kai-Wei Chang",
+    "Chung-Ming Chien",
+    "Yifan Peng",
+    "Haibin Wu",
+    "Yossi Adi",
+    "Emmanuel Dupoux",
+    "Hung-Yi Lee",
+    "Karen Livescu",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-11",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2504.08528",
+  "pdf_url": "https://arxiv.org/pdf/2504.08528.pdf",
+  "pdf_path": "raw/papers/2504.08528.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "The field of spoken language processing is undergoing a shift from training custom-built, task-specific models toward using and optimizing spoken language models (SLMs) which act as universal speech processing systems. This trend is similar to the progression toward universal language models that has taken place in the field of (text) natural language processing. SLMs include both \"pure\" language models of speech -- models of the distribution of tokenized speech sequences -- and models that combine speech encoders with text language models, often including both spoken and written input or output. Work in this area is very diverse, with a range of terminology and evaluation settings. This paper aims to contribute an improved understanding of SLMs via a unifying literature survey of recent work in the context of the evolution of the field. Our survey categorizes the work in this area by model architecture, training, and evaluation choices, and describes some key challenges and directions for future work.",
+  "arxiv_comment": "Published in Transactions on Machine Learning Research",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 27× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 27,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 8,
+    "Q2_2026": 5
+  },
+  "sr_match": false,
+  "corpus_role": "survey"
+}

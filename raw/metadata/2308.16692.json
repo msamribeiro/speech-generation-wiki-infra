@@ -1,0 +1,48 @@
+{
+  "id": "2308.16692",
+  "source_ids": {
+    "arxiv": "2308.16692"
+  },
+  "title": "SpeechTokenizer: Unified Speech Tokenizer for Speech Large Language Models",
+  "authors": [
+    "Xin Zhang",
+    "Dong Zhang",
+    "Shimin Li",
+    "Yaqian Zhou",
+    "Xipeng Qiu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 8,
+  "published_date": "2023-08-31",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2308.16692",
+  "pdf_url": "https://arxiv.org/pdf/2308.16692.pdf",
+  "pdf_path": "raw/papers/2308.16692.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Current speech large language models build upon discrete speech representations, which can be categorized into semantic tokens and acoustic tokens. However, existing speech tokens are not specifically designed for speech language modeling. To assess the suitability of speech tokens for building speech language models, we established the first benchmark, SLMTokBench. Our results indicate that neither semantic nor acoustic tokens are ideal for this purpose. Therefore, we propose SpeechTokenizer, a unified speech tokenizer for speech large language models. SpeechTokenizer adopts the Encoder-Decoder architecture with residual vector quantization (RVQ). Unifying semantic and acoustic tokens, SpeechTokenizer disentangles different aspects of speech information hierarchically across different RVQ layers. Furthermore, We construct a Unified Speech Language Model (USLM) leveraging SpeechTokenizer. Experiments show that SpeechTokenizer performs comparably to EnCodec in speech reconstruction and demonstrates strong performance on the SLMTokBench benchmark. Also, USLM outperforms VALL-E in zero-shot Text-to-Speech tasks. Code and models are available at https://github.com/ZhangXInFD/SpeechTokenizer/.",
+  "arxiv_comment": "Accepted by ICLR 2024. Project page is at https://0nutation.github.io/SpeechTokenizer.github.io/",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 104× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 104,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 25,
+    "Q4_2025": 16,
+    "Q1_2026": 11,
+    "Q2_2026": 8
+  },
+  "sr_match": true,
+  "corpus_role": "codec"
+}

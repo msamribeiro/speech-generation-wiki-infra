@@ -1,0 +1,47 @@
+{
+  "id": "2312.01479",
+  "source_ids": {
+    "arxiv": "2312.01479"
+  },
+  "title": "OpenVoice: Versatile Instant Voice Cloning",
+  "authors": [
+    "Zengyi Qin",
+    "Wenliang Zhao",
+    "Xumin Yu",
+    "Xin Sun"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 12,
+  "published_date": "2023-12-03",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2312.01479",
+  "pdf_url": "https://arxiv.org/pdf/2312.01479.pdf",
+  "pdf_path": "raw/papers/2312.01479.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce OpenVoice, a versatile voice cloning approach that requires only a short audio clip from the reference speaker to replicate their voice and generate speech in multiple languages. OpenVoice represents a significant advancement in addressing the following open challenges in the field: 1) Flexible Voice Style Control. OpenVoice enables granular control over voice styles, including emotion, accent, rhythm, pauses, and intonation, in addition to replicating the tone color of the reference speaker. The voice styles are not directly copied from and constrained by the style of the reference speaker. Previous approaches lacked the ability to flexibly manipulate voice styles after cloning. 2) Zero-Shot Cross-Lingual Voice Cloning. OpenVoice achieves zero-shot cross-lingual voice cloning for languages not included in the massive-speaker training set. Unlike previous approaches, which typically require extensive massive-speaker multi-lingual (MSML) dataset for all languages, OpenVoice can clone voices into a new language without any massive-speaker training data for that language. OpenVoice is also computationally efficient, costing tens of times less than commercially available APIs that offer even inferior performance. To foster further research in the field, we have made the source code and trained model publicly accessible. We also provide qualitative results in our demo website. OpenVoice has been used by more than 2M users worldwide as the voice engine of MyShell.ai",
+  "arxiv_comment": "Technical Report",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 13× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 13,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 5
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

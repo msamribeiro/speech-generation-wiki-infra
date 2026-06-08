@@ -1,0 +1,47 @@
+{
+  "id": "2409.05377",
+  "source_ids": {
+    "arxiv": "2409.05377"
+  },
+  "title": "BigCodec: Pushing the Limits of Low-Bitrate Neural Speech Codec",
+  "authors": [
+    "Detai Xin",
+    "Xu Tan",
+    "Shinnosuke Takamichi",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 9,
+  "published_date": "2024-09-09",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2409.05377",
+  "pdf_url": "https://arxiv.org/pdf/2409.05377.pdf",
+  "pdf_path": "raw/papers/2409.05377.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present BigCodec, a low-bitrate neural speech codec. While recent neural speech codecs have shown impressive progress, their performance significantly deteriorates at low bitrates (around 1 kbps). Although a low bitrate inherently restricts performance, other factors, such as model capacity, also hinder further improvements. To address this problem, we scale up the model size to 159M parameters that is more than 10 times larger than popular codecs with about 10M parameters. Besides, we integrate sequential models into traditional convolutional architectures to better capture temporal dependency and adopt low-dimensional vector quantization to ensure a high code utilization. Comprehensive objective and subjective evaluations show that BigCodec, with a bitrate of 1.04 kbps, significantly outperforms several existing low-bitrate codecs. Furthermore, BigCodec achieves objective performance comparable to popular codecs operating at 4-6 times higher bitrates, and even delivers better subjective perceptual quality than the ground truth.",
+  "arxiv_comment": "4 pages, 1 figure. Audio samples available at: https://aria-k-alethia.github.io/bigcodec-demo/",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 53× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 53,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 17,
+    "Q4_2025": 16,
+    "Q1_2026": 10,
+    "Q2_2026": 8
+  },
+  "sr_match": true,
+  "corpus_role": "codec"
+}

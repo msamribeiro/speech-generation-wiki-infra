@@ -1,0 +1,46 @@
+{
+  "id": "1510.08484",
+  "source_ids": {
+    "arxiv": "1510.08484"
+  },
+  "title": "MUSAN: A Music, Speech, and Noise Corpus",
+  "authors": [
+    "David Snyder",
+    "Guoguo Chen",
+    "Daniel Povey"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2015,
+  "month": 10,
+  "published_date": "2015-10-28",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/1510.08484",
+  "pdf_url": "https://arxiv.org/pdf/1510.08484.pdf",
+  "pdf_path": "raw/papers/1510.08484.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This report introduces a new corpus of music, speech, and noise. This dataset is suitable for training models for voice activity detection (VAD) and music/speech discrimination. Our corpus is released under a flexible Creative Commons license. The dataset consists of music from several genres, speech from twelve languages, and a wide assortment of technical and non-technical noises. We demonstrate use of this corpus for music/speech discrimination on Broadcast news and VAD for speaker identification.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 15× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 15,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "dataset"
+}

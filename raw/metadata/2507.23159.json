@@ -1,0 +1,50 @@
+{
+  "id": "2507.23159",
+  "source_ids": {
+    "arxiv": "2507.23159"
+  },
+  "title": "Full-Duplex-Bench v1.5: Evaluating Overlap Handling for Full-Duplex Speech Models",
+  "authors": [
+    "Guan-Ting Lin",
+    "Shih-Yun Shan Kuan",
+    "Qirui Wang",
+    "Jiachen Lian",
+    "Tingle Li",
+    "Shinji Watanabe",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 7,
+  "published_date": "2025-07-30",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2507.23159",
+  "pdf_url": "https://arxiv.org/pdf/2507.23159.pdf",
+  "pdf_path": "raw/papers/2507.23159.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue systems promise to transform human-machine interaction from a rigid, turn-based protocol into a fluid, natural conversation. However, the central challenge to realizing this vision, managing overlapping speech, remains critically under-evaluated. We introduce Full-Duplex-Bench v1.5, the first fully automated benchmark designed to systematically probe how models behave during speech overlap. The benchmark simulates four representative overlap scenarios: user interruption, user backchannel, talking to others, and background speech. Our framework, compatible with open-source and commercial API-based models, provides a comprehensive suite of metrics analyzing categorical dialogue behaviors, stop and response latency, and prosodic adaptation. Benchmarking five state-of-the-art agents reveals two divergent strategies: a responsive approach prioritizing rapid response to user input, and a floor-holding approach that preserves conversational flow by filtering overlapping events. Our open-source framework enables practitioners to accelerate the development of robust full-duplex systems by providing the tools for reproducible evaluation.",
+  "arxiv_comment": "Accepted by ICASSP 2026. Code and Data at https://github.com/DanielLin94144/Full-Duplex-Bench",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 17× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 17,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 5,
+    "Q2_2026": 5
+  },
+  "sr_match": false,
+  "corpus_role": "evaluation"
+}

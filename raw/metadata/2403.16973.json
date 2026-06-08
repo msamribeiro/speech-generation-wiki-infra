@@ -1,0 +1,48 @@
+{
+  "id": "2403.16973",
+  "source_ids": {
+    "arxiv": "2403.16973"
+  },
+  "title": "VoiceCraft: Zero-Shot Speech Editing and Text-to-Speech in the Wild",
+  "authors": [
+    "Puyuan Peng",
+    "Po-Yao Huang",
+    "Shang-Wen Li",
+    "Abdelrahman Mohamed",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 3,
+  "published_date": "2024-03-25",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2403.16973",
+  "pdf_url": "https://arxiv.org/pdf/2403.16973.pdf",
+  "pdf_path": "raw/papers/2403.16973.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts. VoiceCraft employs a Transformer decoder architecture and introduces a token rearrangement procedure that combines causal masking and delayed stacking to enable generation within an existing sequence. On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALLE and the popular commercial model XTTS-v2. Crucially, the models are evaluated on challenging and realistic datasets, that consist of diverse accents, speaking styles, recording conditions, and background noise and music, and our model performs consistently well compared to other models and real recordings. In particular, for speech editing evaluation, we introduce a high quality, challenging, and realistic dataset named RealEdit. We encourage readers to listen to the demos at https://jasonppy.github.io/VoiceCraft_web.",
+  "arxiv_comment": "ACL 2024. Data, code, and model weights are available at https://github.com/jasonppy/VoiceCraft",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 49× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 49,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 11,
+    "Q4_2025": 11,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

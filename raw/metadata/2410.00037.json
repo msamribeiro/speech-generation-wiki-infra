@@ -1,0 +1,51 @@
+{
+  "id": "2410.00037",
+  "source_ids": {
+    "arxiv": "2410.00037"
+  },
+  "title": "Moshi: a speech-text foundation model for real-time dialogue",
+  "authors": [
+    "Alexandre Défossez",
+    "Laurent Mazaré",
+    "Manu Orsini",
+    "Amélie Royer",
+    "Patrick Pérez",
+    "Hervé Jégou",
+    "Edouard Grave",
+    "Neil Zeghidour"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 9,
+  "published_date": "2024-09-17",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2410.00037",
+  "pdf_url": "https://arxiv.org/pdf/2410.00037.pdf",
+  "pdf_path": "raw/papers/2410.00037.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Moshi, a speech-text foundation model and full-duplex spoken dialogue framework. Current systems for spoken dialogue rely on pipelines of independent components, namely voice activity detection, speech recognition, textual dialogue and text-to-speech. Such frameworks cannot emulate the experience of real conversations. First, their complexity induces a latency of several seconds between interactions. Second, text being the intermediate modality for dialogue, non-linguistic information that modifies meaning -- such as emotion or non-speech sounds -- is lost in the interaction. Finally, they rely on a segmentation into speaker turns, which does not take into account overlapping speech, interruptions and interjections. Moshi solves these independent issues altogether by casting spoken dialogue as speech-to-speech generation. Starting from a text language model backbone, Moshi generates speech as tokens from the residual quantizer of a neural audio codec, while modeling separately its own speech and that of the user into parallel streams. This allows for the removal of explicit speaker turns, and the modeling of arbitrary conversational dynamics. We moreover extend the hierarchical semantic-to-acoustic token generation of previous work to first predict time-aligned text tokens as a prefix to audio tokens. Not only this \"Inner Monologue\" method significantly improves the linguistic quality of generated speech, but we also illustrate how it can provide streaming speech recognition and text-to-speech. Our resulting model is the first real-time full-duplex spoken large language model, with a theoretical latency of 160ms, 200ms in practice, and is available at https://github.com/kyutai-labs/moshi.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 208× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 208,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 56,
+    "Q4_2025": 45,
+    "Q1_2026": 48,
+    "Q2_2026": 38
+  },
+  "sr_match": false,
+  "corpus_role": "sca"
+}

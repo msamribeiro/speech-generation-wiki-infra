@@ -1,0 +1,50 @@
+{
+  "id": "2006.04558",
+  "source_ids": {
+    "arxiv": "2006.04558"
+  },
+  "title": "FastSpeech 2: Fast and High-Quality End-to-End Text to Speech",
+  "authors": [
+    "Yi Ren",
+    "Chenxu Hu",
+    "Xu Tan",
+    "Tao Qin",
+    "Sheng Zhao",
+    "Zhou Zhao",
+    "Tie-Yan Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2020,
+  "month": 6,
+  "published_date": "2020-06-08",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2006.04558",
+  "pdf_url": "https://arxiv.org/pdf/2006.04558.pdf",
+  "pdf_path": "raw/papers/2006.04558.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Non-autoregressive text to speech (TTS) models such as FastSpeech can synthesize speech significantly faster than previous autoregressive models with comparable quality. The training of FastSpeech model relies on an autoregressive teacher model for duration prediction (to provide more information as input) and knowledge distillation (to simplify the data distribution in output), which can ease the one-to-many mapping problem (i.e., multiple speech variations correspond to the same text) in TTS. However, FastSpeech has several disadvantages: 1) the teacher-student distillation pipeline is complicated and time-consuming, 2) the duration extracted from the teacher model is not accurate enough, and the target mel-spectrograms distilled from teacher model suffer from information loss due to data simplification, both of which limit the voice quality. In this paper, we propose FastSpeech 2, which addresses the issues in FastSpeech and better solves the one-to-many mapping problem in TTS by 1) directly training the model with ground-truth target instead of the simplified output from teacher, and 2) introducing more variation information of speech (e.g., pitch, energy and more accurate duration) as conditional inputs. Specifically, we extract duration, pitch and energy from speech waveform and directly take them as conditional inputs in training and use predicted values in inference. We further design FastSpeech 2s, which is the first attempt to directly generate speech waveform from text in parallel, enjoying the benefit of fully end-to-end inference. Experimental results show that 1) FastSpeech 2 achieves a 3x training speed-up over FastSpeech, and FastSpeech 2s enjoys even faster inference speed; 2) FastSpeech 2 and 2s outperform FastSpeech in voice quality, and FastSpeech 2 can even surpass autoregressive models. Audio samples are available at https://speechresearch.github.io/fastspeech2/.",
+  "arxiv_comment": "Accepted by ICLR 2021",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 95× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 95,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 22,
+    "Q4_2025": 14,
+    "Q1_2026": 11,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

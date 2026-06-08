@@ -1,0 +1,48 @@
+{
+  "id": "2206.04658",
+  "source_ids": {
+    "arxiv": "2206.04658"
+  },
+  "title": "BigVGAN: A Universal Neural Vocoder with Large-Scale Training",
+  "authors": [
+    "Sang-gil Lee",
+    "Wei Ping",
+    "Boris Ginsburg",
+    "Bryan Catanzaro",
+    "Sungroh Yoon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2022,
+  "month": 6,
+  "published_date": "2022-06-09",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2206.04658",
+  "pdf_url": "https://arxiv.org/pdf/2206.04658.pdf",
+  "pdf_path": "raw/papers/2206.04658.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Despite recent progress in generative adversarial network (GAN)-based vocoders, where the model generates raw waveform conditioned on acoustic features, it is challenging to synthesize high-fidelity audio for numerous speakers across various recording environments. In this work, we present BigVGAN, a universal vocoder that generalizes well for various out-of-distribution scenarios without fine-tuning. We introduce periodic activation function and anti-aliased representation into the GAN generator, which brings the desired inductive bias for audio synthesis and significantly improves audio quality. In addition, we train our GAN vocoder at the largest scale up to 112M parameters, which is unprecedented in the literature. We identify and address the failure modes in large-scale GAN training for audio, while maintaining high-fidelity output without over-regularization. Our BigVGAN, trained only on clean speech (LibriTTS), achieves the state-of-the-art performance for various zero-shot (out-of-distribution) conditions, including unseen speakers, languages, recording environments, singing voices, music, and instrumental audio. We release our code and model at: https://github.com/NVIDIA/BigVGAN",
+  "arxiv_comment": "To appear at ICLR 2023. Listen to audio samples from BigVGAN at: https://bigvgan-demo.github.io/",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 67× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 67,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 12,
+    "Q4_2025": 10,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

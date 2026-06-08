@@ -1,0 +1,49 @@
+{
+  "id": "2406.00654",
+  "source_ids": {
+    "arxiv": "2406.00654"
+  },
+  "title": "Enhancing Zero-shot Text-to-Speech Synthesis with Human Feedback",
+  "authors": [
+    "Chen Chen",
+    "Yuchen Hu",
+    "Wen Wu",
+    "Helin Wang",
+    "Eng Siong Chng",
+    "Chao Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 6,
+  "published_date": "2024-06-02",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2406.00654",
+  "pdf_url": "https://arxiv.org/pdf/2406.00654.pdf",
+  "pdf_path": "raw/papers/2406.00654.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In recent years, text-to-speech (TTS) technology has witnessed impressive advancements, particularly with large-scale training datasets, showcasing human-level speech quality and impressive zero-shot capabilities on unseen speakers. However, despite human subjective evaluations, such as the mean opinion score (MOS), remaining the gold standard for assessing the quality of synthetic speech, even state-of-the-art TTS approaches have kept human feedback isolated from training that resulted in mismatched training objectives and evaluation metrics. In this work, we investigate a novel topic of integrating subjective human evaluation into the TTS training loop. Inspired by the recent success of reinforcement learning from human feedback, we propose a comprehensive sampling-annotating-learning framework tailored to TTS optimization, namely uncertainty-aware optimization (UNO). Specifically, UNO eliminates the need for a reward model or preference data by directly maximizing the utility of speech generations while considering the uncertainty that lies in the inherent variability in subjective human speech perception and evaluations. Experimental results of both subjective and objective evaluations demonstrate that UNO considerably improves the zero-shot performance of TTS models in terms of MOS, word error rate, and speaker similarity. Additionally, we present a remarkable ability of UNO that it can adapt to the desired speaking style in emotional TTS seamlessly and flexibly.",
+  "arxiv_comment": "19 pages, Preprint",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 15× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 15,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 9,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

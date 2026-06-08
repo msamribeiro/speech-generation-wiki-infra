@@ -1,0 +1,50 @@
+{
+  "id": "2305.11000",
+  "source_ids": {
+    "arxiv": "2305.11000"
+  },
+  "title": "SpeechGPT: Empowering Large Language Models with Intrinsic Cross-Modal Conversational Abilities",
+  "authors": [
+    "Dong Zhang",
+    "Shimin Li",
+    "Xin Zhang",
+    "Jun Zhan",
+    "Pengyu Wang",
+    "Yaqian Zhou",
+    "Xipeng Qiu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 5,
+  "published_date": "2023-05-18",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2305.11000",
+  "pdf_url": "https://arxiv.org/pdf/2305.11000.pdf",
+  "pdf_path": "raw/papers/2305.11000.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Multi-modal large language models are regarded as a crucial step towards Artificial General Intelligence (AGI) and have garnered significant interest with the emergence of ChatGPT. However, current speech-language models typically adopt the cascade paradigm, preventing inter-modal knowledge transfer. In this paper, we propose SpeechGPT, a large language model with intrinsic cross-modal conversational abilities, capable of perceiving and generating multi-model content. With discrete speech representations, we first construct SpeechInstruct, a large-scale cross-modal speech instruction dataset. Additionally, we employ a three-stage training strategy that includes modality-adaptation pre-training, cross-modal instruction fine-tuning, and chain-of-modality instruction fine-tuning. The experimental results demonstrate that SpeechGPT has an impressive capacity to follow multi-modal human instructions and highlight the potential of handling multiple modalities with one model. Demos are shown in https://0nutation.github.io/SpeechGPT.github.io/.",
+  "arxiv_comment": "work in progress",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 64× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 64,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 22,
+    "Q4_2025": 14,
+    "Q1_2026": 8,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "audio-lm"
+}

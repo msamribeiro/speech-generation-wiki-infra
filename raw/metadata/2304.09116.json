@@ -1,0 +1,52 @@
+{
+  "id": "2304.09116",
+  "source_ids": {
+    "arxiv": "2304.09116"
+  },
+  "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+  "authors": [
+    "Kai Shen",
+    "Zeqian Ju",
+    "Xu Tan",
+    "Yanqing Liu",
+    "Yichong Leng",
+    "Lei He",
+    "Tao Qin",
+    "Sheng Zhao",
+    "Jiang Bian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 4,
+  "published_date": "2023-04-18",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2304.09116",
+  "pdf_url": "https://arxiv.org/pdf/2304.09116.pdf",
+  "pdf_path": "raw/papers/2304.09116.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Scaling text-to-speech (TTS) to large-scale, multi-speaker, and in-the-wild datasets is important to capture the diversity in human speech such as speaker identities, prosodies, and styles (e.g., singing). Current large TTS systems usually quantize speech into discrete tokens and use language models to generate these tokens one by one, which suffer from unstable prosody, word skipping/repeating issue, and poor voice quality. In this paper, we develop NaturalSpeech 2, a TTS system that leverages a neural audio codec with residual vector quantizers to get the quantized latent vectors and uses a diffusion model to generate these latent vectors conditioned on text input. To enhance the zero-shot capability that is important to achieve diverse speech synthesis, we design a speech prompting mechanism to facilitate in-context learning in the diffusion model and the duration/pitch predictor. We scale NaturalSpeech 2 to large-scale datasets with 44K hours of speech and singing data and evaluate its voice quality on unseen speakers. NaturalSpeech 2 outperforms previous TTS systems by a large margin in terms of prosody/timbre similarity, robustness, and voice quality in a zero-shot setting, and performs novel zero-shot singing synthesis with only a speech prompt. Audio samples are available at https://speechresearch.github.io/naturalspeech2.",
+  "arxiv_comment": "A large-scale text-to-speech and singing voice synthesis system with latent diffusion models. Update: NaturalSpeech 2 extension to voice conversion and speech enhancement",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 48× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 48,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 13,
+    "Q4_2025": 6,
+    "Q1_2026": 4,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "tts-vc"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "2408.02622",
+  "source_ids": {
+    "arxiv": "2408.02622"
+  },
+  "title": "Language Model Can Listen While Speaking",
+  "authors": [
+    "Ziyang Ma",
+    "Yakun Song",
+    "Chenpeng Du",
+    "Jian Cong",
+    "Zhuo Chen",
+    "Yuping Wang",
+    "Yuxuan Wang",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 8,
+  "published_date": "2024-08-05",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2408.02622",
+  "pdf_url": "https://arxiv.org/pdf/2408.02622.pdf",
+  "pdf_path": "raw/papers/2408.02622.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Dialogue serves as the most natural manner of human-computer interaction (HCI). Recent advancements in speech language models (SLM) have significantly enhanced speech-based conversational AI. However, these models are limited to turn-based conversation, lacking the ability to interact with humans in real-time spoken scenarios, for example, being interrupted when the generated content is not satisfactory. To address these limitations, we explore full duplex modeling (FDM) in interactive speech language models (iSLM), focusing on enhancing real-time interaction and, more explicitly, exploring the quintessential ability of interruption. We introduce a novel model design, namely listening-while-speaking language model (LSLM), an end-to-end system equipped with both listening and speaking channels. Our LSLM employs a token-based decoder-only TTS for speech generation and a streaming self-supervised learning (SSL) encoder for real-time audio input. LSLM fuses both channels for autoregressive generation and detects turn-taking in real time. Three fusion strategies -- early fusion, middle fusion, and late fusion -- are explored, with middle fusion achieving an optimal balance between speech generation and real-time interaction. Two experimental settings, command-based FDM and voice-based FDM, demonstrate LSLM's robustness to noise and sensitivity to diverse instructions. Our results highlight LSLM's capability to achieve duplex communication with minimal impact on existing systems. This study aims to advance the development of interactive speech dialogue systems, enhancing their applicability in real-world contexts.",
+  "arxiv_comment": "Demo can be found at https://ddlbojack.github.io/LSLM",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 19× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 19,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 9,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "sca"
+}

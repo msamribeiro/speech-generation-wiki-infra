@@ -1,0 +1,52 @@
+{
+  "id": "2310.13289",
+  "source_ids": {
+    "arxiv": "2310.13289"
+  },
+  "title": "SALMONN: Towards Generic Hearing Abilities for Large Language Models",
+  "authors": [
+    "Changli Tang",
+    "Wenyi Yu",
+    "Guangzhi Sun",
+    "Xianzhao Chen",
+    "Tian Tan",
+    "Wei Li",
+    "Lu Lu",
+    "Zejun Ma",
+    "Chao Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 10,
+  "published_date": "2023-10-20",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2310.13289",
+  "pdf_url": "https://arxiv.org/pdf/2310.13289.pdf",
+  "pdf_path": "raw/papers/2310.13289.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Hearing is arguably an essential ability of artificial intelligence (AI) agents in the physical world, which refers to the perception and understanding of general auditory information consisting of at least three types of sounds: speech, audio events, and music. In this paper, we propose SALMONN, a speech audio language music open neural network, built by integrating a pre-trained text-based large language model (LLM) with speech and audio encoders into a single multimodal model. SALMONN enables the LLM to directly process and understand general audio inputs and achieve competitive performances on a number of speech and audio tasks used in training, such as automatic speech recognition and translation, auditory-information-based question answering, emotion recognition, speaker verification, and music and audio captioning etc. SALMONN also has a diverse set of emergent abilities unseen in the training, which includes but is not limited to speech translation to untrained languages, speech-based slot filling, spoken-query-based question answering, audio-based storytelling, and speech audio co-reasoning etc. The presence of cross-modal emergent abilities is studied, and a novel few-shot activation tuning approach is proposed to activate such abilities. To our knowledge, SALMONN is the first model of its type and can be regarded as a step towards AI with generic hearing abilities. The source code, model checkpoints and data are available at https://github.com/bytedance/SALMONN.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 31× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 31,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 11,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "corpus_role": "multimodal"
+}

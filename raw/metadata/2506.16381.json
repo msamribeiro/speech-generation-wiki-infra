@@ -1,0 +1,52 @@
+{
+  "id": "2506.16381",
+  "source_ids": {
+    "arxiv": "2506.16381"
+  },
+  "title": "InstructTTSEval: Benchmarking Complex Natural-Language Instruction Following in Text-to-Speech Systems",
+  "authors": [
+    "Kexin Huang",
+    "Qian Tu",
+    "Liwei Fan",
+    "Chenchen Yang",
+    "Dong Zhang",
+    "Shimin Li",
+    "Zhaoye Fei",
+    "Qinyuan Cheng",
+    "Xipeng Qiu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 6,
+  "published_date": "2025-06-19",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2506.16381",
+  "pdf_url": "https://arxiv.org/pdf/2506.16381.pdf",
+  "pdf_path": "raw/papers/2506.16381.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In modern speech synthesis, paralinguistic information--such as a speaker's vocal timbre, emotional state, and dynamic prosody--plays a critical role in conveying nuance beyond mere semantics. Traditional Text-to-Speech (TTS) systems rely on fixed style labels or inserting a speech prompt to control these cues, which severely limits flexibility. Recent attempts seek to employ natural-language instructions to modulate paralinguistic features, substantially improving the generalization of instruction-driven TTS models. Although many TTS systems now support customized synthesis via textual description, their actual ability to interpret and execute complex instructions remains largely unexplored. In addition, there is still a shortage of high-quality benchmarks and automated evaluation metrics specifically designed for instruction-based TTS, which hinders accurate assessment and iterative optimization of these models. To address these limitations, we introduce InstructTTSEval, a benchmark for measuring the capability of complex natural-language style control. We introduce three tasks, namely Acoustic-Parameter Specification, Descriptive-Style Directive, and Role-Play, including English and Chinese subsets, each with 1k test cases (6k in total) paired with reference audio. We leverage Gemini as an automatic judge to assess their instruction-following abilities. Our evaluation of accessible instruction-following TTS systems highlights substantial room for further improvement. We anticipate that InstructTTSEval will drive progress toward more powerful, flexible, and accurate instruction-following TTS.",
+  "arxiv_comment": "19 pages, 9 figures",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 17× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 17,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 5
+  },
+  "sr_match": true,
+  "corpus_role": "evaluation"
+}

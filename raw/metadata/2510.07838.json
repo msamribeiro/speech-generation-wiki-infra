@@ -1,0 +1,50 @@
+{
+  "id": "2510.07838",
+  "source_ids": {
+    "arxiv": "2510.07838"
+  },
+  "title": "Full-Duplex-Bench-v2: A Multi-Turn Evaluation Framework for Duplex Dialogue Systems with an Automated Examiner",
+  "authors": [
+    "Guan-Ting Lin",
+    "Shih-Yun Shan Kuan",
+    "Jiatong Shi",
+    "Kai-Wei Chang",
+    "Siddhant Arora",
+    "Shinji Watanabe",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 10,
+  "published_date": "2025-10-09",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2510.07838",
+  "pdf_url": "https://arxiv.org/pdf/2510.07838.pdf",
+  "pdf_path": "raw/papers/2510.07838.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "While full-duplex speech agents enable natural, low-latency interaction by speaking and listening simultaneously, their consistency and task performance in multi-turn settings remain underexplored. We introduce Full-Duplex-Bench-v2 (FDB-v2), a streaming framework that integrates with an automated examiner that enforces staged goals under two pacing setups (Fast vs. Slow). FDB-v2 covers four task families: daily, correction, entity tracking, and safety. We report turn-taking fluency, multi-turn instruction following, and task-specific competence. The framework is extensible, supporting both commercial APIs and open source models. When we test full-duplex systems with FDB-v2, they often get confused when people talk at the same time, struggle to handle corrections smoothly, and sometimes lose track of who or what is being talked about. Through an open-sourced, standardized streaming protocol and a task set, FDB-v2 makes it easy to extend to new task families, allowing the community to tailor and accelerate evaluation of multi-turn full-duplex systems.",
+  "arxiv_comment": "Accepted by ACL 2026",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 7× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 7,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "evaluation"
+}

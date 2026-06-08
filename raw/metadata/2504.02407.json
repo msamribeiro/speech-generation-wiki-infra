@@ -1,0 +1,49 @@
+{
+  "id": "2504.02407",
+  "source_ids": {
+    "arxiv": "2504.02407"
+  },
+  "title": "F5R-TTS: Improving Flow-Matching based Text-to-Speech with Group Relative Policy Optimization",
+  "authors": [
+    "Xiaohui Sun",
+    "Ruitong Xiao",
+    "Jianye Mo",
+    "Bowen Wu",
+    "Qun Yu",
+    "Baoxun Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-03",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2504.02407",
+  "pdf_url": "https://arxiv.org/pdf/2504.02407.pdf",
+  "pdf_path": "raw/papers/2504.02407.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present F5R-TTS, a novel text-to-speech (TTS) system that integrates Group Relative Policy Optimization (GRPO) into a flow-matching based architecture. By reformulating the deterministic outputs of flow-matching TTS into probabilistic Gaussian distributions, our approach enables seamless integration of reinforcement learning algorithms. During pretraining, we train a probabilistically reformulated flow-matching based model which is derived from F5-TTS with an open-source dataset. In the subsequent reinforcement learning (RL) phase, we employ a GRPO-driven enhancement stage that leverages dual reward metrics: word error rate (WER) computed via automatic speech recognition and speaker similarity (SIM) assessed by verification models. Experimental results on zero-shot voice cloning demonstrate that F5R-TTS achieves significant improvements in both speech intelligibility (a 29.5% relative reduction in WER) and speaker similarity (a 4.6% relative increase in SIM score) compared to conventional flow-matching based TTS systems. Audio samples are available at https://frontierlabs.github.io/F5R.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 9× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 9,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 7,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "2402.01912",
+  "source_ids": {
+    "arxiv": "2402.01912"
+  },
+  "title": "Natural language guidance of high-fidelity text-to-speech with synthetic annotations",
+  "authors": [
+    "Dan Lyth",
+    "Simon King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 2,
+  "published_date": "2024-02-02",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2402.01912",
+  "pdf_url": "https://arxiv.org/pdf/2402.01912.pdf",
+  "pdf_path": "raw/papers/2402.01912.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech models trained on large-scale datasets have demonstrated impressive in-context learning capabilities and naturalness. However, control of speaker identity and style in these models typically requires conditioning on reference speech recordings, limiting creative applications. Alternatively, natural language prompting of speaker identity and style has demonstrated promising results and provides an intuitive method of control. However, reliance on human-labeled descriptions prevents scaling to large datasets. Our work bridges the gap between these two approaches. We propose a scalable method for labeling various aspects of speaker identity, style, and recording conditions. We then apply this method to a 45k hour dataset, which we use to train a speech language model. Furthermore, we propose simple methods for increasing audio fidelity, significantly outperforming recent work despite relying entirely on found data. Our results demonstrate high-fidelity speech generation in a diverse range of accents, prosodic styles, channel conditions, and acoustic conditions, all accomplished with a single model and intuitive natural language conditioning. Audio samples can be heard at https://text-description-to-speech.com/.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 42× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 42,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 0,
+    "Q1_2026": 7,
+    "Q2_2026": 6
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}

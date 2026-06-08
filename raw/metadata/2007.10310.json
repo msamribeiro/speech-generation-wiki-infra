@@ -1,0 +1,46 @@
+{
+  "id": "2007.10310",
+  "source_ids": {
+    "arxiv": "2007.10310"
+  },
+  "title": "CoVoST 2 and Massively Multilingual Speech-to-Text Translation",
+  "authors": [
+    "Changhan Wang",
+    "Anne Wu",
+    "Juan Pino"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2020,
+  "month": 7,
+  "published_date": "2020-07-20",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2007.10310",
+  "pdf_url": "https://arxiv.org/pdf/2007.10310.pdf",
+  "pdf_path": "raw/papers/2007.10310.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech translation has recently become an increasingly popular topic of research, partly due to the development of benchmark datasets. Nevertheless, current datasets cover a limited number of languages. With the aim to foster research in massive multilingual speech translation and speech translation for low resource language pairs, we release CoVoST 2, a large-scale multilingual speech translation corpus covering translations from 21 languages into English and from English into 15 languages. This represents the largest open dataset available to date from total volume and language coverage perspective. Data sanity checks provide evidence about the quality of the data, which is released under CC0 license. We also provide extensive speech recognition, bilingual and multilingual machine translation and speech translation baselines with open-source implementation.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 12× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 12,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 0,
+    "Q4_2025": 0,
+    "Q1_2026": 0,
+    "Q2_2026": 5
+  },
+  "sr_match": false,
+  "corpus_role": "dataset"
+}

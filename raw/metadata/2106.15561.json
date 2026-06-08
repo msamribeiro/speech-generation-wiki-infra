@@ -1,0 +1,47 @@
+{
+  "id": "2106.15561",
+  "source_ids": {
+    "arxiv": "2106.15561"
+  },
+  "title": "A Survey on Neural Speech Synthesis",
+  "authors": [
+    "Xu Tan",
+    "Tao Qin",
+    "Frank Soong",
+    "Tie-Yan Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2021,
+  "month": 6,
+  "published_date": "2021-06-29",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2106.15561",
+  "pdf_url": "https://arxiv.org/pdf/2106.15561.pdf",
+  "pdf_path": "raw/papers/2106.15561.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text to speech (TTS), or speech synthesis, which aims to synthesize intelligible and natural speech given text, is a hot research topic in speech, language, and machine learning communities and has broad applications in the industry. As the development of deep learning and artificial intelligence, neural network-based TTS has significantly improved the quality of synthesized speech in recent years. In this paper, we conduct a comprehensive survey on neural TTS, aiming to provide a good understanding of current research and future trends. We focus on the key components in neural TTS, including text analysis, acoustic models and vocoders, and several advanced topics, including fast TTS, low-resource TTS, robust TTS, expressive TTS, and adaptive TTS, etc. We further summarize resources related to TTS (e.g., datasets, opensource implementations) and discuss future research directions. This survey can serve both academic researchers and industry practitioners working on TTS.",
+  "arxiv_comment": "A comprehensive survey on TTS, 63 pages, 18 tables, 7 figures, 457 references",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 36× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 36,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 17,
+    "Q4_2025": 8,
+    "Q1_2026": 0,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "corpus_role": "survey"
+}

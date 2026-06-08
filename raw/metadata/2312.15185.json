@@ -1,0 +1,50 @@
+{
+  "id": "2312.15185",
+  "source_ids": {
+    "arxiv": "2312.15185"
+  },
+  "title": "emotion2vec: Self-Supervised Pre-Training for Speech Emotion Representation",
+  "authors": [
+    "Ziyang Ma",
+    "Zhisheng Zheng",
+    "Jiaxin Ye",
+    "Jinchao Li",
+    "Zhifu Gao",
+    "Shiliang Zhang",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 12,
+  "published_date": "2023-12-23",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2312.15185",
+  "pdf_url": "https://arxiv.org/pdf/2312.15185.pdf",
+  "pdf_path": "raw/papers/2312.15185.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We propose emotion2vec, a universal speech emotion representation model. emotion2vec is pre-trained on open-source unlabeled emotion data through self-supervised online distillation, combining utterance-level loss and frame-level loss during pre-training. emotion2vec outperforms state-of-the-art pre-trained universal models and emotion specialist models by only training linear layers for the speech emotion recognition task on the mainstream IEMOCAP dataset. In addition, emotion2vec shows consistent improvements among 10 different languages of speech emotion recognition datasets. emotion2vec also shows excellent results on other emotion tasks, such as song emotion recognition, emotion prediction in conversation, and sentiment analysis. Comparison experiments, ablation experiments, and visualization comprehensively demonstrate the universal capability of the proposed emotion2vec. To the best of our knowledge, emotion2vec is the first universal representation model in various emotion-related tasks, filling a gap in the field.",
+  "arxiv_comment": "Code, checkpoints, and extracted features are available at https://github.com/ddlBoJack/emotion2vec",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 64× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 64,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 9,
+    "Q1_2026": 4,
+    "Q2_2026": 0
+  },
+  "sr_match": false,
+  "corpus_role": "evaluation"
+}

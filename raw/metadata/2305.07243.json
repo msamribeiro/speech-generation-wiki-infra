@@ -1,0 +1,44 @@
+{
+  "id": "2305.07243",
+  "source_ids": {
+    "arxiv": "2305.07243"
+  },
+  "title": "Better speech synthesis through scaling",
+  "authors": [
+    "James Betker"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 5,
+  "published_date": "2023-05-12",
+  "ingested_date": null,
+  "integrated_date": null,
+  "url": "https://arxiv.org/abs/2305.07243",
+  "pdf_url": "https://arxiv.org/pdf/2305.07243.pdf",
+  "pdf_path": "raw/papers/2305.07243.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "In recent years, the field of image generation has been revolutionized by the application of autoregressive transformers and DDPMs. These approaches model the process of image generation as a step-wise probabilistic processes and leverage large amounts of compute and data to learn the image distribution. This methodology of improving performance need not be confined to images. This paper describes a way to apply advances in the image generative domain to speech synthesis. The result is TorToise -- an expressive, multi-voice text-to-speech system.   All model code and trained weights have been open-sourced at https://github.com/neonbjb/tortoise-tts.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 41× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-06-08",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_citation_count": 41,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 6,
+    "Q1_2026": 8,
+    "Q2_2026": 5
+  },
+  "sr_match": true,
+  "corpus_role": "tts-vc"
+}
