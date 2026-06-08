@@ -1,5 +1,11 @@
 ## 2026-06-08
+- discover | 21262 entries (652 merge groups collapsed, 8 fuzzy candidates), 1056 corpus papers
 
+- parse | citation-discovery batch 18 | 2/2 done, 0 failures | ~7 min | quality report: raw/parsed/batch_18_cd_quality_report.md | clean | PARSE PIPELINE COMPLETE: 861/861 accepted papers parsed (699 standard + 162 citation-discovery)
+- parse | citation-discovery batch 17 | 40/40 done, 0 failures | ~79 min | quality report: raw/parsed/batch_17_cd_quality_report.md | RapidOCR warnings on 4 papers, PIL warnings on 2 (all non-fatal) | clean
+- parse | citation-discovery batch 16 | 40/40 done, 0 failures | ~93 min | quality report: raw/parsed/batch_16_cd_quality_report.md | RapidOCR warnings on 6 papers, PIL warning on 1 (all non-fatal) | clean
+- parse | citation-discovery batch 15 | 40/40 done, 0 failures | ~128 min | quality report: raw/parsed/batch_15_cd_quality_report.md | RapidOCR warnings on 2 papers (non-fatal) | clean
+- parse | citation-discovery batch 14 | 40/40 done, 0 failures | ~206 min | quality report: raw/parsed/batch_14_cd_quality_report.md | RapidOCR warnings on 3 papers (non-fatal) | 2001.08361 refs manually recovered (50 refs, Docling rendered ref section as table)
 - integrate | seeded evidence digests | transformer-enc-dec-tts (11 papers) | rlhf-speech (15 papers)
 - parse | citation-discovery PDFs | 162/162 downloaded, 0 failures | all arxiv source | batches 14–18 added to raw/parsed/batch_queue.json (pending parse)
 - discover | citation-discovery corpus_role patch | 162 metadata files patched with corpus_role field | 12-value vocabulary (tts-vc 42, foundation-lm 20, evaluation 18, sca 15, multimodal 15, audio-lm 11, ml-method 10, codec 9, dataset 9, survey 8, asr 4, speaker 1)

@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-08 (citation-discovery fetch complete; evidence digests fully seeded)
+Last updated: 2026-06-08 (parse pipeline complete — all 861 accepted papers parsed)
 
 ---
 
@@ -27,8 +27,9 @@ Last updated: 2026-06-08 (citation-discovery fetch complete; evidence digests fu
 | Human review — batch 3 | ✅ Complete | 7 resolved → 3 accepted, 4 rejected. Review queue cleared. |
 | PDF download | ✅ Complete | 910 PDFs on disk (799 prior + 111 new). 2 new 404s flagged needs_manual_pdf: 2503.20999, 2511.08230 (likely withdrawn from arXiv). |
 | Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
-| Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse batches 14–18 queued. |
-| Ingest (wiki pages) | 🔄 In progress | 176/875 ingested (standard corpus). 175 integrated (passes 1–7 complete, 2026-06-05); 1 pending integration. 21/23 evidence digests seeded (singing + fine-tuning below 5-paper threshold). 699 standard papers ready to ingest. |
+| Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse complete 2026-06-08. |
+| Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). Batches 14–18. 0 failures. 1 manual refs fix: 2001.08361 (Scaling Laws, table-layout refs recovered). Quality reports: batch_14–18_cd_quality_report.md. |
+| Ingest (wiki pages) | 🔄 In progress | 176/875 ingested (standard corpus). 175 integrated (passes 1–7 complete, 2026-06-05); 1 pending integration. 23/23 evidence digests seeded. 699 standard papers ready to ingest. |
 
 ---
 
@@ -36,7 +37,7 @@ Last updated: 2026-06-08 (citation-discovery fetch complete; evidence digests fu
 
 ```
 Total files:  1326
-  accepted:    861   ← 699 parsed (standard) + 162 accepted-unparsed (citation-discovery)
+  accepted:    861   ← 699 parsed (standard) + 162 parsed (citation-discovery)
   ingested:    176   ← wiki page written (2 flagged is_duplicate; wiki page migration deferred)
     integrated: 175  ← passes 1–7 complete (2026-06-05); 1 pending integration
   pending:       0   ← cleared
@@ -44,8 +45,8 @@ Total files:  1326
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
 
 PDFs on disk:  ~1037 ← raw/papers/ (875 standard + 162 citation-discovery)
-Parsed:        875   ← standard in-corpus papers (2026-06-06)
-Parse-pending: 162   ← citation-discovery papers; batches 14–18 queued in batch_queue.json
+Parsed:        861   ← all accepted papers parsed (875 standard + 162 citation-discovery; 2026-06-08 complete)
+Parse-pending:   0   ← pipeline complete
 Ready to ingest: 699 ← parsed + accepted (standard corpus), not yet ingested
 
 Evidence digests: 23/23 seeded (all complete 2026-06-08; singing + fine-tuning below 5-paper threshold but stubs exist)
