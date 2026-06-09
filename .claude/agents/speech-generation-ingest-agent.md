@@ -164,6 +164,7 @@ field_significance:
   type: [{one or more from the field_significance vocabulary below}]
 generation:
   date: {TODAY}
+  agent: speech-generation-ingest-agent
   model: claude-sonnet-4-6
   commit: "{COMMIT from step 2b}"
 ---
@@ -172,6 +173,8 @@ generation:
 > **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. No bold label — position implies it.}
+
+⚠️ The abstract card callout type is ALWAYS `[!abstract]`. Never use `[!tip]`, `[!important]`, or any other type here. Those types belong only in Field Significance.
 
 ## Problem
 
@@ -197,6 +200,8 @@ generation:
 {Use a callout for elevated significance only — `> [!important]` for foundational, `> [!tip]` for high. Write plain prose for moderate or low. Never use a callout just to decorate routine content.}
 
 {level} — {1–3 sentences placing this paper in the field. What does it contribute beyond its own results? Is it primarily confirmatory evidence, a cautionary data point, an incremental engineering step, or a genuinely new direction?}
+
+Write only what this paper itself demonstrates. Do not write phrases like "has become the de facto", "widely adopted", "the dominant X", or "has become a standard" — those are adoption claims that require reading citing papers, which is outside this agent's scope. Say what the paper enables or demonstrates; the integration agent will add adoption context after cross-paper analysis.
 
 ## Claims
 
@@ -385,7 +390,7 @@ try:
 except Exception:
     commit = 'unknown'
 op = 're-ingest' if d.get('generation_history') else 'ingest'
-entry = {'date': date.today().isoformat(), 'op': op, 'model': 'claude-sonnet-4-6', 'commit': commit}
+entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-ingest-agent', 'model': 'claude-sonnet-4-6', 'commit': commit}
 d.setdefault('generation_history', []).append(entry)
 open(path,'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "
@@ -430,7 +435,20 @@ Use these exact terms in frontmatter fields. Map author terminology to the canon
 `low` | `moderate` | `high` | `foundational`
 
 ### `field_significance.type` (one or more)
-`engineering-integration` | `architectural-novelty` | `empirical-benchmark` | `conceptual-contribution` | `negative-result` | `evaluation-contribution` | `dataset-contribution`
+
+Choose based on what the paper's *primary contribution* is — not what it incidentally does.
+
+| Type | Use when | Do NOT use when |
+|------|----------|-----------------|
+| `architectural-novelty` | The paper proposes a new model structure, training objective, or inference procedure that hasn't been done before | The paper applies existing architectures to a new task or dataset |
+| `engineering-integration` | The paper combines known components in a new system without structural innovation | The paper introduces a new architecture or training method |
+| `empirical-benchmark` | The paper's main contribution is evaluation at scale or on a new benchmark — the architecture is secondary | The paper surveys existing benchmarks without introducing a new one |
+| `conceptual-contribution` | The paper reframes how the field thinks about a problem (new taxonomy, new framing, theoretical insight) | The paper is primarily experimental |
+| `evaluation-contribution` | The paper introduces a new metric, test set, or listening test methodology | The paper merely uses existing evaluation tools |
+| `dataset-contribution` | The primary contribution is a new training or evaluation corpus | The paper uses existing datasets |
+| `negative-result` | The paper shows that a widely-held belief or approach does not hold | The paper simply reports lower numbers than prior work |
+
+Common errors to avoid: do not assign `architectural-novelty` to papers that use existing architectures (LLM backbones, standard Transformers) in a new context — those are `engineering-integration`. Do not assign `empirical-benchmark` to surveys — those are `conceptual-contribution`. A paper can have multiple types, but pick only those that represent genuine contributions.
 
 ### `related_concepts` — allowed slugs (choose 3–6 per paper)
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`

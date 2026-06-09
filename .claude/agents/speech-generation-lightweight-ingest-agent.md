@@ -148,6 +148,7 @@ field_significance:
   type: [{one or more from vocabulary}]
 generation:
   date: {TODAY}
+  agent: speech-generation-lightweight-ingest-agent
   model: claude-sonnet-4-6
   commit: "{COMMIT from step 2b}"
 ---
@@ -160,6 +161,8 @@ generation:
 ## Context in Speech Generation
 
 {Non-survey papers only (all corpus_role except "survey"). 2–4 sentences, grounded in the paper content. See the corpus_role guide above for what to cover. Write for a researcher who arrived here via a wikilink from a TTS or SCA paper and needs to understand why this paper matters to the speech generation community. Do not cite specific corpus citation counts — these go stale. The paper's inclusion here already signals it is highly cited within the corpus.}
+
+Base the Context and field_significance assessment solely on what the paper itself demonstrates — its methods, results, and stated design choices. Do not write phrases like "has become the de facto", "widely adopted", "the dominant X", or "has become a standard" — these are adoption claims that require reading citing papers to support, not conclusions you can reach from the paper alone. Use neutral framing: "used by TTS and SCA systems as…", "provides…", "enables…", "introduces…".
 
 ## Wiki Connections
 
@@ -339,7 +342,7 @@ try:
 except Exception:
     commit = 'unknown'
 op = 're-ingest' if d.get('generation_history') else 'ingest'
-entry = {'date': date.today().isoformat(), 'op': op, 'model': 'claude-sonnet-4-6', 'commit': commit}
+entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-lightweight-ingest-agent', 'model': 'claude-sonnet-4-6', 'commit': commit}
 d.setdefault('generation_history', []).append(entry)
 open(path,'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "
@@ -373,7 +376,21 @@ INGEST_RESULT: {"id": "{ID}", "success": false, "reason": "{brief reason}"}
 `low` | `moderate` | `high` | `foundational`
 
 ### `field_significance.type` (one or more)
-`engineering-integration` | `architectural-novelty` | `empirical-benchmark` | `conceptual-contribution` | `negative-result` | `evaluation-contribution` | `dataset-contribution`
+
+| Type | Use when | Do NOT use when |
+|------|----------|-----------------|
+| `architectural-novelty` | Paper introduces a new model structure, training objective, or inference procedure | Paper applies an existing architecture to a new domain |
+| `engineering-integration` | Paper adapts or combines known methods for a new context, with no structural novelty | Paper introduces a new component or training recipe |
+| `empirical-benchmark` | Primary contribution is evaluation at scale, systematic comparison, or a new benchmark | Paper includes evals only as validation for a novel method |
+| `conceptual-contribution` | Paper reframes how the field thinks about a problem, introduces a new taxonomy or framing | Paper validates an existing framing with new data |
+| `negative-result` | Paper shows that a widely-held belief or approach does not hold | Paper shows expected approach works, even if the scale or domain is new |
+| `evaluation-contribution` | Paper introduces a new metric, test set, or listening test methodology | Paper uses existing metrics for a new task |
+| `dataset-contribution` | Primary contribution is a new training or evaluation corpus | Paper uses existing datasets in a new way |
+
+**Common errors to avoid:**
+- `empirical-benchmark` on a survey paper (surveys are `conceptual-contribution`)
+- `architectural-novelty` on a paper that only fine-tunes an existing model (`engineering-integration`)
+- Using only one type when the paper has distinct dual contributions (e.g. a new dataset AND a new evaluation metric)
 
 ### `related_concepts` — allowed slugs (0–4 per paper; empty list is valid)
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`

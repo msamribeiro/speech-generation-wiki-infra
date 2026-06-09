@@ -19,7 +19,7 @@
   "year": 2022,
   "month": 12,
   "published_date": "2022-12-06",
-  "ingested_date": null,
+  "ingested_date": "2026-06-09",
   "integrated_date": null,
   "url": "https://arxiv.org/abs/2212.04356",
   "pdf_url": "https://arxiv.org/pdf/2212.04356.pdf",
@@ -30,12 +30,20 @@
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 196× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-08",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "date": "2026-06-09",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "0e34b73"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_citation_count": 196,
   "citation_counts_by_quarter": {

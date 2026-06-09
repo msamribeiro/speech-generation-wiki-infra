@@ -344,6 +344,14 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 
 ### Wiki content quality
 
+- **Wiki page quality audit (lint pass)** — Systematic review of all 185 paper pages. Five recurring issue classes found across test ingest of 10 papers (sessions 38–39, 2026-06-09/10):
+  1. **Adoption claims** — Field Significance and Wiki Connections contain phrases like "has become the de facto", "dominant", "widely adopted" that require reading citing papers to support; absent from the paper itself. Likely widespread in the 176 pre-session-38 pages. Grounding rule added to both agent specs but does not fully prevent this on foundational papers.
+  2. **Abstract callout type** — `[!tip]` used instead of `[!abstract]` on the abstract card. Grep-detectable: `> [!tip]` or `> [!important]` in first 10 lines of paper pages.
+  3. **`field_significance.type` mismatches** — e.g., `empirical-benchmark` assigned to survey papers; `architectural-novelty` assigned to engineering integrations. Requires reading each page.
+  4. **Leaked instruction text** — `**Grounding rule:**` paragraph appearing as visible prose in Field Significance (only affects pages generated mid-session 38 before the spec was fixed; all patched).
+  5. **Spurious `related_concepts` tags** — `self-supervised-speech` appears on papers with no SSL component (EnCodec, FastSpeech 2); agent links it when the paper merely *mentions* or *compares against* SSL work. Similarly, `VAE` in `architecture` for models that use RVQ without a variational objective. Grep-detectable: `self-supervised-speech` in `related_concepts` where `training` does not include `self-supervised`.
+  Recommended approach: (a) write a lint script to flag structural issues (wrong callout type, common adoption phrases, leaked instruction labels, spurious `self-supervised-speech` tag) — fast, no LLM; (b) targeted manual review for foundational/high pages; (c) full re-ingest only for the worst offenders.
+
 - ✅ **Claims provenance** — each claim bullet now includes an inline section citation e.g. `*(§4.1, Table 2)*`. Implemented in CLAUDE.md template, ingest agent spec, and WRITING_STYLE.md §3 (2026-06-04). Applies to new ingest only; no backfill needed.
 - **Static counts go stale** — paper/concept counts hardcoded in `wiki/index.md`, `overview.md`, venue pages, evidence digests (`paper_count`), and concept page All Papers tables drift after every pass. Fix options: (a) compute at Quartz build time via plugin or pre-build script — single source of truth, never stale; (b) add a post-integration agent checklist to re-derive counts in the key index pages. Option (a) is cleaner long-term.
 - **Generation tracking for concept/venue pages** — `generation` frontmatter + `generation_history` implemented for paper pages only. Concept pages, venue pages, and `overview.md` need the same before any Opus quality pass begins. Requires updating integration agent spec and CLAUDE.md template.

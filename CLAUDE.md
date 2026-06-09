@@ -122,6 +122,7 @@ Every paper in `raw/metadata/` must have a JSON file named `{id}.json`. The ID i
     {
       "date": "YYYY-MM-DD",
       "op": "ingest | re-ingest | quality-pass",
+      "agent": "speech-generation-ingest-agent | speech-generation-lightweight-ingest-agent | speech-generation-integration-agent",
       "model": "claude-sonnet-4-6",
       "commit": "abc1234"
     }
@@ -311,6 +312,7 @@ field_significance:
   type: [{one or more from the field_significance type vocabulary}]
 generation:
   date: {YYYY-MM-DD}
+  agent: {agent name, e.g. speech-generation-ingest-agent}
   model: {model-id, e.g. claude-sonnet-4-6}
   commit: {7-char infra repo git hash}
 ---
