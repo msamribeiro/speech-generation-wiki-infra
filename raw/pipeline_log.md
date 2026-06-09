@@ -1,3 +1,6 @@
+## 2026-06-10
+- ingest | 10 papers (6 Tier 1 standard, 4 Tier 2 lightweight) | Moshi (2410.00037), WavChat (2411.13577), Whisper (2212.04356), HiFi-GAN (2010.05646), EnCodec (2210.13438), FastSpeech 2 (2006.04558), Qwen2.5-Omni (2503.20215), Llama 3 (2407.21783), Common Voice (1912.06670), emotion2vec (2312.15185) | wiki now 185 pages | 5 quality issue classes identified; both agent specs tightened
+
 ## 2026-06-09
 - discover | citation merge overrides | added AISHELL-3 (arxiv:2010.11567, 40×) and GSLM (arxiv:2102.01192, 30×) groups; fixed VCTK canonical to title: entry (131×, was doi: not in index); 50 override_entries_merged total | rebuilt index: 21,253 entries, 652 standard merge groups + 50 overrides, 5 fuzzy candidates (none actionable)
 
