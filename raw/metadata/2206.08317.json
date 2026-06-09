@@ -43,5 +43,6 @@
     "Q2_2026": 4
   },
   "sr_match": false,
-  "corpus_role": "asr"
+  "corpus_role": "asr",
+  "ingest_tier": 2
 }

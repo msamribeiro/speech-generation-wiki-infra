@@ -112,5 +112,6 @@
     "Q2_2026": 0
   },
   "sr_match": false,
-  "corpus_role": "foundation-lm"
+  "corpus_role": "foundation-lm",
+  "ingest_tier": 2
 }

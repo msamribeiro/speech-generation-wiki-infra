@@ -159,5 +159,6 @@
     "Q2_2026": 11
   },
   "sr_match": false,
-  "corpus_role": "sca"
+  "corpus_role": "sca",
+  "ingest_tier": 1
 }

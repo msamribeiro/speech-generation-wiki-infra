@@ -49,5 +49,6 @@
     "Q2_2026": 3
   },
   "sr_match": false,
-  "corpus_role": "dataset"
+  "corpus_role": "dataset",
+  "ingest_tier": 2
 }

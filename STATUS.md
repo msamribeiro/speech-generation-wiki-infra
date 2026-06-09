@@ -312,13 +312,13 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 2. **Continue ingest** — 699 papers ready to ingest (2026-06-06). Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
 
-3. **Resolve CD ingest strategy open questions** — 4 decisions pending in `docs/analyses/cd-ingest-strategy.md` before CD ingest begins: (1) RAG for LLMs survey — Tier 1 or Tier 2? (2) MusicLM + AudioLDM — Tier 1 or Tier 2? (3) lightweight stub implementation — `lightweight: true` flag in ingest agent vs. manual vs. new agent? (4) add `ingest_tier` field to Tier 3 metadata files?
+3. ~~**Resolve CD ingest strategy open questions**~~ — ✅ done 2026-06-09. (1) `2312.10997` → Tier 2. (2) MusicLM + AudioLDM → confirmed Tier 1. (3) Lightweight stubs → new `speech-generation-lightweight-ingest-agent` spec. (4) Tier 3 eliminated → all 13 papers upgraded to Tier 2. Final counts: Tier 1 = 94, Tier 2 = 68. See `docs/analyses/cd-ingest-strategy.md`.
 
-4. **CD ingest preparation** (after open questions resolved) — Mark 13 Tier 3 papers in `raw/metadata/`; add 3 fuzzy title merge candidates to `raw/citation_merge_overrides.json` (CSTR VCTK, AISHELL-3, GSLM); implement lightweight stub mode in per-paper ingest agent spec.
+4. **CD ingest preparation** — `ingest_tier` field added to schema and bulk-set in all 162 CD metadata files (2026-06-09). Remaining: add 3 fuzzy title merge candidates to `raw/citation_merge_overrides.json` (CSTR VCTK capitalization variants, AISHELL-3 capitalization variants, GSLM title variant). Low effort.
 
-5. **Ingest Tier 1 CD papers (~92–95 papers)** — Interleave with standard corpus by `published_date`; same 2-at-a-time cadence and full template. Final count after open questions 1–2 resolved. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
+5. **Ingest Tier 1 CD papers (96 papers)** — Interleave with standard corpus by `published_date`; same 2-at-a-time cadence and full template. Use `speech-generation-ingest-agent`. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
 
-6. **Ingest Tier 2 CD papers (~54–57 papers)** — After ~200 standard papers ingested. Lightweight stubs: frontmatter + abstract callout + 1-paragraph context + wiki connections. Up to 5 at a time. Final count after open questions resolved.
+6. **Ingest Tier 2 CD papers (66 papers)** — After ~200 standard papers ingested. Lightweight stubs via `speech-generation-lightweight-ingest-agent`. Up to 5 at a time.
 
 3. ~~**Fetch citation-discovery candidates**~~ — ✅ done 2026-06-08. All 162 arXiv IDs written with `status: accepted`, `discovery_source: "citation-discovery"`, and per-quarter citation counts. Script: `scripts/fetch/citation_discovery_fetch.py`. 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved). These papers bypassed the keyword filter; they are onboarded because they are highly cited by in-corpus papers. Task assignments (TTS/VC/SCA/codec/etc.) and PDF downloads still pending before ingest.
 

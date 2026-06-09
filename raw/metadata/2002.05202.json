@@ -40,5 +40,6 @@
     "Q2_2026": 0
   },
   "sr_match": false,
-  "corpus_role": "ml-method"
+  "corpus_role": "ml-method",
+  "ingest_tier": 2
 }

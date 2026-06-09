@@ -49,5 +49,6 @@
     "Q2_2026": 5
   },
   "sr_match": false,
-  "corpus_role": "survey"
+  "corpus_role": "survey",
+  "ingest_tier": 1
 }

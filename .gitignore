@@ -24,6 +24,9 @@ raw/download_log_*.txt
 convert_paper_with_docling_tmp.py
 docs/THOUGHTS_FOR_IMPROVEMENTS.md
 
+# Claude Code project memory (session-local; not project code)
+memory/
+
 # macOS
 .DS_Store
 

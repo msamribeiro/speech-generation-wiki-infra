@@ -43,5 +43,6 @@
     "Q2_2026": 8
   },
   "sr_match": true,
-  "corpus_role": "codec"
+  "corpus_role": "codec",
+  "ingest_tier": 1
 }

@@ -46,5 +46,6 @@
     "Q2_2026": 0
   },
   "sr_match": false,
-  "corpus_role": "audio-lm"
+  "corpus_role": "audio-lm",
+  "ingest_tier": 1
 }

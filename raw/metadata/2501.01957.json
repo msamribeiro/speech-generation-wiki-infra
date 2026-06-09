@@ -66,5 +66,6 @@
     "Q2_2026": 4
   },
   "sr_match": true,
-  "corpus_role": "multimodal"
+  "corpus_role": "multimodal",
+  "ingest_tier": 2
 }

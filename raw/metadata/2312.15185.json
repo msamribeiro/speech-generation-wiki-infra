@@ -46,5 +46,6 @@
     "Q2_2026": 0
   },
   "sr_match": false,
-  "corpus_role": "evaluation"
+  "corpus_role": "evaluation",
+  "ingest_tier": 2
 }

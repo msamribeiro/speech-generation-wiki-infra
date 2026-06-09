@@ -83,6 +83,7 @@ scripts/
   agents/                     # Claude Code subagent specs
     speech-generation-filter-agent.md
     speech-generation-ingest-agent.md
+    speech-generation-lightweight-ingest-agent.md
     speech-generation-ingest-orchestrator.md
     speech-generation-integration-agent.md
 
@@ -137,7 +138,8 @@ Every paper in `raw/metadata/` must have a JSON file named `{id}.json`. The ID i
   "corpus_role": "one of the corpus_role values listed below — null for standard filter papers",
   "corpus_citation_count": 208,
   "citation_counts_by_quarter": {"Q3_2025": 56, "Q4_2025": 45, "Q1_2026": 48, "Q2_2026": 38},
-  "sr_match": "true | false | null — whether the paper matched the keyword filter"
+  "sr_match": "true | false | null — whether the paper matched the keyword filter",
+  "ingest_tier": "1 | 2 | null — ingest tier for citation-discovery papers (1 = full standard page; 2 = lightweight stub); null for standard corpus papers"
 }
 ```
 
@@ -579,14 +581,20 @@ When given a batch of candidate papers (from arXiv search, proceedings scrape, o
 
 | Stage | Agent | Cadence | Cost |
 |-------|-------|---------|------|
-| **Ingest** | `speech-generation-ingest-orchestrator` → `speech-generation-ingest-agent` | Every session; 5 papers/call | ~20–25k tokens/paper |
+| **Ingest (standard)** | `speech-generation-ingest-orchestrator` → `speech-generation-ingest-agent` | Every session; 5 papers/call | ~20–25k tokens/paper |
+| **Ingest (Tier 2 CD stubs)** | `speech-generation-lightweight-ingest-agent` | After ~200 standard papers; up to 5 at a time | ~10–15k tokens/paper |
 | **Integration** | `speech-generation-integration-agent` | Every ~25 ingested papers | ~60–120k tokens/run |
 
 Ingest is self-contained per paper (writes the paper page + index/log/venue row + metadata). Integration is cross-paper reasoning (updates concept pages, adds back-links between papers, refreshes venue narratives and overview). Run them separately.
 
+Tier 1 citation-discovery papers (full standard pages) are interleaved with the standard corpus by `published_date` using the same orchestrator. Tier 2 CD papers (lightweight stubs) are batched separately after ~200 standard papers. Routing is determined by `ingest_tier` in the metadata JSON.
+
 ```
-# Repeat until ingest queue is clear
+# Repeat until ingest queue is clear (standard + Tier 1 CD papers)
 → speech-generation-ingest-orchestrator: "Ingest up to 5 papers"
+
+# Tier 2 CD stubs (after ~200 standard papers ingested)
+→ speech-generation-lightweight-ingest-agent: "Ingest paper {id}"
 
 # After every ~25 papers
 → speech-generation-integration-agent: "Run integration pass on last 25 papers"

@@ -41,5 +41,6 @@
     "Q2_2026": 6
   },
   "sr_match": true,
-  "corpus_role": "tts-vc"
+  "corpus_role": "tts-vc",
+  "ingest_tier": 1
 }
