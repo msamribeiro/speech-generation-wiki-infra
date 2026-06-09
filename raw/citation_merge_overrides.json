@@ -10,14 +10,71 @@
       ]
     },
     {
-      "note": "CSTR VCTK Corpus (Yamagishi, Veaux, MacDonald). Multiple version strings (v0.92, 2017, Superseded) and DOIs treated as the same dataset per user decision. canonical is the Edinburgh DataShare DOI.",
-      "canonical_key": "doi:10.7488/ds/2645",
+      "note": "CSTR VCTK Corpus (Yamagishi, Veaux, MacDonald). Multiple version strings (v0.92, 2017, Superseded) and DOIs treated as the same dataset per user decision. canonical is the most-cited title entry (v0.92, 37x). doi:10.7488/ds/2645 and doi:10.7488/ds/1994 are Edinburgh DataShare DOIs not directly cited by corpus papers; included as merge_keys so they resolve if ever cited. ~35 raw: author-fragment entries added 2026-06-09.",
+      "canonical_key": "title:cstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkitversion092",
       "merge_keys": [
-        "title:cstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkitversion092",
         "title:supersededcstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkit",
         "title:supersededcstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkitversion092",
+        "title:englishmultispeakercorpusforcstrvoicecloningtoolkit",
+        "title:strvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkit",
         "doi:10.57702/bw3hjwag",
-        "title:strvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkit"
+        "doi:10.7488/ds/2645",
+        "doi:10.7488/ds/1994",
+        "raw:junichiyamagishichristopheveauxandkirstenmacdonald2019cstrvctkcorpusenglishmultispe",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldetalcstrvctkcorpusenglishmultispeake",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldetalsupersededcstrvctkcorpusenglish",
+        "raw:yamagishijveauxcandmacdonaldkcstrvctkcorpusenglishmultispeakercorpusforcstr",
+        "raw:junichiyamagishichristopheveauxandkirstenmacdonaldcstrvctkcorpusenglishmultispeaker",
+        "raw:christopheveauxjunichiyamagishiandkirstenmacdonaldcstrvctkcorpusenglishmultispeakerc",
+        "raw:junichiyamagishichristopheveauxkirstenmacdonaldetalcstrvctkcorpusenglishmultispeake",
+        "raw:yamagishicveauxandkmacdonaldcstrvctkcorpusenglishmultispeakercorpusforcstrvoice",
+        "raw:veauxcyamagishijmacdonaldketalcstrvctkcorpusenglishmultispeakercorpusforc",
+        "raw:junichiyamagishichristopheveauxkirstenmacdonaldetalcstrvctkcorpusenglishmultispeak",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldetalcstrvctkcorpusenglishmultispeak",
+        "raw:christopheveauxjunichiyamagishiandkirstenmacdonaldcstrvctkcorpusenglishmultispeaker",
+        "raw:yjmkveauxchristopheyamagishijunichimacdonaldkirstenetal2016supersededcstrvctkcorpu",
+        "raw:yamagishijveauxcmacdonaldketalcstrvctkcorpusenglishmultispeakercorpusforc",
+        "raw:yamagishijveauxcmacdonaldk2019cstrvctkcorpusenglishmultispeakercorpusfor",
+        "raw:yamagishijunichiveauxchristophemacdonaldandkirsten2016supersededcstrvctkcorpus",
+        "raw:yamagishijetal2019cstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningto",
+        "raw:veauxcyamagishijmacdonaldketalsupersededcstrvctkcorpusenglishmultispeakerco",
+        "raw:veauxcyamagishijmacdonaldketal2019cstrvctkcorpusenglishmultispeakercorpus",
+        "raw:veauxcyamagishijandmacdonaldkcstrvctkcorpusenglishmultispeakercorpusforcstr",
+        "raw:veauxchristopheyarnagishijunichiandmkirsten2016cstrvctkcorpusenglishmultispeakerc",
+        "raw:veauxchristopheyamagishijunichiandmacdonaldkirstencstrvctkcorpusenglishmultispeak",
+        "raw:veauxchristopheandyamagishijunichiandmacdonaldkirsten2017cstrvctkcorpusenglishmul",
+        "raw:jyamagishicveauxandkmacdonaldcstrvctkcorpusenglishmultispeakercorpusforcstrvo",
+        "raw:junichiyamagishichristopheveauxandkirstenmacdonald2019thevctkcorpusenglishmultispe",
+        "raw:junichiyamagishichristopheveauxandkirstenmacdonald2019cstrvctkcorpusenglishmultisp",
+        "raw:cveauxjyamagishikmacdonaldcstrvctkcorpusenglishmultispeakercorpusforcstrvoice",
+        "raw:cveauxjyamagishiandkmacdonaldcstrvctkcorpusenglishmultispeakercorpusforcstrvo",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldetalsupersededcstkvctkcorpusenglish",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldetal2017cstrvctkcorpusenglishmulti",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldetal2016supersededcstrvctkcorpusen",
+        "raw:christopheveauxjunichiyamagishikirstenmacdonaldand1others2017cstrvctkcorpusenglis",
+        "raw:christopheveauxjunichiyamagishiandkirstenmacdonald2017cstrvctkcorpusenglishmultispe",
+        "raw:christopheveauxjunichiyamagishiandkirstenmacdonald2016supersededcstrvctkcorpuseng"
+      ]
+    },
+    {
+      "note": "AISHELL-3 (Yao Shi, Hui Bu et al., arXiv:2010.11567). Truncated title variant 'AISHELL-3: A Multi-Speaker Mandarin TTS Corpus' drops 'and the Baselines'. Six raw: author-fragment entries added 2026-06-09.",
+      "canonical_key": "arxiv:2010.11567",
+      "merge_keys": [
+        "title:aishell3amultispeakermandarinttscorpus",
+        "raw:yaoshihuibuxinxushaojizhangandmingli2021aishell3amultispeakermandarinttsco",
+        "raw:yaoshihuibuxinxushaojizhangandmingliaishell3amultispeakermandarinttscorpusa",
+        "raw:yaoshihuibuxinxushaojizhangandmingliaishell3amultispeakermandarinttscorpus",
+        "raw:xinxushaojizhangmingliyaoshihuibu2015aishell3amultispeakermandarinttscorpusan",
+        "raw:shiybuhxuxzhangsandlimaishell3amultispeakermandarinttscorpusandth",
+        "raw:shihbuxxuszhangandmliaishell3amultispeakermandarinttscorpusandthebasel"
+      ]
+    },
+    {
+      "note": "GSLM — On Generative Spoken Language Modeling from Raw Audio (Lakhotia et al., 2021, arXiv:2102.01192). Title variant adds 'On' prefix in the TACL journal version. One raw: author-fragment entry also merged.",
+      "canonical_key": "arxiv:2102.01192",
+      "merge_keys": [
+        "title:ongenerativespokenlanguagemodelingfromrawaudio",
+        "raw:mohamedetal2021ongenerativespokenlanguagemodelingfromrawaudioinaclvolume9page"
       ]
     }
   ]

@@ -1,3 +1,7 @@
+## 2026-06-09
+- discover | citation merge overrides | added AISHELL-3 (arxiv:2010.11567, 40×) and GSLM (arxiv:2102.01192, 30×) groups; fixed VCTK canonical to title: entry (131×, was doi: not in index); 50 override_entries_merged total | rebuilt index: 21,253 entries, 652 standard merge groups + 50 overrides, 5 fuzzy candidates (none actionable)
+
+
 ## 2026-06-08
 - discover | 21262 entries (652 merge groups collapsed, 8 fuzzy candidates), 1056 corpus papers
 
