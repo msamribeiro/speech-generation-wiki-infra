@@ -5,7 +5,7 @@
   },
   "title": "High Fidelity Neural Audio Compression",
   "authors": [
-    "Alexandre Défossez",
+    "Alexandre D\u00e9fossez",
     "Jade Copet",
     "Gabriel Synnaeve",
     "Yossi Adi"
@@ -18,7 +18,7 @@
   "month": 10,
   "published_date": "2022-10-24",
   "ingested_date": "2026-06-09",
-  "integrated_date": null,
+  "integrated_date": "2026-06-10",
   "url": "https://arxiv.org/abs/2210.13438",
   "pdf_url": "https://arxiv.org/pdf/2210.13438.pdf",
   "pdf_path": "raw/papers/2210.13438.pdf",
@@ -27,7 +27,7 @@
   "arxiv_comment": "Preprint",
   "task": [],
   "relevance_score": null,
-  "relevance_note": "Citation-discovered: cited 179× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "relevance_note": "Citation-discovered: cited 179\u00d7 by in-corpus papers (Q3\u202f2025\u2013Q2\u202f2026 quarterly analysis). Accepted without filter scoring.",
   "status": "ingested",
   "fetched_date": "2026-06-08",
   "needs_manual_pdf": false,
