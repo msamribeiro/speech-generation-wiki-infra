@@ -367,8 +367,8 @@ bullet = f\"- ingest | {meta['id']} | {meta.get('title','')} | {meta.get('venue'
 section = f'## {today}'
 text = open('wiki/log.md').read()
 if section in text:
-    # Append bullet to existing today section
-    text = text.rstrip('\n') + '\n' + bullet + '\n'
+    # Insert bullet at end of today's section (before next ## or end of file)
+    text = re.sub(rf'({re.escape(section)}.*?)((\n## |\Z))', lambda m: m.group(1).rstrip('\n') + '\n' + bullet + '\n' + m.group(2), text, count=1, flags=re.DOTALL)
 else:
     # Prepend new date section after the divider that precedes date entries
     new_section = f'{section}\n\n{bullet}\n\n'
