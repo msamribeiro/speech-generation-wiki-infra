@@ -176,6 +176,8 @@ generation:
 
 ⚠️ The abstract card callout type is ALWAYS `[!abstract]`. Never use `[!tip]`, `[!important]`, or any other type here. Those types belong only in Field Significance.
 
+⚠️ The only permitted callout types anywhere in a paper page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational papers only), `[!tip]` (Field Significance, high papers only), `[!warning]` (critical limitations only). Do not use `[!note]`, `[!info]`, `[!caution]`, or any other type — write plain prose instead.
+
 ## Problem
 
 {What gap or limitation does this paper address? What did prior work fail to do?}
@@ -452,6 +454,8 @@ Common errors to avoid: do not assign `architectural-novelty` to papers that use
 
 ### `related_concepts` — allowed slugs (choose 3–6 per paper)
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
+
+**`self-supervised-speech` usage rule:** Only include this slug if the paper's own system uses a self-supervised model (HuBERT, WavLM, wav2vec 2.0, data2vec, or similar) as a core component of its architecture or training. Do NOT include it if the paper uses Whisper (which is fully supervised), merely cites SSL work in related work, or compares against SSL baselines. The test: does this paper's method depend on self-supervised pre-training?
 
 ---
 

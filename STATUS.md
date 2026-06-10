@@ -314,7 +314,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 3. ~~**Resolve CD ingest strategy open questions**~~ — ✅ done 2026-06-09. (1) `2312.10997` → Tier 2. (2) MusicLM + AudioLDM → confirmed Tier 1. (3) Lightweight stubs → new `speech-generation-lightweight-ingest-agent` spec. (4) Tier 3 eliminated → all 13 papers upgraded to Tier 2. Final counts: Tier 1 = 94, Tier 2 = 68. See `docs/analyses/cd-ingest-strategy.md`.
 
-4. **CD ingest preparation** — `ingest_tier` field added to schema and bulk-set in all 162 CD metadata files (2026-06-09). Remaining: add 3 fuzzy title merge candidates to `raw/citation_merge_overrides.json` (CSTR VCTK capitalization variants, AISHELL-3 capitalization variants, GSLM title variant). Low effort.
+4. ~~**CD ingest preparation**~~ — ✅ done 2026-06-09. `ingest_tier` field added to schema and bulk-set in all 162 CD metadata files. Citation merge overrides added for CSTR VCTK, AISHELL-3, and GSLM.
 
 5. **Ingest Tier 1 CD papers (96 papers)** — Interleave with standard corpus by `published_date`; same 2-at-a-time cadence and full template. Use `speech-generation-ingest-agent`. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
 
@@ -367,7 +367,7 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 
 - **Lightweight ingest mode** — Add `lightweight: true` prompt flag to `.claude/agents/speech-generation-ingest-agent.md` so Tier 2 CD stubs get a short-form page (frontmatter + abstract callout + 1-paragraph context + wiki connections; no Claims, Novelty Assessment, or Key Results). Blocked on open question 3 resolution. Requires updating CLAUDE.md Ingest Workflow note and the agent spec.
 - **`ingest_tier` metadata field** — Add `ingest_tier: 3` to 13 Tier 3 metadata files (foundation-lm: 1810.04805, 2005.14165, 2402.03300, 2503.01743, 2503.19786, 2412.08635, 2506.07900; ml-method: 1412.6980, 1711.05101, 1607.06450, 2002.05202, 2001.08361, 2308.10248). Low effort; blocked on open question 4 resolution.
-- **Citation merge candidates** — Add 3 entries to `raw/citation_merge_overrides.json`: CSTR VCTK capitalization variants, AISHELL-3 capitalization variants, GSLM "On generative spoken language modeling" title variant. Low effort; can be done any time.
+- ✅ **Citation merge candidates** — Added 2026-06-09. All 3 entries in `raw/citation_merge_overrides.json`: CSTR VCTK (~40 raw/title variants), AISHELL-3 (7 variants), GSLM title prefix variant.
 
 ### Infrastructure / site
 

@@ -319,7 +319,8 @@ bullet = f\"- ingest | {meta['id']} | {meta.get('title','')} | {meta.get('venue'
 section = f'## {today}'
 text = open('wiki/log.md').read()
 if section in text:
-    text = text.rstrip('\n') + '\n' + bullet + '\n'
+    # Insert bullet immediately after the last existing bullet in today's section
+    text = re.sub(rf'({re.escape(section)}.*?)((\n## |\Z))', lambda m: m.group(1).rstrip('\n') + '\n' + bullet + '\n' + m.group(2), text, count=1, flags=re.DOTALL)
 else:
     new_section = f'{section}\n\n{bullet}\n\n'
     text = re.sub(r'(---\n\n)(## \d)', r'\1' + new_section + r'\2', text, count=1)
@@ -394,6 +395,8 @@ INGEST_RESULT: {"id": "{ID}", "success": false, "reason": "{brief reason}"}
 
 ### `related_concepts` — allowed slugs (0–4 per paper; empty list is valid)
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
+
+**`self-supervised-speech` usage rule:** Only include this slug if the paper's own system uses a self-supervised model (HuBERT, WavLM, wav2vec 2.0, data2vec, or similar) as a core component of its architecture or training. Do NOT include it if the paper uses Whisper (which is fully supervised), merely cites SSL work in related work, or compares against SSL baselines. The test: does this paper's method depend on self-supervised pre-training?
 
 ---
 
