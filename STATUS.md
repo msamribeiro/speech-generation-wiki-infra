@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-12 (session 43 complete — 225 papers ingested; integration pass 9 due on 25 papers)
+Last updated: 2026-06-12 (session 44 in progress — 225 ingested, 225 integrated; integration pass 9 complete)
 
 ---
 
@@ -29,7 +29,7 @@ Last updated: 2026-06-12 (session 43 complete — 225 papers ingested; integrati
 | Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
 | Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse complete 2026-06-08. |
 | Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). Batches 14–18. 0 failures. 1 manual refs fix: 2001.08361 (Scaling Laws, table-layout refs recovered). Quality reports: batch_14–18_cd_quality_report.md. |
-| Ingest (wiki pages) | 🔄 In progress | 225/875 ingested (176 standard + 49 CD: 25 T1 full pages + 24 T2 stubs). 200/225 integrated (passes 1–8 complete, 2026-06-10). 25 unintegrated (sessions 41–43, integration pass 9 due). 24/24 evidence digests seeded. |
+| Ingest (wiki pages) | 🔄 In progress | 225/875 ingested (176 standard + 49 CD: 25 T1 full pages + 24 T2 stubs). 225/225 integrated (passes 1–9 complete, 2026-06-12). 24/24 evidence digests seeded. |
 
 ---
 
@@ -39,7 +39,7 @@ Last updated: 2026-06-12 (session 43 complete — 225 papers ingested; integrati
 Total files:  1326
   accepted:    816   ← 816 standard/CD not yet ingested (841 − 25 ingested sessions 41–43)
   ingested:    225   ← 176 standard + 49 CD (25 T1 full pages + 24 T2 stubs)
-    integrated: 200  ← passes 1–8 complete (2026-06-10); sessions 41–43 batch (25 papers) awaiting pass 9
+    integrated: 225  ← passes 1–9 complete (2026-06-12)
   pending:       0   ← cleared
   review:        0   ← queue cleared
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
@@ -311,7 +311,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 1. ~~**Parse batches 11–13**~~ — ✅ done 2026-06-06. All 111 new papers parsed, 0 failures. Parse pipeline complete (875/875).
 
-2. **Run integration pass 9** — 25 unintegrated papers from sessions 41–43: 15 T1 (SpeechTokenizer, Spark-TTS, MaskGCT, CosyVoice 3, Mini-Omni, Llasa, NaturalSpeech 2, VALL-E 2, LLaMA-Omni, Freeze-Omni, WavTokenizer, FunAudioLLM, SpeechGPT, VoiceBench, FireRedTTS) + 10 T2 stubs (Qwen-Audio, Qwen3, ECAPA-TDNN, LLaMA, Gemini 2.5, MLS, DeepSeek-R1, Seamless, GigaSpeech, FSQ). Use `speech-generation-integration-agent`.
+2. ~~**Run integration pass 9**~~ — ✅ done 2026-06-12. 25 papers (15 T1 + 10 T2). 19 concepts updated, 4 evidence digests fully updated, 16 cross-links added. Integration agent spec patched to use correct wiki content repo path (WIKI variable).
 
 3. **Continue ingest** — 816 papers ready to ingest. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
 

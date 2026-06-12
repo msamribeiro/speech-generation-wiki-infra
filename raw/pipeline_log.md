@@ -1,4 +1,5 @@
 ## 2026-06-12
+- integrate | pass 9 | 25 papers (15 T1 + 10 T2) | 19 concepts updated | 4 evidence digests fully updated (neural-codec, autoregressive-codec-tts, zero-shot-tts, spoken-language-model) | 16 cross-links added | integrated_date set for all 25 | integration agent spec patched: WIKI variable + two-repo working directory (was writing to detached-HEAD submodule)
 - ingest | 10 Tier 2 stubs (session 43) | Qwen-Audio (2311.07919), Qwen3 (2505.09388), ECAPA-TDNN (2005.07143), LLaMA (2302.13971), Gemini 2.5 (2507.06261), MLS (2012.03411), DeepSeek-R1 (2501.12948), Seamless (2312.05187), GigaSpeech (2106.06909), FSQ (2309.15505) | wiki now 225 pages | 23 quality fixes applied across both batches (adoption claims, SCA prose, spurious SSL tags, field_significance.type mismatches, task tag errors, wikilink formatting) | agent specs strengthened: litmus test + citation-verb failure mode added to both ingest agent specs; SCA prose rule added
 
 ## 2026-06-10

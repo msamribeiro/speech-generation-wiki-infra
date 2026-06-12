@@ -16,7 +16,28 @@ Read `docs/WRITING_STYLE.md` before writing any synthesis prose. The style guide
 
 ## Working directory
 
-All paths are relative to the project root: `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
+The project has **two repos** with distinct roles:
+
+- **Infra root** (working directory): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
+  Use for all `raw/` paths (metadata JSONs, parsed papers).
+- **Wiki content repo** (wiki writes): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content/`
+  Use for ALL wiki file reads and writes. Define this as `WIKI` in every script block.
+
+⚠️ **Never read or write wiki files using the `wiki/` subdirectory** inside the infra repo — that path is a git submodule in detached HEAD state. Writes there will be lost and will not reach the correct branch.
+
+In every bash block that touches wiki files, define:
+```bash
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+```
+And use `$WIKI/papers/`, `$WIKI/concepts/`, `$WIKI/log.md`, `$WIKI/overview.md`, etc.
+
+In every Python block that opens wiki files, define:
+```python
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+```
+And use `f'{WIKI}/papers/index.md'`, `f'{WIKI}/concepts/{slug}.md'`, etc.
+
+`raw/metadata/` paths remain relative to the infra root (current working directory) — do not prefix those with `WIKI`.
 
 ---
 
@@ -63,7 +84,8 @@ Never run on more than 25 papers per invocation.
 ```bash
 python3 -c "
 import re, sys
-text = open('wiki/papers/index.md').read()
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+text = open(f'{WIKI}/papers/index.md').read()
 # Extract Papers table rows: lines starting with | that are not header/separator
 rows = [l for l in text.splitlines()
         if l.startswith('|') and '----' not in l and '| ID |' not in l
@@ -91,7 +113,8 @@ For each target paper ID, read its wiki page and extract:
 ```bash
 python3 -c "
 import re, yaml
-text = open('wiki/papers/{ID}.md').read()
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+text = open(f'{WIKI}/papers/{ID}.md').read()
 m = re.match(r'^---\n(.*?)\n---\n', text, re.DOTALL)
 fm = yaml.safe_load(m.group(1)) if m else {}
 print('related_concepts:', fm.get('related_concepts', []))
@@ -110,19 +133,22 @@ Build a map: `concept_slug → [paper IDs that list this slug in related_concept
 For each concept with ≥1 target paper, process **sequentially**:
 
 ```bash
-cat wiki/concepts/{slug}.md
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+cat $WIKI/concepts/{slug}.md
 ```
 
 If a concept evidence digest exists, also read it (it summarises all previously integrated papers):
 
 ```bash
-cat wiki/concepts/_evidence/{slug}.yaml 2>/dev/null || echo "no digest yet"
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+cat $WIKI/concepts/_evidence/{slug}.yaml 2>/dev/null || echo "no digest yet"
 ```
 
 Then for each newly assigned paper:
 
 ```bash
-cat wiki/papers/{id}.md
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+cat $WIKI/papers/{id}.md
 ```
 
 Update `wiki/concepts/{slug}.md` with these changes. Do not rewrite the entire page — edit only the sections affected by the new papers.
@@ -156,16 +182,18 @@ Update the concept row in `wiki/concepts/index.md` (paper count + last_updated):
 python3 -c "
 import re
 from datetime import date
+WIKI  = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 slug  = '{slug}'
 count = {new_total_paper_count}
 today = date.today().isoformat()
-text  = open('wiki/concepts/index.md').read()
+path  = f'{WIKI}/concepts/index.md'
+text  = open(path).read()
 text  = re.sub(
     rf'(\[\[{re.escape(slug)}\]\][^\n]*\| )(\d+)( \| )[^\|]+(\|)',
     lambda m: f'{m.group(1)}{count}{m.group(3)}{today}{m.group(4)}',
     text
 )
-open('wiki/concepts/index.md','w').write(text)
+open(path,'w').write(text)
 "
 ```
 
@@ -173,7 +201,7 @@ open('wiki/concepts/index.md','w').write(text)
 
 ## Step 3 — Update concept evidence digests
 
-For each concept updated in Step 2, update `wiki/concepts/_evidence/{slug}.yaml`. Create the file if it does not exist.
+For each concept updated in Step 2, update `$WIKI/concepts/_evidence/{slug}.yaml`. Create the file if it does not exist.
 
 **For each new paper assigned to this concept**, add an entry to the `papers:` list:
 
@@ -222,7 +250,8 @@ Only add links for direct P↔C citation pairs among target papers and their dir
 
 ```bash
 # Verify a corpus paper page exists before editing
-ls wiki/papers/{C}.md 2>/dev/null && echo exists || echo missing
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+ls $WIKI/papers/{C}.md 2>/dev/null && echo exists || echo missing
 ```
 
 ---
@@ -232,7 +261,8 @@ ls wiki/papers/{C}.md 2>/dev/null && echo exists || echo missing
 For each venue-year page touched by target papers:
 
 ```bash
-cat wiki/venues/{venue-year}.md
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+cat $WIKI/venues/{venue-year}.md
 ```
 
 If the page has only the bare paper-row table (no narrative prose), populate an `## Overview` section summarising: dominant tasks, dominant architectures, standout papers among the target set.
@@ -244,7 +274,8 @@ If the page already has narrative, update it to incorporate the new papers — k
 ## Step 6 — Update `wiki/overview.md` *(skip if fewer than 10 papers in batch)*
 
 ```bash
-cat wiki/overview.md
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+cat $WIKI/overview.md
 ```
 
 If the target papers shift any section materially — a new dominant paradigm, emerging trend, or new point of tension — update that section. Otherwise skip this step entirely.
@@ -281,6 +312,7 @@ print(f'integrated_date set for {len(ids)} papers')
 python3 -c "
 import re
 from datetime import date
+WIKI       = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 n_papers   = {papers_processed}
 n_concepts = {concepts_updated}
 n_digests  = {digests_updated}
@@ -288,13 +320,14 @@ n_links    = {cross_links_added}
 today      = date.today().isoformat()
 bullet = f'- integrate | {n_papers} papers | {n_concepts} concepts updated | {n_digests} digests updated | {n_links} cross-links added'
 section = f'## {today}'
-text = open('wiki/log.md').read()
+path = f'{WIKI}/log.md'
+text = open(path).read()
 if section in text:
     text = text.rstrip('\n') + '\n' + bullet + '\n'
 else:
     new_section = f'{section}\n\n{bullet}\n\n'
     text = re.sub(r'(---\n\n)(## \d)', r'\1' + new_section + r'\2', text, count=1)
-open('wiki/log.md','w').write(text)
+open(path,'w').write(text)
 "
 ```
 
