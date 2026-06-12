@@ -34,7 +34,14 @@ The integration agent handles concept back-links and cross-paper connections. Do
 
 ## Working directory
 
-All paths are relative to the project root: `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
+The project has **two repos** with distinct roles:
+
+- **Infra root** (working directory): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
+  Use for all `raw/` paths (metadata JSONs, parsed papers, assets).
+- **Wiki content repo** (wiki writes): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content/`
+  Use for ALL wiki file writes. Define this as `WIKI` in every script block.
+
+⚠️ **Never write wiki files to `wiki/`** (the `wiki/` subdirectory inside the infra repo is a git submodule in detached HEAD state — writes there will be lost and will not reach the correct branch).
 
 ---
 
@@ -162,7 +169,17 @@ generation:
 
 {Non-survey papers only (all corpus_role except "survey"). 2–4 sentences, grounded in the paper content. See the corpus_role guide above for what to cover. Write for a researcher who arrived here via a wikilink from a TTS or SCA paper and needs to understand why this paper matters to the speech generation community. Do not cite specific corpus citation counts — these go stale. The paper's inclusion here already signals it is highly cited within the corpus.}
 
-Base the Context and field_significance assessment solely on what the paper itself demonstrates — its methods, results, and stated design choices. Do not write phrases like "has become the de facto", "widely adopted", "the dominant X", or "has become a standard" — these are adoption claims that require reading citing papers to support, not conclusions you can reach from the paper alone. Use neutral framing: "used by TTS and SCA systems as…", "provides…", "enables…", "introduces…".
+Base the Context solely on what the paper itself demonstrates — its methods, results, and stated design choices. **Litmus test:** could you write each sentence knowing only this paper, without reading a single citing paper? If not, rephrase.
+
+Two failure modes to avoid:
+
+1. **Adoption noun phrases:** "has become the de facto", "widely adopted", "the dominant X", "has become a standard", "sustained adoption" — these require reading the broader literature to verify.
+
+2. **Citation verb phrases:** "TTS papers cite X as…", "the community uses X for…", "is referenced by…", "researchers adopt X", "systems cite X as a candidate" — these also require reading citing papers. Do not frame the Context as what other papers do with this work.
+
+Instead, frame the Context as what the paper itself provides, enables, or introduces. Good patterns: "provides a training resource for…", "introduces a scheme that enables…", "can serve as a backbone for…", "enables TTS systems to…".
+
+**Controlled vocabulary in prose:** `SCA` is a project-internal tag used only in the frontmatter `task:` field. In prose, always write "spoken conversational agents" or "speech LMs" instead — "SCA" is not a standard acronym in the literature and will confuse readers unfamiliar with the project vocabulary.
 
 ## Wiki Connections
 
@@ -183,19 +200,21 @@ Base the Context and field_significance assessment solely on what the paper itse
 {[[wikilinks]] for related concepts and any in-corpus papers cited by this survey.}
 ```
 
-### 4. Append row to `wiki/papers/index.md` Papers table
+### 4. Append row to `$WIKI/papers/index.md` Papers table
 
 ```bash
 python3 << 'EOF'
 import re, json
 from datetime import date
 
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+
 meta = json.load(open('raw/metadata/{ID}.json'))
 task_str  = ', '.join(meta.get('task') or [])
 today     = date.today().isoformat()
 
 import yaml
-text = open('wiki/papers/{ID}.md').read()
+text = open(f'{WIKI}/papers/{"{ID}"}.md').read()
 fm_match = re.match(r'^---\n(.*?)\n---\n', text, re.DOTALL)
 fm = yaml.safe_load(fm_match.group(1)) if fm_match else {}
 arch_str = ', '.join(fm.get('architecture') or [])
@@ -204,7 +223,7 @@ title    = meta.get('title', '')[:55]
 
 new_row  = f'| {meta["id"]} | {title} | {org} | {meta.get("venue","arXiv")} | {meta.get("year","")} | {task_str} | {arch_str} | {today} |'
 
-catalog = open('wiki/papers/index.md').read()
+catalog = open(f'{WIKI}/papers/index.md').read()
 papers_header = '| ID | Title | Org | Venue | Year | Task | Architecture | Ingested |'
 if papers_header in catalog:
     lines = catalog.splitlines(keepends=True)
@@ -223,48 +242,51 @@ if papers_header in catalog:
         sep_idx = next((i for i,l in enumerate(lines) if '|----|' in l and in_papers), None)
         if sep_idx:
             lines.insert(sep_idx + 1, new_row + '\n')
-    open('wiki/papers/index.md', 'w').write(''.join(lines))
+    open(f'{WIKI}/papers/index.md', 'w').write(''.join(lines))
     print('papers/index.md updated')
 EOF
 ```
 
-Also update the paper count and date in `wiki/index.md`:
+Also update the paper count and date in `$WIKI/index.md`:
 
 ```bash
 python3 -c "
 import re
 from datetime import date
-catalog = open('wiki/papers/index.md').read()
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+catalog = open(f'{WIKI}/papers/index.md').read()
 paper_rows = len([l for l in catalog.splitlines()
                   if l.startswith('|') and '----' not in l
                   and 'ID' not in l and 'Title' not in l])
 today = date.today().isoformat()
-idx = open('wiki/index.md').read()
+idx = open(f'{WIKI}/index.md').read()
 idx = re.sub(r'\d+ papers ingested', f'{paper_rows} papers ingested', idx)
 idx = re.sub(r'Last updated \d{4}-\d{2}-\d{2}', f'Last updated {today}', idx)
 idx = re.sub(r'Browse all \d+ papers', f'Browse all {paper_rows} papers', idx)
-open('wiki/index.md', 'w').write(idx)
+open(f'{WIKI}/index.md', 'w').write(idx)
 "
 ```
 
-### 5. Create/update `wiki/venues/{year}-{venue-slug}.md`
+### 5. Create/update `$WIKI/venues/{year}-{venue-slug}.md`
 
 ```bash
 python3 << 'EOF'
 import json, os, re
 from datetime import date
 
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+
 meta  = json.load(open('raw/metadata/{ID}.json'))
 venue = meta.get('venue', 'arXiv')
 year  = meta.get('year', '')
 slug  = venue.lower().replace(' ', '-')
-path  = f'wiki/venues/{year}-{slug}.md'
+path  = f'{WIKI}/venues/{year}-{slug}.md'
 pid   = meta['id']
 title = meta.get('title', '')[:70]
 today = date.today().isoformat()
 link  = f'| {pid} | {title} |'
 
-os.makedirs('wiki/venues', exist_ok=True)
+os.makedirs(f'{WIKI}/venues', exist_ok=True)
 
 if os.path.exists(path):
     text = open(path).read()
@@ -287,44 +309,46 @@ print(f'{path} updated')
 EOF
 ```
 
-Update the Venues table in `wiki/venues/index.md`:
+Update the Venues table in `$WIKI/venues/index.md`:
 
 ```bash
 python3 -c "
 import json, re
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 meta  = json.load(open('raw/metadata/{ID}.json'))
 venue = meta.get('venue','arXiv'); year = meta.get('year','')
 slug  = venue.lower().replace(' ','-')
 key   = f'{year}-{slug}'
-text  = open('wiki/venues/index.md').read()
+text  = open(f'{WIKI}/venues/index.md').read()
 if f'[[{key}]]' not in text:
     row = f'| [[{key}]] | {venue} | {year} | 1 |'
     text = text.rstrip('\n') + '\n' + row + '\n'
 else:
     text = re.sub(rf'(\[\[{re.escape(key)}\]\][^\n]*\| )(\d+)( \|)',
                   lambda m: m.group(1)+str(int(m.group(2))+1)+m.group(3), text)
-open('wiki/venues/index.md','w').write(text)
+open(f'{WIKI}/venues/index.md','w').write(text)
 "
 ```
 
-### 6. Append to `wiki/log.md`
+### 6. Append to `$WIKI/log.md`
 
 ```bash
 python3 -c "
 import json, re
 from datetime import date
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 meta = json.load(open('raw/metadata/{ID}.json'))
 today = date.today().isoformat()
 bullet = f\"- ingest | {meta['id']} | {meta.get('title','')} | {meta.get('venue','arXiv')} {meta.get('year','')}\"
 section = f'## {today}'
-text = open('wiki/log.md').read()
+text = open(f'{WIKI}/log.md').read()
 if section in text:
     # Insert bullet immediately after the last existing bullet in today's section
     text = re.sub(rf'({re.escape(section)}.*?)((\n## |\Z))', lambda m: m.group(1).rstrip('\n') + '\n' + bullet + '\n' + m.group(2), text, count=1, flags=re.DOTALL)
 else:
     new_section = f'{section}\n\n{bullet}\n\n'
     text = re.sub(r'(---\n\n)(## \d)', r'\1' + new_section + r'\2', text, count=1)
-open('wiki/log.md','w').write(text)
+open(f'{WIKI}/log.md','w').write(text)
 "
 ```
 
