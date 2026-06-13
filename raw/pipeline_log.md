@@ -1,3 +1,7 @@
+## 2026-06-13
+
+- lint | paper set cross-verification | 4 sets checked (metadata, files, papers/index, wiki/log) | counts reconciled at 251 | log has 1 stale entry (2410.06885, arXiv F5-TTS superseded by ACL canonical) — expected | 0 orphans (all 251 in venue pages) | 4 standard papers missed by integration added to concept pages: interspeech-2025-0253, interspeech-2025-0408, interspeech-2025-0902, 2025.americasnlp-1.1 | 12 remaining Tier 2 stubs (ml-method, dataset, foundation-lm, multimodal) have no concept page by design
+
 ## 2026-06-12
 - integrate | pass 9 | 25 papers (15 T1 + 10 T2) | 19 concepts updated | 4 evidence digests fully updated (neural-codec, autoregressive-codec-tts, zero-shot-tts, spoken-language-model) | 16 cross-links added | integrated_date set for all 25 | integration agent spec patched: WIKI variable + two-repo working directory (was writing to detached-HEAD submodule)
 - ingest | 10 Tier 2 stubs (session 43) | Qwen-Audio (2311.07919), Qwen3 (2505.09388), ECAPA-TDNN (2005.07143), LLaMA (2302.13971), Gemini 2.5 (2507.06261), MLS (2012.03411), DeepSeek-R1 (2501.12948), Seamless (2312.05187), GigaSpeech (2106.06909), FSQ (2309.15505) | wiki now 225 pages | 23 quality fixes applied across both batches (adoption claims, SCA prose, spurious SSL tags, field_significance.type mismatches, task tag errors, wikilink formatting) | agent specs strengthened: litmus test + citation-verb failure mode added to both ingest agent specs; SCA prose rule added
