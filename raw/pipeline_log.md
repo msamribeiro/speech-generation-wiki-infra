@@ -1,5 +1,6 @@
 ## 2026-06-13
 
+- quality-pass | Factor A/B/C label cleanup | 12 files edited (5 concept pages, 5 evidence digests, overview.md, papers/2025.acl-long.1498.md) | paper-internal labels from 2412.17048 replaced with descriptive language; missing [[2412.17048]] citations added | source paper page unchanged
 - lint | paper set cross-verification | 4 sets checked (metadata, files, papers/index, wiki/log) | counts reconciled at 251 | log has 1 stale entry (2410.06885, arXiv F5-TTS superseded by ACL canonical) — expected | 0 orphans (all 251 in venue pages) | 4 standard papers missed by integration added to concept pages: interspeech-2025-0253, interspeech-2025-0408, interspeech-2025-0902, 2025.americasnlp-1.1 | 12 remaining Tier 2 stubs (ml-method, dataset, foundation-lm, multimodal) have no concept page by design
 
 ## 2026-06-12

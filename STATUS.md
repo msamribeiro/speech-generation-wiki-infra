@@ -335,7 +335,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 6. ~~**Corpus top-up fetch (arXiv + cs.CL re-scan)**~~ — ✅ done 2026-06-05. Full coverage 2025-07-01 → 2026-05-31. See `raw/fetch_plan_2026-06.md`. Remaining: citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers).
 
-7. **Fix "Factor A/B/C" terminology** — paper-internal labels from `2412.17048` leaked into 5 concept pages, 5 evidence digests, and `2025.acl-long.1498.md`. Replace with plain language (A = phonetic vs. semantic content, B = token rate/length, C = paralinguistic variability). Source page `2412.17048.md` is correct; do not change it.
+7. ~~**Fix "Factor A/B/C" terminology**~~ — ✅ done 2026-06-13. Paper-internal labels replaced with descriptive language across 12 files (5 concept pages, 5 evidence digests, overview.md, 2025.acl-long.1498.md). Missing `[[2412.17048]]` citations added where references lacked one. Source page `2412.17048.md` unchanged.
 
 8. **Generate first field report** — now at 251 ingested, well past the 200-paper threshold. Ready to generate. Use template in CLAUDE.md §5.
 
