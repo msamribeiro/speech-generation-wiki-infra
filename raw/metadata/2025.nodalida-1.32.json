@@ -20,8 +20,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 3,
+  "published_date": "2025-03-02",
   "ingested_date": null,
   "url": "https://aclanthology.org/2025.nodalida-1.32",
   "pdf_url": "https://aclanthology.org/2025.nodalida-1.32.pdf",
@@ -38,5 +38,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01"
+  "conference_date": "2025-03-02",
+  "venue_detail": "NoDaLiDa/Baltic-HLT 2025: Joint 25th Nordic Conference on Computational Linguistics and 11th Baltic Conference on Human Language Technologies (Tallinn, Estonia, Mar 2–5, 2025)"
 }

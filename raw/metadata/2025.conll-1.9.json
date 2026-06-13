@@ -16,8 +16,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 7,
+  "published_date": "2025-07-31",
   "ingested_date": null,
   "url": "https://aclanthology.org/2025.conll-1.9",
   "pdf_url": "https://aclanthology.org/2025.conll-1.9.pdf",
@@ -34,5 +34,7 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2025-07-31",
+  "venue_detail": "CoNLL 2025: 29th Conference on Computational Natural Language Learning; co-located with ACL 2025 (Vienna, Austria, Jul 31–Aug 1, 2025)"
 }

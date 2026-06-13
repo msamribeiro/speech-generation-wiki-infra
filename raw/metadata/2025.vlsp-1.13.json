@@ -17,8 +17,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 10,
+  "published_date": "2025-10-01",
   "ingested_date": null,
   "url": "https://aclanthology.org/2025.vlsp-1.13",
   "pdf_url": "https://aclanthology.org/2025.vlsp-1.13.pdf",
@@ -36,5 +36,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01"
+  "conference_date": "2025-10-01",
+  "venue_detail": "VLSP 2025: 11th International Workshop on Vietnamese Language and Speech Processing (Hanoi, Vietnam, Oct 2025)"
 }

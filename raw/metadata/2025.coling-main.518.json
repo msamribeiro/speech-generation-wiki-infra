@@ -18,8 +18,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 1,
+  "published_date": "2025-01-19",
   "ingested_date": "2026-05-30",
   "url": "https://aclanthology.org/2025.coling-main.518",
   "pdf_url": "https://aclanthology.org/2025.coling-main.518.pdf",
@@ -36,6 +36,7 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01",
-  "integrated_date": "2026-05-30"
+  "conference_date": "2025-01-19",
+  "integrated_date": "2026-05-30",
+  "venue_detail": "COLING 2025: 31st International Conference on Computational Linguistics (Abu Dhabi, UAE, Jan 19–24, 2025)"
 }

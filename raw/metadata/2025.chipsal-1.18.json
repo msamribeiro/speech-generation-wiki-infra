@@ -17,8 +17,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 1,
+  "published_date": "2025-01-19",
   "ingested_date": null,
   "url": "https://aclanthology.org/2025.chipsal-1.18",
   "pdf_url": "https://aclanthology.org/2025.chipsal-1.18.pdf",
@@ -36,5 +36,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01"
+  "conference_date": "2025-01-19",
+  "venue_detail": "CHiPSAL 2025: Workshop on Challenges in Processing South Asian Languages; co-located with COLING 2025 (Abu Dhabi, UAE, Jan 19–24, 2025)"
 }

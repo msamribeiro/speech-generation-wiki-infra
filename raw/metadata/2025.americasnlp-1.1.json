@@ -16,8 +16,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 5,
+  "published_date": "2025-05-04",
   "ingested_date": "2026-05-27",
   "url": "https://aclanthology.org/2025.americasnlp-1.1",
   "pdf_url": "https://aclanthology.org/2025.americasnlp-1.1.pdf",
@@ -34,6 +34,7 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01",
-  "integrated_date": "2026-05-27"
+  "conference_date": "2025-05-04",
+  "integrated_date": "2026-05-27",
+  "venue_detail": "AmericasNLP 2025: 5th Workshop on NLP for Indigenous Languages of the Americas; co-located with NAACL 2025 (Albuquerque, NM, USA, May 4, 2025)"
 }

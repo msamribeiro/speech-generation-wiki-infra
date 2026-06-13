@@ -18,8 +18,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": null,
-  "published_date": "2025-01-01",
+  "month": 11,
+  "published_date": "2025-11-08",
   "ingested_date": null,
   "url": "https://aclanthology.org/2025.arabicnlp-main.38",
   "pdf_url": "https://aclanthology.org/2025.arabicnlp-main.38.pdf",
@@ -36,5 +36,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01"
+  "conference_date": "2025-11-08",
+  "venue_detail": "ArabicNLP 2025: 3rd Arabic Natural Language Processing Conference; co-located with EMNLP 2025 (Miami, FL, USA, Nov 8–9, 2025)"
 }
