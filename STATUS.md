@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-13 (session 45 complete — 251 ingested, 250 integrated; passes 1–10 complete)
+Last updated: 2026-06-13 (session 45 complete — 251 ingested, 251 integrated; passes 1–10 complete)
 
 ---
 
@@ -39,7 +39,7 @@ Last updated: 2026-06-13 (session 45 complete — 251 ingested, 250 integrated; 
 Total files:  1326
   accepted:    786   ← 699 standard + 43 T1 CD + 44 T2 CD not yet ingested
   ingested:    251   ← 176 standard + 75 CD (53 T1 full pages + 22 T2 stubs)
-    integrated: 250  ← passes 1–10 complete (2026-06-13)
+    integrated: 251  ← passes 1–10 complete (2026-06-13)
   pending:       0   ← cleared
   review:        0   ← queue cleared
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
