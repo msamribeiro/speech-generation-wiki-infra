@@ -60,8 +60,8 @@
   "year": 2025,
   "month": 1,
   "published_date": "2025-01-10",
-  "ingested_date": null,
-  "integrated_date": null,
+  "ingested_date": "2026-06-12",
+  "integrated_date": "2026-06-13",
   "url": "https://arxiv.org/abs/2501.06282",
   "pdf_url": "https://arxiv.org/pdf/2501.06282.pdf",
   "pdf_path": "raw/papers/2501.06282.pdf",
@@ -70,13 +70,21 @@
   "arxiv_comment": "Work in progress. Authors are listed in alphabetical order by family name",
   "task": [],
   "relevance_score": null,
-  "relevance_note": "Citation-discovered: cited 47× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "relevance_note": "Citation-discovered: cited 47\u00d7 by in-corpus papers (Q3\u202f2025\u2013Q2\u202f2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "ingested",
   "fetched_date": "2026-06-08",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "date": "2026-06-12",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "2eb9839"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_citation_count": 47,
   "citation_counts_by_quarter": {
