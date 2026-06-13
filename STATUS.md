@@ -331,7 +331,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 4. ~~**Seed `singing` and `fine-tuning` concept stubs**~~ — ✅ done 2026-06-04.
 
-5. **Investigate ACL/workshop `published_date` issue** — 22 ACL workshop papers have `published_date: 2025-01-01` (year-only placeholder from the scraper). They sort to the front of the chronological queue but represent July/August 2025 conference papers. Decide: (a) patch dates from ACL Anthology metadata, (b) ingest them as-is accepting the sort order quirk, or (c) manually correct the most significant ones before ingesting. Check `scripts/fetch/acl.py` to understand why dates weren't captured.
+5. ~~**Investigate ACL/workshop `published_date` issue**~~ — ✅ done 2026-06-13. 26 metadata files patched: `published_date`, `conference_date`, `month` corrected to actual conference dates; `venue_detail` field added with full name, parent conference, and location. Dates range from COLING Jan 2025 through IWCLUL Dec 2025. Check `scripts/fetch/acl.py` to prevent this from recurring on future fetches.
 
 6. ~~**Corpus top-up fetch (arXiv + cs.CL re-scan)**~~ — ✅ done 2026-06-05. Full coverage 2025-07-01 → 2026-05-31. See `raw/fetch_plan_2026-06.md`. Remaining: citation discovery (Moshi 53×, GLM-4-Voice 35×, VALL-E 2 34×, Llama-omni 28×) → NeurIPS/ICML/ICLR 2025 (~50–150 papers).
 
