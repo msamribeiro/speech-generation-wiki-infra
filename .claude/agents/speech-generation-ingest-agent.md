@@ -135,6 +135,15 @@ Record which figures you selected (numbers and captions) — you will embed them
 
 Write the full paper page following the exact template below. Write to the content repo path — `WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content`. Read the paper carefully — synthesise the prose sections; do not copy the abstract.
 
+#### Survey paper frontmatter rule
+
+When the paper's primary contribution is a survey or taxonomy (i.e. `field_significance.type` is `conceptual-contribution` and the paper proposes no original model):
+- `architecture: []` — surveys review architectures; they do not have one
+- `conditioning: []` — same
+- `training: []` — same
+- `datasets_train: ["not applicable (survey)"]` — unless the survey includes original controlled experiments with a trained model, in which case list only the datasets the survey's own model trains on
+- `datasets_eval: ["not applicable (survey)"]` — same logic; benchmarks the survey *discusses* are not the survey paper's own evaluation data
+
 #### Template
 
 ```markdown
@@ -150,13 +159,13 @@ month: {M or null}
 published_date: {YYYY-MM-DD}
 ingested_date: {TODAY}
 task: [{task list}]
-architecture: [{architecture list}]
-conditioning: [{conditioning list}]
-training: [{training list}]
+architecture: [{architecture list — [] for survey papers}]
+conditioning: [{conditioning list — [] for survey papers}]
+training: [{training list — [] for survey papers}]
 model_size: "{e.g. 330M params | not reported}"
 codec_used: "{e.g. EnCodec 75Hz | none | not reported}"
-datasets_train: [{quoted strings}]
-datasets_eval: [{quoted strings}]
+datasets_train: [{quoted strings — ["not applicable (survey)"] for survey papers with no original experiments}]
+datasets_eval: [{quoted strings — ["not applicable (survey)"] for survey papers with no original experiments}]
 metrics:
   - name: MOS
     value: 4.21
@@ -177,14 +186,15 @@ generation:
   commit: "{COMMIT from step 2b}"
 ---
 
+⚠️ CALLOUT RULES — read before writing the abstract card:
+- The abstract card is ALWAYS `[!abstract]`. Never `[!tip]`, `[!important]`, or anything else here.
+- This is the most common mistake: if you just assigned `[!tip]` or `[!important]` to Field Significance, do NOT reuse that callout type on the abstract card.
+- The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!info]`, `[!caution]` — write prose instead.
+
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Workshop | Preprint | Technical Report}
 > **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. No bold label — position implies it.}
-
-⚠️ The abstract card callout type is ALWAYS `[!abstract]`. Never use `[!tip]`, `[!important]`, or any other type here. Those types belong only in Field Significance.
-
-⚠️ The only permitted callout types anywhere in a paper page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational papers only), `[!tip]` (Field Significance, high papers only), `[!warning]` (critical limitations only). Do not use `[!note]`, `[!info]`, `[!caution]`, or any other type — write plain prose instead.
 
 ## Problem
 
@@ -241,7 +251,16 @@ Good patterns: "introduces…", "enables…", "provides…", "demonstrates…", 
 
 ## Wiki Connections
 
-{Write [[wikilinks]] for the 3–6 concept slugs from `related_concepts` and for any in-corpus paper IDs already identified in step 2. Do not open any other files to populate this section — use only what you already know from reading this paper.}
+{Write one bullet per concept slug (from `related_concepts`) and one bullet per in-corpus paper (from step 2), using this exact format:
+
+- [[concept-slug]] — {1 sentence: how does this paper relate to or contribute to this concept?}
+- [[paper-id]] (Short title or descriptor) — {1 sentence: does this paper build on it, extend it, compare against it, or challenge it?}
+
+Rules:
+- Bullet points only. No pipes `|`, dots `·`, inline commas between wikilinks, or bold section headers.
+- Every [[wikilink]] must have a descriptive clause after the em dash.
+- Concept slugs come from `related_concepts` (3–6 total). Paper IDs come from in-corpus references identified in step 2.
+- Do not open any other files to populate this section — use only what you already know from reading this paper.}
 ```
 
 ### 4. Append row to `$WIKI/papers/index.md` Papers table
@@ -481,6 +500,14 @@ Common errors to avoid: do not assign `architectural-novelty` to papers that use
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
 
 **`self-supervised-speech` usage rule:** Only include this slug if the paper's own system uses a self-supervised model (HuBERT, WavLM, wav2vec 2.0, data2vec, or similar) as a core component of its architecture or training. Do NOT include it if the paper uses Whisper (which is fully supervised), merely cites SSL work in related work, or compares against SSL baselines. The test: does this paper's method depend on self-supervised pre-training?
+
+**`prosody-control` usage rule:** Only include this slug if the paper introduces an explicit mechanism to control prosody (pitch, duration, speaking rate, stress) independently of content or speaker identity. Do NOT include it because the paper evaluates prosody metrics (F0-RMSE, MCD), includes a duration predictor as a standard pipeline component, or discusses prosody in related work.
+
+**`disentanglement` usage rule:** Only include this slug if the paper's training objective explicitly separates speech attributes (e.g., content, speaker identity, style, prosody) into distinct representation spaces. Standard AR architectures with separate codebook layers or fast/slow codec streams do not qualify.
+
+**`instruction-conditioned-tts` usage rule:** Only include this slug if the paper's system accepts natural language style instructions (e.g., "speak in a warm tone", "increase emphasis on key words") as a conditioning signal for TTS or VC. Do NOT include it for spoken conversational agents (SCA) that follow general dialogue or task instructions.
+
+**`prompt-conditioned` usage rule (conditioning field):** Only use `prompt-conditioned` in the `conditioning` field when the system is conditioned on an audio prompt (a short reference clip used to control style or speaker) at inference time. This is standard in zero-shot TTS. Do NOT use it when the paper uses a fixed d-vector/x-vector speaker embedding trained from a speaker ID label, or when audio appears only as conversational context in an SCA system.
 
 ---
 

@@ -160,6 +160,11 @@ generation:
   commit: "{COMMIT from step 2b}"
 ---
 
+⚠️ CALLOUT RULES — read before writing the abstract card:
+- The abstract card is ALWAYS `[!abstract]`. Never `[!tip]`, `[!important]`, or anything else here.
+- This is the most common mistake: if you just assigned `[!tip]` or `[!important]` to Field Significance, do NOT reuse that callout type on the abstract card.
+- The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!info]`, `[!caution]` — write prose instead.
+
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Workshop | Preprint | Technical Report}
 > **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
@@ -183,7 +188,15 @@ Instead, frame the Context as what the paper itself provides, enables, or introd
 
 ## Wiki Connections
 
-{[[wikilinks]] for related concept slugs from `related_concepts`. If any in-corpus papers were found in step 2 (papers this paper cites), link them here. Note: cross-links from corpus papers that cite this one are added by the integration agent.}
+{Write one bullet per concept slug (from `related_concepts`) and one bullet per in-corpus paper (from step 2), using this exact format:
+
+- [[concept-slug]] — {1 sentence: how does this paper relate to or contribute to this concept?}
+- [[paper-id]] (Short title or descriptor) — {1 sentence: does this paper build on it, extend it, compare against it, or challenge it?}
+
+Rules:
+- Bullet points only. No pipes `|`, dots `·`, inline commas between wikilinks, or bold section headers.
+- Every [[wikilink]] must have a descriptive clause after the em dash.
+- Do not open any other files to populate this section.}
 ```
 
 **Survey papers (`corpus_role == "survey"`) use a different body structure.** Replace `## Context in Speech Generation` with `## Scope and Coverage`:
@@ -197,7 +210,7 @@ Instead, frame the Context as what the paper itself provides, enables, or introd
 
 ## Wiki Connections
 
-{[[wikilinks]] for related concepts and any in-corpus papers cited by this survey.}
+{Write one bullet per concept slug and one bullet per in-corpus paper cited, using bullet format: `- [[slug-or-id]] — {1 sentence description}`. No pipes or dots.}
 ```
 
 ### 4. Append row to `$WIKI/papers/index.md` Papers table
@@ -421,6 +434,12 @@ INGEST_RESULT: {"id": "{ID}", "success": false, "reason": "{brief reason}"}
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
 
 **`self-supervised-speech` usage rule:** Only include this slug if the paper's own system uses a self-supervised model (HuBERT, WavLM, wav2vec 2.0, data2vec, or similar) as a core component of its architecture or training. Do NOT include it if the paper uses Whisper (which is fully supervised), merely cites SSL work in related work, or compares against SSL baselines. The test: does this paper's method depend on self-supervised pre-training?
+
+**`prosody-control` usage rule:** Only include this slug if the paper introduces an explicit mechanism to control prosody (pitch, duration, speaking rate, stress) independently of content or speaker identity. Do NOT include it because the paper evaluates prosody metrics, includes a standard duration predictor, or discusses prosody in related work.
+
+**`disentanglement` usage rule:** Only include this slug if the paper's training objective explicitly separates speech attributes (content, speaker identity, style, prosody) into distinct representation spaces. Standard codebook architectures with separate layers do not qualify.
+
+**`instruction-conditioned-tts` usage rule:** Only include this slug if the paper's system accepts natural language style instructions as a conditioning signal for TTS or VC. Do NOT include it for spoken conversational agents that follow general dialogue instructions.
 
 ---
 
