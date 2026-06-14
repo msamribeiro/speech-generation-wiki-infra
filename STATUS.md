@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-13 (session 45 complete — 251 ingested, 251 integrated; passes 1–10 complete)
+Last updated: 2026-06-14 (session 46 complete — 276 ingested, 251 integrated; passes 1–10 complete; integration pass 11 due)
 
 ---
 
@@ -29,17 +29,17 @@ Last updated: 2026-06-13 (session 45 complete — 251 ingested, 251 integrated; 
 | Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
 | Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse complete 2026-06-08. |
 | Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). Batches 14–18. 0 failures. 1 manual refs fix: 2001.08361 (Scaling Laws, table-layout refs recovered). Quality reports: batch_14–18_cd_quality_report.md. |
-| Ingest (wiki pages) | 🔄 In progress | 251/875 ingested (176 standard + 75 CD: 53 T1 full pages + 22 T2 stubs). 250/250 integrated (passes 1–10 complete, 2026-06-13). 24/24 evidence digests seeded. |
+| Ingest (wiki pages) | 🔄 In progress | 276/875 ingested (176 standard + 100 CD: 66 T1 full pages + 34 T2 stubs). 251/276 integrated (passes 1–10 complete, 2026-06-13; integration pass 11 due). 24/24 evidence digests seeded. |
 
 ---
 
-## Metadata counts (2026-06-13)
+## Metadata counts (2026-06-14)
 
 ```
 Total files:  1326
-  accepted:    786   ← 699 standard + 43 T1 CD + 44 T2 CD not yet ingested
-  ingested:    251   ← 176 standard + 75 CD (53 T1 full pages + 22 T2 stubs)
-    integrated: 251  ← passes 1–10 complete (2026-06-13)
+  accepted:    761   ← 699 standard + 30 T1 CD + 32 T2 CD not yet ingested
+  ingested:    276   ← 176 standard + 100 CD (66 T1 full pages + 34 T2 stubs)
+    integrated: 251  ← passes 1–10 complete (2026-06-13); pass 11 due now
   pending:       0   ← cleared
   review:        0   ← queue cleared
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
@@ -47,11 +47,11 @@ Total files:  1326
 PDFs on disk:  ~1037 ← raw/papers/ (875 standard + 162 citation-discovery)
 Parsed:        861   ← all accepted papers parsed (875 standard + 162 citation-discovery; 2026-06-08 complete)
 Parse-pending:   0   ← pipeline complete
-Ready to ingest: 786 ← parsed + accepted, not yet ingested
+Ready to ingest: 761 ← parsed + accepted, not yet ingested
 
 Evidence digests: 24/24 seeded (fine-tuning digest created pass 8; singing + fine-tuning below 5-paper threshold but stubs exist)
 Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (24 total concept pages)
-Wiki pages: 251 (as of 2026-06-13)
+Wiki pages: 276 (as of 2026-06-14)
 ```
 
 ---
@@ -315,15 +315,19 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 2. ~~**Run integration pass 10**~~ — ✅ done 2026-06-13. 25 papers (25 T1: 15 from session 44 + 10 from session 45). 21 concepts updated, 21 evidence digests updated, 133 cross-links added, 6 venue pages updated, overview updated.
 
-3. **Continue ingest** — 786 papers ready to ingest. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
+2. ~~**Patch ingest agent specs**~~ — ✅ done 2026-06-14. Four fixes to `speech-generation-ingest-agent.md` and three to `speech-generation-lightweight-ingest-agent.md`: survey frontmatter rule (architecture/conditioning/training: []); abstract card callout warning; Wiki Connections bullet format requirement; related_concepts grounding rules (prosody-control, disentanglement, instruction-conditioned-tts, prompt-conditioned, self-supervised-speech).
+
+3. **Run integration pass 11** — due now (276 ingested, 251 integrated). 25 papers: the 13 Tier 1 CD papers from session 46. Run `speech-generation-integration-agent`.
+
+3. **Continue ingest** — 761 papers ready to ingest. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
 
 3. ~~**Resolve CD ingest strategy open questions**~~ — ✅ done 2026-06-09. (1) `2312.10997` → Tier 2. (2) MusicLM + AudioLDM → confirmed Tier 1. (3) Lightweight stubs → new `speech-generation-lightweight-ingest-agent` spec. (4) Tier 3 eliminated → all 13 papers upgraded to Tier 2. Final counts: Tier 1 = 96, Tier 2 = 66 (22 T2 done, 44 remaining). See `docs/analyses/cd-ingest-strategy.md`.
 
 4. ~~**CD ingest preparation**~~ — ✅ done 2026-06-09. `ingest_tier` field added to schema and bulk-set in all 162 CD metadata files. Citation merge overrides added for CSTR VCTK, AISHELL-3, and GSLM.
 
-5. **Ingest Tier 1 CD papers (43 remaining of 96)** — 53 done. Same cadence with quality check after each pair. Use `speech-generation-ingest-agent`. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
+5. **Ingest Tier 1 CD papers (30 remaining of 96)** — 66 done. Same cadence with quality check after each pair. Use `speech-generation-ingest-agent`. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
 
-6. **Ingest Tier 2 CD papers (44 remaining of 66)** — 22 done. Lightweight stubs via `speech-generation-lightweight-ingest-agent`. Up to 5 at a time.
+6. **Ingest Tier 2 CD papers (32 remaining of 66)** — 34 done. Lightweight stubs via `speech-generation-lightweight-ingest-agent`. Up to 5 at a time.
 
 3. ~~**Fetch citation-discovery candidates**~~ — ✅ done 2026-06-08. All 162 arXiv IDs written with `status: accepted`, `discovery_source: "citation-discovery"`, and per-quarter citation counts. Script: `scripts/fetch/citation_discovery_fetch.py`. 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved). These papers bypassed the keyword filter; they are onboarded because they are highly cited by in-corpus papers. Task assignments (TTS/VC/SCA/codec/etc.) and PDF downloads still pending before ingest.
 
