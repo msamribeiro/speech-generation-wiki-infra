@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-14 (session 46 complete — 276 ingested, 251 integrated; passes 1–10 complete; integration pass 11 due)
+Last updated: 2026-06-15 (session 47 — 276 ingested, 276 integrated; passes 1–11 complete)
 
 ---
 
@@ -29,17 +29,17 @@ Last updated: 2026-06-14 (session 46 complete — 276 ingested, 251 integrated; 
 | Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
 | Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse complete 2026-06-08. |
 | Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). Batches 14–18. 0 failures. 1 manual refs fix: 2001.08361 (Scaling Laws, table-layout refs recovered). Quality reports: batch_14–18_cd_quality_report.md. |
-| Ingest (wiki pages) | 🔄 In progress | 276/875 ingested (176 standard + 100 CD: 66 T1 full pages + 34 T2 stubs). 251/276 integrated (passes 1–10 complete, 2026-06-13; integration pass 11 due). 24/24 evidence digests seeded. |
+| Ingest (wiki pages) | 🔄 In progress | 276/875 ingested (176 standard + 100 CD: 66 T1 full pages + 34 T2 stubs). 276/276 integrated (passes 1–11 complete, 2026-06-15). 24/24 evidence digests seeded. |
 
 ---
 
-## Metadata counts (2026-06-14)
+## Metadata counts (2026-06-15)
 
 ```
 Total files:  1326
   accepted:    761   ← 699 standard + 30 T1 CD + 32 T2 CD not yet ingested
   ingested:    276   ← 176 standard + 100 CD (66 T1 full pages + 34 T2 stubs)
-    integrated: 251  ← passes 1–10 complete (2026-06-13); pass 11 due now
+    integrated: 276  ← passes 1–11 complete (2026-06-15)
   pending:       0   ← cleared
   review:        0   ← queue cleared
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
@@ -317,7 +317,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 2. ~~**Patch ingest agent specs**~~ — ✅ done 2026-06-14. Four fixes to `speech-generation-ingest-agent.md` and three to `speech-generation-lightweight-ingest-agent.md`: survey frontmatter rule (architecture/conditioning/training: []); abstract card callout warning; Wiki Connections bullet format requirement; related_concepts grounding rules (prosody-control, disentanglement, instruction-conditioned-tts, prompt-conditioned, self-supervised-speech).
 
-3. **Run integration pass 11** — due now (276 ingested, 251 integrated). 25 papers: the 13 Tier 1 CD papers from session 46. Run `speech-generation-integration-agent`.
+3. ~~**Run integration pass 11**~~ — ✅ done 2026-06-15. 25 papers (all 25 Tier 1 CD from session 46). 19 concepts updated, 23 digests updated, 8 cross-links added, 2 venue pages updated. All 276 ingested papers now integrated.
 
 3. **Continue ingest** — 761 papers ready to ingest. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
 
