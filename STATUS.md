@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-06-16 (session 47 — 291 ingested, 276 integrated; passes 1–11 complete; integration pass 12 pending)
+Last updated: 2026-06-16 (306 ingested, 276 integrated; passes 1–11 complete; integration pass 12 pending for 30 papers)
 
 ---
 
@@ -29,7 +29,7 @@ Last updated: 2026-06-16 (session 47 — 291 ingested, 276 integrated; passes 1�
 | Parse (text extraction) | ✅ Complete | 875/875 papers parsed (2026-06-06). Batches 11–13 (111 new papers: arXiv 2409–2605, ICLR 2025/2026, NeurIPS 2025) completed with 0 failures. |
 | Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with status=accepted, discovery_source="citation-discovery", corpus_role, and per-quarter citation counts. Bypassed keyword filter. Script: `scripts/fetch/citation_discovery_fetch.py`. PDFs downloaded; parse complete 2026-06-08. |
 | Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). Batches 14–18. 0 failures. 1 manual refs fix: 2001.08361 (Scaling Laws, table-layout refs recovered). Quality reports: batch_14–18_cd_quality_report.md. |
-| Ingest (wiki pages) | 🔄 In progress | 291/875 ingested (176 standard + 115 CD: 81 T1 full pages + 34 T2 stubs). 276/291 integrated (passes 1–11 complete; 15 ingested 2026-06-16 not yet integrated). 24/24 evidence digests seeded. |
+| Ingest (wiki pages) | 🔄 In progress | 306/875 ingested (176 standard + 130 CD: 96 T1 full pages + 34 T2 stubs). All 96 Tier 1 CD papers complete. 276/306 integrated (passes 1–11 complete; 30 ingested 2026-06-16 not yet integrated). 24/24 evidence digests seeded. |
 
 ---
 
@@ -37,9 +37,9 @@ Last updated: 2026-06-16 (session 47 — 291 ingested, 276 integrated; passes 1�
 
 ```
 Total files:  1326
-  accepted:    746   ← 699 standard + 15 T1 CD + 32 T2 CD not yet ingested
-  ingested:    291   ← 176 standard + 115 CD (81 T1 full pages + 34 T2 stubs)
-    integrated: 276  ← passes 1–11 complete; 15 from session 47 not yet integrated
+  accepted:    731   ← 699 standard + 0 T1 CD + 32 T2 CD not yet ingested
+  ingested:    306   ← 176 standard + 130 CD (96 T1 full pages + 34 T2 stubs)
+    integrated: 276  ← passes 1–11 complete; 30 from 2026-06-16 not yet integrated
   pending:       0   ← cleared
   review:        0   ← queue cleared
   rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
@@ -47,11 +47,11 @@ Total files:  1326
 PDFs on disk:  ~1037 ← raw/papers/ (875 standard + 162 citation-discovery)
 Parsed:        861   ← all accepted papers parsed (875 standard + 162 citation-discovery; 2026-06-08 complete)
 Parse-pending:   0   ← pipeline complete
-Ready to ingest: 746 ← parsed + accepted, not yet ingested
+Ready to ingest: 731 ← parsed + accepted, not yet ingested
 
 Evidence digests: 24/24 seeded (fine-tuning digest created pass 8; singing + fine-tuning below 5-paper threshold but stubs exist)
 Missing concept stubs: none — singing and fine-tuning seeded 2026-06-04 (24 total concept pages)
-Wiki pages: 291 (as of 2026-06-16)
+Wiki pages: 306 (as of 2026-06-16)
 ```
 
 ---
@@ -321,13 +321,13 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 3. **Continue ingest** — 746 papers ready to ingest. Chronological strategy: Aug 2025 → Dec 2025 → 2026. Next up: continue Aug 2025 pool from `2509.04093` onwards. Show selection first, ingest 2 at a time.
 
-3. **Run integration pass 12** — ⏸ deferred. 15 papers ingested 2026-06-16 (session 47) not yet integrated. Run `speech-generation-integration-agent` on these 15 before the next large ingest batch. Papers: 2301.11325, 2301.12503, 2305.15255, 2312.01479, 2312.15821, 2401.07333, 2402.13236, 2404.03204, 2406.00654, 2406.05551, 2408.02622, 2411.09943, 2411.17607, 2411.18803, 2412.04724.
+3. **Run integration pass 12** — ⏸ deferred. 30 papers ingested 2026-06-16 not yet integrated. Run `speech-generation-integration-agent` on these before the next large ingest batch. Papers (session 47): 2301.11325, 2301.12503, 2305.15255, 2312.01479, 2312.15821, 2401.07333, 2402.13236, 2404.03204, 2406.00654, 2406.05551, 2408.02622, 2411.09943, 2411.17607, 2411.18803, 2412.04724. Papers (this session): 2502.18924, 2503.14345, 2504.02407, 2504.10344, 2505.02625, 2505.09558, 2505.13000, 2505.14648, 2506.10274, 2506.13053, 2506.16381, 2507.23159, 2508.04195, 2510.07838, 2511.15848.
 
 3. ~~**Resolve CD ingest strategy open questions**~~ — ✅ done 2026-06-09. (1) `2312.10997` → Tier 2. (2) MusicLM + AudioLDM → confirmed Tier 1. (3) Lightweight stubs → new `speech-generation-lightweight-ingest-agent` spec. (4) Tier 3 eliminated → all 13 papers upgraded to Tier 2. Final counts: Tier 1 = 96, Tier 2 = 66 (22 T2 done, 44 remaining). See `docs/analyses/cd-ingest-strategy.md`.
 
 4. ~~**CD ingest preparation**~~ — ✅ done 2026-06-09. `ingest_tier` field added to schema and bulk-set in all 162 CD metadata files. Citation merge overrides added for CSTR VCTK, AISHELL-3, and GSLM.
 
-5. **Ingest Tier 1 CD papers (15 remaining of 96)** — 81 done (66 prior + 15 ingested session 47). Same cadence with quality check after each paper. Use `speech-generation-ingest-agent`. See `docs/analyses/cd-ingest-strategy.md` Tier 1 table.
+5. ~~**Ingest Tier 1 CD papers**~~ — ✅ done 2026-06-16. All 96 Tier 1 CD papers ingested.
 
 6. **Ingest Tier 2 CD papers (32 remaining of 66)** — 34 done. Lightweight stubs via `speech-generation-lightweight-ingest-agent`. Up to 5 at a time.
 
@@ -390,6 +390,8 @@ Quick-scan list of improvement ideas. Review at session start; pick up when band
 ### Product directions
 
 See `docs/THOUGHTS_FOR_IMPROVEMENTS.md` for extended notes. Key directions: RAG research assistant, living benchmark leaderboards, research gap map, living survey paper, org/lab intelligence, automated related-work generation.
+
+- **Wiki about/documentation page** — write `wiki/about.md` covering: the 3-repo structure (infra, content, site), project philosophy (living systematic review, compounding knowledge base), how the ingest pipeline works, how to contribute or report errors, and FAQs. Link from the wiki landing page (`wiki/index.md`). Should be human-written or lightly assisted — not agent-generated.
 
 ---
 
