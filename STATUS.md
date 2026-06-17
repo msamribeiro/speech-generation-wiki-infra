@@ -329,7 +329,7 @@ Architecture: native Claude Code multi-agent pattern (no Anthropic SDK calls). T
 
 5. ~~**Ingest Tier 1 CD papers**~~ — ✅ done 2026-06-16. All 96 Tier 1 CD papers ingested.
 
-6. **Ingest Tier 2 CD papers (32 remaining of 66)** — 34 done. Lightweight stubs via `speech-generation-lightweight-ingest-agent`. Up to 5 at a time.
+6. ~~**Ingest Tier 2 CD papers**~~ — ✅ done 2026-06-17. All 66/66 Tier 2 CD stubs complete. Lightweight stubs via `speech-generation-lightweight-ingest-agent`.
 
 3. ~~**Fetch citation-discovery candidates**~~ — ✅ done 2026-06-08. All 162 arXiv IDs written with `status: accepted`, `discovery_source: "citation-discovery"`, and per-quarter citation counts. Script: `scripts/fetch/citation_discovery_fetch.py`. 57 SR=Y, 101 SR=N, 4 SR=? (titles resolved). These papers bypassed the keyword filter; they are onboarded because they are highly cited by in-corpus papers. Task assignments (TTS/VC/SCA/codec/etc.) and PDF downloads still pending before ingest.
 
