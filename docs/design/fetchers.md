@@ -659,16 +659,14 @@ For an initial window across all target venues, running the full pipeline once:
 | Merge/deduplicate | `scripts/parse/merge_records.py` | ⏳ Not started | < 1 min | — |
 | Resolve PDFs | `scripts/parse/resolve_pdfs.py` | ⏳ Not started | 20–40 min | — |
 | Manual PDF session | human | ⏳ Not started | 1–2 hours | — |
-| Filter agent | `scripts/filter/agent.py` or in-conversation | ✅ Done | 30–90 min | 732 accepted, 167 rejected |
+| Filter agent | `speech-generation-filter-agent` (Claude Code subagent) | ✅ Done | 30–90 min | 732 accepted, 167 rejected |
 | Human review | human | ✅ Done | 60–90 min | 70 borderline resolved → 40 accepted, 30 rejected |
 
 **Corpus status (May 2026):** 732 papers accepted, 167 rejected, 0 pending. Ready for PDF resolution and ingest.
 
 ### Filter agent note
 
-`scripts/filter/agent.py` (in `scripts/filter/`) requires a paid Anthropic API key separate from a Claude.ai Pro subscription. When the API key is unavailable, filtering can be done in-conversation with Claude Code using the same rubric. Both approaches write identical output to `raw/metadata/`.
-
-For future runs with a key: `python scripts/filter/agent.py --batch-size 10 --model claude-haiku-4-5-20251001`
+Filtering is done via the `speech-generation-filter-agent` Claude Code subagent (`.claude/agents/speech-generation-filter-agent.md`). Invoke it from a Claude Code session whenever papers with `status: pending` need scoring. No separate API key required beyond the Claude Code subscription.
 
 ---
 

@@ -156,13 +156,13 @@ In the arXiv-only slice, SCA is a stable 20–24% through most of the window. Th
 
 | File | Status | Description |
 |------|--------|-------------|
-| `docs/analyses/citation-h2-2025-vs-h1-2026.md` | Committed | H2 2025 vs H1 2026 citation rate comparison — top 100, risers, fallers, key findings narrative |
-| `docs/analyses/citation-h2-2025-vs-h1-2026.json` | Committed | Machine-readable output of the above |
-| `docs/analyses/tts-sca-shift-analysis.md` | Local only | This file — full working notes |
-| `docs/analyses/discovery-quarterly-top100.md` | Local only | Union of quarterly top-100 out-of-corpus citations — 168 candidates, per-quarter counts, SR flags |
-| `docs/analyses/discovery-quarterly-top100.json` | Local only | Machine-readable version of the above |
-| `docs/analyses/discovery-quarterly-arxiv-ids.txt` | Local only | 162 arXiv IDs to fetch (all candidates not yet in metadata, sorted by total citation count) |
-| `docs/analyses/discovery-quarterly-fetch-manifest.md` | Local only | Human-readable fetch manifest with SR flags and per-quarter breakdown |
+| `docs/records/2026-06-07-citation-h2-2025-vs-h1-2026.md` | Committed | H2 2025 vs H1 2026 citation rate comparison — top 100, risers, fallers, key findings narrative |
+| `docs/records/2026-06-07-citation-h2-2025-vs-h1-2026.json` | Committed | Machine-readable output of the above |
+| `docs/records/2026-06-08-tts-sca-shift-analysis.md` | Local only | This file — full working notes |
+| `docs/records/2026-06-07-discovery-quarterly-top100.md` | Local only | Union of quarterly top-100 out-of-corpus citations — 168 candidates, per-quarter counts, SR flags |
+| `docs/records/2026-06-07-discovery-quarterly-top100.json` | Local only | Machine-readable version of the above |
+| `docs/records/2026-06-07-discovery-arxiv-ids.txt` | Local only | 162 arXiv IDs to fetch (all candidates not yet in metadata, sorted by total citation count) |
+| `docs/records/2026-06-07-discovery-fetch-manifest.md` | Local only | Human-readable fetch manifest with SR flags and per-quarter breakdown |
 | `scripts/discover/citation_period_compare.py` | Committed | CLI for reproducible citation rate comparisons across any two windows |
 
 **To reproduce the task distribution analyses** (not saved as standalone scripts — run inline):

@@ -1,0 +1,540 @@
+# Content Stage
+
+The content stage builds and maintains the wiki. It is a three-pass pipeline, each pass having
+a single responsibility and clear input/output contract. Passes are independently triggerable
+and can be run in any combination.
+
+See also: [docs/schemas/metadata.md](schemas/metadata.md), [docs/schemas/claims.md](schemas/claims.md),
+[docs/schemas/vocabulary.md](schemas/vocabulary.md), [docs/writing-style.md](writing-style.md)
+
+---
+
+## Pipeline Overview
+
+| Stage | Agent | Input | Output | Cadence |
+|-------|-------|-------|--------|---------|
+| **Ingest** | `speech-generation-ingest-agent` | `raw/parsed/{id}/` | `wiki/papers/{id}.md` | per paper |
+| **Integrate** | `speech-generation-integration-agent` | `wiki/papers/*.md` | `wiki/_claims/{slug}.yaml` | every ~25 papers |
+| **Render** | `speech-generation-render-agent` | `wiki/_claims/{slug}.yaml` | `wiki/concepts/`, `wiki/evidence/` | monthly or on demand |
+
+Data flow:
+
+```
+wiki/papers/  →  wiki/_claims/  →  wiki/concepts/
+                              →  wiki/evidence/
+                              →  wiki/venues/     (render or ingest)
+                              →  wiki/overview.md (render)
+```
+
+**Tier 1 papers** (full standard pages) use `speech-generation-ingest-agent`.
+**Tier 2 papers** (lightweight stubs) use `speech-generation-lightweight-ingest-agent`.
+Orchestration across batches is handled by `speech-generation-ingest-orchestrator`.
+
+---
+
+## Ingest Workflow
+
+Per-paper, self-contained. No cross-paper knowledge required or produced.
+
+1. **Check status** — only proceed if `status: accepted` in `raw/metadata/{id}.json`. If `status: review`, surface the review queue entry for user decision first.
+2. **Check for duplicate** — verify `wiki/papers/{id}.md` does not already exist. Skip if it does.
+3. **Read parsed paper** — read `raw/parsed/{id}/paper.md` in full: abstract, introduction, method, experiments, conclusion. Also read `raw/metadata/{id}.json` and `raw/parsed/{id}/references.json` (for in-corpus citation flags).
+4. **Draft frontmatter** — fill all fields including `field_significance` (this must come before figure selection; see paper page template).
+5. **Select figure** — only if `field_significance.type` includes `architectural-novelty`. Copy 0–2 figures from `raw/parsed/{id}/assets/` to `wiki/papers/assets/{id}/`. Prefer architecture/system diagrams over result plots.
+6. **Write paper page** — fill every template field. Use `"not reported"` (never blank, never estimated) for missing values. Claims must each have an inline source citation `*(§N.N)*` or `*(§N.N, Table N)*`.
+7. **Update `wiki/papers/index.md`** — add row: `| [[{id}]] | [{title}](papers/{id}.md) | {org} | {venue} | {year} | {tasks} | {architectures} | {date} |`
+8. **Update `wiki/venues/{venue-year}.md`** — add row to the papers table.
+9. **Update `wiki/index.md`** — increment paper count only.
+10. **Update `wiki/log.md`** — append bullet: `- ingest | {id} | {title} | {venue} {year}`
+11. **Update metadata** — set `status: ingested`, `ingested_date`, append to `generation_history` in `raw/metadata/{id}.json`.
+12. **Emit signal** — output `INGEST_RESULT` JSON on last line for the orchestrator.
+
+The ingest agent writes exactly these files: `wiki/papers/{id}.md`, `wiki/papers/assets/{id}/*`,
+`wiki/papers/index.md`, `wiki/venues/{venue-year}.md`, `wiki/index.md`, `wiki/log.md`,
+`raw/metadata/{id}.json`. It never touches `wiki/concepts/`, `wiki/_claims/`, or `wiki/overview.md`.
+
+---
+
+## Integrate Workflow
+
+Cross-paper. Reads paper pages, writes `wiki/_claims/` YAML only. No wiki pages are touched.
+
+**Batch size:** up to 25 papers per pass. Run every ~25 ingested papers.
+
+1. **Discover batch** — find papers with `status: ingested` and `integrated_date: null`, ordered by `ingested_date`. Take up to 25.
+2. **Read paper pages** — for each paper, read frontmatter + `## Claims` section only (not full page). Collect `related_concepts` and structured claims.
+3. **For each concept touched:**
+   a. Read existing `wiki/_claims/{slug}.yaml`.
+   b. Add or update paper entry: set `evidence_role`, initial `current_role`, `method_family`, structured `claims` (with `role`, `source`, `confidence`), `limitations`, `caveats`.
+   c. Update `claim_clusters`: merge new paper claims into canonical clusters; promote `emerging` → `strongly_supported` if ≥3 independent papers support it; mark `contested` if contradicting papers exist; add new clusters for genuinely new claims.
+   d. Update `method_families`: add paper to the appropriate family (or create a new family if a distinct architectural pattern emerges).
+   e. Check `reassessment_queue`: for each queue item, test whether trigger conditions are met by this batch. If a trigger fires, update `current_role` (paper entry) or `status` (claim cluster) and remove the queue item. If `due` date has passed without a trigger, surface for human review.
+4. **Validate YAML** — parse each touched file; verify top-level keys, `paper_count` matches `papers` list length, claim IDs are unique, supporting/contradicting paper IDs exist.
+5. **Write updated `wiki/_claims/{slug}.yaml`** files.
+6. **Set `integrated_date`** in `raw/metadata/{id}.json` for each processed paper.
+7. **Log** — append to `wiki/log.md`: `- integrate | {N} papers | {M} concepts updated | {K} claims updated | {J} reassessments checked`
+
+The integration agent writes exactly these files: `wiki/_claims/*.yaml`, `raw/metadata/{id}.json`
+(integrated_date only), `wiki/log.md`. It never writes wiki pages.
+
+---
+
+## Render Workflow
+
+Page production. Derives all human-readable output from `wiki/_claims/` YAML. Stateless with
+respect to history — always regenerates from current YAML state.
+
+**Modes:**
+- **Full** — regenerate page from scratch from YAML; produces a more coherent result; safe because YAML is self-contained.
+- **Light** — update only sections affected by papers added since last generation; faster and cheaper.
+
+**Invocation targets:**
+- `--concept {slug}` — render one concept page and its evidence dossier
+- `--all-concepts` — render all concept pages whose `source_digest_date` is behind YAML `last_updated`
+- `--evidence-only` — render only evidence dossiers, not concept pages
+- `--overview` — regenerate `wiki/overview.md` from all concept pages
+- `--force` — render even if not stale
+
+**Staleness check:** compare `source_digest_date` in concept page frontmatter against `last_updated` in YAML. If the YAML is newer, the page is stale.
+
+**Steps:**
+1. Accept target parameter and mode.
+2. For each target: read `wiki/_claims/{slug}.yaml`. Check staleness unless `--force`.
+3. Render concept page using the Concept Page Template below.
+4. Write `wiki/concepts/{slug}.md` with `generation` frontmatter (date, stage: render, mode, model, `source_digest_date`, commit).
+5. Optionally render `wiki/evidence/{slug}.md` (Evidence Dossier Template below).
+6. Optionally render `wiki/overview.md` from all concept pages + YAML summaries.
+7. Log: `- render | {N} concepts | mode: {mode} | model: {model}` to `wiki/log.md`.
+
+The render agent writes exactly these files: `wiki/concepts/*.md`, `wiki/evidence/*.md`,
+`wiki/overview.md`, `wiki/log.md`. It never reads `raw/parsed/`, never writes `wiki/papers/`,
+never writes `wiki/_claims/`.
+
+---
+
+## Page Templates
+
+### Paper Page — Tier 1 (Full)
+
+```markdown
+---
+id: {id}
+title: {title}
+authors: [{authors}]
+organization: {org or null}
+venue: {venue}
+venue_type: {venue_type}
+year: {year}
+month: {month}
+published_date: {YYYY-MM-DD}
+ingested_date: {YYYY-MM-DD}
+task: [{task list}]
+architecture: [{architecture families}]
+conditioning: [{conditioning types}]
+training: [{training paradigm}]
+model_size: {e.g. "330M params" | "not reported"}
+codec_used: {e.g. "EnCodec 75Hz" | "none" | "not reported"}
+datasets_train: [{training datasets}]
+datasets_eval: [{evaluation/test sets}]
+metrics:
+  - name: MOS
+    value: 4.21
+    system: proposed
+    testset: LJSpeech
+code_available: true | false | null
+demo_available: true | false | null
+url: {arXiv abstract page or proceedings URL}
+related_concepts: [{concept slugs}]
+related_papers: [{paper IDs}]
+field_significance:
+  level: low | moderate | high | foundational
+  type: [{one or more from field_significance type vocabulary}]
+generation:
+  date: {YYYY-MM-DD}
+  agent: speech-generation-ingest-agent
+  model: {model-id}
+  commit: {7-char infra repo git hash}
+---
+
+> [!abstract] {venue} · {year} · {venue_type capitalized}
+> **{First Author} et al.** ({organization}) · [→ Paper]({url}) · Demo: ✓/✗/? · Code: ✓/✗/?
+>
+> {The single most important thing this paper does.}
+
+## Problem
+
+{What gap or limitation does this paper address?}
+
+## Method
+
+{Architecture, conditioning, training objective, inference procedure. Model size and codec if reported.}
+
+{If a figure was selected, embed it here after the first explanatory paragraph:}
+![{Caption}](assets/{id}/figure-N.png)
+
+## Key Results
+
+{Headline numbers compared to baselines. Note benchmark conditions.}
+
+## Novelty Assessment
+
+{What is genuinely new vs. incremental?}
+
+## Field Significance
+
+{Use callout for foundational (`> [!important]`) or high (`> [!tip]`); plain prose for moderate/low.}
+
+{level} — {1–3 sentences on field-level contribution.}
+
+## Claims
+
+{2–5 field-level propositions this paper provides evidence for, against, or complicates.
+Each is one sentence, stated at the field level, reusable across papers.
+Each is followed by an inline source citation.}
+
+- {Claim 1.} *(§N.N)*
+- {Claim 2.} *(§N.N, Table N)*
+
+## Limitations and Open Questions
+
+{What the paper does not address. Critical limitations go in a `> [!warning]` callout first.}
+
+## Wiki Connections
+
+{Which concept pages does this paper most inform? Which prior papers does it build on or challenge? Use [[wikilinks]].}
+```
+
+### Paper Page — Tier 2 (Lightweight Stub)
+
+For citation-discovery papers (`ingest_tier: 2`): foundation models, codecs, datasets, ASR systems,
+and other non-primary-evidence papers included for context.
+
+Survey papers use `## Scope and Coverage` instead of `## Context in Speech Generation`.
+
+```markdown
+---
+id: {id}
+title: {title}
+authors: [{authors}]
+organization: {org or null}
+venue: {venue}
+venue_type: {venue_type}
+year: {year}
+month: {month}
+published_date: {YYYY-MM-DD}
+ingested_date: {YYYY-MM-DD}
+task: [{task list or empty}]
+url: {url}
+ingest_tier: 2
+corpus_role: {corpus_role value}
+related_concepts: [{slugs}]
+generation:
+  date: {YYYY-MM-DD}
+  agent: speech-generation-lightweight-ingest-agent
+  model: {model-id}
+  commit: {7-char hash}
+---
+
+> [!abstract] {venue} · {year} · {venue_type capitalized} · Reference Stub
+> **{First Author} et al.** ({organization}) · [→ Paper]({url})
+>
+> {The single most important thing this paper does.}
+
+_Reference stub: included for context because this work is cited by speech-generation systems; not treated as primary evidence for speech-generation claims._
+
+## Context in Speech Generation
+
+{4–6 sentences. Why is this paper relevant as a reference? What does it provide to TTS/VC/SCA systems (backbone LLM, codec, dataset, ASR, metric)? Which corpus papers depend on it? Do not perform deep analysis.}
+
+## Wiki Connections
+
+{Which concept pages reference this paper? Which corpus papers cite it? Use [[wikilinks]].}
+```
+
+### Concept Page (New Template)
+
+Generated by the render agent from `wiki/_claims/{slug}.yaml`. Do not edit directly.
+
+```markdown
+---
+slug: {slug}
+title: {Human-readable title}
+aliases: [{alternative names}]
+status: emerging | established | dominant | declining | contested | mature-infrastructure
+last_reviewed: {YYYY-MM-DD}
+source_digest_date: {YYYY-MM-DD}    # last_updated of the _claims YAML used
+generation:
+  date: {YYYY-MM-DD}
+  stage: render
+  mode: full | light
+  agent: speech-generation-render-agent
+  model: {model-id}
+  commit: {7-char hash}
+---
+
+> [!abstract]
+> {2–3 sentences. What is this concept, where does it stand today, why does it matter?}
+
+## Current Assessment
+
+{1–2 paragraphs. What does the field currently believe about this concept? What is the dominant
+pattern? What is actively in flux? Written for a researcher who needs the current answer, not
+the historical story.}
+
+## Major Claims
+
+### Strongly Supported
+
+- **{Claim.}**
+  Evidence: [[id]], [[id]], [[id]]. Caveat: {if any.}
+
+### Emerging
+
+- **{Claim.}**
+  Evidence: [[id]], [[id]]. Caveat: {needs broader validation.}
+
+### Contested
+
+> [!warning]
+> **{Claim where evidence is mixed.}**
+> Supporting: [[id]] / Contradicting: [[id]]
+
+## Method Families
+
+**{Family name.}**
+{2–4 sentences describing what distinguishes this family, what papers exemplify it, and its
+trade-offs. Use [[wikilinks]] for papers.}
+
+**{Family name.}**
+{...}
+
+## How to Interpret Older and Newer Evidence
+
+{A short paragraph noting which papers are historical context vs. current evidence. Flag if
+early seminal papers established the idea but do not validate the current implementation.
+Note which recent papers are frontier probes whose importance depends on replication.}
+
+## Current Tensions
+
+- **{Tension name.}** {1–2 sentences on what the evidence says on each side.}
+- **{Tension name.}** {...}
+
+## Open Questions
+
+- {What remains unresolved?}
+- {Where do papers disagree on methodology?}
+
+## Recommended Reader Path
+
+1. [[id]] — {why start here; 1 sentence}
+2. [[id]] — {what this adds}
+3. [[id]] — {frontier direction to read last}
+
+---
+
+_This page is generated from `wiki/_claims/{slug}.yaml` (digest date: {source_digest_date}).
+For the full paper inventory, claim support matrix, and reassessment queue, see
+[[evidence/{slug}]]._
+```
+
+### Evidence Dossier (`wiki/evidence/{slug}.md`)
+
+Generated by the render agent. The exhaustive complement to the concept page.
+
+```markdown
+---
+concept: {slug}
+title: "Evidence Dossier: {Concept Title}"
+source_digest_date: {YYYY-MM-DD}
+generation:
+  date: {YYYY-MM-DD}
+  stage: render
+  mode: full | light
+  agent: speech-generation-render-agent
+  model: {model-id}
+  commit: {7-char hash}
+---
+
+# Evidence Dossier: {Concept Title}
+
+Companion to [[concepts/{slug}]]. The concept page is interpretive; this dossier keeps the
+full paper inventory, canonical claim clusters, and reassessment queue.
+
+## Evidence Model
+
+Each paper can contribute evidence in one or more roles:
+- `core evidence` — directly advances the concept
+- `architecture variant` — new placement or design variant
+- `acceleration evidence` — speed, NFE, latency, RTF improvement
+- `control evidence` — speaker, prosody, emotion, language, dialogue control
+- `evaluation caution` — exposes metric or benchmark limitations
+- `historical context` — predecessor; does not validate the current paradigm
+- `negative evidence` — contradicts or weakens a claim
+- `infrastructure` — dataset, codec, benchmark, toolkit
+
+## Canonical Claim Clusters
+
+| Claim | Status | Supporting papers | Caveats |
+|-------|--------|-------------------|---------|
+| {claim text} | {strongly_supported \| emerging \| contested} | [[id]], [[id]] | {if any} |
+
+## Method-Family Evidence
+
+### {Family Name}
+
+| Paper | Role | Evidence | Limitation |
+|-------|------|----------|------------|
+| [[id]] {title} | {evidence_role} | {one sentence} | {one sentence} |
+
+## Historical Context Papers
+
+| Paper | Why it matters | Why it is not direct current evidence |
+|-------|----------------|--------------------------------------|
+| [[id]] | {reason} | {reason} |
+
+## Evidence Strength Notes
+
+**Strong evidence** — papers with large-scale evaluation, ablations, multiple benchmarks.
+**Medium evidence** — useful results with scope limits or evaluation gaps.
+**Weak or narrow evidence** — single-language, internal-data-only, or no subjective evaluation.
+
+## Papers to Reassess
+
+| Paper or claim | Why revisit | Trigger |
+|----------------|-------------|---------|
+| [[id]] | {reason} | {what would change the assessment} |
+
+## Data Hygiene Notes
+
+{Any known issues with this concept's YAML: malformed entries, missing provenance, paper_count
+mismatches, etc.}
+```
+
+### Venue Page (`wiki/venues/{year}-{venue-slug}.md`)
+
+One page per venue-year (e.g. `2025-interspeech.md`) or org-year for technical reports.
+Covers: total papers ingested, dominant tasks, dominant architectures, standout papers, and
+trends specific to that community or organization. Written by the ingest agent (for individual
+paper rows) and updated by the render agent (for narrative sections).
+
+### Comparison Page (`wiki/comparisons/{slug}.md`)
+
+Generated in response to a query and filed back. Always includes:
+- Frontmatter: `question`, `date`, `papers_included`
+- A markdown table (one row per system/paper, columns for the dimensions being compared)
+- A short interpretive paragraph after the table
+
+---
+
+## Query Workflow
+
+When asked a research question:
+
+1. Read `wiki/index.md` to find relevant pages.
+2. Read relevant `wiki/concepts/*.md` and `wiki/_claims/*.yaml` pages.
+3. Synthesize with citations using [[wikilinks]].
+4. **File valuable answers back**: comparisons → `wiki/comparisons/`, temporal/trend analyses → `wiki/reports/` or the relevant concept page's trend summary.
+5. Log: `- query | {question summary}` to `wiki/log.md`.
+
+---
+
+## Lint Workflow
+
+When asked to lint the wiki:
+
+- Paper pages missing required sections or claims without *(§N.N)* citations
+- Paper pages with `status: ingested` but no `wiki/papers/{id}.md`
+- Orphan paper pages not referenced by any concept's `_claims` YAML
+- `wiki/_claims/*.yaml` files that fail YAML parse
+- `paper_count` in YAML that does not match the `papers` list length
+- Concept pages whose `source_digest_date` is behind the YAML `last_updated` (stale)
+- `related_concepts` slugs in paper frontmatter that do not match any `wiki/_claims/` file
+- Paper index rows using plain IDs instead of [[wikilinks]]
+- Static count mismatches across `wiki/index.md`, `wiki/overview.md`, venue pages
+- Log: `- lint | {summary}` to `raw/pipeline_log.md`.
+
+---
+
+## Concept Page Registry
+
+Canonical slugs for all concept pages in `wiki/concepts/`. Each has a corresponding YAML in
+`wiki/_claims/`. The render agent will reject slugs not in this registry.
+
+**Core methods:** `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder`
+
+**Capabilities:** `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `singing`
+
+**Foundations:** `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `fine-tuning`
+
+**Evaluation:** `evaluation-metrics` | `subjective-evaluation`
+
+When the integration agent encounters a `related_concepts` slug not in this registry, it flags
+it to the user rather than creating an unsanctioned stub.
+
+---
+
+## Index Format (`wiki/index.md`)
+
+```markdown
+# Wiki Index
+
+Last updated: {date} | Papers: {N} | Concepts: {N} | Reports: {N}
+
+## Papers
+
+| ID | Title | Org | Venue | Year | Task | Architecture | Ingested |
+|----|-------|-----|-------|------|------|--------------|---------|
+| [[{id}]] | [{title}](papers/{id}.md) | {org} | {venue} | {year} | {tasks} | {architectures} | {date} |
+
+## Concepts
+
+| Slug | Title | Paper count | Last updated |
+|------|-------|-------------|-------------|
+
+## Comparisons
+
+| Slug | Question | Papers | Date |
+
+## Reports
+
+| Page | Type | Period | Papers covered |
+
+## Venues
+
+| Page | Venue | Year | Papers ingested |
+|------|-------|------|----------------|
+| [[{year}-{venue-slug}]] | {Venue} | {year} | N |
+```
+
+---
+
+## Log Formats
+
+### `wiki/log.md` — Reader-facing changelog
+
+Records operations that change visible wiki content. Entries in **reverse chronological order**
+(newest date section at top). Append to today's section if it exists; otherwise insert a new
+`## YYYY-MM-DD` section at the top.
+
+```markdown
+## 2026-06-20
+
+- ingest | 2406.18009 | F5-TTS | ACL 2025
+- integrate | 25 papers | 8 concepts updated | 42 claims updated | 3 reassessments checked
+- render | 5 concepts | mode: full | model: claude-opus-4-8
+- query | Comparison of zero-shot TTS systems by SPK-SIM
+```
+
+Entry types: `ingest`, `integrate`, `render`, `query`.
+
+### `raw/pipeline_log.md` — Infra-facing operations log
+
+Records pipeline operations that do not directly change wiki content. Same format. Entry types:
+`filter`, `parse`, `discover`, `lint`, `review`.
+
+```markdown
+## 2026-06-20
+
+- filter | arXiv cs.SD batch | 41 accepted, 12 review, 28 rejected
+- parse | batch 31 | 40 papers | 0 failed
+```
