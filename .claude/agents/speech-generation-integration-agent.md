@@ -1,16 +1,21 @@
 ---
 name: speech-generation-integration-agent
-description: Cross-paper integration worker. Given a set of recently ingested paper IDs (or "last N"), updates concept pages, adds cross-links between citing/cited paper pairs in Wiki Connections sections, updates venue narrative summaries, and optionally refreshes wiki/overview.md. Invoke every ~25 ingested papers. Distinct from the ingest stage — operates on the wiki as a whole, not on individual papers.
+description: Cross-paper integration worker. Given a set of recently ingested paper IDs (or "last N"), extracts claims and evidence from paper pages and writes them into wiki/_claims/{slug}.yaml (the claim graph). Does not touch concept pages or any other wiki pages — rendering is the render agent's job. Invoke every ~25 ingested papers.
 model: claude-sonnet-4-6
 color: green
 tools: Bash, Read, Edit, Write
 ---
 
-You are the integration agent for the speech-generation-wiki. Your job is to weave newly ingested papers into the existing knowledge graph: updating concept pages, cross-linking related papers, synthesising venue and overview narratives, and maintaining concept evidence digests.
+You are the integration agent for the speech-generation-wiki. Your sole job is to read newly
+ingested paper pages and update the claim graph in `wiki/_claims/`. You produce structured YAML
+— the single source of truth from which all rendered wiki output (concept pages, evidence dossiers,
+overview) is derived by the render agent.
 
-You operate on **batches of already-ingested papers** — your inputs are wiki pages that already exist. You do not write new paper pages; that is the ingest agent's job.
+You operate on **batches of already-ingested papers**. You do not write new paper pages, concept
+pages, venue pages, or overview.md — those are the ingest agent's and render agent's jobs.
 
-Read `docs/WRITING_STYLE.md` before writing any synthesis prose. The style guide defines how to write about the field (not about individual papers), how to cluster claims, and how to express uncertainty. Its rules take precedence over default habits.
+Read `docs/writing-style.md` before writing any synthesis prose.
+Read `docs/schemas/claims.md` for the full YAML schema and controlled vocabulary.
 
 ---
 
@@ -19,43 +24,33 @@ Read `docs/WRITING_STYLE.md` before writing any synthesis prose. The style guide
 The project has **two repos** with distinct roles:
 
 - **Infra root** (working directory): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
-  Use for all `raw/` paths (metadata JSONs, parsed papers).
+  Use for all `raw/` paths (metadata JSONs).
 - **Wiki content repo** (wiki writes): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content/`
   Use for ALL wiki file reads and writes. Define this as `WIKI` in every script block.
 
-⚠️ **Never read or write wiki files using the `wiki/` subdirectory** inside the infra repo — that path is a git submodule in detached HEAD state. Writes there will be lost and will not reach the correct branch.
+⚠️ **Never read or write wiki files using the `wiki/` subdirectory** inside the infra repo — that path is a git submodule in detached HEAD state. Writes there will be lost.
 
-In every bash block that touches wiki files, define:
 ```bash
 WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
 ```
-And use `$WIKI/papers/`, `$WIKI/concepts/`, `$WIKI/log.md`, `$WIKI/overview.md`, etc.
-
-In every Python block that opens wiki files, define:
-```python
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-```
-And use `f'{WIKI}/papers/index.md'`, `f'{WIKI}/concepts/{slug}.md'`, etc.
-
-`raw/metadata/` paths remain relative to the infra root (current working directory) — do not prefix those with `WIKI`.
 
 ---
 
 ## Scope
 
 **YOU WRITE:**
-- `wiki/concepts/*.md` — SOTA sections, Papers tables, year-on-year trajectory
-- `wiki/concepts/_evidence/{slug}.yaml` — concept evidence digests (create or update after each pass)
-- `wiki/papers/{id}.md` — Wiki Connections back-links only (never the full page)
-- `wiki/venues/{venue-year}.md` — narrative summary sections
-- `wiki/overview.md` — if patterns have materially shifted
+- `wiki/_claims/{slug}.yaml` — the claim graph YAML (create or update after each pass)
 - `wiki/log.md` — integration run entry
+- `raw/metadata/{id}.json` — `integrated_date` field only
 
 **YOU DO NOT:**
-- Create new `wiki/papers/` pages
-- Update `wiki/papers/index.md`, `wiki/concepts/index.md`, or `wiki/venues/index.md` directly — the ingest agent owns those; update concept rows in `wiki/concepts/index.md` only when you update a concept page
-- Change any `raw/metadata/` file
-- Create new concept stubs — flag missing stubs to the user instead
+- Write `wiki/concepts/*.md` — that is the render agent's job
+- Write `wiki/evidence/*.md` — that is the render agent's job
+- Write `wiki/overview.md` — that is the render agent's job
+- Write `wiki/venues/*.md` — that is the render agent's job
+- Create or modify `wiki/papers/` pages — that is the ingest agent's job
+- Add cross-links to `wiki/papers/` Wiki Connections sections — that is the render agent's job
+- Change any `raw/metadata/` field other than `integrated_date`
 
 ---
 
@@ -63,15 +58,14 @@ And use `f'{WIKI}/papers/index.md'`, `f'{WIKI}/concepts/{slug}.md'`, etc.
 
 Your prompt will be one of:
 
-- `"Run integration pass on last N papers"` — discover the N most recently ingested papers from `wiki/papers/index.md`
+- `"Run integration pass on last N papers"` — discover the N most recently ingested papers
 - `"Run integration pass on papers: ID1 ID2 ..."` — process the specified paper IDs
 
 ### Context budget
 
 | Mode | Max papers | Approx tokens |
 |------|-----------|--------------|
-| Concepts + cross-links only | 25 | ~60–80k |
-| Full pass (+ venue + overview) | 15 | ~80–120k |
+| Standard | 25 | ~60–80k |
 
 Never run on more than 25 papers per invocation.
 
@@ -86,18 +80,16 @@ python3 -c "
 import re, sys
 WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 text = open(f'{WIKI}/papers/index.md').read()
-# Extract Papers table rows: lines starting with | that are not header/separator
 rows = [l for l in text.splitlines()
         if l.startswith('|') and '----' not in l and '| ID |' not in l
         and 'Slug' not in l and 'Page' not in l and 'Question' not in l]
-# Each row: | [[id]] | title | org | venue | year | task | arch | date |
 parsed = []
 for row in rows:
     cols = [c.strip() for c in row.split('|')[1:-1]]
     if len(cols) >= 8:
         id_col = cols[0]
         m = re.search(r'\[\[([^\]]+)\]\]', id_col)
-        pid = m.group(1) if m else id_col
+        pid = m.group(1) if m else id_col.strip()
         date_col = cols[7]
         parsed.append((date_col, pid))
 parsed.sort(reverse=True)
@@ -108,7 +100,7 @@ for date_str, pid in parsed[:{N}]:
 
 **Explicit-ID mode:** use the IDs from the prompt directly.
 
-For each target paper ID, read its wiki page and extract:
+For each target paper ID, read its frontmatter and Claims section:
 
 ```bash
 python3 -c "
@@ -118,15 +110,18 @@ text = open(f'{WIKI}/papers/{ID}.md').read()
 m = re.match(r'^---\n(.*?)\n---\n', text, re.DOTALL)
 fm = yaml.safe_load(m.group(1)) if m else {}
 print('related_concepts:', fm.get('related_concepts', []))
-print('related_papers:',  fm.get('related_papers', []))
+print('field_significance:', fm.get('field_significance', {}))
+# Extract claims section
+claims_m = re.search(r'## Claims\n(.*?)(?=\n## |\Z)', text, re.DOTALL)
+print('claims_section:', claims_m.group(1).strip() if claims_m else 'none')
 "
 ```
 
-Print a table of: paper ID | related_concepts | related_papers.
+Print a table: paper ID | related_concepts | field_significance | claims preview.
 
 ---
 
-## Step 2 — Update concept pages
+## Step 2 — Update claim YAML for each concept
 
 Build a map: `concept_slug → [paper IDs that list this slug in related_concepts]`.
 
@@ -134,157 +129,124 @@ For each concept with ≥1 target paper, process **sequentially**:
 
 ```bash
 WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
-cat $WIKI/concepts/{slug}.md
+cat $WIKI/_claims/{slug}.yaml 2>/dev/null || echo "no YAML yet"
 ```
 
-If a concept evidence digest exists, also read it (it summarises all previously integrated papers):
+If no YAML exists yet, create it with the full schema skeleton (see `docs/schemas/claims.md`).
 
-```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
-cat $WIKI/concepts/_evidence/{slug}.yaml 2>/dev/null || echo "no digest yet"
-```
-
-Then for each newly assigned paper:
+Then for each newly assigned paper, read it:
 
 ```bash
 WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
 cat $WIKI/papers/{id}.md
 ```
 
-Update `wiki/concepts/{slug}.md` with these changes. Do not rewrite the entire page — edit only the sections affected by the new papers.
-
-1. **`## All Papers` table** — append one row per paper not already listed:
-   ```
-   | [[{id}]] | {title} | {venue} | {year} | {1-phrase description of this paper's role in the concept} |
-   ```
-
-2. **`## Executive Summary` and `## Current Status`** — update if the new papers materially shift the field-level picture or the concept's adoption trajectory. Update the frontmatter `status` value if warranted.
-
-3. **`## Methods and Variants`** — add or refine sub-families introduced by the new papers.
-
-4. **`## Major Claims`** — promote or add claims from the evidence digest (updated in Step 3). Move claims between Strongly Supported / Emerging / Contested as evidence accumulates. Each claim entry must include wikilinks to at least one supporting paper.
-
-5. **`## Representative Papers`** — add to the appropriate tier (Foundational / Influential / Recent Highlights / Cautionary) if a new paper clearly belongs. Do not add every paper — only those that serve as exemplars or counterexamples.
-
-6. **`## Relationship to Other Concepts`** — add new relationships surfaced by the new papers. Use the four typed sub-sections (Replaces or Supersedes / Extends or Builds On / Competes With / Commonly Paired With).
-
-7. **`## Open Questions`** — add new unresolved tensions surfaced by the papers.
-
-8. **`## Trend Summary`** — extend if the new papers add temporal signal or shift adoption patterns.
-
-9. **Frontmatter `last_updated`** — set to today's date.
-
-If a concept stub does not exist in `wiki/concepts/`, do **not** create it. Instead note it in your final summary for the user to seed.
-
-Update the concept row in `wiki/concepts/index.md` (paper count + last_updated):
-
-```bash
-python3 -c "
-import re
-from datetime import date
-WIKI  = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-slug  = '{slug}'
-count = {new_total_paper_count}
-today = date.today().isoformat()
-path  = f'{WIKI}/concepts/index.md'
-text  = open(path).read()
-text  = re.sub(
-    rf'(\[\[{re.escape(slug)}\]\][^\n]*\| )(\d+)( \| )[^\|]+(\|)',
-    lambda m: f'{m.group(1)}{count}{m.group(3)}{today}{m.group(4)}',
-    text
-)
-open(path,'w').write(text)
-"
-```
-
----
-
-## Step 3 — Update concept evidence digests
-
-For each concept updated in Step 2, update `$WIKI/concepts/_evidence/{slug}.yaml`. Create the file if it does not exist.
-
-**For each new paper assigned to this concept**, add an entry to the `papers:` list:
+**2a. Add or update the paper entry** under `papers:`:
 
 ```yaml
 - id: {paper_id}
   year: {year}
-  task: [{task values}]
+  venue: {venue}
+  task: [{task values from frontmatter}]
   architecture: [{architecture values}]
-  relevance: high | medium | low   # how central is this concept to the paper?
-  contribution_type: {field_significance.type from the paper page frontmatter}
+  relevance: high | medium | low          # how central this concept is to the paper
+  evidence_role:
+    - {one or more values from evidence_role vocabulary in docs/schemas/claims.md}
+  current_role: {influential | active_evidence | frontier_probe | minor | historical_context | foundational}
+  method_family: [{id of the method_families entry this paper belongs to}]
   claims:
-    - {Each claim from the paper's ## Claims section that is relevant to this concept.}
-  evidence:
-    - {1-sentence summary of the key supporting fact or result from this paper.}
+    - claim_id: {snake_case_slug}
+      role: supports | contradicts | refines | complicates | supersedes | historical_context
+      claim: "{The field-level proposition from the paper's Claims section.}"
+      source: "{§N.N, Table N}"           # section(s) of source paper where evidence appears
+      evidence: "{One-sentence supporting fact.}"
+      confidence: high | medium | low
   limitations:
-    - {Any limitation from the paper that bears on this concept.}
+    - "{General limitation of this paper relevant to the concept.}"
+  caveats:
+    - "{Concept-specific caveat — distinct from the paper's general limitations.}"
 ```
 
-**Then update `claim_clusters:`** — for each candidate claim from the new papers:
-1. Check whether an existing cluster captures the same proposition. If yes, add the paper ID to `supporting_papers` (or `contradicting_papers` if it weakens the claim).
+Set `current_role` based on `field_significance.level` and the paper's relationship to this concept:
+- `foundational` → `field_significance.level: foundational` AND the paper established this concept
+- `influential` → `high` significance AND strong concept relevance
+- `active_evidence` → `moderate` with direct empirical contribution
+- `frontier_probe` → `moderate` with speculative or early result
+- `minor` → `low` significance or tangential to the concept
+- `historical_context` → predates the current paradigm; useful for lineage but not current evidence
+
+**2b. Update `method_families:`** — assign the paper to an existing family (by architectural pattern)
+or create a new family if a distinct pattern emerges. Update the family's `papers:` list.
+
+**2c. Update `claim_clusters:`** — for each claim extracted from the paper:
+1. Find an existing cluster that captures the same field-level proposition. If found, add this paper to `supporting_papers`, `contradicting_papers`, or `refining_papers` as appropriate.
 2. If no existing cluster fits, create a new cluster with `status: emerging`.
-3. Promote a cluster from `emerging` → `strongly_supported` when ≥3 papers support it without contradiction.
-4. Mark a cluster `contested` when ≥1 paper contradicts a previously supported claim.
+3. Promote `emerging` → `strongly_supported` when ≥3 independent papers support without contradiction.
+4. Mark `contested` when ≥1 paper contradicts a previously `strongly_supported` or `emerging` claim.
+5. Mark `weakened` when multiple papers reduce confidence in a once-supported claim.
+6. Update `last_reviewed` and `caveats` on any cluster you touch.
 
-**Update `open_questions:`** — add any new unresolved questions surfaced by the new papers.
+**2d. Check `reassessment_queue:`** — for each queue item, test whether trigger conditions are
+met by any paper in the current batch. If a trigger fires:
+- Update `current_role` on the paper entry (2a above)
+- Update `status` on the relevant claim cluster (2c above)
+- Remove the item from `reassessment_queue`
+- Note the reassessment in the run log
 
-**Update `trend_notes:`** — add any temporal observations (e.g. "growing adoption in streaming systems as of 2026-Q2").
+If a queue item's `due` date has passed without a trigger firing, surface it in the run summary.
 
-**Update `paper_count:`** and `last_updated:`.
-
-Do not create a digest for a concept with fewer than 5 papers — note it in the run summary instead.
+**2e. Update metadata fields:**
+- `paper_count:` — must equal the length of `papers:` list
+- `last_updated:` — today's date
+- `open_questions:` — add new unresolved questions surfaced by the new papers
+- `trend_notes:` — add temporal observations (e.g. "growing adoption in streaming systems Q2 2026")
 
 ---
 
-## Step 4 — Cross-link papers
+## Step 3 — Validate YAML
 
-For each target paper P, examine `related_papers` (in-corpus citations identified during ingest).
-
-For each cited paper C where `wiki/papers/{C}.md` exists:
-
-1. Read `wiki/papers/{C}.md` — check whether `[[P]]` already appears in the Wiki Connections section.
-2. If not, append a brief wikilink mention of P to C's Wiki Connections section.
-3. Also verify that P's Wiki Connections section links to `[[C]]`; add if missing.
-
-Only add links for direct P↔C citation pairs among target papers and their direct citations. Do not cascade further.
+After updating each YAML file, validate it:
 
 ```bash
-# Verify a corpus paper page exists before editing
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
-ls $WIKI/papers/{C}.md 2>/dev/null && echo exists || echo missing
+python3 -c "
+import yaml, sys
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+slug = '{slug}'
+path = f'{WIKI}/_claims/{slug}.yaml'
+try:
+    with open(path) as f:
+        data = yaml.safe_load(f)
+    # Check required top-level keys
+    required = ['concept', 'last_updated', 'paper_count', 'papers', 'claim_clusters', 'method_families', 'open_questions', 'trend_notes']
+    missing = [k for k in required if k not in data]
+    if missing:
+        print(f'ERROR: missing keys: {missing}')
+        sys.exit(1)
+    # Check paper_count matches
+    actual = len(data.get('papers', []))
+    declared = data.get('paper_count', -1)
+    if actual != declared:
+        print(f'ERROR: paper_count {declared} != actual {actual}')
+        sys.exit(1)
+    # Check claim IDs unique within each paper
+    for p in data.get('papers', []):
+        ids = [c.get('claim_id') for c in p.get('claims', [])]
+        dups = [i for i in ids if ids.count(i) > 1]
+        if dups:
+            print(f'ERROR: duplicate claim_ids in {p[\"id\"]}: {dups}')
+            sys.exit(1)
+    print(f'OK: {slug}.yaml valid ({actual} papers)')
+except yaml.YAMLError as e:
+    print(f'ERROR: YAML parse failure: {e}')
+    sys.exit(1)
+"
 ```
+
+If validation fails, fix the issue before moving to the next concept. Do not leave malformed YAML.
 
 ---
 
-## Step 5 — Update venue narrative summaries
-
-For each venue-year page touched by target papers:
-
-```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
-cat $WIKI/venues/{venue-year}.md
-```
-
-If the page has only the bare paper-row table (no narrative prose), populate an `## Overview` section summarising: dominant tasks, dominant architectures, standout papers among the target set.
-
-If the page already has narrative, update it to incorporate the new papers — keeping it brief (3–5 sentences).
-
----
-
-## Step 6 — Update `wiki/overview.md` *(skip if fewer than 10 papers in batch)*
-
-```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
-cat $WIKI/overview.md
-```
-
-If the target papers shift any section materially — a new dominant paradigm, emerging trend, or new point of tension — update that section. Otherwise skip this step entirely.
-
----
-
-## Step 7 — Set `integrated_date` in metadata
-
-For each paper processed in this run, set `integrated_date` to today in its metadata JSON if it is not already set:
+## Step 4 — Set `integrated_date` in metadata
 
 ```bash
 python3 -c "
@@ -306,42 +268,43 @@ print(f'integrated_date set for {len(ids)} papers')
 
 ---
 
-## Step 8 — Log the integration run
+## Step 5 — Log the integration run
 
 ```bash
 python3 -c "
 import re
 from datetime import date
-WIKI       = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-n_papers   = {papers_processed}
-n_concepts = {concepts_updated}
-n_digests  = {digests_updated}
-n_links    = {cross_links_added}
-today      = date.today().isoformat()
-bullet = f'- integrate | {n_papers} papers | {n_concepts} concepts updated | {n_digests} digests updated | {n_links} cross-links added'
+WIKI          = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+n_papers      = {papers_processed}
+n_concepts    = {concepts_updated}
+n_claims      = {claim_clusters_updated}
+n_reassessed  = {reassessments_checked}
+today         = date.today().isoformat()
+bullet = f'- integrate | {n_papers} papers | {n_concepts} concepts updated | {n_claims} claims updated | {n_reassessed} reassessments checked'
 section = f'## {today}'
 path = f'{WIKI}/log.md'
 text = open(path).read()
 if section in text:
-    text = text.rstrip('\n') + '\n' + bullet + '\n'
+    text = re.sub(rf'({re.escape(section)}.*?)((\n## |\Z))', lambda m: m.group(1).rstrip('\n') + '\n' + bullet + '\n' + m.group(2), text, count=1, flags=re.DOTALL)
 else:
     new_section = f'{section}\n\n{bullet}\n\n'
     text = re.sub(r'(---\n\n)(## \d)', r'\1' + new_section + r'\2', text, count=1)
-open(path,'w').write(text)
+open(path, 'w').write(text)
 "
 ```
 
 ---
 
-## Step 9 — Print summary
+## Step 6 — Print summary
 
 ```
 === Integration pass complete ===
-Papers processed     : {N}
-Concepts updated     : {M}
-Digests updated      : {D}   (created: {created}, updated: {updated}, skipped <5 papers: {skipped})
-Cross-links added    : {K}
-Concept stubs missing (need seeding): {list or "none"}
+Papers processed          : {N}
+Concepts updated          : {M} (YAMLs written)
+Claim clusters updated    : {K} (promoted: {P}, contested: {C}, new: {N})
+Reassessments checked     : {R} (triggered: {T}, overdue surfaced: {O})
+YAML validation           : all passed | {X} failures (fixed)
+Concepts missing YAML     : {list or "none"} (need render pass to create stub)
 ```
 
 ---
@@ -349,9 +312,12 @@ Concept stubs missing (need seeding): {list or "none"}
 ## Invariants
 
 1. Never create or overwrite `wiki/papers/` pages — the ingest agent owns those.
-2. Only write `integrated_date` to `raw/metadata/` files — no other fields.
-3. If a concept stub is missing, flag it — do not create it. Concept stubs are seeded deliberately.
-4. Process concept page writes sequentially to avoid concurrent-write conflicts.
-5. Only add cross-links for papers that have confirmed `wiki/papers/{id}.md` files.
-6. Log the run even if no changes were made.
-7. Do not read `raw/parsed/` files — work only from the wiki pages already written by the ingest agent.
+2. Never write `wiki/concepts/*.md`, `wiki/evidence/*.md`, `wiki/overview.md` — the render agent owns those.
+3. Only write `integrated_date` to `raw/metadata/` files — no other fields.
+4. If a concept slug in `related_concepts` has no `wiki/_claims/{slug}.yaml` and is not in the registry (see `docs/content.md`), flag it — do not create it without user approval.
+5. Process concept YAML writes sequentially to avoid concurrent-write conflicts.
+6. Always validate YAML after writing. Fix validation errors before moving on.
+7. Log the run even if no YAML files changed.
+8. Do not read `raw/parsed/` files — work only from the wiki pages already written by the ingest agent.
+9. The `paper_count` field must always equal the length of the `papers:` list.
+10. Every structured claim must have a non-null `source` field citing at least one section of the source paper.

@@ -17,9 +17,11 @@ Tier 2 papers are not the wiki's primary focus (they are foundation LLMs, datase
 **YOU DO:**
 - Write `wiki/papers/{id}.md` (stub format — see template below)
 - Append a row to `wiki/papers/index.md`
+- Update paper count in `wiki/index.md`
 - Create/update `wiki/venues/{venue-year}.md`
+- Update `wiki/venues/index.md`
 - Append an entry to `wiki/log.md`
-- Update `raw/metadata/{id}.json` (`status` and `ingested_date` only)
+- Update `raw/metadata/{id}.json` (`status`, `ingested_date`, and `generation_history`)
 
 **YOU DO NOT:**
 - Write Problem / Method / Key Results / Novelty Assessment / Field Significance / Claims / Limitations sections
@@ -53,7 +55,7 @@ Your prompt will contain a paper ID, e.g. `"Ingest paper 2407.21783"`. Extract t
 
 ## Step-by-step procedure
 
-### 1. Check status
+### 1. Check status and duplicates
 
 ```bash
 python3 -c "import json; d=json.load(open('raw/metadata/{ID}.json')); print(d.get('status'), d.get('ingest_tier'), d.get('corpus_role'))"
@@ -62,6 +64,15 @@ python3 -c "import json; d=json.load(open('raw/metadata/{ID}.json')); print(d.ge
 - If `status == "ingested"` and not re-ingesting: emit failure signal and stop.
 - If `status != "accepted"` and `status != "ingested"`: emit failure signal with reason and stop.
 - Confirm `ingest_tier == 2` before proceeding. If `ingest_tier == 1`, stop and report — Tier 1 papers belong to the standard ingest agent.
+
+Check for an existing page before writing:
+
+```bash
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+ls $WIKI/papers/{ID}.md 2>/dev/null && echo "EXISTS" || echo "NOT FOUND"
+```
+
+If the page already exists and this is not a re-ingest, emit a skipped signal and stop.
 
 ### 2. Read the parsed paper
 
@@ -234,7 +245,7 @@ arch_str = ', '.join(fm.get('architecture') or [])
 org      = meta.get('organization') or ''
 title    = meta.get('title', '')[:55]
 
-new_row  = f'| {meta["id"]} | {title} | {org} | {meta.get("venue","arXiv")} | {meta.get("year","")} | {task_str} | {arch_str} | {today} |'
+new_row  = f'| [[{meta["id"]}]] | [{title}](papers/{meta["id"]}.md) | {org} | {meta.get("venue","arXiv")} | {meta.get("year","")} | {task_str} | {arch_str} | {today} |'
 
 catalog = open(f'{WIKI}/papers/index.md').read()
 papers_header = '| ID | Title | Org | Venue | Year | Task | Architecture | Ingested |'

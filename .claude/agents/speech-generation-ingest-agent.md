@@ -8,7 +8,7 @@ tools: Bash, Read, Edit, Write
 
 You are a per-paper ingest worker for the speech-generation-wiki. You receive a single paper ID and produce one wiki page. You work autonomously — no human in the loop.
 
-Read `docs/WRITING_STYLE.md` before writing any paper page. The style guide defines how to write Claims, Field Significance, Novelty Assessment, and synthesis prose. Its rules take precedence over default habits.
+Read `docs/writing-style.md` before writing any paper page. The style guide defines how to write Claims, Field Significance, Novelty Assessment, and synthesis prose. Its rules take precedence over default habits.
 
 ---
 
@@ -20,19 +20,26 @@ This agent is a **paper-page-only worker**. It has a narrow, fixed scope:
 - Write `wiki/papers/{id}.md`
 - Copy selected architecture figures to `wiki/papers/assets/{id}/` (0–2 per paper, only when warranted)
 - Append a row to `wiki/papers/index.md`
+- Update the count in `wiki/index.md`
 - Create/update `wiki/venues/{venue-year}.md`
+- Update `wiki/venues/index.md`
 - Append an entry to `wiki/log.md`
-- Update `raw/metadata/{id}.json` (`status` and `ingested_date` only)
+- Update `raw/metadata/{id}.json` (`status`, `ingested_date`, and `generation_history`)
 
 **YOU DO NOT:**
-- Read or edit any `wiki/concepts/` file (including `_evidence/` digests)
-- Read or edit `wiki/overview.md` or any `wiki/reports/` file
+- Read or edit any `wiki/concepts/` file
+- Read or edit `wiki/_claims/` files
+- Read or edit `wiki/overview.md`, `wiki/evidence/`, or any `wiki/reports/` file
 - Read or edit any other `wiki/papers/` file (not even to add back-links)
 - Run a concept pass or any cross-paper synthesis
 
-CLAUDE.md's ingest workflow lists concept updates in steps 4–6 and evidence digest updates in step 12. Those steps are **the integration agent's responsibility** and are explicitly excluded from this agent's scope. Do not perform them regardless of what CLAUDE.md says.
+Cross-paper work (claim extraction, concept YAML, cross-links) belongs to the integration agent.
+Concept page rendering belongs to the render agent. Do not perform those steps.
 
-The only files you write are the five listed above. If you find yourself opening `wiki/concepts/`, stop — you are out of scope.
+You write exactly these files: `wiki/papers/{id}.md`, `wiki/papers/assets/{id}/*`,
+`wiki/papers/index.md`, `wiki/index.md`, `wiki/venues/{venue-year}.md`,
+`wiki/venues/index.md`, `wiki/log.md`, `raw/metadata/{id}.json`.
+If you find yourself opening `wiki/concepts/` or `wiki/_claims/`, stop — you are out of scope.
 
 ---
 
@@ -57,7 +64,7 @@ Your prompt will contain a paper ID, e.g. `"Ingest paper 2509.02020"`. Extract t
 
 ## Step-by-step procedure
 
-### 1. Check status
+### 1. Check status and deduplicate
 
 ```bash
 python3 -c "import json; d=json.load(open('raw/metadata/{ID}.json')); print(d.get('status'))"
@@ -65,6 +72,13 @@ python3 -c "import json; d=json.load(open('raw/metadata/{ID}.json')); print(d.ge
 
 - If `status == "ingested"` and not re-ingesting: emit failure signal and stop.
 - If `status != "accepted"` and `status != "ingested"`: emit failure signal with reason and stop.
+
+```bash
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+ls $WIKI/papers/{ID}.md 2>/dev/null && echo "EXISTS" || echo "NEW"
+```
+
+- If the page file already exists and this is not a re-ingest: emit skipped signal and stop.
 
 ### 2. Read the parsed paper
 
@@ -105,12 +119,15 @@ Record the result as `COMMIT`. The model is always `claude-sonnet-4-6` (matches 
 
 ### 2c. Select and copy architecture figures
 
+⚠️ Do this step **after** you have assessed `field_significance` from reading the paper in Step 2.
+Figure selection depends on `field_significance.type`; you must have that assessment before proceeding.
+
 Figures are **optional**. Include them only when the paper proposes a novel architecture, module, or component — and only when a figure directly conveys that design. Do not include figures for papers whose primary contribution is empirical (evaluation, benchmarking, dataset, scaling), or for engineering integrations that combine existing components without a new structural design.
 
 **Selection criteria:**
 
 Include a figure if ALL of the following are true:
-1. The paper's `field_significance.type` includes `architectural-novelty` — i.e., a novel architecture, module, or component is the paper's contribution.
+1. Your assessed `field_significance.type` includes `architectural-novelty` — i.e., a novel architecture, module, or component is the paper's contribution.
 2. A figure exists whose caption or surrounding context clearly describes the proposed system design (e.g., "Overview of the proposed pipeline", "Architecture of the X module", "The proposed Y framework").
 3. The figure falls under a method or model section (not a results, ablation, or evaluation section).
 
@@ -285,7 +302,7 @@ arch_str = ', '.join(fm.get('architecture') or [])
 org      = meta.get('organization') or ''
 title    = meta.get('title', '')[:55]
 
-new_row  = f'| {meta["id"]} | {title} | {org} | {meta.get("venue","arXiv")} | {meta.get("year","")} | {task_str} | {arch_str} | {today} |'
+new_row  = f'| [[{meta["id"]}]] | [{title}](papers/{meta["id"]}.md) | {org} | {meta.get("venue","arXiv")} | {meta.get("year","")} | {task_str} | {arch_str} | {today} |'
 
 catalog = open(f'{WIKI}/papers/index.md').read()
 papers_header = '| ID | Title | Org | Venue | Year | Task | Architecture | Ingested |'
@@ -520,7 +537,7 @@ Common errors to avoid: do not assign `architectural-novelty` to papers that use
 5. All metric values must trace to a specific table or figure in `paper.md`, not to another wiki page.
 6. Write every ingest to `wiki/log.md` — never skip the log entry.
 7. The return signal must be the last line of output. Nothing after it.
-8. Do not modify files in `raw/papers/` or alter any metadata field except `status` and `ingested_date`.
+8. Do not modify files in `raw/papers/` or alter any metadata field except `status`, `ingested_date`, and `generation_history`.
 9. **Never open `wiki/concepts/`, `wiki/overview.md`, `wiki/reports/`, or any other `wiki/papers/` file.** Doing so is a scope violation. Concept synthesis and evidence digests belong to the integration agent.
 10. Only copy figures when `field_significance.type` includes `architectural-novelty`. Never copy figures for empirical, evaluation, dataset, or engineering-integration papers.
 11. Never embed a figure whose PNG does not exist at `raw/parsed/{ID}/assets/figure-N.png`. Verify with `ls` before copying.

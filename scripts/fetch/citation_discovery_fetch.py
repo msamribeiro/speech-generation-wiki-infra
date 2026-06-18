@@ -17,7 +17,7 @@ Usage:
     python scripts/fetch/citation_discovery_fetch.py
     python scripts/fetch/citation_discovery_fetch.py --dry-run
     python scripts/fetch/citation_discovery_fetch.py --ids 2410.00037 2212.04356
-    python scripts/fetch/citation_discovery_fetch.py --manifest docs/analyses/discovery-quarterly-fetch-manifest.md
+    python scripts/fetch/citation_discovery_fetch.py --manifest docs/records/2026-06-07-discovery-fetch-manifest.md
 """
 
 import argparse
@@ -36,7 +36,7 @@ sys.path.insert(0, str(ROOT))
 
 RAW_METADATA = ROOT / "raw" / "metadata"
 FETCH_LOG = ROOT / "raw" / "fetch_log.jsonl"
-DEFAULT_MANIFEST = ROOT / "docs" / "analyses" / "discovery-quarterly-fetch-manifest.md"
+DEFAULT_MANIFEST = ROOT / "docs" / "records" / "2026-06-07-discovery-fetch-manifest.md"
 
 ARXIV_API_URL = "https://export.arxiv.org/api/query"
 RATE_LIMIT_SECONDS = 3.0
@@ -523,7 +523,7 @@ def main() -> None:
         "--manifest",
         default=str(DEFAULT_MANIFEST),
         metavar="PATH",
-        help="Path to the discovery manifest markdown file (default: docs/analyses/discovery-quarterly-fetch-manifest.md)",
+        help="Path to the discovery manifest markdown file (default: docs/records/2026-06-07-discovery-fetch-manifest.md)",
     )
     p.add_argument(
         "--ids",
