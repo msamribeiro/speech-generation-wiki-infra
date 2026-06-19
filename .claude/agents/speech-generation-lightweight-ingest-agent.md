@@ -135,7 +135,7 @@ The `## Context in Speech Generation` section should answer different questions 
 
 ```markdown
 ---
-id: {id}
+id: "{id}"
 title: "{title}"
 authors: [{comma-separated quoted strings}]
 organization: {string or null}
@@ -174,12 +174,15 @@ generation:
 ⚠️ CALLOUT RULES — read before writing the abstract card:
 - The abstract card is ALWAYS `[!abstract]`. Never `[!tip]`, `[!important]`, or anything else here.
 - This is the most common mistake: if you just assigned `[!tip]` or `[!important]` to Field Significance, do NOT reuse that callout type on the abstract card.
-- The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!info]`, `[!caution]` — write prose instead.
+- The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!info]` (Citation Stub banner — required, always second), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!caution]` — write prose instead.
 
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Workshop | Preprint | Technical Report}
 > **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. One sentence, no bold label.}
+
+> [!info] Citation Stub
+> This paper is not a speech generation paper but is cited by the corpus. See Context in Speech Generation below for why it is relevant.
 
 ## Context in Speech Generation
 
@@ -214,6 +217,9 @@ Rules:
 
 ```markdown
 > [!abstract callout — same as above]
+
+> [!info] Citation Stub
+> This paper is not a speech generation paper but is cited by the corpus. See Scope and Coverage below for why it is relevant.
 
 ## Scope and Coverage
 
@@ -266,7 +272,15 @@ if papers_header in catalog:
         sep_idx = next((i for i,l in enumerate(lines) if '|----|' in l and in_papers), None)
         if sep_idx:
             lines.insert(sep_idx + 1, new_row + '\n')
-    open(f'{WIKI}/papers/index.md', 'w').write(''.join(lines))
+    in_table = False
+    clean = []
+    for l in lines:
+        if papers_header in l:
+            in_table = True
+        if in_table and l.strip() == '':
+            continue
+        clean.append(l)
+    open(f'{WIKI}/papers/index.md', 'w').write(''.join(clean))
     print('papers/index.md updated')
 EOF
 ```

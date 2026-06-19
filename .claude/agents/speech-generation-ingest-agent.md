@@ -165,7 +165,7 @@ When the paper's primary contribution is a survey or taxonomy (i.e. `field_signi
 
 ```markdown
 ---
-id: {id}
+id: "{id}"
 title: "{title}"
 authors: [{comma-separated quoted strings}]
 organization: {string or null}
@@ -323,7 +323,15 @@ if papers_header in catalog:
         sep_idx = next((i for i,l in enumerate(lines) if '|----|' in l and in_papers), None)
         if sep_idx:
             lines.insert(sep_idx + 1, new_row + '\n')
-    open(f'{WIKI}/papers/index.md', 'w').write(''.join(lines))
+    in_table = False
+    clean = []
+    for l in lines:
+        if papers_header in l:
+            in_table = True
+        if in_table and l.strip() == '':
+            continue
+        clean.append(l)
+    open(f'{WIKI}/papers/index.md', 'w').write(''.join(clean))
     print('papers/index.md updated')
 EOF
 ```
