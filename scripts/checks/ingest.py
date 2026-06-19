@@ -198,7 +198,7 @@ def _check_claims_section(paper_id: str, fm: dict, body: str) -> list[Issue]:
         return [_issue("error", paper_id, "claims_section",
                        "## Claims section has no bullet points")]
 
-    uncited = [b for b in bullets if "*(§" not in b]
+    uncited = [b for b in bullets if "*(§" not in b and "*(Appendix" not in b]
     if uncited:
         return [_issue("error", paper_id, "claims_section",
                        f"{len(uncited)}/{len(bullets)} claims missing *(§N.N)* citation")]

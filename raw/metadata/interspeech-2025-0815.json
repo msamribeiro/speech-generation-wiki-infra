@@ -6,7 +6,7 @@
   },
   "title": "Towards Better Disentanglement in Non-Autoregressive Zero-Shot Expressive Voice Conversion",
   "authors": [
-    "\u00c5\u009eeymanur Akti",
+    "Åeymanur Akti",
     "Tuan-Nam Nguyen",
     "Alexander Waibel"
   ],
@@ -39,6 +39,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "55d0339"
+    },
+    {
+      "date": "2026-06-19",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "10845cc"
     }
   ],
   "integrated_date": "2026-06-03"
