@@ -60,6 +60,26 @@ cleaned the repo root down to five files: `CLAUDE.md`, `README.md`, `STATUS.md`,
 
 ---
 
+## Wiki Structural Fixes & Review Agent [completed: 2026-06-19]
+
+Resolved all structural errors surfaced by the Pipeline Health Suite ingest module. Quoted 327
+unquoted `id:` fields in paper frontmatter (arXiv float-parse bug). Fixed 191 bare ID cells and
+193 plain title cells in `wiki/papers/index.md` to use `[[id]]` wikilinks and `[title](papers/id.md)`
+markdown links; removed 1 blank row breaking table rendering. Added `_check_index_document()` to
+the ingest health module and patched both ingest agents to strip blank rows from the index table
+and always emit quoted IDs going forward. Added `> [!info] Citation Stub` callout to all 65 Tier 2
+pages and updated the lightweight ingest agent to emit it on all future writes. Wrote the
+`speech-generation-review-agent` spec — a targeted quality review agent that audits any existing
+Tier 1 page against the full expected page template, corrects frontmatter, adds missing Field
+Significance and Claims sections with `*(§N.N)*` citations, and evaluates figures.
+
+- [x] Quote all `id:` fields in wiki paper frontmatter — 327 files patched; both ingest agents updated to always emit quoted id; blank-line stripping added to index table write in both agents
+- [x] Fix paper index wikilink format — 191 ID cells → `[[id]]`, 193 plain titles → `[title](papers/id.md)`, 1 blank row removed; `_check_index_document()` added to health_check ingest module
+- [x] Add `[!info] Citation Stub` callout to all Tier 2 paper pages — 65 pages patched retroactively; lightweight ingest agent updated to emit callout on all future writes; health check updated from `[!note]` → `[!info]`
+- [x] Write speech-generation-review-agent spec — validates all sections against a complete expected template, corrects frontmatter, adds missing Field Significance and Claims with inline citations, evaluates figures; designed for reuse with any model
+
+---
+
 ## Documentation Restructure [completed: 2026-06-18]
 
 Split the monolithic CLAUDE.md (~400 lines mixing contract, templates, and workflows) into a

@@ -1,3 +1,7 @@
+## 2026-06-19
+
+- lint | health check ingest module | 338 papers checked | 327 id fields quoted (arXiv float-parse bug), 191 index IDs → [[wikilinks]], 193 index titles → [title](papers/id.md) links, 1 blank row removed from index table, 65 Tier 2 pages → [!info] Citation Stub callout | health check: scripts/health_check.py --module ingest
+
 ## 2026-06-13
 
 - review | ACL workshop venue dates | 26 metadata files patched | published_date, conference_date, month corrected; venue_detail field added | covers COLING (Jan), NoDaLiDa/ComputEL (Mar), AmericasNLP/IWSDS (May), CoNLL/IWSLT/UNLP (Jul–Aug), CCL/ICNLSP/SIGDIAL (Aug), CLiC-IT (Sep), VLSP (Oct), ArabicNLP (Nov), IWCLUL (Dec)

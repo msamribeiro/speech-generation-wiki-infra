@@ -110,7 +110,7 @@ Never violated under any circumstances:
 4. **One paper, one page** — check the index before creating a new paper page. Deduplicate by arXiv ID first, then by title similarity.
 5. **Cite specifically** — use [[wikilinks]] to paper IDs, not just venue or year.
 6. **File answers back** — valuable query outputs must be written to the wiki, not left only in chat.
-7. **Log everything** — `ingest`, `integrate`, `render`, and `query` operations log to `wiki/log.md`; `filter`, `parse`, `discover`, `lint`, and `review` operations log to `raw/pipeline_log.md`. Never mix the two.
+7. **Log everything** — `ingest`, `review`, `integrate`, `render`, and `query` operations log to `wiki/log.md`; `filter`, `parse`, `discover`, `lint`, and `review` (paper triage) operations log to `raw/pipeline_log.md`. Never mix the two.
 8. **Respect status** — never ingest a paper with `status: pending`, `review`, or `rejected` without explicit user instruction.
 9. **Preserve provenance** — every metric value on a paper page must trace to a specific table or figure in the source PDF.
 10. **Claim graph is derived, not authoritative at the page level** — never edit a concept page or evidence dossier directly to change a claim's status; all changes flow through `wiki/_claims/` YAML via the integration agent. The render agent regenerates pages from YAML; pages are always replaceable.
@@ -132,3 +132,13 @@ Never violated under any circumstances:
 | Paper metadata JSON (`raw/metadata/`) | [docs/schemas/metadata.md](docs/schemas/metadata.md) |
 | Concept claim YAML (`wiki/_claims/`) | [docs/schemas/claims.md](docs/schemas/claims.md) |
 | Controlled vocabulary | [docs/schemas/vocabulary.md](docs/schemas/vocabulary.md) |
+
+## Project Tracking
+
+`BACKLOG.md` — prioritised feature list. Items are grouped by area and priority (`P0` active,
+`P1` planned, `P2` deferred). Add new work here; remove items only when they are fully done and
+moved to the archive. `BACKLOG.md` is the authoritative source for what comes next.
+
+`ARCHIVE.md` — log of completed work. When all tasks in a backlog group are done, move the
+entire group here with a completion date and a prose summary of the outcome. Never delete
+backlog items without archiving them.

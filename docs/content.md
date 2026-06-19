@@ -118,7 +118,7 @@ never writes `wiki/_claims/`.
 
 ```markdown
 ---
-id: {id}
+id: "{id}"
 title: {title}
 authors: [{authors}]
 organization: {org or null}
@@ -213,7 +213,7 @@ Survey papers use `## Scope and Coverage` instead of `## Context in Speech Gener
 
 ```markdown
 ---
-id: {id}
+id: "{id}"
 title: {title}
 authors: [{authors}]
 organization: {org or null}
@@ -235,12 +235,13 @@ generation:
   commit: {7-char hash}
 ---
 
-> [!abstract] {venue} · {year} · {venue_type capitalized} · Reference Stub
+> [!abstract] {venue} · {year} · {venue_type capitalized}
 > **{First Author} et al.** ({organization}) · [→ Paper]({url})
 >
 > {The single most important thing this paper does.}
 
-_Reference stub: included for context because this work is cited by speech-generation systems; not treated as primary evidence for speech-generation claims._
+> [!info] Citation Stub
+> This paper is not a speech generation paper but is cited by the corpus. See Context in Speech Generation below for why it is relevant.
 
 ## Context in Speech Generation
 
@@ -438,20 +439,81 @@ When asked a research question:
 
 ---
 
+## Health Check Workflow
+
+Run after any ingest pass to catch structural problems before they accumulate.
+
+```bash
+# Full ingest module check (all papers + index document)
+.venv/bin/python scripts/health_check.py --module ingest
+
+# Single-paper check (fast; skips corpus-wide checks like index validation)
+.venv/bin/python scripts/health_check.py --module ingest --id {paper_id}
+```
+
+The ingest module checks every `wiki/papers/*.md` for:
+- Frontmatter parses as valid YAML; all required fields present and non-null
+- `id` field is a quoted string (arXiv float-parse bug: unquoted `1412.6980` → float `1412.698`)
+- `field_significance` has `level` and `type` with valid vocabulary values
+- Abstract callout (`> [!abstract]`) and `## Wiki Connections` section present
+- Tier 2 papers have `> [!info] Citation Stub` callout
+- `## Claims` section present with `*(§N.N)*` citations on every bullet
+- Figure assets referenced in body exist in `raw/parsed/{id}/assets/`
+- `related_concepts` slugs exist in `wiki/concepts/`
+- Paper appears in `wiki/papers/index.md` as `[[id]]` wikilink
+
+Corpus-wide (full run only): index table column count, no duplicate IDs, no orphaned entries, no blank rows.
+
+**Errors** must be resolved before continuing ingest. **Warnings** are advisory. Exit code 0 (clean) or 1 (errors).
+
+Log: `- lint | {summary}` to `raw/pipeline_log.md`.
+
+---
+
+## Review Workflow
+
+Use the review agent to fix structural gaps on existing Tier 1 pages without full re-ingest.
+Appropriate when `health_check.py` reports errors on pages that already have complete prose
+(`## Problem`, `## Method`, `## Key Results`, `## Novelty Assessment`, `## Limitations`, `## Wiki Connections`).
+
+**Use the review agent when:** `field_significance` is missing, `## Claims` is absent or has
+uncited bullets, frontmatter values are wrong (task, architecture, related_concepts, metrics),
+figures are missing or incorrectly included.
+
+**Re-ingest instead when:** multiple prose sections are absent or the content is fundamentally
+wrong — the review agent preserves existing prose.
+
+**Invocation:** one paper at a time, with a health check between papers.
+
+```
+Review paper {id}
+```
+
+The review agent:
+- Audits the page against the full expected Tier 1 template
+- Corrects frontmatter, adds missing sections, embeds warranted figures
+- Does NOT rewrite prose unless a factual error is traceable to the parsed paper
+- Does NOT touch `wiki/papers/index.md`, venue files, or `status`
+- Updates `generation_history` in `raw/metadata/{id}.json` with `op: review` or `re-review`
+- Logs to `wiki/log.md`: `- review | {id} | {title} | {venue} {year}`
+- Emits `REVIEW_RESULT` JSON on last output line
+
+Verify with `health_check.py --module ingest --id {paper_id}` after each review.
+
+---
+
 ## Lint Workflow
 
-When asked to lint the wiki:
+Manual lint covers what the health check does not yet automate:
 
-- Paper pages missing required sections or claims without *(§N.N)* citations
-- Paper pages with `status: ingested` but no `wiki/papers/{id}.md`
-- Orphan paper pages not referenced by any concept's `_claims` YAML
-- `wiki/_claims/*.yaml` files that fail YAML parse
-- `paper_count` in YAML that does not match the `papers` list length
-- Concept pages whose `source_digest_date` is behind the YAML `last_updated` (stale)
-- `related_concepts` slugs in paper frontmatter that do not match any `wiki/_claims/` file
-- Paper index rows using plain IDs instead of [[wikilinks]]
-- Static count mismatches across `wiki/index.md`, `wiki/overview.md`, venue pages
-- Log: `- lint | {summary}` to `raw/pipeline_log.md`.
+- Paper pages with `status: ingested` but no `wiki/papers/{id}.md` (corpus module, planned)
+- Orphan paper pages not referenced by any concept's `_claims` YAML (integrate module, planned)
+- `wiki/_claims/*.yaml` files that fail YAML parse (integrate module, planned)
+- `paper_count` in YAML that does not match the `papers` list length (integrate module, planned)
+- Concept pages whose `source_digest_date` is behind the YAML `last_updated` (render module, planned)
+- Static count mismatches across `wiki/index.md`, `wiki/overview.md`, venue pages (corpus module, planned)
+
+Log: `- lint | {summary}` to `raw/pipeline_log.md`.
 
 ---
 
@@ -520,12 +582,13 @@ Records operations that change visible wiki content. Entries in **reverse chrono
 ## 2026-06-20
 
 - ingest | 2406.18009 | F5-TTS | ACL 2025
+- review | 2406.18009 | F5-TTS | ACL 2025
 - integrate | 25 papers | 8 concepts updated | 42 claims updated | 3 reassessments checked
 - render | 5 concepts | mode: full | model: claude-opus-4-8
 - query | Comparison of zero-shot TTS systems by SPK-SIM
 ```
 
-Entry types: `ingest`, `integrate`, `render`, `query`.
+Entry types: `ingest`, `review`, `integrate`, `render`, `query`.
 
 ### `raw/pipeline_log.md` — Infra-facing operations log
 
