@@ -116,7 +116,7 @@ Check for:
 - All eight `##` sections present in the correct order
 - `## Field Significance` uses the correct callout type for its level (see below)
 - `## Claims` has bullet points each with `*(§N.N)*` inline citations
-- `## Wiki Connections` uses bullet format with `[[wikilinks]]` (no pipes `|`, dots `·`, or bold headers)
+- `## Wiki Connections` uses bullet format — one `[[wikilink]]` per bullet; no dots `·` or bold headers; for paper ID wikilinks, use `[[id|Name]]` when a clean display name exists (model name, system name, or short title abbreviation); bare `[[id]]` is acceptable when no clean name applies; concept slug links (`[[flow-matching]]`) never need a display name
 
 ---
 
@@ -208,6 +208,8 @@ If the callout is wrong or malformed, fix it. Do not change the one-sentence sum
 #### 3c. Prose sections
 
 **`## Problem`, `## Method`, `## Key Results`, `## Novelty Assessment`, `## Limitations and Open Questions`, `## Wiki Connections`** — preserve as-is unless you find a factual error traceable to the parsed paper. If you find one, correct it inline without rewriting surrounding prose. If a section is entirely absent, add it following the standard ingest agent guidance; write from the paper, not from the existing abstract.
+
+When writing or editing `## Wiki Connections` prose that references paper IDs inline, use `[[id|Name]]` when a clean display name exists (model name, system name, or short title abbreviation). Use bare `[[id]]` only when no clean name applies. Never write `[[id]] (Name)` — if you have a name, put it inside the link: `[[id|Name]]`.
 
 #### 3d. Figure evaluation
 

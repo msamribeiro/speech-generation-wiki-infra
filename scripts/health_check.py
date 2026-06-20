@@ -60,6 +60,12 @@ def main() -> None:
         action="store_true",
         help="Print all issues, including warnings, even on passing modules",
     )
+    parser.add_argument(
+        "--wiki-dir",
+        dest="wiki_dir",
+        default=None,
+        help="Override wiki root directory (default: wiki/ submodule). Useful for pointing at a standalone content repo.",
+    )
     args = parser.parse_args()
 
     module_names = [m.strip() for m in args.module.split(",") if m.strip()]
@@ -67,7 +73,8 @@ def main() -> None:
     if unknown:
         parser.error(f"Unknown module(s): {', '.join(unknown)}. Available: {', '.join(AVAILABLE_MODULES)}")
 
-    check_args = CheckArgs(paper_id=args.paper_id)
+    wiki_dir = Path(args.wiki_dir) if args.wiki_dir else None
+    check_args = CheckArgs(paper_id=args.paper_id, wiki_dir=wiki_dir)
 
     all_passed = True
     for name in module_names:

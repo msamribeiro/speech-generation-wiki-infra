@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
+from pathlib import Path
 
 
 @dataclass
 class CheckArgs:
     paper_id: str | None = None
+    wiki_dir: Path | None = None
 
 
 @dataclass

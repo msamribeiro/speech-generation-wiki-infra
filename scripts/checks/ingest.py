@@ -14,11 +14,9 @@ import yaml
 from checks._base import CheckArgs, Issue, ModuleResult
 
 ROOT = Path(__file__).parent.parent.parent
-WIKI_PAPERS = ROOT / "wiki" / "papers"
-WIKI_CONCEPTS = ROOT / "wiki" / "concepts"
+_DEFAULT_WIKI = ROOT / "wiki"
 PARSED_DIR = ROOT / "raw" / "parsed"
 VOCABULARY = ROOT / "docs" / "schemas" / "vocabulary.md"
-INDEX_MD = WIKI_PAPERS / "index.md"
 
 REQUIRED_FM_FIELDS = ["id", "title", "venue", "published_date", "task", "field_significance"]
 
@@ -79,10 +77,10 @@ def _load_vocabulary() -> dict:
 # Index loading
 # ---------------------------------------------------------------------------
 
-def _load_index_ids() -> set[str]:
-    if not INDEX_MD.exists():
+def _load_index_ids(index_md: Path) -> set[str]:
+    if not index_md.exists():
         return set()
-    text = INDEX_MD.read_text(encoding="utf-8")
+    text = index_md.read_text(encoding="utf-8")
     ids: set[str] = set()
     # [[id]] wikilink format
     ids.update(re.findall(r"\[\[([^\]|]+)\]\]", text))
@@ -260,12 +258,12 @@ _EXPECTED_INDEX_COLS = 8
 _INDEX_SEPARATOR_RE = re.compile(r"^\|[-| ]+\|$")
 
 
-def _check_index_document() -> list[Issue]:
-    if not INDEX_MD.exists():
+def _check_index_document(wiki_papers: Path, index_md: Path) -> list[Issue]:
+    if not index_md.exists():
         return [_issue("error", "index.md", "index_document", "wiki/papers/index.md not found")]
 
-    text = INDEX_MD.read_text(encoding="utf-8")
-    page_stems = {p.stem for p in WIKI_PAPERS.glob("*.md") if p.name != "index.md"}
+    text = index_md.read_text(encoding="utf-8")
+    page_stems = {p.stem for p in wiki_papers.glob("*.md") if p.name != "index.md"}
     seen: dict[str, int] = {}  # paper_id -> first line number
     issues: list[Issue] = []
 
@@ -366,18 +364,23 @@ def _check_page(
 # ---------------------------------------------------------------------------
 
 def run(args: CheckArgs) -> ModuleResult:
+    wiki_root = args.wiki_dir if args.wiki_dir else _DEFAULT_WIKI
+    wiki_papers = wiki_root / "papers"
+    wiki_concepts = wiki_root / "concepts"
+    index_md = wiki_papers / "index.md"
+
     vocab = _load_vocabulary()
-    index_ids = _load_index_ids()
-    concept_slugs = {p.stem for p in WIKI_CONCEPTS.glob("*.md") if p.stem != "index"}
+    index_ids = _load_index_ids(index_md)
+    concept_slugs = {p.stem for p in wiki_concepts.glob("*.md") if p.stem != "index"} if wiki_concepts.exists() else set()
 
     if args.paper_id:
-        pages = [WIKI_PAPERS / f"{args.paper_id}.md"]
+        pages = [wiki_papers / f"{args.paper_id}.md"]
     else:
-        pages = sorted(p for p in WIKI_PAPERS.glob("*.md") if p.name != "index.md")
+        pages = sorted(p for p in wiki_papers.glob("*.md") if p.name != "index.md")
 
     issues: list[Issue] = []
     if not args.paper_id:
-        issues.extend(_check_index_document())
+        issues.extend(_check_index_document(wiki_papers, index_md))
 
     for page in pages:
         if not page.exists():

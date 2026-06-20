@@ -11,7 +11,7 @@
     "Chen Chen",
     "Edresson Casanova",
     "Subhankar Ghosh",
-    "Piotr \u00c5\u00bbelasko",
+    "Piotr Å»elasko",
     "Zhehuai Chen",
     "Jason Li",
     "Jagadeesh Balam",
@@ -46,6 +46,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "55d0339"
+    },
+    {
+      "date": "2026-06-20",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "bfd00ba"
     }
   ],
   "integrated_date": "2026-06-03"
