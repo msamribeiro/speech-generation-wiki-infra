@@ -6,7 +6,7 @@
   },
   "title": "Intrasentential English in Swedish TTS: perceived English-accentedness",
   "authors": [
-    "Christina T\u00c3\u00a5nnander",
+    "Christina TÃ¥nnander",
     "David House",
     "Jonas Beskow",
     "Jens Edlund"
@@ -34,5 +34,14 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "integrated_date": "2026-05-30"
+  "integrated_date": "2026-05-30",
+  "generation_history": [
+    {
+      "date": "2026-06-21",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "3538db5"
+    }
+  ]
 }

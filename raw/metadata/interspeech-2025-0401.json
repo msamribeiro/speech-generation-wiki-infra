@@ -6,11 +6,11 @@
   },
   "title": "Enabling the replicability of speech synthesis perceptual evaluations",
   "authors": [
-    "S\u00c3\u00a9bastien Le Maguer",
-    "Gw\u00c3\u00a9nol\u00c3\u00a9 Lecorv\u00c3\u00a9",
+    "SÃ©bastien Le Maguer",
+    "GwÃ©nolÃ© LecorvÃ©",
     "Damien Lolive",
     "Naomi Harte",
-    "Juraj \u00c5\u00a0imko"
+    "Juraj Å imko"
   ],
   "authors_full": null,
   "organization": null,
@@ -41,6 +41,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "55d0339"
+    },
+    {
+      "date": "2026-06-21",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "3538db5"
     }
   ],
   "integrated_date": "2026-06-03"
