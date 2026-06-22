@@ -26,7 +26,7 @@
   "pdf_url": "https://aclanthology.org/2025.acl-long.388.pdf",
   "pdf_path": "raw/papers/2025.acl-long.388.pdf",
   "pdf_source": "anthology",
-  "abstract": "Voice assistants, such as Siri and Google Assistant, typically model audio and text separately, resulting in lost speech information and increased complexity. Recent efforts to address this with end-to-end Speech Large Language Models (speech-in, text-out) trained with supervised finetuning (SFT) have led to models \u201cforgetting\u201d capabilities from text-only LLMs. Our work proposes an alternative paradigm for training Speech LLMs without instruction data, using the response of a text-only LLM to transcripts as self-supervision. Importantly, this process can be performed without annotated responses. We show that our Distilled Voice Assistant (DiVA) generalizes to Spoken Question Answering, Classification, and Translation. Furthermore, DiVA better matches user preferences, achieving a 72% win rate compared with state-of-the-art models like Qwen 2 Audio, despite using >100x less training compute.",
+  "abstract": "Voice assistants, such as Siri and Google Assistant, typically model audio and text separately, resulting in lost speech information and increased complexity. Recent efforts to address this with end-to-end Speech Large Language Models (speech-in, text-out) trained with supervised finetuning (SFT) have led to models “forgetting” capabilities from text-only LLMs. Our work proposes an alternative paradigm for training Speech LLMs without instruction data, using the response of a text-only LLM to transcripts as self-supervision. Importantly, this process can be performed without annotated responses. We show that our Distilled Voice Assistant (DiVA) generalizes to Spoken Question Answering, Classification, and Translation. Furthermore, DiVA better matches user preferences, achieving a 72% win rate compared with state-of-the-art models like Qwen 2 Audio, despite using >100x less training compute.",
   "task": [
     "SCA"
   ],
@@ -37,5 +37,14 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "integrated_date": "2026-05-27"
+  "integrated_date": "2026-05-27",
+  "generation_history": [
+    {
+      "date": "2026-06-22",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "24ea64d"
+    }
+  ]
 }

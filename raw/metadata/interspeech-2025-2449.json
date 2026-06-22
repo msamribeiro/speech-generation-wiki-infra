@@ -43,6 +43,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "55d0339"
+    },
+    {
+      "date": "2026-06-22",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "24ea64d"
     }
   ],
   "integrated_date": "2026-06-03"

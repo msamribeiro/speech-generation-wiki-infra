@@ -7,10 +7,11 @@ grouped by paper published_date month. Only accepted and ingested papers
 are counted; rejected/pending/review are excluded.
 
 Usage:
-    python scripts/corpus_summary.py [--tsv]
+    python scripts/corpus_summary.py [--tsv] [--group-before YYYY-MM]
 
 Options:
-    --tsv   Output tab-separated values instead of a formatted table.
+    --tsv               Output tab-separated values instead of a formatted table.
+    --group-before      Collapse all months strictly before YYYY-MM into a single row.
 """
 
 import argparse
@@ -69,11 +70,28 @@ def load_corpus():
     return rows, placeholder_ids, placeholder_months
 
 
-def print_table(rows, placeholder_ids, placeholder_months, tsv=False):
-    keys = sorted(rows.keys())
+def print_table(rows, placeholder_ids, placeholder_months, tsv=False, group_before=None):
+    if group_before:
+        grouped_label = f"< {group_before}"
+        grouped = {"total": 0, "parsed": 0, "ready": 0, "ingested": 0, "integrated": 0}
+        grouped_has_placeholder = False
+        remaining = {}
+        for k, v in rows.items():
+            if k != "unknown" and k < group_before:
+                for c in grouped:
+                    grouped[c] += v[c]
+                if k in placeholder_months:
+                    grouped_has_placeholder = True
+            else:
+                remaining[k] = v
+        rows = {grouped_label: grouped, **remaining}
+        placeholder_months = placeholder_months | ({grouped_label} if grouped_has_placeholder else set())
+        keys = [grouped_label] + sorted(remaining.keys())
+    else:
+        keys = sorted(rows.keys())
 
     # Column headers
-    cols = ["month", "total", "parsed", "ready", "ingested", "integrated", "ingested%", "integrated%"]
+    cols = ["month", "total", "parsed", "to_ingest", "ingested", "integrated", "ingested%", "integrated%"]
 
     if tsv:
         print("\t".join(cols))
@@ -84,12 +102,12 @@ def print_table(rows, placeholder_ids, placeholder_months, tsv=False):
             print(f"{k}\t{r['total']}\t{r['parsed']}\t{r['ready']}\t{r['ingested']}\t{r['integrated']}\t{ing_pct}\t{int_pct}")
     else:
         # Formatted table with a vertical divider before the percentage columns
-        col_w = [10, 7, 8, 7, 9, 11, 10, 12]
+        col_w = [10, 7, 8, 10, 9, 11, 10, 12]
         header = (
             f"{'Month':<{col_w[0]}}  "
             f"{'Total':>{col_w[1]}}  "
             f"{'Parsed':>{col_w[2]}}  "
-            f"{'Ready':>{col_w[3]}}  "
+            f"{'To Ingest':>{col_w[3]}}  "
             f"{'Ingested':>{col_w[4]}}  "
             f"{'Integrated':>{col_w[5]}}  "
             f"|  "
@@ -117,7 +135,7 @@ def print_table(rows, placeholder_ids, placeholder_months, tsv=False):
                 f"{r['integrated']:>{col_w[5]}}  "
                 f"|  "
                 f"{ing_pct:>{col_w[6]}}  "
-                f"{int_pct:>{col_w[7]}}"
+                f"{int_pct:>{col_w[7]}}  "
                 f"{flag}"
             )
             for c in totals:
@@ -135,7 +153,7 @@ def print_table(rows, placeholder_ids, placeholder_months, tsv=False):
             f"{totals['integrated']:>{col_w[5]}}  "
             f"|  "
             f"{total_ing_pct:>{col_w[6]}}  "
-            f"{total_int_pct:>{col_w[7]}}"
+            f"{total_int_pct:>{col_w[7]}}  "
         )
         print(sep)
 
@@ -149,10 +167,11 @@ def print_table(rows, placeholder_ids, placeholder_months, tsv=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--tsv", action="store_true", help="Output TSV instead of formatted table")
+    parser.add_argument("--group-before", metavar="YYYY-MM", help="Collapse all months before YYYY-MM into a single row")
     args = parser.parse_args()
 
     rows, placeholder_ids, placeholder_months = load_corpus()
-    print_table(rows, placeholder_ids, placeholder_months, tsv=args.tsv)
+    print_table(rows, placeholder_ids, placeholder_months, tsv=args.tsv, group_before=args.group_before)
 
 
 if __name__ == "__main__":
