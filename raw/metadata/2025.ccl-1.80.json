@@ -40,5 +40,14 @@
   "canonical_id": null,
   "conference_date": "2025-08-01",
   "integrated_date": "2026-05-29",
-  "venue_detail": "CCL 2025: 24th China National Conference on Computational Linguistics (Jinan, China, Aug 2025)"
+  "venue_detail": "CCL 2025: 24th China National Conference on Computational Linguistics (Jinan, China, Aug 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-23",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "456739f"
+    }
+  ]
 }

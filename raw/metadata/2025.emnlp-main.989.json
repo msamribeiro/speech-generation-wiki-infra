@@ -28,7 +28,7 @@
   "pdf_url": "https://aclanthology.org/2025.emnlp-main.989.pdf",
   "pdf_path": "raw/papers/2025.emnlp-main.989.pdf",
   "pdf_source": "anthology",
-  "abstract": "Speech large language models (LLMs) have emerged as a prominent research focus in speech processing. In this work, we introduce VocalNet, a series of high-performance speech LLMs featuring a scalable and model-agnostic training framework as well as a novel multi-token prediction (MTP) paradigm for speech generation. We first propose an efficient two-stage training framework that enables LLMs to acquire real-time speech interaction capabilities. Through extensive experiments on various training configurations, we ensure both simplicity and effectiveness in the training strategy. Furthermore, inspired by advances in language modeling, we introduce MTP into the domain of speech LLMs\u2014an alternative to traditional next-token prediction (NTP)\u2014which enables the model to predict multiple future tokens at each step. Through systematic analysis and improved implementation, we show that MTP not only accelerates inference speed but also significantly enhances speech quality. Experimental results demonstrate that VocalNet achieves performance comparable to state-of-the-art Omni LLMs while outperforming existing open-source speech LLMs, despite using limited training data.",
+  "abstract": "Speech large language models (LLMs) have emerged as a prominent research focus in speech processing. In this work, we introduce VocalNet, a series of high-performance speech LLMs featuring a scalable and model-agnostic training framework as well as a novel multi-token prediction (MTP) paradigm for speech generation. We first propose an efficient two-stage training framework that enables LLMs to acquire real-time speech interaction capabilities. Through extensive experiments on various training configurations, we ensure both simplicity and effectiveness in the training strategy. Furthermore, inspired by advances in language modeling, we introduce MTP into the domain of speech LLMs—an alternative to traditional next-token prediction (NTP)—which enables the model to predict multiple future tokens at each step. Through systematic analysis and improved implementation, we show that MTP not only accelerates inference speed but also significantly enhances speech quality. Experimental results demonstrate that VocalNet achieves performance comparable to state-of-the-art Omni LLMs while outperforming existing open-source speech LLMs, despite using limited training data.",
   "task": [
     "TTS",
     "SCA"
@@ -41,5 +41,14 @@
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-11-05",
-  "integrated_date": "2026-05-27"
+  "integrated_date": "2026-05-27",
+  "generation_history": [
+    {
+      "date": "2026-06-23",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "456739f"
+    }
+  ]
 }

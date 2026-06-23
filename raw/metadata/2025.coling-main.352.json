@@ -40,5 +40,14 @@
   "canonical_id": null,
   "conference_date": "2025-01-19",
   "integrated_date": "2026-05-29",
-  "venue_detail": "COLING 2025: 31st International Conference on Computational Linguistics (Abu Dhabi, UAE, Jan 19–24, 2025)"
+  "venue_detail": "COLING 2025: 31st International Conference on Computational Linguistics (Abu Dhabi, UAE, Jan 19–24, 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-23",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "456739f"
+    }
+  ]
 }

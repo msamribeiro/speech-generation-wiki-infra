@@ -1,3 +1,7 @@
+## 2026-06-23
+
+- review | health-check review pass (NLP + arXiv batch) | 28 papers | field_significance added, ## Claims with §-section citations added, bare wikilinks fixed to [[id|Name]] format, F5-TTS ID corrected (2410.06885 → 2025.acl-long.313), architecture figures embedded for 6 papers | 14 NLP: 2025.acl-long.682/.911/.912, acl-short.81, americasnlp-1.1, ccl-1.80, coling-main.352/.518, emnlp-demos.70, emnlp-main.1730/.180/.989, findings-acl.1051, findings-emnlp.424 | 14 arXiv: 2507.22746, 2508.00317/.01796/.02013/.02038/.02849/.03543/.04141/.04585/.04996/.05207/.05385/.06262/.06870 | 44 papers remaining (3 NLP, 41 arXiv) | wiki commit: 7ddf224
+
 ## 2026-06-19
 
 - lint | health check ingest module | 338 papers checked | 327 id fields quoted (arXiv float-parse bug), 191 index IDs → [[wikilinks]], 193 index titles → [title](papers/id.md) links, 1 blank row removed from index table, 65 Tier 2 pages → [!info] Citation Stub callout | health check: scripts/health_check.py --module ingest

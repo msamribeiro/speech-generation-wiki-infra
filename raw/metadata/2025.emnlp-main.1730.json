@@ -38,5 +38,14 @@
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-11-05",
-  "integrated_date": "2026-05-27"
+  "integrated_date": "2026-05-27",
+  "generation_history": [
+    {
+      "date": "2026-06-23",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "456739f"
+    }
+  ]
 }

@@ -36,5 +36,14 @@
   "canonical_id": null,
   "conference_date": "2025-05-04",
   "integrated_date": "2026-05-27",
-  "venue_detail": "AmericasNLP 2025: 5th Workshop on NLP for Indigenous Languages of the Americas; co-located with NAACL 2025 (Albuquerque, NM, USA, May 4, 2025)"
+  "venue_detail": "AmericasNLP 2025: 5th Workshop on NLP for Indigenous Languages of the Americas; co-located with NAACL 2025 (Albuquerque, NM, USA, May 4, 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-23",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "456739f"
+    }
+  ]
 }

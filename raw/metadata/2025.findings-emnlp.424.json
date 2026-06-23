@@ -26,7 +26,7 @@
   "pdf_url": "https://aclanthology.org/2025.findings-emnlp.424.pdf",
   "pdf_path": "raw/papers/2025.findings-emnlp.424.pdf",
   "pdf_source": "anthology",
-  "abstract": "Spoken Dialogue Models (SDMs) have achieved significant progress in recent years, yet they continue to face challenges in handling nuanced interactional phenomena. A significant bottleneck hindering further advancement is the scarcity of publicly available, high-quality datasets meticulously designed to train and evaluate these fine-grained interactive capabilities. We introduce InteractSpeech, a 150-hour English speech interaction dialogue dataset designed to empower spoken dialogue models with nuanced real-time interaction capabilities, such as handling interruptions and backchannels. InteractSpeech was created by synthesizing interactive dialogues from text using advanced speech synthesis, and by filtering real-world spoken dialogues for interactive segments. The dataset features precise speaker timestamps and annotations for diverse dialogue interactions, underpinned by a formal framework for interaction dynamics. We demonstrate InteractSpeech\u2019s utility by fine-tuning a LLaMA 3-8B model on its textual scenarios and, crucially, by training a speech understanding model that accurately classifies key interactional events directly from audio. This highlights the dataset\u2019s value in developing models capable of more natural and responsive conversational turn-taking. Audio samples are available at https://interactspeech.github.io/.",
+  "abstract": "Spoken Dialogue Models (SDMs) have achieved significant progress in recent years, yet they continue to face challenges in handling nuanced interactional phenomena. A significant bottleneck hindering further advancement is the scarcity of publicly available, high-quality datasets meticulously designed to train and evaluate these fine-grained interactive capabilities. We introduce InteractSpeech, a 150-hour English speech interaction dialogue dataset designed to empower spoken dialogue models with nuanced real-time interaction capabilities, such as handling interruptions and backchannels. InteractSpeech was created by synthesizing interactive dialogues from text using advanced speech synthesis, and by filtering real-world spoken dialogues for interactive segments. The dataset features precise speaker timestamps and annotations for diverse dialogue interactions, underpinned by a formal framework for interaction dynamics. We demonstrate InteractSpeech’s utility by fine-tuning a LLaMA 3-8B model on its textual scenarios and, crucially, by training a speech understanding model that accurately classifies key interactional events directly from audio. This highlights the dataset’s value in developing models capable of more natural and responsive conversational turn-taking. Audio samples are available at https://interactspeech.github.io/.",
   "task": [
     "SCA",
     "evaluation"
@@ -39,5 +39,14 @@
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-11-05",
-  "integrated_date": "2026-05-27"
+  "integrated_date": "2026-05-27",
+  "generation_history": [
+    {
+      "date": "2026-06-23",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "456739f"
+    }
+  ]
 }
