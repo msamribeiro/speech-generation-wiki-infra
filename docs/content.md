@@ -383,13 +383,13 @@ Each paper can contribute evidence in one or more roles:
 
 | Paper | Role | Evidence | Limitation |
 |-------|------|----------|------------|
-| [[id]] {title} | {evidence_role} | {one sentence} | {one sentence} |
+| [[id\|Name]] | {evidence_role} | {one sentence from the most relevant high/medium claim in the YAML} | {one sentence} |
 
 ## Historical Context Papers
 
 | Paper | Why it matters | Why it is not direct current evidence |
 |-------|----------------|--------------------------------------|
-| [[id]] | {reason} | {reason} |
+| [[id\|Name]] | {reason} | {reason} |
 
 ## Evidence Strength Notes
 
@@ -397,16 +397,25 @@ Each paper can contribute evidence in one or more roles:
 **Medium evidence** — useful results with scope limits or evaluation gaps.
 **Weak or narrow evidence** — single-language, internal-data-only, or no subjective evaluation.
 
+## Current Tensions by Evidence
+
+### {Tension Name}
+
+| Evidence | Supports | Counters or qualifies |
+|----------|----------|-----------------------|
+| [[id\|Name]] | {what this paper supports on this side} | — |
+| [[id\|Name]] | — | {what this paper counters or qualifies} |
+
 ## Papers to Reassess
 
 | Paper or claim | Why revisit | Trigger |
 |----------------|-------------|---------|
-| [[id]] | {reason} | {what would change the assessment} |
+| [[id\|Name]] | {reason} | {what would change the assessment} |
 
 ## Data Hygiene Notes
 
 {Any known issues with this concept's YAML: malformed entries, missing provenance, paper_count
-mismatches, etc.}
+mismatches, etc. Write "None noted." if the YAML is clean.}
 ```
 
 ### Venue Page (`wiki/venues/{year}-{venue-slug}.md`)

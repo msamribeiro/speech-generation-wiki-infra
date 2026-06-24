@@ -116,8 +116,8 @@ For light mode, also read the existing concept page to understand what has chang
 cat $WIKI/concepts/{slug}.md 2>/dev/null || echo "no existing page"
 ```
 
-Optionally read paper frontmatter for supplemental data (titles, organizations, venues) not
-stored in the YAML:
+Read paper frontmatter to collect titles and organizations. This is required — bare IDs alone are
+insufficient for citation display in the Recommended Reader Path and evidence tables:
 
 ```bash
 python3 -c "
@@ -135,6 +135,10 @@ for pid in paper_ids:
 "
 ```
 
+Use the title to determine whether a paper has a well-known system or model name (e.g. "F5-TTS",
+"CosyVoice 2", "OZSpeech"). Named papers use `[[id|Name]]` in all citations; unnamed papers use
+bare `[[id]]`. See §13 of `docs/writing-style.md` for the full citation format rules.
+
 ---
 
 ## Step 3 — Write the concept page
@@ -150,16 +154,41 @@ reformat the YAML. The concept page is a research briefing, not a data dump.
 - `generation.agent: speech-generation-render-agent`
 - `generation.model:` — this agent spec's `model:` value (`claude-sonnet-4-6`)
 - `generation.commit:` — run `git rev-parse --short HEAD` in infra root
+- `status:` — infer from `claim_clusters` and `trend_notes`; use one of:
+  - `dominant` — most clusters `strongly_supported`; `trend_notes` describe widespread field adoption
+  - `established` — most clusters `strongly_supported`; well-evidenced but not the dominant paradigm
+  - `emerging` — most clusters `emerging`; newer concept with growing but thin evidence
+  - `declining` — `trend_notes` describe displacement by a newer approach
+  - `contested` — significant `contested` or `weakened` clusters with active disagreement
+  - `mature-infrastructure` — stable foundational concept (codec, dataset, metric), not actively advancing
+- `aliases:` — 3–5 common alternate names drawn from `trend_notes` and `open_questions` text
+  (e.g. for `flow-matching`: `[CFM, OT-CFM, rectified flow, conditional flow matching]`)
 
 **Section guidance:**
 
 - **Current Assessment**: synthesize what the YAML's claim_clusters and trend_notes say about the concept's current state. Write for a researcher who needs the current answer now. 1–2 paragraphs.
-- **Major Claims**: draw from `claim_clusters` in the YAML. Use status values directly (strongly_supported / emerging / contested). Each claim must cite at least one supporting paper via [[wikilink]].
-- **Method Families**: draw from `method_families` in the YAML. Write prose per family; do not just copy the YAML `summary` field — synthesize.
-- **How to Interpret Older and Newer Evidence**: flag papers with `current_role: historical_context` vs. `foundational` vs. `frontier_probe`. Help the reader know what to trust for current decisions.
-- **Current Tensions**: draw from contested claim clusters and `open_questions`. Name each tension; give 1–2 sentences of evidence on each side.
+- **Major Claims**: draw from `claim_clusters` in the YAML. Use status values directly
+  (strongly_supported / emerging / contested). Use the three-part format for each bullet:
+  ```
+  - **Claim stated at the field level.**
+    Evidence: [[id|Name]], [[id|Name]].
+    Caveat: {one sentence on scope limits, if any.}
+  ```
+  Use `[[id|Name]]` for named systems; bare `[[id]]` for unnamed papers. Every paper cited in
+  Evidence must have a matching YAML claim entry with `role: supports` or `role: refines`.
+  Omit the Caveat line when there are none. See §13 of `docs/writing-style.md` for full rules.
+- **Method Families**: draw from `method_families` in the YAML. Write prose per family; do not
+  just copy the YAML `summary` field — synthesize. Use `[[id|Name]]` for named papers.
+- **How to Interpret Older and Newer Evidence**: flag papers with `current_role: historical_context`
+  vs. `foundational` vs. `frontier_probe`. Draw on `trend_notes` from the YAML to describe the
+  temporal arc. Help the reader know what to trust for current decisions.
+- **Current Tensions**: draw from contested claim clusters and `open_questions`. Draw on
+  `trend_notes` for the historical trajectory. Name each tension; give 1–2 sentences of evidence
+  on each side with wikilinks. Do not create a standalone "Trend Summary" section — trend content
+  belongs here and in "How to Interpret Older and Newer Evidence."
 - **Open Questions**: draw from `open_questions` in the YAML. Phrase as genuine research questions.
-- **Recommended Reader Path**: order 3–7 papers by `current_role` and `relevance`. Annotate each with why to read it at that point.
+- **Recommended Reader Path**: order 3–7 papers by `current_role` and `relevance`. Use
+  `[[id|Name]]` for named papers. Annotate each with why to read it at that point.
 
 Write the maintenance note at the bottom linking to `[[evidence/{slug}]]`.
 
@@ -173,9 +202,10 @@ ENDOFPAGE
 
 ---
 
-## Step 4 — Write the evidence dossier (optional but recommended)
+## Step 4 — Write the evidence dossier
 
-Use the **Evidence Dossier template** from `docs/content.md`. Generate from the same YAML.
+Both the concept page and the evidence dossier are always written together. Use the **Evidence
+Dossier template** from `docs/content.md`. Generate from the same YAML.
 
 ```bash
 WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
@@ -188,12 +218,30 @@ ENDOFDOSSIER
 
 **Dossier guidance:**
 
-- **Canonical Claim Clusters table**: one row per `claim_clusters` entry; include status and caveats.
-- **Method-Family Evidence tables**: one table per `method_families` entry; one row per paper in that family; draw `evidence_role` and key result from paper entries in the YAML.
-- **Historical Context**: papers with `current_role: historical_context` or `evidence_role: historical_context`.
-- **Evidence Strength Notes**: group papers by strength based on `confidence` values and methodology caveats.
-- **Papers to Reassess**: draw from `reassessment_queue`; include trigger and due date.
-- **Data Hygiene Notes**: if you notice YAML issues (missing sources, null confidence values, paper_count mismatch), report them here.
+- **Canonical Claim Clusters table**: one row per `claim_clusters` entry. In the Supporting papers
+  column use `[[id|Name]]` for named systems and bare `[[id]]` for unnamed papers.
+- **Method-Family Evidence tables**: one table per `method_families` entry; one row per paper in
+  that family. Use `[[id|Name]]` in the Paper column. For the Evidence column, write one sentence
+  drawn from the most relevant `high` or `medium` relevance claim in that paper's YAML `claims`
+  list — not a paraphrase of the whole paper. Every evidence sentence must trace to a YAML claim
+  entry (traceability invariant — see §13 of `docs/writing-style.md`).
+- **Current Tensions by Evidence**: one subsection per major tension identified in `open_questions`
+  or contested clusters. Use a table:
+  ```
+  | Evidence | Supports | Counters or qualifies |
+  |----------|----------|-----------------------|
+  | [[id|Name]] | {what this paper says on this side} | — |
+  | [[id|Name]] | — | {what this paper says against or qualifying} |
+  ```
+- **Historical Context**: papers with `current_role: historical_context` or
+  `evidence_role: historical_context`.
+- **Evidence Strength Notes**: group papers into Strong / Medium / Weak based on `confidence`
+  values in the YAML and methodology caveats (multi-benchmark ablations = strong; single-language
+  or internal-data-only = weak).
+- **Papers to Reassess**: draw from `reassessment_queue`; include trigger and due date. If the
+  queue is empty, write "None at this time."
+- **Data Hygiene Notes**: if you notice YAML issues (missing sources, null confidence values,
+  paper_count mismatch), report them here. Write "None noted." if the YAML is clean.
 
 ---
 

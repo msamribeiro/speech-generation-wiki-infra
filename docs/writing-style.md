@@ -231,3 +231,64 @@ Callouts use Obsidian/Quartz syntax: `> [!type]` followed by indented content. U
 - Do not include meta-commentary about the wiki or the ingestion process.
 - Do not speculate about future work beyond what the paper itself proposes as future directions.
 - Do not pad sections. If a section has nothing meaningful to say, write one honest sentence rather than three vague ones.
+
+---
+
+## 13. Citation and Wikilink Format for Concept and Evidence Pages
+
+The general wikilink rule (§10) applies everywhere. Concept and evidence pages additionally follow
+these conventions to achieve research-paper citation clarity.
+
+### Syntax
+
+Use `[[id|Name]]` to display a system or model name as the link text:
+
+- `[[2025.acl-long.313|F5-TTS]]` renders as **F5-TTS** (linked to the paper page)
+- `[[flow-matching|Flow Matching]]` renders as **Flow Matching** (linked to the concept page)
+
+Use bare `[[id]]` when a paper has no commonly used system or model name.
+
+In markdown table cells, the `|` inside `[[id|Name]]` may conflict with column separators. If the
+renderer misparses it, escape with `\|`: `[[2025.acl-long.313\|F5-TTS]]`.
+
+### When to use each form
+
+| Context | Format | Example |
+|---------|--------|---------|
+| Paper as sentence subject | `[[id\|Name]] achieves...` | `[[2025.acl-long.313\|F5-TTS]] achieves WER 1.83%` |
+| Concept named in prose | `[[slug\|Title]]` | `[[flow-matching\|Flow Matching]] has displaced diffusion` |
+| Single parenthetical citation | `([[id\|Name]])` | `...in alignment-free TTS ([[2406.18009\|E2 TTS]])` |
+| Multiple parenthetical citations | `([[id\|Name]], [[id\|Name]])` | `...([[2025.acl-long.313\|F5-TTS]], [[2025.acl-long.1043\|OZSpeech]])` |
+| Paper without a system name | `([[id]])` or `([[id]], [[id]])` | `...([[2210.02747]], [[2312.15821]])` |
+
+### Claim format in Major Claims
+
+Every claim bullet in the `## Major Claims` section uses a three-part format:
+
+```markdown
+- **Claim stated at the field level.**  
+  Evidence: [[id|Name]], [[id|Name]], [[id]].  
+  Caveat: {one sentence on scope limits, if any.}
+```
+
+Omit the Caveat line when there are none. The Evidence line lists only papers that directly support
+the specific claim — not all papers in the concept. Use `[[id|Name]]` for named systems; bare
+`[[id]]` for unnamed papers.
+
+### Traceability invariant
+
+Every claim on a concept page and every evidence cell in a dossier table must be traceable to a
+specific entry in `wiki/_claims/{slug}.yaml`. The YAML `claim_clusters` and `papers[].claims`
+entries in turn derive from the paper's `## Claims` section, which cites source sections via
+`*(§N.N)*`. The full chain is:
+
+```
+concept page claim
+  → YAML claim_cluster (supporting_papers list)
+    → YAML papers[id].claims entry (role, evidence, source)
+      → paper page ## Claims bullet
+        → paper section *(§N.N)*
+```
+
+Render agents never invent evidence — all synthesis derives from YAML entries. If a statement has
+no traceable YAML source, it must not appear on the page.
