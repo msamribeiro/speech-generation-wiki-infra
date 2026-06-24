@@ -61,7 +61,7 @@ Cross-paper. Reads paper pages, writes `wiki/_claims/` YAML only. No wiki pages 
 
 **Batch size:** up to 25 papers per pass. Run every ~25 ingested papers.
 
-1. **Discover batch** — find papers with `status: ingested` and `integrated_date: null`, ordered by `ingested_date`. Take up to 25.
+1. **Discover batch** — find papers with `status: ingested`, ordered by `ingested_date`. Take up to 25.
 2. **Read paper pages** — for each paper, read frontmatter + `## Claims` section only (not full page). Collect `related_concepts` and structured claims.
 3. **For each concept touched:**
    a. Read existing `wiki/_claims/{slug}.yaml`.
@@ -71,11 +71,9 @@ Cross-paper. Reads paper pages, writes `wiki/_claims/` YAML only. No wiki pages 
    e. Check `reassessment_queue`: for each queue item, test whether trigger conditions are met by this batch. If a trigger fires, update `current_role` (paper entry) or `status` (claim cluster) and remove the queue item. If `due` date has passed without a trigger, surface for human review.
 4. **Validate YAML** — parse each touched file; verify top-level keys, `paper_count` matches `papers` list length, claim IDs are unique, supporting/contradicting paper IDs exist.
 5. **Write updated `wiki/_claims/{slug}.yaml`** files.
-6. **Set `integrated_date`** in `raw/metadata/{id}.json` for each processed paper.
-7. **Log** — append to `wiki/log.md`: `- integrate | {N} papers | {M} concepts updated | {K} claims updated | {J} reassessments checked`
+6. **Log** — append to `wiki/log.md`: `- integrate | {N} papers | {M} concepts updated | {K} claims updated | {J} reassessments checked`
 
-The integration agent writes exactly these files: `wiki/_claims/*.yaml`, `raw/metadata/{id}.json`
-(integrated_date only), `wiki/log.md`. It never writes wiki pages.
+The integration agent writes exactly these files: `wiki/_claims/*.yaml`, `wiki/log.md`. It never writes wiki pages.
 
 ---
 

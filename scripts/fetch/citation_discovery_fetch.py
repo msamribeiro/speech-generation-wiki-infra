@@ -353,7 +353,6 @@ def build_metadata(entry, arxiv_id: str, manifest_data: dict) -> dict:
         "month": month,
         "published_date": published_date,
         "ingested_date": None,
-        "integrated_date": None,
         "url": f"https://arxiv.org/abs/{arxiv_id}",
         "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}.pdf",
         "pdf_path": None,

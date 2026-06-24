@@ -104,7 +104,7 @@ Fetch → Filter → Parse → Ingest → Integrate → Render
 
 Never violated under any circumstances:
 
-1. **Never alter source documents** — PDFs in `raw/papers/` and substantive content of `raw/metadata/` JSONs are source of truth. Pipeline scripts may update pipeline-state fields (`status`, `pdf_path`, `ingested_date`, `integrated_date`, `generation_history`) but never alter what a paper says.
+1. **Never alter source documents** — PDFs in `raw/papers/` and substantive content of `raw/metadata/` JSONs are source of truth. Pipeline scripts may update pipeline-state fields (`status`, `pdf_path`, `ingested_date`, `generation_history`) but never alter what a paper says.
 2. **Never invent numbers** — if a metric is not in the paper, write `"not reported"`. Never estimate or hallucinate.
 3. **Canonical vocabulary only** — map all terms to the controlled vocabulary in [docs/schemas/vocabulary.md](docs/schemas/vocabulary.md). Note authors' original term in parentheses.
 4. **One paper, one page** — check the index before creating a new paper page. Deduplicate by arXiv ID first, then by title similarity.

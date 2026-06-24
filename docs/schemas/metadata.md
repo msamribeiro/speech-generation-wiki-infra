@@ -22,7 +22,6 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "month": 11,
   "published_date": "YYYY-MM-DD — date of first public availability",
   "ingested_date": "YYYY-MM-DD or null — set on ingest",
-  "integrated_date": "YYYY-MM-DD or null — set by integration agent after first integration pass",
   "generation_history": [
     {
       "date": "YYYY-MM-DD",
@@ -55,10 +54,8 @@ pending   → filter agent assigns relevance score
 review    → borderline (0.40–0.70): added to raw/review_queue.md for human decision
 accepted  → score > 0.70 or human confirmed relevant: ready to ingest
 rejected  → score < 0.40 or human confirmed irrelevant: skip
-ingested  → wiki paper page written; integration pass pending
+ingested  → wiki paper page written
 ```
-
-`integrated_date` is set separately by the integration agent and does not change `status`.
 
 ## Venue Allowed Values
 

@@ -2,9 +2,12 @@
 """
 Corpus summary by month.
 
-Prints a table of corpus state (total / parsed / ingested / integrated)
+Prints a table of corpus state (total / parsed / ingested)
 grouped by paper published_date month. Only accepted and ingested papers
 are counted; rejected/pending/review are excluded.
+
+Integration tracking has moved to wiki/_claims/ YAML files and is
+reported by scripts/health_check.py --integrate.
 
 Usage:
     python scripts/corpus_summary.py [--tsv] [--group-before YYYY-MM]
@@ -28,7 +31,7 @@ PLACEHOLDER_SUFFIX = "-01-01"
 
 
 def load_corpus():
-    rows = defaultdict(lambda: {"total": 0, "parsed": 0, "ready": 0, "ingested": 0, "integrated": 0})
+    rows = defaultdict(lambda: {"total": 0, "parsed": 0, "ready": 0, "ingested": 0})
     placeholder_ids = []
     placeholder_months = set()
 
@@ -64,8 +67,6 @@ def load_corpus():
 
         if m.get("status") == "ingested":
             rows[key]["ingested"] += 1
-            if m.get("integrated_date"):
-                rows[key]["integrated"] += 1
 
     return rows, placeholder_ids, placeholder_months
 
@@ -73,7 +74,7 @@ def load_corpus():
 def print_table(rows, placeholder_ids, placeholder_months, tsv=False, group_before=None):
     if group_before:
         grouped_label = f"< {group_before}"
-        grouped = {"total": 0, "parsed": 0, "ready": 0, "ingested": 0, "integrated": 0}
+        grouped = {"total": 0, "parsed": 0, "ready": 0, "ingested": 0}
         grouped_has_placeholder = False
         remaining = {}
         for k, v in rows.items():
@@ -91,51 +92,45 @@ def print_table(rows, placeholder_ids, placeholder_months, tsv=False, group_befo
         keys = sorted(rows.keys())
 
     # Column headers
-    cols = ["month", "total", "parsed", "to_ingest", "ingested", "integrated", "ingested%", "integrated%"]
+    cols = ["month", "total", "parsed", "to_ingest", "ingested", "ingested%"]
 
     if tsv:
         print("\t".join(cols))
         for k in keys:
             r = rows[k]
             ing_pct = f"{100 * r['ingested'] / r['total']:.0f}%" if r["total"] else "—"
-            int_pct = f"{100 * r['integrated'] / r['total']:.0f}%" if r["total"] else "—"
-            print(f"{k}\t{r['total']}\t{r['parsed']}\t{r['ready']}\t{r['ingested']}\t{r['integrated']}\t{ing_pct}\t{int_pct}")
+            print(f"{k}\t{r['total']}\t{r['parsed']}\t{r['ready']}\t{r['ingested']}\t{ing_pct}")
     else:
         # Formatted table with a vertical divider before the percentage columns
-        col_w = [10, 7, 8, 10, 9, 11, 10, 12]
+        col_w = [10, 7, 8, 10, 9, 10]
         header = (
             f"{'Month':<{col_w[0]}}  "
             f"{'Total':>{col_w[1]}}  "
             f"{'Parsed':>{col_w[2]}}  "
             f"{'To Ingest':>{col_w[3]}}  "
             f"{'Ingested':>{col_w[4]}}  "
-            f"{'Integrated':>{col_w[5]}}  "
             f"|  "
-            f"{'Ingested%':>{col_w[6]}}  "
-            f"{'Integrated%':>{col_w[7]}}"
+            f"{'Ingested%':>{col_w[5]}}"
         )
         sep = "-" * len(header)
         print(sep)
         print(header)
         print(sep)
 
-        totals = {"total": 0, "parsed": 0, "ready": 0, "ingested": 0, "integrated": 0}
+        totals = {"total": 0, "parsed": 0, "ready": 0, "ingested": 0}
         for k in keys:
             r = rows[k]
             label = k if k != "unknown" else "unknown  "
             flag = " *" if k in placeholder_months else ""
             ing_pct = f"{100 * r['ingested'] / r['total']:.0f}%" if r["total"] else "—"
-            int_pct = f"{100 * r['integrated'] / r['total']:.0f}%" if r["total"] else "—"
             print(
                 f"{label:<{col_w[0]}}  "
                 f"{r['total']:>{col_w[1]}}  "
                 f"{r['parsed']:>{col_w[2]}}  "
                 f"{r['ready']:>{col_w[3]}}  "
                 f"{r['ingested']:>{col_w[4]}}  "
-                f"{r['integrated']:>{col_w[5]}}  "
                 f"|  "
-                f"{ing_pct:>{col_w[6]}}  "
-                f"{int_pct:>{col_w[7]}}  "
+                f"{ing_pct:>{col_w[5]}}  "
                 f"{flag}"
             )
             for c in totals:
@@ -143,17 +138,14 @@ def print_table(rows, placeholder_ids, placeholder_months, tsv=False, group_befo
 
         print(sep)
         total_ing_pct = f"{100 * totals['ingested'] / totals['total']:.0f}%" if totals["total"] else "—"
-        total_int_pct = f"{100 * totals['integrated'] / totals['total']:.0f}%" if totals["total"] else "—"
         print(
             f"{'TOTAL':<{col_w[0]}}  "
             f"{totals['total']:>{col_w[1]}}  "
             f"{totals['parsed']:>{col_w[2]}}  "
             f"{totals['ready']:>{col_w[3]}}  "
             f"{totals['ingested']:>{col_w[4]}}  "
-            f"{totals['integrated']:>{col_w[5]}}  "
             f"|  "
-            f"{total_ing_pct:>{col_w[6]}}  "
-            f"{total_int_pct:>{col_w[7]}}  "
+            f"{total_ing_pct:>{col_w[5]}}  "
         )
         print(sep)
 
