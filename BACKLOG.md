@@ -10,13 +10,10 @@ Resume standard corpus ingest and clear the integration backlog.
 
 ## Content Stage Implementation [P0 · planned]
 
-Execute the redesigned three-stage pipeline in the wiki content repo. Integration agent spec and schema are complete (2026-06-24); design doc at `docs/design/integration-agent.md`.
+Execute the redesigned three-stage pipeline in the wiki content repo. Integration agent spec and schema are complete (2026-06-24); design doc at `docs/design/integration-agent.md`. `_claims/` directory exists; `concepts/_evidence/` removed. YAML validation is covered by the Pipeline Health Suite integrate module (`docs/records/2026-06-24-integrate-health-check-design.md`).
 
-- [ ] Migrate wiki/concepts/_evidence/ → wiki/_claims/ (wiki content repo filesystem change)
-- [ ] Migrate existing 24 YAML digests to new rich schema (structural: add entry_date, evidence_role, current_role, method_family; convert flat claim strings to objects with role/source/confidence/relevance; see docs/schemas/claims.md)
-- [ ] Build YAML validation script (scripts/wiki/validate_concept_evidence.py): required keys present, paper IDs cross-referenced against metadata, claim IDs unique within file, paper_count matches entry count; stepping stone until the Pipeline Health Suite integrate module exists, at which point it is absorbed there
-- [ ] Run first integration passes under new two-phase model: per-concept, starting with flow-matching (prototype YAML exists in wiki content repo), then other core concepts
-- [ ] Run first render pass: regenerate all 24 concept pages with new template
+- [ ] Run integration passes for all supported concepts — per-concept, two-phase model; flow-matching prototype exists, all others start from scratch; run Phase 1 across all ingested Tier 1 papers for each concept, then Phase 2 per concept
+- [ ] Run first render pass: generate concept pages and evidence dossiers from `_claims/` YAML
 - [ ] Generate first evidence dossiers for core concepts (flow-matching, autoregressive-codec-tts, neural-codec, zero-shot-tts, evaluation-metrics)
 
 ## Wiki Quality Improvements [P1 · planned]
