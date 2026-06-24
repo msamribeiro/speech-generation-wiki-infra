@@ -13,6 +13,7 @@ paper_count: N          # number of entries under papers:
 
 papers:
   - id: {paper_id}
+    entry_date: YYYY-MM-DD           # when this entry was written or last force-rewritten
     year: YYYY
     venue: ACL          # cached from paper frontmatter for synthesis efficiency
     task: [TTS]
@@ -20,7 +21,7 @@ papers:
     relevance: high | medium | low   # how central this concept is to the paper
     evidence_role:                   # what kind of evidence this paper contributes
       - core_evidence                # see Evidence Role Vocabulary below
-    current_role: influential        # see Current Role Vocabulary below
+    current_role: influential        # concept-scoped; see Current Role Vocabulary below
     method_family: [pure_nar_fm_tts] # links to method_families section
     claims:
       - claim_id: {slug_for_this_claim}
@@ -29,6 +30,7 @@ papers:
         source: "§3.4, Table 2"      # section(s) of source paper where evidence appears
         evidence: "One-sentence supporting fact."
         confidence: high | medium | low
+        relevance: high | medium | low  # how central this claim is to this concept
     limitations:
       - "General limitation of this paper relevant to the concept."
     caveats:
@@ -87,8 +89,9 @@ What kind of evidence this paper contributes to the concept.
 
 ## Current Role Vocabulary
 
-The living review's current interpretation of the paper's importance to this concept.
-Updated by the integration agent when reassessment triggers fire.
+The living review's current interpretation of the paper's importance to **this concept**.
+This is concept-scoped: the same paper may be `influential` in one concept YAML and `minor`
+in another. Updated by the integration agent when reassessment triggers fire.
 
 | Value | Meaning |
 |-------|---------|
@@ -124,6 +127,20 @@ How a specific paper's evidence relates to a claim.
 | `complicates` | Adds caveats that make the claim harder to apply generally |
 | `supersedes` | Replaces the claim with a stronger or more precise version |
 | `historical_context` | Relevant to understanding the claim's origins, not its current validity |
+
+## Claim Relevance Field
+
+Every claim entry carries a `relevance` field (distinct from the paper-level `relevance`) that
+records how central this specific claim is to the enclosing concept. All claims from the paper's
+`## Claims` section are always included — none are dropped during Phase 1 extraction. The
+integration agent sets `relevance` based on judgment: a claim about evaluation benchmark design
+sitting in `flow-matching.yaml` is `low`; a claim about the flow matching objective is `high`.
+
+Phase 2 synthesis uses this field to weight claim contribution to `claim_clusters`: only `high`
+and `medium` relevance claims drive cluster promotion and status changes. `low` relevance claims
+are present for completeness and cross-concept traceability but do not count toward thresholds.
+
+The field can be manually edited or revised using full paper context without re-running Phase 1.
 
 ## Concept Page Source of Truth Rule
 
