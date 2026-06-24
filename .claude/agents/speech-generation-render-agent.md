@@ -147,6 +147,7 @@ Use the **Concept Page template** from `docs/content.md`. Generate editorial pro
 reformat the YAML. The concept page is a research briefing, not a data dump.
 
 **Frontmatter fields to set:**
+- `title:` — **preserve the existing page title if the page already exists**; do not change it on re-render. If creating a new page, derive from the slug (e.g. `flow-matching` → `Flow Matching`). Never append qualifiers like "for TTS" or "for Speech Synthesis" that were not in the original title.
 - `source_digest_date:` — copy `last_updated` from the YAML exactly
 - `generation.date:` — today's date
 - `generation.stage: render`
@@ -215,6 +216,8 @@ cat > $WIKI/evidence/{slug}.md << 'ENDOFDOSSIER'
 {rendered dossier content}
 ENDOFDOSSIER
 ```
+
+**Dossier frontmatter title**: use `"Evidence Dossier: {concept_title}"` where `{concept_title}` is the concept page's `title:` frontmatter value (preserved from the existing page, or newly derived if this is a first render). The H1 must match the frontmatter title exactly.
 
 **Dossier guidance:**
 
