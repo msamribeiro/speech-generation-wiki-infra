@@ -5,8 +5,7 @@
 Resume standard corpus ingest and clear the integration backlog.
 
 - [ ] Run dedup pass on 56 OpenReview papers (ICLR 2025: 13, NeurIPS 2025: 16, ICLR 2026: 27) — check title collisions against existing corpus before filtering; proceedings ID is canonical over arXiv
-- [ ] Run integration pass 12 — 30 papers pending from 2026-06-16: 2301.11325, 2301.12503, 2305.15255, 2312.01479, 2312.15821, 2401.07333, 2402.13236, 2404.03204, 2406.00654, 2406.05551, 2408.02622, 2411.09943, 2411.17607, 2411.18803, 2412.04724, 2502.18924, 2503.14345, 2504.02407, 2504.10344, 2505.02625, 2505.09558, 2505.13000, 2505.14648, 2506.10274, 2506.13053, 2506.16381, 2507.23159, 2508.04195, 2510.07838, 2511.15848 — **deferred until Content Stage Implementation complete** (integration agent redesigned 2026-06-24; existing 24 YAML digests must be migrated to new schema before running new passes)
-- [ ] Resume standard ingest from 2509.04093 — 699 papers ready; chronological order (Aug 2025 → Dec 2025 → 2026); show selection, ingest 2 at a time with quality check
+- [ ] Standard ingest for papers (July 2025 - September 2025; Q3 2025); then chronologically.
 
 ## Content Stage Implementation [P0 · planned]
 
