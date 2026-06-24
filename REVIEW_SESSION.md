@@ -133,29 +133,20 @@ WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-w
 
 ---
 
-## Remaining candidates — 44 papers (updated 2026-06-23)
-
-Draw from all three groups; mix venues across sessions for topic diversity.
-
-### Interspeech 2025 — 0 papers
-
-*(all Interspeech 2025 papers complete)*
-
-### NLP venues (ACL/EMNLP/NAACL/COLING) — 3 papers
-
-```
-2025.findings-naacl.184  2025.naacl-long.110  2025.naacl-long.242
-```
-
-### arXiv — 41 papers
-
-```
-2508.06890  2508.07302  2508.07426  2508.07711  2508.08095  2508.08399  2508.08715
-2508.08961  2508.09767  2508.11273  2508.11326  2508.12001  2508.14049  2508.15442
-2508.15827  2508.16332  2508.19098  2508.20660  2509.00685  2509.02020  2509.09631
-2509.15969  2509.19668  2510.00981  2510.02848  2510.05758  2510.07979  2510.12210
-2511.12347  2512.04720  2512.13251  2512.14291  2601.03888  2601.15621  2603.08823
-2603.18090  2603.26364  2603.29339  2604.00688  2604.01760  2604.12438
-```
+## Remaining candidates — 32 papers (updated 2026-06-24)
 
 To resume: proceed in batches of 4.
+
+### Interspeech 2025 — 0 papers *(complete)*
+
+### NLP venues (ACL/EMNLP/NAACL/COLING) — 0 papers *(complete)*
+
+### arXiv — 32 papers
+
+```
+2508.11273  2508.11326  2508.12001  2508.14049  2508.15442  2508.15827  2508.16332
+2508.19098  2508.20660  2509.00685  2509.02020  2509.09631  2509.15969  2509.19668
+2510.00981  2510.02848  2510.05758  2510.07979  2510.12210  2511.12347  2512.04720
+2512.13251  2512.14291  2601.03888  2601.15621  2603.08823  2603.18090  2603.26364
+2603.29339  2604.00688  2604.01760  2604.12438
+```
