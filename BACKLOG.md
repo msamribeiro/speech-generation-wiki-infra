@@ -5,16 +5,17 @@
 Resume standard corpus ingest and clear the integration backlog.
 
 - [ ] Run dedup pass on 56 OpenReview papers (ICLR 2025: 13, NeurIPS 2025: 16, ICLR 2026: 27) — check title collisions against existing corpus before filtering; proceedings ID is canonical over arXiv
-- [ ] Run integration pass 12 — 30 papers pending from 2026-06-16: 2301.11325, 2301.12503, 2305.15255, 2312.01479, 2312.15821, 2401.07333, 2402.13236, 2404.03204, 2406.00654, 2406.05551, 2408.02622, 2411.09943, 2411.17607, 2411.18803, 2412.04724, 2502.18924, 2503.14345, 2504.02407, 2504.10344, 2505.02625, 2505.09558, 2505.13000, 2505.14648, 2506.10274, 2506.13053, 2506.16381, 2507.23159, 2508.04195, 2510.07838, 2511.15848
+- [ ] Run integration pass 12 — 30 papers pending from 2026-06-16: 2301.11325, 2301.12503, 2305.15255, 2312.01479, 2312.15821, 2401.07333, 2402.13236, 2404.03204, 2406.00654, 2406.05551, 2408.02622, 2411.09943, 2411.17607, 2411.18803, 2412.04724, 2502.18924, 2503.14345, 2504.02407, 2504.10344, 2505.02625, 2505.09558, 2505.13000, 2505.14648, 2506.10274, 2506.13053, 2506.16381, 2507.23159, 2508.04195, 2510.07838, 2511.15848 — **deferred until Content Stage Implementation complete** (integration agent redesigned 2026-06-24; existing 24 YAML digests must be migrated to new schema before running new passes)
 - [ ] Resume standard ingest from 2509.04093 — 699 papers ready; chronological order (Aug 2025 → Dec 2025 → 2026); show selection, ingest 2 at a time with quality check
 
 ## Content Stage Implementation [P0 · planned]
 
-Execute the redesigned three-stage pipeline in the wiki content repo.
+Execute the redesigned three-stage pipeline in the wiki content repo. Integration agent spec and schema are complete (2026-06-24); design doc at `docs/design/integration-agent.md`.
 
 - [ ] Migrate wiki/concepts/_evidence/ → wiki/_claims/ (wiki content repo filesystem change)
-- [ ] Migrate existing 24 YAML digests to new rich schema (structural: add evidence_role, current_role, method_family; convert flat claim strings to objects with role/source/confidence)
+- [ ] Migrate existing 24 YAML digests to new rich schema (structural: add entry_date, evidence_role, current_role, method_family; convert flat claim strings to objects with role/source/confidence/relevance; see docs/schemas/claims.md)
 - [ ] Build YAML validation script (scripts/wiki/validate_concept_evidence.py): required keys present, paper IDs cross-referenced against metadata, claim IDs unique within file, paper_count matches entry count; stepping stone until the Pipeline Health Suite integrate module exists, at which point it is absorbed there
+- [ ] Run first integration passes under new two-phase model: per-concept, starting with flow-matching (prototype YAML exists in wiki content repo), then other core concepts
 - [ ] Run first render pass: regenerate all 24 concept pages with new template
 - [ ] Generate first evidence dossiers for core concepts (flow-matching, autoregressive-codec-tts, neural-codec, zero-shot-tts, evaluation-metrics)
 
@@ -40,7 +41,7 @@ Single command (`python scripts/health_check.py`) serving two roles: a test suit
 - [ ] Build fetch module (scripts/checks/fetch.py): metadata JSON parses; required fields present (id, title, published_date, status, venue); status values in allowed set; no duplicate IDs across metadata files; title-based collision detection (canonical priority: proceedings ID > arXiv); absorbs the planned dedup check script
 - [ ] Build parse module (scripts/checks/parse.py): accepted papers have local PDF in raw/papers/; parsed entries have paper.md; paper.md not suspiciously short (< 100 lines — flag for manual review); references.json has non-zero count (flag if 0, cross-reference against known exceptions in parse_quality_review.md); assets/ present if figures referenced in paper.md; metadata.json abstract non-null (flag if null)
 - [ ] Build ingest module (scripts/checks/ingest.py): frontmatter parses; required fields and sections present; controlled vocabulary values valid (field_significance.type, tasks, tags against vocabulary.md); claims have inline source citations (§N.N format); figure links point to existing assets; related_concepts slugs exist; wikilinks use [[id|Name]] format; paper appears in wiki/papers/index.md; Tier 2 stubs have citation stub callout
-- [ ] Build integrate module (scripts/checks/integrate.py): YAML parses for all _claims/ files; required top-level keys present; paper IDs cross-reference metadata; claim IDs unique within file; paper_count matches entry count; absorbs validate_concept_evidence.py from Content Stage Implementation
+- [ ] Build integrate module (scripts/checks/integrate.py): full check set designed (25 checks across Phase 1 + Phase 2) — read `docs/records/2026-06-24-integrate-health-check-design.md` before implementing; uses `--concept` (not `--id`) to scope to one YAML; also update §6 of `docs/design/pipeline-health-suite.md` to replace the old thin stub; absorbs validate_concept_evidence.py from Content Stage Implementation
 - [ ] Build render module (scripts/checks/render.py): concept pages exist for all _claims/ YAML files; required sections present on concept pages; evidence dossiers exist where expected; paper counts consistent between YAML and rendered page
 - [ ] Build corpus module (scripts/checks/corpus.py): metadata status:ingested but missing wiki page; wiki page exists but no metadata (orphaned page); count mismatches across wiki/index.md, overview.md, venue pages; broken wikilinks across all pages; this module's output is the authoritative source for corpus counts in STATUS_DASHBOARD.md
 - [ ] Fix static counts — replace hardcoded paper/concept counts in wiki/index.md, overview.md, venue pages, and evidence digests with values computed by the corpus module; run as part of `health_check.py --report` after each ingest or integration pass
