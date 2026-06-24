@@ -9,7 +9,7 @@
     "Zexin Cai",
     "Ashi Garg",
     "Kevin Duh",
-    "Leibny Paola Garc\u00eda-Perera",
+    "Leibny Paola García-Perera",
     "Sanjeev Khudanpur",
     "Nicholas Andrews",
     "Matthew Wiesner"
@@ -44,6 +44,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "f0299ef"
+    },
+    {
+      "date": "2026-06-24",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d029458"
     }
   ],
   "integrated_date": "2026-06-02"

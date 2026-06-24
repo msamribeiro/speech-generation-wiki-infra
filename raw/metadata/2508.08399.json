@@ -8,7 +8,7 @@
     "Ryo Aihara",
     "Yoshiki Masuyama",
     "Gordon Wichern",
-    "Fran\u00e7ois G. Germain",
+    "François G. Germain",
     "Jonathan Le Roux"
   ],
   "authors_full": null,
@@ -41,6 +41,13 @@
       "op": "ingest",
       "model": "claude-sonnet-4-6",
       "commit": "f0299ef"
+    },
+    {
+      "date": "2026-06-24",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d029458"
     }
   ],
   "integrated_date": "2026-06-02"
