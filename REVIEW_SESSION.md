@@ -97,6 +97,8 @@ Papers with contentious topics flagged during review — require human spot-chec
 | 2025.findings-emnlp.424 | Claim 5: "synthetic TTS quality comparable to or exceeding Fisher and Switchboard" — strong comparison to classic corpora | Check §4.2, Table 3 |
 | 2508.06262 | Claim 1: WER 3.07%→14.37% and SPK-SIM 0.570→0.463 without verification — specific paired values | Check §V, Table III |
 | 2508.06262 | Claim 2: "1.48x" acceleration; Claim 4: "approximately 95%" quality retention — specific numbers | Check §IV.B Table I; §IV.C Table II |
+| 2508.14049 | Metric correction: French WER changed 6 → 18 | Check Table 2 |
+| 2510.02848 | Metric correction: WER 3s prompt changed 0.05 → 0.04 | Check Table 1 |
 
 ---
 
@@ -133,7 +135,7 @@ WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-w
 
 ---
 
-## Remaining candidates — 32 papers (updated 2026-06-24)
+## Remaining candidates — 16 papers (updated 2026-06-25)
 
 To resume: proceed in batches of 4.
 
@@ -141,12 +143,10 @@ To resume: proceed in batches of 4.
 
 ### NLP venues (ACL/EMNLP/NAACL/COLING) — 0 papers *(complete)*
 
-### arXiv — 32 papers
+### arXiv — 16 papers
 
 ```
-2508.11273  2508.11326  2508.12001  2508.14049  2508.15442  2508.15827  2508.16332
-2508.19098  2508.20660  2509.00685  2509.02020  2509.09631  2509.15969  2509.19668
-2510.00981  2510.02848  2510.05758  2510.07979  2510.12210  2511.12347  2512.04720
+2510.05758  2510.07979  2510.12210  2511.12347  2512.04720
 2512.13251  2512.14291  2601.03888  2601.15621  2603.08823  2603.18090  2603.26364
 2603.29339  2604.00688  2604.01760  2604.12438
 ```
