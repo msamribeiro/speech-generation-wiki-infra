@@ -99,6 +99,39 @@ Papers with contentious topics flagged during review — require human spot-chec
 | 2508.06262 | Claim 2: "1.48x" acceleration; Claim 4: "approximately 95%" quality retention — specific numbers | Check §IV.B Table I; §IV.C Table II |
 | 2508.14049 | Metric correction: French WER changed 6 → 18 | Check Table 2 |
 | 2510.02848 | Metric correction: WER 3s prompt changed 0.05 → 0.04 | Check Table 1 |
+| 2510.05758 | Claim 4: "Emphasis placement on adverbs and adjectives produces stronger perceived emotional intensity than emphasis on verbs, nouns, or other categories" — granular POS-category ranking | Check §3.2, Figure 2 |
+| 2510.07979 | Claim 4: training instability in direct MeanFlow application manifests as degraded subjective quality even when objective metrics appear competitive — specific failure mode | Check §4.3, Table 2 |
+| 2510.07979 | Claim 5: larger teacher model during distillation improves smaller student — specific ablation | Check §4.2.3, Table 1 |
+| 2510.12210 | Metrics SPK-SIM 0.66 / UTMOS 4.05 for proposed (medium, 0.3B) on SeedTTS test-en | Check Table 1 |
+| 2510.12210 | Claim 3: "tail-first confidence bias" — paper-coined terminology, verify it is in the paper | Check §3.4 |
+| 2511.12347 | Claim 1: "near-random and functional output" — strong language for ablation failure, may overstate | Check §3.4, §D.1, Table 9 |
+| 2511.12347 | Claim 3: "pre-training reducing WER by 5–10x for low-resource languages" — specific quantitative range | Check §4.3, Table 2 |
+| 2511.12347 | Claim 5: "larger systems trained on 30K–130K hours" — specific data scale comparison | Check §4.2, Table 1 |
+| 2512.04720 | Metric correction: WER 1.36 → 1.48 for M3-TTS-Fbank on Seed-TTS test-en | Check Table 1 |
+| 2512.04720 | Claim 2: "roughly 3x" training acceleration with VAE latents | Check §2.2, §4.3, Table 2 |
+| 2512.13251 | Claim 3: soft vs. hard orthogonality three-way ablation comparison | Check §3.1.1, Appendix B, Table 6 |
+| 2512.14291 | Metrics: SPK-SIM 76.4, 67.2, 68.1 and WER 1.91 — multiple new values added | Check Table 3 |
+| 2512.14291 | Claim 1: "reduce phoneme error rate by more than half" with hybrid phoneme-text input | Check §2.6, §3.4, Table 7 |
+| 2512.14291 | Claim 2: "without reward hacking" — design assurance claim, not empirically measured | Check §2.4, §3.3, Table 4 |
+| 2512.14291 | Claim 3: laughter trade-off causation ("because laughter segments resist ASR transcription") | Check §3.3, Table 6 |
+| 2512.14291 | Claim 5: "15% of backbone parameters" for LoRA — specific, weak citation (§2.5 only) | Check §2.5 |
+| 2601.03888 | Claim 1: "no measurable degradation" from halving codec frame rate 50→25 Hz | Check §3.2, Table 4 |
+| 2601.03888 | Claim 2: Japanese-specific finding within multi-language comparison | Check §4.3, Table 1 |
+| 2603.29339 | Claim 1: "primarily because high-frequency acoustic detail... is preserved end-to-end" — causal interpretation | Check §5.3.1, Table 3 |
+| 2603.29339 | Claim 3: "increasing VAE fidelity degrades downstream quality" — counterintuitive causal finding | Check §5.3.2, Figure 3 |
+| 2604.00688 | Claim 4: "CER below 5% for languages with fewer than 10 hours" — two specific thresholds | Check §4.2, Table 4, Figure 4 |
+| 2604.00688 | Claim 5: UTMOS 4.23→4.32 and SIM-o 0.697→0.668 from prompt denoising — four specific values | Check §4.3, Table 7 |
+| 2604.01760 | Claim 4: "cross-lingual generalization stronger for typologically adjacent languages" — no table citation | Check §5.2 |
+| 2604.01760 | Claim 5: "near-complete synthesis failure" from removing duration control at inference | Check §4.2, §5.3, Table 3 |
+| 2604.12438 | Claim 3: "phonetically transparent languages tolerate 12.5 Hz compression better than deep-orthography languages" — linguistic typology framing | Check §4.3, Table 8 |
+| 2601.15621 | Claim 2: "reduces sequence length and error accumulation" — "error accumulation" is causal, no table | Check §4.2.1 |
+| 2601.15621 | Claim 5: "open-source systems match or exceed commercial baselines" on instruction-following benchmarks | Check §4.2.4, Table 8 |
+| 2603.08823 | Claim 1: "eliminates the distribution shift" — likely overstates; probably "reduces" or "mitigates" | Check §3, §4.3 |
+| 2603.08823 | Claim 5: "can match or exceed closed-source systems" — broad generalization | Check §6.1, Tables 1–2 |
+| 2603.18090 | Claim 3: "Token-level duration control can emerge from paired pretraining format alone, without a dedicated fine-tuning stage" — "emerge" is strong | Check §6.4, Table 5 |
+| 2603.18090 | Claim 4: "Cumulative speaker drift... is the dominant failure mode in ultra-long autoregressive speech generation" — class-level characterization | Check §6.5, Table 6, Figure 6 |
+| 2603.26364 | field_significance level: high — borderline for a fine-tuning paper; formal theorem may justify it | Judgment call |
+| 2603.26364 | Claim 3: "formal bound on the suboptimality of AR predictors" — mathematical claim (ε-forward dependence theorem) | Check §3.3 |
 
 ---
 
@@ -143,10 +176,4 @@ To resume: proceed in batches of 4.
 
 ### NLP venues (ACL/EMNLP/NAACL/COLING) — 0 papers *(complete)*
 
-### arXiv — 16 papers
-
-```
-2510.05758  2510.07979  2510.12210  2511.12347  2512.04720
-2512.13251  2512.14291  2601.03888  2601.15621  2603.08823  2603.18090  2603.26364
-2603.29339  2604.00688  2604.01760  2604.12438
-```
+### arXiv — 0 papers *(all 16 complete: batches 1–4)*

@@ -55,5 +55,14 @@
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-28",
+      "op": "review",
+      "agent": "speech-generation-review-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "2d38f07"
+    }
+  ]
 }
