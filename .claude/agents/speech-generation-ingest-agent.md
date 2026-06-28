@@ -60,6 +60,13 @@ The project has **two repos** with distinct roles:
 
 Your prompt will contain a paper ID, e.g. `"Ingest paper 2509.02020"`. Extract the ID from it.
 
+Supported invocations:
+
+- `"Ingest paper {ID}"` — normal ingest. Skip if the paper page already exists or metadata status is already `ingested`.
+- `"Re-ingest paper {ID} --force"` — overwrite the paper page and refresh index/log/metadata entries where applicable. Use only when explicitly requested.
+
+Do not infer re-ingest from context. The prompt must include `Re-ingest` or `--force`.
+
 ---
 
 ## Step-by-step procedure
@@ -70,7 +77,7 @@ Your prompt will contain a paper ID, e.g. `"Ingest paper 2509.02020"`. Extract t
 python3 -c "import json; d=json.load(open('raw/metadata/{ID}.json')); print(d.get('status'))"
 ```
 
-- If `status == "ingested"` and not re-ingesting: emit failure signal and stop.
+- If `status == "ingested"` and the invocation is not an explicit re-ingest: emit failure signal and stop.
 - If `status != "accepted"` and `status != "ingested"`: emit failure signal with reason and stop.
 
 ```bash
@@ -78,7 +85,7 @@ WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-w
 ls $WIKI/papers/{ID}.md 2>/dev/null && echo "EXISTS" || echo "NEW"
 ```
 
-- If the page file already exists and this is not a re-ingest: emit skipped signal and stop.
+- If the page file already exists and this is not an explicit re-ingest: emit skipped signal and stop.
 
 ### 2. Read the parsed paper
 
@@ -252,15 +259,28 @@ Good patterns: "introduces…", "enables…", "provides…", "demonstrates…", 
 
 ## Claims
 
-{2–5 generalised propositions about speech generation that this paper supports, weakens, or complicates. Each claim must:
-- be one sentence
-- be stated at the field level (not "this paper shows..." — claim the general proposition)
-- be reusable across multiple papers (another paper could support or refute it)
-- avoid raw metric values, model names, and paper-specific details
-- be followed by an inline section citation in italics: *(§N.N)*, *(§N.N, Table N)*, *(§N.N, Figure N)*, etc. — cite the section(s) of the source paper where the supporting evidence appears. This grounds each claim in the paper and allows readers to verify it directly.}
+{2–5 structured, paper-local claims about speech generation. These claims are the handoff to the integration agent, so preserve both the reusable proposition and the concrete evidence from this paper.
 
-- {Claim 1.} *({§section or Table/Figure reference})*
-- {Claim 2.} *({§section or Table/Figure reference})*
+Each claim must:
+- start with one of these role prefixes: `supports:`, `complicates:`, `contradicts:`, `refines:`
+- state one generalised proposition about speech generation, reusable across papers
+- be field-level, not paper-subject language; avoid "this paper shows..." in the claim sentence
+- avoid raw metric values, model names, and paper-specific details in the claim sentence
+- include an `Evidence:` continuation line with the paper-specific mechanism, result, comparison, dataset, or failure case
+- include an inline source citation on the Evidence line: *(§N.N)*, *(§N.N, Table N)*, *(§N.N, Figure N)*, etc.
+
+Role meanings:
+- `supports:` — provides positive evidence for the proposition
+- `complicates:` — adds a scope limit, trade-off, failure mode, or measurement caveat
+- `contradicts:` — provides evidence against a proposition that readers might otherwise believe
+- `refines:` — narrows or makes a known proposition more precise
+
+Do not include adoption claims such as "widely adopted" or "standard" unless this paper itself provides a systematic survey or citation analysis.}
+
+- supports: {Generalized claim sentence.}
+  Evidence: {Specific result, mechanism, comparison, dataset, or ablation from this paper.} *({§section or Table/Figure reference})*
+- complicates: {Generalized claim sentence.}
+  Evidence: {Specific limitation, failure case, measurement caveat, or trade-off from this paper.} *({§section or Table/Figure reference})*
 
 ## Limitations and Open Questions
 
@@ -268,15 +288,18 @@ Good patterns: "introduces…", "enables…", "provides…", "demonstrates…", 
 
 ## Wiki Connections
 
-{Write one bullet per concept slug (from `related_concepts`) and one bullet per in-corpus paper (from step 2), using this exact format:
+{Write one bullet per concept slug (from `related_concepts`) and up to 8 bullets for the most salient in-corpus paper references identified in step 2. Use this exact format:
 
-- [[concept-slug]] — {1 sentence: how does this paper relate to or contribute to this concept?}
+- [[concept-slug|Concept Title]] — {1 sentence: how does this paper relate to or contribute to this concept?}
 - [[paper-id]] (Short title or descriptor) — {1 sentence: does this paper build on it, extend it, compare against it, or challenge it?}
 
 Rules:
-- Bullet points only. No pipes `|`, dots `·`, inline commas between wikilinks, or bold section headers.
+- Bullet points only. Use `|` only inside concept wikilink aliases. Do not use dots `·`, inline comma-separated wikilinks, or bold section headers.
 - Every [[wikilink]] must have a descriptive clause after the em dash.
-- Concept slugs come from `related_concepts` (3–6 total). Paper IDs come from in-corpus references identified in step 2.
+- Concept slugs come from `related_concepts` (3–6 total). Display each concept using its human-readable title from the concept title map below, not the raw slug.
+- Paper IDs come from in-corpus references identified in step 2. If more than 8 in-corpus references exist, include only the most important 3–8 references.
+- Prioritize in-corpus references that this paper directly builds on, extends, compares against, uses as a baseline, uses as a dataset/metric/tool, or explicitly challenges.
+- Omit incidental background citations from Wiki Connections; the references list already preserves them.
 - Do not open any other files to populate this section — use only what you already know from reading this paper.}
 ```
 
@@ -308,6 +331,8 @@ catalog = open(f'{WIKI}/papers/index.md').read()
 papers_header = '| ID | Title | Org | Venue | Year | Task | Architecture | Ingested |'
 if papers_header in catalog:
     lines = catalog.splitlines(keepends=True)
+    # Re-ingest safety: remove any existing row for this paper before inserting the refreshed row.
+    lines = [l for l in lines if f'[[{meta["id"]}]]' not in l]
     insert_pos = None
     in_papers = False
     for i, line in enumerate(lines):
@@ -524,6 +549,34 @@ Common errors to avoid: do not assign `architectural-novelty` to papers that use
 ### `related_concepts` — allowed slugs (choose 3–6 per paper)
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
 
+### Concept title map for wikilinks
+
+Use these display names in `## Wiki Connections`. Do not open concept files to look up titles.
+
+| Slug | Display link |
+|------|--------------|
+| `flow-matching` | `[[flow-matching|Flow Matching]]` |
+| `diffusion-tts` | `[[diffusion-tts|Diffusion TTS]]` |
+| `autoregressive-codec-tts` | `[[autoregressive-codec-tts|Autoregressive Codec TTS]]` |
+| `transformer-enc-dec-tts` | `[[transformer-enc-dec-tts|Transformer Encoder-Decoder TTS]]` |
+| `gan-vocoder` | `[[gan-vocoder|GAN Vocoder]]` |
+| `zero-shot-tts` | `[[zero-shot-tts|Zero-Shot TTS]]` |
+| `voice-conversion` | `[[voice-conversion|Voice Conversion]]` |
+| `multilingual-tts` | `[[multilingual-tts|Multilingual TTS]]` |
+| `emotion-synthesis` | `[[emotion-synthesis|Emotion Synthesis]]` |
+| `prosody-control` | `[[prosody-control|Prosody Control]]` |
+| `streaming-tts` | `[[streaming-tts|Streaming TTS]]` |
+| `spoken-language-model` | `[[spoken-language-model|Spoken Language Model]]` |
+| `speech-to-speech` | `[[speech-to-speech|Speech-to-Speech]]` |
+| `instruction-conditioned-tts` | `[[instruction-conditioned-tts|Instruction-Conditioned TTS]]` |
+| `neural-codec` | `[[neural-codec|Neural Audio Codec]]` |
+| `self-supervised-speech` | `[[self-supervised-speech|Self-Supervised Speech]]` |
+| `disentanglement` | `[[disentanglement|Disentanglement]]` |
+| `speaker-adaptation` | `[[speaker-adaptation|Speaker Adaptation]]` |
+| `rlhf-speech` | `[[rlhf-speech|RLHF Speech]]` |
+| `evaluation-metrics` | `[[evaluation-metrics|Evaluation Metrics]]` |
+| `subjective-evaluation` | `[[subjective-evaluation|Subjective Evaluation]]` |
+
 **`self-supervised-speech` usage rule:** Only include this slug if the paper's own system uses a self-supervised model (HuBERT, WavLM, wav2vec 2.0, data2vec, or similar) as a core component of its architecture or training. Do NOT include it if the paper uses Whisper (which is fully supervised), merely cites SSL work in related work, or compares against SSL baselines. The test: does this paper's method depend on self-supervised pre-training?
 
 **`prosody-control` usage rule:** Only include this slug if the paper introduces an explicit mechanism to control prosody (pitch, duration, speaking rate, stress) independently of content or speaker identity. Do NOT include it because the paper evaluates prosody metrics (F0-RMSE, MCD), includes a duration predictor as a standard pipeline component, or discusses prosody in related work.
@@ -538,10 +591,10 @@ Common errors to avoid: do not assign `architectural-novelty` to papers that use
 
 ## Invariants
 
-1. Only ingest papers with `status: accepted`. Never ingest `pending`, `review`, or `rejected`.
+1. Only ingest papers with `status: accepted`, except explicit re-ingest may refresh papers with `status: ingested`. Never ingest `pending`, `review`, or `rejected`.
 2. Never invent metric values. Use `"not reported"` for any missing field — never leave blank.
 3. All `architecture`, `conditioning`, `training`, and metric names must come from the controlled vocabulary above.
-4. Check `wiki/papers/index.md` before creating a paper page — if the ID already appears, skip and emit a skipped signal.
+4. Check `wiki/papers/index.md` before creating a paper page — if the ID already appears, skip and emit a skipped signal unless this is an explicit re-ingest.
 5. All metric values must trace to a specific table or figure in `paper.md`, not to another wiki page.
 6. Write every ingest to `wiki/log.md` — never skip the log entry.
 7. The return signal must be the last line of output. Nothing after it.
@@ -549,3 +602,7 @@ Common errors to avoid: do not assign `architectural-novelty` to papers that use
 9. **Never open `wiki/concepts/`, `wiki/overview.md`, `wiki/reports/`, or any other `wiki/papers/` file.** Doing so is a scope violation. Concept synthesis and evidence digests belong to the integration agent.
 10. Only copy figures when `field_significance.type` includes `architectural-novelty`. Never copy figures for empirical, evaluation, dataset, or engineering-integration papers.
 11. Never embed a figure whose PNG does not exist at `raw/parsed/{ID}/assets/figure-N.png`. Verify with `ls` before copying.
+12. Re-ingest only when the invocation explicitly says `Re-ingest` or `--force`; never infer overwrite permission.
+13. Every claim in `## Claims` must use a role prefix (`supports:`, `complicates:`, `contradicts:`, or `refines:`) and an `Evidence:` line with a source citation.
+14. `## Wiki Connections` must use title aliases for concept links from the concept title map, not raw slugs.
+15. Include at most 8 in-corpus paper references in `## Wiki Connections`; prioritize direct methodological, baseline, dataset, metric, extension, or challenge relationships.

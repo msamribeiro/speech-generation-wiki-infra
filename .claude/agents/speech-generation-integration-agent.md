@@ -209,6 +209,46 @@ Read the full paper page:
 cat $WIKI/papers/{id}.md
 ```
 
+### Claim format compatibility
+
+Paper pages may contain either the legacy claims format or the structured claims format introduced
+after earlier papers were ingested. The integration agent must support both.
+
+**Structured format (preferred for new paper pages):**
+
+```markdown
+- supports: {generalized claim sentence.}
+  Evidence: {specific paper-local evidence.} *(§4.2, Table 1)*
+- complicates: {generalized claim sentence.}
+  Evidence: {specific scope limit, failure mode, or caveat.} *(§5.1)*
+```
+
+Parse structured claims as:
+
+- `role` — from the prefix: `supports`, `complicates`, `contradicts`, or `refines`
+- `claim` — the generalized claim sentence after the prefix
+- `evidence` — the `Evidence:` continuation line, with the source citation removed
+- `source` — the inline citation from the `Evidence:` line
+
+**Legacy format (backward compatibility for already-ingested paper pages):**
+
+```markdown
+- {generalized claim sentence.} *(§4.2, Table 1)*
+```
+
+Parse legacy claims as:
+
+- `role: supports` by default
+- `claim` — the bullet text with the inline citation removed
+- `source` — the inline citation
+- `evidence` — write a one-sentence paper-local supporting fact by using the surrounding paper-page
+  sections (`## Method`, `## Key Results`, `## Limitations and Open Questions`) and the cited
+  source. Do not invent new metrics; use only facts already present on the paper page.
+
+If a legacy claim clearly weakens, complicates, or contradicts a proposition based on its wording
+or the paper page's limitations, set `role` to `complicates`, `contradicts`, or `refines` by
+judgment instead of defaulting to `supports`.
+
 Write or overwrite the paper entry in the YAML's `papers:` list:
 
 ```yaml
@@ -240,6 +280,12 @@ Write or overwrite the paper entry in the YAML's `papers:` list:
 **Extraction rules:**
 
 - Include **all** claims from the paper's `## Claims` section — never drop any.
+- Prefer structured claims when present. Preserve their role prefix and `Evidence:` line directly
+  into YAML fields.
+- For legacy one-line claims, infer the claim role and evidence using the compatibility rules above.
+  Mark these as normal YAML entries; do not create a separate legacy schema.
+- Do not rewrite paper pages to upgrade legacy claims. Backward-compatible parsing belongs here;
+  paper-page editing belongs to explicit re-ingest.
 - Set per-claim `relevance` by judgment: a claim that directly bears on this concept is
   `high`; one primarily about a different concept is `low`. A claim about evaluation
   benchmark design in `flow-matching.yaml` is `low`; a claim about the flow matching
@@ -249,6 +295,9 @@ Write or overwrite the paper entry in the YAML's `papers:` list:
 - `current_role` is concept-scoped. Do not derive it mechanically from `field_significance.level`
   alone — a globally `foundational` paper may be `minor` for a specific concept if its
   contribution to that concept is peripheral. Use the vocabulary in `docs/schemas/claims.md`.
+- If a claim lacks an extractable source citation, still include it but set `source: "not specified"`
+  and note it in the summary. Prefer not to drop it; missing provenance is a data-hygiene issue for
+  later cleanup.
 - If the paper has no `## Claims` section, write `claims: []` and note it in the summary.
 
 After writing each paper entry, update `paper_count` and `last_updated`, then run inline
@@ -397,7 +446,7 @@ open(path, 'w').write(text)
 Mode          : {Phase 1 only | Phase 2 only | Both} [{--force} {--regenerate-clusters}]
 Concept(s)    : {list}
 Discovered    : {N} candidates | {A} already integrated | {T} Tier 2 skipped | {W} queued | {R} remaining (re-invoke)
-Phase 1       : {P} entries written | {E} with empty claims (no ## Claims section)
+Phase 1       : {P} entries written | {S} structured-claim pages | {L} legacy-claim pages | {E} with empty claims (no ## Claims section) | {NS} claims with source: not specified
 Phase 2       : {M} clusters updated (new: {X} | promoted: {Y} | contested: {Z}) | {Q} reassessments ({TR} triggered | {OD} overdue)
 Validation    : all passed | {F} failures (fixed)
 Health check  : python3 scripts/health_check.py --integrate {slug}
@@ -419,6 +468,6 @@ Health check  : python3 scripts/health_check.py --integrate {slug}
 10. Log the run even if no YAML files changed.
 11. Do not read `raw/parsed/` — work only from wiki pages written by the ingest agent.
 12. `paper_count` must always equal `len(papers)`.
-13. Every claim must have a non-null `source` field citing at least one paper section.
+13. Every claim must have a non-null `source` field. New structured claims should cite at least one paper section; legacy claims without extractable provenance may use `source: "not specified"` and must be reported in the summary.
 14. `--regenerate-clusters` preserves `open_questions`, `trend_notes`, `reassessment_queue`.
 15. If a concept slug is not in the registry in `docs/content.md`, flag it and stop — do not create unsanctioned YAMLs.
