@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://openreview.net/forum?id=868masI331",
   "pdf_url": "https://openreview.net/pdf?id=868masI331",
   "pdf_path": "raw/papers/iclr-2025-868masI331.pdf",
@@ -29,9 +29,18 @@
   ],
   "relevance_score": 0.95,
   "relevance_note": "HALL-E introduces a hierarchical neural codec LM that addresses the long-form synthesis challenge in autoregressive TTS by using multi-scale token prediction.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

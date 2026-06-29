@@ -16,7 +16,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://openreview.net/forum?id=tQ1PmLfPBL",
   "pdf_url": "https://openreview.net/pdf?id=tQ1PmLfPBL",
   "pdf_path": "raw/papers/iclr-2025-tQ1PmLfPBL.pdf",
@@ -27,9 +27,18 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "PeriodWave proposes multi-period flow matching for high-fidelity waveform generation, directly advancing neural vocoder design for TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

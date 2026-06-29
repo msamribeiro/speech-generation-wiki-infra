@@ -24,7 +24,7 @@
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-05-26",
   "url": "https://openreview.net/forum?id=kYkfCs4ZAH",
   "pdf_url": "https://openreview.net/pdf?id=kYkfCs4ZAH",
   "pdf_path": "raw/papers/iclr-2026-kYkfCs4ZAH.pdf",
@@ -34,10 +34,11 @@
     "codec"
   ],
   "relevance_score": 0.88,
-  "relevance_note": "FlexiCodec proposes a dynamic neural audio codec that achieves very low frame rates while preserving semantic information — core codec infrastructure for speech LMs.",
-  "status": "accepted",
+  "relevance_note": "FlexiCodec proposes a dynamic neural audio codec that achieves very low frame rates while preserving semantic information \u2014 core codec infrastructure for speech LMs.",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2510.00981"
 }

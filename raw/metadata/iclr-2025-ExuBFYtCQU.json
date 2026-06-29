@@ -23,7 +23,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-11",
   "url": "https://openreview.net/forum?id=ExuBFYtCQU",
   "pdf_url": "https://openreview.net/pdf?id=ExuBFYtCQU",
   "pdf_path": "raw/papers/iclr-2025-ExuBFYtCQU.pdf",
@@ -34,9 +34,10 @@
   ],
   "relevance_score": 0.97,
   "relevance_note": "MaskGCT introduces masked generative codec transformers for zero-shot TTS, eliminating explicit alignment requirements and achieving strong naturalness and speaker similarity at scale.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2409.00750"
 }

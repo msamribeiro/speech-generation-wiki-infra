@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-13",
   "url": "https://openreview.net/forum?id=4YpMrGfldX",
   "pdf_url": "https://openreview.net/pdf?id=4YpMrGfldX",
   "pdf_path": "raw/papers/iclr-2025-4YpMrGfldX.pdf",
@@ -31,9 +31,10 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Demonstrates that scaling transformer parameter count with FSQ quantization achieves high-quality speech coding at low bitrates, a core neural codec contribution for TTS pipelines.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2411.19842"
 }

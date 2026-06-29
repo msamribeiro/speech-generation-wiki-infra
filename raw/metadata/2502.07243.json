@@ -51,8 +51,8 @@
   "status": "ingested",
   "fetched_date": "2026-06-08",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null,
+  "is_duplicate": true,
+  "canonical_id": "iclr-2025-anQDiQZhDP",
   "generation_history": [
     {
       "date": "2026-06-14",

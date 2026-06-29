@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 3,
   "published_date": "2025-03-02",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://aclanthology.org/2025.nodalida-1.32",
   "pdf_url": "https://aclanthology.org/2025.nodalida-1.32.pdf",
   "pdf_path": "raw/papers/2025.nodalida-1.32.pdf",
@@ -33,11 +33,20 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Estonian isolated-word TTS synthesiser for pronunciation training; directly advances low-resource TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-03-02",
-  "venue_detail": "NoDaLiDa/Baltic-HLT 2025: Joint 25th Nordic Conference on Computational Linguistics and 11th Baltic Conference on Human Language Technologies (Tallinn, Estonia, Mar 2–5, 2025)"
+  "venue_detail": "NoDaLiDa/Baltic-HLT 2025: Joint 25th Nordic Conference on Computational Linguistics and 11th Baltic Conference on Human Language Technologies (Tallinn, Estonia, Mar 2–5, 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

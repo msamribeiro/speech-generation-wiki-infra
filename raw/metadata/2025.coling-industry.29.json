@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 1,
   "published_date": "2025-01-19",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://aclanthology.org/2025.coling-industry.29",
   "pdf_url": "https://aclanthology.org/2025.coling-industry.29.pdf",
   "pdf_path": "raw/papers/2025.coling-industry.29.pdf",
@@ -31,11 +31,20 @@
   ],
   "relevance_score": 0.42,
   "relevance_note": "Memory management in LLM voice assistants; contribution is NLP/memory, not the speech generation component.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-01-19",
-  "venue_detail": "COLING 2025: Industry Track (Abu Dhabi, UAE, Jan 19–24, 2025)"
+  "venue_detail": "COLING 2025: Industry Track (Abu Dhabi, UAE, Jan 19–24, 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

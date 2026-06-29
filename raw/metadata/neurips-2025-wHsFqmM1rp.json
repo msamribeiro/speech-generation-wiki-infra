@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-10",
-  "ingested_date": null,
+  "ingested_date": "2026-06-04",
   "url": "https://openreview.net/forum?id=wHsFqmM1rp",
   "pdf_url": "https://openreview.net/pdf?id=wHsFqmM1rp",
   "pdf_path": "raw/papers/neurips-2025-wHsFqmM1rp.pdf",
@@ -31,10 +31,11 @@
     "TTS"
   ],
   "relevance_score": 0.9,
-  "relevance_note": "TaDiCodec proposes a text-aware diffusion transformer speech codec for speech LMs, unifying semantic and acoustic tokenization without multi-layer RVQ — core codec/tokenizer contribution.",
-  "status": "accepted",
+  "relevance_note": "TaDiCodec proposes a text-aware diffusion transformer speech codec for speech LMs, unifying semantic and acoustic tokenization without multi-layer RVQ \u2014 core codec/tokenizer contribution.",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2508.16790"
 }

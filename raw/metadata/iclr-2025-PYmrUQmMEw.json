@@ -19,7 +19,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-11",
   "url": "https://openreview.net/forum?id=PYmrUQmMEw",
   "pdf_url": "https://openreview.net/pdf?id=PYmrUQmMEw",
   "pdf_path": "raw/papers/iclr-2025-PYmrUQmMEw.pdf",
@@ -31,9 +31,10 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "LLaMA-Omni integrates a pretrained speech encoder and streaming speech decoder into an open-source LLM for low-latency real-time speech interaction, advancing SCA with simultaneous response text and speech generation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2409.06666"
 }

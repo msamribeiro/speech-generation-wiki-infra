@@ -40,7 +40,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-10",
-  "ingested_date": null,
+  "ingested_date": "2026-06-17",
   "url": "https://openreview.net/forum?id=8PUzLga3lU",
   "pdf_url": "https://openreview.net/pdf?id=8PUzLga3lU",
   "pdf_path": "raw/papers/neurips-2025-8PUzLga3lU.pdf",
@@ -51,9 +51,10 @@
   ],
   "relevance_score": 0.48,
   "relevance_note": "VITA-1.5 is primarily a vision-speech multimodal LLM for interaction; speech synthesis capability is present but the contribution is dominated by vision-language alignment rather than advancing synthesis methods.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2501.01957"
 }

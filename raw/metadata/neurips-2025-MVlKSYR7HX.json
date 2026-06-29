@@ -35,7 +35,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-10",
-  "ingested_date": null,
+  "ingested_date": "2026-06-16",
   "url": "https://openreview.net/forum?id=MVlKSYR7HX",
   "pdf_url": "https://openreview.net/pdf?id=MVlKSYR7HX",
   "pdf_path": "raw/papers/neurips-2025-MVlKSYR7HX.pdf",
@@ -45,10 +45,11 @@
     "TTS"
   ],
   "relevance_score": 0.9,
-  "relevance_note": "MoonCast proposes a zero-shot TTS system for high-quality long-form multi-speaker podcast generation, addressing spontaneity and turn-taking — direct TTS contribution.",
-  "status": "accepted",
+  "relevance_note": "MoonCast proposes a zero-shot TTS system for high-quality long-form multi-speaker podcast generation, addressing spontaneity and turn-taking \u2014 direct TTS contribution.",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "wiki_page_id": "2503.14345"
 }

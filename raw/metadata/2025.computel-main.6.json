@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 3,
   "published_date": "2025-03-01",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://aclanthology.org/2025.computel-main.6",
   "pdf_url": "https://aclanthology.org/2025.computel-main.6.pdf",
   "pdf_path": "raw/papers/2025.computel-main.6.pdf",
@@ -30,11 +30,20 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Evaluates TTS for Ojibwe language education via participatory workshop; directly assesses indigenous language TTS quality and usability.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-03-01",
-  "venue_detail": "ComputEL 2025: 8th Workshop on Computational Methods for Endangered Languages (Honolulu, Hawaii, USA, Mar 2025)"
+  "venue_detail": "ComputEL 2025: 8th Workshop on Computational Methods for Endangered Languages (Honolulu, Hawaii, USA, Mar 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-29",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://aclanthology.org/2025.naacl-long.619",
   "pdf_url": "https://aclanthology.org/2025.naacl-long.619.pdf",
   "pdf_path": "raw/papers/2025.naacl-long.619.pdf",
@@ -33,9 +33,18 @@
   ],
   "relevance_score": 0.48,
   "relevance_note": "Diffusion model for speech enhancement (not generation); uses diffusion methods but for denoising rather than synthesis.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

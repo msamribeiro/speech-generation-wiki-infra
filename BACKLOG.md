@@ -4,7 +4,9 @@
 
 Resume standard corpus ingest and clear the integration backlog.
 
-- [ ] Run dedup pass on 56 OpenReview papers (ICLR 2025: 13, NeurIPS 2025: 16, ICLR 2026: 27) — check title collisions against existing corpus before filtering; proceedings ID is canonical over arXiv
+- [x] Run dedup pass on 56 OpenReview papers (ICLR 2025: 13, NeurIPS 2025: 16, ICLR 2026: 27) — 8 collisions found (all ingested arXiv copies); arXiv records marked `is_duplicate`, proceedings records marked `ingested` with `wiki_page_id` pointers *(completed 2026-06-29)*
+- [x] Pre-Q3 batch — 16 papers (NAACL 2025, ICLR 2025, workshop venues: COLING, CHiPSAL, ComputEL, NoDaLiDa) ingested 2026-06-29; corpus at 354 pages *(completed 2026-06-29)*
+- [ ] Ingest 2 deferred ICLR 2025 papers: `iclr-2025-hQvX9MBowC` (DiTTo-TTS), `iclr-2025-uxDFlPGRLX` (FlowDec)
 - [ ] Standard ingest for papers (July 2025 - September 2025; Q3 2025); then chronologically.
 
 ## Content Stage Implementation [P0 · planned]
@@ -22,7 +24,15 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
 - [ ] Run page quality audit — adoption claims in Field Significance, wrong abstract callout types, field_significance.type mismatches, citation verb phrases in Context sections, spurious self-supervised-speech tags; the automatable subset is handled by the Pipeline Health Suite ingest module; this item covers remaining targeted editorial review for foundational and high-significance pages
 - [ ] Improve in-corpus citation rendering: (a) wikilinks should render as `[[id|Name]]` so Quartz displays them as bracketed `[Name]` anchors consistent with academic citation style, not bare inline text; (b) named models and systems (WaveNet, VITS, HiFi-GAN, etc.) that have a corpus page should link directly via `[[id|WaveNet]]` rather than appearing as prose followed by a separate paper ID reference ("WaveNet [2609.03499]" → `[[2609.03499|WaveNet]]`); update ingest agent spec and writing style guide, then run a targeted fix pass on high-traffic pages first
 - [ ] Repair flow-matching.yaml (malformed YAML: paper entries appear after trend_notes instead of under papers)
-- [ ] Migrate 2 wiki pages from arXiv to canonical conference IDs: 2510.00981 → iclr-2026-kYkfCs4ZAH (FlexiCodec), 2508.16790 → neurips-2025-wHsFqmM1rp (TaDiCodec); do after integration pass to avoid broken links
+- [ ] Migrate 8 wiki pages from arXiv to canonical conference IDs (dedup pass 2026-06-29; OpenReview metadata already updated with `wiki_page_id` pointers); do after integration pass to avoid broken links:
+  - 2411.19842 → iclr-2025-4YpMrGfldX (Scaling Transformers for Low-Bitrate Speech Coding)
+  - 2409.00750 → iclr-2025-ExuBFYtCQU (MaskGCT)
+  - 2409.06666 → iclr-2025-PYmrUQmMEw (LLaMA-Omni)
+  - 2502.07243 → iclr-2025-anQDiQZhDP (Vevo)
+  - 2501.01957 → neurips-2025-8PUzLga3lU (VITA-1.5)
+  - 2503.14345 → neurips-2025-MVlKSYR7HX (MoonCast)
+  - 2510.00981 → iclr-2026-kYkfCs4ZAH (FlexiCodec)
+  - 2508.16790 → neurips-2025-wHsFqmM1rp (TaDiCodec)
 - [ ] Write wiki/about.md: 3-repo structure, project philosophy, ingest pipeline overview, how to contribute or report errors; link from wiki/index.md
 
 ## Infrastructure [P1 · planned]

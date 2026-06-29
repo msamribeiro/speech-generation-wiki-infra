@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-29",
-  "ingested_date": null,
+  "ingested_date": "2026-06-29",
   "url": "https://aclanthology.org/2025.findings-naacl.298",
   "pdf_url": "https://aclanthology.org/2025.findings-naacl.298.pdf",
   "pdf_path": "raw/papers/2025.findings-naacl.298.pdf",
@@ -30,10 +30,19 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Investigates gender bias in instruction-conditioned TTS style-guided models; directly relevant to evaluation and fairness in TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-04-29"
+  "conference_date": "2025-04-29",
+  "generation_history": [
+    {
+      "date": "2026-06-29",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d69868c"
+    }
+  ]
 }

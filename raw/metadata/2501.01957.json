@@ -50,12 +50,12 @@
   "arxiv_comment": "NeurIPS 2025 Spotlight, Code 2.4K Stars: https://github.com/VITA-MLLM/VITA",
   "task": [],
   "relevance_score": null,
-  "relevance_note": "Citation-discovered: cited 16× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "relevance_note": "Citation-discovered: cited 16\u00d7 by in-corpus papers (Q3\u202f2025\u2013Q2\u202f2026 quarterly analysis). Accepted without filter scoring.",
   "status": "ingested",
   "fetched_date": "2026-06-08",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null,
+  "is_duplicate": true,
+  "canonical_id": "neurips-2025-8PUzLga3lU",
   "generation_history": [
     {
       "date": "2026-06-17",
