@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-29",
-  "ingested_date": null,
+  "ingested_date": "2026-06-30",
   "url": "https://aclanthology.org/2025.findings-naacl.38",
   "pdf_url": "https://aclanthology.org/2025.findings-naacl.38.pdf",
   "pdf_path": "raw/papers/2025.findings-naacl.38.pdf",
@@ -31,10 +31,19 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Novel emotion-conditioned TTS with localized acoustic cue integration via selective masking; directly advances emotional TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-04-29"
+  "conference_date": "2025-04-29",
+  "generation_history": [
+    {
+      "date": "2026-06-30",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "f406e94"
+    }
+  ]
 }

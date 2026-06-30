@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-30",
   "url": "https://openreview.net/forum?id=uxDFlPGRLX",
   "pdf_url": "https://openreview.net/pdf?id=uxDFlPGRLX",
   "pdf_path": "raw/papers/iclr-2025-uxDFlPGRLX.pdf",
@@ -31,9 +31,18 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "FlowDec proposes a flow matching-based neural audio codec for full-band 48kHz audio, combining non-adversarial codec training with a stochastic postfilter — core codec infrastructure contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-30",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "f406e94"
+    }
+  ]
 }

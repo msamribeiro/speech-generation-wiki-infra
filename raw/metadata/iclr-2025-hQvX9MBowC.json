@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 4,
   "published_date": "2025-04-24",
-  "ingested_date": null,
+  "ingested_date": "2026-06-30",
   "url": "https://openreview.net/forum?id=hQvX9MBowC",
   "pdf_url": "https://openreview.net/pdf?id=hQvX9MBowC",
   "pdf_path": "raw/papers/iclr-2025-hQvX9MBowC.pdf",
@@ -29,9 +29,18 @@
   ],
   "relevance_score": 0.95,
   "relevance_note": "DiTTo-TTS proposes a diffusion transformer TTS model that removes domain-specific phoneme/duration dependencies, achieving state-of-the-art TTS scalability.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-06-30",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "f406e94"
+    }
+  ]
 }

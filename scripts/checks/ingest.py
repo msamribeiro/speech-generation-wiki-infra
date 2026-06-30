@@ -191,15 +191,25 @@ def _check_claims_section(paper_id: str, fm: dict, body: str) -> list[Issue]:
     next_heading = re.search(r"\n## ", body[start:])
     section = body[start : start + next_heading.start()] if next_heading else body[start:]
 
-    bullets = [ln for ln in section.splitlines() if ln.strip().startswith("- ")]
-    if not bullets:
+    # Group each "- " bullet with its indented continuation lines (e.g. the
+    # "Evidence: ... *(§N.N)*" line), since the citation lives on the
+    # continuation line, not the bullet line itself.
+    lines = section.splitlines()
+    blocks: list[str] = []
+    for ln in lines:
+        if ln.strip().startswith("- "):
+            blocks.append(ln)
+        elif blocks and ln.strip():
+            blocks[-1] += "\n" + ln
+
+    if not blocks:
         return [_issue("error", paper_id, "claims_section",
                        "## Claims section has no bullet points")]
 
-    uncited = [b for b in bullets if "*(§" not in b and "*(Appendix" not in b]
+    uncited = [b for b in blocks if "*(§" not in b and "*(Appendix" not in b]
     if uncited:
         return [_issue("error", paper_id, "claims_section",
-                       f"{len(uncited)}/{len(bullets)} claims missing *(§N.N)* citation")]
+                       f"{len(uncited)}/{len(blocks)} claims missing *(§N.N)* citation")]
 
     return []
 

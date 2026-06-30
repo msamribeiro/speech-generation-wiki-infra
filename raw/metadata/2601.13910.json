@@ -21,8 +21,8 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2025,
-  "month": 1,
-  "published_date": "2026-01-20",
+  "month": 12,
+  "published_date": "2025-12-20",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2601.13910",
   "pdf_url": "https://aclanthology.org/2025.ijcnlp-long.24.pdf",
@@ -40,5 +40,5 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-01-01"
+  "conference_date": "2025-12-20"
 }
