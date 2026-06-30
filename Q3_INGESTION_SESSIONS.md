@@ -109,6 +109,41 @@ Fix bare wikilinks and any schema errors before marking the paper done.
 
 ---
 
+### 2026-06-30 — Pre-Q3 ICLR + remaining NAACL batch (session 2)
+
+**Scope:** Ingested 8 accepted papers chronologically (pre-Q3 backlog, through 2025-04-29), completing the deferred ICLR papers and the remaining NAACL 2025 Findings/Demo/Long papers not covered in session 1.
+
+**Completed:**
+
+1. **Scope correction** — broadened ingest scope from "Q3 2025 only (Jul–Sep)" to "all accepted papers chronologically through end of Q3 2025," surfacing 17 pre-Q3 papers still uningested. Fixed `raw/metadata/2601.13910.json` conference date (IJCNLP-AACL 2025 met Dec 20–24 2025, not Jan 2025).
+
+2. **8-paper ingest batch** (two batches of 4, with cross-paper critique round after each):
+   - iclr-2025-hQvX9MBowC (DiTTo-TTS, ICLR)
+   - iclr-2025-uxDFlPGRLX (FlowDec, ICLR)
+   - 2025.findings-naacl.130 (DiVISe, NAACL Findings)
+   - 2025.findings-naacl.279 (BnTTS, NAACL Findings)
+   - 2025.findings-naacl.38 (Prompt-Guided Selective Masking Loss, NAACL Findings)
+   - 2025.naacl-demo.12 (ESPnet-SpeechLM, NAACL Demo)
+   - 2025.naacl-demo.21 (ESPnet-SDS, NAACL Demo)
+   - 2025.naacl-long.484 (Behavior-SD, NAACL)
+
+3. **Infrastructure fix** — `scripts/checks/ingest.py` claims-citation check was a false positive: it only scanned `- ` bullet lines, missing the `Evidence:` continuation line where `*(§N.N)*` actually lives in the two-line claims format. Fixed to group each bullet with its continuation lines before checking.
+
+4. **Corpus-wide venue drift fix** — `venues/index.md` had stale paper counts across most active venue rows (years of blind +1 increments). Synced all rows to authoritative venue-page frontmatter values in one pass.
+
+**Corpus after session:** 363 ingested pages.
+
+**Recurring QC issues to watch (updated):**
+- Spurious `multilingual-tts` on single-language papers — remove if paper covers only one language, even if it adapts a multilingual framework
+- Spurious `spoken-language-model` on papers that merely use a text LLM as an upstream conditioning module — concept requires discrete speech tokens, no text intermediate
+- Ingest agents count `index.md` paper count before finishing their own write (off by one) — add "count as the very last step after all files written" to ingest prompt; verify and correct in QC
+- Bare wikilinks `[[id]]` instead of `[[id|Name]]` still occur occasionally in Wiki Connections; now caught by health check (wikilink_format warning)
+- `field_significance.type` is correctly a list (array) per docs/content.md schema — the prior note saying "should be string not array" was incorrect
+
+**Next session:** Continue chronologically — 2025.iwsds-1.11 (Paralinguistic Attitude Recognition), 2025.iwsds-1.27 (Turn-taking Survey), 2507.06235 (Super Kawaii Vocalics), 2505.15772 (MIKU-PAL), then remaining pre-Q3 papers, then Q3 2025 (Jul–Sep) papers.
+
+---
+
 ## Progress
 
 Track by running:
