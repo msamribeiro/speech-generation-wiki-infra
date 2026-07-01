@@ -19,7 +19,7 @@
   "year": 2025,
   "month": 5,
   "published_date": "2025-05-01",
-  "ingested_date": null,
+  "ingested_date": "2026-06-30",
   "url": "https://aclanthology.org/2025.iwsds-1.11",
   "pdf_url": "https://aclanthology.org/2025.iwsds-1.11.pdf",
   "pdf_path": "raw/papers/2025.iwsds-1.11.pdf",
@@ -30,11 +30,20 @@
   ],
   "relevance_score": 0.5,
   "relevance_note": "Paralinguistic attitude recognition for spoken dialogue systems; primarily SER/understanding, with generation implications for SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-05-01",
-  "venue_detail": "IWSDS 2025: 15th International Workshop on Spoken Dialogue Systems Technology (Bilbao, Spain, May 2025)"
+  "venue_detail": "IWSDS 2025: 15th International Workshop on Spoken Dialogue Systems Technology (Bilbao, Spain, May 2025)",
+  "generation_history": [
+    {
+      "date": "2026-06-30",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

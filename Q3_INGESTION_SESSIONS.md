@@ -62,6 +62,8 @@ python3 scripts/health_check.py --ingest {ID} --wiki-dir /path/to/wiki-content
 
 Fix bare wikilinks and any schema errors before marking the paper done.
 
+Also check the INGEST_RESULT signal for `review_flags`. If any flags are present, add the paper to the **Manual Verification Queue** above with the flag field and agent's reason. Resolve flagged papers by hand after the batch completes — do not block the next paper on them.
+
 ---
 
 ## Session Log
@@ -141,6 +143,70 @@ Fix bare wikilinks and any schema errors before marking the paper done.
 - `field_significance.type` is correctly a list (array) per docs/content.md schema — the prior note saying "should be string not array" was incorrect
 
 **Next session:** Continue chronologically — 2025.iwsds-1.11 (Paralinguistic Attitude Recognition), 2025.iwsds-1.27 (Turn-taking Survey), 2507.06235 (Super Kawaii Vocalics), 2505.15772 (MIKU-PAL), then remaining pre-Q3 papers, then Q3 2025 (Jul–Sep) papers.
+
+---
+
+### 2026-07-01 — Pre-Q3 + Q3 ACL/arXiv batch (session 3)
+
+**Scope:** 30 papers ingested chronologically — completing the pre-Q3 backlog (papers 1–8, April–June 2025) and starting Q3 2025 (papers 9–30, July 2025 ACL + workshop + arXiv papers).
+
+**Completed:**
+
+1. **New QC feature** — added `review_flags` field to the ingest agent's INGEST_RESULT JSON signal. Agent emits flags only when genuinely uncertain about `claims` role assignment or `field_significance` level (precision gate, not recall gate). Manual Verification Queue added to this session note. No flags raised across all 30 papers.
+
+2. **30-paper ingest batch** (chronological):
+   - 2025.naacl-long.591 (VAT length generalisation, NAACL)
+   - 2025.naacl-short.65 (kNN-TTS, NAACL)
+   - 2025.naacl-short.69 (Indigenous language TTS, NAACL)
+   - 2025.iwsds-1.11 (Paralinguistic attitude recognition, IWSDS)
+   - 2025.iwsds-1.27 (Turn-taking survey, IWSDS)
+   - 2505.15772 (MIKU-PAL emotion annotation benchmark, arXiv)
+   - 2507.06235 (Super Kawaii Vocalics, arXiv)
+   - 2506.23049 (AURA cascaded SCA, arXiv)
+   - 2025.acl-long.681 (SIFT-50M, ACL)
+   - 2025.acl-long.790 (Rhythm-Controllable VC, ACL)
+   - 2025.acl-long.817 (SimulS2S-LLM, ACL)
+   - 2025.acl-long.87 (Takin-VC, ACL)
+   - 2025.acl-long.937 (UniCodec, ACL)
+   - 2025.acl-long.997 (Align-SLM, ACL)
+   - 2025.conll-1.9 (Intonational phrasing in TTS, CoNLL)
+   - 2025.findings-acl.101 (Chain-Talker, ACL)
+   - 2025.findings-acl.115 (SLAM-Omni, ACL)
+   - 2025.findings-acl.1226 (PodAgent, ACL)
+   - 2025.findings-acl.470 (Voice assistant context recall, ACL)
+   - 2025.findings-acl.534 (Speech instruction query rewriting, ACL)
+   - 2025.findings-acl.631 (Slamming, ACL)
+   - 2025.findings-acl.687 (TCSinger 2, ACL)
+   - 2025.findings-acl.71 (ASK-QA + DAMSEL, ACL)
+   - 2025.findings-acl.75 (Unit language guidance S2ST, ACL)
+   - 2025.findings-ijcnlp.49 (DST in Japanese full-duplex dialogue, ACL)
+   - 2025.iwslt-1.5 (SSR modality connector, IWSLT)
+   - 2025.unlp-1.11 (Ukrainian TTS lexical stress, workshop)
+   - 2412.18603 (SpeechSSM long-form speech, ICML)
+   - 2503.11026 (MAVFlow AV2AV translation, arXiv)
+   - 2505.15670 (SALM-Duplex, arXiv)
+
+3. **QC fixes** — 7 bare wikilinks fixed across 6 papers (2506.23049, 2025.acl-long.817, 2025.findings-acl.101 citation format, 2025.findings-acl.470, 2025.findings-ijcnlp.49, 2503.11026 ×2). Index count corrected after each paper (recurring agent off-by-one bug).
+
+**Corpus after session:** 393 ingested pages.
+
+**Late addition (session 3 wrap-up):** 2 more papers ingested to reach 32 total for the session:
+   - 2506.09874 (UmbraTTS, arXiv) — environment-aware TTS via flow matching; architecture figure included
+   - 2506.18296 (JIS corpus, Interspeech) — Japanese idol speaker corpus; dataset-contribution only
+
+**Corpus after session:** 395 ingested pages.
+
+**Next session:** Continue Q3 2025 chronologically from `2506.23325` (XY-Tokenizer).
+
+---
+
+## Manual Verification Queue
+
+Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.
+
+| Paper ID | Flag | Agent note |
+|----------|------|------------|
+| _(none yet)_ | | |
 
 ---
 

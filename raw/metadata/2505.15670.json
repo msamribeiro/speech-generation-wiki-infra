@@ -23,7 +23,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-25",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://arxiv.org/abs/2505.15670",
   "pdf_url": "https://arxiv.org/pdf/2505.15670.pdf",
   "pdf_path": "raw/papers/2505.15670.pdf",
@@ -35,9 +35,18 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Proposes SALM-Duplex, a full-duplex speech-to-speech architecture with codec agent outputs and channel fusion, directly advancing SCA systems.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

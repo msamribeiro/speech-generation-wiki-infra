@@ -21,7 +21,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-27",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://aclanthology.org/2025.findings-acl.1226",
   "pdf_url": "https://aclanthology.org/2025.findings-acl.1226.pdf",
   "pdf_path": "raw/papers/2025.findings-acl.1226.pdf",
@@ -33,10 +33,19 @@
   ],
   "relevance_score": 0.65,
   "relevance_note": "Framework for podcast generation combining multi-agent content creation and TTS/VC for voice production; TTS is a key component but the paper's focus is content pipeline.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-07-27"
+  "conference_date": "2025-07-27",
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

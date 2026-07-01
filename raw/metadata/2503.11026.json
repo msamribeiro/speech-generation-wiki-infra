@@ -17,7 +17,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-30",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://arxiv.org/abs/2503.11026",
   "pdf_url": "https://arxiv.org/pdf/2503.11026.pdf",
   "pdf_path": "raw/papers/2503.11026.pdf",
@@ -30,9 +30,18 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Proposes a conditional flow matching renderer for zero-shot audio-visual-to-audio-visual translation preserving speaker identity, advancing multilingual VC/TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

@@ -492,12 +492,32 @@ open(path,'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "
 ```
 
-### 8. Emit return signal
+### 8. Assess review flags
+
+Before emitting the return signal, decide whether any fields need human review. This is a **precision gate, not a recall gate** — only flag when you are genuinely uncertain, not as a routine check. If you made a confident judgment call, do not flag it.
+
+Flag `"field_significance"` when:
+- The impact level sits at a hard boundary (e.g., `moderate` vs. `high`) **and** the distinguishing factor is post-publication adoption data you cannot see from the paper alone — i.e., the paper could credibly be either level and you cannot resolve it from the text.
+- Do NOT flag because you had to make a judgment call. Flag only when two reasonable readers of this paper would likely land on different levels.
+
+Flag `"claims"` when:
+- A claim's role prefix (`supports:`, `complicates:`, etc.) is genuinely ambiguous because the paper's own evidence points in two directions and you cannot determine which applies — e.g., the results section contradicts the conclusion section, or a key experiment is partially retracted in a later footnote.
+- The evidence for a claim is thin enough that you could not write a confident `Evidence:` line with a section citation — e.g., the claim is present in the abstract but the supporting section is missing from `paper.md`.
+- Do NOT flag for normal difficulty in phrasing. Flag only when a human reading the paper would find the classification genuinely unclear.
+
+`review_flags` is a list of objects: `{"field": "claims" | "field_significance", "reason": "one sentence"}`. Omit it (or use `[]`) when no flags apply.
+
+### 9. Emit return signal
 
 The **last line of your output** must be exactly this format (valid JSON after the prefix):
 
 ```
-INGEST_RESULT: {"id": "{ID}", "title": "{title}", "venue": "{venue}", "year": {year}, "related_concepts": [{slugs}], "in_corpus_refs": [{corpus_ids}], "success": true}
+INGEST_RESULT: {"id": "{ID}", "title": "{title}", "venue": "{venue}", "year": {year}, "related_concepts": [{slugs}], "in_corpus_refs": [{corpus_ids}], "review_flags": [], "success": true}
+```
+
+When flags apply:
+```
+INGEST_RESULT: {"id": "{ID}", "title": "{title}", "venue": "{venue}", "year": {year}, "related_concepts": [{slugs}], "in_corpus_refs": [{corpus_ids}], "review_flags": [{"field": "field_significance", "reason": "Level sits at moderate/high boundary; distinguishing factor is post-publication citation uptake, not visible from paper."}], "success": true}
 ```
 
 On failure (any step above aborted):

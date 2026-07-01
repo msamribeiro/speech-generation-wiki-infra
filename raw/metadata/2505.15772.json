@@ -16,7 +16,7 @@
   "year": 2025,
   "month": 5,
   "published_date": "2025-05-21",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://arxiv.org/abs/2505.15772",
   "pdf_url": "https://arxiv.org/pdf/2505.15772.pdf",
   "pdf_path": "raw/papers/2505.15772.pdf",
@@ -29,9 +29,18 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Automated multimodal pipeline for extracting high-consistency emotional speech labels for TTS training; directly advances TTS data.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

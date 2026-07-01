@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-10",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://arxiv.org/abs/2506.09874",
   "pdf_url": "https://arxiv.org/pdf/2506.09874.pdf",
   "pdf_path": "raw/papers/2506.09874.pdf",
@@ -34,9 +34,18 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Introduces UmbraTTS, a flow-matching TTS model that jointly generates speech and environmental audio, contributing a novel conditioning approach to TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

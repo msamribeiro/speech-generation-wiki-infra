@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-27",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://aclanthology.org/2025.findings-acl.534",
   "pdf_url": "https://aclanthology.org/2025.findings-acl.534.pdf",
   "pdf_path": "raw/papers/2025.findings-acl.534.pdf",
@@ -33,10 +33,19 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Rewriting ASR data for speech instruction following in large speech LMs; primarily data/training advancement for speech LLMs.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-07-27"
+  "conference_date": "2025-07-27",
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }

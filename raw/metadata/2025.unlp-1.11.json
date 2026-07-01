@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-31",
-  "ingested_date": null,
+  "ingested_date": "2026-07-01",
   "url": "https://aclanthology.org/2025.unlp-1.11",
   "pdf_url": "https://aclanthology.org/2025.unlp-1.11.pdf",
   "pdf_path": "raw/papers/2025.unlp-1.11.pdf",
@@ -31,11 +31,20 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Rule-based phonemizer and lexical stress prediction for Ukrainian TTS preprocessing; directly advances TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-07-31",
-  "venue_detail": "UNLP 2025: 4th Workshop on Ukrainian Natural Language Processing; co-located with ACL 2025 (Vienna, Austria, Jul 31–Aug 1, 2025)"
+  "venue_detail": "UNLP 2025: 4th Workshop on Ukrainian Natural Language Processing; co-located with ACL 2025 (Vienna, Austria, Jul 31–Aug 1, 2025)",
+  "generation_history": [
+    {
+      "date": "2026-07-01",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d5891a3"
+    }
+  ]
 }
