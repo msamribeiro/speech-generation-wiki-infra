@@ -187,11 +187,12 @@ generation:
 ## Claims
 
 {2–5 field-level propositions this paper provides evidence for, against, or complicates.
-Each is one sentence, stated at the field level, reusable across papers.
-Each is followed by an inline source citation.}
+Each claim is one generalised sentence followed by a blockquote Evidence line with paper-local detail and a section citation.}
 
-- {Claim 1.} *(§N.N)*
-- {Claim 2.} *(§N.N, Table N)*
+- **supports:** {Generalized claim sentence.}
+  > *Evidence:* {Specific result, mechanism, comparison, dataset, or ablation.} *(§N.N, Table N)*
+- **complicates:** {Generalized claim sentence.}
+  > *Evidence:* {Specific limitation, failure case, or trade-off.} *(§N.N)*
 
 ## Limitations and Open Questions
 

@@ -217,18 +217,25 @@ after earlier papers were ingested. The integration agent must support both.
 **Structured format (preferred for new paper pages):**
 
 ```markdown
+- **supports:** {generalized claim sentence.}
+  > *Evidence:* {specific paper-local evidence.} *(§4.2, Table 1)*
+- **complicates:** {generalized claim sentence.}
+  > *Evidence:* {specific scope limit, failure mode, or caveat.} *(§5.1)*
+```
+
+Also accept the older inline-continuation variant (no blockquote) for pages ingested before the format change:
+
+```markdown
 - supports: {generalized claim sentence.}
   Evidence: {specific paper-local evidence.} *(§4.2, Table 1)*
-- complicates: {generalized claim sentence.}
-  Evidence: {specific scope limit, failure mode, or caveat.} *(§5.1)*
 ```
 
 Parse structured claims as:
 
-- `role` — from the prefix: `supports`, `complicates`, `contradicts`, or `refines`
+- `role` — from the prefix: `supports`, `complicates`, `contradicts`, or `refines` (strip `**` bold markers if present)
 - `claim` — the generalized claim sentence after the prefix
-- `evidence` — the `Evidence:` continuation line, with the source citation removed
-- `source` — the inline citation from the `Evidence:` line
+- `evidence` — the `> *Evidence:*` blockquote line (or plain `Evidence:` continuation), with the source citation removed
+- `source` — the inline citation from the Evidence line
 
 **Legacy format (backward compatibility for already-ingested paper pages):**
 

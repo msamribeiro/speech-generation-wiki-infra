@@ -60,15 +60,18 @@ A claim is one sentence, stated at the field level, reusable across multiple pap
 
 ### Section citations (provenance)
 
-Every claim must be followed by an inline italic citation to the section(s) of the source paper where the supporting evidence appears:
+Each claim uses a two-line format: a bold role prefix on the bullet line, followed by a blockquote Evidence line carrying the paper-specific detail and an inline section citation:
 
-```
-- Claim text. *(§4.1)*
-- Claim text. *(§3.2, Table 2)*
-- Claim text. *(§4.3, Figure 3)*
+```markdown
+- **supports:** {Generalized claim sentence.}
+  > *Evidence:* {Specific result, mechanism, or failure case from this paper.} *(§4.1, Table 2)*
+- **complicates:** {Generalized claim sentence.}
+  > *Evidence:* {Specific limitation or trade-off.} *(§5.1)*
 ```
 
-Use the section number and title if the paper labels them (e.g. `§4.1 "Inference Speed"`). If the paper uses chapter letters or appendix labels, use those (e.g. `*(Appendix B)*`). If evidence spans multiple sections, cite all of them. Do not cite the abstract or introduction alone — find the section where the result or argument is actually presented.
+Role prefixes: `**supports:**`, `**complicates:**`, `**contradicts:**`, `**refines:**`.
+
+The section citation `*(§N.N)*` goes at the end of the Evidence line. Use the section number and title if the paper labels them (e.g. `§4.1 "Inference Speed"`). Named sections without numbers are valid: `*(§Limitations)*`, `*(§Appendix B)*`. If evidence spans multiple sections, cite all of them. Do not cite the abstract or introduction alone — find the section where the result or argument is actually presented.
 
 This grounds each claim in the paper and allows readers and future agents to verify it directly in the source PDF.
 

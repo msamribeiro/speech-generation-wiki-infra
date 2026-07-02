@@ -200,6 +200,55 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
+### 2026-07-02 — Q3 arXiv July batch (session 4)
+
+**Scope:** 28 papers ingested chronologically — July 2025 arXiv papers (2507.xxxxx), covering the backlog that predated XY-Tokenizer and continuing through late July 2025.
+
+**Completed:**
+
+1. **Claims format upgrade** — changed the two-line claims format across all agents, docs, and 80 existing paper pages:
+   - Old: `- supports: {claim}\n  Evidence: {detail} *(§N.N)*`
+   - New: `- **supports:** {claim}\n  > *Evidence:* {detail} *(§N.N)*`
+   - Updated: ingest agent, integration agent, review agent, `docs/writing-style.md`, `docs/content.md`, `scripts/checks/ingest.py` (comment only — logic unchanged). Bulk sed conversion of all 80 existing pages passed corpus-wide health check with 0 errors.
+
+2. **28-paper ingest batch** (chronological):
+   - 2507.02176 (Speaker Similarity Assessment, arXiv)
+   - 2507.00808 (Multi-interaction TTS, arXiv)
+   - 2507.01611 (QHARMA-GAN vocoder, arXiv)
+   - 2507.02380 (JoyTTS spoken chatbot, arXiv)
+   - 2507.03887 (Traceable TTS, arXiv)
+   - 2507.03912 (Prosody Labeling Phoneme-BERT, arXiv)
+   - 2507.08012 (RepeaTTS, arXiv)
+   - 2507.04349 (TTS-CtrlNet emotion, arXiv)
+   - 2507.04598 (Hierarchical Emotion Distribution TTS, arXiv)
+   - 2507.04817 (Fast-VGAN VC, arXiv)
+   - 2507.01348 (SpeechAccentLLM, arXiv)
+   - 2507.06116 (Speech Quality Assessment MoE, arXiv)
+   - 2506.23325 (XY-Tokenizer codec, arXiv)
+   - 2507.07799 (SecureSpeech, arXiv)
+   - 2507.08319 (Active Learning for TTS, arXiv)
+   - 2507.09070 (SemAlignVC, arXiv)
+   - 2507.09282 (ClaritySpeech dementia obfuscation, arXiv)
+   - 2507.09310 (Lombard VC, arXiv)
+   - 2507.10985 (Pronunciation Deviation Analysis, arXiv)
+   - 2507.12197 (QTTS / QDAC codec, arXiv)
+   - 2507.14988 (DMOSpeech 2 RL duration, arXiv)
+   - 2507.15272 (A2TTS Indian languages, arXiv)
+   - 2507.16875 (Duration Prediction tech report, arXiv)
+   - 2507.21138 (TTS-1 Technical Report, arXiv)
+   - 2507.18119 (GOAT-SLM paralinguistics, arXiv)
+   - 2507.18897 (HH-Codec, arXiv)
+   - 2507.17527 (Seed LiveInterpret 2.0, arXiv)
+   - 2507.20140 (Do Not Mimic My Voice unlearning, arXiv)
+
+3. **QC fixes** — 22 bare wikilinks fixed across 13 papers. F5-TTS ID corrected from `2410.06885` to canonical `2025.acl-long.313` in 2507.04349. Index count corrected after every paper (recurring agent off-by-one).
+
+**Corpus after session:** 423 ingested pages.
+
+**Next session:** Continue Q3 2025 chronologically from `2507.20731` (Neural Vocoder Range-Null Space).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.

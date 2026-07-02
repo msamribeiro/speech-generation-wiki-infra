@@ -191,9 +191,10 @@ def _check_claims_section(paper_id: str, fm: dict, body: str) -> list[Issue]:
     next_heading = re.search(r"\n## ", body[start:])
     section = body[start : start + next_heading.start()] if next_heading else body[start:]
 
-    # Group each "- " bullet with its indented continuation lines (e.g. the
-    # "Evidence: ... *(§N.N)*" line), since the citation lives on the
-    # continuation line, not the bullet line itself.
+    # Group each "- " bullet with its continuation lines. The citation lives on
+    # the Evidence line, not the bullet itself. Two formats are accepted:
+    #   New:  "  > *Evidence:* ... *(§N.N)*"  (blockquote, post-2026-07-02)
+    #   Old:  "  Evidence: ... *(§N.N)*"       (inline continuation, legacy)
     lines = section.splitlines()
     blocks: list[str] = []
     for ln in lines:

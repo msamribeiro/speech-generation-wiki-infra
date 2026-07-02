@@ -40,7 +40,7 @@
   "year": 2025,
   "month": 7,
   "published_date": "2025-07-25",
-  "ingested_date": null,
+  "ingested_date": "2026-07-02",
   "url": "https://arxiv.org/abs/2507.18119",
   "pdf_url": "https://arxiv.org/pdf/2507.18119.pdf",
   "pdf_path": "raw/papers/2507.18119.pdf",
@@ -52,9 +52,18 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Introduces GOAT-SLM, a spoken language model with paralinguistic and speaker characteristic awareness, advancing SCA systems with richer speech understanding and generation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-02",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "b722087"
+    }
+  ]
 }

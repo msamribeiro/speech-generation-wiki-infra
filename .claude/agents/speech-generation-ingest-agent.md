@@ -262,11 +262,11 @@ Good patterns: "introduces…", "enables…", "provides…", "demonstrates…", 
 {2–5 structured, paper-local claims about speech generation. These claims are the handoff to the integration agent, so preserve both the reusable proposition and the concrete evidence from this paper.
 
 Each claim must:
-- start with one of these role prefixes: `supports:`, `complicates:`, `contradicts:`, `refines:`
+- start with a bold role prefix: `**supports:**`, `**complicates:**`, `**contradicts:**`, or `**refines:**`
 - state one generalised proposition about speech generation, reusable across papers
 - be field-level, not paper-subject language; avoid "this paper shows..." in the claim sentence
 - avoid raw metric values, model names, and paper-specific details in the claim sentence
-- include an `Evidence:` continuation line with the paper-specific mechanism, result, comparison, dataset, or failure case
+- include a `> *Evidence:*` blockquote line with the paper-specific mechanism, result, comparison, dataset, or failure case
 - include an inline source citation on the Evidence line: *(§N.N)*, *(§N.N, Table N)*, *(§N.N, Figure N)*, etc.
 
 Role meanings:
@@ -277,10 +277,10 @@ Role meanings:
 
 Do not include adoption claims such as "widely adopted" or "standard" unless this paper itself provides a systematic survey or citation analysis.}
 
-- supports: {Generalized claim sentence.}
-  Evidence: {Specific result, mechanism, comparison, dataset, or ablation from this paper.} *({§section or Table/Figure reference})*
-- complicates: {Generalized claim sentence.}
-  Evidence: {Specific limitation, failure case, measurement caveat, or trade-off from this paper.} *({§section or Table/Figure reference})*
+- **supports:** {Generalized claim sentence.}
+  > *Evidence:* {Specific result, mechanism, comparison, dataset, or ablation from this paper.} *({§section or Table/Figure reference})*
+- **complicates:** {Generalized claim sentence.}
+  > *Evidence:* {Specific limitation, failure case, measurement caveat, or trade-off from this paper.} *({§section or Table/Figure reference})*
 
 ## Limitations and Open Questions
 
@@ -623,6 +623,6 @@ Use these display names in `## Wiki Connections`. Do not open concept files to l
 10. Only copy figures when `field_significance.type` includes `architectural-novelty`. Never copy figures for empirical, evaluation, dataset, or engineering-integration papers.
 11. Never embed a figure whose PNG does not exist at `raw/parsed/{ID}/assets/figure-N.png`. Verify with `ls` before copying.
 12. Re-ingest only when the invocation explicitly says `Re-ingest` or `--force`; never infer overwrite permission.
-13. Every claim in `## Claims` must use a role prefix (`supports:`, `complicates:`, `contradicts:`, or `refines:`) and an `Evidence:` line with a source citation.
+13. Every claim in `## Claims` must use a bold role prefix (`**supports:**`, `**complicates:**`, `**contradicts:**`, or `**refines:**`) and a blockquote `> *Evidence:*` line with a source citation `*(§N.N)*`.
 14. `## Wiki Connections` must use title aliases for concept links from the concept title map, not raw slugs.
 15. Include at most 8 in-corpus paper references in `## Wiki Connections`; prioritize direct methodological, baseline, dataset, metric, extension, or challenge relationships.

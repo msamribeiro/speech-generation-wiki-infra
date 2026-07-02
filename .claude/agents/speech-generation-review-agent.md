@@ -262,11 +262,12 @@ A claim is a generalised proposition about speech generation that this paper sup
 - Be stated at the field level — not "this paper shows…" but a general proposition another paper could also support or refute
 - Avoid raw metric values, model names, and paper-specific details
 - Be reusable: a future paper could cite the same claim as supporting or contradictory evidence
-- Be followed by an inline section citation: `*(§N.N)*`, `*(§N.N, Table N)*`, `*(§N.N, Figure N)*` — cite the specific section(s) of the source paper where the evidence appears
+- Use a bold role prefix: `**supports:**`, `**complicates:**`, `**contradicts:**`, or `**refines:**`
+- Be followed by a blockquote Evidence line with an inline section citation: `*(§N.N)*`, `*(§N.N, Table N)*`, `*(§N.N, Figure N)*` — cite the specific section(s) where the evidence appears
 
-**If the section is absent:** write 2–5 claims from scratch, each with `*(§N.N)*` citations. Read the paper carefully to identify the sections that support each claim.
+**If the section is absent:** write 2–5 claims from scratch using the format below. Read the paper carefully to identify supporting sections.
 
-**If the section exists but bullets lack `*(§N.N)*` citations:** read the paper to identify the supporting section(s) for each existing claim, then add the citation inline after the bullet text. Do not rewrite the claim text unless it is factually wrong.
+**If the section exists but bullets lack `*(§N.N)*` citations:** add the citation to the Evidence line (or add an Evidence line if missing). Do not rewrite claim text unless it is factually wrong.
 
 **If the section exists and citations are present:** verify the citations are accurate (the cited section actually supports the claim). Correct any that are wrong.
 
@@ -274,8 +275,10 @@ Write exactly:
 ```markdown
 ## Claims
 
-- {Claim 1.} *(§N.N)*
-- {Claim 2.} *(§N.N, Table N)*
+- **supports:** {Claim sentence.}
+  > *Evidence:* {Paper-local detail.} *(§N.N)*
+- **complicates:** {Claim sentence.}
+  > *Evidence:* {Limitation or trade-off.} *(§N.N, Table N)*
 ```
 
 #### 3g. Write the corrected page
