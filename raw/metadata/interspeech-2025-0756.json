@@ -21,7 +21,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-17",
-  "ingested_date": null,
+  "ingested_date": "2026-07-02",
   "url": "https://www.isca-archive.org/interspeech_2025/chao25_interspeech.html",
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/chao25_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-0756.pdf",
@@ -32,9 +32,18 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Affective MoE adapter for spoken dialogue models with fine-grained paralinguistic control; advances SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-02",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d8ecfd4"
+    }
+  ]
 }

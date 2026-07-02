@@ -249,6 +249,54 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
+### 2026-07-02 to 2026-07-03 — Q3 August Interspeech/workshop batch (session 5)
+
+**Scope:** 23 papers ingested chronologically in batches of 4, one paper at a time with a health check after each — continuing from `2507.20731` through the start of the large Interspeech 2025 block (papers dated 2025-08-01 and 2025-08-17).
+
+**Completed:**
+
+1. **23-paper ingest batch** (chronological):
+   - 2507.20731 (Neural Vocoder Range-Null Space, arXiv)
+   - 2025.ccl-1.77 (HFSD-V2C Visual Voice Cloning, workshop)
+   - 2025.icnlsp-1.34 (DPO for TTS on Unlabeled Speech, workshop)
+   - 2025.sigdial-1.21 (TRPDformer turn-taking, workshop)
+   - 2025.sigdial-1.27 (EmoNews SDS, workshop)
+   - 2025.sigdial-1.51 (rrSDS 2.0, workshop)
+   - interspeech-2025-0166 (Frozen LLMs Perceive Paralinguistics, Interspeech)
+   - interspeech-2025-0305 (DAFMSVC singing VC, Interspeech)
+   - interspeech-2025-0347 (PeriodCodec, Interspeech)
+   - interspeech-2025-0355 (Codec Robustness Probing, Interspeech)
+   - interspeech-2025-0383 (VC for Likability Control, Interspeech)
+   - interspeech-2025-0433 (Human-to-Animal VC, Interspeech)
+   - interspeech-2025-0438 (LinearVC, Interspeech)
+   - interspeech-2025-0464 (Prosody-Adaptable Codecs for Zero-Shot VC, Interspeech)
+   - interspeech-2025-0506 (EnCodecMAE, Interspeech)
+   - interspeech-2025-0656 (EEG-based VC, Interspeech)
+   - interspeech-2025-0706 (Contextual Paralinguistic Data Creation, Interspeech)
+   - interspeech-2025-0756 (A-SMiLE affective MoE adapter, Interspeech)
+   - interspeech-2025-0998 (Voice-ENHANCE diffusion VC, Interspeech)
+   - interspeech-2025-1020 (Prosody Embedding Codebook, Interspeech)
+   - interspeech-2025-1081 (Speaker Normalization + Content Restoration VC, Interspeech)
+   - interspeech-2025-1084 (Streaming TTS with RVQ/Mamba, Interspeech)
+   - interspeech-2025-1098 (GST-BERT-TTS, Interspeech)
+
+2. **Recurring QC issues this session (updated):**
+   - **Index count drift got worse, not better** — `wiki/index.md`'s 4-occurrence paper-count prose drifted from the true `wiki/papers/index.md` row count on roughly half of all papers this session, by as much as ±8 (not just off-by-one). This persisted even after adding an explicit "run `grep -c \"^| \\[\\[\" wiki/papers/index.md` after appending your row and use that exact number" instruction to every prompt. Manual `grep -c` verification + correction after every single paper is now mandatory, not optional.
+   - **`spoken-language-model`/`subjective-evaluation` tag precision, both directions** — under-tagged `subjective-evaluation` on papers reporting genuine MOS/listening tests (missed 3 times), over-tagged `subjective-evaluation` on papers using only automated/LLM-judge scoring (caught once), and over-tagged `spoken-language-model` on non-generative systems. Established working precedent: speech-in/text-out systems via a frozen or fine-tuned LLM backbone (e.g. DeSTA2, SpeechEmotionLlama-style) DO qualify for `spoken-language-model` in this corpus's actual practice, even though the concept's written definition emphasizes speech-to-speech generation — this is a documented tension worth resolving later (see `docs/content.md` concept registry vs. `wiki/concepts/spoken-language-model.md` abstract).
+   - **Agent self-report cannot be trusted** — twice this session an ingest agent's final summary explicitly stated a tag should NOT be applied (with correct reasoning), while the actual file it wrote included that exact tag anyway. Every QC pass now requires re-reading the actual frontmatter/Wiki Connections from the file, never trusting the agent's narrated summary.
+   - **Wikilink format is context-dependent and gets confused in both directions** — `wiki/papers/index.md`'s ID column must be a bare `[[id]]` (display title is the next column); everywhere else (Wiki Connections, inline citations) must be piped `[[id|Display Name]]`. Agents mixed these up in both directions this session.
+   - **Rejected-duplicate citation trap** — one paper cited a rejected arXiv duplicate ID instead of the canonical ingested ID for the same paper (same title, different ID, exact F5-TTS-style trap from memory). Always verify a cited in-corpus ID has `status: ingested` and an existing wiki page before trusting the citation.
+   - **Batch execution undercounting** — three separate times a requested "batch of four" only resulted in 3 ingest agents actually being launched; two were caught via user-visible arithmetic mismatches, one slipped through silently and was only resolved because the next batch happened to start with the missed paper. No papers were permanently lost, but batch launch counts need to be verified against the intended size before reporting completion.
+   - **Session-limit interruptions, twice** — one ingest agent was cut off after writing only the paper page and figure assets, before completing index/venue/log/metadata updates; recovered by manually completing the remaining steps. A second agent was cut off before any file writes; a clean retry from scratch was safe.
+
+3. **Date rollover mid-session** — the calendar date changed from 2026-07-02 to 2026-07-03 partway through the batch. Ingest agents handled this correctly on their own (new `## 2026-07-03` section inserted at the top of `wiki/log.md`, `ingested_date`/`generation.date` fields consistent, `Last updated` bumped) — no manual correction needed.
+
+**Corpus after session:** 445 ingested pages. Q3 2025 progress: 220 ingested, 146 remaining.
+
+**Next session:** Continue Q3 2025 chronologically from `interspeech-2025-1106` (LSCodec).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.

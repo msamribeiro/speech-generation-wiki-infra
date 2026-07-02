@@ -24,7 +24,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-01",
-  "ingested_date": null,
+  "ingested_date": "2026-07-02",
   "url": "https://aclanthology.org/2025.sigdial-1.51",
   "pdf_url": "https://aclanthology.org/2025.sigdial-1.51.pdf",
   "pdf_path": "raw/papers/2025.sigdial-1.51.pdf",
@@ -35,11 +35,20 @@
   ],
   "relevance_score": 0.42,
   "relevance_note": "Modular spoken dialogue system demo framework; SCA infrastructure work with TTS as a component.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-08-01",
-  "venue_detail": "SIGDIAL 2025: 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue (Avignon, France, Aug 2025)"
+  "venue_detail": "SIGDIAL 2025: 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue (Avignon, France, Aug 2025)",
+  "generation_history": [
+    {
+      "date": "2026-07-02",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "d8ecfd4"
+    }
+  ]
 }
