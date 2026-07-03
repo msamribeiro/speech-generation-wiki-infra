@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-17",
-  "ingested_date": null,
+  "ingested_date": "2026-07-03",
   "url": "https://www.isca-archive.org/interspeech_2025/liu25j_interspeech.html",
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/liu25j_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-1229.pdf",
@@ -29,9 +29,18 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "End-to-end voice conversion preserving background sounds using in-context learning; advances VC.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-03",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "f9e71e3"
+    }
+  ]
 }

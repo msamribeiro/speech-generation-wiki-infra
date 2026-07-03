@@ -297,13 +297,95 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
+### 2026-07-03 — Q3 Interspeech continuation (session 6, in progress)
+
+**Scope:** Continuing Q3 2025 chronologically, one paper at a time with health check + go-ahead between papers.
+
+**Completed so far:**
+
+1. interspeech-2025-1106 (LSCodec, Interspeech) — codec paper, `field_significance: moderate/architectural-novelty`, no `review_flags` raised. Figure-2 (architecture diagram) embedded after confirming figure-1 was the ISCA-logo false positive.
+
+2. **Index count drift recurrence** — the ingest agent reported `wiki/index.md` at 442 papers after this ingest; actual `grep -c "^| \[\[" wiki/papers/index.md` was 446, a 4-paper undercount. Corrected all four occurrences in `wiki/index.md` by hand (abstract callout, "Papers and Venues" section ×2, "Reports" section). This confirms the session-5 finding that manual `grep -c` verification after every paper is required, not optional — the agent's self-reported count cannot be trusted even after the explicit-instruction fix attempted in session 5.
+
+**Batch 1 of 4 (interspeech-2025-1115, -1192, -1210, -1229):**
+
+3. interspeech-2025-1115 (MPE-TTS, Interspeech) — `field_significance: moderate/architectural-novelty`. **review_flag raised**: level sits at moderate/low boundary because the primary baseline (MM-TTS) is a reproduction without an official release, limiting evidential weight of reported gains. Added to Manual Verification Queue below. Also fixed one bare wikilink in Wiki Connections (`[[2301.02111]]` → `[[2301.02111|VALL-E]]`). Index count: agent reported 455, actual was 447 (8-paper overcount) — corrected by hand.
+
+4. interspeech-2025-1192 (Voice Impression Control in Zero-Shot TTS, Interspeech, NTT) — `field_significance: moderate/[architectural-novelty, engineering-integration]`. No review flags; GRL-based control module confirmed as the genuine novel contribution. No wikilink issues. Index count: agent reported 456, actual was 448 (8-paper overcount) — corrected by hand.
+
+5. interspeech-2025-1210 (DiffEmotionVC, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Fixed one bare wikilink in Wiki Connections (`[[2412.10117]]` → `[[2412.10117|CosyVoice 2]]`); reference confirmed as a valid in-corpus citation (CosyVoice 2, ingested). Index count: agent reported 457, actual was 449 (8-paper overcount) — corrected by hand.
+
+6. interspeech-2025-1229 (E2E-BPVC, Interspeech) — `field_significance: moderate/engineering-integration`. No review flags. No wikilink issues (Seed-TTS citation correctly piped). Index count: agent reported 450, actual was 450 — first correct self-report in this session's 4 attempts so far.
+
+**Recurring QC issues this batch:**
+- **Index count drift persists at ~8-paper magnitude** — 3 of 4 papers this batch had the agent overcount by exactly 8 (455/456/457 reported vs. 447/448/449 actual); the 4th was correct. Magnitude is consistent enough to suggest the agent may be anchoring on a stale in-context number rather than computing fresh each time, but the fix remains the same: manual `grep -c` verification after every paper, no exceptions.
+- **Bare wikilinks in Wiki Connections recurring** — 2 of 4 papers this batch (interspeech-2025-1115, interspeech-2025-1210) had a bare `[[id]]` citation for an in-corpus paper reference despite the explicit piped-format instruction in the prompt; both fixed by hand before health check passed clean.
+- Venue page (`2025-interspeech.md`) and `venues/index.md` counts were correct on all 4 papers this batch — no drift observed there.
+
+**Batch 2 of 4 (interspeech-2025-1236, -1334, -1364, -1394):**
+
+7. interspeech-2025-1236 (Accelerating Diffusion-based TTS Training with Dual Modality Alignment / A-DMA, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Four in-corpus citations, all valid and correctly piped, including F5-TTS correctly cited via its canonical ID (2025.acl-long.313, not the arXiv duplicate) — first clean application of that precedent this session. Index count: agent reported 459, actual was 451 (8-paper overcount) — corrected by hand.
+
+8. interspeech-2025-1334 (MiSTR, iEEG-to-speech BCI synthesis, Interspeech) — `field_significance: moderate/architectural-novelty`. No agent-raised review_flags, but **manual flag added**: the agent applied `task: TTS`, though the paper's input is intracranial EEG, not text — no canonical vocabulary term exists for brain-to-speech decoding, and `TTS` (defined as "speech synthesis from text") is a definitional mismatch. Logged to Manual Verification Queue below for a user decision on whether to add a vocabulary term or accept TTS as the closest fit. No wikilink issues. Index count: agent reported 460, actual was 452 (8-paper overcount) — corrected by hand.
+
+9. interspeech-2025-1364 (VS-Singer, Interspeech) — `field_significance: moderate/architectural-novelty`. No agent-raised review_flags, but **caught and fixed directly**: `task: ["singing", "TTS"]` was applied but `related_concepts` omitted the `singing` concept slug (only had diffusion-tts/evaluation-metrics/subjective-evaluation) — added `singing` to `related_concepts` and a corresponding Wiki Connections bullet by hand. No wikilink issues otherwise. Index count: agent reported 461, actual was 453 (8-paper overcount) — corrected by hand.
+
+10. interspeech-2025-1394 (DiEmo-TTS, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. First paper this session where the agent's self-reported count (454) matched actual on the first try, and no wikilink issues — prompt addition warning about the task/related_concepts mismatch (from paper 9) may have helped, though this paper didn't have a matching case to test it against.
+
+**Recurring QC issues this batch:**
+- **Index count drift continues at exactly 8 on 3 of 4 papers** — same magnitude as batch 1, still resolved only by manual `grep -c` verification.
+- **New pattern: task/related_concepts mismatch** — a `task` tag (e.g. `singing`) not mirrored into `related_concepts` even when a matching concept page exists in the registry. Added an explicit instruction about this to the batch's later prompts; one clean paper afterward, but sample size is too small to call it fixed.
+- **New pattern: task tag definitional mismatch on edge-domain papers** — MiSTR (brain-to-speech) forced into `task: TTS` for lack of a better vocabulary term. Not an agent error exactly — the controlled vocabulary genuinely has no term for this — but worth a user decision on how to classify future BCI/neural-signal-to-speech papers if more show up in the corpus.
+
+**Corpus so far:** 454 ingested pages.
+
+**Batch 3 of 4 (interspeech-2025-1397, -1434, -1478, -1494):**
+
+11. interspeech-2025-1397 (VibE-SVC, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. First clean application of the task/related_concepts precedent from paper 9: tagged `task: ["singing", "VC"]` with `singing` correctly included in `related_concepts` from the start. No wikilink issues. Index count: agent reported 463, actual was 455 (8-paper overcount) — corrected by hand.
+
+12. interspeech-2025-1434 (REWIND, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Fully clean on first try: count (456) matched, VALL-E citation correctly piped, no other issues.
+
+13. interspeech-2025-1478 (LightL2S, Interspeech) — **session-limit interruption on first attempt**: the initial agent run was cut off with no files written at all (confirmed via `raw/metadata` status still `accepted` and no paper page/index/venue/log changes) — a clean retry from scratch was safe, consistent with the "no writes yet" recovery case documented in session 5. On retry: `field_significance: moderate/engineering-integration`. Agent correctly self-flagged the `task: TTS` vocabulary gap this time (lip-to-speech, visual input, no text) as instructed, rather than silently applying it like MiSTR did in batch 2 — added to Manual Verification Queue below. Index count: agent reported 465, actual was 457 (8-paper overcount) — corrected by hand.
+
+14. interspeech-2025-1494 (VisualSpeech, Interspeech) — `field_significance: moderate/[architectural-novelty, engineering-integration]`. No review flags; `task: TTS` correctly justified since text remains the primary input (video is only an auxiliary prosody-conditioning signal) — agent correctly distinguished this from the two prior non-text-input cases (MiSTR, LightL2S) rather than over-flagging. **New QC issue**: health check failed with `claims_section` error — one of four claims had its section citation embedded mid-sentence in parentheses instead of as a trailing `*(§N.N)*` marker, so the health check's citation regex didn't match it. Fixed by hand (moved citation to a proper trailing marker: `*(§3.2, Table 2; §3.3, Table 3)*`). Index count: agent reported 466, actual was 458 (8-paper overcount) — corrected by hand.
+
+**Recurring QC issues this batch:**
+- **Index count drift continues at exactly 8** on 3 of 4 papers (all except REWIND) — unchanged from prior batches.
+- **Task/related_concepts precedent held** — VibE-SVC applied it correctly on the first try after being added to the prompt in batch 2.
+- **Vocabulary-gap self-flagging worked when explicitly instructed** — LightL2S self-flagged the TTS/non-text-input mismatch after being told to do so explicitly in the prompt, unlike MiSTR in batch 2 which silently applied the tag. Suggests this class of issue is promptable when named specifically, unlike the index-count bug.
+- **New pattern: malformed claim citations pass the agent's own review but fail health check** — VisualSpeech's citation was embedded inline rather than trailing; this is the first `claims_section` health-check error this session (all prior failures were `wikilink_format`). Worth watching for recurrence.
+- **Session-limit interruptions still occur** — one agent this batch was cut off before any file writes; confirmed clean via metadata status and absence of any partial files before retrying.
+
+**Corpus so far:** 458 ingested pages.
+
+**Batch 4 of 3 — final batch, closes out the 16-paper pre-selected queue (interspeech-2025-1531, -1536, -1538):**
+
+15. interspeech-2025-1531 (SVC content encoder via SSL-embedding dimension reduction, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. **Recurring gap**: `task: ["singing", "VC"]` applied but `related_concepts` again omitted the `singing` slug, despite an explicit instruction in the prompt (third occurrence this session, after VS-Singer in batch 2) — added `singing` to `related_concepts` and a Wiki Connections bullet by hand. First paper this session with a genuinely correct index-count self-report (459, no drift) and clean trailing citation format throughout.
+
+16. interspeech-2025-1536 (Fairness in Dysarthric Speech Synthesis using F5-TTS, Interspeech) — `field_significance: moderate/[evaluation-contribution, empirical-benchmark]`. No review flags. F5-TTS correctly cited via canonical ID (2025.acl-long.313) — clean application of that precedent. Fully clean: count matched (460), no wikilink issues, all citations properly trailing.
+
+17. interspeech-2025-1538 (StarVC, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. `task: VC` confirmed against dedicated VC evaluation (LibriTTS test-clean VC setup vs. TriAAN-VC and CosyVoice baselines). `spoken-language-model` tag verified correct: a Qwen2.5-0.5B LM is adapted to jointly emit text and Mimi codec tokens, matching the "built/adapted LLM emitting discrete speech tokens" precedent exactly. CosyVoice and CosyVoice 2 citations both correct and piped. Index count: agent reported 469, actual was 461 (8-paper overcount) — corrected by hand.
+
+**Recurring QC issues this final batch:**
+- **`task`/`related_concepts` singing-slug gap recurred a third time** (interspeech-2025-1531) despite being called out explicitly in the prompt after batches 2 and 3 — this pattern is more persistent than the vocabulary-gap self-flagging fix, which took hold after one explicit correction. Worth a standing note in the ingest agent's base prompt rather than a per-session reminder.
+- **Index count drift: final tally for the whole 16-paper queue is 12 of 17 ingest attempts drifted (all but one an exact 8-paper overcount, one earlier a 4-paper undercount), 5 were correct on the first try.** Manual `grep -c` verification caught and corrected every instance; no bad count ever reached a committed file.
+- Corpus-wide health check after the full queue: `461 papers, 0 errors, 1178 warnings` — 0 errors confirms the whole 16-paper queue is structurally clean. The 1,178 warnings are accumulated corpus-wide legacy warnings unrelated to this session's papers (not investigated further; out of scope for this ingest pass).
+
+**Queue closed.** All 16 pre-selected papers (interspeech-2025-1106 through interspeech-2025-1538) are ingested. **Corpus: 461 pages.** Q3 2025 progress: 236 ingested, 130 remaining.
+
+**Next session:** Continue Q3 2025 chronologically from `interspeech-2025-1550` (ArVoice, Arabic multi-speaker TTS dataset).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
-| _(none yet)_ | | |
+| interspeech-2025-1115 (MPE-TTS) | field_significance | Level sits at moderate/low boundary; primary baseline (MM-TTS) is a reproduction without an official open-source release, limiting the evidential weight of reported gains — could justify low rather than moderate. |
+| interspeech-2025-1334 (MiSTR) | task vocabulary gap (caught in manual QC, not agent-raised) | Tagged `task: TTS` for lack of a better term, but input is intracranial EEG, not text — no canonical vocabulary term covers brain-to-speech decoding. Needs a user decision: accept TTS as closest fit, or add a new vocabulary term for future BCI/neural-signal-to-speech papers. |
+| interspeech-2025-1478 (LightL2S) | task vocabulary gap (agent self-flagged this time) | Same underlying gap as MiSTR: `task: TTS` applied to lip-to-speech (visual input, no text). Agent flagged it explicitly per this batch's prompt instruction. Same user decision needed — likely resolved together with the MiSTR item once a decision is made (e.g. new vocabulary term, or an explicit documented exception for non-text-input systems). |
 
 ---
 
