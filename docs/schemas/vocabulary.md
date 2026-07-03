@@ -6,7 +6,7 @@ canonical term and note the original in the paper page.
 ## Tasks
 
 - `TTS` — text-to-speech, speech synthesis from text
-- `VC` — voice conversion, speaker style transfer (only when evaluated on dedicated VC benchmarks: L2-ARCTIC, ESD, VCTK conversion; zero-shot voice cloning alone is not VC)
+- `VC` — voice conversion, speaker/style transfer (the paper trains and/or evaluates a dedicated VC system with VC-specific metrics — e.g. speaker similarity, EER, WER-on-converted-output — regardless of whether the benchmark is a canonical one like L2-ARCTIC/ESD/VCTK conversion or a custom/paper-specific dataset; zero-shot TTS voice cloning as an incidental capability, with no dedicated VC evaluation, is not VC)
 - `SCA` — spoken conversational agent, speech LM dialogue system (frontmatter tag only; in prose always write "spoken conversational agents" or "speech LMs")
 - `codec` — neural audio codec (foundational, not a task itself)
 - `evaluation` — primarily a benchmark, metric, or listening test methodology paper

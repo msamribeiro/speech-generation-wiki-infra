@@ -377,6 +377,45 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
+### 2026-07-03 — Q3 Interspeech continuation (session 7, paused after batch 2 of 4)
+
+**Scope:** Pre-selected 16 papers chronologically (interspeech-2025-1550 through -2151, all 2025-08-17), same size as session 6. Ingesting in sequential batches of 4.
+
+**Batch 1 of 4 (interspeech-2025-1550, -1625, -1638, -1639):**
+
+1. interspeech-2025-1550 (ArVoice, Arabic multi-speaker TTS dataset, Interspeech) — `field_significance: moderate/dataset-contribution`. No review flags. **Manual fix**: `task` was `["TTS", "evaluation"]` but the paper trains and evaluates two dedicated VC systems (AAS-VC, KNN-VC) with VC-specific metrics (SPK-SIM, FAR) on the ArVoice corpus itself — added `VC` to `task`. This surfaced a vocabulary gap (see below). Index count matched (462), no wikilink issues.
+
+2. interspeech-2025-1625 (Mimic Blocker, self-supervised adversarial VC defense, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Fully clean: `task: ["VC"]` correctly applied by the agent, `self-supervised-speech` correctly justified (WavLM/HuBERT are core to the attack-loss formulation, not just cited), index count matched (463), no wikilink issues.
+
+3. interspeech-2025-1638 (EATS-Speech, emotion-adaptive zero-shot TTS, Interspeech) — **session-limit interruption on first attempt**, confirmed no files written (metadata still `accepted`, no page/index/venue/log/assets) — clean retry from scratch. On retry: `field_significance: moderate/architectural-novelty`. No review flags. Fully clean: two in-corpus citations (VALL-E, CosyVoice) both piped and confirmed `status: ingested`, index count matched (464), no wikilink issues.
+
+4. interspeech-2025-1639 (LombardTokenizer, RVQ-layer vocal-effort disentanglement, Interspeech) — `field_significance: moderate/[architectural-novelty, dataset-contribution]`. No review flags. **Manual fixes**: (a) `task` was `["codec", "TTS"]` — wrong on both counts, the paper has no text input at all (pure audio-to-audio vocal-effort conversion) and trains/evaluates VC vs. FreeVC baselines with WER/EER; corrected to `["codec", "VC"]`. (b) `wiki/index.md`'s 4 paper-count occurrences were untouched by the agent and still read 461 (stale from before this batch) despite 3 papers already having been added; corrected all 4 to 465 by hand.
+
+**New pattern this batch — VC task tagging vocabulary gap:** Three of four papers (ArVoice, Mimic Blocker, LombardTokenizer) train and evaluate dedicated VC systems with genuine VC-specific metrics (speaker similarity, EER, WER-on-converted-output), but on custom/paper-specific datasets rather than the three benchmarks (L2-ARCTIC, ESD, VCTK conversion) that `docs/schemas/vocabulary.md` literally named as the qualifying set. User decided to broaden the rule: `docs/schemas/vocabulary.md` and `feedback_vc_task_tagging` memory updated 2026-07-03 so `VC` applies to any dedicated VC training/evaluation with VC-specific metrics, regardless of benchmark. The old restrictive wording was under-inclusive given actual corpus composition.
+
+**Corpus so far:** 465 pages.
+
+**Batch 2 of 4 (interspeech-2025-1684, -1726, -1747, -1763):**
+
+5. interspeech-2025-1684 (SA-RAS, speaker-aware retrieval-augmented zero-shot TTS, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. **QC fixes**: 2 bare wikilinks in Wiki Connections (`[[2301.02111]] (VALL-E)` and `[[2407.05407]] (CosyVoice)` written with the display name outside the brackets instead of piped) — fixed to `[[id|Name]]` format. Index count drift resurfaced despite the agent claiming all 4 occurrences matched: agent reported 462, actual `grep -c` was 466 — corrected by hand.
+
+6. interspeech-2025-1726 (Voice Reconstruction for AAC personalisation, Hungarian dysarthric-speech case study, Interspeech) — `field_significance: moderate/[empirical-benchmark, engineering-integration]`. No review flags. **New failure mode**: the agent was given the correct freshly-verified count (466) in its prompt but overrode it with its own incorrect recollection, writing "463 (462 before this ingest, 463 after)" — a fabricated baseline, not a stale one. Actual `grep -c` was 467; corrected by hand. Page content itself was otherwise clean (wikilinks, claims format, tags all correct).
+
+7. interspeech-2025-1747 (FasterVoiceGrad, one-step diffusion VC distillation, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. `task: VC` correctly applied. **Index count reported as 476** (should have been 468) — largest drift yet, corrected by hand. **New failure mode discovered**: two *prior* papers' hand-fixed `task` frontmatter (ArVoice `interspeech-2025-1550`, LombardTokenizer `interspeech-2025-1639`, both fixed in batch 1 to add `VC`) were never propagated to their corresponding rows in `wiki/papers/index.md` — those rows still showed the old `TTS, evaluation` / `codec, TTS` task values. This was caught incidentally while investigating the count drift and fixed by hand for both rows. Lesson: manual frontmatter fixes to a paper page must also update its `papers/index.md` row; the index row is not auto-derived.
+
+8. interspeech-2025-1763 (Vocoder-Projected Feature Discriminator, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. `task: ["VC"]` correctly applied (no TTS, since there's no text input — discriminator paper for VC/TTS acoustic-feature training). Page content, wikilinks, and index-row task column all correctly matched. **Index count reported as 477** (should have been 469) — corrected by hand.
+
+**Recurring QC issues this batch:**
+- **Index count drift got dramatically worse** — magnitudes this batch were +4, -4 (fabricated), +8, +8 relative to actual, not the more consistent ±8 seen in prior sessions. One case (paper 6) involved the agent actively discarding a correct externally-supplied count in favor of a wrong self-computed one, which is a new and more concerning failure mode than simple staleness.
+- **Cross-file consistency gap**: hand-edited frontmatter fixes don't propagate to `papers/index.md` rows automatically — this needs to become a standing QC step whenever a paper page's `task` (or other index-column) field is corrected after the fact.
+- Bare wikilink pattern recurred in a new form: display name written outside the brackets (`[[id]] (Name)`) rather than the more common all-bare `[[id]]` — same underlying issue, different malformation.
+
+**Corpus so far:** 469 pages, 0 errors corpus-wide (`469 papers, 0 errors, 1178 warnings`).
+
+**Next session:** Continue with batch 3 of 4 from `interspeech-2025-1776` (SpeechSEC), then -1819, -1873, -1940. Remaining after that: -2031, -2032, -2075, -2151 (batch 4).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.
