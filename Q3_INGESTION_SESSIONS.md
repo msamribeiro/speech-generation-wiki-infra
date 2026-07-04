@@ -416,6 +416,56 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
+### 2026-07-04 to 2026-07-05 — Q3 Interspeech continuation (session 8, paused after batch 3 of 6)
+
+**Scope:** Pre-selected 24 papers chronologically (interspeech-2025-1776 through the "Hear Me Out" author-ID paper, all still 2025-08-17), larger than sessions 6/7's 16-paper batches. Ingesting in sequential batches of 4 (6 batches total).
+
+**Batch 1 of 6 (interspeech-2025-1776, -1819, -1873, -1940):**
+
+1. interspeech-2025-1776 (SpeechSEC, unified multi-task synthesis/editing/continuation, Interspeech) — `field_significance: moderate/[architectural-novelty, engineering-integration]`. No review flags. **Manual fix**: index count drifted by -4 (agent wrote 466, actual 470); corrected by hand.
+
+2. interspeech-2025-1819 (MS-Wavehax, streaming-optimized vocoder, Interspeech) — `field_significance: moderate/[architectural-novelty, empirical-benchmark]`. No review flags. **Manual fix**: agent fabricated index count 479 despite being given the correct baseline (470) in-prompt; actual was 471 — same "discards correct externally-supplied count" failure mode first seen in session 7 batch 2, recurring here.
+
+3. interspeech-2025-1873 (Can AI Understand Mandarin Speech Prosody?, benchmark, Interspeech) — `field_significance: moderate/[evaluation-contribution, dataset-contribution]`. No review flags. **Manual fixes**: (a) spurious `task: TTS` — paper is a pure comprehension benchmark with no synthesis; removed, keeping `["SCA", "evaluation"]`. (b) removed accompanying spurious `multilingual-tts` related_concept and its Wiki Connections bullet. (c) propagated the task fix to the `papers/index.md` row (lesson from session 7: hand fixes don't auto-propagate).
+
+4. interspeech-2025-1940 (Investigating Stochastic Methods for Prosody Modeling, Interspeech) — `field_significance: moderate/[empirical-benchmark, architectural-novelty]`. No review flags. **Manual fixes**: (a) 2 bare wikilinks (`[[2301.02111]]`, `[[2412.06602]]`) converted to piped format. (b) **new failure mode**: `[[2412.06602|Controllable TTS survey]]` pointed to a paper with `status: rejected` and no wiki page — a dangling wikilink to a non-corpus paper. Converted to a plain non-linked citation and removed from `related_papers`.
+
+**Corpus so far:** 473 pages.
+
+**Batch 2 of 6 (interspeech-2025-2031, -2032, -2075, -2151):**
+
+5. interspeech-2025-2031 (Kinship in Speech, phonotactic-family zero-shot TTS for Indian languages, Interspeech) — `field_significance: moderate/engineering-integration`. No review flags. Index count matched (474). **Manual fix**: F5-TTS (`2025.acl-long.313`) listed in `related_papers`/`in_corpus_refs` but only appeared in the source paper's undifferentiated bibliography — never discussed or cited via wikilink anywhere in the page body. Removed from `related_papers` as an unused/fabricated relation.
+
+6. interspeech-2025-2032 (ExagTTS, controllable word-stress exaggeration for L2 learners, Interspeech) — `field_significance: low/engineering-integration`. No review flags. Fully clean: index count matched (475), no wikilink issues, no spurious tags.
+
+7. interspeech-2025-2075 (Segmentation-Variant Codebooks, multi-granularity DSU quantization, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. **Manual fixes**: (a) index count fabricated as 484 (actual 476) — this happened right as the session hit its limit, so it wasn't caught until the following session resumed. (b) spurious `task: TTS` alongside `codec` — paper has `conditioning: []`, no text input at all (HuBERT-unit resynthesis, not text-to-speech); removed, propagated to index row.
+
+8. interspeech-2025-2151 (FaVC, parallel Farsi VC dataset, Interspeech) — `field_significance: moderate/dataset-contribution`. No review flags. Index count matched (477). **Manual fix**: spurious `multilingual-tts` related_concept on a pure-VC paper with no TTS component; removed along with its Wiki Connections bullet.
+
+**Corpus so far:** 477 pages, 0 errors corpus-wide.
+
+**Batch 3 of 6 (interspeech-2025-2159, -2189, -2283, -2328):**
+
+9. interspeech-2025-2159 (Generating Consistent Prosodic Patterns from Open-Source TTS Systems, Interspeech) — `field_significance: low/[evaluation-contribution, engineering-integration]`. No review flags. Fully clean: index count matched (478), no wikilink or tagging issues.
+
+10. interspeech-2025-2189 (ProMode, task-agnostic zero-shot prosody encoder-decoder, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Fully clean: index count matched (479); F5-TTS (`2025.acl-long.313`) correctly cited inline in both Method prose and Wiki Connections this time (contrast with paper 5's fabricated citation).
+
+11. interspeech-2025-2283 (Pairwise Evaluation of Accent Similarity, evaluation methodology, Interspeech) — `field_significance: moderate/evaluation-contribution`. No review flags. **Manual fix**: agent fabricated index count 488 with a nonsensical justification (cited 10 papers ingested earlier that day as the cause, though those were already reflected in the given baseline of 479); actual was 480.
+
+12. interspeech-2025-2328 (A Watermark for Auto-Regressive Speech Generation Models, Interspeech) — `field_significance: moderate/[engineering-integration, evaluation-contribution]`. No review flags raised by the agent, but a manual vocabulary-gap concern: tagged `task: TTS` despite `conditioning: []` (no text-conditioning at all) — the test model (SpiritLM) is a general speech-continuation LM, not specifically text-to-speech. Same unresolved gap as MiSTR/LightL2S from session 7 (non-text-input speech generation with no clean canonical fit). Left as `TTS` per that precedent; added to Manual Verification Queue below.
+
+**Corpus so far:** 481 pages, 0 errors corpus-wide (`481 papers, 0 errors, 1178 warnings`).
+
+**Recurring QC issues this session:**
+- **Index count fabrication continues** despite prompt hardening (explicit literal `grep -c` command, explicit correct baseline, explicit instruction not to adjust based on guesses) — 4 of 12 papers this session still had a wrong count (1776, 1819, 2075, 2283), though the magnitude and pattern varies each time. This is now the single most persistent recurring failure across sessions 7–8 and does not appear to respond to prompt engineering; manual verification after every paper remains mandatory.
+- **New failure mode — dangling wikilinks to non-corpus papers**: citing a paper by ID that has no wiki page (status `rejected`/`pending`) as a bracketed `[[wikilink]]`. Added explicit instruction to verify cited paper status before linking; held clean for the remaining 8 papers after being introduced in the batch-1 prompt.
+- **New failure mode — unused/fabricated related_papers entries**: listing a paper in `related_papers`/`in_corpus_refs` that only appears in the source paper's raw bibliography, with no actual discussion or wikilink in the page body. Same prompt fix (require an in-page citation to justify the relation) also held clean for the rest of the session.
+- Spurious task/related_concept tags recurred twice more (Mandarin Prosody Benchmark: `TTS`; Segmentation-Variant Codebooks: `TTS`; FaVC: `multilingual-tts`) — all on the theme of applying a TTS-adjacent tag to a paper with no actual text-to-speech component. Prompt was updated mid-session to require tags match the canonical vocabulary definition, not just thematic adjacency; held clean for papers 9-12.
+
+**Next session:** Continue with batch 4 of 6 from `interspeech-2025-2536` (The Text-to-speech in the Wild database), then -2564, -2573, -2586. Remaining after that: batch 5 (-2595, -2679, -2684, -2726) and batch 6 (-2739, -2787, -2815, and the author-ID "Hear Me Out" paper).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.
@@ -425,6 +475,7 @@ Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal
 | interspeech-2025-1115 (MPE-TTS) | field_significance | Level sits at moderate/low boundary; primary baseline (MM-TTS) is a reproduction without an official open-source release, limiting the evidential weight of reported gains — could justify low rather than moderate. |
 | interspeech-2025-1334 (MiSTR) | task vocabulary gap (caught in manual QC, not agent-raised) | Tagged `task: TTS` for lack of a better term, but input is intracranial EEG, not text — no canonical vocabulary term covers brain-to-speech decoding. Needs a user decision: accept TTS as closest fit, or add a new vocabulary term for future BCI/neural-signal-to-speech papers. |
 | interspeech-2025-1478 (LightL2S) | task vocabulary gap (agent self-flagged this time) | Same underlying gap as MiSTR: `task: TTS` applied to lip-to-speech (visual input, no text). Agent flagged it explicitly per this batch's prompt instruction. Same user decision needed — likely resolved together with the MiSTR item once a decision is made (e.g. new vocabulary term, or an explicit documented exception for non-text-input systems). |
+| interspeech-2025-2328 (AR Speech Watermarking) | task vocabulary gap (caught in manual QC, not agent-raised) | Tagged `task: TTS` but `conditioning: []` — no text input anywhere; the test model (SpiritLM) is a general autoregressive speech-continuation LM, not text-to-speech specifically. Same underlying gap as MiSTR/LightL2S (non-text-input speech generation with no clean canonical fit); left as TTS pending the same user decision. |
 
 ---
 

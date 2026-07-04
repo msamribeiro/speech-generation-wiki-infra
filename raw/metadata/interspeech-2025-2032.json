@@ -19,7 +19,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-17",
-  "ingested_date": null,
+  "ingested_date": "2026-07-04",
   "url": "https://www.isca-archive.org/interspeech_2025/mondal25b_interspeech.html",
   "pdf_url": "https://www.isca-archive.org/interspeech_2025/mondal25b_interspeech.pdf",
   "pdf_path": "raw/papers/interspeech-2025-2032.pdf",
@@ -30,9 +30,18 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Controllable word-stress TTS for exaggerated speech aiding L2 language learners; advances TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-04",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "318f1b4"
+    }
+  ]
 }
