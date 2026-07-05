@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 8,
   "published_date": "2025-08-28",
-  "ingested_date": null,
+  "ingested_date": "2026-07-05",
   "url": "https://arxiv.org/abs/2411.19770",
   "pdf_url": "https://arxiv.org/pdf/2411.19770.pdf",
   "pdf_path": "raw/papers/2411.19770.pdf",
@@ -34,9 +34,18 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Noise-robust one-shot voice conversion with dual-branch speaker representation; directly advances VC.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-05",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "2829243"
+    }
+  ]
 }

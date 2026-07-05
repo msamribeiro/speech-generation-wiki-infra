@@ -32,12 +32,22 @@
   "abstract": null,
   "task": [],
   "relevance_score": 0.5,
-  "relevance_note": "No abstract available; title suggests a speech foundation model but scope (ASR vs generation) is unclear.",
-  "status": "accepted",
+  "relevance_note": "Read the full parsed paper: FAMA is a pure ASR/speech-translation (speech-to-text) foundation model, trained and evaluated only on WER/COMET. No TTS, VC, or SCA component. Likely a filter-stage false accept; sent to review queue for a corpus-inclusion decision rather than rejected outright.",
+  "status": "review",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-09-01",
-  "venue_detail": "CLiC-IT 2025: 11th Italian Conference on Computational Linguistics (Cagliari, Italy, Sep 2025)"
+  "venue_detail": "CLiC-IT 2025: 11th Italian Conference on Computational Linguistics (Cagliari, Italy, Sep 2025)",
+  "generation_history": [
+    {
+      "date": "2026-07-05",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "2829243",
+      "note": "Ingest reverted same day: paper is out-of-scope ASR/ST, no TTS/VC/SCA component. Moved to status: review."
+    }
+  ]
 }

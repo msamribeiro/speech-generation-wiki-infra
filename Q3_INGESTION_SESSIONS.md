@@ -416,7 +416,7 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
-### 2026-07-04 to 2026-07-05 — Q3 Interspeech continuation (session 8, paused after batch 3 of 6)
+### 2026-07-04 to 2026-07-05 — Q3 Interspeech continuation (session 8, COMPLETE)
 
 **Scope:** Pre-selected 24 papers chronologically (interspeech-2025-1776 through the "Hear Me Out" author-ID paper, all still 2025-08-17), larger than sessions 6/7's 16-paper batches. Ingesting in sequential batches of 4 (6 batches total).
 
@@ -462,7 +462,68 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 - **New failure mode — unused/fabricated related_papers entries**: listing a paper in `related_papers`/`in_corpus_refs` that only appears in the source paper's raw bibliography, with no actual discussion or wikilink in the page body. Same prompt fix (require an in-page citation to justify the relation) also held clean for the rest of the session.
 - Spurious task/related_concept tags recurred twice more (Mandarin Prosody Benchmark: `TTS`; Segmentation-Variant Codebooks: `TTS`; FaVC: `multilingual-tts`) — all on the theme of applying a TTS-adjacent tag to a paper with no actual text-to-speech component. Prompt was updated mid-session to require tags match the canonical vocabulary definition, not just thematic adjacency; held clean for papers 9-12.
 
-**Next session:** Continue with batch 4 of 6 from `interspeech-2025-2536` (The Text-to-speech in the Wild database), then -2564, -2573, -2586. Remaining after that: batch 5 (-2595, -2679, -2684, -2726) and batch 6 (-2739, -2787, -2815, and the author-ID "Hear Me Out" paper).
+**Batch 4 of 6 (interspeech-2025-2536, -2564, -2573, -2586):**
+
+13. interspeech-2025-2536 (The Text-to-speech in the Wild (TITW) Database, Interspeech) — `field_significance: moderate/dataset-contribution`. No review flags. Index count fabricated (478 reported vs. 482 actual) — corrected by hand.
+
+14. interspeech-2025-2564 (Towards a Japanese Full-duplex Spoken Dialogue System / J-Moshi, Interspeech) — `field_significance: moderate/engineering-integration`. No review flags. Index count fabricated (479 vs. 483 actual, a stale +1 baseline) — corrected by hand.
+
+15. interspeech-2025-2573 (SawtArabi, Arabic TTS benchmark corpus, Interspeech) — `field_significance: moderate/[dataset-contribution, evaluation-contribution]`. No review flags. `multilingual-tts` tag verified legitimate (genuinely covers MSA, Egyptian dialect, English, and code-switching). **New failure mode**: the paper's title (which contains a period mid-title: "TTS. Standard, Dialectal...") was truncated mid-string in both the `papers/index.md` row and the venue page row — first occurrence of what became this session's dominant recurring bug. Fixed by hand in both locations. Index count also fabricated (480 vs. 484) — corrected by hand.
+
+16. interspeech-2025-2586 (Spotlight-TTS, voiced-aware style extraction, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Genuine architecture figure embedded and verified (not the ISCA-logo false positive; paper was parsed from an arXiv PDF, not ISCA proceedings, so the false-positive risk didn't apply). **Title truncation recurred** in both rows despite an explicit warning added to this paper's prompt — confirms the bug does not respond to prompt engineering, matching the index-count bug's pattern. Index count fabricated (481 vs. 485) — corrected by hand.
+
+**Corpus after batch:** 485 pages.
+
+**Batch 5 of 6 (interspeech-2025-2595, -2679, -2684, -2726):**
+
+17. interspeech-2025-2595 (Harnessing TTS Voice Cloning for Audiological Speech Assessment, Interspeech) — `field_significance: low/empirical-benchmark`. No review flags. Index count fabricated (482 vs. 486) — corrected by hand. Row title complete this time.
+
+18. interspeech-2025-2679 (Dysarthric Voice Reconstruction with Parler TTS, Interspeech) — `field_significance: moderate/[empirical-benchmark, evaluation-contribution]`. No review flags. Fully clean: index count matched (487), no wikilink or title issues.
+
+19. interspeech-2025-2684 (Discl-VC, disentangled discrete tokens VC, Interspeech) — `field_significance: moderate/architectural-novelty`. **Session-limit interruption mid-ingest**: the agent was cut off after writing the paper page and both table rows (with the title truncated in both, per the recurring bug) but before completing `wiki/index.md` count, `log.md` entry, or `raw/metadata` status update. Unlike prior clean-retry cases (nothing written yet), this required manual completion: fixed both truncated titles, added the missing log entry, set `status: ingested` with a `generation_history` entry, and corrected the index count (484 vs. 488 actual). Also found the venue page's own frontmatter `papers_ingested` field had drifted independently from its table row count (115 vs. 114 actual) — a second count-drift location distinct from `wiki/index.md`, first observed this session. Genuine architecture figure verified.
+
+20. interspeech-2025-2726 (DS-Codec, dual-stage mirror/non-mirror codec training, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Title truncation recurred again in both rows (3rd occurrence this session) — fixed by hand. Index count fabricated (485 vs. 489) — corrected by hand. Genuine architecture figure verified.
+
+**Corpus after batch:** 489 pages.
+
+**Batch 6 of 6 (interspeech-2025-2739, -2787, -2815, and the "Hear Me Out" author-ID paper) — queue closed:**
+
+21. interspeech-2025-2739 (AF-Vocoder, artifact-free neural vocoder, Interspeech) — `field_significance: moderate/architectural-novelty`. No review flags. Index count matched (490) and venue frontmatter matched its row count (116/116) — both correct on first try. Title truncated only in `papers/index.md` (venue row and log.md were correct) — fixed by hand. Genuine architecture figure verified.
+
+22. interspeech-2025-2787 (Adaptable/Intelligible TTS in Noisy Environments, Interspeech) — `field_significance: low/empirical-benchmark`. No review flags. Fully clean: index count matched (491), venue frontmatter matched (117/117), no title or wikilink issues.
+
+23. interspeech-2025-2815 (AAC with Generative Imagery + Zero-Shot TTS, Interspeech) — `field_significance: low/engineering-integration`. No review flags. Title truncated in both rows — fixed by hand. Index count fabricated (488 vs. 492) — corrected by hand. **Spurious `multilingual-tts` tag caught and removed**: the paper cites XTTS's multilingual capability only as a design rationale for choosing the model, never evaluates or demonstrates more than one language — matches the established spurious-multilingual-tts pattern. Removed the tag, the `conditioning: [multilingual]` flag, the corresponding claim, and its Wiki Connections bullet.
+
+24. interspeech-2025-bokkahallisatish25_interspeech (Hear Me Out, interactive bias-discovery platform for speech-to-speech conversational AI, Interspeech) — `field_significance: low/evaluation-contribution`. No review flags. Title truncated in both rows — fixed by hand. Index count fabricated (489 vs. 493). **New drift variant**: both the venue page's own frontmatter (120) and `venues/index.md` (120) disagreed with the actual venue-page row count (119) simultaneously — first time the drift appeared in two places at once rather than just one. All three counters corrected by hand. SCA prose rule and task/concept consistency verified clean.
+
+**Corpus after batch:** 493 pages, 0 errors corpus-wide. **Queue closed** — all 24 pre-selected papers (interspeech-2025-1776 through the "Hear Me Out" paper) are ingested.
+
+**Recurring QC issues, full session (12 papers in batches 4–6):**
+- **Title truncation emerged as the dominant new bug**, alongside the pre-existing index-count bug: 6 of 12 papers had a title cut off mid-string in `papers/index.md` and/or the venue page row (but never in `log.md`). Explicit per-prompt warnings, including ones added immediately after the first occurrence, did not prevent recurrence on the very next paper — same prompt-resistant pattern as the index-count bug. Manual re-verification of every table-row title is now mandatory, not optional.
+- **Index count fabrication continued unabated**: 10 of 12 papers this batch still had a wrong count despite every prompt including the literal `grep -c` command and an explicit correct baseline — consistent with sessions 6–8's established finding that this is unfixable via prompting.
+- **New count-drift location**: the venue page's own frontmatter `papers_ingested` field can drift independently of both its own table row count and `venues/index.md` — found twice this batch (once single-file, once in both venue-file locations simultaneously). All three counters (`wiki/index.md`, venue-page frontmatter, `venues/index.md`) now need checking on every paper, not just `wiki/index.md`.
+- **One session-limit interruption with partial writes** (Discl-VC): unlike the "nothing written yet, clean retry" cases from prior sessions, this one left a paper page and two truncated table rows in place with the count/log/metadata steps unfinished — required manual completion rather than retry. Establishes a second recovery pattern alongside the "clean retry" case: check exactly how far the interrupted agent got before deciding whether to retry or finish by hand.
+- **Spurious `multilingual-tts` recurred once more** (AAC paper) — same pattern as FaVC in batch 2 of this session: citing an underlying model's stated multilingual capability without the paper itself evaluating more than one language.
+
+---
+
+### 2026-07-05 to 2026-07-06 — Q3 continuation, new 32-paper batch (session 9, in progress)
+
+**Scope:** Pre-selected 32 papers chronologically, continuing past the session-8 queue: `interspeech-2025-2536`→"Hear Me Out" (the last 12 of these were actually session 8's batches 4–6 above; this session's own new ground starts at `2507.16835`) through `2506.04077`, spanning late-August Interspeech stragglers, then September 2025 arXiv/workshop papers. Same cadence: sequential batches of 4, health check + full QC pass after each paper, batch summary and go-ahead between batches.
+
+**Batch 1 of 8 (2507.16835, 2411.19770, 2025.clicit-1.27, 2025.clicit-1.81):**
+
+1. 2507.16835 (Evaluating STT×LLM×TTS Combinations for AI Interview Systems, arXiv) — `field_significance: low/empirical-benchmark`. No review flags. Title truncated in both `papers/index.md` and the arXiv venue page row — fixed by hand. Index count fabricated (490 vs. 494) — corrected by hand. `subjective-evaluation` tag verified legitimate (real candidate post-interview star ratings, not just an LLM-judge score). **Found a pre-existing, session-8-predating drift**: `venues/2025-arxiv.md`'s frontmatter (156, then 157 after this paper) has disagreed with its actual table row count (154, then 155) since at least 2026-07-02 — flagged rather than blind-fixed, since identifying which specific historical paper is missing/extra needs its own investigation, out of scope for tonight's batch.
+
+2. 2411.19770 (Noro, noise-robust one-shot VC, arXiv) — `field_significance: moderate/architectural-novelty`. No review flags. Title truncated in both rows — fixed by hand. Index count fabricated (491 vs. 495) — corrected by hand. Genuine architecture figure verified. Metadata year is 2025 (not 2024 despite the `2411.` arXiv prefix) — accepted the agent's use of the metadata field over the ID-prefix assumption in the prompt, which was correct.
+
+3. 2025.clicit-1.27 (Latin poetic TTS corpus, CLiC-it workshop) — `field_significance: low/[dataset-contribution, engineering-integration]`. No review flags. Title truncated in `papers/index.md` only — fixed by hand. Index count fabricated (492 vs. 496) — corrected by hand. `multilingual-tts` correctly excluded (Latin-only corpus); `subjective-evaluation` correctly applied (Latin-phonology experts gave binary accept/reject judgments — genuine human evaluation).
+
+4. 2025.clicit-1.81 (FAMA, open-science speech foundation model for English/Italian, CLiC-it workshop) — **INGEST REVERTED.** The ingest agent flagged this itself (`review_flags: field_significance`, noting FAMA appeared to be ASR/ST with no generative component) and left `task: []` since no TTS/VC/SCA/codec tag applied. Reading the actual parsed paper confirmed it: FAMA's own keywords are "automatic speech recognition, speech translation, ASR, ST" and it is trained/evaluated exclusively on WER and COMET — zero TTS, VC, or SCA component of any kind. Its own `relevance_note` at filter time had already flagged the ambiguity (`relevance_score: 0.5`, "title suggests a speech foundation model but scope (ASR vs generation) is unclear") — a filter-stage precision gap that should have caught this rather than passing it through to ingest. Per user decision, fully reverted rather than rejected outright: deleted the wiki page, removed the row from `papers/index.md` and `venues/2025-workshop.md`, decremented the venue frontmatter and `venues/index.md` count, reverted the `wiki/index.md` count from 497 back to 496 (net zero change from before this paper — the corpus stands at the same 496 pages it reached after paper 3), reverted the `log.md` ingest line to a `misc` entry explaining the revert, and reset `raw/metadata/2025.clicit-1.81.json` to `status: review` (not `rejected`) with an explanatory note. Added to `raw/review_queue.md` for an explicit accept/reject decision rather than assuming.
+
+**Corpus so far:** 496 pages, 0 errors corpus-wide.
+
+**Next session:** Continue batch 1 of 8 with one more paper to round it back out to 4 (FAMA's slot is now open), or proceed directly to batch 2 with the next chronological paper after `2025.clicit-1.81` in the original 32-paper list: `2506.23367` (L2 Tailored Clear TTS), then `2509.05359`, `2509.04093`, `2509.04667`.
 
 ---
 

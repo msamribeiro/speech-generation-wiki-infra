@@ -7,7 +7,7 @@ Resume standard corpus ingest and clear the integration backlog.
 - [x] Run dedup pass on 56 OpenReview papers (ICLR 2025: 13, NeurIPS 2025: 16, ICLR 2026: 27) — 8 collisions found (all ingested arXiv copies); arXiv records marked `is_duplicate`, proceedings records marked `ingested` with `wiki_page_id` pointers *(completed 2026-06-29)*
 - [x] Pre-Q3 batch — 16 papers (NAACL 2025, ICLR 2025, workshop venues: COLING, CHiPSAL, ComputEL, NoDaLiDa) ingested 2026-06-29; corpus at 354 pages *(completed 2026-06-29)*
 - [x] Ingest 2 deferred ICLR 2025 papers: `iclr-2025-hQvX9MBowC` (DiTTo-TTS), `iclr-2025-uxDFlPGRLX` (FlowDec) *(completed 2026-06-30)*
-- [ ] Continue chronological ingest of remaining accepted papers through end of Q3 2025 (232 remaining as of 2026-06-30) — 8 ingested 2026-06-30 (DiVISe, BnTTS, Prompt-Guided Selective Masking Loss, ESPnet-SpeechLM, ESPnet-SDS, Behavior-SD + the 2 ICLR papers above); next: `2025.iwsds-1.11`, `2025.iwsds-1.27`, `2507.06235`, `2505.15772`, then remaining pre-Q3, then Q3 2025 (Jul–Sep) proper
+- [ ] Continue chronological ingest of remaining accepted papers through end of Q3 2025 (94 remaining as of 2026-07-06) — session 8 queue closed (24 papers, corpus reached 493); session 9 batch 1 of 8 done (2507.16835, 2411.19770, 2025.clicit-1.27 ingested; 2025.clicit-1.81/FAMA reverted to `raw/review_queue.md` — pure ASR/ST paper, no TTS/VC/SCA component); corpus at 496 pages; next: `2506.23367`, `2509.05359`, `2509.04093`, `2509.04667`; full session log at `Q3_INGESTION_SESSIONS.md`
 
 ## Content Stage Implementation [P0 · planned]
 
