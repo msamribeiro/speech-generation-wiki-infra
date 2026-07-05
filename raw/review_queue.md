@@ -243,7 +243,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Was ingested by mistake this session (2026-07-05) before full-text review caught the scope issue; ingest was reverted and status reset to `review`. FAMA is a pure open-science ASR/speech-translation foundation model (trained and evaluated only on WER/COMET); its own keywords list is "automatic speech recognition, speech translation, ASR, ST" with no mention of TTS, VC, or SCA. No generative speech component of any kind. Almost certainly out of scope for a TTS/VC/SCA-focused wiki, but flagging for an explicit reject decision rather than assuming, since the corpus does track some adjacent infrastructure (codecs, evaluation tooling) that isn't itself generative.
 **Abstract excerpt:** The development of speech foundation models (SFMs) like Whisper and SeamlessM4T has significantly advanced the field of speech processing. However, their closed nature—with inaccessible training data and code—poses major reproducibility and fair evaluation challenges. ... we introduce FAMA, the first family of open science SFMs for English and Italian, trained on 150k+ hours of OS speech data.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 

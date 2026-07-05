@@ -1,3 +1,7 @@
+## 2026-07-06
+
+- review | 2025.clicit-1.81 (FAMA) | 1 paper | rejected | pure ASR/speech-translation foundation model (WER/COMET only), no TTS/VC/SCA component; filter-stage false accept (relevance_score 0.50) caught at ingest time, ingest reverted, sent to review_queue.md, user confirmed reject | status: accepted → review → rejected
+
 ## 2026-07-03
 
 - lint | health check ingest module (full corpus, post session-6 ingest) | 461 papers checked | 0 errors, 1178 warnings (pre-existing corpus-wide, not investigated this pass) | health check: scripts/health_check.py --module ingest --wiki-dir speech-generation-wiki-content
