@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 11,
   "published_date": "2025-09-07",
-  "ingested_date": null,
+  "ingested_date": "2026-07-12",
   "url": "https://arxiv.org/abs/2509.06074",
   "pdf_url": "https://aclanthology.org/2025.emnlp-main.448.pdf",
   "pdf_path": "raw/papers/2509.06074.pdf",
@@ -32,10 +32,19 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Fine-grained multimodal context interaction graph modeling for conversational speech synthesis; directly advances TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-11-05"
+  "conference_date": "2025-11-05",
+  "generation_history": [
+    {
+      "date": "2026-07-12",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "1dfaddc"
+    }
+  ]
 }

@@ -39,7 +39,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-08",
-  "ingested_date": null,
+  "ingested_date": "2026-07-12",
   "url": "https://arxiv.org/abs/2509.06502",
   "pdf_url": "https://arxiv.org/pdf/2509.06502.pdf",
   "pdf_path": "raw/papers/2509.06502.pdf",
@@ -51,9 +51,18 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Full-duplex voice interaction system with cascaded and semi-cascaded implementations; core SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-12",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "1dfaddc"
+    }
+  ]
 }
