@@ -257,3 +257,14 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
+
+## 2509.13785 | Summary on The Multilingual Conversational Speech Language Model Challenge: Datasets, Tasks, Baselines, and Methods | arXiv | score: 0.85
+
+**Authors:** Bingshen Mu, Pengcheng Guo, Zhaokai Sun et al.
+**Task guess:** []
+**Reason for review:** Was ingested this session (2026-07-13) before full-text review caught the scope issue; ingest was reverted and status reset directly to `rejected` (user read the PDF and confirmed the same session). This is a pure multilingual ASR + speaker-diarization challenge summary (MLC-SLM): both defined tasks (Task 1 ASR, Task 2 joint diarization+recognition) are evaluated only on MER/tcpMER, WER/CER variants. No TTS, VC, or any speech-generation component anywhere in the paper — the "speech LLM" baselines only transcribe, they never synthesize audio. Same scope pattern as FAMA (2025.clicit-1.81): a filter-stage false accept (relevance_score 0.85) on a paper whose "speech LLM"/"SLLM" framing reads as generative but is comprehension-only.
+**Abstract excerpt:** This paper summarizes the Interspeech2025 Multilingual Conversational Speech Language Model (MLC-SLM) challenge, which aims to advance the exploration of building effective multilingual conversational speech LLMs (SLLMs). We provide a detailed description of the task settings for the MLC-SLM challenge, the released real-world multilingual conversational speech dataset totaling approximately 1,604 hours, and the baseline systems for participants.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---

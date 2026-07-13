@@ -42,15 +42,22 @@
   "pdf_source": "arxiv",
   "abstract": "This paper summarizes the Interspeech2025 Multilingual Conversational Speech Language Model (MLC-SLM) challenge, which aims to advance the exploration of building effective multilingual conversational speech LLMs (SLLMs). We provide a detailed description of the task settings for the MLC-SLM challenge, the released real-world multilingual conversational speech dataset totaling approximately 1,604 hours, and the baseline systems for participants. The MLC-SLM challenge attracts 78 teams from 13 countries to participate, with 489 valid leaderboard results and 14 technical reports for the two tasks. We distill valuable insights on building multilingual conversational SLLMs based on submissions from participants, aiming to contribute to the advancement of the community.",
   "arxiv_comment": null,
-  "task": [
-    "SCA",
-    "evaluation"
-  ],
+  "task": [],
   "relevance_score": 0.85,
-  "relevance_note": "Challenge summary for multilingual conversational speech LLMs with datasets and baselines",
-  "status": "accepted",
+  "relevance_note": "Read the full parsed paper: this is a pure ASR + speaker-diarization challenge summary (MLC-SLM), both tasks evaluated only on MER/tcpMER (WER/CER variants). No TTS, VC, or any speech-generation component anywhere in the paper. User-confirmed reject 2026-07-14 after reading the PDF: out of scope for a speech-generation wiki, same pattern as FAMA (2025.clicit-1.81).",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-13",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "b035ebb",
+      "note": "Ingest reverted 2026-07-14: paper is out-of-scope ASR/diarization challenge summary, no TTS/VC/SCA generative component. User-confirmed reject after reading the PDF."
+    }
+  ]
 }

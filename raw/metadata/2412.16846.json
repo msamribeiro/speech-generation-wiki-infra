@@ -13,13 +13,13 @@
     "Lei Xie"
   ],
   "authors_full": null,
-  "organization": null,
+  "organization": "Northwestern Polytechnical University",
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-17",
-  "ingested_date": null,
+  "ingested_date": "2026-07-13",
   "url": "https://arxiv.org/abs/2412.16846",
   "pdf_url": "https://arxiv.org/pdf/2412.16846.pdf",
   "pdf_path": "raw/papers/2412.16846.pdf",
@@ -31,9 +31,18 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Novel AR LM for TTS predicting next continuous speech frame distribution via Flow-VAE; advances autoregressive TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-13",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "b035ebb"
+    }
+  ]
 }

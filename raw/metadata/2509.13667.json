@@ -16,7 +16,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-17",
-  "ingested_date": null,
+  "ingested_date": "2026-07-13",
   "url": "https://arxiv.org/abs/2509.13667",
   "pdf_url": "https://arxiv.org/pdf/2509.13667.pdf",
   "pdf_path": "raw/papers/2509.13667.pdf",
@@ -28,9 +28,18 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Distilled low-latency neural vocoder with explicit amplitude and phase prediction",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-13",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "b035ebb"
+    }
+  ]
 }

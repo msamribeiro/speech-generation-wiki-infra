@@ -1,3 +1,7 @@
+## 2026-07-14
+
+- review | 2509.13785 (MLC-SLM Challenge Summary) | 1 paper | rejected | pure multilingual ASR + speaker-diarization challenge summary (MER/tcpMER only), no TTS/VC/SCA component; filter-stage false accept (relevance_score 0.85) caught mid-batch during ingest QC, ingest reverted, sent to review_queue.md, user confirmed reject after reading the PDF; same scope pattern as FAMA (2025.clicit-1.81) | status: accepted → ingested → rejected
+
 ## 2026-07-06
 
 - review | 2025.clicit-1.81 (FAMA) | 1 paper | rejected | pure ASR/speech-translation foundation model (WER/COMET only), no TTS/VC/SCA component; filter-stage false accept (relevance_score 0.50) caught at ingest time, ingest reverted, sent to review_queue.md, user confirmed reject | status: accepted → review → rejected

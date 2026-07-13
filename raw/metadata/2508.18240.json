@@ -36,7 +36,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-15",
-  "ingested_date": null,
+  "ingested_date": "2026-07-13",
   "url": "https://arxiv.org/abs/2508.18240",
   "pdf_url": "https://arxiv.org/pdf/2508.18240.pdf",
   "pdf_path": "raw/papers/2508.18240.pdf",
@@ -49,9 +49,18 @@
   ],
   "relevance_score": 0.78,
   "relevance_note": "Introduces MTalk-Bench, a multi-turn speech-to-speech benchmark covering semantic, paralinguistic, and ambient sound dimensions for evaluating S2S LLM dialogue systems.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-13",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "b035ebb"
+    }
+  ]
 }
