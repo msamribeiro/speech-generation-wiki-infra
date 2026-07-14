@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-21",
-  "ingested_date": null,
+  "ingested_date": "2026-07-14",
   "url": "https://arxiv.org/abs/2509.17143",
   "pdf_url": "https://arxiv.org/pdf/2509.17143.pdf",
   "pdf_path": "raw/papers/2509.17143.pdf",
@@ -32,9 +32,18 @@
   ],
   "relevance_score": 0.93,
   "relevance_note": "Zero-shot VC with multi-factor controllability via multiple classifier-free guidances",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-14",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "4d4831c"
+    }
+  ]
 }

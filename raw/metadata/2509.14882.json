@@ -17,7 +17,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-18",
-  "ingested_date": null,
+  "ingested_date": "2026-07-14",
   "url": "https://arxiv.org/abs/2509.14882",
   "pdf_url": "https://arxiv.org/pdf/2509.14882.pdf",
   "pdf_path": "raw/papers/2509.14882.pdf",
@@ -30,9 +30,18 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "Explores flat vs hierarchical speech token processing in speech LMs; directly advances SCA/speech generation architecture.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-14",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "4d4831c"
+    }
+  ]
 }

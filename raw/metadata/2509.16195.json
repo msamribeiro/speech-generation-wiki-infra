@@ -16,7 +16,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-19",
-  "ingested_date": null,
+  "ingested_date": "2026-07-14",
   "url": "https://arxiv.org/abs/2509.16195",
   "pdf_url": "https://arxiv.org/pdf/2509.16195.pdf",
   "pdf_path": "raw/papers/2509.16195.pdf",
@@ -28,9 +28,18 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "FocalCodec-Stream: causal distillation for streaming low-bitrate speech coding; core codec.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-14",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "4d4831c"
+    }
+  ]
 }

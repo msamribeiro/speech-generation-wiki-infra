@@ -669,6 +669,78 @@ Also check the INGEST_RESULT signal for `review_flags`. If any flags are present
 
 ---
 
+### 2026-07-14 — Q3 continuation, 20-paper pre-selected batch (session 10, COMPLETE)
+
+Pre-selected 20 papers chronologically starting from `2509.13989` (closing out the prior session's 2-paper leftover) through `2509.17143`, 5 batches of 4. One transcription error: `2509.14882` (Llama-Mimi) was present in the raw candidate query but dropped when the pre-selected table was built for approval, leaving only 19 unique papers across the first 16 slots + batch 5's original 3. Caught by the user mid-session via an explicit list revision request; resolved by folding `2509.14882` into batch 5 as a 4th paper alongside the 3 chronological leftovers (`2509.17006`, `2509.17021`, `2509.17143`), out of strict date order but closing the gap immediately.
+
+**Batch 1 (2509.13989, 2509.14579, 2509.14684, 2509.14784):**
+
+39. 2509.13989 (Do You Hear What I Mean? Quantifying the Instruction-Perception Gap in Instruction-Guided Expressive Text-To-Speech Systems, arXiv) — `field_significance: moderate/[evaluation-contribution, dataset-contribution]` (E-VOC corpus, 60k+ perceptual ratings). No review flags. Clean.
+
+40. 2509.14579 (Cross-Lingual F5-TTS: Towards Language-Agnostic Voice Cloning and Speech Synthesis, arXiv, Shanghai Jiao Tong University) — `task: [TTS, VC]` confirmed legitimate (SIM-o speaker-similarity metric). 7 bare wikilinks converted to piped format, all verified against ingested papers. Title truncated in both rows, fixed.
+
+41. 2509.14684 (DAIEN-TTS: Disentangled Audio Infilling for Environment-Aware Text-to-Speech Synthesis, arXiv) — `field_significance: moderate/architectural-novelty` (SES disentanglement module on F5-TTS). Title truncated in both rows, fixed.
+
+42. 2509.14784 (MELA-TTS: Joint transformer-diffusion model with representation alignment for speech synthesis, arXiv) — hybrid AR-transformer + diffusion, no codec. 2 bare wikilinks fixed, both citations verified ingested. Title truncated in both rows, fixed.
+
+**Corpus after batch 1: 533 pages, 0 errors.** `wiki/index.md`'s count fabricated on all 4 papers (agents increment from stale in-context baseline instead of re-reading state) — corrected after each.
+
+**Batch 2 (2509.14946, 2509.15085, 2509.15253, 2509.15462) — hit a session-limit interruption mid-batch:**
+
+43. 2509.14946 (SynParaSpeech: Automated Synthesis of Paralinguistic Datasets for Speech Generation and Understanding, arXiv) — 2 bare wikilinks fixed. **One citation (2506.04779, MMSU) pointed to a `status: rejected` paper** — removed the wikilink and `related_papers` entry, replaced with a plain-text mention (citation-integrity catch, see [[feedback_citation_integrity_checks]]).
+
+44. 2509.15085 (Real-Time Streaming Mel Vocoding with Generative Flow Matching, arXiv, University of Hamburg) — clean, no wikilink issues.
+
+45. 2509.15253 (Emotion-Aware Speech Generation with Character-Specific Voices for Comics, arXiv, Queen Mary University of London) — content solid (structured claims, correct callouts, no invented metrics; verified by manual read since the tool-safety classifier was down when the agent ran). **Session-limit interruption right after this paper**: two pending title fixes and the health check never landed before cutoff. Recovered next session — both fixes applied, health check clean, `wiki/index.md` also found stale at that point and corrected.
+
+46. 2509.15462 (A Novel Semantic Compression Approach for Ultra-low Bandwidth Voice Communication, arXiv, Systems & Technology Research, Vevo-based) — **spurious `TTS` task tag caught and corrected → `task: [codec, VC]`**. The paper's own text states the receiver-side decoding is "functionally VC," and the only TTS component (Zonos) is a minor sub-piece of one of two evaluated timbre schemes, not the paper's contribution; a genuine VC metric (SpkrSim) supports the VC tag instead. Title truncated in both rows, fixed.
+
+**Corpus after batch 2: 537 pages, 0 errors.**
+
+**Batch 3 (2505.17093, 2509.15626, 2509.15629, 2509.15845):**
+
+47. 2505.17093 (P2VA: Converting Persona Descriptions into Voice Attributes for Fair and Controllable Text-to-Speech, arXiv) — `field_significance: moderate/[engineering-integration, conceptual-contribution]`. Trusted `published_date` (2025-09-19) over the misleading May-2025 arXiv ID prefix, per established precedent (session 9 batch 8, KALL-E/ClonEval). Title truncated in both rows, fixed.
+
+48. 2509.15626 (LibriTTS-VI: A Public Corpus and Novel Methods for Efficient Voice Impression Control, arXiv, Sony Group Corporation) — clean, no wikilink issues.
+
+49. 2509.15629 (The Singing Voice Conversion Challenge 2025: From Singer Identity Conversion To Singing Style Conversion, arXiv) — **caught the recurring `task`/`related_concepts` mismatch**: `task: [VC, singing, evaluation]` but `singing` was missing from `related_concepts` — added the tag and a Wiki Connections bullet (see [[feedback_task_related_concepts_mismatch]]). One bare wikilink fixed. Both citation status and ingested-page verified.
+
+50. 2509.15845 (Deep Dubbing: End-to-End Auto-Audiobook System with Text-to-Timbre and Context-Aware Instruct-TTS, arXiv) — clean, architecture figure included.
+
+**Corpus after batch 3: 541 pages, 0 errors.**
+
+**Batch 4 (2509.16010, 2509.16195, 2509.16589, 2509.20378) — hit a classifier outage mid-batch:**
+
+51. 2509.16010 (Fed-PISA: Federated Voice Cloning via Personalized Identity-Style Adaptation, arXiv) — genuine VC tag confirmed (SPK-SIM 0.645 reported). `papers/index.md` title fixed pre-outage; the `venues/2025-arxiv.md` row was missed and only caught on recovery.
+
+52. 2509.16195 (FocalCodec-Stream: Streaming Low-Bitrate Speech Coding via Causal Distillation, arXiv, Concordia/Mila/Laval) — **task tag corrected to `[codec, VC]`**: the raw paper text (read directly during the outage, since the ingest agent was blocked) confirmed a genuine one-shot VC evaluation on VCTK (§4.1, Table 2: UTMOS/dWER/speaker-similarity), which the agent then correctly picked up once it ran. One bare wikilink fixed. Multi-hour Claude Sonnet 5 safety-classifier outage blocked the Agent tool and most write-capable Bash calls for an extended period this batch — same transient pattern as session 9 batch 5's ~15-min outage but notably longer; recovered by retrying periodically and doing read-only prep work in the meantime.
+
+53. 2509.16589 (Benchmarking Contextual and Paralinguistic Reasoning in Speech-LLMs: A Case Study with In-the-Wild Data / CP-Bench, EMNLP) — correctly routed to `venues/2025-emnlp.md` (not arXiv). `spoken-language-model` tag verified legitimate (external audio input into adapted LLMs for QA). One phantom `in_corpus_refs` citation (2410.01162) reported in the agent's `INGEST_RESULT` that never actually made it into the page — harmless (source paper is `status: rejected` anyway), another instance of [[feedback_agent_selfreport_unreliable]].
+
+54. 2509.20378 (Beyond Global Emotion: Fine-Grained Emotional Speech Synthesis with Dynamic Word-Level Modulation, arXiv, Harbin Institute of Technology) — clean.
+
+**Corpus after batch 4: 545 pages, 0 errors.**
+
+**Batch 5 (2509.17006, 2509.17021, 2509.17143, 2509.14882) — closing the dropped-paper gap, hit a second session-limit interruption:**
+
+55. 2509.17006 (MBCodec: Thorough Disentangle for High-Fidelity Audio Compression, arXiv) — **title normalization mismatch**: the page frontmatter capitalized/spaced the raw source title (`MBCodec:Thorough disentangle for high-fidelity audio compression` → `MBCodec: Thorough Disentangle for High-Fidelity Audio Compression`), but `papers/index.md` and `venues/2025-arxiv.md` kept the raw (truncated) form — reconciled both rows to match the frontmatter version for internal consistency.
+
+56. 2509.17021 (Bridging the gap between training and inference in LM-based TTS models, arXiv) — **session-limit interruption before any files were written** ("Now let me write the paper page." was the agent's last output) — confirmed `status: accepted` and no page file existed; clean retry from scratch, no data lost. On retry: 4 bare wikilinks fixed, all citation targets (CosyVoice, CosyVoice 2, Seed-TTS, IndexTTS) verified `status: ingested`.
+
+57. 2509.17143 (MaskVCT: Masked Voice Codec Transformer for Zero-Shot Voice Conversion With Increased Controllability via Multiple Guidances, arXiv) — `architecture: autoregressive-LM` double-checked against `docs/schemas/vocabulary.md` — correct, since SoundStorm (also a masked/parallel codec transformer, not strictly token-by-token AR) is the documented precedent example for that tag. Both title rows truncated, fixed.
+
+58. 2509.14882 (Llama-Mimi: Exploring the Limits of Flattened Speech Language Modeling, arXiv) — the dropped paper, folded in out of chronological order. `task: [SCA]` (speech continuation, no text conditioning). `spoken-language-model` tag verified against both the external-signal rule and existing corpus precedent (other speech-continuation papers tagged the same way). `papers/index.md` title truncated, fixed.
+
+**Corpus after batch 5 (session 10 COMPLETE, all 20 pre-selected papers ingested, 0 rejected): 549 pages, 0 errors corpus-wide** (1178 pre-existing warnings, same baseline throughout).
+
+**Recurring QC issues across the session:** `wiki/index.md`'s paper count fabricated on nearly every single paper (agents increment from a stale in-context baseline instead of re-reading the actual file) — corrected by hand after each ingest, worst single-paper drift this session was 4 papers. Title truncation hit `papers/index.md` and/or venue-page rows on roughly 3 of every 4 papers. Venue-page counters (`venues/2025-arxiv.md`, `venues/2025-emnlp.md`, `venues/index.md`) stayed accurate throughout — no drift there all session. Two tool-safety-classifier / session-limit interruptions recovered cleanly (one truly clean nothing-written case, one partial-writes case requiring two small manual fixes). Two spurious `TTS` task tags caught and corrected to `VC` based on genuine VC-specific metrics reported in the papers themselves, one `singing` task/related_concepts mismatch, one citation to a rejected paper removed, one phantom self-reported citation that was harmless.
+
+**Q3 2025 progress:** 321 ingested / 43 remaining.
+
+**Next session:** Continue Q3 2025 chronologically from `2509.17516` (Audiobook-CC), the next paper after this session's queue.
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.

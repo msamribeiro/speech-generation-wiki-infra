@@ -26,7 +26,7 @@
   "year": 2025,
   "month": 11,
   "published_date": "2025-09-20",
-  "ingested_date": null,
+  "ingested_date": "2026-07-14",
   "url": "https://arxiv.org/abs/2509.16589",
   "pdf_url": "https://aclanthology.org/2025.findings-emnlp.760.pdf",
   "pdf_path": "raw/papers/2509.16589.pdf",
@@ -39,10 +39,19 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Benchmark for speech LLMs on contextual paralinguistic reasoning with in-the-wild data; advances SCA evaluation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-11-05"
+  "conference_date": "2025-11-05",
+  "generation_history": [
+    {
+      "date": "2026-07-14",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-4-6",
+      "commit": "4d4831c"
+    }
+  ]
 }
