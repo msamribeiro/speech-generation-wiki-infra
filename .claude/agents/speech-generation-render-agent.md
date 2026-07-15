@@ -39,6 +39,7 @@ WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-w
 **YOU WRITE:**
 - `wiki/concepts/{slug}.md` — rendered concept pages (derived from YAML)
 - `wiki/evidence/{slug}.md` — evidence dossiers (derived from YAML)
+- `wiki/concepts/index.md` — the catalog row for each concept you render (Papers count, Evidence link, Last updated)
 - `wiki/overview.md` — field synthesis (derived from concept pages + YAML summaries)
 - `wiki/log.md` — render run entry
 
@@ -248,7 +249,50 @@ ENDOFDOSSIER
 
 ---
 
-## Step 5 — Log the render run
+## Step 5 — Update the concept index
+
+For every concept rendered this run (concept page, evidence dossier, or both), update its row in
+`wiki/concepts/index.md`. Do this after Steps 3–4 so you have the final concept title, current
+`paper_count` from the YAML, and whether a dossier exists on disk.
+
+- **Evidence cell**: if `wiki/evidence/{slug}.md` exists (written this run or already present), set
+  it to `[[evidence/{slug}|{Concept Title} Evidence]]`. If no dossier exists, leave `—`.
+- **Papers cell**: the YAML's `paper_count`.
+- **Last updated cell**: today's date.
+- **New concept** (slug has no existing row): insert a new row. There is no strict sort order in
+  the table — thematic grouping loosely follows `docs/content.md`'s concept registry — so place it
+  near related concepts rather than appending blindly out of context.
+
+```bash
+python3 << 'EOF'
+WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+path = f'{WIKI}/concepts/index.md'
+
+slug = '{slug}'
+title = '{Concept Title}'
+paper_count = {paper_count}
+today = '{today_iso}'
+has_dossier = {True_or_False}  # wiki/evidence/{slug}.md exists on disk
+
+evidence_cell = f'[[evidence/{slug}\\|{title} Evidence]]' if has_dossier else '—'
+new_row = f'| [[concepts/{slug}\\|{title}]] | {evidence_cell} | {paper_count} | {today} |'
+
+lines = open(path).read().splitlines(keepends=True)
+marker = f'[[concepts/{slug}\\|'
+match_idx = next((i for i, l in enumerate(lines) if l.startswith(f'| {marker}')), None)
+if match_idx is not None:
+    lines[match_idx] = new_row + '\n'
+else:
+    # new concept: no existing row — insert as the last data row of the table
+    last_row = max(i for i, l in enumerate(lines) if l.startswith('| ['))
+    lines.insert(last_row + 1, new_row + '\n')
+open(path, 'w').writelines(lines)
+EOF
+```
+
+---
+
+## Step 6 — Log the render run
 
 ```bash
 python3 -c "
@@ -274,7 +318,7 @@ open(path,'w').write(text)
 
 ---
 
-## Step 6 — Print summary
+## Step 7 — Print summary
 
 ```
 === Render pass complete ===
@@ -299,3 +343,4 @@ Stale pages remaining: {K} (skipped due to --limit or errors)
 8. Log the run even if no pages were written.
 9. Never add `## All Papers` tables to concept pages — that information lives in the evidence dossier.
 10. Claim bullets on concept pages must cite at least one [[wikilink]] to a supporting paper.
+11. Every concept rendered this run must have its `wiki/concepts/index.md` row updated to match (Papers count from YAML `paper_count`, Evidence link only if a dossier exists, Last updated set to today).

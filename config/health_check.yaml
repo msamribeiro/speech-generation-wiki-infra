@@ -1,0 +1,34 @@
+# Pipeline Health Suite configuration.
+# Settings are namespaced per module (see docs/design/pipeline-health-suite.md §10).
+
+integrate:
+  # Canonical concept slugs — mirrors docs/content.md's "Concept Page Registry" section.
+  # The integrate module's registry_config_matches_docs check (warning severity) flags
+  # any drift between this list and that section, so keep them in sync by hand.
+  concept_registry:
+    - flow-matching
+    - diffusion-tts
+    - autoregressive-codec-tts
+    - transformer-enc-dec-tts
+    - gan-vocoder
+    - zero-shot-tts
+    - voice-conversion
+    - multilingual-tts
+    - emotion-synthesis
+    - prosody-control
+    - streaming-tts
+    - spoken-language-model
+    - speech-to-speech
+    - instruction-conditioned-tts
+    - singing
+    - neural-codec
+    - self-supervised-speech
+    - disentanglement
+    - speaker-adaptation
+    - rlhf-speech
+    - fine-tuning
+    - evaluation-metrics
+    - subjective-evaluation
+
+  # cluster_last_reviewed warning threshold (Phase 2)
+  cluster_staleness_days: 180

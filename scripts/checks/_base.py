@@ -6,6 +6,8 @@ from pathlib import Path
 class CheckArgs:
     paper_id: str | None = None
     wiki_dir: Path | None = None
+    concept: str | None = None
+    phase: int | None = None
 
 
 @dataclass

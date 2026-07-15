@@ -3,7 +3,7 @@
 **Project:** Speech Synthesis Research Wiki  
 **Scope:** Automated validation of pipeline outputs at each stage, combined with a health dashboard for the knowledge base  
 **Depends on:** All pipeline stages (fetch, parse, ingest, integrate, render) — the suite reads their outputs but does not run them  
-**Status:** Planned — not yet implemented  
+**Status:** Partially implemented — `ingest` module complete (2026-06-19), `integrate` module complete (2026-07-15); `fetch`, `parse`, `render`, `corpus` modules and `--report` dashboard still planned  
 
 ---
 
@@ -38,6 +38,8 @@ python scripts/health_check.py                    # run all modules
 python scripts/health_check.py --module ingest    # run one module
 python scripts/health_check.py --module fetch,parse  # run multiple
 python scripts/health_check.py --module ingest --id 2501.12345  # scope to one paper
+python scripts/health_check.py --module integrate --concept flow-matching --phase 2  # scope to one concept YAML, force Phase 2 checks
+python scripts/health_check.py --wiki-dir /path/to/standalone/content/checkout  # override wiki root (e.g. standalone content repo, not the infra submodule)
 python scripts/health_check.py --report           # run all + write STATUS_DASHBOARD.md
 ```
 
@@ -67,19 +69,22 @@ def run(args: CheckArgs) -> ModuleResult:
     ...
 ```
 
-Where:
+Where (matches `scripts/checks/_base.py` as actually implemented):
 
 ```python
 @dataclass
 class CheckArgs:
-    paper_id: str | None       # if set, scope checks to this paper only
-    config: dict               # loaded from config/ if needed
+    paper_id: str | None = None    # if set, scope checks to this paper only (ingest)
+    wiki_dir: Path | None = None   # override wiki root; defaults to the wiki/ submodule
+    concept: str | None = None     # if set, scope checks to this concept YAML only (integrate)
+    phase: int | None = None       # force Phase 1 or 2 checks (integrate); default auto-detects per YAML
 
 @dataclass
 class Issue:
     severity: str              # "error" | "warning"
     module: str                # which module raised it
-    paper_id: str | None       # paper context, if applicable
+    paper_id: str | None       # context ref, if applicable — a paper ID, concept slug, or
+                                # concept-scoped composite ref (e.g. "{slug}:{paper_id}")
     check: str                 # short check name, e.g. "frontmatter_parses"
     message: str               # human-readable description
 
@@ -93,6 +98,13 @@ class ModuleResult:
 
 `passed` is False if any issue has `severity == "error"`. Warnings do not affect `passed`.
 
+**No central config injection.** There is no `config: dict` field on `CheckArgs` — each module
+self-loads whatever config or reference docs it needs (e.g. `ingest.py` loads
+`docs/schemas/vocabulary.md` directly; `integrate.py` loads `config/health_check.yaml` and
+`docs/schemas/claims.md` directly). This was already the ingest module's pattern before the
+integrate module existed; `integrate.py` follows the same precedent rather than the originally
+sketched central-config design below, which was never implemented.
+
 ### 2.4 Severity Levels
 
 | Severity | Meaning | Blocks hook? |
@@ -102,17 +114,22 @@ class ModuleResult:
 
 ### 2.5 Output Format
 
-**Console output** (default):
+**Console output** (default), as actually implemented in `health_check.py::_print_result`:
+errors and warnings lead, followed by a generic `key=value` dump of the remaining `stats` dict.
+This was chosen over a hardcoded per-module noun ("N claim files", "N paper pages" as originally
+sketched below) because `stats` dicts vary more across modules than a single count can express —
+`integrate`, for instance, needs `concepts_checked`, `concept_files`, `total_paper_entries`, and
+`papers_not_in_any_yaml` simultaneously visible, not folded into one number:
 
 ```
-[fetch   ] PASS  (1037 metadata files, 0 errors, 0 warnings)
-[parse   ] PASS  (861 parsed entries, 0 errors, 2 warnings)
+[ingest    ] PASS  (0 errors, 4 warnings | papers_checked=338)
+[integrate ] PASS  (0 errors, 0 warnings | concepts_checked=1, concept_files=24, total_paper_entries=338, total_clusters=142, strongly_supported=48, contested=3, papers_not_in_any_yaml=12)
+```
+
+With `-v`/`--verbose`, or on any failing module, each issue prints on its own line:
+
+```
   WARNING  parse  2511.21229  references_nonzero  references.json is empty (known: non-Latin heading)
-  WARNING  parse  2512.17293  paper_md_length     paper.md is 117 lines (< 200 threshold)
-[ingest  ] PASS  (338 paper pages, 0 errors, 4 warnings)
-[integrate] PASS  (24 claim files, 0 errors, 0 warnings)
-[render  ] PASS  (24 concept pages, 0 errors, 0 warnings)
-[corpus  ] FAIL  (0 errors, 1 error)
   ERROR    corpus  —  count_mismatch  wiki/index.md reports 335 papers; metadata shows 338 ingested
 ```
 
@@ -203,22 +220,82 @@ This is the primary post-ingest validation module. Running `health_check.py --mo
 ## 6. Integrate Module
 
 **File:** `scripts/checks/integrate.py`  
-**Reads:** `wiki/_claims/*.yaml`, `raw/metadata/*.json`  
-**Scope:** All claim YAML files  
+**Reads:** `wiki/_claims/*.yaml`, `raw/metadata/*.json`, `config/health_check.yaml`, `docs/content.md`, `docs/schemas/claims.md`  
+**Scope:** All claim YAML files, or a single one via `--concept {slug}` (replaces `--id` for this module — concept YAMLs are not paper-scoped)  
+**Implemented:** 2026-07-15
 
-This module absorbs `scripts/wiki/validate_concept_evidence.py`, which is built as a stepping stone during Content Stage Implementation. Once this module exists, the standalone script is retired.
+Integration is split into Phase 1 (paper entry extraction) and Phase 2 (claim cluster / method
+family synthesis). The module is phase-aware per YAML: a heuristic (non-empty `claim_clusters`
+→ post-Phase-2) picks the check tier, unless `--phase 1` or `--phase 2` forces it explicitly.
 
-### Checks
+```bash
+python scripts/health_check.py --module integrate                        # all YAMLs, full checks
+python scripts/health_check.py --module integrate --concept {slug}       # single YAML, full checks
+python scripts/health_check.py --module integrate --concept {slug} --phase 1  # Phase 1 checks only
+python scripts/health_check.py --module integrate --concept {slug} --phase 2  # full checks
+```
+
+This module absorbs `scripts/wiki/validate_concept_evidence.py` (never built as a standalone
+script — this module was implemented directly instead).
+
+### Phase 1 checks (run after every paper entry write, and standalone with `--phase 1`)
 
 | Check | Severity | Description |
 |-------|----------|-------------|
 | `yaml_parses` | error | Each `wiki/_claims/{slug}.yaml` must parse as valid YAML |
-| `required_keys` | error | Top-level keys `concept`, `papers`, `paper_count`, `last_updated` must be present |
-| `paper_ids_exist` | error | Every paper ID listed under `papers` must have a corresponding `raw/metadata/{id}.json` |
-| `paper_ids_ingested` | warning | Papers listed in a claim file should have `status: ingested` in metadata; `accepted` papers are flagged |
-| `claim_ids_unique` | error | Claim IDs within a file must be unique |
-| `paper_count_matches` | error | The `paper_count` field must equal the number of entries under `papers` |
-| `claim_sources_present` | warning | Each claim object should have a non-null `source` field (paper ID or section reference) |
+| `required_top_keys` | error | `concept`, `last_updated`, `paper_count`, `papers` must be present |
+| `paper_count_matches` | error | `paper_count` must equal `len(papers)` |
+| `no_duplicate_paper_ids` | error | No two entries in `papers` may share the same `id` |
+| `paper_id_is_string` | error | Each paper entry's `id` must parse as a YAML string, not a float — unquoted arXiv-style IDs (e.g. `1412.6980`) parse as floats and silently lose trailing zeros, corrupting every downstream lookup |
+| `paper_entry_required_fields` | error | Each paper entry must have: `id`, `entry_date`, `year`, `venue`, `relevance`, `evidence_role`, `current_role`, `claims` |
+| `entry_date_present` | error | `entry_date` must be non-null and a valid date (string or YAML date/datetime) |
+| `claim_required_fields` | error | Each claim under a paper entry must have: `claim_id`, `role`, `claim`, `source`, `evidence`, `confidence`, `relevance` |
+| `claim_source_nonnull` | error | Every claim's `source` field must be non-null and non-empty |
+| `no_duplicate_claim_ids` | error | `claim_id` values must be unique within each paper entry |
+| `vocabulary_paper_level` | error | `relevance`, `current_role` must be from the controlled vocabulary in `docs/schemas/claims.md`; `evidence_role` values must all be from the Evidence Role Vocabulary |
+| `vocabulary_claim_level` | error | `role`, `confidence`, `relevance` on each claim must be from controlled vocabulary |
+| `no_tier2_papers` | error | No paper entry may reference a paper ID with `ingest_tier: 2` in `raw/metadata/` |
+| `paper_ids_exist` | error | Every paper `id` must have a corresponding `raw/metadata/{id}.json` |
+| `paper_ids_ingested` | warning | Papers in the YAML should have `status: ingested` in metadata; `status: accepted` is flagged |
+| `concept_in_registry` | error | The top-level `concept` slug must appear in the canonical slug list in `config/health_check.yaml` |
+| `registry_config_matches_docs` | warning | `config/health_check.yaml`'s slug list must match the backtick-span slugs in `docs/content.md`'s Concept Page Registry section (runs once per full pass, not per-concept) |
+
+### Phase 2 checks (run after synthesis; include all Phase 1 checks plus the following)
+
+| Check | Severity | Description |
+|-------|----------|-------------|
+| `required_synthesis_keys` | error | `claim_clusters`, `method_families`, `open_questions`, `trend_notes` must be present |
+| `cluster_required_fields` | error | Each cluster must have: `id`, `claim`, `status`, `confidence`, `last_reviewed` |
+| `no_duplicate_cluster_ids` | error | `id` values must be unique across all `claim_clusters` entries |
+| `cluster_paper_refs_valid` | error | Every paper ID in `supporting_papers`, `contradicting_papers`, `refining_papers` must exist in `papers[].id` within the same file |
+| `vocabulary_cluster` | error | `status` and `confidence` on each cluster must be from controlled vocabulary |
+| `method_family_required_fields` | error | Each family entry must have: `id`, `name`, `summary`, `papers` |
+| `method_family_paper_refs_valid` | error | Every paper ID in `method_families[].papers` must exist in `papers[].id` |
+| `paper_method_family_refs_valid` | error | Non-empty `method_family` values on paper entries must reference IDs that exist in `method_families[].id` |
+| `method_family_coverage` | warning | Paper entries with `method_family: []` after Phase 2 are flagged (expected during Phase 1, not after synthesis) |
+| `cluster_last_reviewed` | warning | Clusters with `last_reviewed` older than `cluster_staleness_days` (config, default 180) are flagged as potentially stale |
+
+### Stats emitted
+
+```python
+{
+    "concepts_checked": 1,         # concept YAMLs whose issues were evaluated this run (scope-dependent)
+    "concept_files": 24,           # number of _claims/*.yaml files (always corpus-wide)
+    "total_paper_entries": 338,    # sum of len(papers) across all YAMLs (always corpus-wide)
+    "total_clusters": 142,         # sum of len(claim_clusters) across all YAMLs
+    "strongly_supported": 48,      # clusters with status: strongly_supported
+    "contested": 3,                # clusters with status: contested
+    "papers_not_in_any_yaml": 12,  # ingested, non-Tier-2 papers with no entry in any concept YAML
+}
+```
+
+`papers_not_in_any_yaml` is the key integration-backlog signal and is always computed globally —
+it cannot be meaningfully scoped by `--concept` (see design notes for rationale). No caching: at
+current corpus scale a full scan is sub-second to low-single-digit seconds; revisit only if this
+becomes a measured bottleneck.
+
+**Design notes:** `docs/records/2026-06-24-integrate-health-check-design.md` — full rationale
+and the four open implementation questions (all resolved 2026-07-15).
 
 ---
 
@@ -270,7 +347,7 @@ This module checks cross-cutting consistency across the pipeline. Its `stats` ou
     "total_metadata": 1037,
     "accepted": 699,
     "ingested": 338,
-    "integrated": 276,
+    "papers_not_in_any_yaml": 12,  # from the integrate module — replaces the old "integrated" count
     "rejected": 0,
     "pending": 0,
     "concept_files": 24,
@@ -336,6 +413,13 @@ parse:
 ingest:
   vocabulary_doc: "docs/schemas/vocabulary.md"
   claim_citation_pattern: "§\\d+\\.\\d+"
+
+integrate:
+  concept_registry:                 # canonical concept slugs; kept in sync with
+    - flow-matching                 # docs/content.md's Concept Page Registry via
+    - diffusion-tts                 # the registry_config_matches_docs warning check
+    # ...                           # (see config/health_check.yaml for the full list)
+  cluster_staleness_days: 180       # cluster_last_reviewed warning threshold, Phase 2
 
 corpus:
   core_concepts:                    # concepts that must have evidence dossiers

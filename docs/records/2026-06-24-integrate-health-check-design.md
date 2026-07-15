@@ -81,7 +81,8 @@ references a non-existent family ID is an error.
 | `no_tier2_papers` | error | No paper entry may reference a paper ID with `ingest_tier: 2` in `raw/metadata/` |
 | `paper_ids_exist` | error | Every paper `id` must have a corresponding `raw/metadata/{id}.json` |
 | `paper_ids_ingested` | warning | Papers in the YAML should have `status: ingested` in metadata; `status: accepted` is flagged |
-| `concept_in_registry` | error | The top-level `concept` slug must appear in the concept registry in `docs/content.md` |
+| `concept_in_registry` | error | The top-level `concept` slug must appear in the canonical slug list in `config/health_check.yaml` |
+| `registry_config_matches_docs` | warning | `config/health_check.yaml`'s slug list must match the backtick-span slugs in `docs/content.md`'s Concept Page Registry section (run once per full pass, not per-concept) |
 
 ### Phase 2 checks (run after synthesis; include all Phase 1 checks plus the following)
 
@@ -134,26 +135,38 @@ When implementing `scripts/checks/integrate.py`, replace §6 of
 4. Add the `--concept` flag to the invocation examples (replacing `--id`).
 5. Update the `stats` dict in §8 (Corpus Module) to remove `"integrated": 276` and add
    `papers_not_in_any_yaml` derived from the integrate module output.
+6. Create `config/health_check.yaml` with the canonical concept slug list (source for
+   `concept_in_registry`) and `cluster_staleness_days: 180` (source for `cluster_last_reviewed`).
+   Add `registry_config_matches_docs` to the Phase 1 check table.
 
 ---
 
-## Open Questions for Implementation
+## Open Questions for Implementation — resolved 2026-07-15
 
-1. **Registry parsing.** `concept_in_registry` requires parsing the concept registry out of
-   `docs/content.md`. The registry is a prose section with inline code spans, not a structured
-   list. Either add a `config/health_check.yaml` entry listing canonical slugs, or write a
-   parser for the `docs/content.md` registry section. The config approach is more robust.
+1. **Registry parsing.** Decided: add `config/health_check.yaml` with a flat canonical slug
+   list as the source of truth for `concept_in_registry` (structured, robust to parse — a
+   script, not an LLM, is consuming this). To prevent the config and `docs/content.md`'s
+   "Concept Page Registry" prose section from silently drifting apart, add a second check,
+   `registry_config_matches_docs` (**warning** severity), that regex-extracts the backtick-span
+   slugs from `docs/content.md` and diffs them against the config list. Drift becomes a visible
+   dashboard warning instead of a silent parser miss.
 
-2. **Phase detection.** The module needs to know whether Phase 2 has run for a given YAML to
-   decide which check tier to apply. A heuristic: if `claim_clusters` is present and non-empty,
-   treat as post-Phase-2; if absent or empty list, treat as post-Phase-1-only. The `--phase`
-   flag overrides the heuristic.
+2. **Phase detection.** Decided: accept the heuristic as specified — non-empty `claim_clusters`
+   → post-Phase-2 (full check set); empty/absent → Phase-1-only. `--phase` overrides. Traced
+   through the main edge cases (new Phase 1 entries appended after a prior Phase 2 run; a
+   supporting paper removed after clustering) and the heuristic behaves correctly in both —
+   no changes needed.
 
-3. **`papers_not_in_any_yaml` scope.** Computing this stat requires scanning all concept YAMLs
-   to build a set of all integrated paper IDs, then diffing against all ingested Tier 1 paper
-   IDs from metadata. This is a global operation; it cannot be scoped with `--concept`. If the
-   corpus grows large, this scan may become slow. Cache the union of YAML paper IDs between
-   runs if needed.
+3. **`papers_not_in_any_yaml` scope.** Decided: no caching for now. Checked current scale —
+   1,326 files in `raw/metadata/`, `_claims/` just getting started (1 YAML) — a full scan is
+   sub-second to low-single-digit seconds even scaled to ~23 concept YAMLs. Revisit caching
+   only if `--report` becomes noticeably slow in practice; premature at this corpus size.
+   Note: this stat is a partial, free detector for the `related_concepts` completeness bug
+   tracked in `BACKLOG.md` (Pipeline Health Suite) — it catches papers with a fully empty
+   `related_concepts` list, but not papers missing just one of several correct concept tags
+   (those still show up in the YAMLs they *were* tagged into). The two checks are
+   complementary, not redundant; the dedicated ingest-module check is still needed.
 
-4. **Staleness threshold.** The `cluster_last_reviewed` warning uses 180 days. This is
-   arbitrary and should be tunable in `config/health_check.yaml`.
+4. **Staleness threshold.** Decided: keep 180 days as the default, made tunable via
+   `config/health_check.yaml` (`cluster_staleness_days: 180`) — same config file as (1). Low
+   stakes since this check is warning-severity only.

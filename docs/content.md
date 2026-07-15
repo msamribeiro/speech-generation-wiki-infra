@@ -103,12 +103,13 @@ respect to history — always regenerates from current YAML state.
 3. Render concept page using the Concept Page Template below.
 4. Write `wiki/concepts/{slug}.md` with `generation` frontmatter (date, stage: render, mode, model, `source_digest_date`, commit).
 5. Optionally render `wiki/evidence/{slug}.md` (Evidence Dossier Template below).
-6. Optionally render `wiki/overview.md` from all concept pages + YAML summaries.
-7. Log: `- render | {N} concepts | mode: {mode} | model: {model}` to `wiki/log.md`.
+6. Update the rendered concept's row in `wiki/concepts/index.md` (Papers count from YAML `paper_count`, Evidence link only if a dossier exists, Last updated set to today).
+7. Optionally render `wiki/overview.md` from all concept pages + YAML summaries.
+8. Log: `- render | {N} concepts | mode: {mode} | model: {model}` to `wiki/log.md`.
 
 The render agent writes exactly these files: `wiki/concepts/*.md`, `wiki/evidence/*.md`,
-`wiki/overview.md`, `wiki/log.md`. It never reads `raw/parsed/`, never writes `wiki/papers/`,
-never writes `wiki/_claims/`.
+`wiki/concepts/index.md`, `wiki/overview.md`, `wiki/log.md`. It never reads `raw/parsed/`, never
+writes `wiki/papers/`, never writes `wiki/_claims/`.
 
 ---
 

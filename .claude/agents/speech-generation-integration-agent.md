@@ -122,7 +122,10 @@ for c in concepts:
 ### Context budget
 
 **Phase 1:** process at most **20 new paper pages** per concept per invocation. If more are
-queued, stop at 20, report the remainder, and let the parent orchestrator re-invoke.
+queued, stop at 20, report the remainder, and let the parent orchestrator re-invoke. When the
+candidate list exceeds 20, order the work queue by `published_date` ascending (oldest first —
+see Step 1) and take the first 20; this is a deterministic priority rule, not an artifact of file
+listing order.
 
 **Phase 2:** no paper count cap (reads YAML entries only). Large YAMLs (50+ entries) consume
 significant context — if synthesis stalls, split by running `--phase 2` on one concept at a time.
@@ -132,7 +135,9 @@ significant context — if synthesis stalls, split by running `--phase 2` on one
 ## Step 1 — Discover papers for the target concept
 
 For each target concept `{slug}`, find all paper pages that list it in `related_concepts`,
-filtering out Tier 2 papers:
+filtering out Tier 2 papers. Order candidates by `published_date` ascending (oldest first) — this
+is the priority order used when the work queue is later capped at 20 (see Context budget above),
+so it must come from `raw/metadata/{id}.json`, not from file listing order:
 
 ```bash
 python3 -c "
@@ -141,7 +146,8 @@ import yaml as _yaml
 WIKI  = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 INFRA = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra'
 concept = '{slug}'
-for path in sorted(glob.glob(f'{WIKI}/papers/*.md')):
+candidates = []
+for path in glob.glob(f'{WIKI}/papers/*.md'):
     text = open(path).read()
     fm = re.match(r'^---\n(.*?)\n---', text, re.DOTALL)
     if not fm:
@@ -155,8 +161,12 @@ for path in sorted(glob.glob(f'{WIKI}/papers/*.md')):
         if str(meta.get('ingest_tier')) == '2':
             print(f'TIER2_SKIP {pid}')
             continue
+        published_date = meta.get('published_date') or '9999-99-99'  # unknown dates sort last
     except FileNotFoundError:
-        pass
+        published_date = '9999-99-99'
+    candidates.append((published_date, pid))
+candidates.sort()  # oldest first
+for published_date, pid in candidates:
     print(pid)
 "
 ```
@@ -177,7 +187,7 @@ else:
 "
 ```
 
-Compute the work queue:
+Compute the work queue, preserving the oldest-first order from discovery:
 - **Normal:** candidates not already in `papers:`
 - **`--force [ids]`:** the specified IDs regardless of existing entries (all candidates if no IDs given)
 - **`--phase 2`:** skip Step 1; proceed directly to Phase 2
@@ -411,11 +421,16 @@ except yaml.YAMLError as e:
 "
 ```
 
-Then run the full health check for deep validation:
+Then run the full health check for deep validation. Use `.venv/bin/python3` explicitly — the
+system `python3` may be too old for this script's syntax:
 
 ```bash
-python3 scripts/health_check.py --integrate {slug} --phase 2
+INFRA=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra
+WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+cd $INFRA && .venv/bin/python3 scripts/health_check.py --module integrate --concept {slug} --phase 2 --wiki-dir $WIKI -v
 ```
+
+Fix any reported error before proceeding (warnings do not block).
 
 ---
 
@@ -456,7 +471,7 @@ Discovered    : {N} candidates | {A} already integrated | {T} Tier 2 skipped | {
 Phase 1       : {P} entries written | {S} structured-claim pages | {L} legacy-claim pages | {E} with empty claims (no ## Claims section) | {NS} claims with source: not specified
 Phase 2       : {M} clusters updated (new: {X} | promoted: {Y} | contested: {Z}) | {Q} reassessments ({TR} triggered | {OD} overdue)
 Validation    : all passed | {F} failures (fixed)
-Health check  : python3 scripts/health_check.py --integrate {slug}
+Health check  : .venv/bin/python3 scripts/health_check.py --module integrate --concept {slug} --wiki-dir $WIKI
 ```
 
 ---
