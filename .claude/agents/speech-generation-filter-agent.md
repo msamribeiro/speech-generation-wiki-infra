@@ -1,7 +1,7 @@
 ---
 name: speech-generation-filter-agent
 description: Scores pending papers in raw/metadata/ for relevance to TTS, voice conversion, and spoken conversational agents. Updates each file's status (accepted/review/rejected), relevance_score, relevance_note, and task fields. Appends borderline papers to raw/review_queue.md and logs the run to raw/pipeline_log.md. Invoke whenever papers with status=pending need filtering.
-model: claude-sonnet-4-6
+model: inherit
 color: orange
 tools: Bash, Read, Edit, Write
 ---

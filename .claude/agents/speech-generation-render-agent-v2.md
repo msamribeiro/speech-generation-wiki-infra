@@ -1,7 +1,7 @@
 ---
 name: speech-generation-render-agent-v2
 description: Conservative concept page and evidence dossier renderer. Reads wiki/_claims/{slug}.yaml (the claim graph) and generates human-readable wiki pages while preserving evidence scope, support roles, and uncertainty. Stateless with respect to history; always regenerates from current YAML state. Distinct from the integration agent — this agent reads YAML and writes pages; it never writes YAML.
-model: claude-sonnet-4-6
+model: inherit
 color: purple
 tools: Bash, Read, Edit, Write
 ---
@@ -49,7 +49,7 @@ WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-w
 **YOU DO NOT:**
 - Write `wiki/_claims/*.yaml` — that is the integration agent's job
 - Write `wiki/papers/*.md` — that is the ingest agent's job
-- Write `wiki/venues/*.md` — those are updated by the ingest agent; narrative sections may be added here only if explicitly requested
+- Write `wiki/venues/*.md` — venue pages are not part of the automated pipeline; generate only if explicitly requested
 - Read `raw/parsed/` files — work only from YAML and paper frontmatter
 - Change any `raw/metadata/` file
 - Invent evidence, citations, adoption claims, or status upgrades not encoded in the YAML
@@ -352,7 +352,7 @@ details in the evidence dossier.
 - `generation.stage: render`
 - `generation.mode: full | light`
 - `generation.agent: speech-generation-render-agent-v2`
-- `generation.model:` — this agent spec's `model:` value (`claude-sonnet-4-6`)
+- `generation.model:` — the exact model ID you were told you are running as in your own system prompt (e.g. `claude-sonnet-5`)
 - `generation.commit:` — run `git rev-parse --short HEAD` in infra root
 - `status:` — infer conservatively from `claim_clusters` and `trend_notes`; use one of:
   - `dominant` — use only when the YAML contains broad, current, multi-source evidence that the concept dominates beyond this corpus
@@ -497,7 +497,7 @@ from datetime import date
 WIKI   = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
 n      = {concepts_rendered}
 mode   = '{full|light}'
-model  = 'claude-sonnet-4-6'
+model  = 'MODEL_ID_PLACEHOLDER'  # replace with your actual model ID (from your own system prompt) before running
 today  = date.today().isoformat()
 bullet = f'- render-v2 | {n} concepts | mode: {mode} | model: {model}'
 section = f'## {today}'

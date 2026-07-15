@@ -1,7 +1,7 @@
 ---
 name: speech-generation-ingest-agent
-description: Per-paper ingest worker. Given a single paper ID, reads raw/parsed/{id}/paper.md and raw/metadata/{id}.json, writes wiki/papers/{id}.md following the CLAUDE.md schema, updates wiki/papers/index.md, wiki/venues/index.md, wiki/index.md (count only), wiki/log.md, and raw/metadata/{id}.json (status: ingested). Emits an INGEST_RESULT JSON signal on its last output line for the orchestrator to parse.
-model: claude-sonnet-4-6
+description: Per-paper ingest worker. Given a single paper ID, reads raw/parsed/{id}/paper.md and raw/metadata/{id}.json, writes wiki/papers/{id}.md following the CLAUDE.md schema, updates wiki/papers/index.md, wiki/index.md (count only), wiki/log.md, and raw/metadata/{id}.json (status: ingested). Emits an INGEST_RESULT JSON signal on its last output line for the orchestrator to parse.
+model: inherit
 color: blue
 tools: Bash, Read, Edit, Write
 ---
@@ -21,8 +21,6 @@ This agent is a **paper-page-only worker**. It has a narrow, fixed scope:
 - Copy selected architecture figures to `wiki/papers/assets/{id}/` (0–2 per paper, only when warranted)
 - Append a row to `wiki/papers/index.md`
 - Update the count in `wiki/index.md`
-- Create/update `wiki/venues/{venue-year}.md`
-- Update `wiki/venues/index.md`
 - Append an entry to `wiki/log.md`
 - Update `raw/metadata/{id}.json` (`status`, `ingested_date`, and `generation_history`)
 
@@ -32,13 +30,13 @@ This agent is a **paper-page-only worker**. It has a narrow, fixed scope:
 - Read or edit `wiki/overview.md`, `wiki/evidence/`, or any `wiki/reports/` file
 - Read or edit any other `wiki/papers/` file (not even to add back-links)
 - Run a concept pass or any cross-paper synthesis
+- Create/update `wiki/venues/` files or link to them
 
 Cross-paper work (claim extraction, concept YAML, cross-links) belongs to the integration agent.
 Concept page rendering belongs to the render agent. Do not perform those steps.
 
 You write exactly these files: `wiki/papers/{id}.md`, `wiki/papers/assets/{id}/*`,
-`wiki/papers/index.md`, `wiki/index.md`, `wiki/venues/{venue-year}.md`,
-`wiki/venues/index.md`, `wiki/log.md`, `raw/metadata/{id}.json`.
+`wiki/papers/index.md`, `wiki/index.md`, `wiki/log.md`, `raw/metadata/{id}.json`.
 If you find yourself opening `wiki/concepts/` or `wiki/_claims/`, stop — you are out of scope.
 
 ---
@@ -122,7 +120,7 @@ for r in in_corpus:
 git rev-parse --short HEAD
 ```
 
-Record the result as `COMMIT`. The model is always `claude-sonnet-4-6` (matches this agent spec's `model:` frontmatter). Use both in the paper page `generation` block (step 3) and the metadata `generation_history` entry (step 7). Set `op` to `re-ingest` if `generation_history` already exists and is non-empty in the metadata JSON; otherwise `ingest`.
+Record the result as `COMMIT`. Also determine `MODEL` — the exact model ID you were told you are running as in your own system prompt (e.g. `claude-sonnet-5`), not a value copied from this file. Use both `COMMIT` and `MODEL` in the paper page `generation` block (step 3) and the metadata `generation_history` entry (step 6). Set `op` to `re-ingest` if `generation_history` already exists and is non-empty in the metadata JSON; otherwise `ingest`.
 
 ### 2c. Select and copy architecture figures
 
@@ -206,7 +204,7 @@ field_significance:
 generation:
   date: {TODAY}
   agent: speech-generation-ingest-agent
-  model: claude-sonnet-4-6
+  model: "{MODEL from step 2b}"
   commit: "{COMMIT from step 2b}"
 ---
 
@@ -381,72 +379,7 @@ open(f'{WIKI}/index.md', 'w').write(idx)
 "
 ```
 
-### 5. Create/update `$WIKI/venues/{year}-{venue-slug}.md`
-
-Venue pages are named `{year}-{venue-slug}` (e.g. `2025-interspeech.md`) so directory listings and the index sort chronologically.
-
-```bash
-python3 << 'EOF'
-import json, os, re
-from datetime import date
-
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-
-meta  = json.load(open('raw/metadata/{ID}.json'))
-venue = meta.get('venue', 'arXiv')
-year  = meta.get('year', '')
-slug  = venue.lower().replace(' ', '-')
-path  = f'{WIKI}/venues/{year}-{slug}.md'
-pid   = meta['id']
-title = meta.get('title', '')[:70]
-today = date.today().isoformat()
-link  = f'| {pid} | {title} |'
-
-os.makedirs(f'{WIKI}/venues', exist_ok=True)
-
-if os.path.exists(path):
-    text = open(path).read()
-    if pid not in text:
-        if '| ID |' in text:
-            text = text.rstrip('\n') + '\n' + link + '\n'
-        else:
-            text += f'\n## Papers\n\n| ID | Title |\n|----|-------|\n{link}\n'
-        text = re.sub(r'(papers_ingested:\s*)(\d+)',
-                      lambda m: m.group(1) + str(int(m.group(2)) + 1), text)
-        text = re.sub(r'(last_updated:\s*)\S+', f'\\g<1>{today}', text)
-    open(path, 'w').write(text)
-else:
-    open(path, 'w').write(
-        f'---\ntitle: "{venue} {year}"\nvenue: {venue}\nyear: {year}\npapers_ingested: 1\nlast_updated: {today}\n---\n\n'
-        f'## Overview\n\n_Accumulates as papers are ingested._\n\n'
-        f'## Papers\n\n| ID | Title |\n|----|-------|\n{link}\n'
-    )
-print(f'{path} updated')
-EOF
-```
-
-Update the Venues table in `$WIKI/venues/index.md`:
-
-```bash
-python3 -c "
-import json, re
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-meta  = json.load(open('raw/metadata/{ID}.json'))
-venue = meta.get('venue','arXiv'); year = meta.get('year','')
-slug  = venue.lower().replace(' ','-')
-key   = f'{year}-{slug}'
-text  = open(f'{WIKI}/venues/index.md').read()
-if f'[[{key}]]' not in text:
-    row = f'| [[{key}]] | {venue} | {year} | 1 |'
-    text = text.rstrip('\n') + '\n' + row + '\n'
-else:
-    text = re.sub(rf'(\[\[{re.escape(key)}\]\][^\n]*\| )(\d+)( \|)',
-                  lambda m: m.group(1)+str(int(m.group(2))+1)+m.group(3), text)
-open(f'{WIKI}/venues/index.md','w').write(text)
-"
-```
-
-### 6. Append to `$WIKI/log.md`
+### 5. Append to `$WIKI/log.md`
 
 Log entries are grouped by date. If today's `## YYYY-MM-DD` section already exists, append a bullet to it; otherwise create a new section at the end of the file.
 
@@ -471,7 +404,7 @@ open(f'{WIKI}/log.md','w').write(text)
 "
 ```
 
-### 7. Update `raw/metadata/{ID}.json`
+### 6. Update `raw/metadata/{ID}.json`
 
 ```bash
 python3 -c "
@@ -486,13 +419,14 @@ try:
 except Exception:
     commit = 'unknown'
 op = 're-ingest' if d.get('generation_history') else 'ingest'
-entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-ingest-agent', 'model': 'claude-sonnet-4-6', 'commit': commit}
+model = 'MODEL_ID_PLACEHOLDER'  # replace with the MODEL determined in step 2b before running
+entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-ingest-agent', 'model': model, 'commit': commit}
 d.setdefault('generation_history', []).append(entry)
 open(path,'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "
 ```
 
-### 8. Assess review flags
+### 7. Assess review flags
 
 Before emitting the return signal, decide whether any fields need human review. This is a **precision gate, not a recall gate** — only flag when you are genuinely uncertain, not as a routine check. If you made a confident judgment call, do not flag it.
 
@@ -507,7 +441,7 @@ Flag `"claims"` when:
 
 `review_flags` is a list of objects: `{"field": "claims" | "field_significance", "reason": "one sentence"}`. Omit it (or use `[]`) when no flags apply.
 
-### 9. Emit return signal
+### 8. Emit return signal
 
 The **last line of your output** must be exactly this format (valid JSON after the prefix):
 

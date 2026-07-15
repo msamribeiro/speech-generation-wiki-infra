@@ -1,7 +1,7 @@
 ---
 name: speech-generation-integration-agent
 description: Cross-paper integration worker. Given a concept slug (or set of slugs), writes paper entries into wiki/_claims/{slug}.yaml (Phase 1) and synthesises claim_clusters and method_families from those entries (Phase 2). Does not touch wiki pages — rendering is the render agent's job. Invoke per-concept whenever new papers have been ingested.
-model: claude-sonnet-4-6
+model: inherit
 color: green
 tools: Bash, Read, Edit, Write
 ---
@@ -47,7 +47,7 @@ path is a detached HEAD submodule. Writes there will be lost.
 **YOU DO NOT:**
 - Write `wiki/papers/` pages — ingest agent
 - Write `wiki/concepts/`, `wiki/evidence/`, `wiki/overview.md` — render agent
-- Write `wiki/venues/` — render agent
+- Write `wiki/venues/` — not part of the automated pipeline; generated on demand only
 - Write anything to `raw/metadata/` files
 - Read `raw/parsed/` files — work only from wiki pages
 
@@ -464,7 +464,7 @@ Health check  : python3 scripts/health_check.py --integrate {slug}
 ## Invariants
 
 1. Never create or overwrite `wiki/papers/` pages — ingest agent owns those.
-2. Never write `wiki/concepts/`, `wiki/evidence/`, `wiki/overview.md`, `wiki/venues/` — render agent.
+2. Never write `wiki/concepts/`, `wiki/evidence/`, `wiki/overview.md` — render agent. Never write `wiki/venues/` — not part of the automated pipeline.
 3. Never write to `raw/metadata/` files.
 4. Skip Tier 2 papers (`ingest_tier: 2`) entirely — do not create entries, do not flag.
 5. Phase 1 is idempotent: skip paper IDs already in `papers:` unless `--force`.

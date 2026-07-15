@@ -1,7 +1,7 @@
 ---
 name: speech-generation-lightweight-ingest-agent
-description: Lightweight stub writer for Tier 2 citation-discovery papers. Given a single paper ID, reads raw/parsed/{id}/paper.md and raw/metadata/{id}.json, writes a stub wiki page (frontmatter + abstract callout + Context in Speech Generation + Wiki Connections), updates wiki/papers/index.md, wiki/venues/index.md, wiki/index.md (count only), wiki/log.md, and raw/metadata/{id}.json (status: ingested). Emits an INGEST_RESULT JSON signal on its last output line.
-model: claude-sonnet-4-6
+description: Lightweight stub writer for Tier 2 citation-discovery papers. Given a single paper ID, reads raw/parsed/{id}/paper.md and raw/metadata/{id}.json, writes a stub wiki page (frontmatter + abstract callout + Context in Speech Generation + Wiki Connections), updates wiki/papers/index.md, wiki/index.md (count only), wiki/log.md, and raw/metadata/{id}.json (status: ingested). Emits an INGEST_RESULT JSON signal on its last output line.
+model: inherit
 color: purple
 tools: Bash, Read, Edit, Write
 ---
@@ -18,8 +18,6 @@ Tier 2 papers are not the wiki's primary focus (they are foundation LLMs, datase
 - Write `wiki/papers/{id}.md` (stub format — see template below)
 - Append a row to `wiki/papers/index.md`
 - Update paper count in `wiki/index.md`
-- Create/update `wiki/venues/{venue-year}.md`
-- Update `wiki/venues/index.md`
 - Append an entry to `wiki/log.md`
 - Update `raw/metadata/{id}.json` (`status`, `ingested_date`, and `generation_history`)
 
@@ -29,6 +27,7 @@ Tier 2 papers are not the wiki's primary focus (they are foundation LLMs, datase
 - Read or edit any `wiki/concepts/` file
 - Read or edit `wiki/overview.md` or any `wiki/reports/` file
 - Read or edit any other `wiki/papers/` file
+- Create/update `wiki/venues/` files or link to them
 
 The integration agent handles concept back-links and cross-paper connections. Do not perform those steps.
 
@@ -106,7 +105,7 @@ for r in in_corpus:
 git rev-parse --short HEAD
 ```
 
-Record the result as `COMMIT`. Use it in the `generation` frontmatter block and `generation_history` metadata entry.
+Record the result as `COMMIT`. Also determine `MODEL` — the exact model ID you were told you are running as in your own system prompt (e.g. `claude-sonnet-5`), not a value copied from this file. Use both in the `generation` frontmatter block and `generation_history` metadata entry.
 
 ### 3. Write `wiki/papers/{ID}.md`
 
@@ -167,7 +166,7 @@ field_significance:
 generation:
   date: {TODAY}
   agent: speech-generation-lightweight-ingest-agent
-  model: claude-sonnet-4-6
+  model: "{MODEL from step 2b}"
   commit: "{COMMIT from step 2b}"
 ---
 
@@ -305,70 +304,7 @@ open(f'{WIKI}/index.md', 'w').write(idx)
 "
 ```
 
-### 5. Create/update `$WIKI/venues/{year}-{venue-slug}.md`
-
-```bash
-python3 << 'EOF'
-import json, os, re
-from datetime import date
-
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-
-meta  = json.load(open('raw/metadata/{ID}.json'))
-venue = meta.get('venue', 'arXiv')
-year  = meta.get('year', '')
-slug  = venue.lower().replace(' ', '-')
-path  = f'{WIKI}/venues/{year}-{slug}.md'
-pid   = meta['id']
-title = meta.get('title', '')[:70]
-today = date.today().isoformat()
-link  = f'| {pid} | {title} |'
-
-os.makedirs(f'{WIKI}/venues', exist_ok=True)
-
-if os.path.exists(path):
-    text = open(path).read()
-    if pid not in text:
-        if '| ID |' in text:
-            text = text.rstrip('\n') + '\n' + link + '\n'
-        else:
-            text += f'\n## Papers\n\n| ID | Title |\n|----|-------|\n{link}\n'
-        text = re.sub(r'(papers_ingested:\s*)(\d+)',
-                      lambda m: m.group(1) + str(int(m.group(2)) + 1), text)
-        text = re.sub(r'(last_updated:\s*)\S+', f'\\g<1>{today}', text)
-    open(path, 'w').write(text)
-else:
-    open(path, 'w').write(
-        f'---\ntitle: "{venue} {year}"\nvenue: {venue}\nyear: {year}\npapers_ingested: 1\nlast_updated: {today}\n---\n\n'
-        f'## Overview\n\n_Accumulates as papers are ingested._\n\n'
-        f'## Papers\n\n| ID | Title |\n|----|-------|\n{link}\n'
-    )
-print(f'{path} updated')
-EOF
-```
-
-Update the Venues table in `$WIKI/venues/index.md`:
-
-```bash
-python3 -c "
-import json, re
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
-meta  = json.load(open('raw/metadata/{ID}.json'))
-venue = meta.get('venue','arXiv'); year = meta.get('year','')
-slug  = venue.lower().replace(' ','-')
-key   = f'{year}-{slug}'
-text  = open(f'{WIKI}/venues/index.md').read()
-if f'[[{key}]]' not in text:
-    row = f'| [[{key}]] | {venue} | {year} | 1 |'
-    text = text.rstrip('\n') + '\n' + row + '\n'
-else:
-    text = re.sub(rf'(\[\[{re.escape(key)}\]\][^\n]*\| )(\d+)( \|)',
-                  lambda m: m.group(1)+str(int(m.group(2))+1)+m.group(3), text)
-open(f'{WIKI}/venues/index.md','w').write(text)
-"
-```
-
-### 6. Append to `$WIKI/log.md`
+### 5. Append to `$WIKI/log.md`
 
 ```bash
 python3 -c "
@@ -390,7 +326,7 @@ open(f'{WIKI}/log.md','w').write(text)
 "
 ```
 
-### 7. Update `raw/metadata/{ID}.json`
+### 6. Update `raw/metadata/{ID}.json`
 
 ```bash
 python3 -c "
@@ -405,13 +341,14 @@ try:
 except Exception:
     commit = 'unknown'
 op = 're-ingest' if d.get('generation_history') else 'ingest'
-entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-lightweight-ingest-agent', 'model': 'claude-sonnet-4-6', 'commit': commit}
+model = 'MODEL_ID_PLACEHOLDER'  # replace with the MODEL determined in step 2b before running
+entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-lightweight-ingest-agent', 'model': model, 'commit': commit}
 d.setdefault('generation_history', []).append(entry)
 open(path,'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "
 ```
 
-### 8. Emit return signal
+### 7. Emit return signal
 
 The **last line of your output** must be exactly this format:
 

@@ -48,7 +48,7 @@ wiki/                 # the knowledge base (git submodule → content repo)
   _claims/            # integrate output — one YAML per concept (claim graph)
   concepts/           # render output — concept synthesis pages
   evidence/           # render output — evidence dossiers
-  venues/             # render output — venue/org summary pages
+  venues/             # on-demand only — venue/org trend reports, not part of the automated pipeline
   briefs/             # render output — decision memos (deferred)
   reports/            # render output — trend reports (deferred)
   index.md            # master catalog

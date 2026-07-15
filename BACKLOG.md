@@ -42,7 +42,7 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
 
 ## Pipeline Health Suite [P1 · planned]
 
-Single command (`python scripts/health_check.py`) serving two roles: a test suite that validates pipeline outputs at each stage (run post-pass to catch problems before they accumulate), and a health dashboard that tracks overall knowledge base state. One module per stage, each independently runnable via `--module`; a `--report` flag writes `STATUS_DASHBOARD.md` from the combined output, replacing the standalone dashboard script. Serves as the source of truth for corpus counts — static counts in index.md, overview.md, and venue pages should be driven from this output rather than maintained manually.
+Single command (`python scripts/health_check.py`) serving two roles: a test suite that validates pipeline outputs at each stage (run post-pass to catch problems before they accumulate), and a health dashboard that tracks overall knowledge base state. One module per stage, each independently runnable via `--module`; a `--report` flag writes `STATUS_DASHBOARD.md` from the combined output, replacing the standalone dashboard script. Serves as the source of truth for corpus counts — static counts in index.md and overview.md should be driven from this output rather than maintained manually.
 
 - [ ] Build scripts/health_check.py: entry point; runs all modules or a named subset via `--module`; exit 0 on clean, 1 with per-module failure report; `--id <paper_id>` to scope fetch/parse/ingest checks to a single paper; `--report` flag writes STATUS_DASHBOARD.md with per-module pass/fail summary, corpus counts, and health signals
 - [ ] Build fetch module (scripts/checks/fetch.py): metadata JSON parses; required fields present (id, title, published_date, status, venue); status values in allowed set; no duplicate IDs across metadata files; title-based collision detection (canonical priority: proceedings ID > arXiv); absorbs the planned dedup check script
@@ -50,9 +50,17 @@ Single command (`python scripts/health_check.py`) serving two roles: a test suit
 - [ ] Build ingest module (scripts/checks/ingest.py): frontmatter parses; required fields and sections present; controlled vocabulary values valid (field_significance.type, tasks, tags against vocabulary.md); claims have inline source citations (§N.N format); figure links point to existing assets; related_concepts slugs exist; wikilinks use [[id|Name]] format; paper appears in wiki/papers/index.md; Tier 2 stubs have citation stub callout
 - [ ] Build integrate module (scripts/checks/integrate.py): full check set designed (25 checks across Phase 1 + Phase 2) — read `docs/records/2026-06-24-integrate-health-check-design.md` before implementing; uses `--concept` (not `--id`) to scope to one YAML; also update §6 of `docs/design/pipeline-health-suite.md` to replace the old thin stub; absorbs validate_concept_evidence.py from Content Stage Implementation
 - [ ] Build render module (scripts/checks/render.py): concept pages exist for all _claims/ YAML files; required sections present on concept pages; evidence dossiers exist where expected; paper counts consistent between YAML and rendered page
-- [ ] Build corpus module (scripts/checks/corpus.py): metadata status:ingested but missing wiki page; wiki page exists but no metadata (orphaned page); count mismatches across wiki/index.md, overview.md, venue pages; broken wikilinks across all pages; this module's output is the authoritative source for corpus counts in STATUS_DASHBOARD.md
-- [ ] Fix static counts — replace hardcoded paper/concept counts in wiki/index.md, overview.md, venue pages, and evidence digests with values computed by the corpus module; run as part of `health_check.py --report` after each ingest or integration pass
+- [ ] Build corpus module (scripts/checks/corpus.py): metadata status:ingested but missing wiki page; wiki page exists but no metadata (orphaned page); count mismatches across wiki/index.md, overview.md; broken wikilinks across all pages; this module's output is the authoritative source for corpus counts in STATUS_DASHBOARD.md
+- [ ] Fix static counts — replace hardcoded paper/concept counts in wiki/index.md, overview.md, and evidence digests with values computed by the corpus module; run as part of `health_check.py --report` after each ingest or integration pass
 - [ ] Wire into pre-commit or pre-push hook in wiki content repo
+
+## On-Demand Venue Reports [P2 · deferred]
+
+Venue pages (`wiki/venues/`) were removed from the automated ingest pipeline 2026-07-15 — auto-generated per-venue-year pages were mostly thin paper listings (e.g. "arXiv 2023" as an assortment of unrelated papers), while a handful of hand-enriched pages (e.g. "Interspeech 2025") showed real value once a venue has enough ingested papers to support genuine trend synthesis. Replace with an on-demand generator invoked by request for a specific venue-year, not auto-updated per ingest.
+
+- [ ] Design an on-demand venue report generator (agent or script): input a venue + year, read all ingested papers for that venue-year from `wiki/papers/`, synthesise dominant themes/clusters (not just a paper listing) — similar quality bar to the existing `2025-interspeech.md` write-up
+- [ ] Decide the trigger threshold (e.g. only venues with N+ ingested papers) so isolated arXiv preprints don't get a report
+- [ ] Decide whether venue pages get linked back into `wiki/index.md` once the generator exists, and where
 
 ## Citation Leaderboard [P2 · deferred]
 
@@ -80,7 +88,7 @@ Short, decision-oriented memos generated from the claim graph. Implement after c
 
 Targeted quality upgrades for high-value pages. Blocked on Content Stage Implementation — generation tracking requires rendered concept pages to exist first.
 
-- [ ] Add generation frontmatter tracking to concept pages, venue pages, and overview.md (model, date, infra commit)
+- [ ] Add generation frontmatter tracking to concept pages and overview.md (model, date, infra commit)
 - [ ] Run Opus quality pass on foundational paper pages (≥10 in-corpus citations: VITS, VALL-E, HiFi-GAN, Voicebox, EnCodec, WavLM)
 - [ ] Run Opus quality pass on mature concept pages (≥15 papers; start with flow-matching, autoregressive-codec-tts)
 

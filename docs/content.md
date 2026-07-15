@@ -22,9 +22,12 @@ Data flow:
 ```
 wiki/papers/  →  wiki/_claims/  →  wiki/concepts/
                               →  wiki/evidence/
-                              →  wiki/venues/     (render or ingest)
                               →  wiki/overview.md (render)
 ```
+
+Venue pages (`wiki/venues/`) are not part of the automated pipeline — they are generated
+on demand for venues with enough ingested papers to support a real trend synthesis
+(e.g. a full conference like Interspeech), rather than auto-updated on every ingest.
 
 **Tier 1 papers** (full standard pages) use `speech-generation-ingest-agent`.
 **Tier 2 papers** (lightweight stubs) use `speech-generation-lightweight-ingest-agent`.
@@ -43,15 +46,14 @@ Per-paper, self-contained. No cross-paper knowledge required or produced.
 5. **Select figure** — only if `field_significance.type` includes `architectural-novelty`. Copy 0–2 figures from `raw/parsed/{id}/assets/` to `wiki/papers/assets/{id}/`. Prefer architecture/system diagrams over result plots.
 6. **Write paper page** — fill every template field. Use `"not reported"` (never blank, never estimated) for missing values. Claims must each have an inline source citation `*(§N.N)*` or `*(§N.N, Table N)*`.
 7. **Update `wiki/papers/index.md`** — add row: `| [[{id}]] | [{title}](papers/{id}.md) | {org} | {venue} | {year} | {tasks} | {architectures} | {date} |`
-8. **Update `wiki/venues/{venue-year}.md`** — add row to the papers table.
-9. **Update `wiki/index.md`** — increment paper count only.
-10. **Update `wiki/log.md`** — append bullet: `- ingest | {id} | {title} | {venue} {year}`
-11. **Update metadata** — set `status: ingested`, `ingested_date`, append to `generation_history` in `raw/metadata/{id}.json`.
-12. **Emit signal** — output `INGEST_RESULT` JSON on last line for the orchestrator.
+8. **Update `wiki/index.md`** — increment paper count only.
+9. **Update `wiki/log.md`** — append bullet: `- ingest | {id} | {title} | {venue} {year}`
+10. **Update metadata** — set `status: ingested`, `ingested_date`, append to `generation_history` in `raw/metadata/{id}.json`.
+11. **Emit signal** — output `INGEST_RESULT` JSON on last line for the orchestrator.
 
 The ingest agent writes exactly these files: `wiki/papers/{id}.md`, `wiki/papers/assets/{id}/*`,
-`wiki/papers/index.md`, `wiki/venues/{venue-year}.md`, `wiki/index.md`, `wiki/log.md`,
-`raw/metadata/{id}.json`. It never touches `wiki/concepts/`, `wiki/_claims/`, or `wiki/overview.md`.
+`wiki/papers/index.md`, `wiki/index.md`, `wiki/log.md`,
+`raw/metadata/{id}.json`. It never touches `wiki/concepts/`, `wiki/_claims/`, `wiki/overview.md`, or `wiki/venues/`.
 
 ---
 
@@ -421,10 +423,11 @@ mismatches, etc. Write "None noted." if the YAML is clean.}
 
 ### Venue Page (`wiki/venues/{year}-{venue-slug}.md`)
 
-One page per venue-year (e.g. `2025-interspeech.md`) or org-year for technical reports.
-Covers: total papers ingested, dominant tasks, dominant architectures, standout papers, and
-trends specific to that community or organization. Written by the ingest agent (for individual
-paper rows) and updated by the render agent (for narrative sections).
+Not part of the automated ingest/integrate/render pipeline — generated on demand, by request,
+for a venue-year with enough ingested papers to support a real trend synthesis (e.g. a full
+conference like Interspeech), not for a bucket of unrelated arXiv preprints. Covers: total
+papers ingested, dominant tasks, dominant architectures, standout papers, and trends specific
+to that community or organization.
 
 ### Comparison Page (`wiki/comparisons/{slug}.md`)
 
@@ -519,7 +522,7 @@ Manual lint covers what the health check does not yet automate:
 - `wiki/_claims/*.yaml` files that fail YAML parse (integrate module, planned)
 - `paper_count` in YAML that does not match the `papers` list length (integrate module, planned)
 - Concept pages whose `source_digest_date` is behind the YAML `last_updated` (render module, planned)
-- Static count mismatches across `wiki/index.md`, `wiki/overview.md`, venue pages (corpus module, planned)
+- Static count mismatches across `wiki/index.md`, `wiki/overview.md` (corpus module, planned)
 
 Log: `- lint | {summary}` to `raw/pipeline_log.md`.
 
@@ -568,12 +571,6 @@ Last updated: {date} | Papers: {N} | Concepts: {N} | Reports: {N}
 ## Reports
 
 | Page | Type | Period | Papers covered |
-
-## Venues
-
-| Page | Venue | Year | Papers ingested |
-|------|-------|------|----------------|
-| [[{year}-{venue-slug}]] | {Venue} | {year} | N |
 ```
 
 ---

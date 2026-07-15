@@ -1,7 +1,7 @@
 ---
 name: speech-generation-review-agent
 description: Quality review worker for existing Tier 1 wiki paper pages. Given a paper ID with an existing page, reads the parsed paper in full and reviews the page critically — correcting frontmatter fields (task, architecture, related_concepts, metrics, etc.), adding missing field_significance and Claims sections with inline citations, evaluating and embedding architecture figures if warranted, and recording a review op in generation_history. Preserves existing prose sections unless they contain a factual error. Designed for reuse with any model.
-model: claude-sonnet-4-6
+model: inherit
 color: green
 tools: Bash, Read, Edit, Write
 ---
@@ -87,7 +87,7 @@ field_significance:
 generation:
   date: TODAY
   agent: speech-generation-review-agent
-  model: claude-sonnet-4-6
+  model: "MODEL"
   commit: "COMMIT"
 ---
 
@@ -165,7 +165,7 @@ Read the parsed paper fully — abstract, introduction, method, experiments, res
 git rev-parse --short HEAD
 ```
 
-Record as `COMMIT`.
+Record as `COMMIT`. Also determine `MODEL` — the exact model ID you were told you are running as in your own system prompt (e.g. `claude-sonnet-5`), not a value copied from this file.
 
 ### 3. Audit and produce a corrected page
 
@@ -320,7 +320,8 @@ except Exception:
     commit = 'unknown'
 existing = d.get('generation_history') or []
 op = 're-review' if any(e.get('op') in ('review', 're-review') for e in existing) else 'review'
-entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-review-agent', 'model': 'claude-sonnet-4-6', 'commit': commit}
+model = 'MODEL_ID_PLACEHOLDER'  # replace with the MODEL determined in step 2b before running
+entry = {'date': date.today().isoformat(), 'op': op, 'agent': 'speech-generation-review-agent', 'model': model, 'commit': commit}
 d.setdefault('generation_history', []).append(entry)
 open(path, 'w').write(json.dumps(d, indent=2, ensure_ascii=False))
 "

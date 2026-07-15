@@ -27,7 +27,7 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
       "date": "YYYY-MM-DD",
       "op": "ingest | re-ingest | quality-pass",
       "agent": "speech-generation-ingest-agent | speech-generation-lightweight-ingest-agent | speech-generation-integration-agent",
-      "model": "claude-sonnet-4-6",
+      "model": "string — the model ID that actually performed this operation, e.g. claude-sonnet-5",
       "commit": "abc1234"
     }
   ],
