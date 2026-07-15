@@ -9,11 +9,11 @@ Resume standard corpus ingest and clear the integration backlog.
 - [x] Ingest 2 deferred ICLR 2025 papers: `iclr-2025-hQvX9MBowC` (DiTTo-TTS), `iclr-2025-uxDFlPGRLX` (FlowDec) *(completed 2026-06-30)*
 - [ ] Continue chronological ingest of remaining accepted papers through end of Q3 2025 (94 remaining as of 2026-07-06) — session 8 queue closed (24 papers, corpus reached 493); session 9 batch 1 of 8 done (2507.16835, 2411.19770, 2025.clicit-1.27 ingested; 2025.clicit-1.81/FAMA reverted to `raw/review_queue.md` — pure ASR/ST paper, no TTS/VC/SCA component); corpus at 496 pages; next: `2506.23367`, `2509.05359`, `2509.04093`, `2509.04667`; full session log at `Q3_INGESTION_SESSIONS.md`
 
-## Content Stage Implementation [P0 · planned]
+## Content Stage Implementation [P0 · in-progress]
 
-Execute the redesigned three-stage pipeline in the wiki content repo. Integration agent spec and schema are complete (2026-06-24); design doc at `docs/design/integration-agent.md`. `_claims/` directory exists; `concepts/_evidence/` removed. YAML validation is covered by the Pipeline Health Suite integrate module (`docs/records/2026-06-24-integrate-health-check-design.md`).
+Execute the redesigned three-stage pipeline in the wiki content repo. Integration agent spec and schema are complete (2026-06-24); design doc at `docs/design/integration-agent.md`. `_claims/` directory exists; `concepts/_evidence/` removed. YAML validation is covered by the Pipeline Health Suite integrate module (`scripts/checks/integrate.py`, built 2026-07-15).
 
-- [ ] Run integration passes for all supported concepts — per-concept, two-phase model; flow-matching prototype exists, all others start from scratch; run Phase 1 across all ingested Tier 1 papers for each concept, then Phase 2 per concept
+- [ ] Run integration passes for all supported concepts — per-concept, two-phase model. **flow-matching in progress**: 34/95 candidate papers integrated (round 1 of the 81-paper backlog beyond the original 14-paper prototype, completed 2026-07-15, committed locally in the content repo but not yet pushed); 61 candidates remain queued, oldest-first, ~3 more rounds at the 20-per-invocation cap. All other concepts have not started — no `_claims/` YAML exists for them yet
 - [ ] Run first render pass: generate concept pages and evidence dossiers from `_claims/` YAML
 - [ ] Generate first evidence dossiers for core concepts (flow-matching, autoregressive-codec-tts, neural-codec, zero-shot-tts, evaluation-metrics)
 
