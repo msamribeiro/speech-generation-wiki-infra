@@ -62,7 +62,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-22",
-  "ingested_date": null,
+  "ingested_date": "2026-07-15",
   "url": "https://arxiv.org/abs/2509.17765",
   "pdf_url": "https://arxiv.org/pdf/2509.17765.pdf",
   "pdf_path": "raw/papers/2509.17765.pdf",
@@ -75,9 +75,18 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Multimodal LLM with state-of-the-art speech generation as part of omni-modal system",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-15",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "8a40dd7"
+    }
+  ]
 }

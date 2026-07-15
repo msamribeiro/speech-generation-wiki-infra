@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-23",
-  "ingested_date": null,
+  "ingested_date": "2026-07-15",
   "url": "https://arxiv.org/abs/2509.19592",
   "pdf_url": "https://arxiv.org/pdf/2509.19592.pdf",
   "pdf_path": "raw/papers/2509.19592.pdf",
@@ -34,9 +34,18 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Frame-stacked local transformer for efficient multi-codebook speech generation in LLM-TTS",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-15",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "8a40dd7"
+    }
+  ]
 }

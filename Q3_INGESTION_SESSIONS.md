@@ -741,6 +741,66 @@ Pre-selected 20 papers chronologically starting from `2509.13989` (closing out t
 
 ---
 
+### 2026-07-15 — Q3 continuation, 16-paper pre-selected batch (session 11, COMPLETE)
+
+Pre-selected 16 papers chronologically starting from `2509.17516` (Audiobook-CC) through `2509.19883` (CoMelSinger), 4 batches of 4.
+
+**Batch 1 (2509.17516, 2509.17765, 2509.17988, 2509.18060):**
+
+59. 2509.17516 (Audiobook-CC: Controllable Long-context Speech Generation for Multicast Audiobook, arXiv, Ximalaya Inc.) — `field_significance: moderate/[architectural-novelty, engineering-integration]`. No review flags. Clean.
+
+60. 2509.17765 (Qwen3-Omni Technical Report, arXiv, Qwen Team/Alibaba) — `field_significance: high`. One bare wikilink (`[[2503.20215]]` Qwen2.5-Omni) fixed.
+
+61. 2509.17988 (Nord-Parl-TTS: Finnish and Swedish TTS Dataset from Parliament Speech, arXiv) — **session-limit interruption before any files were written** — confirmed `status: accepted` and no page file existed; clean retry, no data lost. Two bare wikilinks (Emilia, F5-TTS) fixed on retry.
+
+62. 2509.18060 (TMD-TTS: A Unified Tibetan Multi-Dialect Text-to-Speech Framework, arXiv, UESTC) — no in-corpus references found; clean otherwise.
+
+**Corpus after batch 1: 553 pages, 0 errors.**
+
+**Batch 2 (2509.18470, 2501.04561, 2509.18531, 2509.18806):**
+
+63. 2509.18470 (Discrete-Time Diffusion-Like Models for Speech Synthesis, arXiv, University of Sheffield) — clean, no in-corpus references.
+
+64. 2501.04561 (OpenOmni: Advancing Open-Source Omnimodal Large Language Models, arXiv) — trusted `published_date` (2025-09-23) over the misleading `2501` arXiv ID prefix, per established precedent (session 9 batch 8, session 10 batch 3).
+
+65. 2509.18531 (No Verifiable Reward for Prosody: Toward Preference-Guided Prosody Learning in TTS, arXiv) — negative-result finding on GRPO reward collapse for prosody. 5 bare wikilinks fixed (Llasa, F5R-TTS, DMOSpeech 2, TTS-1, MPO).
+
+66. 2509.18806 (Rethinking the joint estimation of magnitude and phase for time-frequency domain neural vocoders, arXiv, IOA-CAS/Tencent) — clean, no in-corpus references.
+
+**Corpus after batch 2: 557 pages, 0 errors.**
+
+**Batch 3 (2509.18823, 2509.18928, 2509.19025, 2509.19186) — hit a classifier outage mid-batch:**
+
+67. 2509.18823 (Towards Evaluating Generative Audio: Insights from Neural Audio Codec Embedding Distances, arXiv, Dolby) — clean, no in-corpus references.
+
+68. 2509.18928 (Direct Preference Optimization for Speech Autoregressive Diffusion Models / ARDM-DPO, arXiv, ByteDance Seed) — 8 bare wikilinks fixed (DiTAR, ARDiT precursor, human-feedback zero-shot TTS, MPO, Next Tokens Denoising, Seed-TTS, CosyVoice 3, next-token-diffusion paradigm paper).
+
+69. 2509.19025 (Enhancing Noise Robustness for Neural Speech Codecs through Resource-Efficient Progressive Quantization Perturbation Simulation, arXiv, USTC) — content verified by full manual read (paper.md + references.json) during a multi-hour Claude Sonnet 5 safety-classifier outage that blocked both Bash and Agent tool calls; health check deferred and completed on retry once the classifier recovered. Same outage pattern as session 10 batch 4, again notably longer than the ~15-min baseline.
+
+70. 2509.19186 (Improving Test-Time Performance of RVQ-based Neural Codecs, arXiv, Supertone) — **session-limit interruption before any files were written**, hit immediately after the classifier outage resolved; confirmed `status: accepted` and no page file existed, clean retry, no data lost.
+
+**Corpus after batch 3: 561 pages, 0 errors.**
+
+**Batch 4 (2509.19231, 2509.19592, 2509.19812, 2509.19883):**
+
+71. 2509.19231 (Finding My Voice: Generative Reconstruction of Disordered Speech for Automated Clinical Evaluation, arXiv, Carnegie Mellon University) — `task: [TTS, VC, evaluation]` confirmed legitimate (SPK-SIM 0.62 on STAR). No in-corpus references found.
+
+72. 2509.19592 (Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation, arXiv, NVIDIA) — clean, no in-corpus references.
+
+73. 2509.19812 (Efficient Speech Watermarking for Speech Synthesis via Progressive Knowledge Distillation / PKDMark, arXiv, Microsoft) — `venue: arXiv` kept despite `arxiv_comment` noting ASRU 2025 acceptance, per established precedent (2507.23159, session unspecified). No in-corpus references found (all 32 references unresolved to corpus IDs, including WavMark/AudioSeal).
+
+74. 2509.19883 (CoMelSinger: Discrete Token-Based Zero-Shot Singing Synthesis With Structured Melody Control and Guidance, arXiv, National University of Singapore) — **caught the recurring `task`/`related_concepts` mismatch again**: `task: [singing]` but `singing` was missing from `related_concepts` — added the tag and a Wiki Connections bullet (see [[feedback_task_related_concepts_mismatch]]). 3 bare wikilinks fixed (Vevo2, CosyVoice, CosyVoice 2).
+
+**Corpus after batch 4 (session 11 COMPLETE, all 16 pre-selected papers ingested, 0 rejected): 565 pages, 0 errors corpus-wide** (1178 pre-existing warnings, same baseline throughout).
+
+**Recurring QC issues across the session:** bare wikilinks were the dominant issue this session (found on 5 of 16 papers, ranging 1-8 per paper) rather than title truncation or index-count fabrication, both of which stayed clean throughout (no drift on either `wiki/index.md` or `papers/index.md` counts all session — the venue-page removal from session 10's post-session cleanup also removed that entire class of drift). Two session-limit interruptions, both clean nothing-written cases recovered without data loss. One multi-hour classifier outage (batch 3), worked around by manual full-text verification and read-only prep during the blocked window, matching the session 10 batch 4 pattern. One recurrence of the `task`/`related_concepts` mismatch for `singing`.
+
+**Q3 2025 progress:** 337 ingested / 27 remaining.
+
+**Next session:** Continue Q3 2025 chronologically from the next accepted paper after `2509.19883` (27 remaining).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.
