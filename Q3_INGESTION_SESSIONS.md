@@ -801,6 +801,56 @@ Pre-selected 16 papers chronologically starting from `2509.17516` (Audiobook-CC)
 
 ---
 
+### 2026-07-16 — Q3 continuation, 12-paper pre-selected batch (session 12, paused — 11 of 12 done)
+
+Pre-selected 12 papers chronologically starting from `2509.19928` through `2509.22062`, 3 batches of 4.
+
+**Batch 1 (2509.19928, 2509.20086, 2509.20321, 2509.20410):**
+
+75. 2509.19928 (Measuring Prosody Diversity in Zero-Shot TTS: A New Metric, Benchmark, and Exploration, arXiv) — clean, no wikilink or count issues. 8 in-corpus citations verified ingested.
+
+76. 2509.20086 (OLaPh: Optimal Language Phonemizer, arXiv, Hof University of Applied Sciences) — `architecture: [autoregressive-LM]` reflects an optional 2B-param GemmaX LLM extension for OOV/edge-case phoneme prediction, not the (rule-based/statistical) core framework; documented in `model_size`. Clean otherwise.
+
+77. 2509.20321 (Conversational Speech Reveals Structural Robustness Failures in SpeechLLM Backbones, arXiv, Texas A&M) — **spurious `spoken-language-model` related_concepts tag caught and removed**: the agent flagged its own uncertainty ("the paper's own probe deliberately excludes any audio signal") but tagged it anyway. The paper is a text-only ablation (`codec_used: "none"`, gold Switchboard transcripts, zero audio) of LLM backbones as a proxy for SpeechLLM components — fails the external-signal rule outright (see [[feedback_spoken_language_model_tagging]]). Kept `task: [SCA, evaluation]` since the paper's stated contribution is genuinely about backbone-selection guidance for spoken conversational agent pipelines; `related_concepts` left at `[evaluation-metrics]` only, since no other concept page fits a text-only backbone-robustness study — an intentional task/related_concepts asymmetry, not an oversight.
+
+78. 2509.20410 (Phoenix-VAD: Streaming Semantic Endpoint Detection for Full-Duplex Speech Interaction, arXiv, Xiamen University/DiDi Global) — `spoken-language-model` tag correctly applied this time (genuine external audio through a Zipformer encoder into a Qwen2.5-0.5B-Instruct backbone) — useful contrast case right after paper 77. Architecture figure copied. 4 bare wikilinks fixed (IndexTTS, Seed-TTS, MinMo, Mini-Omni2).
+
+**Corpus after batch 1: 569 pages, 0 errors.**
+
+**Q3 2025 progress:** 341 ingested / 23 remaining.
+
+**Batch 2 (2509.20485, 2509.22718, 2505.10599, 2509.20802) — hit a session-limit interruption mid-batch:**
+
+79. 2509.20485 (Objective Evaluation of Prosody and Intelligibility in Speech Synthesis via Conditional Prediction of Discrete Tokens, arXiv, Johns Hopkins/NUS) — clean, no wikilink or count issues. 2 in-corpus citations verified ingested.
+
+80. 2509.22718 (PerformSinger: Multimodal Singing Voice Synthesis Leveraging Synchronized Lip Cues from Singing Performance Videos, arXiv) — **session-limit interruption before any files were written** (agent was mid-Bash-heredoc-workaround for a stuck Write tool classifier when cut off); confirmed `status: accepted` and no page file existed, clean retry, no data lost. `task: [singing]` correctly mirrored into `related_concepts` on retry (no mismatch this time). No in-corpus references found (all refs unresolved to corpus IDs).
+
+81. 2505.10599 (UDDETTS: Unifying Discrete and Dimensional Emotions for Controllable Emotional Text-to-Speech, arXiv) — trusted `published_date` (2025-09-25) over the misleading `2505` arXiv ID prefix, per established precedent (sessions 9/10/11). 11 in-corpus citations, all verified `status: ingested` by hand (agent's own `references.json`-based check was reliable this time). 2 architecture figures embedded.
+
+82. 2509.20802 (SPADE: Structured Pruning and Adaptive Distillation for Efficient LLM-TTS, arXiv, KAIST/42dot) — agent's self-reported row-count delta ("567→568") was wrong (another instance of [[feedback_agent_selfreport_unreliable]]); actual file state verified correct independently: 573 rows, matching the `index.md` counter, single row for the paper, no duplicates. 6 in-corpus citations cross-checked and verified ingested (paper's own `references.json` had them all marked `in_corpus: false`, stale).
+
+**Corpus after batch 2: 573 pages, 0 errors.**
+
+**Q3 2025 progress:** 345 ingested / 19 remaining.
+
+**Batch 3 (2509.22727, 2506.21875, 2509.21968, 2509.22062) — switched cadence to one paper at a time with a go-ahead before each, per user request:**
+
+83. 2509.22727 (DiaMoE-TTS: A Unified IPA-Based Dialect TTS Framework with Mixture-of-Experts and Parameter-Efficient Zero-Shot Adaptation, arXiv, Tsinghua/Giant Network AI Lab) — clean, no wikilink or count issues. 4 in-corpus citations (F5-TTS, CosyVoice2, Spark-TTS, MoE-TTS) verified ingested. Agent considered and rejected a `disentanglement` tag on review (MoE routing doesn't meet the tagging bar).
+
+84. 2506.21875 (WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild, arXiv, WeChat AI/Tencent) — trusted `published_date` (2025-09-26) over the misleading `2506` arXiv ID prefix, same precedent as prior sessions. `spoken-language-model` + `speech-to-speech` related_concepts confirmed legitimate (benchmark feeds real synthesized/human audio into 5 end-to-end speech LLMs under test) — good contrast case against session 12 batch 1's paper 77, which failed the same rule. 8 bare wikilinks fixed (VoiceBench, GLM-4-Voice, Qwen2.5-omni, Kimi-Audio, GPT-4o System Card, CosyVoice 2, Baichuan-Audio, MiniCPM-V), all verified ingested.
+
+85. 2509.21968 (AUV: Teaching Audio Universal Vector Quantization with Single Nested Codebook, arXiv, SJTU/Tencent Hunyuan/Peking University) — pure-codec paper, correctly tagged `task: [codec]` only (no TTS tag) since the §4.3 zero-shot TTS eval trains an existing external model, EmoVoice, on AUV tokens rather than proposing a new TTS system. 8 bare wikilinks fixed (UniCodec, BigCodec, Moshi/Mimi, Stable-Codec, SpeechTokenizer, WavTokenizer, F5-TTS, EmoVoice), all verified ingested. Architecture figure embedded.
+
+**Corpus after session 12 (paused): 576 pages, 0 errors.**
+
+**Q3 2025 progress:** 348 ingested / 16 remaining.
+
+**Recurring QC issues this session:** bare wikilinks dominated again (found on 4 of 11 papers, all 4-8 per paper), consistent with session 11's pattern. One spurious `spoken-language-model` tag caught and removed (paper 77, text-only backbone study), contrasted twice against legitimate applications of the same tag (papers 78, 84) where real audio was genuinely fed into an LLM — the external-signal rule is holding up well under repeated testing. One session-limit interruption, clean nothing-written case, recovered without data loss. One instance of a wrong agent self-reported file count that didn't match the actual (correct) file state on independent verification.
+
+**Next session:** One paper left in this session's pre-selected 12 — `2509.22062` (Comprehend and Talk) — then continue Q3 2025 chronologically (16 remaining including that one).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these after the session batch is complete — check the paper page and resolve each flag by hand.

@@ -22,7 +22,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-24",
-  "ingested_date": null,
+  "ingested_date": "2026-07-16",
   "url": "https://arxiv.org/abs/2509.20410",
   "pdf_url": "https://arxiv.org/pdf/2509.20410.pdf",
   "pdf_path": "raw/papers/2509.20410.pdf",
@@ -34,9 +34,18 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Phoenix-VAD: streaming semantic endpoint detection enabling full-duplex dialogue; foundational SCA component.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-16",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "779058a"
+    }
+  ]
 }

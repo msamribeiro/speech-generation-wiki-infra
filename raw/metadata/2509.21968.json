@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-26",
-  "ingested_date": null,
+  "ingested_date": "2026-07-16",
   "url": "https://arxiv.org/abs/2509.21968",
   "pdf_url": "https://arxiv.org/pdf/2509.21968.pdf",
   "pdf_path": "raw/papers/2509.21968.pdf",
@@ -32,9 +32,18 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "AUV: universal audio codec with single nested codebook for mixed-domain audio; core codec.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-16",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "779058a"
+    }
+  ]
 }
