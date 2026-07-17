@@ -21,7 +21,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-26",
-  "ingested_date": null,
+  "ingested_date": "2026-07-17",
   "url": "https://arxiv.org/abs/2509.22243",
   "pdf_url": "https://arxiv.org/pdf/2509.22243.pdf",
   "pdf_path": "raw/papers/2509.22243.pdf",
@@ -34,9 +34,18 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "FLEXI is the first benchmark for full-duplex LLM-human spoken interaction, evaluating latency, speech quality, and conversational effectiveness of real-time dialogue systems.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-17",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "831240d"
+    }
+  ]
 }

@@ -15,7 +15,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-30",
-  "ingested_date": null,
+  "ingested_date": "2026-07-17",
   "url": "https://arxiv.org/abs/2510.00264",
   "pdf_url": "https://arxiv.org/pdf/2510.00264.pdf",
   "pdf_path": "raw/papers/2510.00264.pdf",
@@ -28,9 +28,18 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Baseline systems for Low-Resource Audio Codec Challenge 2025; core codec evaluation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-17",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "831240d"
+    }
+  ]
 }

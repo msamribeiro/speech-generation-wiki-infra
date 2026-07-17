@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-29",
-  "ingested_date": null,
+  "ingested_date": "2026-07-17",
   "url": "https://arxiv.org/abs/2509.24457",
   "pdf_url": "https://arxiv.org/pdf/2509.24457.pdf",
   "pdf_path": "raw/papers/2509.24457.pdf",
@@ -33,9 +33,18 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Systematic evaluation of 45 objective metrics for neural codec quality assessment",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-17",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "831240d"
+    }
+  ]
 }

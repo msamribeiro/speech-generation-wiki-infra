@@ -3,18 +3,20 @@
 **Date:** 2026-06-29
 **Goal:** Ingest all remaining Q3 2025 (July–September 2025) accepted papers into the wiki.
 
+**STATUS: COMPLETE as of 2026-07-17 (session 13).** All Q3 2025 accepted papers are ingested — 364 ingested, 0 remaining, 107 rejected, 471 total in scope. 13 sessions, ~30 batches, 0 uncaught corpus-wide health-check errors at any point. See final scope table below and the session 13 close-out entry for full totals.
+
 ---
 
 ## Scope
 
 | Status | Count |
 |--------|-------|
-| Already ingested (Q3 2025) | 145 |
-| Remaining to ingest | 221 |
-| Rejected | 105 |
+| Ingested (Q3 2025, final) | 364 |
+| Remaining to ingest | 0 |
+| Rejected | 107 |
 | **Total Q3 2025 in corpus** | **471** |
 
-All 221 remaining papers are Tier 1. No Tier 2 stubs needed for this quarter.
+All papers were Tier 1. No Tier 2 stubs were needed for this quarter.
 
 ---
 
@@ -848,6 +850,90 @@ Pre-selected 12 papers chronologically starting from `2509.19928` through `2509.
 **Recurring QC issues this session:** bare wikilinks dominated again (found on 4 of 11 papers, all 4-8 per paper), consistent with session 11's pattern. One spurious `spoken-language-model` tag caught and removed (paper 77, text-only backbone study), contrasted twice against legitimate applications of the same tag (papers 78, 84) where real audio was genuinely fed into an LLM — the external-signal rule is holding up well under repeated testing. One session-limit interruption, clean nothing-written case, recovered without data loss. One instance of a wrong agent self-reported file count that didn't match the actual (correct) file state on independent verification.
 
 **Next session:** One paper left in this session's pre-selected 12 — `2509.22062` (Comprehend and Talk) — then continue Q3 2025 chronologically (16 remaining including that one).
+
+---
+
+### 2026-07-17 — Q3 continuation, session 12 close-out + new 16-paper batch (session 13, batch 1 of 4)
+
+Closed out session 12's last paper, then pre-selected the full remaining 16 Q3 2025 papers chronologically in 4 batches of 4. Cadence for this session: one paper at a time with a health check after each, batch summarized before the next go-ahead.
+
+86. 2509.22062 (Comprehend and Talk: Text to Speech Synthesis via Dual Language Modeling, arXiv, AMAP Speech/Tsinghua University) — closes out session 12. S3Codec split-RVQ ASR-distilled codec + dual-Transformer (Understand-then-Generate) architecture with Masked Audio Parallel Inference. 1 in-corpus citation (MBCodec, 2509.17006), 1 bare wikilink fixed. 2 architecture figures embedded.
+
+87. 2509.22167 (Semantic-VAE: Semantic-Alignment Latent Representation for Better Speech Synthesis, arXiv) — 8 in-corpus citations (F5-TTS, CosyVoice2, and others) verified ingested, all correctly piped on first pass — no bare wikilinks this time. 1 architecture figure embedded (VAE training framework); motivational and results-plot figures correctly excluded per selection criteria.
+
+88. 2509.22243 (FLEXI: Benchmarking Full-duplex Human-LLM Speech Interaction, arXiv, Northeastern University) — benchmark paper (no proposed model, no figure). 4 in-corpus citations; one (SageLM, 2508.20916) correctly kept in `related_papers` frontmatter but omitted from Wiki Connections prose since it has no wiki page yet (citation-integrity invariant). 1 bare wikilink fixed (Full-Duplex-Bench).
+
+89. 2509.23147 (BFA: Real-time Multilingual Text-to-speech Forced Alignment, arXiv) — clean, no wikilink issues, no in-corpus references found.
+
+**Corpus after batch 1: 580 pages, 0 errors** (1178 pre-existing warnings, same baseline as prior sessions — confirmed unchanged via full corpus-wide health check run at the end of the batch).
+
+**Q3 2025 progress:** 352 ingested / 12 remaining.
+
+**Recurring QC issues this batch:** the `wiki/index.md` paper-count callout drifted after every single one of the 4 ingests this batch (agents wrote 572, 573, 580, and 575 against actual counts of 577, 578, 579, and 580 respectively — errors in both directions, not a consistent off-by-N) — manually corrected each time against the true file count (`ls wiki/papers/*.md | wc -l` cross-checked against `papers/index.md` row count). This is a more severe recurrence of [[feedback_index_count_drift]] than previously logged (drift up to 5, and not always an undercount). 2 bare wikilinks fixed (2 of 4 papers affected), consistent with the ongoing dominant QC issue pattern from sessions 11–12. No task/related_concepts mismatches, no spurious concept tags, no title truncation.
+
+**Next batch:** `2510.02352`, `2509.23938`, `2509.24457`, `2509.24570` (batch 2 of 4) — awaiting go-ahead.
+
+---
+
+### 2026-07-17 continued — session 13, batch 2 of 4
+
+90. 2510.02352 (Evaluating Bias in Spoken Dialogue LLMs for Real-World Decisions and Recommendations, arXiv) — trusted `published_date` (2025-09-27) over the misleading `2510` arXiv ID prefix, same precedent as prior sessions. 1 in-corpus citation (IndexTTS2), 1 bare wikilink fixed. No figure (dataset/evaluation-contribution paper, not architectural-novelty).
+
+91. 2509.23938 (Easy Turn: Integrating Acoustic and Linguistic Modalities for Robust Turn-Taking in Full-Duplex Spoken Dialogue Systems, arXiv) — **hit a transient API-server overload (529) on the first attempt**, cutting the agent off mid-task before any files were written; confirmed clean nothing-written state (`status: accepted`, `ingested_date: null`, no page file) and retried successfully. The retry also **omitted its own `INGEST_RESULT` JSON signal** (a new failure mode, distinct from the tracked self-report-unreliable pattern) — verified all file writes by hand instead of trusting the summary. 1 bare wikilink fixed (Full-Duplex-Bench). No figure (engineering integration, not a novel architecture).
+
+92. 2509.24457 (Assessing speech quality metrics for evaluation of neural audio codecs under clean speech conditions, arXiv) — clean, no wikilink issues, no in-corpus references found.
+
+93. 2509.24570 (ISSE: An Instruction-Guided Speech Style Editing Dataset And Benchmark, arXiv) — agent caught a stale `in_corpus: false` flag in the paper's own `references.json` and correctly linked Llasa (2502.04128) anyway after direct verification it has a wiki page. 1 bare wikilink fixed.
+
+**Corpus after batch 2: 584 pages, 0 errors** (1178 pre-existing warnings, unchanged).
+
+**Q3 2025 progress:** 356 ingested / 8 remaining.
+
+**Recurring QC issues this batch:** `wiki/index.md` count drift continued but less severely than batch 1 — 3 of 4 papers drifted (581 correct on paper 90's first pass then re-broken to 577 by paper 91's agent, corrected to 582; 578 vs actual 583 on paper 92; paper 93 was correct on first try at 584). 3 bare wikilinks fixed (3 of 4 papers). One clean session-limit-style interruption (API overload, not a context/turn limit, but same nothing-written recovery pattern). One missing `INGEST_RESULT` signal on retry — new variant worth watching for recurrence.
+
+**Next batch:** `2509.24650`, `2509.24773`, `2509.25131`, `2509.25416` (batch 3 of 4) — awaiting go-ahead.
+
+---
+
+### 2026-07-17 continued — session 13, batch 3 of 4
+
+94. 2509.24650 (VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning, arXiv) — **hit a session-limit interruption on the first attempt** (Claude session limit, resets 12:50pm Europe/Warsaw), cut off mid-write; left a stray `wiki/papers/assets/2509.24650/figure-7.png` from before the interruption but no page file, no index row, no metadata change — clean nothing-written case for the actual ingest. Retried after resume; agent verified and reused the pre-existing figure rather than assuming it was stale. 7 in-corpus citations, all bare wikilinks, all fixed. `field_significance.level: high`.
+
+95. 2509.24773 (VSSFlow: Unifying Video-conditioned Sound and Speech Generation via Joint Learning, arXiv) — clean, no wikilink issues. Correctly resolved an F5-TTS citation (arXiv `2410.06885`) to the wiki's canonical ID `2025.acl-long.313`, per [[feedback_f5tts_paper_id]] precedent. `field_significance.type` includes `negative-result` (contradicts a prior DualDub claim that joint V2S/VisualTTS training degrades performance).
+
+96. 2509.25131 (MGM-Omni: Scaling Omni LLMs to Personalized Long-Horizon Speech, arXiv) — unusually high in-corpus citation count (20 total, 8 linked in Wiki Connections); `references.json`'s `in_corpus` flags were stale/false for all of them, agent cross-verified directly against `wiki/papers/index.md` — all 8 linked citations spot-checked and confirmed real. 8 bare wikilinks fixed. Index count correct on first try (first paper this session to avoid the drift entirely).
+
+97. 2509.25416 (Emotion-Aligned Generation in Diffusion Text to Speech Models via Preference-Guided Optimization, arXiv, ICASSP 2026) — 5 in-corpus citations, `references.json` stale for 4 of 5, agent cross-verified all against real wiki pages (confirmed correct on independent spot-check). 5 bare wikilinks fixed. 1 architecture figure embedded (D3PO/Diffusion-DPO/EASPO comparison).
+
+**Corpus after batch 3: 588 pages, 0 errors** (1178 pre-existing warnings, unchanged).
+
+**Q3 2025 progress:** 360 ingested / 4 remaining.
+
+**Recurring QC issues this batch:** bare wikilinks were the dominant issue again (3 of 4 papers, 5-8 links each — the two highest-citation papers this session). `wiki/index.md` count drift hit only 1 of 4 papers (paper 94, on the interruption-recovery retry) — the lowest drift rate of any batch this session, though still not zero. One more session-limit interruption (paper 94), same clean-recovery pattern as batch 2's API-overload case but from an actual context/turn limit this time; the stray pre-written figure asset was verified rather than blindly reused or discarded. No task/related_concepts mismatches, no spurious concept tags, no title truncation. A recurring theme worth noting across batches 2-3: ingest agents' own `references.json` in-corpus flags are proving unreliable (stale in multiple papers this session) — cross-verification against actual wiki page existence caught this correctly every time it came up.
+
+**Next batch:** `2509.26276`, `2509.26514`, `2509.26542`, `2510.00264` (batch 4 of 4, final batch of the 16-paper Q3 tail) — awaiting go-ahead.
+
+---
+
+### 2026-07-17 continued — session 13, batch 4 of 4 (FINAL — Q3 2025 COMPLETE)
+
+98. 2509.26276 (Optimizing Speech Language Models for Acoustic Consistency, arXiv) — CAST, an LM-side training recipe (SSL-distilled embedding init, alignment loss, thinning augmentation, coarse-then-fine losses) for acoustic consistency in decoder-only speech LMs. **Citation-integrity catch:** the agent linked `2506.23670` (a companion paper) as a wikilink despite it having `status: accepted` with no wiki page yet — caught on health check (bare-wikilink warning led to checking the target, which surfaced the missing page), removed from Wiki Connections prose while keeping it in `related_papers` frontmatter, per the established SageLM precedent (session 12, paper 78). 1 architecture figure embedded. Index count correct on first try.
+
+99. 2509.26514 (BatonVoice: An Operationalist Framework for Enhancing Controllable Speech Synthesis with Linguistic Intelligence from LLMs, arXiv) — 9 in-corpus citations, `references.json` stale for 7 of 9 (agent cross-verified all against real wiki pages, confirmed correct on independent spot-check). 7 bare wikilinks fixed. 2 architecture figures embedded (conductor/orchestra decoupling design).
+
+100. 2509.26542 (Voice Evaluation of Reasoning Ability: Diagnosing the Modality-Induced Performance Gap, arXiv) — VERA benchmark. **Good agent catch:** two `references.json`-flagged in-corpus citations (MultiVox, URO-Bench) were correctly excluded from wikilinking after the agent verified both lack a wiki page (MultiVox's EMNLP variant is `accepted`-not-ingested, its arXiv duplicate is `rejected`; URO-Bench has the same accepted/rejected duplicate-version split) — no citation-integrity violation this time, unlike paper 98. 1 bare wikilink fixed (Full-Duplex-Bench). No figure (benchmark/diagnostic paper).
+
+101. 2510.00264 (Baseline Systems For The 2025 Low-Resource Audio Codec Challenge, arXiv, Cisco Systems) — trusted `published_date` (2025-09-30) over the misleading `2510` arXiv ID prefix, same precedent as papers 90 and 96. Fully clean: no bare wikilinks, no title truncation, org field correctly populated, no in-corpus references found. **Final paper of the Q3 2025 chronological ingest queue.**
+
+**Corpus after batch 4: 592 pages, 0 errors** (1178 pre-existing warnings, unchanged — confirmed via full corpus-wide health check).
+
+**Q3 2025 progress: 364 ingested / 0 remaining — Q3 2025 IS FULLY INGESTED.**
+
+**Recurring QC issues this batch:** bare wikilinks remained dominant (3 of 4 papers). `wiki/index.md` count drift hit 3 of 4 papers (paper 98 correct on first try; 99, 100, 101 all drifted and were corrected — magnitudes varied, no consistent pattern). One genuine citation-integrity violation caught and fixed (paper 98, first time this specific bug appeared in this session after 3 batches of citing-only-real-pages) — contrasted immediately by paper 100 doing the equivalent check correctly on its own. No task/related_concepts mismatches, no spurious concept tags, no session-limit interruptions this batch.
+
+**Session 13 totals (2026-07-17):** 16 papers ingested across 4 batches (86–101), 0 rejected. Corpus 576 → 592 pages, 0 errors throughout. Two interruptions (one API 529 overload, one actual session-limit cutoff), both clean recoveries with no data loss. One missing `INGEST_RESULT` signal on a retry. One citation-integrity violation caught and fixed. `wiki/index.md` count drift hit at least one paper in every single batch (11 of 16 papers total this session) — the worst-affected session on record for this bug; see [[feedback_index_count_drift]] for the full magnitude breakdown. Nothing committed yet — content, infra, and site repos all have uncommitted/unpushed work pending.
+
+**Next session:** Q3 2025 is complete. Options for next ingest session: begin Q4 2025 (October–December) chronologically, or pivot to integration/render passes on the newly ingested backlog (deprioritized per standing instruction unless the user asks). Commit and push all three repos before starting new work.
 
 ---
 

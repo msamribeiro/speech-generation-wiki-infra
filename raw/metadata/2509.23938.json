@@ -35,7 +35,7 @@
   "year": 2025,
   "month": 9,
   "published_date": "2025-09-28",
-  "ingested_date": null,
+  "ingested_date": "2026-07-17",
   "url": "https://arxiv.org/abs/2509.23938",
   "pdf_url": "https://arxiv.org/pdf/2509.23938.pdf",
   "pdf_path": "raw/papers/2509.23938.pdf",
@@ -47,9 +47,18 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Full-duplex turn-taking detection integrating acoustic and linguistic modalities; directly advances SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-17",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "831240d"
+    }
+  ]
 }
