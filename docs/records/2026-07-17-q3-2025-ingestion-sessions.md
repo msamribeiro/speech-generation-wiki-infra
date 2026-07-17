@@ -1,5 +1,16 @@
 # Q3 2025 Ingest Session
 
+Document type: archived operational record
+Archived: 2026-07-17 (moved from infra root `Q3_INGESTION_SESSIONS.md`)
+Superseded by: `Q4_INGESTION_SESSIONS.md` (infra root) — the active ingest protocol and cadence preferences developed across this file's 13 sessions were carried forward there, without the per-session narrative log.
+
+This file is kept as a historical record only: the full paper-by-paper, session-by-session log
+of the Q3 2025 chronological ingest effort, including every QC issue caught and how it was
+resolved. For the current ingestion protocol, quality-check procedure, and cadence preferences,
+see `Q4_INGESTION_SESSIONS.md` or `docs/content.md`.
+
+---
+
 **Date:** 2026-06-29
 **Goal:** Ingest all remaining Q3 2025 (July–September 2025) accepted papers into the wiki.
 
