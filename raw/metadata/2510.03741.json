@@ -29,9 +29,9 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Soft frequency disentanglement for neural audio codecs; core codec architecture.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2510.03735"
 }

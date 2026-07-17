@@ -268,3 +268,25 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
+
+## 2510.03111 | Evaluation of preprocessing pipelines in the creation of in-the-wild TTS datasets | arXiv | score: 0.65
+
+**Authors:** Matías Di Bernardo, Emmanuel Misley, Ignacio Correa, Mateo García Iacovelli, Simón Mellino, Gala Lucía Gonzalez Barrios
+**Task guess:** [TTS, evaluation]
+**Reason for review:** Caught at ingest time (2026-07-17, Q4 session 14 batch 3) before any page was written. The paper's own three stated contributions (§1) are: a preprocessing-pipeline evaluation methodology "independent of any specific TTS system," a low-cost CPU-friendly preprocessing chain (VAD, denoising, quality filtering, STT), and a new raw Argentine Spanish audio collection. No TTS model is trained or evaluated anywhere in the paper — all reported metrics (PESQ, SI-SDR, SNR, T30, C50, F0-STD, MCD) are signal/audio-quality metrics computed on raw vs. processed recordings, not on synthesized speech. The authors explicitly defer TTS training/evaluation to future work (§5, Limitations and Future Work: "We plan to measure the correlation between the composite score and TTS outcomes by training representative TTS models..."). Same scope pattern as FAMA and the MLC-SLM challenge summary: "TTS" in the title/task tag is not itself evidence of a generative component. The original `relevance_note` at filter time already flagged this ambiguity ("synthesis is the end goal but pipeline evaluation is primary").
+**Abstract excerpt:** This work introduces a reproducible, metric-driven methodology to evaluate preprocessing pipelines for in-the-wild TTS corpora generation. We apply a custom low-cost pipeline to the first in-the-wild Argentine Spanish collection and compare 24 pipeline configurations combining different denoising and quality filtering variants. Evaluation relies on complementary objective measures (PESQ, SI-SDR, SNR), acoustic descriptors (T30, C50), and speech-preservation metrics (F0-STD, MCD). Results expose trade-offs between dataset size, signal quality, and voice preservation; where denoising variants with permissive filtering provide the best overall compromise for our testbed. The proposed methodology allows selecting pipeline configurations without training TTS models for each subset, accelerating and reducing the cost of preprocessing development for low-resource settings.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user accepted despite no trained TTS model; preprocessing methodology judged valuable infrastructure for the field (2026-07-17)
+
+---
+
+## 2510.07978 | VoiceAgentBench: Are Voice Assistants ready for agentic tasks? | arXiv | score: 0.72
+
+**Authors:** Dhruv Jain, Harshit Shukla, Gautam Rajeev, Ashish Kulkarni, Chandra Khatri, Shubham Agarwal
+**Task guess:** [SCA, evaluation]
+**Reason for review:** Caught at ingest time (2026-07-18, Q4 session 14). All four evaluation metrics (Tool Selection, Tool Call Structure, Parameter Filling, Refusal Rate — §3.2, Tables 2-4) score text/structured tool-call correctness against the model's spoken query; none evaluate generated speech quality, naturalness, or any acoustic characteristic. TTS/VC (ElevenLabs, Coqui-TTS, Krutrim-TTS) is used only to construct the benchmark's input audio, including a speaker-diversity sampling ablation (§3.1.2) and a vendor-selection MOS pilot (Appendix I) — neither is evaluated as a research contribution in its own right. Structurally identical in scope-relevance to the AURA entry above (agentic reasoning/tool-use primary, TTS/VC incidental to the voice interface).
+**Abstract excerpt:** Large scale Speech Language Models have enabled voice assistants capable of understanding natural spoken queries and performing complex tasks. However, existing speech benchmarks largely focus on isolated capabilities such as transcription or question answering and do not systematically evaluate agentic behavior or adversarial robustness. To address this, we introduce VOICEAGENTBENCH, a comprehensive benchmark for evaluating SpeechLMs in realistic spoken agentic settings, comprising 6,000+ synthetic spoken queries spanning single-tool invocations, multi-tool workflows, multi-turn dialogue, and safety evaluations across English and six Indic languages.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user accepted following the AURA precedent (2026-07-18): same shape (agentic tool-use primary, TTS/VC incidental), treated consistently as in-scope SCA-adjacent evaluation work
+
+---

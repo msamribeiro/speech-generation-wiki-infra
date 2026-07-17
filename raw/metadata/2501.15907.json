@@ -51,9 +51,9 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Emilia-Pipe: open-source pipeline and large-scale multilingual spontaneous speech dataset for generation; directly advances TTS datasets.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2407.05361"
 }

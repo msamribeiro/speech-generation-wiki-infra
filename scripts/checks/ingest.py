@@ -23,6 +23,7 @@ REQUIRED_FM_FIELDS = ["id", "title", "venue", "published_date", "task", "field_s
 _PAPER_ID_RE = re.compile(
     r"^\d{4}\.\d{4,5}$"
     r"|^(iclr|neurips|interspeech|icassp|acl|emnlp|naacl|asru|slt|coling|eacl|findings-naacl|findings-acl|findings-emnlp)-\d{4}-"
+    r"|^\d{4}\.[a-z][a-z0-9-]*\.\d+$"
 )
 
 

@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-09",
-  "ingested_date": null,
+  "ingested_date": "2026-07-18",
   "url": "https://arxiv.org/abs/2510.07881",
   "pdf_url": "https://arxiv.org/pdf/2510.07881.pdf",
   "pdf_path": "raw/papers/2510.07881.pdf",
@@ -33,9 +33,18 @@
   ],
   "relevance_score": 0.6,
   "relevance_note": "CS3-Bench evaluates Mandarin-English code-switching in speech-to-speech LLMs — covers speech output quality but the primary focus is language alignment/code-switching rather than synthesis advancement.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-18",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "76d3f82"
+    }
+  ]
 }

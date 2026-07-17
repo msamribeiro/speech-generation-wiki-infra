@@ -1,7 +1,8 @@
 {
   "id": "2407.05361",
   "source_ids": {
-    "arxiv": "2407.05361"
+    "arxiv": "2407.05361",
+    "arxiv_full_version": "2501.15907"
   },
   "title": "Emilia: An Extensive, Multilingual, and Diverse Speech Dataset for Large-Scale Speech Generation",
   "authors": [
@@ -61,6 +62,14 @@
       "agent": "speech-generation-ingest-agent",
       "model": "claude-sonnet-4-6",
       "commit": "2eb9839"
+    },
+    {
+      "date": "2026-07-17",
+      "op": "re-ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "76d3f82",
+      "note": "merged content from arxiv:2501.15907 (full version); canonical ID stays 2407.05361 (SLT 2024 published version)"
     }
   ],
   "discovery_source": "citation-discovery",

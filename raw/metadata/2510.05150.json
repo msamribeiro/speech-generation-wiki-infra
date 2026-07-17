@@ -35,7 +35,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-02",
-  "ingested_date": null,
+  "ingested_date": "2026-07-17",
   "url": "https://arxiv.org/abs/2510.05150",
   "pdf_url": "https://arxiv.org/pdf/2510.05150.pdf",
   "pdf_path": "raw/papers/2510.05150.pdf",
@@ -47,9 +47,18 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "Framework for reasoning over conversational behaviors in full-duplex SDLMs; directly advances SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-17",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "76d3f82"
+    }
+  ]
 }

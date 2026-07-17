@@ -16,7 +16,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-06",
-  "ingested_date": null,
+  "ingested_date": "2026-07-17",
   "url": "https://arxiv.org/abs/2510.04738",
   "pdf_url": "https://arxiv.org/pdf/2510.04738.pdf",
   "pdf_path": "raw/papers/2510.04738.pdf",
@@ -29,9 +29,18 @@
   ],
   "relevance_score": 0.93,
   "relevance_note": "Cross-attentive Mamba architecture for voice editing and zero-shot TTS achieving state-of-the-art results",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-17",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "76d3f82"
+    }
+  ]
 }
