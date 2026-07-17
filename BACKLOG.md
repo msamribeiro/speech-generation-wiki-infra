@@ -8,7 +8,7 @@ Resume standard corpus ingest and clear the integration backlog.
 - [x] Pre-Q3 batch — 16 papers (NAACL 2025, ICLR 2025, workshop venues: COLING, CHiPSAL, ComputEL, NoDaLiDa) ingested 2026-06-29; corpus at 354 pages *(completed 2026-06-29)*
 - [x] Ingest 2 deferred ICLR 2025 papers: `iclr-2025-hQvX9MBowC` (DiTTo-TTS), `iclr-2025-uxDFlPGRLX` (FlowDec) *(completed 2026-06-30)*
 - [x] Continue chronological ingest of remaining accepted papers through end of Q3 2025 — COMPLETE 2026-07-17 (session 13): 364 ingested, 0 remaining, 107 rejected, 471 total in scope; corpus reached 592 pages, 0 errors corpus-wide throughout; full session log archived at `docs/records/2026-07-17-q3-2025-ingestion-sessions.md` *(completed 2026-07-17)*
-- [ ] Begin chronological ingest of Q4 2025 (October–December) accepted papers — 27 already ingested, 159 remaining, 61 rejected as of 2026-07-17; protocol and cadence bootstrapped at `Q4_INGESTION_SESSIONS.md`
+- [ ] Continue chronological ingest of Q4 2025 (October–December) accepted papers — 51 ingested, 133 remaining, 63 rejected as of 2026-07-18 (session 14); protocol and cadence at `Q4_INGESTION_SESSIONS.md`
 
 ## Content Stage Implementation [P0 · in-progress]
 
