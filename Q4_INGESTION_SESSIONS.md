@@ -13,14 +13,93 @@ ingestion protocol and cadence preferences refined during Q3, without the histor
 
 | Status | Count |
 |--------|-------|
-| Already ingested (Q4 2025) | 27 |
-| Remaining to ingest | 159 |
-| Rejected | 61 |
+| Already ingested (Q4 2025) | 51 |
+| Remaining to ingest | 133 |
+| Rejected | 63 |
 | **Total Q4 2025 in corpus** | **247** |
 
+As of session 14 close (2026-07-18). Corpus stands at **616 wiki pages**, 0 errors corpus-wide.
 Counts computed from `raw/metadata/*.json` where `year == 2025` and `month in (10, 11, 12)`
 (these fields are derived from `published_date`, not the arXiv ID prefix — see the ID-prefix
-note below). Re-run before starting a session, as fetch/filter may still be adding papers.
+note below). Re-run before starting a session, as fetch/filter may still be adding papers:
+
+```bash
+.venv/bin/python3 -c "
+import json, glob
+accepted, ingested, rejected = 0, 0, 0
+for path in glob.glob('raw/metadata/*.json'):
+    m = json.load(open(path))
+    y, mo = str(m.get('year','')), str(m.get('month','0')).zfill(2)
+    if y == '2025' and mo in ('10','11','12'):
+        if m['status'] == 'accepted': accepted += 1
+        if m['status'] == 'ingested': ingested += 1
+        if m['status'] == 'rejected': rejected += 1
+print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
+"
+```
+
+---
+
+## Next Session — Resume Here
+
+To continue, just say something like **"Let's continue ingesting"**. Everything needed is below
+and in the linked memories (auto-loaded via `MEMORY.md` at session start).
+
+**Before starting:** re-run the progress-count script above — fetch/filter may have added papers
+since 2026-07-18, which would shift IDs/counts. If the list below no longer matches
+`raw/metadata/`'s current `accepted` set for Q4 2025, re-select fresh candidates chronologically
+by `published_date` rather than assuming this list is still accurate.
+
+**Pre-selected candidates (32 papers, 8 batches of 4), chronological by `published_date`,**
+starting from the first remaining paper after `2510.08392` (last ingested, session 14):
+
+| # | ID | Date | Venue | Task | Title |
+|---|----|----|----|----|----|
+| 1 | `2510.09061` | 2025-10-10 | EMNLP | VC | O_O-VC: Synthetic Data-Driven One-to-One Alignment for Voice Conversion |
+| 2 | `2510.09016` | 2025-10-10 | arXiv | singing | DiTSinger: Scaling Singing Voice Synthesis with Diffusion Transformers |
+| 3 | `2506.12311` | 2025-10-10 | arXiv | TTS | Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time TTS |
+| 4 | `2510.09424` | 2025-10-10 | arXiv | SCA | The Speech-LLM Takes It All: A Truly Fully End-to-End SCA |
+| 5 | `2510.09592` | 2025-10-10 | arXiv | SCA | Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Spoken Dialogue |
+| 6 | `2510.09245` | 2025-10-10 | arXiv | VC | SynthVC: Leveraging Synthetic Data for End-to-End Low-Latency VC |
+| 7 | `2510.10003` | 2025-10-11 | arXiv | TTS, SCA | MTP-S2UT: Enhancing Speech-to-Speech Translation Quality |
+| 8 | `2510.10774` | 2025-10-12 | arXiv | TTS | ParsVoice: A Large-Scale Multi-Speaker Persian Speech Corpus |
+| 9 | `2510.10785` | 2025-10-12 | arXiv | VC | FAC-FACodec: Controllable Zero-Shot Foreign Accent Conversion |
+| 10 | `2510.11646` | 2025-10-13 | arXiv | TTS | BridgeCode: A Dual Speech Representation Paradigm |
+| 11 | `2510.11124` | 2025-10-13 | arXiv | TTS | Perturbation Self-Supervised Representations for Cross-Lingual TTS |
+| 12 | `2510.12964` | 2025-10-14 | arXiv | VC | VCTR: A Transformer-Based Model for Non-Parallel Voice Conversion |
+| 13 | `2510.12116` | 2025-10-14 | EMNLP | SCA | Understanding the Modality Gap: An Empirical Study |
+| 14 | `2510.12995` | 2025-10-14 | arXiv | TTS | Continuous-Token Diffusion for Speaker-Referenced TTS |
+| 15 | `2510.13221` | 2025-10-15 | arXiv | codec | Acoustic Teleportation via Disentangled Neural Audio Codec |
+| 16 | `2510.13293` | 2025-10-15 | arXiv | TTS | Cross-Modal Consistency Guidance for Robust Emotion Control |
+| 17 | `2510.13194` | 2025-10-15 | arXiv | TTS | StressTransfer: Stress-Aware Speech-to-Speech Translation |
+| 18 | `2510.15364` | 2025-10-17 | arXiv | codec | LDCodec: A High-Quality Neural Audio Codec with Low Complexity |
+| 19 | `2510.15227` | 2025-10-17 | arXiv | codec | LongCat-Audio-Codec: An Audio Tokenizer and Detokenizer |
+| 20 | `2510.16841` | 2025-10-19 | arXiv | codec | SAC: Neural Speech Codec with Semantic-Acoustic Dual-Stream |
+| 21 | `2510.16718` | 2025-10-19 | arXiv | codec | U-Codec: Ultra Low Frame-Rate Neural Speech Codec |
+| 22 | `2503.06211` | 2025-10-20 | arXiv | SCA, TTS | Late Fusion and Multi-Level Fission Amplify Cross-Modal Transfer |
+| 23 | `2510.18308` | 2025-10-21 | arXiv | TTS | ParaStyleTTS: Toward Efficient and Robust Paralinguistic Control |
+| 24 | `2506.23670` | 2025-10-21 | arXiv | TTS, SCA | Efficient Interleaved Speech Modeling through Knowledge Distillation |
+| 25 | `2510.19509` | 2025-10-22 | arXiv | evaluation | Which Evaluation for Which Model? A Taxonomy for Speech |
+| 26 | `2510.20210` | 2025-10-23 | arXiv | TTS, evaluation | Vox-Evaluator: Enhancing Stability and Fidelity for Zero-Shot TTS |
+| 27 | `2510.20513` | 2025-10-23 | arXiv | TTS, evaluation | Decoding the Ear: A Framework for Objectifying Expressiveness |
+| 28 | `2510.20677` | 2025-10-23 | arXiv | singing, VC | R2-SVC: Towards Real-World Robust and Expressive Zero-Shot SVC |
+| 29 | `2510.21209` | 2025-10-24 | Interspeech | codec | SpecTokenizer: A Lightweight Streaming Codec |
+| 30 | `2510.21685` | 2025-10-24 | arXiv | singing, VC | StylePitcher: Generating Style-Following and Expressive Singing |
+| 31 | `2510.22241` | 2025-10-25 | arXiv | codec | FOA Tokenizer: Low-Bitrate Neural Codec for First-Order Ambisonics |
+| 32 | `2510.22588` | 2025-10-26 | arXiv | TTS, SCA | UltraVoice: Scaling Fine-Grained Style-Controlled Speech |
+
+Batches: 1–4, 5–8, 9–12, 13–16, 17–20, 21–24, 25–28, 29–32 (matching the standard cadence below).
+
+**Pre-flight checks already done for this list (2026-07-18), don't need to be re-run unless the
+list changes:**
+- No duplicate/full-version signals found — checked `arxiv_comment` on all 3 papers whose arXiv
+  ID prefix doesn't match `published_date` (`2506.12311`, `2503.06211`, `2506.23670`); none say
+  "full version of" or similar, and none title-match an existing wiki page. See
+  [[feedback_arxiv_full_version_dedup]] for what this check looks for and why.
+- No exact-title collisions found against `papers/index.md` for any of the 32.
+- `2510.07978`-style scope questions may recur among the SCA papers (`2510.09424`, `2510.09592`,
+  `2510.10003`, `2510.12116`) — read each carefully before ingesting; see the corpus-scope
+  precedent chain below.
 
 ---
 
@@ -92,12 +171,81 @@ the actual files independently:
 - **Metadata status.** Confirm `status: ingested` and `ingested_date` are actually set in
   `raw/metadata/{id}.json`.
 - **Bare wikilinks.** Fix every `wikilink_format` warning the health check reports — pipe to
-  `[[id|Display Name]]`, don't just suppress the warning.
+  `[[id|Display Name]]`, don't just suppress the warning. The `wikilink_format` check's ID regex
+  was fixed 2026-07-17/18 to also catch ACL-Anthology-style dotted IDs (`YYYY.venue-track.number`
+  e.g. `2025.acl-long.313`) — previously these silently passed even in the exact same bad
+  `[[id]] (Name)` pattern the check exists to catch. See [[feedback_health_check_dotted_id_gap]].
+  Since the fix is now live in `scripts/checks/ingest.py`, the health check should catch these
+  going forward, but it's still worth a manual eyeball on any page with dotted-ID citations.
+- **Canonical paper IDs.** Some papers have a canonical wiki ID that differs from their arXiv ID
+  (e.g. F5-TTS is `2025.acl-long.313`, not the arXiv `2410.06885`) because the conference/proceedings
+  ID took precedence at ingest time. Verify any citation's ID against `wiki/papers/index.md`
+  before linking — don't assume the arXiv ID is right just because that's what the source paper's
+  own bibliography uses. See [[feedback_f5tts_paper_id]] for the canonical example.
+
+### Tagging rules to apply during ingest (not just structural QC)
+
+These are judgment calls the ingest agent makes per paper — verify independently, don't just
+trust the agent's own reasoning in its closing summary:
+
+- **VC task tag** — requires a dedicated VC system + genuine VC-specific metrics (zero metrics of
+  any kind fails the bar, even if the system nominally supports voice conversion/editing). See
+  [[feedback_vc_task_tagging]].
+- **`spoken-language-model` concept tag** — requires an EXTERNAL speech signal consumed by an
+  adapted LLM in a real spoken-dialogue context. An autoregressive TTS-LM consuming only its own
+  generated output does NOT qualify. See [[feedback_spoken_language_model_tagging]].
+- **`multilingual-tts` concept tag** — legitimate if the paper's OWN system was trained/adapted
+  across languages, even without full per-language metrics; spurious if it only cites an upstream
+  model's claimed multilingual capability. See [[feedback_multilingual_tts_tagging]].
+- **`subjective-evaluation` concept tag** — requires real human raters (MOS/listening test);
+  LLM-judge/automated scoring never qualifies. See [[feedback_subjective_evaluation_tagging]].
+- **Task/`related_concepts` consistency** — a task tag (e.g. `singing`) is frequently omitted from
+  `related_concepts` even when explicitly warned; verify independently every ingest. See
+  [[feedback_task_related_concepts_mismatch]].
+- **YAML date/ID coercion** — unquoted dates parse as YAML date objects, and unquoted numeric-
+  looking IDs (e.g. `1412.6980`) parse as floats, dropping trailing zeros. Quote all date fields
+  and the `id` field as strings. See [[feedback_yaml_coercion_gotchas]].
+
+### Corpus-scope precedent chain (when a paper's generative-speech connection is unclear)
+
+The test is **subject-matter relevance to TTS/VC/SCA** (including data/tooling/methodology work
+squarely in service of speech generation), not literally "does the paper train a model." Read the
+actual paper before deciding — task tags and relevance scores are not reliable signals on their
+own. See [[feedback_corpus_scope_asr_false_accept]] for the full precedent chain, summarized:
+
+- **Reject** — FAMA, MLC-SLM challenge summary: pure ASR/speech-translation/diarization papers
+  whose only connection to "generative" is surface-level terminology ("speech LLM") in the title.
+- **Accept** — 2506.04077 (TTS-as-data-augmentation): TTS is not the primary contribution, but the
+  paper genuinely and methodologically engages with a TTS system (real claims about its behavior).
+- **Accept (scope exception)** — 2510.03111 (TTS preprocessing pipelines): no TTS model trained or
+  evaluated, but the paper's entire subject matter IS TTS data curation — it's a different axis
+  from FAMA/MLC-SLM entirely, not an exception to that rule.
+- **Accept (precedent reapplied)** — AURA, then VoiceAgentBench (2510.07978): agentic tool-use
+  benchmarks where TTS/VC is incidental to the voice interface and never evaluated as output.
+  Accepted for consistency once the shape was already decided once — when a new paper matches an
+  already-decided precedent this closely, surface the match explicitly rather than re-deciding
+  the underlying scope question fresh each time.
+
+### arXiv full-version / extended-paper dedup
+
+Some papers get a later arXiv "full version" under a completely different, unrelated-looking ID
+(e.g. `2501.15907` was the full version of the already-ingested `2407.05361` Emilia paper). Check
+`arxiv_comment` for "full version of X" / "extended version" / "journal version" language whenever
+a candidate's arXiv ID prefix doesn't match its `published_date` — this is a stronger and cheaper
+signal than assuming it's just the routine chronological-ordering gotcha below. If found and the
+referenced ID is already ingested, surface it to the user rather than deciding unilaterally; the
+resolution isn't always the same (compare to the plain French/English duplicate case, which was a
+straightforward reject-the-non-canonical-version). See [[feedback_arxiv_full_version_dedup]] for
+the full resolution procedure (keep canonical ID, re-ingest its content from the fuller paper,
+backfill `source_ids`, add an editorial note on the page, log as `misc` not `ingest`).
 
 Also check the INGEST_RESULT signal for `review_flags`; if present, add the paper to the
 **Manual Verification Queue** below and resolve by hand after the batch — don't block the next
-paper on it. Note: agents sometimes omit the `INGEST_RESULT` signal entirely, especially on a
-retry after an interruption — this is not itself an error, just verify the files directly.
+paper on it (see [[project_review_flags]] for the precision-gate rule agents apply before
+flagging). Note: agents sometimes omit the `INGEST_RESULT` signal entirely, especially on a retry
+after an interruption — this is not itself an error, just verify the files directly. Also don't
+trust an agent's closing summary in general — it sometimes narrates a correct decision while the
+actual file contradicts it; always re-read the real file (see [[feedback_agent_selfreport_unreliable]]).
 
 ### arXiv ID prefix vs. published date
 
@@ -112,7 +260,14 @@ If an agent is cut off mid-ingest (session limit, API 5xx, etc.), before retryin
 giving a false "nothing written" signal) for whether the page file, index row, or metadata
 status actually got written. A clean "nothing written" state is safe to retry directly. A
 partial-write state (e.g. a stray copied figure asset with no page yet) needs the retry to
-verify and reuse or discard what's there rather than assuming either way.
+verify and reuse or discard what's there rather than assuming either way. See
+[[feedback_session_limit_interruption]] for the full two-case recovery pattern.
+
+Two other long-standing corpus-wide QC bugs to keep verifying manually even though they didn't
+recur in session 14: `wiki/index.md`/venue-page count fabrication
+(see [[feedback_index_count_drift]]) and mid-string title truncation in `papers/index.md` rows
+(see [[feedback_title_truncation]]) — both are "not fixable by prompting," budget for a manual
+check on every paper regardless of whether this session's batches stayed clean.
 
 ### Known open vocabulary gap
 
@@ -162,19 +317,20 @@ after the session batch is complete — check the paper page and resolve each fl
 
 ## Progress
 
-Track by running:
+Track with the same script as in the Scope section above (repeated here for convenience):
 
 ```bash
 .venv/bin/python3 -c "
 import json, glob
-accepted, ingested = 0, 0
+accepted, ingested, rejected = 0, 0, 0
 for path in glob.glob('raw/metadata/*.json'):
     m = json.load(open(path))
     y, mo = str(m.get('year','')), str(m.get('month','0')).zfill(2)
     if y == '2025' and mo in ('10','11','12'):
         if m['status'] == 'accepted': accepted += 1
         if m['status'] == 'ingested': ingested += 1
-print(f'Ingested: {ingested} | Remaining: {accepted}')
+        if m['status'] == 'rejected': rejected += 1
+print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 "
 ```
 
@@ -184,9 +340,20 @@ Not every batch needs a commit — batch within a session freely, commit at natu
 points or when explicitly asked. When committing:
 
 1. Content repo: stage new paper pages + assets + `index.md`/`log.md`/`papers/index.md`, commit, push.
-2. Infra repo: stage `raw/metadata/*.json` status updates + this session log, commit; then bump
-   the `wiki/` submodule pointer to the new content commit (checkout `main` in `wiki/`, `git pull`,
-   commit the pointer bump in infra), push.
-3. Site repo: bump the `content` submodule pointer, commit, push — **ask before this step**, it
-   triggers a live deploy. Push order is always content → infra → site, since site's submodule
-   reference only resolves once content is on GitHub.
+2. Infra repo: stage `raw/metadata/*.json` status updates + this session log (and `BACKLOG.md` if
+   its Q4 progress line has gone stale), commit; then bump the `wiki/` submodule pointer to the
+   new content commit (checkout `main` in `wiki/`, `git pull`, commit the pointer bump in infra), push.
+3. Site repo: bump the `content` submodule pointer, commit, push — **ask before this step**
+   (though a durable standing instruction to always bump satisfies this too — check for one
+   before asking), it triggers a live deploy. Push order is always content → infra → site, since
+   site's submodule reference only resolves once content is on GitHub.
+
+Always edit and commit from the **standalone content repo**
+(`/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content`), never
+via `infra/wiki/` or `site/content/` submodule paths directly — both are detached-HEAD checkouts
+of specific commits, and committing there orphans the work. See [[project_repo_structure]] for
+the three-repo layout and [[feedback_site_submodule_bump]] for the submodule-bump specifics
+(use `git branch` not `git submodule status` to verify branch state). Commit messages: no
+`Co-Authored-By` trailers, no session-number prefix — describe what changed, not when (see
+[[feedback_commit_messages]]). Wiki prose: avoid em dashes, use comma/colon/parentheses instead
+(see [[feedback_em_dashes]]).
