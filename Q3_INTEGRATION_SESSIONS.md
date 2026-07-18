@@ -34,37 +34,46 @@ cd /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wik
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content -v
 ```
 
-**State as of 2026-07-18** (re-run the commands above before resuming — this will be stale):
+**State as of 2026-07-19** (re-run the commands above before resuming — this will be stale).
+Refreshed after Q4 session 15 grew the corpus 616 → 640 pages (24 new Q4 2025 papers, all
+correctly excluded from this task's scope) — the `Covers` column below is corpus-wide (includes
+Q4 papers that reference each concept), not Q3-scoped, so it shifts slightly every time Q4 ingest
+adds papers; only `flow-matching`'s `Integrated` count and the Q3-scoped backlog figure below are
+what actually matter for planning this task:
 
-| Concept | Papers referencing it (all time) | Integrated | % |
+| Concept | Papers referencing it (all time, corpus-wide) | Integrated | % |
 |---|---|---|---|
 | flow-matching | 112 | 34 | 30% |
-| zero-shot-tts | 230 | 0 | 0% |
-| evaluation-metrics | 318 | 0 | 0% |
-| subjective-evaluation | 202 | 0 | 0% |
-| neural-codec | 218 | 0 | 0% |
-| autoregressive-codec-tts | 194 | 0 | 0% |
-| spoken-language-model | 176 | 0 | 0% |
-| self-supervised-speech | 159 | 0 | 0% |
-| disentanglement | 104 | 0 | 0% |
-| prosody-control | 103 | 0 | 0% |
-| multilingual-tts | 102 | 0 | 0% |
-| voice-conversion | 94 | 0 | 0% |
-| emotion-synthesis | 85 | 0 | 0% |
-| speaker-adaptation | 84 | 0 | 0% |
-| speech-to-speech | 81 | 0 | 0% |
-| streaming-tts | 70 | 0 | 0% |
-| gan-vocoder | 64 | 0 | 0% |
-| instruction-conditioned-tts | 54 | 0 | 0% |
-| diffusion-tts | 53 | 0 | 0% |
-| rlhf-speech | 40 | 0 | 0% |
+| zero-shot-tts | 238 | 0 | 0% |
+| evaluation-metrics | 322 | 0 | 0% |
+| subjective-evaluation | 210 | 0 | 0% |
+| neural-codec | 229 | 0 | 0% |
+| autoregressive-codec-tts | 201 | 0 | 0% |
+| spoken-language-model | 181 | 0 | 0% |
+| self-supervised-speech | 166 | 0 | 0% |
+| disentanglement | 110 | 0 | 0% |
+| prosody-control | 107 | 0 | 0% |
+| multilingual-tts | 107 | 0 | 0% |
+| voice-conversion | 98 | 0 | 0% |
+| emotion-synthesis | 88 | 0 | 0% |
+| speaker-adaptation | 87 | 0 | 0% |
+| speech-to-speech | 86 | 0 | 0% |
+| streaming-tts | 74 | 0 | 0% |
+| gan-vocoder | 67 | 0 | 0% |
+| instruction-conditioned-tts | 56 | 0 | 0% |
+| diffusion-tts | 57 | 0 | 0% |
+| rlhf-speech | 41 | 0 | 0% |
 | transformer-enc-dec-tts | 32 | 0 | 0% |
-| singing | 10 | 0 | 0% |
+| singing | 11 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2590** | **34** | **1%** |
+| **TOTAL** | **2685** | **34** | **1%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters): **524**. Scoped to Q3-2025-and-earlier only
-(the actual target of this task, excluding Tier 2 stubs): **463** as of 2026-07-18.
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via health check): **548** (up from 524 —
+entirely accounted for by the 24 new unintegrated Q4 papers, not scope creep in this task).
+Scoped to Q3-2025-and-earlier only (the actual target of this task, excluding Tier 2 stubs,
+recomputed directly from `_claims/*.yaml` `papers:` lists vs. paper frontmatter since
+`health_check.py` has no date-scoping flag): **464** as of 2026-07-19 (was 463 — negligible
+drift, not Q4 contamination). **This 464 is the number that actually matters for this task.**
 
 **Only `flow-matching` has started** — 34 of 112 papers integrated (round 1 of a production run
 begun 2026-07-15, prototype-tested 2026-06-24 on an initial 14 papers). All other 22 concepts
