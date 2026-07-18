@@ -290,3 +290,25 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user accepted following the AURA precedent (2026-07-18): same shape (agentic tool-use primary, TTS/VC incidental), treated consistently as in-scope SCA-adjacent evaluation work
 
 ---
+
+## 2510.09424 | The Speech-LLM Takes It All: A Truly Fully End-to-End Spoken Dialogue State Tracking Approach | arXiv | score: 0.55
+
+**Authors:** Nizar El Ghazal, Antoine Caubrière, Valentin Vielzeuf
+**Task guess:** [SCA]
+**Reason for review:** Caught at ingest time (2026-07-18). This is a Spoken Dialog State Tracking (DST) paper: a speech encoder + connector + LLM (with optional attention-pooling context-compression module) consumes a full spoken multi-turn dialogue and autoregressively emits a structured JSON of slot-value pairs, evaluated via Joint Goal Accuracy on SpokenWOZ. There is no TTS, no VC, no synthesized spoken output anywhere in the paper — the sole generative step is the LLM emitting a JSON string. Structurally matches the FAMA (2025.clicit-1.81) / MLC-SLM (2509.13785) reject pattern: an "understanding task wearing speech-LLM terminology," where "speechLLM"/"E2E" framing reads as generative but the task itself is comprehension/tracking, not generation. This is a distinct pattern from the AURA/VoiceAgentBench precedent above, which involved incidental TTS/VC used to construct a benchmark's input audio for an agentic tool-use task; here there is no TTS/VC component anywhere in the pipeline, incidental or otherwise.
+**Abstract excerpt:** This paper presents a comparative study of context management strategies for end-to-end Spoken Dialog State Tracking using Speech-LLMs. We systematically evaluate traditional multimodal context (combining text history and spoken current turn), full spoken history, and compressed spoken history approaches. Our experiments on the SpokenWOZ corpus demonstrate that providing the full spoken conversation as input yields the highest performance among models of similar size, significantly surpassing prior methods.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user explicitly overrode the scope concern and accepted anyway (2026-07-18), citing architectural/methodological relevance (context management for long spoken multi-turn input into an LLM) despite the paper having no generative speech output. Logged as a one-off scope-override decision, not a new precedent: does not authorize accepting future DST/understanding-only papers by default; each should still be evaluated against the FAMA/MLC-SLM pattern on its own merits.
+
+---
+
+## 2510.12116 | Understanding the Modality Gap: An Empirical Study on the Speech-Text Alignment Mechanism of Large Speech Language Models | EMNLP | score: 0.82
+
+**Authors:** (see raw/metadata/2510.12116.json)
+**Task guess:** [SCA]
+**Reason for review:** Caught at ingest time (2026-07-18, Q4 session 15, batch 3), before any page was written. The LSLM under study only ever outputs text — §3.1 states it "enabl[es] autoregressive generation of textual responses," and all evaluation is on VoiceBench QA-accuracy subsets (AdvBench, IFEval, OBQA, MMSU, sd-qa). No TTS, VC, speech-to-speech, or any spoken-output quality metric appears anywhere in the paper (checked Table 1, §3–§5, Limitations). The paper's actual contribution is a representation-similarity analysis of why speech-input QA accuracy lags text-input QA accuracy in speech-text LLMs, plus inference-time embedding interventions to close that gap — pure speech *comprehension* research. This is a cleaner match to the FAMA/MLC-SLM reject pattern than 2510.09424 was: unlike that DST case (which at least produces a structured dialogue-state output as part of a spoken-dialogue-agent pipeline), this paper has no spoken-output component of any kind, incidental or otherwise.
+**Abstract excerpt:** (see raw/metadata/2510.12116.json for full abstract)
+
+**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________) — user chose to leave `status: accepted` unchanged and skip this paper for now rather than deciding immediately (2026-07-18); not ingested. Revisit when convenient — recommend reject on the FAMA/MLC-SLM pattern absent new information, but flagging rather than deciding unilaterally per the review-queue process. Not part of the "DST/dialog scope expansion" backlog interest ([[future_dst_scope_expansion]] memory) in the same way 2510.09424 is, since this paper has no dialogue-state or dialogue-management output at all — it's pure input-side comprehension analysis.
+
+---

@@ -102,3 +102,19 @@ Compress incremental papers to a single-paragraph summary as corpus scales; fron
 - [ ] Define promotion/demotion criteria (candidate: 0 in-corpus citations after 6+ months, no concept back-link) and add tier field to wiki/index.md
 - [ ] Build pruning agent or script to generate candidate list for user approval before any demotion
 - [ ] Run initial tier assignment pass
+
+## Corpus Scope Extension: Spoken Dialog Understanding [P2 · deferred]
+
+Current scope test is subject-matter relevance to TTS/VC/SCA *generation*; this rejects pure understanding/tracking
+papers (DST, diarization, ASR) even when they're architecturally part of the same spoken-dialog-agent stack
+(2510.09424 DST accepted only via one-off user override, 2026-07-18 — see raw/review_queue.md). User wants to
+eventually broaden the controlled vocabulary to cover spoken dialog agents beyond speech generation (e.g. a
+`dialog-understanding` or similar concept/task term), so that already-accepted-and-parsed papers in this space can
+be let into the corpus on their own terms instead of needing a scope override each time. Not scoped yet — needs a
+vocabulary design decision (docs/schemas/vocabulary.md) before any filter/ingest behavior changes.
+
+- [ ] Define the new controlled-vocabulary term(s) for spoken-dialog-understanding tasks (DST, turn-taking, intent
+      tracking) distinct from TTS/VC/SCA generation
+- [ ] Decide whether this is a new `task` value, a new `concept`, or both
+- [ ] Re-review papers previously rejected/flagged under the FAMA/MLC-SLM pattern once the vocabulary exists, to see
+      which would now qualify on their own merits (not retroactively, just going forward)

@@ -14,7 +14,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-14",
-  "ingested_date": null,
+  "ingested_date": "2026-07-18",
   "url": "https://arxiv.org/abs/2510.12964",
   "pdf_url": "https://arxiv.org/pdf/2510.12964.pdf",
   "pdf_path": "raw/papers/2510.12964.pdf",
@@ -26,9 +26,18 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Transformer-based non-parallel voice conversion using contrastive learning approach",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-18",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "386bc97"
+    }
+  ]
 }

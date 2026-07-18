@@ -21,7 +21,7 @@
   "year": 2025,
   "month": 11,
   "published_date": "2025-10-10",
-  "ingested_date": null,
+  "ingested_date": "2026-07-18",
   "url": "https://arxiv.org/abs/2510.09061",
   "pdf_url": "https://aclanthology.org/2025.findings-emnlp.879.pdf",
   "pdf_path": "raw/papers/2510.09061.pdf",
@@ -33,10 +33,19 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Synthetic data-driven one-to-one alignment approach for any-to-any voice conversion",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-11-05"
+  "conference_date": "2025-11-05",
+  "generation_history": [
+    {
+      "date": "2026-07-18",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "386bc97"
+    }
+  ]
 }

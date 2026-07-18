@@ -36,7 +36,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-10",
-  "ingested_date": null,
+  "ingested_date": "2026-07-18",
   "url": "https://arxiv.org/abs/2510.09592",
   "pdf_url": "https://arxiv.org/pdf/2510.09592.pdf",
   "pdf_path": "raw/papers/2510.09592.pdf",
@@ -48,9 +48,18 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Brain-inspired framework enabling real-time reasoning during speech generation in SLMs; directly advances SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-18",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "386bc97"
+    }
+  ]
 }

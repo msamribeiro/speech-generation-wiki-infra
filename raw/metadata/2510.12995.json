@@ -21,7 +21,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-14",
-  "ingested_date": null,
+  "ingested_date": "2026-07-18",
   "url": "https://arxiv.org/abs/2510.12995",
   "pdf_url": "https://arxiv.org/pdf/2510.12995.pdf",
   "pdf_path": "raw/papers/2510.12995.pdf",
@@ -33,9 +33,18 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Continuous-token diffusion for TTS in multimodal LLMs preserving fine-grained acoustic information",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-18",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "386bc97"
+    }
+  ]
 }

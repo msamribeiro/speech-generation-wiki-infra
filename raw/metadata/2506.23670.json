@@ -15,7 +15,7 @@
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-21",
-  "ingested_date": null,
+  "ingested_date": "2026-07-18",
   "url": "https://arxiv.org/abs/2506.23670",
   "pdf_url": "https://arxiv.org/pdf/2506.23670.pdf",
   "pdf_path": "raw/papers/2506.23670.pdf",
@@ -28,9 +28,18 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Compact speech generation model (TinyWave 2B) via layer-aligned distillation; directly advances efficient TTS/SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "date": "2026-07-18",
+      "op": "ingest",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "386bc97"
+    }
+  ]
 }
