@@ -13,12 +13,14 @@ ingestion protocol and cadence preferences refined during Q3, without the histor
 
 | Status | Count |
 |--------|-------|
-| Already ingested (Q4 2025) | 51 |
-| Remaining to ingest | 133 |
+| Already ingested (Q4 2025) | 75 |
+| Remaining to ingest | 109 |
 | Rejected | 63 |
 | **Total Q4 2025 in corpus** | **247** |
 
-As of session 14 close (2026-07-18). Corpus stands at **616 wiki pages**, 0 errors corpus-wide.
+As of session 15 close (2026-07-18). Corpus stands at **640 wiki pages**, 0 errors corpus-wide.
+One paper (`2510.12116`) remains `status: accepted` but undecided pending a scope call — see
+`raw/review_queue.md`; skip it again rather than re-ingesting on autopilot until it's resolved.
 Counts computed from `raw/metadata/*.json` where `year == 2025` and `month in (10, 11, 12)`
 (these fields are derived from `published_date`, not the arXiv ID prefix — see the ID-prefix
 note below). Re-run before starting a session, as fetch/filter may still be adding papers:
@@ -51,7 +53,15 @@ since 2026-07-18, which would shift IDs/counts. If the list below no longer matc
 by `published_date` rather than assuming this list is still accurate.
 
 **Pre-selected candidates (32 papers, 8 batches of 4), chronological by `published_date`,**
-starting from the first remaining paper after `2510.08392` (last ingested, session 14):
+starting from the first remaining paper after `2510.08392` (last ingested, session 14).
+
+**Session 15 status (2026-07-18): items 1–25 processed** (24 ingested + `2510.12116` flagged and
+left `accepted`/undecided — see the Manual Verification note below). **Item 9 (`2510.10785`) was
+initially skipped by a batch-numbering mistake** (batch 3 was mislabeled as items 9–12 when it
+should have been items 10–13, silently dropping item 9) — caught during session wrap-up and
+ingested as a same-session follow-up once the gap was found; the fix: cross-check the actual
+committed paper IDs against this table's `#` column at the end of every session, not just the
+running ingested-count. **Next session starts at item 26** (`2510.20210`), continuing batches 7–8:
 
 | # | ID | Date | Venue | Task | Title |
 |---|----|----|----|----|----|
@@ -329,6 +339,10 @@ Also verified `2510.16718` (U-Codec)'s broadened `task: [codec, TTS]` tag (raw m
 
 `2510.19509` correctly identified and handled as a survey/taxonomy paper (`## Scope and Coverage` section, `tags: ["survey"]`) with no original model or experiments; citation integrity held clean (only 1 of 4 detected in-corpus refs actually has a wiki page, and only that one was cited/included in `related_papers`). One agent self-report note this batch: the ingest agent's completion message flagged that its own safety classifier was unavailable during review and asked for extra verification — ran the full independent QC pass as usual (page/index/count/citation/health-check) and everything checked out clean regardless. Q4 progress: 74 ingested / 110 remaining.
 
+**Session 2026-07-18, session 15 close — gap found and fixed, then committed and pushed:** While updating this session log after batches 1–6, found that `2510.10785` (FAC-FACodec, item 9 on the pre-selected list) had been silently dropped — batch 3 was mislabeled internally as "items 9–12" when it actually ingested items 10–13 (`2510.11646`, `2510.11124`, `2510.12964`, `2510.12116`), skipping item 9 without anyone noticing since the batch still contained 4 IDs and looked complete. Flagged to the user immediately; user chose to ingest it as a same-session follow-up rather than deferring. Ingested cleanly, 0 errors, genuine VC task tag (real SPK-SIM speaker-similarity metrics on L2-Arctic). Corpus 639 → 640 pages. Final Q4 progress for the session: **75 ingested / 109 remaining** (63 rejected, `2510.12116` still pending a scope call).
+
+All three repos committed and pushed. Content (`dd4eb36`, 23-paper batch commit, then a follow-up commit for `2510.10785`): 24 new paper pages total + assets, `index.md`/`log.md`/`papers/index.md` updated. Infra — three commits: `8aa86f5` (23 metadata files + `BACKLOG.md` + this session log + `review_queue.md` + `pipeline_log.md`), `bd05e7e` (wiki submodule bump to `dd4eb36`), plus a follow-up pair for the `2510.10785` fix. Site: content submodule bump (`e9e0da9`, then a follow-up bump), live deploy triggered — user explicitly authorized both this session. Stray `flow-matching-render-v2-test-2026-06-26.md` again left untouched. Next session: continue Q4 2025 from item 26 (`2510.20210`) of the pre-selected list — 109 papers remaining, plus `2510.12116` pending.
+
 ---
 
 ## Manual Verification Queue
@@ -338,6 +352,7 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2510.19509` | field_significance | Level sits at moderate/high boundary; comprehensive first-of-its-kind capability-aware evaluation taxonomy, but actual field influence depends on post-publication adoption not visible from the paper alone. Currently set to `moderate` — revisit if the paper gains citations/adoption in later ingests. |
 
 ---
 
