@@ -48,68 +48,84 @@ To continue, just say something like **"Let's continue ingesting"**. Everything 
 and in the linked memories (auto-loaded via `MEMORY.md` at session start).
 
 **Before starting:** re-run the progress-count script above — fetch/filter may have added papers
-since 2026-07-18, which would shift IDs/counts. If the list below no longer matches
+since 2026-07-19, which would shift IDs/counts. If the list below no longer matches
 `raw/metadata/`'s current `accepted` set for Q4 2025, re-select fresh candidates chronologically
 by `published_date` rather than assuming this list is still accurate.
 
-**Pre-selected candidates (32 papers, 8 batches of 4), chronological by `published_date`,**
-starting from the first remaining paper after `2510.08392` (last ingested, session 14).
+**Prior list (session 15, 32 papers) fully consumed as of session 15 close**: items 1–25
+processed (24 ingested + `2510.12116` flagged and left `accepted`/undecided), items 26–32
+absorbed into this fresh list below (renumbered 1–7), plus 17 new items chronologically after
+them. Session 15 also caught and fixed a batch-numbering mistake that silently dropped one list
+item without the batch looking short — see [[feedback_batch_execution_undercounting]]. **Always
+cross-check the actual committed paper IDs against this table's `#` column at the end of every
+batch (not just at session close), not just the running ingested-count.**
 
-**Session 15 status (2026-07-18): items 1–25 processed** (24 ingested + `2510.12116` flagged and
-left `accepted`/undecided — see the Manual Verification note below). **Item 9 (`2510.10785`) was
-initially skipped by a batch-numbering mistake** (batch 3 was mislabeled as items 9–12 when it
-should have been items 10–13, silently dropping item 9) — caught during session wrap-up and
-ingested as a same-session follow-up once the gap was found; the fix: cross-check the actual
-committed paper IDs against this table's `#` column at the end of every session, not just the
-running ingested-count. **Next session starts at item 26** (`2510.20210`), continuing batches 7–8:
+**Pre-selected candidates (24 papers, 6 batches of 4), chronological by `published_date`,**
+starting from the first remaining paper after `2510.19509` (last ingested in numbered-list order,
+session 15 — `2510.10785` and `2510.12116` are handled separately, see above):
 
 | # | ID | Date | Venue | Task | Title |
 |---|----|----|----|----|----|
-| 1 | `2510.09061` | 2025-10-10 | EMNLP | VC | O_O-VC: Synthetic Data-Driven One-to-One Alignment for Voice Conversion |
-| 2 | `2510.09016` | 2025-10-10 | arXiv | singing | DiTSinger: Scaling Singing Voice Synthesis with Diffusion Transformers |
-| 3 | `2506.12311` | 2025-10-10 | arXiv | TTS | Phonikud: Hebrew Grapheme-to-Phoneme Conversion for Real-Time TTS |
-| 4 | `2510.09424` | 2025-10-10 | arXiv | SCA | The Speech-LLM Takes It All: A Truly Fully End-to-End SCA |
-| 5 | `2510.09592` | 2025-10-10 | arXiv | SCA | Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Spoken Dialogue |
-| 6 | `2510.09245` | 2025-10-10 | arXiv | VC | SynthVC: Leveraging Synthetic Data for End-to-End Low-Latency VC |
-| 7 | `2510.10003` | 2025-10-11 | arXiv | TTS, SCA | MTP-S2UT: Enhancing Speech-to-Speech Translation Quality |
-| 8 | `2510.10774` | 2025-10-12 | arXiv | TTS | ParsVoice: A Large-Scale Multi-Speaker Persian Speech Corpus |
-| 9 | `2510.10785` | 2025-10-12 | arXiv | VC | FAC-FACodec: Controllable Zero-Shot Foreign Accent Conversion |
-| 10 | `2510.11646` | 2025-10-13 | arXiv | TTS | BridgeCode: A Dual Speech Representation Paradigm |
-| 11 | `2510.11124` | 2025-10-13 | arXiv | TTS | Perturbation Self-Supervised Representations for Cross-Lingual TTS |
-| 12 | `2510.12964` | 2025-10-14 | arXiv | VC | VCTR: A Transformer-Based Model for Non-Parallel Voice Conversion |
-| 13 | `2510.12116` | 2025-10-14 | EMNLP | SCA | Understanding the Modality Gap: An Empirical Study |
-| 14 | `2510.12995` | 2025-10-14 | arXiv | TTS | Continuous-Token Diffusion for Speaker-Referenced TTS |
-| 15 | `2510.13221` | 2025-10-15 | arXiv | codec | Acoustic Teleportation via Disentangled Neural Audio Codec |
-| 16 | `2510.13293` | 2025-10-15 | arXiv | TTS | Cross-Modal Consistency Guidance for Robust Emotion Control |
-| 17 | `2510.13194` | 2025-10-15 | arXiv | TTS | StressTransfer: Stress-Aware Speech-to-Speech Translation |
-| 18 | `2510.15364` | 2025-10-17 | arXiv | codec | LDCodec: A High-Quality Neural Audio Codec with Low Complexity |
-| 19 | `2510.15227` | 2025-10-17 | arXiv | codec | LongCat-Audio-Codec: An Audio Tokenizer and Detokenizer |
-| 20 | `2510.16841` | 2025-10-19 | arXiv | codec | SAC: Neural Speech Codec with Semantic-Acoustic Dual-Stream |
-| 21 | `2510.16718` | 2025-10-19 | arXiv | codec | U-Codec: Ultra Low Frame-Rate Neural Speech Codec |
-| 22 | `2503.06211` | 2025-10-20 | arXiv | SCA, TTS | Late Fusion and Multi-Level Fission Amplify Cross-Modal Transfer |
-| 23 | `2510.18308` | 2025-10-21 | arXiv | TTS | ParaStyleTTS: Toward Efficient and Robust Paralinguistic Control |
-| 24 | `2506.23670` | 2025-10-21 | arXiv | TTS, SCA | Efficient Interleaved Speech Modeling through Knowledge Distillation |
-| 25 | `2510.19509` | 2025-10-22 | arXiv | evaluation | Which Evaluation for Which Model? A Taxonomy for Speech |
-| 26 | `2510.20210` | 2025-10-23 | arXiv | TTS, evaluation | Vox-Evaluator: Enhancing Stability and Fidelity for Zero-Shot TTS |
-| 27 | `2510.20513` | 2025-10-23 | arXiv | TTS, evaluation | Decoding the Ear: A Framework for Objectifying Expressiveness |
-| 28 | `2510.20677` | 2025-10-23 | arXiv | singing, VC | R2-SVC: Towards Real-World Robust and Expressive Zero-Shot SVC |
-| 29 | `2510.21209` | 2025-10-24 | Interspeech | codec | SpecTokenizer: A Lightweight Streaming Codec |
-| 30 | `2510.21685` | 2025-10-24 | arXiv | singing, VC | StylePitcher: Generating Style-Following and Expressive Singing |
-| 31 | `2510.22241` | 2025-10-25 | arXiv | codec | FOA Tokenizer: Low-Bitrate Neural Codec for First-Order Ambisonics |
-| 32 | `2510.22588` | 2025-10-26 | arXiv | TTS, SCA | UltraVoice: Scaling Fine-Grained Style-Controlled Speech |
+| 1 | `2510.20210` | 2025-10-23 | arXiv | TTS, evaluation | Vox-Evaluator: Enhancing Stability and Fidelity for Zero-Shot TTS with A Multi-Level Evaluator |
+| 2 | `2510.20513` | 2025-10-23 | arXiv | TTS, evaluation | Decoding the Ear: A Framework for Objectifying Expressiveness from Human Preference Through Efficient Alignment |
+| 3 | `2510.20677` | 2025-10-23 | arXiv | singing, VC | R2-SVC: Towards Real-World Robust and Expressive Zero-Shot Singing Voice Conversion |
+| 4 | `2510.21209` | 2025-10-24 | Interspeech | codec | SpecTokenizer: A Lightweight Streaming Codec in the Compressed Spectrum Domain |
+| 5 | `2510.21685` | 2025-10-24 | arXiv | singing, VC | StylePitcher: Generating Style-Following and Expressive Pitch Curves for Versatile Singing Tasks |
+| 6 | `2510.22241` | 2025-10-25 | arXiv | codec | FOA Tokenizer: Low-Bitrate Neural Codec for First Order Ambisonics with Spatial Consistency Loss |
+| 7 | `2510.22588` | 2025-10-26 | arXiv | TTS, SCA | UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models |
+| 8 | `2511.05516` | 2025-10-26 | arXiv | TTS, SCA | Ming-UniAudio: Speech LLM for Joint Understanding, Generation and Editing with Unified Representation |
+| 9 | `2510.23541` | 2025-10-27 | arXiv | TTS | SoulX-Podcast: Towards Realistic Long-form Podcasts with Dialectal and Paralinguistic Diversity |
+| 10 | `2510.25178` | 2025-10-27 | arXiv | TTS | SFMS-ALR: Script-First Multilingual Speech Synthesis with Adaptive Locale Resolution |
+| 11 | `2506.21864` | 2025-10-27 | arXiv | SCA, TTS | DeepOmni: Towards Seamless and Smart Speech Interaction with Adaptive Modality-Specific MoE |
+| 12 | `2510.23312` | 2025-10-27 | arXiv | codec, evaluation | Low-Resource Audio Codec (LRAC): 2025 Challenge Description |
+| 13 | `2510.24372` | 2025-10-28 | arXiv | TTS | Bayesian Speech Synthesizers Can Learn from Multiple Teachers |
+| 14 | `2510.25566` | 2025-10-29 | arXiv | codec, TTS | PitchFlower: A Flow-Based Neural Audio Codec with Pitch Controllability |
+| 15 | `2510.25577` | 2025-10-29 | arXiv | evaluation | Lost in Phonation: Voice Quality Variation as an Evaluation Dimension for Speech Foundation Models |
+| 16 | `2510.26190` | 2025-10-30 | arXiv | TTS, evaluation | SP-MCQA: Evaluating Intelligibility of TTS Beyond the Word Level |
+| 17 | `2507.14815` | 2025-10-31 | arXiv | SCA | FastLongSpeech: Enhancing Large Speech-Language Models for Efficient Long-Speech Processing |
+| 18 | `2511.00256` | 2025-10-31 | arXiv | VC | NaturalVoices: A Large-Scale, Spontaneous and Emotional Podcast Dataset for Voice Conversion |
+| 19 | `2511.00850` | 2025-11-02 | arXiv | SCA, evaluation | MULTI-Bench: A Multi-Turn Interactive Benchmark for Assessing Emotional Intelligence Ability of Spoken Dialogue Models |
+| 20 | `2511.01056` | 2025-11-02 | arXiv | VC | WhisperVC: Decoupled Cross-Domain Alignment and Speech Generation for Low-Resource Whisper-to-Normal Conversion |
+| 21 | `2511.02104` | 2025-11-03 | arXiv | TTS, evaluation | Toward Objective and Interpretable Prosody Evaluation in Text-to-Speech: A Linguistically Motivated Approach |
+| 22 | `2511.01261` | 2025-11-03 | arXiv | SCA, evaluation | Speech-DRAME: A Framework for Human-Aligned Benchmarks in Speech Role-Play |
+| 23 | `2025.findings-emnlp.241` | 2025-11-05 | EMNLP | SCA | Enhancing Speech-to-Speech Dialogue Modeling with End-to-End Retrieval-Augmented Generation |
+| 24 | `2025.findings-emnlp.1077` | 2025-11-05 | EMNLP | VC | EZ-VC: Easy Zero-Shot Any-to-Any Voice Conversion |
 
-Batches: 1–4, 5–8, 9–12, 13–16, 17–20, 21–24, 25–28, 29–32 (matching the standard cadence below).
+Batches: 1–4, 5–8, 9–12, 13–16, 17–20, 21–24 (matching the standard cadence below).
 
-**Pre-flight checks already done for this list (2026-07-18), don't need to be re-run unless the
+**Pre-flight checks already done for this list (2026-07-19), don't need to be re-run unless the
 list changes:**
 - No duplicate/full-version signals found — checked `arxiv_comment` on all 3 papers whose arXiv
-  ID prefix doesn't match `published_date` (`2506.12311`, `2503.06211`, `2506.23670`); none say
+  ID prefix doesn't match `published_date` (`2511.05516`, `2506.21864`, `2507.14815`); none say
   "full version of" or similar, and none title-match an existing wiki page. See
-  [[feedback_arxiv_full_version_dedup]] for what this check looks for and why.
-- No exact-title collisions found against `papers/index.md` for any of the 32.
-- `2510.07978`-style scope questions may recur among the SCA papers (`2510.09424`, `2510.09592`,
-  `2510.10003`, `2510.12116`) — read each carefully before ingesting; see the corpus-scope
-  precedent chain below.
+  [[feedback_arxiv_full_version_dedup]] for what this check looks for and why. Note `2511.05516`
+  is an unusual case: its ID prefix (November) is chronologically *after* its `published_date`
+  (2025-10-26) — trust `published_date` as always, but this is worth a second glance if the page
+  ends up looking off, since it's the reverse direction of the usual prefix-lag gotcha.
+- No exact-title collisions found against `papers/index.md` for any of the 24. One companion-paper
+  pair identified (not a duplicate): item 12 (`2510.23312`, "LRAC: 2025 Challenge Description") and
+  the already-ingested `2510.00264` ("Baseline Systems For The 2025 Low-Resource Audio Codec
+  Challenge") share one author (Yusuf Ziya Isik) and the same challenge — both are legitimate
+  distinct papers (challenge description vs. baseline systems), ingest both independently, no
+  cross-linking assumptions needed beyond what each paper's own bibliography supports.
+- Corpus-scope precedent chain likely to recur on several SCA/evaluation-tagged papers this batch
+  — read each carefully before ingesting, don't trust the pre-assigned task tag:
+  - `2507.14815` (FastLongSpeech) — relevance_note says "efficient processing of long-form speech,"
+    which is exactly the shape of a potential understanding/efficiency paper rather than a genuine
+    generation paper (cf. `2510.09424`, `2510.12116` this session). Verify it actually generates or
+    evaluates spoken output, not just processes/comprehends long speech input more efficiently.
+  - `2511.00850` (MULTI-Bench) and `2511.01261` (Speech-DRAME) — both benchmark/evaluation papers
+    for spoken dialogue models; check against the AURA/VoiceAgentBench precedent (agentic/dialogue
+    evaluation where TTS/VC is incidental to constructing benchmark input is fine; pure text-output
+    scoring with no spoken-output evaluation at all is the FAMA/MLC-SLM pattern) before assuming
+    either way. See [[feedback_corpus_scope_asr_false_accept]] for the full precedent chain.
+  - `2511.05516` (Ming-UniAudio) and `2506.21864` (DeepOmni) — both framed as "speech LLM" /
+    "seamless speech interaction" systems; titles suggest genuine generation (Ming-UniAudio's own
+    title says "Generation and Editing"), but verify against actual evaluated spoken output before
+    trusting the SCA tag, per the same precedent chain.
+- Also still pending from session 15: `2510.12116` remains `status: accepted` but undecided in
+  `raw/review_queue.md` — do not re-select it into a fresh batch; it needs an explicit user
+  decision, not automatic inclusion in chronological ordering.
 
 ---
 
