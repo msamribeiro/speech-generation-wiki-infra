@@ -34,50 +34,64 @@ cd /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wik
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content -v
 ```
 
-**State as of 2026-07-19** (re-run the commands above before resuming — this will be stale).
-Refreshed after Q4 session 15 grew the corpus 616 → 640 pages (24 new Q4 2025 papers, all
-correctly excluded from this task's scope) — the `Covers` column below is corpus-wide (includes
-Q4 papers that reference each concept), not Q3-scoped, so it shifts slightly every time Q4 ingest
-adds papers; only `flow-matching`'s `Integrated` count and the Q3-scoped backlog figure below are
-what actually matter for planning this task:
+**State as of 2026-07-20** (re-run the commands above before resuming — this will be stale). This
+table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
+frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
+corpus-wide `Covers`-style column was dropped:
 
-| Concept | Papers referencing it (all time, corpus-wide) | Integrated | % |
+| Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
-| flow-matching | 112 | 34 | 30% |
-| zero-shot-tts | 238 | 0 | 0% |
-| evaluation-metrics | 322 | 0 | 0% |
-| subjective-evaluation | 210 | 0 | 0% |
-| neural-codec | 229 | 0 | 0% |
-| autoregressive-codec-tts | 201 | 0 | 0% |
-| spoken-language-model | 181 | 0 | 0% |
-| self-supervised-speech | 166 | 0 | 0% |
-| disentanglement | 110 | 0 | 0% |
-| prosody-control | 107 | 0 | 0% |
-| multilingual-tts | 107 | 0 | 0% |
-| voice-conversion | 98 | 0 | 0% |
-| emotion-synthesis | 88 | 0 | 0% |
-| speaker-adaptation | 87 | 0 | 0% |
-| speech-to-speech | 86 | 0 | 0% |
-| streaming-tts | 74 | 0 | 0% |
-| gan-vocoder | 67 | 0 | 0% |
-| instruction-conditioned-tts | 56 | 0 | 0% |
-| diffusion-tts | 57 | 0 | 0% |
-| rlhf-speech | 41 | 0 | 0% |
-| transformer-enc-dec-tts | 32 | 0 | 0% |
-| singing | 11 | 0 | 0% |
+| evaluation-metrics | 286 | 0 | 0% |
+| zero-shot-tts | 204 | 0 | 0% |
+| neural-codec | 184 | 0 | 0% |
+| subjective-evaluation | 180 | 0 | 0% |
+| autoregressive-codec-tts | 166 | 0 | 0% |
+| self-supervised-speech | 146 | 0 | 0% |
+| spoken-language-model | 127 | 0 | 0% |
+| disentanglement | 100 | 0 | 0% |
+| **flow-matching** | **97** | **97** | **100%** |
+| prosody-control | 94 | 0 | 0% |
+| voice-conversion | 87 | 0 | 0% |
+| speaker-adaptation | 79 | 0 | 0% |
+| multilingual-tts | 76 | 0 | 0% |
+| emotion-synthesis | 74 | 0 | 0% |
+| **speech-to-speech** | **63** | **60** | **95%** |
+| gan-vocoder | 60 | 0 | 0% |
+| streaming-tts | 54 | 0 | 0% |
+| diffusion-tts | 46 | 0 | 0% |
+| instruction-conditioned-tts | 45 | 0 | 0% |
+| rlhf-speech | 29 | 0 | 0% |
+| transformer-enc-dec-tts | 28 | 0 | 0% |
+| singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2685** | **34** | **1%** |
+| **TOTAL** | **2236** | **157** | **7.0%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via health check): **548** (up from 524 —
-entirely accounted for by the 24 new unintegrated Q4 papers, not scope creep in this task).
-Scoped to Q3-2025-and-earlier only (the actual target of this task, excluding Tier 2 stubs,
-recomputed directly from `_claims/*.yaml` `papers:` lists vs. paper frontmatter since
-`health_check.py` has no date-scoping flag): **464** as of 2026-07-19 (was 463 — negligible
-drift, not Q4 contamination). **This 464 is the number that actually matters for this task.**
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **429** as of
+2026-07-20 (down from 548 on 2026-07-19, reflecting the 157 papers integrated this session across
+both concepts).
 
-**Only `flow-matching` has started** — 34 of 112 papers integrated (round 1 of a production run
-begun 2026-07-15, prototype-tested 2026-06-24 on an initial 14 papers). All other 22 concepts
-have **no `wiki/_claims/{slug}.yaml` file at all yet** — every paper touching them is unintegrated.
+**Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
+2026-07-19 table it replaces) was originally computed by a one-off script that checked a
+frontmatter field named `tier` — but the actual field is `ingest_tier`. This silently failed to
+exclude any Tier 2 stub pages (65 exist corpus-wide), inflating every concept's "papers
+referencing it" denominator. A second bug in the same class: `related_concepts` is serialized
+three different ways across paper pages (bracket-unquoted, bracket-quoted, YAML block-list — see
+`BACKLOG.md`'s new "Standardize `related_concepts` frontmatter serialization" item), and an
+early version of the script only handled one form, silently undercounting further. Both bugs are
+now fixed in the ad-hoc scripts used to produce the table above; the two integration agent
+invocations that actually wrote `_claims/*.yaml` this session were unaffected (they independently
+re-verify `ingest_tier` and `related_concepts` per paper before writing, and in practice caught
+4 Tier-2 papers and 3 sub-paradigm-fit exclusions that a naive candidate list would have missed).
+**Takeaway for future sessions**: never hand-roll a `related_concepts`/`ingest_tier` scan without
+handling both quoting styles and the correct field name — `scripts/corpus_summary.py` and
+`scripts/checks/integrate.py` already do this correctly via real YAML frontmatter parsing, so
+prefer extending those over writing a new one-off script.
+
+**`flow-matching` and `speech-to-speech` are now fully closed for Q3-and-earlier Phase 1 + Phase
+2** (97/97 and 60/63 — the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388`
+DiVA, `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly
+excluded for having no speech-generation stage of their own, despite carrying the tag). All other
+21 concepts have **no `wiki/_claims/{slug}.yaml` file at all yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 fully clearing the Q3-and-before backlog is roughly 463 ÷ 20 ≈ **23+ Phase 1 invocations**, plus
@@ -259,7 +273,51 @@ needed.
 
 ## Session Log
 
-_(none yet — bootstrapped 2026-07-18)_
+### 2026-07-19/20 — flow-matching closed, speech-to-speech done from scratch
+
+- **flow-matching Phase 1 completed**: 3 batches (54→74→94→97 papers), closing the round-1
+  backlog. 11 Q4-2025-or-later candidates identified in the same discovery pool and explicitly
+  excluded per scope (they'll get their own pass later, per `Q4_INGESTION_SESSIONS.md`).
+- **flow-matching Phase 2 run for the first time against the full 97-paper set**: 7
+  method_families (2 new: `continuous_ar_fm_head`, `fm_auxiliary_attribute`), 34 claim_clusters
+  (8 strongly_supported, 25 emerging, 1 contested), 3 reassessment_queue items. Notable: the
+  `cfg_conditioning_mechanism_adopted` cluster was downgraded strongly_supported → contested after
+  `2509.19668` found CFG techniques from image generation don't cleanly transfer to flow-matching
+  TTS. 5 papers remain legitimate method_family outliers (pre-CFM survey, off-the-shelf-backbone
+  usage, theory-only, benchmark-only papers) — expected, not a defect.
+- **speech-to-speech started and fully closed** (Phase 1 + Phase 2), the second concept to reach
+  this milestone. Phase 1: 4 batches, 60/63 in-scope papers integrated; 3 papers evaluated and
+  excluded for having no speech-generation stage of their own despite carrying the tag
+  (`2025.acl-long.388` DiVA — speech-in/text-out; `interspeech-2025-2660` VAP turn-taking
+  predictor; `2509.23938` Easy Turn detector) — all three independently confirmed against source
+  pages, establishing a consistent exclusion precedent for this concept going forward. Phase 2: 5
+  method_families, 16 claim_clusters (13 strongly_supported, 2 contested, 1 emerging). Headline
+  finding: `cascade_outperforms_e2e_on_benchmarks` turned out much larger than expected (10
+  supporting + 5 refining papers) — cascaded ASR+LLM+TTS pipelines still beat end-to-end S2S on
+  general instruction-following/reasoning benchmarks, though the gap is concentrated in
+  paralinguistic fidelity rather than semantic accuracy. Two duplicate paper pairs discovered and
+  handled as single data points for cluster-support counting: `2505.02625`/`2025.acl-long.912`
+  (LLaMA-Omni 2, arXiv vs. ACL) and `2412.15649`/`2025.findings-acl.115` (SLAM-Omni, arXiv vs. ACL
+  Findings) — both flagged for an eventual ingest-side dedup pass per the existing
+  arXiv-full-version-dedup precedent (Emilia case).
+- **Two process bugs found and fixed** (see the corrected state table above for detail): (1) an
+  ad-hoc scoping script checked frontmatter field `tier` instead of the actual `ingest_tier`,
+  silently failing to exclude Tier 2 stubs; (2) `related_concepts` has 3 coexisting YAML
+  serializations corpus-wide with no clean chronological cutover, causing a naive single-format
+  parser to undercount by roughly half. Neither bug affected the actual `_claims/*.yaml` writes
+  (the integration agent invocations independently re-verify both fields per paper), only the
+  ad-hoc reporting scripts used to answer "how many Q3 papers per concept" questions. A backlog
+  item was added to standardize `related_concepts` serialization.
+- **Two agent runs were interrupted mid-task by session API limits** (once during a speech-to-speech
+  Phase 1 batch, once during the speech-to-speech Phase 2 run). Both times, the file state was
+  checked directly before resuming (valid YAML, correct paper/cluster counts, no partial writes)
+  rather than trusting the interrupted agent's own partial output — both resumes were clean,
+  no data loss or corruption. A stray `log.md` header corruption (missing `## ` prefix on the
+  2026-07-18 and 2026-07-17 section headers, introduced sometime in the uncommitted working tree
+  this session) was found and repaired by hand mid-session.
+- Everything in this session was independently re-verified against `health_check.py` output and,
+  for a sample of claims/clusters each batch, against the actual source paper pages — never taking
+  an agent's closing summary at face value (see [[feedback_agent_selfreport_unreliable]]).
 
 ---
 
@@ -270,6 +328,18 @@ warnings, ambiguous claim roles, or judgment calls noted by the agent).
 
 | Concept | Paper ID | Note |
 |---|---|---|
-| flow-matching | `2106.15561` | empty `method_family` after Phase 2 (pre-existing, session 2026-07-15) |
-| flow-matching | `2025.coling-main.518` | empty `method_family` after Phase 2 (pre-existing, session 2026-07-15) |
-| flow-matching | `iclr-2025-uxDFlPGRLX` | empty `method_family` after Phase 2 (pre-existing, session 2026-07-15) |
+| flow-matching | `2106.15561` | empty `method_family` after Phase 2: pre-2021 survey predating the CFM objective, "flow" refers to normalizing flows not conditional flow matching — intentional outlier |
+| flow-matching | `2025.acl-long.1252` | empty `method_family`: F5-TTS used entirely off-the-shelf, no FM methodology contribution |
+| flow-matching | `2025.findings-acl.115` | empty `method_family` for flow-matching: AR-LM only, FM present merely as an unrelated pretrained vocoder |
+| flow-matching | `interspeech-2025-1066` | empty `method_family`: pure theory paper (SSM↔flow-matching equivalence proof), no TTS/VC system |
+| flow-matching | `2509.19928` | empty `method_family`: benchmark/evaluation paper, `architecture: []`, no system of its own |
+| flow-matching | `cfg_conditioning_mechanism_adopted` (cluster) | downgraded strongly_supported → contested by `2509.19668`; watch for further evidence either way |
+| flow-matching | `2509.09631`, `2509.18470` | `current_role: frontier_probe` — narrow proof-of-concept scope, watch for adoption/replication signal |
+| speech-to-speech | `2025.acl-long.388` (DiVA) | excluded from concept: speech-in/text-out only, no speech-generation stage |
+| speech-to-speech | `interspeech-2025-2660` (VAP) | excluded from concept: acoustic turn-taking predictor, no speech-generation stage |
+| speech-to-speech | `2509.23938` (Easy Turn) | excluded from concept: turn-taking detector, no speech-generation stage — closest call of the three, tightly coupled to S2S systems architecturally despite the exclusion |
+| speech-to-speech | `2505.02625` / `2025.acl-long.912` | duplicate pair (LLaMA-Omni 2, arXiv vs. ACL) — both have separate YAML entries but count as one data point for cluster support; candidate for ingest-side dedup |
+| speech-to-speech | `2412.15649` / `2025.findings-acl.115` | duplicate pair (SLAM-Omni, arXiv vs. ACL Findings) — same treatment; candidate for ingest-side dedup |
+| speech-to-speech | `staged_pretraining_effect_on_instruction_following` (cluster) | contested cluster confounded by model scale (SLAM-Omni 0.5B vs. Baichuan-Audio 7B) — needs a scale-matched ablation to resolve cleanly |
+| speech-to-speech | `2025.naacl-long.484` (Behavior-SD) | borderline sub-paradigm fit: generates full-duplex dialogue audio rather than acting as an interactive agent |
+| speech-to-speech | `2025.iwsds-1.27` | borderline concept fit: general turn-taking survey, not S2S-specific — consider whether it belongs under `evaluation-metrics`/`subjective-evaluation` instead |
