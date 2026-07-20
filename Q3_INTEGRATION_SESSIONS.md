@@ -60,15 +60,15 @@ corpus-wide `Covers`-style column was dropped:
 | streaming-tts | 54 | 0 | 0% |
 | diffusion-tts | 46 | 0 | 0% |
 | instruction-conditioned-tts | 45 | 0 | 0% |
-| rlhf-speech | 29 | 0 | 0% |
+| **rlhf-speech** | **29** | **29** | **100%** |
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **157** | **7.0%** |
+| **TOTAL** | **2236** | **186** | **8.3%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **429** as of
-2026-07-20 (down from 548 on 2026-07-19, reflecting the 157 papers integrated this session across
-both concepts).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **411** as of
+2026-07-20 (down from 429 earlier the same day, reflecting the 29 rlhf-speech papers integrated
+in this session; down from 548 on 2026-07-19).
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -87,11 +87,14 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 `scripts/checks/integrate.py` already do this correctly via real YAML frontmatter parsing, so
 prefer extending those over writing a new one-off script.
 
-**`flow-matching` and `speech-to-speech` are now fully closed for Q3-and-earlier Phase 1 + Phase
-2** (97/97 and 60/63 — the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388`
-DiVA, `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly
-excluded for having no speech-generation stage of their own, despite carrying the tag). All other
-21 concepts have **no `wiki/_claims/{slug}.yaml` file at all yet**.
+**`flow-matching` and `speech-to-speech` are fully closed for Q3-and-earlier Phase 1 + Phase 2**
+(97/97 and 60/63 — the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
+`interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
+for having no speech-generation stage of their own, despite carrying the tag). **`rlhf-speech` is
+fully closed for Phase 1** (29/29, no exclusions) but **Phase 2 synthesis has not yet been run**
+for it — deferred per explicit user instruction this session, so `claim_clusters` and
+`method_families` remain empty skeletons. All other 20 concepts have **no `wiki/_claims/{slug}.yaml`
+file at all yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 fully clearing the Q3-and-before backlog is roughly 463 ÷ 20 ≈ **23+ Phase 1 invocations**, plus
@@ -273,6 +276,29 @@ needed.
 
 ## Session Log
 
+### 2026-07-20 — rlhf-speech Phase 1 closed from scratch
+
+- **rlhf-speech started and closed for Phase 1** (Phase 2 deliberately deferred per user
+  instruction). Two batches, 20 then 9, 0 in-scope exclusions: 29/29 Q3-scoped papers integrated,
+  oldest-first from `2406.00654` (2024-06-02, UNO) through `2509.25416` (2025-09-30). 2 candidates
+  correctly skipped as Tier 2 (`2501.12948`, `2307.09288`). All 39+100=139 extracted claims carry
+  a real `source` citation; no `"not specified"` fallbacks needed. Both batches independently
+  re-verified against the actual YAML (`paper_count`/`len(papers)` match, ID lists match) and a
+  spot-checked paper (`2508.15442`, GOAT) against its source page — claim text, section
+  citations, and numbers all traced cleanly. `health_check.py --module integrate --concept
+  rlhf-speech` passed 0 errors/0 warnings after each batch.
+- **Log-insertion bug recurred in a new code path**: the previously-fixed regex-based section
+  insertion (see [[feedback_log_insertion_bug]], fixed 2026-06-10 for the append-to-end-of-file
+  case) stripped the `## ` heading prefix from the *following* day's section (`## 2026-07-19` →
+  `2026-07-19`) when appending an entry within an *existing* day section — a different code path
+  than the original bug. Found and repaired by hand during the second batch; verified afterward
+  that all section headings in `log.md` are intact. Worth a proper code-level fix rather than
+  relying on catching it by inspection each time.
+- Two papers integrated with only a nominal/infrastructural connection to rlhf-speech, marked
+  `relevance: low` / `current_role: minor` with explicit caveats rather than excluded outright
+  (RLHF mentioned as a supported feature or potential future reward-model use, no dedicated RLHF
+  experiments in the paper itself) — see Manual Verification Queue below.
+
 ### 2026-07-19/20 — flow-matching closed, speech-to-speech done from scratch
 
 - **flow-matching Phase 1 completed**: 3 batches (54→74→94→97 papers), closing the round-1
@@ -343,3 +369,5 @@ warnings, ambiguous claim roles, or judgment calls noted by the agent).
 | speech-to-speech | `staged_pretraining_effect_on_instruction_following` (cluster) | contested cluster confounded by model scale (SLAM-Omni 0.5B vs. Baichuan-Audio 7B) — needs a scale-matched ablation to resolve cleanly |
 | speech-to-speech | `2025.naacl-long.484` (Behavior-SD) | borderline sub-paradigm fit: generates full-duplex dialogue audio rather than acting as an interactive agent |
 | speech-to-speech | `2025.iwsds-1.27` | borderline concept fit: general turn-taking survey, not S2S-specific — consider whether it belongs under `evaluation-metrics`/`subjective-evaluation` instead |
+| rlhf-speech | `2025.naacl-demo.12` (ESPnet-SpeechLM) | `relevance: low`, `current_role: minor`: RLHF listed as a supported training feature of the toolkit, no dedicated RLHF experiments in the paper itself |
+| rlhf-speech | `2508.08957` (QAMRO) | `relevance: low`, `current_role: minor`: paper discusses potential future use as a reward model for RLHF, does not itself run RLHF training |
