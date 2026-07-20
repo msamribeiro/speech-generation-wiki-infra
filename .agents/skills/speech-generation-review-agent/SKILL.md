@@ -403,6 +403,10 @@ Choose based on the paper's primary contribution.
 Common errors: do not assign `architectural-novelty` to papers that use existing architectures (LLM backbones, standard Transformers) in a new context — those are `engineering-integration`. Do not assign `empirical-benchmark` to surveys — those are `conceptual-contribution`.
 
 ### `related_concepts` — allowed slugs (choose 3–6 per paper)
+Write as bracket-unquoted YAML: `related_concepts: [flow-matching, zero-shot-tts]`. Never quote
+the slugs and never use a YAML block list. If an existing page uses quoted or block-list form,
+normalize it to this canonical form while correcting the slugs.
+
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
 
 **`self-supervised-speech`**: Only include if the paper's own system uses HuBERT, WavLM, wav2vec 2.0, data2vec, or similar as a core component. Not for Whisper (supervised), not for papers that merely cite SSL work.

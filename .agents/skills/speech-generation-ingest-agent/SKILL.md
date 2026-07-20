@@ -512,6 +512,9 @@ Choose based on what the paper's *primary contribution* is — not what it incid
 Common errors to avoid: do not assign `architectural-novelty` to papers that use existing architectures (LLM backbones, standard Transformers) in a new context — those are `engineering-integration`. Do not assign `empirical-benchmark` to surveys — those are `conceptual-contribution`. A paper can have multiple types, but pick only those that represent genuine contributions.
 
 ### `related_concepts` — allowed slugs (choose 3–6 per paper)
+Write as bracket-unquoted YAML: `related_concepts: [flow-matching, zero-shot-tts]`. Never quote
+the slugs and never use a YAML block list.
+
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
 
 ### Concept title map for wikilinks

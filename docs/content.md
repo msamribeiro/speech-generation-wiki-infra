@@ -116,6 +116,22 @@ writes `wiki/papers/`, never writes `wiki/_claims/`.
 
 ## Page Templates
 
+### Frontmatter List Formatting
+
+List-type frontmatter fields (`task`, `architecture`, `conditioning`, `training`,
+`datasets_train`, `datasets_eval`, `related_concepts`, `related_papers`) use YAML flow-sequence
+syntax with **unquoted** scalars: `related_concepts: [flow-matching, zero-shot-tts]`, not
+`["flow-matching", "zero-shot-tts"]` and not a block list. All slugs and vocabulary values in
+this schema are plain kebab-case or alphanumeric tokens, so quoting is never required for valid
+YAML. This is the canonical form for every ingest, re-ingest, and review write — pick it even
+when writing only a single-element or empty list (`related_concepts: [flow-matching]`,
+`task: []`).
+
+`related_concepts` specifically drifted across three coexisting serializations (bracket
+unquoted, bracket quoted, YAML block-list) before a 2026-07 normalization pass fixed the
+existing corpus and closed the gap in agent specs — see `wiki/log.md` for the normalization
+commit. Do not reintroduce quoted or block-list forms for any of these fields.
+
 ### Paper Page — Tier 1 (Full)
 
 ```markdown

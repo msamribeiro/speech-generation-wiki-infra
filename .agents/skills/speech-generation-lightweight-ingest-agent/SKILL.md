@@ -403,6 +403,9 @@ INGEST_RESULT: {"id": "{ID}", "success": false, "reason": "{brief reason}"}
 - Using only one type when the paper has distinct dual contributions (e.g. a new dataset AND a new evaluation metric)
 
 ### `related_concepts` — allowed slugs (0–4 per paper; empty list is valid)
+Write as bracket-unquoted YAML: `related_concepts: [flow-matching, zero-shot-tts]`, or
+`related_concepts: []` if none apply. Never quote the slugs and never use a YAML block list.
+
 `flow-matching` | `diffusion-tts` | `autoregressive-codec-tts` | `transformer-enc-dec-tts` | `gan-vocoder` | `zero-shot-tts` | `voice-conversion` | `multilingual-tts` | `emotion-synthesis` | `prosody-control` | `streaming-tts` | `spoken-language-model` | `speech-to-speech` | `instruction-conditioned-tts` | `neural-codec` | `self-supervised-speech` | `disentanglement` | `speaker-adaptation` | `rlhf-speech` | `evaluation-metrics` | `subjective-evaluation`
 
 **`self-supervised-speech` usage rule:** Only include this slug if the paper's own system uses a self-supervised model (HuBERT, WavLM, wav2vec 2.0, data2vec, or similar) as a core component of its architecture or training. Do NOT include it if the paper uses Whisper (which is fully supervised), merely cites SSL work in related work, or compares against SSL baselines. The test: does this paper's method depend on self-supervised pre-training?
