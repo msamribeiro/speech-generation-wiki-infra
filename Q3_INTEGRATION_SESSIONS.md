@@ -34,14 +34,15 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-20** (re-run the commands above before resuming — this will be stale). This
+**State as of 2026-07-20, after evaluation-metrics batch 4** (re-run the commands above before
+resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
 corpus-wide `Covers`-style column was dropped:
 
 | Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
-| **evaluation-metrics** | **286** | **60** | **21%** |
+| **evaluation-metrics** | **286** | **80** | **28%** |
 | zero-shot-tts | 204 | 0 | 0% |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
@@ -64,11 +65,11 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **246** | **11.0%** |
+| **TOTAL** | **2236** | **266** | **11.9%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **366** as of
-2026-07-20 (down from 411 earlier the same day, reflecting the 60 evaluation-metrics papers
-integrated in this session; down from 429 before rlhf-speech Phase 1, 548 on 2026-07-19).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **351** as of
+2026-07-20 after batch 4 (down from 366 after batches 1-3, 411 earlier the same day, 429 before
+rlhf-speech Phase 1, 548 on 2026-07-19).
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -274,6 +275,27 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-20 — evaluation-metrics Phase 1 batch 4 (60 → 80/286)
+
+- Fourth Phase 1 batch, 20 papers, oldest-first continuation from `2025.americasnlp-1.1` through
+  `2507.08319`. Same standing exclusion re-applied on re-encounter: `2207.12598` (Classifier-Free
+  Diffusion Guidance), the oldest unintegrated in-scope candidate on disk since it was never
+  written to the YAML in batches 1–3, excluded again for the same reason (off-topic ImageNet
+  diffusion paper, no speech content). Not replaced in this batch's 20-cap. No Tier 2 papers
+  encountered in this range. **205/286 remain, next oldest `2507.09282`** (followed by
+  `2507.09310`, `2506.18296`, `2507.10985`, ...).
+- Independently re-verified (not trusting the agent's closing summary uncontested, per
+  [[feedback_agent_selfreport_unreliable]]): `paper_count`/`len(papers)` both 80, no duplicate
+  IDs, all `id`/`entry_date` fields string-typed (no YAML date/float coercion — see
+  [[feedback_yaml_coercion_gotchas]]), health check clean (`--module integrate --concept
+  evaluation-metrics`: 0 errors, 0 warnings). Spot-checked `2507.03912` (prosody-labeling SSL
+  features paper) against its source page: all four claim numbers (89.8/89.0/82.5% ACC accuracy;
+  75.2%/62.9% for melspectrogram/F0 baselines; Japanese-vs-English SSL pretraining comparison)
+  matched the paper page's Key Results section and `§5.4`/`§5.6` citations exactly, and
+  `related_concepts` frontmatter confirmed the `evaluation-metrics` tag.
+- Committed in the content repo (`_claims/evaluation-metrics.yaml` + `log.md`, one commit,
+  `f82206d`). Not pushed this session, consistent with the commit-only pattern for prior batches.
 
 ### 2026-07-20 — evaluation-metrics Phase 1 started, batches 1–3 (60/286)
 
