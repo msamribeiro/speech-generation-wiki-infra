@@ -41,7 +41,7 @@ corpus-wide `Covers`-style column was dropped:
 
 | Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
-| evaluation-metrics | 286 | 0 | 0% |
+| **evaluation-metrics** | **286** | **60** | **21%** |
 | zero-shot-tts | 204 | 0 | 0% |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
@@ -64,11 +64,11 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **186** | **8.3%** |
+| **TOTAL** | **2236** | **246** | **11.0%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **411** as of
-2026-07-20 (down from 429 earlier the same day, reflecting the 29 rlhf-speech papers integrated
-in this session; down from 548 on 2026-07-19).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **366** as of
+2026-07-20 (down from 411 earlier the same day, reflecting the 60 evaluation-metrics papers
+integrated in this session; down from 429 before rlhf-speech Phase 1, 548 on 2026-07-19).
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -91,8 +91,9 @@ prefer extending those over writing a new one-off script.
 Phase 1 + Phase 2** (97/97, 60/63, and 29/29 respectively — the 3-paper gap on speech-to-speech
 is intentional: `2025.acl-long.388` DiVA, `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn
 were each evaluated and correctly excluded for having no speech-generation stage of their own,
-despite carrying the tag). All other 20 concepts have **no `wiki/_claims/{slug}.yaml` file at all
-yet**.
+despite carrying the tag). **`evaluation-metrics` is started** (60/286 Phase 1, no Phase 2 yet) —
+the fourth concept with a `wiki/_claims/{slug}.yaml` file. All other 19 concepts have **no
+`wiki/_claims/{slug}.yaml` file at all yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 fully clearing the Q3-and-before backlog is roughly 463 ÷ 20 ≈ **23+ Phase 1 invocations**, plus
@@ -273,6 +274,45 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-20 — evaluation-metrics Phase 1 started, batches 1–3 (60/286)
+
+- **First-ever integration pass for `evaluation-metrics`**, new `wiki/_claims/evaluation-metrics.yaml`
+  created. Three Phase 1 batches, 20 papers each, oldest-first: batch 1 `1703.10135` →
+  `2403.16973` (Tacotron-era through VoiceCraft), batch 2 `2404.03204` → `2502.04128` (RALL-E
+  through Llasa), batch 3 `2502.06490` → `2025.iwsds-1.27`. 60/286 in-scope candidates processed,
+  225 remain, next oldest `2025.americasnlp-1.1`.
+- **One consistent exclusion across all three batches**: `2207.12598` (Classifier-Free Diffusion
+  Guidance) — a class-conditional ImageNet diffusion-guidance paper with `task: []` and no speech
+  content of any kind, wikilinked from `evaluation-metrics` only as background inspiration for
+  CFG-style guidance mechanisms elsewhere in the corpus. Excluded independently on each
+  re-encounter (batches 1, 2, 3) for the same reason each time — a stable precedent, not
+  indecision.
+- **Batch 2 was interrupted mid-task by an API session limit**, cut off right after the agent's
+  last message ("Now I'll write the Python script that builds all 20 entries and inserts them")
+  — i.e. discovery/drafting was done but nothing had been written to disk yet. Checked the file
+  directly before resuming: `evaluation-metrics.yaml` was unchanged from batch 1 (still exactly 20
+  papers) and `log.md` had no batch-2 entry, confirming a clean pre-write state with no partial or
+  corrupted output. The same agent was resumed via `SendMessage` (not restarted) to write the
+  already-drafted 20 entries; it was explicitly told to re-verify its draft before committing it to
+  disk rather than force a potentially-stale draft through. Result independently re-verified
+  afterward: `paper_count`/`len(papers)` (40/40), no duplicate IDs across batches, correct
+  re-exclusion of `2207.12598`, health check 0 errors/0 warnings.
+- **Batch 3's agent caught and self-corrected its own arithmetic error** before finishing: an
+  initial draft log-bullet stated 245 papers remaining (carried over from batch 2's post-batch
+  count without subtracting batch 3's 20), corrected to the right figure (225) before the run
+  ended. Independently re-verified: the committed log entry and the true remaining-candidate count
+  both read 225, consistent with 245 − 20.
+- All three batches independently re-verified the same way as prior concepts (never trusting an
+  agent's closing summary uncontested — see [[feedback_agent_selfreport_unreliable]]): YAML
+  structural checks (`paper_count` vs `len(papers)`, uniqueness, string-typed IDs/dates),
+  `health_check.py --module integrate --concept evaluation-metrics` (0 errors/0 warnings after
+  every batch), and one claim per batch spot-checked against its source paper page (UTMOS
+  listener-dependent MOS modeling, VoiceBench cascade-vs-e2e gap, Landscape-of-SLMs
+  content-vs-acoustic-reasoning tradeoff) — all traced cleanly with correct section citations.
+- **Committed at end of session**: content repo (`_claims/evaluation-metrics.yaml` new file +
+  3 `log.md` entries, one commit) and this infra session log. Not pushed this session (user
+  chose commit-only for the prior rlhf-speech work too); push deferred to a later explicit request.
 
 ### 2026-07-20 — rlhf-speech Phase 2 synthesis run, concept fully closed
 
