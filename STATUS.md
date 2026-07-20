@@ -100,7 +100,7 @@ GitHub repository (`acl-org/acl-anthology`).
 | `scripts/parse/download_pdfs.py` | Downloads PDFs for all accepted papers; resumable, per-domain rate limiting |
 | `scripts/discover/citation_index.py` | Builds `raw/citation_index.json` from all parsed `references.json` files; run after each parse batch |
 | `lib/keyword_filter.py` | Shared keyword filter logic used by all fetchers |
-| `.claude/agents/speech-generation-filter-agent.md` | Relevance scoring agent; invoke on any new pending batch |
+| `.agents/skills/speech-generation-filter-agent/SKILL.md` | Shared relevance scoring workflow; invoke on any new pending batch |
 
 ### Extending the corpus
 

@@ -9,6 +9,7 @@ issues with severity (error / warning). Exits 0 if all modules pass
 Usage:
     python scripts/health_check.py                          # run all available modules
     python scripts/health_check.py --module ingest          # run one module
+    python scripts/health_check.py --module agents          # validate Claude/Codex parity
     python scripts/health_check.py --module ingest --id 2501.12345  # single paper
     python scripts/health_check.py --module integrate --concept flow-matching --phase 2
 """
@@ -20,10 +21,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from checks._base import CheckArgs, ModuleResult
+from checks import agents as _agents
 from checks import ingest as _ingest
 from checks import integrate as _integrate
 
-AVAILABLE_MODULES = {"ingest": _ingest, "integrate": _integrate}
+AVAILABLE_MODULES = {"agents": _agents, "ingest": _ingest, "integrate": _integrate}
 
 
 def _print_result(result: ModuleResult, verbose: bool) -> None:

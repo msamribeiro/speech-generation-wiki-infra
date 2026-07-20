@@ -2,7 +2,7 @@
 
 A living systematic review of the state of the art in synthetic speech, covering **text-to-speech (TTS)**, **voice conversion (VC)**, and **spoken conversational agents**. Papers are ingested on a rolling basis from arXiv, Interspeech, ACL/EMNLP/NAACL, NeurIPS, ICLR, and industry technical reports.
 
-This repository contains the data acquisition pipeline, parsing infrastructure, and Claude Code agent specs. It is not the wiki itself — wiki content lives in a separate content repository and is published as a static site.
+This repository contains the data acquisition pipeline, parsing infrastructure, and shared Claude Code/Codex workflows. It is not the wiki itself — wiki content lives in a separate content repository and is published as a static site.
 
 ---
 
@@ -10,7 +10,7 @@ This repository contains the data acquisition pipeline, parsing infrastructure, 
 
 | Repo | Contents |
 |------|----------|
-| **infra** (this repo) | Pipeline scripts, raw corpus state, Claude Code agent specs |
+| **infra** (this repo) | Pipeline scripts, raw corpus state, shared agent workflows |
 | **wiki-content** | Paper pages, concept pages, claim graph YAML |
 | **site** | Quartz v5 static site → GitHub Pages |
 
@@ -54,11 +54,14 @@ scripts/
   parse/                # PDF download and Docling conversion pipeline
   discover/             # Citation index and corpus expansion
 
-.claude/agents/         # Claude Code subagent specs
+.agents/skills/         # Canonical Claude/Codex workflow skills
+.claude/agents/         # Thin Claude Code adapters for shared skills
+.claude/skills          # Symlink exposing canonical skills to Claude Code
 config/                 # keyword_filter.yaml, parsing.yaml
 lib/                    # Shared library code
 
-CLAUDE.md               # Operating contract for Claude Code sessions
+AGENTS.md                # Model-neutral operating contract
+CLAUDE.md                # Claude Code import/adapter for AGENTS.md
 BACKLOG.md              # Feature backlog (P0/P1/P2 priorities)
 ARCHIVE.md              # Completed features with prose summaries
 STATUS.md               # Current corpus counts and pipeline state
@@ -82,9 +85,9 @@ Fetch → Filter → Parse → Ingest → Integrate → Render
 | **Integrate** | `speech-generation-integration-agent` | `wiki/_claims/{slug}.yaml` |
 | **Render** | `speech-generation-render-agent` | `wiki/concepts/`, `wiki/evidence/` |
 
-Fetch through Parse use Python scripts and are independently resumable — re-running skips work already done. Ingest, Integrate, and Render use Claude Code subagents invoked from a Claude Code session.
+Fetch through Parse use Python scripts and are independently resumable — re-running skips work already done. Filter, Ingest, Review, Integrate, and Render are shared skills usable from Claude Code or Codex.
 
-For detailed workflows, see `docs/fetch.md`, `docs/parse.md`, and `docs/content.md`. For the operating contract and invariants, see `CLAUDE.md`.
+For detailed workflows, see `docs/fetch.md`, `docs/parse.md`, and `docs/content.md`. For the operating contract and invariants, see `AGENTS.md`.
 
 ---
 
@@ -112,6 +115,12 @@ uv pip install -r requirements.txt
 
 ```bash
 source .venv/bin/activate
+```
+
+**Tests:**
+
+```bash
+.venv/bin/python -m pytest tests/ -q
 ```
 
 ---
@@ -150,7 +159,7 @@ python scripts/parse/batch_convert.py
 python scripts/discover/citation_index.py
 ```
 
-### Claude Code agents
+### Shared agent workflows
 
 | Agent | Purpose |
 |-------|---------|
@@ -159,8 +168,21 @@ python scripts/discover/citation_index.py
 | `speech-generation-lightweight-ingest-agent` | Write a Tier 2 stub page for citation-discovery papers |
 | `speech-generation-integration-agent` | Extract claims from paper pages; update `wiki/_claims/` YAML |
 | `speech-generation-render-agent` | Render concept pages and evidence dossiers from claim YAML |
+| `speech-generation-review-agent` | Audit and correct an existing Tier 1 paper page |
 
-Invoke from a Claude Code session: `"Ingest paper {id}"`, `"Run integration pass on last 25 papers"`, `"Render all stale concepts"`.
+In either tool, natural prompts such as `"Ingest paper {id}"`, `"Run integration pass on last 25 papers"`, or `"Render all stale concepts"` select the relevant workflow. Codex can also invoke `$speech-generation-ingest-agent` explicitly; Claude Code can select the matching project subagent.
+
+Wiki writes target the sibling `speech-generation-wiki-content` clone. Run `python3 scripts/resolve_wiki_dir.py` to validate and print the path. Set `SPEECH_WIKI_CONTENT_DIR` to override it. Codex must be granted write access to that sibling directory in its local workspace or `sandbox_workspace_write.writable_roots` configuration.
+
+After changing agent instructions, skills, adapters, or the resolver, validate Claude/Codex parity:
+
+```bash
+.venv/bin/python scripts/health_check.py --module agents
+```
+
+The same check is included in a full `.venv/bin/python scripts/health_check.py` run. For focused
+debugging, `.venv/bin/python scripts/check_agent_compat.py` remains available as the standalone
+implementation.
 
 ---
 
@@ -168,7 +190,9 @@ Invoke from a Claude Code session: `"Ingest paper {id}"`, `"Run integration pass
 
 | Document | Purpose |
 |----------|---------|
-| `CLAUDE.md` | Operating contract — read at the start of every Claude Code session |
+| `AGENTS.md` | Shared operating contract loaded by Codex and imported by Claude Code |
+| `CLAUDE.md` | Claude Code adapter that imports `AGENTS.md` |
+| `docs/schemas/generation.md` | Cross-runtime page and operation provenance schema |
 | `STATUS.md` | Current corpus counts and pipeline state |
 | `BACKLOG.md` | Prioritised feature backlog |
 | `ARCHIVE.md` | Completed features with outcomes |

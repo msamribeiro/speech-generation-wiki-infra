@@ -64,7 +64,7 @@ Some duplicates are neither caught by exact title normalization nor well-describ
 
 With deduplication fixed and the prefilter removed, the index is a usable starting point for two things:
 
-**Citation discovery.** The Citation Discovery Workflow (documented in CLAUDE.md) surfaces out-of-corpus papers cited by three or more corpus papers. The top of the list is predictably the foundational papers — Whisper, VALL-E, HiFi-GAN, WaveNet, VITS — but the middle tiers reveal papers we haven't yet ingested that the community is consistently building on. Running discovery after each major ingest batch keeps the corpus from drifting away from what the field actually cites.
+**Citation discovery.** The Citation Discovery Workflow (governed by AGENTS.md) surfaces out-of-corpus papers cited by three or more corpus papers. The top of the list is predictably the foundational papers — Whisper, VALL-E, HiFi-GAN, WaveNet, VITS — but the middle tiers reveal papers we haven't yet ingested that the community is consistently building on. Running discovery after each major ingest batch keeps the corpus from drifting away from what the field actually cites.
 
 **Quantitative analysis.** Citation counts give a rough signal of a paper's influence within our corpus. This isn't the same as real-world influence (our corpus has biases, papers can be cited negatively, recent papers haven't had time to accumulate citations), but as an internal consistency check — which papers does the field keep returning to? — it's useful. The counts are also a reasonable input for prioritizing Opus quality passes: a paper cited 80× by corpus papers is a stronger candidate for a detailed rewrite than one cited twice.
 

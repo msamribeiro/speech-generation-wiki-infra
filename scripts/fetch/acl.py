@@ -221,7 +221,7 @@ def parse_authors(paper: ET.Element) -> List[str]:
 
 def volume_to_canonical_venue(volume_id: str, collection_id: str) -> str:
     """
-    Map a volume ID to a CLAUDE.md canonical venue name.
+    Map a volume ID to an AGENTS.md canonical venue name.
     For 'findings' collections the volume ID encodes the parent venue
     (e.g. 'acl-2025', 'emnlp-2025', 'naacl-2025').
     """

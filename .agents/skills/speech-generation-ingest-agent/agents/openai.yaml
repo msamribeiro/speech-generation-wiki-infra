@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speech Generation Ingest"
+  short_description: "Create a Tier 1 wiki paper page"
+  default_prompt: "Use $speech-generation-ingest-agent to ingest a paper by ID."

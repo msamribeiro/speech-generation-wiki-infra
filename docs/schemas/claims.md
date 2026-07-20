@@ -4,6 +4,10 @@ The claim graph lives in `wiki/_claims/{slug}.yaml` — one file per concept slu
 single source of truth for all rendered wiki output. Concept pages, evidence dossiers, and
 overview are all generated from these files; they are never edited directly.
 
+All rendered Markdown carries the version-2 provenance block defined in
+`docs/schemas/generation.md`. The claim YAML itself records evidence state and staleness through
+`last_updated`; integration-run runtime/model provenance is recorded in `wiki/log.md`.
+
 ## Full Schema
 
 ```yaml

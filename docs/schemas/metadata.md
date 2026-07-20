@@ -24,10 +24,13 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "ingested_date": "YYYY-MM-DD or null — set on ingest",
   "generation_history": [
     {
+      "schema_version": 2,
       "date": "YYYY-MM-DD",
-      "op": "ingest | re-ingest | quality-pass",
-      "agent": "speech-generation-ingest-agent | speech-generation-lightweight-ingest-agent | speech-generation-integration-agent",
-      "model": "string — the model ID that actually performed this operation, e.g. claude-sonnet-5",
+      "op": "ingest | re-ingest | review | re-review | quality-pass",
+      "agent": "speech-generation-ingest-agent | speech-generation-lightweight-ingest-agent | speech-generation-review-agent",
+      "runtime": "claude-code | codex — execution surface",
+      "provider": "anthropic | openai — model provider",
+      "model": "string — exact model ID exposed by the runtime, or unknown",
       "commit": "abc1234"
     }
   ],
@@ -46,6 +49,10 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "ingest_tier": "1 | 2 | null — Tier 1 = full page; Tier 2 = lightweight stub; null for standard papers"
 }
 ```
+
+Entries without `schema_version` are legacy version-1 provenance and remain valid. All new ingest,
+re-ingest, review, and re-review entries use version 2. See
+[generation.md](generation.md) for field semantics.
 
 ## Status Lifecycle
 

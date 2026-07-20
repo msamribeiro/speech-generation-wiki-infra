@@ -822,7 +822,7 @@ The citation index is the primary mechanism for discovering foundational papers 
 
 - Papers cited by many corpus papers are almost certainly foundational works (WaveNet, VITS, HiFi-GAN, VALL-E, FastSpeech, etc.)
 - High citation count within the corpus is a strong prior for relevance — these papers will score high through the normal filter agent
-- The Citation Discovery Workflow (see `CLAUDE.md`) surfaces the top out-of-corpus candidates for user review and optional addition as `status: pending`
+- The Citation Discovery Workflow (see `AGENTS.md`) surfaces the top out-of-corpus candidates for user review and optional addition as `status: pending`
 
 **Threshold guidance:**
 - ≥ 3 citations: worth surfacing for review

@@ -156,6 +156,32 @@ def _check_required_sections(paper_id: str, fm: dict, body: str) -> list[Issue]:
     return issues
 
 
+def _check_generation_provenance(paper_id: str, fm: dict) -> list[Issue]:
+    """Validate version-2 provenance while grandfathering historical version-1 blocks."""
+    generation = fm.get("generation")
+    if not isinstance(generation, dict):
+        return []
+    version = generation.get("schema_version")
+    if version is None:
+        return []
+    if version != 2:
+        return [_issue("error", paper_id, "generation_provenance",
+                       f"Unsupported generation.schema_version: {version!r}")]
+
+    issues = []
+    for field in ("date", "runtime", "provider", "agent", "model", "commit"):
+        if generation.get(field) in (None, ""):
+            issues.append(_issue("error", paper_id, "generation_provenance",
+                                 f"Version-2 generation block missing: {field}"))
+    if generation.get("runtime") not in ("claude-code", "codex"):
+        issues.append(_issue("error", paper_id, "generation_provenance",
+                             f"Invalid generation.runtime: {generation.get('runtime')!r}"))
+    if generation.get("provider") not in ("anthropic", "openai"):
+        issues.append(_issue("error", paper_id, "generation_provenance",
+                             f"Invalid generation.provider: {generation.get('provider')!r}"))
+    return issues
+
+
 def _check_vocabulary(paper_id: str, fm: dict, vocab: dict) -> list[Issue]:
     issues = []
 
@@ -361,6 +387,7 @@ def _check_page(
     issues += _check_id_is_string(paper_id, fm)
     issues += _check_required_fields(paper_id, fm)
     issues += _check_required_sections(paper_id, fm, body)
+    issues += _check_generation_provenance(paper_id, fm)
     issues += _check_vocabulary(paper_id, fm, vocab)
     issues += _check_claims_section(paper_id, fm, body)
     issues += _check_figure_links(paper_id, body)

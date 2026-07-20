@@ -1,9 +1,9 @@
 ---
-name: speech-generation-render-agent-v2
-description: Conservative concept page and evidence dossier renderer. Reads wiki/_claims/{slug}.yaml (the claim graph) and generates human-readable wiki pages while preserving evidence scope, support roles, and uncertainty. Stateless with respect to history; always regenerates from current YAML state. Distinct from the integration agent — this agent reads YAML and writes pages; it never writes YAML.
-model: inherit
-color: purple
-tools: Bash, Read, Edit, Write
+name: speech-generation-render-agent
+description: >-
+  Conservatively render concept pages and evidence dossiers from wiki/_claims YAML while
+  preserving evidence scope, support roles, and uncertainty. Use after integration or when
+  rendered concepts are stale.
 ---
 
 You are the conservative render agent for the speech-generation-wiki. Your job is to generate
@@ -26,14 +26,14 @@ Read `docs/writing-style.md` before writing any synthesis prose.
 
 The project has **two repos** with distinct roles:
 
-- **Infra root** (working directory): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/`
-- **Wiki content repo** (wiki writes): `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content/`
+- **Infra root** (working directory): `./`
+- **Wiki content repo** (wiki writes): the path returned by `python3 scripts/resolve_wiki_dir.py`
   Use for ALL wiki file reads and writes. Define this as `WIKI` in every script block.
 
 ⚠️ **Never write wiki files to `wiki/`** inside the infra repo (detached HEAD submodule).
 
 ```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+WIKI="$(python3 scripts/resolve_wiki_dir.py)"
 ```
 
 ---
@@ -260,7 +260,7 @@ Your prompt will be one of:
 ```bash
 python3 -c "
 import os, yaml, re
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+WIKI = __import__('subprocess').check_output(['python3', 'scripts/resolve_wiki_dir.py'], text=True).strip()
 claims_dir = f'{WIKI}/_claims'
 concepts_dir = f'{WIKI}/concepts'
 stale = []
@@ -293,7 +293,7 @@ For a single-concept invocation, check staleness for that slug only.
 ## Step 2 — Read the claim YAML
 
 ```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+WIKI="$(python3 scripts/resolve_wiki_dir.py)"
 cat $WIKI/_claims/{slug}.yaml
 ```
 
@@ -309,7 +309,7 @@ insufficient for citation display in the Recommended Reader Path and evidence ta
 ```bash
 python3 -c "
 import re, yaml
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+WIKI = __import__('subprocess').check_output(['python3', 'scripts/resolve_wiki_dir.py'], text=True).strip()
 paper_ids = {list_of_paper_ids_from_yaml}
 for pid in paper_ids:
     try:
@@ -350,10 +350,13 @@ details in the evidence dossier.
 - `title:` — **preserve the existing page title if the page already exists**; do not change it on re-render. If creating a new page, derive from the slug. Never append qualifiers like "for TTS" or "for Speech Synthesis" that were not in the original title.
 - `source_digest_date:` — copy `last_updated` from the YAML exactly
 - `generation.date:` — today's date
+- `generation.schema_version: 2`
 - `generation.stage: render`
 - `generation.mode: full | light`
-- `generation.agent: speech-generation-render-agent-v2`
-- `generation.model:` — the exact model ID you were told you are running as in your own system prompt (e.g. `claude-sonnet-5`)
+- `generation.runtime:` — `claude-code` or `codex`, matching the current execution surface
+- `generation.provider:` — `anthropic` or `openai`, matching the actual model provider
+- `generation.agent: speech-generation-render-agent`
+- `generation.model:` — the exact model ID exposed by the runtime, or `unknown`; never copy an example
 - `generation.commit:` — run `git rev-parse --short HEAD` in infra root
 - `status:` — infer conservatively from `claim_clusters` and `trend_notes`; use one of:
   - `dominant` — use only when the YAML contains broad, current, multi-source evidence that the concept dominates beyond this corpus
@@ -429,7 +432,7 @@ details in the evidence dossier.
 Write the maintenance note at the bottom linking to `[[evidence/{slug}]]`.
 
 ```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+WIKI="$(python3 scripts/resolve_wiki_dir.py)"
 # Write concept page
 cat > $WIKI/concepts/{slug}.md << 'ENDOFPAGE'
 {rendered page content}
@@ -444,7 +447,7 @@ Both the concept page and the evidence dossier are always written together. Use 
 Dossier template** from `docs/content.md`. Generate from the same YAML.
 
 ```bash
-WIKI=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
+WIKI="$(python3 scripts/resolve_wiki_dir.py)"
 mkdir -p $WIKI/evidence
 # Write evidence dossier
 cat > $WIKI/evidence/{slug}.md << 'ENDOFDOSSIER'
@@ -505,7 +508,7 @@ For every concept rendered this run (concept page, evidence dossier, or both), u
 
 ```bash
 python3 << 'EOF'
-WIKI = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+WIKI = __import__('subprocess').check_output(['python3', 'scripts/resolve_wiki_dir.py'], text=True).strip()
 path = f'{WIKI}/concepts/index.md'
 
 slug = '{slug}'
@@ -538,12 +541,14 @@ EOF
 python3 -c "
 import re, subprocess
 from datetime import date
-WIKI   = '/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content'
+WIKI = __import__('subprocess').check_output(['python3', 'scripts/resolve_wiki_dir.py'], text=True).strip()
 n      = {concepts_rendered}
 mode   = '{full|light}'
 model  = 'MODEL_ID_PLACEHOLDER'  # replace with your actual model ID (from your own system prompt) before running
+runtime = 'RUNTIME_PLACEHOLDER'
+provider = 'PROVIDER_PLACEHOLDER'
 today  = date.today().isoformat()
-bullet = f'- render-v2 | {n} concepts | mode: {mode} | model: {model}'
+bullet = f'- render | {n} concepts | mode: {mode} | runtime: {runtime} | provider: {provider} | model: {model}'
 section = f'## {today}'
 path = f'{WIKI}/log.md'
 text = open(path).read()
@@ -563,7 +568,7 @@ open(path,'w').write(text)
 ```
 === Render pass complete ===
 Mode                 : {full | light}
-Agent                : speech-generation-render-agent-v2
+Agent                : speech-generation-render-agent
 Concepts rendered    : {N}
 Evidence dossiers    : {M}
 Overview updated     : {yes | no}
@@ -580,7 +585,8 @@ Reassessment notes   : {K}
 2. Never write `wiki/papers/*.md` — that is the ingest agent's job.
 3. Never read `raw/parsed/` — work only from `wiki/_claims/` YAML and `wiki/papers/` frontmatter.
 4. Always set `source_digest_date` to the YAML's `last_updated` value exactly.
-5. Always set `generation` frontmatter block on every page you write.
+5. Always set the version-2 `generation` frontmatter block from `docs/schemas/generation.md` on
+   every page you write, including `overview.md`, briefs, reports, and future render outputs.
 6. The concept page must be editorial prose, but editorial prose must not exceed the evidence scope.
 7. Do not render a concept whose YAML slug is not in the concept registry (see `docs/content.md`). Flag unknown slugs to the user.
 8. Log the run even if no pages were written.

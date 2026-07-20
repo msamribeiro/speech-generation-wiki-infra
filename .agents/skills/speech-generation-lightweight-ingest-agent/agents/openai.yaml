@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lightweight Speech Ingest"
+  short_description: "Create a Tier 2 citation stub page"
+  default_prompt: "Use $speech-generation-lightweight-ingest-agent to ingest a Tier 2 paper by ID."

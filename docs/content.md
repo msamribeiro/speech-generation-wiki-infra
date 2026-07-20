@@ -47,7 +47,7 @@ Per-paper, self-contained. No cross-paper knowledge required or produced.
 6. **Write paper page** — fill every template field. Use `"not reported"` (never blank, never estimated) for missing values. Claims must each have an inline source citation `*(§N.N)*` or `*(§N.N, Table N)*`.
 7. **Update `wiki/papers/index.md`** — add row: `| [[{id}]] | [{title}](papers/{id}.md) | {org} | {venue} | {year} | {tasks} | {architectures} | {date} |`
 8. **Update `wiki/index.md`** — increment paper count only.
-9. **Update `wiki/log.md`** — append bullet: `- ingest | {id} | {title} | {venue} {year}`
+9. **Update `wiki/log.md`** — append bullet: `- ingest | {id} | {title} | {venue} {year} | runtime: {runtime} | provider: {provider} | model: {model}`
 10. **Update metadata** — set `status: ingested`, `ingested_date`, append to `generation_history` in `raw/metadata/{id}.json`.
 11. **Emit signal** — output `INGEST_RESULT` JSON on last line for the orchestrator.
 
@@ -101,11 +101,12 @@ respect to history — always regenerates from current YAML state.
 1. Accept target parameter and mode.
 2. For each target: read `wiki/_claims/{slug}.yaml`. Check staleness unless `--force`.
 3. Render concept page using the Concept Page Template below.
-4. Write `wiki/concepts/{slug}.md` with `generation` frontmatter (date, stage: render, mode, model, `source_digest_date`, commit).
+4. Write `wiki/concepts/{slug}.md` with version-2 `generation` frontmatter (date, runtime,
+   provider, exact model, stage: render, mode, agent, `source_digest_date`, commit).
 5. Optionally render `wiki/evidence/{slug}.md` (Evidence Dossier Template below).
 6. Update the rendered concept's row in `wiki/concepts/index.md` (Papers count from YAML `paper_count`, Evidence link only if a dossier exists, Last updated set to today).
 7. Optionally render `wiki/overview.md` from all concept pages + YAML summaries.
-8. Log: `- render | {N} concepts | mode: {mode} | model: {model}` to `wiki/log.md`.
+8. Log: `- render | {N} concepts | mode: {mode} | runtime: {runtime} | provider: {provider} | model: {model}` to `wiki/log.md`.
 
 The render agent writes exactly these files: `wiki/concepts/*.md`, `wiki/evidence/*.md`,
 `wiki/concepts/index.md`, `wiki/overview.md`, `wiki/log.md`. It never reads `raw/parsed/`, never
@@ -151,7 +152,10 @@ field_significance:
   level: low | moderate | high | foundational
   type: [{one or more from field_significance type vocabulary}]
 generation:
+  schema_version: 2
   date: {YYYY-MM-DD}
+  runtime: claude-code | codex
+  provider: anthropic | openai
   agent: speech-generation-ingest-agent
   model: {model-id}
   commit: {7-char infra repo git hash}
@@ -231,7 +235,10 @@ ingest_tier: 2
 corpus_role: {corpus_role value}
 related_concepts: [{slugs}]
 generation:
+  schema_version: 2
   date: {YYYY-MM-DD}
+  runtime: claude-code | codex
+  provider: anthropic | openai
   agent: speech-generation-lightweight-ingest-agent
   model: {model-id}
   commit: {7-char hash}
@@ -267,9 +274,12 @@ status: emerging | established | dominant | declining | contested | mature-infra
 last_reviewed: {YYYY-MM-DD}
 source_digest_date: {YYYY-MM-DD}    # last_updated of the _claims YAML used
 generation:
+  schema_version: 2
   date: {YYYY-MM-DD}
   stage: render
   mode: full | light
+  runtime: claude-code | codex
+  provider: anthropic | openai
   agent: speech-generation-render-agent
   model: {model-id}
   commit: {7-char hash}
@@ -350,9 +360,12 @@ concept: {slug}
 title: "Evidence Dossier: {Concept Title}"
 source_digest_date: {YYYY-MM-DD}
 generation:
+  schema_version: 2
   date: {YYYY-MM-DD}
   stage: render
   mode: full | light
+  runtime: claude-code | codex
+  provider: anthropic | openai
   agent: speech-generation-render-agent
   model: {model-id}
   commit: {7-char hash}
@@ -428,12 +441,13 @@ Not part of the automated ingest/integrate/render pipeline — generated on dema
 for a venue-year with enough ingested papers to support a real trend synthesis (e.g. a full
 conference like Interspeech), not for a bucket of unrelated arXiv preprints. Covers: total
 papers ingested, dominant tasks, dominant architectures, standout papers, and trends specific
-to that community or organization.
+to that community or organization. Include the version-2 `generation` block from
+`docs/schemas/generation.md`.
 
 ### Comparison Page (`wiki/comparisons/{slug}.md`)
 
 Generated in response to a query and filed back. Always includes:
-- Frontmatter: `question`, `date`, `papers_included`
+- Frontmatter: `question`, `date`, `papers_included`, and the version-2 `generation` block
 - A markdown table (one row per system/paper, columns for the dimensions being compared)
 - A short interpretive paragraph after the table
 
@@ -447,7 +461,13 @@ When asked a research question:
 2. Read relevant `wiki/concepts/*.md` and `wiki/_claims/*.yaml` pages.
 3. Synthesize with citations using [[wikilinks]].
 4. **File valuable answers back**: comparisons → `wiki/comparisons/`, temporal/trend analyses → `wiki/reports/` or the relevant concept page's trend summary.
-5. Log: `- query | {question summary}` to `wiki/log.md`.
+5. Log: `- query | {question summary} | runtime: {runtime} | provider: {provider} | model: {model}`
+   to `wiki/log.md`.
+
+Any overview, brief, report, venue page, comparison page, or other Markdown page created or
+substantively regenerated by an agent must use the same version-2 provenance schema. Index and log
+files that are only incrementally updated do not receive a new page-level `generation` block; the
+operation itself is recorded in `wiki/log.md`.
 
 ---
 
@@ -467,6 +487,7 @@ The ingest module checks every `wiki/papers/*.md` for:
 - Frontmatter parses as valid YAML; all required fields present and non-null
 - `id` field is a quoted string (arXiv float-parse bug: unquoted `1412.6980` → float `1412.698`)
 - `field_significance` has `level` and `type` with valid vocabulary values
+- Version-2 generation blocks contain runtime, provider, exact model, agent, date, and commit
 - Abstract callout (`> [!abstract]`) and `## Wiki Connections` section present
 - Tier 2 papers have `> [!info] Citation Stub` callout
 - `## Claims` section present with `*(§N.N)*` citations on every bullet
@@ -507,7 +528,7 @@ The review agent:
 - Does NOT rewrite prose unless a factual error is traceable to the parsed paper
 - Does NOT touch `wiki/papers/index.md`, venue files, or `status`
 - Updates `generation_history` in `raw/metadata/{id}.json` with `op: review` or `re-review`
-- Logs to `wiki/log.md`: `- review | {id} | {title} | {venue} {year}`
+- Logs to `wiki/log.md` with runtime, provider, and exact model provenance
 - Emits `REVIEW_RESULT` JSON on last output line
 
 Verify with `health_check.py --module ingest --id {paper_id}` after each review.
@@ -590,7 +611,7 @@ Records operations that change visible wiki content. Entries in **reverse chrono
 - ingest | 2406.18009 | F5-TTS | ACL 2025
 - review | 2406.18009 | F5-TTS | ACL 2025
 - integrate | 25 papers | 8 concepts updated | 42 claims updated | 3 reassessments checked
-- render | 5 concepts | mode: full | model: claude-opus-4-8
+- render | 5 concepts | mode: full | runtime: claude-code | provider: anthropic | model: claude-opus-4-8
 - query | Comparison of zero-shot TTS systems by SPK-SIM
 ```
 

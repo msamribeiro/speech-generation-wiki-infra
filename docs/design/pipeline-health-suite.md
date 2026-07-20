@@ -36,6 +36,7 @@
 ```
 python scripts/health_check.py                    # run all modules
 python scripts/health_check.py --module ingest    # run one module
+.venv/bin/python scripts/health_check.py --module agents  # validate Claude/Codex workflow parity
 python scripts/health_check.py --module fetch,parse  # run multiple
 python scripts/health_check.py --module ingest --id 2501.12345  # scope to one paper
 python scripts/health_check.py --module integrate --concept flow-matching --phase 2  # scope to one concept YAML, force Phase 2 checks
@@ -51,6 +52,7 @@ Exit codes: `0` on clean (no errors), `1` if any module reports at least one err
 scripts/
   health_check.py          # entry point
   checks/
+    agents.py              # validates shared agent instructions, skills, and adapters
     fetch.py               # validates raw/metadata/
     parse.py               # validates raw/parsed/
     ingest.py              # validates wiki/papers/
@@ -59,6 +61,11 @@ scripts/
     corpus.py              # cross-cutting consistency
     _base.py               # shared dataclasses and helpers
 ```
+
+The `agents` module is cross-cutting rather than a pipeline stage. It delegates to
+`scripts/check_agent_compat.py`, runs as part of the default full suite, and should be run directly
+after changes to agent contracts, skills, Claude adapters, or wiki path resolution. It is not a
+session-start check because those files are static between edits.
 
 ### 2.3 Module Interface
 

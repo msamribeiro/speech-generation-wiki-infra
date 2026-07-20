@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speech Generation Review"
+  short_description: "Audit and correct a Tier 1 paper page"
+  default_prompt: "Use $speech-generation-review-agent to review a paper page by ID."

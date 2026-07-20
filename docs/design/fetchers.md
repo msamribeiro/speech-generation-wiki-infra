@@ -195,7 +195,7 @@ class PaperMetadata:
     organization: str | None    # primary affiliation if detectable
 
     # Venue
-    venue: str                  # controlled vocabulary (see CLAUDE.md)
+    venue: str                  # controlled vocabulary (see AGENTS.md)
     venue_type: str             # conference | workshop | preprint | technical-report
     year: int
     month: int
@@ -659,14 +659,14 @@ For an initial window across all target venues, running the full pipeline once:
 | Merge/deduplicate | `scripts/parse/merge_records.py` | ⏳ Not started | < 1 min | — |
 | Resolve PDFs | `scripts/parse/resolve_pdfs.py` | ⏳ Not started | 20–40 min | — |
 | Manual PDF session | human | ⏳ Not started | 1–2 hours | — |
-| Filter agent | `speech-generation-filter-agent` (Claude Code subagent) | ✅ Done | 30–90 min | 732 accepted, 167 rejected |
+| Filter agent | `speech-generation-filter-agent` (shared Claude/Codex workflow) | ✅ Done | 30–90 min | 732 accepted, 167 rejected |
 | Human review | human | ✅ Done | 60–90 min | 70 borderline resolved → 40 accepted, 30 rejected |
 
 **Corpus status (May 2026):** 732 papers accepted, 167 rejected, 0 pending. Ready for PDF resolution and ingest.
 
 ### Filter agent note
 
-Filtering is done via the `speech-generation-filter-agent` Claude Code subagent (`.claude/agents/speech-generation-filter-agent.md`). Invoke it from a Claude Code session whenever papers with `status: pending` need scoring. No separate API key required beyond the Claude Code subscription.
+Filtering is done via the shared `speech-generation-filter-agent` workflow (`.agents/skills/speech-generation-filter-agent/SKILL.md`). Invoke it from Claude Code or Codex whenever papers with `status: pending` need scoring.
 
 ---
 

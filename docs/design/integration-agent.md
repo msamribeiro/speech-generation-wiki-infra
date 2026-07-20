@@ -1,7 +1,7 @@
 # Integration Agent — Design Document
 
 **Status:** Implemented (prototype tested 2026-06-24)  
-**Agent spec:** `.claude/agents/speech-generation-integration-agent.md`  
+**Agent spec:** `.agents/skills/speech-generation-integration-agent/SKILL.md`
 **Schema:** `docs/schemas/claims.md`  
 **Health check:** `docs/records/2026-06-24-integrate-health-check-design.md`
 

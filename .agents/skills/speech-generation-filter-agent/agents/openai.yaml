@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speech Generation Filter"
+  short_description: "Score pending papers for corpus relevance"
+  default_prompt: "Use $speech-generation-filter-agent to filter pending corpus papers."

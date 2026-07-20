@@ -23,7 +23,7 @@ ingested already — keep the two efforts separate so progress in each is easy t
 already exist and are the source of truth):
 
 ```bash
-cd /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra
+cd "$(git rev-parse --show-toplevel)"
 
 # Corpus-wide integration coverage per concept (papers referencing each concept vs. papers
 # actually integrated into that concept's YAML)
@@ -31,7 +31,7 @@ cd /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wik
 
 # Structural validation + the single most useful backlog stat: papers_not_in_any_yaml
 # (ingested, non-Tier-2 papers with zero concept-YAML entries anywhere)
-.venv/bin/python scripts/health_check.py --module integrate --wiki-dir /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content -v
+.venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
 **State as of 2026-07-20** (re-run the commands above before resuming — this will be stale). This
@@ -145,7 +145,7 @@ sessions — pace it like the Q4 ingest work (batch, verify, log, repeat), not a
 
 ## Methodology
 
-### The two-phase model (full detail: `.claude/agents/speech-generation-integration-agent.md`,
+### The two-phase model (full detail: `.agents/skills/speech-generation-integration-agent/SKILL.md`,
 `docs/schemas/claims.md`, `docs/content.md` Integrate Workflow section)
 
 - **Phase 1 — paper entry extraction.** Reads one paper page, writes one entry to `papers:` in
@@ -206,7 +206,7 @@ Given the scale, don't try to run all 22 unstarted concepts in parallel or in on
 ### Health check after each concept (or each Phase 1/2 pass)
 
 ```bash
-.venv/bin/python3 scripts/health_check.py --module integrate --concept {slug} --wiki-dir /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content -v
+.venv/bin/python3 scripts/health_check.py --module integrate --concept {slug} --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
 16 Phase 1 checks (required fields, `entry_date`/vocabulary validity, no duplicate paper/claim

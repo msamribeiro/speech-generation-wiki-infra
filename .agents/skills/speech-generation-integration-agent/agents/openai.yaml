@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speech Generation Integration"
+  short_description: "Integrate paper evidence into claim YAML"
+  default_prompt: "Use $speech-generation-integration-agent to integrate one or more concepts."

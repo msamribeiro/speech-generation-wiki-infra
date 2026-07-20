@@ -4,7 +4,7 @@ Integrate module for the Pipeline Health Suite.
 Validates the claim graph in wiki/_claims/*.yaml for structural correctness.
 Integration is split into Phase 1 (paper entry extraction) and Phase 2 (claim
 cluster / method family synthesis) — see the integration agent spec
-(.claude/agents/speech-generation-integration-agent.md) and the design notes
+(.agents/skills/speech-generation-integration-agent/SKILL.md) and the design notes
 at docs/records/2026-06-24-integrate-health-check-design.md.
 
 Phase is auto-detected per YAML (non-empty claim_clusters => post-Phase-2)

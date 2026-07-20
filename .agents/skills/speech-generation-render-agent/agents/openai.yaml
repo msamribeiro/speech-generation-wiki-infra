@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speech Generation Render"
+  short_description: "Render evidence-scoped concept pages"
+  default_prompt: "Use $speech-generation-render-agent to render stale concepts."

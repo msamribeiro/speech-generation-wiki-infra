@@ -39,7 +39,7 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
 
 ## Infrastructure [P1 · planned]
 
-- [ ] Extend fetch coverage — add ICASSP, ASRU, and SLT fetchers (listed in CLAUDE.md coverage but no scripts exist yet)
+- [ ] Extend fetch coverage — add ICASSP, ASRU, and SLT fetchers (listed in AGENTS.md coverage but no scripts exist yet)
 - [ ] Resolve parse quality review: 8 papers flagged for offline PDF spot-check (raw/parsed/parse_quality_review.md); blocked on user results before --force re-runs
 
 ## Pipeline Health Suite [P1 · in-progress]
@@ -47,6 +47,7 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
 Single command (`python scripts/health_check.py`) serving two roles: a test suite that validates pipeline outputs at each stage (run post-pass to catch problems before they accumulate), and a health dashboard that tracks overall knowledge base state. One module per stage, each independently runnable via `--module`; a `--report` flag writes `STATUS_DASHBOARD.md` from the combined output, replacing the standalone dashboard script. Serves as the source of truth for corpus counts — static counts in index.md and overview.md should be driven from this output rather than maintained manually.
 
 - [x] Build scripts/health_check.py entry point: runs all modules or a named subset via `--module`; exit 0 on clean, 1 with per-module failure report; `--id` scopes ingest, `--concept`/`--phase` scope integrate, `--wiki-dir` overrides the wiki root *(completed 2026-06-19, extended 2026-07-15)*
+- [x] Add agents module (`scripts/checks/agents.py`): validates the shared `AGENTS.md`/`CLAUDE.md` contract, six repository skills, Claude adapters, renderer naming, portable paths, and required references; runs in the default full suite and directly via `--module agents` *(completed 2026-07-20)*
 - [ ] Add `--report` flag to the entry point: writes STATUS_DASHBOARD.md with per-module pass/fail summary, corpus counts, and health signals — not yet built; some older docs/backlog text referenced it as if it existed
 - [ ] Build fetch module (scripts/checks/fetch.py): metadata JSON parses; required fields present (id, title, published_date, status, venue); status values in allowed set; no duplicate IDs across metadata files; title-based collision detection (canonical priority: proceedings ID > arXiv); absorbs the planned dedup check script
 - [ ] Build parse module (scripts/checks/parse.py): accepted papers have local PDF in raw/papers/; parsed entries have paper.md; paper.md not suspiciously short (< 100 lines — flag for manual review); references.json has non-zero count (flag if 0, cross-reference against known exceptions in parse_quality_review.md); assets/ present if figures referenced in paper.md; metadata.json abstract non-null (flag if null)

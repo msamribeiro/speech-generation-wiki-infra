@@ -74,7 +74,7 @@ _VENUE_TABLE: Dict[Tuple[str, int], Tuple[str, str, str, int]] = {
     ("NeurIPS", 2025): ("neurips", "NeurIPS.cc/2025/Conference", "2025-12-10", 12),
 }
 
-# Controlled vocabulary venue names (CLAUDE.md schema)
+# Controlled vocabulary venue names (AGENTS.md contract)
 _VENUE_CV: Dict[str, str] = {
     "ICLR":    "ICLR",
     "NeurIPS": "NeurIPS",
