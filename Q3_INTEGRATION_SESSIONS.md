@@ -60,7 +60,7 @@ corpus-wide `Covers`-style column was dropped:
 | streaming-tts | 54 | 0 | 0% |
 | diffusion-tts | 46 | 0 | 0% |
 | instruction-conditioned-tts | 45 | 0 | 0% |
-| **rlhf-speech** | **29** | **29** | **100%** |
+| **rlhf-speech** | **29** | **29** | **100%** (Phase 1+2) |
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
@@ -87,14 +87,12 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 `scripts/checks/integrate.py` already do this correctly via real YAML frontmatter parsing, so
 prefer extending those over writing a new one-off script.
 
-**`flow-matching` and `speech-to-speech` are fully closed for Q3-and-earlier Phase 1 + Phase 2**
-(97/97 and 60/63 — the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
-`interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
-for having no speech-generation stage of their own, despite carrying the tag). **`rlhf-speech` is
-fully closed for Phase 1** (29/29, no exclusions) but **Phase 2 synthesis has not yet been run**
-for it — deferred per explicit user instruction this session, so `claim_clusters` and
-`method_families` remain empty skeletons. All other 20 concepts have **no `wiki/_claims/{slug}.yaml`
-file at all yet**.
+**`flow-matching`, `speech-to-speech`, and `rlhf-speech` are fully closed for Q3-and-earlier
+Phase 1 + Phase 2** (97/97, 60/63, and 29/29 respectively — the 3-paper gap on speech-to-speech
+is intentional: `2025.acl-long.388` DiVA, `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn
+were each evaluated and correctly excluded for having no speech-generation stage of their own,
+despite carrying the tag). All other 20 concepts have **no `wiki/_claims/{slug}.yaml` file at all
+yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 fully clearing the Q3-and-before backlog is roughly 463 ÷ 20 ≈ **23+ Phase 1 invocations**, plus
@@ -275,6 +273,48 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-20 — rlhf-speech Phase 2 synthesis run, concept fully closed
+
+- **Phase 2 synthesis run for `rlhf-speech`** against the full 29-paper set (first Phase 2 run
+  for this concept): **5 method_families** (all new — `dpo_style_preference_optimization_discrete_tts`
+  11 papers, `rl_policy_gradient_reward_optimization` 9, `differentiable_reward_gradient_backprop`
+  3, `continuous_generative_preference_optimization` 3, `reward_model_infrastructure` 2; 3 papers
+  have dual family membership by design). **20 claim_clusters** (9 strongly_supported, 11
+  emerging, **0 contested** — unlike flow-matching (1) and speech-to-speech (2); read as too few
+  independent replications yet to surface real disagreement, not necessarily genuine consensus).
+  Headline strongly_supported cluster `rlhf_posttraining_beats_sft_baseline` (11 supporting
+  papers): preference/reward-based post-training (DPO/KTO/GRPO/differentiable-reward) consistently
+  beats SFT-only baselines on intelligibility/similarity/naturalness. `rlhf_reward_hacking_risk`
+  (7 supporting + 2 refining, no disputing paper) recurs across ~7/29 papers regardless of
+  architecture or method, read as a structural property of applying verifiable rewards to speech
+  rather than a defect of any one technique. **3 reassessment_queue items**: watching for a second
+  GFlowNet paper (GOAT family), cross-backbone replication for the continuous-generative-DPO
+  cluster (echoes the flow-matching CFG contested-downgrade precedent), and a second primary-research
+  SCA/dialogue RLHF paper beyond Step-Audio. **4 method_family outliers** (empty, expected):
+  `2025.naacl-demo.12` (ESPnet-SpeechLM, toolkit/demo, no original experiments),
+  `2025.acl-long.682` (SpeechLM survey, no original experiments), `2508.15442` (GOAT, genuine
+  single-paper GFlowNet paradigm, below the 2-paper family threshold), `2509.19928` (ProsodyEval,
+  evaluation-methodology paper, DPO incidental to its core contribution).
+- **Session was interrupted mid-task by an API session limit** partway through Phase 2 (after the
+  agent had finished and self-verified per-paper `method_family` assignments for all 29 papers,
+  before writing the tail `claim_clusters`/`method_families`/`reassessment_queue` sections). Per
+  the established recovery protocol (see the 2026-07-19/20 entry below), the file was checked
+  directly before resuming rather than trusting the interrupted agent's partial output: `git diff`
+  showed a clean, complete 25-insertion/25-deletion change (only `method_family` fields on 25 of
+  29 papers, 4 correctly left empty), YAML parsed validly, `paper_count` matched `len(papers)`.
+  The same agent was resumed via `SendMessage` (not restarted from scratch) to finish the tail
+  sections. After completion, independently re-verified: `paper_count`/`len(papers)` (29/29),
+  method_family and claim_cluster counts, cluster status breakdown, and the empty-method_family
+  list all matched the agent's report exactly; `health_check.py --module integrate --concept
+  rlhf-speech` passed 0 errors / 4 expected warnings (the 4 documented outliers).
+- One judgment call worth a second look later: the agent reclassified DLPO
+  (`interspeech-2025-0063`) from an initial draft placement in the continuous-generative-DPO
+  family into `rl_policy_gradient_reward_optimization`, reasoning that its baselines (DDPO, DPOK,
+  KLinR, RWR) are RL methods despite the paper's "DLPO" name suggesting DPO-style preference
+  optimization. Not independently re-verified against the source paper this session.
+- `rlhf-speech` is now the third concept (after flow-matching and speech-to-speech) fully closed
+  for Q3-and-earlier Phase 1 + Phase 2.
 
 ### 2026-07-20 — rlhf-speech Phase 1 closed from scratch
 
