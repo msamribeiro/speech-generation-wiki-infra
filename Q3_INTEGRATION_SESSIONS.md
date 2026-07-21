@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-21, after evaluation-metrics batch 8** (re-run the commands above before
+**State as of 2026-07-21, after evaluation-metrics batch 14 (Phase 1 closed)** (re-run the commands above before
 resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -42,7 +42,7 @@ corpus-wide `Covers`-style column was dropped:
 
 | Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
-| **evaluation-metrics** | **286** | **160** | **56%** |
+| **evaluation-metrics** | **286** | **285** | **100%** (Phase 1 only, no Phase 2 yet) |
 | zero-shot-tts | 204 | 0 | 0% |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
@@ -65,12 +65,13 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **346** | **15.5%** |
+| **TOTAL** | **2236** | **471** | **21.1%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **295** as of
-2026-07-21 after batch 8 (down from 312 after batch 7, 325 after batch 6, 339 after batch 5, 351
-after batch 4, 366 after batches 1-3, 411 earlier, 429 before rlhf-speech Phase 1, 548 on
-2026-07-19).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **205** as of
+2026-07-21 after batch 14 (down from 221 after batch 13, 236 after batch 12, 248 after batch 11,
+261 after batch 10, 278 after batch 9, 295 after batch 8, 312 after batch 7, 325 after batch 6,
+339 after batch 5, 351 after batch 4, 366 after batches 1-3, 411 earlier, 429 before rlhf-speech
+Phase 1, 548 on 2026-07-19).
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -89,13 +90,19 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 `scripts/checks/integrate.py` already do this correctly via real YAML frontmatter parsing, so
 prefer extending those over writing a new one-off script.
 
-**`flow-matching`, `speech-to-speech`, and `rlhf-speech` are fully closed for Q3-and-earlier
-Phase 1 + Phase 2** (97/97, 60/63, and 29/29 respectively — the 3-paper gap on speech-to-speech
-is intentional: `2025.acl-long.388` DiVA, `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn
-were each evaluated and correctly excluded for having no speech-generation stage of their own,
-despite carrying the tag). **`evaluation-metrics` is started** (60/286 Phase 1, no Phase 2 yet) —
-the fourth concept with a `wiki/_claims/{slug}.yaml` file. All other 19 concepts have **no
-`wiki/_claims/{slug}.yaml` file at all yet**.
+**`flow-matching`, `speech-to-speech`, `rlhf-speech`, and now `evaluation-metrics` are fully
+closed for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, and 285/286 respectively —
+the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
+`interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
+for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
+is *not* a contradiction — it's separately and correctly integrated into `evaluation-metrics`,
+since exclusion from one concept doesn't imply exclusion from another; evaluation-metrics' one gap
+is the permanent `2207.12598` exclusion). `evaluation-metrics` is the largest concept closed so
+far by paper count (285 vs. 97/60/29) and its Phase 2 pass required a mid-run course correction
+(see Session Log) — the first attempt only covered 59/285 papers (21%) before a session-limit
+interruption, and was resumed and reworked around evaluation-methodology *type* rather than TTS
+architecture to reach 271/285 (95%) coverage with 14 legitimate outliers. All other 19 concepts
+have **no `wiki/_claims/{slug}.yaml` file at all yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 fully clearing the Q3-and-before backlog is roughly 463 ÷ 20 ≈ **23+ Phase 1 invocations**, plus
@@ -287,6 +294,191 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-21 — evaluation-metrics Phase 2 synthesis run, concept fully closed
+
+- **First-ever Phase 2 synthesis run for `evaluation-metrics`**, against the full 285-paper set —
+  the largest Phase 2 pass to date (vs. 97/60/29 for flow-matching/speech-to-speech/rlhf-speech).
+- **Session was interrupted mid-task by an API session limit** partway through synthesis. Per the
+  established recovery protocol, file state was checked directly before resuming: the YAML parsed
+  validly, `paper_count`/`len(papers)` were intact at 285, and 10 `method_families` + 31
+  `claim_clusters` had already been drafted — but the health check revealed this was a genuinely
+  incomplete synthesis, not just an unwritten log entry: only 59/285 papers (21%) had a
+  non-empty `method_family`, 226 papers triggering the coverage warning. For comparison, the three
+  previously-closed concepts left only single-digit legitimate outliers (5/97, 4/29, and similarly
+  small for speech-to-speech) — 226 outliers was not a plausible "doesn't fit any family" result.
+  The same agent was resumed via `SendMessage` (not restarted from scratch, to preserve the
+  legitimate work already done) with explicit instructions to finish classifying the remaining
+  papers and reconcile clusters against the fuller picture, rather than accepting the partial
+  result.
+- **Course correction during the resumed run**: the original 10-family taxonomy was organized
+  around TTS/VC architecture, which doesn't fit this concept well since most of its 285 papers are
+  system papers from other concepts (TTS/VC/SCA/codec) whose relevance to evaluation-metrics is a
+  single incidental `evaluation_caution` finding, not a dedicated methodology contribution. The
+  agent reworked the taxonomy around evaluation-methodology *type* instead (which metric/dimension
+  a paper's claim concerns: WER/CER, speaker-similarity, MOS/PESQ-style divergence, prosody, codec
+  multi-metric suites, LLM-judge reliability, bias/fairness, low-resource/community, clinical/
+  accessibility, data curation, watermarking), reaching **17 method_families, 271/285 papers (95%)
+  covered, 14 legitimate outliers** (pure architecture/theory/efficiency papers with no
+  evaluation-methodology content of their own: Tacotron 2, HiFi-GAN, AudioLDM, GOAT — already a
+  documented rlhf-speech outlier too — plus model-quantization/inference-acceleration/G2P-transfer
+  papers). Two families are intentionally broad umbrellas by design
+  (`objective_perceptual_quality_metric_divergence` 86 papers, `asr_wer_intelligibility_evaluation`
+  79 papers) spanning many unrelated architectures sharing one evaluation observation — flagged in
+  `reassessment_queue` as future sub-splitting candidates rather than force-fragmented now.
+- **31 claim_clusters: 23 strongly_supported, 7 emerging, 1 contested**
+  (`llm_audio_judge_reliability_is_contested`: LLM/audio-LM judges approximate human evaluation
+  well for instruction-following, style adherence, and checklist-rubric dialogue scoring, but fail
+  for fine-grained prosody and non-verbal/raw-waveform cues — independently spot-checked
+  `2506.21875` WildSpeech-Bench against its source page, confirmed it genuinely describes the
+  query-aware checklist approach the cluster credits it with). While rebuilding families the
+  agent cross-checked cluster completeness against the fuller paper set and added 3 previously
+  missed supporting papers plus 1 refining paper. Headline cross-cutting finding, replicated
+  across unrelated architectures: `wer_cer_unreliable_intelligibility_proxy` (8),
+  `embedding_speaker_similarity_diverges_from_human_perception` (11),
+  `automatic_mos_predictors_diverge_from_subjective_mos` (8) — together the concept's single
+  dominant finding: no automatic objective metric reliably substitutes for targeted human
+  perceptual judgment. **7 reassessment_queue items**: 5 `claim_status` (thin-replication
+  findings: full-duplex automatic metrics without human raters, automated-annotation-consistency
+  possible shared lineage, deception-rate evaluation, reference-free task-specific metrics,
+  watermark robustness under realistic transforms) + 2 `method_family` (embedding-distributional-
+  distance metrics thin at 4 papers; the two mega-families' internal heterogeneity, worth
+  revisiting for sub-splitting).
+- Independently re-verified end-to-end (not trusting the agent's closing summary uncontested):
+  `paper_count`/`len(papers)` both 285, 0 duplicate IDs, all `id`/`entry_date` string-typed, the
+  14 empty-`method_family` IDs matched exactly between the health check output and the agent's
+  report, family/cluster/reassessment_queue counts all matched, and one cluster's supporting-paper
+  citation was spot-checked against its actual source page. `health_check.py --module integrate
+  --concept evaluation-metrics`: 0 errors, 14 warnings (all `method_family_coverage`, all the
+  documented legitimate outliers).
+- `evaluation-metrics` is now the fourth concept fully closed for Q3-and-earlier Phase 1 + Phase
+  2 (after flow-matching, speech-to-speech, rlhf-speech), and by far the largest.
+- Held for explicit user go-ahead before committing — everything since batch 9 (Phase 1 batches
+  9-14 plus this Phase 2 run) remains uncommitted; batches 5-8 committed locally (`83e78a1`) but
+  not yet pushed (content repo 4 commits ahead of `origin/main`).
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 14 (260 → 285/286), Phase 1 fully closed
+
+- **Final Phase 1 batch for evaluation-metrics.** The standard 20-paper cap was deliberately
+  overridden for this single invocation at explicit user request, since only 25 genuine
+  candidates remained — processing all of them in one batch to close the concept's Phase 1
+  backlog outright. Oldest-first, `2509.17006` through `2510.00264` (2 papers, `2510.02352` and
+  `2510.00264`, carry an October-prefixed arXiv ID from a late-September submission rolling over
+  the month boundary — verified their actual `published_date` frontmatter is 2025-09-27 and
+  2025-09-30 respectively, correctly in-scope despite the misleading ID prefix). The standing
+  `2207.12598` exclusion re-confirmed and re-excluded one final time (14th consecutive batch) —
+  it remains the sole permanent gap, never written to the YAML.
+- **A prior attempt at this same batch was cut off by a session API limit** before any file
+  write occurred (confirmed directly: `paper_count` was still 260, diff stat against the last
+  commit was byte-identical to the post-batch-13 state). Restarted fresh rather than resuming,
+  per the established recovery protocol for the "nothing written yet" case.
+- Independently re-verified: `paper_count`/`len(papers)` both 285, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=471` corpus-wide, consistent with 97+60+29+285). `papers_not_in_any_yaml`
+  dropped 221 → 205. **Independently re-scanned all paper frontmatter matching the
+  evaluation-metrics scope criteria (Q3-dated, non-Tier-2, tag present in any serialization) and
+  confirmed exactly one gap corpus-wide: the permanent `2207.12598` exclusion** — Phase 1 is
+  genuinely, not just nominally, fully closed for this concept.
+- `evaluation-metrics` is now the fourth concept to close Phase 1 (after flow-matching,
+  speech-to-speech, rlhf-speech), and the largest so far by paper count (285 vs. 97/60/29). Phase
+  2 synthesis has not yet been run for this concept — a separate follow-up task.
+- Held for explicit user go-ahead before committing — batches 9-14 uncommitted; batches 5-8
+  committed locally (`83e78a1`) but not yet pushed (content repo 4 commits ahead of `origin/main`).
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 13 (240 → 260/286)
+
+- Thirteenth Phase 1 batch, 20 papers, oldest-first continuation from `2509.11425` through
+  `2509.20378`. The standing `2207.12598` exclusion (Classifier-Free Diffusion Guidance, an
+  off-topic ImageNet diffusion paper with `task: []` and no speech content) was re-derived
+  independently from frontmatter and re-confirmed/re-excluded again (thirteenth consecutive
+  batch), not counted against the 20-cap or the remaining count. Only 1 of the 20 used the
+  legacy bare-claims format (`2509.15969`, VoXtream — evidence synthesized from its Method/Key
+  Results/Limitations sections, role inferred from wording rather than defaulted to `supports`);
+  the other 19 used the structured bold-prefix/blockquote format. Only 45 in-scope candidates
+  remained going in (below the 20-cap headroom for a full second batch), so this does not close
+  the concept's backlog; **25/286 remain, next: `2509.17006`, then `2509.17021`, `2509.17988`,
+  `2509.18060`, `2509.18470`, ...** — a smaller batch 14 (~25 papers) will finish Phase 1 for this
+  concept.
+- Independently re-verified: `paper_count`/`len(papers)` both 260, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed and properly quoted (spot-checked, including a numeric-looking ID
+  `2504.20581`), `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=446` corpus-wide, consistent with 97+60+29+260). `papers_not_in_any_yaml`
+  dropped 236 → 221 (a smaller drop than 20 because some of this batch's papers already appeared
+  in another closed concept's YAML, e.g. flow-matching or speech-to-speech).
+- Held for explicit user go-ahead before committing — batches 9-13 uncommitted; batches 5-8
+  committed locally (`83e78a1`) but not yet pushed (content repo 4 commits ahead of `origin/main`).
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 12 (220 → 240/286)
+
+- Twelfth Phase 1 batch, 20 papers, oldest-first continuation from `2508.18006` through
+  `2509.11084`. The standing `2207.12598` exclusion re-confirmed and re-excluded again (twelfth
+  consecutive batch), not counted against the 20-cap. 9 of the 20 used the legacy bare-claims
+  format. **45/286 remain, next: `2509.11425`, then `2508.18240`, `2509.12171`, `2509.14270`, ...**
+- Independently re-verified: `paper_count`/`len(papers)` both 240, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=426` corpus-wide, consistent with 97+60+29+240). `papers_not_in_any_yaml`
+  dropped 248 → 236.
+- Held for explicit user go-ahead before committing — batches 9-12 uncommitted; batches 5-8
+  committed locally (`83e78a1`) but not yet pushed (content repo 4 commits ahead of `origin/main`).
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 11 (200 → 220/286)
+
+- Eleventh Phase 1 batch, 20 papers, oldest-first continuation from `interspeech-2025-2449`
+  through `2508.17623`, mixing numeric-ID and author-name-ID Interspeech pages (e.g.
+  `interspeech-2025-bokkahallisatish25_interspeech`, `interspeech-2025-gourav25_interspeech` —
+  independently confirmed these are real pages on disk, not hallucinated IDs) plus a run of
+  post-Interspeech `2508.x` arXiv papers. The standing `2207.12598` exclusion re-confirmed and
+  re-excluded again (eleventh consecutive batch), not counted against the 20-cap. 10 of the 20
+  used the legacy bare-claims format. **65/286 remain, next: `2508.18006`, `2508.20660`,
+  `2509.00685`, `2509.01391`, ...**
+- Independently re-verified: `paper_count`/`len(papers)` both 220, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=406` corpus-wide, consistent with 97+60+29+220). `papers_not_in_any_yaml`
+  dropped 261 → 248.
+- Held for explicit user go-ahead before committing — batches 9-11 uncommitted; batches 5-8
+  committed locally (`83e78a1`) but not yet pushed (content repo 4 commits ahead of `origin/main`).
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 10 (180 → 200/286)
+
+- Tenth Phase 1 batch, 20 papers, oldest-first continuation from `interspeech-2025-1531` through
+  `interspeech-2025-2447`. The standing `2207.12598` exclusion re-confirmed and re-excluded again
+  (tenth consecutive batch), not counted against the 20-cap. 4 papers used the legacy bare-claims
+  format (`interspeech-2025-1993`, `-2043`, `-2447`, and `-2449` which was read but correctly
+  excluded from the write since it falls after the cap), handled per the dual-format compatibility
+  rules. **85/286 remain, next: `interspeech-2025-2449`, then `-2536`, `-2573`, `-2595`, `-2660`, ...**
+- **Process note**: the agent initially miscounted the remaining-candidate pool by forgetting the
+  `published_date < 2025-10-01` scope cutoff in its own discovery query (307/306 instead of 286),
+  and over-read 5 papers beyond the 20-cap before catching the mistake. Self-corrected before
+  writing; independently confirmed none of the 5 over-read IDs (`interspeech-2025-2449`, `-2536`,
+  `-2573`, `-2595`, `-2660`) made it into the YAML — the write itself was clean, only the
+  discovery-phase bookkeeping briefly went wrong.
+- Independently re-verified: `paper_count`/`len(papers)` both 200, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` and all 5 over-read IDs correctly absent, health
+  check clean (0 errors, 0 warnings, `total_paper_entries=386` corpus-wide, consistent with
+  97+60+29+200). `papers_not_in_any_yaml` dropped 278 → 261.
+- Held for explicit user go-ahead before committing — batches 9-10 uncommitted; batches 5-8
+  committed locally (`83e78a1`) but not yet pushed (content repo 4 commits ahead of `origin/main`).
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 9 (160 → 180/286)
+
+- Ninth Phase 1 batch, 20 papers, oldest-first continuation from `interspeech-2025-0816` through
+  `interspeech-2025-1494` (numeric-ID secondary sort within the shared `2025-08-17` Interspeech
+  date cohort, same convention as batches 7-8). The standing `2207.12598` exclusion re-confirmed
+  and re-excluded again (ninth consecutive batch), not counted against the 20-cap. **105/286
+  remain, next: `interspeech-2025-1531`, `-1536`, `-1550`, `-1726`, ...**
+- No interruption this batch; `log.md` entry written immediately after the YAML write as
+  instructed, correctly appended under the existing `## 2026-07-21` section without disturbing
+  adjacent headers.
+- Independently re-verified: `paper_count`/`len(papers)` both 180, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=366` corpus-wide, consistent with 97+60+29+180). `papers_not_in_any_yaml`
+  dropped 295 → 278 (a smaller drop than the 20 newly-added entries, expected since some of this
+  batch's papers were already integrated under other concepts' YAMLs). Spot-checked
+  `interspeech-2025-1229` (E2E-BPVC) against its source page: BS-MOS 4.60/4.65, SS-MOS 4.02/4.07,
+  ICL-VC BS-MOS 0.70, CER 10.27→7.99/9.22→7.99, SIM 0.849/0.873 all matched exactly.
+- Held for explicit user go-ahead before committing — batches 9 (this one) uncommitted; batches
+  5-8 committed locally (`83e78a1` in content repo) but not yet pushed (content repo 4 commits
+  ahead of `origin/main`).
 
 ### 2026-07-21 — evaluation-metrics Phase 1 batch 8 (140 → 160/286)
 
@@ -592,3 +784,7 @@ warnings, ambiguous claim roles, or judgment calls noted by the agent).
 | speech-to-speech | `2025.iwsds-1.27` | borderline concept fit: general turn-taking survey, not S2S-specific — consider whether it belongs under `evaluation-metrics`/`subjective-evaluation` instead |
 | rlhf-speech | `2025.naacl-demo.12` (ESPnet-SpeechLM) | `relevance: low`, `current_role: minor`: RLHF listed as a supported training feature of the toolkit, no dedicated RLHF experiments in the paper itself |
 | rlhf-speech | `2508.08957` (QAMRO) | `relevance: low`, `current_role: minor`: paper discusses potential future use as a reward model for RLHF, does not itself run RLHF training |
+| evaluation-metrics | `llm_audio_judge_reliability_is_contested` (cluster) | contested: LLM/audio-LM judges work for instruction-following/style/checklist-rubric scoring but fail on fine-grained prosody and non-verbal/raw-waveform cues; capability-scoped contest, not a blanket rejection |
+| evaluation-metrics | `objective_perceptual_quality_metric_divergence` (family, 86 papers), `asr_wer_intelligibility_evaluation` (family, 79 papers) | intentionally broad umbrella families spanning many unrelated architectures sharing one evaluation-methodology observation; flagged as future sub-splitting candidates rather than force-fragmented now |
+| evaluation-metrics | `embedding_distributional_distance_metrics` (family) | thin at 4 papers, watch for growth |
+| evaluation-metrics | 14 empty-`method_family` papers | legitimate outliers: pure architecture/theory/efficiency papers with no evaluation-methodology content (Tacotron 2 `1712.05884`, HiFi-GAN `2010.05646`, AudioLDM `2301.12503`, GOAT `2508.15442` — also a documented rlhf-speech outlier — plus `2506.09874`, `2509.05359`, `2509.08696`, `2509.23147`, `interspeech-2025-1122/-1364/-1763/-1819/-2031/-2449`) |
