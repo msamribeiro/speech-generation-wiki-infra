@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-20, after evaluation-metrics batch 4** (re-run the commands above before
+**State as of 2026-07-21, after evaluation-metrics batch 8** (re-run the commands above before
 resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -42,7 +42,7 @@ corpus-wide `Covers`-style column was dropped:
 
 | Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
-| **evaluation-metrics** | **286** | **80** | **28%** |
+| **evaluation-metrics** | **286** | **160** | **56%** |
 | zero-shot-tts | 204 | 0 | 0% |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
@@ -65,11 +65,12 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **266** | **11.9%** |
+| **TOTAL** | **2236** | **346** | **15.5%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **351** as of
-2026-07-20 after batch 4 (down from 366 after batches 1-3, 411 earlier the same day, 429 before
-rlhf-speech Phase 1, 548 on 2026-07-19).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **295** as of
+2026-07-21 after batch 8 (down from 312 after batch 7, 325 after batch 6, 339 after batch 5, 351
+after batch 4, 366 after batches 1-3, 411 earlier, 429 before rlhf-speech Phase 1, 548 on
+2026-07-19).
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -124,12 +125,23 @@ sessions — pace it like the Q4 ingest work (batch, verify, log, repeat), not a
    `method_families` → `reassessment_queue` → `open_questions` → `trend_notes`). Mark that
    BACKLOG line done/removed rather than re-investigating it.
 
-3. **3 papers in the existing `flow-matching.yaml` have an empty `method_family` after Phase 2**
+3. **`2207.12598` (Classifier-Free Diffusion Guidance) is a permanent, never-integrated candidate
+   for `evaluation-metrics`** — a Q3 2022 ImageNet diffusion paper tagged `evaluation-metrics`
+   only as unrelated CFG background citation, correctly excluded on every re-encounter (batches
+   1-5) since it's never written to the YAML. Because it's the oldest paper in the entire
+   candidate pool by years, an oldest-first discovery scan will keep resurfacing it as "next"
+   forever. Batch 5's agent got this backwards (see 2026-07-20 log entry) and reported it as no
+   longer relevant — it always is, until either the paper is re-tagged to drop `evaluation-metrics`
+   from `related_concepts` (an ingest-side fix, out of scope for integration) or every session
+   explicitly re-confirms and re-excludes it as the standing first candidate. Expect to see this
+   again in batch 6+; don't be misled by a "does not resurface" claim.
+
+4. **3 papers in the existing `flow-matching.yaml` have an empty `method_family` after Phase 2**
    synthesis (a warning, not an error, from the health check): `2106.15561`,
    `2025.coling-main.518`, `iclr-2025-uxDFlPGRLX`. Worth a look when next touching flow-matching,
    not urgent.
 
-4. `flow-matching.yaml` is already committed and pushed to `main` in the content repo (commits
+5. `flow-matching.yaml` is already committed and pushed to `main` in the content repo (commits
    `34af590` prototype, `3847599` round 1) — the "committed locally, not pushed" note in some
    older memory/BACKLOG text is stale as of this session.
 
@@ -275,6 +287,113 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 8 (140 → 160/286)
+
+- Eighth Phase 1 batch, 20 papers, oldest-first continuation from `interspeech-2025-0310` through
+  `interspeech-2025-0779` (numeric-ID secondary sort within the shared `2025-08-17` Interspeech
+  date cohort, same convention as batch 7). The standing `2207.12598` exclusion re-confirmed and
+  re-excluded again, no other exclusions. **125/286 remain, next: `2207.12598` (re-confirm
+  again), then `interspeech-2025-0816`, `-0854`, `-0902`, `-0973`, ...**
+- No interruption this batch; `log.md` entry written immediately after the YAML write as
+  instructed, correctly appended under the existing `## 2026-07-21` section without disturbing
+  adjacent headers.
+- Independently re-verified: `paper_count`/`len(papers)` both 160, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=346` corpus-wide, consistent with 97+60+29+160). Gap-check via numeric
+  `interspeech-2025-NNNN` ID ordering: zero numeric IDs below 0816 remain unintegrated; also
+  confirmed no non-Interspeech in-scope candidate dated before the shared 2025-08-17 cohort was
+  left behind. Spot-checked `interspeech-2025-0656` (EEG-driven zero-shot voice conversion) against
+  its source page: all Homogeneity/Consistency/Naturalness-MOS numbers (0.9437/0.9465/0.9371,
+  0.8026, 4.00) matched exactly with correct `§3.1.2`/`§4.4`/`§4.4.1` citations.
+- Held for explicit user go-ahead before committing — batches 5, 6, 7, and 8 all still uncommitted.
+
+### 2026-07-21 — evaluation-metrics Phase 1 batch 7 (120 → 140/286)
+
+- Seventh Phase 1 batch, 20 papers, oldest-first continuation from `2508.06890` through
+  `interspeech-2025-0305`. The standing `2207.12598` exclusion was correctly re-confirmed and
+  re-excluded again, no reasoning error this time. No other exclusions. **146/286 remain, next:
+  `2207.12598` (re-confirm again), then `interspeech-2025-0310`, `-0347`, `-0355`, `-0383`, ...**
+  Includes `interspeech-2025-0063` (DLPO), the paper flagged in the rlhf-speech Phase 2 log for a
+  judgment-call `method_family` reclassification — unrelated to this concept's claims about it.
+- **No interruption this batch** — the agent was explicitly told upfront to write the `log.md`
+  entry immediately after the YAML write, before running any validation, specifically to avoid a
+  repeat of batch 6's partial-write gap. `log.md` correctly created a new `## 2026-07-21` section
+  header without corrupting the adjacent `## 2026-07-20` header (no recurrence of
+  [[feedback_log_insertion_bug]]).
+- Independently re-verified: `paper_count`/`len(papers)` both 140, 0 duplicate IDs, all
+  `id`/`entry_date` string-typed, `2207.12598` absent, health check clean (0 errors, 0 warnings,
+  `total_paper_entries=326` corpus-wide, consistent with 97+60+29+140). Gap-check needed one
+  extra step this time: nearly all remaining candidates share the identical nominal
+  `published_date: 2025-08-17` (the Interspeech 2025 conference date), so a pure date-sort
+  gap-check flags the entire untouched Interspeech cohort as false positives. Re-verified instead
+  by numeric `interspeech-2025-NNNN` ID ordering (the tiebreak the agent actually used, consistent
+  with a same-date secondary sort): confirmed zero numeric IDs below 0305 remain unintegrated.
+  Spot-checked `interspeech-2025-0063` (DLPO) against its source page: all UTMOS/NISQA/WER numbers
+  (3.65/3.02/3.18/3.16, 4.02, 1.2%/1.5%/0.99%, 67% human preference) matched the paper's results
+  table exactly.
+- Held for explicit user go-ahead before committing — batches 5, 6, and 7 all still uncommitted.
+
+### 2026-07-20/21 — evaluation-metrics Phase 1 batch 6 (100 → 120/286)
+
+- Sixth Phase 1 batch, 20 papers, oldest-first continuation from `2025.findings-acl.470` through
+  `2508.06870`. The standing `2207.12598` exclusion (Classifier-Free Diffusion Guidance) was
+  correctly re-confirmed and re-excluded this time — the agent was explicitly briefed on batch 5's
+  reasoning error beforehand. No other exclusions. **166/286 remain, next: `2207.12598` (standing
+  exclusion, re-confirm again), then `2508.06890`, `2508.07426`, `2508.07273`, `2508.07375`, ...**
+- **Session was interrupted mid-task by an API session limit**, cut off right after the agent's
+  last message ("Now let's validate with the Phase 1 inline validation script") — i.e. the YAML
+  write had completed but validation and the `log.md` entry had not yet run. Per the established
+  recovery protocol ([[feedback_session_limit_interruption]]), checked file state directly rather
+  than trusting the interrupted agent: `_claims/evaluation-metrics.yaml` was valid YAML,
+  `paper_count`/`len(papers)` both 120, no duplicate IDs, all `id`/`entry_date` fields
+  string-typed, and `2207.12598` correctly absent — a clean, complete write. `log.md` however had
+  **no batch 6 entry at all** (confirmed via `git diff`) — a genuine partial-write gap, unlike the
+  prior interruptions in this session which resolved cleanly on resume. Rather than resuming the
+  agent, reconstructed the batch 6 log entry by hand directly from the YAML's actual paper list
+  (positions 101–120) and wrote it manually into `log.md`, since all the needed information (paper
+  IDs, counts, exclusion) was independently derivable and verifiable from the committed-quality
+  YAML itself.
+- Independently verified no silent gaps: re-derived the full in-scope candidate list from paper
+  frontmatter and confirmed every in-scope paper dated on or before the last-processed paper
+  (`2508.06870`, 2025-08-09) is either integrated, or is the standing `2207.12598` exclusion. One
+  same-day candidate (`2508.06890`, also 2025-08-09) is simply next-in-line once the 20-cap was
+  hit, not a missed paper. Health check clean (0 errors, 0 warnings, `total_paper_entries=306`
+  corpus-wide, consistent with 97+60+29+120). Spot-checked `2025.sigdial-1.51` (rrSDS 2.0 robotic
+  dialogue demo paper) against its source page: all three claims (modular IU architecture,
+  synchronization challenges, engineering-overhead reduction) traced exactly to `§1`-`§4`, and
+  `related_concepts` confirmed the `evaluation-metrics` tag.
+- Held for explicit user go-ahead before committing — batches 5 and 6 are both still uncommitted
+  as of this log entry.
+
+### 2026-07-20 — evaluation-metrics Phase 1 batch 5 (80 → 100/286)
+
+- Fifth Phase 1 batch, 20 papers, oldest-first continuation from `2507.09282` through
+  `2025.findings-acl.1226`. No genuine scope-mismatch exclusions this batch (all 20 processed
+  papers integrated cleanly). Includes `2025.acl-long.313` (F5-TTS, canonical ACL ID per
+  [[feedback_f5tts_paper_id]], correctly not the arXiv `2410.06885` duplicate). **186/286 remain,
+  next: `2207.12598` (see reporting-bug note below), then `2025.findings-acl.470`,
+  `2025.findings-acl.534`, `2025.findings-acl.71`, `2507.17527`, ...**
+- **Reporting bug caught and corrected before commit**: the agent's own report and initial
+  `log.md` wording claimed the standing `2207.12598` exclusion (Classifier-Free Diffusion
+  Guidance, off-topic ImageNet diffusion paper excluded in batches 1-4) "does not resurface" and
+  omitted it from the batch 6 candidate preview, reasoning that its 2022 date put it "before this
+  batch's range" — backwards logic, since an oldest-first scan should always resurface the oldest
+  unintegrated candidate regardless of how old it is. Independently re-derived the candidate list
+  directly from paper frontmatter (not trusting the agent's summary, per
+  [[feedback_agent_selfreport_unreliable]]): `2207.12598` is still tagged `evaluation-metrics`,
+  still Q3-scoped, still Tier 1, and still absent from the YAML — confirming it remains the true
+  oldest unintegrated in-scope candidate, unchanged from batches 1-4. The 186-remaining *count*
+  the agent reported was numerically correct by coincidence; only the *reasoning* and the "next
+  candidate" pointer were wrong. `log.md` wording corrected to state this accurately and to list
+  `2207.12598` first in the batch 6 preview, so a future session isn't misled into skipping the
+  re-exclusion step. Data integrity itself was unaffected: 100/100 `paper_count`/`len(papers)`, 0
+  duplicate IDs, all `id`/`entry_date` fields string-typed, health check clean (0 errors, 0
+  warnings). Spot-checked `2025.acl-long.313` (F5-TTS) against its source page: all 5 claim
+  numbers (WER 2.42/2.53/2.84/2.41/18.1%, UTMOS 3.70/3.89, RTF 0.15) matched exactly with correct
+  `§3.2`/`§5`/`§5.1`/`§5.2`/`§4` citations.
+- Held for explicit user go-ahead before committing (per this session's instruction) — not yet
+  committed as of this log entry.
 
 ### 2026-07-20 — evaluation-metrics Phase 1 batch 4 (60 → 80/286)
 
