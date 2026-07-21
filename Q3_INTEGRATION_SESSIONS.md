@@ -42,7 +42,7 @@ corpus-wide `Covers`-style column was dropped:
 
 | Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
-| **evaluation-metrics** | **286** | **285** | **100%** (Phase 1 only, no Phase 2 yet) |
+| **evaluation-metrics** | **286** | **285** | **100%** (Phase 1+2) |
 | zero-shot-tts | 204 | 0 | 0% |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
