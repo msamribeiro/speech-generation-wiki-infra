@@ -34,8 +34,8 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-21, after evaluation-metrics batch 14 (Phase 1 closed)** (re-run the commands above before
-resuming — this will be stale). This
+**State as of 2026-07-22, after disentanglement Phase 1 + Phase 2 closed** (re-run the commands
+above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
 corpus-wide `Covers`-style column was dropped:
@@ -49,7 +49,7 @@ corpus-wide `Covers`-style column was dropped:
 | autoregressive-codec-tts | 166 | 0 | 0% |
 | self-supervised-speech | 146 | 0 | 0% |
 | spoken-language-model | 127 | 0 | 0% |
-| disentanglement | 100 | 0 | 0% |
+| **disentanglement** | **100** | **100** | **100%** (Phase 1+2) |
 | **flow-matching** | **97** | **97** | **100%** |
 | prosody-control | 94 | 0 | 0% |
 | voice-conversion | 87 | 0 | 0% |
@@ -65,13 +65,15 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **471** | **21.1%** |
+| **TOTAL** | **2236** | **571** | **25.5%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **205** as of
-2026-07-21 after batch 14 (down from 221 after batch 13, 236 after batch 12, 248 after batch 11,
-261 after batch 10, 278 after batch 9, 295 after batch 8, 312 after batch 7, 325 after batch 6,
-339 after batch 5, 351 after batch 4, 366 after batches 1-3, 411 earlier, 429 before rlhf-speech
-Phase 1, 548 on 2026-07-19).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **157** as of
+2026-07-22 after disentanglement's Phase 1 batches 1-5 (205 → 198 → 188 → 180 → 169 → 157) and
+Phase 2 (no change, Phase 2 doesn't add new papers). Prior progression: 205 after evaluation-metrics
+batch 14 (down from 221 after batch 13, 236 after batch 12, 248 after batch 11, 261 after batch 10,
+278 after batch 9, 295 after batch 8, 312 after batch 7, 325 after batch 6, 339 after batch 5, 351
+after batch 4, 366 after batches 1-3, 411 earlier, 429 before rlhf-speech Phase 1, 548 on
+2026-07-19).
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -90,24 +92,34 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 `scripts/checks/integrate.py` already do this correctly via real YAML frontmatter parsing, so
 prefer extending those over writing a new one-off script.
 
-**`flow-matching`, `speech-to-speech`, `rlhf-speech`, and now `evaluation-metrics` are fully
-closed for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, and 285/286 respectively —
+**`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, and now
+`disentanglement` are fully closed for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29,
+285/286, and 100/100 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
 is *not* a contradiction — it's separately and correctly integrated into `evaluation-metrics`,
 since exclusion from one concept doesn't imply exclusion from another; evaluation-metrics' one gap
 is the permanent `2207.12598` exclusion). `evaluation-metrics` is the largest concept closed so
-far by paper count (285 vs. 97/60/29) and its Phase 2 pass required a mid-run course correction
+far by paper count (285 vs. 97/60/29/100) and its Phase 2 pass required a mid-run course correction
 (see Session Log) — the first attempt only covered 59/285 papers (21%) before a session-limit
 interruption, and was resumed and reworked around evaluation-methodology *type* rather than TTS
-architecture to reach 271/285 (95%) coverage with 14 legitimate outliers. All other 19 concepts
-have **no `wiki/_claims/{slug}.yaml` file at all yet**.
+architecture to reach 271/285 (95%) coverage with 14 legitimate outliers. `disentanglement`'s
+Phase 2 pass hit a similar (smaller-scale) pattern: a session-limit interruption left per-paper
+`method_family` assignment at 77/100 with 23 empty, and the resumed run reconciled 7 of those 23
+against the same evidentiary standard already used elsewhere, landing at 16/100 legitimate
+outliers, 10 method_families, 17 claim_clusters (12 strongly_supported, 3 emerging, 2 contested).
+All other 18 concepts have **no `wiki/_claims/{slug}.yaml` file at all yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
-fully clearing the Q3-and-before backlog is roughly 463 ÷ 20 ≈ **23+ Phase 1 invocations**, plus
-one or more Phase 2 synthesis passes per concept, plus health checks. This will span many
-sessions — pace it like the Q4 ingest work (batch, verify, log, repeat), not as a single sitting.
+and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 157, fully clearing the
+Q3-and-before backlog for the remaining 18 unstarted concepts is at minimum 157 ÷ 20 ≈ **8+ Phase 1
+invocations** if every remaining paper needed only one concept entry — in practice higher, since a
+paper touching multiple unstarted concepts needs a separate YAML entry per concept (the per-concept
+"Q3-scoped papers referencing it" column above sums to far more than 157 for exactly this reason,
+so summing that column directly overstates the invocation count). Plus one or more Phase 2
+synthesis passes per concept, plus health checks. This will span many sessions — pace it like the
+Q4 ingest work (batch, verify, log, repeat), not as a single sitting.
 
 ---
 
@@ -294,6 +306,115 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-22 — disentanglement Phase 2 synthesis run, concept fully closed
+
+- **First-ever Phase 2 synthesis run for `disentanglement`**, against the full 100-paper set
+  (larger than flow-matching's 97 and rlhf-speech's 29, smaller than evaluation-metrics' 285 and
+  speech-to-speech's 60). Used a metadata-first + relevance-filtered-claims condensation strategy
+  rather than reading the full ~4900-line YAML at once, per the evaluation-metrics Phase 2
+  precedent.
+- **Session was interrupted mid-task by an API session limit**, cut off right after the agent said
+  "Now I'll build the complete Phase 2 synthesis content programmatically to ensure correctness,
+  then validate before writing." Per the established recovery protocol, file state was checked
+  directly before resuming rather than trusting the interrupted agent: `paper_count`/`len(papers)`
+  were intact at 100, 77/100 papers already had a non-empty `method_family` assigned across 10
+  family labels, but the top-level `claim_clusters`/`method_families`/`reassessment_queue` lists
+  were still empty and no `log.md` entry existed yet — a genuine partial write, not a clean
+  pre-write state. **Process error caught and corrected during this recovery**: the first resume
+  attempt mistakenly launched a brand-new `Agent` call (in an isolated git worktree) instead of
+  using `SendMessage` to resume the original interrupted agent by its agent ID — this would have
+  lost all prior context and, worse, isolated the write from the actual content repo. Caught before
+  any work was done in the worktree; that agent was stopped cleanly via `TaskStop` and the correct
+  agent was resumed via `SendMessage` with a full brief on the file state. See
+  [[feedback_session_limit_interruption]] for the update to this recovery protocol.
+- **Course correction during the resumed run**: the initial per-paper classification pass had left
+  23/100 papers (23%) with an empty `method_family`, a noticeably higher outlier rate than the
+  other closed concepts (5/97, 4/29, ~14/285). The coordinator flagged this before accepting the
+  result (same class of check as the evaluation-metrics 226/285 false start); the resumed agent
+  reconciled 7 of those 23 against the same evidentiary standard already applied to similar
+  included papers (e.g. FreeCodec's self-reported incomplete separation was already included in
+  the RVQ-distillation family, so DiffStyleTTS's self-reported prosody/timbre non-separation,
+  VibeVoice's and PerformSinger's inherited-not-novel codec splits, and ChiReSSD's/Conan's
+  inherited-mechanism applications were brought in on the same basis), landing at a final 16/100
+  (16%) legitimate-outlier rate.
+- **10 method_families**: `explicit_multiencoder_factorization` (30, largest/most heterogeneous,
+  flagged as a reassessment_queue mega-family watch), `rvq_semantic_acoustic_distillation` (19),
+  `data_training_recipe_disentanglement` (11), `adversarial_grl_disentanglement` (7),
+  `asr_text_alignment_disentanglement` (7), `discrete_bottleneck_disentanglement` (7),
+  `signal_level_prosody_decomposition` (6), `orthogonality_constraint_disentanglement` (5),
+  `ssl_statistical_normalization_disentanglement` (4), `mutual_information_minimization` (2, thin,
+  flagged). 14 papers hold dual family membership.
+- **17 claim_clusters: 12 strongly_supported, 3 emerging, 2 contested.** Headline
+  strongly_supported clusters: `disentanglement_reconstruction_fidelity_tradeoff` (10 supporting,
+  incorporating DeCodec's explicit reconstruction-quality trade-off),
+  `explicit_disentanglement_enables_independent_multiattribute_control` (12),
+  `emotion_speaker_disentanglement_enables_crossspeaker_transfer` (7). The 2 contested clusters
+  directly surface complicating evidence flagged during Phase 1:
+  `grl_disentanglement_leakage_vs_quality_tradeoff` (GRL reduces leakage per 5 supporting papers,
+  but PeriodCodec reports a GRL-induced MOS regression — 3.28→2.44 — and DiEmoTTS directly critiques
+  GRL/VQ-based disentanglement) and `disentanglement_oriented_codecs_fail_on_pitch`
+  (`interspeech-2025-0115`/AnCoGen's finding that SpeechTokenizer- and Mimi-style codecs fail to
+  cleanly separate pitch, contradicted by 3 papers using dedicated signal-level F0 mechanisms rather
+  than generic representation-level disentanglement, with FreeCodec's self-reported incomplete
+  t-SNE separation as a refining data point). Independently spot-checked the PeriodCodec claim
+  numbers against its source page (`interspeech-2025-0347`): MOS 3.28→2.44 and 3.55→3.33 both
+  matched exactly.
+- **7 reassessment_queue items**: 2 method_family threshold-watches (the mega-family risk;
+  `mutual_information_minimization`'s 2-paper thinness), 3 contested/thin claim_status watches (the
+  2 contested clusters above, plus a 3-paper emerging claim on objective metrics not predicting
+  subjective disentanglement quality), 1 fast-emerging 3-paper claim
+  (`prompt_based_conditioning_causes_attribute_leakage`), 1 paper_role watch (Vevo2's un-ablated
+  bottleneck tokenizer).
+- Independently re-verified end-to-end: `paper_count`/`len(papers)` both 100, 0 duplicate IDs, all
+  `id`/`entry_date`/`last_reviewed` fields string-typed, every `claim_cluster` and `method_family`
+  paper reference resolves to a real entry in `papers:`, cluster status counts (12/3/2) matched the
+  agent's report exactly, the 16 empty-`method_family` IDs matched exactly between the health check
+  output and the agent's report. `health_check.py --module integrate --concept disentanglement`:
+  0 errors, 16 warnings (all `method_family_coverage`, all documented legitimate outliers).
+- `disentanglement` is now the fifth concept fully closed for Q3-and-earlier Phase 1 + Phase 2
+  (after flow-matching, speech-to-speech, rlhf-speech, evaluation-metrics).
+- Committed to the content repo (`_claims/disentanglement.yaml` new file + `log.md`, one commit,
+  `f01eff1`) alongside a fix for a pre-existing, unrelated bare `2026-07-19` log.md section header
+  (confirmed via `git diff` to predate this session, not introduced by it). Pushed to `origin/main`.
+
+### 2026-07-22 — disentanglement Phase 1 closed from scratch (batches 1-5, 100/100)
+
+- **First-ever integration pass for `disentanglement`**, new `wiki/_claims/disentanglement.yaml`
+  created. 110 total candidates found (papers with `disentanglement` in `related_concepts`), 10
+  Q4-2025-or-later excluded per scope, 0 Tier 2 stubs, leaving 100 in-scope Q3-and-earlier
+  candidates — all 100 integrated across 5 batches, oldest-first, 0 genuine scope-mismatch
+  exclusions.
+- Batch 1 (20, `2010.05646` HiFi-GAN → `2505.07916` MiniMax-Speech): first-ever batch, 18/20 legacy
+  claims format. Batch 2 (20, `2506.10274` → `interspeech-2025-0115`): 6/20 structured format;
+  surfaced `interspeech-2025-0115`'s finding that SpeechTokenizer/Mimi fail to cleanly separate
+  pitch. Batch 3 (20, `interspeech-2025-0196` → `-1106`): 8/20 structured format; surfaced
+  PeriodCodec's GRL-induced MOS regression and LinearVC's clean SVD evidence for orthogonal
+  content-speaker subspaces (independently spot-checked against source pages, both exact matches).
+  Batch 4 (20, `interspeech-2025-1115` → `2508.16332`): 14/20 structured format; independently
+  spot-checked FreeCodec (`interspeech-2025-1440`) against its source page, exact match on all 4
+  claims. Batch 5 / final (20, `2508.17031` → `2509.24650`): confirmed exactly 20 remaining
+  in-scope candidates going in (no scope miscount), closing Phase 1 at 100/100; independently
+  spot-checked DeCodec (`2509.09201`) against its source page, exact match on all 5 claims.
+- **One session-limit interruption during batch 4**: cut off right after the agent's last message
+  ("Now I'll construct the 20 YAML entries and insert them into the file") — confirmed via direct
+  file check to be a clean pre-write state (`paper_count`/`len(papers)` unchanged at 60, no batch 4
+  `log.md` entry). Restarted fresh rather than resuming, since no drafting had occurred yet to
+  preserve.
+- **Two log-insertion issues surfaced**: batch 5's agent introduced and self-corrected a header
+  corruption mid-write (recurrence of the known log-insertion bug class, see
+  [[feedback_log_insertion_bug]]) before it was ever visible outside the write; independently
+  confirmed all `## YYYY-MM-DD` headers intact afterward. Separately, a pre-existing bare
+  `2026-07-19` header (missing its `## ` prefix, predating this session per `git diff` against the
+  last commit) was manually fixed as its own small edit at the user's request.
+- Independently re-verified every batch the same way as prior concepts (never trusting an agent's
+  closing summary uncontested, see [[feedback_agent_selfreport_unreliable]]): `paper_count`/
+  `len(papers)` match after each batch (20/40/60/80/100), 0 duplicate IDs throughout, all
+  `id`/`entry_date` fields string-typed, `health_check.py --module integrate --concept
+  disentanglement --phase 1` clean (0 errors, 0 warnings) after every batch, `papers_not_in_any_yaml`
+  dropped 205 → 198 → 188 → 180 → 169 → 157 across the 5 batches, and one claim spot-checked per
+  batch against its actual source page (SpeechTokenizer, `interspeech-2025-0115` AnCoGen, LinearVC,
+  FreeCodec, DeCodec) — all traced cleanly with correct section citations.
 
 ### 2026-07-21 — evaluation-metrics Phase 2 synthesis run, concept fully closed
 
@@ -788,3 +909,8 @@ warnings, ambiguous claim roles, or judgment calls noted by the agent).
 | evaluation-metrics | `objective_perceptual_quality_metric_divergence` (family, 86 papers), `asr_wer_intelligibility_evaluation` (family, 79 papers) | intentionally broad umbrella families spanning many unrelated architectures sharing one evaluation-methodology observation; flagged as future sub-splitting candidates rather than force-fragmented now |
 | evaluation-metrics | `embedding_distributional_distance_metrics` (family) | thin at 4 papers, watch for growth |
 | evaluation-metrics | 14 empty-`method_family` papers | legitimate outliers: pure architecture/theory/efficiency papers with no evaluation-methodology content (Tacotron 2 `1712.05884`, HiFi-GAN `2010.05646`, AudioLDM `2301.12503`, GOAT `2508.15442` — also a documented rlhf-speech outlier — plus `2506.09874`, `2509.05359`, `2509.08696`, `2509.23147`, `interspeech-2025-1122/-1364/-1763/-1819/-2031/-2449`) |
+| disentanglement | `grl_disentanglement_leakage_vs_quality_tradeoff` (cluster) | contested: GRL-based adversarial disentanglement reduces leakage per 5 supporting papers, but PeriodCodec (`interspeech-2025-0347`) reports a GRL-induced MOS regression (3.28→2.44) and DiEmoTTS (`interspeech-2025-1394`) directly critiques GRL/VQ-based disentanglement as introducing a separation-vs-quality tension |
+| disentanglement | `disentanglement_oriented_codecs_fail_on_pitch` (cluster) | contested: AnCoGen (`interspeech-2025-0115`) finds SpeechTokenizer- and Mimi-style disentanglement-oriented codecs fail to cleanly separate pitch, contradicted by 3 papers using dedicated signal-level F0 mechanisms rather than generic representation-level disentanglement — may be two different mechanisms rather than a direct conflict |
+| disentanglement | `explicit_multiencoder_factorization` (family, 30 papers) | intentionally broad mega-family spanning many distinct multi-encoder disentanglement architectures; flagged as a future sub-splitting candidate |
+| disentanglement | `mutual_information_minimization` (family) | thin at 2 papers, watch for growth |
+| disentanglement | 16 empty-`method_family` papers | legitimate outliers: evaluation/diagnostic-side contributions, out-of-scope modality, or tangential/analogical use of disentanglement (`2010.05646` HiFi-GAN, `2304.09116` NaturalSpeech 2, `2508.11224`, `interspeech-2025-0196/-0455/-0575/-0656/-0723/-0816`, `2508.15565`, `2508.15931`, `2508.16188`, `2508.17031`, `2509.00503`, `2509.18060`, `2505.10599`) |
