@@ -11,7 +11,7 @@ This repository contains the data acquisition pipeline, parsing infrastructure, 
 | Repo | Contents |
 |------|----------|
 | **infra** (this repo) | Pipeline scripts, raw corpus state, shared agent workflows |
-| **wiki-content** | Paper pages, concept pages, claim graph YAML |
+| **wiki-content** | Paper pages, claim graph YAML, Concept Overviews and In Depth reviews |
 | **site** | Quartz v5 static site → GitHub Pages |
 
 The wiki content repo is included here as a git submodule under `wiki/`.
@@ -32,12 +32,13 @@ raw/                    # Source documents and pipeline state
 wiki/                   # Knowledge base (git submodule → wiki content repo)
   papers/               # One page per ingested paper
   _claims/              # Claim graph YAML — source of truth for all rendered pages
-  concepts/             # Rendered concept synthesis pages
-  evidence/             # Rendered evidence dossiers
-  venues/               # Rendered venue summary pages
-  index.md              # Master paper catalog
+  concepts/             # Concept Overviews and In Depth reviews
+  venues/               # Venue reports generated on demand
+  reports/              # Periodic cross-concept reports (deferred)
+  index.md              # Reader-facing landing page
+  start.md              # Intent-based reading guide
   log.md                # Reader-facing changelog
-  overview.md           # Evolving field synthesis
+  overview.md           # Cross-concept synthesis of completed integrations
 
 docs/                   # Project documentation
   fetch.md              # Fetch + filter stage guide
@@ -83,9 +84,18 @@ Fetch → Filter → Parse → Ingest → Integrate → Render
 | **Parse** | `scripts/parse/batch_convert.py` | `raw/parsed/{id}/paper.md` |
 | **Ingest** | `speech-generation-ingest-agent` | `wiki/papers/{id}.md` |
 | **Integrate** | `speech-generation-integration-agent` | `wiki/_claims/{slug}.yaml` |
-| **Render** | `speech-generation-render-agent` | `wiki/concepts/`, `wiki/evidence/` |
+| **Render** | `speech-generation-render-agent` | Concept Overviews, In Depth reviews, field overview |
 
 Fetch through Parse use Python scripts and are independently resumable — re-running skips work already done. Filter, Ingest, Review, Integrate, and Render are shared skills usable from Claude Code or Codex.
+
+The render stage creates two human-readable projections of each concept claim graph:
+
+- `wiki/concepts/{slug}.md` — **Overview**, for rapid state-of-the-art scanning
+- `wiki/concepts/{slug}-in-depth.md` — **In Depth**, for detailed research synthesis
+
+The exhaustive machine-readable evidence remains in `wiki/_claims/{slug}.yaml`. Rendered Markdown
+selects and explains the conclusions that matter to readers; it does not reproduce the full claim
+graph or paper inventory.
 
 For detailed workflows, see `docs/fetch.md`, `docs/parse.md`, and `docs/content.md`. For the operating contract and invariants, see `AGENTS.md`.
 
@@ -117,11 +127,14 @@ uv pip install -r requirements.txt
 source .venv/bin/activate
 ```
 
-**Tests:**
+**Pipeline health:**
 
 ```bash
-.venv/bin/python -m pytest tests/ -q
+.venv/bin/python scripts/health_check.py
 ```
+
+The health suite validates agent compatibility, ingested pages, claim graphs, and both concept
+rendering depths. Run the focused unit tests with `.venv/bin/python -m pytest tests/ -q`.
 
 ---
 
@@ -167,7 +180,7 @@ python scripts/discover/citation_index.py
 | `speech-generation-ingest-agent` | Write a Tier 1 wiki paper page from parsed output |
 | `speech-generation-lightweight-ingest-agent` | Write a Tier 2 stub page for citation-discovery papers |
 | `speech-generation-integration-agent` | Extract claims from paper pages; update `wiki/_claims/` YAML |
-| `speech-generation-render-agent` | Render concept pages and evidence dossiers from claim YAML |
+| `speech-generation-render-agent` | Render Concept Overviews, In Depth reviews, and the field overview from claim YAML |
 | `speech-generation-review-agent` | Audit and correct an existing Tier 1 paper page |
 
 In either tool, natural prompts such as `"Ingest paper {id}"`, `"Run integration pass on last 25 papers"`, or `"Render all stale concepts"` select the relevant workflow. Codex can also invoke `$speech-generation-ingest-agent` explicitly; Claude Code can select the matching project subagent.
@@ -197,6 +210,7 @@ implementation.
 | `BACKLOG.md` | Prioritised feature backlog |
 | `ARCHIVE.md` | Completed features with outcomes |
 | `docs/content.md` | Full ingest → integrate → render workflow and page templates |
+| `docs/design/concept-rendering.md` | Overview / In Depth reader model and rendering contract |
 | `docs/schemas/` | Paper metadata schema, claim YAML schema, controlled vocabulary |
 
 ---
