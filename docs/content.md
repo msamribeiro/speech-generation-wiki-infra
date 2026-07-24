@@ -369,8 +369,6 @@ generation:
   commit: {7-char hash}
 ---
 
-# {Concept Title}: In Depth
-
 Companion to the [[concepts/{slug}|Overview]]. This page explains what the reviewed research
 collectively shows. Citations are representative; complete provenance is in
 `wiki/_claims/{slug}.yaml`.
@@ -389,7 +387,7 @@ collectively shows. Citations are representative; complete provenance is in
 
 ## What the Research Shows
 
-### {Question- or conclusion-led theme}
+### {Short topic label}
 
 **Current assessment:** {Plain-language conclusion at the narrowest supported scope.}
 
@@ -415,13 +413,29 @@ collectively shows. Citations are representative; complete provenance is in
 
 ## Representative Reading Path
 
-1. [[id|Name]] — {why read it}
+1. **{Reader-oriented step or question.}** Read [[id|Name]] {for the specific reason it belongs
+   at this point in the sequence}.
+2. **{Next step.}** Compare [[id|Name]] and [[id|Name]] {to understand a meaningful contrast}.
 
 ## Structured Source
 
 This page selects citations for human readability. The complete claim graph, paper roles, source
 sections, caveats, and reassessment state are available in `wiki/_claims/{slug}.yaml`.
 ```
+
+Use a numbered list for the Representative Reading Path, never a table. The ordering should teach
+the concept: each entry starts with a bold action or question, cites one to three representative
+papers, and gives a concise reason for reading them at that point.
+
+Do not add a body H1 to generated pages: Quartz renders the frontmatter `title` as the article
+title. H2 headings define the stable page structure. H3 headings feed the right-side table of
+contents, so keep them as unnumbered topic labels or compact questions of at most 60 characters.
+State the complete claim in the opening assessment prose, not in the heading.
+
+Callouts are limited to the required Overview abstract and, when scientifically necessary, one
+warning for a critical contested finding or scope limitation. In Depth pages use `Findings at a
+Glance` for orientation and should not add decorative callouts. No generated page should exceed
+two callouts.
 
 ### Venue Page (`wiki/venues/{year}-{venue-slug}.md`)
 

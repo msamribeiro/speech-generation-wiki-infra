@@ -26,8 +26,9 @@ that need exhaustive record-level access should use `wiki/_claims/{slug}.yaml`.
 | Overview | Overview | `wiki/concepts/{slug}.md` | `overview` |
 | In Depth | In Depth | `wiki/concepts/{slug}-in-depth.md` | `in-depth` |
 
-The Overview H1 is the concept title, for example `# Flow Matching`. The In Depth H1 is
-`# Flow Matching: In Depth`.
+Quartz renders the frontmatter `title` through its Article Title component. Rendered Markdown
+therefore contains no body H1; content begins with the abstract or introductory text, followed by
+H2 sections.
 
 The flat path scheme preserves existing concept links and avoids relying on directory-index
 resolution. Both pages live under the `concepts` information architecture and link to each other.
@@ -113,6 +114,23 @@ Required structure:
 7. Implications — consequences for system design, evaluation, deployment, or research.
 8. Representative Reading Path — a curated route, not a complete bibliography.
 9. Structured Source — link to `_claims/{slug}.yaml` for complete machine-readable provenance.
+
+The Representative Reading Path uses a numbered list in an intentional learning sequence. Each
+entry begins with a bold reader-oriented step or question, names one to three papers, and explains
+why they belong at that point in the route. Do not use a Markdown table: reading-path explanations
+need room to wrap on narrow screens, and wikilink pipes make tables fragile.
+
+Quartz builds the right-side table of contents from body headings. Keep H2 labels stable and
+structural. H3 labels are short topics or compact research questions, use no numeric prefixes, and
+stay at 60 characters or fewer. Put the complete conclusion in the first paragraph—normally as a
+bold `Current assessment:` sentence—rather than encoding a claim in the heading.
+
+Use callouts as information hierarchy, not decoration:
+
+- the Overview abstract callout is required;
+- a warning callout may surface one critical contested finding or scope limitation;
+- In Depth pages normally use prose plus `Findings at a Glance`, not a second decorative abstract;
+- keep any generated page to at most two callouts.
 
 Each major-finding section should establish:
 

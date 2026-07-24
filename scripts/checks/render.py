@@ -166,12 +166,23 @@ def _validate_page(
         ))
 
     h1 = re.search(r"^# (.+?)\s*$", body, re.MULTILINE)
-    title = frontmatter.get("title")
-    if not h1 or h1.group(1) != title:
+    if h1:
         issues.append(_issue(
-            "error", slug, "h1_matches_title",
-            f"{path.name}: H1 must exactly match frontmatter title {title!r}",
+            "error", slug, "no_body_h1",
+            f"{path.name}: body H1 duplicates Quartz article title {h1.group(1)!r}",
         ))
+
+    for heading in re.findall(r"^### (.+?)\s*$", body, re.MULTILINE):
+        if re.match(r"^\d+\.\s", heading):
+            issues.append(_issue(
+                "warning", slug, "toc_heading_style",
+                f"{path.name}: H3 should not use a numeric prefix: {heading!r}",
+            ))
+        if len(heading) > 60:
+            issues.append(_issue(
+                "warning", slug, "toc_heading_length",
+                f"{path.name}: H3 is {len(heading)} characters; keep TOC labels at 60 or fewer: {heading!r}",
+            ))
 
     count = _word_count(body)
     low, high = (700, 1400) if expected_type == "overview" else (2500, 6000)

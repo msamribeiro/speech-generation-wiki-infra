@@ -79,6 +79,11 @@ acoustic models, but may not know the internal theory of this concept.
 - Use deeper mechanism and evaluation detail in In Depth only when it helps interpret a finding.
 - Keep paper names as citations and examples, not as the organizing structure.
 - Organize In Depth sections around research questions or conclusions, never YAML claim IDs.
+- Do not write a body H1. Quartz renders the frontmatter title above the page body.
+- Keep H2 headings structural. H3 headings appear in the right-side table of contents, so use
+  unnumbered topic labels or compact questions of at most 60 characters.
+- Put the complete conclusion in the opening prose, normally as a bold `Current assessment:`
+  sentence, rather than turning a long claim into a heading.
 
 Treat the YAML as the complete evidence available for the render, not proof of complete field
 coverage. If coverage is partial or narrow, use scoped language such as “in the reviewed corpus” or
@@ -165,6 +170,15 @@ Required sections:
 7. Implications — consequences for design, evaluation, deployment, or research.
 8. Representative Reading Path — curated, not exhaustive.
 9. Structured Source — direct readers to `_claims/{slug}.yaml`.
+
+Format the Representative Reading Path as a numbered learning sequence, never a table. Each entry
+starts with a bold reader-oriented step or question, selects one to three papers, and explains why
+they belong at that point in the route. Keep the order pedagogical rather than ranking papers by
+strength or recency.
+
+Use callouts sparingly. The Overview abstract is required; one warning may surface a critical
+contested finding or scope limitation. In Depth pages normally rely on Findings at a Glance rather
+than another abstract callout. Never exceed two callouts on a generated page.
 
 Each major-finding section should establish:
 
