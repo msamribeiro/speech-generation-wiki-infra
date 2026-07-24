@@ -45,7 +45,8 @@ path is a detached HEAD submodule. Writes there will be lost.
 
 **YOU DO NOT:**
 - Write `wiki/papers/` pages — ingest agent
-- Write `wiki/concepts/`, `wiki/evidence/`, `wiki/overview.md` — render agent
+- Write `wiki/concepts/` or `wiki/overview.md` — render agent; never recreate the removed legacy
+  `wiki/evidence/` path
 - Write `wiki/venues/` — not part of the automated pipeline; generated on demand only
 - Write anything to `raw/metadata/` files
 - Read `raw/parsed/` files — work only from wiki pages
@@ -484,7 +485,8 @@ Health check  : .venv/bin/python3 scripts/health_check.py --module integrate --c
 ## Invariants
 
 1. Never create or overwrite `wiki/papers/` pages — ingest agent owns those.
-2. Never write `wiki/concepts/`, `wiki/evidence/`, `wiki/overview.md` — render agent. Never write `wiki/venues/` — not part of the automated pipeline.
+2. Never write `wiki/concepts/` or `wiki/overview.md` — render agent. Never recreate the removed
+   legacy `wiki/evidence/` path. Never write `wiki/venues/` — not part of the automated pipeline.
 3. Never write to `raw/metadata/` files.
 4. Skip Tier 2 papers (`ingest_tier: 2`) entirely — do not create entries, do not flag.
 5. Phase 1 is idempotent: skip paper IDs already in `papers:` unless `--force`.

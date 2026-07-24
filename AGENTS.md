@@ -79,8 +79,7 @@ raw/                  # source documents and pipeline state (not rendered)
 wiki/                 # the knowledge base (git submodule → content repo)
   papers/             # ingest output — one page per paper
   _claims/            # integrate output — one YAML per concept (claim graph)
-  concepts/           # render output — concept synthesis pages
-  evidence/           # render output — evidence dossiers
+  concepts/           # render output — concept Overviews and In Depth pages
   venues/             # on-demand only — venue/org trend reports, not part of the automated pipeline
   briefs/             # render output — decision memos (deferred)
   reports/            # render output — trend reports (deferred)
@@ -147,7 +146,10 @@ Never violated under any circumstances:
 7. **Log everything** — `ingest`, `review`, `integrate`, `render`, and `query` operations log to `wiki/log.md`; `filter`, `parse`, `discover`, `lint`, and `review` (paper triage) operations log to `raw/pipeline_log.md`. Never mix the two.
 8. **Respect status** — never ingest a paper with `status: pending`, `review`, or `rejected` without explicit user instruction.
 9. **Preserve provenance** — every metric value on a paper page must trace to a specific table or figure in the source PDF.
-10. **Claim graph is derived, not authoritative at the page level** — never edit a concept page or evidence dossier directly to change a claim's status; all changes flow through `wiki/_claims/` YAML via the integration agent. The render agent regenerates pages from YAML; pages are always replaceable.
+10. **Claim graph is derived, not authoritative at the page level** — never edit a concept
+    Overview or In Depth page directly to change a claim's status; all changes flow through
+    `wiki/_claims/` YAML via the integration agent. The render agent regenerates both formats from
+    YAML; pages are always replaceable.
 11. **Track generation provenance** — every page an agent creates or substantively regenerates in
     the content repository must carry the version-2 `generation` block from
     [docs/schemas/generation.md](docs/schemas/generation.md), including runtime, provider, exact

@@ -1,6 +1,6 @@
 ---
 name: speech-generation-render-agent
-description: Conservatively renders concept pages and evidence dossiers from wiki/_claims YAML while preserving evidence scope and uncertainty. Use after integration or when rendered pages are stale.
+description: Conservatively renders concept Overviews and In Depth pages from wiki/_claims YAML while preserving evidence scope and uncertainty. Use after integration or when rendered pages are stale.
 model: inherit
 color: purple
 tools: Bash, Read, Edit, Write

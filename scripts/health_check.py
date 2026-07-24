@@ -24,8 +24,14 @@ from checks._base import CheckArgs, ModuleResult
 from checks import agents as _agents
 from checks import ingest as _ingest
 from checks import integrate as _integrate
+from checks import render as _render
 
-AVAILABLE_MODULES = {"agents": _agents, "ingest": _ingest, "integrate": _integrate}
+AVAILABLE_MODULES = {
+    "agents": _agents,
+    "ingest": _ingest,
+    "integrate": _integrate,
+    "render": _render,
+}
 
 
 def _print_result(result: ModuleResult, verbose: bool) -> None:
@@ -73,7 +79,7 @@ def main() -> None:
         "--concept",
         dest="concept",
         default=None,
-        help="Scope checks to a single concept YAML (supported by: integrate)",
+        help="Scope checks to a single concept (supported by: integrate, render)",
     )
     parser.add_argument(
         "--phase",

@@ -131,7 +131,8 @@ Be honest. The Novelty Assessment is the place to say that a paper is incrementa
 
 ## 6. Synthesis Over Enumeration
 
-On concept pages and overview pages, prefer interpretive paragraphs over lists of papers.
+On Concept Overview, Concept In Depth, and field overview pages, prefer interpretive paragraphs
+over lists of papers.
 
 **Avoid:**
 > - Paper A uses flow matching.
@@ -141,7 +142,8 @@ On concept pages and overview pages, prefer interpretive paragraphs over lists o
 **Prefer:**
 > Flow matching has become the dominant training paradigm for continuous-output TTS, appearing in the majority of high-performing systems since 2024. Its advantages over diffusion — fewer inference steps, simpler training objective, and comparable or superior sample quality — have proven robust across system scales and conditioning types.
 
-Lists of papers belong in the **Papers** table of a concept page, not in the synthesis sections.
+Long paper inventories do not belong in either concept rendering. Select representative citations
+for human readability; complete paper-to-claim provenance remains in the claim YAML.
 
 ---
 
@@ -186,7 +188,9 @@ Trade-offs matter for practitioners choosing systems, for downstream synthesis a
 
 Use `[[paper_id]]` for in-corpus papers and `[[concept_slug]]` for concept pages. Use wikilinks when a paper or concept is specifically relevant to the sentence — not as a general "see also." Over-linking degrades the signal.
 
-On concept pages, every claim in the Major Claims section (once that section exists) should have at least one wikilink to a supporting paper.
+Every substantive finding in a Concept Overview or Concept In Depth page should have at least one
+wikilink to a supporting paper. Use enough citations to demonstrate independence or disagreement,
+but do not reproduce the full support list from YAML.
 
 ---
 
@@ -237,10 +241,10 @@ Callouts use Obsidian/Quartz syntax: `> [!type]` followed by indented content. U
 
 ---
 
-## 13. Citation and Wikilink Format for Concept and Evidence Pages
+## 13. Citation and Wikilink Format for Concept Renderings
 
-The general wikilink rule (§10) applies everywhere. Concept and evidence pages additionally follow
-these conventions to achieve research-paper citation clarity.
+The general wikilink rule (§10) applies everywhere. Concept Overview and Concept In Depth pages
+additionally follow these conventions to achieve research-paper citation clarity.
 
 ### Syntax
 
@@ -264,29 +268,24 @@ renderer misparses it, escape with `\|`: `[[2025.acl-long.313\|F5-TTS]]`.
 | Multiple parenthetical citations | `([[id\|Name]], [[id\|Name]])` | `...([[2025.acl-long.313\|F5-TTS]], [[2025.acl-long.1043\|OZSpeech]])` |
 | Paper without a system name | `([[id]])` or `([[id]], [[id]])` | `...([[2210.02747]], [[2312.15821]])` |
 
-### Claim format in Major Claims
+### Citation density by rendering
 
-Every claim bullet in the `## Major Claims` section uses a three-part format:
-
-```markdown
-- **Claim stated at the field level.**  
-  Evidence: [[id|Name]], [[id|Name]], [[id]].  
-  Caveat: {one sentence on scope limits, if any.}
-```
-
-Omit the Caveat line when there are none. The Evidence line lists only papers that directly support
-the specific claim — not all papers in the concept. Use `[[id|Name]]` for named systems; bare
-`[[id]]` for unnamed papers.
+- **Overview:** normally cite one to three representative papers per conclusion. Prefer citations
+  that demonstrate breadth or independence rather than listing every supporting record.
+- **In Depth:** cite enough papers to explain convergence, disagreement, and scope. Citations remain
+  editorially selected; do not reproduce complete YAML support lists.
+- **Structured source:** both formats direct readers who want exhaustive provenance to
+  `wiki/_claims/{slug}.yaml`.
 
 ### Traceability invariant
 
-Every claim on a concept page and every evidence cell in a dossier table must be traceable to a
-specific entry in `wiki/_claims/{slug}.yaml`. The YAML `claim_clusters` and `papers[].claims`
+Every claim in a concept Overview and every factual evidence statement in a Concept In Depth page
+must be traceable to a specific entry in `wiki/_claims/{slug}.yaml`. The YAML `claim_clusters` and `papers[].claims`
 entries in turn derive from the paper's `## Claims` section, which cites source sections via
 `*(§N.N)*`. The full chain is:
 
 ```
-concept page claim
+rendered concept statement
   → YAML claim_cluster (supporting_papers list)
     → YAML papers[id].claims entry (role, evidence, source)
       → paper page ## Claims bullet

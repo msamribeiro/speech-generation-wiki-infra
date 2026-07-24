@@ -26,7 +26,8 @@ This agent is a **paper-page-only worker**. It has a narrow, fixed scope:
 **YOU DO NOT:**
 - Read or edit any `wiki/concepts/` file
 - Read or edit `wiki/_claims/` files
-- Read or edit `wiki/overview.md`, `wiki/evidence/`, or any `wiki/reports/` file
+- Read or edit `wiki/overview.md`, the removed legacy `wiki/evidence/` path, or any
+  `wiki/reports/` file
 - Read or edit any other `wiki/papers/` file (not even to add back-links)
 - Run a concept pass or any cross-paper synthesis
 - Create/update `wiki/venues/` files or link to them

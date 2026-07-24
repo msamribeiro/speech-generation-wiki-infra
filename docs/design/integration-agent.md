@@ -10,7 +10,7 @@
 ## Purpose
 
 The integration agent sits between the ingest stage (paper pages) and the render stage
-(concept pages). Its job is to build and maintain the claim graph in `wiki/_claims/` — the
+(concept renderings). Its job is to build and maintain the claim graph in `wiki/_claims/` — the
 structured YAML layer from which all rendered wiki output is derived.
 
 ```
@@ -21,7 +21,7 @@ wiki/_claims/{slug}.yaml     (integration output — living review's interpretat
 wiki/concepts/{slug}.md      (render output — human-readable synthesis)
 ```
 
-The YAML is the single source of truth. Concept pages and evidence dossiers are derived
+The YAML is the single source of truth. Concept Overviews and In Depth pages are derived
 artifacts and can always be regenerated from the YAML without loss.
 
 ---

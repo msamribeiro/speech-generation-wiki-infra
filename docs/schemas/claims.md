@@ -1,8 +1,8 @@
 # Claims Schema
 
 The claim graph lives in `wiki/_claims/{slug}.yaml` — one file per concept slug. This is the
-single source of truth for all rendered wiki output. Concept pages, evidence dossiers, and
-overview are all generated from these files; they are never edited directly.
+single source of truth for all rendered wiki output. Concept Overviews, Concept In Depth pages,
+and the field overview are all generated from these files; they are never edited directly.
 
 All rendered Markdown carries the version-2 provenance block defined in
 `docs/schemas/generation.md`. The claim YAML itself records evidence state and staleness through
@@ -146,16 +146,16 @@ are present for completeness and cross-concept traceability but do not count tow
 
 The field can be manually edited or revised using full paper context without re-running Phase 1.
 
-## Concept Page Source of Truth Rule
+## Concept Rendering Source of Truth Rule
 
-The `wiki/_claims/{slug}.yaml` file is the source of truth. Concept pages and evidence dossiers
-are derived from it. Never update claim status, paper roles, or method family membership by
-editing a concept page directly — all changes flow through the YAML. The integration agent
-writes the YAML; the render agent reads it to produce pages.
+The `wiki/_claims/{slug}.yaml` file is the source of truth. The Overview and In Depth renderings are
+derived from it. Never update claim status, paper roles, or method family membership by editing
+either page directly — all changes flow through the YAML. The integration agent writes the YAML;
+the render agent reads it to produce both formats.
 
 ## Staleness Detection
 
-Every rendered concept page carries a `source_digest_date` frontmatter field recording the
-`last_updated` date of the YAML at generation time. When `last_updated` in the YAML is newer
-than `source_digest_date` on the concept page, the page is stale and should be queued for
-the next render pass.
+Every rendered Overview and In Depth page carries a `source_digest_date` frontmatter field
+recording the `last_updated` date of the YAML at generation time. When `last_updated` in the YAML is
+newer than `source_digest_date` on either page, that rendering is stale and should be queued for the
+next render pass.

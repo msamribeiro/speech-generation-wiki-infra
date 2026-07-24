@@ -57,7 +57,7 @@ scripts/
     parse.py               # validates raw/parsed/
     ingest.py              # validates wiki/papers/
     integrate.py           # validates wiki/_claims/
-    render.py              # validates wiki/concepts/ and wiki/evidence/
+    render.py              # validates concept Overview and In Depth pages
     corpus.py              # cross-cutting consistency
     _base.py               # shared dataclasses and helpers
 ```
@@ -309,21 +309,25 @@ and the four open implementation questions (all resolved 2026-07-15).
 ## 7. Render Module
 
 **File:** `scripts/checks/render.py`  
-**Reads:** `wiki/_claims/*.yaml`, `wiki/concepts/*.md`, `wiki/evidence/*.md`  
+**Reads:** `wiki/_claims/*.yaml`, `wiki/concepts/*.md`
 **Scope:** All concepts with a corresponding claim YAML  
 
 ### Checks
 
 | Check | Severity | Description |
 |-------|----------|-------------|
-| `concept_page_exists` | warning | Every `wiki/_claims/{slug}.yaml` should have a corresponding `wiki/concepts/{slug}.md`; missing pages are flagged as not-yet-rendered |
-| `required_sections` | error | Concept pages must contain `## Current Assessment` and `## Major Claims` |
-| `evidence_dossier_exists` | warning | Core concepts (defined in config) should have a corresponding `wiki/evidence/{slug}.md` |
-| `paper_count_consistent` | warning | Paper count referenced in the concept page header should match `paper_count` in the corresponding `_claims/` YAML |
+| `overview_exists` | warning | Every `wiki/_claims/{slug}.yaml` should have a corresponding `wiki/concepts/{slug}.md`; missing pages are flagged as not yet rendered |
+| `in_depth_exists` | warning | Every `wiki/_claims/{slug}.yaml` should have a corresponding `wiki/concepts/{slug}-in-depth.md` |
+| `render_type_valid` | error | Overview and In Depth frontmatter must declare `overview` and `in-depth` respectively |
+| `required_sections` | error | Each format must contain the required sections from `docs/design/concept-rendering.md` |
+| `reciprocal_links` | warning | Overview and In Depth pages must link to each other |
+| `source_digest_consistent` | warning | Each format's digest date must match YAML `last_updated` |
+| `paper_count_consistent` | warning | Each format's `paper_count` must match the corresponding claim YAML |
 
 **Notes:**
 
-- `concept_page_exists` is a warning because the render stage is run on demand (monthly or after integration passes), and it is normal for newly integrated concepts to have YAML without a rendered page until the next render pass.
+- Missing renderings are warnings because render runs are on demand and newly integrated concepts
+  may have YAML before the next render pass.
 
 ---
 
@@ -428,13 +432,6 @@ integrate:
     # ...                           # (see config/health_check.yaml for the full list)
   cluster_staleness_days: 180       # cluster_last_reviewed warning threshold, Phase 2
 
-corpus:
-  core_concepts:                    # concepts that must have evidence dossiers
-    - flow-matching
-    - autoregressive-codec-tts
-    - neural-codec
-    - zero-shot-tts
-    - evaluation-metrics
 ```
 
 ---
