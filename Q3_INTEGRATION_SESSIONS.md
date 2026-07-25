@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-22, after disentanglement Phase 1 + Phase 2 closed** (re-run the commands
+**State as of 2026-07-25, after prosody-control Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -46,12 +46,12 @@ corpus-wide `Covers`-style column was dropped:
 | zero-shot-tts | 204 | 0 | 0% |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
-| autoregressive-codec-tts | 166 | 0 | 0% |
+| **autoregressive-codec-tts** | **165** | **165** | **100%** (Phase 1+2) |
 | self-supervised-speech | 146 | 0 | 0% |
 | spoken-language-model | 127 | 0 | 0% |
 | **disentanglement** | **100** | **100** | **100%** (Phase 1+2) |
 | **flow-matching** | **97** | **97** | **100%** |
-| prosody-control | 94 | 0 | 0% |
+| **prosody-control** | **94** | **94** | **100%** (Phase 1+2) |
 | voice-conversion | 87 | 0 | 0% |
 | speaker-adaptation | 79 | 0 | 0% |
 | multilingual-tts | 76 | 0 | 0% |
@@ -60,20 +60,16 @@ corpus-wide `Covers`-style column was dropped:
 | gan-vocoder | 60 | 0 | 0% |
 | streaming-tts | 54 | 0 | 0% |
 | diffusion-tts | 46 | 0 | 0% |
-| instruction-conditioned-tts | 45 | 0 | 0% |
+| **instruction-conditioned-tts** | **44** | **44** | **100%** (Phase 1+2) |
 | **rlhf-speech** | **29** | **29** | **100%** (Phase 1+2) |
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2236** | **571** | **25.5%** |
+| **TOTAL** | **2234** | **874** | **39.1%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **157** as of
-2026-07-22 after disentanglement's Phase 1 batches 1-5 (205 → 198 → 188 → 180 → 169 → 157) and
-Phase 2 (no change, Phase 2 doesn't add new papers). Prior progression: 205 after evaluation-metrics
-batch 14 (down from 221 after batch 13, 236 after batch 12, 248 after batch 11, 261 after batch 10,
-278 after batch 9, 295 after batch 8, 312 after batch 7, 325 after batch 6, 339 after batch 5, 351
-after batch 4, 366 after batches 1-3, 411 earlier, 429 before rlhf-speech Phase 1, 548 on
-2026-07-19).
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **99** as of
+2026-07-25 after prosody-control Phase 1 closed. This is a unique-paper corpus-wide
+coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
 2026-07-19 table it replaces) was originally computed by a one-off script that checked a
@@ -92,9 +88,10 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 `scripts/checks/integrate.py` already do this correctly via real YAML frontmatter parsing, so
 prefer extending those over writing a new one-off script.
 
-**`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, and now
-`disentanglement` are fully closed for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29,
-285/286, and 100/100 respectively —
+**`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, `disentanglement`,
+`autoregressive-codec-tts`, `instruction-conditioned-tts`, and `prosody-control` are fully closed
+for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, 285/286, 100/100, 165/165, 44/44,
+and 94/94 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
@@ -109,11 +106,17 @@ Phase 2 pass hit a similar (smaller-scale) pattern: a session-limit interruption
 `method_family` assignment at 77/100 with 23 empty, and the resumed run reconciled 7 of those 23
 against the same evidentiary standard already used elsewhere, landing at 16/100 legitimate
 outliers, 10 method_families, 17 claim_clusters (12 strongly_supported, 3 emerging, 2 contested).
-All other 18 concepts have **no `wiki/_claims/{slug}.yaml` file at all yet**.
+`autoregressive-codec-tts` is fully closed at 165/165 after nine Phase 1 batches and one Phase 2
+synthesis pass. The live
+YAML-frontmatter discovery on 2026-07-25 found 165 candidates rather than the 166 recorded on
+2026-07-22; the current live count is used here. `instruction-conditioned-tts` is fully closed
+at 44/44 after three Phase 1 batches and one Phase 2 synthesis pass. `prosody-control` is fully
+closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. All other 15 concepts have **no
+`wiki/_claims/{slug}.yaml` file at all yet**.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
-and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 157, fully clearing the
-Q3-and-before backlog for the remaining 18 unstarted concepts is at minimum 157 ÷ 20 ≈ **8+ Phase 1
+and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 99, fully clearing the
+Q3-and-before backlog for the remaining 15 unstarted concepts is at minimum 99 ÷ 20 ≈ **5+ Phase 1
 invocations** if every remaining paper needed only one concept entry — in practice higher, since a
 paper touching multiple unstarted concepts needs a separate YAML entry per concept (the per-concept
 "Q3-scoped papers referencing it" column above sums to far more than 157 for exactly this reason,
@@ -306,6 +309,215 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-25 — repository checkpoint after instruction-conditioned-tts and prosody-control closure
+
+- Saved the accumulated content-repository integration work in commit `1adc40f`
+  (`Integrate three Q3 speech generation concepts`): the completed
+  `autoregressive-codec-tts`, `instruction-conditioned-tts`, and `prosody-control` claim graphs,
+  plus their reader-facing integration log entries.
+- The checkpoint leaves eight Q3 concepts with Phase 1 + Phase 2 closed and 15 concepts not yet
+  started. The Q3 coverage table remains at 874/2,234 concept-paper entries (39.1%), with
+  `papers_not_in_any_yaml` at 99.
+- The infrastructure checkpoint includes this session note, the current integration backlog
+  status, and the post-Q3 recurring cross-concept claim-cluster reconciliation design item.
+
+### 2026-07-25 — prosody-control Phase 2 synthesis run, concept fully closed
+
+- Synthesized the 94-paper Phase 1 graph entirely from YAML without re-reading paper pages.
+  Built **14 method families** with 179 reciprocal memberships. The largest are
+  `explicit_acoustic_variance_control` (42 papers), `emotion_expressive_prosody_control` (28),
+  `latent_reference_prosody_transfer` (23), and `disentangled_prosody_content_timbre` (17).
+- The first pass left 23/94 papers without family membership. A consistency reconciliation added
+  evidence-backed implicit-scale, language/domain, analysis/evaluation, and voice-quality
+  families and corrected missed disentanglement, context, latent-control, and language-mediated
+  assignments. Final coverage is **82/94**, with 12 legitimate low-relevance or contextual
+  outliers rather than forced architectural assignments.
+- Built **17 claim clusters**: 13 `strongly_supported` and 4 `emerging`. Strong convergence
+  covers explicit pitch/energy/duration control, stochastic one-to-many modeling, prosody
+  disentanglement, reference transfer and leakage, linguistic context, duration/alignment,
+  local-control difficulty, SSL representation trade-offs, multimodal conditioning, hierarchical
+  emotion, language-specific structure, shared speech–singing learning, and scale-driven implicit
+  prosody.
+- Added 7 reassessment items, including future subdivision watches for the two largest families
+  and evidence watches for diversity–naturalness trade-offs, metric validity, SSL entanglement,
+  structured control plans, and reference-prompt leakage. Added 6 open questions and 5 trend notes.
+- Final `health_check.py --module integrate --concept prosody-control --phase 2` passed with
+  **0 errors and 12 expected method-family coverage warnings** for the outliers.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-25 — prosody-control Phase 1 closed, batches 1–5 (0 → 94/94)
+
+- Re-derived the Q3-and-earlier queue before each sequential invocation. Live discovery confirmed
+  **94** eligible non-Tier-2 papers, matching the session-table estimate, and excluded one Tier 2
+  page (`2312.05187`).
+- **Batch 1:** 20 papers, `1609.03499` through `2025.naacl-long.484`; 89 claims
+  (4 structured pages, 16 legacy). **Batch 2:** 20 papers, `2507.06235` through `2508.08399`;
+  85 claims (11 structured, 9 legacy). **Batch 3:** 20 papers, `2508.09702` through
+  `interspeech-2025-1020`; 87 claims (5 structured, 15 legacy).
+- The three batches added **60 papers and 261 claims** (20 structured pages, 40 legacy).
+  Every paper has claims, all claims have source citations, there are no duplicate IDs, and all
+  `method_family` lists and top-level `claim_clusters` remain empty as required for Phase 1.
+- **Batch 4:** 20 papers, `interspeech-2025-1098` through `2509.03940`; 84 claims
+  (12 structured pages, 8 legacy). **Batch 5:** the final 14 papers, `2509.04072` through
+  `2509.26514`; 59 claims (13 structured, 1 legacy).
+- Across all five batches, Phase 1 produced **404 claims from 94 papers** (45 structured pages,
+  49 legacy). Every paper has claims, all citations are specified, there are no duplicate or
+  extraneous paper IDs, and all Phase 2 structures remain empty.
+- Live discovery confirmed **0 unintegrated IDs**. Every batch's concept-scoped Phase 1 health
+  check passed with **0 errors and 0 warnings**. Phase 1 completed here; Phase 2 was subsequently
+  run and is recorded above.
+
+### 2026-07-25 — instruction-conditioned-tts Phase 2 synthesis run, concept fully closed
+
+- Synthesized the 44-paper Phase 1 graph entirely from the YAML, without re-reading paper pages.
+  Built **8 method families** with 57 total memberships and reciprocal paper assignments.
+  The largest are `direct_prompt_conditioned_speech_lm` (11 papers),
+  `description_embedding_style_control` (9), `instruction_data_and_annotation_pipeline` (8),
+  and `instruction_following_benchmark_and_audit` (8).
+- Assigned 42/44 papers to at least one family. `2310.00704` and `2502.11946` remain deliberate
+  outliers: both contribute contextual general-purpose audio-language-model evidence, but neither
+  justifies forced membership in an instruction-conditioning method family.
+- Built **15 claim clusters**: 8 `strongly_supported`, 6 `emerging`, and 1 `contested`.
+  Strong convergence appears around multidimensional natural-language control, small-data
+  instruction adaptation, instruction diversity, automatic supervision construction, structured
+  intermediate control, the open-versus-closed capability gap, demographic bias, and bounded
+  benefits from situated context.
+- The contested cluster `automatic_judges_do_not_fully_replace_human_evaluation` preserves both
+  sides of the evidence: several studies report strong judge-human agreement, while others expose
+  blind spots in fine-grained alignment, naturalness, and atypical-speech evaluation.
+- Added 5 reassessment items, 5 cross-cutting open questions, and 4 temporal trend notes. Final
+  `health_check.py --module integrate --concept instruction-conditioned-tts --phase 2` passed
+  with **0 errors and 2 expected method-family coverage warnings** for the two outliers.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-25 — instruction-conditioned-tts Phase 1 closed, batches 1–3 (0 → 44/44)
+
+- Re-derived the Q3-and-earlier queue before each sequential invocation. Live YAML-frontmatter
+  discovery found **44** eligible non-Tier-2 papers rather than the session table's prior estimate
+  of 45; 5 Tier 2 pages were excluded by protocol.
+- **Batch 1:** 20 papers, `2305.11000` through `2025.acl-long.681`; 90 claims
+  (6 structured pages, 14 legacy). **Batch 2:** 20 papers, `2025.acl-long.911` through
+  `2505.17093`; 85 claims (10 structured, 10 legacy). **Batch 3:** the final 4 papers
+  (`2509.15845`, `2509.17516`, `2509.24570`, `2509.26514`); 17 claims, all structured.
+- Phase 1 produced **192 claims across 44 papers** (20 structured pages, 24 legacy). Every paper
+  has claims; all citations are specified; there are no duplicate paper IDs; all per-paper
+  `method_family` lists and top-level `claim_clusters` remain empty as required before Phase 2.
+- Validation caught and corrected an initial empty-list YAML skeleton formatting error after
+  batch 1 and four punctuation-obscured source citations on `2509.24570`. The final
+  `health_check.py --module integrate --concept instruction-conditioned-tts --phase 1` passed
+  with **0 errors and 0 warnings**; live discovery found **0 unintegrated IDs**.
+- Phase 1 completed here; Phase 2 was subsequently run and is recorded above.
+
+### 2026-07-25 — autoregressive-codec-tts Phase 2 synthesis run, concept fully closed
+
+- Synthesized the 165-paper Phase 1 evidence graph without re-reading paper pages. Assigned
+  13 method families with 264 total memberships; every paper has at least one reciprocal family
+  assignment, including `interspeech-2025-1538`, which was retained as a low-relevance
+  speech-text autoregressive VC variant and reassessed from `active_evidence` to `minor`.
+- Largest families are `hybrid_ar_token_continuous_renderer` (52 papers),
+  `semantic_acoustic_token_cascade` (43), `unified_speech_text_language_model` (39),
+  `codec_tokenizer_infrastructure` (36), and `scaled_general_ar_codec_tts` (24).
+  The first two were explicitly queued for future sub-splitting rather than fragmented without
+  a stable evidentiary boundary.
+- Built 17 claim clusters: 15 `strongly_supported`, 1 `contested`, and 1 `emerging`.
+  The contested cluster, `parallel_and_masked_models_challenge_full_autoregression`, was
+  corrected during polarity audit: 4 papers support quality-preserving parallel/masked decoding,
+  3 provide contrary latency/quality evidence, and 1 refines the trade-off. The emerging
+  `continuous_representations_avoid_quantization_tradeoffs` cluster has only 2 supporting papers.
+- Added 5 reassessment items: the contested causal-versus-parallel comparison, the thin
+  continuous-token claim, the broad general autoregressive family, and the two largest
+  mega-families. Added 5 open questions and 5 temporal trend notes.
+- Final `health_check.py --module integrate --concept autoregressive-codec-tts --phase 2`
+  passed with **0 errors and 0 warnings**. **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-25 — autoregressive-codec-tts Phase 1 closed, batches 7–9 (120 → 165/165)
+
+- Ran the final three Phase 1 invocations sequentially, independently re-deriving the queue and
+  running the full concept-scoped health check after each.
+- **Batch 7:** integrated 20 papers from `interspeech-2025-1993` through `2509.09174`;
+  90 claims across 7 structured-format and 13 legacy-format pages. Validation passed with
+  0 errors and 0 warnings; 25 remained.
+- **Batch 8:** integrated 20 papers from `2509.09550` through `2509.21968`;
+  89 claims across 19 structured-format and 1 legacy-format page. Validation passed with
+  0 errors and 0 warnings; 5 remained.
+- **Batch 9:** integrated the final 5 papers (`2509.22062`, `2509.24570`, `2509.24650`,
+  `2509.25131`, `2509.26514`), extracting 21 claims from 5 structured-format pages.
+  Four Evidence citations on `2509.24570` ended with punctuation after the italic citation
+  marker and initially parsed as unspecified; all four were recovered from the page and corrected
+  before final validation.
+- Across the three batches: **45 papers, 200 claims, 31 structured pages, 14 legacy pages,
+  0 empty claim lists, and 0 unspecified sources**. Live discovery confirmed 165 Q3-scoped
+  non-Tier-2 candidates and zero unintegrated IDs. The final Phase 1 health check passed with
+  0 errors and 0 warnings. `papers_not_in_any_yaml` fell from 122 to 112.
+  **Phase 1 is closed at 165/165; Phase 2 synthesis remains pending.**
+
+### 2026-07-25 — autoregressive-codec-tts Phase 1 batches 5–6 (80 → 120/165)
+
+- Ran two complete 20-paper invocations sequentially, with independent oldest-first discovery
+  and a full concept-scoped Phase 1 health check after each batch.
+- **Batch 5:** integrated 20 papers from `2025.acl-long.1498` through `2508.06262`;
+  92 claims across 5 structured-format and 15 legacy-format pages, all with source citations.
+  Validation passed with 0 errors and 0 warnings; 65 remained.
+- **Batch 6:** re-derived the queue at 100/165, then integrated 20 papers from `2508.08715`
+  through `interspeech-2025-1776`; 85 claims across 5 structured-format and 15 legacy-format
+  pages, all with source citations. Final validation passed with 0 errors and 0 warnings.
+- Across both batches: **40 papers, 177 claims, 10 structured pages, 30 legacy pages, 0 empty
+  claim lists, and 0 unspecified sources**. No Phase 2 synthesis was performed.
+  `papers_not_in_any_yaml` fell from 136 to 122. **45 in-scope papers remain.**
+
+### 2026-07-25 — autoregressive-codec-tts Phase 1 batches 3–4 (40 → 80/165)
+
+- Ran two complete 20-paper invocations sequentially, re-deriving the oldest-first queue and
+  running the full concept-scoped Phase 1 health check between them.
+- **Batch 3:** integrated the next 20 papers from `2410.17799` through
+  `iclr-2025-cuFzE8Jlvb`; 96 claims across 2 structured-format and 18 legacy-format pages,
+  all with source citations. Validation passed with 0 errors and 0 warnings; 105 remained.
+- **Batch 4:** independently re-derived the queue at 60/165, then integrated the next 20 from
+  `iclr-2025-dGSOn7sdWg` through `2025.acl-long.1043`; 94 claims across 12 structured-format
+  and 8 legacy-format pages. One structured Evidence citation on `2025.naacl-demo.12` ended
+  with punctuation after the italic citation and initially parsed as unspecified; it was
+  corrected to `§3.3` before final validation. Final health check passed with 0 errors and
+  0 warnings.
+- Across both batches: **40 papers, 190 claims, 14 structured pages, 26 legacy pages, 0 empty
+  claim lists, and 0 unspecified sources**. No Phase 2 synthesis was performed.
+  `papers_not_in_any_yaml` fell from 145 to 136. **85 in-scope papers remain.**
+
+### 2026-07-25 — autoregressive-codec-tts Phase 1 batch 2 (20 → 40/165)
+
+- Re-derived the queue before writing: 165 Q3-scoped non-Tier-2 candidates, 20 already in YAML,
+  145 queued, and 9 Tier 2 pages skipped. Processed the next 20 oldest:
+  `2402.13236`, `2403.16973`, `2404.03204`, `2406.00654`, `2406.02430`, `2406.04904`,
+  `2406.05370`, `2406.07855`, `2406.18009`, `2407.05407`, `2407.08551`, `2408.02622`,
+  `2408.16532`, `2408.16725`, `2409.00750`, `2409.03283`, `2409.05377`, `2410.00037`,
+  `2410.03751`, `2410.11190`.
+- All 20 pages use the legacy bare-claims format. Extracted all 93 claims with real source
+  citations; no empty-claims pages and no `source: "not specified"` fallbacks. Phase 1 left
+  `method_family: []` throughout and did not synthesize clusters.
+- QC also repaired sentence-boundary truncation in several batch-1 evidence fields caused by
+  decimal values following `vs.` and normalized the affected batch-2 evidence sentences before
+  validation. The concept-scoped Phase 1 health check passed with 0 errors and 0 warnings.
+  Corpus-wide `papers_not_in_any_yaml` fell from 149 to 145. **125 in-scope papers remain.**
+
+### 2026-07-25 — autoregressive-codec-tts Phase 1 batch 1 (0 → 20/165)
+
+- Re-derived the Q3 scope from live paper frontmatter and metadata before writing:
+  `published_date < 2025-10-01`, `related_concepts` containing
+  `autoregressive-codec-tts`, and `ingest_tier != 2`. This produced 165 in-scope candidates,
+  one fewer than the 166 recorded in the 2026-07-22 table; 9 Tier 2 pages were skipped.
+- Created `wiki/_claims/autoregressive-codec-tts.yaml` and integrated the 20 oldest candidates,
+  from `1609.03499` (WaveNet, 2016-09-12) through `2402.08093` (BASE TTS, 2024-02-12):
+  `1609.03499`, `1703.10135`, `2106.15561`, `2209.03143`, `2210.13438`, `2301.02111`,
+  `2301.11325`, `2303.03926`, `2305.02765`, `2305.07243`, `2305.09636`, `2305.11000`,
+  `2306.00814`, `2306.12925`, `2308.16692`, `2310.00704`, `2401.07333`, `2402.01912`,
+  `2402.05755`, `2402.08093`.
+- All 20 pages use the legacy bare-claims format. Extracted all 93 claims and retained a real
+  source citation for every claim, including the two appendix-form citations on
+  `2308.16692`. Phase 1 left `method_family: []` throughout and did not synthesize clusters.
+- Inline validation confirmed 20 unique paper IDs, `paper_count == len(papers)`, 93 claims, and
+  no null sources. The concept-scoped Phase 1 health check passed with 0 errors and 0 warnings.
+  Corpus-wide `papers_not_in_any_yaml` fell from 157 to 149 because 8 of the 20 papers had not
+  previously appeared in another concept YAML. **145 in-scope papers remain.**
 
 ### 2026-07-22 — disentanglement Phase 2 synthesis run, concept fully closed
 
