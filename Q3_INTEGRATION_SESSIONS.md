@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-25, after prosody-control Phase 2 closed** (re-run the commands
+**State as of 2026-07-26, after zero-shot-tts Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -43,7 +43,7 @@ corpus-wide `Covers`-style column was dropped:
 | Concept | Q3-scoped papers referencing it | Integrated | % |
 |---|---|---|---|
 | **evaluation-metrics** | **286** | **285** | **100%** (Phase 1+2) |
-| zero-shot-tts | 204 | 0 | 0% |
+| **zero-shot-tts** | **203** | **203** | **100%** (Phase 1+2) |
 | neural-codec | 184 | 0 | 0% |
 | subjective-evaluation | 180 | 0 | 0% |
 | **autoregressive-codec-tts** | **165** | **165** | **100%** (Phase 1+2) |
@@ -65,10 +65,10 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2234** | **874** | **39.1%** |
+| **TOTAL** | **2233** | **1077** | **48.2%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **99** as of
-2026-07-25 after prosody-control Phase 1 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **93** as of
+2026-07-26 after zero-shot-tts Phase 1 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -89,9 +89,10 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 prefer extending those over writing a new one-off script.
 
 **`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, `disentanglement`,
-`autoregressive-codec-tts`, `instruction-conditioned-tts`, and `prosody-control` are fully closed
+`autoregressive-codec-tts`, `instruction-conditioned-tts`, `prosody-control`, and `zero-shot-tts`
+are fully closed
 for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, 285/286, 100/100, 165/165, 44/44,
-and 94/94 respectively —
+94/94, and 203/203 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
@@ -111,12 +112,13 @@ synthesis pass. The live
 YAML-frontmatter discovery on 2026-07-25 found 165 candidates rather than the 166 recorded on
 2026-07-22; the current live count is used here. `instruction-conditioned-tts` is fully closed
 at 44/44 after three Phase 1 batches and one Phase 2 synthesis pass. `prosody-control` is fully
-closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. All other 15 concepts have **no
-`wiki/_claims/{slug}.yaml` file at all yet**.
+closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. As of 2026-07-26,
+`zero-shot-tts` is fully closed at 203/203 after eleven Phase 1 batches and one Phase 2 synthesis
+pass, leaving 14 concepts with no `wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
-and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 99, fully clearing the
-Q3-and-before backlog for the remaining 15 unstarted concepts is at minimum 99 ÷ 20 ≈ **5+ Phase 1
+and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 93, fully clearing the
+Q3-and-before backlog for the remaining 14 unstarted concepts is at minimum 93 ÷ 20 ≈ **5+ Phase 1
 invocations** if every remaining paper needed only one concept entry — in practice higher, since a
 paper touching multiple unstarted concepts needs a separate YAML entry per concept (the per-concept
 "Q3-scoped papers referencing it" column above sums to far more than 157 for exactly this reason,
@@ -309,6 +311,115 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-26 — zero-shot-tts Phase 2 synthesis run, concept fully closed
+
+- Ran the first Phase 2 synthesis pass against all 203 Phase 1 entries and 903 extracted claims,
+  reading only `_claims/zero-shot-tts.yaml` as required. No reassessment items were pending.
+- Created 9 architecture-based `method_families` and assigned 187/203 papers reciprocally. The
+  largest families are `autoregressive_speech_token_lm` (64 papers),
+  `nonautoregressive_flow_matching` (38), and `hybrid_ar_semantic_nar_acoustic` (25). The 16
+  unassigned papers have empty Phase 1 architecture fields and contribute primarily
+  infrastructure, evaluation, historical-context, or architecture-comparison evidence, so they
+  remain legitimate outliers rather than being forced into a method family.
+- Created 18 `claim_clusters`: 16 `strongly_supported` and 2 `contested`. The contested clusters
+  cover whether cross-lingual cloning necessarily leaks language or prosody and whether automatic
+  metrics consistently fail to capture perceived cloning quality. Added 5 open questions and 5
+  trend notes covering prompt robustness, representation choice, evaluation validity, data scale,
+  long-form generation, and cloning safeguards.
+- Phase 2 health validation passed with 0 errors and 16 expected method-family coverage warnings.
+  Corpus-wide totals are now 1,077 paper entries and 185 claim clusters across 9 concept YAMLs;
+  `papers_not_in_any_yaml` remains 93. `zero-shot-tts` is now fully closed for Q3-and-earlier.
+
+### 2026-07-26 — zero-shot-tts Phase 1 batch 11, Phase 1 complete (200 → 203/203)
+
+- Completed the final oldest-first Phase 1 batch with `2509.22167`, `2509.24650`, and
+  `2509.25131`. Authoritative metadata discovery now finds all 203 eligible Q3-and-earlier papers
+  integrated, with 0 remaining after excluding 3 Tier 2 records. The closure audit specifically
+  rechecked `2407.04051`: its page frontmatter omits `ingest_tier`, but its authoritative raw
+  metadata records `ingest_tier: 2`, so the health check correctly requires its exclusion.
+- Extracted all 14 claims directly from the three structured paper pages. Every claim retains a
+  source citation; there are no empty claims lists and no `source: "not specified"` fallbacks.
+- The concept-scoped Phase 1 health check passed with 0 errors and 0 warnings
+  (`total_paper_entries=1077`, `papers_not_in_any_yaml=93`). Phase 2 was not run:
+  `method_families` and `claim_clusters` remain empty pending explicit go-ahead.
+
+### 2026-07-26 — zero-shot-tts Phase 1 batches 9–10 (160 → 200/203)
+
+- Continued `zero-shot-tts` with exactly two sequential oldest-first Phase 1 batches. Batch 9
+  integrated 20 papers from `2509.02020` through `2509.14579`; batch 10 integrated 20 papers from
+  `2509.14684` through `2509.22062`. The concept now has 200/203 entries, with exactly 3 remaining.
+- Batch 9 preserved 89 claims from 15 structured and 5 legacy pages; batch 10 preserved 86 claims
+  from 18 structured and 2 legacy pages. All 175 claims retain source citations, with no empty
+  claims lists and no `source: "not specified"` fallbacks. `2509.12831` was the only paper without
+  an existing entry in another claim YAML and was extracted directly from its paper page.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Phase 2 was not run. Corpus-wide `papers_not_in_any_yaml` decreased from 94 to 93 in batch 9
+  and remained 93 after batch 10.
+
+### 2026-07-26 — zero-shot-tts Phase 1 batches 7–8 (120 → 160/203)
+
+- Continued `zero-shot-tts` with exactly two sequential oldest-first Phase 1 batches. Batch 7
+  integrated 20 papers from `interspeech-2025-0596` through `interspeech-2025-1726`; batch 8
+  integrated 20 papers from `interspeech-2025-1779` through `2507.14534`. The concept now has
+  160/203 entries, with 43 remaining.
+- Batch 7 preserved 83 claims from 12 structured and 8 legacy pages; batch 8 preserved 83 claims
+  from 8 structured and 12 legacy pages. All 166 claims retain source citations, with no empty
+  claims lists and no `source: "not specified"` fallbacks. Two papers without an existing entry
+  in another claim YAML (`interspeech-2025-0787`, `interspeech-2025-2815`) were extracted directly
+  from their legacy claim blocks; the first batch-7 attempt detected the unsupported-format case
+  and stopped before writing, after which the legacy compatibility path was applied from a clean
+  120-paper state.
+- The concept-scoped Phase 1 health check passed after each completed batch with 0 errors and
+  0 warnings. Phase 2 was not run. Corpus-wide `papers_not_in_any_yaml` decreased from 96 to 94.
+
+### 2026-07-26 — zero-shot-tts Phase 1 batches 5–6 (80 → 120/203)
+
+- Continued `zero-shot-tts` with exactly two sequential oldest-first Phase 1 batches. Batch 5
+  integrated 20 papers from `2025.acl-long.1043` through `2508.02038`; batch 6 integrated 20
+  papers from `2504.10352` through `interspeech-2025-0575`. The concept now has 120/203 entries,
+  with 83 remaining.
+- Batch 5 preserved 93 claims from 9 structured and 11 legacy pages; batch 6 preserved 91 claims
+  from 2 structured and 18 legacy pages. All 184 claims retain source citations, with no empty
+  claims lists and no `source: "not specified"` fallbacks. Every paper had an existing validated
+  paper-level extraction in another concept YAML; each received fresh zero-shot-TTS-specific
+  relevance, evidence-role, current-role, claim-relevance, caveat, and empty `method_family`
+  judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Phase 2 was not run. Corpus-wide `papers_not_in_any_yaml` remains 96.
+
+### 2026-07-26 — zero-shot-tts Phase 1 batches 3–4 (40 → 80/203)
+
+- Continued `zero-shot-tts` with exactly two sequential oldest-first Phase 1 batches. Batch 3
+  integrated 20 papers from `2501.06282` through `2505.13000`; batch 4 integrated 20 papers from
+  `2505.17589` through `2025.acl-industry.42`. The concept now has 80/203 entries, with 123
+  remaining.
+- Batch 3 preserved 93 claims from 9 structured and 11 legacy pages; batch 4 preserved 84 claims
+  from 16 structured and 4 legacy pages. All 177 claims retain source citations, with no empty
+  claims lists and no `source: "not specified"` fallbacks. Three pages without an existing entry
+  in another claim YAML (`iclr-2025-hQvX9MBowC`, `2025.naacl-short.65`, `2507.15272`) were
+  extracted directly from their structured claim blocks; all other entries reused validated
+  paper-level extractions and received fresh zero-shot-TTS-specific judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Phase 2 was not run. Corpus-wide `papers_not_in_any_yaml` decreased from 99 before batch 3 to
+  96 after batch 4.
+
+### 2026-07-26 — zero-shot-tts Phase 1 batches 1–2 (0 → 40/203)
+
+- Started `zero-shot-tts` from scratch and ran exactly two sequential oldest-first Phase 1 batches.
+  Live discovery found 203 Q3-and-earlier non-Tier-2 candidates, correcting the prior 204-paper
+  estimate, and skipped 3 Tier 2 pages. Batch 1 integrated the first 20 papers from `1712.05884`
+  through `2403.03100`; batch 2 integrated the next 20 from `2403.16973` through `2409.09098`.
+  The concept now has 40/203 entries, with 163 remaining.
+- The 40 paper-level extractions reused already validated entries from other concept YAMLs while
+  applying fresh zero-shot-TTS-specific paper relevance, evidence roles, current roles, claim
+  relevance, caveats, and empty Phase 1 `method_family` assignments. Claim counts were checked
+  against each complete paper page before writing: batch 1 preserved 93 claims from 20 legacy
+  pages; batch 2 preserved 94 claims from 2 structured and 18 legacy pages. All 187 claims retain
+  source citations; no `source: "not specified"` fallback was needed.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Phase 2 was not run. Corpus-wide `papers_not_in_any_yaml` remains 99 because all 40 papers
+  already participated in at least one of the eight previously integrated concepts.
 
 ### 2026-07-25 — repository checkpoint after instruction-conditioned-tts and prosody-control closure
 
