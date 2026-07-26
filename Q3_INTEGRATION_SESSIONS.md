@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-26, after zero-shot-tts Phase 2 closed** (re-run the commands
+**State as of 2026-07-26, after diffusion-tts Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -59,13 +59,13 @@ corpus-wide `Covers`-style column was dropped:
 | **speech-to-speech** | **63** | **60** | **95%** |
 | gan-vocoder | 60 | 0 | 0% |
 | streaming-tts | 54 | 0 | 0% |
-| diffusion-tts | 46 | 0 | 0% |
+| **diffusion-tts** | **46** | **46** | **100%** (Phase 1+2) |
 | **instruction-conditioned-tts** | **44** | **44** | **100%** (Phase 1+2) |
 | **rlhf-speech** | **29** | **29** | **100%** (Phase 1+2) |
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2233** | **1077** | **48.2%** |
+| **TOTAL** | **2233** | **1123** | **50.3%** |
 
 `papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **93** as of
 2026-07-26 after zero-shot-tts Phase 1 closed. This is a unique-paper corpus-wide
@@ -89,10 +89,10 @@ handling both quoting styles and the correct field name — `scripts/corpus_summ
 prefer extending those over writing a new one-off script.
 
 **`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, `disentanglement`,
-`autoregressive-codec-tts`, `instruction-conditioned-tts`, `prosody-control`, and `zero-shot-tts`
-are fully closed
+`autoregressive-codec-tts`, `instruction-conditioned-tts`, `prosody-control`, `zero-shot-tts`,
+and `diffusion-tts` are fully closed
 for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, 285/286, 100/100, 165/165, 44/44,
-94/94, and 203/203 respectively —
+94/94, 203/203, and 46/46 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
@@ -114,11 +114,12 @@ YAML-frontmatter discovery on 2026-07-25 found 165 candidates rather than the 16
 at 44/44 after three Phase 1 batches and one Phase 2 synthesis pass. `prosody-control` is fully
 closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. As of 2026-07-26,
 `zero-shot-tts` is fully closed at 203/203 after eleven Phase 1 batches and one Phase 2 synthesis
-pass, leaving 14 concepts with no `wiki/_claims/{slug}.yaml` file yet.
+pass. `diffusion-tts` is fully closed at 46/46 after three Phase 1 batches and one Phase 2
+synthesis pass, leaving 13 concepts with no `wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 93, fully clearing the
-Q3-and-before backlog for the remaining 14 unstarted concepts is at minimum 93 ÷ 20 ≈ **5+ Phase 1
+Q3-and-before backlog for the remaining 13 unstarted concepts is at minimum 93 ÷ 20 ≈ **5+ Phase 1
 invocations** if every remaining paper needed only one concept entry — in practice higher, since a
 paper touching multiple unstarted concepts needs a separate YAML entry per concept (the per-concept
 "Q3-scoped papers referencing it" column above sums to far more than 157 for exactly this reason,
@@ -311,6 +312,53 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-26 — diffusion-tts Phase 2 synthesis run, concept fully closed
+
+- Ran the first Phase 2 synthesis pass against all 46 Phase 1 entries and 199 extracted claims,
+  reading only `_claims/diffusion-tts.yaml` as required. No reassessment items were pending.
+- Created 7 architecture-based `method_families` and assigned 41/46 papers reciprocally. The
+  largest families are `score_based_diffusion_synthesis` (14 papers),
+  `flow_and_consistency_alternatives` (7), and `autoregressive_diffusion_hybrids` and
+  `adversarial_and_distilled_diffusion` (5 each). Five architecture-unspecified or
+  diffusion-adjacent papers remain legitimate outliers rather than being forced into a family.
+- Created 15 `claim_clusters`, all `strongly_supported`, spanning diffusion fidelity and sampling
+  cost; acceleration, latent targets, guidance, and transformer scaling; zero-shot transfer,
+  factorized and expressive control, robustness, and preference optimization; flow/consistency
+  alternatives, alignment supervision, representation choice, and evaluation limitations. Added
+  5 open questions and 5 trend notes.
+- Phase 2 health validation passed with 0 errors and 5 expected method-family coverage warnings.
+  Corpus-wide totals are now 1,123 paper entries and 200 claim clusters across 10 concept YAMLs;
+  `papers_not_in_any_yaml` remains 93. `diffusion-tts` is now fully closed for Q3-and-earlier.
+
+### 2026-07-26 — diffusion-tts Phase 1 batches 2–3, Phase 1 complete (20 → 46/46)
+
+- Continued `diffusion-tts` with exactly two sequential oldest-first Phase 1 batches. Batch 2
+  integrated 20 papers from `interspeech-2025-0554` through `2509.08696`; batch 3 integrated the
+  final 6 from `2509.09748` through `2509.25416`. Authoritative discovery now finds all 46
+  eligible Q3-and-earlier papers integrated, with 0 remaining.
+- Batch 2 preserved 86 claims from 17 structured and 3 legacy pages; batch 3 preserved 25 claims
+  from 6 structured pages. All 111 claims retain source citations, with no empty claims lists and
+  no `source: "not specified"` fallbacks. Each entry received fresh diffusion-TTS-specific
+  relevance, evidence-role, current-role, claim-relevance, caveat, and empty `method_family`
+  judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide `papers_not_in_any_yaml` remained 93. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending explicit go-ahead.
+
+### 2026-07-26 — diffusion-tts Phase 1 batch 1 (0 → 20/46)
+
+- Started `diffusion-tts` with the standard Q3-and-earlier Phase 1 protocol. Authoritative
+  discovery found 46 eligible papers, no Tier 2 exclusions, and no pre-existing concept YAML.
+  Processed the 20 oldest papers from `2105.06337` through `interspeech-2025-0063`; 26 remain.
+- Preserved all 88 claims from 4 structured and 16 legacy pages. Every paper-level extraction was
+  already validated in another concept YAML, then received fresh diffusion-TTS-specific paper
+  relevance, evidence roles, current role, claim relevance, caveat, and empty `method_family`
+  judgments. All claims retain source citations; there are no empty claim lists or
+  `source: "not specified"` fallbacks.
+- The concept-scoped Phase 1 health check passed with 0 errors and 0 warnings
+  (`total_paper_entries=1097`, `papers_not_in_any_yaml=93`). Phase 2 was not run, and
+  `method_families` and `claim_clusters` remain empty.
 
 ### 2026-07-26 — zero-shot-tts Phase 2 synthesis run, concept fully closed
 
