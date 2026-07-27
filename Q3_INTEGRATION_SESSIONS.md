@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-26, after diffusion-tts Phase 2 closed** (re-run the commands
+**State as of 2026-07-27, after subjective-evaluation Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -45,7 +45,7 @@ corpus-wide `Covers`-style column was dropped:
 | **evaluation-metrics** | **286** | **285** | **100%** (Phase 1+2) |
 | **zero-shot-tts** | **203** | **203** | **100%** (Phase 1+2) |
 | neural-codec | 184 | 0 | 0% |
-| subjective-evaluation | 180 | 0 | 0% |
+| **subjective-evaluation** | **180** | **180** | **100%** (Phase 1+2) |
 | **autoregressive-codec-tts** | **165** | **165** | **100%** (Phase 1+2) |
 | self-supervised-speech | 146 | 0 | 0% |
 | spoken-language-model | 127 | 0 | 0% |
@@ -65,10 +65,10 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2233** | **1123** | **50.3%** |
+| **TOTAL** | **2233** | **1303** | **58.4%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **93** as of
-2026-07-26 after zero-shot-tts Phase 1 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **106** as of
+2026-07-27 after subjective-evaluation Phase 2 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -115,11 +115,13 @@ at 44/44 after three Phase 1 batches and one Phase 2 synthesis pass. `prosody-co
 closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. As of 2026-07-26,
 `zero-shot-tts` is fully closed at 203/203 after eleven Phase 1 batches and one Phase 2 synthesis
 pass. `diffusion-tts` is fully closed at 46/46 after three Phase 1 batches and one Phase 2
-synthesis pass, leaving 13 concepts with no `wiki/_claims/{slug}.yaml` file yet.
+synthesis pass. `subjective-evaluation` is fully closed at 180/180 after nine Phase 1 batches
+and one Phase 2 synthesis pass; 12 concepts have no `wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
-and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 93, fully clearing the
-Q3-and-before backlog for the remaining 13 unstarted concepts is at minimum 93 ÷ 20 ≈ **5+ Phase 1
+and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 106, fully clearing the
+Q3-and-before backlog for the remaining 12 unstarted concepts is at minimum
+106 ÷ 20 ≈ **6+ Phase 1
 invocations** if every remaining paper needed only one concept entry — in practice higher, since a
 paper touching multiple unstarted concepts needs a separate YAML entry per concept (the per-concept
 "Q3-scoped papers referencing it" column above sums to far more than 157 for exactly this reason,
@@ -312,6 +314,109 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-27 — subjective-evaluation Phase 2 synthesis run, concept fully closed
+
+- Ran the first Phase 2 synthesis pass against all 180 Phase 1 entries and 771 extracted claims,
+  reading only `_claims/subjective-evaluation.yaml` as required. No reassessment items were
+  pending.
+- Created 7 architecture-based `method_families` with 177 reciprocal memberships across 133/180
+  papers. The families cover autoregressive, transformer encoder–decoder, GAN, diffusion,
+  flow-matching, variational-latent, and hybrid generation. The remaining 47 papers have empty
+  cached architecture fields and are legitimate evaluation, benchmark, dataset, or metric
+  outliers rather than candidates for invented architecture labels.
+- Created 17 `claim_clusters`: 15 `strongly_supported`, 1 `emerging`, and 1 `contested`. The
+  synthesis covers metric–perception disagreement, learned quality predictors, MOS protocol
+  sensitivity, pairwise designs, preference alignment and its trade-offs, speaker-similarity
+  confounds, fine-grained attribute tests, domain and demographic effects, participatory
+  evaluation, automated judges, benchmark design, speed–quality testing, codec ceilings, and
+  distinct perceptual axes. The contested cluster concerns whether LLM and audio-language-model
+  judges are uniformly reliable for fine-grained and non-verbal attributes.
+- Added 5 open questions and 5 trend notes. Phase 2 health validation passed with 0 errors and
+  47 expected method-family coverage warnings for architecture-unspecified papers. Corpus-wide
+  totals are now 1,303 paper entries and 217 claim clusters across 11 concept YAMLs;
+  `papers_not_in_any_yaml` remains 106. `subjective-evaluation` is fully closed for
+  Q3-and-earlier.
+
+### 2026-07-27 — subjective-evaluation Phase 1 batch 9, Phase 1 complete (160 → 180/180)
+
+- Completed the final oldest-first Phase 1 batch, integrating 20 papers from `2509.16010`
+  through `2509.26542`. Authoritative discovery confirms all 180 eligible Q3-and-earlier papers
+  are integrated, with 0 remaining, 0 extraneous entries, and 4 Tier 2 pages excluded.
+- Preserved 85 claims from 20 structured pages, bringing the Phase 1 total to 771 claims.
+  Every paper has a non-empty claim list, every claim retains a source citation, and each entry
+  received subjective-evaluation-specific relevance, evidence-role, current-role,
+  claim-relevance, caveat, and empty `method_family` judgments.
+- The concept-scoped Phase 1 health check passed with 0 errors and 0 warnings. Corpus-wide totals
+  are now 1,303 paper entries and 200 claim clusters across 11 concept YAMLs;
+  `papers_not_in_any_yaml` remains 106. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending explicit approval.
+
+### 2026-07-27 — subjective-evaluation Phase 1 batches 7–8 (120 → 160/180)
+
+- Continued `subjective-evaluation` with exactly two sequential oldest-first Phase 1 batches.
+  Batch 7 integrated 20 papers from `interspeech-2025-2151` through `2506.23367`; batch 8
+  integrated the next 20 from `2509.03292` through `2509.15629`. Authoritative discovery now
+  leaves 20 of 180 eligible papers: one final full Phase 1 batch.
+- Batch 7 preserved 80 claims from 12 structured and 8 legacy pages; batch 8 preserved 89 claims
+  from 17 structured and 3 legacy pages. One batch-8 paper had no reusable entry in another
+  concept YAML and received a fresh five-claim extraction from its full page, including its
+  20-listener MOS and missing offline-baseline comparison caveats. All 169 claims retain source
+  citations, every paper has a non-empty claim list, and each entry received fresh
+  subjective-evaluation-specific judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,283 paper entries and 200 claim clusters across 11 concept YAMLs;
+  `papers_not_in_any_yaml` decreased 107 → 106. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending review.
+
+### 2026-07-27 — subjective-evaluation Phase 1 batches 5–6 (80 → 120/180)
+
+- Continued `subjective-evaluation` with exactly two sequential oldest-first Phase 1 batches.
+  Batch 5 integrated 20 papers from `interspeech-2025-0464` through
+  `interspeech-2025-1210`; batch 6 integrated the next 20 from `interspeech-2025-1229` through
+  `interspeech-2025-2032`. Authoritative discovery now leaves 60 of 180 eligible papers.
+- Batch 5 preserved 86 claims from 8 structured and 12 legacy pages; batch 6 preserved 84 claims
+  from 20 structured pages. One batch-6 paper had no reusable entry in another concept YAML and
+  received a fresh four-claim extraction from its full page, including the small listening-panel
+  caveat. All 170 claims retain source citations, every paper has a non-empty claim list, and
+  each entry received fresh subjective-evaluation-specific judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,243 paper entries and 200 claim clusters across 11 concept YAMLs;
+  `papers_not_in_any_yaml` decreased 108 → 107. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending review.
+
+### 2026-07-27 — subjective-evaluation Phase 1 batches 3–4 (40 → 80/180)
+
+- Continued `subjective-evaluation` with exactly two sequential oldest-first Phase 1 batches.
+  Batch 3 integrated 20 papers from `2506.09874` through `2025.sigdial-1.21`; batch 4 integrated
+  the next 20 from `2025.sigdial-1.27` through `interspeech-2025-0438`. Authoritative discovery
+  now leaves 100 of 180 eligible Q3-and-earlier papers.
+- Batch 3 preserved 87 claims from 15 structured and 5 legacy pages; batch 4 preserved 84 claims
+  from 6 structured and 14 legacy pages. One batch-3 paper had no reusable entry in another
+  concept YAML and received a fresh five-claim extraction from its full page. All 171 claims
+  retain source citations, every paper has a non-empty claim list, and each entry received fresh
+  subjective-evaluation-specific judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,203 paper entries and 200 claim clusters across 11 concept YAMLs;
+  `papers_not_in_any_yaml` decreased 109 → 108. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending review.
+
+### 2026-07-27 — subjective-evaluation Phase 1 batches 1–2 (0 → 40/180)
+
+- Started `subjective-evaluation` with exactly two sequential oldest-first Phase 1 batches.
+  Authoritative discovery found 180 eligible Q3-and-earlier papers, excluded 4 Tier 2 pages,
+  and found no pre-existing concept YAML. Batch 1 integrated the first 20 papers from
+  `1609.03499` through `2410.17196`; batch 2 integrated the next 20 from
+  `2025.chipsal-1.18` through `2507.06116`. There are 140 eligible papers remaining.
+- Batch 1 preserved 93 claims from 1 structured and 19 legacy pages; batch 2 preserved 83
+  claims from 18 structured and 2 legacy pages. All 176 claims retain source citations, every
+  paper has a non-empty claim list, and each entry received subjective-evaluation-specific
+  relevance, evidence-role, current-role, claim-relevance, caveat, and empty `method_family`
+  judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,163 paper entries and 200 claim clusters across 11 concept YAMLs;
+  `papers_not_in_any_yaml` is 109 after additional Q4 ingests. Phase 2 was not run;
+  `method_families` and `claim_clusters` remain empty pending review.
 
 ### 2026-07-26 — diffusion-tts Phase 2 synthesis run, concept fully closed
 
