@@ -19,7 +19,7 @@
   "year": 2025,
   "month": 11,
   "published_date": "2025-11-05",
-  "ingested_date": null,
+  "ingested_date": "2026-07-27",
   "url": "https://aclanthology.org/2025.emnlp-main.1160",
   "pdf_url": "https://aclanthology.org/2025.emnlp-main.1160.pdf",
   "pdf_path": "raw/papers/2025.emnlp-main.1160.pdf",
@@ -31,10 +31,22 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Benchmark for spoken dialogue models evaluating complex conversational understanding and voice response generation; directly advances SCA evaluation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-11-05"
+  "conference_date": "2025-11-05",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-07-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "275207e"
+    }
+  ]
 }

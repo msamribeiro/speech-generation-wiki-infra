@@ -32,9 +32,10 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Survey of speculative decoding and generation-refinement frameworks for autoregressive models; relevant to fast AR TTS inference but primarily about general LLMs.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "rejected_date": "2026-07-27"
 }

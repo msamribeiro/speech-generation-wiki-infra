@@ -60,72 +60,28 @@ item without the batch looking short — see [[feedback_batch_execution_undercou
 cross-check the actual committed paper IDs against this table's `#` column at the end of every
 batch (not just at session close), not just the running ingested-count.**
 
-**Pre-selected candidates (24 papers, 6 batches of 4), chronological by `published_date`,**
-starting from the first remaining paper after `2510.19509` (last ingested in numbered-list order,
-session 15 — `2510.10785` and `2510.12116` are handled separately, see above):
+**List fully consumed as of session 16 batch 8 close (2026-07-27).** All 16 items resolved: 12
+ingested, 2 rejected (`2507.14815`, `2025.findings-emnlp.716`), plus `2510.20210`–`2510.26190`
+(the 16 items before this list, session 16 batches 1–4 on 2026-07-26) already closed out earlier.
+**Next session: re-run the candidate-selection script fresh** (see Scope section above) rather than
+assuming a stale list — the accepted set has changed mid-session twice already this session
+(9 new EMNLP papers appeared once; check again before building the next batch). Continue
+chronologically from the first remaining paper after `2025.findings-emnlp.933`.
 
-| # | ID | Date | Venue | Task | Title |
-|---|----|----|----|----|----|
-| 1 | `2510.20210` | 2025-10-23 | arXiv | TTS, evaluation | Vox-Evaluator: Enhancing Stability and Fidelity for Zero-Shot TTS with A Multi-Level Evaluator |
-| 2 | `2510.20513` | 2025-10-23 | arXiv | TTS, evaluation | Decoding the Ear: A Framework for Objectifying Expressiveness from Human Preference Through Efficient Alignment |
-| 3 | `2510.20677` | 2025-10-23 | arXiv | singing, VC | R2-SVC: Towards Real-World Robust and Expressive Zero-Shot Singing Voice Conversion |
-| 4 | `2510.21209` | 2025-10-24 | Interspeech | codec | SpecTokenizer: A Lightweight Streaming Codec in the Compressed Spectrum Domain |
-| 5 | `2510.21685` | 2025-10-24 | arXiv | singing, VC | StylePitcher: Generating Style-Following and Expressive Pitch Curves for Versatile Singing Tasks |
-| 6 | `2510.22241` | 2025-10-25 | arXiv | codec | FOA Tokenizer: Low-Bitrate Neural Codec for First Order Ambisonics with Spatial Consistency Loss |
-| 7 | `2510.22588` | 2025-10-26 | arXiv | TTS, SCA | UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models |
-| 8 | `2511.05516` | 2025-10-26 | arXiv | TTS, SCA | Ming-UniAudio: Speech LLM for Joint Understanding, Generation and Editing with Unified Representation |
-| 9 | `2510.23541` | 2025-10-27 | arXiv | TTS | SoulX-Podcast: Towards Realistic Long-form Podcasts with Dialectal and Paralinguistic Diversity |
-| 10 | `2510.25178` | 2025-10-27 | arXiv | TTS | SFMS-ALR: Script-First Multilingual Speech Synthesis with Adaptive Locale Resolution |
-| 11 | `2506.21864` | 2025-10-27 | arXiv | SCA, TTS | DeepOmni: Towards Seamless and Smart Speech Interaction with Adaptive Modality-Specific MoE |
-| 12 | `2510.23312` | 2025-10-27 | arXiv | codec, evaluation | Low-Resource Audio Codec (LRAC): 2025 Challenge Description |
-| 13 | `2510.24372` | 2025-10-28 | arXiv | TTS | Bayesian Speech Synthesizers Can Learn from Multiple Teachers |
-| 14 | `2510.25566` | 2025-10-29 | arXiv | codec, TTS | PitchFlower: A Flow-Based Neural Audio Codec with Pitch Controllability |
-| 15 | `2510.25577` | 2025-10-29 | arXiv | evaluation | Lost in Phonation: Voice Quality Variation as an Evaluation Dimension for Speech Foundation Models |
-| 16 | `2510.26190` | 2025-10-30 | arXiv | TTS, evaluation | SP-MCQA: Evaluating Intelligibility of TTS Beyond the Word Level |
-| 17 | `2507.14815` | 2025-10-31 | arXiv | SCA | FastLongSpeech: Enhancing Large Speech-Language Models for Efficient Long-Speech Processing |
-| 18 | `2511.00256` | 2025-10-31 | arXiv | VC | NaturalVoices: A Large-Scale, Spontaneous and Emotional Podcast Dataset for Voice Conversion |
-| 19 | `2511.00850` | 2025-11-02 | arXiv | SCA, evaluation | MULTI-Bench: A Multi-Turn Interactive Benchmark for Assessing Emotional Intelligence Ability of Spoken Dialogue Models |
-| 20 | `2511.01056` | 2025-11-02 | arXiv | VC | WhisperVC: Decoupled Cross-Domain Alignment and Speech Generation for Low-Resource Whisper-to-Normal Conversion |
-| 21 | `2511.02104` | 2025-11-03 | arXiv | TTS, evaluation | Toward Objective and Interpretable Prosody Evaluation in Text-to-Speech: A Linguistically Motivated Approach |
-| 22 | `2511.01261` | 2025-11-03 | arXiv | SCA, evaluation | Speech-DRAME: A Framework for Human-Aligned Benchmarks in Speech Role-Play |
-| 23 | `2025.findings-emnlp.241` | 2025-11-05 | EMNLP | SCA | Enhancing Speech-to-Speech Dialogue Modeling with End-to-End Retrieval-Augmented Generation |
-| 24 | `2025.findings-emnlp.1077` | 2025-11-05 | EMNLP | VC | EZ-VC: Easy Zero-Shot Any-to-Any Voice Conversion |
+**Pre-flight checks done for this list (2026-07-27):** no full-version/duplicate `arxiv_comment`
+signals on any of the 16 (checked before batch 1), no existing wiki pages, no title collisions.
+Items 7 (`2025.emnlp-main.1160`) and 16 (`2025.findings-emnlp.933`) are the proceedings-canonical
+versions of two arXiv preprints (`2507.22968` C3-Bench, `2502.17810` URO-Bench) already correctly
+rejected as duplicates at fetch time — ingest items 7 and 16 normally, this is not a fresh dedup
+decision. `2510.12116` remains pending in `raw/review_queue.md` — do not re-select it.
 
-Batches: 1–4, 5–8, 9–12, 13–16, 17–20, 21–24 (matching the standard cadence below).
-
-**Pre-flight checks already done for this list (2026-07-19), don't need to be re-run unless the
-list changes:**
-- No duplicate/full-version signals found — checked `arxiv_comment` on all 3 papers whose arXiv
-  ID prefix doesn't match `published_date` (`2511.05516`, `2506.21864`, `2507.14815`); none say
-  "full version of" or similar, and none title-match an existing wiki page. See
-  [[feedback_arxiv_full_version_dedup]] for what this check looks for and why. Note `2511.05516`
-  is an unusual case: its ID prefix (November) is chronologically *after* its `published_date`
-  (2025-10-26) — trust `published_date` as always, but this is worth a second glance if the page
-  ends up looking off, since it's the reverse direction of the usual prefix-lag gotcha.
-- No exact-title collisions found against `papers/index.md` for any of the 24. One companion-paper
-  pair identified (not a duplicate): item 12 (`2510.23312`, "LRAC: 2025 Challenge Description") and
-  the already-ingested `2510.00264` ("Baseline Systems For The 2025 Low-Resource Audio Codec
-  Challenge") share one author (Yusuf Ziya Isik) and the same challenge — both are legitimate
-  distinct papers (challenge description vs. baseline systems), ingest both independently, no
-  cross-linking assumptions needed beyond what each paper's own bibliography supports.
-- Corpus-scope precedent chain likely to recur on several SCA/evaluation-tagged papers this batch
-  — read each carefully before ingesting, don't trust the pre-assigned task tag:
-  - `2507.14815` (FastLongSpeech) — relevance_note says "efficient processing of long-form speech,"
-    which is exactly the shape of a potential understanding/efficiency paper rather than a genuine
-    generation paper (cf. `2510.09424`, `2510.12116` this session). Verify it actually generates or
-    evaluates spoken output, not just processes/comprehends long speech input more efficiently.
-  - `2511.00850` (MULTI-Bench) and `2511.01261` (Speech-DRAME) — both benchmark/evaluation papers
-    for spoken dialogue models; check against the AURA/VoiceAgentBench precedent (agentic/dialogue
-    evaluation where TTS/VC is incidental to constructing benchmark input is fine; pure text-output
-    scoring with no spoken-output evaluation at all is the FAMA/MLC-SLM pattern) before assuming
-    either way. See [[feedback_corpus_scope_asr_false_accept]] for the full precedent chain.
-  - `2511.05516` (Ming-UniAudio) and `2506.21864` (DeepOmni) — both framed as "speech LLM" /
-    "seamless speech interaction" systems; titles suggest genuine generation (Ming-UniAudio's own
-    title says "Generation and Editing"), but verify against actual evaluated spoken output before
-    trusting the SCA tag, per the same precedent chain.
-- Also still pending from session 15: `2510.12116` remains `status: accepted` but undecided in
-  `raw/review_queue.md` — do not re-select it into a fresh batch; it needs an explicit user
-  decision, not automatic inclusion in chronological ordering.
+Corpus-scope precedent chain to keep applying: `2025.emnlp-main.1160` (C3), `2025.emnlp-main.1447`
+(MULTIVOX), and `2025.findings-emnlp.933` (URO-Bench) are all SCA/evaluation benchmark papers —
+check each against the AURA/VoiceAgentBench-vs-FAMA/MLC-SLM precedent (does the benchmark score the
+system's generated *speech* output, or only text/structured output from a system that merely
+consumes speech input?) rather than assuming either way from the title. `2025.findings-emnlp.716`
+is a general AR-model speculative-decoding survey with only incidental TTS relevance — worth a
+second look on whether it clears the corpus bar, similar to the reasoning applied to `2507.14815`.
 
 ---
 
@@ -391,6 +347,54 @@ Session-limit interruption hit twice this batch: once mid-`2510.25566` (verified
 While checking the `2510.25566` retry's clean state, discovered a new title-truncation bug affecting **all 13 rows added earlier this session** (batches 1–3): every title in `papers/index.md` was cut off mid-word at ~57 characters (e.g. "Bayesian Speech Synthesizers Can Learn from Multiple Te" instead of the full title) — this is the same known-unfixable-by-prompting bug documented in [[feedback_title_truncation]] from earlier sessions, recurring here despite not being explicitly checked per-paper this session (a gap in this session's own QC, now corrected). All 13 rows were rewritten with complete titles pulled directly from each page's frontmatter, verified against the existing full-title convention in older rows. The two ingest agents in this batch after the fix (`2510.25577`, `2510.26190`) were briefed explicitly on the bug and both produced correctly untruncated rows on the first try. **Added title-row completeness to the per-paper QC checklist going forward, not just index-count and citation checks.**
 
 Q4 progress: 91 ingested / 93 remaining (63 rejected, `2510.12116` still pending).
+
+---
+
+**Session 2026-07-27, session 16, batch 5 of ? — new 16-paper list pre-selected, 1 reject:** Re-verified progress (91/93/63, matched log) and re-ran the candidate script; items 17–20 of the prior stale list still held, but items 21–24 were stale (9 new 2025-11-05 EMNLP papers added to the accepted set since 2026-07-19, sharing a date with the two originally-selected items). Rebuilt a fresh 16-paper chronological list (items 1–16: `2507.14815`, `2511.00256`, `2511.00850`, `2511.01056`, `2511.01261`, `2511.02104`, then all 10 remaining 2025-11-05 EMNLP papers) for today's session. Pre-flight checks: no full-version/duplicate `arxiv_comment` signals on any of the 16, no existing wiki pages, `2507.14815`'s July-prefix/Oct-31-published-date mismatch confirmed as the routine prefix-lag pattern (NeurIPS 2025 acceptance note, not a dedup case).
+
+First paper, `2507.14815` (FastLongSpeech), was flagged before writing anything: same shape as the FAMA/MLC-SLM/2510.09424/2510.12116 comprehension-only reject pattern — Qwen2-Audio-based long-speech-input compression whose own output is always text (§2 Eq. 1), every benchmark (Spoken QA incl. its own LongSpeech-Eval, AIR-Bench, MELD, ASR WER, SPIRAL-H) scores text/label accuracy, and the only TTS mention (third-party "Orca") synthesizes benchmark input audio rather than being model output. Surfaced to the user; **rejected**, consistent with precedent. Logged to `review_queue.md` and `raw/pipeline_log.md`, `status: rejected` set.
+
+Remaining batch 1 (`2511.00256` NaturalVoices, `2511.00850` MULTI-Bench, `2511.01056` WhisperVC, `2511.01261` Speech-DRAME) all ingested cleanly, 0 further rejects. Corpus 656 → 660 pages, 0 errors, 1170 warnings unchanged (post-fix; briefly 1175 mid-batch, see below). Two corpus-scope AURA/VoiceAgentBench-precedent checks this batch, both genuine accepts on read: (1) `2511.00850` (MULTI-Bench) scores the SDM's generated *speech* directly — an audio-aware Gemini judge plus UTMOS on the acoustic dimension (§2.2, Table 4), not just text; stronger case for inclusion than the incidental-TTS-input AURA/VoiceAgentBench pattern. (2) `2511.01261` (Speech-DRAME) likewise evaluates generated speech directly — real human raters scoring audio clips on Audio Quality/Prosodic Dynamics/Emotional Expressiveness (§4), and its DRAME-Eval judge is a fine-tuned audio-LLM validated against those human ratings (§6); also scores five cascaded TTS pipelines' acoustic output (Tables 5–6). Both tagged `subjective-evaluation` correctly (MULTI-Bench: no, Gemini-judge only; Speech-DRAME: yes, real listening tests).
+
+QC catches (all on manual verification, not agent self-report): (1) `2511.00256`'s `papers/index.md` row title was truncated ("...Spontaneous and Emotional" cutting the rest) despite the session-16-batch-4 title-truncation fix being in place — confirms this bug recurs per-paper regardless of prior fixes, not something that stays fixed; rewritten with the full title. (2) `2511.00850` and `2511.01261` both had bare `[[id]] (Name)` wikilinks in Wiki Connections (5 and 7 respectively) that the ingest agents' own closing summaries incorrectly claimed matched "the skill template's own prescribed format" — verified false by running the health check directly (7 and 5 `wikilink_format` warnings respectively, 0 after piping to `[[id|Display Name]]`); do not trust an agent's claim that a warning is expected without checking the health check output yourself. (3) `wiki/index.md` count-drift recurred as usual (agents cross-checked with `grep -c '^| \[\['` before writing on `2511.00850`/`2511.01261` and got it right unprompted this time, though `2511.00256`'s agent still needed the manual fix). Also confirmed in passing: `references.json` flagged two rejected arXiv preprints (`2502.17810`, `2507.22968`) as `in_corpus` on `2511.00850` — both are pre-existing, correctly-resolved duplicates of two papers later in today's list (`2025.findings-emnlp.933`, `2025.emnlp-main.1160`), not a new issue.
+
+Q4 progress: 95 ingested / 88 remaining (64 rejected, `2510.12116` still pending). Nothing committed yet this session.
+
+---
+
+**Session 2026-07-27, session 16, batch 6 of ? (batch 2 of the fresh 16-paper list):** Batch (`2511.02104` Prosody Evaluation, `2025.emnlp-main.1160` C3, `2025.emnlp-main.1447` MULTIVOX, `2025.emnlp-main.1492` PACHAT) all ingested, 0 rejected. Corpus 660 → 664 pages, 0 errors, 1170 warnings unchanged.
+
+Three AURA/VoiceAgentBench-precedent scope checks this batch, resolved on both sides for the first time (previously every check this session had landed on the accept side): (1) `2025.emnlp-main.1160` (C3) accepted — mostly text/LLM-judge-scored, but its phonological-ambiguity "Generation" subtask has three human experts directly listen to and label the SDM's generated audio (§4.2), explicitly because the phenomenon "cannot be captured by the transcribed text" — a narrow but genuine speech-output evaluation, flagged on the page via a `complicates:` claim for future spot-checking; (2) `2025.emnlp-main.1447` (MULTIVOX) matches the **reject-shaped precedent instead** (AURA/VoiceAgentBench pattern) — the authors' own Limitations section states outright "we limit our evaluation to the content of the speech outputs and not the speech quality," and the only real audio MOS test (Appendix E) validates the benchmark's *input* speech-prompt construction, not any assistant's output; ingested anyway per the established precedent (TTS/VC incidental to input construction is in-scope), no VC/TTS task tag; (3) `2025.emnlp-main.1492` (PACHAT) verified as a genuine architecture paper, not a benchmark — LoRA-tuned Llama 3.1 + Whisper/Q-Former speech-LLM backbone producing real spoken output via CosyVoice2 at inference, with an end-to-end MOS eval (Appendix C.2); `spoken-language-model` and `speech-to-speech` tags both verified genuine (cascade-pattern spoken dialogue, matching the concept's defined cascade sub-paradigm).
+
+Interruption recovery mid-batch: the first attempt at `2025.emnlp-main.1447` was cut off by a session limit before any file was written. Verified clean per protocol (no page, no index row, no log entry, no assets, metadata still `accepted`, all prior batch papers untouched) and retried from scratch; the retry ingested cleanly.
+
+QC notes: `2511.02104` (prosody evaluation methodology paper) correctly excluded the `prosody-control` tag (evaluation metrics, not a control mechanism) and legitimately carries only 2 `related_concepts` (evaluation-metrics, subjective-evaluation) rather than the usual 3–6 — judged acceptable rather than padded with a spurious third tag, since no other vocabulary term genuinely fits a pure prosody-evaluation-methodology paper. `2025.emnlp-main.1160` and `2025.emnlp-main.1492` both needed bare-`[[id]] (Name)`-to-piped-format wikilink fixes (8 each), applied by the agents themselves this time after being briefed explicitly — first batch this session where agents self-corrected the wikilink format issue rather than the main session catching it after the fact.
+
+Q4 progress: 99 ingested / 84 remaining (64 rejected, `2510.12116` still pending). Nothing committed yet this session.
+
+---
+
+**Session 2026-07-27, session 16, batch 7 of ? (batch 3 of the fresh 16-paper list):** Batch (`2025.findings-emnlp.1077` EZ-VC, `2025.findings-emnlp.1381` UniSpeaker, `2025.findings-emnlp.1394` DM-Codec, `2025.findings-emnlp.241` S2S Dialogue RAG) all ingested, 0 rejected. Corpus 664 → 668 pages, 0 errors, 1170 warnings unchanged.
+
+Session-limit interruption occurred mid-verification of `2025.findings-emnlp.1394` (transient classifier-unavailable error, not an actual write-in-progress cutoff); confirmed clean per protocol (state exactly as left: 667/667 rows, single entry, correct title) and resumed verification directly with no retry needed.
+
+New spurious-tag pattern found twice this batch (not previously seen this session): the `disentanglement` tag applied to papers that *discuss or contrast against* disentanglement rather than perform it themselves. (1) `2025.findings-emnlp.1077` (EZ-VC) — page prose explicitly stated content/speaker separation is achieved "implicitly through... input design rather than through dedicated disentanglement modules"; the paper's own novelty framing is built around *avoiding* disentanglement encoders used by prior work (AdaptVC, StableVC, Seed-VC). Removed. (2) `2025.findings-emnlp.1394` (DM-Codec) — Wiki Connections bullet described the paper's design as "holistic," explicitly contrasted against FACodec's "explicit factorized subspace approach"; DM-Codec's actual contribution (confirmed by reading the Method section) is jointly distilling acoustic/semantic/contextual information into a *single* shared RVQ codebook, the opposite of separating attributes into distinct spaces. Removed. By contrast, `2025.findings-emnlp.1381` (UniSpeaker)'s `disentanglement` tag in the same batch held up on inspection — a genuine self-distillation fine-tuning stage with an explicit "negative-disentanglement re-weighting" term and ablation evidence (Table 3: removing it drops SST from 39.37% to 31.07% on VC) — so this is a real per-paper judgment call, not a blanket rule against the tag.
+
+Other QC: `2025.findings-emnlp.241` (S2S Dialogue RAG) verified as a genuine `speech-to-speech`/`spoken-language-model` fit (end-to-end spoken dialogue sub-paradigm, GLM-4-Voice as the unmodified downstream generator) — first paper this batch where the ingest agent avoided the disentanglement trap itself with no tag applied. All citation-integrity spot-checks (in-corpus reference IDs actually have wiki pages) passed across all 4 papers this batch.
+
+Q4 progress: 103 ingested / 80 remaining (64 rejected, `2510.12116` still pending). Nothing committed yet this session.
+
+---
+
+**Session 2026-07-27, session 16, batch 8 of ? (batch 4 of 4, fresh 16-paper list COMPLETE):** Batch (`2025.findings-emnlp.524` Dub-S2ST, `2025.findings-emnlp.716` AR generation-refinement survey, `2025.findings-emnlp.933` URO-Bench) — 2 ingested, 1 rejected. Corpus 668 → 670 pages, 0 errors, 1170 warnings unchanged.
+
+`2025.findings-emnlp.524` (Dub-S2ST) ingested cleanly: `speech-to-speech` tag verified against the direct/textless S2ST translation sub-paradigm; `disentanglement` correctly excluded by the ingest agent itself this time (off-the-shelf pretrained mHuBERT units + speaker embedding, no explicit factorization training objective) — first batch where an agent avoided this trap without being told the specific paper needed it, just from the general standing reminder. Task tag narrowed from the pre-assigned `[TTS, VC]` to `[TTS]` only: VC appears solely as a comparison baseline/ablation, not the paper's own dedicated system, matching the SeamlessM4T precedent for S2ST papers.
+
+`2025.findings-emnlp.716` (AR generation-refinement survey) was flagged before writing anything, per the standing note from this list's initial pre-flight check: confirmed on full read to be a general LLM/AR-model speculative-decoding survey whose substantive content (§3–6) covers text decoding exclusively; speech content is confined to two sentences in §7.2 citing 2 papers out of 100+ total references, no dedicated speech section, no original speech experiment. Surfaced to the user with title/authors/URL on request; user reviewed directly and confirmed **reject**. Logged to `review_queue.md` and `raw/pipeline_log.md`, `status: rejected` set. This is the second reject this session on a genuine-relevance-test basis (distinct from `2507.14815`'s comprehension-vs-generation test) — subject-matter relevance is negligible relative to the survey's actual general-AR-model scope, not a scope exception.
+
+`2025.findings-emnlp.933` (URO-Bench) ingested cleanly: matches the stronger MULTI-Bench/Speech-DRAME/C3 accept pattern rather than the AURA/VoiceAgentBench/MULTIVOX one — UTMOS scores generated audio directly (§3.3, Table 5), audio-aware judges (Gemini 2.0 Flash, GPT-4o-Audio-Preview) score response audio for expressiveness tasks, and a genuine human listening study (§4.3/Appendix B.3) validates the automatic scores against real raters listening to output audio, not transcripts. `subjective-evaluation` tag verified genuine.
+
+This closes out the full 16-paper list pre-selected at the start of this session (2026-07-27): **12 ingested, 2 rejected (`2507.14815`, `2025.findings-emnlp.716`), 2 removed for spurious tags but otherwise clean.** Q4 progress: 105 ingested / 77 remaining (65 rejected, `2510.12116` still pending). Nothing committed yet this session — next step is either a commit/push at this natural stopping point, or re-running the candidate-selection script to pre-select the next batch (re-check for newly-added papers first, as happened at this session's start).
 
 ---
 
