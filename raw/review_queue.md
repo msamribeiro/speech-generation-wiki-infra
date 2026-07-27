@@ -312,3 +312,25 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________) — user chose to leave `status: accepted` unchanged and skip this paper for now rather than deciding immediately (2026-07-18); not ingested. Revisit when convenient — recommend reject on the FAMA/MLC-SLM pattern absent new information, but flagging rather than deciding unilaterally per the review-queue process. Not part of the "DST/dialog scope expansion" backlog interest ([[future_dst_scope_expansion]] memory) in the same way 2510.09424 is, since this paper has no dialogue-state or dialogue-management output at all — it's pure input-side comprehension analysis.
 
 ---
+
+## 2507.14815 | FastLongSpeech: Enhancing Large Speech-Language Models for Efficient Long-Speech Processing | arXiv (NeurIPS 2025) | score: 0.72
+
+**Authors:** Shoutao Guo, Shaolei Zhang, Qingkai Fang, Zhengrui Ma, Min Zhang, Yang Feng
+**Task guess:** [SCA]
+**Reason for review:** Caught at ingest time (2026-07-27, Q4 session 16), before any page was written. FastLongSpeech extends Qwen2-Audio with a speech extractor ("iterative fusion" compression, §3.2) and a two-stage training recipe (CTC content-density training + dynamic compression training, §3.3) so the LLM can consume long audio inputs more cheaply, but the system's own output is always text (§2 Eq. 1, reused unchanged in §3.1). Every benchmark scores text or label outputs — Short/Long-Speech Spoken QA (including the paper's own LongSpeech-Eval, §3.4), Spoken Dialogue Understanding (AIR-Bench), Emotion Recognition (MELD), ASR (LibriSpeech/GigaSpeech WER), and Speech Information Retrieval (SPIRAL-H) — never generated speech. The only TTS mention (the third-party "Orca" model, §3.4/Appendix A) synthesizes input audio for constructing the LongSpeech-Eval benchmark, not model output. Clean match to the FAMA/MLC-SLM/2510.12116 reject pattern — no spoken output anywhere, not even incidental.
+**Abstract excerpt:** (see raw/metadata/2507.14815.json for full abstract)
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________) — user confirmed reject (2026-07-27), consistent with the FAMA/MLC-SLM/2510.12116 precedent.
+
+---
+
+## 2025.findings-emnlp.716 | Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models | EMNLP | score: 0.45
+
+**Authors:** Yunhai Hu, Zining Liu, Zhenyuan Dong, Tianfan Peng, Bradley McDanel, Sai Qian Zhang
+**Task guess:** [TTS]
+**Reason for review:** Caught at ingest time (2026-07-27, Q4 session 16), before any page was written. This is a general survey of speculative decoding / generation-refinement frameworks for autoregressive models. Its substantive content (§3–6, the bulk of the survey) covers text/LLM decoding techniques exclusively (draft-model taxonomy, tree-based verification, iterative Jacobi/Gauss-Seidel decoding, distributed/hardware system optimizations). Speech-domain content is confined to two sentences in §7.2 ("Speculative Decoding for Multimodal Output Generation"), citing only two speech papers (VADUSA, a speech-LLaMA multi-token-prediction paper) out of 100+ total references. No dedicated speech section, no speech-specific taxonomy branch, no original speech experiment. Subject-matter relevance to TTS/VC/SCA is negligible relative to the survey's actual scope (general AR-model inference acceleration), not a scope exception like the TTS-preprocessing or AURA/VoiceAgentBench precedents.
+**Abstract excerpt:** (see raw/metadata/2025.findings-emnlp.716.json for full abstract)
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________) — user reviewed the paper directly (title/authors/URL provided) and confirmed reject (2026-07-27).
+
+---
