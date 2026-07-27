@@ -64,9 +64,23 @@ batch (not just at session close), not just the running ingested-count.**
 ingested, 2 rejected (`2507.14815`, `2025.findings-emnlp.716`), plus `2510.20210`–`2510.26190`
 (the 16 items before this list, session 16 batches 1–4 on 2026-07-26) already closed out earlier.
 **Next session: re-run the candidate-selection script fresh** (see Scope section above) rather than
-assuming a stale list — the accepted set has changed mid-session twice already this session
-(9 new EMNLP papers appeared once; check again before building the next batch). Continue
-chronologically from the first remaining paper after `2025.findings-emnlp.933`.
+assuming a stale list. Continue chronologically from the first remaining paper after
+`2025.findings-emnlp.933`.
+
+**Correction, investigated post-session-close (2026-07-27):** the "9 new EMNLP papers appeared
+mid-session" note above (session 16 batch-1 log entry) was wrong about *why* — nothing was newly
+fetched. Traced all 9 back to `fetched_date` 2026-05-22–24 and the `filter` entry in
+`raw/pipeline_log.md` dated 2026-05-25 ("ACL 2025 + EMNLP 2025 + NAACL 2025 + Interspeech 2025 +
+arXiv + workshops pending batch — 300 accepted, 39 review, 56 rejected") — they were `status:
+accepted` over two months before this session and simply weren't in session 15's manually-built
+candidate list from 2026-07-19. That's a **curation gap in list-building**, not new corpus growth:
+the list must have been built by extending a prior list rather than re-running the full accepted-set
+query fresh. **Action for next session:** `2511.03080` (PolyNorm, same 2025-11-05 EMNLP date, same
+`fetched_date`/filter batch as the 9) is still sitting `status: accepted` and was never picked up —
+fold it into the next chronological batch rather than assuming today's list was exhaustive. More
+generally, always build the candidate list from a fresh query of the full `accepted` set sorted by
+`published_date`, never by extending/renumbering a previous session's list — that's what caught this
+gap in the first place.
 
 **Pre-flight checks done for this list (2026-07-27):** no full-version/duplicate `arxiv_comment`
 signals on any of the 16 (checked before batch 1), no existing wiki pages, no title collisions.
