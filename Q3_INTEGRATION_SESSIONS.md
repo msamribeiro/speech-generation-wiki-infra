@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-27, after subjective-evaluation Phase 2 closed** (re-run the commands
+**State as of 2026-07-27, after spoken-language-model Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -48,7 +48,7 @@ corpus-wide `Covers`-style column was dropped:
 | **subjective-evaluation** | **180** | **180** | **100%** (Phase 1+2) |
 | **autoregressive-codec-tts** | **165** | **165** | **100%** (Phase 1+2) |
 | self-supervised-speech | 146 | 0 | 0% |
-| spoken-language-model | 127 | 0 | 0% |
+| **spoken-language-model** | **127** | **127** | **100%** (Phase 1+2) |
 | **disentanglement** | **100** | **100** | **100%** (Phase 1+2) |
 | **flow-matching** | **97** | **97** | **100%** |
 | **prosody-control** | **94** | **94** | **100%** (Phase 1+2) |
@@ -65,10 +65,10 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2233** | **1303** | **58.4%** |
+| **TOTAL** | **2233** | **1430** | **64.0%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **106** as of
-2026-07-27 after subjective-evaluation Phase 2 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **104** as of
+2026-07-27 after spoken-language-model Phase 2 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -116,12 +116,14 @@ closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. As of
 `zero-shot-tts` is fully closed at 203/203 after eleven Phase 1 batches and one Phase 2 synthesis
 pass. `diffusion-tts` is fully closed at 46/46 after three Phase 1 batches and one Phase 2
 synthesis pass. `subjective-evaluation` is fully closed at 180/180 after nine Phase 1 batches
-and one Phase 2 synthesis pass; 12 concepts have no `wiki/_claims/{slug}.yaml` file yet.
+and one Phase 2 synthesis pass. `spoken-language-model` is fully closed at 127/127 after seven
+Phase 1 batches and one Phase 2 synthesis pass; 11 concepts have no
+`wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
-and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 106, fully clearing the
-Q3-and-before backlog for the remaining 12 unstarted concepts is at minimum
-106 ÷ 20 ≈ **6+ Phase 1
+and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 104, fully clearing the
+Q3-and-before backlog for the remaining 11 unstarted concepts is at minimum
+104 ÷ 20 ≈ **6+ Phase 1
 invocations** if every remaining paper needed only one concept entry — in practice higher, since a
 paper touching multiple unstarted concepts needs a separate YAML entry per concept (the per-concept
 "Q3-scoped papers referencing it" column above sums to far more than 157 for exactly this reason,
@@ -314,6 +316,93 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-27 — spoken-language-model Phase 2 synthesis run, concept fully closed
+
+- Ran the first Phase 2 synthesis pass against all 127 Phase 1 entries and 571 extracted claims,
+  reading only `_claims/spoken-language-model.yaml` as required. No reassessment items were
+  pending.
+- Created 6 architecture-based `method_families` with 142 reciprocal memberships across 99/127
+  papers. The families cover autoregressive, hybrid/multistage, flow-matching,
+  transformer encoder–decoder, adversarial-codec, and variational-latent systems. The remaining
+  28 papers have empty cached architecture fields and are legitimate surveys, benchmarks,
+  datasets, or evaluation outliers.
+- Created 17 `claim_clusters`: 16 `strongly_supported` and 1 `emerging`. The synthesis covers
+  discrete tokenization, semantic–acoustic and token-rate trade-offs, unified
+  understanding/generation, speech–text alignment and interleaving, streaming and full-duplex
+  behavior, paralinguistic competence, memory and long-form coherence, instruction data,
+  preference alignment, cascaded/end-to-end trade-offs, multidimensional benchmarking,
+  speech-modality gaps, and safety. The emerging cluster concerns bias, privacy, security, and
+  generated-speech provenance.
+- Added 5 open questions and 5 trend notes. Phase 2 health validation passed with 0 errors and
+  28 expected method-family coverage warnings for architecture-unspecified papers. Corpus-wide
+  totals are now 1,430 paper entries and 234 claim clusters across 12 concept YAMLs;
+  `papers_not_in_any_yaml` remains 104. `spoken-language-model` is fully closed for
+  Q3-and-earlier.
+
+### 2026-07-27 — spoken-language-model Phase 1 batch 7, Phase 1 complete (120 → 127/127)
+
+- Completed the final oldest-first Phase 1 batch, integrating 7 papers from `2506.21875`
+  through `2509.26542`. Authoritative discovery confirms all 127 eligible Q3-and-earlier papers
+  are integrated, with 0 remaining and 0 extraneous entries; 32 Tier 2 and 26 Q4 pages remain
+  correctly excluded.
+- Preserved 29 claims from 7 structured pages, bringing the Phase 1 total to 571 claims. Every
+  paper has a non-empty claim list, every claim retains a source citation, and each entry
+  received spoken-language-model-specific relevance, evidence-role, current-role,
+  claim-relevance, caveat, and empty `method_family` judgments.
+- The concept-scoped Phase 1 health check passed with 0 errors and 0 warnings. Corpus-wide totals
+  are now 1,430 paper entries and 217 claim clusters across 12 concept YAMLs;
+  `papers_not_in_any_yaml` remains 104. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending explicit approval.
+
+### 2026-07-27 — spoken-language-model Phase 1 batches 5–6 (80 → 120/127)
+
+- Continued `spoken-language-model` with exactly two sequential oldest-first Phase 1 batches.
+  Batch 5 integrated 20 papers from `2503.04721` through `2508.16790`; batch 6 integrated the
+  next 20 from `2508.17623` through `2509.20410`. Authoritative discovery now leaves the final
+  7 of 127 eligible papers.
+- Batch 5 preserved 85 claims from 7 structured and 13 legacy pages; batch 6 preserved 88 claims
+  from 15 structured and 5 legacy pages. One batch-6 conversational-dataset paper had no reusable
+  entry in another concept YAML and received a fresh four-claim extraction from its full page.
+  All 173 claims retain source citations, every paper has a non-empty claim list, and each entry
+  received fresh spoken-language-model-specific judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,423 paper entries and 217 claim clusters across 12 concept YAMLs;
+  `papers_not_in_any_yaml` decreased 105 → 104. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending review.
+
+### 2026-07-27 — spoken-language-model Phase 1 batches 3–4 (40 → 80/127)
+
+- Continued `spoken-language-model` with exactly two sequential oldest-first Phase 1 batches.
+  Batch 3 integrated 20 papers from `2025.naacl-long.484` through `2025.acl-long.997`; batch 4
+  integrated the next 20 from `2025.findings-acl.101` through `2508.11224`. Authoritative
+  discovery now leaves 47 of 127 eligible papers.
+- Batch 3 preserved 92 claims from 10 structured and 10 legacy pages; batch 4 preserved 90
+  claims from 8 structured and 12 legacy pages. All 182 claims retain source citations, every
+  paper has a non-empty claim list, and each entry received fresh
+  spoken-language-model-specific judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,383 paper entries and 217 claim clusters across 12 concept YAMLs;
+  `papers_not_in_any_yaml` remained 105. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending review.
+
+### 2026-07-27 — spoken-language-model Phase 1 batches 1–2 (0 → 40/127)
+
+- Started `spoken-language-model` with exactly two sequential oldest-first Phase 1 batches.
+  Authoritative discovery found 127 eligible Q3-and-earlier papers, excluded 32 Tier 2 pages and
+  26 Q4 pages, and found no pre-existing concept YAML. Batch 1 integrated the first 20 papers
+  from `2209.03143` through `2411.00774`; batch 2 integrated the next 20 from `2411.13577`
+  through `2025.naacl-demo.21`. There are 87 eligible papers remaining.
+- Batch 1 preserved 91 claims from 20 legacy pages; batch 2 preserved 96 claims from 7 structured
+  and 13 legacy pages. One batch-2 codec paper had no reusable entry in another concept YAML and
+  received a fresh four-claim extraction from its full page. All 187 claims retain source
+  citations, every paper has a non-empty claim list, and each entry received
+  spoken-language-model-specific relevance, evidence-role, current-role, claim-relevance,
+  caveat, and empty `method_family` judgments.
+- The concept-scoped Phase 1 health check passed after each batch with 0 errors and 0 warnings.
+  Corpus-wide totals are now 1,343 paper entries and 217 claim clusters across 12 concept YAMLs;
+  `papers_not_in_any_yaml` decreased 106 → 105. Phase 2 was not run; `method_families` and
+  `claim_clusters` remain empty pending review.
 
 ### 2026-07-27 — subjective-evaluation Phase 2 synthesis run, concept fully closed
 
