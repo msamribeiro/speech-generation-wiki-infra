@@ -52,7 +52,7 @@ corpus-wide `Covers`-style column was dropped:
 | **disentanglement** | **100** | **100** | **100%** (Phase 1+2) |
 | **flow-matching** | **97** | **97** | **100%** |
 | **prosody-control** | **94** | **94** | **100%** (Phase 1+2) |
-| voice-conversion | 87 | 0 | 0% |
+| **voice-conversion** | **87** | **87** | **100% (Phase 1+2)** |
 | speaker-adaptation | 79 | 0 | 0% |
 | multilingual-tts | 76 | 0 | 0% |
 | emotion-synthesis | 74 | 0 | 0% |
@@ -65,7 +65,7 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2232** | **1613** | **72.3%** |
+| **TOTAL** | **2232** | **1700** | **76.2%** |
 
 `papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **104** as of
 2026-07-27 after spoken-language-model Phase 2 closed. This is a unique-paper corpus-wide
@@ -118,7 +118,8 @@ pass. `diffusion-tts` is fully closed at 46/46 after three Phase 1 batches and o
 synthesis pass. `subjective-evaluation` is fully closed at 180/180 after nine Phase 1 batches
 and one Phase 2 synthesis pass. `spoken-language-model` is fully closed at 127/127 after seven
 Phase 1 batches and one Phase 2 synthesis pass. `neural-codec` is fully closed at 183/183 after
-ten Phase 1 batches and one Phase 2 synthesis pass; 10 concepts have no
+ten Phase 1 batches and one Phase 2 synthesis pass. `voice-conversion` is fully closed at 87/87
+after five Phase 1 batches and one Phase 2 synthesis pass; 9 concepts have no
 `wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
@@ -317,6 +318,59 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-28 — voice-conversion Phase 2 synthesis run, concept fully closed
+
+- Synthesized the complete 87-paper graph from YAML only. The final evidence base contains
+  372 Phase 1 claims and now resolves into **7 method families** and **17 claim clusters**.
+- Assigned 78/87 papers to at least one reciprocal architecture family, producing 117 total
+  memberships across GAN/adversarial, VAE latent, autoregressive-token, flow-matching, diffusion,
+  hybrid semantic–acoustic, and transformer encoder–decoder conversion systems. The 9 remaining
+  papers are architecture-unspecified surveys, evaluations, privacy studies, or peripheral
+  systems and remain legitimate outliers.
+- Cluster status is 14 strongly supported, 2 emerging, and 1 contested. The contested cluster
+  captures the scoped disagreement over automatic evaluation: WER can be reliable for
+  accent-specific intelligibility while remaining insufficient as a global VC-quality proxy.
+- Added 5 reassessment watches, 6 open questions, and 5 temporal trend notes. Reciprocal family
+  membership and all cluster paper references passed an independent audit. The final Phase 2
+  health check passed with **0 errors and 9 expected method-family coverage warnings**.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-28 — voice-conversion Phase 1 closed, batch 5 (80 → 87/87)
+
+- Re-derived the deterministic oldest-first queue and processed the final 7 papers,
+  `2509.16010` through `2509.24570`; all 30 claims came from structured pages and retained
+  source citations.
+- The authoritative closure audit matched the eligible candidate and YAML ID sets exactly:
+  **87/87 unique entries**, zero missing, zero extraneous, 1 Tier 2 page skipped, and 17
+  Q4-or-later pages excluded. All **372 claims** retain source citations; there are no empty
+  claim lists or unspecified sources.
+- The concept-scoped Phase 1 health check passed with **0 errors and 0 warnings**. All
+  `method_family` fields and synthesis structures remain empty as required.
+  **Phase 1 is closed; Phase 2 synthesis remains pending.**
+
+### 2026-07-28 — voice-conversion Phase 1 batches 3–4 (40 → 80/87)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 3:** 20 papers, `interspeech-2025-0948` through `interspeech-2025-2043`;
+  86 claims from 14 structured and 6 legacy pages. **Batch 4:** 20 papers,
+  `interspeech-2025-2151` through `2509.15629`; 86 claims from 16 structured and 4 legacy pages.
+- Across the two batches, all 172 claims retained source citations; no empty claim lists or
+  duplicate paper IDs were introduced. The YAML now contains **80 papers and 342 claims**, with
+  7 eligible Q3-and-earlier papers remaining.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+
+### 2026-07-28 — voice-conversion Phase 1 batches 1–2 (0 → 40/87)
+
+- Re-derived the Q3-and-earlier queue before both sequential invocations. Live discovery found
+  **87** eligible non-Tier-2 papers, skipped 1 Tier 2 page, and excluded 17 Q4-or-later pages.
+- **Batch 1:** 20 papers, `2104.00355` through `2025.acl-long.790`; 85 claims from
+  11 structured and 9 legacy pages. **Batch 2:** 20 papers, `2025.acl-long.87` through
+  `interspeech-2025-0902`; 85 claims from 7 structured and 13 legacy pages.
+- The new `voice-conversion.yaml` contains **40 unique paper entries and 170 claims**, with no
+  empty claim lists or unspecified sources. `method_family` and synthesis fields remain empty as
+  required for Phase 1. Both concept-scoped health checks passed with **0 errors and 0 warnings**;
+  47 eligible papers remain.
 
 ### 2026-07-28 — neural-codec Phase 2 synthesis run, concept fully closed
 
