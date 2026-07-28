@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 11,
   "published_date": "2025-11-08",
-  "ingested_date": null,
+  "ingested_date": "2026-07-28",
   "url": "https://aclanthology.org/2025.arabicnlp-main.38",
   "pdf_url": "https://aclanthology.org/2025.arabicnlp-main.38.pdf",
   "pdf_path": "raw/papers/2025.arabicnlp-main.38.pdf",
@@ -31,11 +31,23 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Dialectal Arabic G2P model essential for TTS pronunciation; directly enables better TTS for Arabic dialects.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "conference_date": "2025-11-08",
-  "venue_detail": "ArabicNLP 2025: 3rd Arabic Natural Language Processing Conference; co-located with EMNLP 2025 (Miami, FL, USA, Nov 8–9, 2025)"
+  "venue_detail": "ArabicNLP 2025: 3rd Arabic Natural Language Processing Conference; co-located with EMNLP 2025 (Miami, FL, USA, Nov 8–9, 2025)",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-07-28",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "f054c5f"
+    }
+  ]
 }

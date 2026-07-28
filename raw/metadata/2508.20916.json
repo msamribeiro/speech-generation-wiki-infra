@@ -37,7 +37,7 @@
   "year": 2025,
   "month": 11,
   "published_date": "2025-11-10",
-  "ingested_date": null,
+  "ingested_date": "2026-07-28",
   "url": "https://arxiv.org/abs/2508.20916",
   "pdf_url": "https://arxiv.org/pdf/2508.20916.pdf",
   "pdf_path": "raw/papers/2508.20916.pdf",
@@ -50,9 +50,21 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "SageLM proposes an end-to-end multi-aspect LLM judge for evaluating speech-to-speech LLMs on both semantic and acoustic dimensions.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-07-28",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "f054c5f"
+    }
+  ]
 }
