@@ -44,7 +44,7 @@ corpus-wide `Covers`-style column was dropped:
 |---|---|---|---|
 | **evaluation-metrics** | **286** | **285** | **100%** (Phase 1+2) |
 | **zero-shot-tts** | **203** | **203** | **100%** (Phase 1+2) |
-| neural-codec | 184 | 0 | 0% |
+| **neural-codec** | **183** | **183** | **100% (Phase 1+2)** |
 | **subjective-evaluation** | **180** | **180** | **100%** (Phase 1+2) |
 | **autoregressive-codec-tts** | **165** | **165** | **100%** (Phase 1+2) |
 | self-supervised-speech | 146 | 0 | 0% |
@@ -65,7 +65,7 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2233** | **1430** | **64.0%** |
+| **TOTAL** | **2232** | **1613** | **72.3%** |
 
 `papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **104** as of
 2026-07-27 after spoken-language-model Phase 2 closed. This is a unique-paper corpus-wide
@@ -117,11 +117,12 @@ closed at 94/94 after five Phase 1 batches and one Phase 2 synthesis pass. As of
 pass. `diffusion-tts` is fully closed at 46/46 after three Phase 1 batches and one Phase 2
 synthesis pass. `subjective-evaluation` is fully closed at 180/180 after nine Phase 1 batches
 and one Phase 2 synthesis pass. `spoken-language-model` is fully closed at 127/127 after seven
-Phase 1 batches and one Phase 2 synthesis pass; 11 concepts have no
+Phase 1 batches and one Phase 2 synthesis pass. `neural-codec` is fully closed at 183/183 after
+ten Phase 1 batches and one Phase 2 synthesis pass; 10 concepts have no
 `wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
-and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 104, fully clearing the
+and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 116, fully clearing the
 Q3-and-before backlog for the remaining 11 unstarted concepts is at minimum
 104 ÷ 20 ≈ **6+ Phase 1
 invocations** if every remaining paper needed only one concept entry — in practice higher, since a
@@ -316,6 +317,88 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-28 — neural-codec Phase 2 synthesis run, concept fully closed
+
+- Synthesized the complete 183-paper graph from YAML only. The final evidence base contains
+  832 Phase 1 claims and now resolves into **7 method families** and **17 claim clusters**.
+- Assigned 171/183 papers to at least one reciprocal architecture family, producing 261 total
+  memberships across autoregressive codec LMs, GAN codecs/decoders, VAE/VQ codecs, hybrid
+  semantic–acoustic tokenizers, flow-matching decoders, diffusion latent generators, and
+  transformer encoder–decoder tokenizers. The 12 remaining papers are architecture-unspecified
+  surveys, evaluations, or peripheral generation systems and remain legitimate outliers.
+- All 17 clusters are strongly supported. They cover low-bitrate reconstruction, RVQ hierarchy,
+  semantic guidance, downstream language modeling, quantizer and codebook behavior, adversarial
+  objectives, decoder capacity, content/speaker/prosody entanglement, continuous–discrete
+  trade-offs, token-rate efficiency, parallel latent generation, intelligibility, multilingual
+  transfer, unified speech systems, and codec evaluation validity.
+- Added 5 reassessment watches, 6 open questions, and 5 temporal trend notes. Reciprocal family
+  membership and all cluster paper references passed an independent audit. The final Phase 2
+  health check passed with **0 errors and 12 expected method-family coverage warnings**.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-28 — neural-codec Phase 1 closed, batches 9–10 (160 → 183/183)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 9:** 20 papers, `2509.15462` through `2509.24650`; 85 claims from 19 structured and
+  1 legacy page. **Batch 10:** the final 3 papers, `2509.25131` through `2510.00264`;
+  12 claims from 3 structured pages.
+- The authoritative closure audit matched the eligible candidate and YAML ID sets exactly:
+  **183/183 unique entries**, zero missing, zero extraneous, 9 Tier 2 pages skipped, and 45
+  Q4-or-later pages excluded. All **832 claims** retain source citations; there are no empty
+  claim lists or unspecified sources.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+  All per-paper `method_family` fields, `claim_clusters`, and `method_families` remain empty as
+  required. **Phase 1 is closed; Phase 2 synthesis remains pending.**
+
+### 2026-07-28 — neural-codec Phase 1 batches 7–8 (120 → 160/183)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 7:** 20 papers, `interspeech-2025-0468` through `interspeech-2025-2564`;
+  85 claims from 9 structured and 11 legacy pages. **Batch 8:** 20 papers,
+  `interspeech-2025-2726` through `2509.14882`; 92 claims from 11 structured and 9 legacy pages.
+- Across the two batches, all 177 claims retained source citations; no empty claim lists or
+  duplicate paper IDs were introduced. The YAML now contains **160 papers and 735 claims**, with
+  23 eligible Q3-and-earlier papers remaining.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+  `papers_not_in_any_yaml` decreased from 117 to 116 during batch 7.
+
+### 2026-07-28 — neural-codec Phase 1 batches 5–6 (80 → 120/183)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 5:** 20 papers, `2507.21138` through `2508.02849`; 94 claims from 8 structured and
+  12 legacy pages. **Batch 6:** 20 papers, `2504.10352` through `interspeech-2025-0464`;
+  89 claims from 3 structured and 17 legacy pages.
+- Across the two batches, all 183 claims retained source citations; no empty claim lists or
+  duplicate paper IDs were introduced. The YAML now contains **120 papers and 558 claims**, with
+  63 eligible Q3-and-earlier papers remaining.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+  `papers_not_in_any_yaml` decreased from 118 to 117 during batch 6.
+
+### 2026-07-28 — neural-codec Phase 1 batches 3–4 (40 → 80/183)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 3:** 20 papers, `2411.00774` through `iclr-2025-868masI331`; 96 claims from
+  1 structured and 19 legacy pages. **Batch 4:** 20 papers, `iclr-2025-cuFzE8Jlvb` through
+  `2507.16632`; 94 claims from 15 structured and 5 legacy pages.
+- Across the two batches, all 190 claims retained source citations; no empty claim lists or
+  duplicate paper IDs were introduced. The YAML now contains **80 papers and 375 claims**, with
+  103 eligible Q3-and-earlier papers remaining.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+
+### 2026-07-28 — neural-codec Phase 1 batches 1–2 (0 → 40/183)
+
+- Re-derived the Q3-and-earlier queue before each sequential invocation. Live YAML-frontmatter
+  discovery found **183** eligible non-Tier-2 papers, one fewer than the prior 184-paper estimate;
+  9 Tier 2 pages and 45 Q4-or-later pages were excluded by protocol.
+- **Batch 1:** 20 papers, `1609.03499` through `2402.08093`; 94 claims preserved from 20 legacy
+  pages. **Batch 2:** 20 papers, `2402.13236` through `2410.17799`; 91 claims preserved from
+  20 legacy pages. Three Appendix-only citations that lacked a section-sign marker were recovered
+  and normalized into explicit source fields.
+- The new `neural-codec.yaml` contains **40 unique paper entries and 185 claims**, with no empty
+  claim lists and no unspecified sources. `method_family` remains empty and synthesis fields
+  remain untouched as required for Phase 1. The concept-scoped Phase 1 health check passed with
+  **0 errors and 0 warnings**; 143 eligible papers remain.
 
 ### 2026-07-27 — spoken-language-model Phase 2 synthesis run, concept fully closed
 
