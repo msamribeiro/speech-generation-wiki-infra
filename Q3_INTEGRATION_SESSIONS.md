@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-27, after spoken-language-model Phase 2 closed** (re-run the commands
+**State as of 2026-07-29, after self-supervised-speech Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -47,7 +47,7 @@ corpus-wide `Covers`-style column was dropped:
 | **neural-codec** | **183** | **183** | **100% (Phase 1+2)** |
 | **subjective-evaluation** | **180** | **180** | **100%** (Phase 1+2) |
 | **autoregressive-codec-tts** | **165** | **165** | **100%** (Phase 1+2) |
-| self-supervised-speech | 146 | 0 | 0% |
+| **self-supervised-speech** | **146** | **146** | **100% (Phase 1+2)** |
 | **spoken-language-model** | **127** | **127** | **100%** (Phase 1+2) |
 | **disentanglement** | **100** | **100** | **100%** (Phase 1+2) |
 | **flow-matching** | **97** | **97** | **100%** |
@@ -65,10 +65,10 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2232** | **1700** | **76.2%** |
+| **TOTAL** | **2232** | **1846** | **82.7%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **104** as of
-2026-07-27 after spoken-language-model Phase 2 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **124** as of
+2026-07-29 after self-supervised-speech Phase 2 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -90,9 +90,9 @@ prefer extending those over writing a new one-off script.
 
 **`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, `disentanglement`,
 `autoregressive-codec-tts`, `instruction-conditioned-tts`, `prosody-control`, `zero-shot-tts`,
-and `diffusion-tts` are fully closed
+`diffusion-tts`, and `self-supervised-speech` are fully closed
 for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, 285/286, 100/100, 165/165, 44/44,
-94/94, 203/203, and 46/46 respectively —
+94/94, 203/203, 46/46, and 146/146 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
@@ -119,7 +119,8 @@ synthesis pass. `subjective-evaluation` is fully closed at 180/180 after nine Ph
 and one Phase 2 synthesis pass. `spoken-language-model` is fully closed at 127/127 after seven
 Phase 1 batches and one Phase 2 synthesis pass. `neural-codec` is fully closed at 183/183 after
 ten Phase 1 batches and one Phase 2 synthesis pass. `voice-conversion` is fully closed at 87/87
-after five Phase 1 batches and one Phase 2 synthesis pass; 9 concepts have no
+after five Phase 1 batches and one Phase 2 synthesis pass. `self-supervised-speech` is fully
+closed at 146/146 after eight Phase 1 batches and one Phase 2 synthesis pass; 7 concepts have no
 `wiki/_claims/{slug}.yaml` file yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
@@ -318,6 +319,73 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-29 — self-supervised-speech Phase 2 synthesis run, concept fully closed
+
+- Synthesized the completed 146-paper, 644-claim YAML without re-reading paper pages. Created
+  **7 method families** spanning autoregressive SSL-conditioned models, transformer SSL encoders
+  and adapters, hybrid semantic–acoustic systems, GAN decoders, flow matching, VAE/quantized
+  representations, and diffusion conditioning.
+- Created **17 claim clusters**: 13 strongly supported, 2 emerging, and 2 contested. The
+  synthesis covers reusable pretrained features, linguistic content, layer choice,
+  speaker/prosody leakage, disentanglement, discrete-unit modeling, continuous–discrete
+  trade-offs, semantic–acoustic hierarchies, low-resource and multilingual transfer,
+  robustness, scaling limits, task adaptation, unified speech models, generation conditioning,
+  low-bitrate codecs, and automatic-judge validity.
+- Assigned **127/146 papers** to reciprocal architecture families with **170 memberships**.
+  The remaining 19 papers have no architecture label and are legitimate survey, evaluation,
+  dialogue, codec, or peripheral-system outliers. Added 5 reassessment items, 6 open questions,
+  and 5 trend notes. The reciprocal-link and reference audit found no inconsistencies.
+- Phase 2 health passed with **0 errors and 19 expected method-family coverage warnings**.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-29 — self-supervised-speech Phase 1 closed, batches 7–8 (120 → 146/146)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 7:** 20 papers, `2411.19770` through `2509.17143`; 90 claims from 14 structured and
+  6 legacy pages. **Batch 8:** the final 6 papers, `2509.19928` through `2509.26276`;
+  26 claims from 6 structured pages.
+- The authoritative closure audit matched the eligible candidate and YAML ID sets exactly:
+  **146/146 unique entries**, zero missing, zero extraneous, 9 Tier 2 pages skipped, and 16
+  Q4-or-later pages excluded. All **644 claims** retain source citations; there are no empty
+  claim lists or unspecified sources.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**. All
+  `method_family` fields and synthesis structures remain empty as required.
+  **Phase 1 is closed; Phase 2 synthesis remains pending.**
+
+### 2026-07-29 — self-supervised-speech Phase 1 batches 5–6 (80 → 120/146)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 5:** 20 papers, `interspeech-2025-0305` through `interspeech-2025-1229`;
+  87 claims from 12 structured and 8 legacy pages. **Batch 6:** 20 papers,
+  `interspeech-2025-1236` through `2508.16790`; 83 claims from 12 structured and 8 legacy pages.
+- Across the two batches, all 170 claims retained source citations; no empty claim lists or
+  duplicate paper IDs were introduced. The YAML now contains **120 papers and 528 claims**, with
+  26 eligible Q3-and-earlier papers remaining.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+
+### 2026-07-29 — self-supervised-speech Phase 1 batches 3–4 (40 → 80/146)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 3:** 20 papers, `2507.00808` through `2025.findings-acl.75`; 88 claims from
+  17 structured and 3 legacy pages. **Batch 4:** 20 papers, `2503.11026` through
+  `interspeech-2025-0246`; 85 claims from 5 structured and 15 legacy pages.
+- Across the two batches, all 173 claims retained source citations; no empty claim lists or
+  duplicate paper IDs were introduced. The YAML now contains **80 papers and 358 claims**, with
+  66 eligible Q3-and-earlier papers remaining.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**.
+
+### 2026-07-29 — self-supervised-speech Phase 1 batches 1–2 (0 → 40/146)
+
+- Re-derived the Q3-and-earlier queue before both sequential invocations. Live discovery found
+  **146** eligible non-Tier-2 papers, skipped 9 Tier 2 pages, and excluded 16 Q4-or-later pages.
+- **Batch 1:** 20 papers, `2104.00355` through `2411.13577`; 92 claims from 20 legacy pages.
+  **Batch 2:** 20 papers, `2411.19842` through `2506.10274`; 93 claims from 8 structured and
+  12 legacy pages.
+- The new `self-supervised-speech.yaml` contains **40 unique paper entries and 185 claims**, with
+  no empty claim lists or unspecified sources. `method_family` and synthesis fields remain empty
+  as required for Phase 1. Both concept-scoped health checks passed with **0 errors and
+  0 warnings**; 106 eligible papers remain.
 
 ### 2026-07-28 — voice-conversion Phase 2 synthesis run, concept fully closed
 
