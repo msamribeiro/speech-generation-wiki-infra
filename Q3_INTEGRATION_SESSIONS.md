@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-29, after self-supervised-speech Phase 2 closed** (re-run the commands
+**State as of 2026-07-29, after speaker-adaptation Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -53,7 +53,7 @@ corpus-wide `Covers`-style column was dropped:
 | **flow-matching** | **97** | **97** | **100%** |
 | **prosody-control** | **94** | **94** | **100%** (Phase 1+2) |
 | **voice-conversion** | **87** | **87** | **100% (Phase 1+2)** |
-| speaker-adaptation | 79 | 0 | 0% |
+| **speaker-adaptation** | **79** | **79** | **100% (Phase 1+2)** |
 | multilingual-tts | 76 | 0 | 0% |
 | emotion-synthesis | 74 | 0 | 0% |
 | **speech-to-speech** | **63** | **60** | **95%** |
@@ -65,10 +65,10 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2232** | **1846** | **82.7%** |
+| **TOTAL** | **2232** | **1925** | **86.2%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **124** as of
-2026-07-29 after self-supervised-speech Phase 2 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **123** as of
+2026-07-29 after speaker-adaptation Phase 2 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -90,9 +90,9 @@ prefer extending those over writing a new one-off script.
 
 **`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, `disentanglement`,
 `autoregressive-codec-tts`, `instruction-conditioned-tts`, `prosody-control`, `zero-shot-tts`,
-`diffusion-tts`, and `self-supervised-speech` are fully closed
+`diffusion-tts`, `self-supervised-speech`, and `speaker-adaptation` are fully closed
 for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, 285/286, 100/100, 165/165, 44/44,
-94/94, 203/203, 46/46, and 146/146 respectively —
+94/94, 203/203, 46/46, 146/146, and 79/79 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
@@ -120,8 +120,9 @@ and one Phase 2 synthesis pass. `spoken-language-model` is fully closed at 127/1
 Phase 1 batches and one Phase 2 synthesis pass. `neural-codec` is fully closed at 183/183 after
 ten Phase 1 batches and one Phase 2 synthesis pass. `voice-conversion` is fully closed at 87/87
 after five Phase 1 batches and one Phase 2 synthesis pass. `self-supervised-speech` is fully
-closed at 146/146 after eight Phase 1 batches and one Phase 2 synthesis pass; 7 concepts have no
-`wiki/_claims/{slug}.yaml` file yet.
+closed at 146/146 after eight Phase 1 batches and one Phase 2 synthesis pass.
+`speaker-adaptation` is fully closed at 79/79 after four Phase 1 batches and one Phase 2
+synthesis pass; 6 concepts have no claim YAML yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 116, fully clearing the
@@ -319,6 +320,52 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-29 — speaker-adaptation Phase 2 synthesis run, concept fully closed
+
+- Synthesized the completed 79-paper, 336-claim YAML without re-reading paper pages. Created
+  **7 method families** spanning autoregressive prompt conditioning, flow matching, GAN-based
+  transfer, transformer encoder–decoders, VAE latents, hybrid semantic–acoustic systems, and
+  diffusion adaptation.
+- Created **17 claim clusters**: 15 strongly supported and 2 emerging. The synthesis covers
+  multi-speaker generalization, reference conditioning, learned speaker encoders, prompt quality,
+  few-shot and parameter-efficient adaptation, identity–style disentanglement, identity and
+  expressiveness trade-offs, multilingual transfer, continuous representations, codec prompting,
+  flow/diffusion adaptation, data scale, automatic-metric validity, mismatch robustness,
+  assistive personalization, and privacy.
+- Assigned **70/79 papers** to reciprocal architecture families with **102 memberships**. The
+  remaining 9 papers have no architecture label and are legitimate corpus, evaluation, assistive,
+  or peripheral-task outliers. Added 5 reassessment items, 6 open questions, and 5 trend notes.
+  The reciprocal-link and cluster-reference audit found no inconsistencies.
+- Phase 2 health passed with **0 errors and 9 expected method-family coverage warnings**.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-29 — speaker-adaptation Phase 1 closed, batches 3–4 (40 → 79/79)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 3:** 20 papers, `interspeech-2025-0047` through `2508.15565`; 79 claims from
+  10 structured and 10 legacy pages. **Batch 4:** the final 19 papers, `2508.15931` through
+  `2509.22727`; 84 claims from 13 structured and 6 legacy pages.
+- The authoritative closure audit matched the eligible candidate and YAML ID sets exactly:
+  **79/79 unique entries**, zero missing, zero extraneous, 1 Tier 2 page skipped, and 12
+  Q4-or-later pages excluded. All **336 claims** retain source citations; there are no empty
+  claim lists or unspecified sources.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**. All
+  `method_family` fields and synthesis structures remain empty as required.
+  **Phase 1 is closed; Phase 2 synthesis remains pending.**
+
+### 2026-07-29 — speaker-adaptation Phase 1 batches 1–2 (0 → 40/79)
+
+- Started `speaker-adaptation` using the deterministic oldest-first Phase 1 protocol.
+  Authoritative discovery found **79 eligible Q3-and-earlier papers**, skipped 1 Tier 2 page,
+  and excluded 12 Q4-or-later pages; the concept is registered and had no existing claim YAML.
+- **Batch 1:** 20 papers, `1609.03499` through `2507.02380`; 88 claims from 6 structured and
+  14 legacy pages. **Batch 2:** 20 papers, `2507.08319` through `2508.09767`; 85 claims from
+  11 structured and 9 legacy pages.
+- The YAML now contains **40 unique paper entries and 173 claims**, with no empty claim lists,
+  unspecified sources, or duplicate IDs. Method-family assignments and synthesis structures
+  remain empty as required during Phase 1. Both health checks passed with **0 errors and
+  0 warnings**; 39 eligible papers remain.
 
 ### 2026-07-29 — self-supervised-speech Phase 2 synthesis run, concept fully closed
 
