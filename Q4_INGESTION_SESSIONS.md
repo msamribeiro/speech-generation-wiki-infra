@@ -420,6 +420,7 @@ after the session batch is complete — check the paper page and resolve each fl
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
 | `2510.19509` | field_significance | Level sits at moderate/high boundary; comprehensive first-of-its-kind capability-aware evaluation taxonomy, but actual field influence depends on post-publication adoption not visible from the paper alone. Currently set to `moderate` — revisit if the paper gains citations/adoption in later ingests. |
+| `2511.18487` | field_significance | Level sits at high/moderate boundary; single industry preprint with no independent validation, and its own results show mixed outcomes (lower NMOS/QMOS than reference-audio-conditioned or dedicated baselines). Currently set to `high` — revisit if independent validation or wider adoption emerges in later ingests. |
 
 ---
 
@@ -469,6 +470,311 @@ Session-limit interruption occurred at the very start of `2511.06150` (agent cal
 Three genuine QC catches this batch (all on manual verification, not agent self-report): (1) `2025.arabicnlp-main.38` (DialG2P) was tagged `transformer-enc-dec-tts` despite being a G2P/phonemization front-end, not a TTS acoustic model — the concept's own aliases ("FastSpeech family", "NAR TTS") make clear its scope is non-autoregressive TTS synthesis, and this paper never synthesizes speech; removed from `related_concepts` and Wiki Connections, leaving `evaluation-metrics` as the sole tag (paper is squarely a TTS front-end per its own problem statement, in-scope on the PolyNorm/TTS-preprocessing precedent, just doesn't fit that particular concept). (2) `2511.06150` (BSCodec) was tagged `autoregressive-codec-tts`, but the page's own Limitations section explicitly states the paper leaves untested "whether the band-split token structure is compatible with autoregressive or other generative modeling approaches" — an acknowledged open question, not something the paper demonstrates; same "discussed/contrasted, not performed" mistag pattern seen with `disentanglement` in session 16 batch 7, removed. (3) `2508.20916` (SageLM) cited F5-TTS via its arXiv ID (`2410.06885`, no wiki page) instead of the canonical ACL wiki ID (`2025.acl-long.313`) in both `related_papers` and two in-prose wikilinks — the exact recurring F5-TTS confusion pattern (see [[feedback_f5tts_paper_id]]), fixed both occurrences plus the array entry.
 
 Other notes: `2508.20916`'s audio-native LLM-judge design was verified to genuinely consume external speech (not transcripts), so `subjective-evaluation` was correctly excluded (LLM-judge, no human raters) and `spoken-language-model` correctly included (external speech consumed by an adapted LLM, matching the WavReward precedent); its parsed source also carries an AAAI 2026 copyright footer suggesting a venue update may be warranted later, left as `arXiv` per the invariant against altering substantive metadata without instruction. `2511.06246` (IDMap)'s `VC` task tag verified genuine (dedicated pseudo-speaker/anonymization system with real EER/WER metrics). All index row counts and titles verified against `ls`/grep and frontmatter independently after every paper, no drift this batch. Q4 progress: 113 ingested / 69 remaining (65 rejected, `2510.12116` still pending). Nothing committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18, pre-selection (list ready, batch 1 not yet started):** Re-verified progress (113 ingested / 69 remaining / 65 rejected, matched log) and re-ran the candidate script fresh rather than extending a prior list. Skipped `2510.12116` (still pending its scope call in `review_queue.md`). Built a fresh 16-paper chronological list, the first 16 remaining Q4 2025 papers by `published_date` after `2510.12116`:
+
+1. `2511.05143` — Synthesizing speech with selected perceptual voice qualities (creaky voice case study)
+2. `2511.07116` — BridgeVoC: Revitalizing Neural Vocoder from a Restoration Perspective
+3. `2511.07135` — Generating Novel and Realistic Speakers for Voice Conversion
+4. `2511.08496` — HQ-SVC: High-Quality Zero-Shot Singing Voice Conversion in Low-Resource Scenarios
+5. `2511.09995` — Time-Layer Adaptive Alignment for Speaker Similarity in Flow-Matching Based Zero-Shot TTS
+6. `2511.10112` — FabasedVC: Voice Conversion with Text Modality Fusion and Phoneme-Level SSL Features
+7. `2511.10262` — MTR-DuplexBench: Evaluation of Multi-Round Conversations for Full-Duplex Speech LMs
+8. `2511.10913` — Synthetic Voices, Real Threats: Evaluating Large TTS Models in Generating Harmful Audio
+9. `2511.11104` — CLARITY: Contextual Linguistic Adaptation and Accent Retrieval for Dual-Bias Mitigation in TTS
+10. `2511.11124` — AV-Dialog: Spoken Dialogue Models with Audio-Visual Input
+11. `2511.12074` — MF-Speech: Fine-Grained and Compositional Control in Speech Generation via Factor Disentanglement
+12. `2511.12690` — Improving Direct Persian-English Speech-to-Speech Translation with Discrete Units and Synthetic Parallel Data
+13. `2511.14249` — Towards Authentic Movie Dubbing with Retrieve-Augmented Director-Actor Interaction Learning
+14. `2511.16639` — Codec2Vec: Self-Supervised Speech Representation Learning Using Neural Speech Codecs
+15. `2511.18487` — InstructAudio: Unified speech and music generation with natural language instruction
+16. `2512.05126` — SyncVoice: Towards Video Dubbing with Vision-Augmented Pretrained TTS Model
+
+Pre-flight checks: no full-version/duplicate `arxiv_comment` signals on any of the 16 (checked
+each individually — AAAI/ACMMM-Asia/ACL-Findings/ASRU acceptance notes, "under review," or
+empty, none reference a prior arXiv ID or "extended version" language); no existing wiki pages
+or `papers/index.md` rows for any of the 16; 678=678 page/index parity confirmed before starting
+(`ls papers/*.md | grep -v index.md | wc -l` vs. `grep -c '^| \[\[' papers/index.md`). One
+ID-prefix/date anomaly flagged for later in the list: `2512.05126` (SyncVoice) carries a
+December-prefixed arXiv ID against a `published_date` of 2025-11-23 — the reverse of the usual
+lag pattern (ID ahead of the published date rather than behind it). `arxiv_comment` is empty (no
+full-version/extended-version language) and no title/author collision was found against the
+corpus, so this is being treated as a routine ID-prefix anomaly per the standing rule to trust
+`published_date` for ordering, not a dedup signal — worth a second look if a stronger signal
+turns up once the paper is actually read during ingest.
+
+Q4 progress unchanged this entry: 113 ingested / 69 remaining / 65 rejected, `2510.12116` still
+pending. Nothing ingested yet — list is ready, awaiting go-ahead to start batch 1 of 4.
+
+---
+
+**Session 2026-07-29, session 18, batch 1 of 4:** Batch (`2511.05143` creaky-voice PVQ case study,
+`2511.07116` BridgeVoC, `2511.07135` Novel/Realistic Speaker Generation for VC, `2511.08496`
+HQ-SVC) all ingested, 0 rejected. Corpus 678 → 682 pages, 0 errors corpus-wide, 1170 warnings
+unchanged.
+
+QC catches this batch (all on manual verification, not agent self-report): (1) title truncation
+on `papers/index.md` rows recurred on 3 of 4 papers (`2511.05143`, `2511.07116`, `2511.08496`) —
+same known unfixable-by-prompting bug, fixed against each page's own frontmatter `title:` every
+time; (2) `2511.07116` (BridgeVoC) had 5 bare `[[id]] (Name)` wikilinks in Wiki Connections, piped
+to `[[id|Name]]`; (3) `wiki/index.md`'s 3 paper-count occurrences (abstract callout, "Browse the
+Papers" prose line, "Browse all N papers" link) drifted after every single paper this batch, in
+both directions and sometimes only partially updated (e.g. after `2511.08496` two lines still read
+`681` and the link read `675` against an actual count of 682) — corrected against real `ls`/`grep`
+counts each time. `2511.07135` was the one fully clean paper this batch (index count, title, and
+wikilinks all correct on first health check).
+
+Tagging judgment calls verified: `2511.07135`'s `VC` task tag confirmed genuine (SpeakerVAE
+evaluated inside two dedicated VC pipelines with real cosine-similarity/WER/CER/UTMOS metrics).
+`2511.08496` (HQ-SVC) correctly carries both `singing` and `VC` task tags with both reflected in
+`related_concepts`, per the standing task/related_concepts consistency check; `disentanglement`
+correctly excluded (the paper's own training additions aren't ablated as a distinct mechanism,
+and the actual disentanglement work belongs to the frozen externally-trained FACodec backbone,
+not to this paper). `2511.05143`'s `field_significance.type` was set to
+`[engineering-integration, empirical-benchmark]` rather than `architectural-novelty` since its
+core manipulation mechanism carries over from the authors' own prior (out-of-corpus) paper —
+correctly triggered no figure copy. All in-corpus reference IDs cited by all 4 pages (HiFi-GAN,
+BigVGAN, Vocos, PeriodWave, WaveFM, NaturalSpeech 3/FACodec, FastSpeech 2, and others) verified
+to have real wiki pages before trusting `related_papers`/Wiki Connections links; no duplicate
+index rows found.
+
+Q4 progress: 117 ingested / 65 remaining (65 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18, batch 2 of 4:** Batch (`2511.09995` Time-Layer Adaptive
+Alignment for flow-matching zero-shot TTS, `2511.10112` FabasedVC, `2511.10262` MTR-DuplexBench,
+`2511.10913` Synthetic Voices, Real Threats) all ingested, 0 rejected. Corpus 682 → 686 pages,
+0 errors corpus-wide, 1170 warnings unchanged.
+
+Session-limit interruption occurred on the first attempt at `2511.10262`, cut off right after the
+agent announced it was starting to write the page. Verified clean per the interruption-recovery
+protocol (no page, no index row, no assets, no log entry, metadata still `accepted`, all 6 prior
+batch papers from batches 1–2 untouched, counts still 684=684 exactly as left after `2511.10112`)
+and retried from scratch; the retry ingested cleanly.
+
+QC catches this batch (all on manual verification, not agent self-report): title truncation on
+`papers/index.md` rows recurred on 3 of 4 papers (`2511.09995`, `2511.10262`, `2511.10913`) —
+fixed against each page's own frontmatter `title:` every time; `2511.10112` was the one fully
+clean paper this batch. `wiki/index.md`'s 3 paper-count occurrences drifted after every paper
+again, sometimes only 1–2 of 3 updated (e.g. after `2511.10262` the abstract callout still read
+684 against an actual 685; after `2511.10913` two lines read 685 and the Browse link read 679
+against an actual 686) — corrected against real `ls`/`grep` counts each time.
+
+Two scope/tagging judgment calls verified genuine on inspection: (1) `2511.10262`
+(MTR-DuplexBench) correctly excluded `subjective-evaluation` — all four evaluation dimensions
+are scored by a GPT-4o judge, not real human listeners, with a `complicates:` claim added noting
+the automated-judge caveat; `spoken-language-model` correctly included since the systems under
+test (Moshi, Freeze-Omni, VocalNet) consume a genuine live external user audio stream in a real
+full-duplex spoken-dialogue context, consistent with the sibling Full-Duplex-Bench precedent
+already in the corpus. (2) `2511.10913` (Synthetic Voices, Real Threats) correctly excluded
+`subjective-evaluation` (all scoring is automated via Detoxify/COLD/moderation APIs, one informal
+author aside about listening doesn't count as a controlled test) and correctly included
+`spoken-language-model` — verified by reading the full page: the paper's multi-modal attack
+family (Read/Spell/Phoneme) genuinely feeds external audio input into the LALM-based TTS system
+for it to consume and re-render as speech, satisfying the external-signal rule rather than being
+a plain text-to-speech paper wearing the tag. All in-corpus reference IDs across all 4 pages
+verified to have real wiki pages before trusting `related_papers`/Wiki Connections links; no
+duplicate index rows found.
+
+Q4 progress: 121 ingested / 61 remaining (65 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18, batch 3 of 4:** Batch (`2511.11104` CLARITY, `2511.11124`
+AV-Dialog, `2511.12074` MF-Speech, `2511.12690` Persian-English direct S2ST) all ingested, 0
+rejected. Corpus 686 → 690 pages, 0 errors corpus-wide, 1170 warnings unchanged.
+
+QC catches this batch (all on manual verification, not agent self-report): title truncation on
+`papers/index.md` rows recurred on all 4 papers this time (first fully-100%-affected batch this
+session) — fixed against each page's own frontmatter `title:` every time. `wiki/index.md`'s
+paper-count occurrences drifted after 3 of 4 papers (correct after `2511.11124` only) in both
+directions, including one case (`2511.12074`) where the count reverted all the way back to a
+stale `682` across all three occurrences rather than partially updating — corrected against real
+`ls`/`grep` counts each time.
+
+Three tagging/scope judgment calls verified genuine on inspection this batch: (1) `2511.11104`
+(CLARITY) correctly excluded both `multilingual-tts` (targets English accent varieties, not
+multiple languages, and filtered its own training data down to English-dominant utterances only)
+and `disentanglement` (bias mitigation is entirely input-side, via LLM text rewriting and
+retrieval-based prompt selection, with no explicit factorization/adversarial training mechanism);
+(2) `2511.11124` (AV-Dialog) correctly tagged both `spoken-language-model` (LLaMA3-8B genuinely
+consumes external live user speech, alongside video, in a real streaming dialogue context — the
+added video modality doesn't disqualify the tag) and `speech-to-speech` (fits the end-to-end
+spoken-dialogue sub-paradigm, directly comparable to the already-tagged Moshi/SpiRit-LM); (3)
+`2511.12074` (MF-Speech) is the strongest catch this batch — despite the title's own "Factor
+Disentanglement" framing, the `disentanglement` tag was independently verified against the actual
+Method/ablation sections (per-factor contrastive losses + post-discretization MI minimization via
+CLUB/MINE, with genuine Table 2 leakage-accuracy and Figure 4 t-SNE ablations) rather than taken
+on the title's word; separately, its `task` was reclassified from the pre-assigned `TTS` to `VC`
+since the system takes speech (not text) as input and is benchmarked exclusively against VC
+baselines on the VC-standard ESD dataset, with the metadata JSON left untouched per the
+never-alter-source-metadata invariant and only the page frontmatter corrected. `2511.12690`
+(Persian-English S2ST) correctly narrowed `task` to `[TTS]` only, per the established
+SeamlessM4T/Dub-S2ST/MTP-S2UT precedent (no dedicated VC system, only a discrete-unit-to-waveform
+vocoder). All in-corpus reference IDs across all 4 pages verified to have real wiki pages before
+trusting `related_papers`/Wiki Connections links; no duplicate index rows found.
+
+Q4 progress: 125 ingested / 57 remaining (65 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18, batch 4 of 4 (fresh 16-paper list COMPLETE):** Batch (`2511.14249`
+movie dubbing, `2511.16639` Codec2Vec, `2511.18487` InstructAudio, `2512.05126` SyncVoice) all
+ingested, 0 rejected. Corpus 690 → 694 pages, 0 errors corpus-wide, 1170 warnings unchanged.
+
+Session-limit interruption occurred on the outer session itself (not an individual ingest agent)
+right after `2511.14249`'s ingest agent had already returned a complete, successful result.
+Verified clean per the interruption-recovery protocol before proceeding: 691=691 page/index
+parity, metadata `status: ingested`, log.md entry present, health check 0 errors — the paper was
+genuinely fully ingested, only the outer session's own manual-verification pass had been cut off.
+No retry was needed, just resumed the normal per-paper QC pass and continued to the next paper.
+
+QC catches this batch (all on manual verification, not agent self-report): title truncation on
+`papers/index.md` rows recurred on all 4 papers again; `wiki/index.md`'s paper-count occurrences
+drifted after every paper in this batch, in both directions — corrected against real `ls`/`grep`
+counts each time. One genuine citation-integrity catch on `2512.05126` (SyncVoice): both the
+`related_papers` frontmatter array and a Wiki Connections prose bullet cited F5-TTS via its
+arXiv ID (`2410.06885`, no wiki page) instead of the canonical ACL wiki ID (`2025.acl-long.313`)
+— the exact recurring F5-TTS confusion pattern (see [[feedback_f5tts_paper_id]]), not caught by
+the automated health check since it only validates wikilink *format*, not whether the target page
+exists; fixed both occurrences by hand.
+
+Pre-selection's flagged ID-prefix anomaly on `2512.05126` (December-prefixed arXiv ID against a
+November `published_date`) was investigated during ingest per the standing instruction: the ingest
+agent read the full paper, checked the author list against the corpus, and found four prior
+papers from an overlapping Xiamen University author group, all on unrelated topics (endpoint
+detection, voice conversion, codec design) with no title/topic overlap and no self-referential
+"extended version" language — confirmed as a genuinely new, distinct paper, not a duplicate.
+
+Two scope/tagging judgment calls verified genuine: (1) `2511.14249` (movie dubbing) correctly
+excluded `speech-to-speech` (script+video-conditioned TTS, no speech-in/speech-out or dialogue
+component, checked against the concept's own scope note) and `multilingual-tts` (single-dataset
+training, no cross-language evidence); (2) `2512.05126` (SyncVoice) correctly included
+`multilingual-tts` (own bilingual Chinese/English training with a purpose-built Dual Speaker
+Encoder and real cross-lingual EN-ZH evaluation) but excluded `speech-to-speech` for the same
+reason as the movie-dubbing paper (video+text input, not speech-in/speech-out). `2511.16639`
+(Codec2Vec) correctly carries both `neural-codec` and `self-supervised-speech` given an explicit
+codec-choice ablation (DAC vs. Encodec) rather than incidental use of an off-the-shelf codec.
+`2511.18487` (InstructAudio) correctly scoped its dual speech/music framework to TTS-relevant
+prose without inventing music-specific vocabulary terms, and emitted a genuine `review_flags`
+entry (field_significance sitting at the high/moderate boundary — added to the Manual
+Verification Queue below). All in-corpus reference IDs across all 4 pages verified to have real
+wiki pages before trusting `related_papers`/Wiki Connections links (beyond the one F5-TTS catch);
+no duplicate index rows found.
+
+**This closes out the full 16-paper list pre-selected at the start of this session (2026-07-29):
+16 ingested, 0 rejected.** Q4 progress: 129 ingested / 53 remaining (65 rejected, `2510.12116`
+still pending). Nothing committed yet this session — next step is either a commit/push at this
+natural stopping point, or re-running the candidate-selection script to pre-select the next batch.
+
+---
+
+**Session 2026-07-29, session 18, pre-selection (5-paper list, batch not yet started):** Re-ran
+the candidate script fresh (53 remaining) rather than extending the just-closed 16-paper list.
+Skipped `2510.12116` (still pending). Built a fresh 5-paper chronological list:
+
+1. `2511.19734` — Evaluating Objective Speech Quality Metrics for Neural Audio Codecs
+2. `2511.20974` — RosettaSpeech: Zero-Shot Speech-to-Speech Translation without Parallel Speech
+3. `2511.21045` — CartoonSing: Unifying Human and Nonhuman Timbres in Singing Generation
+4. `2511.21229` — Developing an Open Conversational Speech Corpus for the Isan Language
+5. `2511.21270` — Multi-Reward GRPO for Stable and Prosodic Single-Codebook TTS LLMs at Scale
+
+Pre-flight checks: no full-version/duplicate `arxiv_comment` signals on any of the 5 (page-count
+notes or empty, nothing self-referential); no existing wiki pages or `papers/index.md` rows for
+any of the 5; 694=694 page/index parity confirmed before starting; no ID-prefix/published-date
+anomalies (all five IDs are `2511.x` against November 2025 dates, consistent). Noted for later in
+the queue (not part of this 5-paper list): `2511.22503` ("Joint Speech and Text Training for
+LLM-Based End-to-End Spoken Dialogue State Tracking") is the next chronological item after this
+batch and looks like another DST paper matching the `2510.09424` precedent (structured
+dialogue-state output, not spoken-output generation) — worth checking against that precedent
+chain when it comes up rather than assuming either way from the title.
+
+Q4 progress unchanged this entry: 129 ingested / 53 remaining / 65 rejected, `2510.12116` still
+pending. Nothing ingested yet — list is ready, awaiting go-ahead.
+
+---
+
+**Session 2026-07-29, session 18, item 1 of 5 (cadence dropped to one-at-a-time-with-go-ahead
+per user request):** `2511.19734` (Evaluating Objective Speech Quality Metrics for Neural Audio
+Codecs) ingested. Corpus 694 → 695 pages, 0 errors.
+
+Session-limit interruption hit mid-ingest, right as the agent announced it was about to update
+`papers/index.md`, `index.md` counts, `log.md`, and metadata — a genuine partial-write case, not
+the usual clean-cutoff case. Checked the standalone content repo per the interruption-recovery
+protocol and found: the paper page itself (`papers/2511.19734.md`) and its `papers/index.md` row
+were both already written and complete (full page, all required sections, clean frontmatter,
+`subjective-evaluation` tag correctly applied for a genuine MUSHRA listening test with real human
+raters), but `log.md` had no entry and `raw/metadata/2511.19734.json` was still `status:
+accepted`. Read the full page to confirm it wasn't a mid-write truncation before deciding to
+reuse rather than discard; health check passed 0 errors, 0 warnings on the page as found. Rather
+than re-running a fresh ingest agent (which would have re-written the already-correct page),
+completed the missing steps by hand: fixed the usual title truncation on the index row, corrected
+`wiki/index.md`'s 3 count occurrences (694 → 695), appended the missing `log.md` entry matching
+the established format, and set `status: ingested` / `ingested_date` / `generation_history` on
+the metadata JSON to match the pattern used by the agent-driven ingests earlier this session.
+
+Q4 progress: 130 ingested / 52 remaining (65 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18, item 2 of 5:** `2511.20974` (RosettaSpeech) ingested. Corpus
+695 → 696 pages, 0 errors.
+
+Tagging judgment calls verified genuine: `task` narrowed to `[TTS]` only, per the established
+SeamlessM4T/Dub-S2ST/MTP-S2UT/Persian-English-S2ST precedent — speaker preservation runs through
+an unmodified, never-fine-tuned off-the-shelf CosyVoice2 CFM component, unlike Dub-S2ST's
+synthesizer which the paper does fine-tune as part of its own system. `zero-shot-tts` correctly
+excluded from `related_concepts` even though the title says "zero-shot": the voice-preservation
+capability is inherited unmodified from a reused external component rather than a dedicated
+contribution, and the title's "zero-shot" actually refers to zero-shot S2ST training without
+parallel speech data, which the `speech-to-speech` tag and claims already capture.
+`spoken-language-model` included since Qwen3 is adapted with a speech encoder to consume an
+external source-speech signal, matching the DeSTA2/Qwen3-Omni precedent already in the corpus.
+
+One QC note: the ingest agent flagged what it believed was a "race condition from concurrent
+parallel ingest workers" causing inconsistent `wiki/index.md` counts (695 in two places, 689 in
+the Browse link) and left the file as-is rather than reconciling it itself. Investigated and
+found no evidence of any actual concurrent writer — this session has been running strictly
+sequential one-paper-at-a-time ingests all day, and the pattern (partial, inconsistent count
+updates) exactly matches the long-standing, already-diagnosed index-count-drift bug rather than a
+new race condition. Corrected the usual way (fixed title truncation on the index row and all 3
+`wiki/index.md` count occurrences against real `ls`/`grep` counts, 696=696 confirmed). Worth
+watching whether this "race condition" misdiagnosis recurs from other agents, since attributing
+the drift to a phantom concurrent process could lead a future agent to stop reconciling it
+under the (incorrect) assumption that another process will.
+
+Q4 progress: 131 ingested / 51 remaining (65 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18, item 3 of 5:** `2511.21045` (CartoonSing) ingested. Corpus
+696 → 697 pages, 0 errors.
+
+Genuine catch this item (manual verification, not agent self-report): the recurring
+task/`related_concepts` mismatch bug (see [[feedback_task_related_concepts_mismatch]]) — the
+page's `task` frontmatter correctly included `singing` alongside `TTS`/`VC`, but `related_concepts`
+and Wiki Connections both omitted the `singing` concept tag entirely despite the paper formally
+defining and evaluating both non-human singing voice synthesis and non-human singing voice
+conversion as its two core contributions. Added `singing` to `related_concepts` and a
+corresponding Wiki Connections bullet by hand. Tagging judgment calls otherwise verified genuine
+on inspection: `zero-shot-tts` (unseen timbre embeddings, including non-human, without
+per-timbre fine-tuning), `multilingual-tts` (own system trained/evaluated on Chinese and Japanese
+singing data with per-language metrics), and `disentanglement` (explicit ablation evidence, §B.2,
+that a more timbre-disentangled content representation generalizes better to non-human timbre
+transfer) all held up. `task: [singing, TTS, VC]` confirmed reasonable given the paper formally
+defines and separately evaluates both an SVS and an SVC task. In-corpus citation correctly
+excluded TCSinger 2 (`2505.14910`) since that paper's own `status` is `rejected` in this corpus.
+
+Q4 progress: 132 ingested / 50 remaining (65 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
 
 ---
 
