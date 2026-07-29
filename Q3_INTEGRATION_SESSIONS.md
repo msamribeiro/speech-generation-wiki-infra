@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-29, after speaker-adaptation Phase 2 closed** (re-run the commands
+**State as of 2026-07-29, after multilingual-tts Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -54,7 +54,7 @@ corpus-wide `Covers`-style column was dropped:
 | **prosody-control** | **94** | **94** | **100%** (Phase 1+2) |
 | **voice-conversion** | **87** | **87** | **100% (Phase 1+2)** |
 | **speaker-adaptation** | **79** | **79** | **100% (Phase 1+2)** |
-| multilingual-tts | 76 | 0 | 0% |
+| **multilingual-tts** | **75** | **75** | **100% (Phase 1+2)** |
 | emotion-synthesis | 74 | 0 | 0% |
 | **speech-to-speech** | **63** | **60** | **95%** |
 | gan-vocoder | 60 | 0 | 0% |
@@ -65,7 +65,7 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2232** | **1925** | **86.2%** |
+| **TOTAL** | **2231** | **2000** | **89.6%** |
 
 `papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **123** as of
 2026-07-29 after speaker-adaptation Phase 2 closed. This is a unique-paper corpus-wide
@@ -90,9 +90,9 @@ prefer extending those over writing a new one-off script.
 
 **`flow-matching`, `speech-to-speech`, `rlhf-speech`, `evaluation-metrics`, `disentanglement`,
 `autoregressive-codec-tts`, `instruction-conditioned-tts`, `prosody-control`, `zero-shot-tts`,
-`diffusion-tts`, `self-supervised-speech`, and `speaker-adaptation` are fully closed
+`diffusion-tts`, `self-supervised-speech`, `speaker-adaptation`, and `multilingual-tts` are fully closed
 for Q3-and-earlier Phase 1 + Phase 2** (97/97, 60/63, 29/29, 285/286, 100/100, 165/165, 44/44,
-94/94, 203/203, 46/46, 146/146, and 79/79 respectively —
+94/94, 203/203, 46/46, 146/146, 79/79, and 75/75 respectively —
 the 3-paper gap on speech-to-speech is intentional: `2025.acl-long.388` DiVA,
 `interspeech-2025-2660` VAP, and `2509.23938` Easy Turn were each evaluated and correctly excluded
 for having no speech-generation stage of their own, despite carrying the tag; note `2509.23938`
@@ -122,7 +122,8 @@ ten Phase 1 batches and one Phase 2 synthesis pass. `voice-conversion` is fully 
 after five Phase 1 batches and one Phase 2 synthesis pass. `self-supervised-speech` is fully
 closed at 146/146 after eight Phase 1 batches and one Phase 2 synthesis pass.
 `speaker-adaptation` is fully closed at 79/79 after four Phase 1 batches and one Phase 2
-synthesis pass; 6 concepts have no claim YAML yet.
+synthesis pass. `multilingual-tts` is fully closed at 75/75 after four Phase 1 batches and one
+Phase 2 synthesis pass; 5 concepts have no claim YAML yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 116, fully clearing the
@@ -320,6 +321,52 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-29 — multilingual-tts Phase 2 synthesis run, concept fully closed
+
+- Synthesized the completed 75-paper, 325-claim YAML without re-reading paper pages. Created
+  **7 method families** spanning autoregressive codec models, flow matching, transformer
+  encoder–decoders, GAN synthesis, hybrid semantic–acoustic systems, VAE latents, and diffusion.
+- Created **17 claim clusters**: 15 strongly supported and 2 emerging. The synthesis covers
+  low-resource transfer, corpus imbalance, cross-lingual cloning, explicit language conditioning,
+  shared phonetic representations, code-switching, text front ends, unseen-language transfer,
+  continued adaptation, parameter-efficient extension, data scale, accent leakage,
+  language-sensitive alignment, multilingual evaluation, codec language models, flow/diffusion
+  scaling, and dialect identity.
+- Assigned **67/75 papers** to reciprocal architecture families with **104 memberships**. The
+  remaining 8 papers have no architecture label and are legitimate evaluation, corpus, or
+  peripheral-task outliers. Added 5 reassessment items, 6 open questions, and 5 trend notes.
+  The reciprocal-link and cluster-reference audit found no inconsistencies.
+- Phase 2 health passed with **0 errors and 8 expected method-family coverage warnings**.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-29 — multilingual-tts Phase 1 closed, batches 3–4 (40 → 75/75)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 3:** 20 papers, `2508.07302` through `2508.17494`; 85 claims from 5 structured and
+  15 legacy pages. **Batch 4:** the final 15 papers, `2508.18006` through `2509.25131`;
+  61 claims from 13 structured and 2 legacy pages.
+- The authoritative closure audit matched the eligible candidate and YAML ID sets exactly:
+  **75/75 unique entries**, zero missing, zero extraneous, 13 Tier 2 pages skipped, and 25
+  Q4-or-later pages excluded. All **325 claims** retain source citations; there are no empty
+  claim lists or unspecified sources.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**. All
+  `method_family` fields and synthesis structures remain empty as required.
+  **Phase 1 is closed; Phase 2 synthesis remains pending.**
+
+### 2026-07-29 — multilingual-tts Phase 1 batches 1–2 (0 → 40/75)
+
+- Started `multilingual-tts` using the deterministic oldest-first Phase 1 protocol. Live
+  discovery corrected the prior 76-paper status-table count to **75 eligible Q3-and-earlier
+  papers**, skipped 13 Tier 2 pages, and excluded 25 Q4-or-later pages; the concept is registered
+  and had no existing claim YAML.
+- **Batch 1:** 20 papers, `2206.04658` through `2505.13000`; 90 claims from 4 structured and
+  16 legacy pages. **Batch 2:** 20 papers, `2505.17589` through `2508.05385`; 89 claims from
+  11 structured and 9 legacy pages.
+- The YAML now contains **40 unique paper entries and 179 claims**, with no empty claim lists,
+  unspecified sources, or duplicate IDs. Method-family assignments and synthesis structures
+  remain empty as required during Phase 1. Both health checks passed with **0 errors and
+  0 warnings**; 35 eligible papers remain.
 
 ### 2026-07-29 — speaker-adaptation Phase 2 synthesis run, concept fully closed
 
