@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-30, after streaming-tts Phase 2 closed** (re-run the commands
+**State as of 2026-07-30, after transformer-enc-dec-tts Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -62,13 +62,13 @@ corpus-wide `Covers`-style column was dropped:
 | **diffusion-tts** | **46** | **46** | **100%** (Phase 1+2) |
 | **instruction-conditioned-tts** | **44** | **44** | **100%** (Phase 1+2) |
 | **rlhf-speech** | **29** | **29** | **100%** (Phase 1+2) |
-| transformer-enc-dec-tts | 28 | 0 | 0% |
+| **transformer-enc-dec-tts** | **28** | **28** | **100% (Phase 1+2)** |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2230** | **2187** | **98.1%** |
+| **TOTAL** | **2230** | **2215** | **99.3%** |
 
 `papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **142** as of
-2026-07-30 after streaming-tts Phase 2 closed. This is a unique-paper corpus-wide
+2026-07-30 after transformer-enc-dec-tts Phase 2 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -129,8 +129,10 @@ and one Phase 2 synthesis pass, with 7 method families and 17 claim clusters fro
 with 7 method families and 17 claim clusters from 259 claims. `streaming-tts` is fully closed at
 54/54 after three Phase 1 batches and one Phase 2 synthesis pass, with 5 method families and
 17 claim clusters from 247 claims; 51/54 papers have reciprocal family assignments and 3
-architecture-unspecified evaluation or system-level outliers remain. Three concepts have no
-claim YAML yet.
+architecture-unspecified evaluation or system-level outliers remain. `transformer-enc-dec-tts`
+is fully closed at 28/28 after two Phase 1 batches and one Phase 2 synthesis pass, with 7 method
+families and 17 claim clusters from 119 claims; 27/28 papers have reciprocal family assignments
+and one architecture-unspecified evaluation outlier remains. Two concepts have no claim YAML yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 116, fully clearing the
@@ -328,6 +330,28 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-30 — transformer-enc-dec-tts Phase 2 closed
+
+- Synthesized the complete 28-paper, 119-claim Phase 1 evidence base into **7 method families**
+  and **17 claim clusters**: 4 strongly supported and 13 emerging.
+- Assigned **27/28 papers** to reciprocal architecture families, with **43 memberships**.
+  `2025.conll-1.9` remains a legitimate architecture-unspecified evaluation outlier.
+- Added 5 reassessment items, 6 open questions, and 5 trend notes. The Phase 2 health check
+  passed with **0 errors and 1 expected method-family coverage warning**. The concept is now
+  fully closed for Q3 integration.
+
+### 2026-07-30 — transformer-enc-dec-tts Phase 1 closed, batches 1–2 (0 → 28/28)
+
+- Started the concept with the deterministic oldest-first protocol. Live discovery found
+  **28 eligible Q3-and-earlier papers**, no Tier 2 pages, and 5 Q4-or-later exclusions.
+- **Batch 1:** 20 papers, `1703.10135` through `interspeech-2025-1940`; 86 claims from
+  9 structured and 11 legacy pages. **Batch 2:** the final 8 papers,
+  `interspeech-2025-2189` through `2509.19592`; 33 claims from 5 structured and 3 legacy pages.
+- The closure audit matched the candidate and YAML ID sets exactly: **28/28 entries**, zero
+  missing or extraneous IDs, 119 claims, no empty claim lists, and no unspecified sources.
+  Both concept-scoped Phase 1 checks passed with **0 errors and 0 warnings**. Method-family
+  assignments and all synthesis structures remain empty; Phase 2 is pending.
 
 ### 2026-07-30 — streaming-tts Phase 2 closed
 
