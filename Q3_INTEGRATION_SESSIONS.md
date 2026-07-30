@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-29, after multilingual-tts Phase 2 closed** (re-run the commands
+**State as of 2026-07-30, after emotion-synthesis Phase 2 closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -55,7 +55,7 @@ corpus-wide `Covers`-style column was dropped:
 | **voice-conversion** | **87** | **87** | **100% (Phase 1+2)** |
 | **speaker-adaptation** | **79** | **79** | **100% (Phase 1+2)** |
 | **multilingual-tts** | **75** | **75** | **100% (Phase 1+2)** |
-| emotion-synthesis | 74 | 0 | 0% |
+| **emotion-synthesis** | **73** | **73** | **100% (Phase 1+2)** |
 | **speech-to-speech** | **63** | **60** | **95%** |
 | gan-vocoder | 60 | 0 | 0% |
 | streaming-tts | 54 | 0 | 0% |
@@ -65,10 +65,10 @@ corpus-wide `Covers`-style column was dropped:
 | transformer-enc-dec-tts | 28 | 0 | 0% |
 | singing | 10 | 0 | 0% |
 | fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2231** | **2000** | **89.6%** |
+| **TOTAL** | **2230** | **2073** | **93.0%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **123** as of
-2026-07-29 after speaker-adaptation Phase 2 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **142** as of
+2026-07-30 after emotion-synthesis Phase 2 closed. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -123,7 +123,9 @@ after five Phase 1 batches and one Phase 2 synthesis pass. `self-supervised-spee
 closed at 146/146 after eight Phase 1 batches and one Phase 2 synthesis pass.
 `speaker-adaptation` is fully closed at 79/79 after four Phase 1 batches and one Phase 2
 synthesis pass. `multilingual-tts` is fully closed at 75/75 after four Phase 1 batches and one
-Phase 2 synthesis pass; 5 concepts have no claim YAML yet.
+Phase 2 synthesis pass. `emotion-synthesis` is fully closed at 73/73 after four Phase 1 batches
+and one Phase 2 synthesis pass, with 7 method families and 17 claim clusters from 324 claims.
+Four concepts have no claim YAML yet.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 116, fully clearing the
@@ -321,6 +323,53 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-07-30 — emotion-synthesis Phase 2 synthesis run, concept fully closed
+
+- Synthesized the completed 73-paper, 324-claim YAML without re-reading paper pages. Created
+  **7 method families** spanning autoregressive speech language models, flow matching,
+  transformer encoder–decoders, GANs, hybrid semantic–acoustic systems, diffusion, and VAE
+  emotion/style latents.
+- Created **17 claim clusters**: 14 strongly supported and 3 emerging. The synthesis covers
+  explicit emotion conditioning, natural-language control, temporal granularity, identity–emotion
+  disentanglement, expressiveness trade-offs, multimodal and dialogue context, categorical and
+  continuous representations, corpus and annotation limits, expressive transfer, flow/diffusion
+  control, paralinguistic events, preference optimization, metric validity, multilingual transfer,
+  and sustained emotional coherence.
+- Assigned **62/73 papers** to reciprocal architecture families with **99 memberships**. The
+  remaining 11 papers have no architecture label and are legitimate evaluation, benchmark, or
+  system-level outliers. Added 5 reassessment items, 6 open questions, and 5 trend notes.
+  The reciprocal-link and cluster-reference audit found no inconsistencies.
+- Phase 2 health passed with **0 errors and 11 expected method-family coverage warnings**.
+  **The concept is fully closed for Q3 and earlier.**
+
+### 2026-07-30 — emotion-synthesis Phase 1 closed, batches 3–4 (40 → 73/73)
+
+- Re-derived the deterministic oldest-first queue before both sequential invocations.
+  **Batch 3:** 20 papers, `interspeech-2025-0756` through `2509.09716`; 89 claims from
+  10 structured and 10 legacy pages. **Batch 4:** the final 13 papers, `2504.20581` through
+  `2509.26514`; 56 claims from 13 structured pages.
+- The authoritative closure audit matched the eligible candidate and YAML ID sets exactly:
+  **73/73 unique entries**, zero missing, zero extraneous, 4 Tier 2 pages skipped, and 20
+  Q4-or-later pages excluded. All **324 claims** retain source citations; there are no empty
+  claim lists or unspecified sources.
+- Both concept-scoped Phase 1 health checks passed with **0 errors and 0 warnings**. All
+  `method_family` fields and synthesis structures remain empty as required.
+  **Phase 1 is closed; Phase 2 synthesis remains pending.**
+
+### 2026-07-30 — emotion-synthesis Phase 1 batches 1–2 (0 → 40/73)
+
+- Started `emotion-synthesis` using the deterministic oldest-first Phase 1 protocol. Live
+  discovery corrected the prior 74-paper status-table count to **73 eligible Q3-and-earlier
+  papers**, skipped 4 Tier 2 pages, and excluded 20 Q4-or-later pages; the concept is registered
+  and had no existing claim YAML.
+- **Batch 1:** 20 papers, `2312.01479` through `2025.sigdial-1.27`; 90 claims from 14 structured
+  and 6 legacy pages. **Batch 2:** 20 papers, `2508.02038` through `interspeech-2025-0754`;
+  89 claims from 2 structured and 18 legacy pages.
+- The YAML now contains **40 unique paper entries and 179 claims**, with no empty claim lists,
+  unspecified sources, or duplicate IDs. Method-family assignments and synthesis structures
+  remain empty as required during Phase 1. Both health checks passed with **0 errors and
+  0 warnings**; 33 eligible papers remain.
 
 ### 2026-07-29 — multilingual-tts Phase 2 synthesis run, concept fully closed
 
