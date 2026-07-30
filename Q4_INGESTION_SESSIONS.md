@@ -13,12 +13,12 @@ ingestion protocol and cadence preferences refined during Q3, without the histor
 
 | Status | Count |
 |--------|-------|
-| Already ingested (Q4 2025) | 75 |
-| Remaining to ingest | 109 |
-| Rejected | 63 |
+| Already ingested (Q4 2025) | 147 |
+| Remaining to ingest | 34 |
+| Rejected | 66 |
 | **Total Q4 2025 in corpus** | **247** |
 
-As of session 15 close (2026-07-18). Corpus stands at **640 wiki pages**, 0 errors corpus-wide.
+As of session 19 close (2026-07-30). Corpus stands at **712 wiki pages**, 0 errors corpus-wide.
 One paper (`2510.12116`) remains `status: accepted` but undecided pending a scope call — see
 `raw/review_queue.md`; skip it again rather than re-ingesting on autopilot until it's resolved.
 Counts computed from `raw/metadata/*.json` where `year == 2025` and `month in (10, 11, 12)`
@@ -48,9 +48,14 @@ To continue, just say something like **"Let's continue ingesting"**. Everything 
 and in the linked memories (auto-loaded via `MEMORY.md` at session start).
 
 **Before starting:** re-run the progress-count script above — fetch/filter may have added papers
-since 2026-07-19, which would shift IDs/counts. If the list below no longer matches
+since 2026-07-30, which would shift IDs/counts. If the list below no longer matches
 `raw/metadata/`'s current `accepted` set for Q4 2025, re-select fresh candidates chronologically
 by `published_date` rather than assuming this list is still accurate.
+
+**Session 19 (2026-07-30) 16-paper list fully consumed as of batch 4 close**: 15 ingested, 1
+rejected (`2511.22503`, DST scope call). Next session: re-run the candidate-selection script fresh
+(see Scope section above) rather than assuming a stale list. Continue chronologically from the
+first remaining paper after `2512.04793`. `2510.12116` remains pending — do not re-select it.
 
 **Prior list (session 15, 32 papers) fully consumed as of session 15 close**: items 1–25
 processed (24 ingested + `2510.12116` flagged and left `accepted`/undecided), items 26–32
@@ -775,6 +780,193 @@ excluded TCSinger 2 (`2505.14910`) since that paper's own `status` is `rejected`
 
 Q4 progress: 132 ingested / 50 remaining (65 rejected, `2510.12116` still pending). Nothing
 committed yet this session.
+
+---
+
+**Session 2026-07-29, session 18 close (committed and pushed, documented retroactively 2026-07-30):**
+A session-close commit/push happened after item 3 above but was never logged back to this file —
+the last few entries said "nothing committed yet this session" and that note went stale without a
+closing update. Confirmed via git log: content repo commit `65ecf66` ("Ingest 19 Q4 2025 papers,
+batches 1-4 plus 3 additional items (Nov 5-26)") and infra repo commit `f8f38e7` (same message)
+both merged into `main` (content `7788447`, infra `f68f111`) — "19 papers" = the 16-paper
+pre-selected batch (items 1-16) plus the 3 "additional items" ingested afterward
+(`2511.19734`, `2511.20974`, `2511.21045`). All three confirmed `status: ingested` in metadata and
+present as tracked, committed files. No work was lost; this is a documentation gap only.
+
+---
+
+**Session 2026-07-30, session 19, batch 1 of 4 (fresh 16-paper list, includes the 2 items left
+over from the prior 5-paper list):** Pre-selected 16 papers chronologically from the fresh
+`accepted` Q4 set (50 remaining), skipping `2510.12116` (still pending scope call). List starts
+with the 2 remaining items from the last session's 5-paper list (`2511.21229`, `2511.21270`).
+Pre-flight checks: no full-version/duplicate `arxiv_comment` signals, no existing wiki pages, no
+title collisions. `2505.17320` (item 7 of the 16) carries the routine ID-prefix/published-date
+mismatch (May 2025 arXiv ID against a November 2025 `published_date`) with no self-referential
+"full version" language, so it's the known chronological-ordering gotcha, not a duplicate.
+
+Batch 1 (`2511.21229` Isan Language corpus, `2511.21270` Multi-Reward GRPO, `2511.22293`
+GLA-Grad++, `2511.22503` DST) processed: 3 ingested, 1 rejected. Corpus 697 → 700 pages, 0 errors.
+
+QC catches on manual verification (not agent self-report): (1) `2511.21229`'s ingest agent tagged
+`multilingual-tts`, but the paper trains no model at all (pure corpus/orthography-documentation
+work for a single Isan dialect variety) — spurious per the multilingual-tts tagging rule (requires
+the paper's own system to be trained/adapted across languages); removed the tag from frontmatter
+and rewrote the Wiki Connections section honestly (no concept fit, no in-corpus citations). (2)
+Title truncation recurred on all 3 ingested papers' `papers/index.md` rows, fixed by hand each
+time. (3) `wiki/index.md`'s 3 count occurrences drifted after the second and third papers
+(including one first-agent claim of "fixing" the count to a value lower than before its own edit,
+692 vs. the correct 699) — corrected against real `ls`/`grep` counts both times; one agent falsely
+labeled a genuine bare wikilink (`[[2406.00654]]` on `2511.21270`'s page) as "intentional," fixed
+to piped form. Neither of the two GRPO/RLHF and diffusion-vocoder tagging judgment calls
+(`rlhf-speech` on `2511.21270`, `diffusion` architecture on `2511.22293`, both with `gan-vocoder`
+correctly excluded) needed correction on review — both held up against the paper's actual method
+sections.
+
+`2511.22503` ("Joint Speech and Text Training for LLM-Based End-to-End Spoken Dialogue State
+Tracking") is a second instance of the exact `2510.09424` DST shape (speech-in, JSON-slot-out, JGA
+metric only, no speech generation anywhere), likely the same Brno University of Technology
+research line. Per the standing note that the `2510.09424` accept was a one-off override and not a
+new precedent, this one was read in full and surfaced to the user fresh rather than auto-accepted
+or auto-rejected. User confirmed **reject**. Logged to `raw/review_queue.md` and
+`raw/pipeline_log.md`; `raw/metadata/2511.22503.json` set to `status: rejected`.
+
+Q4 progress: 135 ingested / 46 remaining (66 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-30, session 19, batch 2 of 4:** Batch 2 (`2511.22687` PURE Codec, `2512.00451`
+STCTS, `2505.17320` Expressive Japanese Character TTS, `2512.00937` Arabic TTS with FastPitch) all
+ingested, 0 rejected. Corpus 700 → 704 pages, 0 errors.
+
+Process note: the first two papers of this batch (`2511.22687`, `2512.00451`) were launched as two
+parallel ingest agents by mistake, breaking the standing one-paper-at-a-time rule (both write to
+the same shared `papers/index.md`/`index.md`/`log.md`). Caught immediately and flagged; verified
+carefully afterward for clobbered edits once both completed — no actual corruption occurred (no
+duplicate or missing rows, no missing log entries, both pages independently valid), but the index
+paper-count occurrences were left inconsistent across the two agents' edits (700 vs. 702 vs. 695
+at different points) and needed the usual manual reconciliation. Reverted to strict one-at-a-time
+for the remaining two papers in the batch.
+
+QC catches (manual verification, not agent self-report): (1) index-count drift recurred on every
+single paper in this batch, worse than usual due to the parallel-launch mistake — all count
+occurrences reconciled against real `ls`/`grep` totals after each paper (701→702→703→704 in
+sequence); (2) title truncation recurred on all 4 papers' `papers/index.md` rows, fixed by hand
+each time; (3) one genuine review-flagged claim on `2511.22687` (PURE Codec): the paper's own
+Section IV-F prose (WER 2.91%→2.46%, SPK-SIM "reaching 0.76") doesn't match its own Table IV (WER
+10.8→10.5, SPK-SIM 0.70→0.68) for the downstream SpeechLM-TTS evaluation — the ingest agent
+correctly used Table IV as the traceable source and surfaced the inconsistency in a `[!warning]`
+Limitations callout rather than reconciling or picking one number silently; verified on inspection,
+no fix needed. `2505.17320` hit the known ID-prefix/published-date mismatch (May 2025 arXiv ID
+against a November `published_date`) with no self-referential "full version" language in its
+`arxiv_comment` — the routine chronological-ordering gotcha, not a duplicate, handled correctly per
+standing instruction.
+
+One session-limit interruption: the first `2512.00937` ingest attempt was cut off mid-read (still
+inside `raw/parsed/2512.00937/paper.md`) before writing anything. Verified clean per the
+interruption-recovery protocol (no page file, no index row, no log entry, `status` still
+`accepted`) and retried directly as a fresh ingest rather than a resume.
+
+Tagging judgment calls verified genuine on inspection: `multilingual-tts` correctly excluded from
+both `2505.17320` (per-character Japanese-only fine-tunes, neutral style vector, base model's
+pitch-accent control not exercised as this paper's contribution) and `2512.00937` (single-language
+Arabic system, no cross-language training/adaptation) — both single-language systems, tagging
+would have repeated the exact `2511.21229` mistag pattern caught in batch 1 had it been applied.
+`subjective-evaluation` correctly included on `2505.17320` (genuine MOS/CMOS listening tests, 11
+and 5 raters) and correctly excluded from `2512.00937` (objective metrics only, including the
+paper's own novel cepstral oversmoothing metric family). `2511.22687` correctly excluded
+`self-supervised-speech` (its guidance model is a supervised speech-enhancement model, not an SSL
+representation model) and `2512.00451` (STCTS) correctly excluded `neural-codec` despite superficial
+codec-adjacent framing — it explicitly rejects learned discrete-token compression in favor of
+text+prosody+speaker-embedding transmission reconstructed via off-the-shelf XTTS-v2, so the tag
+would not have matched the paper's actual method.
+
+Q4 progress: 139 ingested / 42 remaining (66 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-30, session 19, batch 3 of 4:** Batch 3 (`2025.iwclul-1.3` South Sámi TTS,
+`2512.01537` Two-Dimensional Quantization for Geometry-Aware Audio Coding, `2512.01865`
+Cross-Lingual Interleaving for Speech Language Models, `2512.02523` Generative Multi-modal Feedback
+for Singing Voice Synthesis Evaluation) all ingested, 0 rejected. Corpus 704 → 708 pages, 0 errors.
+Strict one-at-a-time cadence maintained throughout, no parallel launches this batch.
+
+QC catches (manual verification, not agent self-report): (1) index-count drift recurred on every
+paper again, reconciled against real `ls`/`grep` totals each time (705→706→707→708 in sequence);
+one agent's self-reported "corrected" count was actually a regression below the real prior value,
+consistent with the pattern seen all session; (2) title truncation recurred on 3 of 4 papers'
+`papers/index.md` rows (`2025.iwclul-1.3`, `2512.01537`, `2512.02523`), fixed by hand each time; (3)
+5 bare wikilinks on `2512.01865` (Cross-Lingual Interleaving), fixed to piped form; (4) a genuine
+recurrence of the task/`related_concepts` mismatch bug on `2512.02523`: the ingest agent tagged
+`task: [singing, evaluation]` but omitted `singing` from `related_concepts`, incorrectly claiming
+in its own summary that no `singing` concept slug exists in the controlled vocabulary — it does
+(`docs/content.md` Capabilities registry, `concepts/singing.md`); added the tag and a matching Wiki
+Connections bullet by hand.
+
+Tagging/scope judgment calls verified genuine on inspection: `multilingual-tts` correctly excluded
+from `2025.iwclul-1.3` (single-language South Sámi system; the paper explicitly states transfer
+learning from other Sámi languages "was not pursued here," multilingual use is future work only) —
+same pattern as the `2511.21229` mistag caught in batch 1, correctly avoided here. `2512.01537`
+(general-purpose audio codec, not speech-specific) was ingested with an explicit scope caveat in
+its Novelty Assessment, on the same precedent basis as already-accepted general codecs (EnCodec,
+WavTokenizer) — substantial speech-domain training/evaluation share plus a dedicated downstream
+autoregressive-TTS validation; did not require escalating to the user. `2512.01865`'s
+`spoken-language-model` tag verified against the strict external-signal rule (LLM adapted via
+embedding-table replacement to consume real external Mimi-tokenized speech, not a TTS-LM consuming
+only its own output); `multilingual-tts` correctly excluded since the paper does no TTS generation
+at all (textless SLM), multilinguality captured via `conditioning: [multilingual]` instead.
+`2512.02523`'s `subjective-evaluation` correctly excluded despite the paper calling its output
+"feedback" — verified directly against the method section that the evaluation signal is an
+LLM-as-judge benchmark (SCQ/OEQ), not a human listening test.
+
+Q4 progress: 143 ingested / 38 remaining (66 rejected, `2510.12116` still pending). Nothing
+committed yet this session.
+
+---
+
+**Session 2026-07-30, session 19, batch 4 of 4 (16-paper pre-selected list COMPLETE):** Batch 4
+(`2512.03486` Universal Harmonic Discriminator, `2512.04552` RRPO Emotional TTS, `2512.04779`
+YingMusic-Singer, `2512.04793` YingMusic-SVC) all ingested, 0 rejected. Corpus 708 → 712 pages, 0
+errors. Corpus-wide health check re-run at batch close: 0 errors across all 712 pages, 1170
+warnings (matches the pre-existing baseline, no new corpus-wide issues introduced).
+
+One session-limit interruption: the first `2512.03486` attempt was cut off while still reading the
+source paper, before writing anything. Verified clean per the interruption-recovery protocol (no
+page file, no index row, no log entry, `status` still `accepted`) and retried directly.
+
+QC catches (manual verification, not agent self-report): (1) index-count drift recurred on every
+paper again (709→710→711→712 in sequence), reconciled against real `ls`/`grep` totals each time;
+(2) title truncation recurred on all 4 papers' `papers/index.md` rows, fixed by hand each time; (3)
+a third recurrence this session of the task/`related_concepts` mismatch bug, on `2512.03486`: task
+tagged `[TTS, singing]` (genuinely earned — trains/evaluates specifically on OpenSinger/M4Singer/
+Opencpop with singing-focused results) but `singing` omitted from `related_concepts`, fixed by
+hand; (4) a genuine citation-integrity catch on `2512.04779` (YingMusic-Singer): the ingest agent
+cited TCSinger 2 (`2505.14910`) as an in-corpus wikilink, but that paper's own `status` is
+`rejected` (confirmed earlier this session during the `2511.21045` CartoonSing ingest in batch 1)
+— unlike a forward-reference to an accepted-but-not-yet-ingested paper, a rejected paper will never
+get a page, so the ID was removed from `related_papers` entirely (not just de-linked in prose) and
+the Wiki Connections bullet converted to plain text noting it's outside the corpus.
+
+Tagging/scope judgment calls verified genuine on inspection: `2512.03486`'s venue was correctly
+corrected from raw `arXiv` metadata to `ASRU`/`conference` per its `arxiv_comment` ("Accepted by
+ASRU2025"), following existing corpus precedent for other ASRU-accepted preprints; `rlhf-speech` on
+`2512.04552` (RRPO) verified against a genuine mechanism (reward-model fine-tuning with gradients
+backpropagated into the policy, ablated per regularization component), not an incidental RL
+citation. `2512.04779`'s `zero-shot-tts` tag verified against real unseen-speaker evidence (Table
+1/2 zero-shot timbre transfer to 5 unseen in-the-wild speakers with WER/SIM/FPC results), not just
+the paper's own title claim; confirmed no fabricated cross-link to the same-session companion paper
+`2512.04793` (YingMusic-SVC) since neither paper's own text or bibliography references the other,
+despite being from the same research group/product line. `2512.04793`'s `task: [singing, VC]`
+verified against genuine VC-specific metrics (SPK-SIM, CER, LogF0PCC, NMOS, SMOS), and its 8
+`related_papers` IDs were individually checked for `status: ingested` (not `rejected`) before
+linking, applying the lesson from the `2512.04779` TCSinger 2 catch earlier in the same batch.
+
+**This closes out the full 16-paper list pre-selected at the start of this session (2026-07-30):
+16 ingested, 1 rejected (`2511.22503`, DST scope reject).** Q4 progress: 147 ingested / 34 remaining
+(66 rejected, `2510.12116` still pending). Nothing committed yet this session — next step is either
+a commit/push at this natural stopping point, or re-running the candidate-selection script to
+pre-select the next batch.
 
 ---
 

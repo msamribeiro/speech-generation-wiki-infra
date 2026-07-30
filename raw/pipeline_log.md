@@ -1,3 +1,7 @@
+## 2026-07-30
+
+- review | 2511.22503 (Joint Speech and Text Training for LLM-Based End-to-End Spoken Dialogue State Tracking) | 1 paper | rejected | caught at ingest time (Q4 session 18 continuation) before any page was written; speech encoder + connector + LLM emits a JSON string of DST slot-value pairs, sole metric Joint Goal Accuracy, no TTS/VC/synthesized speech output anywhere; second instance of the exact 2510.09424 DST shape (likely same Brno University of Technology research line), but the 2510.09424 accept was explicitly a one-off override not a new precedent, so evaluated fresh against the FAMA/MLC-SLM pattern; user confirmed reject | status: accepted → rejected, review_queue.md decision recorded
+
 ## 2026-07-27
 
 - review | 2025.findings-emnlp.716 (Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models) | 1 paper | rejected | caught at ingest time (Q4 session 16, batch 4) before any page was written; general LLM/AR-model speculative-decoding survey, substantive content (§3–6) covers text decoding exclusively, speech content confined to 2 sentences in §7.2 citing 2 papers out of 100+ references, no dedicated speech section or original speech experiment; negligible subject-matter relevance, not a genuine scope exception; user reviewed directly and confirmed reject | status: accepted → rejected, review_queue.md decision recorded
