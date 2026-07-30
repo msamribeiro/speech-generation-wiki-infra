@@ -16,7 +16,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-03",
-  "ingested_date": null,
+  "ingested_date": "2026-07-30",
   "url": "https://arxiv.org/abs/2512.03486",
   "pdf_url": "https://arxiv.org/pdf/2512.03486.pdf",
   "pdf_path": "raw/papers/2512.03486.pdf",
@@ -28,9 +28,21 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Universal harmonic discriminator improving time-frequency GAN vocoder quality for speech synthesis",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-07-30",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "f68f111"
+    }
+  ]
 }

@@ -31,7 +31,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Joint speech-text training for end-to-end spoken dialogue state tracking; understanding-focused with limited generation contribution",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,

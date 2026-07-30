@@ -324,6 +324,17 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 
 ---
 
+## 2511.22503 | Joint Speech and Text Training for LLM-Based End-to-End Spoken Dialogue State Tracking | arXiv (submitted to ICASSP 2026) | score: 0.55
+
+**Authors:** Katia Vendrame, Bolaji Yusuf, Santosh Kesiraju, Šimon Sedláček, Oldřich Plchot, Jan Černocký
+**Task guess:** [SCA]
+**Reason for review:** Caught at ingest time (2026-07-30, Q4 session 18 continuation), before any page was written. A second instance of the exact 2510.09424 DST shape: a speech encoder (WavLM) + Transformer connector + LLM (Gemma-3/OLMo-1B) with LoRA adapters consumes the current spoken turn plus text dialogue history and emits a single JSON string (ASR transcript + dialogue-state slot-value pairs). This paper's own contribution is a parallel text encoder (sharing the connector/LoRA parameters) so the model can also train on unpaired written DST data for domains with no paired speech, discarded at inference — inference remains speech-in/JSON-out, identical to the baseline it builds on (Sedláček et al. 2025, likely the same Brno University of Technology research line as 2510.09424). Sole metric is Joint Goal Accuracy (SpokenWOZ/MultiWOZ-style fuzzy slot matching) — no speech-quality metric anywhere, since nothing is generated in the speech modality. Structurally identical to the FAMA/MLC-SLM/2510.09424 reject pattern.
+**Abstract excerpt:** End-to-end spoken dialogue state tracking (DST) is made difficult by the tandem of having to handle speech input and data scarcity. Combining speech foundation encoders and large language models has been proposed in recent work as to alleviate some of this difficulty... in this work, we propose jointly training on available spoken DST data and written textual data from other domains as a way to achieve cross-domain generalization.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________) — user confirmed reject (2026-07-30). The 2510.09424 accept was explicitly logged as a one-off override, not a new precedent, so this second same-shape paper was evaluated fresh against the FAMA/MLC-SLM pattern rather than auto-accepted; no speech generation anywhere in the pipeline.
+
+---
+
 ## 2025.findings-emnlp.716 | Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models | EMNLP | score: 0.45
 
 **Authors:** Yunhai Hu, Zining Liu, Zhenyuan Dong, Tianfan Peng, Bradley McDanel, Sai Qian Zhang
