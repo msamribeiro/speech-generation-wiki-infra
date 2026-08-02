@@ -179,3 +179,8 @@ Infra-only operations (filter, parse, discover, lint, review). Not rendered on t
 - schema | Quartz display names: title frontmatter added to top-level files and folder index pages
 - schema | wiki landing page redesigned; paper/concept/venue tables migrated to folder index pages
 - schema | trends/ directory eliminated; replaced by reports/ and concept page Trend Summary sections
+
+## 2026-08-02
+
+- review | 2512.16832 | scope call: information-theoretic linguistics paper (no TTS/VC/SCA system built or evaluated); user confirmed accept as a scope exception following the 2510.03111 precedent (relevant methodology/analysis work); logged to raw/review_queue.md
+- review | 2510.12116 (Understanding the Modality Gap: An Empirical Study on the Speech-Text Alignment Mechanism of Large Speech Language Models) | 1 paper | rejected | left pending since 2026-07-18 (Q4 session 15); the LSLM under study only ever outputs text, all evaluation is VoiceBench QA-accuracy subsets, no TTS/VC/spoken-output quality metric anywhere in the paper; clean match to the FAMA/MLC-SLM/2507.14815/2511.22503 reject pattern; user confirmed reject | status: accepted → rejected, review_queue.md decision recorded

@@ -20,7 +20,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-08",
-  "ingested_date": null,
+  "ingested_date": "2026-08-02",
   "url": "https://arxiv.org/abs/2512.07168",
   "pdf_url": "https://arxiv.org/pdf/2512.07168.pdf",
   "pdf_path": "raw/papers/2512.07168.pdf",
@@ -32,9 +32,21 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "JEPA-based neural tokenizer with density adaptive attention; core speech tokenization.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-02",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "b6e27f4"
+    }
+  ]
 }
