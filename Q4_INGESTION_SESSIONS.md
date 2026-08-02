@@ -13,14 +13,16 @@ ingestion protocol and cadence preferences refined during Q3, without the histor
 
 | Status | Count |
 |--------|-------|
-| Already ingested (Q4 2025) | 147 |
-| Remaining to ingest | 34 |
-| Rejected | 66 |
+| Already ingested (Q4 2025) | 180 |
+| Remaining to ingest | 0 |
+| Rejected | 67 |
 | **Total Q4 2025 in corpus** | **247** |
 
-As of session 19 close (2026-07-30). Corpus stands at **712 wiki pages**, 0 errors corpus-wide.
-One paper (`2510.12116`) remains `status: accepted` but undecided pending a scope call — see
-`raw/review_queue.md`; skip it again rather than re-ingesting on autopilot until it's resolved.
+As of session 20 close (2026-08-02). Corpus stands at **745 wiki pages**, 0 errors corpus-wide.
+**Q4 2025 ingestion is fully complete**, including the resolution of `2510.12116` (rejected
+2026-08-02 — pure speech-comprehension representation analysis, no TTS/VC/spoken-output component,
+matching the FAMA/MLC-SLM pattern; see `raw/review_queue.md`). No Q4 2025 papers remain in any
+undecided state. Q1 2026 candidate selection has not yet started.
 Counts computed from `raw/metadata/*.json` where `year == 2025` and `month in (10, 11, 12)`
 (these fields are derived from `published_date`, not the arXiv ID prefix — see the ID-prefix
 note below). Re-run before starting a session, as fetch/filter may still be adding papers:
@@ -44,13 +46,19 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-To continue, just say something like **"Let's continue ingesting"**. Everything needed is below
-and in the linked memories (auto-loaded via `MEMORY.md` at session start).
+**Q4 2025 is fully complete as of session 20 close (2026-08-02): 180 ingested, 67 rejected, 0
+remaining, 0 pending.** `2510.12116` was resolved (rejected) on 2026-08-02, closing out the last
+open item. Before starting further ingest work: re-run the progress-count script above —
+fetch/filter may have added new Q4 2025 papers since 2026-08-02. If it still shows 0 remaining,
+the next step is starting Q1 2026 candidate selection (not yet begun) using the same
+chronological-by-`published_date` approach used throughout this file, with
+`month in ('01','02','03')` and `year == '2026'` in the progress-count script.
 
-**Before starting:** re-run the progress-count script above — fetch/filter may have added papers
-since 2026-07-30, which would shift IDs/counts. If the list below no longer matches
-`raw/metadata/`'s current `accepted` set for Q4 2025, re-select fresh candidates chronologically
-by `published_date` rather than assuming this list is still accurate.
+**Before starting (superseded guidance below, kept for historical reference):** re-run the
+progress-count script above — fetch/filter may have added papers since 2026-07-30, which would
+shift IDs/counts. If the list below no longer matches `raw/metadata/`'s current `accepted` set for
+Q4 2025, re-select fresh candidates chronologically by `published_date` rather than assuming this
+list is still accurate.
 
 **Session 19 (2026-07-30) 16-paper list fully consumed as of batch 4 close**: 15 ingested, 1
 rejected (`2511.22503`, DST scope call). Next session: re-run the candidate-selection script fresh
@@ -967,6 +975,402 @@ linking, applying the lesson from the `2512.04779` TCSinger 2 catch earlier in t
 (66 rejected, `2510.12116` still pending). Nothing committed yet this session — next step is either
 a commit/push at this natural stopping point, or re-running the candidate-selection script to
 pre-select the next batch.
+
+**Session 2026-08-02, session 20, batch 1 of 4 (fresh 16-paper list):** Re-ran the candidate-
+selection script fresh; 34 accepted Q4 2025 papers remained, `2510.12116` skipped again per its
+still-pending scope call. Pre-selected the next 16 chronologically starting from `2512.06304`.
+Pre-flight checks: no full-version/dedup `arxiv_comment` signals on any of the 16, no existing wiki
+pages, and two apparent title collisions (`neurips-2025-SYcggdxX6W` vs `2509.24629`,
+`neurips-2025-pDWwz9F7Zh` vs `2505.13181`) resolved as the normal arXiv-preprint-superseded-by-
+proceedings-ID pattern, not a real dedup conflict (both arXiv IDs are already `status: rejected`
+with no wiki page).
+
+Batch 1 (`2512.06304` robust-VC survey, `2512.07168` JEPA neural tokenizer, `2512.08006`
+service-oriented phonemization, `2512.09504` DMP-TTS) all ingested cleanly, 0 rejected. Corpus 712
+→ 716 pages, 0 errors, 1170 warnings unchanged (corpus-wide health check re-run at batch close).
+One process error caught and fixed on the first paper: `resolve_wiki_dir.py`'s output path was
+mistakenly treated as containing a `wiki/` subdirectory (copying the template's `$WIKI/papers/...`
+pattern too literally), creating a stray untracked `wiki/papers/2512.06304.md` inside the content
+repo one level too deep; caught immediately via `git status`, moved to the correct path
+(`{content-repo}/papers/2512.06304.md`), and the stray directory removed before continuing — no
+partial writes reached index/log/metadata at the time of the mistake.
+
+QC catches (manual verification, not agent self-report, since these papers were ingested directly
+in the main session rather than via the worker-agent pattern): (1) `2512.07168`'s first draft had a
+health-check error (1/4 claims missing a `§N.N` citation on a bare `*(Figure 4)*` reference) and two
+bare wikilinks in Wiki Connections (`[[id]] (Name)` pattern) — both fixed before re-running the
+check; (2) index-count drift recurred on every paper again (713→714→715→716 in sequence),
+reconciled against real `ls`/`grep` totals each time; (3) title truncation did not recur this batch,
+all four index rows verified against full frontmatter titles.
+
+Tagging/scope judgment calls: `2512.06304` (VC robustness survey) tagged only `voice-conversion`
+and `evaluation-metrics` in `related_concepts` (2, below the usual 3-6), since it is a survey with no
+own training objective — `disentanglement` was considered and excluded because the paper only
+discusses disentanglement in surveyed work, never performs it itself, consistent with
+[[feedback_disentanglement_tagging]]. `2512.07168` (JEPA tokenizer) explicitly reports "qualitative
+... preliminary" results only (§6) with no MOS/WER/reconstruction metrics despite listing codec
+baselines by frame rate; `metrics` left empty rather than fabricating a comparison, and
+`field_significance.level` set to `low` on that basis. `2512.09504` (DMP-TTS) is the strongest paper
+in the batch: chained CFG + Style-CLAP disentanglement mechanism with real ablations (Table 2) and
+human NMOS/QMOS ratings; tagged 6 `related_concepts` (disentanglement, instruction-conditioned-tts,
+emotion-synthesis, zero-shot-tts, prosody-control, subjective-evaluation) after individually
+checking each against its usage rule, and cited 3 in-corpus baselines (CosyVoice, CosyVoice2,
+IndexTTS2) actually compared against in its Table 1, excluding 3 same-author-group background
+citations (M3-TTS, SecoustiCodec, InstructAudio) that are not baselines in this paper's own
+experiments. Q4 progress: 151 ingested / 30 remaining (66 rejected, `2510.12116` still pending).
+Nothing committed yet this session.
+
+**Session 2026-08-02, session 20, batch 2 of 4:** Batch 2 (`neurips-2025-1cURNMriee` StreamFlow,
+`neurips-2025-4iehXI36QG` OpenOmni, `neurips-2025-7Z3wQSu3mH` FocalCodec,
+`neurips-2025-AsRB5nmlOD` SALMONN-omni) all ingested cleanly, 0 rejected. Corpus 716 → 720 pages,
+0 errors, 1170 warnings unchanged (corpus-wide health check re-run at batch close).
+
+QC catches: (1) two health-check failures on the first pass, both the same mistake, using
+`[!important]`/`[!tip]` on the abstract callout (copying the Field Significance callout type
+instead of leaving the abstract card as `[!abstract]`) on `neurips-2025-1cURNMriee` and
+`neurips-2025-7Z3wQSu3mH`; both caught by the health check itself (`required_sections` error) and
+fixed before moving on — this is the exact failure mode the skill's own callout-rules warning
+calls out, worth watching for on every high-significance paper going forward; (2) a new task-column
+drift pattern found on this batch (not previously seen in this form): the index-row generator
+script pulls `task` from `raw/metadata/{id}.json`, not from the page's own frontmatter, so when a
+paper's `task` tag was legitimately broadened during ingest (following the U-Codec precedent) but
+`raw/metadata` wasn't updated to match, the index row silently reverted to the stale, narrower
+metadata value even though the page frontmatter was correct. Caught via manual index-row
+inspection after both affected papers (`neurips-2025-7Z3wQSu3mH`: `codec` → `codec, VC, TTS`;
+`neurips-2025-AsRB5nmlOD`: `SCA` → `TTS, SCA`) were already ingested; fixed by updating
+`raw/metadata` task fields to match the ingest-time judgment and regenerating both index rows
+directly. Going forward, any task-tag broadening decided during ingest must be written back to
+`raw/metadata` in the same step, not left as a page-frontmatter-only change.
+
+Two genuine corpus-scope pre-checks this batch, both confirmed as clean accepts on read (not
+FAMA/MLC-SLM-shaped): `neurips-2025-4iehXI36QG` (OpenOmni) has a real, dedicated lightweight speech
+decoder trained via CTC-DPO with its own emotion-classification and WER/CER evaluation on its own
+synthesized speech, not just text output from a system that consumes speech; `neurips-2025-AsRB5nmlOD`
+(SALMONN-omni) is a genuine full-duplex spoken dialogue agent generating and evaluating its own
+speech output (UTMOS quality scores reported per system). Both also had their `task` tag broadened
+from the raw-metadata single-tag scoring (`SCA`-only and `codec`-only respectively) to include `TTS`
+after confirming real synthesized-speech evaluation metrics, following the U-Codec precedent
+(session 15) of broadening task tags on genuine downstream validation rather than title framing
+alone. `neurips-2025-7Z3wQSu3mH` (FocalCodec)'s task tag was separately broadened to add `VC` given
+its genuine one-shot voice-conversion experiment with real VC-specific metrics (Table 3), and `TTS`
+given a genuine downstream TTS validation task (Table 4), both beyond the raw metadata's `codec`-only
+scoring. `self-supervised-speech` was correctly included on FocalCodec (frozen pretrained WavLM
+encoder is a core architectural component) and correctly excluded from `disentanglement` despite
+genuine VC results, since the paper has no explicit trained disentanglement mechanism, VC works via
+a post-hoc k-NN trick on the encoder's feature space, not a training-time separation objective,
+consistent with [[feedback_disentanglement_tagging]]. `subjective-evaluation` was correctly excluded
+from SALMONN-omni despite reporting UTMOS scores, since UTMOS is an automated MOS predictor, not a
+real human listening test, consistent with [[feedback_subjective_evaluation_tagging]]. Q4 progress:
+155 ingested / 26 remaining (66 rejected, `2510.12116` still pending). Nothing committed yet this
+session.
+
+**Session 2026-08-02, session 20, batch 3 of 4:** Batch 3 (`neurips-2025-RTjr4DnS79` Metis,
+`neurips-2025-SYcggdxX6W` WeSCon, `neurips-2025-SoRe80Tg48` Shallow Flow Matching,
+`neurips-2025-pDWwz9F7Zh` SLED) all ingested cleanly, 0 rejected. Corpus 720 → 724 pages, 0 errors,
+1170 warnings unchanged (corpus-wide health check re-run at batch close).
+
+QC catches: (1) recurrence of the `[!important]`/`[!tip]` copied onto the abstract callout mistake
+from batch 2, this time on `neurips-2025-RTjr4DnS79` — caught and fixed the same way, still worth
+flagging as a pattern on `foundational`/`high` papers specifically, since those are exactly the
+ones prompting a Field Significance callout that then gets echoed onto the abstract card by
+mistake; (2) a new and more serious bug found mid-batch: `related_papers` YAML lists with bare
+(unquoted) numeric-looking arXiv IDs get silently coerced to floats by PyYAML, e.g. `2406.02430`
+becomes `2406.0243`, dropping the trailing zero — this is the exact [[feedback_yaml_coercion_gotchas]]
+pattern applied to `related_papers` for the first time (previously only seen on `id`/date fields).
+Audited all 10 papers ingested so far this session and found 5 with this bug
+(`2512.07168`, `2512.09504`, `neurips-2025-4iehXI36QG`, `neurips-2025-AsRB5nmlOD`,
+`neurips-2025-RTjr4DnS79`); the underlying file text was correct in all cases (the coercion only
+manifested when a script parsed and re-printed the field), but all 5 were fixed by quoting every ID
+in `related_papers` as a string, and the health check was re-run corpus-wide to confirm no other
+damage. **Action for future sessions: always quote `related_papers` list entries as strings, the
+same rule already applied to `id` and date fields.**
+
+Tagging/scope judgment calls: `neurips-2025-RTjr4DnS79` (Metis) rated `field_significance.level:
+foundational`, the first `foundational` rating this session, given genuine cross-task unification
+(5 speech generation tasks including a cross-modal lip-to-speech task) from one pretraining
+objective with emergent generalization to untrained task combinations. `neurips-2025-pDWwz9F7Zh`
+(SLED) correctly excluded from `spoken-language-model` despite being an LLM-backbone speech
+generation system, since it is an AR TTS-LM consuming only its own generated output (not an
+external speech signal in a real dialogue context), matching the existing KALL-E/FELLE/DiTAR
+non-qualifying precedent in [[feedback_spoken_language_model_tagging]] exactly (same architecture
+family, same paper's own comparisons). `neurips-2025-SoRe80Tg48` (Shallow Flow Matching) and
+`neurips-2025-SYcggdxX6W` (WeSCon) both correctly excluded `disentanglement` despite genuine VC/
+speaker-consistency-adjacent results, since neither has an explicit trained separation mechanism
+(SFM's VC-adjacent behavior is incidental to its actual contribution; WeSCon's speaker consistency
+is enforced structurally via CosyVoice2's flow-matching stage, not a disentanglement loss),
+consistent with [[feedback_disentanglement_tagging]]. Q4 progress: 159 ingested / 22 remaining
+(66 rejected, `2510.12116` still pending). Nothing committed yet this session.
+
+**Session 2026-08-02, session 20, batch 4 of 4 (16-paper pre-selected list COMPLETE):** Batch 4
+(`neurips-2025-vhPy3NMsO5` OmniResponse, `2512.12129` child voice conversion comparative study,
+`2512.12297` F5-TTS-RO, `2512.14653` SVS prior/posterior uncertainty) all ingested cleanly, 0
+rejected. Corpus 724 → 728 pages, 0 errors, 1170 warnings unchanged (corpus-wide health check
+re-run at batch close).
+
+One corpus-scope pre-check this batch: `neurips-2025-vhPy3NMsO5` (OmniResponse) has a low raw
+relevance_score (0.58, borderline) since its primary contribution is multimodal (audio+facial)
+dyadic dialogue generation, not TTS advancement per se. Read in full before deciding: it contains
+TempoVoice, a real, dedicated, ablated online TTS module (Table 3 ablation shows real UTMOSv2/LSE-D
+degradation when removed) with its own ablated architectural mechanism (zero-initialized
+positional-query cross-attention for length-decoupled synchronized audio generation), a genuine
+speech-generation component, not just an audio-consuming or audio-adjacent system, so accepted and
+ingested with `field_significance.level: moderate` reflecting that speech generation is one of
+several co-equal modalities in the paper rather than its central focus. Task broadened from raw
+metadata's `SCA`-only to `TTS, SCA` given TempoVoice's genuine ablated contribution, applying the
+same U-Codec-style broadening precedent as batch 2, this time the raw metadata `task` field was
+updated in the same step as the page frontmatter, avoiding the batch-2 drift bug.
+
+`2512.14653` (SVS uncertainty paper)'s `arxiv_comment` flagged "Accepted by ASRU 2025"; venue
+corrected from raw metadata's `arXiv`/`preprint` to `ASRU`/`conference` in both the page and raw
+metadata together, applying the same precedent as `2512.03486` in session 19.
+
+Tagging note: `2512.12129` (child VC comparative study) and `2512.12297` (F5-TTS-RO) were both
+tagged `field_significance.type` without `architectural-novelty` (empirical-benchmark/
+engineering-integration and engineering-integration respectively, since neither proposes a new
+architecture), so per the figure-copying invariant, no architecture figures were embedded on
+either page even though both papers include diagrams, a reminder that the no-figures-for-
+non-architectural-papers rule was applied correctly rather than by oversight.
+
+**This closes out the full 16-paper list pre-selected at the start of this session (2026-08-02):
+16 ingested, 0 rejected.** Q4 progress: 163 ingested / 18 remaining (66 rejected, `2510.12116`
+still pending). Nothing committed yet this session, next step is either a commit/push at this
+natural stopping point, or re-running the candidate-selection script to pre-select the next batch
+from the 18 remaining papers.
+
+---
+
+**Session 2026-08-02, session 20 continued, fresh 8-paper list, batch 1 of 2:** Re-ran the
+candidate-selection script fresh; 18 accepted Q4 2025 papers remained (`2510.12116` still
+pending). Pre-selected the next 8 chronologically starting from `2512.14865`. Pre-flight checks
+clean: no full-version/dedup signals, no existing pages, no title collisions. Note: `2601.13910`
+(a survey, item 6 of the 8) carries a 2026-prefixed arXiv ID despite a `2025-12-20` published
+date, the known chronological-ordering gotcha; already correctly ordered by `published_date`
+rather than ID.
+
+Batch 1 (`2512.14865` Audio MultiChallenge, `2512.16519` Pseudo-Cepstrum, `2512.16832` What Do
+Prosody and Text Convey?, `2512.17293` Robust TTS Training via SPFM for WildSpoof 2026) all
+ingested, 0 rejected. Corpus 728 → 732 pages, 0 errors, 1170 warnings unchanged (corpus-wide
+health check re-run at batch close).
+
+Two corpus-scope calls this batch. `2512.14865` (Audio MultiChallenge) has a low raw
+relevance_score (0.78, still above the review threshold) since it's an SCA evaluation benchmark;
+read in full and confirmed it matches the AURA/VoiceAgentBench precedent exactly, even audio-output
+models are scored only on their text-stream response against rubrics (Fig. 4), never on generated
+speech quality itself, so accepted without needing to escalate, per the "surface the match
+explicitly rather than re-deciding fresh" guidance. `2512.16832` (prosody/text information-theory
+analysis) was a harder, genuinely new-shaped call: no TTS/VC/SCA system is built or evaluated
+anywhere in the paper, it's a linguistics paper fine-tuning classifiers (GPT-2, Whisper, wav2vec2)
+to measure how much sarcasm/emotion/questionhood signal lives in audio vs. text, structurally
+closer to the FAMA/MLC-SLM reject shape than any existing accept precedent, just without
+generative-sounding title language. Flagged to the user before writing anything (via
+AskUserQuestion); user chose **accept as a scope exception**, reasoning it provides useful
+background for prosody-control/expressive-TTS research, extending the 2510.03111 precedent
+(methodology/analysis work squarely relevant to speech generation, even without training a
+generative model) to a new shape: analysis-of-existing-speech rather than tooling-for-building-
+speech. Ingested with an honest analysis-paper framing (empty `architecture`/`conditioning`,
+empty `related_concepts` since no tracked concept's usage rule is actually satisfied, no
+fabricated TTS results) and logged to `raw/review_queue.md` and `raw/pipeline_log.md` per the
+established scope-decision logging pattern. **This is a new precedent shape, not a strict
+reapplication of 2510.03111** — future sessions should treat it as its own precedent (pure
+speech-analysis/linguistics papers with clear TTS/SCA research relevance can be scope-exception
+accepts) rather than conflating it with the tooling-only 2510.03111 shape.
+
+QC catches: (1) recurrence of the abstract-callout mistake for a third time this session (using
+`[!tip]` instead of `[!abstract]` on `2512.16519`), caught by self-review before running the
+health check rather than by the health check failing this time, worth explicit note since the
+pattern has now recurred on both `foundational`/`high`-rated and even just `high`-rated papers;
+(2) `2512.14865` and `2512.16832` both required empty `architecture`/`conditioning`/`training`
+fields and empty or near-empty `related_concepts`, following the survey-paper and 2510.03111
+conventions for non-modeling papers, a reminder that not every ingested paper needs to force-fit
+the standard TTS-modeling frontmatter shape. One interruption recovery mid-session: a
+`Q4_INGESTION_SESSIONS.md` edit attempt failed on a stale string match after a session-limit
+interruption; verified via `git status` in both repos and a corpus-wide health check that all 4
+batch-4 papers from the prior list were already fully and correctly ingested before retrying the
+edit with corrected text. Q4 progress: 167 ingested / 14 remaining (66 rejected, `2510.12116`
+still pending). Nothing committed yet this session.
+
+---
+
+**Session 2026-08-02, session 20 continued, fresh 8-paper list, batch 2 of 2 (list COMPLETE):**
+Batch 2 (`2512.17356` Training TTS with Purely Synthetic Data, `2601.13910` Synthetic Singers SVS
+survey, `2512.18699` Task Vector in TTS / HE-Vector, `2512.18706` X-Talk modular S2S dialogue
+system) all ingested, 0 rejected. Corpus 732 → 736 pages, 0 errors, 1170 warnings unchanged
+(corpus-wide health check re-run at batch close).
+
+`2512.17356`'s `arxiv_comment` flagged a real NCMMSC 2025 acceptance; venue corrected from
+`arXiv`/`preprint` to `NCMMSC`/`conference` in both the page and raw metadata, same precedent as
+`2512.03486`/`2512.14653`. Abstract-callout mistake (`[!tip]` instead of `[!abstract]`) recurred
+for a fourth time this session, again caught by self-review before the health check ran rather
+than by a health-check failure.
+
+`2601.13910` (Synthetic Singers) is a comprehensive SVS survey with a merged arXiv+ACL metadata
+record (`source_ids.acl: 2025.ijcnlp-long.24`, `canonical_id: null`, no separate metadata file
+under the ACL ID) — confirmed this is a single consolidated record, not a duplicate-pair needing
+canonical-ID resolution like F5-TTS, so proceeded with `2601.13910` as the page ID. `arxiv_comment`
+("Accepetd by IJCNLP-AACL 2025(Oral)") triggered the same venue-correction treatment, `workshop`/
+`workshop` → `IJCNLP-AACL`/`conference`, in both page and raw metadata. Survey frontmatter rule
+applied in full (empty `architecture`/`conditioning`/`training`, `datasets_train`/`datasets_eval`
+as `["not applicable (survey)"]`, confirmed by reading the full paper including both appendices,
+no original controlled experiments anywhere). Citation-integrity check caught two in-corpus papers
+the survey discusses substantively in its own prose, TCSinger2 (`2505.14910`) and MRSAudio
+(`2510.10396`), both authored by overlapping authors, but both are `status: rejected` in this
+corpus, so both were excluded from `related_papers`/Wiki Connections per the established
+rejected-papers-get-delinked rule, leaving 4 genuinely in-corpus, `status: ingested` references
+(Seed-TTS, CosyVoice, DiTAR, Qwen3-Omni).
+
+`2512.18699` (Task Vector in TTS) resolved F5-TTS to its canonical ACL ID (`2025.acl-long.313`)
+rather than the `status: rejected` arXiv duplicate (`2410.06885`) it actually cites, applying the
+F5-TTS precedent unprompted. Its architectural contribution (hierarchical per-layer merging of
+independently-trained dialect/emotion task vectors) cleared the figure-copying bar
+(`architectural-novelty` in `field_significance.type`, a figure whose caption directly describes
+the proposed merging strategy under the Method section), so the architecture figure was copied and
+embedded. Noted that "dialect" has no corresponding term in the controlled conditioning
+vocabulary; rather than force-fitting a nonexistent `dialect-conditioned` tag, conditioning was
+limited to the vocabulary terms that genuinely apply (`emotion-conditioned`, `zero-shot`, etc.).
+
+`2512.18706` (X-Talk) is a cascaded modular S2S dialogue framework paper (`SCA`), explicitly
+positioned against the field's shift toward end-to-end omni-models; `field_significance.type`
+includes `negative-result` since the paper's core claim is that a widely-held assumption (E2E is
+necessary for low latency and paralinguistic awareness) does not hold, backed by concrete
+sub-second latency numbers. It reports only latency figures, which have no canonical metric name
+in the vocabulary, so `metrics` was left empty rather than inventing a new metric name; the
+numbers are covered in prose instead. Manual reference cross-check caught one gap in the automated
+`in_corpus` extractor: IndexTTS (`2502.05512`), X-Talk's actual default TTS backend and a system
+directly benchmarked in its latency table, was not flagged `in_corpus` by
+`references.json` despite being `status: ingested`, so it was added to `related_papers`/Wiki
+Connections by hand rather than trusting the extractor's flags alone.
+
+**This closes out the full 8-paper list pre-selected earlier this session (2026-08-02): 8
+ingested, 0 rejected across both batches.** Q4 progress: 171 ingested / 10 remaining (66 rejected,
+`2510.12116` still pending). Nothing committed yet this session, next step is either a commit/push
+at this natural stopping point, or re-running the candidate-selection script to pre-select the
+next batch from the 10 remaining papers.
+
+---
+
+**Session 2026-08-02, session 20 continued, fresh 4-paper batch:** Re-ran the candidate-selection
+script; 10 accepted Q4 2025 papers remained (`2510.12116` still pending). Pre-selected the next 4
+chronologically starting from `2512.19090`: `2512.19090` (JoyVoice), `2512.20156` (Fun-Audio-Chat),
+`2512.20211` (Aliasing-Free Neural Audio Synthesis), `2512.20296` (TAVID). All 4 ingested, 0
+rejected. Corpus 736 → 740 pages, 0 errors, 1170 warnings unchanged (corpus-wide health check
+re-run at batch close).
+
+A session-limit interruption occurred mid-batch, right after `2512.20211`'s paper page and figure
+assets were written but before its metadata status, `papers/index.md` row, `index.md` counts, and
+`log.md` entry were updated. On resume, checked the actual file state directly (page existed with
+assets; metadata still `status: accepted`; no `papers/index.md` row; no `log.md` entry) rather than
+assuming either full completion or a clean restart, then completed the remaining steps by hand.
+This matches the documented partial-write interruption pattern from earlier sessions.
+
+`2512.20156` (Fun-Audio-Chat)'s most conceptually central citation, DrVoice (`2506.09349`), the
+paper's own direct architectural predecessor from which both of its two named innovations (DRSR
+and Core-Cocktail Training) originate, is `status: rejected` in this corpus, as is one of its
+evaluation benchmarks, MMSU (`2506.04779`). Both were excluded entirely from `related_papers`/Wiki
+Connections per the established rejected-papers-get-delinked rule, even though DrVoice would
+otherwise be the single most important in-corpus link on the page; DrVoice is discussed by name in
+prose without a wikilink instead.
+
+`2512.20211` (Aliasing-Free Neural Audio Synthesis / Pupu-Vocoder / Pupu-Codec)'s `arxiv_comment`
+flagged "Accepted by TASLP," a peer-reviewed IEEE journal; kept `venue: arXiv` / `venue_type:
+preprint` rather than inventing a `journal` venue_type value, since the controlled vocabulary only
+defines `conference | workshop | preprint | technical-report` and an earlier session (`2507.01611`)
+already established the precedent of leaving TASLP-accepted papers as arXiv/preprint rather than
+guessing a non-existent vocabulary value.
+
+`2512.20296` (TAVID) has a borderline raw `relevance_score` (0.72) as a joint audio-visual
+talking/listening-head generation paper. Read in full before deciding: it contains a genuinely
+dedicated conversational-speech-generation pipeline (autoregressive text-to-semantic module plus a
+flow-matching acoustic denoiser, following CoVoMix) with its own named architectural contribution
+(the Speaker Mapper, predicting zero-shot voice identity from a face image instead of reference
+audio) and a dedicated speech-quality evaluation axis (UTMOS, VoxSim, naturalness/face-matching MOS
+against real zero-shot TTS baselines YourTTS, CoVoMix, Face-TTS, FVTTS on VoxCeleb2), clearing the
+corpus-scope bar on subject-matter relevance. None of its speech-generation baselines are
+themselves in-corpus, so `related_papers` ended up genuinely empty rather than under-populated by
+oversight; `related_concepts` limited to `speech-to-speech` and `zero-shot-tts`, the two concepts
+its speech pipeline actually implements, rather than reaching into the video-generation side of the
+paper.
+
+Q4 progress: **175 ingested / 6 remaining** (66 rejected, `2510.12116` still pending). Nothing
+committed yet this session, next step is either a commit/push at this natural stopping point, or
+re-running the candidate-selection script to pre-select the final small batch from the 6 remaining
+papers.
+
+---
+
+**Session 2026-08-02, session 20 continued, fresh 4-paper batch:** Re-ran the candidate-selection
+script; 6 accepted Q4 2025 papers remained (`2510.12116` still pending). Pre-selected the next 4
+chronologically starting from `2512.20944`: `2512.20944` (SACodec), `2512.21653` (Semantic
+Codebooks / SemDAC), `2512.21706` (GoT full-duplex conversational behavior reasoning), `2512.22491`
+(ManchuTTS). All 4 ingested, 0 rejected. Corpus 740 → 744 pages, 0 errors, 1170 warnings unchanged
+(corpus-wide health check re-run at batch close).
+
+`2512.20944` (SACodec) failed its first health check with a genuine error: all 4 claims cited
+sections by name only (`Ablation Study`, `Results and Analysis`) without the required `§` prefix,
+the same named-section-citation gap documented earlier this project — fixed by prefixing each with
+`§`, health check passed clean on the second run.
+
+`2512.21706` (GoT full-duplex behavior reasoning) was flagged to the user before writing anything,
+via AskUserQuestion: the paper's own system detects speech acts and generates text rationales, it
+does not generate speech itself (CosyVoice2 is used only to synthesize its training corpus, Moshi/
+dGSLM are only benchmarked, not extended). Structurally similar to the DST (`2510.09424`) and
+prosody-analysis (`2512.16832`) scope-exception precedents, though with more genuine audio/corpus
+content than either (a novel overlap-based TTS dialogue-stitching mechanism for full-duplex corpus
+construction, and direct turn-taking-statistics benchmarking of real full-duplex speech-generation
+systems). User confirmed **accept as a scope exception**, extending that precedent. Also caught and
+surfaced, rather than silently resolved, a genuine inconsistency in the paper's own reporting: its
+Section 6.3 text and its Table 6 report two different rankings and different absolute numbers for
+the same human-evaluation experiment; flagged via a `[!warning]` callout in Limitations instead of
+picking one version to cite as fact. Logged to `raw/review_queue.md` per the established
+scope-decision logging pattern.
+
+Two DAC-not-in-corpus and F5-TTS-canonical-ID checks recurred this batch, consistent with earlier
+sessions: `2512.20944` and `2512.21653` both compare against DAC/Descript Audio Codec extensively,
+confirmed absent from the corpus for the third time this session (cited unlinked in prose); and
+`2512.22491` (ManchuTTS) resolved F5-TTS to its canonical ACL ID (`2025.acl-long.313`) rather than
+the `status: rejected` arXiv duplicate it actually cites, applying the now well-established F5-TTS
+precedent unprompted.
+
+**This closes out the full Q4 2025 candidate list down to a single paper: 179 ingested / 2
+remaining** (66 rejected, `2510.12116` still pending its own separate scope call). The only paper
+left to ingest is `2512.23808` (MiMo-Audio). Nothing committed yet this session, next step is
+either a commit/push at this natural stopping point, or a final single-paper session to close out
+the remaining Q4 2025 backlog.
+
+---
+
+**Session 2026-08-02, session 20 continued, final paper — Q4 2025 candidate list COMPLETE:**
+Ingested `2512.23808` (MiMo-Audio: Audio Language Models are Few-Shot Learners, Xiaomi). Corpus
+744 → 745 pages, 0 errors, 1170 warnings unchanged (corpus-wide health check re-run at close).
+
+This is a substantial technical report: a 7B audio-language model pretrained on 100M+ hours of
+speech (an order of magnitude beyond any open-source precedent), a novel unified semantic+acoustic
+tokenizer, and directly-tracked phase-transition evidence of emergent few-shot in-context learning
+(explicit "GPT-3 moment" framing, backed by performance-vs-pretraining-data curves rather than only
+a final-checkpoint leaderboard). Rated `field_significance.level: foundational`, the first
+`foundational` rating this session, given the combination of unprecedented scale, genuine
+architectural rigor, and the phase-transition evidence specifically, with the rating's provisional
+nature (single-lab preprint, no independent replication yet) noted explicitly in the page's Field
+Significance section rather than left implicit. `related_papers` capped at 8 despite dozens of
+genuinely-used baselines across its many benchmark tables (tokenizer comparison, SpeechMMLU/MMAU
+few-shot eval, post-training audio-understanding/spoken-dialogue/TTS eval); prioritized Seed-TTS,
+GLM-4-Voice, Kimi-Audio, Step-Audio 2, Qwen2.5-Omni, MMAU, InstructTTSEval, and XY-Tokenizer as the
+most central. One rejected in-corpus benchmark (MMSU, `2506.04779`) mentioned unlinked per the
+rejected-delink rule. Deliberately omitted an ambiguous ASR WER figure from a garbled source table
+(LibriSpeech/AISHELL columns merged in Docling's table extraction) rather than risk citing a
+misattributed number, describing that result qualitatively in prose instead.
+
+QC catch: caught and fixed, before running the health check, the abstract-callout mistake
+(`[!important]` instead of `[!abstract]`) recurring for a **fifth time this session** — this time
+specifically triggered by the paper's own `foundational` level using `[!important]` in Field
+Significance, the same trigger pattern noted on the fourth occurrence (`2512.17356`). This
+confirms the pattern isn't confined to `high`-rated papers; any elevated `field_significance.level`
+appears to prime the same copy-paste mistake onto the abstract card immediately above it.
+
+**This closes out the entire Q4 2025 candidate list: 180 ingested / 0 remaining** (66 rejected,
+`2510.12116` still pending its own separate, longstanding scope call — unaffected by this
+closure). Nothing committed yet this session. Q4 2025 ingestion is functionally complete; next
+steps are a commit/push of this session's work, and either starting Q1 2026 candidate selection or
+resolving `2510.12116` before further ingest sessions.
 
 ---
 

@@ -32,7 +32,7 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Empirical study of speech-text modality gap in large speech LMs; directly advances SCA and understanding of speech generation models.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,

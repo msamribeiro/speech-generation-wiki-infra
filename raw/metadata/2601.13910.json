@@ -18,12 +18,12 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "IJCNLP-AACL",
+  "venue_type": "conference",
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-20",
-  "ingested_date": null,
+  "ingested_date": "2026-08-02",
   "url": "https://arxiv.org/abs/2601.13910",
   "pdf_url": "https://aclanthology.org/2025.ijcnlp-long.24.pdf",
   "pdf_path": "raw/papers/2601.13910.pdf",
@@ -35,10 +35,22 @@
   ],
   "relevance_score": 0.95,
   "relevance_note": "Comprehensive survey of deep-learning-based singing voice synthesis covering LLM and generative paradigm advances",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2025-12-20"
+  "conference_date": "2025-12-20",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "op": "ingest",
+      "date": "2026-08-02",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "b6e27f4"
+    }
+  ]
 }

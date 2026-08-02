@@ -18,7 +18,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-10",
-  "ingested_date": null,
+  "ingested_date": "2026-08-02",
   "url": "https://openreview.net/forum?id=SoRe80Tg48",
   "pdf_url": "https://openreview.net/pdf?id=SoRe80Tg48",
   "pdf_path": "raw/papers/neurips-2025-SoRe80Tg48.pdf",
@@ -29,9 +29,21 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "Proposes Shallow Flow Matching (SFM) for coarse-to-fine TTS synthesis, introducing orthogonal projection to determine intermediate state positions in flow paths — direct TTS/flow-matching contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-02",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "b6e27f4"
+    }
+  ]
 }

@@ -38,7 +38,7 @@
   "year": 2025,
   "month": 12,
   "published_date": "2025-12-10",
-  "ingested_date": null,
+  "ingested_date": "2026-08-02",
   "url": "https://openreview.net/forum?id=SYcggdxX6W",
   "pdf_url": "https://openreview.net/pdf?id=SYcggdxX6W",
   "pdf_path": "raw/papers/neurips-2025-SYcggdxX6W.pdf",
@@ -49,9 +49,21 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "WeSCon proposes the first self-training framework for word-level emotional expression control in zero-shot TTS, advancing fine-grained prosody and emotion synthesis.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-02",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "b6e27f4"
+    }
+  ]
 }
