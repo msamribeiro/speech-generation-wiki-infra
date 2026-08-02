@@ -34,7 +34,7 @@ cd "$(git rev-parse --show-toplevel)"
 .venv/bin/python scripts/health_check.py --module integrate --wiki-dir "$(python3 scripts/resolve_wiki_dir.py)" -v
 ```
 
-**State as of 2026-07-30, after transformer-enc-dec-tts Phase 2 closed** (re-run the commands
+**State as of 2026-08-02, after Q3 integration fully closed** (re-run the commands
 above before resuming — this will be stale). This
 table is now **Q3-scoped directly** (`published_date < 2025-10-01`, non-Tier-2, counted from paper
 frontmatter, not the corpus-wide `corpus_summary.py` output) — see the note below on why the
@@ -63,12 +63,12 @@ corpus-wide `Covers`-style column was dropped:
 | **instruction-conditioned-tts** | **44** | **44** | **100%** (Phase 1+2) |
 | **rlhf-speech** | **29** | **29** | **100%** (Phase 1+2) |
 | **transformer-enc-dec-tts** | **28** | **28** | **100% (Phase 1+2)** |
-| singing | 10 | 0 | 0% |
-| fine-tuning | 1 | 0 | 0% |
-| **TOTAL** | **2230** | **2215** | **99.3%** |
+| **singing** | **10** | **10** | **100% (Phase 1+2)** |
+| **fine-tuning** | **1** | **1** | **100% (Phase 1+2)** |
+| **TOTAL** | **2230** | **2226** | **99.8%** |
 
-`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **142** as of
-2026-07-30 after transformer-enc-dec-tts Phase 2 closed. This is a unique-paper corpus-wide
+`papers_not_in_any_yaml` (corpus-wide, all quarters, via `health_check.py`): **157** as of
+2026-08-02 after Q3 integration fully closed and recent Q4 ingestion. This is a unique-paper corpus-wide
 coverage statistic, so it does not decrease by one for every per-concept YAML entry.
 
 **Important correction found and fixed 2026-07-20**: the Q3-scoping arithmetic above (and the
@@ -132,7 +132,13 @@ with 7 method families and 17 claim clusters from 259 claims. `streaming-tts` is
 architecture-unspecified evaluation or system-level outliers remain. `transformer-enc-dec-tts`
 is fully closed at 28/28 after two Phase 1 batches and one Phase 2 synthesis pass, with 7 method
 families and 17 claim clusters from 119 claims; 27/28 papers have reciprocal family assignments
-and one architecture-unspecified evaluation outlier remains. Two concepts have no claim YAML yet.
+and one architecture-unspecified evaluation outlier remains. `singing` is fully closed at 10/10
+after one Phase 1 batch and one Phase 2 synthesis pass, with 4 method families and 17 emerging
+claim clusters from 43 claims; 9/10 papers have reciprocal family assignments and one
+architecture-unspecified challenge and evaluation outlier remains. `fine-tuning` is fully closed
+at 1/1 after one Phase 1 batch and one Phase 2 synthesis pass, with 2 emerging claim clusters from
+4 claims and no method family because the two-paper threshold cannot be met. All 23 supported
+concepts are fully closed for Q3 integration.
 
 **Scale note:** at the Phase 1 cap of 20 new papers per concept per invocation (see Methodology),
 and with `papers_not_in_any_yaml` (corpus-wide, unique papers) at 116, fully clearing the
@@ -330,6 +336,51 @@ needed.
 ---
 
 ## Session Log
+
+### 2026-08-02 — fine-tuning Phase 2 and Q3 integration fully closed
+
+- Synthesized the one-paper, four-claim evidence base into **2 emerging claim clusters** covering
+  adapter-based preservation of TTS capability and target-language speaker diversity in
+  cross-lingual adaptation.
+- Created no method family: the concept has one paper, below the schema's two-paper threshold.
+  Added 2 reassessment items, 4 open questions, and 2 trend notes.
+- The Phase 2 health check passed with **0 errors and 1 expected method-family coverage warning**.
+  All **23 supported concepts** are now fully closed for Q3 integration. Recorded coverage is
+  **2226/2230 (99.8%)**; the four-entry denominator gap consists solely of the established
+  speech-to-speech and evaluation-metrics exclusions.
+
+### 2026-08-02 — fine-tuning Phase 1 closed (0 → 1/1)
+
+- Live discovery found exactly one eligible Q3-and-earlier paper, `2508.18006`, with no Tier 2
+  pages and no Q4-or-later exclusions.
+- Extracted all **4 claims** from the legacy-format page with complete source citations. The
+  closure audit found one matching candidate and YAML ID, with no missing or extraneous entries,
+  empty claim lists, or unspecified sources.
+- The Phase 1 health check passed with **0 errors and 0 warnings**. All family and synthesis
+  fields remain empty; Phase 2 is pending. Every supported Q3 concept now has a claim YAML.
+
+### 2026-08-02 — singing Phase 2 closed
+
+- Synthesized the complete 10-paper, 43-claim evidence base into **4 method families** and
+  **17 claim clusters**. All clusters remain emerging, consistent with the small, heterogeneous
+  evidence base and the absence of three-paper convergence on any one proposition.
+- Assigned **9/10 papers** to reciprocal architecture families, with **12 memberships**.
+  `2509.15629` remains a legitimate architecture-unspecified challenge and evaluation outlier.
+- Added 5 reassessment items, 6 open questions, and 5 trend notes. The Phase 2 health check
+  passed with **0 errors and 1 expected method-family coverage warning**. The concept is now
+  fully closed for Q3 integration.
+
+### 2026-08-02 — singing Phase 1 closed (0 → 10/10)
+
+- Fast-forwarded both clean integration worktrees to current local `main` before starting. Live
+  oldest-first discovery found **10 eligible Q3-and-earlier papers**, no Tier 2 pages, and 9
+  Q4-or-later exclusions.
+- Processed all 10 papers, `2304.09116` through `2509.22718`, in one Phase 1 batch: **43 claims**
+  from 8 structured and 2 legacy pages, all with source citations.
+- The closure audit matched the candidate and YAML ID sets exactly, with zero missing or
+  extraneous entries, no empty claim lists, and no unspecified sources. The Phase 1 health check
+  passed with **0 errors and 0 warnings**. All family and synthesis fields remain empty; Phase 2
+  is pending.
 
 ### 2026-07-30 — transformer-enc-dec-tts Phase 2 closed
 
