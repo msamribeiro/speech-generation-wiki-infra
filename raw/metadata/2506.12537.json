@@ -46,7 +46,7 @@
   "year": 2026,
   "month": 1,
   "published_date": "2026-01-16",
-  "ingested_date": null,
+  "ingested_date": "2026-08-03",
   "url": "https://arxiv.org/abs/2506.12537",
   "pdf_url": "https://arxiv.org/pdf/2506.12537.pdf",
   "pdf_path": "raw/papers/2506.12537.pdf",
@@ -59,9 +59,21 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "Systematic study of speech tokenizer designs for LLM-centric speech generation; directly advances codec design.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-03",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "ae5381c"
+    }
+  ]
 }

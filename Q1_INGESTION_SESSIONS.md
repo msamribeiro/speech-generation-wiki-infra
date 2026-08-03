@@ -43,10 +43,29 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-No sessions have run yet. To start, re-run the progress-count script above to confirm the current
-counts, then build a fresh candidate list chronologically by `published_date` (not by arXiv ID
-prefix — see the note below) starting from the earliest remaining Q1 2026 `accepted` paper. Follow
-the ingest cadence and quality-check procedure below.
+All 16 papers from the original preselected chronological candidate list (built 2026-08-03,
+`published_date` 2026-01-01 through 2026-01-13) are now ingested: `2601.00217`, `2601.00303`,
+`2601.01459`, `2601.01568`, `2601.04233`, `2601.02073`, `2601.02753`, `2601.02776`, `2601.03170`,
+`2601.03632`, `2601.03892`, `2601.05329`, `2601.05554`, `2601.05564`, `2505.15727`, `2601.08450`.
+
+To start the next session: re-run the progress-count script first to confirm current counts (159
+was the count at bootstrap; 143 remained as of the end of this session, but fetch/filter may have
+added more since), then build a fresh chronological candidate list of the next batch(es) starting
+from the earliest remaining Q1 2026 `accepted` paper by `published_date`.
+
+**Mandatory before every paper page:** run `grep -n "!tip\]\|!abstract\]\|!important\]"` against
+the drafted page and confirm the abstract callout is `[!abstract]` before running the health check.
+This mistake (writing `[!tip]` or `[!important]` on the abstract card instead of the Field
+Significance callout, reusing the significance-level token) recurred 7 times across this session's
+4 batches. A written reminder alone was not sufficient to stop it (it recurred even after being
+noted 3 separate times); the mechanical grep check adopted at the end of batch 3 caught it reliably
+for the rest of the session (2 more catches in batch 4, both pre-emptive) — keep using the grep
+check every time, it is now the confirmed working mitigation, not just a suggestion.
+
+Also check `arxiv_comment` for a named future-conference acceptance (e.g. "ACL 2026", "accepted for
+ICASSP 2026") before setting `venue`/`venue_type` — keep `venue: arXiv` / `venue_type: preprint`
+until the paper has an actual venue-specific ID, per precedent (`2510.14664`, confirmed again with
+`2601.03632` and `2601.03892` in batch 3; no recurrence in batch 4).
 
 ---
 
@@ -251,7 +270,97 @@ inventing a new term unilaterally.
 
 ## Session Log
 
-(No sessions yet — this section will hold per-batch narrative entries once Q1 2026 ingestion starts.)
+### 2026-08-03 — Batch 1 (papers 1-4 of 16 preselected)
+
+Ingested sequentially, one at a time, with a health check after each:
+
+- `2601.00217` — Mitigating Latent Mismatch in cVAE-Based Singing Voice Synthesis via Flow Matching (FM-Singer). Tagged `singing`; note that the ingest skill's embedded `related_concepts` allowed-slugs list is stale (missing `singing` and `fine-tuning`, both closed concepts as of 2026-08-02 per `wiki/_claims/` and `wiki/concepts/`) — used the actual tracked concept set instead of the skill's hardcoded list. Fixed a bare-wikilink health-check warning (WaveNet) before it passed clean. 1 figure embedded (architecture pipeline).
+- `2601.00303` — DepFlow: Disentangled Speech Generation to Mitigate Semantic Bias in Depression Detection. Corpus-scope precedent match: TTS-as-methodologically-central-tool for a downstream task (same shape as the 2506.04077 precedent), accepted consistent with prior scope calls. No figure (empirical/engineering-integration contribution, no architectural-novelty type). Manual log.md section-insertion fix needed (today's `## 2026-08-03` section didn't exist yet; the skill's regex assumes a `---\n\n## ` separator pattern not present in the current file).
+- `2601.01459` — OV-InstructTTS: Towards Open-Vocabulary Instruct Text-to-Speech. Caught and fixed a real mistake before it reached health check: used `[!tip]` instead of `[!abstract]` on the abstract callout, and omitted the required `[!tip]` wrapper on the Field Significance prose for this `high`-significance paper — both are exactly the callout-type-bleed failure mode the ingest template warns about. Health check initially failed (`required_sections`), fixed, re-ran clean. 1 figure embedded (model architecture).
+- `2601.01568` — MM-Sonate: Multimodal Controllable Audio-Video Generation with Zero-Shot Voice Cloning. Confirmed F5-TTS canonical ID is `2025.acl-long.313`, not the `2410.06885` arXiv ID this paper's own bibliography cites (per the standing precedent, see `feedback_f5tts_paper_id`). 1 figure embedded (framework architecture).
+
+QC notes: `wiki/index.md`'s paper-count template has drifted from what the ingest skill's regex expects (it now reads "N paper pages" / "Browse all N papers" in prose rather than the "papers ingested" / "Last updated" pattern the skill script matches), so all 3 occurrences needed a manual fix after every paper rather than being caught by the automated step — consistent with the standing "not fixable by prompting" status of this bug. `papers/index.md` row count and `wiki/papers/*.md` file count were verified to match after each paper (746, 747, 748, 749). No `review_flags` emitted by any of the 4 papers.
+
+Corpus page count: 745 → 749. Q1 2026 progress: 7 → 11 ingested, 159 → 155 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+### 2026-08-03 — Batch 2 (papers 5-8 of 16 preselected)
+
+Ingested sequentially, one at a time, with a health check after each:
+
+- `2601.04233` — LEMAS: A 150K-Hour Large-scale Extensible Multilingual Audio Suite with Generative Speech Models. Dataset paper (LEMAS-Dataset) validated by two benchmark models (LEMAS-TTS extending F5-TTS, LEMAS-Edit extending VoiceCraft). Fixed the same `[!tip]`-instead-of-`[!abstract]` callout mistake as below (see recurring-mistake note). No figure embedded (the one candidate architecture-style figure sits in the Introduction, not a Method/Model section, so it didn't satisfy the figure-selection criteria).
+- `2601.02073` — Towards Prosodically Informed Mizo TTS without Explicit Tone Markings. First reported TTS system for Mizo (low-resource tonal language); genuinely useful methodological finding that DNSMOS and F0-based objective metrics fail to track large, significant differences in tone accuracy and human-rated naturalness. No figure (no architectural-novelty type).
+- `2601.02753` — Vclip: Face-based Speaker Generation by Face-voice Association Learning. Zero in-corpus references found (small, disconnected niche literature); flagged an open vocabulary gap (no controlled `conditioning` term for face/image-conditioned generation — used `speaker-conditioned` + `zero-shot` as the closest fit rather than inventing a term). 1 figure embedded (method overview).
+- `2601.02776` — UniSRCodec: Unified and Low-Bitrate Single Codebook Codec with Sub-Band Reconstruction. 1 figure embedded (architecture/training diagram).
+
+**Recurring mistake this batch:** made the `[!tip]`-instead-of-`[!abstract]` callout error on 2 of the 4 papers this batch (`2601.04233`, `2601.02776`) — the same mistake caught and fixed once in Batch 1 (`2601.01459`) recurred twice more despite being flagged. Both were caught by the health check (`required_sections` error) before being marked complete, so nothing shipped broken, but this is clearly not a one-off; worth deliberately double-checking the abstract-callout line before running health check on every future paper rather than relying on the check to catch it after the fact.
+
+QC notes: `wiki/index.md` count fix (3 occurrences) still needed manually on every paper, as expected. `papers/index.md` row count and `wiki/papers/*.md` file count verified to match after each paper (750, 751, 752, 753). No `review_flags` emitted by any of the 4 papers.
+
+Corpus page count: 749 → 753. Q1 2026 progress: 11 → 15 ingested, 155 → 151 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+### 2026-08-03 — Batch 3 (papers 9-12 of 16 preselected)
+
+Ingested sequentially, one at a time, with a health check after each:
+
+- `2601.03170` — TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control. First training-free framework for intra-utterance multi-emotion/duration control on a frozen zero-shot TTS backbone (IndexTTS2-configured); genuinely useful Monotonic Stream Alignment mechanism for driving segment transitions from noisy attention maps. 1 figure embedded. Double-checked the abstract callout before health check per the note left at the end of Batch 2 — passed clean on the first attempt.
+- `2601.03632` — ReStyle-TTS: Relative and Continuous Style Control for Zero-Shot Speech Synthesis. First controllable zero-shot TTS to support continuous, reference-relative (not absolute) style control; per-sample regression analysis (slopes ~1, intercepts ~0) is a genuinely rigorous test of the "relative" claim. Caught and fixed a venue-labeling mistake before it shipped: the paper's `arxiv_comment` says "ACL 2026," and I initially set `venue: ACL` / `venue_type: conference`, but a precedent check against an already-ingested paper with the identical situation (`2510.14664`) showed the corpus convention is to keep `venue: arXiv` until the paper has an actual ACL Anthology ID (i.e. until the conference has happened) — reverted to match. Also repeated the `[!tip]`-instead-of-`[!abstract]` callout mistake a **third** time this session despite the explicit note left after Batch 2; caught by health check, fixed. 1 figure embedded.
+- `2601.03892` — Lightweight and perceptually-guided voice conversion for electro-laryngeal speech. Clinical-application VC paper (StreamVC adapted for post-laryngectomy speech rehabilitation); useful negative result that adding more than ~2 auxiliary perceptual/intelligibility losses degrades rather than improves a GAN-VC training objective. `arxiv_comment` also flagged "accepted for ICASSP 2026" — applied the same arXiv-venue precedent proactively this time, no fix needed. No figure (engineering-integration, no architectural-novelty type). Correct abstract callout on the first attempt (moderate significance, so no Field Significance callout to conflict with).
+- `2601.05329` — CosyEdit: Unlocking End-to-End Speech Editing Capability from Zero-Shot TTS Models. 400M-parameter model fine-tuned on 250h outperforms 3B-16B-parameter end-to-end speech-editing baselines (Step-Audio-EditX, MiMo-Audio, Ming-UniAudio) on RealEdit. Repeated the `[!tip]` mistake a **fourth** time this session. 1 figure embedded.
+
+**The `[!tip]`-instead-of-`[!abstract]` mistake recurred twice more this batch** (`2601.03632`, `2601.05329`), on top of the three prior occurrences from Batches 1-2 — five total across the session, always on `high`-significance papers, always caught by the health check before completion. Explicitly noting it in the session log has not been sufficient to prevent recurrence. Adopted a mechanical fix instead: run `grep -n "!tip\]\|!abstract\]\|!important\]"` against the drafted page before every health check, every paper, no exceptions — verified working for the remainder of this batch.
+
+**New precedent applied:** arXiv-sourced papers whose `arxiv_comment` names a future conference acceptance (e.g. "ACL 2026", "accepted for ICASSP 2026") keep `venue: arXiv` / `venue_type: preprint` until the paper has an actual venue-specific ID (ACL Anthology dotted ID, etc.) — matches existing corpus precedent (`2510.14664`). Worth checking `arxiv_comment` for this pattern on every future paper before setting `venue`.
+
+QC notes: `wiki/index.md` count fix (3 occurrences) needed manually on every paper, as expected. `papers/index.md` row count and `wiki/papers/*.md` file count verified to match after each paper (754, 755, 756, 757). No `review_flags` emitted by any of the 4 papers.
+
+Corpus page count: 753 → 757. Q1 2026 progress: 15 → 19 ingested, 151 → 147 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+### 2026-08-03 — Batch 4 (papers 13-16 of 16 preselected — list complete)
+
+Ingested sequentially, one at a time, with a health check after each. Session was interrupted mid-write on the first paper of this batch (model temporarily unavailable); recovered cleanly per the standard interruption-recovery procedure (checked the standalone content repo directly — only a stray figure-asset directory existed for `2601.05554`, no page/index-row/log-entry/metadata-update, so it was a safe direct retry).
+
+- `2601.05554` — SPAM: Style Prompt Adherence Metric for Prompt-based TTS. New CLAP-inspired automatic metric for TTS style-prompt adherence, validated for both plausibility (MOS correlation) and faithfulness (paraphrase-invariance via paired t-test) — a genuinely rigorous two-part validation methodology for an evaluation metric. 1 figure embedded (scorer architecture, since the fusion design and multi-positive SupCon loss were judged genuinely novel, not just an applied metric).
+- `2601.05564` — The ICASSP 2026 HumDial Challenge. First challenge jointly benchmarking emotional intelligence and full-duplex interaction using authentic professional-actor recordings (not synthetic mixing or concatenation); 100+ registered teams, 15 valid submissions. No figures in the source paper.
+- `2505.15727` — VocalBench. Large (~24k instance) bilingual benchmark across 14 capabilities, 27 evaluated models spanning all major SCA paradigms (cascade/SpeechLLM/Omni-LLM/API); rich, genuinely generalizable field-level findings (LLM backbone drives semantic gains without acoustic/empathy gains; E2E models more robust than cascades; paralinguistic control lags semantic instruction-following). Large parsed source file required paginated reading. No figures embedded (benchmark paper, no architectural-novelty type).
+- `2601.08450` — Decoding Order Matters in Autoregressive Speech Synthesis. Small, rigorous University of Sheffield paper using a masked-diffusion framework as a controlled instrument to directly challenge the near-universal left-to-right decoding convention in AR speech synthesis; genuinely novel `contradicts`-role claim (rare in this session, most claims have been supports/complicates). Secondary finding that HiFi-GAN can vocode 1-bit-quantized mel-spectrograms without retraining. No figures embedded (all 6 figures are results plots or raw spectrograms, none are architecture diagrams).
+
+**Mechanical abstract-callout check held for the whole batch**: ran `grep -n "!tip\]\|!abstract\]\|!important\]"` against every drafted page before the health check, as adopted at the end of Batch 3. It caught the mistake again on 2 of 4 papers this batch (`2601.05564`, `2505.15727`) before they ever reached the health check — confirming the mechanical check is working as the reliable backstop that written reminders alone were not. Total recurrence count for the full session: 7 (5 caught by health check in batches 1-3, 2 caught pre-emptively by the grep check in batch 4).
+
+QC notes: `wiki/index.md` count fix (3 occurrences) needed manually on every paper, as expected. `papers/index.md` row count and `wiki/papers/*.md` file count verified to match after each paper (758, 759, 760, 761). No `review_flags` emitted by any of the 4 papers. `arxiv_comment` checked for future-conference-acceptance language on every paper this batch (per the batch-3 precedent); none present.
+
+Corpus page count: 757 → 761. Q1 2026 progress: 19 → 23 ingested, 147 → 143 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+**This completes the original 16-paper preselected candidate list** (built 2026-08-03 at session start, spanning `published_date` 2026-01-01 through 2026-01-13). 143 papers remain in Q1 2026 scope; a fresh chronological candidate list should be built at the start of the next session before continuing.
+
+### 2026-08-03 — Batch 5 (fresh candidate list, papers 1-4)
+
+Ingested sequentially, one at a time, with a health check after each.
+
+- `2601.09239` — DSA-Tokenizer: Disentangled Semantic-Acoustic Tokenization via Flow Matching-based Hierarchical Fusion. 1 figure embedded (framework overview).
+- `2602.06053` — PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models. Duplex conversational speech model adding role- and voice-conditioning via hybrid text+audio system prompts on top of a Moshi-style backbone; extended Full-Duplex-Bench to multi-role customer-service scenarios. `references.json` in-corpus flag falsely indicated URO-Bench (2502.17810) was in the corpus; verified via direct `ls` and excluded it after confirming it was actually absent. Correctly excluded `instruction-conditioned-tts` from `related_concepts` per the standing SCA-exclusion rule (general-purpose role/persona following in dialogue does not qualify). 1 figure embedded (architecture diagram).
+- `2601.10629` — VoiceSculptor: Your Voice, Designed By You. Open-source instruction-based voice design (with RAG-based iterative refinement) unified with zero-shot voice cloning in one framework. Docling figure-numbering mismatch: the placeholder tagged `figure-7.png` but its caption read "Figure 1" (the paper's own numbering); resolved by trusting the caption text over the placeholder number, copied the correct asset file, and labeled it "Figure 1" in the embedded caption to match the source paper.
+- `2506.12537` — What Makes a Good Speech Tokenizer for LLM-Centric Speech Generation? A Systematic Study. Controlled, SLM-internal comparison showing decoupled tokenizers (FACodec) outperform coupled/semi-decoupled tokenizers in SLM training despite not always winning on standalone reconstruction quality; introduces multi-token prediction for speech heads (up to 12x faster decoding, WER 6.07→3.01) and RoleTriviaQA, a new speaker-aware role-playing knowledge QA benchmark. `references.json` in-corpus flags were unreliable in the other direction this time — all 46 references flagged `False` even though 10 were actually in-corpus (including NaturalSpeech 3/FACodec, SpeechTokenizer, WavTokenizer, BigCodec, CosyVoice 2, Moshi); verified by direct `ls` lookup against candidate IDs pulled from the reference list rather than trusting the flag. No figure embedded (field_significance.type is empirical-benchmark/engineering-integration/dataset-contribution, no architectural-novelty). Correct `[!abstract]` callout on the first attempt.
+
+**The `[!tip]`/`[!abstract]` callout mistake recurred on all 3 `high`-significance papers this batch** (`2601.09239`, `2602.06053`, `2601.10629`) before being caught by the mandatory `grep -n "!tip\]\|!abstract\]\|!important\]"` check run immediately after drafting each page, per the mechanical mitigation adopted in Batch 3. `2506.12537` (also `high` significance) was the first paper all session to get the callout right on the first attempt. Running session total: 10 recurrences (5 caught by health check in batches 1-3, 2 caught pre-emptively in batch 4, 3 caught pre-emptively in batch 5).
+
+QC notes: `wiki/index.md` count fix needed manually on every paper. On `2506.12537`, the automated count-update script's row-counting logic (filtering out lines containing the substrings `ID`/`Title`) undercounted by 10 (reported 755 against an actual 765 file/row count) — root-caused as the known index-count-drift class of bug, not a one-off; fixed by using the direct `grep -c '^| \[\['` row count as authoritative and manually correcting all 3 occurrences in `wiki/index.md` to 765. `papers/index.md` row count and `wiki/papers/*.md` file count verified to match after each paper (762, 763, 764, 765). No `review_flags` emitted by any of the 4 papers.
+
+Corpus page count: 761 → 765. Q1 2026 progress: 23 → 27 ingested, 143 → 139 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+### 2026-08-03 — Batch 6 (fresh candidate list continued, papers 5-8)
+
+Ingested sequentially, one at a time, with a health check after each. Continued chronologically by `published_date` from where Batch 5 left off.
+
+- `2601.11141` — FlashLabs Chroma 1.0: A Real-Time End-to-End Spoken Dialogue Model with Personalized Voice Cloning. First open-source system to combine sub-second streaming latency with personalized voice cloning; decouples coarse acoustic-code generation (long-context Backbone) from residual-codebook refinement (frame-local Decoder) to keep both dimensions fast. Zero-shot SIM (0.81) exceeds the human baseline and all compared TTS systems including Seed-TTS. Notable finding: listeners preferred synthesized ElevenLabs audio over ground-truth human recordings 92% of the time, undercutting naturalness-preference as a proxy for speaker-similarity fidelity. 1 figure embedded (overall architecture).
+- `2601.16225` — ES4R: Speech Encoding Based on Prepositive Affective Modeling for Empathetic Response Generation. Explicitly models affective context (dual-level intra-turn/inter-turn attention) *before* generic speech encoding rather than relying on the encoder or post-hoc fusion to preserve emotion cues; the largest ablation effect all session (removing this module collapsed BLEU-4 by ~10x). Energy-trajectory-based empathetic prosody strategy selection is a genuinely lightweight, interpretable alternative to explicit emotion supervision. 1 figure embedded (three-stage framework).
+- `2601.12205` — Do Neural Codecs Generalize? A Controlled Study Across Unseen Languages and Non-Speech Tasks. Trains NACs from scratch under matched architecture/training configuration (varying only pretraining data coverage) to cleanly isolate three previously confounded generalization questions; counterintuitive finding that non-speech pretraining data does not trade off against speech-task performance, contrary to the authors' own initial hypothesis. No figure embedded (empirical-benchmark/negative-result, no architectural-novelty).
+- `2601.12289` — ParaMETA: Towards Learning Disentangled Paralinguistic Speaking Styles Representations from Speech. Two-stage contrastive framework (graded META-space regularization + per-task prototype-anchored subspaces) that cleanly qualifies for the `disentanglement` tag per the standing tagging rule (explicit training mechanism with ablation evidence, not just contrastive framing). `arxiv_comment` flagged "Accepted to AAAI-26"; applied the standing arXiv-venue precedent (venue stays `arXiv`/preprint until a real Anthology-style ID exists) without needing to look it up fresh. Honest negative finding embedded in the results: language-attribute manipulation nearly fails (55% accuracy) since language identity is bound to text/phonetic content rather than a purely acoustic style attribute. 1 figure embedded (framework overview).
+
+**Zero `[!tip]`/`[!abstract]` callout mistakes this batch** — all 4 papers (3 of them `high` significance) got the callout right on the first attempt, verified by the mandatory `grep -n "!tip\]\|!abstract\]\|!important\]"` check before health check. This is the first fully clean batch on this recurring issue; running session total holds at 10 recurrences (unchanged from Batch 5).
+
+QC notes: `wiki/index.md` count fix needed manually on every paper (3 occurrences each), continuing to use the direct `grep -c '^| \[\['` row count as authoritative per the fix adopted in Batch 5. `papers/index.md` row count and `wiki/papers/*.md` file count verified to match after each paper (766, 767, 768, 769). No `review_flags` emitted by any of the 4 papers. `references.json` in-corpus flags continued to be unreliable and were independently verified by direct `ls` lookup on every paper rather than trusted (no false positives or negatives caught this batch, but the check was still run every time).
+
+Corpus page count: 765 → 769. Q1 2026 progress: 27 → 31 ingested, 139 → 135 remaining (58 rejected, unchanged). Not yet committed/pushed.
 
 ---
 

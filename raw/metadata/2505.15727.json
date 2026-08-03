@@ -23,7 +23,7 @@
   "year": 2026,
   "month": 1,
   "published_date": "2026-01-13",
-  "ingested_date": null,
+  "ingested_date": "2026-08-03",
   "url": "https://arxiv.org/abs/2505.15727",
   "pdf_url": "https://arxiv.org/pdf/2505.15727.pdf",
   "pdf_path": "raw/papers/2505.15727.pdf",
@@ -36,9 +36,21 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Introduces VocalBench, a comprehensive benchmark for evaluating speech LLMs including synthesis quality, paralinguistics, and acoustic understanding.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-03",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "ae5381c"
+    }
+  ]
 }
