@@ -43,29 +43,56 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-All 16 papers from the original preselected chronological candidate list (built 2026-08-03,
-`published_date` 2026-01-01 through 2026-01-13) are now ingested: `2601.00217`, `2601.00303`,
-`2601.01459`, `2601.01568`, `2601.04233`, `2601.02073`, `2601.02753`, `2601.02776`, `2601.03170`,
-`2601.03632`, `2601.03892`, `2601.05329`, `2601.05554`, `2601.05564`, `2505.15727`, `2601.08450`.
+All 12 papers from the second preselected chronological candidate list (built 2026-08-11,
+`published_date` 2026-01-18 through 2026-01-22) are now ingested, across batches 7-9:
+`2601.12480`, `2409.16681`, `2601.12966`, `2601.13055`, `2602.11172`, `2601.13758`, `2601.13802`,
+`2601.13835`, `2601.13948`, `2601.14472`, `2601.14960`, `2601.15596`. Q1 2026 progress at end of
+session: 43 ingested, 123 remaining, 58 rejected (224 total in scope).
 
-To start the next session: re-run the progress-count script first to confirm current counts (159
-was the count at bootstrap; 143 remained as of the end of this session, but fetch/filter may have
-added more since), then build a fresh chronological candidate list of the next batch(es) starting
-from the earliest remaining Q1 2026 `accepted` paper by `published_date`.
+To start the next session: re-run the progress-count script first to confirm current counts (123
+was the count at the end of this session, but fetch/filter may have added more since), then build a
+fresh chronological candidate list of the next batch(es) starting from the earliest remaining Q1
+2026 `accepted` paper by `published_date`.
+
+**Cadence note:** this session ended on a one-paper-at-a-time-with-go-ahead cadence (user request
+mid-session, batch 9), not the default batches-of-4. Per the standing rule, follow whichever cadence
+was most recently requested rather than defaulting back to batches-of-4 silently — ask if unclear
+at the start of the next session.
 
 **Mandatory before every paper page:** run `grep -n "!tip\]\|!abstract\]\|!important\]"` against
 the drafted page and confirm the abstract callout is `[!abstract]` before running the health check.
-This mistake (writing `[!tip]` or `[!important]` on the abstract card instead of the Field
-Significance callout, reusing the significance-level token) recurred 7 times across this session's
-4 batches. A written reminder alone was not sufficient to stop it (it recurred even after being
-noted 3 separate times); the mechanical grep check adopted at the end of batch 3 caught it reliably
-for the rest of the session (2 more catches in batch 4, both pre-emptive) — keep using the grep
-check every time, it is now the confirmed working mitigation, not just a suggestion.
+This is now a long-confirmed working mitigation (zero recurrences across all 8 papers this session,
+following the fix adopted in the prior session) — keep using it every time regardless.
+
+**New recurring-issue classes confirmed this session** (distinct from the settled callout issue):
+- Bare `[[id]] (Name)` citation format in Wiki Connections instead of piped `[[id|Name]]` — agents
+  sometimes reason (incorrectly) that the SKILL.md template's literal text licenses bare format;
+  it does not. State the piped-format requirement explicitly in every ingest prompt.
+- `wiki/index.md`'s 3 paper-count occurrences going internally *inconsistent* after an edit (not
+  just stale, but 3 different wrong values at once) — verify all 3 resolve to the same authoritative
+  `grep -c '^| \[\[' wiki/papers/index.md` count, not just that each was "bumped."
+- Org column left blank in `papers/index.md` despite a valid multi-institution `organization`
+  frontmatter field — fill with an abbreviated form (e.g. "KIT / CMU"), never leave blank.
+- Multi-tag papers sometimes get only one task shown in the `papers/index.md` Task column despite
+  multiple tags in frontmatter `task:` — cross-check the row against the frontmatter list, not just
+  presence of a value.
+- `task:`/`related_concepts:` quoted-list frontmatter syntax (`["VC"]` instead of `[VC]`) — same
+  drift class as the already-resolved `related_concepts` quoting fix; found on `2601.13948`. Not yet
+  fixed corpus-wide (213 of ~726 pages currently use quoted `task:`) — worth a future normalization
+  pass, tracked informally here pending a BACKLOG.md entry.
+
+**Interruption recovery worked as documented**: a session-limit interruption hit mid-ingest on
+`2601.13758` (batch 8). Checked the standalone content repo directly per protocol, found a
+partial-write state (page written and well-formed, downstream steps — index title, log entry,
+metadata status — not yet done), and completed it by hand rather than re-running the agent from
+scratch. See [[feedback_session_limit_interruption]].
 
 Also check `arxiv_comment` for a named future-conference acceptance (e.g. "ACL 2026", "accepted for
 ICASSP 2026") before setting `venue`/`venue_type` — keep `venue: arXiv` / `venue_type: preprint`
-until the paper has an actual venue-specific ID, per precedent (`2510.14664`, confirmed again with
-`2601.03632` and `2601.03892` in batch 3; no recurrence in batch 4).
+until the paper has an actual venue-specific ID, per precedent (`2510.14664`).
+
+One `review_flags` entry this session (`2602.11172`, field_significance confidence) — see Manual
+Verification Queue below, not yet resolved.
 
 ---
 
@@ -362,6 +389,56 @@ QC notes: `wiki/index.md` count fix needed manually on every paper (3 occurrence
 
 Corpus page count: 765 → 769. Q1 2026 progress: 27 → 31 ingested, 139 → 135 remaining (58 rejected, unchanged). Not yet committed/pushed.
 
+### 2026-08-11 — Batch 7 (fresh candidate list, papers 1-4 of 12 preselected)
+
+Ingested sequentially, one at a time, with a health check after each. New 12-paper chronological candidate list preselected at session start, `published_date` 2026-01-18 through 2026-01-22.
+
+- `2601.12480` — A Unified Neural Codec Language Model for Selective Editable Text to Speech Generation (SpeechEdit, Microsoft). Unified instruction interface over a VALL-E-style AR/NAR codec-LM backbone covering zero-shot TTS, voice conversion, emotion control, and prosody control as special cases of one editing mechanism. Tagged `[TTS, VC]` (dedicated VC evaluation with subjective CMOS across four speakers). `disentanglement` and `instruction-conditioned-tts` concept tags considered and excluded (disentanglement is implicit/data-driven, not an explicit mechanism; instruction tokens are fixed categorical/ordinal, not natural language). 1 figure embedded. Agent's own draft used bare `[[id]] (Name)` citation format in Wiki Connections against the SKILL.md template's literal text; caught and self-corrected by the agent to piped `[[id|Name]]` format after checking actual corpus convention.
+- `2409.16681` — Emotional Dimension Control in Language Model-Based Text-to-Speech: Spanning a Broad Spectrum of Human Emotions. Continuous PAD (pleasure-arousal-dominance) conditioning for LM-based TTS emotion control, avoiding categorical emotion labels. arXiv ID prefix (2409, Sept 2024) doesn't match `published_date` (2026-01-19); checked `arxiv_comment` ("ICASSP 2026") and full paper text for "full version of" / "extended version" language, found none — read as a normal arXiv revision timestamp coinciding with ICASSP 2026 camera-ready, not a duplicate-paper case. **QC catch:** agent left 5 bare `[[id]] (Name)` citations in Wiki Connections unfixed, incorrectly reasoning they matched the skill template; manually corrected to piped format after the fact (health check only warns on this, doesn't error, so it passed before the fix).
+- `2601.12966` — Lombard Speech Synthesis for Any Voice with Controllable Style Embeddings. Fine-tunes F5-TTS with FiLM-conditioned style embeddings (replacing in-context reference-audio conditioning) for zero-shot Lombard-speech control; PCA-based mechanism for interpretable loudness/clarity control. F5-TTS citation correctly resolved to canonical ID `2025.acl-long.313` per standing precedent. **QC catches:** (1) Org column left blank in `papers/index.md` despite a valid multi-institution `organization` field (KIT Campus Transfer GmbH, KIT, CMU) — filled in manually as "KIT / CMU"; (2) `wiki/index.md`'s 3 count occurrences were internally inconsistent after the agent's edit (771, 771, 762 — three different wrong numbers, none matching the authoritative `grep -c` count of 772) — corrected all 3 to 772.
+- `2601.13055` — VoCodec: An Efficient Lightweight Low-Bitrate Speech Codec. Combines Vocos, DAC-style RVQ, and ConvNeXt/ResNet blocks; correctly classified as `engineering-integration`/`empirical-benchmark` (no architecture figure copied per invariant #10). Zero in-corpus references (0/30 in `references.json`, and none found by manual check either). Table 1's per-condition objective metrics had garbled row alignment in the Docling parse; agent correctly excluded the ambiguous values from frontmatter rather than risk misattribution, and noted this in Limitations. Clean on all counts, including index count and Org field, after explicit instructions incorporating the prior three papers' QC catches.
+
+**Two new recurring-mistake classes surfaced this batch** (distinct from the settled `[!tip]`/`[!abstract]` issue, which had zero recurrences across all 4 papers): (1) bare `[[id]] (Name)` citation format in Wiki Connections instead of piped `[[id|Name]]` — occurred on 2 of the first 2 papers before being explicitly called out in agent instructions, zero recurrence on papers 3-4 once the instruction was explicit; (2) `wiki/index.md` count-fix producing internally inconsistent numbers across its 3 occurrences (not just stale numbers, but 3 different wrong values in the same edit) — worth continuing to verify all 3 occurrences resolve to the same authoritative number, not just that they were "updated."
+
+QC notes: title truncation caught and fixed on paper 1 only (`2601.12480`, cut mid-word as "Selective Edi"); papers 2-4 came through with full titles intact once agents were explicitly told to re-read the line back. `papers/index.md` row count and `wiki/papers/*.md` file count verified to match after each paper (770, 771, 772, 773). No `review_flags` emitted by any of the 4 papers. `references.json` in-corpus flags remained unreliable in both directions (paper 1 undercounted by manual title search; paper 4 correctly reported zero) — independently verified against the real `wiki/papers/` directory on every paper as usual.
+
+Corpus page count: 769 → 773. Q1 2026 progress: 31 → 35 ingested, 135 → 131 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+### 2026-08-11 — Batch 8 (fresh candidate list continued, papers 5-8 of 12 preselected)
+
+Ingested sequentially, one at a time, with a health check after each. Continued chronologically from where Batch 7 left off.
+
+- `2602.11172` — Synthesizing the Virtual Advocate: A Multi-Persona Speech Generation Framework for Diverse Linguistic Jurisdictions in Indic Languages. Single-author case study prompting closed Gemini 2.5 Flash/Pro TTS models to produce persona-conditioned courtroom speech across five Indic languages; no model trained, Gemini used as a black box (precedent: `2503.04721` Full-Duplex-Bench). Correctly classified `field_significance: low` with `review_flags` emitted (unreported evaluator count/qualifications, no non-Gemini baseline) — added to the Manual Verification Queue. `subjective-evaluation` tag verified legitimate (real human Likert-scale ratings, not LLM-judge). No figure (no architectural-novelty type). Clean on all structural QC.
+- `2601.13758` — GOMPSNR: Reflourish the Signal-to-Noise Ratio Metric for Audio Generation Tasks. **Session-limit interruption mid-ingest**, recovered per the standard two-case procedure: checked the standalone content repo directly and found a partial-write state (paper page written and well-formed, but `papers/index.md` title truncated, no `log.md` entry, metadata still `status: accepted`). Completed by hand rather than re-running the agent: fixed the truncated title, filled in the missing `codec` task tag omitted from the row (page frontmatter had `task: [evaluation, codec]`), added the `log.md` entry, and set `status: ingested`/`ingested_date`/`generation_history` in metadata (also backfilled `task: [evaluation, codec]` into the metadata JSON, which had only `["evaluation"]` from the original filter pass). Corrected phase-distance term for SNR (GOMPSNR) plus derived vocoder/codec training losses; validated across 4 vocoders and 2 codecs. Citations independently verified (5/5 in-corpus refs have pages, all `ingested`).
+- `2601.13802` — Habibi: Laying the Open-Source Foundation of Unified-Dialectal Arabic Speech Synthesis. F5-TTS fine-tuned for unified multi-dialect Arabic TTS across seven dialects with curriculum training; introduces the first standardized multi-dialect Arabic TTS benchmark. 8 in-corpus citations, all independently verified (pages exist, status `ingested`). Clean on all structural QC first attempt (piped wikilinks, full title, Org/Task columns, count consistency).
+- `2601.13835` — The Role of Prosodic and Lexical Cues in Turn-Taking with Self-Supervised Speech Representations. Interpretability/probing paper (not a generative system): uses a WORLD-vocoder resynthesis technique purely as a diagnostic tool to isolate prosodic vs. lexical cues for testing an existing turn-taking model (VAP) built on CPC/wav2vec2.0 representations. **Scope judgment independently re-verified** rather than trusting the agent's self-justification: confirmed against 4 existing in-corpus turn-taking papers (`2025.sigdial-1.21`, `2025.iwsds-1.27`, `2508.07375`, `2509.23938`), two of which are themselves pure timing/survey papers with no synthesis component — this is an established corpus precedent, not a one-off, and turn-taking (deciding *when* to speak) is structurally distinct from the DST/ASR "understanding-only" rejection precedent since it's a core SCA behavior. Accepted the ingest. No in-corpus references (all 24 citations are prior non-corpus work).
+
+**New recurring-issue class confirmed:** the Org/Task column omission from `papers/index.md` seen once in Batch 7 (blank Org) recurred as a blank Org on `2602.11172` initially then caught before health check, and as a dropped secondary task tag on `2601.13758` (only `evaluation` shown in the row despite `task: [evaluation, codec]` in frontmatter) — worth continuing the row-vs-frontmatter cross-check on every multi-tag paper, not just assuming a single task value is complete.
+
+QC notes: `wiki/index.md` count fix needed manually on `2601.13758` only (post-interruption completion); the other 3 papers' agents correctly self-verified all 3 occurrences matched the authoritative `grep -c '^| \[\['` count. `papers/index.md` row count verified after each paper (774, 775, 776, 777). 1 `review_flags` entry (`2602.11172`), added to Manual Verification Queue. All in-corpus citations across the batch independently verified against the real `wiki/papers/` directory and status field, not trusted from agent self-report.
+
+Corpus page count: 773 → 777. Q1 2026 progress: 35 → 39 ingested, 131 → 127 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+### 2026-08-11 — Batch 9 (cadence dropped to one-paper-at-a-time with go-ahead between each, per user request)
+
+- `2601.13948` — Stream-Voice-Anon: Enhancing Utility of Real-Time Speaker Anonymization via Neural Audio Codec and Language Models. Real-time streaming speaker-anonymization system (autoregressive VC over a frozen FishSpeech neural-codec token space); benchmarked against DarkStream (`2509.04667`, prior SOTA) under the VoicePrivacy 2024 Challenge protocol at matched latency. Tagged `VC` per the standing rule (dedicated VC-style system + genuine metrics: WER, UAR, EER). **QC catch:** `task: ["VC"]` used quoted-list frontmatter syntax instead of the more common unquoted `task: [VC]` — a new instance of the same quoting drift previously resolved for `related_concepts` (213 of ~726 pages currently use quoted `task:`, worth a future normalization pass, not fixed corpus-wide here). Normalized this page only. Citation to DarkStream independently verified (page exists, `status: ingested`). Clean on all other structural QC (callout, piped wikilinks, title, Org, count consistency) on first attempt.
+
+Corpus page count: 777 → 778. Q1 2026 progress: 39 → 40 ingested, 127 → 126 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+- `2601.14472` — Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum (ICASSP 2026, BME). Adds an F0-driven harmonic-attention encoder stage plus explicit phase supervision to a complex-spectrum GAN vocoder, contrasted against HiFi-GAN (auxiliary-feature F0 baseline) and Vocos (closest architectural relative). Formal MOS listening study (20 listeners, ITU-T P.800). `references.json` only auto-matched 1 in-corpus reference; agent manually cross-checked `papers/index.md` and correctly recovered the 3 actual Table I baselines (HiFi-GAN, Vocos, BigVGAN) as in-corpus, all independently re-verified here (pages exist, `status: ingested`). Clean on every structural QC check on first attempt: unquoted `task`/`related_concepts`, piped wikilinks, full title, Org filled, count consistency (779 across all 3 occurrences).
+
+Corpus page count: 778 → 779. Q1 2026 progress: 40 → 41 ingested, 126 → 125 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+- `2601.14960` — VCNAC: A Variable-Channel Neural Audio Codec for Mono, Stereo, and Surround Sound (Amazon AGI). **Scope judgment independently re-verified**: title suggested a general/surround-audio codec possibly out of scope, but the agent's read of the full paper found genuine speech-specific content (LibriTTS/LibriVox training data, a dedicated "Single-Channel Speech Evaluation" modality with PESQ/SI-SDR on LibriTTS) and cited `2508.05207` (SpectroStream, a general-audio codec already accepted on the same basis) as precedent — independently confirmed that precedent's metadata (`status: ingested`, relevance note: "full-band neural codec extending SoundStream to 48kHz stereo") before accepting the ingest. 1 architecture figure embedded (variable-channel design). Citation to SpectroStream independently verified. Clean on all structural QC on first attempt (count, title, Org, unquoted task/related_concepts, piped wikilinks).
+
+Corpus page count: 779 → 780. Q1 2026 progress: 41 → 42 ingested, 125 → 124 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
+- `2601.15596` — DeepASMR: LLM-Based Zero-Shot ASMR Speech Generation for Anyone of Any Voice (SJTU / VUI Labs). Two-stage LLM (Qwen2.5-0.5B over CosyVoice2 S3 tokens) + Voicebox-style flow-matching acoustic decoder, extending zero-shot voice cloning to ASMR style from an ordinary-speech reference; evaluated in English and Mandarin. Sanity-checked as a genuine generative system (not a dataset/analysis paper) before ingest, per instruction. 8 in-corpus citations, all independently verified (pages exist, `status: ingested`). Clean on all structural QC on first attempt.
+
+**This completes both the one-paper-at-a-time cadence (4 papers: `2601.13948`, `2601.14472`, `2601.14960`, `2601.15596`) and the full original 12-paper preselected candidate list** (`published_date` 2026-01-18 through 2026-01-22) built at the start of this session. A fresh chronological candidate list should be built at the start of the next session before continuing. Zero recurring QC issues surfaced on the final 4 papers beyond the single `task:` quoting fix on `2601.13948` — the `[!tip]`/`[!abstract]` callout mistake had zero recurrences across the entire session (8 papers), a first.
+
+Corpus page count: 780 → 781. Q1 2026 progress: 42 → 43 ingested, 124 → 123 remaining (58 rejected, unchanged). Not yet committed/pushed.
+
 ---
 
 ## Manual Verification Queue
@@ -371,7 +448,7 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
-| _(none yet)_ | | |
+| `2602.11172` | `field_significance` | Single-author closed-model (Gemini 2.5 TTS) case study with no reported evaluator count/qualifications and no non-Gemini baseline; level (`low`) could plausibly be argued lower still if the human-evaluation claims are discounted entirely. |
 
 ---
 

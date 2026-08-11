@@ -19,7 +19,7 @@
   "year": 2026,
   "month": 1,
   "published_date": "2026-01-19",
-  "ingested_date": null,
+  "ingested_date": "2026-08-11",
   "url": "https://arxiv.org/abs/2409.16681",
   "pdf_url": "https://arxiv.org/pdf/2409.16681.pdf",
   "pdf_path": "raw/papers/2409.16681.pdf",
@@ -31,9 +31,21 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "LM-based TTS framework with flexible continuous emotion dimension control; directly advances emotional TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-11",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "646e2be"
+    }
+  ]
 }
