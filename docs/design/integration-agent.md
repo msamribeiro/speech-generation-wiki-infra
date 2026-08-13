@@ -11,7 +11,7 @@
 
 The integration agent sits between the ingest stage (paper pages) and the render stage
 (concept renderings). Its job is to build and maintain the claim graph in `wiki/_claims/` — the
-structured YAML layer from which all rendered wiki output is derived.
+structured YAML layer from which concept-local rendered output is derived.
 
 ```
 wiki/papers/{id}.md          (ingest output — ground truth for what a paper says)
@@ -23,6 +23,10 @@ wiki/concepts/{slug}.md      (render output — human-readable synthesis)
 
 The YAML is the single source of truth. Concept Overviews and In Depth pages are derived
 artifacts and can always be regenerated from the YAML without loss.
+
+Integration owns only top-level concept YAMLs. It never writes `_claims/_reconciliation/`; the
+reconciliation agent owns cross-concept relationships, run records, and snapshots after an
+integration cycle completes.
 
 ---
 

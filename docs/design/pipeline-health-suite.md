@@ -3,7 +3,9 @@
 **Project:** Speech Synthesis Research Wiki  
 **Scope:** Automated validation of pipeline outputs at each stage, combined with a health dashboard for the knowledge base  
 **Depends on:** All pipeline stages (fetch, parse, ingest, integrate, render) — the suite reads their outputs but does not run them  
-**Status:** Partially implemented — `ingest` module complete (2026-06-19), `integrate` module complete (2026-07-15); `fetch`, `parse`, `render`, `corpus` modules and `--report` dashboard still planned  
+**Status:** Partially implemented — `ingest`, `integrate`, and `render` modules complete;
+`reconcile`, temporal-report validation, `fetch`, `parse`, `corpus`, and `--report` dashboard still
+planned
 
 ---
 
@@ -57,7 +59,9 @@ scripts/
     parse.py               # validates raw/parsed/
     ingest.py              # validates wiki/papers/
     integrate.py           # validates wiki/_claims/
+    reconcile.py           # validates registry, runs, and snapshots
     render.py              # validates concept Overview and In Depth pages
+    reports.py             # validates bounded temporal and venue reports
     corpus.py              # cross-cutting consistency
     _base.py               # shared dataclasses and helpers
 ```
@@ -255,6 +259,7 @@ script — this module was implemented directly instead).
 | `no_duplicate_paper_ids` | error | No two entries in `papers` may share the same `id` |
 | `paper_id_is_string` | error | Each paper entry's `id` must parse as a YAML string, not a float — unquoted arXiv-style IDs (e.g. `1412.6980`) parse as floats and silently lose trailing zeros, corrupting every downstream lookup |
 | `paper_entry_required_fields` | error | Each paper entry must have: `id`, `entry_date`, `year`, `venue`, `relevance`, `evidence_role`, `current_role`, `claims` |
+| `published_date_canonical` | error | After the temporal migration, every paper entry must contain an ISO publication date matching canonical paper frontmatter or metadata |
 | `entry_date_present` | error | `entry_date` must be non-null and a valid date (string or YAML date/datetime) |
 | `claim_required_fields` | error | Each claim under a paper entry must have: `claim_id`, `role`, `claim`, `source`, `evidence`, `confidence`, `relevance` |
 | `claim_source_nonnull` | error | Every claim's `source` field must be non-null and non-empty |
@@ -305,6 +310,49 @@ becomes a measured bottleneck.
 and the four open implementation questions (all resolved 2026-07-15).
 
 ---
+
+## 6A. Reconcile Module
+
+**File:** `scripts/checks/reconcile.py` (planned for Phase 4)
+**Reads:** `wiki/_claims/*.yaml`, `wiki/_claims/_reconciliation/`, canonical paper dates
+**Scope:** Registry-wide or one run/snapshot ID
+
+The module validates the contracts in `docs/schemas/reconciliation.md` and
+`docs/schemas/snapshots.md`. Structural defects are errors; unresolved reviewed work is advisory.
+
+| Check | Severity | Description |
+|---|---|---|
+| `qualified_refs_resolve` | error | Every `{concept}#{cluster}` reference resolves |
+| `relationship_vocabulary` | error | Relationship types and endpoint direction/order are valid |
+| `registry_ids_unique` | error | Relationship and broader-claim IDs are unique |
+| `broader_membership_valid` | error | Broader claims span at least two concepts and have unique members |
+| `no_cycles` | error | Directed relationships, broader memberships, and supersession chains do not cycle |
+| `accepted_decisions_reciprocal` | error | Accepted run candidates point to matching registry state |
+| `finalized_run_complete` | error | Finalized runs contain no pending candidates and every decision has required rationale |
+| `evidence_deduplicated` | error | Broader and snapshot evidence-role lists contain unique eligible paper IDs |
+| `published_dates_canonical` | error | Snapshot eligibility dates exist, parse, and match canonical sources |
+| `snapshot_digest_valid` | error | Canonical snapshot digest recomputes exactly |
+| `snapshot_immutable` | error | A published snapshot was changed instead of superseded |
+| `unresolved_candidates` | warning | Deferred or configured high-similarity candidates remain unresolved |
+
+Candidate generation is not part of health validation, and this module never mutates artifacts.
+
+## 6B. Reports Module
+
+**File:** `scripts/checks/reports.py` (planned for Phase 9)
+**Reads:** published snapshots, `wiki/reports/`, reports index, `wiki/log.md`
+
+| Check | Severity | Description |
+|---|---|---|
+| `snapshot_ref_valid` | error | Referenced snapshot exists and digest matches |
+| `retrospective_label_present` | error | Bounded reports state cutoff and assessment date explicitly |
+| `citations_in_snapshot` | error | Every cited paper belongs to the source snapshot |
+| `windows_match` | error | Report period and date windows match its snapshot |
+| `trend_has_two_snapshots` | error | Trend reports reference at least two ordered snapshots |
+| `venue_selection_valid` | error | Venue and inclusive date bounds match canonical snapshot data |
+| `report_generation_v2` | error | Report carries `stage: report`, valid mode, and version-2 provenance |
+| `report_supersession_valid` | error | Versioned successors resolve without cycles |
+| `report_index_and_log` | error | Published report appears in the index and operation log |
 
 ## 7. Render Module
 

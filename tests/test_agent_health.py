@@ -18,7 +18,7 @@ class AgentHealthTests(unittest.TestCase):
         result = agents.run(CheckArgs())
         self.assertTrue(result.passed)
         self.assertEqual(result.issues, [])
-        self.assertEqual(result.stats["workflows_checked"], 6)
+        self.assertEqual(result.stats["workflows_checked"], 8)
 
     def test_validation_errors_become_health_issues(self) -> None:
         with mock.patch.object(agents, "validate", return_value=["broken adapter"]):

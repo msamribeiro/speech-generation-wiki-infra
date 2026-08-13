@@ -19,6 +19,12 @@ The former Evidence Dossier format is retired for future renders. Human pages do
 complete claim graph, paper inventory, reassessment queue, or data-hygiene fields. Readers or agents
 that need exhaustive record-level access should use `wiki/_claims/{slug}.yaml`.
 
+Cross-concept relationships live separately in `_claims/_reconciliation/registry.yaml`. Concept
+renders preserve their local graph's assessment and may use accepted relationships only for
+navigation and overlap context. The current field overview reads all concept YAMLs plus the
+registry, presents accepted broader claims once, and deduplicates linked paper evidence. Candidate
+and run files are never rendering authority.
+
 ## Names and Paths
 
 | Rendering | Reader-facing label | Production path | Internal `render_type` |

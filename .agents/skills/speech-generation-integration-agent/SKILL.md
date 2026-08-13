@@ -7,7 +7,8 @@ description: >-
 
 You are the integration agent for the speech-generation-wiki. Your job is to read ingested
 paper pages and maintain the claim graph in `wiki/_claims/`. You produce structured YAML —
-the single source of truth from which all rendered wiki output is derived by the render agent.
+the source of truth for concept-local renderings. The reviewed reconciliation registry separately
+owns accepted cross-concept relationships used by field-level rendering.
 
 Work is split into two independent phases:
 
@@ -50,6 +51,8 @@ path is a detached HEAD submodule. Writes there will be lost.
 - Write `wiki/venues/` — not part of the automated pipeline; generated on demand only
 - Write anything to `raw/metadata/` files
 - Read `raw/parsed/` files — work only from wiki pages
+- Write `wiki/_claims/_reconciliation/` — the reconciliation agent owns registry, runs, and
+  snapshots
 
 ---
 
@@ -158,12 +161,14 @@ for path in glob.glob(f'{WIKI}/papers/*.md'):
     pid = data.get('id')
     try:
         meta = json.load(open(f'{INFRA}/raw/metadata/{pid}.json'))
-        if str(meta.get('ingest_tier')) == '2':
-            print(f'TIER2_SKIP {pid}')
-            continue
-        published_date = meta.get('published_date') or '9999-99-99'  # unknown dates sort last
     except FileNotFoundError:
-        published_date = '9999-99-99'
+        raise SystemExit(f'DATE_ERROR missing metadata for {pid}')
+    if str(meta.get('ingest_tier')) == '2':
+        print(f'TIER2_SKIP {pid}')
+        continue
+    published_date = meta.get('published_date')
+    if not published_date:
+        raise SystemExit(f'DATE_ERROR missing published_date for {pid}')
     candidates.append((published_date, pid))
 candidates.sort()  # oldest first
 for published_date, pid in candidates:
@@ -270,6 +275,7 @@ Write or overwrite the paper entry in the YAML's `papers:` list:
 
 ```yaml
 - id: {paper_id}
+  published_date: {published_date}    # exact canonical frontmatter/metadata date; never inferred
   entry_date: {today}                  # YYYY-MM-DD — set on write, updated on --force
   year: {year}
   venue: {venue}
@@ -297,6 +303,8 @@ Write or overwrite the paper entry in the YAML's `papers:` list:
 **Extraction rules:**
 
 - Include **all** claims from the paper's `## Claims` section — never drop any.
+- Copy `published_date` exactly from canonical paper frontmatter or metadata. Stop and report a
+  missing, invalid, or conflicting date; never infer it from the ID, entry date, or filesystem.
 - Prefer structured claims when present. Preserve their role prefix and `Evidence:` line directly
   into YAML fields.
 - For legacy one-line claims, infer the claim role and evidence using the compatibility rules above.
@@ -500,3 +508,5 @@ Health check  : .venv/bin/python3 scripts/health_check.py --module integrate --c
 13. Every claim must have a non-null `source` field. New structured claims should cite at least one paper section; legacy claims without extractable provenance may use `source: "not specified"` and must be reported in the summary.
 14. `--regenerate-clusters` preserves `open_questions`, `trend_notes`, `reassessment_queue`.
 15. If a concept slug is not in the registry in `docs/content.md`, flag it and stop — do not create unsanctioned YAMLs.
+16. Never write `_claims/_reconciliation/`; cross-concept relationships are a separate reviewed
+    stage.

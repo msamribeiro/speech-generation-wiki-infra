@@ -1,0 +1,44 @@
+schema_version: 1
+snapshot_id: 2025-Q3
+period: 2025-Q3
+evidence_cutoff: "2025-09-30"
+activity_window:
+  start: "2025-07-01"
+  end: "2025-09-30"
+baseline_cutoff: "2025-06-30"
+assessment_as_of: "2026-08-13"
+assessment_mode: retrospective
+status: published
+supersedes: null
+supersession_reason: null
+source:
+  infra_commit: abc1234
+  content_commit: def5678
+  reconciliation_runs: [2025-Q3]
+  registry_digest: "sha256:cccccccc"
+  concept_digests:
+    speech-to-speech: "sha256:aaaaaaaa"
+included_papers:
+  - id: "2508.00001"
+    published_date: "2025-08-01"
+    venue: arXiv
+    concepts: [speech-to-speech]
+baseline_papers: []
+activity_papers: ["2508.00001"]
+concepts:
+  - concept: speech-to-speech
+    eligible_papers: ["2508.00001"]
+    claim_clusters:
+      - ref: speech-to-speech#semantic_acoustic_token_tradeoff
+        proposition: "Semantic abstraction trades against acoustic detail."
+        baseline_assessment: null
+        cutoff_assessment:
+          status: emerging
+          confidence: medium
+          supporting_papers: ["2508.00001"]
+          contradicting_papers: []
+          refining_papers: []
+        caveats: []
+    method_families: []
+broader_claims: []
+digest: "sha256:dddddddd"

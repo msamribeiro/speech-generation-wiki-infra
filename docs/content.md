@@ -1,10 +1,13 @@
 # Content Stage
 
-The content stage builds and maintains the wiki. It is a three-pass pipeline, each pass having
-a single responsibility and clear input/output contract. Passes are independently triggerable
-and can be run in any combination.
+The content stage builds and maintains the wiki. Its normal evidence pipeline has distinct
+paper-local, concept-local, cross-concept, and presentation responsibilities. Stages are
+independently triggerable, but reconciliation follows integration and bounded reports follow a
+published snapshot.
 
 See also: [docs/schemas/metadata.md](schemas/metadata.md), [docs/schemas/claims.md](schemas/claims.md),
+[docs/schemas/reconciliation.md](schemas/reconciliation.md),
+[docs/schemas/snapshots.md](schemas/snapshots.md),
 [docs/schemas/vocabulary.md](schemas/vocabulary.md), [docs/writing-style.md](writing-style.md)
 
 ---
@@ -15,14 +18,17 @@ See also: [docs/schemas/metadata.md](schemas/metadata.md), [docs/schemas/claims.
 |-------|-------|-------|--------|---------|
 | **Ingest** | `speech-generation-ingest-agent` | `raw/parsed/{id}/` | `wiki/papers/{id}.md` | per paper |
 | **Integrate** | `speech-generation-integration-agent` | `wiki/papers/*.md` | `wiki/_claims/{slug}.yaml` | every ~25 papers |
-| **Render** | `speech-generation-render-agent` | `wiki/_claims/{slug}.yaml` | `wiki/concepts/` Overview + In Depth | monthly or on demand |
+| **Reconcile** | `speech-generation-reconciliation-agent` | all concept claim YAMLs | registry, run, snapshot | quarterly or after a large integration round |
+| **Render** | `speech-generation-render-agent` | concept YAMLs + reviewed registry | concepts and current field overview | monthly or on demand |
+| **Report** | `speech-generation-report-agent` | immutable snapshot | quarterly, trend, or venue report | quarterly or on demand |
 
 Data flow:
 
 ```
-wiki/papers/  →  wiki/_claims/  →  wiki/concepts/{slug}.md
-                              →  wiki/concepts/{slug}-in-depth.md
-                              →  wiki/overview.md (render)
+wiki/papers/  →  wiki/_claims/{slug}.yaml  →  wiki/concepts/{slug}.md
+                         │                 →  wiki/concepts/{slug}-in-depth.md
+                         └→ _reconciliation/registry.yaml → wiki/overview.md
+                                                     └→ snapshot → wiki/reports/
 ```
 
 Venue pages (`wiki/venues/`) are not part of the automated pipeline — they are generated
@@ -75,7 +81,32 @@ Cross-paper. Reads paper pages, writes `wiki/_claims/` YAML only. No wiki pages 
 5. **Write updated `wiki/_claims/{slug}.yaml`** files.
 6. **Log** — append to `wiki/log.md`: `- integrate | {N} papers | {M} concepts updated | {K} claims updated | {J} reassessments checked`
 
-The integration agent writes exactly these files: `wiki/_claims/*.yaml`, `wiki/log.md`. It never writes wiki pages.
+The integration agent writes exactly these files: top-level `wiki/_claims/{slug}.yaml` concept
+files and `wiki/log.md`. It never writes wiki pages or anything below
+`wiki/_claims/_reconciliation/`.
+
+Every new or force-rewritten concept paper entry includes canonical `published_date`; see
+`docs/schemas/claims.md`. Integration stops rather than inferring a missing date.
+
+---
+
+## Reconcile Workflow
+
+Corpus-wide reviewed relationship work. Reads all top-level concept claim YAMLs and writes the
+separate reconciliation layer described in `docs/design/cross-concept-reconciliation.md`.
+
+1. Record source commits, concept digests, trigger, evidence cutoff, and candidate configuration.
+2. Generate deterministic, advisory cross-concept candidates with component signals.
+3. Review every candidate as accepted, rejected, or deferred with rationale.
+4. Write accepted relationships and broader claims to `_reconciliation/registry.yaml`; never
+   rewrite local clusters.
+5. Finalize the run only when no candidate remains pending.
+6. Optionally freeze an immutable, publication-bounded snapshot for reporting.
+7. Log each review batch and snapshot operation to `wiki/log.md` with full provenance.
+
+The reconciliation agent writes exactly `wiki/_claims/_reconciliation/registry.yaml`, run and
+snapshot files below that directory, and `wiki/log.md`. It never writes concept YAMLs or rendered
+Markdown.
 
 ---
 
@@ -94,7 +125,8 @@ respect to history — always regenerates from current YAML state.
 - `--overview-only` — render only the short Overview format
 - `--in-depth-only` — render only the detailed In Depth format
 - `--prototype {slug}` — write draft formats to the infra root without changing canonical wiki files
-- `--field-overview` — regenerate `wiki/overview.md` from all concept Overviews
+- `--field-overview` — regenerate `wiki/overview.md` from all concept YAMLs plus the reviewed
+  registry; Concept Overviews may inform terminology and navigation but are not evidence authority
 - `--force` — render even if not stale
 
 **Staleness check:** compare `source_digest_date` in each rendering's frontmatter against
@@ -108,13 +140,26 @@ respect to history — always regenerates from current YAML state.
 5. Write `wiki/concepts/{slug}.md` and `wiki/concepts/{slug}-in-depth.md` with version-2
    `generation` frontmatter.
 6. Update the rendered concept's row in `wiki/concepts/index.md`.
-7. Optionally render `wiki/overview.md` from all Concept Overviews + YAML summaries.
+7. Optionally render `wiki/overview.md` from all concept YAMLs plus accepted registry relationships,
+   deduplicating linked clusters and papers while preserving local qualifications.
 8. Log: `- render | {N} concepts | formats: {overview|in-depth|both} | mode: {mode} | runtime: {runtime} | provider: {provider} | model: {model}` to `wiki/log.md`.
 
 The production render agent writes exactly these files: `wiki/concepts/*.md`,
 `wiki/concepts/index.md`, `wiki/overview.md`, `wiki/log.md`. Prototype mode writes only
 `DRAFT_{SLUG}_OVERVIEW.md` and `DRAFT_{SLUG}_IN_DEPTH.md` in the infra root. It never reads
 `raw/parsed/`, never writes `wiki/papers/`, and never writes `wiki/_claims/`.
+
+---
+
+## Report Workflow
+
+Temporal and venue reporting reads immutable snapshots, not living claim graphs. Quarterly reports
+separate activity during the publication window from changes in assessed knowledge. Trend reports
+require at least two snapshots. Venue reports remain on demand and must meet the synthesis quality
+bar in `docs/design/temporal-reporting.md`.
+
+The report agent writes only approved files under `wiki/reports/`, the reports index, and
+`wiki/log.md`. It never edits a snapshot, registry, concept YAML, or paper page.
 
 ---
 
@@ -617,7 +662,7 @@ Records operations that change visible wiki content. Entries in **reverse chrono
 - query | Comparison of zero-shot TTS systems by SPK-SIM
 ```
 
-Entry types: `ingest`, `review`, `integrate`, `render`, `query`.
+Entry types: `ingest`, `review`, `integrate`, `reconcile`, `snapshot`, `render`, `report`, `query`.
 
 ### `raw/pipeline_log.md` — Infra-facing operations log
 

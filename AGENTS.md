@@ -78,11 +78,11 @@ raw/                  # source documents and pipeline state (not rendered)
 
 wiki/                 # the knowledge base (git submodule → content repo)
   papers/             # ingest output — one page per paper
-  _claims/            # integrate output — one YAML per concept (claim graph)
+  _claims/            # integrate output plus reviewed cross-concept reconciliation state
   concepts/           # render output — concept Overviews and In Depth pages
   venues/             # on-demand only — venue/org trend reports, not part of the automated pipeline
   briefs/             # render output — decision memos (deferred)
-  reports/            # render output — trend reports (deferred)
+  reports/            # snapshot-backed quarterly, trend, and venue reports
   index.md            # master catalog
   log.md              # reader-facing changelog
   overview.md         # evolving field synthesis
@@ -102,12 +102,14 @@ lib/                  # shared library code
 Sessions rarely mix stages. Read only the doc for the stage you are running.
 
 ```
-Fetch → Filter → Parse → Ingest → Integrate → Render
+Fetch → Filter → Parse → Ingest → Integrate → Reconcile → Render
+                                                    \→ Snapshot → Report
 ```
 
 - **Fetch / Filter**: discover papers, score relevance, download PDFs → see [docs/fetch.md](docs/fetch.md)
 - **Parse**: convert PDFs to markdown via Docling → see [docs/parse.md](docs/parse.md)
-- **Ingest → Integrate → Render**: build and maintain wiki content → see [docs/content.md](docs/content.md)
+- **Ingest → Integrate → Reconcile → Render / Snapshot → Report**: build and maintain wiki
+  content → see [docs/content.md](docs/content.md)
 
 ---
 
@@ -120,7 +122,10 @@ Fetch → Filter → Parse → Ingest → Integrate → Render
 | **Parse** | Convert accepted PDFs to structured markdown via Docling |
 | **Ingest** | Write a wiki paper page from a parsed paper; paper-scoped |
 | **Integrate** | Extract claims and evidence from paper pages into concept YAML; cross-paper |
+| **Reconcile** | Review semantic relationships among claim clusters in different concepts; corpus-wide |
 | **Render** | Generate human-readable wiki pages from claim YAML; concept-scoped |
+| **Snapshot** | Freeze a publication-bounded retrospective assessment from concept graphs and reviewed relationships |
+| **Report** | Generate an immutable quarterly, trend, or venue synthesis from one or more snapshots |
 | **Claim** | A generalizable proposition about speech generation, traceable to paper evidence |
 | **Concept** | A method or capability that groups related claims and papers |
 | **Evidence** | Structured support for or against a claim, traceable to a specific paper section |
@@ -143,14 +148,19 @@ Never violated under any circumstances:
 4. **One paper, one page** — check the index before creating a new paper page. Deduplicate by arXiv ID first, then by title similarity.
 5. **Cite specifically** — use [[wikilinks]] to paper IDs, not just venue or year.
 6. **File answers back** — valuable query outputs must be written to the wiki, not left only in chat.
-7. **Log everything** — `ingest`, `review`, `integrate`, `render`, and `query` operations log to `wiki/log.md`; `filter`, `parse`, `discover`, `lint`, and `review` (paper triage) operations log to `raw/pipeline_log.md`. Never mix the two.
+7. **Log everything** — `ingest`, `review`, `integrate`, `reconcile`, `snapshot`, `render`,
+   `report`, and `query` operations log to `wiki/log.md`; `filter`, `parse`, `discover`, `lint`, and
+   `review` (paper triage) operations log to `raw/pipeline_log.md`. Never mix the two.
 8. **Respect status** — never ingest a paper with `status: pending`, `review`, or `rejected` without explicit user instruction.
 9. **Preserve provenance** — every metric value on a paper page must trace to a specific table or figure in the source PDF.
 10. **Claim graph is derived, not authoritative at the page level** — never edit a concept
     Overview or In Depth page directly to change a claim's status; all changes flow through
     `wiki/_claims/` YAML via the integration agent. The render agent regenerates both formats from
     YAML; pages are always replaceable.
-11. **Track generation provenance** — every page an agent creates or substantively regenerates in
+11. **Cross-concept state is reviewed and separate** — ordinary integration never writes
+    `_claims/_reconciliation/`; similarity output is advisory and never mutates accepted
+    relationships. Temporal reports derive from immutable snapshots, not from the living registry.
+12. **Track generation provenance** — every page an agent creates or substantively regenerates in
     the content repository must carry the version-2 `generation` block from
     [docs/schemas/generation.md](docs/schemas/generation.md), including runtime, provider, exact
     model ID, logical agent, date, and infra commit.
@@ -163,7 +173,7 @@ Never violated under any circumstances:
 |-------|-----|
 | Fetch + Filter | [docs/fetch.md](docs/fetch.md) |
 | Parse | [docs/parse.md](docs/parse.md) |
-| Ingest + Integrate + Render | [docs/content.md](docs/content.md) |
+| Ingest + Integrate + Reconcile + Render + Report | [docs/content.md](docs/content.md) |
 
 ## Schema Documentation
 
@@ -171,6 +181,8 @@ Never violated under any circumstances:
 |--------|-----|
 | Paper metadata JSON (`raw/metadata/`) | [docs/schemas/metadata.md](docs/schemas/metadata.md) |
 | Concept claim YAML (`wiki/_claims/`) | [docs/schemas/claims.md](docs/schemas/claims.md) |
+| Reconciliation registry and runs | [docs/schemas/reconciliation.md](docs/schemas/reconciliation.md) |
+| Immutable reconciliation snapshots | [docs/schemas/snapshots.md](docs/schemas/snapshots.md) |
 | Controlled vocabulary | [docs/schemas/vocabulary.md](docs/schemas/vocabulary.md) |
 | Generated page provenance | [docs/schemas/generation.md](docs/schemas/generation.md) |
 

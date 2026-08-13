@@ -1,6 +1,13 @@
 # Writing Style Guidelines — Speech Generation Wiki
 
-This guide applies to all content-generating agents: ingest, integration, query, and report. Read it before writing any wiki page. Its rules take precedence over default habits.
+This guide applies to all content-generating agents: ingest, integration, reconciliation, render,
+query, and report. Read it before writing any wiki page. Its rules take precedence over default
+habits.
+
+For temporal reports, always distinguish publication activity, evidence strength, adoption, and
+consensus. State the evidence cutoff and retrospective assessment date explicitly. Never describe
+an assessment performed later as what the field “knew” at the cutoff, and never use paper volume
+alone as evidence of progress or adoption.
 
 ---
 

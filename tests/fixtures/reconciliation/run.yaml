@@ -1,0 +1,56 @@
+schema_version: 1
+run_id: 2025-Q3
+trigger: quarterly-integration
+evidence_cutoff: "2025-09-30"
+assessment_as_of: "2026-08-13"
+status: finalized
+supersedes_run: null
+source:
+  infra_commit: abc1234
+  content_commit: def5678
+  concept_digests:
+    speech-to-speech: "sha256:aaaaaaaa"
+    spoken-language-model: "sha256:bbbbbbbb"
+generator:
+  version: 1
+  neighbors_per_cluster: 10
+  review_cap: 500
+  shared_support_minimum: 2
+  weights:
+    text_similarity: 0.4
+    shared_evidence: 0.3
+    status_polarity: 0.15
+    technical_vocabulary: 0.15
+diagnostics:
+  cross_concept_pairs: 1
+  emitted_candidates: 1
+  shared_evidence_candidates: 0
+  score_distribution:
+    minimum: 0.8
+    median: 0.8
+    maximum: 0.8
+  cap_excluded_shared_evidence: false
+candidates:
+  - id: cand_token_tradeoff
+    left: speech-to-speech#semantic_acoustic_token_tradeoff
+    right: spoken-language-model#semantic_acoustic_token_tradeoff
+    theme: codecs-language-modeling
+    signals:
+      text_similarity: 0.8
+      shared_supporting_papers: []
+      status_compatible: true
+      polarity_compatible: true
+      shared_terms: [semantic-token, acoustic-token]
+      aggregate_score: 0.8
+    disposition: accepted
+    relationship: related
+    registry_target: rel_token_tradeoff
+    rationale: "Reviewed as overlap without sufficient identity."
+    reconsideration_trigger: null
+review:
+  completed_on: "2026-08-13"
+  runtime: codex
+  provider: openai
+  agent: speech-generation-reconciliation-agent
+  model: "gpt-5"
+  commit: abc1234

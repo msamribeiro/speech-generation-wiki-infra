@@ -15,7 +15,9 @@ SKILLS = (
     "speech-generation-lightweight-ingest-agent",
     "speech-generation-review-agent",
     "speech-generation-integration-agent",
+    "speech-generation-reconciliation-agent",
     "speech-generation-render-agent",
+    "speech-generation-report-agent",
 )
 
 
@@ -60,6 +62,7 @@ def validate() -> list[str]:
         "speech-generation-lightweight-ingest-agent",
         "speech-generation-review-agent",
         "speech-generation-render-agent",
+        "speech-generation-report-agent",
     ):
         skill_text = (ROOT / ".agents" / "skills" / name / "SKILL.md").read_text()
         if "schema_version: 2" not in skill_text or "docs/schemas/generation.md" not in skill_text:
@@ -80,6 +83,8 @@ def validate() -> list[str]:
         "docs/content.md",
         "docs/schemas/metadata.md",
         "docs/schemas/claims.md",
+        "docs/schemas/reconciliation.md",
+        "docs/schemas/snapshots.md",
         "docs/schemas/vocabulary.md",
         "docs/schemas/generation.md",
         "scripts/resolve_wiki_dir.py",

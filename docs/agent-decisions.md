@@ -9,8 +9,8 @@ the operational logs remain authoritative for live state.
 - `AGENTS.md` is the model-neutral operating contract; `CLAUDE.md` imports it.
 - Canonical pipeline workflows live as repository skills in `.agents/skills/`. Claude subagents
   are thin adapters that preload those skills through the `.claude/skills` symlink.
-- The pipeline is Fetch → Filter → Parse → Ingest → Integrate → Render. Integration writes
-  `wiki/_claims/`; rendering derives human-facing Markdown from those YAML files. The original
+- At that point, the pipeline was Fetch → Filter → Parse → Ingest → Integrate → Render.
+  Integration writes `wiki/_claims/`; rendering derives human-facing Markdown from those YAML files. The original
   dossier output named here was superseded by the 2026-07-24 two-depth decision below.
 - The conservative renderer formerly called v2 is canonical under the stable
   `speech-generation-render-agent` name.
@@ -32,6 +32,19 @@ the operational logs remain authoritative for live state.
   canonical content pages on 2026-07-24 after review found no blockers. The production
   specification is `docs/design/concept-rendering.md`. The obsolete `wiki/evidence/` directory was
   removed after all five integrated concepts had Overview and In Depth renderings.
+
+## 2026-08-13 — Cross-concept reconciliation and temporal reporting
+
+- The content pipeline now separates concept integration from corpus-wide reconciliation:
+  Ingest → Integrate → Reconcile → Render, with Snapshot → Report branching after reconciliation.
+- Concept YAMLs remain authoritative for local claims and evidence. The reviewed registry owns only
+  accepted cross-concept relationships and broader claims; similarity output is advisory.
+- Quarterly snapshots materialize both the pre-quarter baseline and cutoff assessment using
+  canonical publication dates. Published snapshots and reports are immutable and use explicit
+  supersession for substantive corrections.
+- Current field synthesis reads live concept YAMLs plus the reviewed registry. Temporal reports
+  read immutable snapshots and distinguish publication activity, evidence strength, adoption, and
+  consensus.
 
 ## 2026-07-20 — Cross-runtime generation provenance
 

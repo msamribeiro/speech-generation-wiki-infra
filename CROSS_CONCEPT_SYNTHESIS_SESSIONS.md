@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Bootstrap complete; design and schema phase is next
+**Status:** Phase 2 complete; temporal migration is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -288,13 +288,13 @@ deduplication on that batch before broadening the review.
 
 ### Phase 2 — Designs, schemas, and workflow contracts
 
-- [ ] Add focused cross-concept reconciliation and report design documents.
-- [ ] Extend the claim schema with `published_date`.
-- [ ] Define schemas for registry, run records, immutable snapshots, and supersession.
-- [ ] Update pipeline and stage-ownership documentation.
-- [ ] Add reconciliation and report workflow specifications and compatibility adapters.
-- [ ] Update integration and rendering contracts without merging stage responsibilities.
-- [ ] Run `.venv/bin/python scripts/health_check.py --module agents` from a checkout with `.venv`.
+- [x] Add focused cross-concept reconciliation and report design documents.
+- [x] Extend the claim schema with `published_date`.
+- [x] Define schemas for registry, run records, immutable snapshots, and supersession.
+- [x] Update pipeline and stage-ownership documentation.
+- [x] Add reconciliation and report workflow specifications and compatibility adapters.
+- [x] Update integration and rendering contracts without merging stage responsibilities.
+- [x] Run `.venv/bin/python scripts/health_check.py --module agents` from a checkout with `.venv`.
 
 **Gate:** Schemas and ownership boundaries are documented, fixtures parse, compatibility checks pass,
 and no content data has yet changed.
@@ -429,10 +429,9 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 2 — Designs, schemas, and workflow contracts.
-**Next action:** Review the current claims, content, integration, rendering, provenance, writing,
-and health-suite contracts; draft focused reconciliation and report designs plus their schemas
-before implementing migration or content changes.
+**Current phase:** Phase 3 — Temporal migration.
+**Next action:** Implement an idempotent `published_date` backfill with dry-run and explicit apply
+mode, then prove the migration changes only date fields and agrees with canonical sources.
 
 Baseline commits recorded at bootstrap:
 
@@ -510,3 +509,22 @@ evaluation-themed candidate batch.
   design contracts and `docs/records/` for the completed program archive.
 - Marked Phase 1 complete and authorized this note's standalone commit.
 - Next: Phase 2 design and schema work.
+
+### 2026-08-13 — Phase 2 designs, schemas, and workflow contracts
+
+- Added focused reconciliation and temporal-reporting designs and schemas for the living registry,
+  finalized run records, dual-boundary immutable snapshots, and supersession.
+- Required canonical `published_date` on concept paper entries and removed the integration
+  workflow's former missing-date fallback.
+- Chose snapshot materialization at both the pre-quarter baseline and quarter cutoff so reports do
+  not reassess history from counts or the living graph.
+- Added shared reconciliation and report workflow skills, OpenAI metadata, and Claude adapters;
+  expanded compatibility validation from six to eight workflows.
+- Updated content-stage ownership, integration, rendering, generation provenance, writing style,
+  pipeline health design, and the root operating contract.
+- Added parseable registry, run, and snapshot fixtures, seeded with the qualified duplicate cluster
+  reference, plus focused contract tests.
+- Validated both new skills, ran all 15 repository unit tests, and ran the agents health module
+  with 0 errors and 0 warnings across 8 workflows.
+- Confirmed no content-repository files changed during Phase 2.
+- Next: Phase 3 temporal migration.

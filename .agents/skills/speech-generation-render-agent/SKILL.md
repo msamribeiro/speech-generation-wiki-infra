@@ -64,6 +64,7 @@ production generation block.
 - `raw/metadata/*.json`
 - `raw/parsed/`
 - new `wiki/evidence/*.md` dossiers
+- `wiki/_claims/_reconciliation/*` — reconciliation owns these artifacts
 
 The former `wiki/evidence/` directory was removed after the Overview and In Depth migration and is
 not a render target.
@@ -221,7 +222,9 @@ Do not invent evidence. If a statement has no traceable YAML source, omit it.
 - `"Render Overview for {slug}"` — production-render only the Overview.
 - `"Render In Depth for {slug}"` — production-render only the In Depth page.
 - `"Render all stale concepts"` — render every stale format.
-- `"Render field overview"` — regenerate `wiki/overview.md` from Concept Overviews.
+- `"Render field overview"` — regenerate `wiki/overview.md` from all concept YAMLs and the reviewed
+  reconciliation registry. Concept Overviews may inform terminology and navigation but are not
+  evidence authority.
 - Add `--force` to production invocations to render even when current.
 
 ### Modes
@@ -356,3 +359,5 @@ counts, scope warnings, stale formats remaining, and whether the run was prototy
 16. Unknown concept slugs are not rendered.
 17. Related concept links use human-readable titles and point to existing pages.
 18. The default production concept render writes both formats and updates the concept index.
+19. Field overview rendering follows accepted registry relationships, deduplicates linked clusters
+    and paper evidence, preserves local caveats, and never reads candidates as authority.

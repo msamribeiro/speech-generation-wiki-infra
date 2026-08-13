@@ -1,8 +1,9 @@
 # Claims Schema
 
 The claim graph lives in `wiki/_claims/{slug}.yaml` — one file per concept slug. This is the
-single source of truth for all rendered wiki output. Concept Overviews, Concept In Depth pages,
-and the field overview are all generated from these files; they are never edited directly.
+source of truth for concept-local assessments. Concept Overviews and Concept In Depth pages are
+generated from these files and are never edited directly. The current field overview also reads
+the reviewed cross-concept registry defined in `docs/schemas/reconciliation.md`.
 
 All rendered Markdown carries the version-2 provenance block defined in
 `docs/schemas/generation.md`. The claim YAML itself records evidence state and staleness through
@@ -17,6 +18,7 @@ paper_count: N          # number of entries under papers:
 
 papers:
   - id: {paper_id}
+    published_date: YYYY-MM-DD       # canonical publication eligibility date; never inferred
     entry_date: YYYY-MM-DD           # when this entry was written or last force-rewritten
     year: YYYY
     venue: ACL          # cached from paper frontmatter for synthesis efficiency
@@ -146,10 +148,22 @@ are present for completeness and cross-concept traceability but do not count tow
 
 The field can be manually edited or revised using full paper context without re-running Phase 1.
 
+## Publication Date
+
+Every `papers:` entry requires `published_date`, copied exactly from canonical paper frontmatter or
+metadata. It determines eligibility for snapshots and temporal reports. Missing, invalid, or
+conflicting dates are errors. Never infer it from a paper ID, arXiv version, `entry_date`,
+`last_updated`, filesystem time, or integration order.
+
+`entry_date` remains the date on which the concept entry was written or force-rewritten. Adding
+`published_date` does not change that meaning or imply a historical assessment.
+
 ## Concept Rendering Source of Truth Rule
 
-The `wiki/_claims/{slug}.yaml` file is the source of truth. The Overview and In Depth renderings are
-derived from it. Never update claim status, paper roles, or method family membership by editing
+The `wiki/_claims/{slug}.yaml` file is the source of truth for concept-local assessments. The
+reviewed registry at `wiki/_claims/_reconciliation/registry.yaml` is authoritative only for
+accepted cross-concept relationships and broader claims. The Overview and In Depth renderings are
+derived from the local YAML. Never update claim status, paper roles, or method family membership by editing
 either page directly — all changes flow through the YAML. The integration agent writes the YAML;
 the render agent reads it to produce both formats.
 

@@ -19,8 +19,9 @@ generation:
   commit: "7-character infra repository commit"
 ```
 
-Render outputs also include `stage: render` and `mode: full | light`. Other page types may add
-operation-specific fields without removing the required fields above.
+Concept and field render outputs also include `stage: render` and `mode: full | light`. Temporal
+report outputs include `stage: report` and `mode: quarterly | trend | venue`. Other page types may
+add operation-specific fields without removing the required fields above.
 
 - `runtime` records the execution surface, independently of the model vendor.
 - `provider` records who provides the model. Use `anthropic` for Claude models and `openai` for

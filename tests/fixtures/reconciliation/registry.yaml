@@ -1,0 +1,11 @@
+schema_version: 1
+last_updated: "2026-08-13"
+relationships:
+  - id: rel_token_tradeoff
+    source: speech-to-speech#semantic_acoustic_token_tradeoff
+    target: spoken-language-model#semantic_acoustic_token_tradeoff
+    type: related
+    rationale: "The claims overlap, but their system scope remains concept-specific."
+    reviewed_on: "2026-08-13"
+    accepted_in: 2025-Q3
+broader_claims: []
