@@ -367,3 +367,14 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept as a scope exception (2026-08-02), extending the 2510.09424/2512.16832 precedent to full-duplex behavior-reasoning research with genuine audio/corpus content, even though the system itself does not generate speech. Ingested with an honest scope note under the abstract callout, empty `conditioning` field, real metrics only (F1/AUC/BLEU/ROUGE are not canonical TTS/VC metrics so `metrics: []`), and a flagged internal inconsistency in the paper's own human-evaluation numbers (Section 6.3 text vs. Table 6 report different rankings) surfaced via a `[!warning]` callout rather than silently picking one.
 
 ---
+
+## 2602.04796 | LALM-as-a-Judge: Benchmarking Large Audio-Language Models for Safety Evaluation in Multi-Turn Spoken Dialogues | arXiv | score: 0.45
+
+**Authors:** Amir Ivry, Shinji Watanabe
+**Task guess:** [evaluation]
+**Reason for review:** Caught at ingest time (2026-08-13, Q1 2026 session batch 17), before any page was written. The paper benchmarks three off-the-shelf large audio-language models (Qwen2-Audio, Audio Flamingo 3, MERaLiON) plus a text-only LLaMA baseline as zero-shot safety judges that output a scalar `[0,1]` safety score for multi-turn spoken dialogues. Coqui XTTS-v2 is used only to synthesize one replaced "unsafe" turn per dialogue, purely to construct the benchmark's synthetic input corpus (DEEPDIALOGUE-derived) — no TTS quality metric (MOS, WER, naturalness, speaker similarity) is reported anywhere, and the studied judges' own output is always a scalar score, never speech. Clean match to the FastLongSpeech (2507.14815) reject pattern: TTS synthesizes benchmark *input*, never model *output*. Also structurally matches the broader FAMA/MLC-SLM/2510.12116 reject shape (pure audio-understanding/classification system, no spoken-output component anywhere). The paper's own `relevance_note` from the filter pass had already flagged "evaluation not generation."
+**Abstract excerpt:** Spoken dialogues with and between voice agents are becoming increasingly common, yet assessing them for their socially harmful content such as violence, harassment, and hate remains text-centric... We present LALM-as-a-Judge, the first controlled benchmark and systematic study of large audio-language models (LALMs) as safety judges for multi-turn spoken dialogues.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________) — rejected per the FastLongSpeech precedent match (2026-08-13); TTS is incidental benchmark-construction tooling, not a studied generation contribution.
+
+---

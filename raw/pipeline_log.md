@@ -1,3 +1,7 @@
+## 2026-08-13
+
+- review | 2602.04796 (LALM-as-a-Judge: Benchmarking Large Audio-Language Models for Safety Evaluation in Multi-Turn Spoken Dialogues) | 1 paper | rejected | caught at ingest time (Q1 2026 session, batch 17) before any page was written; benchmarks off-the-shelf LALMs as zero-shot safety judges outputting a scalar score for spoken dialogues, Coqui XTTS-v2 used only to synthesize one injected "unsafe" turn for benchmark construction, no TTS quality metric anywhere, judges' own output is always a scalar score; clean match to the FastLongSpeech (2507.14815) reject pattern (TTS synthesizes input, never model output); filter-pass relevance_note had already flagged "evaluation not generation" | status: accepted → rejected, review_queue.md decision recorded
+
 ## 2026-07-30
 
 - review | 2511.22503 (Joint Speech and Text Training for LLM-Based End-to-End Spoken Dialogue State Tracking) | 1 paper | rejected | caught at ingest time (Q4 session 18 continuation) before any page was written; speech encoder + connector + LLM emits a JSON string of DST slot-value pairs, sole metric Joint Goal Accuracy, no TTS/VC/synthesized speech output anywhere; second instance of the exact 2510.09424 DST shape (likely same Brno University of Technology research line), but the 2510.09424 accept was explicitly a one-off override not a new precedent, so evaluated fresh against the FAMA/MLC-SLM pattern; user confirmed reject | status: accepted → rejected, review_queue.md decision recorded

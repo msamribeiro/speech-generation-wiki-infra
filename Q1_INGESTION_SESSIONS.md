@@ -43,56 +43,62 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-All 12 papers from the second preselected chronological candidate list (built 2026-08-11,
-`published_date` 2026-01-18 through 2026-01-22) are now ingested, across batches 7-9:
-`2601.12480`, `2409.16681`, `2601.12966`, `2601.13055`, `2602.11172`, `2601.13758`, `2601.13802`,
-`2601.13835`, `2601.13948`, `2601.14472`, `2601.14960`, `2601.15596`. Q1 2026 progress at end of
-session: 43 ingested, 123 remaining, 58 rejected (224 total in scope).
+Session 2026-08-13 ingested 24 papers across batches 16-21 (published_date 2026-01-31 through
+2026-02-19) and rejected 1 (`2602.04796`, precedent-matched to FastLongSpeech — see Session Log
+below). Q1 2026 progress at end of session: 91 ingested, 74 remaining, 59 rejected (224 total in
+scope).
 
-To start the next session: re-run the progress-count script first to confirm current counts (123
+To start the next session: re-run the progress-count script first to confirm current counts (74
 was the count at the end of this session, but fetch/filter may have added more since), then build a
 fresh chronological candidate list of the next batch(es) starting from the earliest remaining Q1
-2026 `accepted` paper by `published_date`.
+2026 `accepted` paper by `published_date`. The last-ingested paper this session was `2602.17157`
+(published_date 2026-02-19); the next candidate list should start from whatever is earliest after
+that.
 
-**Cadence note:** this session ended on a one-paper-at-a-time-with-go-ahead cadence (user request
-mid-session, batch 9), not the default batches-of-4. Per the standing rule, follow whichever cadence
-was most recently requested rather than defaulting back to batches-of-4 silently — ask if unclear
-at the start of the next session.
+**Cadence note:** this session used sequential batches of 4 (batches 16-20), then one batch of 5
+(batch 21, user-requested). Ask at the start of the next session which cadence to use rather than
+assuming — the default remains batches-of-4 unless told otherwise.
 
-**Mandatory before every paper page:** run `grep -n "!tip\]\|!abstract\]\|!important\]"` against
-the drafted page and confirm the abstract callout is `[!abstract]` before running the health check.
-This is now a long-confirmed working mitigation (zero recurrences across all 8 papers this session,
-following the fix adopted in the prior session) — keep using it every time regardless.
+**Verification protocol confirmed working across the full session:** for every paper, after the
+ingest agent finishes, independently (1) run the per-paper health check, and (2) manually grep the
+actual page/index files — callout type, title match character-for-character against the index row,
+`task:`/`related_concepts:` cross-check, citation existence and status via direct `ls`/metadata
+lookup — rather than trusting the agent's closing summary. This caught two real issues the health
+check itself did not flag (health check passed 0 errors/0 warnings on both):
+- **Title truncation** on `2506.04518` (`papers/index.md` row cut off mid-word at "...within O") —
+  fixed by hand. See [[feedback_title_truncation]].
+- **task/related_concepts mismatch** on `2602.04683` (UniAudio 2.0) — `task: [TTS, VC, SCA, codec,
+  singing]` but `related_concepts` was missing `voice-conversion` and `singing`; both tags were
+  independently verified legitimate against the raw parsed source before adding the missing
+  `related_concepts` entries and Wiki Connections bullets. See
+  [[feedback_task_related_concepts_mismatch]].
 
-**New recurring-issue classes confirmed this session** (distinct from the settled callout issue):
-- Bare `[[id]] (Name)` citation format in Wiki Connections instead of piped `[[id|Name]]` — agents
-  sometimes reason (incorrectly) that the SKILL.md template's literal text licenses bare format;
-  it does not. State the piped-format requirement explicitly in every ingest prompt.
-- `wiki/index.md`'s 3 paper-count occurrences going internally *inconsistent* after an edit (not
-  just stale, but 3 different wrong values at once) — verify all 3 resolve to the same authoritative
-  `grep -c '^| \[\[' wiki/papers/index.md` count, not just that each was "bumped."
-- Org column left blank in `papers/index.md` despite a valid multi-institution `organization`
-  frontmatter field — fill with an abbreviated form (e.g. "KIT / CMU"), never leave blank.
-- Multi-tag papers sometimes get only one task shown in the `papers/index.md` Task column despite
-  multiple tags in frontmatter `task:` — cross-check the row against the frontmatter list, not just
-  presence of a value.
-- `task:`/`related_concepts:` quoted-list frontmatter syntax (`["VC"]` instead of `[VC]`) — same
-  drift class as the already-resolved `related_concepts` quoting fix; found on `2601.13948`. Not yet
-  fixed corpus-wide (213 of ~726 pages currently use quoted `task:`) — worth a future normalization
-  pass, tracked informally here pending a BACKLOG.md entry.
+**One corpus-scope reject this session**: `2602.04796` (LALM-as-a-Judge) — the ingest agent itself
+caught this before writing any page, correctly identifying a clean match to the FastLongSpeech
+(`2507.14815`) reject precedent: TTS (Coqui XTTS-v2) is used only to synthesize one injected
+benchmark-input turn, never the studied system's output (the LALM judges only ever emit a scalar
+safety score). Verified the cited precedent directly in `raw/review_queue.md` before applying the
+reject; logged to both `raw/review_queue.md` and `raw/pipeline_log.md` per the `review`-operation
+logging convention. Status flipped `accepted → rejected` in `raw/metadata/2602.04796.json`.
 
-**Interruption recovery worked as documented**: a session-limit interruption hit mid-ingest on
-`2601.13758` (batch 8). Checked the standalone content repo directly per protocol, found a
-partial-write state (page written and well-formed, downstream steps — index title, log entry,
-metadata status — not yet done), and completed it by hand rather than re-running the agent from
-scratch. See [[feedback_session_limit_interruption]].
+**Session-limit interruption recovered cleanly**: `2602.10735` (Calliope) was cut off with nothing
+written (verified: no page, no assets, no index/log entries, metadata still `accepted`) — safe
+direct retry from scratch, no partial-state cleanup needed. See
+[[feedback_session_limit_interruption]].
+
+**Zero recurrences this session** of the `[!tip]`/`[!abstract]` callout mistake and the bare-vs-piped
+Wiki Connections wikilink format issue — both now long-settled by stating the requirement explicitly
+in every ingest prompt.
 
 Also check `arxiv_comment` for a named future-conference acceptance (e.g. "ACL 2026", "accepted for
 ICASSP 2026") before setting `venue`/`venue_type` — keep `venue: arXiv` / `venue_type: preprint`
-until the paper has an actual venue-specific ID, per precedent (`2510.14664`).
+until the paper has an actual venue-specific ID, per precedent (`2510.14664`). Same convention
+applies to already-past IEEE-proceedings venues with no open anthology ID system (ASRU, ICASSP,
+SLT) — confirmed again this session on `2506.04518` (ASRU 2025) and `2602.10164` (SLT 2024), both
+kept as `venue: arXiv`.
 
-One `review_flags` entry this session (`2602.11172`, field_significance confidence) — see Manual
-Verification Queue below, not yet resolved.
+Zero `review_flags` entries emitted across all 24 ingested papers this session — Manual Verification
+Queue below is unchanged from the prior session (still just `2602.11172`, unresolved).
 
 ---
 
@@ -516,6 +522,85 @@ Ingested sequentially, one at a time, with a health check after each. Completes 
 QC notes: `wiki/index.md`'s 3 count occurrences verified consistent after every paper (802, 803, 804, 805). `papers/index.md` row count verified to match after each paper (`grep -c '^| \[\['` = 805 at batch end). Zero `[!tip]`/`[!abstract]` callout mistakes across all 4 papers. Caught and fixed the recurring bare-vs-piped Wiki Connections wikilink format mistake (`[[id]] (Name)` instead of `[[id|Name]]`) on both `2602.00269` and `2602.00443` — health check flagged it as `wikilink_format` warnings (7 and 8 respectively) on first pass; fixed and re-verified 0 warnings on both. Zero `review_flags` emitted. Health check (`--module ingest --id`) passed clean (0 errors, 0 warnings) on all 4 papers after fixes.
 
 Corpus page count: 801 → 805. Q1 2026 progress: 63 → 67 ingested, 103 → 99 remaining (58 rejected, unchanged). This completes the second 12-paper candidate list in full. Not yet committed/pushed.
+
+### 2026-08-13 — Batch 16 (fresh candidate list, papers 1-4 of 12 preselected)
+
+New 12-paper chronological candidate list preselected at session start, `published_date` 2026-01-31
+through 2026-02-08. Ingested sequentially, one at a time, with a health check plus independent
+manual QC (callout, title match, task/related_concepts cross-check, citation existence/status) after
+each.
+
+- `2602.00594` — Kanade: A Simple Disentangled Tokenizer for Spoken Language Modeling. Dual-branch content/global architecture achieving content-speaker disentanglement purely through an information bottleneck (no adversarial/contrastive/supervised loss); `disentanglement` tag independently re-verified legitimate (explicit bottleneck mechanism + ablation evidence in Table 3), not just "by construction." Tagged `[codec, VC, TTS, SCA]`. 1 figure embedded.
+- `2602.02591` — VividVoice: A Unified Framework for Scene-Aware Visually-Driven Speech Synthesis. Face-image-conditioned speech synthesis (timbre + environmental acoustics from a visual scene); flagged a genuine vocabulary gap (no dedicated visual-conditioning term). `disentanglement` and `subjective-evaluation` both independently re-verified legitimate (explicit D-MSVA losses + ablation; 25 human MOS raters). 1 figure embedded.
+- `2602.03420` — CoCoEmo: Composable and Controllable Human-Like Emotional TTS via Activation Steering. Post-hoc activation-steering technique; `disentanglement` correctly excluded (no training-time mechanism, fails the standing rule despite steering-based framing). Agent self-corrected a leaked instruction-text line before finalizing, independently re-verified removed. 1 figure embedded.
+- `2602.09041` — DSFlow: Dual Supervision and Step-Aware Architecture for One-Step Flow Matching Speech Synthesis. One-step flow-matching distillation replacing adaLN-Zero with lightweight step-aware tokens. F5-TTS correctly cited under its canonical ID (`2025.acl-long.313`). 1 figure embedded.
+
+QC notes: `wiki/index.md`'s 3 count occurrences verified consistent after every paper (806, 807, 808, 809). Zero callout mistakes, zero bare-wikilink issues, zero `review_flags`. All citations independently verified via direct `ls`/status lookup, not trusted from agent self-report or `references.json`.
+
+Corpus page count: 805 → 809. Q1 2026 progress: 67 → 71 ingested, 99 → 95 remaining (58 rejected, unchanged).
+
+### 2026-08-13 — Batch 17 (candidate list continued, papers 5-8 of 12; one reject)
+
+- `2602.04160` — PFluxTTS: Hybrid Flow-Matching TTS with Robust Cross-Lingual Voice Cloning and Inference-Time Model Fusion. Dual-decoder (duration-guided + alignment-free) fusion for cross-lingual zero-shot cloning; `voice-conversion` considered and correctly excluded (zero-shot TTS cloning, not a dedicated VC system with VC-specific metrics). `multilingual-tts` and `subjective-evaluation` both independently re-verified legitimate. 1 figure embedded.
+- `2602.04683` — UniAudio 2.0: A Unified Audio Language Model with Text-Aligned Factorized Audio Tokenization. **QC catch:** `task: [TTS, VC, SCA, codec, singing]` shipped with `related_concepts` missing `voice-conversion` and `singing` — both independently re-verified legitimate against the raw parsed source (real few-shot VC eval with WER/SIM/DNS-MOS on VCTK; real Song Generation eval with WER/AudioBox-Score against SongGen, confirmed in `raw/parsed/2602.04683/paper.md` even though not detailed in the rendered page prose) before adding the missing `related_concepts` entries and Wiki Connections bullets by hand. 2 figures embedded.
+- `2602.04796` — **REJECTED.** LALM-as-a-Judge: Benchmarking Large Audio-Language Models for Safety Evaluation in Multi-Turn Spoken Dialogues. Ingest agent itself caught this before writing any page: benchmarks off-the-shelf LALMs as zero-shot safety judges outputting a scalar `[0,1]` score; Coqui XTTS-v2 used only to synthesize one injected "unsafe" turn for benchmark construction, no TTS quality metric anywhere, studied judges' own output is always a scalar score. Clean match to the FastLongSpeech (`2507.14815`) reject pattern (TTS synthesizes input, never model output) — precedent independently verified in `raw/review_queue.md` before applying. Status flipped `accepted → rejected`; logged to both `raw/review_queue.md` and `raw/pipeline_log.md`.
+- `2602.05207` — ARCHI-TTS: A Flow-Matching-Based TTS Model with Self-Supervised Semantic Aligner and Accelerated Inference. `self-supervised-speech` correctly excluded despite the title's framing — the "semantic aligner" is trained end-to-end with the flow-matching objective, not built on a frozen pretrained SSL encoder. 1 figure embedded.
+
+QC notes: `wiki/index.md` count consistent after every paper (810, [reject, no change], 811, 812). Zero callout mistakes. One real task/related_concepts mismatch caught and fixed (`2602.04683`). One corpus-scope reject, precedent-verified independently. Zero `review_flags`.
+
+Corpus page count: 809 → 812 (net +3 across 4 candidate-list slots, one reject). Q1 2026 progress: 71 → 74 ingested, 95 → 90 remaining, 58 → 59 rejected.
+
+### 2026-08-13 — Batch 18 (candidate list continued, papers 9-12 of 12 — completes the list)
+
+- `2602.05443` — Wave-Trainer-Fit: Neural Vocoder with Trainable Prior and Fixed-Point Iteration towards High-Quality Speech Generation from SSL features. WavLM-feature-conditioned vocoder; `task: [TTS]` confirmed consistent with prior vocoder-paper precedent (`2601.14472`). `self-supervised-speech` independently re-verified legitimate. 1 figure embedded.
+- `2602.05770` — Zero-Shot TTS With Enhanced Audio Prompts: BSc Submission For The 2026 Wildspoof Challenge TTS Track. Short challenge-submission report; `field_significance: low` correctly held with no inflation (both backbone and enhancement models used off the shelf, fine-tuned only). `subjective-evaluation` correctly excluded — all metrics (UTMOS, DNSMOS Pro, WER, SECS, F0 RMSE) are automated, no human listening test reported. No figure.
+- `2602.06180` — STACodec: Semantic Token Assignment for Balancing Acoustic Fidelity and Semantic Information in Audio Codecs. Assigns externally-derived WavLM/HuBERT K-means semantic tokens directly to RVQ layer 1 (rather than an auxiliary distillation loss); `disentanglement` correctly excluded (paper explicitly contrasts itself against HASRD's disentanglement approach rather than performing disentanglement itself). `self-supervised-speech` independently re-verified legitimate. 1 figure embedded.
+- `2602.07803` — SoulX-Singer: Towards High-Quality Zero-Shot Singing Voice Synthesis. `VC` task tag added by the agent beyond the raw-metadata `singing` guess (justified — a dedicated SoulX-Singer-SVC variant with its own evaluation table), independently re-verified legitimate. `subjective-evaluation` correctly excluded (SingMOS/Sheet-SSQA are automated proxies, no human MOS). Org filled in from full-text affiliations despite `organization: null` in raw metadata, addressing rather than reproducing the standing blank-Org bug pattern. TCSinger 2 (`2505.14910`, rejected) correctly excluded from citations despite being discussed by name in the paper's own Introduction. 1 figure embedded.
+
+QC notes: `wiki/index.md` count consistent after every paper (813, 814, 815, 816). Zero callout mistakes, zero bare-wikilink issues, zero `review_flags`. This completes the original 12-paper candidate list in full (`2602.00594` through `2602.07803`, published_date 2026-01-31 through 2026-02-08), with one reject (`2602.04796`).
+
+Corpus page count: 812 → 816. Q1 2026 progress: 74 → 78 ingested, 90 → 86 remaining (59 rejected, unchanged).
+
+### 2026-08-13 — Batch 19 (fresh candidate list, papers 1-4 of 12 preselected)
+
+New 12-paper chronological candidate list preselected at session start, `published_date` 2026-02-10
+through 2026-02-17.
+
+- `2602.09823` — Covo-Audio Technical Report. Unified TTS/SCA technical report; task/related_concepts cross-checked clean on first attempt (TTS → speaker-adaptation/multilingual-tts/emotion-synthesis, SCA → spoken-language-model/speech-to-speech). Two since-rejected in-corpus references (MMSU `2506.04779`, URO-Bench `2502.17810`) correctly excluded, independently re-verified against metadata status. 2 figures embedded.
+- `2602.10164` — Emotion-Coherent Speech Data Augmentation and Self-Supervised Contrastive Style Training for Enhancing Kids's Story Speech Synthesis. `self-supervised-speech` and `disentanglement` both correctly excluded despite the title's "self-supervised contrastive style training" framing — the contrastive loss trains a reference encoder from scratch, not consumption of a frozen SSL representation; no explicit attribute-separation mechanism. Venue kept `arXiv` despite SLT 2024 acceptance (IEEE proceedings, no open anthology ID system) — consistent with the ICASSP/ASRU precedent. No figure (no architecture diagrams in source).
+- `2506.04518` — Towards Efficient Speech-Text Jointly Decoding within One Speech Language Model. Old arXiv ID (June 2025) but `published_date` 2026-02-11 (ASRU 2025 camera-ready revision, not a full-version-dedup case — `arxiv_comment` checked, no "full version of" language). `spoken-language-model` independently re-verified legitimate (genuine external spoken question via audio encoder, real dialogue context, not a self-consuming AR TTS-LM). **QC catch:** title truncation in `papers/index.md` (cut off mid-word at "...within O") — fixed by hand. 1 figure embedded.
+- `2602.10735` — Calliope: A TTS-based Narrated E-book Creator Ensuring Exact Synchronization, Privacy, and Layout Fidelity. **Session-limit interruption** on the first attempt — verified a clean "nothing written" state (no page, no assets, no index/log entries, metadata still `accepted`) before a direct retry from scratch. `field_significance: moderate/engineering-integration` correctly held with no inflation (integrates two existing TTS backends, no new architecture). No figure (engineering-integration type, not architectural-novelty).
+
+QC notes: `wiki/index.md` count consistent after every paper (817, 818, 819, 820). One title-truncation fix (`2506.04518`), one clean interruption recovery (`2602.10735`). Zero callout mistakes, zero `review_flags`.
+
+Corpus page count: 816 → 820. Q1 2026 progress: 78 → 82 ingested, 86 → 82 remaining (59 rejected, unchanged).
+
+### 2026-08-13 — Batch 20 (candidate list continued, papers 5-8 of 12)
+
+- `2602.10934` — MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models. Homogeneous causal-Transformer codec (CAT) jointly optimized with a semantic LLM head. `task: [codec, TTS]` both cross-checked against `related_concepts`. 1 figure embedded.
+- `2602.11072` — Simultaneous Speech-to-Speech Translation Without Aligned Data (Kyutai, Hibiki-Zero). `task: [TTS]` confirmed consistent with prior S2ST-paper precedent (`2601.16023`, `2601.16618`) over the raw-metadata `SCA` guess. `subjective-evaluation` independently re-verified legitimate (20 raters/model/language). 1 figure embedded.
+- `2602.11477` — SLD-L2S: Hierarchical Subspace Latent Diffusion for High-Fidelity Lip to Speech Synthesis. Non-text-input generation (silent video → speech); applied the standing vocabulary-gap precedent (`TTS` fallback tag, explicit in-page note), cross-referenced against the same-shape prior papers `interspeech-2025-1478`/`interspeech-2025-1334`. `self-supervised-speech` (frozen AV-HuBERT/X-Codec-hubert) and `subjective-evaluation` (15-participant MOS) both independently re-verified legitimate. 1 figure embedded.
+- `2602.12135` — WavBench: Benchmarking Reasoning, Colloquialism, and Paralinguistics for End-to-End Spoken Dialogue Models. `subjective-evaluation` correctly excluded — scoring is entirely LLM-judge (Gemini 3 Pro Preview) with no human-correlation validation study, unlike the VStyle precedent which does report one. SCA scope confirmed (5 real end-to-end spoken dialogue models producing actual audio output, not a text-only benchmark). Two since-rejected in-corpus references (MMSU, URO-Bench) correctly excluded again. No figure (dataset/evaluation-contribution type, no proposed architecture).
+
+QC notes: `wiki/index.md` count consistent after every paper (821, 822, 823, 824). Zero callout mistakes, zero `review_flags`. This completes the second 12-paper candidate list (`2602.09823` through `2602.15491`, published_date 2026-02-10 through 2026-02-17) except for its last 4 papers, deferred to batch 21.
+
+Corpus page count: 820 → 824. Q1 2026 progress: 82 → 86 ingested, 82 → 78 remaining (59 rejected, unchanged).
+
+### 2026-08-13 — Batch 21 (5-paper batch, user-requested; finishes the candidate list + 1 more)
+
+User explicitly requested a 5-paper batch (finishing the remaining 4 of the prior 12-paper candidate
+list plus the next paper chronologically) with health check plus QC between each paper, rather than
+the default batches-of-4.
+
+- `2602.13891` — GSRM: Generative Speech Reward Model for Speech RLHF (Meta Superintelligence Labs). `rlhf-speech` independently re-verified legitimate — GSRM is the actual reward/verifier driving online RLHF that measurably shifts a real speech LLM's generations, not an incidental text reward model. `subjective-evaluation` legitimate (31k expert ratings, human A/B listening tests). 2 figures embedded.
+- `2602.14664` — Probing Human Articulatory Constraints in End-to-End TTS with Reverse and Mismatched Speech-Text Directions. Confirmed distinct from the unrelated already-ingested `2510.14664` before starting. Builds and trains real Tacotron-2/VITS-TTS variants with standard WER/CER/MOS evaluation — no scope flag needed (unlike the 2512.16832 analysis-paper precedent, this paper trains and evaluates actual TTS systems). `field_significance: moderate/negative-result` correctly calibrated, not inflated. `gan-vocoder` (VITS-TTS's adversarial decoder) and `subjective-evaluation` (5 real listeners, MOS + preference test) both independently re-verified legitimate. No figure.
+- `2602.14686` — Disentangling Pitch and Creak for Speaker Identity Preservation in Speech Synthesis. `disentanglement` tag applied rigorously despite the literal title match — independently re-verified against a real explicit mechanism (TD-PSOLA pitch-shift data augmentation decorrelating pitch/creak) plus 3-way ablation (base-flow/adapted-flow/combined-flow, Table 1/2/Figure 3), not just the title claim. `field_significance: low` correctly held (data-centric fix on an existing published pipeline, no new architecture). No figure.
+- `2602.15491` — The Equalizer: Introducing Shape-Gain Decomposition in Neural Audio Codecs. `disentanglement` correctly excluded — decomposes signal-level gain vs. shape, not speech attributes (content/speaker/prosody), so it doesn't match the concept's scope despite having an explicit mechanism and ablation evidence. Zero in-corpus references (verified against `references.json`'s reported 0, consistent). 1 figure embedded.
+- `2602.17157` — CC-G2PnP: Streaming Grapheme-to-Phoneme and Prosody with Conformer-CTC for Unsegmented Languages (last paper of batch). Scope-checked explicitly before ingesting: a G2P/prosody-prediction module, but built and evaluated squarely as a TTS front-end (output feeds a downstream TTS model, central evaluation is a subjective MOS test on synthesized speech) — matches the `2510.03111` TTS-preprocessing-tooling precedent, independently re-verified as real (`ingested` status confirmed). 2 figures embedded.
+
+QC notes: `wiki/index.md` count consistent after every paper (825, 826, 827, 828, 829). Zero callout mistakes, zero bare-wikilink issues, zero `review_flags` across all 5 papers.
+
+Corpus page count: 824 → 829. Q1 2026 progress: 86 → 91 ingested, 78 → 74 remaining (59 rejected, unchanged). This completes the second 12-paper candidate list in full plus one additional paper. Full corpus-wide health check re-run at end of session: `[ingest] PASS (0 errors, 1170 warnings | papers_checked=829)` — warning count matches the known pre-existing baseline (unrelated to this session's work, tracked separately in BACKLOG.md).
 
 ---
 

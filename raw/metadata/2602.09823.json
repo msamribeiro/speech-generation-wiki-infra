@@ -50,7 +50,7 @@
   "year": 2026,
   "month": 2,
   "published_date": "2026-02-10",
-  "ingested_date": null,
+  "ingested_date": "2026-08-13",
   "url": "https://arxiv.org/abs/2602.09823",
   "pdf_url": "https://arxiv.org/pdf/2602.09823.pdf",
   "pdf_path": "raw/papers/2602.09823.pdf",
@@ -63,9 +63,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "7B end-to-end audio LLM processing continuous audio I/O across understanding and generation tasks at SOTA performance",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "fd03e29"
+    }
+  ]
 }

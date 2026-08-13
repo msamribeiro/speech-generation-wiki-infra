@@ -17,7 +17,7 @@
   "year": 2026,
   "month": 2,
   "published_date": "2026-02-05",
-  "ingested_date": null,
+  "ingested_date": "2026-08-13",
   "url": "https://arxiv.org/abs/2602.05770",
   "pdf_url": "https://arxiv.org/pdf/2602.05770.pdf",
   "pdf_path": "raw/papers/2602.05770.pdf",
@@ -29,9 +29,21 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Non-autoregressive zero-shot TTS submission for WildSpoof challenge with multi-stage enhancement pipeline",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "fd03e29"
+    }
+  ]
 }

@@ -27,7 +27,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "LALM safety judgment benchmark for detecting harmful spoken dialogue content; evaluation not generation",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
