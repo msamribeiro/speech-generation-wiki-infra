@@ -43,61 +43,65 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Session 2026-08-13 ingested 24 papers across batches 16-21 (published_date 2026-01-31 through
-2026-02-19) and rejected 1 (`2602.04796`, precedent-matched to FastLongSpeech — see Session Log
-below). Q1 2026 progress at end of session: 91 ingested, 74 remaining, 59 rejected (224 total in
-scope).
+Session 2026-08-14 processed a fresh 12-paper chronological candidate list in full (3 batches of
+4). Q1 2026 progress at end of session: 100 ingested, 62 remaining, 62 rejected (224 total in
+scope, unchanged — no new fetch/filter activity this session). Corpus 829 → 838 pages, 0 errors /
+1170 warnings (exact pre-existing baseline) at final health check.
 
-To start the next session: re-run the progress-count script first to confirm current counts (74
-was the count at the end of this session, but fetch/filter may have added more since), then build a
-fresh chronological candidate list of the next batch(es) starting from the earliest remaining Q1
-2026 `accepted` paper by `published_date`. The last-ingested paper this session was `2602.17157`
-(published_date 2026-02-19); the next candidate list should start from whatever is earliest after
-that.
+To start the next session: re-run the progress-count script first to confirm current counts, then
+build a fresh chronological candidate list starting from the earliest remaining Q1 2026 `accepted`
+paper by `published_date`. The last-ingested paper this session was `2603.04145` (published_date
+2026-03-04); as of session close the next four chronologically are `2603.04219` (ZeSTA),
+`2603.05299` (WavSLM), `2603.05373` (Hierarchical Decoding for Discrete Speech Synthesis),
+`2603.05413` (Building Enterprise Realtime Voice Agents) — verify this list is still current before
+using it, since 66 days remain until end of Q1 2026 and more papers may have been fetched/filtered
+since.
 
-**Cadence note:** this session used sequential batches of 4 (batches 16-20), then one batch of 5
-(batch 21, user-requested). Ask at the start of the next session which cadence to use rather than
-assuming — the default remains batches-of-4 unless told otherwise.
+**Cadence note:** this session used sequential batches of 4 throughout (batches 1-3 of the
+candidate list), no user-requested cadence changes. Default remains batches-of-4 unless told
+otherwise.
 
-**Verification protocol confirmed working across the full session:** for every paper, after the
-ingest agent finishes, independently (1) run the per-paper health check, and (2) manually grep the
-actual page/index files — callout type, title match character-for-character against the index row,
-`task:`/`related_concepts:` cross-check, citation existence and status via direct `ls`/metadata
-lookup — rather than trusting the agent's closing summary. This caught two real issues the health
-check itself did not flag (health check passed 0 errors/0 warnings on both):
-- **Title truncation** on `2506.04518` (`papers/index.md` row cut off mid-word at "...within O") —
-  fixed by hand. See [[feedback_title_truncation]].
-- **task/related_concepts mismatch** on `2602.04683` (UniAudio 2.0) — `task: [TTS, VC, SCA, codec,
-  singing]` but `related_concepts` was missing `voice-conversion` and `singing`; both tags were
-  independently verified legitimate against the raw parsed source before adding the missing
-  `related_concepts` entries and Wiki Connections bullets. See
-  [[feedback_task_related_concepts_mismatch]].
+**Three consecutive corpus-scope boundary cases in batch 2, all resolved via `AskUserQuestion` or
+direct precedent match, plus a fourth in batch 3** — the busiest scope-decision session since the
+FAMA/MLC-SLM precedents were established. Full detail in `raw/review_queue.md` and the Session Log
+below; two new precedents worth carrying forward:
+- **Narrow codec-only acceptance for tri-domain audio papers** (`2602.23765`, DashengTokenizer):
+  a general-purpose (speech/music/environmental-sound) audio tokenizer with no TTS/VC generation of
+  its own can still be accepted if it includes a genuine, directly-comparable speech-codec
+  reconstruction benchmark against known in-corpus speech codecs — scoped narrowly to `task:
+  [codec]` and codec-relevant claims only, general-audio results excluded. Applied consistently
+  within the same session: `2602.23333` (SemanticVocoder, zero speech content) and `2603.01592`
+  (TQCodec, music-only) were both rejected for *not* meeting this bar.
+- **Framing-plus-infrastructure acceptance for zero-metric TTS-tooling papers** (`2603.04145`,
+  VietNormalizer): explicitly TTS-pipeline-framed tooling with open-source code but literally zero
+  quantitative validation can be kept on infrastructure value alone — but this is **not a blanket
+  rule**, re-evaluate each future zero-metric case on its own framing strength. Weaker than the
+  `2510.03111` precedent it echoes (that paper had real signal-quality metrics; this one has none).
 
-**One corpus-scope reject this session**: `2602.04796` (LALM-as-a-Judge) — the ingest agent itself
-caught this before writing any page, correctly identifying a clean match to the FastLongSpeech
-(`2507.14815`) reject precedent: TTS (Coqui XTTS-v2) is used only to synthesize one injected
-benchmark-input turn, never the studied system's output (the LALM judges only ever emit a scalar
-safety score). Verified the cited precedent directly in `raw/review_queue.md` before applying the
-reject; logged to both `raw/review_queue.md` and `raw/pipeline_log.md` per the `review`-operation
-logging convention. Status flipped `accepted → rejected` in `raw/metadata/2602.04796.json`.
+**Process gap found**: on the VietNormalizer retry, the ingest agent identified this exact
+scope-boundary tension itself but wrote the page directly instead of stopping to flag first, despite
+an explicit instruction to stop and flag if scope was uncertain. Caught only by independent
+post-hoc verification, not by the agent's own signal. Worth watching for recurrence — an agent
+correctly *identifying* a scope problem is not the same as it *stopping* on that identification.
 
-**Session-limit interruption recovered cleanly**: `2602.10735` (Calliope) was cut off with nothing
-written (verified: no page, no assets, no index/log entries, metadata still `accepted`) — safe
-direct retry from scratch, no partial-state cleanup needed. See
-[[feedback_session_limit_interruption]].
+**Verification protocol caught one real issue after batch close**: a corpus-wide health-check
+re-run at session end (not just per-paper) surfaced 7 bare-wikilink warnings on `2602.23068` (TADA,
+batch 1) that had passed its own per-paper health check clean and been individually verified as
+correct earlier in the session — the warnings were introduced by a Wiki Connections list mixing
+concept-slug wikilinks (correctly piped) with paper-ID wikilinks (incorrectly left bare) in the same
+section, apparently missed because the per-paper spot-check that session sampled only a few lines
+rather than grepping every wikilink. Fixed by hand; worth running the full corpus-wide health check
+at least once per session close, not only per-paper, even when per-paper checks all passed.
 
-**Zero recurrences this session** of the `[!tip]`/`[!abstract]` callout mistake and the bare-vs-piped
-Wiki Connections wikilink format issue — both now long-settled by stating the requirement explicitly
-in every ingest prompt.
+**One clean session-limit interruption**: `2603.04145` (VietNormalizer) was cut off on first attempt
+with nothing written (verified: no page, no assets, no index/log entries, metadata still
+`accepted`) — safe direct retry from scratch.
 
-Also check `arxiv_comment` for a named future-conference acceptance (e.g. "ACL 2026", "accepted for
-ICASSP 2026") before setting `venue`/`venue_type` — keep `venue: arXiv` / `venue_type: preprint`
-until the paper has an actual venue-specific ID, per precedent (`2510.14664`). Same convention
-applies to already-past IEEE-proceedings venues with no open anthology ID system (ASRU, ICASSP,
-SLT) — confirmed again this session on `2506.04518` (ASRU 2025) and `2602.10164` (SLT 2024), both
-kept as `venue: arXiv`.
+**Zero recurrences this session** of the `[!tip]`/`[!abstract]` callout mistake. The moderate/low
+vs. high/foundational Field Significance callout convention (plain prose vs. `[!tip]` wrapper) was
+confirmed consistent across all 9 ingested papers.
 
-Zero `review_flags` entries emitted across all 24 ingested papers this session — Manual Verification
+Zero `review_flags` entries emitted across all 9 ingested papers this session — Manual Verification
 Queue below is unchanged from the prior session (still just `2602.11172`, unresolved).
 
 ---
@@ -601,6 +605,45 @@ the default batches-of-4.
 QC notes: `wiki/index.md` count consistent after every paper (825, 826, 827, 828, 829). Zero callout mistakes, zero bare-wikilink issues, zero `review_flags` across all 5 papers.
 
 Corpus page count: 824 → 829. Q1 2026 progress: 86 → 91 ingested, 78 → 74 remaining (59 rejected, unchanged). This completes the second 12-paper candidate list in full plus one additional paper. Full corpus-wide health check re-run at end of session: `[ingest] PASS (0 errors, 1170 warnings | papers_checked=829)` — warning count matches the known pre-existing baseline (unrelated to this session's work, tracked separately in BACKLOG.md).
+
+### 2026-08-14 — Batch 1 (papers 1-4 of a fresh 12-paper candidate list)
+
+Ingested sequentially, one at a time, with a health check plus independent manual QC pass after each:
+
+- `2602.18104` — MeanVoiceFlow: One-step Nonparallel Voice Conversion with Mean Flows. `VC` task tag verified against real reported metrics (MOS, SMOS, CER, SPK-SIM). Agent self-caught and corrected a factual error in its own draft: the paper's "FastVoiceGrad+" Table 2 baseline is built from a different in-corpus paper (Vocoder-Projected Feature Discriminator, `interspeech-2025-1763`) than initially assumed (FasterVoiceGrad, `interspeech-2025-1747`) — reworded the Wiki Connections bullet to avoid mischaracterizing it. 1 figure embedded.
+- `2602.19574` — CTC-TTS: LLM-based dual-streaming text-to-speech with CTC alignment. AR codec-token-LM streaming TTS. `spoken-language-model` correctly excluded (self-generated-output AR TTS, no external speech signal consumed) per the standing rule. Found and wikilinked 3 in-corpus baselines the automated reference-matcher missed due to ID-format mismatches (LLMVoX `2025.findings-acl.1051`, ELLA-V `2401.07333`, WavTokenizer `2408.16532`). 2 figures embedded.
+- `2602.23068` — TADA: A Generative Framework for Speech Modeling via Text-Acoustic Dual Alignment (Hume AI). `field_significance: high`; `[!tip] High significance` callout correctly present (confirmed convention: elevated levels get the `[!tip]` wrapper, moderate/low are plain prose). `spoken-language-model` tag independently re-verified legitimate — evaluated against Spirit-LM/TWIST on real external-speech story-cloze benchmarks (sSC/tSC), not self-generated audio, satisfying the external-signal rule. 2 figures embedded.
+- `2602.23266` — Discourse-Aware Dual-Track Streaming Response for Low-Latency Spoken Dialogue Systems (DDTSR). Cascaded ASR/LLM/TTS spoken-dialogue-latency system; `speech-to-speech` dialogue sub-paradigm confirmed. Includes an honest `[!warning]` in Limitations: quality preservation is assessed only via automated proxies (G-Eval, UTMOSv2), no human listening test reported.
+
+QC notes: `wiki/index.md` count consistent after every paper (830, 831, 832, 833). Zero callout mistakes, zero bare-wikilink issues (all Wiki Connections used piped `[[id|Name]]` correctly after one self-correction on the first paper), zero `review_flags`.
+
+Corpus page count: 829 → 833. Q1 2026 progress: 91 → 95 ingested, 74 → 70 remaining (59 rejected, unchanged).
+
+### 2026-08-14 — Batch 2 (papers 5-8 of the candidate list) — 2 scope rejects, 1 narrowly-scoped accept
+
+This batch surfaced three consecutive corpus-scope boundary cases, all caught by the ingest agent
+before writing any page and each resolved via `AskUserQuestion`/direct precedent match rather than
+guessed. Full detail in `raw/review_queue.md`; summarized here:
+
+- `2602.23333` — SemanticVocoder: Bridging Audio Generation and Audio Understanding via Semantic Latents. **Rejected.** A genuinely generative system, but of general (non-speech) audio: trained on AudioSet, evaluated on AudioCaps/Clotho/HEAR sound-event benchmarks, baselines all general-TTA systems (EzAudio, AudioLDM2, TangoFlux, StableAudio). Zero speech/speaker/prosody content anywhere; filter's `[TTS, codec]` tag was a keyword false positive (TTA vs. TTS, generic "vocoder" match). New scope-failure shape, distinct from the FAMA/MLC-SLM understanding-wearing-generative-framing pattern — this is genuinely generative, just not of speech. User confirmed reject via `AskUserQuestion`.
+- `2602.23765` — DashengTokenizer: One layer is enough for unified audio understanding and generation. **Accepted, narrowly scoped.** A tri-domain (speech/music/environmental-sound) audio tokenizer whose own generative demos (TTA, TTM, speech enhancement) are all non-speech-synthesis — but it runs a genuine SEED-TTS speech-reconstruction benchmark directly against in-corpus TTS codecs (Mimi, XCodec 2.0, SNAC, XY-Tokenizer). User confirmed accept via `AskUserQuestion`, on the reasoning that codec-reconstruction fidelity is genuine neural-codec subject matter even without a TTS/VC generation component. Re-ingested with an explicit scope instruction: `task: [codec]` only (no TTS/VC), `related_concepts: [neural-codec, self-supervised-speech, evaluation-metrics]` only (no TTS-architecture concepts), Claims limited to the SEED-TTS/X-ARES speech-relevant results (TTA/TTM results mentioned in Context only, not as claims). Establishes a precedent: tri-domain/general-audio papers can be accepted narrowly when they include a genuine, directly-comparable speech-codec evaluation, even with zero TTS/VC generation of their own. 1 figure embedded.
+- `2603.00958` — S-VoCAL: A Dataset and Evaluation Framework for Inferring Speaking Voice Character Attributes in Literature. **Rejected**, applied directly without a separate user ask (unambiguous case, following established precedent-match practice). Entire pipeline is text-in/text-out: novel text + Wikidata ground truth → RAG (E5-large + Qwen3-8B/Phi-4-14B) predicting 8 categorical character attributes. No audio produced, consumed, or evaluated anywhere; filter's `[TTS, evaluation]` tag was a false positive from TTS-motivation language in the abstract. Cleaner reject than the FAMA/MLC-SLM/2510.12116 precedents it matches, since even the *inputs* are text, not audio.
+- `2603.01467` — Conversational Speech Naturalness Predictor (Meta). **Ingested**, confirmed in scope. Trains a dual-channel MOS-style predictor against real human naturalness ratings (≥5 raters/recording) for synthesized (ConvTTS) and full-duplex-agent (FDX-Conv) conversational speech; shows existing single-utterance predictors (NISQA, UTMOSv2) correlate poorly or negatively on this task. Same shape as other automated-MOS-predictor papers already in-corpus (e.g. UTMOS). `metrics: []` (paper reports PCC/SRC/MSE correlation values, not canonical MOS-style values, described in prose per the `2005.07143` precedent). `subjective-evaluation` included (real human-rater data collected and validated against). No figure.
+
+QC notes: `wiki/index.md` count consistent after every ingested paper (834, 835). Zero callout mistakes, zero bare-wikilink issues, zero `review_flags` on the 2 ingested papers.
+
+Corpus page count: 833 → 835 (2 ingested, 2 rejected). Q1 2026 progress: 95 → 97 ingested, 70 → 66 remaining, 59 → 61 rejected.
+
+### 2026-08-14 — Batch 3 (papers 9-12, final batch of the candidate list) — 1 reject, 1 session-limit interruption, 1 retroactive scope flag
+
+- `2603.01476` — Entropy-Guided GRVQ for Ultra-Low Bitrate Neural Speech Codec (Waseda/NTT). Straightforward speech-scoped codec (LibriTTS+VCTK, PESQ/STOI/ViSQOL/SDR + 8-participant MUSHRA). Clean ingest, 0 issues.
+- `2603.01592` — TQCodec: Towards neural audio codec for high-fidelity music streaming. **Rejected**, applied directly without a separate user ask (unambiguous case). Trains and evaluates exclusively on music datasets (MusDBHQ, Jamendo, private corpus), LSD/SNR metrics only, no speech-domain data or speech-codec comparison anywhere. Clean match to the MIDI-VALLE/SemanticVocoder reject shape; does not meet the DashengTokenizer narrow-accept bar (no speech-reconstruction benchmark against in-corpus codecs).
+- `2603.02022` — CodecFlow: Efficient Bandwidth Extension via Conditional Flow Matching in Neural Codec Latent Space. Confirmed speech-scoped (LibriTTS/VCTK/TIMIT, no music data). Correctly excluded `subjective-evaluation` — the paper's one MOS-labeled value is NISQA-predicted (automated proxy), not real listener ratings.
+- `2603.04145` — VietNormalizer: Vietnamese TTS text-normalization library. **Session-limit interruption on first attempt** — verified clean (no page/assets/index/log/metadata changes, `status` still `accepted`) before a safe direct retry. On retry, the ingest agent identified a genuine scope-boundary case (explicit TTS-pipeline framing throughout, but zero quantitative results of any kind — no accuracy, latency, or downstream TTS evaluation, only a qualitative feature-comparison table) but **wrote the page directly instead of stopping to flag first**, a deviation from the explicit instruction given. Caught during independent verification; surfaced via `AskUserQuestion` after the fact. User confirmed **keep** — TTS-pipeline framing plus open-source code judged genuine infrastructure value even without benchmarks, though this is a materially weaker empirical case than the `2510.03111` precedent it invoked (which had real signal-quality metrics across 24 configurations). Logged as a new precedent in `raw/review_queue.md`, explicitly not a blanket exception for future zero-metric papers — re-evaluate each on its own framing strength. `related_concepts: []` (no controlled-vocabulary concept covers TTS text-frontend normalization tooling).
+
+QC notes: `wiki/index.md` count consistent after every ingested paper (836, 837, 838). A corpus-wide health-check re-run at end of session caught 7 bare-wikilink warnings on `2602.23068` (TADA, from batch 1) that had slipped past the earlier per-paper QC pass — fixed by hand (piped `[[id|Name]]` format).
+
+Corpus page count: 835 → 838 (3 ingested, 1 rejected). Q1 2026 progress: 97 → 100 ingested, 66 → 62 remaining, 61 → 62 rejected. This completes the 12-paper candidate list in full. Full corpus-wide health check re-run at end of session: `[ingest] PASS (0 errors, 1170 warnings | papers_checked=838)` — warning count matches the known pre-existing baseline exactly, confirming no new warnings survived across the whole session's 9 ingested papers.
 
 ---
 
