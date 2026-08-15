@@ -43,65 +43,47 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Session 2026-08-14 processed a fresh 12-paper chronological candidate list in full (3 batches of
-4). Q1 2026 progress at end of session: 100 ingested, 62 remaining, 62 rejected (224 total in
-scope, unchanged — no new fetch/filter activity this session). Corpus 829 → 838 pages, 0 errors /
-1170 warnings (exact pre-existing baseline) at final health check.
+2026-08-15 was a three-part day: two full 12-paper sessions plus a 2-paper mini-batch appended to
+close out the day, totalling **26 papers ingested**. Q1 2026 progress at end of day: 126 ingested,
+36 remaining, 62 rejected (224 total in scope, unchanged — no new fetch/filter activity all day).
+Corpus 838 → 864 pages, 0 errors / 1171 warnings (unchanged baseline all day) at final health check.
 
 To start the next session: re-run the progress-count script first to confirm current counts, then
 build a fresh chronological candidate list starting from the earliest remaining Q1 2026 `accepted`
-paper by `published_date`. The last-ingested paper this session was `2603.04145` (published_date
-2026-03-04); as of session close the next four chronologically are `2603.04219` (ZeSTA),
-`2603.05299` (WavSLM), `2603.05373` (Hierarchical Decoding for Discrete Speech Synthesis),
-`2603.05413` (Building Enterprise Realtime Voice Agents) — verify this list is still current before
-using it, since 66 days remain until end of Q1 2026 and more papers may have been fetched/filtered
-since.
+paper by `published_date`. The last-ingested paper today was `2603.12342` (published_date
+2026-03-12); as of day close the next four chronologically are `2603.12565` (Speech-Worthy Alignment
+for Japanese SpeechLLMs via Direct Preference Optimization), `2603.13518` (VoXtream2: Full-stream
+TTS with dynamic speaking rate control), `2603.14032` (Beyond Two-stage Diffusion TTS: Joint
+Structure and Content Refinement via Jump Diffusion), `2603.14035` (Probing neural audio codecs for
+distinctions among English nuclear tunes) — verify this list is still current before using it, since
+more papers may have been fetched/filtered since.
 
-**Cadence note:** this session used sequential batches of 4 throughout (batches 1-3 of the
-candidate list), no user-requested cadence changes. Default remains batches-of-4 unless told
-otherwise.
+**Cadence note:** all three parts of today used sequential batches of 4 (or smaller for the closing
+mini-batch), no user-requested cadence changes. Default remains batches-of-4 unless told otherwise.
 
-**Three consecutive corpus-scope boundary cases in batch 2, all resolved via `AskUserQuestion` or
-direct precedent match, plus a fourth in batch 3** — the busiest scope-decision session since the
-FAMA/MLC-SLM precedents were established. Full detail in `raw/review_queue.md` and the Session Log
-below; two new precedents worth carrying forward:
-- **Narrow codec-only acceptance for tri-domain audio papers** (`2602.23765`, DashengTokenizer):
-  a general-purpose (speech/music/environmental-sound) audio tokenizer with no TTS/VC generation of
-  its own can still be accepted if it includes a genuine, directly-comparable speech-codec
-  reconstruction benchmark against known in-corpus speech codecs — scoped narrowly to `task:
-  [codec]` and codec-relevant claims only, general-audio results excluded. Applied consistently
-  within the same session: `2602.23333` (SemanticVocoder, zero speech content) and `2603.01592`
-  (TQCodec, music-only) were both rejected for *not* meeting this bar.
-- **Framing-plus-infrastructure acceptance for zero-metric TTS-tooling papers** (`2603.04145`,
-  VietNormalizer): explicitly TTS-pipeline-framed tooling with open-source code but literally zero
-  quantitative validation can be kept on infrastructure value alone — but this is **not a blanket
-  rule**, re-evaluate each future zero-metric case on its own framing strength. Weaker than the
-  `2510.03111` precedent it echoes (that paper had real signal-quality metrics; this one has none).
+**One clean session-limit interruption in the second full session**, resolved without incident:
+`2603.09627` (Speech-Omni-Lite) was cut off with nothing written (verified: no page/assets/
+index/log/metadata changes, status still `accepted`) — safe direct retry from scratch, same as the
+`2603.04145` precedent.
 
-**Process gap found**: on the VietNormalizer retry, the ingest agent identified this exact
-scope-boundary tension itself but wrote the page directly instead of stopping to flag first, despite
-an explicit instruction to stop and flag if scope was uncertain. Caught only by independent
-post-hoc verification, not by the agent's own signal. Worth watching for recurrence — an agent
-correctly *identifying* a scope problem is not the same as it *stopping* on that identification.
+**One scope pre-check, no issue found**: `2603.16924` (SimulU) had an arXiv ID prefix (16xxx) that
+looked out of sequence against neighboring papers' IDs (07xxx-11xxx) despite sharing similar
+`published_date`s — checked and confirmed this is normal, since arXiv submission numbers are global
+across all categories (~3,000/day) rather than per-category; not a duplicate/full-version case like
+the Emilia precedent. Ingested normally.
 
-**Verification protocol caught one real issue after batch close**: a corpus-wide health-check
-re-run at session end (not just per-paper) surfaced 7 bare-wikilink warnings on `2602.23068` (TADA,
-batch 1) that had passed its own per-paper health check clean and been individually verified as
-correct earlier in the session — the warnings were introduced by a Wiki Connections list mixing
-concept-slug wikilinks (correctly piped) with paper-ID wikilinks (incorrectly left bare) in the same
-section, apparently missed because the per-paper spot-check that session sampled only a few lines
-rather than grepping every wikilink. Fixed by hand; worth running the full corpus-wide health check
-at least once per session close, not only per-paper, even when per-paper checks all passed.
+**Index-count drift remains the dominant recurring issue, all day**: hit on the large majority of
+all 26 papers ingested today — essentially every paper needed at least one of the 3
+`wiki/index.md` occurrences corrected. Several instances had an ingest agent report a count value
+that was flatly wrong by more than 1 (off by exactly 10, three separate times today). Independent
+verification via `grep -c '^| \[\[' papers/index.md` against all 3 occurrences after *every single
+paper* continues to be mandatory, not optional — this is no longer an occasional catch, it is the
+expected steady state of the pipeline; worth considering a script-level fix if it keeps recurring at
+this rate. Also caught once (`2603.16924`): an ingest agent's self-reported "0 warnings" that was
+actually 5 bare-wikilink warnings — agent self-reports on warning counts, not just error counts or
+index counts, need the same independent verification.
 
-**One clean session-limit interruption**: `2603.04145` (VietNormalizer) was cut off on first attempt
-with nothing written (verified: no page, no assets, no index/log entries, metadata still
-`accepted`) — safe direct retry from scratch.
-
-**Zero recurrences this session** of the `[!tip]`/`[!abstract]` callout mistake. The moderate/low
-vs. high/foundational Field Significance callout convention (plain prose vs. `[!tip]` wrapper) was
-confirmed consistent across all 9 ingested papers.
-
-Zero `review_flags` entries emitted across all 9 ingested papers this session — Manual Verification
+Zero `review_flags` entries emitted across all 26 ingested papers today. Manual Verification
 Queue below is unchanged from the prior session (still just `2602.11172`, unresolved).
 
 ---
@@ -644,6 +626,95 @@ Corpus page count: 833 → 835 (2 ingested, 2 rejected). Q1 2026 progress: 95 �
 QC notes: `wiki/index.md` count consistent after every ingested paper (836, 837, 838). A corpus-wide health-check re-run at end of session caught 7 bare-wikilink warnings on `2602.23068` (TADA, from batch 1) that had slipped past the earlier per-paper QC pass — fixed by hand (piped `[[id|Name]]` format).
 
 Corpus page count: 835 → 838 (3 ingested, 1 rejected). Q1 2026 progress: 97 → 100 ingested, 66 → 62 remaining, 61 → 62 rejected. This completes the 12-paper candidate list in full. Full corpus-wide health check re-run at end of session: `[ingest] PASS (0 errors, 1170 warnings | papers_checked=838)` — warning count matches the known pre-existing baseline exactly, confirming no new warnings survived across the whole session's 9 ingested papers.
+
+### 2026-08-15 — Batch 1 (papers 1-4 of a fresh 12-paper candidate list)
+
+Ingested sequentially, one at a time, with an independent per-paper health check after each:
+
+- `2603.04219` — ZeSTA: Zero-Shot TTS Augmentation with Domain-Conditioned Training for Data-Efficient Personalized Speech Synthesis. Fine-tunes a VITS-based personalized TTS model on zero-shot-TTS-synthesized augmentation data (Fish-Speech, CosyVoice 2) plus real-data oversampling; base architecture unchanged, so `field_significance.type: engineering-integration` (no figure copied). Health check: 0 errors, 1 informational warning (expected bare-wikilink case, cited paper has no distinctive system name).
+- `2603.05299` — WavSLM: Single-Stream Speech Language Modeling via WavLM Distillation. Distills WavLM's upper transformer layers into a causal, single-codebook autoregressive next-chunk predictor on the existing FocalCodec-Stream tokenizer, speech-only training. `field_significance: moderate / architectural-novelty`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.05373` — Hierarchical Decoding for Discrete Speech Synthesis with Multi-Resolution Spoof Detection (MSpoof-TTS, NUS). Training-free, inference-time framework using multi-resolution spoof detectors to guide autoregressive codec-token decoding of a frozen NeuTTS backbone. `field_significance: moderate / architectural-novelty`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.05413` — Building Enterprise Realtime Voice Agents from Scratch: A Technical Tutorial (Salesforce AI Research). Judgment call: not pure survey despite a 25+ model / 30+ framework landscape section, since it also contributes original empirical latency benchmarking (own instrumented runs of Qwen2.5-Omni/Qwen3-Omni across 3 deployment configs) and a tested cascaded pipeline — used standard template, not survey handling. `field_significance.type: [engineering-integration, empirical-benchmark, conceptual-contribution]`, no novel architecture (`architecture: []`). Paper's own `references.json` in_corpus flags were unreliable (2/12 correctly flagged); all 12 arXiv references manually cross-checked against the index, 8 selected for Wiki Connections. Health check: 0 errors, 0 warnings.
+
+QC notes: `wiki/index.md` count consistent after every paper (839, 840, 841, 842), verified independently against `grep -c '^| \[\[' papers/index.md` each time. Zero `review_flags` across all 4 papers.
+
+Corpus page count: 838 → 842. Q1 2026 progress: 100 → 104 ingested, 62 → 58 remaining (62 rejected, unchanged). Full corpus-wide health check re-run at batch close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=842)` — warning count is baseline (1170) + 1 (the expected `2603.04219` informational warning), confirming no new issues.
+
+### 2026-08-15 — Batch 2 (papers 5-8 of the candidate list)
+
+Ingested sequentially, one at a time, with an independent per-paper health check after each:
+
+- `2603.05887` — Reconstruct! Don't Encode: Self-Supervised Representation Reconstruction Loss for High-Intelligibility and Low-Latency Streaming Neural Audio Codec (JHU/USC). Proposes JHCodec (causal Transformer RVQ-VAE streaming codec on TS3-Codec) plus the SSRR loss (reconstructing distilled W2V-BERT 2.0 features from the codec's *decoded* output, not just the encoder as in Mimi's SED); halves WER at matched early training steps. `field_significance: moderate / architectural-novelty`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.05977` — Activation Steering for Accent-Neutralized Zero-Shot Text-To-Speech (UT Dallas/CRSS). Post-hoc, training-free activation-steering method for Qwen3-TTS that neutralizes accent while preserving speaker timbre, extending the in-corpus activation-steering family (EmoSteer-TTS, TruS, EmoShift) to a new attribute. `field_significance: moderate / architectural-novelty` (narrow scope: one accent pair, one base model). 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.06079` — StreamVoiceAnon+: Emotion-Preserving Streaming Speaker Anonymization via Frame-Level Acoustic Distillation. Fixes emotion degradation in streaming neural-codec speaker anonymization via restructured same-speaker neutral/emotional training pairs plus frame-level emotion distillation, 49.2% UAR vs. 39.7% baseline at zero inference-latency cost. `field_significance: moderate / architectural-novelty`, 1 figure embedded. Health check: 0 errors, 0 warnings. **Index count drift caught after this paper**: `wiki/index.md` line 65 prose sentence stayed at 844 while the callout and Browse-link occurrences correctly advanced to 845 — fixed by hand, another instance of the known single-edit-leaves-occurrences-inconsistent pattern.
+- `2603.06444` — Prosodic Boundary-Aware Streaming Generation for LLM-Based TTS with Streaming Text Input. Post-training strategy for LLM-based TTS (CosyVoice2 base) inserting a learned prosodic-boundary marker via WhisperX weak alignment plus a bounded sliding-window inference prompt, avoiding the catastrophic long-form collapse (WER 70.97% → 4.77%) seen in interleaved streaming baselines. `field_significance: moderate / architectural-novelty` (single base architecture, author-constructed long-form benchmark). 1 figure embedded. Health check: 0 errors, 0 warnings; all 3 count occurrences already consistent at 846.
+
+QC notes: zero `review_flags` across all 4 papers. One index-count-drift instance caught and fixed (see above); all other counts self-consistent at every step.
+
+Corpus page count: 842 → 846. Q1 2026 progress: 104 → 108 ingested, 58 → 54 remaining (62 rejected, unchanged). Full corpus-wide health check re-run at batch close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=846)` — warning count unchanged from batch 1 close, confirming no new issues across this batch's 4 papers.
+
+### 2026-08-15 — Batch 3 (papers 9-12, final batch of the candidate list) — 1 session-limit interruption with partial write, 2 index-count-drift catches
+
+- `2603.07513` — Bolbosh: Script-Aware Flow Matching for Kashmiri Text-to-Speech (KAUST / University of Kashmir / Gaash Lab, NIT Srinagar). Cross-lingual fine-tune of a pretrained English Matcha-TTS (OT-CFM) checkpoint with an expanded 272-grapheme vocabulary preserving Perso-Arabic diacritics; first open Kashmiri TTS system, corpus, and benchmark. `field_significance: moderate / engineering-integration, dataset-contribution`. Zero in-corpus references found. No figure (no architectural novelty). Health check: 0 errors, 0 warnings.
+- `2603.07534` — Accent Vector: Controllable Accent Manipulation for Multilingual TTS Without Accented Data (USC). **Session-limit interruption with a partial write** — the agent was cut off after writing a fully complete paper page (all sections, generation block finished) but before touching the metadata status, `papers/index.md`, `index.md`, or `log.md`. Verified this was a clean partial (not a corrupted mid-write) by reading the full page end-to-end, then completed the remaining steps by hand: added the index row (title truncated to 55 chars per the skill script's actual `title[:55]` behavior, matching existing convention), bumped `index.md` count (847→848) after also fixing that file's 3 occurrences which had drifted to two different stale values, added the `log.md` entry, set metadata `status: ingested` + `generation_history`, and fixed 5 bare-wikilink warnings the interrupted agent had left in Wiki Connections. Verified all 5 `related_papers` IDs resolve in the index before finishing. Health check: 0 errors, 0 warnings after the fix.
+- `2603.07550` — Learning-free L2-Accented Speech Generation using Phonological Rules (USC). Learning-free rule pipeline extending the authors' own prior US-UK phonological accent rules (`2601.14417`) to cross-lingual Spanish/Indian accents over a frozen pretrained TTS model. `field_significance` type excludes architectural-novelty (no figure). Agent self-caught and fixed a 3-way `index.md` count inconsistency (848/848/839) before reporting. Health check: 0 errors, 0 warnings.
+- `2603.07551` — Targeted Speaker Poisoning Framework in Zero-Shot Text-to-Speech (USC). **Scope-checked before ingest**: formalizes Speech Generation Speaker Poisoning (SGSP), a privacy/machine-unlearning framing that modifies a trained zero-shot StyleTTS2 model to prevent reproduction of specific forgotten speaker identities while preserving utility for retained ones (adapts Teacher-Guided Poisoning from `2507.20140` to a new backbone, adds a novel Encoder-Guided variant). Confirmed in-scope directly (not deferred to `AskUserQuestion`) since it directly manipulates and evaluates a zero-shot TTS generation model on TTS-relevant metrics (WER utility, AUC/Forget-Speaker-Similarity privacy) rather than attacking an external system — distinct shape from the ASR-false-accept precedents. `field_significance: moderate / conceptual-contribution, evaluation-contribution, engineering-integration`, no figure. Health check on the paper itself: 0 errors, 0 warnings — but caught a fresh 3-way `index.md` count drift afterward (849/849/840 vs. actual 850), fixed by hand.
+
+QC notes: zero `review_flags` across all 4 papers. Two independent index-count-drift instances this batch (one self-caught by the ingest agent on `2603.07550`, one caught by the session's own post-hoc verification on `2603.07551`) plus the `2603.07534` partial-write recovery — the drift pattern and the session-limit-interruption pattern are now both recurring reliably enough to treat independent verification after every single paper (not just at batch close) as mandatory, not optional.
+
+Corpus page count: 846 → 850. Q1 2026 progress: 108 → 112 ingested, 54 → 50 remaining (62 rejected, unchanged). This completes the 12-paper candidate list in full. Full corpus-wide health check re-run at batch close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=850)` — warning count unchanged from batch 1/2 close, confirming no new issues across the whole session's 12 ingested papers.
+
+### 2026-08-15 — Batch 1 of a fresh 12-paper session (papers 1-4)
+
+Ingested sequentially, one at a time, with an independent per-paper health check after each:
+
+- `2603.07599` — StyleBench: Evaluating Speech Language Models on Conversational Speaking Style Control. Pure-evaluation benchmark paper (no proposed model), evaluating 10 open-source speech/omni LMs on multi-turn conversational speaking-style intensity control (emotion, speed, volume, pitch). `field_significance: moderate / dataset-contribution, evaluation-contribution, empirical-benchmark`; `architecture/conditioning/training: []` per the established pure-evaluation-paper convention (precedent: `2511.10262` MTR-DuplexBench). No figure. Health check: 0 errors, 0 warnings.
+- `2603.08216` — DualTurn: Learning Turn-Taking from Dual-Channel Generative Speech Pretraining. Dual-channel generative pretraining (Qwen2.5-0.5B over frozen Mimi codec embeddings) as unsupervised representation learning, fine-tuned into 12 lightweight turn-taking classification heads; beats VAP (wF1 0.633 vs 0.389) and a 3.1B audio-text baseline (AUC 0.930 vs 0.880) with ablations isolating the pretraining objective (not backbone capacity) as the source of the gain. `field_significance: high / architectural-novelty, empirical-benchmark`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.08574` — Scalable Neural Vocoder from Range-Null Space Decomposition (RNDVoC). GAN vocoder decomposing spectrogram reconstruction into a closed-form linear range-space projection plus a learned null-space residual, with a dual-path sub-band architecture and mel-configuration-agnostic inference (no retraining needed for new mel configs). `field_significance: high / architectural-novelty, conceptual-contribution`, 1 figure embedded. Organization (Chinese Academy of Sciences, Tencent AI Lab) filled in from the PDF text since `raw/metadata` had it null; metadata JSON itself left untouched (pipeline-state fields only) per the never-alter-source invariant. Health check: 0 errors, 0 warnings.
+- `2603.08977` — Universal Speech Content Factorization (USCF, JHU). Extends closed-set SCF voice conversion to an open-set/zero-shot setting via a speaker-agnostic linear content mapping (fit once by least-squares/SVD) plus a per-speaker transformation recoverable in closed form from a few seconds of unseen-speaker speech; no gradient-based training required beyond the pretrained WavLM encoder/vocoder. `disentanglement` tag independently re-verified as a genuine explicit factorization mechanism (SVD-based content/speaker separation is the entire method), not an implicit-by-construction case. 1 figure embedded. Health check: 0 errors, 0 warnings.
+
+QC notes: `wiki/index.md` 3-way count drift caught and fixed on **every one of the 4 papers this batch** (851/852/853/854, each time at least one of the three occurrences was stale or an agent-reported wrong value) — independent verification after every paper continues to be necessary, not optional. Zero `review_flags` across all 4 papers.
+
+Corpus page count: 850 → 854. Q1 2026 progress: 112 → 116 ingested, 50 → 46 remaining (62 rejected, unchanged). Full corpus-wide health check re-run at batch close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=854)` — warning count unchanged from prior session's baseline, confirming no new issues.
+
+### 2026-08-15 — Batch 2 (papers 5-8) — 1 clean session-limit interruption
+
+Ingested sequentially, one at a time, with an independent per-paper health check after each:
+
+- `2603.09120` — Emotion-Aware Prefix: Towards Explicit Emotion Control in Voice Conversion Models. Extends the VEVO two-stage zero-shot VC backbone with an Emotion-Aware Prefix (Temporal-Shuffle Transformer + Perceiver + Emotion Fusion Layer over Emotion2Vec+) injected via Deep-Prefix Prompting (P-Tuning-v2-style KV-cache injection); nearly doubles Emotion Conversion Accuracy (42.40% → 85.50%) on ESD while preserving speaker/content/quality. Stage-isolation and cross-architecture (GenVC) experiments show emotion control is driven by the sequence-modulation stage. `field_significance: moderate / architectural-novelty, conceptual-contribution`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.09180` — DuplexCascade: Full-Duplex Speech-to-Speech Dialogue with VAD-Free Cascaded ASR-LLM-TTS Pipeline and Micro-Turn Optimization. VAD-free cascaded pipeline converting long turns into chunk-wise micro-turns with dedicated control tokens, LoRA-trained on synthetically-augmented text-only UltraChat dialogues; SOTA turn-taking accuracy on Full-Duplex-Bench, near-parity VoiceBench conversational-intelligence vs. a naive cascade. `field_significance: moderate / architectural-novelty, empirical-benchmark`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+- `2603.09627` — Speech-Omni-Lite: Portable Speech Interfaces for Vision-Language Models. **Session-limit interruption on first attempt** — verified clean (no page, no assets, no index/log/metadata changes, `status` still `accepted`) before a safe direct retry. Adds lightweight speech-projector and speech-token-generator adapters to a fully frozen Qwen3-VL-8B backbone, trained partly on a novel LLM-manufactured QTATS spoken-QA dataset built from ASR corpora. `field_significance: moderate / engineering-integration, dataset-contribution`, no figure. Health check: 0 errors, 0 warnings.
+- `2603.10371` — Speech Codec Probing from Semantic and Phonetic Perspectives (USC / Dolby Laboratories). Empirical probing study (no new codec proposed) showing four widely-used speech codecs (EnCodec, DAC, MIMI, MIMO) primarily encode phonetic rather than lexical-semantic structure in their "semantic" tokens, via word-pair distance probing, articulatory (rt-MRI) correlation, and cross-modal CKA alignment. `field_significance: moderate / empirical-benchmark, conceptual-contribution, negative-result` (verified `negative-result` is valid controlled vocabulary per `docs/schemas/vocabulary.md`), no figure. Health check: 0 errors, 0 warnings.
+
+QC notes: `wiki/index.md` 3-way count drift caught and fixed on 3 of the 4 papers (855, 857 — corrected from an agent-reported wrong "847" — and 858 all needed manual fixes; only 856 on `2603.09180` was self-consistent). Zero `review_flags` across all 4 papers.
+
+Corpus page count: 854 → 858. Q1 2026 progress: 116 → 120 ingested, 46 → 42 remaining (62 rejected, unchanged). Full corpus-wide health check re-run at batch close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=858)` — warning count unchanged from baseline.
+
+### 2026-08-15 — Batch 3 (papers 9-12, final batch of the candidate list)
+
+Before this batch, sanity-checked `2603.16924` (SimulU, paper 10): its arXiv ID prefix (16xxx) looked out of sequence against neighboring papers' IDs (07xxx-11xxx) despite all sharing March 8-12 `published_date`s. Confirmed this is normal — arXiv submission numbers are global across all categories (~3,000/day), not per-category, so the jump is consistent with 3 days of full-arXiv volume; no `arxiv_comment` flag either. Proceeded without an `AskUserQuestion`.
+
+Ingested sequentially, one at a time, with an independent per-paper health check after each:
+
+- `2603.10904` — When Fine-Tuning Fails and when it Generalises: Role of Data Diversity and Mixed Training in LLM-based TTS (Sprinklr AI). Empirical LoRA fine-tuning study on the Qwen2.5-0.5B backbone of an AR codec TTS system (NeuTTS); finds training-data acoustic diversity (not dataset size or loss convergence) predicts whether fine-tuning improves or degrades DNS-MOS, documents a loss-quality divergence phenomenon. `field_significance: moderate / empirical-benchmark, negative-result`, no figure. Health check: 0 errors, 0 warnings.
+- `2603.16924` — SimulU: Training-free Policy for Long-form Simultaneous Speech-to-Speech Translation. Training-free inference-time policy repurposing SeamlessM4T's internal cross-attention for long-form simultaneous S2S translation without retraining. `field_significance: moderate / architectural-novelty`, 1 figure (correctly selected the true architecture-overview figure over a stray author-affiliation icon mislabeled as figure-1). Caught and fixed 5 bare-wikilink warnings in Wiki Connections that the ingest agent's own reported "0 warnings" claim didn't match — independent health check found them. Health check after fix: 0 errors, 0 warnings.
+- `2603.11678` — RAF: Relativistic Adversarial Feedback For Universal Speech Synthesis (KAIST). GAN vocoder training objective pairing SSL-derived (WavLM/HuBERT) quality-gap estimation with relativistic discriminator feedback; notable parameter-efficiency result (14M-param BigVGAN-base+RAF beats 112M-param BigVGAN+LSGAN). `field_significance: moderate / architectural-novelty`, 1 figure embedded, zero in-corpus references. Health check: 0 errors, 0 warnings.
+- `2603.11683` — Causal Prosody Mediation for Text-to-Speech: Counterfactual Training of Duration, Pitch, and Energy in FastSpeech2. Augments FastSpeech2 with a structural causal model (emotion→prosody→speech) and two counterfactual training losses (IPC, CPC) keeping emotion's effect routed entirely through duration/pitch/energy. `field_significance` not explicitly reported in agent summary but confirmed via health check; 1 figure (SCM diagram), zero in-corpus references. Health check: 0 errors, 0 warnings.
+
+QC notes: `wiki/index.md` 3-way count drift caught and fixed on 2 of the 4 papers (860 on `2603.16924`, 861 on `2603.11678` — both had agent-reported values off by exactly 10, a new variant of the drift pattern); `2603.10904` and `2603.11683` were self-consistent. Zero `review_flags` across all 4 papers. One instance of an agent's self-reported "0 warnings" being wrong, caught only by the independent post-hoc health check (`2603.16924`) — reinforces that agent self-reports on warnings, not just error counts, need independent verification.
+
+Corpus page count: 858 → 862. Q1 2026 progress: 120 → 124 ingested, 42 → 38 remaining (62 rejected, unchanged). This completes the 12-paper candidate list in full. Full corpus-wide health check re-run at batch close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=862)` — warning count unchanged from baseline across the whole session's 12 ingested papers.
+
+### 2026-08-15 — Mini-batch (2 papers, appended to close out the day)
+
+- `2603.11947` — Resurfacing Paralinguistic Awareness in Large Audio Language Models (Monash University / UCL). Five layer-wise probing analyses on Qwen2.5-Omni and Kimi-Audio localizing paralinguistic signal (layers 0-6) vs. semantic understanding (layers 7-14); proposes paralinguistic-enhanced fine-tuning (PE-FT, selective-layer LoRA + auxiliary dual-level classification head), two new LLM-judged metrics (PA-score, PA-rate), and a child-safety evaluation dataset showing a 7-8% → 97-99% appropriate-response-rate fix. `field_significance: moderate`, no figure. Citation-integrity check applied correctly: 2 of 4 cited in-corpus papers were `status: rejected` and excluded from `related_papers`/Wiki Connections per the citation-integrity rule. Health check: 0 errors, 0 warnings.
+- `2603.12342` — MamTra: A Hybrid Mamba-Transformer Backbone for Speech Synthesis (KAIST / Chung-Ang University). Converts a pretrained CosyVoice 2 attention backbone into a hybrid Mamba-Transformer via structural weight transfer (Q/K/V → Mamba C/B/x projections) plus multi-level distillation (CE + logit-KL + embedding MSE); cuts inference memory up to 34% with only 0.25% absolute WER increase, using under 2% of original training data. `field_significance: moderate / architectural-novelty, empirical-benchmark`, 1 figure embedded. Health check: 0 errors, 0 warnings.
+
+QC notes: `wiki/index.md` 3-way count drift caught and fixed on `2603.11947` (agent-reported "853" vs. correct 863, off by 10 again); `2603.12342` was self-consistent at 864. Zero `review_flags` on both papers.
+
+Corpus page count: 862 → 864. Q1 2026 progress: 124 → 126 ingested, 38 → 36 remaining (62 rejected, unchanged). Full corpus-wide health check re-run at close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=864)` — warning count unchanged from baseline.
+
+**Day total (both sessions + this mini-batch): 26 papers ingested 2026-08-15.**
 
 ---
 
