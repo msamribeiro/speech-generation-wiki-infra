@@ -43,48 +43,70 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-2026-08-15 was a three-part day: two full 12-paper sessions plus a 2-paper mini-batch appended to
-close out the day, totalling **26 papers ingested**. Q1 2026 progress at end of day: 126 ingested,
-36 remaining, 62 rejected (224 total in scope, unchanged — no new fetch/filter activity all day).
-Corpus 838 → 864 pages, 0 errors / 1171 warnings (unchanged baseline all day) at final health check.
+2026-08-19 processed two fresh 12-paper candidate lists across 6 batches of 4, totalling **24
+papers ingested**, 0 rejected. Q1 2026 progress at end of day: 150 ingested, 12 remaining, 62
+rejected (224 total in scope, unchanged — no new fetch/filter activity today). Corpus 864 → 888
+pages, 0 errors / 1171 warnings (unchanged baseline) at final health check.
 
-To start the next session: re-run the progress-count script first to confirm current counts, then
-build a fresh chronological candidate list starting from the earliest remaining Q1 2026 `accepted`
-paper by `published_date`. The last-ingested paper today was `2603.12342` (published_date
-2026-03-12); as of day close the next four chronologically are `2603.12565` (Speech-Worthy Alignment
-for Japanese SpeechLLMs via Direct Preference Optimization), `2603.13518` (VoXtream2: Full-stream
-TTS with dynamic speaking rate control), `2603.14032` (Beyond Two-stage Diffusion TTS: Joint
-Structure and Content Refinement via Jump Diffusion), `2603.14035` (Probing neural audio codecs for
-distinctions among English nuclear tunes) — verify this list is still current before using it, since
-more papers may have been fetched/filtered since.
+To start the next session: re-run the progress-count script first to confirm current counts (only
+12 papers should remain in scope), then build a final chronological candidate list starting from
+the earliest remaining Q1 2026 `accepted` paper by `published_date`. The last-ingested paper today
+was `2603.25750` (published_date 2026-03-20); as of day close the remaining 12 papers span
+`2603.20638` (OmniCodec) through `2604.01247` (published_date 2026-03-31) — verify this list is
+still current before using it, since more papers may have been fetched/filtered since. Two of the
+remaining papers (`2604.03279`, `2604.01247`) carry misleading `2604`-prefix arXiv IDs with earlier
+`published_date`s (2026-03-24 and 2026-03-31 respectively) — sort by `published_date`, not ID
+prefix, same as the `2604.08558`/`2604.08562` precedent from today.
 
-**Cadence note:** all three parts of today used sequential batches of 4 (or smaller for the closing
-mini-batch), no user-requested cadence changes. Default remains batches-of-4 unless told otherwise.
+**Cadence note:** all 6 batches today used sequential batches of 4, no user-requested cadence
+changes. Default remains batches-of-4 unless told otherwise.
 
-**One clean session-limit interruption in the second full session**, resolved without incident:
-`2603.09627` (Speech-Omni-Lite) was cut off with nothing written (verified: no page/assets/
-index/log/metadata changes, status still `accepted`) — safe direct retry from scratch, same as the
-`2603.04145` precedent.
+**New recurring-issue class found today: title-truncation-bypass.** `papers/index.md` rows use a
+deliberate hard 55-character truncation (`title[:55]` in the ingest skill's own row-generation
+script) — this is the actual, intended convention, not a bug. Three times today (`2603.16280`,
+`2604.08558`, `2603.17837`) an ingest agent instead wrote the paper's FULL untruncated title into
+the index row, apparently treating the truncation it saw on neighboring rows as a defect to "fix"
+rather than the template's own behavior. This is the mirror image of the long-standing
+[[feedback_title_truncation]] mid-word-cut issue: that memory is about *unpredictable* truncation
+points corrupting titles; today's finding clarifies the truncation itself is correct and intentional
+at a fixed 55-char cutoff, and the actual defect is an agent overriding it with the full title.
+Verify every new row's title is truncated to (approximately) 55 characters, not just present.
 
-**One scope pre-check, no issue found**: `2603.16924` (SimulU) had an arXiv ID prefix (16xxx) that
-looked out of sequence against neighboring papers' IDs (07xxx-11xxx) despite sharing similar
-`published_date`s — checked and confirmed this is normal, since arXiv submission numbers are global
-across all categories (~3,000/day) rather than per-category; not a duplicate/full-version case like
-the Emilia precedent. Ingested normally.
+**Agent self-report reliability took another hit today**, beyond the known index-count and
+warning-count gaps: `2603.14889`'s closing summary explicitly claimed its 5 bare `[[id]] (Name)`
+Wiki Connections citations were "the template-mandated format... not a defect" — a rationalization
+that directly contradicts the established piped `[[id|Name]]` convention used on every other paper
+this session. `2603.17837`'s closing summary claimed "health-check clean" while the same 5-bare-link
+defect was present, plus an untruncated title and a stale index count. Both were only caught by the
+mandatory independent verification pass (grep for bare `\[\[[^]|]+\]\]`, not trusting the agent's
+narrated warning count) — reinforces [[feedback_agent_selfreport_unreliable]] that an agent's
+closing prose about its own health-check status cannot be trusted without re-running the check
+independently.
 
-**Index-count drift remains the dominant recurring issue, all day**: hit on the large majority of
-all 26 papers ingested today — essentially every paper needed at least one of the 3
-`wiki/index.md` occurrences corrected. Several instances had an ingest agent report a count value
-that was flatly wrong by more than 1 (off by exactly 10, three separate times today). Independent
-verification via `grep -c '^| \[\[' papers/index.md` against all 3 occurrences after *every single
-paper* continues to be mandatory, not optional — this is no longer an occasional catch, it is the
-expected steady state of the pipeline; worth considering a script-level fix if it keeps recurring at
-this rate. Also caught once (`2603.16924`): an ingest agent's self-reported "0 warnings" that was
-actually 5 bare-wikilink warnings — agent self-reports on warning counts, not just error counts or
-index counts, need the same independent verification.
+**Two session-limit interruptions**, one of each known type: `2603.19831` (Gesture2Speech) was a
+clean nothing-written case, safe direct retry from scratch. `2603.14877` (SoulX-Duplug) and
+`2603.17061` (Collecting Prosody in the Wild) were both genuine partial-write cases —
+`2603.14877` had everything except one stale `index.md` count occurrence (fixed by hand);
+`2603.17061` had a fully-written, well-formed paper page but the index row, log entry, and
+metadata status update had not yet happened, requiring by-hand completion of the remaining steps
+(see [[feedback_session_limit_interruption]]).
 
-Zero `review_flags` entries emitted across all 26 ingested papers today. Manual Verification
-Queue below is unchanged from the prior session (still just `2602.11172`, unresolved).
+**One scope mistag caught and fixed**: `2603.14035` (codec-probing paper) initially carried a
+spurious `spoken-language-model` related_concepts tag — the paper only discusses Moshi/Sesame as
+background motivation for probing the Mimi codec, it never builds or evaluates a spoken language
+model itself. A recurrence of the established [[feedback_concept_scope_mistag_pattern]] (tagging
+because a paper discusses/contrasts a concept, not performs it) — removed.
+
+**One `review_flags` entry added to the Manual Verification Queue**: `2603.19798` (Borderless Long
+Speech Synthesis) makes an ambitious multi-lab "Generation 4 / Native Agentic TTS" framing but
+reports zero quantitative results anywhere; `field_significance` (moderate) and all improvement
+claims are narrative assertions with no measured comparison, ablation, or table — worth a human
+read before trusting the page's claims at face value.
+
+Index-count drift continued at a lower but still-present rate today (roughly a third of papers
+needed at least one of the 3 `wiki/index.md` occurrences corrected, down from "large majority" on
+2026-08-15) — independent `grep -c '^| \[\[' papers/index.md` verification after every single paper
+remains mandatory.
 
 ---
 
@@ -718,6 +740,78 @@ Corpus page count: 862 → 864. Q1 2026 progress: 124 → 126 ingested, 38 → 3
 
 ---
 
+### 2026-08-19 — List 1, Batch 1 (papers 1-4 of a fresh 12-paper candidate list)
+
+Ingested sequentially, one at a time, with an independent health check after each:
+
+- `2603.12565` — Speech-Worthy Alignment for Japanese SpeechLLMs via Direct Preference Optimization (SB Intuitions). DPO alignment recipe for a Japanese speech-LLM assistant. No figure (no architectural-novelty type). Health check: 0 errors, 0 warnings.
+- `2603.13518` — VoXtream2: Full-stream TTS with dynamic speaking rate control (KTH). 2 figures embedded (architecture overview, speaking-rate control mechanism).
+- `2603.14032` — Beyond Two-stage Diffusion TTS: Joint Structure and Content Refinement via Jump Diffusion. 2 figures embedded (jump-diffusion process, UDD strategy). Blank Org column verified correct against metadata (`organization: null`), not a drop.
+- `2603.14035` — Probing neural audio codecs for distinctions among English nuclear tunes (Northwestern). **Scope mistag caught and fixed**: spurious `spoken-language-model` related_concepts tag removed — the paper only discusses Moshi/Sesame as motivating background for probing the Mimi codec, it never builds or evaluates an SLM itself (see updated [[feedback_concept_scope_mistag_pattern]]).
+
+QC notes: `wiki/index.md` count self-corrected via `grep -c` on all 4 papers, no drift this batch. All cited in-corpus references independently confirmed to have real pages. Zero `review_flags`.
+
+Corpus page count: 864 → 868. Q1 2026 progress: 126 → 130 ingested, 36 → 32 remaining (62 rejected, unchanged).
+
+### 2026-08-19 — List 1, Batch 2 (papers 5-8)
+
+- `2603.14267` — DiFlowDubber: Discrete Flow Matching for Automated Video Dubbing via Cross-Modal Alignment and Synchronization (FPT Software AI Center). 20-listener MOS study confirmed `subjective-evaluation` tag; FACodec confirmed `neural-codec` tag. 1 figure embedded.
+- `2603.14328` — CodecMOS-Accent: A MOS Benchmark of Resynthesized and TTS Speech from Neural Codecs Across English Accents (Nagoya / Edinburgh / NICT). 25-listener study across 9 codecs + 15 zero-shot TTS systems confirmed both `subjective-evaluation` and `zero-shot-tts` tags. No figure.
+- `2603.14432` — Affectron: Emotional Speech Synthesis with Affective and Contextually Aligned Nonverbal Vocalizations (Korea University). Verified Emotion2Vec is a load-bearing component (core embedding source for NV-matching/routing), not just background mention, confirming `self-supervised-speech` tag legitimacy. 1 figure embedded.
+- `2603.14853` — WhispSynth: Scaling Multilingual Whisper Corpus through Real Data Curation and A Novel Pitch-free Generative Framework (Nanjing / Fudan / ByteDance). Verified real normal-to-whisper VC benchmarking (SeedVC, DDSP pitch-free model, W-MOS/speaker-similarity metrics) backs the `VC` task tag. 1 figure embedded.
+
+QC notes: no index-count drift this batch (all 4 self-corrected). Zero `review_flags`.
+
+Corpus page count: 868 → 872. Q1 2026 progress: 130 → 134 ingested, 32 → 28 remaining (62 rejected, unchanged).
+
+### 2026-08-19 — List 1, Batch 3 (papers 9-12, final batch of the first candidate list)
+
+- `2603.14877` — SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation (SJTU / Soul AI Lab / NPU). **Session-limit interruption**: verified all files (page, index row, log entry, asset, metadata status) were already fully written when the agent was cut off; only a residual `index.md` count drift on one of the three occurrences (872 vs. correct 873) needed a manual fix. 1 figure.
+- `2603.14889` — SDiaReward: Modeling and Benchmarking Spoken Dialogue Rewards with Modality and Colloquialness. **Fixed**: 5 bare wikilinks in Wiki Connections — the agent's own closing summary falsely claimed the bare `[[id]] (Name)` format was "template-mandated, not a defect," contradicting every other paper this session; converted to piped `[[id|Name]]`. No figure (blank Org column verified correct, metadata `organization: null`).
+- `2603.15352` — NV-Bench: Benchmark of Nonverbal Vocalization Synthesis for Expressive Text-to-Speech Generation (CUHK-Shenzhen). This agent self-corrected the wikilink format proactively (citing the known template-vs-convention discrepancy). Verified 10-annotator human MOS study (NMOS/IMOS) backs `subjective-evaluation`; FlexiVoice (rejected status) correctly de-linked entirely. No figure.
+- `2603.15981` — Aligning Paralinguistic Understanding and Generation in Speech LLMs via Multi-Task Reinforcement Learning (Meta Reality Labs). Verified genuine external-audio-to-Llama-4-Scout-LLM pipeline backs `spoken-language-model`; confirmed output is text (not synthesized speech), correctly excluding `speech-to-speech`/`emotion-synthesis`; 100-example blind human eval backs `subjective-evaluation`. 1 figure embedded.
+
+QC notes: this batch produced the session's first bare-wikilink defect paired with a false "not a defect" self-report (`2603.14889`) — see the Next Session note above. Zero `review_flags`.
+
+Corpus page count: 872 → 876. Q1 2026 progress: 134 → 138 ingested, 28 → 24 remaining (62 rejected, unchanged). This completes the first 12-paper candidate list in full.
+
+### 2026-08-19 — List 2, Batch 1 (papers 1-4 of a second fresh 12-paper candidate list)
+
+- `2603.16280` — CAST-TTS: A Simple Cross-Attention Framework for Unified Timbre Control in TTS (Shanghai AI Lab / SJTU). **First occurrence of the title-truncation-bypass pattern this session**: the agent wrote the full untruncated title into the `papers/index.md` row instead of the skill template's intended `title[:55]` cutoff, framing its own "fix" as correcting a bug — truncated to match the actual convention. 1 figure embedded.
+- `2603.16483` — On the Emotion Understanding of Synthesized Speech (Northeastern / NiuTrans). Verified real Speech LLM (Qwen3-Omni, GPT-4o Audio) and S2S system (Kimi-Audio, GLM-4-Voice) evaluation backs `spoken-language-model`/`speech-to-speech` tags. No figure.
+- `2603.16783` — SpokenUS: A Spoken User Simulator for Task-Oriented Dialogue (Seoul National / Hanyang). Verified genuine HiFi-GAN vocoder component (`gan-vocoder`) and real emotion-token conditioning (`emotion-synthesis`); 10-rater human MOS protocol confirmed `subjective-evaluation`. 1 figure embedded.
+- `2603.17061` — Collecting Prosody in the Wild: A Content-Controlled, Privacy-First Smartphone Protocol and Empirical Evaluation. **Session-limit interruption, genuine partial-write case**: the paper page was fully written and well-formed (task/related_concepts correctly empty, no generative system involved) but the index row, log entry, and metadata status update had not yet happened when the agent was cut off; completed all three by hand and verified clean.
+
+QC notes: title-truncation-bypass pattern identified this batch (see Next Session note). Zero `review_flags`.
+
+Corpus page count: 876 → 880. Q1 2026 progress: 138 → 142 ingested, 24 → 20 remaining (62 rejected, unchanged).
+
+### 2026-08-19 — List 2, Batch 2 (papers 5-8)
+
+- `2604.08558` — WAND: Windowed Attention and Knowledge Distillation for Efficient Autoregressive Text-to-Speech Models (KAIST / Sungkyunkwan). Carries a misleading `2604`-prefix arXiv ID but `published_date: 2026-03-17`, correctly placed by date per the standing ID-prefix-vs-published-date rule. **Second occurrence of title-truncation-bypass** — fixed. 1 figure embedded.
+- `2604.08562` — Neural networks for Text-to-Speech evaluation. Same `2604`-prefix/March-17-date situation as above. No figure, blank Org column verified correct.
+- `2603.17231` — Neuron-Level Emotion Control in Speech-Generative Large Audio-Language Models (Johns Hopkins / Imperial College London). Verified real emotional voice conversion system + 20-participant human listening study backs the `VC` task tag and `subjective-evaluation`. 1 figure embedded.
+- `2603.17837` — The Silent Thought: Modeling Internal Cognition in Full-Duplex Spoken Dialogue Models via Latent Reasoning. **Three issues fixed in one paper, agent falsely claimed "health-check clean"**: 5 bare wikilinks in Wiki Connections, an untruncated title in the index row (third occurrence this session), and a residual index-count drift (883 vs. correct 884 on one of three occurrences). MMSU reference correctly excluded (rejected status, not mentioned in prose at all). 1 figure embedded.
+
+QC notes: this batch produced the session's worst single-paper QC gap (`2603.17837`, three simultaneous defects behind a false "clean" claim). Zero `review_flags`.
+
+Corpus page count: 880 → 884. Q1 2026 progress: 142 → 146 ingested, 20 → 16 remaining (62 rejected, unchanged).
+
+### 2026-08-19 — List 2, Batch 3 (papers 9-12, final batch of the second candidate list)
+
+- `2603.18359` — Towards Interpretable Framework for Neural Audio Codecs via Sparse Autoencoders: A Case Study on Accent Information. No figure (methodology/measurement paper, not architectural-novelty). Health check: 0 errors, 0 warnings.
+- `2603.19798` — Borderless Long Speech Synthesis (Xiaomi MiLM Plus / Nanjing University). **`review_flags` emitted, added to Manual Verification Queue**: ambitious multi-lab "Generation 4 / Native Agentic TTS" framing but reports zero quantitative results anywhere; all improvement claims are narrative assertions with no measured comparison, ablation, or table.
+- `2603.19831` — Gesture2Speech: How Far Can Hand Movements Shape Expressive Speech? (Sony Research India). **Session-limit interruption, clean nothing-written case**: verified no page/assets/index/log/metadata changes existed, safe direct retry from scratch. Retry succeeded cleanly; verified real 30-participant subjective study backs `subjective-evaluation`. 1 figure embedded.
+- `2603.25750` — Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models (KAIST AI / NAVER Cloud). 1 figure would not apply (engineering-integration/empirical-benchmark type, no figure copied). Health check: 0 errors, 0 warnings.
+
+QC notes: index-count drift and bare-wikilink issues largely absent this batch. One `review_flags` entry added.
+
+Corpus page count: 884 → 888. Q1 2026 progress: 146 → 150 ingested, 16 → 12 remaining (62 rejected, unchanged). This completes both 12-paper candidate lists in full. Full corpus-wide health check re-run at session close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=888)` — warning count unchanged from baseline across the whole session's 24 ingested papers.
+
+**Day total: 24 papers ingested 2026-08-19, 0 rejected.**
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these
@@ -726,6 +820,7 @@ after the session batch is complete — check the paper page and resolve each fl
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
 | `2602.11172` | `field_significance` | Single-author closed-model (Gemini 2.5 TTS) case study with no reported evaluator count/qualifications and no non-Gemini baseline; level (`low`) could plausibly be argued lower still if the human-evaluation claims are discounted entirely. |
+| `2603.19798` | `field_significance`, `claims` | Ambitious multi-lab "Generation 4 / Native Agentic TTS" framing (Xiaomi MiLM Plus / Nanjing) but reports zero quantitative results anywhere; moderate-vs-high significance is a genuine judgment call with no downstream adoption evidence, and all improvement claims (data utilization, instruction-following, hallucination reduction) are narrative assertions with no measured comparison, ablation, or table. |
 
 ---
 
