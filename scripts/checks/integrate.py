@@ -33,7 +33,8 @@ DEFAULT_STALENESS_DAYS = 180
 
 REQUIRED_TOP_KEYS = ["concept", "last_updated", "paper_count", "papers"]
 REQUIRED_PAPER_FIELDS = [
-    "id", "entry_date", "year", "venue", "relevance", "evidence_role", "current_role", "claims",
+    "id", "published_date", "entry_date", "year", "venue", "relevance", "evidence_role",
+    "current_role", "claims",
 ]
 REQUIRED_CLAIM_FIELDS = [
     "claim_id", "role", "claim", "source", "evidence", "confidence", "relevance",
@@ -135,6 +136,8 @@ def _valid_date(value) -> bool:
         return True
     if not isinstance(value, str):
         return False
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) is None:
+        return False
     try:
         datetime.strptime(value, "%Y-%m-%d")
         return True
@@ -159,6 +162,39 @@ def _detect_phase(data: dict, forced_phase: int | None) -> int:
     if forced_phase is not None:
         return forced_phase
     return 2 if data.get("claim_clusters") else 1
+
+
+def _check_published_date(ref: str, value: object, metadata: dict | None) -> list[Issue]:
+    issues: list[Issue] = []
+    if not _valid_date(value):
+        issues.append(_issue(
+            "error", ref, "published_date_valid",
+            f"published_date missing or invalid: {value!r}",
+        ))
+        return issues
+
+    if metadata is None:
+        return issues
+    canonical_value = metadata.get("published_date")
+    if not _valid_date(canonical_value):
+        issues.append(_issue(
+            "error", ref, "published_date_canonical",
+            f"canonical metadata published_date missing or invalid: {canonical_value!r}",
+        ))
+        return issues
+
+    actual = _as_date(value)
+    canonical = _as_date(canonical_value)
+    if actual != canonical:
+        issues.append(_issue(
+            "error", ref, "published_date_canonical",
+            f"published_date {_iso(actual)!r} does not match canonical metadata {_iso(canonical)!r}",
+        ))
+    return issues
+
+
+def _iso(value: date | None) -> str | None:
+    return value.isoformat() if value is not None else None
 
 
 # ---------------------------------------------------------------------------
@@ -217,6 +253,7 @@ def _check_phase1(slug: str, data: dict, papers: list, metadata: dict, claims_vo
                 issues.append(_issue("error", ref, "vocabulary_paper_level", f"Invalid evidence_role: {er!r}"))
 
         meta = metadata.get(pid)
+        issues.extend(_check_published_date(ref, p.get("published_date"), meta))
         if meta is None:
             issues.append(_issue("error", ref, "paper_ids_exist", f"No raw/metadata/{pid}.json found"))
         else:

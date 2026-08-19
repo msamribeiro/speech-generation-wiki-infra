@@ -258,8 +258,9 @@ script — this module was implemented directly instead).
 | `paper_count_matches` | error | `paper_count` must equal `len(papers)` |
 | `no_duplicate_paper_ids` | error | No two entries in `papers` may share the same `id` |
 | `paper_id_is_string` | error | Each paper entry's `id` must parse as a YAML string, not a float — unquoted arXiv-style IDs (e.g. `1412.6980`) parse as floats and silently lose trailing zeros, corrupting every downstream lookup |
-| `paper_entry_required_fields` | error | Each paper entry must have: `id`, `entry_date`, `year`, `venue`, `relevance`, `evidence_role`, `current_role`, `claims` |
-| `published_date_canonical` | error | After the temporal migration, every paper entry must contain an ISO publication date matching canonical paper frontmatter or metadata |
+| `paper_entry_required_fields` | error | Each paper entry must have: `id`, `published_date`, `entry_date`, `year`, `venue`, `relevance`, `evidence_role`, `current_role`, `claims` |
+| `published_date_valid` | error | Every paper entry must contain an exact ISO `YYYY-MM-DD` publication date |
+| `published_date_canonical` | error | Every paper-entry date must match canonical metadata; migration additionally requires agreement with paper frontmatter before writing |
 | `entry_date_present` | error | `entry_date` must be non-null and a valid date (string or YAML date/datetime) |
 | `claim_required_fields` | error | Each claim under a paper entry must have: `claim_id`, `role`, `claim`, `source`, `evidence`, `confidence`, `relevance` |
 | `claim_source_nonnull` | error | Every claim's `source` field must be non-null and non-empty |

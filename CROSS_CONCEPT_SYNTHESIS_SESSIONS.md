@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 2 complete; temporal migration is next
+**Status:** Phase 3 complete; reconciliation infrastructure is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -301,13 +301,13 @@ and no content data has yet changed.
 
 ### Phase 3 — Temporal migration
 
-- [ ] Implement an idempotent backfill tool with `--dry-run` and explicit apply mode.
-- [ ] Resolve dates from canonical sources and report missing or conflicting values.
-- [ ] Add `published_date` to all 2,226 starting concept paper entries.
-- [ ] Require it for new Phase 1 integration entries.
-- [ ] Extend integrate health checks for presence, ISO date validity, and canonical agreement.
-- [ ] Prove a second migration run produces no diff.
-- [ ] Prove paper counts, claims, families, evidence roles, and all other fields are unchanged.
+- [x] Implement an idempotent backfill tool with `--dry-run` and explicit apply mode.
+- [x] Resolve dates from canonical sources and report missing or conflicting values.
+- [x] Add `published_date` to all 2,226 starting concept paper entries.
+- [x] Require it for new Phase 1 integration entries.
+- [x] Extend integrate health checks for presence, ISO date validity, and canonical agreement.
+- [x] Prove a second migration run produces no diff.
+- [x] Prove paper counts, claims, families, evidence roles, and all other fields are unchanged.
 
 **Gate:** Zero missing or conflicting dates across 23 YAMLs; integrate health passes with no new
 errors; the migration diff contains only `published_date` additions.
@@ -429,9 +429,9 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 3 — Temporal migration.
-**Next action:** Implement an idempotent `published_date` backfill with dry-run and explicit apply
-mode, then prove the migration changes only date fields and agrees with canonical sources.
+**Current phase:** Phase 4 — Reconciliation infrastructure.
+**Next action:** Implement deterministic advisory candidate generation and the dedicated
+reconciliation health module, then create the empty registry and generated Q3 run record.
 
 Baseline commits recorded at bootstrap:
 
@@ -528,3 +528,23 @@ evaluation-themed candidate batch.
   with 0 errors and 0 warnings across 8 workflows.
 - Confirmed no content-repository files changed during Phase 2.
 - Next: Phase 3 temporal migration.
+
+### 2026-08-19 — Phase 3 temporal migration
+
+- Audited all 2,226 concept paper entries across 23 YAMLs (497 unique papers) against canonical
+  metadata and paper frontmatter: zero missing metadata dates, missing pages, missing page dates,
+  source conflicts, or pre-existing claim dates.
+- Added `scripts/backfill_claim_published_dates.py` with mutually exclusive required `--dry-run`
+  and `--apply` modes. The tool inserts one quoted date line after each paper ID and preserves all
+  other bytes.
+- Added canonical date checks to the integrate health module: required field, exact ISO validity,
+  and agreement with metadata.
+- Added focused migration and health-check tests; all 24 repository unit tests pass.
+- Applied 2,226 date additions across all 23 concept YAMLs. A second apply changed 0 files.
+- Compared every migrated YAML with its committed predecessor after removing `published_date`:
+  semantic state is identical. The raw diff contains 2,226 additions and zero removals, and every
+  addition is a `published_date` line.
+- Ran integrate health across all concepts: 0 errors and the same 241 pre-existing warnings;
+  counts remain 2,226 paper entries, 406 clusters, 280 strongly supported, and 14 contested.
+- Logged the migration in the content changelog with runtime provenance.
+- Next: Phase 4 reconciliation infrastructure.
