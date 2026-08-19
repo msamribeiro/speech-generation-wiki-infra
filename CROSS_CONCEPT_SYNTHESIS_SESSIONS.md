@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 3 complete; reconciliation infrastructure is next
+**Status:** Phase 4 complete; Q3 evaluation pilot is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -314,12 +314,12 @@ errors; the migration diff contains only `published_date` additions.
 
 ### Phase 4 — Reconciliation infrastructure
 
-- [ ] Implement deterministic candidate generation and tests.
-- [ ] Add a dedicated reconciliation health module.
-- [ ] Create an empty valid registry and a Q3 run record containing generated candidates.
-- [ ] Validate qualified references, vocabulary, unique broader IDs, cycles, decision completeness,
+- [x] Implement deterministic candidate generation and tests.
+- [x] Add a dedicated reconciliation health module.
+- [x] Create an empty valid registry and a Q3 run record containing generated candidates.
+- [x] Validate qualified references, vocabulary, unique broader IDs, cycles, decision completeness,
       reciprocal membership, incompatible canonical memberships, and paper deduplication.
-- [ ] Report unresolved high-similarity candidates as warnings; broken structure is an error.
+- [x] Report unresolved high-similarity candidates as warnings; broken structure is an error.
 
 **Gate:** Generator output is byte-stable for identical inputs; all references validate; no command
 accepts or mutates registry relationships automatically.
@@ -429,9 +429,9 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 4 — Reconciliation infrastructure.
-**Next action:** Implement deterministic advisory candidate generation and the dedicated
-reconciliation health module, then create the empty registry and generated Q3 run record.
+**Current phase:** Phase 5 — Q3 pilot and full reconciliation.
+**Next action:** Review the evaluation-themed candidate batch first, record explicit dispositions
+and rationales, and validate field-render behavior against any accepted pilot relationships.
 
 Baseline commits recorded at bootstrap:
 
@@ -444,6 +444,11 @@ Current working commits after the 2026-08-13 setup refresh:
   of freshly fetched `origin/main`.
 - Content: `babd6cd`, branch `work/integrate`, equal to local `main` and one commit ahead of
   freshly fetched `origin/main`.
+
+Phase 4 commits:
+
+- Infrastructure: `081567b` (`Implement reconciliation candidate infrastructure`).
+- Content: `0f6fcb5` (`Generate Q3 reconciliation candidates`).
 
 Content checkout:
 
@@ -548,3 +553,27 @@ evaluation-themed candidate batch.
   counts remain 2,226 paper entries, 406 clusters, 280 strongly supported, and 14 contested.
 - Logged the migration in the content changelog with runtime provenance.
 - Next: Phase 4 reconciliation infrastructure.
+
+### 2026-08-19 — Phase 4 reconciliation infrastructure
+
+- Added deterministic canonical digests, qualified-reference utilities, TF-IDF and component
+  scoring, stable candidate IDs, theme classification, and cycle detection.
+- Added an advisory generator with required dry-run/apply modes, clean-worktree enforcement for
+  apply, source commit and concept digest provenance, overwrite refusal, and no path that accepts
+  relationships automatically.
+- Added the dedicated reconcile health module and CLI scoping. It validates registry, run, and
+  snapshot structure; references; vocabularies; IDs; directed cycles; broader evidence derivation
+  and deduplication; decision completeness; accepted-decision reciprocity; stable ordering; source
+  digests; and unresolved-candidate warnings.
+- Added focused positive and defect tests. All 29 repository unit tests pass.
+- Scored 78,475 cross-concept pairs from all 406 clusters across 23 concepts. The top-neighbor
+  union contained 4,233 candidates; 2,049 pairs shared at least two supporting papers.
+- Preserved all 2,049 shared-evidence candidates despite the nominal 500-pair cap, as required by
+  policy. No shared-evidence candidate was excluded.
+- Proved repeated output is byte-identical and exactly matches the written run record.
+- Created the empty valid registry and in-progress `2025-Q3` run. Reconcile health passes with
+  0 errors and one expected warning for 2,049 pending candidates; no relationship or broader claim
+  has been accepted yet.
+- Logged candidate generation in the content changelog and committed infrastructure and content
+  separately.
+- Next: Phase 5 evaluation-focused pilot review.
