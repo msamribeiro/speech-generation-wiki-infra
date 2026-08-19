@@ -114,6 +114,7 @@ generator:
 
 diagnostics:
   cross_concept_pairs: 1000
+  pre_cap_candidates: 180
   emitted_candidates: 120
   shared_evidence_candidates: 8
   score_distribution:
@@ -123,15 +124,18 @@ diagnostics:
   cap_excluded_shared_evidence: false
 
 candidates:
-  - id: cand_{stable_pair_slug}
+  - id: cand_{first_16_hex_of_pair_sha256}
     left: concept-a#cluster-a
     right: concept-b#cluster-b
     theme: evaluation
     signals:
       text_similarity: 0.82
+      shared_evidence_score: 0.50
       shared_supporting_papers: [paper-a, paper-b]
       status_compatible: true
       polarity_compatible: true
+      status_polarity_score: 1.0
+      technical_vocabulary_score: 0.33
       shared_terms: [speaker-similarity]
       aggregate_score: 0.88
     disposition: accepted
@@ -159,7 +163,9 @@ Run vocabulary:
 Candidate rules:
 
 - `left` is lexically smaller than `right`, regardless of directed relationship semantics;
-- candidate IDs and ordering are deterministic for identical source digests and configuration;
+- candidate IDs are `cand_` plus the first 16 hexadecimal characters of SHA-256 over the
+  lexically ordered qualified-reference pair separated by a newline; ordering is deterministic
+  for identical source digests and configuration;
 - all component signals are present; shared paper and term lists are sorted and unique;
 - `pending` is allowed only while the run is `in_progress`;
 - `accepted` requires a relationship, registry target, and rationale;

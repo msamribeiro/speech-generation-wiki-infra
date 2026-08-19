@@ -314,7 +314,7 @@ and the four open implementation questions (all resolved 2026-07-15).
 
 ## 6A. Reconcile Module
 
-**File:** `scripts/checks/reconcile.py` (planned for Phase 4)
+**File:** `scripts/checks/reconcile.py`
 **Reads:** `wiki/_claims/*.yaml`, `wiki/_claims/_reconciliation/`, canonical paper dates
 **Scope:** Registry-wide or one run/snapshot ID
 

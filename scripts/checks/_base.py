@@ -8,6 +8,7 @@ class CheckArgs:
     wiki_dir: Path | None = None
     concept: str | None = None
     phase: int | None = None
+    reconciliation_id: str | None = None
 
 
 @dataclass

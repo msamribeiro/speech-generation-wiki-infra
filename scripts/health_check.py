@@ -24,12 +24,14 @@ from checks._base import CheckArgs, ModuleResult
 from checks import agents as _agents
 from checks import ingest as _ingest
 from checks import integrate as _integrate
+from checks import reconcile as _reconcile
 from checks import render as _render
 
 AVAILABLE_MODULES = {
     "agents": _agents,
     "ingest": _ingest,
     "integrate": _integrate,
+    "reconcile": _reconcile,
     "render": _render,
 }
 
@@ -89,6 +91,12 @@ def main() -> None:
         default=None,
         help="Force Phase 1 or Phase 2 checks (integrate only); default auto-detects per YAML",
     )
+    parser.add_argument(
+        "--reconciliation-id",
+        dest="reconciliation_id",
+        default=None,
+        help="Scope reconcile checks to one run or snapshot ID",
+    )
     args = parser.parse_args()
 
     module_names = [m.strip() for m in args.module.split(",") if m.strip()]
@@ -97,7 +105,13 @@ def main() -> None:
         parser.error(f"Unknown module(s): {', '.join(unknown)}. Available: {', '.join(AVAILABLE_MODULES)}")
 
     wiki_dir = Path(args.wiki_dir) if args.wiki_dir else None
-    check_args = CheckArgs(paper_id=args.paper_id, wiki_dir=wiki_dir, concept=args.concept, phase=args.phase)
+    check_args = CheckArgs(
+        paper_id=args.paper_id,
+        wiki_dir=wiki_dir,
+        concept=args.concept,
+        phase=args.phase,
+        reconciliation_id=args.reconciliation_id,
+    )
 
     all_passed = True
     for name in module_names:

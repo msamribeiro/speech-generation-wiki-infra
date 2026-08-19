@@ -32,3 +32,8 @@ integrate:
 
   # cluster_last_reviewed warning threshold (Phase 2)
   cluster_staleness_days: 180
+
+reconcile:
+  # Pending or deferred candidates at or above this aggregate score remain visible
+  # as advisory health warnings until a reviewer resolves them.
+  high_similarity_warning_threshold: 0.65
