@@ -43,23 +43,34 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-2026-08-19 processed two fresh 12-paper candidate lists across 6 batches of 4, totalling **24
-papers ingested**, 0 rejected. Q1 2026 progress at end of day: 150 ingested, 12 remaining, 62
-rejected (224 total in scope, unchanged — no new fetch/filter activity today). Corpus 864 → 888
-pages, 0 errors / 1171 warnings (unchanged baseline) at final health check.
+**Q1 2026 (January–March) ingestion is COMPLETE as of 2026-08-22: 162 ingested, 0 remaining, 62
+rejected, 224 total in scope.** Corpus reached 900 pages, 0 errors corpus-wide throughout. This
+file's job is done for Q1 2026; treat it as a closed historical record and protocol reference
+(the Methodology, QC checklist, tagging rules, and precedent-chain sections below remain valid
+and reusable for future quarters).
 
-To start the next session: re-run the progress-count script first to confirm current counts (only
-12 papers should remain in scope), then build a final chronological candidate list starting from
-the earliest remaining Q1 2026 `accepted` paper by `published_date`. The last-ingested paper today
-was `2603.25750` (published_date 2026-03-20); as of day close the remaining 12 papers span
-`2603.20638` (OmniCodec) through `2604.01247` (published_date 2026-03-31) — verify this list is
-still current before using it, since more papers may have been fetched/filtered since. Two of the
-remaining papers (`2604.03279`, `2604.01247`) carry misleading `2604`-prefix arXiv IDs with earlier
-`published_date`s (2026-03-24 and 2026-03-31 respectively) — sort by `published_date`, not ID
-prefix, same as the `2604.08558`/`2604.08562` precedent from today.
+**To start Q2 2026 (April–June):** fetch and filter are not yet run for this window. Before any
+ingest session can begin, someone needs to (a) top up the arXiv/ACL/ISCA/OpenReview fetchers for
+the April–June 2026 date range per the "Extending the corpus" commands in `STATUS.md` (itself
+stale since 2026-06-18 and due for a refresh once fetch resumes), (b) run the filter agent on any
+new pending papers, then (c) bootstrap a fresh `Q2_INGESTION_SESSIONS.md` from this file the same
+way this file was bootstrapped from the Q4 2025 record (see the note at the top of this file) —
+carry forward the Methodology/QC/tagging sections verbatim, drop the historical Session Log
+narrative. Do not start ingesting Q2 2026 papers against this file.
 
-**Cadence note:** all 6 batches today used sequential batches of 4, no user-requested cadence
-changes. Default remains batches-of-4 unless told otherwise.
+**2026-08-22 session summary (batches 1-3, the final 12-paper list):** all 12 papers ingested
+sequentially in 3 batches of 4, 0 rejected, one session-limit interruption (clean retry). QC catches
+this session: a `task` frontmatter quoting-drift fix, a concept-scope mistag removal
+(`autoregressive-codec-tts` on a non-codec AR model), two index-row blank-Org-column fixes, one
+architecture/related_concepts mismatch fix (`transformer-enc-dec-tts` omitted despite the
+architecture tag), one internally-inconsistent index-count-drift fix (agent's own update left one
+of 3 occurrences stale), one agent-self-report failure (7 bare wikilinks despite a "checks out"
+claim), and one minor Org-column truncation fix. See the Batch 1/2/3 Session Log entries below for
+full detail. All of these recur precedents already tracked in this file's Methodology section and
+in Claude auto-memory — no new failure classes emerged today.
+
+**Cadence note:** all batches this session and on 2026-08-19 used sequential batches of 4, no
+user-requested cadence changes. Default remains batches-of-4 unless told otherwise.
 
 **New recurring-issue class found today: title-truncation-bypass.** `papers/index.md` rows use a
 deliberate hard 55-character truncation (`title[:55]` in the ingest skill's own row-generation
@@ -810,6 +821,43 @@ Corpus page count: 884 → 888. Q1 2026 progress: 146 → 150 ingested, 16 → 1
 
 **Day total: 24 papers ingested 2026-08-19, 0 rejected.**
 
+### 2026-08-22 — Batch 1 (papers 1-4 of the final 12-paper list)
+
+- `2603.20638` — OmniCodec: Low Frame Rate Universal Audio Codec with Semantic-Acoustic Disentanglement (Northwestern Polytechnical University). 1 figure embedded (architecture overview). Health check: 0 errors, 0 warnings.
+- `2603.20743` — The Binding Effect: Analyzing How Multi-Dimensional Cues Form Gender Bias in Instruction TTS (National Taiwan University / Inventec). No figure (evaluation-methodology paper). **`task` frontmatter quoting drift caught and fixed** (`["TTS", "evaluation"]` → `[TTS, evaluation]`), instance of the known corpus-wide drift tracked in BACKLOG.md. **`review_flags` emitted, added to Manual Verification Queue**: the "generic diversity prompting is insufficient" mitigation claim has no dedicated experimental section/table backing it in the parsed (short, 5-page) paper.
+- `2603.21078` — Assessing the Ability of Neural TTS Systems to Model Consonant-Induced F0 Perturbation (no organization reported). No figure (all source figures are GAMM result plots). **Concept-scope mistag caught and fixed**: agent tagged `autoregressive-codec-tts` for evaluating Tacotron 2, but that concept is scoped to neural-codec-token autoregression (VALL-E-style), not classic mel-frame AR acoustic models — removed the tag and its Wiki Connections bullet; `transformer-enc-dec-tts` (FastSpeech 2) and `prosody-control` retained as correctly scoped. Recurrence of [[feedback_concept_scope_mistag_pattern]].
+- `2603.22252` — SelfTTS: cross-speaker style transfer through explicit embedding disentanglement and self-refinement using self-augmentation (UNICAMP / CPQD). 1 figure embedded (architecture diagram). `voice-conversion` tag checked against [[feedback_vc_task_tagging]]-adjacent concern (VC used only as an internal self-augmentation mechanism, not the paper's primary evaluated contribution) and kept: the model's invertible-flow VC capability is genuinely implemented and exploited in the pipeline, not merely discussed, and the Wiki Connections prose accurately scopes it as a mechanism rather than overclaiming a dedicated VC contribution. Health check: 0 errors, 0 warnings.
+
+QC notes: index-count drift (`grep -c '^| \[\['` vs. `ls papers/*.md | wc -l`) matched cleanly after every paper this batch (889→890→891→892, all 3 `index.md` occurrences consistent each time); no bare wikilinks; no title-truncation issues.
+
+Corpus page count: 888 → 892. Q1 2026 progress: 150 → 154 ingested, 12 → 8 remaining (62 rejected, unchanged).
+
+### 2026-08-22 — Batch 2 (papers 5-8 of the final 12-paper list)
+
+- `2603.22267` — TiCo: Time-Controllable Spoken Dialogue Model (MIT / National Taiwan University). 1 figure embedded (two-stage framework overview). **`review_flags` emitted, added to Manual Verification Queue**: `field_significance` sits at the moderate/high boundary. Health check: 0 errors, 0 warnings.
+- `2604.03279` — Rewriting TTS Inference Economics: Lightning V2 on Tenstorrent (Smallest AI). Misleading `2604`-prefix ID, actual `published_date` 2026-03-24 (earlier than `2603.23938`/`2603.24116`) — sorted correctly by date per the established prefix-vs-date rule. No figure (engineering-integration/negative-result type). Health check: 0 errors, 0 warnings.
+- `2603.23938` — OmniACBench: A Benchmark for Evaluating Context-Grounded Acoustic Control (Hanyang / SNU / KAIST AI / NAVER Cloud). No figure (benchmark paper). Citation integrity handled correctly by the agent: two in-corpus refs (`2502.17810`, `2511.08723`) are `rejected` and were fully excluded; one (`2503.05085`) is `accepted`-but-unwritten and was kept in `related_papers` frontmatter with prose de-linked. **Index row completeness bug caught and fixed**: blank Org column despite a valid frontmatter `organization` field — recurrence of [[feedback_index_row_completeness]].
+- `2603.24116` — How Open is Open TTS? A Practical Evaluation of Open Source TTS Tools (POLITEHNICA Bucharest / Technical University of Cluj-Napoca). No figure (empirical-benchmark type). **Architecture/related_concepts mismatch caught and fixed**: `architecture: [transformer-enc-dec, ...]` (FastPitch is genuinely trained and evaluated) but `transformer-enc-dec-tts` was missing from `related_concepts` — added the tag and a Wiki Connections bullet. Same failure class as [[feedback_task_related_concepts_mismatch]], this time on `architecture` rather than `task`.
+
+QC notes: also re-checked the Org column on `2603.21078` from Batch 1 while investigating the `2603.23938` case above — same blank-Org-despite-valid-frontmatter bug was present there too and is now fixed retroactively. All 6 other Batch 1/2 papers had correct Org columns. Index-count drift matched cleanly after every paper this batch (892→893→894→895→896).
+
+Corpus page count: 892 → 896. Q1 2026 progress: 154 → 158 ingested, 8 → 4 remaining (62 rejected, unchanged).
+
+### 2026-08-22 — Batch 3 (papers 9-12, final batch — completes Q1 2026 ingestion)
+
+- `2603.24144` — Semantic-Aware Interruption Detection in Spoken Dialogue Systems (Qwen Team, Alibaba). **Session-limit interruption, clean nothing-written case**: verified no page/assets/index/log/metadata changes existed before retry, safe direct retry from scratch. Retry succeeded cleanly, 0 errors/0 warnings. No figure (benchmark/metric/model paper, no architectural-novelty type).
+- `2603.24430` — Iterate to Differentiate: Enhancing Discriminability and Reliability in Zero-Shot TTS Evaluation (Nanjing University / MiLM Plus (Xiaomi) / HKUST). No figure (evaluation-methodology paper). **Agent self-report unreliable again**: closing summary claimed "everything checks out" but independent health check found 7 bare `[[id]] (Name)` Wiki Connections citations — fixed to piped `[[id|Name]]` format. Recurrence of [[feedback_agent_selfreport_unreliable]] and the bare-wikilink pattern from 2026-08-19.
+- `2603.24589` — YingMusic-Singer-Plus: Controllable Singing Voice Synthesis (Northwestern Polytechnical University (ASLP@NPU) / GiantNetwork AI Lab). 1 figure embedded (model + GRPO pipeline). **Index-count drift caught and fixed**: the abstract-callout occurrence (line 20) was left at 898 while the other two occurrences correctly showed 899 — the agent's own count update was internally inconsistent, not just stale. Recurrence of [[feedback_index_count_drift]].
+- `2604.01247` — Combining Masked Language Modeling and Cross-Modal Contrastive Learning for Prosody-Aware TTS (MTUCI, Moscow, Russia). 1 figure embedded (prosody-encoder architecture). Minor index-row inconsistency fixed: Org column showed the truncated "MTUCI" while frontmatter `organization` was the fuller "MTUCI, Moscow, Russia" — corrected to match. This is the final Q1 2026 paper by `published_date`; corpus count reached 900 pages.
+
+QC notes: one session-limit interruption (clean retry), one self-report/bare-wikilink miss, one internally-inconsistent index-count drift, one minor Org-column truncation — four distinct QC catches across four papers, none corpus-wide (all caught and fixed before moving on).
+
+Corpus page count: 896 → 900. Q1 2026 progress: 158 → 162 ingested, 4 → 0 remaining (62 rejected, unchanged).
+
+**Q1 2026 (January–March 2026) ingestion is now COMPLETE: 162 ingested, 0 remaining, 62 rejected, 224 total in scope.** Full corpus-wide health check at session close: `[ingest] PASS (0 errors, 1171 warnings | papers_checked=900)` — warning count unchanged from the established baseline across this session's 12 ingested papers.
+
+**Day total: 12 papers ingested 2026-08-22, 0 rejected. This closes out the final 12-paper Q1 2026 candidate list in full.**
+
 ---
 
 ## Manual Verification Queue
@@ -821,6 +869,8 @@ after the session batch is complete — check the paper page and resolve each fl
 |----------|------|------------|
 | `2602.11172` | `field_significance` | Single-author closed-model (Gemini 2.5 TTS) case study with no reported evaluator count/qualifications and no non-Gemini baseline; level (`low`) could plausibly be argued lower still if the human-evaluation claims are discounted entirely. |
 | `2603.19798` | `field_significance`, `claims` | Ambitious multi-lab "Generation 4 / Native Agentic TTS" framing (Xiaomi MiLM Plus / Nanjing) but reports zero quantitative results anywhere; moderate-vs-high significance is a genuine judgment call with no downstream adoption evidence, and all improvement claims (data utilization, instruction-following, hallucination reduction) are narrative assertions with no measured comparison, ablation, or table. |
+| `2603.20743` | `claims` | "Generic diversity prompting is insufficient" mitigation claim from the abstract/introduction has no dedicated experimental section or table in the parsed (short, 5-page) paper to cite as direct evidence. |
+| `2603.22267` | `field_significance` | Level sits at the moderate/high boundary; introduces both a novel two-stage training mechanism and the first benchmark for this capability with strong results, but how central duration-control will prove for the field is not resolvable from the paper alone. |
 
 ---
 

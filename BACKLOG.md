@@ -9,7 +9,7 @@ Resume standard corpus ingest and clear the integration backlog.
 - [x] Ingest 2 deferred ICLR 2025 papers: `iclr-2025-hQvX9MBowC` (DiTTo-TTS), `iclr-2025-uxDFlPGRLX` (FlowDec) *(completed 2026-06-30)*
 - [x] Continue chronological ingest of remaining accepted papers through end of Q3 2025 — COMPLETE 2026-07-17 (session 13): 364 ingested, 0 remaining, 107 rejected, 471 total in scope; corpus reached 592 pages, 0 errors corpus-wide throughout; full session log archived at `docs/records/2026-07-17-q3-2025-ingestion-sessions.md` *(completed 2026-07-17)*
 - [x] Continue chronological ingest of Q4 2025 (October–December) accepted papers — COMPLETE 2026-08-02 (session 20): 180 ingested, 0 remaining, 67 rejected, 247 total in scope (includes `2510.12116`, resolved rejected 2026-08-02 after being left pending since session 15); corpus reached 745 pages, 0 errors corpus-wide throughout; full session log archived at `docs/records/2026-08-02-q4-2025-ingestion-sessions.md` *(completed 2026-08-02)*
-- [ ] Continue chronological ingest of Q1 2026 (January–March) accepted papers — in progress; 150 ingested, 12 remaining, 62 rejected, 224 total in scope as of 2026-08-19 (fetch+filter fully complete); protocol and cadence at `Q1_INGESTION_SESSIONS.md`
+- [x] Continue chronological ingest of Q1 2026 (January–March) accepted papers — COMPLETE 2026-08-22: 162 ingested, 0 remaining, 62 rejected, 224 total in scope; corpus reached 900 pages, 0 errors corpus-wide throughout; full session log at `Q1_INGESTION_SESSIONS.md` *(completed 2026-08-22)*
 
 ## Content Stage Implementation [P0 · in-progress]
 
