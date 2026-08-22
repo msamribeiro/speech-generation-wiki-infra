@@ -1,5 +1,18 @@
 # Q1 2026 Ingest Session
 
+Document type: archived operational record
+Archived: 2026-08-22 (moved from infra root `Q1_INGESTION_SESSIONS.md`)
+Superseded by: `Q2_INGESTION_SESSIONS.md` (infra root) — the active ingest protocol and cadence
+preferences developed across this file's 8 sessions were carried forward there, without the
+per-session narrative log.
+
+This file is kept as a historical record only: the full paper-by-paper, session-by-session log
+of the Q1 2026 chronological ingest effort, including every QC issue caught and how it was
+resolved. For the current ingestion protocol, quality-check procedure, and cadence preferences,
+see `Q2_INGESTION_SESSIONS.md` or `docs/content.md`.
+
+---
+
 **Date:** 2026-08-02
 **Goal:** Ingest all accepted Q1 2026 (January–March 2026) papers into the wiki.
 
