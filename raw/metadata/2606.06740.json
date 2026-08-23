@@ -1,0 +1,38 @@
+{
+  "id": "2606.06740",
+  "source_ids": {
+    "arxiv": "2606.06740"
+  },
+  "title": "Multilingual Multi-Speaker Unit Vocoders: A Systematic Analysis of Discrete Speech Representations",
+  "authors": [
+    "Naman Kothari",
+    "Arjun Gangwar",
+    "Adarsh Arigala",
+    "S Umesh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.06740",
+  "pdf_url": "https://arxiv.org/pdf/2606.06740.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Discrete speech units obtained via k-means clustering of self supervised embeddings entangle phonetic, speaker, and language information, causing speaker mixing and cross-lingual interference in multilingual multi-speaker speech generation. Despite growing use in Audio LLMs and speech to speech systems, unit vocoders remain underexplored. We analyze a BigVGAN based unit vocoder, across four Indian languages. We study the interaction between cluster size and conditioning strategies using WER, speaker similarity, and unit level metrics. Results show that cluster size governs intelligibility by improving phonetic discriminability, while explicit speaker conditioning is indispensable for preventing identity collapse. Language supervision yields further gains mainly at lower cluster sizes where units remain ambiguous. Our analysis shows similar phonemes across languages collapse to the same cluster IDs at smaller inventories, with larger clusters progressively separating them.",
+  "arxiv_comment": "5 pages, 5 tables, 1 figure, Accepted at Interspeech 2026",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Systematically analyzes discrete-unit vocoders for multilingual multi-speaker speech generation, relevant codec/TTS-infrastructure contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

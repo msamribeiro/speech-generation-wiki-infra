@@ -1,0 +1,38 @@
+{
+  "id": "2026.iwsds-1.36",
+  "source_ids": {
+    "acl": "2026.iwsds-1.36",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Analysis of Child-Caregiver Interactions for Developing a Caregiver Spoken Dialogue System",
+  "authors": [
+    "Sanae Yamashita",
+    "Shota Mochizuki",
+    "Yuko Kuma",
+    "Ray Sakai",
+    "Ayaka Sasaki",
+    "Ryuichiro Higashinaka"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.36",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.36.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We aim to develop a caregiver spoken dialogue system for remote childcare services. As a first step toward this goal, this study investigates how interactions occur between children and caregivers. We collected Japanese child–caregiver dialogue data through a remote childcare service in which participants engaged in activities such as introductions, quizzes, and free conversations. The collected data were analyzed and compared with existing child–caregiver dialogue data from both acoustic and linguistic perspectives. The results showed that, acoustically, child–caregiver dialogues contained fewer overlapping utterances than adult dialogues. Linguistically, the distribution and transitions of utterance intentions differed across dialogue parts, reflecting the diverse structures of each activity. These findings provide useful insights for building future caregiver spoken dialogue systems, suggesting that a turn-based interaction structure may be sufficient and that dialogue control should be adapted to each part of the dialogue.",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Corpus collection and interaction analysis of child-caregiver dialogue as groundwork for a future caregiver dialogue system; no synthesis system or evaluation is presented yet.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

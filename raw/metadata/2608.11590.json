@@ -1,0 +1,40 @@
+{
+  "id": "2608.11590",
+  "source_ids": {
+    "arxiv": "2608.11590"
+  },
+  "title": "CookVoice: Unified Framework for Style Controllable Multi-Modal Human Voice Generation",
+  "authors": [
+    "Haowei Lou",
+    "Hye-Young Paik",
+    "Dai Jia",
+    "Kai Li",
+    "Lina Yao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.11590",
+  "pdf_url": "https://arxiv.org/pdf/2608.11590.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Human voice generation has made rapid progress in speech generation, singing voice generation, voice cloning, and voice editing. However, most existing systems are designed for specific tasks and often rely on task-dependent architectures, control signals, or autoregressive decoding, limiting fine-grained controllability and inference efficiency. In this paper, we propose CookVoice, a unified framework for multimodal, multi-style, and multi-task human voice generation. CookVoice decomposes the human voice into three key factors: content, prosody, and style, enabling both speech and singing voice generation within a unified model. To achieve precise and flexible controllability, we design a flexible alignment strategy that maps text, style, and prosody control signals onto the frame-level of spectrogram. This design allows CookVoice to support a wide range of tasks, including text-to-speech, text-to-singing voice, style-controllable generation, voice mimicry, voice conversion, and voice editing. Experimental results show that CookVoice achieves generation quality comparable to existing Text-to-Speech and text-to-singing voice baselines, while providing stronger style and prosody controllability. Moreover, CookVoice achieves comparable performance to large-scale baselines with only 43.51 million parameters and efficient inference using as few as 4 ODE steps, making it a practical solution for real-world human voice generation applications. Demo page is available at https://haoweilou.github.io/CookVoice/.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "CookVoice proposes a unified, style-controllable framework spanning speech generation, singing voice generation, voice cloning, and voice editing, a core TTS/singing/VC architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

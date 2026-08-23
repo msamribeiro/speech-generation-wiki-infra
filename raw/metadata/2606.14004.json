@@ -1,0 +1,36 @@
+{
+  "id": "2606.14004",
+  "source_ids": {
+    "arxiv": "2606.14004"
+  },
+  "title": "Unsupervised Approaches for Global Prosodic Embedding Extraction",
+  "authors": [
+    "Martin Meza",
+    "Luciana Ferrer",
+    "Pablo Riera"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.14004",
+  "pdf_url": "https://arxiv.org/pdf/2606.14004.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Prosody is central to oral communication, conveying information like the emotional state of the speaker and cues needed for meaning disambiguation. Many self-supervised models of speech produce embeddings that encode prosodic as well as linguistic, and speaker information. This entanglement of information is problematic in scenarios where prosody is the main distinguishing factor while other factors may vary between training and deployment; in such cases, a purely prosodic representation would be more robust. Such representation could also be used for analyzing the role of prosody in a given task or as input to speech synthesis systems. In this work, we propose a variety of approaches for producing global prosodic embeddings based on auto-encoder models of pitch and energy. We develop a benchmark for assessing the performance of these representations, showing that our embeddings provide competitive or superior performance under challenging conditions, compared to various alternatives.",
+  "arxiv_comment": "10 pages, 3 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Studies unsupervised extraction of global prosodic embeddings disentangled from linguistic/speaker information; a representation-learning contribution useful for TTS but the paper trains no synthesis system.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

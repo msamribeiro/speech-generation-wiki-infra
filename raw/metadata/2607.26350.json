@@ -1,0 +1,39 @@
+{
+  "id": "2607.26350",
+  "source_ids": {
+    "arxiv": "2607.26350"
+  },
+  "title": "Dissecting Sensitivity to Training Language in Self-Supervised Speech Learning Using Neural Audio Codec Tokens",
+  "authors": [
+    "Daigo Takizawa",
+    "Tomohiko Nakamura",
+    "Samuele Cornell",
+    "William Chen",
+    "Satoru Fukayama",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.26350",
+  "pdf_url": "https://arxiv.org/pdf/2607.26350.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs (NACs) have become popular for obtaining speech representations as discrete tokens. Beyond compression, discrete tokens can be used to train self-supervised learning (SSL) models. Such models, referred to as codec-based SSL models, reduce data storage and computational cost, enabling scalable SSL pre-training. However, their language sensitivity remains unclear. When the language changes, codec-based SSL models may require retraining, which undermines their efficiency. In this paper, we present a systematic analysis of language sensitivity by varying either the NAC training language or the SSL pre-training language while keeping the other fixed. Experimental results show that downstream performance is insensitive to the NAC training language but strongly dependent on the SSL pre-training language. These findings suggest that a single NAC can be reused across languages, while aligning the SSL pre-training language with the target language is crucial.",
+  "arxiv_comment": "Accepted to Interspeech2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Investigates language sensitivity of self-supervised learning models trained on neural-audio-codec discrete tokens; a codec-based SSL representation-robustness study relevant to but not centrally about TTS/VC/SCA generation.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2607.19033",
+  "source_ids": {
+    "arxiv": "2607.19033"
+  },
+  "title": "Content is What Remains: Invariant Speech Tokenization from Parallel Utterances",
+  "authors": [
+    "Laurin Wagner",
+    "Bernhard Thallinger",
+    "Miroslav Stankovic",
+    "Mario Zusag"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.19033",
+  "pdf_url": "https://arxiv.org/pdf/2607.19033.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Discrete speech tokenizers aim to disentangle semantic from acoustic information, yet targets from self-supervised learning (SSL) models like HuBERT retain non-linguistic variation: speaker identity, prosody, and channel conditions leak into the tokens, inflating entropy. Our key insight is that when enough speakers utter the same words under varying conditions, linguistic content is the only shared factor. We propose PINT (Parallel INvariant Tokenization), which fine-tunes an SSL encoder with alignment losses across parallel utterances and augmentations to distill this shared residual. PINT collapses identical words onto consistent token sequences, drastically reducing conditional entropy. Unlike ASR text, PINT tokens preserve frame-level temporal grounding and serve as drop-in semantic targets for audio codecs. Experiments show a 98.7% relative reduction in speaker probe accuracy (93.1% to 1.2%), a 42% lower ABX error rate, and 27-30% lower LM perplexity versus baselines, confirming that the right invariance is key to efficient learning.",
+  "arxiv_comment": "Accepted at Interspeech 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Proposes invariant speech tokenization that disentangles linguistic content from speaker/prosody/channel variation using parallel utterances, a core codec/tokenizer contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

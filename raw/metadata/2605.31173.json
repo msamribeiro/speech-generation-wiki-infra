@@ -1,0 +1,37 @@
+{
+  "id": "2605.31173",
+  "source_ids": {
+    "arxiv": "2605.31173"
+  },
+  "title": "MindVoice: Reconstructing Intelligible Speech from Non-invasive Neural Signals with Pretrained Priors",
+  "authors": [
+    "Guangyin Bao",
+    "Taiping Zeng",
+    "Jianfeng Feng",
+    "Xiangyang Xue"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.31173",
+  "pdf_url": "https://arxiv.org/pdf/2605.31173.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Reconstructing continuous speech from non-invasive neural recordings is a fundamental problem for probing human auditory perception and building safe, scalable speech brain-computer interfaces. Despite recent progress, intelligible reconstruction remains elusive, as non-invasive recordings are inherently noisy, spatially blurred, and only partially preserve information about perceived speech. Existing methods directly map neural activity to entangled speech representations before synthesizing waveforms with neural vocoders, resulting in spectral-similar but unintelligible results. To overcome these limitations, we introduce MindVoice, a neuro-to-speech reconstruction framework that uses pretrained models to compensate for the incomplete semantic and acoustic information in neural recordings. MindVoice disentangles reconstruction into two complementary pathways: one recovers high-level semantic content, while the other estimates fine-grained acoustic attributes. These inferred representations are then fused with powerful speech generation models and in-context voice cloning to synthesize natural and intelligible utterances. Extensive experiments on EEG and MEG demonstrate that MindVoice substantially outperforms existing methods on various metrics. These results show that pretrained priors provide a principled way to bridge the gap between noisy neural recordings and natural speech, highlighting a promising attempt for auditory neuroscience research and non-invasive speech brain-computer interfaces.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "MindVoice reconstructs intelligible speech from non-invasive neural (EEG-like) signals using pretrained speech-generation priors; input modality is brain signals rather than text, so fit with the TTS/VC/SCA scope is ambiguous - it uses speech synthesis technology for a brain-computer-interface task, not text-to-speech or voice conversion per the controlled vocabulary.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

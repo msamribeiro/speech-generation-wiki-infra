@@ -1,0 +1,35 @@
+{
+  "id": "2026.eacl-long.193",
+  "source_ids": {
+    "acl": "2026.eacl-long.193",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.eacl-long.193"
+  },
+  "title": "Validating Automatic Evaluation of Controllable Counterspeech Generation: Rankings Matter More Than Scores",
+  "authors": [
+    "Yi Zheng",
+    "Björn Ross",
+    "Walid Magdy"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.eacl-long.193",
+  "pdf_url": "https://aclanthology.org/2026.eacl-long.193.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Counterspeech generation has emerged as a promising approach to combat online hate speech, with recent work focusing on controlling attributes used in counterspeech, such as strategies or intents. While these attributes are often evaluated automatically using classifiers, a key goal of this evaluation is to compare the performance of different generation models. However, the validity of such evaluation results is questionable when the classifiers themselves have only modest performance. This paper examines the automatic evaluation of counterspeech attributes using a multi-attribute counterspeech dataset containing 2,728 samples. We investigate when automatic evaluation can be trusted for model comparison and address the limitations of current evaluation methodologies. We make concrete recommendations for how to perform classifier validation before model evaluation. Our classifier validation results demonstrate that even limited classifiers can produce trustworthy model rankings. Therefore, we argue that when comparing counterspeech generation models, a classifier’s ability to rank generation models is a more direct measure of its practical utility than traditional classification metrics, e.g., accuracy and F1.",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Studies automatic evaluation validity for controllable counterspeech generation; purely textual, no audio synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

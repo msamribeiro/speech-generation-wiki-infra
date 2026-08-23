@@ -1,0 +1,35 @@
+{
+  "id": "2606.08843",
+  "source_ids": {
+    "arxiv": "2606.08843"
+  },
+  "title": "From A to B to A: Palindromic Zero-Shot Voice Conversion with Non-Parallel Data",
+  "authors": [
+    "Moshe Mandel",
+    "Shlomo E. Chazan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.08843",
+  "pdf_url": "https://arxiv.org/pdf/2606.08843.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present a voice conversion (VC) framework that utilizes K-Nearest Neighbors (KNN) retrieval over WavLM representations to align non-parallel source and target speech, constructing synthetic training pairs for supervised learning. The retrieved segments serve as synthetic inputs, while real target audio provides ground-truth outputs, forming a synthetic-to-real training paradigm that naturally supports multilingual data without requiring parallel corpora or explicit alignment. To ensure consistent target-speaker identity, we incorporate a speaker loss derived from a pretrained speaker verification model. Experiments across multiple languages demonstrate that the proposed approach achieves high naturalness and strong speaker similarity, outperforming competitive VC baselines, despite being trained exclusively on English data. Samples can be accessed at: https://palindromic-vc.github.io.",
+  "arxiv_comment": "Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes a KNN-retrieval-based zero-shot voice conversion framework using WavLM representations and synthetic-to-real training, a dedicated VC contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

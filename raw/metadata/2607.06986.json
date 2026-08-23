@@ -1,0 +1,38 @@
+{
+  "id": "2607.06986",
+  "source_ids": {
+    "arxiv": "2607.06986"
+  },
+  "title": "MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres",
+  "authors": [
+    "Wenhao Feng",
+    "Yuxun Tang",
+    "Jiatong Shi",
+    "Qin Jin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.06986",
+  "pdf_url": "https://arxiv.org/pdf/2607.06986.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Singing voice synthesis (SVS) has progressed rapidly, yet its ability to generalize across diverse musical genres remains underexplored. Existing benchmarks are heavily biased toward pop music, limiting systematic analysis of genre-dependent behavior. We introduce MMGenre, a benchmark for multi-genre SVS diagnosis, supported by an automatic pipeline for constructing genre-aligned music scores. MMGenre spans 10 major genres and 26 subgenres, enabling comprehensive analysis of genre-aware synthesis. Extensive evaluation of representative SVS models reveals limited genre discrimination: synthesized vocals across genres exhibit highly similar acoustic characteristics and weak separability. While zero-shot genre adaptation yields only marginal improvements, lightweight genre-specific continued training leads to substantial gains. MMGenre provides a standardized framework for multi-genre SVS evaluation and exposes critical challenges in achieving genre-aware singing voice synthesis.",
+  "arxiv_comment": "Accepted by Interspeech 2026. Camera-ready version. 4 pages, 5 figures.Project page: https://fengjin1117.github.io/mmgenre-demo/",
+  "task": [
+    "singing",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "MMGenre introduces a benchmark diagnosing singing voice synthesis generalization across musical genres, a core singing/evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2026.iwsds-1.10",
+  "source_ids": {
+    "acl": "2026.iwsds-1.10",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model",
+  "authors": [
+    "Yuto Abe",
+    "Mao Saeki",
+    "Atsumoto Ohashi",
+    "Shinnosuke Takamichi",
+    "Shiyna Fujie",
+    "Tetsunori Kobayashi",
+    "Tetsuji Ogawa",
+    "Ryuichiro Higashinaka"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.10",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.10.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This study investigates how interactional characteristics of spoken dialogue corpora influence the learning process and resulting behavior of speech language models for full-duplex dialogue systems. While previous research has mainly focused on improving acoustic and linguistic quality, an effective dialogue system must also capture and reproduce task-dependent interactional dynamics such as conversational tempo and turn-taking patterns. To analyze these properties, we evaluated multiple dialogue corpora using NISQA for speech quality, LLM-as-a-Judge for linguistic and semantic appropriateness, and four timing-based indicators: inter-pausal units, pause, gap, and overlap. A curriculum learning strategy was applied to fine-tune a Moshi-based full-duplex dialogue model by incrementally combining corpora with different interactional characteristics. Experimental results on a dialogue continuation task showed that corpus-specific interactional patterns effectively shape model behavior. Chat-style corpora facilitated natural rhythms with moderate overlaps and gaps, whereas consultation-style corpora promoted more stable and deliberate timing. Fine-tuning with high-quality audio improved speech quality, while using task-mismatched data degraded linguistic coherence.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Studies how dialogue corpus properties affect fine-tuning of a Moshi-based full-duplex spoken dialogue model; core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2606.19209",
+  "source_ids": {
+    "arxiv": "2606.19209"
+  },
+  "title": "FineCombo-TTS: Collaborative and Precise Controllable Speech Synthesis Using Text Descriptions and Reference Speech",
+  "authors": [
+    "Shuoyi Zhou",
+    "Yixuan Zhou",
+    "Peiji Yang",
+    "Yifan Hu",
+    "Yicheng Zhong",
+    "Zhisheng Wang",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.19209",
+  "pdf_url": "https://arxiv.org/pdf/2606.19209.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Controllable text-to-speech (TTS) has become a key research focus. However, methods based on either reference speech or text descriptions lack flexibility and precise control, and recent joint approaches remain loosely coupled, with speech modeling timbre and text controlling global style. We propose FineCombo-TTS, a unified framework for speech synthesis grounded in reference speech and guided by text descriptions, enabling flexible and precise control over acoustic attributes. Instead of explicit attribute disentanglement, we learn a unified acoustic representation and introduce a Conditional Flow Matching (CFM)-based Speech Variance Predictor to model fine-grained reference-to-target transformations guided by text descriptions. To support relative attribute control, we construct FineEdit, a structured paired dataset that explicitly encodes source-to-target attribute variations. Experiments demonstrate that our approach achieves flexible, precise, and expressive controllable TTS.",
+  "arxiv_comment": "Accepted by Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "FineCombo-TTS proposes a unified controllable TTS framework jointly grounded in reference speech and text descriptions, a core TTS control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

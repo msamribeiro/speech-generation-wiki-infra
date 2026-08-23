@@ -1,0 +1,38 @@
+{
+  "id": "2606.09667",
+  "source_ids": {
+    "arxiv": "2606.09667"
+  },
+  "title": "Cross-Modal Masking for Robust Silent Speech Synthesis Using sEMG and Lipreading",
+  "authors": [
+    "Eder del Blanco",
+    "David Gimeno-Gómez",
+    "Eva Navas",
+    "Carlos-D. Martínez-Hinarejos",
+    "Inma Hernáez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09667",
+  "pdf_url": "https://arxiv.org/pdf/2606.09667.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech restoration through silent speech interfaces (SSIs) has emerged as a promising assistive technology for individuals with impaired or absent laryngeal voice production. Among non-invasive SSI modalities, surface electromyography (sEMG) and video-based lipreading provide complementary articulatory information, yet their integration for continuous speech synthesis remains underexplored. Moreover, existing multimodal approaches rarely address robustness to modality degradation or temporary sensor failure, limiting their applicability in realistic scenarios. In this work, we propose a masked multimodal speech synthesis framework that jointly leverages sEMG and lipreading signals through modality masking during training. Under multispeaker settings, the proposed approach reduces word error rate by up to 14 absolute percentage points compared to the strongest unimodal baseline. Experimental results not only show that masking strategies are critical for these performance gains and robustness under low-bitrate conditions, but also that they generalize better than degradation-specific data augmentations in the presence of modality absence conditions. Phone-level analyses further reveal complementary contributions across modalities, with particularly strong benefits for vowels and for specific consonant groups. Overall, these findings demonstrate the effectiveness and robustness of masked multimodal integration for silent speech synthesis, although adaptation to laryngectomized speakers remains an open research challenge.",
+  "arxiv_comment": "12 pages, 7 figures and 6 tables. Submitted to Transactions on Audio, Speech and Language Processing",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "Proposes cross-modal masking for silent speech synthesis from sEMG and lipreading signals; generates speech from non-text, non-acoustic input modalities, so fit with the text-to-speech/voice-conversion scope is ambiguous, similar to MindVoice (2605.31173).",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

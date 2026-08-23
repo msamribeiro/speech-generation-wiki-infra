@@ -1,0 +1,38 @@
+{
+  "id": "2607.18629",
+  "source_ids": {
+    "arxiv": "2607.18629"
+  },
+  "title": "CS-ETS: Chaos-Inspired Samba-Based EMG-To-Speech Synthesis with Nonlinear Chaotic Losses",
+  "authors": [
+    "Sajid Fardin Dipto",
+    "Tarikul Islam Tamiti",
+    "David Vergano",
+    "Luke Baja-Ricketts",
+    "Anomadarshi Barua"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-21",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.18629",
+  "pdf_url": "https://arxiv.org/pdf/2607.18629.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We propose a chaos-inspired new architecture for EMG-to-Speech (ETS) synthesis called CS-ETS, which combines a Samba-based encoder with two novel chaos-inspired loss functions -- Lyapunov Exponent Regularization (LER) and Multi-Scale Detrended Fluctuation Analysis (MSDFA). LER is designed based on Lyapunov exponents to capture nonlinear fluctuations and sensitivity to initial conditions. MSDFA exploits detrended fluctuation analysis to quantify fractal-like, long-range temporal chaotic correlation. CS-ETS surpasses prior work with a 40.79\\% lower parameter count (32M vs 54.1M) and introduces a new Post-Vocoder Alignment approach that improves LSD by 2.1x, STOI by 4.7x, and SI-SDR by 1.25x. CS-ETS reduces computation by 13.33\\% while maintaining improved performance. To the best of our knowledge, for the first time, we show how ETS can be supervised by the subtle non-linear chaotic physics with Samba attention to achieve a significantly smaller model with superior performance.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.48,
+  "relevance_note": "CS-ETS proposes a chaos-inspired architecture for EMG-to-speech synthesis; generates speech from a non-text, non-acoustic input modality (surface EMG), so fit with the text-to-speech/voice-conversion scope is ambiguous, similar to other silent-speech-interface papers.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

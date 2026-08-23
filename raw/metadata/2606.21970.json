@@ -1,0 +1,36 @@
+{
+  "id": "2606.21970",
+  "source_ids": {
+    "arxiv": "2606.21970"
+  },
+  "title": "Integrating Facial Generation into Full-Duplex Spoken Dialogue Systems",
+  "authors": [
+    "Jingjing Jiang",
+    "Atsumoto Ohashi",
+    "Ryuichiro Higashinaka"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21970",
+  "pdf_url": "https://arxiv.org/pdf/2606.21970.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue models, such as Moshi, enable natural, low-latency voice conversations. However, they remain limited to the audio modality, lacking the facial expressions that are integral to human communication. We present Moshi-Face, the first full-duplex dialogue model that jointly processes the user's audio and facial input while simultaneously generating speech and facial motion. We first construct a vector-quantized variational autoencoder (VQ-VAE) as a face codec that encodes 3D head meshes extracted from facial videos into compact discrete tokens, referred to as face tokens, and conversely reconstructs 3D meshes from these tokens. We then extend Moshi with a Face Transformer module that generates face tokens non-autoregressively, enabling Moshi-Face to produce synchronized audio and face tokens in real time. Experiments show that Moshi-Face achieves audiovisual alignment at low latency while preserving the dialogue quality of the original audio-only model.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Moshi-Face extends full-duplex spoken dialogue with joint facial-motion generation alongside speech, a core SCA contribution with a significant speech-generation component.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

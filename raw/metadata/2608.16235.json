@@ -1,0 +1,39 @@
+{
+  "id": "2608.16235",
+  "source_ids": {
+    "arxiv": "2608.16235"
+  },
+  "title": "Speaker-Normalized Semantic Speech Tokens via Iterative S2U-T2U Refinement",
+  "authors": [
+    "Hanlin Zhang",
+    "Daxin Tan",
+    "Dehua Tao",
+    "Chengxi Deng",
+    "Xiao Chen",
+    "Linqi Song"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.16235",
+  "pdf_url": "https://arxiv.org/pdf/2608.16235.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Semantic speech tokens should preserve linguistic content while suppressing speaker- and duration-dependent variation inherited from acoustic inputs. We propose Iterative Semantic Token Purification (ISTP), an alternating speech-to-unit (S2U) and text-to-unit (T2U) training procedure guided by text predictability. Starting from an initial S2U tokenizer, each iteration trains a T2U model on its deduplicated token sequences. The decoded T2U predictions then serve as connectionist temporal classification targets for a newly initialized S2U model, whose outputs supervise the next T2U model. This cycle progressively aligns the two token generators and biases the token space toward information recoverable from text. Experiments on Mandarin and English show substantially improved S2U--T2U agreement. Independently trained de-tokenizers further show that the refined S2U and T2U tokens retain sufficient content for high-intelligibility voice conversion and text-to-speech synthesis. In voice conversion, the generated speaking rate follows the reference more closely. The refined tokens also exhibit substantially improved cross-speaker consistency and reduced probe-recoverable speaker information.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Proposes iterative speech-to-unit/text-to-unit refinement to purify semantic speech tokens of speaker/duration variation, a core codec/tokenizer contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2606.28249",
+  "source_ids": {
+    "arxiv": "2606.28249"
+  },
+  "title": "HPRO: Hierarchical Progressive Reward Optimization via Preference Extraction for Emotional Text-to-Speech",
+  "authors": [
+    "Sihang Nie",
+    "Xiaofen Xing",
+    "Rui Xing",
+    "Haoming Li",
+    "Ruitong Xiao",
+    "Jingyuan Xing",
+    "Baiji Liu",
+    "Xiangmin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.28249",
+  "pdf_url": "https://arxiv.org/pdf/2606.28249.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recently, Large Language Model (LLM)-based Text-to-Speech (TTS) models have achieved remarkable naturalness. However, the standard Supervised Fine-Tuning paradigm often converges to statistically averaged prosody, limiting emotional expressiveness. While preference-driven optimization offers a promising alternative, existing approaches suffer from two structural mismatches: information conflict, where content and emotion in a shared latent space produce conflicting gradients, leading to reward hacking and semantic degradation; and scale gap, where sparse sentence-level rewards struggle to guide dense frame-level generation. To overcome these challenges, we propose HPRO, a hierarchical progressive reward optimization framework. Within HPRO, we introduce the HD-Emo codec as a novel differentiable reward model to resolve the information conflict. It extracts speech into distinct content and style preference tokens, structurally isolating emotional optimization from semantic content. Building upon this structured preference space, HPRO bridges the scale gap by progressively aligning frame-, word- and sentence-level objectives. Experiments demonstrate that HPRO significantly enhances emotional expressiveness, while effectively preserving linguistic intelligibility. The code and audio samples are publicly available at https://xxh333.github.io/hpro-demo/.",
+  "arxiv_comment": "7 pages, 3 figures, 3 tables; Preprint",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "HPRO proposes hierarchical progressive reward optimization via preference extraction to improve emotional expressiveness in LLM-based TTS, a core TTS/RLHF contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

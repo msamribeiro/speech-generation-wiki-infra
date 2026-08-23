@@ -1,0 +1,41 @@
+{
+  "id": "2607.03666",
+  "source_ids": {
+    "arxiv": "2607.03666"
+  },
+  "title": "TRACE-EVC: Text-Guided Relative Affective Control for Zero-Shot Emotional Voice Conversion",
+  "authors": [
+    "Zihan Zhang",
+    "Shreeram Suresh Chandra",
+    "Zongyang Du",
+    "Xiutian Zhao",
+    "Aurosweta Mahapatra",
+    "Hao Zhang",
+    "Philipp Koehn",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.03666",
+  "pdf_url": "https://arxiv.org/pdf/2607.03666.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Traditional emotional voice conversion (EVC) conditions generation on explicit target emotions like labels or references, defining the target affective state but omitting the direction or nature of the transition. We introduce instruction-guided relative emotional voice conversion, a task where natural-language instructions specify source-conditioned affective transformations (e.g., \"make the speech slightly calmer\" or \"sound noticeably more confident\") instead of fixed targets. To support this task, we construct TRACE-Instruct, a dataset of relative emotion instructions covering categorical transitions, intensity modifications, and open-ended affective changes. We propose TRACE-EVC, a zero-shot framework built around Emo-Compass, a module that models each conversion as a source-anchored rectified flow. Rather than conditioning on an explicit target, it predicts the direction and degree of the affective change. Experiments demonstrate that TRACE-EVC accurately follows relative emotion instructions while preserving speaker identity, linguistic content, and speech quality, and remains competitive with conventional EVC systems on standard categorical emotion conversion.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "TRACE-EVC introduces instruction-guided relative emotional voice conversion, specifying source-conditioned affective transformations via natural-language instructions, a core VC contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

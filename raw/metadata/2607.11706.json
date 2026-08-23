@@ -1,0 +1,33 @@
+{
+  "id": "2607.11706",
+  "source_ids": {
+    "arxiv": "2607.11706"
+  },
+  "title": "VoxENES 2026: Benchmarking Generalization of Speech Spoofing Detectors Against LLM-Era TTS and Voice Conversion",
+  "authors": [
+    "Aastha Sharma",
+    "Guangjing Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.11706",
+  "pdf_url": "https://arxiv.org/pdf/2607.11706.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Modern LLM-driven text-to-speech (TTS) and voice conversion (VC) systems produce synthetic speech that differs from the generators represented in many legacy spoofing benchmarks. This mismatch creates a temporal generalization gap that can overestimate detector robustness under real-world post-processing conditions. We bridge this gap by introducing VoxENES 2026, a bilingual (English and Spanish) benchmark of 53,628 audio samples generated using 10 contemporary speech synthesis methods and evaluated under 10 standardized post-processing conditions. Using VoxENES 2026, we benchmark eight pretrained detectors without fine-tuning and observe substantial performance degradation: the best model achieves 28.98\\% EER overall, while most perform near or below random chance across modern generators and perturbations. Our results highlight the reliance on brittle artifacts in current detectors and establish VoxENES 2026 as a practical testbed for developing robust audio spoofing countermeasures.",
+  "arxiv_comment": "Accepted in InterSpeech 2026",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "VoxENES 2026 benchmarks spoofing-detector generalization against LLM-era TTS/VC generators; a deepfake-detection benchmark, not TTS/VC/SCA generation itself.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

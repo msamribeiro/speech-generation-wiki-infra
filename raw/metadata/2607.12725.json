@@ -1,0 +1,34 @@
+{
+  "id": "2607.12725",
+  "source_ids": {
+    "arxiv": "2607.12725"
+  },
+  "title": "Neural Morphing: Sequence-Optimized Token-Level Morphing in Neural Audio Codecs",
+  "authors": [
+    "Emmanouil Karystinaios"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.12725",
+  "pdf_url": "https://arxiv.org/pdf/2607.12725.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs were originally developed for high-fidelity compression; however, their latent token representations and expressive decoders also constitute a powerful substrate for controllable audio transformation. This work introduces Neural Morphing, a training-free token-domain audio effect that selects residual-vector-quantized (RVQ) token grains from a user palette and decodes the edited stream through a pretrained codec. The method combines an RVQ-group transfer policy that separates coarse, middle, and fine codebook groups with a continuity-constrained sequence matcher that replaces independent greedy selection with bounded beam search. The intended output is a controlled hybrid: the source preserves rhythmic organization while the palette contributes timbral color and residual detail. We focus on the implementation and realtime behavior of a deployable VST3/AU system, including chunked rendering, palette-size scaling, and backend health checks.",
+  "arxiv_comment": "In proceedings of the 29th International Conference on Digital Audio Effects (DAFx) 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Neural Morphing introduces a training-free token-domain audio-effect technique for controllable voice/audio transformation via RVQ token grain selection in neural audio codecs, relevant codec/voice-transformation infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

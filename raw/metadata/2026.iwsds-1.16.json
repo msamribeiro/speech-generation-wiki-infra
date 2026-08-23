@@ -1,0 +1,40 @@
+{
+  "id": "2026.iwsds-1.16",
+  "source_ids": {
+    "acl": "2026.iwsds-1.16",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Conversational AI for Virtual Standardized Patients using a Speech-to-Speech LLM",
+  "authors": [
+    "Andrew Emerson",
+    "Keelan Evanini",
+    "Su Somay",
+    "Kevin Frome",
+    "Le An Ha",
+    "Polina Harik"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.16",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.16.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "To develop clinical reasoning skills, medical students are often tasked with interacting with trained standardized patients (SPs). Human SPs enable real conversations that can resemble authentic clinical scenarios. However, human SPs require extensive training and are often limited in their accessibility and continual availability to medical students or residents. Virtual SPs offer the ability for medical students to practice clinical interviews in a lower-stakes setting across a broader set of clinical cases. This paper introduces a virtual SP (VSP) that leverages Amazon’s Nova Sonic, a speech-to-speech foundation model designed for human-like conversation. We investigated the ability of Nova Sonic to portray four distinct clinical cases in virtual doctor-patient encounters with 20 third-year medical students. The system’s realism, its perceived learning value, and user experience were all assessed via a survey administered to the students. Students were also asked to compare this experience to interactions with a human SP. Survey results and conversations were analyzed to derive insights for improving the Nova Sonic-based VSP system.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Applies an existing speech-to-speech LLM as a black-box component to build virtual standardized patients for medical education; an application paper rather than a method contribution to S2S/SCA.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2607.04941",
+  "source_ids": {
+    "arxiv": "2607.04941"
+  },
+  "title": "DuplexChat: Constructing Speaker-Separated Full-Duplex Dialogue Speech at Scale for Spoken Dialogue Language Modeling",
+  "authors": [
+    "Wataru Nakata",
+    "Yuki Saito",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.04941",
+  "pdf_url": "https://arxiv.org/pdf/2607.04941.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue models are trained on conversational speech in which each speaker is represented as a separate stream, but existing large-scale public speech corpora are mostly monaural, making them unsuited for SDLM training. We present DuplexChat, an open-source corpus for full-duplex spoken dialogue models, and DuplexChat-Pipe, a pipeline for constructing speaker-separated full-duplex dialogue speech from public podcast feeds. DuplexChat-Pipe filters language-specific podcast feeds, retrieves and cleans episode audio, extracts diarization-guided two-speaker dialogue clips, and applies speech separation and restoration to produce one channel per speaker. Running this pipeline yields a speaker-separated spoken dialogue corpus covering 282,634 hours of English and 132,723 hours of Japanese. Analysis results on DuplexChat show that it contains turn-taking dynamics present in human dialogues.",
+  "arxiv_comment": "4 pages, 1 figures, submitted to SLT demo track",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "DuplexChat introduces an open-source speaker-separated full-duplex dialogue speech corpus and construction pipeline for training spoken dialogue language models, a core SCA infrastructure/dataset contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

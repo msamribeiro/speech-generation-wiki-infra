@@ -1,0 +1,39 @@
+{
+  "id": "2607.24323",
+  "source_ids": {
+    "arxiv": "2607.24323"
+  },
+  "title": "Revisiting Vocos: That Phasiness Business in Time-Frequency Neural Vocoding",
+  "authors": [
+    "Ünal Ege Gaznepoğlu",
+    "Frank Zalkow",
+    "Mohammad Joshaghani",
+    "Emanuël A. P. Habets",
+    "Nils Peters",
+    "Christian Dittmar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.24323",
+  "pdf_url": "https://arxiv.org/pdf/2607.24323.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recently, time-frequency neural vocoders have been approaching the state-of-the-art quality of time-domain neural vocoders. Vocos is a notable example due to its efficiency, but its audio quality lags behind the time-domain vocoders and the reasons remain debated. Thus, in this study, we revisit Vocos from a phase reconstruction perspective. First, we quantify the gap between time-domain and time-frequency domain vocoders using bandlimited mel spectrograms as inputs. Later, via an ablation study, we verify the Vocos architecture is effective for magnitude modeling, but less so for phase. We then adapt the Vocos backbone to predict phase differences, a precursor for phase reconstruction, and identify 1D convolutional layers are hindering their accurate prediction. Our findings indicate that future research needs to focus on inductive biases that allow the architecture to better model the time-frequency structure of speech signals, without sacrificing the support for arbitrary input representations.",
+  "arxiv_comment": "Accepted at IWAENC 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Revisits the Vocos time-frequency neural vocoder from a phase-reconstruction perspective to close its quality gap with time-domain vocoders, a core TTS/vocoder contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

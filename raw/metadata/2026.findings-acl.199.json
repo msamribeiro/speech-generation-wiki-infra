@@ -1,0 +1,45 @@
+{
+  "id": "2026.findings-acl.199",
+  "source_ids": {
+    "acl": "2026.findings-acl.199",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.199",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.199"
+  },
+  "title": "Dual-Reasoner: Bridging Interleaved Atomicity and Streaming Latency via Thinking-while-Talking",
+  "authors": [
+    "Yangzhuo Li",
+    "Shengpeng Ji",
+    "Yifu Chen",
+    "Tianle Liang",
+    "Haoyu Yang",
+    "Junboli",
+    "Jun Fang",
+    "Lin Li",
+    "Qingyang Hong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.199",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.199.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Integrating explicit Chain-of-Thought (CoT) into end-to-end spoken dialogue models enhances intelligence but incurs prohibitive latency. While the “Thinking-while-Talking” paradigm alleviates this delay, it fundamentally compromises block atomicity, severing the logical connection between interleaved thought and speech. To address this, we present Dual-Reasoner, employing a Streaming Masking Mechanism underpinned by our Dual-Think-30k dataset to guarantee uninterrupted audio streaming. Crucially, to strictly align the fragmented thinking blocks to service speech generation, we introduce the Atomic-Consistency Restoration framework. To secure comprehensive capabilities in high-difficulty reasoning, this mechanism utilizes a quadruple-constraint system to reconstruct logical atomicity, ensuring that “think” chunks act as a rigorous anchor for “talk” outputs. Experimental results demonstrate that Dual-Reasoner achieves comprehensive reasoning enhancements within ultra-low latency constraints: it elevates the VoiceBench score from 67.24 to 73.41 over the baseline, while significantly reducing the Time-to-First-Audio (TTFA) from 20.35s to 3.65s and the Real-Time Factor (RTF) from 7.04 to 1.05.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Dual-Reasoner: streaming-masking mechanism reconciling chain-of-thought reasoning latency with block atomicity in end-to-end spoken dialogue models; core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

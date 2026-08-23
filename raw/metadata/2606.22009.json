@@ -1,0 +1,34 @@
+{
+  "id": "2606.22009",
+  "source_ids": {
+    "arxiv": "2606.22009"
+  },
+  "title": "Benchmarking Large Language Models for Grapheme-to-Phoneme Conversion: A Japanese Case Study",
+  "authors": [
+    "Tomoki Koriyama"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.22009",
+  "pdf_url": "https://arxiv.org/pdf/2606.22009.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Grapheme-to-phoneme (G2P) conversion is essential for controllable and robust text-to-speech, and large language models (LLMs), with broad linguistic knowledge, offer a promising approach. We benchmarked over 30 LLMs on Japanese G2P, comparing them with conventional morphological analyzers on 3000 manually annotated sentences. We evaluated two prompting strategies: a parse mode, where the LLM performs morphological analysis followed by rule-based kana conversion, and a direct mode, where the LLM directly predicts kana readings. The results show that model size, version, and Japanese-specialized training are key factors, with the best LLMs achieving kana character error rate below 0.52\\% vs. the best conventional tool (1.03\\%). Parse mode outperforms direct mode for most models, as rule-based post-processing relieves the LLM of handling complex pronunciation rules. We also show that feeding LLM-predicted kana into a kana-input TTS yields better pronunciation than end-to-end TTS.",
+  "arxiv_comment": "accepted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Benchmarks LLMs against conventional morphological analyzers for Japanese grapheme-to-phoneme conversion, a core TTS front-end/pronunciation-infrastructure contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

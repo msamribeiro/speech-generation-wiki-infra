@@ -1,0 +1,39 @@
+{
+  "id": "2607.17615",
+  "source_ids": {
+    "arxiv": "2607.17615"
+  },
+  "title": "Re-Sonance: A Dysarthric Asynchronous Real-Time Speech Conversion System Based on a Three-Stage Cascaded ASR-LLM-TTS Architecture",
+  "authors": [
+    "Yuxuan Wu",
+    "Yifan Xu",
+    "Junkun Wang",
+    "Jiayong Jiang",
+    "Xin Zhao",
+    "Zhaojie Luo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.17615",
+  "pdf_url": "https://arxiv.org/pdf/2607.17615.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Individuals with dysarthria face significant challenges in professional speaking scenarios such as conferences, presentations, and meetings, where real-time communication is crucial. While existing Augmentative and Alternative Communication (AAC) systems provide basic support, they often fail to meet the demands of professional speaking environments due to high latency and unnatural speech patterns. This paper presents Re-Sonance, a novel LLM-enhanced speech-driven AAC system designed for real-time professional speaking scenarios. By integrating Whisper ASR, Qwen LLM, and CosyVoice TTS, Re-Sonance achieves improved speech intelligibility and naturalness while maintaining real-time performance. Both subjective and objective evaluations using a Mandarin dysarthric speech dataset demonstrate that our speech reconstruction approach significantly improved intelligibility while preserving semantic coherence for speakers with mild to moderate dysarthria. Although performance remains limited for severe dysarthria cases, our findings validate the potential of LLM-based methods for enhancing speech-driven AAC systems, paving the way for more effective and accessible communication technologies.",
+  "arxiv_comment": "Accepted by NCMMSC 2025",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Re-Sonance proposes a three-stage cascaded ASR-LLM-TTS real-time speech conversion system to improve dysarthric speech intelligibility in professional settings, a core assistive speech-conversion contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

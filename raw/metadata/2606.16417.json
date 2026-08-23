@@ -1,0 +1,35 @@
+{
+  "id": "2606.16417",
+  "source_ids": {
+    "arxiv": "2606.16417"
+  },
+  "title": "Joycent: Diffusion-based Accent TTS without Accented Phone Prediction",
+  "authors": [
+    "Xintong Wang",
+    "Ye Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.16417",
+  "pdf_url": "https://arxiv.org/pdf/2606.16417.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Accent text-to-speech (TTS) aims to synthesize speech with target accents. Existing accent TTS systems typically rely on a two-stage pipeline that first converts standard phone sequences into accented phone sequences and then synthesizes accented speech. However, such approaches suffer from error accumulation and require paired standard-accented phone sequence data, which is often limited in practice. Moreover, text-based accented phone representations are insufficient to model acoustic accent characteristics such as prosody and rhythm. In this work, we propose Joycent, a diffusion-based accent TTS model that synthesizes accented speech directly from standard phone sequences and speech references without accented phone prediction. Joycent integrates accent and speaker representations through conditional layer normalization (CLN) in the text encoder. We introduce WhisAID, a Mandarin accent identification model trained on accented Mandarin speech to extract accent representations. Experimental results show that Joycent improves accentedness while preserving speaker identity compared with baseline systems. We release our code and demos at: https://github.com/oshindow/Joycent-code.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Joycent proposes diffusion-based accent TTS without requiring accented phone prediction, a core TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,9 @@
 {
   "id": "2601.08342",
   "source_ids": {
-    "arxiv": "2601.08342"
+    "arxiv": "2601.08342",
+    "acl": "2026.iwsds-1.41",
+    "url_acl": "https://aclanthology.org/2026.iwsds-1.41"
   },
   "title": "Detecting Mental Manipulation in Speech via Synthetic Multi-Speaker Dialogue",
   "authors": [
@@ -13,16 +15,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "workshop",
+  "venue_type": "workshop",
   "year": 2026,
   "month": 1,
   "published_date": "2026-01-13",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2601.08342",
-  "pdf_url": "https://arxiv.org/pdf/2601.08342.pdf",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.41.pdf",
   "pdf_path": null,
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Mental manipulation, the strategic use of language to covertly influence or exploit others, is a newly emerging task in computational social reasoning. Prior work has focused exclusively on textual conversations, overlooking how manipulative tactics manifest in speech. We present the first study of mental manipulation detection in spoken dialogues, introducing a synthetic multi-speaker benchmark SPEECHMENTALMANIP that augments a text-based dataset with high-quality, voice-consistent Text-to-Speech rendered audio. Using few-shot large audio-language models and human annotation, we evaluate how modality affects detection accuracy and perception. Our results reveal that models exhibit high specificity but markedly lower recall on speech compared to text, suggesting sensitivity to missing acoustic or prosodic cues in training. Human raters show similar uncertainty in the audio setting, underscoring the inherent ambiguity of manipulative speech. Together, these findings highlight the need for modality-aware evaluation and safety alignment in multimodal dialogue systems.",
   "arxiv_comment": "Accepted to IWSDS 2026",
   "task": [],
@@ -32,5 +34,6 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

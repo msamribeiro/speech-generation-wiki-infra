@@ -1,0 +1,41 @@
+{
+  "id": "2607.22304",
+  "source_ids": {
+    "arxiv": "2607.22304"
+  },
+  "title": "Synthetic Speech, Real Signal: Paralinguistic Preservation and Cross-Lingual Augmentation via Voice Cloning",
+  "authors": [
+    "Roseline Polle",
+    "Owen Parsons",
+    "George Fairs",
+    "Luis Miguel San Martin Fernandez",
+    "Cole Looney",
+    "Xiaoliang Wu",
+    "Alexandra Livia Georgescu",
+    "Stefano Goria"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.22304",
+  "pdf_url": "https://arxiv.org/pdf/2607.22304.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Synthetic data augmentation in speech is common practice for linguistic tasks like ASR, but has seen far less work for paralinguistic ones, especially clinical tasks where labelled data is expensive and some patient groups are underrepresented. Voice cloning is one such augmentation approach, but is typically evaluated on speech intelligibility (WER) or speaker similarity (SS) rather than on downstream performance, and it remains unclear whether these preserve the paralinguistic signal such tasks depend on. We benchmark eight voice cloning models on five paralinguistic tasks across public and clinical datasets, showing most preserve signal with modest degradation. We then clone English clinical speech into Japanese and find that training on cloned data outperforms raw cross-lingual transfer for depression and anxiety detection on real Japanese speech, suggesting voice cloning is a promising direction for augmenting clinical speech data in low-resource languages.",
+  "arxiv_comment": "5 pages, 3 figures. Accepted at Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Studies voice cloning as a data-augmentation approach for clinical paralinguistic tasks, evaluating downstream task performance rather than voice-cloning intelligibility/similarity metrics; VC used as one tool for an application study rather than the paper's primary object of study.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

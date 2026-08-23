@@ -1,0 +1,44 @@
+{
+  "id": "2606.01677",
+  "source_ids": {
+    "arxiv": "2606.01677",
+    "acl": "2026.acl-long.1452",
+    "doi": "10.18653/v1/2026.acl-long.1452",
+    "url_acl": "https://aclanthology.org/2026.acl-long.1452"
+  },
+  "title": "UniVocal: Unified Speech-Singing Code-Switching Synthesis",
+  "authors": [
+    "Yufei Shi",
+    "Qian Chen",
+    "Wen Wang",
+    "Xiangang Li",
+    "Zhen-Hua Ling",
+    "Yang Ai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.01677",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.1452.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We propose UniVocal, a unified framework that implicitly infers vocal modes from text context to pioneer Speech-Singing Code-Switching (SCS) Synthesis - a task where transitions are autonomously driven by textual semantics, akin to seamless human language blending. Unlike single-mode generation or systems relying on switching-control tags, our proposed UniVocal implicitly infers vocal modes solely from text context. To achieve this, we employ a data-efficient two-stage curriculum learning strategy that progressively trains a competitive TTS system to acquire the desired SCS capability. Addressing data scarcity, we introduce a scalable pipeline to synthesize diverse code-switching data that is both semantically and acoustically natural, alongside a new multi-scenario benchmark, SCSBench. To address limitations of semantic tokenizers in capturing acoustic details, we also introduce refined cent token and Chain-of-Thought (CoT) generation for planning prosody before content generation, effectively enhancing empathetic speech generation and singing melody. Experimental results demonstrate that UniVocal achieves state-of-the-art performance on SCSBench while maintaining competitive performance on regular speech and singing tasks. Audio samples are available at https://project-univocal-demo.github.io/demo/. The code and dataset are released at https://github.com/FunAudioLLM/FunResearch/tree/main/UniVocal.",
+  "arxiv_comment": "accepted by ACL 2026",
+  "task": [
+    "TTS",
+    "singing"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "UniVocal proposes a unified speech-singing code-switching synthesis framework, directly advancing TTS/SVS methodology.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "2606.11611",
+  "source_ids": {
+    "arxiv": "2606.11611"
+  },
+  "title": "SARA: A Dual-Stream VAE for High-Fidelity Speech Generation via Integrating Semantic and Acoustic Representations",
+  "authors": [
+    "Peijie Chen",
+    "Wenhao Guan",
+    "Weijie Wu",
+    "Kaidi Wang",
+    "Daiyu Huang",
+    "Zhuanling Zha",
+    "Junbo Li",
+    "Jun Fang",
+    "Qingyang Hong",
+    "Lin Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.11611",
+  "pdf_url": "https://arxiv.org/pdf/2606.11611.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot text-to-speech (TTS) relies on robust speech representations. However, current speech tokenizers face a fundamental trade-off: acoustic codecs preserve high-fidelity audio but lack linguistic constraints, causing content errors during generation, whereas semantic tokens from self-supervised learning (SSL) models ensure precise text alignment but discard some acoustic information. To bridge this gap, we propose SARA, a dual-stream VAE that directly fuses a frozen SSL semantic anchor with a dedicated residual acoustic encoder. This effectively mitigates the dilemma, creating an efficient and compact latent space without relying on complex regularizers. SARA achieves superior reconstruction quality over strong baselines. Furthermore, in downstream zero-shot TTS tasks, it yields highly natural and expressive synthesis quality, and maintains robust generation performance even under accelerated inference, offering a favorable trade-off between synthesis speed and computational cost.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "SARA proposes a dual-stream VAE integrating semantic and acoustic representations for high-fidelity zero-shot TTS speech generation, core TTS/codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2026.lrec-1.859",
+  "source_ids": {
+    "acl": "2026.lrec-1.859",
+    "arxiv": null,
+    "doi": "10.63317/2avnr98mgbre"
+  },
+  "title": "A Benchmark Dataset and Comparative Evaluation of Phonemized and Romanized Urdu for Text-to-Speech",
+  "authors": [
+    "M Kaab Bin Shahid",
+    "Muhammed Izharuddin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-859",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-859.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Text-to-Speech (TTS) system for the Urdu language presents significant challenges, primarily due to the scarcity of high-quality datasets and an insufficient focus on modeling pronunciation. Urdu is spoken by 250 million people worldwide, but its research on computational linguistics remains underrepresented. In this paper, we introduce URDUTTS, a comprehensive and publicly available Urdu TTS dataset containing 89 hours of studio-quality speech, with accompanying transcriptions in three formats: Urdu Script, Phonemized Script, and Romanized Script. The dataset includes both mono-speaker and multi-speaker configurations. As Urdu relies heavily on phonetic features, accurate pronunciation is highly essential for the language. Therefore, we benchmark our dataset using VITS and GlowTTS models to compare the widely used Romanized script format with the Phonemized representation. To make the evaluation highly comprehensive, we combined both objective and subjective evaluation strategies. For objective evaluation, Mel-Cepstral Distortion (MCD with Plain, Dynamic Time-Warping, and Slope-Limitation variants), Signal-to-Noise Ratio (SNR), Word Error Rate (WER), and Character Error Rate (CER) were taken. Subjective evaluation was governed by Mean Opinion Score (MOS) ratings from 40 native speakers. Results show that using VITS and GlowTTS with Phonemized transcriptions performs significantly better than Romanized ones, with an improvement of 9.6% and 26.5% in MOS. The data and code are available at github.com/KAABSHAHID/URDUTTS.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "URDUTTS: benchmark dataset and comparative evaluation of phonemized vs. romanized text representations for Urdu TTS; core TTS dataset/evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

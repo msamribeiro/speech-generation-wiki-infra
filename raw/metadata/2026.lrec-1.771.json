@@ -1,0 +1,39 @@
+{
+  "id": "2026.lrec-1.771",
+  "source_ids": {
+    "acl": "2026.lrec-1.771",
+    "arxiv": null,
+    "doi": "10.63317/2x6ou8cyanmo"
+  },
+  "title": "Nos_Brais-GL: A FAIR Galician TTS Corpus for Neural Speech Synthesis",
+  "authors": [
+    "Adina Ioana Vladu",
+    "Antonio Moscoso Sánchez",
+    "Carmen Magariños",
+    "María Perez Lago",
+    "Elisa Fernández Rei"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-771",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-771.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper introduces Nos_Brais-GL, a new open-access high-quality Galician speech corpus designed for the development of neural Text-to-Speech (TTS) systems. Nos_Brais-GL contains approximately 18 hours of professionally recorded male speech and a carefully curated set of utterances selected to ensure linguistic variation and phonetic and prosodic richness. Beyond its immediate application in synthetic speech generation, Nos_Brais-GL exemplifies good practices in TTS corpus design for lesser-resourced languages, emphasizing methodological transparency, open licensing, and interoperability.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Nos_Brais-GL: a new FAIR, professionally recorded Galician speech corpus for neural TTS development; core TTS dataset contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

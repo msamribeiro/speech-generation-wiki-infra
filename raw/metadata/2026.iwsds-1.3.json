@@ -1,0 +1,36 @@
+{
+  "id": "2026.iwsds-1.3",
+  "source_ids": {
+    "acl": "2026.iwsds-1.3",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Personality Expression in Spoken Dialogue Systems: From Text to Speech",
+  "authors": [
+    "Kenta Yamamoto",
+    "Kazunori Komatani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.3",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.3.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "A consistent personality in a spoken dialogue system enhances the naturalness and friendliness of interactions. However, users may not accurately perceive all the personality traits that the system attempts to express. This study aims to identify which traits are most reliably perceived by users. We first analyzed third-party personality ratings of a dialogue corpus using principal component and factor analyses to uncover the underlying dimensions of user perception. We then conducted experiments under both text-only and speech-based dialogue conditions to evaluate how effectively each trait could be perceived. Crowd-sourced ratings showed that a trait concerning Extraversion and Openness can be reliably perceived through text alone, whereas accurate perception of the other traits requires speech-related features such as speech rate, backchannels, fillers, and turn-taking pause duration. These findings suggest that, rather than attempting to express all Big Five traits, focusing on a subset aligned with users’ perceptual tendencies enables more effective and expressive personality design in spoken dialogue systems.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.5,
+  "relevance_note": "Studies which personality traits are reliably perceived in a text-to-speech-realized spoken dialogue system; ambiguous whether the contribution is a synthesis method or a perception/corpus analysis study.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

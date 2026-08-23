@@ -1,0 +1,38 @@
+{
+  "id": "2608.16053",
+  "source_ids": {
+    "arxiv": "2608.16053"
+  },
+  "title": "DuplexGen: Decoupling Content, Timing, and Acoustics for Synthetic Dialogue Speech",
+  "authors": [
+    "Pengcheng Wang",
+    "Sheng Li",
+    "Jiyi Li",
+    "Takahiro Shinozaki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.16053",
+  "pdf_url": "https://arxiv.org/pdf/2608.16053.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Synthetic conversational speech has become an important resource for developing and evaluating conversational speech systems. However, existing dialogue synthesis pipelines typically generate dialogue content first and then insert interruptions, overlap, and backchannels using handcrafted markers or timing rules, making conversational timing prescribed rather than interaction-driven. We present DuplexGen, a dialogue synthesis framework that explicitly decouples content, timing, and acoustics. An LLM first generates the dialogue script, and then two full-duplex conversational models perform the script while listening to each other in real time. This allows conversational timing to emerge naturally while preserving the scripted content. Finally, a high-fidelity text-to-speech model re-renders the interaction without altering its timing. As a demonstration of the proposed framework, we construct a patient--clinician conversational speech corpus with construction-time annotations, including word timestamps, speaker activity, overlap regions, and interaction events. Experimental results show that the proposed framework produces conversational dynamics closer to real dialogue than conventional stitching-based synthesis.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "DuplexGen decouples content, timing, and acoustics to generate synthetic dialogue speech with interaction-driven (rather than prescribed) conversational timing, a core SCA/TTS dataset-generation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

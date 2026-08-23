@@ -1,0 +1,43 @@
+{
+  "id": "2026.acl-long.998",
+  "source_ids": {
+    "acl": "2026.acl-long.998",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.acl-long.998",
+    "url_acl": "https://aclanthology.org/2026.acl-long.998"
+  },
+  "title": "Rectifying the Emotional Flow: Aligning Priors and Dynamic Guidance for High-Arousal Text-to-Speech",
+  "authors": [
+    "Fangming Feng",
+    "Dongjie Fu",
+    "Zequn Xie",
+    "Yu Zhang",
+    "Yangyang Wu",
+    "Zhou Zhao",
+    "Tao Jin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.acl-long.998",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.998.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "While diffusion and flow-matching models have advanced TTS, generating high-arousal emotions remains a persistent challenge due to the trade-off between stability and expressiveness. Existing systems often suffer from linguistic collapse when pursuing high intensity or fail to meet target emotional levels under stable settings. In this work, we identify that standard Gaussian initialization inevitably introduces a neutral prosody bias, while uniform Classifier-Free Guidance often distorts the acoustic manifold, leading to artifacts. To address this, we propose an inference framework that rectifies the emotional trajectory. An Emotion-Rectified Noise Prior injects a semantic gradient at initialization to align sampling with the target emotional manifold, and Likelihood-Inverse Guidance adaptively schedules guidance via a conditional/unconditional likelihood ratio, strengthening guidance only when the trajectory drifts toward a neutral fallback. Extensive experiments demonstrate that our method effectively resolves the stability bottleneck in high-intensity scenarios, achieving superior linguistic accuracy and emotional fidelity without model retraining. Audio samples are available at https://showtts.github.io/emotionTTS/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Diffusion/flow-matching TTS method targeting high-arousal emotional speech generation with corrected prior alignment; core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

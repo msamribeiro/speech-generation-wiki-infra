@@ -1,0 +1,40 @@
+{
+  "id": "2607.21132",
+  "source_ids": {
+    "arxiv": "2607.21132"
+  },
+  "title": "Investigating Codec-Internal Latent Audio Watermarking for Neural Codec Robustness",
+  "authors": [
+    "Zi Hu",
+    "Houmin Sun",
+    "Linxi Li",
+    "Yechen Wang",
+    "Liwei Jin",
+    "Carsten Maple",
+    "Ming Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-23",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.21132",
+  "pdf_url": "https://arxiv.org/pdf/2607.21132.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs are challenging transformations for audio watermarking because they re-encode, quantize, and resynthesize speech. This paper investigates continuous latent-space watermarking for codec robustness. Instead of adding a watermark only to the waveform or spectrogram, we embed a 32-bit message into the continuous latent representation of a codec-like speech autoencoder. The pipeline uses a SEANet-style encoder-decoder, a Conformer-based message embedder, RVQ-guided latent decomposition, and a latent-domain detector trained under signal-processing and neural-codec transformations. Rather than proposing a final universal watermarking baseline, we characterize the trade-offs that appear when the watermark carrier is moved before neural decoding. On 48 kHz speech, EnCodec-aware training improves EnCodec-24k bit accuracy from 78.8% to 95.6% and 97.1%, while PESQ decreases from 3.727 to 3.514 and 3.427.",
+  "arxiv_comment": "7 pages. Submitted to IEEE Spoken Language Technology Workshop (SLT)",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Investigates continuous latent-space audio watermarking robust to neural codec re-encoding; a traceability/security contribution for codec-processed audio rather than an advance in codec reconstruction or speech generation quality.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2607.01965",
+  "source_ids": {
+    "arxiv": "2607.01965"
+  },
+  "title": "Towards a Phonology-Informed Evaluation of Multilingual TTS",
+  "authors": [
+    "Sneha Ray Barman",
+    "Neeraj Kumar Sharma",
+    "Shakuntala Mahanta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.01965",
+  "pdf_url": "https://arxiv.org/pdf/2607.01965.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural TTS systems can sound natural across languages, but naturalness does not guarantee the preservation of sound contrasts that distinguish words from their grammatical forms. Standard metrics like MOS do not test for this. We propose a classifier-based framework that audits TTS output against language-specific phonological patterns using human speech as a benchmark. Testing Assamese advanced tongue root (ATR) vowel harmony with Meta's MMS TTS, we show that a classifier trained on human speech transfers to synthesized speech with minimal loss. The faithfulness audit reveals that [+ATR] mid vowels are realized as [-ATR] in 1/3 tokens despite an underlying [+ATR] specification, a bias absent in human speech. At the word level, predicted ATR labels classify harmony more accurately than transcription labels, indicating a gap between intended and produced phonology. The framework offers task-specific diagnostics and generalizes to other phonological contrasts with measurable acoustic cues.",
+  "arxiv_comment": "Accepted at Interspeech 2026",
+  "task": [
+    "TTS",
+    "evaluation",
+    "multilingual"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Proposes a classifier-based, phonology-informed evaluation framework auditing multilingual TTS output against language-specific sound contrasts that MOS does not capture, a core TTS evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

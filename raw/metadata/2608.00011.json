@@ -1,0 +1,40 @@
+{
+  "id": "2608.00011",
+  "source_ids": {
+    "arxiv": "2608.00011"
+  },
+  "title": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+  "authors": [
+    "Wasim Madha",
+    "Nityanand Mathur",
+    "Hamees Sayed",
+    "Apoorv Singh",
+    "Sameer Khurana",
+    "Akshat Mandloi",
+    "Sudarshan Kamath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.00011",
+  "pdf_url": "https://arxiv.org/pdf/2608.00011.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Current text-to-speech systems face a trade-off: autoregres- sive codec language models produce highly intelligible speech but require large-scale models and training data and decode tokens sequentially, while non-autoregressive approaches im- prove speed at the cost of linguistic accuracy. We present DLLM-TTS, a framework that formulates TTS as conditional block discrete diffusion over X-Codec2 neural audio codec to- kens. The model decomposes sequences into blocks and applies masked diffusion within each block while processing blocks se- quentially, learning both local acoustic coherence and global text-speech alignment. During inference, parallel token pre- diction within blocks enables efficient generation with a real- time factor (RTF) of 0.15. A 0.6B-parameter model trained on 20K hours achieves competitive performance on the Seed- TTS-eval benchmark, demonstrating that block discrete diffu- sion language models enable practical and data-efficient speech synthesis with parallel generation.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "DLLM-TTS formulates TTS as conditional block discrete diffusion over neural codec tokens, addressing the AR/NAR speed-accuracy trade-off, a core TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

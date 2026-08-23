@@ -1,0 +1,39 @@
+{
+  "id": "2607.02343",
+  "source_ids": {
+    "arxiv": "2607.02343"
+  },
+  "title": "SelectTSL: Prompt-Guided Selective Target Sound Localization in Complex Scenarios",
+  "authors": [
+    "Ziyang Jiang",
+    "Yu Chen",
+    "Zexu Pan",
+    "Xinyuan Qian",
+    "Bowen Xing",
+    "Ivor W. Tsang",
+    "Xu-Cheng Yin",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.02343",
+  "pdf_url": "https://arxiv.org/pdf/2607.02343.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Humans can selectively attend to a target sound and estimate its direction in complex scenarios, whereas such selective localization remains challenging for current deep learning-based systems. Sound source localization (SSL) has achieved remarkable success with deep learning, yet most methods localize all active sources without selectivity. Conversely, target sound extraction (TSE) extracts sources using multimodal prompts but typically fails to preserve the multichannel spatial information required for accurate localization. To bridge this gap, we formulate the task of prompt-guided selective target sound localization and propose SelectTSL, an end-to-end architecture that localizes only the user-specified target in multi-source acoustic scenes. Specifically, we design a target-aware selective localization strategy that employs a Prompt-Guided Selective Attention Module (PGSA) to generate prompt-informed embeddings. These embeddings guide an inter-channel phase difference (IPD) enhancer to refine raw phase cues, fusing with target magnitudes to jointly estimate direction of arrival (DoA) and target-source cardinality, i.e., the number of target sound sources. This coupled design effectively focuses on the user-specified target spatial cues for selective localization and also handles time-varying numbers of target sources. Extensive experiments on both synthetic data and real-world recordings demonstrate that our proposed method consistently outperforms other baselines and exhibits robust generalization to real acoustic environments.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "SelectTSL studies prompt-guided selective sound source localization; a sound-localization/spatial-audio-perception task with no speech generation component.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

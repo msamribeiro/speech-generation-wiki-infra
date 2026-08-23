@@ -1,7 +1,10 @@
 {
   "id": "2605.22170",
   "source_ids": {
-    "arxiv": "2605.22170"
+    "arxiv": "2605.22170",
+    "acl": "2026.starsem-conference.28",
+    "doi": "10.18653/v1/2026.starsem-conference.28",
+    "url_acl": "https://aclanthology.org/2026.starsem-conference.28"
   },
   "title": "Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?",
   "authors": [
@@ -14,16 +17,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "workshop",
+  "venue_type": "workshop",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-21",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2605.22170",
-  "pdf_url": "https://arxiv.org/pdf/2605.22170.pdf",
+  "pdf_url": "https://aclanthology.org/2026.starsem-conference.28.pdf",
   "pdf_path": null,
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "In recent years, several Speech Language Models (SLMs) that represent speech and written text jointly have been presented. The question then emerges about how model-internal mechanisms are similar and different when operating in the two modalities. We focus on how these systems encode, store, and retrieve factual knowledge, which has previously been investigated for text-only models. To investigate mechanisms behind the storage and recall of factual association in SLMs, we leverage Causal Mediation Analysis, a technique previously applied to text-based models.   Initial results using SpiritLM, a multimodal model integrating discrete speech tokens reveal discrepancies between text-to-text and speech-to-text results, suggesting that the emergent mechanisms for factual recall are only partially carried over from the text to the speech modality. These results advance our understanding of how internal mechanisms encode factual associations in SLMs while contributing insights for improving speech-enabled AI systems.",
   "arxiv_comment": "In *SEM 2026, the 15th Joint Conference on Lexical and Computational Semantics",
   "task": [],
@@ -33,5 +36,6 @@
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

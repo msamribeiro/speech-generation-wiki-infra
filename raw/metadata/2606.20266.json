@@ -1,0 +1,38 @@
+{
+  "id": "2606.20266",
+  "source_ids": {
+    "arxiv": "2606.20266"
+  },
+  "title": "Transcript-Free Flow-Matching Text-to-Speech via Speech Feature Conditioning",
+  "authors": [
+    "SooHwan Eom",
+    "Hee Suk Yoon",
+    "Eunseop Yoon",
+    "Mark Hasegawa-Johnson",
+    "Chang D. Yoo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.20266",
+  "pdf_url": "https://arxiv.org/pdf/2606.20266.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent flow-matching text-to-speech (TTS) models, such as F5-TTS, rely on a reference transcript at inference time, obtained from an external ASR system. This dependency makes zero-shot TTS brittle for accented or dysarthric speakers, precisely the scenarios where it is most needed. Moreover, we find that text-based reference conditioning can propagate atypical acoustic patterns from atypical speech into synthesis, even when ground-truth transcripts are available. To address this, we propose RTFree-F5, which replaces the reference transcript with continuous self-supervised speech representations mapped into F5-TTS's text-conditioning space via a lightweight adapter, while reusing the pretrained checkpoint. On dysarthric speech, RTFree-F5 reduces WER from 24.6% to 10.4%, surpassing even the ground-truth reference transcript baselines, while improving naturalness and remaining competitive on standard benchmarks without requiring any reference transcript.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes transcript-free flow-matching TTS conditioned on speech features instead of ASR-derived reference transcripts, improving robustness for accented/dysarthric zero-shot TTS, a core architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

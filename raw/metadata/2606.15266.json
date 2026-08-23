@@ -1,0 +1,38 @@
+{
+  "id": "2606.15266",
+  "source_ids": {
+    "arxiv": "2606.15266"
+  },
+  "title": "Evaluating and Preserving Lexical Stress in English-to-Chinese Speech-to-Speech Translation",
+  "authors": [
+    "Yuchen Song",
+    "Xi Chen",
+    "Mingze Li",
+    "Satoshi Nakamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.15266",
+  "pdf_url": "https://arxiv.org/pdf/2606.15266.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-speech translation (S2ST) systems have achieved impressive progress in semantic accuracy and speech naturalness. However, the cross-lingual transfer of lexical stress, a vital cue for emphasis and speaker intent, remains heavily underexplored, compounded by a lack of reliable automatic evaluation metrics for tonal languages like Chinese. We investigate English-to-Chinese S2ST stress transfer by constructing a stress-annotated Chinese dataset and an XLS-R-based Mandarin stress detector. Integrating this with the English EmphAssess system, we propose a novel objective metric for cross-lingual stress evaluation. Furthermore, we fine-tune CosyVoice3 to build a stress-aware S2ST system. Experiments demonstrate that our proposed S2ST architecture significantly outperforms existing systems in stress translation capability while maintaining competitive translation quality. Furthermore, our evaluation metric exhibits a strong correlation with human subjective judgments.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Evaluates and preserves cross-lingual lexical stress transfer in English-to-Chinese speech-to-speech translation, a core S2ST evaluation/methodology contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

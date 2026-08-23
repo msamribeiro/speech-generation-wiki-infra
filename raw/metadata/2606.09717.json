@@ -1,0 +1,37 @@
+{
+  "id": "2606.09717",
+  "source_ids": {
+    "arxiv": "2606.09717"
+  },
+  "title": "What Makes Synthetic Speech Sound Sarcastic? A Prosody-Controlled Perception Study",
+  "authors": [
+    "Zhu Li",
+    "Shekhar Nayak",
+    "Matt Coler"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09717",
+  "pdf_url": "https://arxiv.org/pdf/2606.09717.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Prosody plays an important role in sarcasm perception, yet previous studies have relied on naturally produced speech that lacks fine-grained control over individual acoustic dimensions. As prosodic cues co-vary in natural data, isolating their independent contributions remains challenging. We introduce a controlled framework using neural text-to-speech (TTS) with prompt-based prosodic conditioning to manipulate speech rate, pitch variation, and loudness. An orthogonal stimulus set was constructed to enable causal testing of prosodic cue effects. Human listeners rated sarcasm and naturalness, and their judgments were compared with predictions from a foundation model capable of processing audio input. Results show that loudness primarily drives human sarcasm perception, whereas the model assigns greater weight to speech rate, indicating limited behavioral alignment. This study shows how controllable neural TTS enables investigation of prosodic cue weighting in speech perception.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Uses prompt-conditioned neural TTS as an experimental tool in a perception study of sarcasm; primary contribution is a human-perception finding about prosodic cues rather than a TTS system or evaluation-methodology advance.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

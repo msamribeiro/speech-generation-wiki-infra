@@ -1,0 +1,35 @@
+{
+  "id": "2607.13864",
+  "source_ids": {
+    "arxiv": "2607.13864"
+  },
+  "title": "Rethinking Speech Foundation Model Fine-tuning: Better SFT or Better Match?",
+  "authors": [
+    "Wangjin Zhou",
+    "Yizhou Zhang",
+    "Yichi Wang",
+    "Tatsuya Kawahara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.13864",
+  "pdf_url": "https://arxiv.org/pdf/2607.13864.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Supervised fine-tuning (SFT) is widely used to adapt self-supervised speech representations to downstream classification tasks. Small gains observed under a single pretrained checkpoint are often interpreted as method-level improvements, i.e., a higher attainable performance ceiling. We show that such conclusions are not always reliable because SFT outcomes depend strongly on the specific pretrained instance. We conduct a systematic study on 3 SUPERB classification tasks, evaluating 8 SFT variants across 9 pretrained checkpoints from wav2vec~2.0, HuBERT, and WavLM, with multi-seed repetitions on representative base-scale models. We find that the identity of the statistically indistinguishable top-group SFT recipe is often checkpoint-dependent, with limited transferability across pretrained instances. These findings suggest that many reported downstream gains reflect instance and seed dependent elicitation match, rather than universally improving the attainable performance ceiling.",
+  "arxiv_comment": "Accept by Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Studies how supervised fine-tuning outcomes for self-supervised speech representations on downstream classification tasks depend on pretraining-finetuning match; a representation-learning methodology paper unrelated to TTS/VC/SCA generation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

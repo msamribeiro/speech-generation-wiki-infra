@@ -1,0 +1,36 @@
+{
+  "id": "2026.dravidianlangtech-1.3",
+  "source_ids": {
+    "acl": "2026.dravidianlangtech-1.3",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.dravidianlangtech-1.3"
+  },
+  "title": "Cascaded Modular or End-to-End? : An Investigation on Speech-to-Speech Translation Task for Dravidian Languages",
+  "authors": [
+    "Bhavana Nali",
+    "Abhik Jana"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.dravidianlangtech-1.3",
+  "pdf_url": "https://aclanthology.org/2026.dravidianlangtech-1.3.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper presents a study of speech-to-speech translation for low-resource Dravidian languages, focusing on Tamil, Telugu, and Kannada. We investigate the efficacy of the Cascaded Modular system with the End-to-end system in both zero-shot and fine-tuned settings. The Cascaded Modular approach combines an ASR Module (Whisper-based ASR for English speech; IndicConformer for Dravidian speech), a Text-to-Text translation module (IndicTrans2), and a Speech synthesis module (Indic Parler-TTS), whereas SeamlessM4T is used as the End-to-end system. For parameter-efficient Low-Rank Adaptation (LoRA) fine-tuning to adapt the translation component to a domain-specific dataset, we use FLEURS and Mann-ki-Baat (a subset of BhasaAnuvaad dataset). Cascaded Modular systems achieve BLEU scores ranging from 3.17 to 19.18 in the zero-shot setting and 5.08 to 19.18 after fine-tuning, whereas the End-to-end model ranges from 3.02 to 15.72 in zero-shot settings across languages and 4.11 to 16.84 after fine-tuning. The results show that Cascaded Modular systems consistently outperform the End-to-end model across both setups. Note that parameter-efficient fine-tuning yields significant improvements in translation quality and speech generation performance for low-resource Dravidian speech translation.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Compares cascaded (ASR+MT+TTS) and end-to-end speech-to-speech translation architectures for low-resource Dravidian languages; fits the S2S-translation sub-paradigm.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

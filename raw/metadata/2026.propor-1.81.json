@@ -1,0 +1,45 @@
+{
+  "id": "2026.propor-1.81",
+  "source_ids": {
+    "acl": "2026.propor-1.81",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Certas Palavras: A 1980s-90s Brazilian Radio Corpus to Test TTS Models in Noisy Multi-Speaker Dialogues",
+  "authors": [
+    "Gustavo Evangelista Araújo",
+    "Moacir Ponti",
+    "Arnaldo Candido Junior",
+    "Sidney Leal",
+    "Edresson Casanova",
+    "Renato Moraes Silva",
+    "Miguel Oliveira Jr.",
+    "Adriana Barbosa Santos",
+    "Gustavo Wadas Lopes",
+    "Sandra Aluisio"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 4,
+  "published_date": "2026-04-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.propor-1.81",
+  "pdf_url": "https://aclanthology.org/2026.propor-1.81.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Robust text-to-speech (TTS) systems must be trained on speech that mirrors the variability and imperfections of spontaneous dialogues. However, TTS systems trained on existing Brazilian Portuguese datasets are typically limited to clean, scripted, or studio-recorded speech. Certas Palavras (CP) bridges this gap with 70 hours of spontaneous, multi-speaker dialogues from a Brazilian radio program broadcast in the 1980s–1990s. The extensive manual annotation process captures conversational dynamics, including orality markers, filled pauses, and hesitations. For the analog medium, we annotated non-verbal phenomena as musical interference, noise and segmental corrections, describing a challenging acoustic environment for synthesis. Baseline YourTTS and F5-TTS models were trained in a 9-hour subset featuring one of the two main hosts of Certas Palavras. Baseline YourTTS and F5-TTS models were trained on a 9-hour single-speaker subset corresponding to one of the main program hosts. Objective evaluation shows that the synthesized speech remains intelligible, with moderate WER and CER. In contrast, subjective evaluation reveals a clear gap in perceived naturalness, with lower MOS scores and higher inter-rater variability compared to ground-truth audio. Together, these properties make the dataset a strong benchmark for TTS robustness.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Certas Palavras: a spontaneous, noisy, multi-speaker Brazilian Portuguese radio corpus purpose-built to stress-test TTS models beyond clean studio data; core TTS evaluation-benchmark contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

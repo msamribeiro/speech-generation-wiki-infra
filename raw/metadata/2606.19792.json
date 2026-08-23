@@ -1,0 +1,37 @@
+{
+  "id": "2606.19792",
+  "source_ids": {
+    "arxiv": "2606.19792"
+  },
+  "title": "Exploring Pre-training Benefits on Phoneme Addition through Fine-tuning in Speech Synthesis",
+  "authors": [
+    "Masato Murata",
+    "Koichi Miyazaki",
+    "Tomoki Koriyama",
+    "Tomoki Toda"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.19792",
+  "pdf_url": "https://arxiv.org/pdf/2606.19792.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Transfer learning is widely used for low-resource text-to-speech. When the target corpus contains phonemes unseen in pre-training, the model must expand its phoneme inventory during fine-tuning; we call the process \"phoneme addition.\" However, it remains unclear whether the pre-trained ability to generate seen phonemes contributes to this process. This study investigates phoneme addition in two settings: (1) a simulation setup using LLM-generated phoneme-controlled corpora that enables investigation without considering confounding factors, and (2) a real-speech cross-lingual transfer setup (English to Japanese) to validate whether the findings hold in practice. Experiments in both settings showed that while fine-tuning achieved higher naturalness than training from scratch, it required as much or more data to achieve comparable PER for new phonemes. These results indicate that pre-training mainly contributes to naturalness improvement, but offers limited benefit for phoneme addition.",
+  "arxiv_comment": "Accepted by INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Investigates whether pre-training benefits transfer to phoneme-inventory expansion during low-resource TTS fine-tuning, a core TTS transfer-learning contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

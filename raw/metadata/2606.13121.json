@@ -1,0 +1,38 @@
+{
+  "id": "2606.13121",
+  "source_ids": {
+    "arxiv": "2606.13121"
+  },
+  "title": "NaturalFlow: Reducing Disruptive Pauses for Natural Speech Flow in Simultaneous Speech-to-Speech Translation",
+  "authors": [
+    "Dongwook Lee",
+    "Youngho Cho",
+    "Sangkwon Park",
+    "Heeseung Kim",
+    "Sungroh Yoon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.13121",
+  "pdf_url": "https://arxiv.org/pdf/2606.13121.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Simultaneous speech-to-speech translation aims to enable near-real-time communication by minimizing latency, offering a compelling, real-time alternative to the high latency of consecutive translation. However, the excessive pursuit of low latency often results in fragmented chunk-wise speech. Consequently, listeners are subjected to an unnatural acoustic flow punctuated by frequent pauses, which could increase their cognitive load. To bridge this gap, we introduce a fluency-aware optimization framework designed to discover the sweet spot between the low-latency benefits of simultaneous translation and the natural flow of consecutive translation. Our framework minimizes inter-chunk silences by leveraging model-internal signals, including linguistic diversity and induced temporal variability in speech durations. Experiments on short- and long-form benchmarks show that our framework produces natural speech flow while maintaining competitive latency and translation quality.",
+  "arxiv_comment": "Proceedings of the 26th Interspeech Conference, Long Paper",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "NaturalFlow reduces disruptive pauses for natural speech flow in simultaneous speech-to-speech translation, a core SCA/S2ST contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

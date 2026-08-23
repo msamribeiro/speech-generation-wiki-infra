@@ -1,0 +1,36 @@
+{
+  "id": "2026.sigdial-1.18",
+  "source_ids": {
+    "acl": "2026.sigdial-1.18",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "CrossOracle: An Agentic Framework for Real-Time Expert Personas with Parallelized Acoustic Synthesis",
+  "authors": [
+    "Yash Raj Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.sigdial-1.18",
+  "pdf_url": "https://aclanthology.org/2026.sigdial-1.18.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We present CrossOracle, a production-deployed spoken dialogue system for real-time Hinglish (Hindi-English code-switched) voice interaction across eleven Expert Persona identities. The system addresses the latency bottleneck of cascaded ASR-LLM-TTS pipelines through three contributions: (1) a parallelized First-In-First-Stream TTS worker that overlaps synthesis with ongoing LLM generation, mathematically ensuring gapless audio playback; (2) a language-aware semantic boundary heuristic that flushes text chunks at Hindi danda and Latin punctuation boundaries, preserving prosodic integrity across code-switched utterances; and (3) a deterministic AbortController-based barge-in protocol that resolves user interruptions in under 1 ms. Empirical evaluation of live conversational logs demonstrates a mean TTS Real-Time Factor of 0.107 and a 100% barge-in resolution rate. The live system is deployed at crossoracle.io and supports persona switching, custom persona creation from natural language descriptions, and robust Hinglish ASR error tolerance via a Devanagari ratio mishear filter. The demonstration invites attendees to hold unscripted Hinglish conversations, stress-test the barge-in protocol, and construct novel personas on-the-fly.",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "CrossOracle: production spoken dialogue system with a parallelized streaming TTS worker overlapping synthesis with LLM generation for real-time code-switched persona interaction; core SCA/TTS systems contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

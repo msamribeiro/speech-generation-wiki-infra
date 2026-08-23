@@ -1,0 +1,42 @@
+{
+  "id": "2605.31521",
+  "source_ids": {
+    "arxiv": "2605.31521"
+  },
+  "title": "UniAudio-Token: Empowering Semantic Speech Tokenizers with General Audio Perception",
+  "authors": [
+    "Yuhan Song",
+    "Linhao Zhang",
+    "Aiwei Liu",
+    "Chuhan Wu",
+    "Sijun Zhang",
+    "Wei Jia",
+    "Yuan Liu",
+    "Houfeng Wang",
+    "Xiao Zhou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.31521",
+  "pdf_url": "https://arxiv.org/pdf/2605.31521.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Semantic speech tokenizers have become a widely used interface for Audio-LLMs, owing to their compact single-codebook design and strong linguistic alignment. However, their focus on linguistic abstraction induces acoustic blindness, limiting their applicability beyond speech-centric tasks. We propose UniAudio-Token, a framework that empowers semantic tokenizers with general audio perception without compromising speech ability. Instead of altering the semantic paradigm, UniAudio-Token mitigates its information loss through two key innovations: (1) Semantic-Acoustic Primitives (SAP) provide structured supervision by decomposing audio into linguistic content, vocal attributes, and auditory-scene primitives; and (2) Semantic-Acoustic Equilibrium (SAE) introduces a content-aware gating mechanism that adaptively restores fine-grained acoustic details from shallow layers. Extensive evaluations show that UniAudio-Token learns comprehensive universal representations while preserving high-fidelity speech generation. When integrated with downstream LLMs, it outperforms all single-codebook baseline tokenizers on both understanding and generation tasks, effectively serving as a unified audio interface. We publicly release all our code, including training and inference scripts, together with the model checkpoints at https://github.com/Tencent/Universal_Audio_Tokenizer.",
+  "arxiv_comment": "19 pages, 10 figures",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "UniAudio-Token extends semantic speech tokenizers with general audio perception, relevant codec/tokenizer infrastructure for speech generation-understanding systems.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

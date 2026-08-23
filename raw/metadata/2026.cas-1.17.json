@@ -1,0 +1,34 @@
+{
+  "id": "2026.cas-1.17",
+  "source_ids": {
+    "acl": "2026.cas-1.17",
+    "arxiv": null,
+    "doi": "10.63317/4f24agmr53nm"
+  },
+  "title": "PoETIC: A Re-framing of Context Dependent Emotion Detection",
+  "authors": [
+    "Nirmal Surange",
+    "Manish Shrivastava"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-cas-17",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-cas-17.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Emotion classification has been extensively studied, with numerous datasets enabling progress in both textual and multimodal settings. However, most existing text-based resources treat emotion as an utterance-level property, assuming that the emotional content is fully encoded in the sentence itself. This assumption is problematic: in the absence of paralinguistic cues such as prosody, facial expressions, or emojis, textual emotions are often highly context-dependent. Many utterances lack explicit emotion markers, and even when present, such cues may be overridden by broader situational context. Sentence-level emotion annotation, thus, is driven by the annotator’s ability to imagine the context in which the given utterance would elicit a given emotion. An utterance may be able to express an emotion completely (Emotion Obvious), or it can express an emotion when imagined in a certain context (Emotion Plausible). Also, for an utterance, certain emotions might be implausible to express given the specific wording of a sentence (Emotion-Implausible). To address these issues, we create a new paradigm for emotion classification by categorizing utterance and emotion pairs into context-dependency classes. We present the PoETIC benchmark dataset, where sentences in the GoEmotions dataset are human-annotated for the three aforementioned classes across seven emotions (Fear, Anger, Sadness, Joy, Disgust, Surprise, and Neutral). We observe that gold-tagged emotions in GoEmotions do not have a clear correlation with human judgment with respect to the ability to express other emotions, given different contexts. Human annotators identify significantly more plausible emotions for a given utterance if asked to imagine a plausible context per utterance-emotion pair. We also present baselines using three popular large language models and two “small” language models in zero-shot and few-shot settings on the benchmark dataset.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Text-based context-dependent emotion classification framework; paralinguistic/prosody cues are discussed only as an absent signal in text, no speech synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

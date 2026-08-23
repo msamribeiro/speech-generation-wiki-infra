@@ -1,0 +1,39 @@
+{
+  "id": "2026.dialres-1.18",
+  "source_ids": {
+    "acl": "2026.dialres-1.18",
+    "arxiv": null,
+    "doi": "10.63317/3sqk7nxsikhp"
+  },
+  "title": "Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification",
+  "authors": [
+    "Caroline Kleen",
+    "Lea Fischbach",
+    "Akbar Karimi",
+    "Lucie Flek",
+    "Alfred Lameli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-dialres-18",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-dialres-18.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This study evaluates whether Retrieval-based Voice Conversion (RVC) can be used to normalize speaker-specific variability while preserving dialect-relevant acoustic cues, and what the response of human and machine systems to this manipulation reveals about the architecture of dialect recognition. In two perception experiments, speech samples from nine German dialect regions were presented either in their original form or after conversion to a single target speaker. We compared overall accuracy, confusion structures, item-level response distributions, and the interaction between listener origin and target dialect across conditions. Human classification remained stable under voice conversion. Accuracy did not differ between conditions, confusion matrices were highly correlated, and item-level divergences were minimal. The interaction between listener origin and target dialect—reflecting systematic regional bias—remained invariant. These findings indicate that RVC does not distort perceptually relevant dialectal cues and that human dialect recognition is robust to speaker normalization. In contrast, we evaluated a deep learning model under matched conditions: model accuracy improved significantly under RVC, while human performance remained unchanged. This dissociation reframes RVC as an experimental probe for investigating the divergence between human and machine speech processing, suggesting that this divergence is rooted in fundamentally different representational architectures.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.45,
+  "relevance_note": "Uses off-the-shelf voice conversion (RVC) as a speaker-normalization tool to study dialect classification perception; VC is a black-box instrument for a perception study, not the paper's own method contribution.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2607.09530",
+  "source_ids": {
+    "arxiv": "2607.09530"
+  },
+  "title": "FreyaTTS: A Compact Tokenizer-Free Flow-Matching Transformer for Turkish-First Speech Synthesis",
+  "authors": [
+    "Ahmet Erdem Pamuk",
+    "Ömer Yentür",
+    "Ahmet Tunga Bayrak",
+    "Yavuz Alp Sencer Öztürk",
+    "Mustafa Yavuz"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.09530",
+  "pdf_url": "https://arxiv.org/pdf/2607.09530.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Freya-TTS, a compact, tokenizer-free, Turkish-first text-to-speech model designed for highly reliable and efficient conversational synthesis. Freya-TTS is a 183.2M-parameter non-autoregressive conditional flow-matching Diffusion Transformer (DiT) that operates in the continuous latent space of the frozen AudioVAE2 (16 kHz encode, 48 kHz decode), allowing the model to focus its capacity on text-to-latent mapping while inheriting high-quality 48 kHz reconstruction. We advance the framework along three key dimensions: (1) rule-free end-to-end modeling from a 92-symbol Turkish character vocabulary without a phonemizer, grapheme-to-phoneme frontend, or discrete speech tokenizer, with digit strings expanded to their spoken form at the text frontend; (2) non-autoregressive parallel denoising, which predicts the entire latent sequence simultaneously over a predicted duration; and (3) a production-oriented two-stage post-training recipe consisting of single-speaker voice locking and short-utterance coverage, improving speaker consistency and robustness on short inputs. On the Freya-TR-Eval benchmark, Freya-TTS achieves a band-matched word error rate (WER) of 8.0% and character error rate (CER) of 3.0%, lower error than both larger open systems in its field, XTTS-v2 and F5-TTS, at 40-55% of their parameter count, together with the highest naturalness (MOS) among the compact systems. The model achieves a real-time factor of 0.11 on a consumer GPU (RTX 4090; ~0.14 mean on an H100) and synthesizes in real time on a laptop CPU, making it well suited for resource-constrained edge deployment. We release the model weights, training and inference code, and evaluation benchmark under the Apache-2.0 license.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Freya-TTS introduces a compact, tokenizer-free, Turkish-first flow-matching TTS model for reliable conversational synthesis, a core multilingual TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

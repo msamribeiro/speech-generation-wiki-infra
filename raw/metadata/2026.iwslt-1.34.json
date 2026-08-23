@@ -1,0 +1,34 @@
+{
+  "id": "2026.iwslt-1.34",
+  "source_ids": {
+    "acl": "2026.iwslt-1.34",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.iwslt-1.34"
+  },
+  "title": "Hurdles of Automatic Metric for Speech Translation Evaluation",
+  "authors": [
+    "Victor Eugen Zarzu",
+    "Vilem Zouhar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwslt-1.34",
+  "pdf_url": "https://aclanthology.org/2026.iwslt-1.34.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Automatic evaluation of speech translation has so far relied on text-only automated metrics that ignore speech phenomena. One would expect that incorporating the source audio modality would improve the performance of automatic metrics. We implement two standard metric paradigms: a COMET-audio regression model using audio and text encoders, and one based on prompting a speech large language model. Surprisingly, both audio-infused models fail to reliably surpass text-only baselines. We attribute this failure to the noise pollution and audio-transcript mismatches present in the audio signal, which makes the modality unreliable from the metric’s perspective. Furthermore, we argue that current human-annotated evaluation datasets for automated metrics predominantly feature technical content or short texts where paralinguistic features like prosody lack importance, rendering the extra audio information unhelpful for quality estimation (QE).",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Automatic metrics for speech-to-text translation quality (COMET-audio, speech-LLM prompting); evaluates translation accuracy from source audio, not synthesized speech quality.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

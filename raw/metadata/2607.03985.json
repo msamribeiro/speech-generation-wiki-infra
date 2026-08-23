@@ -1,0 +1,37 @@
+{
+  "id": "2607.03985",
+  "source_ids": {
+    "arxiv": "2607.03985"
+  },
+  "title": "NouveauVoice: Generating Novel Pseudo Speakers for Voice Anonymization",
+  "authors": [
+    "Meiying Melissa Chen",
+    "Anastasia Kuznetsova",
+    "Zhenyu Wang",
+    "Zhiyao Duan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.03985",
+  "pdf_url": "https://arxiv.org/pdf/2607.03985.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Advanced neural technologies in speech synthesis and voice conversion (VC) have introduced severe risks to personal privacy, necessitating robust Speaker Anonymization Systems (SAS). Existing SAS approaches modify voice characteristics in the hand-crafted feature space or speaker embedding space, often struggling to provide sufficient identity variance across generated voices. In this paper, we propose NouveauVoice, a novel pseudo-speaker generation framework based on a Hierarchical Deep Variational Autoencoder (NVAE). Integrated as a standalone plug-in module on top of state-of-the-art architectures (FACodec and CosyVoice2), our approach leverages tractable sampling and the Evidence Lower Bound (ELBO) objective to synthesize highly expressive pseudo-speaker embeddings with significantly enhanced speaker diversity. Evaluating our framework under a protocol similar to the VoicePrivacy Challenge alongside Maximum Mean Discrepancy (MMD) analysis, we demonstrate that NouveauVoice achieves strong identity concealment, yielding an Equal Error Rate (EER) exceeding 38% against an automatic speaker verification attacker model. Our system shows a reasonable trade-off between strict anonymity, rich pseudo-speaker diversity, and downstream speech utility, such as intelligibility and emotional expressiveness.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "NouveauVoice generates novel pseudo-speakers for voice anonymization with improved identity variance, a core VC/speaker-anonymization generation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

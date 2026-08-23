@@ -1,0 +1,34 @@
+{
+  "id": "2026.lrec-1.464",
+  "source_ids": {
+    "acl": "2026.lrec-1.464",
+    "arxiv": null,
+    "doi": "10.63317/5ctuktk6ffpi"
+  },
+  "title": "ToneSwiper: Facilitating Manual ToDI-annotation of Dutch Prosody",
+  "authors": [
+    "Matthijs Westera",
+    "Ariëlle Reitsema"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-464",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-464.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Manual transcription of intonation by experts remains an essential part of research on the structure and meaning of intonation across languages, as well as for developing computational methods for automatic intonation transcription. We present ToneSwiper, a Python program with a graphical user interface that facilitates manual intonation transcription in the ToDI framework (Transcription of Dutch Intonation; Gussenhoven, 2005), with possible adaptation to similar (e.g., ToBI-like) frameworks for other languages. For the trained annotator, it enables efficient ToDI transcription of speech by integrating an audio-player, a spectrogram and pitch contour plot, auto-scroll, dynamic audio stretching, and an intuitive hotkey interface that maps key sequences to ToDI elements, e.g., pressing up-down for a high-to-low accent (H*L). In this way, transcription is conducted by ‘swiping‘ over the arrow keys on the keyboard. We present the program and its motivation, as well as a small-scale pilot study on annotation efficiency and inter-rater agreement, using a highly challenging sample of task-oriented dialogue from the Dutch Map Task Corpus (Ladd and Schepman, 2003).",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "ToneSwiper is a manual intonation-transcription annotation tool for Dutch (ToDI framework), aimed at linguistic transcription research rather than TTS synthesis or evaluation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

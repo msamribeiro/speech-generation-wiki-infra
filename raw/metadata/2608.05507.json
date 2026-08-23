@@ -1,0 +1,41 @@
+{
+  "id": "2608.05507",
+  "source_ids": {
+    "arxiv": "2608.05507"
+  },
+  "title": "AffectDF: The Most Comprehensive Benchmark for Speech Deepfake Detection against Emotionally Expressive Attacks",
+  "authors": [
+    "Aurosweta Mahapatra",
+    "Xiutian Zhao",
+    "Shreeram Suresh Chandra",
+    "Zihan Zhang",
+    "Zongyang Du",
+    "Ismail Rasim Ulgen",
+    "Kong Aik Lee",
+    "Nicholas Andrews",
+    "Carlos Busso",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-06",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.05507",
+  "pdf_url": "https://arxiv.org/pdf/2608.05507.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech deepfake detection (SDD) systems achieve strong performance on conventional benchmarks; however, existing datasets provide limited coverage of emotionally expressive and recent large audio-language model (LALM)-based attacks. Existing emotional spoofing datasets are also limited in scale and attack diversity, typically covering only voice conversion (VC) or text-to-speech (TTS) attacks. We introduce AffectDF, the most comprehensive benchmark for emotionally expressive speech deepfakes, spanning TTS, VC, emotional VC, and LALM-based spoofing attacks across both acted and spontaneous emotional speech. AffectDF contains approximately 260 hours of speech generated using 21 spoofing attacks across five emotional states. We benchmark state-of-the-art SDD systems under conventional and emotional spoofing conditions, including LALM-based detectors evaluated with both inference-only prompting and supervised fine-tuning. Our experiments reveal severe robustness degradation when models trained on conventional benchmarks are evaluated on AffectDF, with several systems approaching near-random performance. Surprisingly, even large-scale emotional training does not consistently improve cross-domain robustness, indicating that current SDD systems fail to learn generalized spoof representations under emotional and prosodic variability. Robustness further varies substantially across emotional states, attack families, and acted vs spontaneous emotional speech conditions. These findings expose fundamental limitations of current SDD systems and establish AffectDF as a benchmark for developing more robust spoof detection models.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "AffectDF introduces a benchmark for speech deepfake detection against emotionally expressive TTS/VC/LALM attacks; a detection benchmark, not TTS/VC/SCA generation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

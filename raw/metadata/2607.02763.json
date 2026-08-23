@@ -1,0 +1,36 @@
+{
+  "id": "2607.02763",
+  "source_ids": {
+    "arxiv": "2607.02763"
+  },
+  "title": "LuxSQA: Ask Me in Luxembourgish with TTS-Augmented Spoken Question Answering",
+  "authors": [
+    "Nina Hosseini-Kivanani",
+    "Marco Matassoni",
+    "Alessio Brutti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.02763",
+  "pdf_url": "https://arxiv.org/pdf/2607.02763.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Spoken Question Answering (SQA) remains largely focused on high-resource languages and carefully recorded speech, limiting the reach of speech-LLM methods in low-resource settings. This paper investigates whether text-to-speech (TTS) can provide task-specific training data for Luxembourgish SQA without requiring a large human-recorded QA corpus. Starting from existing text-based QA resources, we translate questions into Luxembourgish, synthesize spoken questions with multiple TTS systems, and pair them with textual answers. We train a parameter-efficient SLAM-style architecture that connects a frozen Whisper encoder to frozen multilingual LLM backends through a learned projector and LoRA adapters. We compare MMS-TTS, Qwen3-TTS, and OmniVoice variants, including single-source corpora of about 48k questions and a 4TTS multi-source mix of approximately 230k questions. Evaluation on LLAMA-LB-Test with two real Luxembourgish speaker conditions shows that multi-source and voice-design-based synthetic training configurations yield the strongest SQA performance. The results also show that no-reference TTS quality scores do not monotonically predict downstream QA performance, indicating that synthetic speech must be evaluated as task-specific training data rather than only as natural-sounding audio.",
+  "arxiv_comment": "7 pages, under review",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "LuxSQA investigates whether TTS can generate task-specific training data for low-resource Luxembourgish spoken question answering; TTS is used as a data-augmentation tool for a downstream QA task rather than the paper's primary object of study.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

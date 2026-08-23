@@ -1,0 +1,42 @@
+{
+  "id": "2608.08432",
+  "source_ids": {
+    "arxiv": "2608.08432"
+  },
+  "title": "BAMU: Bitstream-Aware Marginal-Utility Allocation for Frozen Pretrained Neural Speech Codecs",
+  "authors": [
+    "Mingyu Zhao",
+    "Zijian Lin",
+    "Yutang Feng",
+    "Jiatao Chen",
+    "Fan Wang",
+    "Jiehui Luo",
+    "Yuhao Ding",
+    "Jinchao Zhang",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.08432",
+  "pdf_url": "https://arxiv.org/pdf/2608.08432.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Pretrained neural speech codecs typically use a fixed residual vector quantization (RVQ) depth for all frames, ignoring temporal variation in quantization difficulty. We propose BAMU, a bitstream-aware dynamic RVQ allocation framework for frozen pretrained codecs. A lightweight, rate-independent predictor estimates frame- and layer-wise marginal latent-distortion reductions, while a constrained allocator selects prefix-valid depths under an exact serialized-size budget. Experiments on EnCodec and DAC over LibriSpeech, together with VCTK evaluation, show consistent EnCodec gains and DAC improvements mainly at medium and high rates. A 30-listener study confirms a MOS improvement from 3.449 to 3.780 over matched fixed-depth coding.",
+  "arxiv_comment": "5 pages, 2 figures, 1 table",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "BAMU proposes bitstream-aware dynamic RVQ depth allocation for frozen pretrained neural speech codecs based on frame/layer-wise marginal-utility estimation, core codec infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

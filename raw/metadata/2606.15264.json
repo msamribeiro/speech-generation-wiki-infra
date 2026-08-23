@@ -1,0 +1,38 @@
+{
+  "id": "2606.15264",
+  "source_ids": {
+    "arxiv": "2606.15264"
+  },
+  "title": "DuraMark: Duration-Embedded Watermarking in LLM-based TTS",
+  "authors": [
+    "Zhenwei Mou",
+    "Weili Jiang",
+    "Liping Chen",
+    "Zhen-Hua Ling",
+    "Kong Aik Lee",
+    "Kai Gao",
+    "Boyu Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.15264",
+  "pdf_url": "https://arxiv.org/pdf/2606.15264.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Large language model (LLM)-based text-to-speech (TTS) models have achieved remarkable voice cloning capabilities, raising concerns about potential deepfake misuse. Speech watermarking mitigates this by embedding traceable information into generated speech. Mainstream watermarking methods operate at the signal level (waveform or spectrogram), rendering the watermark vulnerable to generative attacks (e.g., neural codec and vocoder). To address this, we propose DuraMark, a robust information-level watermarking framework. It utilizes syllable duration editing to achieve watermark embedding. Specifically, DuraMark integrates a duration-controllable LLM-based TTS model to edit syllable durations during synthesis, coupled with a duration extractor to extract these durations for detection. Experiments demonstrate DuraMark's superior robustness against generative attacks, significantly outperforming signal-level baselines. Audio samples are available at https://muzw.github.io/duramark_demo/.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2026. 5 pages, 1 figure. Audio samples: https://muzw.github.io/duramark_demo/",
+  "task": [],
+  "relevance_score": 0.38,
+  "relevance_note": "DuraMark embeds watermarks in LLM-based TTS output to mitigate deepfake misuse; a traceability/security contribution rather than an advance in TTS synthesis quality, similar to other deepfake-mitigation papers scored tangential.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

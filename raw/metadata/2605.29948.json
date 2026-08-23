@@ -1,0 +1,42 @@
+{
+  "id": "2605.29948",
+  "source_ids": {
+    "arxiv": "2605.29948"
+  },
+  "title": "HoliTok:A Coutinuous Holistic Tokenization with Robust Dual Capabilities of Speech Generation and Understanding",
+  "authors": [
+    "Bohan Li",
+    "Shi Lian",
+    "Hankun Wang",
+    "Yiwei Guo",
+    "Yu Xi",
+    "Zhihan Li",
+    "Da Zheng",
+    "Colin Zhang",
+    "Kai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.29948",
+  "pdf_url": "https://arxiv.org/pdf/2605.29948.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Unified speech foundation models require a holistic tokenization space that is both learnable by language models and decodable into high-quality waveforms. Existing speech tokenizers, however, often fail to satisfy these requirements simultaneously, leading to increased architectural complexity and more involved training designs. We propose HoliTok, a continuous Holistic speech Tokenization model designed for unified generation-understanding modeling. HoliTok encodes 48~kHz speech into a compact 25~Hz sequence of 128-dimensional latents. It is trained with a progressive strategy that jointly preserves signal-level fidelity, incorporates semantic information, and maintains strong latent learnability. Based on this tokenization, we build a unified AR+DiT model for speech synthesis and recognition, where the same latent sequence supports both generation-specific and unified generation-understanding tasks. Experiments show that HoliTok achieves competitive reconstruction fidelity, improves generative learnability for high-quality and controllable synthesis, and, among the evaluated representations, is the only one that operates robustly in our unified generation-understanding architecture without additional optimization tricks. These results suggest that HoliTok serves as an effective speech tokenizer and a foundational representation interface for unified spoken language modeling. The code is available at: https://github.com/bovod-sjtu/HoliTok.",
+  "arxiv_comment": "14 pages, 2 figures, 8 tables",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Introduces a continuous holistic speech tokenizer supporting both unified generation and understanding, core codec/tokenizer infrastructure for speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

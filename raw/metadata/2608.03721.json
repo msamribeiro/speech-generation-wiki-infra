@@ -1,0 +1,34 @@
+{
+  "id": "2608.03721",
+  "source_ids": {
+    "arxiv": "2608.03721"
+  },
+  "title": "On the Geometry of Music Bandwidth Extension in Latent Spaces of Audio Codecs",
+  "authors": [
+    "Hendrik Vincent Koops",
+    "Hao Hao Tan",
+    "Elio Quinton"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.03721",
+  "pdf_url": "https://arxiv.org/pdf/2608.03721.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent audio restoration increasingly relies on large-scale conditional latent generative modeling, including diffusion, Schrodinger Bridges, and Flow Matching variants, to invert degradations such as bandwidth limitation or noise. We present an analysis of the performance of various state-of-the-art methods compared to simple arithmetic transformations in the latent spaces of multiple neural codecs for musical bandwidth extension. We show that estimating a single transport vector between the clean and degraded latent centroids on a reference set, and adding it to degraded latents, can yield restoration performance competitive with large diffusion models. This suggests, first, that some neural codec latent spaces exhibit structure aligned with audio bandwidth; and second, that in such cases complex conditional models may offer only limited gains over a simple vector addition. We argue that these findings reveal an interesting avenue for future research whereby models could take advantage of the latent space structure in order to offer greater training and parameter efficiency, and overall better performance. Additionally, we propose to consider this simple arithmetic transformation as a baseline for music bandwidth extension research, as it allows an assessment of the contribution of learnable parameters towards restoration performance.",
+  "arxiv_comment": "8 pages, 4 figures, 4 tables. Accepted at the 27th International Society for Music Information Retrieval Conference (ISMIR 2026). Companion website: https://ismir26latentgeo.github.io/",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Analyzes music bandwidth extension in the latent spaces of neural audio codecs; a music-restoration study with no speech-domain training or evaluation content.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

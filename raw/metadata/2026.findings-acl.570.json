@@ -1,0 +1,41 @@
+{
+  "id": "2026.findings-acl.570",
+  "source_ids": {
+    "acl": "2026.findings-acl.570",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.570",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.570"
+  },
+  "title": "VoiceStar: Robust Zero-Shot Autoregressive TTS with Duration Control and Extrapolation",
+  "authors": [
+    "Puyuan Peng",
+    "Zhisheng Zheng",
+    "Shang-Wen Li",
+    "Abdelrahman Mohamed",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.570",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.570.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We present VoiceStar, the first zero-shot TTS model that achieves both output duration control and extrapolation. VoiceStar is an autoregressive encoder-decoder neural codec language model, that leverages a novel Progress-Monitoring Rotary Position Embedding (PM-RoPE) and is trained with Continuation-Prompt Mixed (CPM) training. PM-RoPE enables the model to better align text and speech tokens, indicates the target duration for the generated speech, and also allows the model to generate speech waveforms much longer in duration than those seen during training. CPM training also helps to mitigate the training/inference mismatch, and significantly improves the quality of the generated speech in terms of speaker similarity and intelligibility. VoiceStar outperforms or is on par with current state-of-the-art models on short-form benchmarks such as LibriSpeech and Seed-TTS, and significantly outperforms these models on long-form/extrapolation benchmarks (20-50s) in terms of intelligibility and naturalness. Code and model: https://github.com/jasonppy/VoiceStar. Audio samples: https://jasonppy.github.io/VoiceStar_web.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "VoiceStar: zero-shot autoregressive codec-LM TTS with duration control and extrapolation via a novel rotary position embedding; core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

@@ -79,14 +79,25 @@ MAIN_VENUE_STEMS = ["acl", "emnlp", "naacl", "findings"]
 # so August+ conferences appear first in output.
 VENUE_ORDER = ["emnlp", "findings", "acl", "naacl"]
 
-# Maps (canonical_venue, year) → conference metadata
+# Maps (canonical_venue, year) → conference metadata. Curated manually (verified
+# against each conference's official site) where day-level precision is known.
+# Falls back to the Anthology XML's own <meta><month>/<year> (see
+# _parse_volume_month_year) when no entry exists here — that covers every
+# workshop and any main venue not yet added to this table.
 _CONF_META: Dict[Tuple[str, int], Dict] = {
     ("ACL",   2024): {"date": "2024-08-11", "month": 8},
     ("ACL",   2025): {"date": "2025-07-27", "month": 7},
+    ("ACL",   2026): {"date": "2026-07-02", "month": 7},
     ("EMNLP", 2024): {"date": "2024-11-12", "month": 11},
     ("EMNLP", 2025): {"date": "2025-11-05", "month": 11},
     ("NAACL", 2024): {"date": "2024-06-16", "month": 6},
     ("NAACL", 2025): {"date": "2025-04-29", "month": 4},
+}
+
+_MONTH_NAME_TO_NUM = {
+    "January": 1, "February": 2, "March": 3, "April": 4,
+    "May": 5, "June": 6, "July": 7, "August": 8,
+    "September": 9, "October": 10, "November": 11, "December": 12,
 }
 
 # ---------------------------------------------------------------------------
@@ -235,6 +246,23 @@ def volume_to_canonical_venue(volume_id: str, collection_id: str) -> str:
     return base.upper()
 
 
+def parse_volume_month_year(volume: ET.Element, fallback_year: int) -> Tuple[Optional[int], int]:
+    """
+    Read the real <month>/<year> the Anthology published for this volume's
+    <meta> block (present on virtually every volume, including workshops —
+    only a handful of continuously-rolling venues like TACL omit <month>).
+    Returns (month_number_or_None, year).
+    """
+    meta = volume.find("meta")
+    if meta is None:
+        return None, fallback_year
+    month_text = (meta.findtext("month") or "").strip()
+    year_text = (meta.findtext("year") or "").strip()
+    month_num = _MONTH_NAME_TO_NUM.get(month_text)
+    year_num = int(year_text) if year_text.isdigit() else fallback_year
+    return month_num, year_num
+
+
 def iter_papers(
     xml_text: str,
     xml_stem: str,
@@ -265,6 +293,13 @@ def iter_papers(
             v_type = "conference"
 
         conf_meta = _CONF_META.get((c_venue, year), {})
+        if conf_meta:
+            volume_month = conf_meta.get("month")
+            volume_date = conf_meta.get("date")
+        else:
+            xml_month, xml_year = parse_volume_month_year(volume, year)
+            volume_month = xml_month
+            volume_date = f"{xml_year}-{xml_month:02d}-01" if xml_month else f"{xml_year}-01-01"
 
         for paper in volume.findall("paper"):
             paper_id = paper.get("id", "")
@@ -293,8 +328,8 @@ def iter_papers(
                 "canonical_venue": c_venue,
                 "venue_type": v_type,
                 "year": year,
-                "month": conf_meta.get("month"),
-                "published_date": conf_meta.get("date", f"{year}-01-01"),
+                "month": volume_month,
+                "published_date": volume_date,
             }
 
 

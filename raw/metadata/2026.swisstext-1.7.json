@@ -1,0 +1,39 @@
+{
+  "id": "2026.swisstext-1.7",
+  "source_ids": {
+    "acl": "2026.swisstext-1.7",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Text vs. Phoneme Intermediates for Low-Resource Swiss German Text-to-Speech",
+  "authors": [
+    "Reza Kakooee",
+    "Vincenzo Timmel",
+    "Daniel Olivier Perruchoud",
+    "Michael Graber",
+    "Manfred Vogel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.swisstext-1.7",
+  "pdf_url": "https://aclanthology.org/2026.swisstext-1.7.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Compares text vs. phoneme intermediate representations for low-resource Swiss German TTS; core TTS contribution (scored on title only, no abstract available in metadata).",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,61 @@
+{
+  "id": "2606.09295",
+  "source_ids": {
+    "arxiv": "2606.09295"
+  },
+  "title": "NüshuVoice: Reviving the Voice of Endangered Nüshu with Pitch-Aware Text-to-Speech",
+  "authors": [
+    "Hongkun Yang",
+    "Xinhui Yi",
+    "Xiyan Zhao",
+    "Yibo Meng",
+    "Lionel Z. Wang",
+    "Lixu Wang",
+    "Yaqi Zhang",
+    "Ruiqi Chen",
+    "Xuanyue Zhao",
+    "Lanxin Zhang"
+  ],
+  "authors_full": [
+    "Hongkun Yang",
+    "Xinhui Yi",
+    "Xiyan Zhao",
+    "Yibo Meng",
+    "Lionel Z. Wang",
+    "Lixu Wang",
+    "Yaqi Zhang",
+    "Ruiqi Chen",
+    "Xuanyue Zhao",
+    "Lanxin Zhang",
+    "Yu Zeng",
+    "Weijia Chu",
+    "Yiming Ma",
+    "Chenyu Liu",
+    "Jianghao Lin",
+    "Xin Xu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09295",
+  "pdf_url": "https://arxiv.org/pdf/2606.09295.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Nüshu is an endangered phonetic script historically used by women in Jiangyong County, southern Hunan, China. While existing computational studies of Nüshu mainly focus on textual digitization and visual recognition, the acoustic reconstruction of its authentic pronunciation remains largely unexplored. Building a Nüshu text-to-speech (TTS) system is particularly challenging because available recordings are extremely limited and mostly consist of isolated syllable-level pronunciations rather than natural sentence-level utterances. In this work, we introduce NüshuVoice, the first TTS benchmark for Nüshu. We construct a sentence-level Nüshu text-to-audio dataset that aligns standardized Unicode Nüshu text, phonetic transcriptions, standard Chinese translations, and archival recordings. To synthesize speech under this extreme low-resource setting, we propose Nüshu-PitchVITS, an F0-conditioned VITS framework that leverages Nüshu's five-level pitch notation as an explicit prosodic inductive bias. Experimental results show that Nüshu-PitchVITS outperforms strong TTS baselines in spectral fidelity, pitch reconstruction, and human-rated intelligibility. We publicly release the dataset and code at: https://anonymous.4open.science/r/Nvshu-TTS-2EB6.",
+  "arxiv_comment": "12 pages, 3 figures",
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "NuushuVoice builds a pitch-aware TTS system for the endangered Nushu script, a low-resource/endangered-language TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

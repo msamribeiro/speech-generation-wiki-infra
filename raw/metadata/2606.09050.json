@@ -1,0 +1,42 @@
+{
+  "id": "2606.09050",
+  "source_ids": {
+    "arxiv": "2606.09050"
+  },
+  "title": "MeanVC 2: Robust Low-Latency Streaming Zero-Shot Voice Conversion",
+  "authors": [
+    "Guobin Ma",
+    "Yuxuan Xia",
+    "Yuepeng Jiang",
+    "Dake Guo",
+    "Hanke Xie",
+    "Jingbin Hu",
+    "Yanbo Wang",
+    "Lei Xie",
+    "Pengcheng Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09050",
+  "pdf_url": "https://arxiv.org/pdf/2606.09050.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Streaming zero-shot voice conversion (VC) has become increasingly popular due to its potential for real-time applications. The recently proposed MeanVC achieves lightweight streaming zero-shot VC, but it has several limitations: its chunk-wise autoregressive denoising doubles the effective training sequence length, conversion quality degrades under small-chunk settings, and its timbre encoder directly relies on reference mel-spectrograms, making it sensitive to reference audio quality. To address these limitations we propose MeanVC 2. We introduce future-receptive chunking (FRC), which explicitly schedules past and future receptive fields across diffusion transformer decoder layers and removes clean-chunk teacher forcing. By incorporating bounded future context, FRC enables stable conversion with a 40 ms chunk size. We further introduce a universal timbre token encoder, which constructs a timbre representation from a global speaker embedding and retrieves fine-grained timbre cues via cross-attention, improving robustness to low-quality references and enhancing zero-shot speaker similarity. Experimental results show that MeanVC 2 significantly outperforms MeanVC, while reducing latency from 211 ms to 110 ms. Audio samples are publicly available. The source code will be publicly released.",
+  "arxiv_comment": "Accepted by Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "MeanVC 2 proposes a robust low-latency streaming zero-shot voice conversion system improving on chunk-wise autoregressive denoising limitations.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

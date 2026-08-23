@@ -1,0 +1,36 @@
+{
+  "id": "2606.21882",
+  "source_ids": {
+    "arxiv": "2606.21882"
+  },
+  "title": "Streaming T5-based Text-to-Speech Synthesis with Limited Lookahead",
+  "authors": [
+    "Muyang Du",
+    "Jason Roche",
+    "Junjie Lai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21882",
+  "pdf_url": "https://arxiv.org/pdf/2606.21882.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Streaming text-to-speech synthesis in cascaded LLM-TTS systems still faces latency challenges as most TTS models require full context before initiating generation. We present S5-TTS, a streaming variant of T5-TTS that enables low-latency, word-by-word incremental speech synthesis through encoder-decoder language modeling and monotonic alignment learning. S5-TTS begins generating speech immediately after receiving the first few words, substantially reducing end-to-end response latency. To maintain quality under limited lookahead, we introduce a lookahead-causal masking mechanism with Conv-based auxiliary attention that preserves intelligibility and speaker similarity, and employ interleaved multi-source distillation to further restore naturalness. Experiments show that S5-TTS achieves comparable quality to full-context T5-TTS, supports zero-shot synthesis with high speaker similarity, and significantly reduces end-to-end latency for practical conversational AI systems.",
+  "arxiv_comment": "6 pages, 1 figure, 4 tables, Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "S5-TTS proposes a streaming T5-based TTS variant enabling low-latency word-by-word incremental synthesis via monotonic alignment learning, a core TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

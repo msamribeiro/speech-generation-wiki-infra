@@ -1,0 +1,56 @@
+{
+  "id": "2607.23811",
+  "source_ids": {
+    "arxiv": "2607.23811"
+  },
+  "title": "Memory Efficient Audio Synthesis with Decoupled Temporal Depth Diffusion Transformers",
+  "authors": [
+    "Dongseong Hwang",
+    "Prasanth Yadla",
+    "Kaan Elgin",
+    "Shifas Padinjaru Veettil",
+    "Sivanand Achanta",
+    "Dipjyoti Paul",
+    "Ramya Rasipuram",
+    "Tyler Johnson",
+    "Emad Soroush",
+    "Chung-Cheng Chiu"
+  ],
+  "authors_full": [
+    "Dongseong Hwang",
+    "Prasanth Yadla",
+    "Kaan Elgin",
+    "Shifas Padinjaru Veettil",
+    "Sivanand Achanta",
+    "Dipjyoti Paul",
+    "Ramya Rasipuram",
+    "Tyler Johnson",
+    "Emad Soroush",
+    "Chung-Cheng Chiu",
+    "Zhifeng Chen"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.23811",
+  "pdf_url": "https://arxiv.org/pdf/2607.23811.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Siri Expressive Voices synthesize rich, configurable speech in real time and entirely on device, powered by AFM 3 Core Advanced, Apple's most powerful on-device foundation model. This work presents the memory-efficient audio synthesis architecture behind that capability: a detokenizer that converts the semantic audio tokens emitted by the foundation model into high-fidelity audio within the tight compute and memory budget of the Apple Matrix Coprocessor (AMX). We convert semantic audio tokens to a residual vector quantization (RVQ) representation with a three-component design, a streaming encoder, a temporal decoder, and a depth decoder, that systematically decouples temporal and depth processing. A single reusable depth decoder with Diffusion Transformer (DiT)-style stage conditioning generates all RVQ levels autoregressively, replacing the dedicated per-level decoders of prior multi-decoder architectures, while causal sliding window attention with fixed-window key-value caching yields constant memory complexity independent of sequence length. Deployed on the AMX, the detokenizer sustains roughly 10 ms per generation step, about 16x faster than real time, with a peak runtime memory of only 21 MB and 329 MB of on-device assets, enabling continuous streaming synthesis of 20-320 seconds of audio. This constant, small footprint replaces the linear and quadratic memory scaling of conventional transformer- and GAN-based approaches. Ablation studies validate the key architectural components, and audio quality assessment confirms that the architecture maintains synthesis fidelity while achieving efficiency gains over existing methods. Operating at a 1-billion-parameter activation size within AFM 3 Core Advanced, it improves Mean Opinion Score by +0.28 overall (4.15 vs. 3.87) and by +0.42 on conversational speech (4.24 vs. 3.82) over the prior on-device text-to-speech system.",
+  "arxiv_comment": "11 pages, ICASSP",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Presents the memory-efficient decoupled temporal-depth diffusion transformer detokenizer behind Apple's on-device Siri Expressive Voices system, converting foundation-model semantic audio tokens to high-fidelity audio, a core TTS/codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2608.12814",
+  "source_ids": {
+    "arxiv": "2608.12814"
+  },
+  "title": "FastThaiG2P: Lightning-fast Thai Grapheme-to-phoneme Conversion for Voice Agent Pipelines",
+  "authors": [
+    "Charin Polpanumas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-13",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.12814",
+  "pdf_url": "https://arxiv.org/pdf/2608.12814.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "FastThaiG2P provides sub-millisecond Thai grapheme-to-phoneme conversion for text-to-speech pipelines (International Phonetic Alphabet and Kokoro-TTS conventions) using a PyThaiNLP-tokenized, extensible dictionary and normalization rules for common Central Thai speech. The approach achieves an average latency of 0.15 ms per utterance on a benchmark of 27,242 synthetically generated utterances, of which 30\\% is spent on tokenization, 12\\% on normalization, and 58\\% on out-of-vocabulary fallbacks (0.5\\% OOV rate). To demonstrate its effectiveness, we used FastThaiG2P to phonemize Som-TTS, an open dataset containing 20 hours of grapheme-and-audio pairs, then trained an 82M-parameter StyleTTS 2 model based on a Kokoro-TTS recipe. The resulting model vocalizes intelligible Thai speech suitable for prototyping and development at 0.25 real-time factor (4x real-time) with ONNX inference on CPU.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "FastThaiG2P provides sub-millisecond Thai grapheme-to-phoneme conversion for TTS/voice-agent pipelines, a core TTS front-end infrastructure contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

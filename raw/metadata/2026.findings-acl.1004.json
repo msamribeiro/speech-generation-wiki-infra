@@ -1,0 +1,43 @@
+{
+  "id": "2026.findings-acl.1004",
+  "source_ids": {
+    "acl": "2026.findings-acl.1004",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.1004",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.1004"
+  },
+  "title": "S2ST-Omni: Hierarchical Language-Aware SpeechLLM Adaptation for Multilingual Speech-to-Speech Translation",
+  "authors": [
+    "Yu Pan",
+    "Xiongfei Wu",
+    "Yang Yuguang",
+    "Jixun Yao",
+    "Maxime Cordy",
+    "Lei Ma",
+    "Jianjun Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.1004",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.1004.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Despite recent advances in speech-to-speech translation (S2ST), it remains difficult to achieve both high translation accuracy and practical flexibility. In this paper, we present S2ST-Omni, a compositional S2ST framework that integrates a high-accuracy speech-to-text translation (S2TT) frontend with a modular, plug-and-play text-to-speech (TTS) backend, enabling independent optimization of translation and synthesis. On the S2TT side, we introduce a hybrid adapter that follows a “local-then-global” strategy to bridge the pretrained Whisper encoder and Qwen3 LLM, yielding a hierarchical acoustic-to-semantic abstraction. Building on this bridge, we further propose a hierarchical language-aware architecture that injects source-language information at two complementary levels. At the acoustic level, Language-Aware Dual-CTC operates on intermediate adapter features and employs FiLM-style feature modulation with a learnable gate, encouraging the model to learn language-specific but content-faithful acoustic representations. At the linguistic level, Language-Aware Prompting dynamically constructs source-language-conditioned prompts that activate language-specific translation knowledge in the LLM. To enable efficient optimization, we design a task-specific progressive fine-tuning strategy that first stabilizes speech-text alignment and then improves translation via LoRA on top of this converged foundation. The TTS backend remains fully modular and can be instantiated with any state-of-the-art synthesizer without retraining the S2TT frontend. Experiments on CVSS-C show that S2ST-Omni consistently achieves the best BLEU and ASR-BLEU across French, German, and Spanish to English directions, outperforming strong recent S2ST baselines.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "S2ST-Omni: SpeechLLM-based multilingual speech-to-speech translation framework with a modular TTS backend; core SCA/S2ST contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

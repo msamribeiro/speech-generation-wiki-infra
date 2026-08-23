@@ -1,0 +1,35 @@
+{
+  "id": "2606.13507",
+  "source_ids": {
+    "arxiv": "2606.13507"
+  },
+  "title": "Leveraging Audio-LLMs to Filter Speech-to-Speech Training Data",
+  "authors": [
+    "Qixu Chen",
+    "Satoshi Nakamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.13507",
+  "pdf_url": "https://arxiv.org/pdf/2606.13507.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Large-scale mined corpora provide abundant training data for end-to-end speech-to-speech translation (S2ST) but may contain noise, misalignment, and semantic errors. Filtering noisy data is crucial to maintain robust speech translation performance. We study how to train an audio-language model to make keep/drop decisions on paired speech directly from audio. To obtain reliable supervision without manual labels, we adopt a scalable two-stage Rank-to-Distill strategy. A lightweight ranker generates keep/drop pseudo-labels from noisy speech pairs, then trains an audio large language model to predict keep/drop directly from raw paired speech. The resulting model jointly captures acoustic fidelity and cross-lingual semantic consistency for the selection of speech-conditioned data. Experiments on CVSS-C and SpeechMatrix show consistent improvements over unfiltered training, yielding up to +1.4 ASR-BLEU for end-to-end S2ST.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Trains an audio-LLM to filter noisy speech-to-speech translation training data directly from audio, a genuine S2ST data-curation infrastructure contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

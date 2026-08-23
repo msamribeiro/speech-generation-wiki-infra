@@ -1,0 +1,59 @@
+{
+  "id": "2026.findings-acl.114",
+  "source_ids": {
+    "acl": "2026.findings-acl.114",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.114",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.114"
+  },
+  "title": "WavAlign: Enhancing Intelligence and Expressiveness in Spoken Dialogue Models via Adaptive Hybrid Post-Training",
+  "authors": [
+    "Yifu Chen",
+    "Shengpeng Ji",
+    "Qian Chen",
+    "Tianle Liang",
+    "Yangzhuo Li",
+    "Ziqing Wang",
+    "Wen Wang",
+    "Jingyu Lu",
+    "Haoxiao Wang",
+    "Xueyi Pu"
+  ],
+  "authors_full": [
+    "Yifu Chen",
+    "Shengpeng Ji",
+    "Qian Chen",
+    "Tianle Liang",
+    "Yangzhuo Li",
+    "Ziqing Wang",
+    "Wen Wang",
+    "Jingyu Lu",
+    "Haoxiao Wang",
+    "Xueyi Pu",
+    "Fan Zhuo",
+    "Zhou Zhao"
+  ],
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.114",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.114.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "End-to-end spoken dialogue models have garnered significant attention because they offer a higher potential ceiling in expressiveness and perceptual ability than cascaded systems. However, the intelligence and expressiveness of current open-source spoken dialogue models often remain below expectations. Motivated by the success of online reinforcement learning(RL) in other domains, one might attempt to directly apply preference optimization to spoken dialogue models, yet this transfer is non-trivial. We analyze these obstacles from the perspectives of reward modeling and rollout sampling, focusing on how sparse preference supervision interacts with dense speech generation under shared-parameter updates. Based on the analysis, we propose a modality-aware adaptive post-training recipe that makes RL practical for spoken dialogue: it constrains preference updates to the semantic channel and improves acoustic behavior via explicit anchoring, while dynamically regulating their mixture from rollout statistics to avoid unreliable preference gradients. We evaluate the method across multiple spoken dialogue benchmarks and representative architectures, and observe consistent improvements in semantic quality and speech expressiveness.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "WavAlign: RL-based post-training method improving intelligence and expressiveness of end-to-end spoken dialogue models; core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2606.00407",
+  "source_ids": {
+    "arxiv": "2606.00407",
+    "acl": "2026.acl-short.26",
+    "doi": "10.18653/v1/2026.acl-short.26",
+    "url_acl": "https://aclanthology.org/2026.acl-short.26"
+  },
+  "title": "Privacy-preserving Prosody Representation Learning",
+  "authors": [
+    "Kevin Everson",
+    "Mari Ostendorf"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.00407",
+  "pdf_url": "https://aclanthology.org/2026.acl-short.26.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Speech representations that capture prosodic information can be useful for both understanding and generation. However, speaker characteristics are reflected in acoustic-prosodic features (e.g., pitch). To address privacy concerns from the leakage of identity information, we propose a new self-supervised approach to learning prosody representations that incorporates speaker disentanglement strategies. We evaluate our encoder on three tasks to probe representation capabilities, including pitch reconstruction and detection of different prosodic events. Our encoder outperforms raw prosody and HuBERT-base baselines, achieving strong speaker disentanglement without adverse impact on prosody-related downstream tasks.",
+  "arxiv_comment": "Accepted to ACL 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Proposes self-supervised privacy-preserving prosody representation learning with speaker disentanglement; useful for generation but the paper trains no TTS/VC system and reports no synthesis-quality evaluation.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

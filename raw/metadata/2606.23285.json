@@ -1,0 +1,37 @@
+{
+  "id": "2606.23285",
+  "source_ids": {
+    "arxiv": "2606.23285"
+  },
+  "title": "On the Effect of Segmentation Width and Cluster Size on Speech Resynthesis and Continuation in Generative Spoken Language Models",
+  "authors": [
+    "Shunsuke Kando",
+    "Wataru Nakata",
+    "Shinnosuke Takamichi",
+    "Yusuke Miyao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.23285",
+  "pdf_url": "https://arxiv.org/pdf/2606.23285.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Generative Spoken Language Modeling (GSLM) enables text-free speech modeling by training language models (LMs) using discrete speech representations instead of textual transcription. In this paper, we investigate the performance of GSLM on speech synthesis and continuation using discrete speech representations with varying bitrates. We segment speech representations with fixed widths and train K-means models in multiple cluster sizes, resulting in various bitrate settings. We demonstrate that intelligible and natural speech can be synthesized at lower bitrate settings than the baseline. Furthermore, speech continuation quality remains stable at lower bitrates across multiple metrics, suggesting that the conventional GSLM setting may be redundant for effective speech generation. Although LLM-based metrics show higher correlation with human subjective score than conventional metrics, it remains low, highlighting the need for more stable automatic evaluation methods.",
+  "arxiv_comment": "Accepted to Interspeech2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Investigates how segmentation width and cluster size of discrete speech representations affect speech resynthesis and continuation in generative spoken language modeling, a core SCA/speech-LM contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

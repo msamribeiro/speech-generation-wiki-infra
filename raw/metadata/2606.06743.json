@@ -1,0 +1,35 @@
+{
+  "id": "2606.06743",
+  "source_ids": {
+    "arxiv": "2606.06743"
+  },
+  "title": "HybridCodec: Fast Dual-Stream, Semantically Enhanced Neural Audio Codec",
+  "authors": [
+    "Arjun Gangwar",
+    "S Umesh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.06743",
+  "pdf_url": "https://arxiv.org/pdf/2606.06743.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The popularity of neural audio codecs as speech tokenizers has surged with the advent of Multimodal Large Language Models. New codec architectures with semantic and acoustic disentanglement have emerged. There are two main approaches to introduce semantic information into codec models: one distills semantic information from SSL representations into the first RVQ layer, while the other maintains separate streams for semantic and acoustic features. We propose HybridCodec, a unified architecture that combines both paradigms. It employs separate semantic and acoustic branches while distilling SSL representations into the semantic stream. This design ensures strong disentanglement without requiring an SSL model during inference. HybridCodec shows superior semantic specialization (RVQ-1) on in-domain test set and competitive reconstruction (RVQ-all). We demonstrate its robustness in out-of-domain and zero-shot cross-lingual settings, achieving a 3x speedup over existing dual-stream models.",
+  "arxiv_comment": "5 pages, 5 tables, 1 figure, Accepted at Interspeech 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "HybridCodec proposes a fast dual-stream, semantically enhanced neural audio codec, core codec infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

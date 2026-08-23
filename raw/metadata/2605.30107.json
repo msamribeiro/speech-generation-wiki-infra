@@ -1,7 +1,10 @@
 {
   "id": "2605.30107",
   "source_ids": {
-    "arxiv": "2605.30107"
+    "arxiv": "2605.30107",
+    "acl": "2026.findings-acl.1275",
+    "doi": "10.18653/v1/2026.findings-acl.1275",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.1275"
   },
   "title": "Dial HEALTHDIAL for Advice: A Multilingual and Multi-Parallel Spoken Dialogue Dataset for Knowledge-Grounded Information Seeking",
   "authors": [
@@ -16,16 +19,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-28",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2605.30107",
-  "pdf_url": "https://arxiv.org/pdf/2605.30107.pdf",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.1275.pdf",
   "pdf_path": null,
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Creating spoken dialogue datasets is methodologically challenging, and these challenges are amplified when the goal is to build multilingual, multi-parallel datasets at scale. This work introduces HEALTHDIAL, a large-scale, multilingual, and multi-parallel dataset for developing and evaluating retrieval-augmented generation (RAG)-based spoken dialogue systems. The dataset comprises 6,000 information-seeking dialogues (1,500 per language) grounded in trusted content from the World Health Organization (WHO) and 163 hours of user speech recorded from native speakers of diverse dialects across four official WHO languages: Arabic, Chinese, English, and Spanish. Each speaker is annotated with demographic (e.g., gender, age) and sociolinguistic (e.g., primary language, region of origin) variables. We report benchmark results across key dialogue tasks, which reveal consistent performance disparities across languages, even among high-resource ones. To support future research, we release the dataset, a prototype system, and a toolkit for data collection and system evaluation.",
   "arxiv_comment": "Accepted to Findings of ACL 2026",
   "task": [
@@ -37,5 +40,6 @@
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

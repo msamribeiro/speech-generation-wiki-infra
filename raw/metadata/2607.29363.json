@@ -1,0 +1,37 @@
+{
+  "id": "2607.29363",
+  "source_ids": {
+    "arxiv": "2607.29363"
+  },
+  "title": "Stable Autoregressive Speech Generation with Low-Frame-Rate High-Dimensional Continuous Tokens",
+  "authors": [
+    "Yi Luo",
+    "Rongzhi Gu",
+    "Jixun Yao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.29363",
+  "pdf_url": "https://arxiv.org/pdf/2607.29363.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Balancing sequence length, representational capacity, and long-horizon stability is a central problem in autoregressive (AR) speech and audio generation. Representations with higher frame rates or greater capacity can preserve more signal detail, but they also make streaming generation more vulnerable to distribution drift and AR error accumulation. Conversely, shorter and more compressed representations simplify AR modeling, but their limited bandwidth may discard important components and constrain the upper bound of reconstruction fidelity and generation quality. We ask whether a low-frame-rate, high-dimensional, high-bandwidth continuous representation can be co-designed with a streaming generation framework to support robust high-fidelity reconstruction, strong single-token predictability, and superior long-horizon stability. We decompose this goal into two coupled problems: what geometric and statistical properties a high-dimensional representation space should have, and how an AR continuous-token generator should be structured to resist error accumulation. Accordingly, we propose Locodec, a locally encoded codec that shapes its representation space to improve the interpolatability of a lower-dimensional core manifold and the identifiability of the native high-dimensional coordinates, thereby improving the predictability of high-dimensional high-bandwidth tokens. We also propose MP-ELD, a single-token AR flow-matching framework that uses multi-path information routing and residual classifier-free guidance to mitigate error accumulation. Experiments with 8-Hz, 768-dimensional tokens show that our design preserves reconstruction quality, improves single-token predictability, achieves competitive WER, and maintains stable long-form synthesis, without using external SSL/ASR models, pretrained text language models, or post-training stages.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Investigates stability of autoregressive speech generation using low-frame-rate, high-dimensional continuous tokens, balancing sequence length and representational capacity, a core TTS/codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

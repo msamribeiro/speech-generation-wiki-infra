@@ -1,0 +1,40 @@
+{
+  "id": "2606.13006",
+  "source_ids": {
+    "arxiv": "2606.13006"
+  },
+  "title": "Emo-LiPO: Listwise Preference Optimization for Fine-Grained Emotion Intensity Control in LLM-based Text-to-Speech",
+  "authors": [
+    "Yihang Lin",
+    "Li Zhou",
+    "Congwei Cao",
+    "Dongchu Xie",
+    "Xiaoxue Gao",
+    "Chen Zhang",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.13006",
+  "pdf_url": "https://arxiv.org/pdf/2606.13006.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Large language model (LLM)-based text-to-speech (TTS) systems enable prompt-conditioned emotional control but struggle with fine-grained emotion intensity due to the semantic -- acoustic gap between text and speech. To address this challenge, we formulate emotion intensity control in LLM-based TTS as a learning-to-rank problem and propose Emo-LiPO, a listwise preference optimization framework that aligns prompt-conditioned speech generation with relative emotion intensity expressed in text. Emo-LiPO explicitly models global intensity ordering within each emotion under fixed transcripts, enabling more faithful and continuous emotional expression. We further construct ESD-plus, a multi-speaker dataset with explicit emotion intensity variations, to support fine-grained emotion modeling and evaluation. Experiments on ESD-plus demonstrate that Emo-LiPO significantly improves emotion accuracy and intensity controllability over both supervised- and DPO-based LLM TTS baselines, with particularly pronounced gains at high intensity levels.",
+  "arxiv_comment": "Accepted by IJCAI 2026. Emotional TTS, Preference Optimization, Emotion Intensity Control",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Emo-LiPO proposes listwise preference optimization for fine-grained emotion intensity control in LLM-based TTS, a core TTS/RLHF contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

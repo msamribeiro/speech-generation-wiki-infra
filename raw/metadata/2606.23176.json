@@ -1,0 +1,35 @@
+{
+  "id": "2606.23176",
+  "source_ids": {
+    "arxiv": "2606.23176"
+  },
+  "title": "Synthesizing the Lombard Effect: Multi-Level Control of Speech Clarity and Vocal Effort in TTS",
+  "authors": [
+    "Seymanur Akti",
+    "Alexander Waibel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.23176",
+  "pdf_url": "https://arxiv.org/pdf/2606.23176.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Humans tend to speak louder and clearer in challenging environments, such as noisy conditions or when addressing hearingimpaired listeners, which is called Lombard effect. To simulate this behavior in speech synthesis systems, we introduce a flow-matching based text-to-speech (TTS) model trained with vocal effort and articulation pseudo-labels. The proposed model achieves continuous and disentangled control of vocal effort and articulation, while also enabling word-level emphasis for clarifying specific segments of an utterance. Experimental results show that these control mechanisms effectively improve clarityrelated acoustic features. Furthermore, speech-in-noise experiments demonstrate that our model successfully simulates the intelligibility gains of human clear speech in noisy conditions.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Introduces a flow-matching TTS model with multi-level control of speech clarity and vocal effort to synthesize the Lombard effect, a core TTS control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

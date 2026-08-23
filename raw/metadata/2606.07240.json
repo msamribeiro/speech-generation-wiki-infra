@@ -1,0 +1,39 @@
+{
+  "id": "2606.07240",
+  "source_ids": {
+    "arxiv": "2606.07240",
+    "acl": "2026.iwslt-1.8",
+    "doi": "10.18653/v1/2026.iwslt-1.8",
+    "url_acl": "https://aclanthology.org/2026.iwslt-1.8"
+  },
+  "title": "KIT's Submission to Cross-Lingual Voice Cloning in IWSLT 2026",
+  "authors": [
+    "Seymanur Akti",
+    "Alexander Waibel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.07240",
+  "pdf_url": "https://aclanthology.org/2026.iwslt-1.8.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Cross-lingual voice cloning aims to generate speech in a target language while preserving speaker identity from a source-language reference. This task is central to speech translation and is the focus of the IWSLT 2026 Cross-Lingual Voice Cloning track. A key challenge is maintaining intelligibility and naturalness in the presence of accent variation and domain-specific vocabulary. We build on a multilingual text-to-speech model, FishAudio-S2-Pro, and introduce language tag prompting to improve language control and reduce accent leakage. We further apply reinforcement learning (RL) fine-tuning for task adaptation and observe improvements in intelligibility. Finally, we propose a reference-conditioned lexical matching method that improves pronunciation of domain-specific terms when lexical overlap is present. Results show that language prompting provides the largest gains, while lexical matching yields consistent improvements on matched subsets.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "KIT's IWSLT 2026 cross-lingual voice cloning submission, a zero-shot speaker-preserving TTS system for speech translation.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

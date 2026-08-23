@@ -1,0 +1,41 @@
+{
+  "id": "2607.29125",
+  "source_ids": {
+    "arxiv": "2607.29125"
+  },
+  "title": "M3-DuplexBench: A Multi-Turn, Multilingual, Multidomain Benchmark for Full-Duplex Spoken Dialogue Models",
+  "authors": [
+    "Ryo Fukuda",
+    "Atsushi Ando",
+    "Hiroki Kanagawa",
+    "Takatomo Kano",
+    "Marc Delcroix",
+    "Naohiro Tawara",
+    "Yuya Chiba"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.29125",
+  "pdf_url": "https://arxiv.org/pdf/2607.29125.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue systems (FDSDSs) can listen while speaking, enabling natural behaviors such as smooth turn-taking, backchannel handling, and user barge-in handling. However, fair comparisons in multi-turn conversations remain a challenge. In addition, existing benchmarks provide limited coverage of languages and dialogue domains. We propose M3-DuplexBench, a multi-turn, multilingual, multidomain benchmark for FDSDSs. M3-DuplexBench supports English and Japanese and covers both casual conversation and multi-turn question answering. In addition, we evaluate models under multiple dialogue context settings, including single-turn, user-only, and teacher-forced full-context settings, to analyze how dialogue history affects model behavior. Experiments with recent FDSDSs reveal model-specific turn-taking characteristics, clear performance gaps across languages and domains, and mixed effects of dialogue context.",
+  "arxiv_comment": "Submitted to SLT 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "M3-DuplexBench introduces a multi-turn, multilingual, multidomain benchmark for fairly comparing full-duplex spoken dialogue systems, a core SCA evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

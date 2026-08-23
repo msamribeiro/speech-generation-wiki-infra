@@ -1,0 +1,38 @@
+{
+  "id": "2607.23961",
+  "source_ids": {
+    "arxiv": "2607.23961"
+  },
+  "title": "Leveraging Gradient Reversal Loss and Multitask Learning for Datasets-Aware Audio Deepfake Detection",
+  "authors": [
+    "Mingrui Liang",
+    "Thomas Thebaud",
+    "Lukasz Wojciak",
+    "Laureano Moro Velazquez",
+    "Yishay Carmiel",
+    "Jesus Villalba Lopez",
+    "Najim Dehak"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.23961",
+  "pdf_url": "https://arxiv.org/pdf/2607.23961.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in speech synthesis and voice conversion, which pose threats to security and privacy, have underscored the need for deepfake detection technology. Although existing detection systems achieve strong performance on individual datasets, they often fail to generalize across diverse datasets. Prior methods for improving generalization, including data augmentation, adversarial training on auxiliary factors such as language or codec types, and Mixture-of-Experts (MoE), are limited by predefined augmentation coverage, difficulties in obtaining auxiliary factors, and substantial model complexity. In this work, we propose a practical dataset-aware framework for deepfake detection. Our method targets heterogeneous datasets for which auxiliary annotations such as language, codec, or spoofing method may not be consistently available. We therefore rely only on dataset identity as a naturally available supervisory signal for multitask (MT) and gradient reversal layer (GRL) training, allowing the model to investigate both dataset-aware multitask supervision and adversarial suppression of dataset-specific information. We conduct experiments following the 2025 Speech DeepFake Arena benchmark protocol, evaluating our model across multiple evaluation datasets and reporting aggregate performance in terms of Equal Error Rate (EER), including Average EER and Pooled EER. Compared with the baseline, MT reduces Average EER by 13.14% relatively, while GRL reduces Pooled EER by 5.32% relatively. These results demonstrate that our method can improve aggregate detection performance across heterogeneous evaluation datasets, offering a practical solution for deploying reliable deepfake detection systems on diverse and unseen real-world data.",
+  "arxiv_comment": "Accepted by SPSC 2026. Camera-ready version pending",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Proposes gradient-reversal-loss and multitask learning for dataset-aware audio deepfake detection generalization; a detection paper, not TTS/VC/SCA generation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

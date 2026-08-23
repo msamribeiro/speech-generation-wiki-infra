@@ -72,6 +72,7 @@ _VENUE_TABLE: Dict[Tuple[str, int], Tuple[str, str, str, int]] = {
     ("ICLR",    2025): ("iclr",    "ICLR.cc/2025/Conference",   "2025-04-24", 4),
     ("ICLR",    2026): ("iclr",    "ICLR.cc/2026/Conference",   "2026-04-27", 4),
     ("NeurIPS", 2025): ("neurips", "NeurIPS.cc/2025/Conference", "2025-12-10", 12),
+    ("NeurIPS", 2026): ("neurips", "NeurIPS.cc/2026/Conference", "2026-12-06", 12),
 }
 
 # Controlled vocabulary venue names (AGENTS.md contract)

@@ -1,7 +1,10 @@
 {
   "id": "2604.15710",
   "source_ids": {
-    "arxiv": "2604.15710"
+    "arxiv": "2604.15710",
+    "acl": "2026.acl-long.459",
+    "doi": "10.18653/v1/2026.acl-long.459",
+    "url_acl": "https://aclanthology.org/2026.acl-long.459"
   },
   "title": "VoxMind: An End-to-End Agentic Spoken Dialogue System",
   "authors": [
@@ -18,16 +21,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-17",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2604.15710",
-  "pdf_url": "https://arxiv.org/pdf/2604.15710.pdf",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.459.pdf",
   "pdf_path": "raw/papers/2604.15710.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Recent end-to-end spoken dialogue models enable natural interaction. However, as user demands become increasingly complex, models that rely solely on conversational abilities often struggle to cope. Incorporating agentic capabilities is therefore essential: by enabling tool use, these models can extend their knowledge boundaries and better solve real-world tasks. Yet, existing research has largely concentrated on core perception and generation, with comparatively limited exploration of such tool-augmented extensions. To bridge this gap, we present VoxMind, an integrated framework designed to equip end-to-end spoken dialogue models with comprehensive agentic abilities. Leveraging our curated 470-hour AgentChat dataset, we incorporate a \"Think-before-Speak\" mechanism, enabling the model to internalize structured reasoning as a critical prerequisite for planning and response generation. Furthermore, to mitigate latency bottlenecks caused by large-scale tool integration, we propose a Multi-Agent Dynamic Tool Management architecture. By asynchronously delegating retrieval tasks to an auxiliary agent aligned with the main model's reasoning trajectory, this system effectively decouples inference latency from toolset size. Experimental results confirm that VoxMind achieves significant improvements in agent performance: compared with strong baselines, the task completion rate increases from 34.88% to 74.57%, outperforming Gemini-2.5-Pro on spoken agent tasks while preserving general conversational quality. The source code and associated data are publicly available at https://github.com/MM-Speech/VoxMind.",
   "arxiv_comment": "Accepted to ACL 2026 Main Conference.Code and data available at https://github.com/MM-Speech/VoxMind",
   "task": [
@@ -39,5 +42,6 @@
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

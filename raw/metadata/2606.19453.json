@@ -1,0 +1,62 @@
+{
+  "id": "2606.19453",
+  "source_ids": {
+    "arxiv": "2606.19453"
+  },
+  "title": "A Survey of Full-Duplex Spoken Dialogue Systems: Architectural Hierarchy, Interaction Ontology, and Decision State Machine",
+  "authors": [
+    "Jingyu Lu",
+    "Yuhan Wang",
+    "Jianming Luo",
+    "Yifu Chen",
+    "Tianle Liang",
+    "Shengpeng Ji",
+    "Ziyue Jiang",
+    "Xiaoda Yang",
+    "Yu Zhang",
+    "Xize Cheng"
+  ],
+  "authors_full": [
+    "Jingyu Lu",
+    "Yuhan Wang",
+    "Jianming Luo",
+    "Yifu Chen",
+    "Tianle Liang",
+    "Shengpeng Ji",
+    "Ziyue Jiang",
+    "Xiaoda Yang",
+    "Yu Zhang",
+    "Xize Cheng",
+    "Chenyuhao Wen",
+    "Changhao Pan",
+    "Haoxiao Wang",
+    "Chen Ye",
+    "Jian Wu",
+    "Xiaoxi Jiang",
+    "Guanjun Jiang",
+    "Zhou Zhao"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-17",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.19453",
+  "pdf_url": "https://arxiv.org/pdf/2606.19453.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "More than a dozen spoken dialogue systems have recently claimed to be \"full-duplex,\" yet the term has been used to describe substantially different capabilities. Existing surveys collapse them onto a single axis (cascaded/end-to-end, or engineered/learned) and miss the distinctions that matter most for builders. We argue that much of this ambiguity is taxonomical: current terminology does not specify where duplex decisions are made, which interaction types are supported, or how a system behaves moment by moment. This paper introduces three complementary frameworks: (i) an L0-L3 Architectural Hierarchy that locates where duplex decisions are made; (ii) a $T\\times I\\times R$ Interaction Ontology that specifies the temporal relation, user intent, and required system response for each interaction; and (iii) a Decision State Machine (IDLE/LISTEN/SPEAK/WAIT/DUAL) that describes how systems move between states. Across published systems and benchmarks, our audit documents a realization gap: although many architectures can in principle operate in full-duplex states, their observed behavior remains constrained by the interaction patterns represented in training and evaluation. We point to the limited public training-data coverage relative to the (largely undisclosed) industrial corpora, together with the still-unrealized goal of L3 representation-level modeling, as the key frontiers for future research on full-duplex dialogue. The related material is available at https://github.com/DuplexLM/DuplexSurvey.",
+  "arxiv_comment": "34 pages, 5 figures, 7 tables. Project page and interactive demo: https://github.com/DuplexLM/DuplexSurvey",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "A survey proposing a taxonomy (architectural hierarchy, interaction ontology, decision state machine) for full-duplex spoken dialogue systems, a core SCA survey.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

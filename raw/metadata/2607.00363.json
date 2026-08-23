@@ -1,0 +1,41 @@
+{
+  "id": "2607.00363",
+  "source_ids": {
+    "arxiv": "2607.00363"
+  },
+  "title": "Enhancing Flow Matching with A Unified Guidance Framework for Efficient and Robust Speech Synthesis",
+  "authors": [
+    "Zuda Yu",
+    "Qianhui Xu",
+    "Ting Chen",
+    "Junhui Zhang",
+    "Tao Fu",
+    "Hongjiang Yu",
+    "Qiangqing Wang",
+    "Yang Song"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.00363",
+  "pdf_url": "https://arxiv.org/pdf/2607.00363.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Flow Matching (FM) has emerged as a powerful paradigm for speech generation but remains constrained by high inference latency and timbre leakage. To address these bottlenecks, we propose a unified guidance framework that enhances generation efficiency and robustness through two complementary strategies. On the data front, we introduce Data-guidance via heterogeneous augmentation, encouraging the model to disentangle linguistic content from acoustic residue. In parallel, we propose an enhanced Model-guidance mechanism that synergizes trajectory rectification with a novel intrinsic guidance objective. This approach distills conditional knowledge into network weights and straightens inference trajectory path, thereby eliminating Classifier-Free Guidance (CFG) overhead. Experiments demonstrate that our framework accelerates inference by nearly three times while effectively improving speaker similarity compared to state-of-the-art baselines.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes a unified guidance framework (data- and model-side) to improve efficiency and robustness of flow-matching speech synthesis, addressing latency and timbre leakage, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

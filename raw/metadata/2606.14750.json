@@ -1,0 +1,37 @@
+{
+  "id": "2606.14750",
+  "source_ids": {
+    "arxiv": "2606.14750"
+  },
+  "title": "Pixel-TTS: Image based Text Rendering for Robust Text-to-Speech",
+  "authors": [
+    "Adarsh Arigala",
+    "Arjun Gangwar",
+    "S Umesh",
+    "Yova Kementchedjhieva"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.14750",
+  "pdf_url": "https://arxiv.org/pdf/2606.14750.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in pixel-based text modeling show that representing text as images enables models to exploit visual cues for language understanding. Grounding text in its visual form allows structurally similar characters with different Unicode encodings to produce similar embeddings, benefiting cross-lingual and zero-shot scenarios. Conventional text-based approaches treat each character independently, limiting generalization to unseen characters and requiring embedding expansion during cross-lingual adaptation. We propose Pixel-TTS, a text-to-speech framework for visually grounded speech synthesis. It renders text as images and projects them through a 2D convolutional layer to generate embeddings. This design eliminates embedding matrix expansion during fine-tuning while improving robustness to unseen characters and orthographic variations. Extensive experiments show Pixel-TTS achieves competitive performance with strong baselines, faster convergence and robust zero-shot generalization.",
+  "arxiv_comment": "11 pages, 5 figures, 15 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Pixel-TTS uses image-based text rendering as a robust TTS input representation, a core TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,10 @@
 {
   "id": "2604.17852",
   "source_ids": {
-    "arxiv": "2604.17852"
+    "arxiv": "2604.17852",
+    "acl": "2026.findings-acl.1308",
+    "doi": "10.18653/v1/2026.findings-acl.1308",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.1308"
   },
   "title": "LLM-Codec: Neural Audio Codec Meets Language Model Objectives",
   "authors": [
@@ -11,16 +14,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-20",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2604.17852",
-  "pdf_url": "https://arxiv.org/pdf/2604.17852.pdf",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.1308.pdf",
   "pdf_path": "raw/papers/2604.17852.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Neural audio codecs are widely used as tokenizers for spoken language models, but they are optimized for waveform reconstruction rather than autoregressive prediction. This mismatch injects acoustically driven uncertainty into the discrete token space and increases language-model perplexity. We propose \\ours, which augments codec training with language-model-facing objectives while keeping both codec and LLM architectures unchanged. \\ours introduces (i) future token prediction with Medusa-style multi-step heads to encourage multi-step predictability, and (ii) semantic alignment that matches audio and text representations via a memory-bank contrastive loss. A differentiable Gumbel bridge enables end-to-end gradients from these objectives to the codec encoder. On SALMon speech coherence, token LMs trained on \\ours reach 61.6% accuracy (+12.1 points over AUV) while reducing perplexity 35. On Codec-SUPERB-tiny, \\ours improves speech Mel distance by 5.0% over AUV while simultaneously achieving the learnability gains, demonstrating that reconstruction fidelity and token predictability can be improved together.",
   "arxiv_comment": "ACL2026 Finding",
   "task": [
@@ -32,5 +35,6 @@
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

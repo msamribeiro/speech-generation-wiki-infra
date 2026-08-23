@@ -1,0 +1,41 @@
+{
+  "id": "2608.08362",
+  "source_ids": {
+    "arxiv": "2608.08362"
+  },
+  "title": "CtrlSpeech: Coarse-to-Fine Control for Expressive Speech Synthesis",
+  "authors": [
+    "Zhisheng Zheng",
+    "Xiaohang Sun",
+    "Zhu Liu",
+    "Caren Chen",
+    "Rohith Kumar",
+    "Manoj Aggarwal",
+    "Gerard Medioni",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.08362",
+  "pdf_url": "https://arxiv.org/pdf/2608.08362.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent Text-To-Speech (TTS) systems have achieved strong naturalness and zero-shot voice cloning performance, but fine-grained control of expressive speech at the word or phoneme level remains challenging. We propose CtrlSpeech, a controllable, expressive TTS framework with coarse-to-fine control. Built on the DiTAR architecture, CtrlSpeech combines global speaker conditioning with phone-aligned pitch, loudness, and duration signals, enabling localized prosodic control while preserving the target speaker's timbre. This design allows users to adjust expressive attributes at a fine temporal granularity, making speech refinement more flexible and controllable. Experimental results show that CtrlSpeech achieves competitive zero-shot TTS performance and improves controllability over expressive attributes, demonstrating its effectiveness for flexible and practical expressive speech synthesis.",
+  "arxiv_comment": "Interspeech 2026. Demo, code and model weights are available at https://zhishengzheng.com/ctrlspeech",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "CtrlSpeech proposes coarse-to-fine, word/phoneme-level fine-grained control for expressive TTS built on the DiTAR architecture, a core TTS control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

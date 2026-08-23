@@ -1,0 +1,59 @@
+{
+  "id": "2607.23938",
+  "source_ids": {
+    "arxiv": "2607.23938"
+  },
+  "title": "Qwen-Audio-3.0-TTS: Freely Controllable and Highly Robust Speech Synthesis with Multi-Stage Training Paradigm",
+  "authors": [
+    "Bajian Xiang",
+    "Cheng Wen",
+    "Han Zhao",
+    "Hao Wang",
+    "Haoxu Wang",
+    "Jiawei Jin",
+    "Jiayan Cui",
+    "Jie Chen",
+    "Mengxi Nie",
+    "Tianyu Zhao"
+  ],
+  "authors_full": [
+    "Bajian Xiang",
+    "Cheng Wen",
+    "Han Zhao",
+    "Hao Wang",
+    "Haoxu Wang",
+    "Jiawei Jin",
+    "Jiayan Cui",
+    "Jie Chen",
+    "Mengxi Nie",
+    "Tianyu Zhao",
+    "Weiqin Li",
+    "Xiang Lv",
+    "Xiangang Li",
+    "Yang Xiang",
+    "Yang Zhou"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.23938",
+  "pdf_url": "https://arxiv.org/pdf/2607.23938.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this report, we present Qwen-Audio-3.0-TTS, a production-oriented speech synthesis system that jointly advances content consistency, speaker similarity, prosodic naturalness, audio quality, controllability, multilingual coverage, efficiency, and robustness. It combines a 12.5~Hz low-frame-rate speech tokenizer for reduced inference latency with a five-stage progressive training paradigm for coordinated language model (LM) and flow-matching model (FM) optimization. The model provides production-level control through free-style natural-language instructions and fine-grained inline tags, while supporting 16 languages, 20 Chinese dialect regions, one-pass long-form synthesis up to 3 minutes, and robust generation from noisy, reverberant, or unclear reference speech. Across SEED-TTS-Eval, CV3-Eval, instruction-following, long-form, and acoustic-robustness evaluations, Qwen-Audio-3.0-TTS achieves state-of-the-art performance on many reported dimensions or the strongest aggregate results. It also ranks first on the independent Artificial Analysis Text-to-Speech Leaderboard. These results establish Qwen-Audio-3.0-TTS as a strong foundation for production-level speech synthesis.",
+  "arxiv_comment": "19 pages",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Qwen-Audio-3.0-TTS presents a production-oriented speech synthesis system jointly advancing content consistency, speaker similarity, prosody, controllability, multilingual coverage, and robustness via a five-stage training paradigm, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

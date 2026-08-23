@@ -1,0 +1,34 @@
+{
+  "id": "2606.14820",
+  "source_ids": {
+    "arxiv": "2606.14820"
+  },
+  "title": "Spectro-Temporal Interference Confounds Phase Encoding in Spatial Audio Foundation Models",
+  "authors": [
+    "Yuxuan Chen",
+    "Haoyuan Yu",
+    "Peize He"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.14820",
+  "pdf_url": "https://arxiv.org/pdf/2606.14820.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent spatial self supervised audio models achieve high performance on localization tasks, raising questions about their encoding of microsecond interaural phase fine structures. We propose a psychoacoustic benchmark based on the binaural masking level difference to evaluate this. Using an equalization cancellation baseline and a GCC PHAT positive control we evaluate nine frozen audio models spanning binaural SSL, monaural SSL, and neural audio codecs. Four monaural negative controls yield zero BMLD confirming binaural specificity. Two general purpose binaural SSL models exhibit minimal phase sensitivity while dedicated binaural spatial SSL models achieve BMLD comparable to the analytical baseline. Progressive physical ablations show that general purpose binaural SSL models rely on spectro temporal interference textures rather than cross channel phase computation. High detection rates in speech reflect a confounding reliance on broadband envelopes rather than genuine phase encoding.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2026; 6 pages, 3 figures",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Studies phase-encoding limitations of spatial audio foundation models on a psychoacoustic sound-localization benchmark; no speech generation content.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

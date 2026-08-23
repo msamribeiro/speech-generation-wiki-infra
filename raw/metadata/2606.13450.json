@@ -1,0 +1,37 @@
+{
+  "id": "2606.13450",
+  "source_ids": {
+    "arxiv": "2606.13450"
+  },
+  "title": "Endpoint Anticipation for Low-Latency Spoken Dialogue",
+  "authors": [
+    "Sathvik Udupa",
+    "Shinji Watanabe",
+    "Petr Schwarz",
+    "Jan Cernocky"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.13450",
+  "pdf_url": "https://arxiv.org/pdf/2606.13450.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "While low-latency interaction is critical for spoken dialogue, cascaded architectures are often bottlenecked by reactive turn-completion detection. We propose Endpoint Anticipation, shifting from reactive detection to proactive forecasting of end-of-turn signals. Our speech-based model anticipates endpoints upto 2.56 seconds in advance, enabling speculative execution of LLM and TTS pipelines on partial context. We introduce metrics to quantify the trade-off between realized latency reduction and computational redundancy. Evaluation across conversational and task-oriented datasets shows our model consistently outperforms competitive VAP-based baselines. Integration with the Unmute framework demonstrates a 505 ms average latency reduction with a 28.4% increase in speculative computation, effectively masking sequential bottlenecks to enable complex reasoning in real-time speech-to-speech interaction.",
+  "arxiv_comment": "Accepted at Interspeech 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Endpoint Anticipation proposes proactive end-of-turn forecasting for low-latency spoken dialogue, enabling speculative TTS pipeline execution, a core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}
