@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 4 complete; Q3 evaluation pilot is next
+**Status:** Phase 5 complete; retrospective Q3 snapshot is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -326,13 +326,13 @@ accepts or mutates registry relationships automatically.
 
 ### Phase 5 — Q3 pilot and full reconciliation
 
-- [ ] Review the evaluation-focused pilot first.
-- [ ] Validate field-render behavior against accepted pilot relationships.
-- [ ] Review all remaining thematic batches.
-- [ ] Give every emitted candidate an accepted, rejected, or deferred disposition and rationale.
-- [ ] Create broader claims only when at least two concepts contribute meaningfully.
-- [ ] Preserve local status, scope, polarity, evidence, and caveats.
-- [ ] Log each review batch in `log.md` and commit at theme boundaries.
+- [x] Review the evaluation-focused pilot first.
+- [x] Validate field-render behavior against accepted pilot relationships.
+- [x] Review all remaining thematic batches.
+- [x] Give every emitted candidate an accepted, rejected, or deferred disposition and rationale.
+- [x] Create broader claims only when at least two concepts contribute meaningfully.
+- [x] Preserve local status, scope, polarity, evidence, and caveats.
+- [x] Log each review batch in `log.md` and commit at theme boundaries.
 
 **Gate:** Every Q3 run candidate has a disposition; accepted relationships and broader claims pass
 reconciliation health; local cluster count remains 406 unless an independently justified
@@ -429,9 +429,9 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 5 — Q3 pilot and full reconciliation.
-**Next action:** Review the evaluation-themed candidate batch first, record explicit dispositions
-and rationales, and validate field-render behavior against any accepted pilot relationships.
+**Current phase:** Phase 6 — Retrospective Q3 snapshot.
+**Next action:** Freeze the finalized `2025-Q3` reconciliation view with evidence cutoff
+`2025-09-30`, actual assessment date, dual baseline/cutoff assessments, and canonical digest.
 
 Baseline commits recorded at bootstrap:
 
@@ -449,6 +449,17 @@ Phase 4 commits:
 
 - Infrastructure: `081567b` (`Implement reconciliation candidate infrastructure`).
 - Content: `0f6fcb5` (`Generate Q3 reconciliation candidates`).
+
+Phase 5 content commits:
+
+- `9c8ed21` — evaluation pilot.
+- `ca30fe2` — efficiency.
+- `06840a9` — speaker.
+- `2418ab6` — controllability.
+- `14165a3` — robustness.
+- `8c89aeb` — codecs and language modeling.
+- `698ae43` — streaming and spoken agents.
+- `8e9f7b8` — post-training and finalized run.
 
 Content checkout:
 
@@ -577,3 +588,24 @@ evaluation-themed candidate batch.
 - Logged candidate generation in the content changelog and committed infrastructure and content
   separately.
 - Next: Phase 5 evaluation-focused pilot review.
+
+### 2026-08-23 — Phase 5 Q3 reconciliation review
+
+- Confirmed clean `work/integrate` worktrees and reviewed all candidates in the prescribed order:
+  evaluation, efficiency, speaker, controllability, robustness, codecs/language modeling,
+  streaming/spoken agents, and post-training.
+- Compared complete local cluster records and role-specific evidence conservatively. Shared papers
+  alone were not treated as semantic equivalence or an accepted relationship.
+- Reviewed all 2,049 candidates: 110 accepted, 1,939 rejected, 0 deferred, and 0 pending.
+- Recorded 49 direct relationships and 11 broader claims. Broader evidence-role lists are exact
+  deduplicated unions of member-cluster evidence; every broader claim spans at least two concepts.
+- The evaluation pilot produced three broader claims and validated field-render projection:
+  17 local cluster appearances collapse to three field-level nodes, 38 duplicate supporting-paper
+  occurrences are removed, and local claims, statuses, evidence, and caveats remain unchanged.
+- Health caught and prevented one incorrect broader-target assignment during the controllability
+  batch; corrected it to a direct `related` relationship before commit.
+- Logged and committed every theme boundary separately, then finalized the `2025-Q3` run.
+- Final reconciliation health passes with 0 errors and 0 warnings. All 29 unit tests pass; all 23
+  source concept digests still match the generated run, and the local graph remains 406 clusters.
+- No concept YAML, rendered page, paper page, source metadata, or parsed source was changed.
+- Next: Phase 6 retrospective Q3 snapshot.
