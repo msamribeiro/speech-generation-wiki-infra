@@ -46,6 +46,7 @@ class ReconcileHealthTests(unittest.TestCase):
             "schema_version": 1, "run_id": "2025-Q3", "trigger": "quarterly-integration",
             "evidence_cutoff": "2025-09-30", "assessment_as_of": "2026-08-19",
             "status": "in_progress", "supersedes_run": None,
+            "review_mode": "human_review",
             "source": {"infra_commit": "abc1234", "content_commit": "def5678", "concept_digests": {key: canonical_digest(value) for key, value in graphs.items()}},
             "generator": {"version": 1, "neighbors_per_cluster": 10, "review_cap": 500, "shared_support_minimum": 2, "weights": {"text_similarity": 0.4, "shared_evidence": 0.3, "status_polarity": 0.15, "technical_vocabulary": 0.15}},
             "diagnostics": {"cross_concept_pairs": 1, "pre_cap_candidates": 1, "emitted_candidates": 1, "shared_evidence_candidates": 0, "score_distribution": {"minimum": 0.7, "median": 0.7, "maximum": 0.7}, "cap_excluded_shared_evidence": False},
@@ -74,6 +75,28 @@ class ReconcileHealthTests(unittest.TestCase):
             self.assertFalse(result.passed)
             self.assertIn("qualified_refs_resolve", checks)
             self.assertIn("finalized_run_complete", checks)
+
+    def test_human_acceptance_requires_human_approved_registry_target(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            wiki, graphs = self._wiki(directory)
+            left, right = "alpha#claim", "beta#claim"
+            registry = yaml.safe_load((wiki / "_claims/_reconciliation/registry.yaml").read_text())
+            registry["relationships"] = [{
+                "id": "rel_claims", "source": left, "target": right, "type": "related",
+                "rationale": "Both claims concern codec-token quality, but retain concept-specific scope.",
+                "review_status": "agent_proposed", "reviewed_on": "2026-08-23", "accepted_in": "2025-Q3",
+            }]
+            (wiki / "_claims/_reconciliation/registry.yaml").write_text(yaml.safe_dump(registry, sort_keys=False))
+            run = self._run(graphs)
+            run["status"] = "finalized"
+            run["candidates"][0].update({
+                "disposition": "accepted", "relationship": "related", "registry_target": "rel_claims",
+                "rationale": "A human accepted the proposed related relationship.",
+            })
+            run["review"] = {"completed_on": "2026-08-23"}
+            (wiki / "_claims/_reconciliation/runs/2025-Q3.yaml").write_text(yaml.safe_dump(run, sort_keys=False))
+            result = reconcile.run(CheckArgs(wiki_dir=wiki))
+            self.assertIn("human_approval_required", {issue.check for issue in result.issues if issue.severity == "error"})
 
 
 if __name__ == "__main__":

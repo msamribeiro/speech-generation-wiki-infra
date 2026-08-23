@@ -97,12 +97,16 @@ separate reconciliation layer described in `docs/design/cross-concept-reconcilia
 
 1. Record source commits, concept digests, trigger, evidence cutoff, and candidate configuration.
 2. Generate deterministic, advisory cross-concept candidates with component signals.
-3. Review every candidate as accepted, rejected, or deferred with rationale.
-4. Write accepted relationships and broader claims to `_reconciliation/registry.yaml`; never
+3. Record whether decisions are agent adjudications or human review; never call agent decisions
+   human-reviewed.
+4. Review every candidate as accepted, rejected, or deferred with rationale.
+5. Write agent proposals or human-approved relationships and broader claims to
+   `_reconciliation/registry.yaml` with explicit `review_status`; never
    rewrite local clusters.
-5. Finalize the run only when no candidate remains pending.
-6. Optionally freeze an immutable, publication-bounded snapshot for reporting.
-7. Log each review batch and snapshot operation to `wiki/log.md` with full provenance.
+6. Exclude `agent_proposed` records from rendering and snapshots.
+7. Finalize the run only when no candidate remains pending.
+8. Optionally freeze an immutable, publication-bounded snapshot after human approval.
+9. Log each review batch and snapshot operation to `wiki/log.md` with full provenance.
 
 The reconciliation agent writes exactly `wiki/_claims/_reconciliation/registry.yaml`, run and
 snapshot files below that directory, and `wiki/log.md`. It never writes concept YAMLs or rendered
@@ -125,7 +129,7 @@ respect to history — always regenerates from current YAML state.
 - `--overview-only` — render only the short Overview format
 - `--in-depth-only` — render only the detailed In Depth format
 - `--prototype {slug}` — write draft formats to the infra root without changing canonical wiki files
-- `--field-overview` — regenerate `wiki/overview.md` from all concept YAMLs plus the reviewed
+- `--field-overview` — regenerate `wiki/overview.md` from all concept YAMLs plus the human-approved
   registry; Concept Overviews may inform terminology and navigation but are not evidence authority
 - `--force` — render even if not stale
 
@@ -140,7 +144,7 @@ respect to history — always regenerates from current YAML state.
 5. Write `wiki/concepts/{slug}.md` and `wiki/concepts/{slug}-in-depth.md` with version-2
    `generation` frontmatter.
 6. Update the rendered concept's row in `wiki/concepts/index.md`.
-7. Optionally render `wiki/overview.md` from all concept YAMLs plus accepted registry relationships,
+7. Optionally render `wiki/overview.md` from all concept YAMLs plus human-approved registry relationships,
    deduplicating linked clusters and papers while preserving local qualifications.
 8. Log: `- render | {N} concepts | formats: {overview|in-depth|both} | mode: {mode} | runtime: {runtime} | provider: {provider} | model: {model}` to `wiki/log.md`.
 

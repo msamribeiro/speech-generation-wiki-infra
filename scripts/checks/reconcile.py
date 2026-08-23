@@ -31,6 +31,8 @@ SYMMETRIC_TYPES = {"equivalent", "contradicts", "tradeoff", "related"}
 DIRECTED_TYPES = {"specialization", "supports", "refines"}
 RUN_TRIGGERS = {"quarterly-integration", "large-integration-round", "corrective-review"}
 RUN_STATUSES = {"in_progress", "finalized", "superseded"}
+REVIEW_MODES = {"agent_adjudication", "human_review"}
+REGISTRY_REVIEW_STATUSES = {"agent_proposed", "human_approved"}
 DISPOSITIONS = {"pending", "accepted", "rejected", "deferred"}
 THEMES = {"evaluation", "efficiency", "speaker", "controllability", "robustness", "codecs-language-modeling", "streaming-agents", "post-training"}
 CLAIM_STATUSES = {"strongly_supported", "emerging", "contested", "weakened", "superseded", "historical"}
@@ -141,6 +143,7 @@ def _validate_registry(
         return issues, {}, {}
 
     relationship_by_id: dict[str, dict] = {}
+    agent_proposed = 0
     directed_edges: dict[str, set[str]] = {}
     for item in relationships:
         if not isinstance(item, dict):
@@ -148,7 +151,7 @@ def _validate_registry(
             continue
         rid = item.get("id", "?")
         item_ref = f"registry:relationship:{rid}"
-        missing = _missing(item, {"id", "source", "target", "type", "rationale", "reviewed_on", "accepted_in"})
+        missing = _missing(item, {"id", "source", "target", "type", "rationale", "review_status", "reviewed_on", "accepted_in"})
         if missing:
             issues.append(_issue("error", item_ref, "relationship_required_fields", f"missing fields: {missing}"))
         if not isinstance(rid, str) or not rid.startswith("rel_"):
@@ -171,6 +174,10 @@ def _validate_registry(
                 directed_edges.setdefault(source, set()).add(target)
         if not _nonempty(item.get("rationale")):
             issues.append(_issue("error", item_ref, "relationship_required_fields", "rationale must be non-empty"))
+        if item.get("review_status") not in REGISTRY_REVIEW_STATUSES:
+            issues.append(_issue("error", item_ref, "registry_review_status", f"invalid review_status: {item.get('review_status')!r}"))
+        elif item.get("review_status") == "agent_proposed":
+            agent_proposed += 1
         if _iso(item.get("reviewed_on")) is None:
             issues.append(_issue("error", item_ref, "relationship_required_fields", "reviewed_on must be YYYY-MM-DD"))
         if not _nonempty(item.get("accepted_in")):
@@ -192,7 +199,7 @@ def _validate_registry(
             continue
         bid = item.get("id", "?")
         item_ref = f"registry:broader:{bid}"
-        required = {"id", "proposition", "status", "confidence", "members", *role_fields, "caveats", "review_rationale", "evidence_cutoff", "assessment_date", "reviewed_in"}
+        required = {"id", "proposition", "status", "confidence", "review_status", "members", *role_fields, "caveats", "review_rationale", "evidence_cutoff", "assessment_date", "reviewed_in"}
         missing = _missing(item, required)
         if missing:
             issues.append(_issue("error", item_ref, "broader_required_fields", f"missing fields: {missing}"))
@@ -204,6 +211,10 @@ def _validate_registry(
             broader_by_id[bid] = item
         if item.get("status") not in CLAIM_STATUSES or item.get("confidence") not in CONFIDENCE:
             issues.append(_issue("error", item_ref, "broader_vocabulary", "invalid status or confidence"))
+        if item.get("review_status") not in REGISTRY_REVIEW_STATUSES:
+            issues.append(_issue("error", item_ref, "registry_review_status", f"invalid review_status: {item.get('review_status')!r}"))
+        elif item.get("review_status") == "agent_proposed":
+            agent_proposed += 1
         if not _nonempty(item.get("proposition")) or not _nonempty(item.get("review_rationale")):
             issues.append(_issue("error", item_ref, "broader_required_fields", "proposition and review_rationale must be non-empty"))
         for field in ("evidence_cutoff", "assessment_date"):
@@ -253,6 +264,8 @@ def _validate_registry(
     for member_ref, broader_ids in equivalent_memberships.items():
         if len(broader_ids) > 1:
             issues.append(_issue("error", member_ref, "incompatible_canonical_memberships", f"equivalent member of multiple broader claims: {sorted(broader_ids)}"))
+    if agent_proposed:
+        issues.append(_issue("warning", ref, "agent_proposed_registry", f"{agent_proposed} registry records await human approval and are not rendering or snapshot authority"))
     return issues, relationship_by_id, broader_by_id
 
 
@@ -271,7 +284,7 @@ def _validate_run(
     issues: list[Issue] = []
     run_id = data.get("run_id", path.stem)
     ref = f"run:{run_id}"
-    required = {"schema_version", "run_id", "trigger", "evidence_cutoff", "assessment_as_of", "status", "supersedes_run", "source", "generator", "diagnostics", "candidates"}
+    required = {"schema_version", "run_id", "trigger", "evidence_cutoff", "assessment_as_of", "status", "review_mode", "supersedes_run", "source", "generator", "diagnostics", "candidates"}
     missing = sorted(field for field in required if field not in data)
     if missing:
         issues.append(_issue("error", ref, "run_required_fields", f"missing fields: {missing}"))
@@ -279,6 +292,8 @@ def _validate_run(
         issues.append(_issue("error", ref, "run_identity", "schema_version must be 1 and run_id must match filename"))
     if data.get("trigger") not in RUN_TRIGGERS or data.get("status") not in RUN_STATUSES:
         issues.append(_issue("error", ref, "run_vocabulary", "invalid trigger or status"))
+    if data.get("review_mode") not in REVIEW_MODES:
+        issues.append(_issue("error", ref, "run_vocabulary", f"invalid review_mode: {data.get('review_mode')!r}"))
     for field in ("evidence_cutoff", "assessment_as_of"):
         if _iso(data.get(field)) is None:
             issues.append(_issue("error", ref, "run_required_fields", f"{field} must be YYYY-MM-DD"))
@@ -365,6 +380,10 @@ def _validate_run(
             pending += 1
             if data.get("status") != "in_progress":
                 issues.append(_issue("error", candidate_ref, "finalized_run_complete", "pending candidate in non-in-progress run"))
+            proposal = candidate.get("proposal")
+            if proposal is not None:
+                if not isinstance(proposal, dict) or proposal.get("review_status") != "agent_proposed" or proposal.get("relationship") not in RELATIONSHIP_TYPES or proposal.get("registry_target") not in relationships | broader_claims or not _nonempty(proposal.get("rationale")):
+                    issues.append(_issue("error", candidate_ref, "proposal_valid", "proposal requires agent_proposed status, relationship, registry target, and rationale"))
         elif disposition == "accepted":
             reviewed = True
             relation = candidate.get("relationship")
@@ -379,6 +398,8 @@ def _validate_run(
                 members = {member.get("claim") for member in broader_claims[target_id].get("members") or [] if isinstance(member, dict)}
                 if not {left, right}.issubset(members):
                     issues.append(_issue("error", candidate_ref, "accepted_decisions_reciprocal", "candidate endpoints are not both members of broader target"))
+            if target_id in relationships | broader_claims and data.get("review_mode") == "human_review" and (relationships | broader_claims)[target_id].get("review_status") != "human_approved":
+                issues.append(_issue("error", candidate_ref, "human_approval_required", "accepted human-review decision must target a human_approved registry record"))
         elif disposition == "rejected":
             reviewed = True
             if not _nonempty(candidate.get("rationale")) or candidate.get("registry_target") is not None:

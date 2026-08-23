@@ -6,6 +6,7 @@ relationships:
     target: spoken-language-model#semantic_acoustic_token_tradeoff
     type: related
     rationale: "The claims overlap, but their system scope remains concept-specific."
+    review_status: human_approved
     reviewed_on: "2026-08-13"
     accepted_in: 2025-Q3
 broader_claims: []

@@ -1,7 +1,8 @@
 # Cross-Concept Reconciliation Schema
 
 Reconciliation artifacts live below `wiki/_claims/_reconciliation/`. Schema version 1 has two
-mutable-to-final artifact types: the living reviewed registry and finalized run records. Concept
+mutable-to-final artifact types: the living registry and finalized run records. Registry records
+explicitly distinguish agent proposals from human-approved decisions. Concept
 claims remain in `wiki/_claims/{concept}.yaml` under `docs/schemas/claims.md`.
 
 ## Qualified References
@@ -43,6 +44,7 @@ relationships:
     target: concept-b#cluster-b
     type: refines
     rationale: "Why this exact relation is justified."
+    review_status: agent_proposed | human_approved
     reviewed_on: YYYY-MM-DD
     accepted_in: 2025-Q3
 
@@ -51,6 +53,7 @@ broader_claims:
     proposition: "Reviewed field-level proposition."
     status: strongly_supported
     confidence: high
+    review_status: agent_proposed | human_approved
     members:
       - claim: concept-a#cluster-a
         relationship: specialization
@@ -78,6 +81,8 @@ Registry rules:
 - a local cluster cannot be an `equivalent` member of incompatible broader claims;
 - supporting, contradicting, and refining lists contain unique paper IDs derived from members;
 - status uses the Claim Status Vocabulary and confidence uses `high | medium | low`;
+- `review_status: agent_proposed` records an AI adjudication for human consideration and is not
+  rendering or snapshot authority; only `human_approved` records are authoritative downstream;
 - every rationale and caveat is evidence-bounded prose, not a similarity score; and
 - registry history is recoverable from `accepted_in`/`reviewed_in` run records and Git history.
 
@@ -92,6 +97,7 @@ trigger: quarterly-integration
 evidence_cutoff: 2025-09-30
 assessment_as_of: YYYY-MM-DD
 status: in_progress
+review_mode: agent_adjudication | human_review
 supersedes_run: null
 
 source:
@@ -143,6 +149,7 @@ candidates:
     registry_target: rel_{stable_slug}
     rationale: "Reviewed decision rationale."
     reconsideration_trigger: null
+    proposal: null
 
 review:
   completed_on: YYYY-MM-DD
@@ -157,6 +164,7 @@ Run vocabulary:
 
 - `trigger`: `quarterly-integration | large-integration-round | corrective-review`;
 - `status`: `in_progress | finalized | superseded`;
+- `review_mode`: `agent_adjudication | human_review`;
 - `theme`: `evaluation | efficiency | speaker | controllability | robustness | codecs-language-modeling | streaming-agents | post-training`;
 - `disposition`: `pending | accepted | rejected | deferred`.
 
@@ -168,7 +176,11 @@ Candidate rules:
   for identical source digests and configuration;
 - all component signals are present; shared paper and term lists are sorted and unique;
 - `pending` is allowed only while the run is `in_progress`;
+- a pending corrective-review candidate may carry an AI recommendation in `proposal`, containing
+  `review_status: agent_proposed`, `relationship`, `registry_target`, and a complete `rationale`;
+  these fields do not constitute the candidate's disposition;
 - `accepted` requires a relationship, registry target, and rationale;
+- an accepted candidate in a `human_review` run must target a `human_approved` registry record;
 - `rejected` requires a rationale and no registry target;
 - `deferred` requires a rationale and non-empty reconsideration trigger;
 - a finalized run contains no pending candidates; and

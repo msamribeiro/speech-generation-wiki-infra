@@ -329,12 +329,16 @@ The module validates the contracts in `docs/schemas/reconciliation.md` and
 | `broader_membership_valid` | error | Broader claims span at least two concepts and have unique members |
 | `no_cycles` | error | Directed relationships, broader memberships, and supersession chains do not cycle |
 | `accepted_decisions_reciprocal` | error | Accepted run candidates point to matching registry state |
+| `registry_review_status` | error | Every registry record is explicitly `agent_proposed` or `human_approved` |
+| `human_approval_required` | error | Accepted decisions in human-review runs target human-approved registry state |
+| `proposal_valid` | error | Pending AI proposals remain separate, complete recommendations rather than dispositions |
 | `finalized_run_complete` | error | Finalized runs contain no pending candidates and every decision has required rationale |
 | `evidence_deduplicated` | error | Broader and snapshot evidence-role lists contain unique eligible paper IDs |
 | `published_dates_canonical` | error | Snapshot eligibility dates exist, parse, and match canonical sources |
 | `snapshot_digest_valid` | error | Canonical snapshot digest recomputes exactly |
 | `snapshot_immutable` | error | A published snapshot was changed instead of superseded |
 | `unresolved_candidates` | warning | Deferred or configured high-similarity candidates remain unresolved |
+| `agent_proposed_registry` | warning | Agent-proposed registry records remain non-authoritative pending human approval |
 
 Candidate generation is not part of health validation, and this module never mutates artifacts.
 

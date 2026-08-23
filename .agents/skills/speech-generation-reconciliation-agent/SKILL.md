@@ -10,7 +10,8 @@ description: >-
 # Speech Generation Reconciliation Agent
 
 Maintain relationships between concept-local claim clusters without rewriting those clusters.
-Treat candidate generation as advisory and require review for every registry change.
+Treat candidate generation as advisory and distinguish agent proposals from human approval for
+every registry change.
 
 Read before acting:
 
@@ -66,7 +67,15 @@ Do not combine candidate generation and acceptance into one automatic step.
 
 Use only qualified references: `{concept}#{cluster-id}`. Bare cluster IDs are invalid.
 
-## Human Review
+## Agent Adjudication and Human Review
+
+Label an agent-only decision run `review_mode: agent_adjudication` and mark every resulting
+registry record `review_status: agent_proposed`. Never describe agent adjudication as human review.
+Only a person's explicit decision can set `review_status: human_approved`.
+
+For a corrective human-review run, retain an AI recommendation under the candidate's `proposal`
+block and leave the actual `disposition`, `relationship`, `registry_target`, and `rationale`
+pending/null until the person decides.
 
 For each candidate, inspect the complete local cluster records and their paper evidence. Decide:
 
@@ -79,7 +88,8 @@ evidence independence. Similar wording or shared papers alone never establish eq
 
 For accepted decisions:
 
-1. create or update the referenced direct relationship or broader claim in `registry.yaml`;
+1. create or update the referenced direct relationship or broader claim in `registry.yaml` with
+   the decision's explicit review status;
 2. preserve local claim wording, status, confidence, evidence, and caveats;
 3. require broader claims to contain meaningful members from at least two concepts;
 4. derive broader paper roles from member clusters and deduplicate paper IDs;
@@ -91,7 +101,8 @@ theme boundaries; do not finalize a run with pending candidates.
 
 ## Snapshot Freezing
 
-Freeze only from one or more finalized runs whose accepted registry targets validate.
+Freeze only from one or more finalized human-review runs whose accepted registry targets are
+`human_approved` and validate.
 
 1. Apply the exact publication cutoff using canonical `published_date`; never infer dates.
 2. Materialize every local cluster at both the pre-window baseline and cutoff, filtering evidence

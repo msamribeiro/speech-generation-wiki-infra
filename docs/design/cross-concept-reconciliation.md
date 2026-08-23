@@ -20,9 +20,10 @@ papers -> concept claim YAMLs -> reconciliation registry -> field overview
 ```
 
 Concept YAMLs remain authoritative for local claims, paper evidence, status, confidence, caveats,
-and method families. `_claims/_reconciliation/registry.yaml` is authoritative only for accepted
-cross-concept relationships and broader claims. Run records are the audit trail for proposed and
-reviewed candidates.
+and method families. `_claims/_reconciliation/registry.yaml` is downstream authority only for
+cross-concept relationships and broader claims marked `human_approved`. Agent-proposed records
+remain visible for review but cannot affect rendering or snapshots. Run records are the audit trail
+for proposals, agent adjudications, and human decisions.
 
 ## Ownership and Paths
 
@@ -104,7 +105,13 @@ The initial policy is:
 The generator writes candidates with `disposition: pending`. It must not create registry entries,
 accept relationships, or rewrite concept YAMLs.
 
-## Human Review
+## Agent Proposals and Human Review
+
+An agent may adjudicate candidates and draft registry records, but it must label the run
+`review_mode: agent_adjudication` and every resulting registry record
+`review_status: agent_proposed`. Do not describe this work as human-reviewed. A corrective or
+ordinary human-review run keeps any AI recommendation in a separate candidate `proposal` block
+while leaving `disposition: pending` until a person decides.
 
 Review candidates in themed batches, beginning with evaluation and subjective judgment. For every
 candidate, record one disposition and a non-empty rationale:
@@ -113,7 +120,8 @@ candidate, record one disposition and a non-empty rationale:
 - `rejected` — the overlap is insufficient or misleading; or
 - `deferred` — a named evidence or design condition must be resolved before deciding.
 
-An accepted decision is incomplete until its registry target exists. Rejected candidates never
+In a human-review run, an accepted decision is incomplete until its registry target exists and is
+marked `human_approved`. Rejected candidates never
 appear in the registry. Deferred candidates remain warnings and record a concrete reconsideration
 trigger.
 
@@ -140,7 +148,8 @@ Run reconciliation after each quarterly integration cycle or another large integ
 2. generate deterministic candidates and diagnostics;
 3. review candidates in themed batches;
 4. update accepted registry relationships and broader claims;
-5. give every candidate a final disposition and rationale;
+5. give every candidate a final disposition and rationale, explicitly recording whether the run
+   was agent adjudication or human review;
 6. validate registry and run together;
 7. log concepts, clusters, decisions, deferrals, trigger, runtime, provider, and model; and
 8. optionally freeze a snapshot after the run is complete.
@@ -174,8 +183,8 @@ Concept Overview and In Depth pages continue to derive their epistemic assessmen
 local YAML. They may use registry relationships for cross-concept navigation and to avoid implying
 that linked findings are independent field discoveries.
 
-The current field overview reads all concept YAMLs plus `registry.yaml`. It presents an accepted
-broader claim once, deduplicates paper evidence across its members, and preserves material local
+The current field overview reads all concept YAMLs plus `registry.yaml`. It presents a
+`human_approved` broader claim once, deduplicates paper evidence across its members, and preserves material local
 qualifications. Unlinked local clusters remain eligible for field synthesis. Candidate and run
 files are never rendering authority.
 

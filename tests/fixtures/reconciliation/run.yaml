@@ -4,6 +4,7 @@ trigger: quarterly-integration
 evidence_cutoff: "2025-09-30"
 assessment_as_of: "2026-08-13"
 status: finalized
+review_mode: human_review
 supersedes_run: null
 source:
   infra_commit: abc1234

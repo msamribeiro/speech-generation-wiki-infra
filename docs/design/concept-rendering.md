@@ -20,9 +20,10 @@ complete claim graph, paper inventory, reassessment queue, or data-hygiene field
 that need exhaustive record-level access should use `wiki/_claims/{slug}.yaml`.
 
 Cross-concept relationships live separately in `_claims/_reconciliation/registry.yaml`. Concept
-renders preserve their local graph's assessment and may use accepted relationships only for
-navigation and overlap context. The current field overview reads all concept YAMLs plus the
-registry, presents accepted broader claims once, and deduplicates linked paper evidence. Candidate
+renders preserve their local graph's assessment and may use `human_approved` relationships only
+for navigation and overlap context. The current field overview reads all concept YAMLs plus the
+registry, presents `human_approved` broader claims once, and deduplicates linked paper evidence.
+Records marked `agent_proposed` are review material, not rendering authority. Candidate
 and run files are never rendering authority.
 
 ## Names and Paths
