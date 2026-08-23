@@ -17,7 +17,7 @@
   "year": 2026,
   "month": 3,
   "published_date": "2026-03-08",
-  "ingested_date": null,
+  "ingested_date": "2026-08-15",
   "url": "https://arxiv.org/abs/2603.07551",
   "pdf_url": "https://arxiv.org/pdf/2603.07551.pdf",
   "pdf_path": "raw/papers/2603.07551.pdf",
@@ -29,9 +29,21 @@
   ],
   "relevance_score": 0.6,
   "relevance_note": "Speaker poisoning framework for zero-shot TTS models to prevent synthesis of specific consenting speakers voices",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-15",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "8f82f13"
+    }
+  ]
 }

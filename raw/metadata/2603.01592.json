@@ -34,7 +34,7 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Neural audio codec for high-fidelity music streaming at 32-128 kbps with 44.1 kHz output quality",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,

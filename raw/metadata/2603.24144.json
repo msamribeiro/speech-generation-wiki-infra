@@ -18,7 +18,7 @@
   "year": 2026,
   "month": 3,
   "published_date": "2026-03-25",
-  "ingested_date": null,
+  "ingested_date": "2026-08-22",
   "url": "https://arxiv.org/abs/2603.24144",
   "pdf_url": "https://arxiv.org/pdf/2603.24144.pdf",
   "pdf_path": "raw/papers/2603.24144.pdf",
@@ -30,9 +30,21 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Interruption detection benchmark and model for full-duplex spoken dialogue systems turn-taking",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-08-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "d3fabcd"
+    }
+  ]
 }

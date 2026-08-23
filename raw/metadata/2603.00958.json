@@ -30,7 +30,7 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Dataset and framework for inferring voice character attributes for TTS in fiction/audiobooks; advances instruction-conditioned TTS.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
