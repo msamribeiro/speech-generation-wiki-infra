@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 5 complete; retrospective Q3 snapshot is next
+**Status:** Phase 5 corrective human review pending; retrospective Q3 snapshot blocked
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -34,8 +34,9 @@ Ingest -> Integrate -> Reconcile -> Render
 The reconciliation layer connects semantically overlapping concept-local claim clusters without
 deleting or flattening them. Existing paper pages remain authoritative for paper-level evidence;
 concept YAMLs remain authoritative for local wording, evidence, confidence, status, caveats, and
-method families. The reviewed cross-concept registry becomes authoritative only for relationships
-and broader claims.
+method families. The cross-concept registry becomes authoritative downstream only for relationships
+and broader claims explicitly marked `human_approved`; agent proposals remain non-authoritative
+review material.
 
 Rendering remains a current-state synthesis. Reports are explicitly bounded by publication date,
 venue, or comparisons between immutable snapshots.
@@ -148,7 +149,8 @@ _claims/_reconciliation/
   snapshots/2025-Q3.yaml
 ```
 
-`registry.yaml` is authoritative for accepted cross-concept relationships and broader claims.
+`registry.yaml` is authoritative downstream only for human-approved cross-concept relationships
+and broader claims. Agent-proposed records remain visible but cannot affect rendering or snapshots.
 `runs/2025-Q3.yaml` preserves every emitted candidate and its `accepted`, `rejected`, or `deferred`
 disposition with rationale. `snapshots/2025-Q3.yaml` freezes the time-bounded assessed state.
 
@@ -326,17 +328,23 @@ accepts or mutates registry relationships automatically.
 
 ### Phase 5 — Q3 pilot and full reconciliation
 
-- [x] Review the evaluation-focused pilot first.
-- [x] Validate field-render behavior against accepted pilot relationships.
-- [x] Review all remaining thematic batches.
-- [x] Give every emitted candidate an accepted, rejected, or deferred disposition and rationale.
-- [x] Create broader claims only when at least two concepts contribute meaningfully.
+- [x] Complete an agent adjudication of the evaluation-focused pilot and remaining thematic batches.
+- [x] Preserve all 2,049 agent dispositions and rationales in the superseded `2025-Q3` audit run.
+- [x] Mark the 49 proposed relationships and 11 proposed broader claims as `agent_proposed`.
+- [x] Rewrite all proposed relationship rationales, broader propositions, and member rationales so
+      their variables, scope, relationship semantics, and practical meaning are explicit.
+- [x] Open `2025-Q3-corrective-review` with the 110 AI-proposed acceptances reset to pending human
+      decisions and each recommendation isolated in a `proposal` block.
+- [ ] Obtain human accept/reject/defer decisions for all 110 corrective candidates.
+- [ ] Mark accepted registry targets `human_approved` and remove or retain rejected proposals only
+      according to the reviewed registry contract.
 - [x] Preserve local status, scope, polarity, evidence, and caveats.
 - [x] Log each review batch in `log.md` and commit at theme boundaries.
 
-**Gate:** Every Q3 run candidate has a disposition; accepted relationships and broader claims pass
-reconciliation health; local cluster count remains 406 unless an independently justified
-same-concept cleanup is performed outside this program.
+**Gate:** Every corrective candidate has an explicit human disposition; every accepted registry
+target is `human_approved`; reconciliation health has no pending-review warnings; local cluster
+count remains 406 unless an independently justified same-concept cleanup is performed outside this
+program.
 
 ### Phase 6 — Retrospective Q3 snapshot
 
@@ -429,9 +437,10 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 6 — Retrospective Q3 snapshot.
-**Next action:** Freeze the finalized `2025-Q3` reconciliation view with evidence cutoff
-`2025-09-30`, actual assessment date, dual baseline/cutoff assessments, and canonical digest.
+**Current phase:** Phase 5 — Corrective human review.
+**Next action:** Present the 110 pending candidates in `2025-Q3-corrective-review` for explicit
+human accept/reject/defer decisions. Do not freeze the Q3 snapshot until the run is finalized and
+every accepted registry target is `human_approved`.
 
 Baseline commits recorded at bootstrap:
 
@@ -450,7 +459,7 @@ Phase 4 commits:
 - Infrastructure: `081567b` (`Implement reconciliation candidate infrastructure`).
 - Content: `0f6fcb5` (`Generate Q3 reconciliation candidates`).
 
-Phase 5 content commits:
+Phase 5 agent-adjudication content commits:
 
 - `9c8ed21` — evaluation pilot.
 - `ca30fe2` — efficiency.
@@ -460,6 +469,11 @@ Phase 5 content commits:
 - `8c89aeb` — codecs and language modeling.
 - `698ae43` — streaming and spoken agents.
 - `8e9f7b8` — post-training and finalized run.
+
+Corrective-review commits:
+
+- Infrastructure: `96becc3` — explicit agent-proposed versus human-approved contract and checks.
+- Content: `96cf5a1` — superseded agent run, clarified registry prose, and 110 pending human decisions.
 
 Content checkout:
 
@@ -596,16 +610,35 @@ evaluation-themed candidate batch.
   streaming/spoken agents, and post-training.
 - Compared complete local cluster records and role-specific evidence conservatively. Shared papers
   alone were not treated as semantic equivalence or an accepted relationship.
-- Reviewed all 2,049 candidates: 110 accepted, 1,939 rejected, 0 deferred, and 0 pending.
-- Recorded 49 direct relationships and 11 broader claims. Broader evidence-role lists are exact
+- Agent-adjudicated all 2,049 candidates: 110 proposed acceptances, 1,939 rejections, 0 deferred,
+  and 0 pending in that agent-only pass.
+- Proposed 49 direct relationships and 11 broader claims. Broader evidence-role lists are exact
   deduplicated unions of member-cluster evidence; every broader claim spans at least two concepts.
 - The evaluation pilot produced three broader claims and validated field-render projection:
   17 local cluster appearances collapse to three field-level nodes, 38 duplicate supporting-paper
   occurrences are removed, and local claims, statuses, evidence, and caveats remain unchanged.
 - Health caught and prevented one incorrect broader-target assignment during the controllability
   batch; corrected it to a direct `related` relationship before commit.
-- Logged and committed every theme boundary separately, then finalized the `2025-Q3` run.
+- Logged and committed every theme boundary separately, then finalized the agent-adjudication
+  `2025-Q3` run.
 - Final reconciliation health passes with 0 errors and 0 warnings. All 29 unit tests pass; all 23
   source concept digests still match the generated run, and the local graph remains 406 clusters.
 - No concept YAML, rendered page, paper page, source metadata, or parsed source was changed.
-- Next: Phase 6 retrospective Q3 snapshot.
+- Correction: this work was performed by the agent and had not received human review. It must not
+  be described as human-reviewed or used as rendering/snapshot authority.
+
+### 2026-08-23 — Corrective human-review setup
+
+- Added `review_mode: agent_adjudication | human_review` to runs and
+  `review_status: agent_proposed | human_approved` to registry records.
+- Updated reconciliation, rendering, snapshot, documentation, workflow, health checks, and tests so
+  AI proposals cannot be mistaken for human-approved authority.
+- Preserved the original `2025-Q3` decisions as a superseded agent-adjudication audit record.
+- Rewrote all 11 broader propositions and all 49 direct relationship rationales with explicit
+  source and target claims, relationship meaning, scope, and practical consequences; also replaced
+  generic broader-member rationales with claim-specific explanations.
+- Opened `2025-Q3-corrective-review` in `human_review` mode. Its 110 candidates are all pending;
+  prior AI recommendations are retained only inside separate `proposal` blocks.
+- Marked all 60 registry records `agent_proposed`. Reconciliation health passes with 0 errors and
+  two intentional warnings: 60 non-authoritative proposals and 110 pending human decisions.
+- Snapshot work remains blocked until the corrective run is finalized by human decisions.
