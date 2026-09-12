@@ -130,6 +130,53 @@ This is a retrospective assessment. Attention is not evidence of adoption. [[new
         with self.assertRaisesRegex(ValueError, "outside snapshot"):
             validate_quarterly_report(outside, snapshot)
 
+    def test_quarterly_meta_sections_may_use_distinct_presentation(self) -> None:
+        snapshot = _snapshot()
+        narrative_sections = QUARTERLY_SECTIONS[1:-1]
+        sections = "\n".join(f"## {name}\n\nText." for name in narrative_sections)
+        report = f'''---
+title: "Test"
+report_type: quarterly
+period: 2025-Q3
+activity_window: {{start: "2025-07-01", end: "2025-09-30"}}
+baseline_cutoff: "2025-06-30"
+evidence_cutoff: "2025-09-30"
+assessment_as_of: "2026-09-12"
+assessment_mode: retrospective
+snapshot_id: 2025-Q3
+snapshot_digest: "{snapshot['digest']}"
+included_paper_count: 2
+baseline_paper_count: 1
+activity_paper_count: 1
+concept_count: 1
+concept_membership_count: 3
+activity_concept_membership_count: 2
+generation:
+  schema_version: 2
+  date: "2026-09-13"
+  stage: report
+  mode: quarterly
+  runtime: codex
+  provider: openai
+  agent: speech-generation-report-agent
+  model: "gpt-5"
+  commit: "1234567"
+---
+
+> [!note] About this report
+> **Scope and retrospective assessment.** Attention is not evidence of adoption. [[new|New]].
+
+{sections}
+
+<details>
+<summary><strong>Snapshot and provenance references</strong></summary>
+
+Technical metadata.
+
+</details>
+'''
+        validate_quarterly_report(report, snapshot)
+
 
 if __name__ == "__main__":
     unittest.main()

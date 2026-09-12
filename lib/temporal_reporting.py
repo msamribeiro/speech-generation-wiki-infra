@@ -254,8 +254,13 @@ def validate_quarterly_report(
     if not generation.get("commit"):
         raise ValueError("report generation provenance must record an infra commit")
 
+    meta_sections = {
+        "Scope and retrospective assessment",
+        "Snapshot and provenance references",
+    }
     for section in QUARTERLY_SECTIONS:
-        if f"## {section}" not in body:
+        marker = section if section in meta_sections else f"## {section}"
+        if marker not in body:
             raise ValueError(f"report is missing required section: {section}")
     if "retrospective" not in body.lower():
         raise ValueError("report must explicitly describe the assessment as retrospective")

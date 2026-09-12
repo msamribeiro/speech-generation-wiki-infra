@@ -77,6 +77,11 @@ Reader-facing quarterly reports contain:
 9. Representative reading path; and
 10. Snapshot and provenance references.
 
+The scope statement and snapshot/provenance references are report metadata rather than field
+synthesis. They may be presented as a labeled callout and a collapsible technical appendix instead
+of ordinary second-level narrative sections. Their labels and complete required content remain
+present for readers and validation.
+
 The report cites representative papers with `[[id|Name]]`. Every factual conclusion traces to a
 snapshot local-cluster or broader-claim assessment, which in turn traces to concept YAML evidence.
 
