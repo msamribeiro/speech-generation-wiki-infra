@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 7 complete; Phase 8 Q3 quarterly report is next
+**Status:** Phase 8 complete; Phase 9 report framework completion is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -370,12 +370,12 @@ appropriate; every factual claim remains traceable.
 
 ### Phase 8 — Q3 quarterly report
 
-- [ ] Publish `reports/quarterly/2025-Q3.md` and update the reports index.
-- [ ] Separate publication activity from changes in knowledge.
-- [ ] Compare Q3 contributions with the pre-Q3 baseline.
-- [ ] Cover new methods, strengthened/refined/contested claims, evaluation changes, and attention.
-- [ ] Label the report as a retrospective assessment.
-- [ ] Avoid equating publication volume with evidence strength or adoption.
+- [x] Publish `reports/quarterly/2025-Q3.md` and update the reports index.
+- [x] Separate publication activity from changes in knowledge.
+- [x] Compare Q3 contributions with the pre-Q3 baseline.
+- [x] Cover new methods, strengthened/refined/contested claims, evaluation changes, and attention.
+- [x] Label the report as a retrospective assessment.
+- [x] Avoid equating publication volume with evidence strength or adoption.
 
 **Gate:** Cutoff fixtures behave correctly; the report is reproducible from the Q3 snapshot and
 distinguishes activity, evidence, and adoption.
@@ -437,11 +437,10 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 8 — Q3 quarterly report.
-**Next action:** Generate `reports/quarterly/2025-Q3.md` from the published `2025-Q3` snapshot,
-keeping Q3 publication activity separate from changes between the pre-Q3 and through-Q3 assessed
-knowledge states. Update the reports index and content log, then validate report provenance and
-snapshot-bound citations.
+**Current phase:** Phase 9 — report framework completion.
+**Next action:** Implement the trend-report guard requiring at least two ordered snapshots and the
+canonical-venue, inclusive-date selection contract. Add focused failure and boundary tests without
+publishing a trend or venue report.
 
 Baseline commits recorded at bootstrap:
 
@@ -492,6 +491,13 @@ Phase 7 field-overview commits:
 
 - Infrastructure: `96be404` (`Add field overview source projection`).
 - Content: `46fb46d` (`Regenerate Q3 field overview`).
+- Content editorial revision: `21e20a8` (`Refine field overview for accessibility`).
+
+Phase 8 quarterly-report commits:
+
+- Infrastructure: `3fb774b` (`Add quarterly snapshot projection`) and `16175fb`
+  (`Validate snapshot-backed quarterly reports`).
+- Content: `f62829b` (`Publish retrospective Q3 2025 report`).
 
 Content checkout:
 
@@ -688,3 +694,23 @@ evaluation-themed candidate batch.
   zero errors; remaining warnings are the known two unrendered concept pairs, three pre-existing
   length warnings, and 15 preserved agent proposals.
 - Next: Phase 8 Q3 quarterly report from the immutable `2025-Q3` snapshot.
+
+### 2026-09-13 — Phase 8 Q3 quarterly report
+
+- Added a deterministic temporal projection that validates the published retrospective snapshot,
+  checks its canonical digest and paper partitions, and calculates publication activity separately
+  from assessed knowledge changes.
+- Derived 364 Q3 papers and 1,598 overlapping Q3 concept memberships independently from the
+  snapshot. The assessment comparison identifies 117 new local clusters, 96 emerging-to-strong
+  transitions, 12 newly contested local clusters, 19 newly represented method families, 148
+  expanded families, and one changed broader claim.
+- Added quarterly-report validation for snapshot dates, counts, digest, retrospective labeling,
+  activity-versus-adoption language, required sections, version-2 provenance, snapshot-bounded
+  citations, reports-index presence, and changelog presence.
+- Published `reports/quarterly/2025-Q3.md`, updated the reports index, and logged the operation. The
+  report cites 38 distinct papers, all verified members of the immutable snapshot.
+- Kept the living registry, concept YAMLs, concept pages, paper pages, field overview, and snapshot
+  unchanged during report generation.
+- Ran all four focused temporal-reporting tests and the full project health suite. Both passed; the
+  health suite reported zero errors across agents, ingest, integrate, reconcile, and render.
+- Next: Phase 9 trend failure and venue-selection framework tests; no report publication.
