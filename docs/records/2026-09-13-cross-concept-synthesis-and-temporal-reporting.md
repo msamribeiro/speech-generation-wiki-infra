@@ -1,18 +1,15 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 9 complete; Phase 10 program closeout is next
+**Status:** Complete; all ten phases closed on 2026-09-13
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
 
-This is the authoritative, resumable implementation note for the first cross-concept
-reconciliation and temporal-reporting rollout. Update **Resume Here** and append a dated entry to
-**Session Log** at every safe stopping point. Infrastructure and content changes are committed
-separately at phase boundaries. No remote push is part of this program unless separately requested.
-
-When the program is complete, archive this file as
-`docs/records/{completion-date}-cross-concept-synthesis-sessions.md`.
+This is the authoritative implementation record for the first cross-concept reconciliation and
+temporal-reporting rollout. Infrastructure and content changes were committed separately at phase
+boundaries. No remote push was part of this program. The completed record is archived at
+`docs/records/2026-09-13-cross-concept-synthesis-and-temporal-reporting.md`.
 
 ---
 
@@ -391,12 +388,12 @@ distinguishes activity, evidence, and adoption.
 
 ### Phase 10 — Closeout
 
-- [ ] Run full health, render, reconciliation, report, link, schema, and compatibility checks.
-- [ ] Confirm every generated page carries version-2 provenance.
-- [ ] Update `BACKLOG.md`, `ARCHIVE.md`, and `log.md` as appropriate.
-- [ ] Confirm both repositories are clean and record final commits.
-- [ ] Archive this file with `git mv` to the dated `docs/records/` path.
-- [ ] Record deliberately deferred candidates and their triggers.
+- [x] Run full health, render, reconciliation, report, link, schema, and compatibility checks.
+- [x] Confirm every generated page carries version-2 provenance.
+- [x] Update `BACKLOG.md`, `ARCHIVE.md`, and `log.md` as appropriate.
+- [x] Confirm both repositories are clean and record final commits.
+- [x] Archive this file with `git mv` to the dated `docs/records/` path.
+- [x] Record deliberately deferred candidates and their triggers.
 
 ---
 
@@ -435,12 +432,24 @@ distinguishes activity, evidence, and adoption.
 
 ---
 
-## Resume Here
+## Completion and Future Triggers
 
-**Current phase:** Phase 10 — closeout.
-**Next action:** Run the complete closeout validation matrix, update project tracking, confirm both
-repositories are clean, and archive this session record under `docs/records/` with deliberately
-deferred publication triggers recorded.
+**Current phase:** Program complete.
+
+No reconciliation candidate remains deferred: both Q3 runs record zero deferred decisions, and the
+corrective human-review run has zero pending decisions. The 15 preserved `agent_proposed` registry
+records are superseded audit history, not unresolved candidates and not synthesis authority.
+
+Future operation triggers:
+
+- Run reconciliation after each completed quarterly integration cycle or another large integration
+  round makes cross-concept relationships stale.
+- Publish the first trend report only after at least one additional comparable, published snapshot
+  exists; the current single-Q3 state must continue to fail clearly.
+- Generate a venue report only on explicit request, using an exact canonical venue and inclusive
+  date range, and only when the selection passes the evidence-backed thematic synthesis gate.
+- Render the pending `singing` and `fine-tuning` concept pairs when their evidence supports useful
+  production pages; their current placeholders do not affect the completed field synthesis.
 
 Baseline commits recorded at bootstrap:
 
@@ -502,6 +511,10 @@ Phase 8 quarterly-report commits:
 Phase 9 report-framework commit:
 
 - Infrastructure: `c036afe` (`Complete trend and venue report framework`).
+
+Phase 10 closeout content commit:
+
+- Content: `6dcc177` (`Record synthesis program closeout`).
 
 Content checkout:
 
@@ -738,3 +751,23 @@ evaluation-themed candidate batch.
 - All eight focused temporal-reporting tests pass. The complete infrastructure suite passes with
   43 tests and 3 subtests.
 - Next: Phase 10 validation, tracking updates, clean-state confirmation, and session-record archive.
+
+### 2026-09-13 — Phase 10 closeout
+
+- Ran the full health suite against the explicit content integration checkout. Agents, ingest,
+  integrate, reconcile, and render all passed with zero errors. Remaining warnings are documented
+  corpus/editorial signals rather than closeout failures.
+- Ran all 43 infrastructure tests plus 3 subtests and the standalone compatibility check across all
+  8 shared workflows; all passed.
+- Recomputed the published Q3 snapshot digest and validated the quarterly report against its dates,
+  counts, digest, retrospective mode, required sections, citations, reports index, and changelog.
+- Audited all 46 generated synthesis and report pages; every page has complete version-2 generation
+  provenance.
+- Resolved 1,386 wikilinks across the field overview, quarterly report, and 44 concept pages with no
+  broken targets. The audit handles Quartz's escaped table-link aliases.
+- Confirmed zero deferred or pending reconciliation decisions. Recorded the next reconciliation,
+  trend-publication, venue-publication, and pending concept-render triggers explicitly.
+- Updated `BACKLOG.md`, `ARCHIVE.md`, and the content changelog. No source PDF, metadata, concept
+  YAML, reconciliation artifact, snapshot, paper page, concept page, overview, or report changed.
+- Archived this record to
+  `docs/records/2026-09-13-cross-concept-synthesis-and-temporal-reporting.md`.

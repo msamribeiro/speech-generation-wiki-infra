@@ -5,6 +5,30 @@ Each entry records the completion date, a prose summary of the outcome, and the 
 
 ---
 
+## Cross-Concept Synthesis and Temporal Reporting [completed: 2026-09-13]
+
+Built and validated the first complete cross-concept and temporal-reporting cycle over all 23 Q3
+concept graphs. The rollout added canonical publication dates, an advisory reconciliation audit,
+explicit human-review authority, a reviewed relationship registry, an immutable retrospective Q3
+snapshot, a 23-concept field overview, a snapshot-backed Q3 report, and guarded trend/venue report
+foundations. The full record is archived at
+`docs/records/2026-09-13-cross-concept-synthesis-and-temporal-reporting.md`.
+
+- [x] Add reconciliation, snapshot, temporal-reporting, and generation-provenance contracts
+- [x] Backfill and validate 2,226 canonical publication dates without semantic YAML changes
+- [x] Score all 78,475 cross-concept pairs and preserve 2,049 review candidates deterministically
+- [x] Correct the initial agent-only adjudication and obtain human dispositions for all 110 proposed acceptances
+- [x] Finalize 49 human-approved direct relationships and 11 human-approved broader claims
+- [x] Freeze the immutable retrospective `2025-Q3` snapshot over 497 unique papers and 406 local clusters
+- [x] Regenerate the field overview from all 23 concepts with deduplicated broader synthesis
+- [x] Publish the snapshot-backed Q3 2025 report with activity, evidence change, and adoption separated
+- [x] Require at least two ordered snapshots for trend reports and fail clearly with only Q3
+- [x] Add canonical inclusive venue selection and an evidence-backed anti-inventory quality gate
+- [x] Validate tests, health, compatibility, provenance, snapshot/report binding, and 1,386 synthesis-page wikilinks
+- [x] Record future triggers: reconcile after each quarterly integration or other large integration round;
+      publish a trend only after a second comparable snapshot; publish venue reports only on explicit
+      request when the selected evidence passes the synthesis gate
+
 ## Ingest & Integration Pipeline [completed: 2026-06-17]
 
 Built the full multi-agent ingest architecture. Per-paper ingest agent writes one wiki page with
