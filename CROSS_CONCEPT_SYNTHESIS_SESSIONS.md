@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 8 complete; Phase 9 report framework completion is next
+**Status:** Phase 9 complete; Phase 10 program closeout is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -382,10 +382,10 @@ distinguishes activity, evidence, and adoption.
 
 ### Phase 9 — Report framework completion
 
-- [ ] Require at least two snapshots for trend reports and fail clearly with only Q3 available.
-- [ ] Validate venue selection by canonical venue and inclusive publication range.
-- [ ] Keep venue generation on demand; do not create an Interspeech report in this rollout.
-- [ ] Enforce the existing reader-facing venue quality bar.
+- [x] Require at least two snapshots for trend reports and fail clearly with only Q3 available.
+- [x] Validate venue selection by canonical venue and inclusive publication range.
+- [x] Keep venue generation on demand; do not create an Interspeech report in this rollout.
+- [x] Enforce the existing reader-facing venue quality bar.
 
 **Gate:** Trend failure and venue selection tests pass; no thin venue page is generated.
 
@@ -437,10 +437,10 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 9 — report framework completion.
-**Next action:** Implement the trend-report guard requiring at least two ordered snapshots and the
-canonical-venue, inclusive-date selection contract. Add focused failure and boundary tests without
-publishing a trend or venue report.
+**Current phase:** Phase 10 — closeout.
+**Next action:** Run the complete closeout validation matrix, update project tracking, confirm both
+repositories are clean, and archive this session record under `docs/records/` with deliberately
+deferred publication triggers recorded.
 
 Baseline commits recorded at bootstrap:
 
@@ -498,6 +498,10 @@ Phase 8 quarterly-report commits:
 - Infrastructure: `3fb774b` (`Add quarterly snapshot projection`) and `16175fb`
   (`Validate snapshot-backed quarterly reports`).
 - Content: `f62829b` (`Publish retrospective Q3 2025 report`).
+
+Phase 9 report-framework commit:
+
+- Infrastructure: `c036afe` (`Complete trend and venue report framework`).
 
 Content checkout:
 
@@ -714,3 +718,23 @@ evaluation-themed candidate batch.
 - Ran all four focused temporal-reporting tests and the full project health suite. Both passed; the
   health suite reported zero errors across agents, ingest, integrate, reconcile, and render.
 - Next: Phase 9 trend failure and venue-selection framework tests; no report publication.
+
+### 2026-09-13 — Phase 9 report framework completion
+
+- Added a trend-input guard requiring at least two distinct published snapshots in strictly
+  increasing evidence-cutoff order. A single Q3 snapshot now fails clearly without writing output.
+- Added adjacent-snapshot comparability projections for shared, added, and removed concepts and
+  local claim references, keeping like-for-like evidence changes separate from coverage changes.
+- Added canonical, case-sensitive venue selection with inclusive start and end dates and refusal to
+  select beyond the source snapshot's evidence cutoff.
+- Added a venue evidence projection linking selected papers to the assessed local claims and
+  evidence roles they inform.
+- Enforced the non-inventory quality bar through evidence-backed thematic breadth: by default a
+  venue selection must inform at least two assessed claims across at least two concepts. This gate
+  is independent of raw publication volume and does not authorize automatic publication.
+- Verified the real Q3 snapshot fails the trend guard as expected. A read-only Interspeech Q3
+  selection found 123 papers informing 276 assessed claims across 22 concepts; no report was
+  generated or content file changed.
+- All eight focused temporal-reporting tests pass. The complete infrastructure suite passes with
+  43 tests and 3 subtests.
+- Next: Phase 10 validation, tracking updates, clean-state confirmation, and session-record archive.
