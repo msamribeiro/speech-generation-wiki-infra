@@ -4,7 +4,12 @@ from copy import deepcopy
 import unittest
 
 from lib.reconciliation import canonical_digest
-from lib.temporal_reporting import quarterly_projection, validate_published_snapshot
+from lib.temporal_reporting import (
+    QUARTERLY_SECTIONS,
+    quarterly_projection,
+    validate_published_snapshot,
+    validate_quarterly_report,
+)
 
 
 def _snapshot() -> dict:
@@ -77,6 +82,53 @@ class TemporalReportingTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "must be published"):
             quarterly_projection(snapshot)
+
+    def test_quarterly_report_is_bound_to_snapshot_and_citations(self) -> None:
+        snapshot = _snapshot()
+        sections = "\n".join(f"## {name}\n\nText." for name in QUARTERLY_SECTIONS)
+        report = f'''---
+title: "Test"
+report_type: quarterly
+period: 2025-Q3
+activity_window: {{start: "2025-07-01", end: "2025-09-30"}}
+baseline_cutoff: "2025-06-30"
+evidence_cutoff: "2025-09-30"
+assessment_as_of: "2026-09-12"
+assessment_mode: retrospective
+snapshot_id: 2025-Q3
+snapshot_digest: "{snapshot['digest']}"
+included_paper_count: 2
+baseline_paper_count: 1
+activity_paper_count: 1
+concept_count: 1
+concept_membership_count: 3
+activity_concept_membership_count: 2
+generation:
+  schema_version: 2
+  date: "2026-09-13"
+  stage: report
+  mode: quarterly
+  runtime: codex
+  provider: openai
+  agent: speech-generation-report-agent
+  model: "gpt-5"
+  commit: "1234567"
+---
+
+This is a retrospective assessment. Attention is not evidence of adoption. [[new|New]].
+
+{sections}
+'''
+        validate_quarterly_report(
+            report,
+            snapshot,
+            reports_index="[[quarterly/2025-Q3|Q3]]",
+            changelog="report | 2025-Q3",
+        )
+
+        outside = report.replace("[[new|New]]", "[[outside|Outside]]")
+        with self.assertRaisesRegex(ValueError, "outside snapshot"):
+            validate_quarterly_report(outside, snapshot)
 
 
 if __name__ == "__main__":

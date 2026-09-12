@@ -4,9 +4,26 @@ from __future__ import annotations
 
 from collections import Counter
 from datetime import date, datetime
+import re
 from typing import Any
 
+import yaml
+
 from lib.reconciliation import canonical_digest
+
+
+QUARTERLY_SECTIONS = (
+    "Scope and retrospective assessment",
+    "Executive synthesis",
+    "Publication activity during the quarter",
+    "Changes in assessed knowledge",
+    "New methods and capability directions",
+    "Evaluation and evidence-quality changes",
+    "Contested, weakened, or unresolved findings",
+    "Attention versus evidence caveat",
+    "Representative reading path",
+    "Snapshot and provenance references",
+)
 
 
 def _iso(value: Any) -> str:
@@ -172,3 +189,88 @@ def quarterly_projection(snapshot: dict) -> dict:
             "expanded_families": sorted(expanded_families, key=lambda item: (item["concept"], item["id"])),
         },
     }
+
+
+def _markdown_frontmatter(markdown: str) -> tuple[dict, str]:
+    if not markdown.startswith("---\n"):
+        raise ValueError("report must begin with YAML frontmatter")
+    try:
+        raw, body = markdown[4:].split("\n---\n", 1)
+    except ValueError as exc:
+        raise ValueError("report frontmatter is not terminated") from exc
+    metadata = yaml.safe_load(raw)
+    if not isinstance(metadata, dict):
+        raise ValueError("report frontmatter must be a mapping")
+    return metadata, body
+
+
+def validate_quarterly_report(
+    markdown: str,
+    snapshot: dict,
+    *,
+    reports_index: str | None = None,
+    changelog: str | None = None,
+) -> None:
+    """Validate a published quarterly report against its immutable snapshot."""
+
+    projection = quarterly_projection(snapshot)
+    metadata, body = _markdown_frontmatter(markdown)
+    expected = {
+        "report_type": "quarterly",
+        "period": snapshot["period"],
+        "snapshot_id": snapshot["snapshot_id"],
+        "snapshot_digest": snapshot["digest"],
+        "evidence_cutoff": _iso(snapshot["evidence_cutoff"]),
+        "baseline_cutoff": _iso(snapshot["baseline_cutoff"]),
+        "assessment_as_of": _iso(snapshot["assessment_as_of"]),
+        "assessment_mode": "retrospective",
+        "included_paper_count": len(snapshot["included_papers"]),
+        "baseline_paper_count": len(snapshot["baseline_papers"]),
+        "activity_paper_count": projection["activity"]["paper_count"],
+        "concept_count": len(snapshot.get("concepts") or []),
+        "concept_membership_count": sum(
+            len(item.get("concepts") or []) for item in snapshot["included_papers"]
+        ),
+        "activity_concept_membership_count": projection["activity"]["concept_membership_count"],
+    }
+    for key, value in expected.items():
+        actual = _iso(metadata[key]) if key.endswith("cutoff") or key == "assessment_as_of" else metadata.get(key)
+        if actual != value:
+            raise ValueError(f"report {key} does not match snapshot: {actual!r} != {value!r}")
+    if {
+        "start": _iso(metadata["activity_window"]["start"]),
+        "end": _iso(metadata["activity_window"]["end"]),
+    } != {
+        "start": _iso(snapshot["activity_window"]["start"]),
+        "end": _iso(snapshot["activity_window"]["end"]),
+    }:
+        raise ValueError("report activity_window does not match snapshot")
+
+    generation = metadata.get("generation") or {}
+    if generation.get("schema_version") != 2:
+        raise ValueError("report generation provenance must use schema version 2")
+    if generation.get("stage") != "report" or generation.get("mode") != "quarterly":
+        raise ValueError("report generation provenance has the wrong stage or mode")
+    if not generation.get("commit"):
+        raise ValueError("report generation provenance must record an infra commit")
+
+    for section in QUARTERLY_SECTIONS:
+        if f"## {section}" not in body:
+            raise ValueError(f"report is missing required section: {section}")
+    if "retrospective" not in body.lower():
+        raise ValueError("report must explicitly describe the assessment as retrospective")
+    if "adoption" not in body.lower() or "attention" not in body.lower():
+        raise ValueError("report must distinguish attention from adoption")
+
+    included_ids = {str(item["id"]) for item in snapshot["included_papers"]}
+    cited_ids = set(re.findall(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]", body))
+    missing = sorted(cited_ids - included_ids)
+    if missing:
+        raise ValueError(f"report cites papers outside snapshot: {', '.join(missing)}")
+    if not cited_ids:
+        raise ValueError("report must cite representative papers")
+
+    if reports_index is not None and f"quarterly/{snapshot['snapshot_id']}" not in reports_index:
+        raise ValueError("reports index does not link the quarterly report")
+    if changelog is not None and f"report | {snapshot['snapshot_id']}" not in changelog:
+        raise ValueError("changelog does not record the report operation")
