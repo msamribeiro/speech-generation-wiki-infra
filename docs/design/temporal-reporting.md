@@ -55,12 +55,25 @@ A trend report requires at least two immutable snapshots. It compares like-for-l
 fields and explains schema, corpus, or coverage changes that weaken comparability. With fewer than
 two snapshots, the workflow fails clearly and writes no report.
 
+Inputs must be distinct published snapshots supplied in strictly increasing `evidence_cutoff`
+order. Before comparison, the workflow records shared, added, and removed concepts and local claim
+references for every adjacent pair. Only shared references support like-for-like change claims;
+coverage additions and removals are disclosed separately.
+
 ### Venue
 
 Venue reports remain on demand. Selection uses the canonical venue value and an inclusive
 publication-date range. A venue report must compare venue-specific activity and evidence with the
 wider-field snapshot rather than produce a thin paper inventory. If the selected evidence cannot
 support synthesis, write nothing and report the insufficiency.
+
+Canonical venue matching is exact and case-sensitive; a non-canonical case variant fails with the
+available canonical value. Both date boundaries are inclusive and the range may not extend beyond
+the source snapshot's evidence cutoff. Readiness is based on evidence-backed thematic breadth, not
+an arbitrary paper-count threshold: by default the selected papers must inform at least two
+assessed local claims across at least two concepts. Passing this gate does not itself authorize
+publication; venue generation remains explicitly on demand, and the resulting report must still
+compare those contributions with the wider snapshot state.
 
 ## Quarterly Structure
 

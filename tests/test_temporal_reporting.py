@@ -7,8 +7,13 @@ from lib.reconciliation import canonical_digest
 from lib.temporal_reporting import (
     QUARTERLY_SECTIONS,
     quarterly_projection,
+    select_venue_papers,
+    trend_comparability,
     validate_published_snapshot,
     validate_quarterly_report,
+    validate_trend_snapshots,
+    validate_venue_synthesis_readiness,
+    venue_projection,
 )
 
 
@@ -53,6 +58,22 @@ def _snapshot() -> dict:
         "broader_claims": [],
         "digest": None,
     }
+    snapshot["digest"] = canonical_digest(snapshot, omit_digest=True)
+    return snapshot
+
+
+def _later_snapshot() -> dict:
+    snapshot = deepcopy(_snapshot())
+    snapshot.update({
+        "snapshot_id": "2025-Q4",
+        "period": "2025-Q4",
+        "baseline_cutoff": "2025-09-30",
+        "activity_window": {"start": "2025-10-01", "end": "2025-12-31"},
+        "evidence_cutoff": "2025-12-31",
+        "assessment_as_of": "2026-09-13",
+        "baseline_papers": ["new", "old"],
+        "activity_papers": [],
+    })
     snapshot["digest"] = canonical_digest(snapshot, omit_digest=True)
     return snapshot
 
@@ -176,6 +197,53 @@ Technical metadata.
 </details>
 '''
         validate_quarterly_report(report, snapshot)
+
+    def test_trend_requires_two_snapshots_and_increasing_cutoffs(self) -> None:
+        first = _snapshot()
+        second = _later_snapshot()
+
+        with self.assertRaisesRegex(ValueError, "at least two"):
+            validate_trend_snapshots([first])
+        with self.assertRaisesRegex(ValueError, "increasing evidence cutoff"):
+            validate_trend_snapshots([second, first])
+
+        comparison = trend_comparability([first, second])
+        self.assertEqual(comparison[0]["from_snapshot"], "2025-Q3")
+        self.assertEqual(comparison[0]["to_snapshot"], "2025-Q4")
+        self.assertEqual(comparison[0]["shared_concepts"], ["a"])
+        self.assertEqual(comparison[0]["shared_local_claim_refs"], ["a#claim"])
+
+    def test_venue_selection_uses_canonical_name_and_inclusive_dates(self) -> None:
+        snapshot = _snapshot()
+        selected = select_venue_papers(
+            snapshot,
+            venue="Interspeech",
+            start="2025-07-01",
+            end="2025-07-01",
+        )
+        self.assertEqual([item["id"] for item in selected], ["new"])
+
+        with self.assertRaisesRegex(ValueError, "canonical value: Interspeech"):
+            select_venue_papers(
+                snapshot,
+                venue="interspeech",
+                start="2025-07-01",
+                end="2025-07-01",
+            )
+
+    def test_venue_readiness_rejects_a_thin_inventory(self) -> None:
+        snapshot = _snapshot()
+        projection = venue_projection(
+            snapshot,
+            venue="Interspeech",
+            start="2025-07-01",
+            end="2025-07-01",
+        )
+        with self.assertRaisesRegex(ValueError, "cannot support a synthesis"):
+            validate_venue_synthesis_readiness(projection)
+
+        projection["local_claims"].append({"ref": "b#claim", "concept": "b"})
+        validate_venue_synthesis_readiness(projection)
 
 
 if __name__ == "__main__":

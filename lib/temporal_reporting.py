@@ -26,6 +26,166 @@ QUARTERLY_SECTIONS = (
 )
 
 
+def validate_trend_snapshots(snapshots: list[dict]) -> None:
+    """Require distinct published snapshots in strictly increasing cutoff order."""
+
+    if len(snapshots) < 2:
+        raise ValueError("trend reports require at least two published snapshots")
+    seen_ids: set[str] = set()
+    previous_cutoff: str | None = None
+    for snapshot in snapshots:
+        validate_published_snapshot(snapshot)
+        snapshot_id = str(snapshot["snapshot_id"])
+        if snapshot_id in seen_ids:
+            raise ValueError(f"trend snapshots contain duplicate ID: {snapshot_id}")
+        seen_ids.add(snapshot_id)
+        cutoff = _iso(snapshot["evidence_cutoff"])
+        if previous_cutoff is not None and cutoff <= previous_cutoff:
+            raise ValueError("trend snapshots must be ordered by increasing evidence cutoff")
+        previous_cutoff = cutoff
+
+
+def trend_comparability(snapshots: list[dict]) -> list[dict]:
+    """Describe like-for-like concept and claim coverage for adjacent snapshots."""
+
+    validate_trend_snapshots(snapshots)
+    comparisons: list[dict] = []
+    for earlier, later in zip(snapshots, snapshots[1:]):
+        earlier_concepts = {
+            str(item["concept"]): item for item in earlier.get("concepts") or []
+        }
+        later_concepts = {
+            str(item["concept"]): item for item in later.get("concepts") or []
+        }
+        shared_concepts = sorted(earlier_concepts.keys() & later_concepts.keys())
+        earlier_claims = {
+            str(claim["ref"])
+            for slug in shared_concepts
+            for claim in earlier_concepts[slug].get("claim_clusters") or []
+        }
+        later_claims = {
+            str(claim["ref"])
+            for slug in shared_concepts
+            for claim in later_concepts[slug].get("claim_clusters") or []
+        }
+        comparisons.append({
+            "from_snapshot": str(earlier["snapshot_id"]),
+            "to_snapshot": str(later["snapshot_id"]),
+            "from_cutoff": _iso(earlier["evidence_cutoff"]),
+            "to_cutoff": _iso(later["evidence_cutoff"]),
+            "schema_changed": earlier.get("schema_version") != later.get("schema_version"),
+            "shared_concepts": shared_concepts,
+            "added_concepts": sorted(later_concepts.keys() - earlier_concepts.keys()),
+            "removed_concepts": sorted(earlier_concepts.keys() - later_concepts.keys()),
+            "shared_local_claim_refs": sorted(earlier_claims & later_claims),
+            "added_local_claim_refs": sorted(later_claims - earlier_claims),
+            "removed_local_claim_refs": sorted(earlier_claims - later_claims),
+        })
+    return comparisons
+
+
+def select_venue_papers(
+    snapshot: dict,
+    *,
+    venue: str,
+    start: str,
+    end: str,
+) -> list[dict]:
+    """Select one canonical venue over an inclusive publication-date range."""
+
+    validate_published_snapshot(snapshot)
+    start_date = _iso(start)
+    end_date = _iso(end)
+    if start_date > end_date:
+        raise ValueError("venue report start date must not exceed end date")
+    if end_date > _iso(snapshot["evidence_cutoff"]):
+        raise ValueError("venue report range exceeds snapshot evidence cutoff")
+
+    canonical_venues = sorted({str(item["venue"]) for item in snapshot["included_papers"]})
+    if venue not in canonical_venues:
+        case_matches = [item for item in canonical_venues if item.casefold() == venue.casefold()]
+        if case_matches:
+            raise ValueError(f"venue must use canonical value: {case_matches[0]}")
+        raise ValueError(f"venue is not represented in snapshot: {venue}")
+
+    return sorted(
+        (
+            item for item in snapshot["included_papers"]
+            if str(item["venue"]) == venue
+            and start_date <= _iso(item["published_date"]) <= end_date
+        ),
+        key=lambda item: (_iso(item["published_date"]), str(item["id"])),
+    )
+
+
+def venue_projection(
+    snapshot: dict,
+    *,
+    venue: str,
+    start: str,
+    end: str,
+) -> dict:
+    """Project venue activity and the snapshot claims its papers inform."""
+
+    selected = select_venue_papers(snapshot, venue=venue, start=start, end=end)
+    selected_ids = {str(item["id"]) for item in selected}
+    concept_counts = Counter(
+        str(concept) for item in selected for concept in item.get("concepts") or []
+    )
+    local_claims: list[dict] = []
+    for concept in snapshot.get("concepts") or []:
+        slug = str(concept["concept"])
+        for claim in concept.get("claim_clusters") or []:
+            assessment = claim.get("cutoff_assessment") or {}
+            roles = {
+                "supporting": sorted(selected_ids & set(map(str, assessment.get("supporting_papers") or []))),
+                "contradicting": sorted(selected_ids & set(map(str, assessment.get("contradicting_papers") or []))),
+                "refining": sorted(selected_ids & set(map(str, assessment.get("refining_papers") or []))),
+            }
+            evidence_ids = sorted(set().union(*map(set, roles.values())))
+            if evidence_ids:
+                local_claims.append({
+                    "ref": str(claim["ref"]),
+                    "concept": slug,
+                    "proposition": str(claim["proposition"]),
+                    "status": assessment.get("status"),
+                    "confidence": assessment.get("confidence"),
+                    "venue_evidence_papers": evidence_ids,
+                    "venue_evidence_roles": roles,
+                })
+    return {
+        "snapshot_id": str(snapshot["snapshot_id"]),
+        "snapshot_digest": str(snapshot["digest"]),
+        "venue": venue,
+        "start": _iso(start),
+        "end": _iso(end),
+        "paper_count": len(selected),
+        "paper_ids": [str(item["id"]) for item in selected],
+        "concept_counts": dict(sorted(concept_counts.items())),
+        "local_claims": sorted(local_claims, key=lambda item: item["ref"]),
+    }
+
+
+def validate_venue_synthesis_readiness(
+    projection: dict,
+    *,
+    minimum_claims: int = 2,
+    minimum_concepts: int = 2,
+) -> None:
+    """Refuse venue output that cannot support evidence-backed thematic synthesis."""
+
+    if not projection.get("paper_ids"):
+        raise ValueError("venue selection contains no papers")
+    claim_refs = {str(item["ref"]) for item in projection.get("local_claims") or []}
+    claim_concepts = {str(item["concept"]) for item in projection.get("local_claims") or []}
+    if len(claim_refs) < minimum_claims or len(claim_concepts) < minimum_concepts:
+        raise ValueError(
+            "venue selection cannot support a synthesis: "
+            f"requires at least {minimum_claims} assessed claims across "
+            f"{minimum_concepts} concepts"
+        )
+
+
 def _iso(value: Any) -> str:
     if isinstance(value, datetime):
         return value.date().isoformat()
