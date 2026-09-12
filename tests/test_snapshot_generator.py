@@ -12,10 +12,29 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from lib.reconciliation import canonical_digest
-from scripts.freeze_reconciliation_snapshot import SnapshotError, generate_snapshot
+from scripts.freeze_reconciliation_snapshot import (
+    SnapshotError,
+    _bounded_assessment,
+    generate_snapshot,
+)
 
 
 class SnapshotGeneratorTests(unittest.TestCase):
+    def test_complete_boundary_preserves_reviewed_assessment(self) -> None:
+        cluster = {
+            "status": "strongly_supported",
+            "confidence": "high",
+            "supporting_papers": ["p0", "p1"],
+            "contradicting_papers": ["p2"],
+            "refining_papers": [],
+        }
+        complete = _bounded_assessment(cluster, {"p0", "p1", "p2"})
+        filtered = _bounded_assessment(cluster, {"p0", "p2"})
+        self.assertEqual(complete["status"], "strongly_supported")
+        self.assertEqual(complete["confidence"], "high")
+        self.assertEqual(filtered["status"], "contested")
+        self.assertEqual(filtered["confidence"], "medium")
+
     def _wiki(self, directory: str) -> Path:
         wiki = Path(directory)
         claims = wiki / "_claims"

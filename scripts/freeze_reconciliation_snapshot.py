@@ -117,19 +117,22 @@ def _paper_catalog(wiki_dir: Path, graphs: dict[str, dict]) -> dict[str, dict]:
 
 
 def _bounded_assessment(cluster: dict, eligible: set[str]) -> dict | None:
+    all_role_papers = {
+        field: set(map(str, cluster.get(field) or []))
+        for field in ("supporting_papers", "contradicting_papers", "refining_papers")
+    }
     roles = {
-        "supporting_papers": sorted(set(map(str, cluster.get("supporting_papers") or [])) & eligible),
-        "contradicting_papers": sorted(
-            set(map(str, cluster.get("contradicting_papers") or [])) & eligible
-        ),
-        "refining_papers": sorted(set(map(str, cluster.get("refining_papers") or [])) & eligible),
+        field: sorted(papers & eligible) for field, papers in all_role_papers.items()
     }
     evidence_count = len(set().union(*map(set, roles.values())))
     if evidence_count == 0:
         return None
 
     live_status = cluster.get("status")
-    if roles["contradicting_papers"]:
+    complete_reviewed_evidence = set().union(*all_role_papers.values()).issubset(eligible)
+    if complete_reviewed_evidence:
+        status = live_status
+    elif roles["contradicting_papers"]:
         status = "contested"
     elif live_status == "emerging":
         status = "emerging"
@@ -141,8 +144,10 @@ def _bounded_assessment(cluster: dict, eligible: set[str]) -> dict | None:
     live_confidence = cluster.get("confidence")
     if live_confidence not in confidence_order:
         raise SnapshotError(f"invalid live confidence: {live_confidence!r}")
-    confidence = min(
-        (evidence_confidence, live_confidence), key=lambda value: confidence_order[value]
+    confidence = (
+        live_confidence
+        if complete_reviewed_evidence
+        else min((evidence_confidence, live_confidence), key=lambda value: confidence_order[value])
     )
     return {"status": status, "confidence": confidence, **roles}
 

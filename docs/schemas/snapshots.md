@@ -116,13 +116,17 @@ they are not copied blindly from the live graph. A genuinely new cluster may use
 evidence. A source paper appearing in several concepts occurs once in `included_papers` and once per
 evidence-role list in each assessment.
 
-The version-1 materializer applies the claim-schema evidence thresholds at each boundary. A claim
-with eligible contradicting evidence is `contested`; otherwise three or more eligible supporting
-papers can support `strongly_supported`, while smaller evidence sets remain `emerging`. A live
-`emerging` judgment caps the bounded status so paper count cannot erase methodological caveats.
-Confidence is `low`, `medium`, or `high` for one, two, or at least three unique eligible evidence
-papers respectively, capped by the reviewed live confidence. These deterministic rules make the
-retrospective assessment reproducible; they do not treat paper counts as adoption or consensus.
+When a boundary contains a claim's complete reviewed evidence set, the version-1 materializer
+preserves its reviewed status and confidence. This prevents a mechanical paper-count rule from
+overriding judgments about evidence independence, methodological quality, or whether nominally
+contradicting evidence actually changes the proposition's bounded status. For an earlier or
+otherwise filtered boundary, the materializer applies the claim-schema thresholds: eligible
+contradicting evidence yields `contested`; otherwise three or more eligible supporting papers can
+support `strongly_supported`, while smaller sets remain `emerging`. A live `emerging` judgment caps
+the bounded status so count alone cannot erase methodological caveats. Filtered-boundary confidence
+is `low`, `medium`, or `high` for one, two, or at least three unique eligible evidence papers,
+capped by the reviewed live confidence. These deterministic rules make retrospective reassessment
+reproducible; they do not treat paper counts as adoption or consensus.
 
 The snapshot records complete local-cluster assessments needed to explain field changes, including
 unlinked clusters. It records baseline and cutoff method-family eligibility so reports can
