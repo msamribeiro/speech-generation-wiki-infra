@@ -1,7 +1,7 @@
 # Cross-Concept Synthesis and Temporal Reporting Program
 
 **Started:** 2026-08-02
-**Status:** Phase 5 corrective human review pending; retrospective Q3 snapshot blocked
+**Status:** Phase 7 complete; Phase 8 Q3 quarterly report is next
 **Evidence scope:** Q3 2025 and earlier (`published_date <= 2025-09-30`)
 **Assessment mode:** Retrospective; the assessment date is the date each reconciliation or
 snapshot is completed, not the evidence cutoff
@@ -335,8 +335,8 @@ accepts or mutates registry relationships automatically.
       their variables, scope, relationship semantics, and practical meaning are explicit.
 - [x] Open `2025-Q3-corrective-review` with the 110 AI-proposed acceptances reset to pending human
       decisions and each recommendation isolated in a `proposal` block.
-- [ ] Obtain human accept/reject/defer decisions for all 110 corrective candidates.
-- [ ] Mark accepted registry targets `human_approved` and remove or retain rejected proposals only
+- [x] Obtain human accept/reject/defer decisions for all 110 corrective candidates.
+- [x] Mark accepted registry targets `human_approved` and remove or retain rejected proposals only
       according to the reviewed registry contract.
 - [x] Preserve local status, scope, polarity, evidence, and caveats.
 - [x] Log each review batch in `log.md` and commit at theme boundaries.
@@ -348,22 +348,22 @@ program.
 
 ### Phase 6 — Retrospective Q3 snapshot
 
-- [ ] Freeze the reconciled view with cutoff `2025-09-30` and actual assessment date.
-- [ ] Include only papers published on or before the cutoff.
-- [ ] Record included paper IDs, source digests, and reconciliation run.
-- [ ] Validate reproducibility, retrospective labeling, and immutability behavior.
+- [x] Freeze the reconciled view with cutoff `2025-09-30` and actual assessment date.
+- [x] Include only papers published on or before the cutoff.
+- [x] Record included paper IDs, source digests, and reconciliation run.
+- [x] Validate reproducibility, retrospective labeling, and immutability behavior.
 
 **Gate:** Rebuilding from the same source commits produces the same assessed content and digests;
 any later correction must create a superseding snapshot.
 
 ### Phase 7 — Current field overview
 
-- [ ] Regenerate `overview.md` from all 23 concept YAMLs and the registry.
-- [ ] Rank broader conclusions by decision impact, evidence independence, breadth, recency, and
+- [x] Regenerate `overview.md` from all 23 concept YAMLs and the registry.
+- [x] Rank broader conclusions by decision impact, evidence independence, breadth, recency, and
       disagreement rather than publication volume.
-- [ ] Deduplicate linked clusters and papers while preserving local qualifications.
-- [ ] State the Q3 cutoff, retrospective assessment date, corpus boundary, and overlapping counts.
-- [ ] Preserve traceability: broader claim -> local cluster -> paper claim -> cited source.
+- [x] Deduplicate linked clusters and papers while preserving local qualifications.
+- [x] State the Q3 cutoff, retrospective assessment date, corpus boundary, and overlapping counts.
+- [x] Preserve traceability: broader claim -> local cluster -> paper claim -> cited source.
 
 **Gate:** All 23 concepts inform the overview; linked clusters appear as one field conclusion where
 appropriate; every factual claim remains traceable.
@@ -437,10 +437,11 @@ distinguishes activity, evidence, and adoption.
 
 ## Resume Here
 
-**Current phase:** Phase 5 — Corrective human review.
-**Next action:** Present the 110 pending candidates in `2025-Q3-corrective-review` for explicit
-human accept/reject/defer decisions. Do not freeze the Q3 snapshot until the run is finalized and
-every accepted registry target is `human_approved`.
+**Current phase:** Phase 8 — Q3 quarterly report.
+**Next action:** Generate `reports/quarterly/2025-Q3.md` from the published `2025-Q3` snapshot,
+keeping Q3 publication activity separate from changes between the pre-Q3 and through-Q3 assessed
+knowledge states. Update the reports index and content log, then validate report provenance and
+snapshot-bound citations.
 
 Baseline commits recorded at bootstrap:
 
@@ -475,6 +476,23 @@ Corrective-review commits:
 - Infrastructure: `96becc3` — explicit agent-proposed versus human-approved contract and checks.
 - Content: `96cf5a1` — superseded agent run, clarified registry prose, and 110 pending human decisions.
 
+Phase 5 finalization:
+
+- Content: `1fa98d7` (`Finalize Q3 reconciliation review`) — all 110 corrective candidates have
+  explicit human dispositions; the finalized registry contains 49 human-approved relationships
+  and 11 human-approved broader claims.
+
+Phase 6 snapshot commits:
+
+- Infrastructure: `0f758af` (`Implement reconciliation snapshot materializer`) and `795b82e`
+  (`Preserve reviewed snapshot assessments`).
+- Content: `b1d2f66` (`Freeze retrospective Q3 snapshot`).
+
+Phase 7 field-overview commits:
+
+- Infrastructure: `96be404` (`Add field overview source projection`).
+- Content: `46fb46d` (`Regenerate Q3 field overview`).
+
 Content checkout:
 
 ```bash
@@ -495,6 +513,8 @@ cd /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wik
   scripts/health_check.py --module integrate --wiki-dir "$SPEECH_WIKI_CONTENT_DIR"
 /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/.venv/bin/python \
   scripts/health_check.py --module render --wiki-dir "$SPEECH_WIKI_CONTENT_DIR"
+/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra/.venv/bin/python \
+  scripts/health_check.py --module reconcile --wiki-dir "$SPEECH_WIKI_CONTENT_DIR"
 ```
 
 Known setup issue: `python3 scripts/resolve_wiki_dir.py` currently fails without the environment
@@ -642,3 +662,29 @@ evaluation-themed candidate batch.
 - Marked all 60 registry records `agent_proposed`. Reconciliation health passes with 0 errors and
   two intentional warnings: 60 non-authoritative proposals and 110 pending human decisions.
 - Snapshot work remains blocked until the corrective run is finalized by human decisions.
+
+### 2026-09-12 — Phases 5–7 completion
+
+- Recorded explicit human dispositions for all 110 corrective candidates and finalized
+  `2025-Q3-corrective-review`: 110 accepted, 0 rejected, 0 deferred, and 0 pending. The accepted
+  targets comprise 49 direct relationships and 11 broader claims marked `human_approved`.
+- Preserved 15 superseded `agent_proposed` registry records as non-authoritative audit material;
+  they remain excluded from rendering and snapshots.
+- Implemented and tested deterministic snapshot materialization, including canonical publication
+  boundaries, source digests, complete-evidence assessment preservation, byte-stable checks, and
+  refusal to modify a published snapshot.
+- Published `_claims/_reconciliation/snapshots/2025-Q3.yaml`: 497 unique papers, comprising 133
+  baseline papers and 364 Q3 activity papers, across 23 concepts and 406 local clusters. Its digest
+  is `sha256:33ef4cf849c6e202e327b28cf39d95ea6128b78e474ae0514861b56490df463b`.
+- Added the deterministic field-overview source projection. Human-approved broader claims appear
+  once, linked paper evidence is deduplicated, member-local caveats survive, and agent proposals do
+  not suppress local conclusions.
+- Regenerated `overview.md` from all 23 live concept graphs and the reviewed registry. It states
+  the 2025-09-30 evidence cutoff, 2026-09-12 retrospective assessment date, 497 unique papers,
+  2,226 concept memberships (1,729 beyond the unique-paper count), 406 clusters, and 11 approved
+  broader claims.
+- Verified every overview citation resolves to a paper in the source graphs and every concept is
+  represented. All 35 infrastructure unit tests pass. Render and reconciliation health pass with
+  zero errors; remaining warnings are the known two unrendered concept pairs, three pre-existing
+  length warnings, and 15 preserved agent proposals.
+- Next: Phase 8 Q3 quarterly report from the immutable `2025-Q3` snapshot.
