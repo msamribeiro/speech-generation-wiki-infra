@@ -116,6 +116,14 @@ they are not copied blindly from the live graph. A genuinely new cluster may use
 evidence. A source paper appearing in several concepts occurs once in `included_papers` and once per
 evidence-role list in each assessment.
 
+The version-1 materializer applies the claim-schema evidence thresholds at each boundary. A claim
+with eligible contradicting evidence is `contested`; otherwise three or more eligible supporting
+papers can support `strongly_supported`, while smaller evidence sets remain `emerging`. A live
+`emerging` judgment caps the bounded status so paper count cannot erase methodological caveats.
+Confidence is `low`, `medium`, or `high` for one, two, or at least three unique eligible evidence
+papers respectively, capped by the reviewed live confidence. These deterministic rules make the
+retrospective assessment reproducible; they do not treat paper counts as adoption or consensus.
+
 The snapshot records complete local-cluster assessments needed to explain field changes, including
 unlinked clusters. It records baseline and cutoff method-family eligibility so reports can
 distinguish a new family from an established family gaining more papers.
@@ -159,3 +167,18 @@ Supersession chains must resolve, move forward in version order, and contain no 
 - the stored digest recomputes exactly; and
 - published snapshot bytes never change in later commits except through an explicitly approved
   repository-history repair.
+
+## Materialization Command
+
+Use `scripts/freeze_reconciliation_snapshot.py`. Create and validate a draft first, then publish:
+
+```bash
+.venv/bin/python scripts/freeze_reconciliation_snapshot.py \
+  --wiki-dir "$SPEECH_WIKI_CONTENT_DIR" --snapshot-id 2025-Q3 --period 2025-Q3 \
+  --baseline-cutoff 2025-06-30 --activity-start 2025-07-01 --activity-end 2025-09-30 \
+  --evidence-cutoff 2025-09-30 --assessment-as-of YYYY-MM-DD \
+  --run-id 2025-Q3-corrective-review --apply
+```
+
+Repeat with `--check` to prove byte reproducibility. After health validation, repeat with
+`--publish`, then `--check` again. The command refuses to overwrite a published snapshot.
