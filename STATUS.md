@@ -1,116 +1,146 @@
 # Project Status
 
-Last updated: 2026-06-18 (338 ingested, 276 integrated; all CD complete; standard ingest paused for pipeline redesign)
+Last updated: 2026-09-19
+
+The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
+retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
+the Q4 2025 cycle. Q2 2026 ingestion is queued behind that work.
+
+---
+
+## Current priorities
+
+1. Complete Q4 2025 Phase 1 and Phase 2 integration across the affected concept graphs.
+2. Validate the updated graphs, run Q4 cross-concept reconciliation, and obtain human decisions
+   for accepted relationships.
+3. Regenerate stale concept pages and the field overview.
+4. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
+5. Resume Q2 2026 parsing and ingestion after the Q4 content cycle.
+
+The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
 ---
 
 ## Corpus state
 
-| Step | Status | Notes |
-|------|--------|-------|
-| arXiv fetch (cs.SD + eess.AS) | ✅ Complete | 2025-08-01 → 2026-05-25. 504 + 70 re-scan = 574 written. July 2025 backfill + May tail added 2026-06-05 (+75 written). Full coverage: 2025-07-01 → 2026-05-31. Note: switched to OAI-PMH (search API rate-limited). |
-| arXiv fetch (cs.CL) | ✅ Complete | Via OAI-PMH. Aug–Nov: 41; Dec–Feb: 32; Mar–May: 42. Total: 115. Re-scan with expanded keywords done 2026-06-05: Jul backfill +3, Aug–Nov +12, Dec–Feb +5, Mar–May +13 = 33 new. Full coverage: 2025-07-01 → 2026-05-31. |
-| ISCA fetch (Interspeech 2025) | ✅ Complete | 128 + 12 re-scan = 140 papers written. |
-| Deduplication (arXiv ↔ ISCA) | ✅ Complete | 11 duplicates resolved; ISCA is canonical. |
-| ACL Anthology fetch (2025) | ✅ Complete | 14,669 scanned; 113 + 14 re-scan = 127 new written, 136 arXiv records enriched total. |
-| Citation discovery fetch (targeted) | ✅ Complete | 5 papers fetched by arXiv ID via `--ids` flag: VALL-E, CosyVoice ×2, Seed-TTS, F5-TTS. |
-| ICLR + NeurIPS fetch (OpenReview) | ✅ Complete | New fetcher `scripts/fetch/openreview.py`. ICLR 2025: 13 written. NeurIPS 2025: 16 written. ICLR 2026: 27 written. Total: 56 new pending. Dedup pass pending. |
-| Keyword filter expansion | ✅ Complete | +11 terms added to `config/keyword_filter.yaml` (2026-05-25). |
-| Filter — batches 1–3 | ✅ Complete | All batches scored. Total: 732 accepted, 167 rejected, 0 review pending. |
-| Human review — batches 1–3 | ✅ Complete | 77 borderline papers resolved. Review queue cleared. |
-| Deduplication (arXiv ↔ ACL + full scan) | ✅ Complete | 38 total duplicates resolved; proceedings ID canonical throughout. |
-| PDF download | ✅ Complete | ~1,037 PDFs on disk (875 standard + 162 citation-discovery). 2 withdrawn papers flagged `needs_manual_pdf`: 2503.20999, 2511.08230. |
-| Parse (standard) | ✅ Complete | 875/875 parsed (2026-06-06). 0 failures. |
-| Citation discovery fetch (bulk) | ✅ Complete | 162 highly-cited out-of-corpus papers written with `status=accepted`, `discovery_source="citation-discovery"`. Script: `scripts/fetch/citation_discovery_fetch.py`. |
-| Parse (citation-discovery) | ✅ Complete | 162/162 parsed (2026-06-08). 0 failures. |
-| Ingest — standard papers | 🔄 In progress | 176/875 ingested. 699 ready. Standard ingest paused (pipeline redesign session 2026-06-18). |
-| Ingest — citation-discovery | ✅ Complete | 162/162 ingested (2026-06-17): 96 Tier 1 full pages + 66 Tier 2 stubs. |
-| Integrate | 🔄 In progress | 276/338 integrated (passes 1–11). 30 papers from 2026-06-16 pending (pass 12). |
+| Measure | Current value | Notes |
+|---|---:|---|
+| Metadata records | 1,628 | 908 ingested, 333 accepted, 43 review, 344 rejected |
+| Published paper pages | 900 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Active accepted + ingested corpus | 1,241 | Basis of `scripts/corpus_summary.py` |
+| Parsed active papers | 1,025 | Includes ingested papers and accepted papers ready for ingest |
+| Accepted and parsed, ready to ingest | 117 | 76 April 2026 and 41 May 2026 papers |
+| Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
+| Concept paper entries | 2,299 | Includes the closed subjective-evaluation Q4 Phase 1 queue |
+| Claim clusters | 406 | 280 strongly supported, 15 contested |
+| Rendered concept pairs | 21/23 | `singing` and `fine-tuning` remain unrendered |
+| Reconciliation state | 64 relationships, 11 broader claims | Human-approved Q3 authority plus preserved non-authoritative audit history |
+| Published snapshots | 1 | Retrospective `2025-Q3` snapshot |
+| Published quarterly reports | 1 | `reports/quarterly/2025-Q3.md` |
 
----
+Live health baseline on 2026-09-19:
 
-## Metadata counts (2026-06-18)
-
-```
-Total files:  1326
-  accepted:    699   ← standard papers not yet ingested
-  ingested:    338   ← 176 standard + 162 CD (96 T1 full pages + 66 T2 stubs)
-    integrated: 276  ← passes 1–11 complete; 30 from 2026-06-16 pending pass 12
-  pending:       0   ← cleared
-  review:        0   ← queue cleared
-  rejected:    289   ← includes 2 withdrawn arXiv papers (2503.20999, 2511.08230)
-
-PDFs on disk:  ~1037 ← raw/papers/ (875 standard + 162 citation-discovery)
-Parsed:         861  ← all accepted papers parsed (complete 2026-06-08)
-Ready to ingest: 699 ← standard papers (parsed + accepted, not yet ingested)
-
-Concept stubs:   24  ← pending migration to wiki/_claims/ schema (see BACKLOG)
+```text
+integrate: PASS — global check 0 errors, 255 warnings; subjective-evaluation Q4 Phase 2 check 0 errors, 61 warnings; papers_not_in_any_yaml=272
+render:    PASS — 0 errors, 7 warnings; 21 Overview/In Depth pairs
+reconcile: PASS — 0 errors, 1 warning; 2 runs and 1 snapshot
 ```
 
----
-
-## cs.CL fetch detail
-
-The arXiv search API (`export.arxiv.org/api/query`) is unreliable for cs.CL due to
-aggressive rate-limiting on large result sets. Switched to the OAI-PMH bulk-harvest
-endpoint (`export.arxiv.org/oai2`), implemented in `fetch_arxiv_oai.py`.
-
-**OAI-PMH set identifier:** `cs:cs:CL` (the familiar `cs.CL` notation is accepted by
-the CLI and converted automatically).
-
-### Final harvest results
-
-| Window | Records scanned | Matched filter | Written | Skipped (existing) |
-|--------|----------------|----------------|---------|-------------------|
-| 2025-08-01 → 2025-11-30 | 9,461 | 119 | 41 | 78 |
-| 2025-12-01 → 2026-02-28 | 6,857 | 65 | 32 | 33 |
-| 2026-03-01 → 2026-05-22 | 9,752 | 96 | 42 | 54 |
-| **Total** | **26,070** | **280** | **115** | **165** |
-
-"Skipped (existing)" = paper already in corpus from cs.SD/eess.AS or ACL fetches.
+Warnings are non-blocking and primarily reflect accepted method-family outliers, the two missing
+concept render pairs, and preserved reconciliation audit history.
 
 ---
 
-## ACL Anthology fetch detail
+## Quarterly progress
 
-`fetch_acl.py` completed on 2026-05-22. Fetches per-venue XML from the ACL Anthology
-GitHub repository (`acl-org/acl-anthology`).
+| Quarter | Ingest | Integrate | Reconcile | Render / report |
+|---|---|---|---|---|
+| Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
+| Q4 2025 | Complete | **Active** | Pending integration | Pending reconciliation |
+| Q1 2026 | Original chronological sweep complete | Not started | Not started | Not started |
+| Q2 2026 | 5 ingested; 230 accepted; 18 review | Not started | Not started | Not started |
+| Q3 2026 to date | 98 accepted; 21 review | Not started | Not started | Not started |
 
-**Scope:** 2025 main proceedings (EMNLP, ACL, NAACL, Findings) + 182 co-located workshops.
-
-### Final results (2026-05-22)
-
-| Venue group | Papers scanned | Passed filter | Written (new) | Enriched existing |
-|-------------|---------------|--------------|---------------|-------------------|
-| Main venues (EMNLP, Findings, ACL, NAACL) | 8,369 | 80 | 67 | 16 |
-| Workshops (182 files) | 6,300 | 49 | 46 | 0 |
-| **Total** | **14,669** | **129** | **113** | **16** |
+Five accepted Q1 2026 records are present in the live metadata after the later corpus top-up and
+were not part of the bounded Q1 ingest closeout. Reconcile them when the ingestion frontier resumes.
 
 ---
 
-## Infrastructure
+## Active Q4 2025 content cycle
 
-| Tool | Purpose |
-|------|---------|
-| `scripts/fetch/arxiv.py` | arXiv search API fetcher (cs.SD, eess.AS; avoid for large cs.CL queries) |
-| `scripts/fetch/arxiv_oai.py` | OAI-PMH bulk fetcher — use for cs.CL and future large-category sweeps |
-| `scripts/fetch/acl.py` | ACL Anthology fetcher via GitHub XML; supports `--all-workshops` |
-| `scripts/fetch/isca.py` | ISCA/Interspeech HTML scraper |
-| `scripts/fetch/openreview.py` | OpenReview API v2 fetcher — ICLR and NeurIPS; `--venue ICLR\|NeurIPS --year YYYY` |
-| `scripts/parse/download_pdfs.py` | Downloads PDFs for all accepted papers; resumable, per-domain rate limiting |
-| `scripts/discover/citation_index.py` | Builds `raw/citation_index.json` from all parsed `references.json` files; run after each parse batch |
-| `lib/keyword_filter.py` | Shared keyword filter logic used by all fetchers |
-| `.agents/skills/speech-generation-filter-agent/SKILL.md` | Shared relevance scoring workflow; invoke on any new pending batch |
+Canonical live audit as of 2026-09-19:
 
-### Extending the corpus
+- 174 ingested, non-Tier-2 Q4 paper pages.
+- 172 pages carry at least one canonical `related_concepts` assignment.
+- 2 pages have no concept assignment and require an audit.
+- 2 Tier 2 pages are excluded from integration.
+- 75 Q4 papers currently appear in at least one applicable concept YAML.
+- 22 concepts have Q4 work queued; `fine-tuning` has no current Q4 candidate.
+- The outstanding workload is approximately 590 concept-paper entries. This is larger than the
+  unique-paper count because one paper may contribute evidence to several concepts.
+
+Largest Q4 queues:
+
+| Concept | Q4 candidates | Already present | Queue |
+|---|---:|---:|---:|
+| subjective-evaluation | 73 | 73 | 0 |
+| evaluation-metrics | 61 | 0 | 61 |
+| zero-shot-tts | 61 | 2 | 59 |
+| neural-codec | 58 | 2 | 56 |
+| spoken-language-model | 49 | 2 | 47 |
+| speech-to-speech | 35 | 0 | 35 |
+| autoregressive-codec-tts | 33 | 2 | 31 |
+| multilingual-tts | 31 | 1 | 30 |
+| self-supervised-speech | 31 | 1 | 30 |
+| voice-conversion | 29 | 0 | 29 |
+| flow-matching | 30 | 2 | 28 |
+
+`subjective-evaluation` is complete through Q4 Phase 2. Its remaining 61 concept warnings are
+accepted architecture-unspecified evaluation, benchmark, dataset, and metric outliers rather than
+missing synthesis work.
+
+The remaining 11 affected concepts have queues between 5 and 24 entries. Recompute live discovery
+before each concept because canonical IDs, concept tags, or corrective reviews may change the
+denominator.
+
+---
+
+## Q2 2026 ingestion frontier
+
+Fetch and filter are complete for April-June 2026 across arXiv cs.SD/eess.AS/cs.CL and the
+available ACL Anthology 2026 material.
+
+| Status | Count |
+|---|---:|
+| Already ingested | 5 |
+| Accepted, awaiting ingest | 230 |
+| Awaiting human triage | 18 |
+| Rejected | 49 |
+
+Of the 230 accepted papers, 117 are currently parsed and ready to ingest; approximately 113 still
+need parsing. ICASSP, ASRU, and SLT remain fetch-coverage gaps. The Q2 cadence and paper-level QC
+contract remain in `Q2_INGESTION_SESSIONS.md`.
+
+---
+
+## Repository and setup state
+
+- Infrastructure repository: `main` at `df5176b`; clean at the 2026-09-19 baseline inspection.
+- Content repository: `work/integrate` at `872959f`; clean at the baseline inspection.
+- The default wiki resolver points to a non-writable sibling checkout in the managed workspace.
+  Use:
 
 ```bash
-# Top up cs.SD + eess.AS (run periodically)
-python scripts/fetch/arxiv.py --date-from 2026-05-22
-
-# Top up cs.CL
-python scripts/fetch/arxiv_oai.py --set cs.CL --date-from 2026-05-22
-
-# Next year's ACL Anthology
-python scripts/fetch/acl.py --years 2026 --all-workshops
+export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-integrate
 ```
+
+Do not write through the infra repository's `wiki/` submodule.
+
+---
+
+## Infrastructure summary
+
+Available fetchers cover arXiv, ACL Anthology, ISCA/Interspeech, and OpenReview. The pipeline
+health suite currently implements agent, ingest, integrate, render, and reconciliation checks.
+Planned work includes fetch, parse, and corpus modules; generated reporting; computed static
+counts; and hook integration. See `BACKLOG.md` for the authoritative task list.

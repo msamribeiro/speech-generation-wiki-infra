@@ -1,8 +1,34 @@
 # Backlog
 
-## Ingest [P0 · in-progress]
+## Q4 2025 Content Cycle [P0 · active]
 
-Resume standard corpus ingest and clear the integration backlog.
+Complete the first quarter-over-quarter update after the closed Q3 synthesis program. Scope is
+canonical `published_date` from `2025-10-01` through `2025-12-31`, inclusive. Track batches,
+decisions, validation results, and resume state in `Q4_INTEGRATION_SESSIONS.md`.
+
+- [ ] Phase 1 integration — add every eligible Q4 paper to each applicable concept YAML in
+  oldest-first batches of at most 20 papers per concept. Baseline: 174 non-Tier-2 Q4 paper pages,
+  172 with canonical concept assignments, 22 affected concepts, and approximately 660 missing
+  concept-paper entries
+- [ ] Phase 2 synthesis — after each concept's Q4 Phase 1 queue closes, update claim clusters,
+  method families, reassessment items, open questions, and trend notes from the complete YAML
+- [ ] Validate the completed Q4 claim graphs — concept-scoped checks after every pass, followed by
+  the corpus-wide integrate health check and an exact Q4 candidate-versus-YAML closure audit
+- [ ] Run `2025-Q4` cross-concept reconciliation — generate deterministic candidates only after
+  all concept integrations close; review in themed batches, obtain explicit human decisions, and
+  finalize with no pending candidates before using new relationships downstream
+- [ ] Regenerate every stale concept Overview/In Depth pair from the Q4-updated YAMLs; include the
+  still-missing `singing` and `fine-tuning` production pairs if their evidence supports useful
+  synthesis
+- [ ] Regenerate the field overview from all 23 concept YAMLs and the human-approved reconciliation
+  registry, deduplicating linked claims and paper evidence while preserving local caveats
+- [ ] If approved after reconciliation, freeze the retrospective `2025-Q4` snapshot and publish
+  the Q4 quarterly report; validate source digests, cutoff semantics, provenance, indexes, and
+  supersession rules
+
+## Ingest [P0 · queued]
+
+Resume the corpus frontier after the Q4 2025 content cycle closes.
 
 - [x] Run dedup pass on 56 OpenReview papers (ICLR 2025: 13, NeurIPS 2025: 16, ICLR 2026: 27) — 8 collisions found (all ingested arXiv copies); arXiv records marked `is_duplicate`, proceedings records marked `ingested` with `wiki_page_id` pointers *(completed 2026-06-29)*
 - [x] Pre-Q3 batch — 16 papers (NAACL 2025, ICLR 2025, workshop venues: COLING, CHiPSAL, ComputEL, NoDaLiDa) ingested 2026-06-29; corpus at 354 pages *(completed 2026-06-29)*
