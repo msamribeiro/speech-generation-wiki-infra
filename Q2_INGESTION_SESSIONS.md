@@ -29,6 +29,13 @@ Session Log). Breakdown by month (`published_date`-derived):
 | May 2026 | 57 | 0 | 6 | 12 | 75 |
 | June 2026 | 96 | 0 | 12 | 18 | 126 |
 
+**Download and parse (2026-09-19): complete for all 230 `accepted` papers** (0 failures; 113 downloaded
+and parsed on 2026-09-19, the other 117 were already done). By source: arXiv 181, ICLR 21, ACL 15,
+workshop 13. Of the 5 `ingested` records, 4 are real Q2 pages (all arXiv, April); the fifth is the
+ICLR record `iclr-2026-kYkfCs4ZAH`, a dedup pointer (`wiki_page_id: 2510.00981`) to a Q4 2025 page.
+`2507.09318` is marked `ingested` with an April 2026 `published_date` despite a July 2025 ID prefix
+(not investigated; does not change the counts).
+
 **Fetch is now believed complete for all of Q2 2026** (April–June) across both arXiv and ACL
 Anthology sources. The arXiv top-up covered `--date-from 2026-05-25` through today (2026-08-23) on
 both arXiv fetchers, so June — previously entirely unfetched — is now populated, and any remaining
@@ -90,19 +97,25 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Fetch top-up is done (see Session Log below) — Q2 2026 now has a complete, quarter-wide accepted
-pool (221 papers, April–June), matching the Q3/Q4/Q1 2026 precedent of not starting ingest until
-fetch+filter closes out the full quarter. The user explicitly chose to stop after the fetch+filter
-pass this session rather than start ingesting immediately.
+Fetch, filter, download, and parse are all done for Q2 2026 (see Session Log, 2026-08-23 and
+2026-09-19): 230 `accepted` papers, every one parsed and ready to ingest. Ingest itself has not
+started.
 
 To resume:
 
-1. Optionally triage the 15 `review`-status Q2 papers in `raw/review_queue.md` first (not required
-   to start ingest — the 221 `accepted` papers are independent of these).
-2. Build the first chronological candidate list from the 221 `accepted` Q2 papers (sort by
-   `published_date`, not ID prefix — see the ID-prefix note below).
-3. ICASSP 2026 (and ASRU/SLT) still have no dedicated fetcher — raised to the user 2026-08-23, not
-   yet resolved either way. Worth a decision before or during the sweep on whether to build one.
+1. **Apply the user's offline review decisions.** The user is triaging the 18 Q2 `review` papers
+   offline in `raw/review_queue.md` (entries at lines 437–591, 821, 887, 898 as of 2026-09-19). When
+   decisions come back, update both the queue entry's decision line and `raw/metadata/{id}.json`
+   `status`, and log each to `raw/pipeline_log.md` (`review` operations). Any newly `accepted` paper
+   still needs a download and parse (`download_pdfs.py`, then `batch_convert.py`). Three entries
+   (`2026.dialres-1.18`, `2026.lrec-1.184`, `2026.nlpaics-1.18`) already have `[x] accept` ticked but
+   their metadata status is still `review`; who ticked them is unknown, so confirm with the user
+   rather than treating the ticks as decisions. Triage is not required to start ingest — the 230
+   `accepted` papers are independent of it.
+2. Build the first chronological candidate list from the 230 `accepted` Q2 papers (sort by
+   `published_date`, not ID prefix — see the ID-prefix note below). April is entirely parsed.
+3. Check with the user before starting: the trunk checkout's uncommitted `BACKLOG.md` (another
+   stream, Q4 2025 content cycle) marks ingest "P0 · queued" behind that cycle as of 2026-09-19.
 4. Proceed with the standard batches-of-4 cadence below.
 
 **Cadence:** carried forward unchanged from Q1 2026 — sequential batches of 4, one paper at a time,
@@ -446,6 +459,47 @@ the review queue (at least the 18 Q2-scoped entries) before treating Q2 scope as
 2026 chronological ingest sweep (230 accepted papers, standard batches-of-4 cadence) — this was
 paused pending this session's fetch top-up; whenever convenient, the ICASSP/ASRU/SLT fetcher gap and
 the pre-2026 workshop-date backfill are both real but non-blocking.
+
+### 2026-09-19 — Q2 status review, then download + parse of all accepted papers
+
+No ingest, no wiki (content repo) changes. Started as a status review and turned into finishing the
+download and parse stage for Q2.
+
+- **Fetch gap analysis (Q2 only):** none for arXiv or ACL Anthology (no weekly holes in arXiv
+  coverage April onward). ICLR 2026 is fully in the corpus (27 records). Outside Q2 for reference:
+  arXiv is fetched only through 2026-08-20, so late August onward is unfetched for Q3 2026, and
+  `isca-archive.org/interspeech_2026/` returned 404.
+- **Found:** only 117 of the 230 accepted Q2 papers had a PDF and parse (the 08-23 top-up added
+  metadata only); the 98 accepted July–August papers had none.
+- **`download_pdfs.py`:** had no way to scope to one quarter (it takes every accepted paper), so
+  added `--published-from` / `--published-to` (filters on `published_date`). Used to keep the run to
+  Q2 and skip Q3.
+- **`acl.py` bug found and fixed:** the first download attempt aborted on 5 consecutive 404s. The
+  LREC 2026 volume's Anthology XML lists an external `https://lrec.elra.info/...` `<url>`, and
+  `acl.py` prefixed the Anthology base onto it (`https://aclanthology.org/https://lrec...`). Affected
+  LREC 2026 main, SIGUL, CAS, DialRES, and PoliticalNLP records. `acl.py` now falls back to the
+  canonical Anthology ID (`{collection}-{volume}.{paper}`) when the XML URL is absolute. Repaired
+  `pdf_url` (and `url` where it carried the same defect) in place on 17 records (9 accepted, 6
+  rejected, 2 review), deriving each canonical ID from the cached XML; diff verified to touch only
+  those URL lines. Canonical `aclanthology.org/{id}.pdf` URLs return 200.
+- **Download:** 113/113 Q2 PDFs downloaded, 0 failed.
+- **Parse:** 113/113 parsed, 0 failed, `--workers 2`, 204 minutes (about 1.8 min per paper; the first
+  papers finished much faster than the average, so do not extrapolate from an early rate). Post-parse
+  check on all 230 accepted Q2 papers: `paper.md` present, at least 100 lines, non-empty
+  `references.json`, 0 flagged. This checks output files, not paper-by-paper content.
+- **Citation index** rebuilt: 22,427 entries, 1,169 corpus papers.
+- **Review queue:** located the 18 Q2 entries in `raw/review_queue.md` (see Next Session). The user
+  will triage offline; nothing applied.
+- **Repo state at close:** all of the above committed on infra `work/ingest` (`2729cd2`), one commit
+  ahead of `main`, **not merged or pushed** (user's choice). The trunk checkout on `main` had another
+  stream's uncommitted work (`BACKLOG.md`, `STATUS.md`, `Q4_INTEGRATION_SESSIONS.md`), which is why
+  the merge was held. That work was committed to `main` as `d273f06` before session close, and a
+  read-only `git merge-tree` dry run confirmed `work/ingest` merges into it cleanly (both sides
+  edited `BACKLOG.md`, in different hunks). Content and site repos untouched. The user was also
+  editing `raw/review_queue.md` in this worktree (offline triage ticks, uncommitted) at close: leave
+  it alone until they say the decisions are final, then apply them to metadata. Earlier this same session `work/ingest` was
+  merged into `main` and pushed (`ab0bfb0`, then a `BACKLOG.md` update `df5176b`), and both ingest
+  worktrees were fast-forwarded and their `wiki/` submodule checkout updated.
 
 ---
 
