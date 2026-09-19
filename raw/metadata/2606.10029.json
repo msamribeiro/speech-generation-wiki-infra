@@ -20,7 +20,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.10029",
   "pdf_url": "https://arxiv.org/pdf/2606.10029.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.10029.pdf",
   "pdf_source": "arxiv",
   "abstract": "Language models increasingly serve as the backbone of text-to-speech (TTS) systems, yet we understand little about the representations they build when text and generated speech tokens share a single residual stream. We train BatchTopK sparse autoencoders on the LM backbone of CosyVoice3 and introduce a modality-aware auto-interp pipeline that labels each feature from where it fires-text-prefix context, 1-second speech clips, or both. The recovered features are interpretable, spanning phonemes, laughter, accent prompts and speaker gender. Steering through the SAE latent space shows these features are causal rather than merely descriptive: targeted interventions raise laughter probability from 0.02 to 0.79, flip perceived speaker gender, and control speech rate while preserving spoken content. SAE features thus serve both as interpretability objects and as control directions for TTS synthesis.",
   "arxiv_comment": null,

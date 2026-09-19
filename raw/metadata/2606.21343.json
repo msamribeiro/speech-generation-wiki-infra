@@ -22,7 +22,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.21343",
   "pdf_url": "https://arxiv.org/pdf/2606.21343.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.21343.pdf",
   "pdf_source": "arxiv",
   "abstract": "Voice reconstruction using Text-to-Speech (TTS) offers a communication method for people with speech disorders, which aims to retain their speaker identity while improving intelligibility. Previous work generally relies on Mean Opinion Score (MOS) to evaluate naturalness and speaker similarity, but this has limited sensitivity and reliability. We propose an evaluation framework with subjective and objective components. Subjectively, we evaluate perceived intelligibility and speaker identity using Best Worst Scaling (BWS) with situational framing. Objectively, we demonstrate that standard measures fail to predict reconstruction success for highly unintelligible speakers, so we introduce a novel dual-reference distributional measure to assess the trade-off between intelligibility and speaker identity. By evaluating the output of 17 zero-shot TTS systems for 193 speakers, we show that our framework provides a reliable and task-aligned approach for assessing voice reconstruction.",
   "arxiv_comment": "Accepted at Interspeech 2026",

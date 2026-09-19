@@ -1,3 +1,10 @@
+## 2026-09-19
+
+- parse | Q2 2026 download + parse | 113 accepted papers with published_date 2026-04-01 to 2026-06-30 (2026.lrec-1.375 … 2608.00011) | 113 PDFs downloaded, 0 failed; 113 parsed, 0 failed (--workers 2, 204 min) | Q2 accepted papers now 230/230 parsed; 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | `download_pdfs.py` gained `--published-from`/`--published-to` to scope a run to one quarter
+- fetch | acl.py external-URL fix | LREC 2026 (and SIGUL/CAS/DialRES/PoliticalNLP) Anthology XML lists an external lrec.elra.info `<url>`, which acl.py prefixed with the Anthology base, yielding 404 pdf_urls; acl.py now falls back to the canonical Anthology ID; `pdf_url`/`url` repaired in place on 17 records (9 accepted, 6 rejected, 2 review) using the cached XML, no other fields touched
+- discover | 22427 entries (710 merge groups collapsed, 7 fuzzy candidates), 1169 corpus papers
+
+
 ## 2026-08-13
 
 - review | 2602.04796 (LALM-as-a-Judge: Benchmarking Large Audio-Language Models for Safety Evaluation in Multi-Turn Spoken Dialogues) | 1 paper | rejected | caught at ingest time (Q1 2026 session, batch 17) before any page was written; benchmarks off-the-shelf LALMs as zero-shot safety judges outputting a scalar score for spoken dialogues, Coqui XTTS-v2 used only to synthesize one injected "unsafe" turn for benchmark construction, no TTS quality metric anywhere, judges' own output is always a scalar score; clean match to the FastLongSpeech (2507.14815) reject pattern (TTS synthesizes input, never model output); filter-pass relevance_note had already flagged "evaluation not generation" | status: accepted → rejected, review_queue.md decision recorded

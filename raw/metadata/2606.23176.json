@@ -18,7 +18,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.23176",
   "pdf_url": "https://arxiv.org/pdf/2606.23176.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.23176.pdf",
   "pdf_source": "arxiv",
   "abstract": "Humans tend to speak louder and clearer in challenging environments, such as noisy conditions or when addressing hearingimpaired listeners, which is called Lombard effect. To simulate this behavior in speech synthesis systems, we introduce a flow-matching based text-to-speech (TTS) model trained with vocal effort and articulation pseudo-labels. The proposed model achieves continuous and disentangled control of vocal effort and articulation, while also enabling word-level emphasis for clarifying specific segments of an utterance. Experimental results show that these control mechanisms effectively improve clarityrelated acoustic features. Furthermore, speech-in-noise experiments demonstrate that our model successfully simulates the intelligibility gains of human clear speech in noisy conditions.",
   "arxiv_comment": "Accepted to Interspeech 2026",

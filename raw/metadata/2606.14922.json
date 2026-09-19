@@ -18,7 +18,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.14922",
   "pdf_url": "https://arxiv.org/pdf/2606.14922.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.14922.pdf",
   "pdf_source": "arxiv",
   "abstract": "For the last couple of years, the field of speech synthesis has improved dramatically thanks to deep learning. There are more and more deep learning-based TTS systems developed to make it possible to produce voices with high intelligibility and naturalness. Meanwhile, controlling the expressiveness is yet a big deal, generating speech in different styles or manners has received a lot of attention from community recently. This paper aims to give our solutions to deal with the task emotional speech synthesis (ESS) at VLSP 2022 which allows to generate humanlike natural-sounding voice from a given input text with desired emotional expression. By integrating speaker embedding, prosody bottleneck into FastSpeech 2, our systems can promisingly generate emotional speech of a single speaker (Sub-task 1), transfer speaking styles from another speaker to the target speaker with neutral non-expressive data while retaining the target speaker's identity (Sub-task 2).",
   "arxiv_comment": "4 pages",

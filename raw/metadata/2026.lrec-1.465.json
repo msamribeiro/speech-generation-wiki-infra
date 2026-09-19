@@ -21,9 +21,9 @@
   "month": 5,
   "published_date": "2026-05-01",
   "ingested_date": null,
-  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-465",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-465.pdf",
-  "pdf_path": null,
+  "url": "https://aclanthology.org/2026.lrec-1.465",
+  "pdf_url": "https://aclanthology.org/2026.lrec-1.465.pdf",
+  "pdf_path": "raw/papers/2026.lrec-1.465.pdf",
   "pdf_source": "anthology",
   "abstract": "Modern text-to-speech (TTS) systems use deep learning to synthesize speech increasingly approaching human quality, but they require a database of high-quality audio-text sentence pairs for training. Malayalam, the official language of the Indian state of Kerala and spoken by 35+ million people, is a low-resource language in terms of available corpora for TTS systems. In this paper, we present IMaSC, a Malayalam text and speech corpora containing 49 hours and 37 minutes of recorded speech. With 8 speakers and a total of 34,473 text-audio pairs, IMaSC is larger than every other publicly available alternative. We evaluated the database by using it to train TTS models for each speaker based on a modern deep learning architecture. With an average mean opinion score of 4.50, we find that the synthesized speech of our model is close to human quality.",
   "task": [

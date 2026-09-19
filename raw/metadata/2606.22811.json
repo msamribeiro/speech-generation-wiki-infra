@@ -25,7 +25,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.22811",
   "pdf_url": "https://arxiv.org/pdf/2606.22811.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.22811.pdf",
   "pdf_source": "arxiv",
   "abstract": "Classical TTS systems typically rely on rigid input formats and predefined metadata slots, limiting their ability to fulfill flexible user requirements. This paper introduces Bagpiper-TTS, a universal speech synthesis system that deals with diverse natural language user requests. Given a natural language prompt, Bagpiper-TTS first reasons over the users' intent to derive a rich caption, i.e., a comprehensive textual blueprint encompassing both transcription and nuanced metadata. Subsequently, this caption guides the synthesis of the target speech. Our model inherently supports a broad spectrum of tasks besides classical TTS applications, including multi-talker, intent-to-speech, role-play synthesis, singing voice synthesis, and more. Experimental results demonstrate that Bagpiper-TTS achieves an 1.7% Word Error Rate (WER) on the Seed-TTS-Eval benchmark and match the performance of dedicated models in both LLM-as-a-judge and human subjective evaluations across multiple applications.",
   "arxiv_comment": null,

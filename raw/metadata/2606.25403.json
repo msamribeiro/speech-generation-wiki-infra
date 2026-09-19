@@ -21,7 +21,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.25403",
   "pdf_url": "https://arxiv.org/pdf/2606.25403.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.25403.pdf",
   "pdf_source": "arxiv",
   "abstract": "Accent conversion and controllability remain fundamental challenges in cross-lingual text-to-speech (TTS), particularly for low-resource and phonetically diverse Indic languages. While recent large language model (LLM)-based TTS systems exhibit strong cross-lingual generalization, they provide limited explicit control over accent characteristics and intensity. In this paper, we propose CrossAccentTTS, a framework that enables both accent control and conversion while preserving speaker identity. Specifically, we introduce an Accent Intensity Controller (AIC) that injects weighted language embeddings into the accent subspace, allowing smooth interpolation between accents and fine-grained modulation of accent strength at inference time. Experiments on the Indic Multilingual and L2-arctic datasets shows that CrossAccent-TTS achieves precise control of accent intensity, outperforming strong baselines in accent similarity and controllability by maintaining speaker similarity and naturalness.",
   "arxiv_comment": "Accepted at INTERSPEECH 2026",
