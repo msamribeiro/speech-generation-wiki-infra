@@ -1,0 +1,38 @@
+{
+  "id": "2606.01479",
+  "source_ids": {
+    "arxiv": "2606.01479"
+  },
+  "title": "Sparse Autoencoders for Interpretable Emotion Control in Text-to-Speech",
+  "authors": [
+    "Hongfei Du",
+    "Jiacheng Shi",
+    "Sidi Lu",
+    "Gang Zhou",
+    "Ye Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-31",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.01479",
+  "pdf_url": "https://arxiv.org/pdf/2606.01479.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Integrating large language models (LLMs) into text-to-speech (TTS) systems has improved speech expressiveness, yet interpretable emotional control remains challenging. Existing approaches primarily rely on external conditioning or global activation steering, offering limited insight into the internal representations underlying emotional control. In this work, we analyze emotion-related variation in the semantic hidden states of LLM-based TTS models using sparse autoencoders (SAEs) to identify sparse latent features. Our analysis shows that emotional variation is distributed across multiple sparse latent features, while intervening on a small subset enables interpretable emotion control. Building on this observation, we introduce a feature-level intervention framework for bidirectional emotion induction and suppression without modifying backbone parameters. We further show that distinct latent features are associated with specific acoustic attributes (e.g., pitch), suggesting that emotional expression arises from coordinated latent contributions rather than a single global shift. Empirically, steering these sparse latent features achieves comparable or superior emotion induction and suppression performance relative to global steering and existing TTS baselines.",
+  "arxiv_comment": "Accepted by ICML 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Applies sparse autoencoders to interpret and control emotion in LLM-based TTS systems, a core TTS interpretability/control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,10 @@
 {
   "id": "2503.23439",
   "source_ids": {
-    "arxiv": "2503.23439"
+    "arxiv": "2503.23439",
+    "acl": "2026.acl-long.2094",
+    "doi": "10.18653/v1/2026.acl-long.2094",
+    "url_acl": "https://aclanthology.org/2026.acl-long.2094"
   },
   "title": "Speculative End-Turn Detector for Efficient Speech Chatbot Assistant",
   "authors": [
@@ -11,16 +14,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-21",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2503.23439",
-  "pdf_url": "https://arxiv.org/pdf/2503.23439.pdf",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.2094.pdf",
   "pdf_path": "raw/papers/2503.23439.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Spoken dialogue systems powered by large language models have demonstrated remarkable abilities in understanding human speech and generating appropriate spoken responses. However, these systems struggle with end-turn detection (ETD) -- the ability to distinguish between user turn completion and hesitation. This limitation often leads to premature or delayed responses, disrupting the flow of spoken conversations. In this paper, we introduce the ETD Dataset, the first public dataset for end-turn detection. The ETD dataset consists of both synthetic speech data generated with text-to-speech models and real-world speech data collected from web sources. We also propose SpeculativeETD, a novel collaborative inference framework that balances efficiency and accuracy to improve real-time ETD in resource-constrained environments. Our approach jointly employs a lightweight GRU-based model, which rapidly detects the non-speaking units in real-time on local devices, and a high-performance Wav2vec-based model running on the server to make a more challenging classification of distinguishing turn ends from mere pauses. Experiments demonstrate that the proposed SpeculativeETD significantly improves ETD accuracy while keeping the required computations low. Datasets and code will be available after the review.",
   "arxiv_comment": "ACL 2026",
   "task": [
@@ -32,5 +35,6 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

@@ -1,0 +1,37 @@
+{
+  "id": "2607.02214",
+  "source_ids": {
+    "arxiv": "2607.02214"
+  },
+  "title": "Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Models without Instruction Tuning",
+  "authors": [
+    "Congrui Du",
+    "Yang Zhang",
+    "Kaizhi Qian",
+    "Shiyu Chang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.02214",
+  "pdf_url": "https://arxiv.org/pdf/2607.02214.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Instruction tuning for speech language models (SLMs) is substantially more challenging than for text-based large language models (LLMs), as it requires learning a new modality and a wide range of speech-specific instructions in addition to those supported by text LLMs. Existing SLM training approaches largely replicate the text LLM training paradigm by synthesizing large-scale speech pre-training and instruction-tuning datasets. However, this strategy is difficult to scale, since speech sequences are significantly longer than text sequences. In this paper, we propose SpeechCombine, an instruction-following speech language model trained without any instruction tuning, using only a single round of speech pre-training on 30k hours of data. Starting from a text LLM base model, we perform continuous pre-training on speech utterances to obtain a speech-adapted model, and then directly combine its weights with the weight difference between the instruction-tuned and base versions of the text LLM. Our results show that this simple combination strategy not only preserves the knowledge and capabilities of the original text LLM, but also effectively transfers them to the speech domain. These findings suggest a new direction for SLM training that avoids reliance on massive speech data.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Investigates unlocking instruction-following speech-text compositional capabilities in speech language models without dedicated instruction tuning, a core SCA/speech-LM contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

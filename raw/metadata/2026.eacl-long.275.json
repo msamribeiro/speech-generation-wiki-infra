@@ -1,0 +1,37 @@
+{
+  "id": "2026.eacl-long.275",
+  "source_ids": {
+    "acl": "2026.eacl-long.275",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.eacl-long.275"
+  },
+  "title": "CSPB: Conversational Speech Processing Benchmark for Self-supervised Speech Models",
+  "authors": [
+    "Zili Huang",
+    "Matthew Maciejewski",
+    "Leibny Paola Garcia Perera",
+    "Shinji Watanabe",
+    "Sanjeev Khudanpur"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.eacl-long.275",
+  "pdf_url": "https://aclanthology.org/2026.eacl-long.275.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Recent advances in self-supervised learning (SSL) have led to powerful speech representation models, yet their robustness in real-world conversational settings remains largely untested. Most existing benchmarks focus on clean, single-speaker, single-channel audio, failing to reflect the complexities of natural human interaction—where background noise, reverberation, and overlapping speech are the norm. To bridge these critical gaps, we present the Conversational Speech Processing Benchmark (CSPB), a new benchmark designed to assess the robustness of SSL speech models in realistic conversational scenarios. CSPB is constructed from four multi-party datasets—AMI, AliMeeting, MMCSG, and DiPCo—and supports both single-channel and multi-channel evaluation. By releasing CSPB as an open-source toolkit, we aim to establish a unified framework for evaluating and advancing robust, spatially-aware self-supervised speech models.",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "CSPB is a robustness benchmark for self-supervised speech representation models (e.g. HuBERT-style encoders) under real-world conversational noise/overlap; an ASR/SSL-representation benchmark, not a synthesis contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

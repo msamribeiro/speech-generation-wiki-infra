@@ -15,27 +15,57 @@ narrative.
 | Status | Count |
 |--------|-------|
 | Already ingested (Q2 2026) | 5 |
-| Remaining to ingest | 117 |
-| Rejected | 28 |
-| **Total Q2 2026 in scope so far** | **150** |
+| Remaining to ingest (accepted) | 230 |
+| Pending human triage (review) | 18 |
+| Rejected | 49 |
+| **Total Q2 2026 in scope so far** | **302** |
 
-As of 2026-08-22 (bootstrap, session not yet started). **Unlike the Q3/Q4/Q1 2026 bootstraps —
-each of which began only after its full quarter's fetch+filter was already complete — Q2 2026 fetch
-is incomplete.** Breakdown by month (`published_date`-derived):
+As of 2026-08-23, after the arXiv fetch top-up and ACL Anthology 2026 fetch in this session (see
+Session Log). Breakdown by month (`published_date`-derived):
 
-| Month | Accepted | Ingested | Rejected | Total |
-|-------|----------|----------|----------|-------|
-| April 2026 | 76 | 5 | 19 | 100 |
-| May 2026 | 41 | 0 | 9 | 50 |
-| June 2026 | 0 | 0 | 0 | 0 |
+| Month | Accepted | Ingested | Review | Rejected | Total |
+|-------|----------|----------|--------|----------|-------|
+| April 2026 | 77 | 5 | 0 | 19 | 101 |
+| May 2026 | 57 | 0 | 6 | 12 | 75 |
+| June 2026 | 96 | 0 | 12 | 18 | 126 |
 
-April looks essentially complete: it was already covered by the original broad arXiv cs.SD+eess.AS
-and cs.CL sweeps, which per `STATUS.md` extended through 2026-05-31. May is only fetched through
-2026-05-28 (the latest `published_date` currently in metadata) — a handful of end-of-month days may
-still be missing. June 2026 has zero records of any status: it has not been fetched at all. The 5
+**Fetch is now believed complete for all of Q2 2026** (April–June) across both arXiv and ACL
+Anthology sources. The arXiv top-up covered `--date-from 2026-05-25` through today (2026-08-23) on
+both arXiv fetchers, so June — previously entirely unfetched — is now populated, and any remaining
+May gap is closed. A follow-up `acl.py --years 2026 --all-workshops` run added the ACL 2026 main
+track plus 21 co-located 2026 workshops, contributing 15 Q2-dated records (1 April, 12 May, 2 June)
+after a date-table fix (see below). The arXiv run also incidentally pulled July/August 2026 records
+into the corpus (useful head start for the eventual Q3 2026 bootstrap, out of scope for this file).
+
+**EMNLP 2026 and NAACL 2026 are not yet on the ACL Anthology** (no `2026.emnlp`/`2026.naacl` XML
+exists yet — confirmed by dry-run, consistent with EMNLP 2026's official Oct 24–29 date and NAACL
+2026's date being unconfirmed as of this session). Re-check `acl.py --years 2026 --dry-run` closer
+to those dates. ICASSP 2026 still has no dedicated fetcher (`BACKLOG.md` Infrastructure section) —
+raised to the user 2026-08-23, not yet resolved; ASRU/SLT are in the same gap. The 18 `review`-status
+Q2 papers need human triage in `raw/review_queue.md` before the scope count is fully final. The 5
 already-`ingested` April papers were not part of a chronological Q2 sweep — they were ingested
 individually back in late May 2026, before quarterly chronological ingest sessions existed, most
 likely via citation-discovery or an early top-up fetch run that happened to overlap April dates.
+
+**Fetcher fix (2026-08-23):** `scripts/fetch/acl.py`'s conference-date table (`_CONF_META`) had no
+2026 entries, so every newly-fetched 2026 record (main-track and workshop alike) got a placeholder
+`published_date: 2026-01-01`/`month: None` — silently excluding them from any month-based quarter
+count. Investigation traced this further back: the *workshop* half of the bug is not 2026-specific —
+every co-located-workshop paper in every year gets a hardcoded `canonical_venue = "workshop"` with no
+per-workshop date lookup at all, so historically only records that happened to already exist as
+dated arXiv preprints (and got "enriched" with a conference ID) kept a real date; freshly-written
+workshop records got the placeholder regardless of year. Fixed structurally rather than by adding
+more manually-curated table rows: added a confirmed `("ACL", 2026): 2026-07-02` entry (verified
+against the official conference site), and `iter_papers` now falls back to the Anthology XML's own
+`<meta><month>/<year>` (present on virtually every volume, workshops included — only continuously-
+rolling venues like TACL omit it) whenever no curated table entry exists. This closes the gap for
+every venue and year going forward, not just ACL 2026. Verified against cached XML: SIGDIAL 2026 →
+August 2026 (matches the Anthology's own listed month), ACL 2026 main → July 2026 (matches the
+curated table), TACL → correctly still falls back to the placeholder (no month info exists for that
+venue). Backfilled all 49 already-written 2026 records in place (`month`/`published_date` fields
+only) using the fixed logic — no other fields touched. Pre-2026 years' workshop records (indeterminate
+count, corpus-wide) were **not** backfilled this session — that's a larger corpus-wide correction,
+worth a dedicated pass rather than folding into a Q2 fetch session.
 
 Counts computed the same way as prior quarters, from `raw/metadata/*.json` where `year == 2026` and
 `month in (4, 5, 6)` (derived from `published_date`, not the arXiv ID prefix — see the ID-prefix
@@ -60,29 +90,20 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-**Before starting a chronological Q2 2026 ingest sweep, fetch needs to be topped up.** Every prior
-quarter (Q3 2025, Q4 2025, Q1 2026) began its ingest session only once fetch+filter was fully
-complete for that quarter; Q2 2026 is not there yet. Recommended before the first batch:
+Fetch top-up is done (see Session Log below) — Q2 2026 now has a complete, quarter-wide accepted
+pool (221 papers, April–June), matching the Q3/Q4/Q1 2026 precedent of not starting ingest until
+fetch+filter closes out the full quarter. The user explicitly chose to stop after the fetch+filter
+pass this session rather than start ingesting immediately.
 
-1. Top up the standard fetchers for the remainder of the window, per the "Extending the corpus"
-   commands in `STATUS.md` (itself stale since 2026-06-18 and due a refresh once fetch resumes):
-   ```bash
-   python scripts/fetch/arxiv.py --date-from 2026-05-25
-   python scripts/fetch/arxiv_oai.py --set cs.CL --date-from 2026-05-25
-   ```
-   Adjust `--date-from` once the actual May gap is confirmed (re-run the progress-count script and
-   check the latest `published_date` in the May bucket) — don't assume 2026-05-25 is exact.
-2. Check whether any Q2-relevant conference venues need a dedicated fetch pass. ICASSP 2026
-   typically falls in this window and has no fetcher yet (`BACKLOG.md`'s Infrastructure section) —
-   worth raising explicitly rather than silently skipping.
-3. Run the filter agent (`speech-generation-filter-agent`) on any newly-written `pending` records.
-4. Re-run the progress-count script above to get a clean, complete Q2 2026 scope before building
-   the first chronological candidate list.
+To resume:
 
-The 117 already-`accepted` Q2 2026 papers (spanning April–May) are legitimate and could be ingested
-now if the user prefers to start immediately rather than wait for June to be fetched — surface this
-choice explicitly rather than assuming either way, since starting now departs from the Q3/Q4/Q1 2026
-precedent of waiting for full-quarter fetch completion first.
+1. Optionally triage the 15 `review`-status Q2 papers in `raw/review_queue.md` first (not required
+   to start ingest — the 221 `accepted` papers are independent of these).
+2. Build the first chronological candidate list from the 221 `accepted` Q2 papers (sort by
+   `published_date`, not ID prefix — see the ID-prefix note below).
+3. ICASSP 2026 (and ASRU/SLT) still have no dedicated fetcher — raised to the user 2026-08-23, not
+   yet resolved either way. Worth a decision before or during the sweep on whether to build one.
+4. Proceed with the standard batches-of-4 cadence below.
 
 **Cadence:** carried forward unchanged from Q1 2026 — sequential batches of 4, one paper at a time,
 health check after each paper, a short batch summary plus explicit go-ahead before the next batch.
@@ -332,7 +353,99 @@ inventing a new term unilaterally.
 
 ## Session Log
 
-(No sessions yet — this file was bootstrapped 2026-08-22, before Q2 2026 fetch/filter is complete.)
+### 2026-08-23 — Fetch top-up (no ingest yet)
+
+User asked to top up fetch/filter this session and pause before ingesting. Ran both standard
+fetchers with `--date-from 2026-05-25` (default `--date-to` is today, 2026-08-23):
+
+- `arxiv.py` (cs.SD + eess.AS): 1337 discovered, 226 passed filter, 213 written, 13 skipped existing.
+- `arxiv_oai.py --set cs.CL`: 10,077 discovered, 125 passed filter, 40 written, 85 skipped existing.
+
+253 new `pending` records total. Ran `speech-generation-filter-agent` on all of them: 185 accepted,
+35 review, 33 rejected (73% accept rate); logged to `raw/pipeline_log.md` under `## 2026-08-23`, 35
+new entries appended to `raw/review_queue.md`. Verified independently: 0 pending records remain
+corpus-wide.
+
+Net effect on Q2 2026 scope: June 2026 went from 0 records to 124 (95 accepted); May grew from 50 to
+63 total; April unchanged. The run also incidentally reached into July/August 2026 (out of Q2 scope,
+left as-is for a future Q3 2026 bootstrap). ICASSP 2026 fetcher gap confirmed still open in
+`BACKLOG.md`, raised to the user, not resolved this session.
+
+Not committed yet — `raw/metadata/*.json` (253 new + all touched), `raw/review_queue.md`,
+`raw/pipeline_log.md`, and this file are all modified/untracked pending a commit decision.
+
+### 2026-08-23 (continued) — ACL Anthology 2026 fetch + date-fetcher fix
+
+User asked whether conference/workshop venues needed a separate top-up beyond the arXiv sweep above.
+Dry-run survey found: ACL 2026 main track and 2026 workshops already have real content on the
+Anthology (unfetched by our last `acl.py` run, which defaulted to years=[2025]); Interspeech 2026
+not yet published (404); ICLR 2026 top-up blocked by a 403 from OpenReview's API after retries
+(inconclusive, not actionable); NeurIPS 2026 not yet code-configured in `openreview.py`.
+
+Ran `acl.py --years 2026 --all-workshops` for real: 32 new + 53 arXiv→conference enrichments, 0
+errors. Filter agent on the 49 new `pending` records: 31 accepted, 8 review, 10 rejected. Verified:
+0 pending remain corpus-wide.
+
+While reviewing the new records, found all 49 had a placeholder `published_date: 2026-01-01`/
+`month: None` — traced to a genuine fetcher gap (see the Scope section above for the full writeup
+and fix). Fixed `scripts/fetch/acl.py` to fall back to the Anthology XML's own `<meta><month>/<year>`
+when no curated `_CONF_META` table entry exists, added a verified `("ACL", 2026)` table entry, and
+backfilled the 49 already-written records' `month`/`published_date` fields in place. Verified the
+fix against cached XML for both a main-track and a workshop volume before backfilling.
+
+Not committed yet — same pending-commit state as the entry above, plus `scripts/fetch/acl.py` and
+the 49 backfilled `raw/metadata/2026.*.json` files.
+
+### 2026-08-23 (continued) — NeurIPS 2026 OpenReview: config fixed, fetch blocked
+
+Investigated the ICLR/NeurIPS 2026 issue flagged in the previous entry. Two distinct problems:
+
+1. **NeurIPS 2026 was a real code gap** (same shape as the ACL 2026 date-table gap above):
+   `scripts/fetch/openreview.py`'s `_VENUE_TABLE` had no `("NeurIPS", 2026)` entry at all, so the
+   script failed immediately with `Unsupported venue/year` before any network call. Looked up the
+   real values and added them: venue ID `NeurIPS.cc/2026/Conference` (confirmed live on OpenReview),
+   conference start date `2026-12-06` (Sydney, primary venue; satellites in Atlanta and Paris run
+   slightly later). **Fixed, not yet committed.**
+2. **Both ICLR 2026 and NeurIPS 2026 live fetches are blocked**, and this is not a per-venue problem.
+   After the config fix, a NeurIPS 2026 `--dry-run` hit the identical failure as the earlier ICLR 2026
+   check: `403 Forbidden` from `api2.openreview.net`, on every one of 5 retries with exponential
+   backoff (10s → 160s), then gave up. Two different, independently-configured venues failing
+   identically points to OpenReview rate-limiting or blocking this session/IP after the volume of API
+   calls made tonight (across arXiv, ACL Anthology, and OpenReview fetchers) — not a broken venue ID
+   or a "nothing new yet" signal. Deliberately did not keep retrying, to avoid extending any block.
+
+**Resume here next session:** re-run `openreview.py --venue ICLR --year 2026 --dry-run` and
+`--venue NeurIPS --year 2026 --dry-run` first, before anything else OpenReview-related. If still
+403ing, the block hasn't cleared — wait longer rather than retrying repeatedly. If it succeeds,
+proceed to a real (non-dry) fetch for both, then run the filter agent on whatever's new, same
+pattern as the ACL 2026 batch above.
+
+### 2026-08-23 (continued) — Global fetch status snapshot (corpus-wide, not just Q2)
+
+Requested end-of-session snapshot before committing. Corpus totals: 1,628 metadata records — 908
+ingested, 333 accepted (awaiting ingest), 43 in review, 344 rejected, 0 pending.
+
+| Source | Records | Years covered | Notes |
+|---|---|---|---|
+| arXiv (cs.SD, eess.AS, cs.CL) | 1,191 | 2014–2026 | Continuous through today (2026-08-20 latest), topped up this session |
+| Interspeech (ISCA) | 142 | 2025 only | 2026 not yet published (404 confirmed this session) |
+| ACL Anthology (ACL/EMNLP/NAACL/Findings + workshops) | 234 | 2024–2026 | 2026 main track + 21 workshops added this session; EMNLP 2026/NAACL 2026 not on Anthology yet |
+| ICLR (OpenReview) | 40 | 2025–2026 | 2026 top-up blocked this session (403, likely rate-limit) |
+| NeurIPS (OpenReview) | 16 | 2025 only | 2026 fetcher just fixed, but hit the same 403 block before any data came through |
+| One-offs (ICASSP, ASRU, NCMMSC, ICML, IJCNLP-AACL) | 5 | scattered | Incidental (citation-discovery or arXiv cross-listed), no dedicated fetcher |
+
+Known gaps, roughly in priority order:
+1. ICASSP, ASRU, SLT — no dedicated fetcher exists at all (`BACKLOG.md` P1).
+2. ICLR 2026 / NeurIPS 2026 top-up — blocked by OpenReview 403s, see entry above, resume next session.
+3. EMNLP 2026 / NAACL 2026 — not yet posted to the Anthology (EMNLP 2026 is Oct 24–29; NAACL 2026 date unconfirmed).
+4. 24 pre-2026 workshop records still carry the placeholder-date bug fixed this session — tracked in `BACKLOG.md`, not urgent.
+5. 43 total review-queue papers awaiting human triage corpus-wide (18 of these are Q2-scoped).
+
+Next steps for future sessions, roughly in order: retry the OpenReview fetch once unblocked; triage
+the review queue (at least the 18 Q2-scoped entries) before treating Q2 scope as final; start the Q2
+2026 chronological ingest sweep (230 accepted papers, standard batches-of-4 cadence) — this was
+paused pending this session's fetch top-up; whenever convenient, the ICASSP/ASRU/SLT fetcher gap and
+the pre-2026 workshop-date backfill are both real but non-blocking.
 
 ---
 

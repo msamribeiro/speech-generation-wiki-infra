@@ -1,0 +1,56 @@
+{
+  "id": "2605.31530",
+  "source_ids": {
+    "arxiv": "2605.31530"
+  },
+  "title": "UNISON: A Unified Sound Generation and Editing Framework via Deep LLM Fusion",
+  "authors": [
+    "Zhaoqing Li",
+    "Haoning Xu",
+    "Jingran Su",
+    "Yaofang Liu",
+    "Zhefan Rao",
+    "Huimeng Wang",
+    "Jiajun Deng",
+    "Tianzi Wang",
+    "Zengrui Jin",
+    "Rui Liu"
+  ],
+  "authors_full": [
+    "Zhaoqing Li",
+    "Haoning Xu",
+    "Jingran Su",
+    "Yaofang Liu",
+    "Zhefan Rao",
+    "Huimeng Wang",
+    "Jiajun Deng",
+    "Tianzi Wang",
+    "Zengrui Jin",
+    "Rui Liu",
+    "Haoxuan Che",
+    "Xunying Liu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2605.31530",
+  "pdf_url": "https://arxiv.org/pdf/2605.31530.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present UNISON, a latent diffusion framework that unifies speech generation, sound generation, and audio editing within a single model. A single model handles text-to-audio, text-to-speech, zero-shot speaker cloning, mixed speech-and-sound generation, scene-level audio editing, speech-in-scene editing, and timed temporal composition, all of which share a single set of weights. Our architecture features two core designs: (1) Layer-wise deep LLM fusion, which injects hidden states from uniformly sampled layers of a frozen MLLM into corresponding MM-DiT blocks via learned projections, providing depth-matched semantic conditioning that improves instruction following over single-layer baselines; and (2) a unified multi-task architecture where task identity is encoded solely by a channel-wise mask and source audio is provided through VAE-encoded channel concatenation. Training is stabilized by an online GPU-side multi-task data synthesis pipeline with task-homogeneous batching and a two-stage curriculum. With 621M--732M trainable parameters, UNISON achieves results competitive with or exceeding task-specialist models across evaluated domains, while being roughly $4\\times$ smaller than comparable unified systems.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.62,
+  "relevance_note": "UNISON is primarily a unified general-audio generation/editing framework (text-to-audio, text-to-music, scene editing) with TTS and zero-shot speaker cloning as one of several capabilities; unclear how much of the paper's evidence specifically advances speech synthesis versus general audio generation.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

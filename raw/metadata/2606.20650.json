@@ -1,0 +1,42 @@
+{
+  "id": "2606.20650",
+  "source_ids": {
+    "arxiv": "2606.20650"
+  },
+  "title": "EmoInstruct-TTS: Dual-Path Instruction-Guided Emotional Speech Synthesis",
+  "authors": [
+    "Minghui Wu",
+    "Ganjun Liu",
+    "Zikun Fang",
+    "Ting Meng",
+    "Hongchuan Wu",
+    "Bingao Xu",
+    "Yonglong Cai",
+    "Jiasheng Chen",
+    "Jun Du"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.20650",
+  "pdf_url": "https://arxiv.org/pdf/2606.20650.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Instruction-based controllable speech synthesis enables users to specify emotions through natural language. However, existing approaches often rely on coarse emotion labels and lack explicit modeling of fine-grained intensity. We propose EmoInstruct-TTS, a dual-path instruction-guided framework for emotional speech synthesis. We introduce Emotion2embed, a supervised semantic-acoustic emotion embedding covering 48 emotional states, including fine-grained categories and intensity levels. To infer embeddings from free-form instructions, we design an Instruction-Conditioned Emotion Flow Model (ICE-Flow) that generates acoustically grounded emotion representations. The inferred embeddings are integrated into an LLM-based synthesis pipeline to provide explicit emotional control while preserving semantic planning. Experiments show improved emotional controllability and speech naturalness over strong baselines.",
+  "arxiv_comment": "5 pages, 3 figures, 4 tables. Submitted to Interspeech 2026. Audio demos: https://huanyu-lab.github.io/EMOINSTRUCT-TTS",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "EmoInstruct-TTS proposes a dual-path instruction-guided framework with fine-grained emotion intensity modeling for emotional speech synthesis, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

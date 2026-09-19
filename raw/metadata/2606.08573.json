@@ -1,0 +1,36 @@
+{
+  "id": "2606.08573",
+  "source_ids": {
+    "arxiv": "2606.08573"
+  },
+  "title": "Titans-as-a-Layer: Test-Time Memory for Conversational Speech Emotion Recognition",
+  "authors": [
+    "Daniel Chen",
+    "Qicong Hu",
+    "Yang Xiao",
+    "Ting Dang",
+    "Hong Jia"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.08573",
+  "pdf_url": "https://arxiv.org/pdf/2606.08573.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech emotion recognition (SER) is commonly formulated as utterance-level classification, although conversational emotion depends on a speaker's usual vocal range and the emotional context established by previous utterances. Speech-language models provide strong pretrained acoustic and semantic representations, and can adapts them to SER labels via finetune, but this mechanism still missing per-dialogue state. We study whether test-time neural memory can supply this missing context while leaving the large audio language models (LALMs) backbone intact. Building on Titans, we introduce a plug-and-play Memory-as-a-Layer (MAL) adapter that writes dialogue history into a small neural memory and reads it back as an audio-token-aligned residual update, avoiding changes to the host model's token positions. Across different audio LLMs and emotion recognition datasets evaluations, our design improves SER performs across different evaluation metrics, supporting test-time memory as a residual contextual mechanism for conversational SER.",
+  "arxiv_comment": "ICML 2026 Workshop on Machine Learning for Audio",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Titans-as-a-Layer is a conversational speech emotion recognition (classification) paper; no speech generation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

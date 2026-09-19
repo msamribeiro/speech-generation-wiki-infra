@@ -1,0 +1,34 @@
+{
+  "id": "2607.25351",
+  "source_ids": {
+    "arxiv": "2607.25351"
+  },
+  "title": "Extracting Voice Styles from Frozen TTS Models via Gradient-Based Inverse Optimization",
+  "authors": [
+    "Gyeongmin Kim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-28",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.25351",
+  "pdf_url": "https://arxiv.org/pdf/2607.25351.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Some text-to-speech systems ship a synthesis model and preset style vectors but not the reference encoder that turns audio into such a vector. The model still accepts a style vector; a user with a voice of their own cannot produce one. We solve for that input directly, inverting the released pipeline by gradient descent: every weight stays frozen and only the style vector is optimized, against time-pooled WavLM statistics of one recording. Because the objective discards the time axis, the synthesized text may differ from the recording, so no transcript and no alignment are needed. On 154 speakers from two corpora, ECAPA-TDNN similarity rises from 0.132 to 0.413 and ResNet from 0.099 to 0.401, improving for every speaker; a verifier at its equal-error point accepts 53% of the recovered voices as the target, against 1% for the presets they start from.",
+  "arxiv_comment": "5 pages, 2 figures, 2 tables. Code: https://github.com/kdrkdrkdr/supertonic.embed",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Proposes gradient-based inverse optimization to extract usable voice-style vectors from frozen TTS models when the reference encoder is unavailable, a core TTS personalization/control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

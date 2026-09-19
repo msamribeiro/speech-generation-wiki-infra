@@ -1,0 +1,39 @@
+{
+  "id": "2606.09234",
+  "source_ids": {
+    "arxiv": "2606.09234"
+  },
+  "title": "End-to-End Training for Discrete Token LLM based TTS System",
+  "authors": [
+    "Changfeng Gao",
+    "Yong Ren",
+    "Jun Yuan",
+    "Ye Bai",
+    "Zhao You",
+    "ShiDong Shang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09234",
+  "pdf_url": "https://arxiv.org/pdf/2606.09234.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent state-of-the-art (SOTA) text-to-speech (TTS) systems typically adopt a cascaded pipeline consisting of a speech tokenizer, an autoregressive large language model (LLM), and a diffusion based flow-matching (FM) model, with these components trained independently. In this paper, we propose a fully end-to-end (E2E) optimization framework that unifies the training of the speech tokenizer, LLM, FM model, and an additional reward model (RM). Specifically, we first jointly optimize the tokenizer using multi-task objectives derived from reconstruction for FM, next-token prediction for LLM, and multi recognition task for RM. This joint training encourages the discrete speech token space to capture acoustically and semantically salient information that is better tailored to TTS. We then further optimize the LLM using downstream reconstruction and recognition by FM and RM, which reduces inference-time mismatch and steers the LLM toward more preferred generations. Experimental results show that our E2E framework consistently outperforms cascaded baselines. On the Seed-TTS-Eval benchmark, our system achieves a word error rate (WER) of 0.78% and 1.56%, a new SOTA result with a 0.6B-parameter LLM and 0.5B-parameter FM model. These results validate that holistic E2E optimization is critical for improving discrete-token-based TTS systems with a much simpler training pipeline.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes fully end-to-end joint training of tokenizer, LLM, and flow-matching components for discrete-token LLM-based TTS, a core architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

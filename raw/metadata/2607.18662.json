@@ -1,0 +1,35 @@
+{
+  "id": "2607.18662",
+  "source_ids": {
+    "arxiv": "2607.18662"
+  },
+  "title": "Staged Depth-Pruning Distillation of a Flow-Matching Text-to-Speech Teacher: A Compact Hindi Speech Synthesizer",
+  "authors": [
+    "Sivateja Trikutam"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.18662",
+  "pdf_url": "https://arxiv.org/pdf/2607.18662.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present a practical recipe for building a compact Hindi text-to-speech (TTS) model by distilling a large flow-matching teacher (IndicF5, 337M-parameter DiT) under a severe data budget (~17.6 hours). Training a small model from scratch on this much data fails outright. Instead we warm-start the student from the teacher by pruning depth only: keeping the teacher's width, text dimension, attention heads, and mel/text I/O fixed so all non-block tensors copy one-to-one, and retaining an evenly-spaced subset of transformer blocks. We first measure how much depth the teacher tolerates (it remains near-functional at -27% blocks but collapses past -50%), then descend gradually (22 -> 16 -> 12 -> 8 -> 6 blocks), re-fine-tuning after each prune, with each step gated by an objective ASR word-error-rate (WER) check. The resulting students reach WER 0.00 on unseen sentences at 249M and 190M parameters, and remain robust down to 131M; at 102M we observe a clear capacity cliff that we attribute to the data budget rather than the recipe. We also document two train/inference feature- and library-parity failures (mel filterbank and rotary-embedding library versions) that silently degrade audio, and a version-independent fix. The method yields a high-quality Hindi voice that runs in real time on a 6 GB laptop GPU. An independent 50-sentence FLEURS benchmark compares the released 190M student against its teacher and MMS-TTS-hin.",
+  "arxiv_comment": "7 pages, 4 tables. Model and benchmark artifacts: https://huggingface.co/5ivatej/hindi-tts-190M",
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Presents a staged depth-pruning distillation recipe to build a compact Hindi TTS model from a large flow-matching teacher under a severe data budget, a core low-resource TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

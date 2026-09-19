@@ -1,0 +1,40 @@
+{
+  "id": "2606.20218",
+  "source_ids": {
+    "arxiv": "2606.20218"
+  },
+  "title": "Zero-VC: Zero-Lookahead Streaming Voice Conversion via Speaker Anonymization",
+  "authors": [
+    "Yudong Li",
+    "Zihao Fang",
+    "Junwen Qiu",
+    "Ruihai Jing",
+    "Ruixiang Hang",
+    "Yingda Shen",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.20218",
+  "pdf_url": "https://arxiv.org/pdf/2606.20218.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Streaming zero-shot voice conversion struggles to disentangle timbre from linguistic content without degrading utility or inflating latency. Current methods rely on information bottleneck (IB) or speaker perturbation. While IB filters out timbre, it discards prosody, forcing models to explicitly inject features like fundamental frequency. This often requires buffering future frames, creating algorithmic lookahead latency. On the other hand, existing perturbation methods largely overlook the crucial trade-off between timbre leakage and utility preservation. Recognizing this neglected trade-off, we find that the inherent objective of Speaker Anonymization (SA) aligns well with balancing these factors. Thus, we introduce SA as a novel perturbation mechanism to explicitly mitigate timbre leakage while retaining prosodic utility. Crucially, SA's robust representations significantly alleviate the generator's reliance on future context, enabling our strictly causal, zero-lookahead network. Audio samples are available at https://amphionteam.github.io/Zero-VC-demo/.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Zero-VC proposes zero-lookahead streaming voice conversion via speaker anonymization, disentangling timbre from linguistic content without latency-inflating bottlenecks, a core VC contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

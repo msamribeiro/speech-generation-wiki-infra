@@ -1,7 +1,10 @@
 {
   "id": "2604.13288",
   "source_ids": {
-    "arxiv": "2604.13288"
+    "arxiv": "2604.13288",
+    "acl": "2026.politicalnlp-1.7",
+    "doi": "10.63317/39457jk69sij",
+    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-politicalnlp-07"
   },
   "title": "Giving Voice to the Constitution: Low-Resource Text-to-Speech for Quechua and Spanish Using a Bilingual Legal Corpus",
   "authors": [
@@ -11,16 +14,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "workshop",
+  "venue_type": "workshop",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-14",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2604.13288",
-  "pdf_url": "https://arxiv.org/pdf/2604.13288.pdf",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-politicalnlp-07.pdf",
   "pdf_path": "raw/papers/2604.13288.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "We present a unified pipeline for synthesizing high-quality Quechua and Spanish speech for the Peruvian Constitution using three state-of-the-art text-to-speech (TTS) architectures: XTTS v2, F5-TTS, and DiFlow-TTS. Our models are trained on independent Spanish and Quechua speech datasets with heterogeneous sizes and recording conditions, and leverage bilingual and multilingual TTS capabilities to improve synthesis quality in both languages. By exploiting cross-lingual transfer, our framework mitigates data scarcity in Quechua while preserving naturalness in Spanish. We release trained checkpoints, inference code, and synthesized audio for each constitutional article, providing a reusable resource for speech technologies in indigenous and multilingual contexts. This work contributes to the development of inclusive TTS systems for political and legal content in low-resource settings.",
   "arxiv_comment": null,
   "task": [
@@ -32,5 +35,6 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

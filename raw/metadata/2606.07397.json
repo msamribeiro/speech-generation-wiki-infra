@@ -1,0 +1,42 @@
+{
+  "id": "2606.07397",
+  "source_ids": {
+    "arxiv": "2606.07397"
+  },
+  "title": "Audio-Oscar: A Multi-Agent System for Complex Audio Scene Generation, Orchestration, and Refinement",
+  "authors": [
+    "Yifan Duan",
+    "Qixiang Xu",
+    "Hengtao Wu",
+    "Zhanxun Liu",
+    "Wenhao Guan",
+    "Junxi Liu",
+    "Ziyang Ma",
+    "Kelu Xu",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.07397",
+  "pdf_url": "https://arxiv.org/pdf/2606.07397.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In recent years, audio generation has made significant progress in tasks such as text-to-speech (TTS), text-to-audio (TTA) and text-to-music (TTM). However, generating long-form and controllable audio from complex audio scene descriptions remains a significant challenge, as such scenes often require coordinated speech, sound effects, music, songs, temporal structure, and post-production. In this work, we introduce \\textbf{Audio-Oscar}, a multi-agent framework for generating audio from complex descriptions. Audio-Oscar coordinates a set of specialist agents, each responsible for a different aspect of the audio scene, including character modeling and voice design, speech generation, fine-grained timeline planning, model selection, non-speech generation, and audio post-production. Audio-Oscar further incorporates feedback-driven refinement. In addition, to address the lack of suitable benchmarks for evaluating audio generation from complex audio scene descriptions, we construct \\textbf{ASG-Bench}, an Audio Scene Generation Benchmark containing both scene descriptions paired with reference audio and text-only scene descriptions. Each scene is annotated with target audio events and temporal statements to evaluate whether the generated audio faithfully realizes the required scene content and temporal structure. Experimental results show that Audio-Oscar can effectively generate audio that matches complex scene descriptions. Project samples are available at https://audiooscar.github.io/. Our code is available at https://github.com/ziye26/Audio-Oscar.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Audio-Oscar is a multi-agent system orchestrating complex audio scene generation across TTS, text-to-audio, and text-to-music; TTS is one of several generation types and the primary contribution is scene-level orchestration rather than speech synthesis quality.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

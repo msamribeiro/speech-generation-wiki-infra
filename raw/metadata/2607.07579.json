@@ -1,0 +1,36 @@
+{
+  "id": "2607.07579",
+  "source_ids": {
+    "arxiv": "2607.07579"
+  },
+  "title": "Text-Independent Speaker Verification Using Discrete Audio Tokens",
+  "authors": [
+    "Zheng Liang",
+    "Junjie Li",
+    "Kong Aik Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.07579",
+  "pdf_url": "https://arxiv.org/pdf/2607.07579.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs (NACs) enable efficient audio compression and have achieved success in downstream tasks such as speech synthesis. However, their discrete representations consistently underperform traditional spectral features in automatic speaker verification (ASV). We empirically demonstrate that speaker cues are implicitly preserved in discrete tokens but remain underutilized by conventional ASV training paradigms. To address this, we propose a Cross-Feature Knowledge Distillation (CFKD) framework. By guiding the codec-based student to mimic the embedding space of a strong Fbank-based teacher, CFKD provides structured supervision for effective utilization of speaker information in tokens. Experiments on the VoxCeleb benchmarks show that CFKD substantially improves the ASV performance of codec-based systems, allowing them to approach the accuracy of Fbank-based teacher models and highlighting the potential of discrete audio tokens for diverse speech tasks.",
+  "arxiv_comment": "This paper has been accepted by Interspeech 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.4,
+  "relevance_note": "Studies whether discrete neural-audio-codec tokens (originally developed for speech synthesis) can be used for text-independent automatic speaker verification; primarily an ASV-system contribution using codec representations as a feature source, not a TTS/VC/SCA generation or codec-design paper itself.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

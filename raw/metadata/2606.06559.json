@@ -1,0 +1,42 @@
+{
+  "id": "2606.06559",
+  "source_ids": {
+    "arxiv": "2606.06559"
+  },
+  "title": "IRAF: Interference-Resilient Adaptive Fusion for Noise-Robust End-to-End Full-Duplex Spoken Dialogue Systems",
+  "authors": [
+    "Tao Zhong",
+    "Jiajun Deng",
+    "Nikita Kuzmin",
+    "Yinke Zhu",
+    "Tianxiang Cao",
+    "Tristan Tsoi",
+    "Zhili Tan",
+    "Simon Lui",
+    "Xunying Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.06559",
+  "pdf_url": "https://arxiv.org/pdf/2606.06559.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue models allow voice agents to listen and speak concurrently, enabling natural interaction with real-time overlap. However, end-to-end dual-channel models that jointly encode user and agent streams may degrade in realistic acoustic environments: interfering speakers leaking into the user microphone can be encoded as part of the user query, corrupting the LLM's conditioning and causing unstable turn-taking and reduced response quality. We propose Interference-Resilient Adaptive Fusion (IRAF), a lightweight, streaming-compatible module that modulates the contribution of user audio to the LLM frame by frame. IRAF predicts a scalar reliability gate from target-speaker and user audio embeddings and rescales user representations before fusion with agent embeddings. Experiments on MS-MARCO and InstructS2S-200K show consistent gains in response quality and full-duplex interaction under interfering-speaker conditions.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "IRAF proposes an interference-resilient adaptive fusion module for noise-robust full-duplex spoken dialogue systems, a core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

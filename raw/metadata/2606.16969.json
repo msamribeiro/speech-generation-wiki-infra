@@ -1,0 +1,35 @@
+{
+  "id": "2606.16969",
+  "source_ids": {
+    "arxiv": "2606.16969"
+  },
+  "title": "Probing Low Frame Rate Degradation in Neural Audio Codecs",
+  "authors": [
+    "Alex Gichamba",
+    "Moise Busogi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.16969",
+  "pdf_url": "https://arxiv.org/pdf/2606.16969.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Low frame rates in neural audio codecs are attractive for autoregressive speech synthesis, where the generation cost scales linearly with the sequence length. Recent work has demonstrated that codecs can operate at 12.5 Hz and below, but the mechanisms underlying low frame rate degradation remain insufficiently understood. We investigate these mechanisms through a controlled frame rate ablation. We reproduce a quality cliff at 6.25 Hz reported in previous works and evaluate candidate explanations: phonemic collisions and codebook saturation, neither of which shows evidence of a fundamental barrier. The cliff is instead caused by suboptimal training configuration: fixed clip duration during training yields too few tokens at low frame rates, starving the decoder of inter-token context. Once corrected, WER degrades smoothly with phonemic load down to 3.1 Hz and 1.6 Hz, suggesting the inference-time efficiency gains of low frame rate codecs are more accessible than previously assumed.",
+  "arxiv_comment": "Accepted at Interspeech 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Investigates the mechanisms underlying quality degradation at low frame rates in neural audio codecs used for autoregressive speech synthesis, core codec infrastructure research.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

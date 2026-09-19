@@ -1,0 +1,39 @@
+{
+  "id": "2607.19810",
+  "source_ids": {
+    "arxiv": "2607.19810"
+  },
+  "title": "SimulS2ST-Omni: Data-Efficient Streaming Speech-to-Speech Translation via Explicit Trajectory Supervision",
+  "authors": [
+    "Rongshen He",
+    "Xinyu Liang",
+    "Dekun Chen",
+    "Jiaqi Li",
+    "Mingjie Chen",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.19810",
+  "pdf_url": "https://arxiv.org/pdf/2607.19810.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Long-form streaming speech-to-speech translation (S2ST) requires incremental, unbounded translation under strict latency constraints. Existing methods typically suffer from sentence-bounded supervision or demand massive paired-S2ST supervision. We introduce a training recipe enabling a speech language model for sentence-level and long-form streaming S2ST using only $\\sim$2k hours of paired cross-lingual S2ST data, layered atop auxiliary supervision. Anchored by auxiliary multitask training, our approach remains robust even when the paired-S2ST budget itself is reduced by 90\\%. Our core contribution, joint text-code trajectory supervision, schedules target text and acoustic semantic codes as a unified commitment path, eliminating the need for separate, unstable speech-side emission controllers. Furthermore, our two-stream Thinker--Talker factorization significantly outperforms unified-decoder baselines by decoupling linguistic reasoning from dense acoustic prediction to mitigate modality interference. Finally, our system achieves highly competitive quality-latency trade-offs on RealSI and ACL60/60-dev, matching state-of-the-art, closed-source S2ST systems such as LiveInterpret~2.0 on ASR-BLEU.",
+  "arxiv_comment": "29 pages, 19 figures, 16 tables",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "SimulS2ST-Omni proposes a data-efficient training recipe for a speech language model performing sentence-level and long-form streaming speech-to-speech translation, a core SCA/S2ST contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

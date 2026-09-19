@@ -1,7 +1,10 @@
 {
   "id": "2605.28618",
   "source_ids": {
-    "arxiv": "2605.28618"
+    "arxiv": "2605.28618",
+    "acl": "2026.findings-acl.112",
+    "doi": "10.18653/v1/2026.findings-acl.112",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.112"
   },
   "title": "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
   "authors": [
@@ -34,16 +37,16 @@
     "Zhou Zhao"
   ],
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-27",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2605.28618",
-  "pdf_url": "https://arxiv.org/pdf/2605.28618.pdf",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.112.pdf",
   "pdf_path": "raw/papers/2605.28618.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Recent advances in speech generation have enabled high-fidelity synthesis, yet systematic evaluation of models under long-context conditions remains largely underexplored. A comprehensive evaluation benchmark for long-form speech is indispensable for two reasons: 1) existing test scenarios are often confined to limited domains, creating a significant gap with the diverse downstream applications; 2) existing metrics overlook critical long-text factors such as consistency and coherence, failing to generalize reliably. To this end, we propose Swanbench-Speech, a comprehensive benchmark that decomposes long-form speech quality into specific, disentangled dimensions. SwanBench-Speech has three key properties. 1) Rich speech scenarios: Focusing on long-form speech generation and dialog generation, SwanBench-Speech covers acoustics, semantics, and expressiveness challenges, and consists of 1,101 samples spanning 17 common speech scenarios; 2) Comprehensive evaluation dimensions: Along the acoustics, semantics, and expressiveness axes, SwanBench-Speech defines an automated evaluation protocol with seven metrics to provide a comprehensive, accurate, and standardized assessment; 3) Valuable Insights: Through extensive experiments, we reveal that current models still struggle in highly expressive scenarios and exhibit a notable gap in consistency and hierarchy compared to real recordings.",
   "arxiv_comment": "Accepted by ACL 2026(Findings). 36pages, 14figures",
   "task": [
@@ -56,5 +59,6 @@
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

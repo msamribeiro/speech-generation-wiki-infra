@@ -1,0 +1,37 @@
+{
+  "id": "2026.iwslt-1.12",
+  "source_ids": {
+    "acl": "2026.iwslt-1.12",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.iwslt-1.12"
+  },
+  "title": "Balancing Linguistic Intelligibility and Speaker Identity in Zero-Shot Cross-Lingual Voice Cloning",
+  "authors": [
+    "Mo Ahtasam",
+    "Jamal uddin",
+    "Mohammad Nadeem"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwslt-1.12",
+  "pdf_url": "https://aclanthology.org/2026.iwslt-1.12.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Cross-lingual voice cloning (CLVC) aims to synthesize speech in a target language while preserving the vocal identity of a source speaker who has no recorded speech in that language. Despite recent advances in multilingual text-to-speech systems, zero-shot CLVC remains challenging due to phonetic divergence across languages and the difficulty of maintaining speaker identity alongside linguistic intelligibility. In this work, we present a systematic evaluation of four state-of-the-art CLVC systems spanning autoregressive and diffusion-based architectures. Using English source speakers from the ACL-60/60 dataset, we evaluate zero-shot voice transfer across multiple target languages, including Arabic, Chinese, French, German, Russian, and Japanese. Systems are assessed using speaker similarity and content consistency metrics under a unified multilingual evaluation pipeline. We analyze how different modeling approaches autoregressive language modeling and diffusion-based flow matching handle the tradeoff between speech accuracy and speaker identity preservation across different architectural approaches. We further observe substantial performance variation across languages, with Arabic remaining particularly challenging under zero-shot transfer settings.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Studies the intelligibility/speaker-identity trade-off in zero-shot cross-lingual voice cloning; core VC contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

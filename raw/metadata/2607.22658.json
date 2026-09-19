@@ -1,0 +1,42 @@
+{
+  "id": "2607.22658",
+  "source_ids": {
+    "arxiv": "2607.22658"
+  },
+  "title": "StanceBench: A Benchmark for Audio LLM-Based Interpersonal Stance Evaluation from Speech",
+  "authors": [
+    "Yuzhe Wang",
+    "Thomas Thebaud",
+    "Jennifer Hu",
+    "Jesús Villalba-Lopez",
+    "Venkatesh Ravichandran",
+    "Georgi Tinchev",
+    "Najim Dehak",
+    "Laureano Moro-Velázquez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.22658",
+  "pdf_url": "https://arxiv.org/pdf/2607.22658.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-speech dialogue models increasingly depend on prosody and interactional nuance to convey social intent, yet benchmarks for these cues remain limited. We introduce StanceBench, a benchmark for measuring interpersonal stance in conversational speech and evaluating audio-capable LLMs as automated judges. Using the Seamless Interaction corpus, StanceBench (1) specifies 9 stance dimensions via role-prompt poles, (2) standardizes single-speaker and interaction-based evaluations, and (3) reports LLM-as-a-judge robustness, bias, and stance inference. Across evaluated stances, empathy and politeness are the easiest. Warmth and assertiveness are moderately separable with positivity skew/asymmetry. Honesty is the hardest and shows high prompt order bias, consistent with needing cross-turn evidence. Attentiveness is separable but aligns weakly with humans. Interaction stances are more context-sensitive, with threshold gaps and high variance, especially conflict regulation.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "StanceBench introduces a benchmark for evaluating interpersonal stance conveyed via prosody in speech-to-speech dialogue models using audio-LLM judges, a core SCA evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

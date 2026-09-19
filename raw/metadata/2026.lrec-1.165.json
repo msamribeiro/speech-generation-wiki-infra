@@ -1,0 +1,38 @@
+{
+  "id": "2026.lrec-1.165",
+  "source_ids": {
+    "acl": "2026.lrec-1.165",
+    "arxiv": null,
+    "doi": "10.63317/3je3mug9bbb3"
+  },
+  "title": "Explainable AI for Ethical Counter Speech Generation in Hate Speech Mitigation",
+  "authors": [
+    "Ashiful Islam Ridoy",
+    "Mohammed Faisal",
+    "Yogesh Kumar",
+    "Md Mamun-Ur Rashid",
+    "Marina Ernst",
+    "Frank Hopfgartner"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-165",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-165.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "The proliferation of hate speech in digital communication platforms poses significant challenges to online safety and social cohesion. While automated hate speech detection systems have shown promise, their black-box nature limits user trust and understanding of AI-driven content moderation decisions. This paper presents a framework that integrates explainable AI (XAI) techniques with counter-speech generation to create transparent, ethical solutions for hate speech mitigation. Our approach combines a fine-tuned HateBERT model, with a specialized Llama 3.1-8B-Instruct model for generating empathetic counter-narratives. The system employs five distinct XAI methods: Integrated Gradients, Attention Visualization, LIME, Counterfactual Analysis, and Natural Language Explanations to provide interpretable reasoning behind both detection and response generation decisions. The integration of explainability mechanisms with counter-speech generation represents a novel contribution to ethical AI systems, fostering transparency and trust in automated hate speech mitigation while maintaining high performance standards for real-world deployment.",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Explainable-AI framework for text-based counter-speech generation in hate-speech mitigation; no audio synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2606.00851",
+  "source_ids": {
+    "arxiv": "2606.00851"
+  },
+  "title": "Sympatheia: Emotionally Adaptive Voice Assistant with Continuous Affect Conditioning",
+  "authors": [
+    "Sukru Samet Dindar",
+    "Riki Shimizu",
+    "Xilin Jiang",
+    "Nima Mesgarani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.00851",
+  "pdf_url": "https://arxiv.org/pdf/2606.00851.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Empathetic spoken dialogue systems must infer a user's emotional state to respond appropriately, yet everyday speech often carries weak, neutral, or ambiguous affective cues. To address this, we introduce Sympatheia, a speech-to-speech dialogue framework conditioned on affect inferred from the user's speech and, when available, explicit affect specifications provided as a continuous valence--arousal (VA) control signal by a multimodal sensing module or user interface. To train our model, we construct Sympatheia-18k, an emotion-conditioned synthetic spoken dialogue corpus with 12 emotion anchors. This dataset includes an emotional split for learning affective speech behavior, and a neutral split that pairs emotionally neutral queries with multiple emotion-conditioned responses to isolate explicit emotion control in emotionally ambiguous cases. Empirical results show that Sympatheia outperforms speech conversational baselines in generating responses whose semantic content and spoken delivery are both emotionally appropriate. We further show that the same VA interface can integrate emotion estimates from diverse sensing modules, including facial expression, biosignals, and textual affect descriptions, improving response alignment when speech alone provides limited emotional evidence. These results suggest that continuous affect conditioning is an effective practical step for building emotionally adaptive voice assistants.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Sympatheia proposes an emotionally adaptive speech-to-speech dialogue framework with continuous affect conditioning, a core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

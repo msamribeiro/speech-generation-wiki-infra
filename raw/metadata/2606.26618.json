@@ -1,0 +1,39 @@
+{
+  "id": "2606.26618",
+  "source_ids": {
+    "arxiv": "2606.26618"
+  },
+  "title": "Closing the Quality Gap in Low-Resource Text-to-Speech: LoRA Fine-Tuning of VoxCPM2 for Khmer and Korean",
+  "authors": [
+    "Phannet Pov",
+    "Sovandara Chhoun",
+    "Hyun Woo Park",
+    "Wan-Sup Cho",
+    "Saksonita Khoeurn"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.26618",
+  "pdf_url": "https://arxiv.org/pdf/2606.26618.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Large pretrained text-to-speech (TTS) models sound almost human for well-resourced languages, but much worse for languages that are rare in their training data. We study this quality gap for Khmer and Korean using VoxCPM2, a 2.4B-parameter, tokenizer-free TTS model that joins a MiniCPM-4 language-model backbone with a flow-matching diffusion decoder. We build one shared, language-tagged corpus of about 26 hours and adapt VoxCPM2 with a single Low-Rank Adaptation (LoRA) adapter, trained on both languages at once and added to both the language model and the decoder. The adapter is zero-initialized, so training starts exactly at the original (zero-shot) model. In native-speaker listening tests, the Khmer Mean Opinion Score (MOS) rises from 3.85 to 4.23 with the best adapter (rank 64), a highly significant gain (paired Wilcoxon test, p<0.001), while training only 0.19 to 3.03 percent of the parameters. The automatic loss and the human ratings, however, disagree on the best rank: validation loss is lowest at rank 128, yet MOS peaks at rank 64. The same adapter brings no gain for Korean, a language the base model already handles well, and at a high rank it even degrades quality. Adaptation therefore helps mainly where the base model is genuinely weak.",
+  "arxiv_comment": "5 pages, 1 figure, 4 tables. IEEE conference format (IEEEtran)",
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Studies LoRA fine-tuning of VoxCPM2 to close the quality gap in low-resource TTS for Khmer and Korean, a core multilingual/low-resource TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2026.eacl-short.16",
+  "source_ids": {
+    "acl": "2026.eacl-short.16",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.eacl-short.16"
+  },
+  "title": "Exploring Cross-Lingual Voice Conversion Methods for Anonymizing Low-Resource Text-to-Speech",
+  "authors": [
+    "Shenran Wang",
+    "Aidan Pine",
+    "Mengzhe Geng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.eacl-short.16",
+  "pdf_url": "https://aclanthology.org/2026.eacl-short.16.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We describe and compare multiple approaches for using voice conversion techniques to mask speaker identities in low-resource text-to-speech. We build and evaluate speaker-anonymized text-to-speech systems for two Canadian Indigenous languages, nêhiyawêwin and SENĆOŦEN, and show that cross-lingual speaker transfer via multilingual training with English data produces the most consistent results across both languages. Our research also underscores the need for better evaluation metrics tailored to cross-lingual voice conversion. Our code can be found at https://github.com/EveryVoiceTTS/Speaker_Anonymization_StyleTTS2",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Compares cross-lingual voice conversion methods for speaker-anonymized low-resource TTS in two Indigenous Canadian languages; core VC/TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "2606.20893",
+  "source_ids": {
+    "arxiv": "2606.20893"
+  },
+  "title": "Exploiting Neural Audio Codec Latents for Adversarial Audio Attacks",
+  "authors": [
+    "Sameek Bhattacharya",
+    "Bharath Krishnamurthy",
+    "Ajita Rattani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.20893",
+  "pdf_url": "https://arxiv.org/pdf/2606.20893.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Deep learning-based audio classification systems, including automatic speaker verification, are vulnerable to adversarial attacks. Realistic real-time threat assessment remains difficult because optimization-based methods, such as projected gradient descent (PGD) and Carlini-Wagner, require costly iterative updates in the high-dimensional waveform domain. Generative attacks allow single-shot synthesis but often introduce perceptible artifacts or depend on computationally intensive architectures, while diffusion and autoregressive approaches incur high inference latency. To address this gap, we propose a generative attack framework operating in the continuous latent space of a neural audio codec. A conditional generator synthesizes class-specific perturbations in a single forward pass and decodes them into adversarial waveforms. Our method achieves targeted attack success rates up to 99% with sub-7 ms inference, outperforming generative baselines while reducing latency by 24x.",
+  "arxiv_comment": "Accepted to Interspeech 2026. 5 Pages with references containing 2 figures and 4 tables. Code is available at https://github.com/vcbsl/DAC-GAN or https://github.com/Bharath-K3/DAC-GAN",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Studies adversarial attacks on automatic speaker verification systems using neural audio codec latents for fast generative attack synthesis; a security/attack paper targeting ASV, not TTS/VC/SCA generation research.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

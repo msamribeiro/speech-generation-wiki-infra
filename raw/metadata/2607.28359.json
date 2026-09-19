@@ -1,0 +1,34 @@
+{
+  "id": "2607.28359",
+  "source_ids": {
+    "arxiv": "2607.28359"
+  },
+  "title": "Correlation between prosody and pragmatics: A case study of the discourse marker hālā `now' in Persian",
+  "authors": [
+    "Soleiman Ghaderi",
+    "Moloud Asakereh",
+    "Kevin Tang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.28359",
+  "pdf_url": "https://arxiv.org/pdf/2607.28359.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The Persian discourse marker hālā ('now') exhibits remarkable multifunctionality, extending far beyond its temporal adverbial role to encompass a variety of pragmatic functions. This study presents a pragmatic and acoustic analysis of hālā in spoken Persian, examining 267 instances from spontaneous conversations. While temporal uses were present, they were often combined with other discourse marker functions, indicating extensive multifunctionality, with 70% of tokens serving two or more pragmatic roles. Textual functions (topic shifting, signaling relationships, boundary marking, attention guidance, topic introduction, and topic emphasis) were most frequent, followed by interactive functions (turn management, listener engagement, and feedback regulation), and modal functions (epistemic stance, emotional expression, and attitudinal marking). Prosodic analysis revealed that duration and intensity are key cues for distinguishing hālā's functions. Textual uses were significantly shorter, while temporal uses showed a tendency toward longer realizations. Interactive functions correlated with higher intensity, while modal functions showed a weaker tendency toward lower intensity. These findings indicate that duration and intensity are the main prosodic cues associated with functional differentiation in hālā, especially in textual and interactive uses.",
+  "arxiv_comment": "35 pages, 0 figures",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "A corpus-linguistic/phonetic case study of prosody and pragmatic function of a Persian discourse marker in natural (non-synthesized) spontaneous speech; no speech generation content.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

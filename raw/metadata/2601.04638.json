@@ -1,7 +1,10 @@
 {
   "id": "2601.04638",
   "source_ids": {
-    "arxiv": "2601.04638"
+    "arxiv": "2601.04638",
+    "acl": "2026.acl-long.1428",
+    "doi": "10.18653/v1/2026.acl-long.1428",
+    "url_acl": "https://aclanthology.org/2026.acl-long.1428"
   },
   "title": "SpeechMedAssist: Efficiently and Effectively Adapting Speech Language Models for Medical Consultation",
   "authors": [
@@ -12,16 +15,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-18",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2601.04638",
-  "pdf_url": "https://arxiv.org/pdf/2601.04638.pdf",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.1428.pdf",
   "pdf_path": null,
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Medical consultations are intrinsically speech-centric. However, most prior works focus on long-text-based interactions, which are cumbersome and patient-unfriendly. Recent advances in speech language models (SpeechLMs) have enabled more natural speech-based interaction, yet the scarcity of medical speech data and the inefficiency of directly fine-tuning on speech data jointly hinder the adoption of SpeechLMs in medical consultation. In this paper, we propose SpeechMedAssist, a SpeechLM natively capable of conducting speech-based multi-turn interactions with patients. By exploiting the architectural properties of SpeechLMs, we decouple the conventional one-stage training into a two-stage paradigm consisting of (1) Knowledge & Capability Injection via Text and (2) Modality Re-alignment with Limited Speech Data, thereby reducing the requirement for medical speech data to only 10k synthesized samples. To evaluate SpeechLMs for medical consultation scenarios, we design a benchmark comprising both single-turn question answering and multi-turn simulated interactions. Experimental results show that our model outperforms all baselines in both effectiveness and robustness in most evaluation settings.",
   "arxiv_comment": null,
   "task": [
@@ -33,5 +36,6 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

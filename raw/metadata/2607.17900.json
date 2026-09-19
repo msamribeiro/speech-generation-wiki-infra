@@ -1,0 +1,41 @@
+{
+  "id": "2607.17900",
+  "source_ids": {
+    "arxiv": "2607.17900"
+  },
+  "title": "Harness TTS: Towards Context-Aware Expressive Speech Synthesis with Harness Layer",
+  "authors": [
+    "Shengfan Shen",
+    "Di Wu",
+    "Xingchen Song",
+    "Dinghao Zhou",
+    "Pengyu Cheng",
+    "Sixiang Lyu",
+    "Jian Luan",
+    "Shuai Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.17900",
+  "pdf_url": "https://arxiv.org/pdf/2607.17900.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Expressive speech synthesis for voice assistants requires flexible style control that adapts to explicit requests and broader interaction context. We propose Harness TTS, a lightweight control layer that wraps around a TTS engine to externalize and govern its expressive behavior. It reformulates style control as closed-set prompt-tool routing: offline, a compact registry of stylistic prompt tools is constructed with structured metadata; online, an LLM planner selects the appropriate tool based on a priority-aware observation schema, and the TTS executor synthesizes speech using the corresponding prompt audio. We evaluate Harness TTS on both routing and synthesis tasks. In routing, Qwen3-4B achieves Top-1 accuracies of 74.3%, 43.0%, and 64.6% on explicit, implicit, and conflict subsets. For synthesis, experiments on CosyVoice3 and VoxCPM2 show that Harness TTS outperforms instruction-only control, achieving higher instruction-following win rates (margins of 23.1-35.6 points on CosyVoice3 and 13.8-20.0 points on VoxCPM2) and improving UTMOSv2 scores by 0.11-0.38. Moreover, the 4B planner delivers its first tool recommendation in under 50 ms in standard mode, introducing negligible latency for real-time interaction. These results demonstrate that equipping TTS engines with a dedicated Harness layer offers a practical, auditable, and context-aware solution for voice assistant expression control.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Harness TTS proposes a lightweight context-aware control layer wrapping a TTS engine to externalize and govern expressive style behavior for voice assistants, a core TTS control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

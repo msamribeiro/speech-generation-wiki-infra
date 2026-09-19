@@ -1,0 +1,55 @@
+{
+  "id": "2606.30944",
+  "source_ids": {
+    "arxiv": "2606.30944"
+  },
+  "title": "Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation",
+  "authors": [
+    "Yuxuan Hu",
+    "Heng Lu",
+    "Ruchao Fan",
+    "Yao Qian",
+    "Xiaofei Wang",
+    "Jian Xue",
+    "Heming Wang",
+    "Shuohang Wang",
+    "Young Jin Kim",
+    "Yelong Shen"
+  ],
+  "authors_full": [
+    "Yuxuan Hu",
+    "Heng Lu",
+    "Ruchao Fan",
+    "Yao Qian",
+    "Xiaofei Wang",
+    "Jian Xue",
+    "Heming Wang",
+    "Shuohang Wang",
+    "Young Jin Kim",
+    "Yelong Shen",
+    "Jinyu Li"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.30944",
+  "pdf_url": "https://arxiv.org/pdf/2606.30944.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Strong speech-to-text (S2T) LLMs already provide robust speech perception and text reasoning, but adding speech-to-speech (S2S) output is challenging: fine-tuning the backbone can degrade the original S2T performance, while attaching a downstream talker reintroduces a serial text-to-speech bottleneck. We present PRIME-Speech, a frozen-backbone S2S conversion framework that trains only speech-generation modules. PRIME-Speech synchronizes a causal audio post-decoder with intermediate hidden states of the frozen backbone, so codec tokens are generated from the model's evolving reasoning trajectory rather than from completed text chunks. The post-decoder uses mixed hidden-state, text, and audio-history conditioning, and a training-time packing strategy with turn-level audio KV-cache and position reset stabilizes multi-turn spoken interaction without additional multi-turn S2S training data. Multi-token prediction further reduces the effective codec prediction rate and improves first-audio latency without modifying the reasoning path. Across speech translation, spoken QA, speech understanding, and multi-turn dialogue, PRIME-Speech preserves the S2T behavior of the frozen backbone while producing accurate, low-WER spoken responses.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "PRIME-Speech preserves speech-to-text LLM capabilities while adding speech-to-speech generation via a frozen-backbone conversion framework, a core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

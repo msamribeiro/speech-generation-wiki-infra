@@ -1,0 +1,36 @@
+{
+  "id": "2606.21157",
+  "source_ids": {
+    "arxiv": "2606.21157"
+  },
+  "title": "SDP-Codec: A Speaker-Decoupled Speech Codec with Pitch Injection for Low-Bitrate Coding and Zero-Shot Voice Conversion",
+  "authors": [
+    "Hounsu Kim",
+    "Juhan Nam"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21157",
+  "pdf_url": "https://arxiv.org/pdf/2606.21157.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speaker-decoupled speech codecs can reduce bitrate by separating global speaker attributes from local content and prosody, while supporting voice conversion. Existing speaker-decoupled codecs face a trade-off: methods that explicitly suppress speaker leakage often rely on multi-stage or auxiliary training, whereas simpler designs can leave residual speaker information in local tokens. We propose SDP-Codec, a speaker-decoupled, pitch-injected codec trained with a single-stage optimization pipeline. SDP-Codec derives local tokens from continuous pre-quantization features of a pretrained self-supervised encoder and injects normalized F0 via a pitch encoder-decoder with global-conditioned denormalization and soft-label pitch reconstruction objective. Across 16 kHz and 24 kHz settings, SDP-Codec achieves competitive reconstruction and strong zero-shot voice conversion at comparable bitrates, with the lowest speaker-probing accuracy among compared systems, suggesting reduced speaker leakage.",
+  "arxiv_comment": "Accepted to Interspeech 2026. Code and demo: https://github.com/hanshounsu/sdpcodec-open/",
+  "task": [
+    "codec",
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "SDP-Codec proposes a speaker-decoupled speech codec with pitch injection supporting both low-bitrate coding and zero-shot voice conversion, a core codec/VC contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

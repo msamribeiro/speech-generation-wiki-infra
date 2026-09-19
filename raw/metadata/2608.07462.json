@@ -1,0 +1,61 @@
+{
+  "id": "2608.07462",
+  "source_ids": {
+    "arxiv": "2608.07462"
+  },
+  "title": "SemBridge: Semantic Token Anchoring for Continuous-Latent Autoregressive Speech Generation",
+  "authors": [
+    "Hanke Xie",
+    "Haopeng Lin",
+    "Jiale Qian",
+    "Dake Guo",
+    "Yuepeng Jiang",
+    "Zhichao Wang",
+    "Wenxiao Cao",
+    "Jingbin Hu",
+    "Guobin Ma",
+    "Wenhao Li"
+  ],
+  "authors_full": [
+    "Hanke Xie",
+    "Haopeng Lin",
+    "Jiale Qian",
+    "Dake Guo",
+    "Yuepeng Jiang",
+    "Zhichao Wang",
+    "Wenxiao Cao",
+    "Jingbin Hu",
+    "Guobin Ma",
+    "Wenhao Li",
+    "Huakang Chen",
+    "Chengyou Wang",
+    "Ming Tao",
+    "Zhonghua Fu",
+    "Lei Xie",
+    "Xinsheng Wang"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.07462",
+  "pdf_url": "https://arxiv.org/pdf/2608.07462.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Continuous-latent autoregressive speech generation has emerged as a promising alternative to discrete-token modeling by avoiding quantization loss and preserving richer acoustic information. However, continuous acoustic targets do not ex- pose linguistic structure as explicit token-level prediction tar- gets. Consequently, the autoregressive language model (LM) must acquire linguistic structure indirectly through acous- tic prediction, which can compromise the content fidelity of generated speech. We propose SemBridge, a training-only semantic-token anchoring framework for continuous-latent autoregressive speech generation. SemBridge uses discrete se- mantic tokens to directly supervise autoregressive LM states and employs a Semantic-Aligned Acoustic VAE to organize the continuous target space under the same semantic refer- ence. The semantic supervision is used only during train- ing, while inference remains entirely continuous. We evalu- ate SemBridge on zero-shot text-to-speech (TTS) and score- conditioned singing voice synthesis (SVS). Across multi- ple benchmarks, SemBridge improves content accuracy, as measured by word and character error rates (WER/CER), while maintaining competitive speaker similarity and percep- tual quality. Experimental results demonstrate that explicit semantic-token supervision for autoregressive state learning is an effective and general direction for continuous speech generation. Speech samples are available.1 The model code and checkpoints will be available at https://github.com/ASLP- lab/SemBridge",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "SemBridge proposes semantic token anchoring to inject explicit linguistic-structure prediction targets into continuous-latent autoregressive speech generation, a core TTS/codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

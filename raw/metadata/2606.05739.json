@@ -1,0 +1,37 @@
+{
+  "id": "2606.05739",
+  "source_ids": {
+    "arxiv": "2606.05739"
+  },
+  "title": "Do speech foundation models perceive speaker similarity as humans do?",
+  "authors": [
+    "Minoru Kishi",
+    "Hayato Yagi",
+    "Shinnosuke Takamichi",
+    "Yuki Saito"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.05739",
+  "pdf_url": "https://arxiv.org/pdf/2606.05739.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This study presents a comparative analysis between the speaker embeddings of speech foundation models and human subjective perception of speaker similarity. Human listeners have the ability to judge speaker similarity on a continuous scale discerning how similar two voices are. In contrast, speech foundation models embed speaker characteristics into numerical representation. However, a question remains: does the numerical distance between speaker embeddings in these models truly align with the similarity perceived by humans? To address this, we conduct a comprehensive investigation using more than 40 models to compare model-derived distances with human-perceived similarity scores. Furthermore, we identify which factors in model configuration contribute most to a speaker embedding that mirrors human perception. Our findings provide insights for the development of more perceptually grounded speech foundation models.",
+  "arxiv_comment": "Accepted by INTERSPEECH 2026. Camera-ready version",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Compares speech foundation model speaker embeddings against human speaker-similarity perception, directly relevant to the validity of the SPK-SIM metric widely used in TTS/VC evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

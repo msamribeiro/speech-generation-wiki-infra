@@ -1,0 +1,34 @@
+{
+  "id": "2607.14474",
+  "source_ids": {
+    "arxiv": "2607.14474"
+  },
+  "title": "Can Tokens Compete? Token Representations against Supervised CNN Backbones for BirdCLEF+ 2026",
+  "authors": [
+    "Anthony Miyaguchi",
+    "Murilo Gustineli",
+    "Adrian Cheung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.14474",
+  "pdf_url": "https://arxiv.org/pdf/2607.14474.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper details the DS@GT ARC team's approach to BirdCLEF+ 2026, multi-label detection of animal vocalizations in soundscapes from the Pantanal wetlands. The 2026 edition adds about an hour of labeled soundscapes, shifting the task toward supervised pipelines fit to the labeled set. First, we build a competitive supervised baseline that ensembles a frozen Perch v2 backbone, a trained HGNetV2-B0 sound-event-detection network, and a non-bird prototypical head, reaching a private leaderboard score of 0.936 at rank 1894 within a 90-minute CPU budget. Second, we ask whether token-based representations can compete, contrasting codec representations from neural audio codecs against semantic representations from foundational embeddings. We compare two bioacoustic specialist models against four token-based encoders trained on AudioSet. The repository for this work can be found at https://github.com/dsgt-arc/birdclef-2026.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Studies multi-label bird/animal vocalization detection for BirdCLEF+ 2026; non-speech bioacoustics, no relevance to TTS/VC/SCA.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

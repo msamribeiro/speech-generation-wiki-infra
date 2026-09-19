@@ -1,0 +1,37 @@
+{
+  "id": "2606.21727",
+  "source_ids": {
+    "arxiv": "2606.21727"
+  },
+  "title": "Towards Detecting Neural Audio Codec Synthesized Heart Sounds",
+  "authors": [
+    "Girish",
+    "Orchid Chetia Phukan",
+    "Mohd Mujtaba Akhtar",
+    "Bhavinkumar Vinodbhai Kuwar",
+    "Swarup Ranjan Behera",
+    "Arun Balaji Buduru"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21727",
+  "pdf_url": "https://arxiv.org/pdf/2606.21727.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "In this paper, we introduce Synthetic Heart Sound Detection (SHAC), a task aimed at identifying phonocardiograms (PCGs) synthesized using neural audio codecs (NACs). To facilitate research in this direction, we release CARDIOFAKE, the first benchmark dataset for SHAC containing both real and codec-synthesized PCGs. We benchmark spectral representations (MFCC, LFCC) and self-supervised learning (SSL) representations (e.g., WavLM) for the task. Furthermore, we propose GROOT, a fusion framework that integrates spectral and SSL features for leveraging their complementary behavior. Experiments show that GROOT, combining MFCC and WavLM, achieves state-of-the-art performance, outperforming individual representations and competitive baselines.",
+  "arxiv_comment": "Accepted to INTERSPEECH 2026",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Studies detection of neural-audio-codec-synthesized heart sounds (phonocardiograms); non-speech biomedical signal, no speech content.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

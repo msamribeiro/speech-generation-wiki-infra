@@ -1,0 +1,38 @@
+{
+  "id": "2607.16870",
+  "source_ids": {
+    "arxiv": "2607.16870"
+  },
+  "title": "Do Speech Tokens Leak Voiceprints? Speaker Inversion Attacks Against End-to-End Speech Language Models",
+  "authors": [
+    "Ye Lu",
+    "Yihan Yan",
+    "Zhaoyang Zhang",
+    "Zhitao Ou",
+    "Runze Liu",
+    "Li Liu",
+    "Shen Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.16870",
+  "pdf_url": "https://arxiv.org/pdf/2607.16870.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end speech language models increasingly represent user speech with speech tokens rather than relying exclusively on cascaded ASR--LLM--TTS pipelines. Although these tokens support expressive and low-latency spoken interaction, they may also preserve sensitive speaker characteristics. We investigate whether exposed speech tokens leak voiceprints and formulate this risk as a speaker inversion attack. We introduce Audio BERT (AuB), a trainable model that constructs token embeddings from discrete codebooks and aggregates them into speaker-sensitive representations, and propose SpInv, a two-stage inversion method built on AuB to recover embeddings in the space of an attacker-specified speaker encoder. We evaluate Moshi, Higgs3, Kimi-Audio, and Qwen3-Omni using speaker-disjoint protocols on the VoxCeleb dataset. Extensive experiments show that, with only three seconds of frontend output, SpInv achieves cosine similarities above 0.70 in the attacker-specified speaker-encoder space.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.62,
+  "relevance_note": "Investigates whether speech tokens used in end-to-end speech language models leak speaker voiceprints via speaker-inversion attacks; a privacy/security analysis of speech-token representations used in SCA systems.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

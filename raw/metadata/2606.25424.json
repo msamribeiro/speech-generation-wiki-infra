@@ -1,0 +1,37 @@
+{
+  "id": "2606.25424",
+  "source_ids": {
+    "arxiv": "2606.25424"
+  },
+  "title": "Adaptive Oscillatory Inductive Bias for Modeling Sharp Prosodic Dynamics in Diffusion-Based TTS",
+  "authors": [
+    "Sandipan Dhar",
+    "Nirmesh J. Shah",
+    "Ashishkumar P. Gudmalwar",
+    "Pankaj Wasnik"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.25424",
+  "pdf_url": "https://arxiv.org/pdf/2606.25424.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Diffusion-based text-to-speech (TTS) models have achieved significant improvements in speech quality. However, modeling sharp prosodic transitions and rapid pitch variations in expressive speech remains challenging. Existing diffusion-based TTS decoders commonly utilize periodic nonlinearities such as Snake activation function to capture harmonic structures, but this activation funcation provides limited adaptability when modeling abrupt amplitude and frequency variations. In this paper, we investigate the role of oscillatory inductive bias in diffusion-based TTS decoders and introduce an adaptive oscillatory nonlinearity that enables controllable periodic modulation while maintaining signal stability through a linear bypass component. We refer the resulting TTS system as OscillaTTS. Experiments on the LJSpeech and Emotional Speech Dataset show consistent improvements across objective and subjective evaluations, indicating improved modeling of expressive prosodic dynamics.",
+  "arxiv_comment": "Accepted in INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes an adaptive oscillatory inductive bias to better model sharp prosodic transitions and rapid pitch variation in diffusion-based TTS, a core architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

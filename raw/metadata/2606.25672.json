@@ -1,0 +1,37 @@
+{
+  "id": "2606.25672",
+  "source_ids": {
+    "arxiv": "2606.25672"
+  },
+  "title": "Joint Residual Reweighting for Classifier Free Guidance in Flow-Matching Zero-Shot TTS",
+  "authors": [
+    "Runwu Shi",
+    "Yujin Wang",
+    "Hongjin Song",
+    "Chunxiang Jin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.25672",
+  "pdf_url": "https://arxiv.org/pdf/2606.25672.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Classifier-free guidance (CFG) is widely used in flow-matching-based zero-shot text-to-speech (TTS), where generation is typically controlled by two conditions: the target text and a prompt speech signal. Standard CFG strengthens these conditions jointly, while recent branch-selective guidance methods attempt to enhance text or speaker conditioning separately, often leading to a trade-off between text correctness and speaker similarity. In this paper, we revisit the CFG under independently masked text and speech-prompt conditions, and decompose the guidance field into text, speaker, and joint residuals. We show that conventional speaker-selective guidance entangles the speaker residual with the joint residual, which may disturb text-related generation. Based on this observation, we propose joint residual reweighting, which independently controls the speaker and joint residuals within the standard CFG framework. Experiments on F5-TTS and CosyVoice2 show that the proposed method improves speaker similarity while maintaining competitive text correctness, demonstrating the usefulness of the joint residual for balancing speaker fidelity and text accuracy in zero-shot TTS.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes joint residual reweighting for classifier-free guidance in flow-matching zero-shot TTS to better balance text and speaker-prompt conditioning, a core TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

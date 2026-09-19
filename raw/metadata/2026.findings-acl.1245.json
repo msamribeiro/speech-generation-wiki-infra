@@ -1,0 +1,36 @@
+{
+  "id": "2026.findings-acl.1245",
+  "source_ids": {
+    "acl": "2026.findings-acl.1245",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.1245",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.1245"
+  },
+  "title": "A Unified Feature Mixture Framework for Joint Speech and Singing Deepfake Detection",
+  "authors": [
+    "Aastha Sharma",
+    "Guangjing Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.1245",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.1245.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "High-fidelity audio generation techniques, such as voice conversion and singing voice synthesis, have significantly increased the risk of audio deepfakes. Although existing methods perform well on conversational speech deepfake detection, they fail severely under the speech-to-singing domain shift. To address this limitation, we propose GenuVoice, a unified deepfake detector based on a multi-branch mixture-of-experts architecture that integrates three complementary feature views: Wav2Vec 2.0 representations, log-mel spectrograms, and mel-frequency cepstral coefficients (MFCC). Each expert is trained to remain independently discriminative, while a learned gating network dynamically weights expert contributions. A speech-retentive multi-domain fine-tuning strategy enables adaptation to singing without degrading speech performance. GenuVoice achieves 1.82% Equal Error Rate (EER) on CtrSVDD, compared to 37–62% for existing speech-trained detectors, while preserving strong speech performance (0.38% EER on ASVspoof 2019) and generalizing to unseen generators (8.89% EER on held-out ASVspoof 2021). Extensive ablations confirm the importance of multi-expert fusion and speech retention, establishing GenuVoice as an effective unified detector for speech and singing deepfakes. The implementation code is available at https://github.com/aastha-sharma/genuvoice",
+  "task": [],
+  "relevance_score": 0.42,
+  "relevance_note": "GenuVoice is a deepfake detector for VC and singing-synthesis audio; engages with synthetic speech artifacts but its contribution is detection, not generation or a synthesis quality/evaluation methodology.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

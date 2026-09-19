@@ -1,0 +1,35 @@
+{
+  "id": "2606.05367",
+  "source_ids": {
+    "arxiv": "2606.05367"
+  },
+  "title": "Task-Vector Arithmetic for Emotional Expressivity Control in Language-Model-Based Text-to-Speech",
+  "authors": [
+    "Daniel Oliveira de Brito",
+    "Arnaldo Candido Junior"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.05367",
+  "pdf_url": "https://arxiv.org/pdf/2606.05367.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We investigate whether task-vector arithmetic, successful for cross-speaker emotional intensity control in modular text-to-speech (TTS), transfers to large-scale TTS systems built on language-model backbones with in-context learning (LM-TTS). Through a systematic elimination study over four progressively narrower operands on Qwen3-TTS-12Hz-1.7B - model weights via LoRA fine-tuning, continuous codec embeddings, discrete codec tokens, and the speaker embedding (x-vector) produced by an ECAPA-TDNN encoder jointly trained with the synthesis backbone - we localize the dominant carrier of emotional prosody to the x-vector. Building on this finding, we propose a training-free method based on centroid arithmetic in x-vector space: an emotion direction $τ= \\mathbb{E}_i[x(s_i,\\text{emo})] -\\mathbb{E}_i[x(s_i,\\text{neutral})]$ applied to an unseen target speaker as $x_{\\text{new}} = x(\\text{target},\\text{neutral}) + α\\cdotτ$. Using ESD (English) as the $τ$ source and emoUERJ (Brazilian Portuguese) as a cross-lingual ground-truth target, we observe average gains of $+0.29$ in emotion2vec cosine over the ICL baseline on English held-out speakers and $+0.09$ on Brazilian Portuguese held-out speakers, while largely preserving identity (WavLM SECS $\\gtrsim 0.88$ for the multi-speaker $τ$ variant) and intelligibility (WER $\\approx 0$ in PT-BR). These results offer initial evidence that the dominant carrier of emotional prosody in this class of models is localizable, by elimination, to the co-trained speaker embedding, where training-free centroid arithmetic remains effective even under cross-lingual transfer.",
+  "arxiv_comment": "v2: expanded related work",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Investigates task-vector arithmetic for emotional expressivity control in LM-based TTS, a core TTS control-methodology contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

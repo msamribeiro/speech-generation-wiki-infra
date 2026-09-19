@@ -1,0 +1,34 @@
+{
+  "id": "2026.iwsds-1.9",
+  "source_ids": {
+    "acl": "2026.iwsds-1.9",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Exploring Emotional Nuances in Spoken Dialogue: Dataset Construction and Prediction of Emotional Dialogue Breakdown",
+  "authors": [
+    "Hyuga Nakaguro",
+    "Koichiro Yoshino"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.9",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.9.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "In spoken dialogue systems, even when the utterance text is the same, speaking style or tone differences can change its nuance. To respond appropriately in such cases, systems must accurately interpret paralinguistic information. Our study evaluates such a system’s ability using the “paraling-dial” dataset, which pairs a fixed utterance text with five distinct emotional expressions and their corresponding responses. We define a task using this dataset that detects mismatches—referred to as emotional dialogue breakdowns—between the expressed emotion of an utterance and the content of its response. We propose a breakdown detection system based on the Feature-wise Linear Modulation (FiLM) model, under the hypothesis that emotion dynamically controls text interpretation. Our experimental results show that the proposed model achieves 93.8% accuracy with gold emotion labels and 91.2% with predicted labels, demonstrating both its effectiveness and practicality. We also compare different types of control signals to identify the level of information required for such a breakdown detection task: emotion labels, emotion embeddings, and acoustic features. The results suggest that the appropriate level of abstraction, rather than simply richer information, is crucial for designing effective control signals.",
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "Dataset construction pairing fixed text with five emotional speech renditions, used to predict emotional dialogue breakdown; the paper's own contribution is breakdown prediction (classification) rather than synthesis, though the paired-audio resource has TTS relevance.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

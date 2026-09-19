@@ -1,0 +1,37 @@
+{
+  "id": "2607.06027",
+  "source_ids": {
+    "arxiv": "2607.06027"
+  },
+  "title": "Fréchet Distance Loss on Speech Representations for Text-to-Speech Synthesis",
+  "authors": [
+    "Ho-Lam Chung",
+    "Kuan-Po Huang",
+    "Bo-Ru Lu",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.06027",
+  "pdf_url": "https://arxiv.org/pdf/2607.06027.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Few-step diffusion and flow-matching text-to-speech (TTS) models are usually trained with local objectives, such as conditional flow matching, reconstruction, and stop prediction. These losses provide stable optimization, but they never ask whether sampled speech follows the distribution of high-quality speech. We propose Speech Representation Fr'echet Distance loss (SR-FD), a training-time distributional regularizer for tokenizer-free flow-matching autoregressive TTS. During fine-tuning, the model synthesizes speech with the same few-step sampler used at deployment, and SR-FD matches the mean and covariance of frozen Whisper and CTC features of this speech to reference statistics computed offline from three complementary content targets. The loss requires no discriminator and no inference-time computation. On Seed-TTS English, four-step SR-FD fine-tuning reduces WER from the original four-step VoxCPM2 baseline's 2.2279% to 1.4147%, a 36.5% relative reduction, and also surpasses the original ten-step baseline at 1.7366%; both gains are significant under an utterance-level paired bootstrap. Speaker similarity and objective quality proxies are preserved at the ten-step level, and an error analysis shows the gain comes from content substitutions across all prompt lengths. SR-FD is thus an intelligibility-improving distributional regularizer for few-step TTS.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Proposes a Fréchet-distance-based distributional loss on speech representations to train few-step diffusion/flow-matching TTS models, a core TTS training-objective contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2607.10162",
+  "source_ids": {
+    "arxiv": "2607.10162"
+  },
+  "title": "Hearing Like Humans? Sound Symbolism and Perceptual Alignment in Speech Language Models",
+  "authors": [
+    "Yun-Shao Tsai",
+    "Chun-Wei Chen",
+    "Chee-En Yu",
+    "Yi-Cheng Lin",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.10162",
+  "pdf_url": "https://arxiv.org/pdf/2607.10162.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Sound symbolism, the human tendency to map speech sounds to perceptual qualities such as roundness or sharpness, arises primarily from the acoustics of speech rather than spelling. Whether Speech Language Models (SLMs) share this tendency remains open, as prior evaluations rely on text or images rather than real speech. We study it using genuine human speech recordings, comparing model judgments against human data across the auditory, crossmodal, and visual components of the effect. We find that SLMs' auditory judgments align poorly with human perception and miss the acoustic cues, such as spectral tilt, that drive human intuitions, and open-weight models cannot reliably link a heard sound to its corresponding shape. With a visual-only control ruling out shape perception, the weakness localizes to how speech is represented, suggesting that perceptual alignment depends not on stronger vision but on speech representations that capture the cues humans hear.",
+  "arxiv_comment": "Submitted to SLT 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Studies whether speech language models exhibit human-like sound symbolism using genuine human speech recordings; a perceptual-alignment analysis of SLM representations rather than a TTS/VC/SCA generation or evaluation-methodology contribution.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

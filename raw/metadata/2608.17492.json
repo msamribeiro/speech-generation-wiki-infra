@@ -1,0 +1,55 @@
+{
+  "id": "2608.17492",
+  "source_ids": {
+    "arxiv": "2608.17492"
+  },
+  "title": "FireRedTTS3: Unified Speech Generation and Editing with Semantically Enriched Speech Representations",
+  "authors": [
+    "Feiyu Shen",
+    "Kun Xie",
+    "Yichen Wu",
+    "Ziqi Dai",
+    "Yichen Han",
+    "Junjie Li",
+    "Xuelong Geng",
+    "Fenglong Xie",
+    "Lei Xie",
+    "Xu Tang"
+  ],
+  "authors_full": [
+    "Feiyu Shen",
+    "Kun Xie",
+    "Yichen Wu",
+    "Ziqi Dai",
+    "Yichen Han",
+    "Junjie Li",
+    "Xuelong Geng",
+    "Fenglong Xie",
+    "Lei Xie",
+    "Xu Tang",
+    "Yao Hu"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-18",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.17492",
+  "pdf_url": "https://arxiv.org/pdf/2608.17492.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent continuous autoregressive TTS models operate directly on continuous speech representations, preserving rich acoustic details while leveraging the instruction-following capabilities of text LLMs. This paradigm opens new possibilities for voice cloning, instruction-controlled voice design, and speech editing, but remains susceptible to error accumulation during autoregressive generation. Existing solutions often require additional semantic modules, multi-stage tokenizer training pipelines, or complex autoregressive architectures. In this work, we propose FireRedTTS3, a simple yet effective speech generation and editing framework that mitigates error accumulation at the representation level. Specifically, we leverage a frozen Audio Encoder trained on diverse speech understanding tasks as a semantic teacher to regularize the audio feature space. This improves text-speech alignment and stabilizes autoregressive generation while keeping the overall system simple. FireRedTTS3 provides two variants: FireRedTTS3-Base for multilingual and multi-dialect zero-shot voice cloning, and FireRedTTS3-Instruct for unified voice cloning, instruction-controlled voice design, and speech editing. Experiments show that FireRedTTS3-Base achieves the best average speech intelligibility and speaker similarity among compared systems on Seed-TTS-Eval and MiniMax-MLS-Test, while FireRedTTS3-Instruct outperforms competing systems on InstructTTSEval and Ming-Freeform-Audio-Edit. These results demonstrate that semantically enriched continuous speech representations, combined with a simple architecture, enable stable, controllable, and high-fidelity speech generation and editing. Code and models are available at https://github.com/FireRedTeam/FireRedTTS3.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "FireRedTTS3 proposes unified speech generation and editing via semantically enriched speech representations, addressing error accumulation in continuous autoregressive TTS, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

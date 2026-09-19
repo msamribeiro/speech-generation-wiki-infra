@@ -1,0 +1,37 @@
+{
+  "id": "2608.08286",
+  "source_ids": {
+    "arxiv": "2608.08286"
+  },
+  "title": "ReLMCodec: Designing Predictable Speech Tokens from Pre-Quantization Phoneme Structure",
+  "authors": [
+    "Zixiang Wan",
+    "Xusheng Yang",
+    "Zheng Wang",
+    "Peiji Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.08286",
+  "pdf_url": "https://arxiv.org/pdf/2608.08286.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural speech codecs face a fundamental tension in the language-model era: tokens that support high-fidelity reconstruction are not necessarily easy for autoregressive models to predict. Our controlled analysis of diverse codec and self-supervised speech representations shows that clearer phoneme structure before discrete code assignment is consistently associated with easier autoregressive token prediction. Yet phoneme structure alone is insufficient for high-fidelity reconstruction, which also requires reconstruction-relevant acoustic detail. Guided by this observation, we introduce ReLMCodec, a low-bitrate single-codebook speech codec built upon a preserve--control--refine principle: it preserves the linguistic organization of frozen self-supervised learning (SSL) features at the quantizer input, controls reconstruction-driven drift through Pre-quantization Anchor-Preserving Adaptation (PAPA), and refines the quantized latent space with a training-only WavLM-Large L24 teacher to reduce phoneme-level token fragmentation. Together, these components allow acoustic detail to support waveform reconstruction while keeping the resulting token sequence predictable for autoregressive models. At 650 and 800 bps, ReLMCodec moves the empirical single-stream predictability--reconstruction frontier in our evaluations, with gains that carry over to downstream text-to-speech (TTS) synthesis in both intelligibility and speaker similarity.",
+  "arxiv_comment": "18 pages, 9 figures, 12 tables. Project page: https://github.com/ggiggit/ReLMCodec",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "ReLMCodec analyzes how phoneme structure prior to discrete code assignment affects autoregressive-model predictability of speech tokens, informing codec design for the LM era, core codec infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

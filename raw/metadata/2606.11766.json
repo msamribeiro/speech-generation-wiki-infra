@@ -1,0 +1,33 @@
+{
+  "id": "2606.11766",
+  "source_ids": {
+    "arxiv": "2606.11766"
+  },
+  "title": "Fast Speech Foundation Model Distillation Using Interleaved Stacking",
+  "authors": [
+    "Eungbeom Kim",
+    "Kyogu Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-10",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.11766",
+  "pdf_url": "https://arxiv.org/pdf/2606.11766.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Distilling a large speech foundation model (SFM) into an efficient student model has been successfully applied to low-resource environments. Although distillation reduces inference latency, it requires an additional student model training. However, the training efficiency of SFM distillation remains underexplored. In this work, we explore training acceleration of SFM distillation to speed up model deployment. We examine the potential of stacking, in which the model depth is progressively increased through training until the target model depth is reached. While existing stacking methods improve training speed, they suffer from performance degradation. To handle this limitation, we propose interleaved stacking, a novel stacking method that consistently preserves layer position throughout the stacking process. This property is particularly critical in SFMs, in which each layer encodes distinct layer-specific knowledge. We validate the effectiveness of the proposed method on SUPERB.",
+  "arxiv_comment": "Accepted by Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Studies training-acceleration techniques for distilling general speech foundation models (evaluated via WER-style downstream tasks); no TTS/VC/SCA generation component evident.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

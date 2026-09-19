@@ -1,7 +1,10 @@
 {
   "id": "2505.22765",
   "source_ids": {
-    "arxiv": "2505.22765"
+    "arxiv": "2505.22765",
+    "acl": "2026.findings-acl.64",
+    "doi": "10.18653/v1/2026.findings-acl.64",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.64"
   },
   "title": "StressTest: Can YOUR Speech LM Handle the Stress?",
   "authors": [
@@ -11,16 +14,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-07",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2505.22765",
-  "pdf_url": "https://arxiv.org/pdf/2505.22765.pdf",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.64.pdf",
   "pdf_path": "raw/papers/2505.22765.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Sentence stress refers to emphasis on words within a spoken utterance to highlight or contrast an idea. It is often used to imply an underlying intention not explicitly stated. Recent speech-aware language models (SLMs) have enabled direct audio processing, allowing models to access the full richness of speech to perform audio reasoning tasks such as spoken question answering. Despite the crucial role of sentence stress in shaping meaning and intent, it remains largely overlooked in evaluation and development of SLMs. We address this gap by introducing StressTest, a benchmark designed to evaluate models' ability to distinguish between meanings of speech based on the stress pattern. We evaluate leading SLMs, and find that despite their overall capabilities, they perform poorly on such tasks. Hence, we propose a novel data generation pipeline, and create Stress-17k, a training set that simulates change of meaning implied by stress variation. Results suggest, that our finetuned model, StresSLM, generalizes well to real recordings and notably outperforms existing SLMs on sentence stress reasoning and detection. Models, code, data, samples - pages.cs.huji.ac.il/adiyoss-lab/stresstest.",
   "arxiv_comment": "Accepted to ACL 2026",
   "task": [
@@ -33,5 +36,6 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

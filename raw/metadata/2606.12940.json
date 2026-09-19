@@ -1,0 +1,38 @@
+{
+  "id": "2606.12940",
+  "source_ids": {
+    "arxiv": "2606.12940"
+  },
+  "title": "Self-Guidance: Enhancing Neural Codecs via Decoder Manifold Alignment",
+  "authors": [
+    "Xiang Li",
+    "Yixuan Zhou",
+    "Jingran Xie",
+    "Zhiyong Wu",
+    "Hui Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.12940",
+  "pdf_url": "https://arxiv.org/pdf/2606.12940.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural speech codecs based on Vector-Quantized VAEs (VQ-VAEs) are core audio tokenizers for speech LLMs, yet their reconstruction fidelity is bottlenecked by quantization error. Modifying the quantizer or increasing model capacity are common fixes, but they complicate downstream language modeling. Our core idea is to align the decoder's internal feature manifolds when processing both the quantized tokens and their original continuous embeddings, using a lightweight feature-mapping loss. This requires minimal training overhead and no inference-time changes. Applied to XCodec2, self-guidance improves all reconstruction metrics, achieving state-of-the-art low-bitrate performance. Notably, it enables a 4x codebook reduction without fidelity loss, which downstream TTS experiments show significantly improves LLM-based synthesis by simplifying the token modeling space. Multiple statistical observations and visualizations corroborate the enhanced internal manifold alignment in the decoder. Extensive experiments confirm its generality across various inductive biases. Self-guidance thus establishes an efficient, broadly applicable method for high-fidelity neural audio coding.",
+  "arxiv_comment": "20 pages, 9 figures, accepted to ICML 2026, demo website available at https://sgvqvae.github.io/sgvqvae-demo",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Self-Guidance improves neural speech codec reconstruction fidelity via decoder manifold alignment, core codec infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2606.10758",
+  "source_ids": {
+    "arxiv": "2606.10758"
+  },
+  "title": "Anchoring the Unknown: Open-Set Model Attribution via Proxy-Anchor Learning",
+  "authors": [
+    "Cristian-Teodor Neamtu",
+    "Serban Mihalache",
+    "Stefan Smeu",
+    "Dan Oneata",
+    "Horia Cucu",
+    "Dragos Burileanu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-09",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.10758",
+  "pdf_url": "https://arxiv.org/pdf/2606.10758.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The proliferation of text-to-speech (TTS) systems capable of generating realistic synthetic speech poses growing challenges for audio forensics. While binary deepfake detection has received considerable attention, source tracing (i.e., identifying which TTS system produced a given audio sample) remains underexplored, particularly in open-set scenarios where unknown systems may be encountered. We propose a metric learning framework based on the Proxy-Anchor loss function that operates on Wav2Vec2-BERT embeddings to learn a discriminative embedding space for TTS source attribution and out-of-distribution (OOD) detection of unseen systems. We evaluate it on the MLAAD v9 dataset spanning 140 TTS systems across 51 languages, and introduce an architecture merging strategy that groups TTS system versions into unified classes, reducing inter-class confusion. Our system achieves 99.76% accuracy on 110 in-distribution classes and a False Positive Rate (FPR@95) as low as 2.04% for OOD detection. Also, for a fair comparison against the current state of the art, we further evaluate it on the MLAAD v5 official dataset splits, improving the OOD accuracy by almost doubling it. These results demonstrate that Proxy-Anchor metric learning, combined with architecture-aware class design and post-hoc OOD scoring, provides an effective framework for forensic TTS source tracing in both closed-set and open-set settings.",
+  "arxiv_comment": "Accepted to the 34th European Signal Processing Conference (EUSIPCO 2026)",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Studies open-set source attribution (identifying which TTS system produced a sample) for audio forensics; a detection/forensics paper, not TTS/VC/SCA generation itself.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

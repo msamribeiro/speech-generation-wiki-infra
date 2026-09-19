@@ -1,0 +1,36 @@
+{
+  "id": "2607.14310",
+  "source_ids": {
+    "arxiv": "2607.14310"
+  },
+  "title": "Dialogs: a studio-quality expressive conversational Russian speech corpus for dialog assistants",
+  "authors": [
+    "Ilya Shigabeev",
+    "Ilya Latyshev"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.14310",
+  "pdf_url": "https://arxiv.org/pdf/2607.14310.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Dialogs, a studio-quality Russian conversational speech corpus for dialog assistants. The dataset contains 20.6 hours of face-to-face acted dialogs recorded in a professional studio (44.1 kHz stereo) and segmented into 11,796 utterances across 3 speakers. Unlike read-speech resources, Dialogs captures turn-taking rhythm and expressive prosody, and provides per-utterance style/emotion labels spanning 12 categories. We validate corpus quality with crowd MOS tests, showing comparable audio quality and intelligibility to strong Russian studio baselines while achieving higher ratings for expressiveness and conversational naturalness. Finally, we train a VITS2 model as a proof of concept, demonstrating that Dialogs supports training expressive, dialog-like TTS despite limited per-speaker data.",
+  "arxiv_comment": "4 pages, 1 figure, 5 tables. Interspeech 2026",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Introduces Dialogs, a studio-quality expressive conversational Russian speech corpus with per-utterance style/emotion annotation for dialog assistants, a core SCA/TTS dataset contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

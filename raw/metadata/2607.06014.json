@@ -1,0 +1,37 @@
+{
+  "id": "2607.06014",
+  "source_ids": {
+    "arxiv": "2607.06014"
+  },
+  "title": "Escaping the Procrustean Bed: Groupwise Orthogonal Connectors for Audio-Language Models",
+  "authors": [
+    "Ho-Lam Chung",
+    "Ke-Han Lu",
+    "Yi-Cheng Lin",
+    "Guan-Ting Lin",
+    "Yiming Chen",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-07",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.06014",
+  "pdf_url": "https://arxiv.org/pdf/2607.06014.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Audio-language models compress a speech encoder's output through a Querying Transformer (Q-Former) connector before feeding it to a large language model. We identify two failures in this compression. The connector's output vectors collapse to a single direction, and different speakers produce nearly indistinguishable outputs, with paralinguistic cues such as speaker identity, gender, and prosody lost along the way. Our method, ORCA, reverses this collapse by splitting the queries into groups whose outputs are constrained to point in different directions. On SAKURA multi-hop reasoning, ORCA gains 26.4 points over an identically trained 4B baseline, reaching 75.2% (vs. 49.0% for the 8B Audio Flamingo-3). At the connector level, the same change cuts query redundancy by 12x and raises cross-speaker variance by 75x.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.45,
+  "relevance_note": "Studies representation collapse in Q-Former audio-language connectors that lose paralinguistic cues (speaker, gender, prosody); relevant to audio-LLM understanding architecture, but unclear from the abstract whether the target system performs speech generation or is an understanding-only audio-language model.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

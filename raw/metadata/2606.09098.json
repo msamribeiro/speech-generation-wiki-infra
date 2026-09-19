@@ -1,0 +1,42 @@
+{
+  "id": "2606.09098",
+  "source_ids": {
+    "arxiv": "2606.09098"
+  },
+  "title": "HoliDubber: Holistic Video Dubbing for Complex Acoustic Scenes via Text-Guided Audio Synthesis",
+  "authors": [
+    "Wenhao Guan",
+    "Yifan Duan",
+    "Junxi Liu",
+    "Yu Gu",
+    "Feng Dang",
+    "Kaidi Wang",
+    "Qingyang Hong",
+    "Lin Li",
+    "Xie Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09098",
+  "pdf_url": "https://arxiv.org/pdf/2606.09098.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Video dubbing is a cornerstone of multimedia content creation, aiming to synthesize synchronized acoustic sequences for visual streams. While Text-to-Speech (TTS) and Text-to-Audio (TTA) generation have each achieved remarkable progress, existing dubbing systems remain confined to isolated speech synthesis without incorporating sound effects and ambient audio, forcing practitioners to rely on fragmented workflows and laborious manual post-mixing. To address this limitation, we present HoliDubber, a holistic video dubbing framework that moves beyond speech-only generation by enabling the joint synthesis of speech and sound effects from a single text prompt. Specifically, HoliDubber adopts a patch-based autoregressive diffusion transformer architecture, where a causal language model autoregressively models aggregated patch embeddings to capture global temporal structure, and a Diffusion Transformer decoder generates high-fidelity continuous tokens within each patch, following a divide-and-conquer strategy. To achieve cross-modal alignment, visual features are encoded into patch-level representations and fused with audio patches via cross-attention, enabling the model to ground speech generation in the speaker's visual articulation dynamics. In addition, we introduce HoliDub-Bench, a benchmark curated from established datasets with synchronized video-text-audio triplets designed for holistic dubbing evaluation.   Extensive experiments demonstrate that HoliDubber significantly outperforms existing methods across multiple benchmarks in speech quality, synchronization, and speaker similarity. Furthermore, results on HoliDub-Bench validate the effectiveness of joint speech-and-sound generation, establishing a new paradigm for holistic video dubbing in complex acoustic scenes. \\footnote{The demo page of the project is https://holidubber.github.io}",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.62,
+  "relevance_note": "HoliDubber proposes holistic video dubbing combining text-guided speech and ambient-audio synthesis; core speech synthesis is one part of a broader dubbing/audio-scene system, similar to the UNISON/Audio-Oscar borderline pattern.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

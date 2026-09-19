@@ -1,0 +1,39 @@
+{
+  "id": "2026.acl-long.1911",
+  "source_ids": {
+    "acl": "2026.acl-long.1911",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.acl-long.1911",
+    "url_acl": "https://aclanthology.org/2026.acl-long.1911"
+  },
+  "title": "Temporal Precision Matters: Brain-Tuning Speech Language Models with Millisecond-Resolution Neural Signals",
+  "authors": [
+    "Zhejun Zhang",
+    "Wenqing Zhou",
+    "Haozhe Xu",
+    "Lin Zhang",
+    "Lei Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.acl-long.1911",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.1911.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Brain-tuning enhances brain alignment and downstream performance by fine-tuning speech language models with neural recordings. However, previous work relies primarily on fMRI, whose temporal resolution integrates neural activity over seconds, blending distinct processing stages into a single supervision signal and precluding temporally targeted training. We introduce ECoG-tuning, which leverages electrocorticography’s millisecond precision to train speech language models. We design temporally targeted windows—a speech window capturing acoustic-phonetic encoding and a language window capturing higher-order linguistic processing—grounded in neuroscientific findings about temporal encoding hierarchies. Evaluating three models on the Podcast ECoG dataset, we find that ECoG-tuning significantly improves brain alignment over pretrained and distillation baselines. Notably, full spatiotemporal dynamics yield 7–17% higher alignment than time-averaged supervision across models, and language-window tuning produces larger gains in higher-order language regions, indicating that temporal precision provides additional training value. Moreover, ECoG-tuned models consistently improve or maintain downstream performance. Overall, our work provides initial evidence that electrophysiology is a viable brain-tuning modality, demonstrating how neuroscientific insights into processing hierarchies can inform principled model training strategies. Code is available at https://github.com/Mochizuki-BUPT/ECoG-Tuning-main.",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "ECoG-tuning aligns speech language model representations to millisecond-resolution brain signals for neuroscience analysis; not a speech generation or synthesis-evaluation contribution.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

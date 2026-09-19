@@ -1,0 +1,37 @@
+{
+  "id": "2607.23650",
+  "source_ids": {
+    "arxiv": "2607.23650"
+  },
+  "title": "Expose Your Disguise: Recovering Source Speaker Identity From Voice Conversion",
+  "authors": [
+    "Hanlei Zhang",
+    "Zhongming Ma",
+    "Mingyang Zhang",
+    "Tengfei Liu",
+    "Yushi Cheng",
+    "Yanjiao Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-26",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.23650",
+  "pdf_url": "https://arxiv.org/pdf/2607.23650.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Voice conversion (VC) poses a significant threat to biometric security by allowing attackers to impersonate target speakers. In forensic contexts, recovering the source speaker's identity from converted audio is vital for narrowing the field of suspects. To address this, we propose TRIDENT, a retracing framework designed to restore a source speaker's original identity from a converted audio sample. TRIDENT utilizes a three-pronged architecture consisting of a primary extractor and two auxiliary branches. The first auxiliary branch identifies the underlying voice conversion mechanism. This design acknowledges that even if the exact conversion strategy is unknown, a high-performance model adopted by the attacker is typically a derivative or variant of established mainstream ones. The second auxiliary branch extracts a latent representation of the target speaker, facilitating the isolation of target-specific traits from the composite converted audio sample. Finally, the main extractor leverages insights from both auxiliary branches to decouple confounding factors and distill a highly discriminative representation of the source speaker's identity. Experimental results demonstrate that TRIDENT achieves an accuracy as high as 90.99% against 7 state-of-the-art voice conversion methods. Furthermore, TRIDENT maintains robust performance under challenging conditions, including telephony channels, unseen languages, and adaptive scenarios.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "TRIDENT is a forensic retracing framework for recovering a source speaker's identity from voice-converted audio; a security/forensics paper targeting VC output, not an advance in VC generation itself.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

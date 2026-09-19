@@ -1,0 +1,39 @@
+{
+  "id": "2606.21053",
+  "source_ids": {
+    "arxiv": "2606.21053"
+  },
+  "title": "Imitation Learning for Elder-Facing Speech Synthesis",
+  "authors": [
+    "Dongrui Han",
+    "Weidong Chen",
+    "Jiawen Kang",
+    "Mingyu Cui",
+    "Helen Meng",
+    "Xixin Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21053",
+  "pdf_url": "https://arxiv.org/pdf/2606.21053.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) synthesis have achieved highly natural and expressive speech generation. However, these systems are designed for general adults and overlook older adults' speech comprehension needs due to age-related sensory and cognitive decline. Prior work involves older adults by collecting preference feedback to tune model parameters. However, obtaining sufficient preference data is costly and difficult, as older adults quickly become fatigued during collection. In this paper, we propose a novel imitation learning (IL) framework to learn TTS models from expert demonstrations. We further improve Group Relative Policy Optimization (GRPO) with two-stage on-policy reward learning (OPRL) to mitigate reward hacking under limited supervision from expert demonstration. Experimental results show that GRPO w/ OPRL outperforms GRPO and supervised baselines in objective and subjective metrics. Audio samples are available at https://dongru1.github.io/demo/im-efss",
+  "arxiv_comment": "accepted by Interspeech 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Proposes an imitation-learning approach for elder-facing TTS personalization to better serve older adults' speech comprehension needs, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

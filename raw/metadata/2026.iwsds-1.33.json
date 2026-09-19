@@ -1,0 +1,36 @@
+{
+  "id": "2026.iwsds-1.33",
+  "source_ids": {
+    "acl": "2026.iwsds-1.33",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Adaptive Multimodal Sentiment Analysis with Stream-Based Active Learning for Spoken Dialogue Systems",
+  "authors": [
+    "Atsuto Ajichi",
+    "Takato Hayashi",
+    "Kazunori Komatani",
+    "Shogo Okada"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.33",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.33.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "In empathic dialogue systems, it is crucial to continuously monitor and adapt to the user’s emotional state. To capture user-specific mappings between multimodal behaviors and emotional states, directly asking users about their emotions during dialogue is the most straightforward and effective approach. However, frequent questioning can cause inconvenience to users and diminish the user experience, so the number of queries should be minimized. In this study, we formulate personalized multimodal sentiment analysis (MSA) as a stream-based active learning problem, where user behaviors are observed sequentially, and we assume that the system has an ability to decide at each step whether to request an emotion label from the user. Simulation experiments using a human–agent dialogue corpus demonstrate that the proposed method efficiently improves performance even under few-shot conditions. These results indicate that our approach is effective for developing dialogue systems that achieve cost-efficient personalized MSA.",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Multimodal sentiment analysis with active learning for dialogue systems; an understanding/classification task, no speech generation component.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

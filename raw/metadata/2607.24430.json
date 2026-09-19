@@ -1,0 +1,38 @@
+{
+  "id": "2607.24430",
+  "source_ids": {
+    "arxiv": "2607.24430"
+  },
+  "title": "Let Me Look at You: Advanced Facial Expression Modeling for Conversational Speech Synthesis",
+  "authors": [
+    "Yifan Hu",
+    "Shuwei He",
+    "Rui Liu",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-27",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.24430",
+  "pdf_url": "https://arxiv.org/pdf/2607.24430.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Conversational Speech Synthesis is a fundamental component of human-computer interaction, aiming to generate contextually appropriate, expressive, and empathetic speech. However, facial expressions encode subtle and rich affective cues that are crucial for empathetic speech interaction, whereas existing approaches often overlook this important modality. In addition, the lack of large-scale natural conversational datasets with both speech and visual modalities also limits the development of visual affect understanding in conversational settings.To address these limitations, we propose FacialTalker, a facial-expression-aware CSS framework built upon a large language model backbone. To efficiently encode facial expressions, we propose AUTokenizer, a single-codebook visual tokenizer that discretizes each frame-level facial expression into a compact token, trained with supervision from combinations of facial Action Units. We further introduce a dual direct preference optimization (DualDPO) strategy, which extends the DPO by jointly imposing preference constraints on both visual and speech token sequences, to enhance the model's understanding of facial expressions and speech semantics in multimodal conversational contexts. Moreover, we construct VSDD-1K, a large-scale multimodal dialogue dataset collected through a fully automated pipeline from real-world Internet conversations, comprising over 1,033 hours of synchronized speaker videos and speech, with more than 85\\% of frames containing valid faces. Extensive objective and subjective experiments demonstrate that FacialTalker consistently outperforms strong baselines in facial-expression perception and speech synthesis quality, generating speech that is more natural, expressive, and better aligned with the conversational context. The results also validate the effectiveness of our training strategy and dataset construction pipeline.",
+  "arxiv_comment": "10 pages, 5 figures, 5 tables. Accepted by ACM MM 2026",
+  "task": [
+    "SCA",
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Proposes advanced facial-expression modeling integrated with conversational speech synthesis for empathetic human-computer interaction, a core SCA/TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

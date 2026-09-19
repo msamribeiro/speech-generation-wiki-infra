@@ -1,0 +1,40 @@
+{
+  "id": "2606.09019",
+  "source_ids": {
+    "arxiv": "2606.09019"
+  },
+  "title": "TLDR: Compressing Audio Tokens for Efficient Autoregressive Text-to-Speech",
+  "authors": [
+    "Yejin Lee",
+    "Junwon Moon",
+    "Hyoeun Kim",
+    "Hyunjin Choi",
+    "Heeseung Kim",
+    "Kyuhong Shim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-08",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.09019",
+  "pdf_url": "https://arxiv.org/pdf/2606.09019.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Codec-based autoregressive (AR) speech language models have achieved strong text-to-speech (TTS) quality by modeling speech as sequences of discrete audio tokens with large pretrained backbones. However, this token-level formulation creates a structural efficiency bottleneck: speech-token sequences are much longer than text sequences, requiring the AR backbone to perform causal computation at every token position and maintain a KV cache that grows with the sequence length. We introduce TLDR, a patch-based autoregressive framework that accelerates codec-based AR-TTS by shifting the causal modeling from token-level speech sequences to patch-level sequences. TLDR groups consecutive codec tokens into compact latent patches using a lightweight compressor, models the resulting shorter patch sequence with a frozen pretrained AR-TTS backbone adapted by LoRA, and reconstructs fine-grained speech tokens within each patch using a speaker-conditioned extractor. With a patch size of 4, TLDR achieves a 1.8x inference speedup over the baseline AR-TTS model and reduces global KV-cache memory by up to 75%. Experimental results indicate that patch-level global causal modeling can be a practical way to reduce the inference cost of pretrained codec-based AR-TTS systems without replacing the existing modules.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "TLDR compresses audio tokens for efficient autoregressive TTS, addressing the token-length efficiency bottleneck in codec-based AR TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

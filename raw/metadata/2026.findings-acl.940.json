@@ -1,0 +1,45 @@
+{
+  "id": "2026.findings-acl.940",
+  "source_ids": {
+    "acl": "2026.findings-acl.940",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.940",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.940"
+  },
+  "title": "Beyond Sentence-level Labels: Integrating Conversational Context and Personal Experience for Natural Emotional Expression",
+  "authors": [
+    "Haiyang Sun",
+    "Chenyang Le",
+    "Wei Wang",
+    "Leying Zhang",
+    "Chuang Li",
+    "Bing Han",
+    "Chenda Li",
+    "Mengxiao Bi",
+    "Yanmin Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.940",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.940.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Emotional Text-to-Speech aims to synthesize speech with human-like naturalness and expressiveness. However, existing systems rely on sentence-level labels, which fails to capture the subtle nuances of human affect. Based on cognitive appraisal theories, we argue that emotional expression is not generated in isolation but is deeply influenced by speaker’s Personal Experience and the conversational Context.To overcome the information bottleneck inherent in traditional annotations, we present Emotional-Context-Speech, a large-scale, context-aware speech corpus derived from multi-speaker audiobooks. This dataset provides not only transcriptions but also dialogue context, personal experience, open-vocabulary emotion labels, and paralinguistic descriptions.Experimental results demonstrate that TTS model trained using additional context and experience descriptions as inputs, called Emotional-Context-TTS, significantly outperforms existing methods in terms of emotional expression accuracy and naturalness.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Emotional TTS framework integrating conversational context and personal experience beyond sentence-level emotion labels; core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

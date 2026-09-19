@@ -1,0 +1,39 @@
+{
+  "id": "2606.12902",
+  "source_ids": {
+    "arxiv": "2606.12902"
+  },
+  "title": "PRISM: Prosody-Integrated Multi-Agent Reasoning Framework for Empathetic Spoken Dialogue",
+  "authors": [
+    "Wen Zhang",
+    "Xiaocui Yang",
+    "Zhuoyue Gao",
+    "Shi Feng",
+    "Daling Wang",
+    "Yifei Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.12902",
+  "pdf_url": "https://arxiv.org/pdf/2606.12902.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Empathetic spoken dialogue systems require not only semantically appropriate responses but also emotionally aligned prosodic expression. However, cascade pipelines often discard acoustic cues during speech-to-text conversion, while end-to-end speech models lack interpretable control over emotion and knowledge integration. To address these challenges, we propose PRISM, a multi-agent framework for empathetic spoken dialogue that decouples speech perception, response generation, and speech synthesis into coordinated components. PRISM introduces a prosody-to-language translation mechanism to stabilize large language model reasoning and enables on-demand invocation of external knowledge tools for empathetic dialogue generation. Experimental results demonstrate that PRISM achieves consistent improvements in empathy, prosodic appropriateness, and text response generation quality across objective and subjective metrics. Our code is available at: https://github.com/Bxzfrm/PRISM.",
+  "arxiv_comment": "Accepted to Interspeech 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "PRISM proposes a prosody-integrated multi-agent reasoning framework for empathetic spoken dialogue, a core SCA contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

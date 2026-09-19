@@ -1,0 +1,36 @@
+{
+  "id": "2608.00998",
+  "source_ids": {
+    "arxiv": "2608.00998"
+  },
+  "title": "Beyond One-Size-Fits-All: Personalized and Culturally Adaptive Emotional TTS via Interactive Optimization of Individual Emotion Perception Spaces",
+  "authors": [
+    "Wangzixi Zhou",
+    "Bagus Tris Atmaja",
+    "Sakriani Sakti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-02",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.00998",
+  "pdf_url": "https://arxiv.org/pdf/2608.00998.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rise of conversational AI has increased interest in emotional Text-to-Speech (TTS). Most systems rely on discrete emotion labels, which fail to capture the nuanced nature of human affect. Recent models employ dimensional representations such as Russell's arousal-valence (A-V) model, offering finer control. However, emotional perception varies across individuals and cultures, which may cause mismatches between modeled and perceived emotions. We propose a personalized and culturally adaptive emotional TTS framework that performs interactive optimization of individualized A-V perception spaces using an Interactive Genetic Algorithm. By adapting emotion representations to each listener, the system produces speech with more perceptually aligned emotional expression than models using averaged A-V values. Evaluations with Japanese, Chinese, and Indonesian participants highlight the importance of personalization and cultural adaptation for moving beyond one-size-fits-all emotional TTS.",
+  "arxiv_comment": "Accepted for publication at INTERSPEECH 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Proposes personalized, culturally adaptive emotional TTS via interactive optimization of individual emotion-perception spaces, moving beyond discrete emotion labels, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

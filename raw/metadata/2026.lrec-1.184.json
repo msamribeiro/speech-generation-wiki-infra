@@ -1,0 +1,40 @@
+{
+  "id": "2026.lrec-1.184",
+  "source_ids": {
+    "acl": "2026.lrec-1.184",
+    "arxiv": null,
+    "doi": "10.63317/4d4kttgdydde"
+  },
+  "title": "Probing Discrete Speech Tokens of Spoken Language Models",
+  "authors": [
+    "Sven Naber",
+    "Julia Koch",
+    "Pranav Singh",
+    "Alberto Saponaro",
+    "Ioanna Karagianni",
+    "Ngoc Thang Vu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-184",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-184.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper presents a framework for systematic probing of discrete speech token representations in spoken language models (SLMs). We propose three complementary components: a distributional divergence analysis testing whether an attribute is reflected in token usage, token-based classifiers to quantify recoverability and an attribute-conditioned representation analysis revealing phonetic attribute realizations. As a demonstration we apply these probes to tokenizer outputs and model generations from CosyVoice2 and SparkTTS on LibriTTS-R and VCTK. We find that gender is encoded in their respective tokens but in different forms - the signal is more stable across stages and datasets in CosyVoice2, whereas SparkTTS shows weaker cross-stage consistency and stronger pause/prosody-related effects. Exploratory probes of valence, arousal, and dominance are weaker and less consistent. These results show that discrete speech tokens retain speaker-related information in different ways across architectures and that the proposed framework provides an interpretable basis for comparing token representations across spoken language modeling pipelines.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Probing framework analyzing what phonetic/paralinguistic attributes are recoverable from discrete speech tokens used by spoken language models; a representation-analysis study relevant to codec/SLM design but not itself a new generation or codec method.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -52,6 +52,7 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
 
 - [ ] Extend fetch coverage — add ICASSP, ASRU, and SLT fetchers (listed in AGENTS.md coverage but no scripts exist yet)
 - [ ] Resolve parse quality review: 8 papers flagged for offline PDF spot-check (raw/parsed/parse_quality_review.md); blocked on user results before --force re-runs
+- [ ] Backfill pre-2026 workshop `published_date`/`month` placeholders — found 2026-08-23 while fetching ACL 2026: `scripts/fetch/acl.py` used to hardcode every co-located-workshop paper to `canonical_venue = "workshop"` with no per-workshop date lookup, so any freshly-written workshop record (any year) got a `YYYY-01-01`/`month: None` placeholder unless it happened to already exist as a dated arXiv preprint that got conference-ID-enriched instead. Fixed going forward (2026-08-23: `iter_papers` now falls back to the Anthology XML's own `<meta><month>/<year>`, verified against cached XML), and the 49 newly-fetched 2026 records were backfilled in the same session. Pre-2026 years' workshop records were **not** backfilled — confirmed 24 of 103 corpus-wide `workshop`-venue records still carry the placeholder (month is null) as of 2026-08-23; needs a scoped pass: re-parse each affected record's cached (or re-downloaded) Anthology XML volume with the fixed logic and update `month`/`published_date` in place, nothing else.
 
 ## Pipeline Health Suite [P1 · in-progress]
 

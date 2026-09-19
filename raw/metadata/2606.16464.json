@@ -1,0 +1,33 @@
+{
+  "id": "2606.16464",
+  "source_ids": {
+    "arxiv": "2606.16464"
+  },
+  "title": "Towards Robust Generative Speech Enhancement Using Vector Quantisation-Based Neural Audio Codec",
+  "authors": [
+    "Haixin Zhao",
+    "Nilesh Madhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-15",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.16464",
+  "pdf_url": "https://arxiv.org/pdf/2606.16464.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This work investigates modelling strategies in continuous and discrete latent spaces in the vector quantisation (VQ)-based neural audio codec (NAC) speech enhancement (SE), along with the role of VQ regularisation. We propose cNAC-SE and dNAC-SE frameworks that predict continuous representations and discrete tokens in latent space, respectively. Theoretical analysis and visualisations in latent space are performed to exhibit their inherent modelling mechanisms. Experimental results show that the fully fine-tuned cNAC-SE model consistently outperforms all dNAC-SE variants across diverse test conditions and achieves leading performance among established generative approaches in DNS-MOS metrics. Comparison with the discriminative counterpart shows that VQ enhances robustness through an intrinsic effect of clean-prior-constrained regularisation, independent of discrete token processing. This highlights the transferable value of VQ regularisation to other continuous modelling methods.",
+  "arxiv_comment": "Accepted by Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.42,
+  "relevance_note": "Investigates generative speech enhancement using a VQ-based neural audio codec; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though it reuses codec/generative-modeling techniques.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

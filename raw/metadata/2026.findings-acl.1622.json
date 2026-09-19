@@ -1,0 +1,38 @@
+{
+  "id": "2026.findings-acl.1622",
+  "source_ids": {
+    "acl": "2026.findings-acl.1622",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.findings-acl.1622",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.1622"
+  },
+  "title": "Hierarchical Representation Alignment Learning of Diffusion Transformers for Neural Audio Codec",
+  "authors": [
+    "Sang-Hoon Lee",
+    "Ha-Yeong Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.findings-acl.1622",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.1622.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Despite recent progress in diffusion and conditional flow matching (CFM) models for low-resolution domains such as latent representations, their application to high-resolution data like raw waveform signals remains underexplored. Generative adversarial networks (GANs) have been the dominant approach in neural vocoder and neural audio codecs for realistic waveform generation. However, under low-bitrate conditions, these models suffer from degraded performance due to information loss caused by heavy compression and quantization, often resulting in mispronunciations. To address the aforementioned problem, we first leverage CFM to iteratively generate raw waveform in an extremely low-bitrate scenario. We then introduce hierarchical representation alignment learning (REPA-H) to enable efficient and robust CFM training. Furthermore, we propose dense vector quantization (DVQ), a novel factorized quantization method using a single quantizer. Our model, FlowTokenizer, outperforms state-of-the-art neural audio codecs in audio quality and semantic intelligibility under low-bitrate conditions, using only 25 tokens per second for 24 kHz waveform generation.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Diffusion-transformer representation-alignment method for high-resolution neural audio codec waveform generation; core codec contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

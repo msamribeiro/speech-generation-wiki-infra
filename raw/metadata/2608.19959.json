@@ -1,0 +1,40 @@
+{
+  "id": "2608.19959",
+  "source_ids": {
+    "arxiv": "2608.19959"
+  },
+  "title": "Tracking the Trend in How Speech Synthesizers Deceive People",
+  "authors": [
+    "Milan Šalko",
+    "Anton Firc",
+    "Kamil Malinka",
+    "Vojtěch Staněk",
+    "Martin Perešini",
+    "Filip Pleško",
+    "Jakub Reš"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.19959",
+  "pdf_url": "https://arxiv.org/pdf/2608.19959.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Advances in speech synthesis have made deepfake audio highly realistic. Earlier studies reported 70-80% human detection accuracy, but relied primarily on older synthesizers. We compare human detection for three selected voice synthesis tools released in 2019, 2022, and 2024 with 82 IT professionals, and benchmark humans against six pretrained detectors on the same material. For fully synthetic speech (full spoofs), the F1 score drops from about 90% for RTVC and YourTTS to 48% for ElevenLabs, although listeners were explicitly warned that deepfakes were present. For partial spoofing, where only one sentence of an utterance is altered, strict accuracy falls to 9%, and listeners classify the synthetic sentence as bona fide 77% of the time. Humans and detectors fail in complementary ways, and neither reliably localizes short manipulations. Additionally, listeners increasingly mislabel bona fide speech as fake, eroding trust in unmanipulated audio. These findings show that human perception alone is unreliable for the selected modern and partial-spoof conditions and motivate procedural verification, provenance, watermarking, and segment-level detection.",
+  "arxiv_comment": "Accepted at the 6th Symposium on Security and Privacy in Speech Communication (SPSC 2026)",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.6,
+  "relevance_note": "Compares human deepfake-audio detection accuracy against pretrained detectors across TTS synthesizers released in 2019, 2022, and 2024, tracking how perceptually deceptive synthetic speech has become over time; a human-perception trend study of TTS realism, evaluation-adjacent but framed primarily around deepfake detection rather than TTS methodology.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

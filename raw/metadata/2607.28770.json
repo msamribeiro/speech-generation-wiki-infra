@@ -1,0 +1,38 @@
+{
+  "id": "2607.28770",
+  "source_ids": {
+    "arxiv": "2607.28770"
+  },
+  "title": "Cloned Voices, Real Consequences: Evaluating Bias in Political Deepfake Detection for Electoral Integrity in Brazil",
+  "authors": [
+    "Lucas Rafael Stefanel Gris",
+    "Daniel Casanova",
+    "Frederico Santos De Oliveira",
+    "Alef Iury Ferreira",
+    "Beatriz Almeida Felício",
+    "Raul César Reis Mata",
+    "Anderson da Silva Soares"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.28770",
+  "pdf_url": "https://arxiv.org/pdf/2607.28770.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in generative artificial intelligence have made it easier to fabricate statements and amplify political disinformation during elections. We introduce ParlaSpoof-BR, an audio deepfake dataset derived from recordings of the Brazilian Chamber of Deputies and expanded with synthetic utterances from diverse text-to-speech and voice conversion models. Using ParlaSpoof-BR, we benchmark state-of-the-art audio deepfake detectors, examine their ability to generalize to Brazilian Portuguese political speech, and investigate potential biases in their predictions. Our analysis reveals that current systems struggle to provide consistent decisions across the diversity represented in the dataset, with methodological factors (synthesis model choice, manipulation extent) dominating over demographic disparities. ParlaSpoof-BR provides a domain-specific benchmark for studying audio deepfake detection in a socially consequential and underrepresented setting, supporting the development of more robust detection systems for electoral integrity in Brazil.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Evaluates bias in political audio-deepfake detection systems using a dataset expanded with synthetic TTS/VC utterances; a detection-bias study, not TTS/VC/SCA generation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

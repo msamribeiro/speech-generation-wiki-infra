@@ -1,0 +1,40 @@
+{
+  "id": "2607.13278",
+  "source_ids": {
+    "arxiv": "2607.13278"
+  },
+  "title": "Adapting Diffusion-Based Music Synthesis to Speech and Singing Voice Conversion",
+  "authors": [
+    "Ben Maman",
+    "Frank Zalkow",
+    "Hans-Ulrich Berendes",
+    "Paolo Sani",
+    "Christian Dittmar",
+    "Meinard Müller"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.13278",
+  "pdf_url": "https://arxiv.org/pdf/2607.13278.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent diffusion-based generative models have achieved strong results in domain-specific audio generation tasks such as speech, singing, and instrumental music synthesis. However, these models are typically specialized and do not generalize well to mixed or intermediate audio types. In this work, we adapt a diffusion-based model originally designed for multi-instrument music synthesis to voice conversion, covering both speech and singing within a unified framework. Specifically, we extend musical note-based conditioning to include phonetic posteriorgrams (PPGs) and pitch contours, and reinterpret timbre conditioning as speaker or singer identity via feature-wise linear modulation. Experiments show that the adapted model matches or surpasses a dedicated voice conversion system in terms of naturalness and performer similarity, while maintaining accurate pitch control across speech and singing. At the same time, we observe limitations in phonetic fidelity and a degradation in vocal quality when incorporating instrumental training data. Furthermore, we demonstrate that off-the-shelf feature extractors provide effective conditioning signals, enabling large-scale self-supervised training without manual annotations. These results highlight the potential of cross-domain model transfer towards unified audio generation systems capable of handling speech, singing, and music. Qualitative samples can be found on our project page: https://benadar293.github.io/voice-conversion",
+  "arxiv_comment": "Accepted to International Conference on Digital Audio Effects (DAFx) 2026",
+  "task": [
+    "VC",
+    "singing"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Adapts a diffusion-based multi-instrument music synthesis model to voice conversion and singing voice conversion, a core VC/singing contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

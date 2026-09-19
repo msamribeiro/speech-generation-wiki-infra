@@ -1,7 +1,10 @@
 {
   "id": "2605.24618",
   "source_ids": {
-    "arxiv": "2605.24618"
+    "arxiv": "2605.24618",
+    "acl": "2026.acl-long.173",
+    "doi": "10.18653/v1/2026.acl-long.173",
+    "url_acl": "https://aclanthology.org/2026.acl-long.173"
   },
   "title": "FC-TTS: Style and Timbre Control in Zero-Shot Text-to-Speech with Disentangled Speech Representations",
   "authors": [
@@ -12,16 +15,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-23",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2605.24618",
-  "pdf_url": "https://arxiv.org/pdf/2605.24618.pdf",
+  "pdf_url": "https://aclanthology.org/2026.acl-long.173.pdf",
   "pdf_path": "raw/papers/2605.24618.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Recent advances in zero-shot text-to-speech (TTS) have enabled accurate imitation of reference speech in terms of both speaking style and speaker timbre. However, achieving disentangled control over these aspects from separate references remains a challenging task. Several studies have proposed disentangled speech representations that decompose speech into interpretable attributes (e.g., timbre, prosody, and content), providing a promising foundation for TTS with attribute control from separate references. Yet, how to effectively integrate such representations into TTS systems to achieve independent and precise control remains underexplored. In this paper, we present FC-TTS, a zero-shot TTS framework that enables disentangled control of style and timbre by conditioning on two distinct reference utterances. Unlike existing systems that inherit limitations from those pre-trained disentangled representations, FC-TTS introduces key design strategies, including architectural choices, training framework, and auxiliary training objectives, which improve the reliability of attribute separation and dual-reference control. Experiments show that FC-TTS achieves high-fidelity synthesis and competitive zero-shot naturalness, while uniquely supporting consistent and independent manipulation of style and timbre. Audio samples are available at https://qualcomm-ai-research.github.io/fc-tts",
   "arxiv_comment": "Accepted to ACL 2026 (Main Conference). 20 pages, 8 figures, 7 tables. Demo page: https://qualcomm-ai-research.github.io/fc-tts",
   "task": [
@@ -34,5 +37,6 @@
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

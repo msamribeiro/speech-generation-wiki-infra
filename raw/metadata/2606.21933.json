@@ -1,0 +1,56 @@
+{
+  "id": "2606.21933",
+  "source_ids": {
+    "arxiv": "2606.21933"
+  },
+  "title": "ISCSLP 2026 CoT-TTS Challenge: Chain-of-Thought Reasoning for Context-Aware Text-to-Speech",
+  "authors": [
+    "Wei Xue",
+    "Junlan Feng",
+    "Shilei Zhang",
+    "Yue Wang",
+    "Ruosong Yang",
+    "Bei Liu",
+    "Liumeng Xue",
+    "Sitong Cheng",
+    "Jiahao Pan",
+    "Weizhen Bian"
+  ],
+  "authors_full": [
+    "Wei Xue",
+    "Junlan Feng",
+    "Shilei Zhang",
+    "Yue Wang",
+    "Ruosong Yang",
+    "Bei Liu",
+    "Liumeng Xue",
+    "Sitong Cheng",
+    "Jiahao Pan",
+    "Weizhen Bian",
+    "Boyi Kang",
+    "Bin Long"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21933",
+  "pdf_url": "https://arxiv.org/pdf/2606.21933.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in text-to-speech (TTS) have greatly improved speech naturalness, speaker similarity, and controllability. However, most existing controllable TTS systems still rely on explicit user-provided style prompts, making it difficult to automatically determine how a sentence should be spoken in long and complex conversational scenarios. This proposal introduces the ISCSLP 2026 CoT-TTS Challenge, which aims to evaluate whether a system can infer the intended speaking manner from contextual information and generate speech consistent with both the reasoning output and the surrounding scene. The challenge contains two tracks: text-context-aware CoT-TTS and audio-context-aware CoT-TTS. We construct a large-scale bilingual training set from speech-rich media and provide carefully filtered evaluation data for leaderboard comparison. Each system is required to output both a chain-of-thought reasoning analysis and the generated speech waveform. The official evaluation combines objective metrics, multimodal LLM-based evaluation, and human subjective assessment. To facilitate reproducibility, we provide inference code together with a fine-tuning recipe for a 0.6B Qwen3-based model trained via a three-stage strategy. This challenge is expected to support research on context understanding, chain-of-thought reasoning, and expressive speech generation for applications such as film dubbing, audiobook production, virtual characters, and spoken dialogue agents. Further information about the associated challenge is available at:https://iscslp2026-cot-tts.github.io/challenge-website/",
+  "arxiv_comment": "11 pages, ISCSLP 2026 challenge proposal",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Describes the ISCSLP 2026 CoT-TTS Challenge on chain-of-thought reasoning for automatically determining speaking style in context-aware TTS, a core TTS challenge proposal.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

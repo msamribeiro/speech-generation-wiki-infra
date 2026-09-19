@@ -1,0 +1,41 @@
+{
+  "id": "2606.01905",
+  "source_ids": {
+    "arxiv": "2606.01905"
+  },
+  "title": "Advancing Electrolaryngeal Speech Enhancement Through Speech-Text Representation Learning",
+  "authors": [
+    "Ding Ma",
+    "Jinyi Mi",
+    "Fengji Li",
+    "Lester Phillip Violeta",
+    "Jiajun He",
+    "Wenchin Huang",
+    "Kazuhiro Kobayashi",
+    "Tomoki Toda"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.01905",
+  "pdf_url": "https://arxiv.org/pdf/2606.01905.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Objective: laryngectomees depend on an electromechanical device to generate electrolaryngeal (EL) speech. Compared with normal speech, EL speech suffers from severe distortion, limited phonetic variation, unnatural prosody, and temporal shifts, degrading naturalness and intelligibility. Although sequence-to-sequence (seq2seq) voice conversion (VC) based EL-speech-to-normal-speech conversion (EL2SP) is promising, substantial mismatches between EL and normal speech inevitably cause cumulative mapping errors that limit performance. To address this, we describe a novel representation learning framework integrating speech and text representations to improve mapping and reconstruction quality within a seq2seq VC model. Methods: our methodology comprises two main stages: 1) representation integration and learning, and 2) reconstruction training. A network capable of incorporating auxiliary text information is first constructed with pretrained modules to learn speech--text-based integrated representations. Then, an autoencoder-style reconstruction strategy finalizes EL2SP model to inherit these representations without increasing model complexity. We introduce three fusion strategies including middle-, input-, and hybrid-level fusion strategies that progressively enhance learning. Moreover, besides standard seq2seq VC objectives, an additional reconstruction loss on the integrated representation is introduced to refine representation transfer. Results: experiments under different EL2SP datasets consistently demonstrate that our methods, combined with data augmentations, outperform baselines relying solely on speech representations. Furthermore, progressive improvements with system design depth validate the effectiveness of our methods. Significance: the proposed methods provide an extensible and practical methodology for EL speech enhancement and assistive communication technologies.",
+  "arxiv_comment": "15 pages, 7 figures. Accepted to IEEE TBME",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Proposes a seq2seq voice-conversion-based approach for converting electrolaryngeal speech to normal speech, a dedicated VC system with speech-quality evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

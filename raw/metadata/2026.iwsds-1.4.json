@@ -1,0 +1,39 @@
+{
+  "id": "2026.iwsds-1.4",
+  "source_ids": {
+    "acl": "2026.iwsds-1.4",
+    "arxiv": null,
+    "doi": null
+  },
+  "title": "Reproducing Proficiency-Conditioned Dialogue Features with Full-duplex Spoken Dialogue Models",
+  "authors": [
+    "Takao Obi",
+    "Sadahiro Yoshikawa",
+    "Mao Saeki",
+    "Masaki Eguchi",
+    "Yoichi Matsuyama"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 2,
+  "published_date": "2026-02-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwsds-1.4",
+  "pdf_url": "https://aclanthology.org/2026.iwsds-1.4.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Real-time, human-centered conversational AI requires systems that handle spoken dialogue with overlap and rapid turn-taking. Although full-duplex models promise these capabilities, empirical work applying them to conversational AI is still nascent. To fill this gap, this study investigates whether the full-duplex model can reproduce the human dialogue features. We adapt a full-duplex spoken dialogue model to a large corpus of second-language (L2) learner interviews and train proficiency-conditioned models. We then conduct real-time interview sessions between these models and a spoken dialogue system designed to elicit spontaneous learner speech, and analyze reaction time, response frequency, and fluency metrics across aggregated CEFR levels (A/B/C). Our results show that proficiency-conditioned models partially reproduce levelwise trends and distributions observed in human interviews across multiple metrics. These findings suggest that full-duplex models can reproduce dialogue features of human dialogues and offer a promising foundation for conversational AI systems.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.58,
+  "relevance_note": "Adapts and empirically evaluates an existing full-duplex spoken dialogue model's ability to reproduce proficiency-conditioned human dialogue features; studies SCA behavior but is not a new generation method.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2608.14029",
+  "source_ids": {
+    "arxiv": "2608.14029"
+  },
+  "title": "S2Dialog: Multimodal Dialogue Retrieval with Semantic and Acoustic-Style Modeling",
+  "authors": [
+    "Xueqi Wang",
+    "Zhigang Wang",
+    "Runqing Zhang",
+    "Zhenqi Jia",
+    "Junfeng Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.14029",
+  "pdf_url": "https://arxiv.org/pdf/2608.14029.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Multimodal dialogue retrieval aims to retrieve dialogues from multimodal dialogue banks that are similar to a target dialogue in terms of both textual semantics and acoustic conversational styles. Such dialogue-level retrieval is crucial for many dialogue-related tasks, including Emotion Recognition in Conversation, Spoken Dialogue Systems, and Conversational Speech Synthesis, where external dialogue examples can provide valuable semantic and stylistic references. However, existing retrieval methods are still largely limited to utterance-level or unimodal matching, and often fail to capture the global semantic coherence and stylistic consistency of an entire dialogue. To address this gap, we propose S2Dialog, a unified framework for dialogue-level semantic-style retrieval from multimodal dialogue banks. Specifically, S2Dialog consists of a Dialogue-level Textual Retriever and a Dialogue-level Acoustic Retriever, which encode the textual and acoustic modalities of a dialogue into dialogue-level representations, respectively. To further enhance multimodal retrieval, we introduce Dialogue-level Textual-Acoustic Contrastive Learning, which aligns semantically and stylistically similar dialogues while distinguishing unrelated ones. Extensive experiments on the multimodal dialogue dataset DailyTalk demonstrate that S2Dialog achieves outstanding retrieval performance.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "S2Dialog studies multimodal dialogue retrieval (retrieving similar dialogues by semantic and acoustic-conversational style) as an auxiliary resource for downstream dialogue tasks; a retrieval-system contribution rather than TTS/VC/SCA generation itself, though motivated by conversational speech synthesis applications.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

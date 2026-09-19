@@ -1,0 +1,42 @@
+{
+  "id": "2606.07080",
+  "source_ids": {
+    "arxiv": "2606.07080"
+  },
+  "title": "dots.tts Technical Report",
+  "authors": [
+    "Shi Lian",
+    "Changtao Li",
+    "Bohan Li",
+    "Hankun Wang",
+    "Da Zheng",
+    "Junfeng Tian",
+    "Yufeng Ma",
+    "Colin Zhang",
+    "Kai Yu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-05",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.07080",
+  "pdf_url": "https://arxiv.org/pdf/2606.07080.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present dots$.$tts, a 2B-parameter continuous autoregressive text-to-speech (TTS) foundation model that models speech in a continuous latent space. Compared with existing continuous autoregressive models, our key innovations are threefold. First, we train an AudioVAE with multiple objectives to build a semantically structured and prediction-friendly continuous speech space. Second, we use full-history conditioning in the flow-matching head to preserve long-range consistency and reduce drift during generation. Third, we apply reward-free self-corrective post-training to the flow-matching head to further improve robustness and acoustic quality. After being trained on a large-scale multilingual corpus, dots$.$tts achieves the best average performance on Seed-TTS-Eval, with WERs of 0.94%/1.30%/6.60% and SIM scores of 81.0/77.1/79.5 on the zh/en/zh-hard test sets, respectively. Across other benchmarks, dots$.$tts also consistently demonstrates open-source state-of-the-art performance, exhibiting strong generation stability, voice cloning ability, and emotional expressiveness. For efficient inference, we further apply CFG-aware MeanFlow distillation, enabling low-latency speech generation with first-packet latencies of 85/54 ms in output streaming and dual-streaming modes, respectively. To facilitate reproducible research and practical deployment, we release the training and inference code, together with the pretrained, post-trained, and MeanFlow-distilled checkpoints, under the Apache 2.0 license.",
+  "arxiv_comment": "22 pages, 2 figures. Revised technical report with updated technical content, experiments, efficiency results, references, figures, project links, and abstract metadata formatting",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "dots.tts proposes a 2B-parameter continuous autoregressive TTS foundation model with a novel AudioVAE and training recipe.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

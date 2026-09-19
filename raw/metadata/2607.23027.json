@@ -1,0 +1,36 @@
+{
+  "id": "2607.23027",
+  "source_ids": {
+    "arxiv": "2607.23027"
+  },
+  "title": "Singlish, Can or Not? Fine-Tuning and Evaluating Zero-Shot TTS for Singapore English",
+  "authors": [
+    "Ivan Kukanov",
+    "Zheng Xin Chai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-25",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.23027",
+  "pdf_url": "https://arxiv.org/pdf/2607.23027.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot text-to-speech (ZS-TTS) achieves near-human quality for standard English, but it copies regional accents poorly. Prompted with a short Singlish utterance, state-of-the-art systems reproduce a speaker's timbre while flattening the accent toward generic English. We investigate whether targeted fine-tuning off-the-shelf ZS-TTS can close the gap for Singapore English (Singlish). We fine-tune two cutting-edge ZS-TTS models, Chatterbox and CosyVoice 3, on 50 Singlish speakers from the IMDA National Speech Corpus. Three speech distributions are evaluated: real recordings against off-the-shelf and fine-tuned generation driven by the same Singlish audio prompts. The evaluation covers four dimensions: naturalness, intelligibility, speaker similarity, and accent similarity. We separate adaptation (in-domain speakers seen during fine-tuning) from consistency (held-out speakers) to test whether accent transfer generalises beyond the training data. Fine-tuning raises accent similarity on in-domain and out-of-domain speakers for both Chatterbox and CosyVoice 3. It moves the generated distribution measurably toward real Singlish, with the gain persisting on held-out speakers. To our knowledge, this is the first systematic study of Singlish-accented TTS.",
+  "arxiv_comment": "7 pages, 5 figures, 6 tables. Submitted to SLT 2026 IEEE",
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Investigates fine-tuning off-the-shelf zero-shot TTS to better reproduce Singapore English (Singlish) accent rather than flattening it toward generic English, a core TTS/multilingual contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

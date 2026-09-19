@@ -1,0 +1,40 @@
+{
+  "id": "2608.15690",
+  "source_ids": {
+    "arxiv": "2608.15690"
+  },
+  "title": "Adding Voice Cloning to Text-to-Audio-Video Models with a Single Zero-Initialised Layer",
+  "authors": [
+    "Ivan Mikheev",
+    "Viacheslav Vasilev",
+    "Anna Dmitrienko",
+    "Alexey Letunovskiy",
+    "Ivan Kirillov",
+    "Kirill Chernyshev",
+    "Denis Dimitrov"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-16",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.15690",
+  "pdf_url": "https://arxiv.org/pdf/2608.15690.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-audio-video (T2AV) generation models produce a video and its soundtrack from a textual description, but offer no control over whose voice speaks in the output. We show that a base T2AV model can be turned into a voice-cloning model by adding a single zero-initialized linear layer on top of its audio backbone, fine-tuning for a comparatively short training schedule, and conditioning on a short reference recording at inference time. The reference is injected through two complementary signals: its diffusion latents are prepended to the audio stream, and a global speaker embedding modulates token of the target audio. On a benchmark of 674 speaker-text pairs spanning 30 speakers we compare against five strong voice-cloning text-to-speech baselines: our enhanced 5B model attains the highest speaker-encoder cosine similarity (SECS) across three independent verification networks (ECAPA-TDNN, WavLM-SV, Resemblyzer), statistically significantly outperforming every baseline. A side product of the architecture is that the audio path can be evaluated without the video path at inference time, yielding a ~30x speed-up over the full audio-video diffusion loop while preserving the voice-cloning behaviour.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Shows a base text-to-audio-video model can be converted into a voice-cloning model by adding a single zero-initialized layer and short fine-tuning, a core TTS/voice-cloning contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

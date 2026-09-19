@@ -1,0 +1,57 @@
+{
+  "id": "2026.iwslt-1.11",
+  "source_ids": {
+    "acl": "2026.iwslt-1.11",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.iwslt-1.11"
+  },
+  "title": "HW-TSC’s Submission to the IWSLT 2026 Cross-Lingual Voice Cloning Track",
+  "authors": [
+    "Yu He",
+    "Daimeng Wei",
+    "Jiaxin GUO",
+    "Yuanchang Luo",
+    "Hengchao Shang",
+    "Zongyao Li",
+    "Zhiqiang Rao",
+    "Jinlong Yang",
+    "Zhanglin Wu",
+    "Boqi Huang"
+  ],
+  "authors_full": [
+    "Yu He",
+    "Daimeng Wei",
+    "Jiaxin GUO",
+    "Yuanchang Luo",
+    "Hengchao Shang",
+    "Zongyao Li",
+    "Zhiqiang Rao",
+    "Jinlong Yang",
+    "Zhanglin Wu",
+    "Boqi Huang",
+    "Xiaoqing Lan"
+  ],
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.iwslt-1.11",
+  "pdf_url": "https://aclanthology.org/2026.iwslt-1.11.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "This paper presents HW-TSC’s submission to the IWSLT 2026 Cross-Lingual Voice Cloning Track. The Cross-Lingual Voice Cloning Track includes three target languages: Arabic, Chinese, and French. We take part in two language tasks of this track, namely Chinese and French. We employ the Qwen3-TTS-12Hz-1.7B-Base multilingual model as the core voice cloning model. To tackle problems such as excessively long duration of the original reference audio and scattered features, we design a sliding-window audio segmentation preprocessing method, which continuously splits long audio into standardized short segments with overlapping redundancy. This method avoids feature attenuation caused by overly long audio and maximizes the preservation of complete timbre information through step overlap. To select the outputs with the highest timbre similarity from numerous synthetic results, this study conducts voiceprint recognition based on the Enhanced Context-Dependent Adversarial Time Delay Neural Network (ECAPA-TDNN), with cosine similarity as the core quantitative evaluation metric, and selects the result with the highest similarity as the optimal output.",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "System submission to the IWSLT 2026 Cross-Lingual Voice Cloning Track using a multilingual TTS-based voice cloning model; core VC/TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

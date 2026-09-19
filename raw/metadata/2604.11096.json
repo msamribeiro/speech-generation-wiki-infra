@@ -1,7 +1,10 @@
 {
   "id": "2604.11096",
   "source_ids": {
-    "arxiv": "2604.11096"
+    "arxiv": "2604.11096",
+    "acl": "2026.findings-acl.642",
+    "doi": "10.18653/v1/2026.findings-acl.642",
+    "url_acl": "https://aclanthology.org/2026.findings-acl.642"
   },
   "title": "Efficient Training for Cross-lingual Speech Language Models",
   "authors": [
@@ -12,16 +15,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ACL",
+  "venue_type": "conference",
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-13",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2604.11096",
-  "pdf_url": "https://arxiv.org/pdf/2604.11096.pdf",
+  "pdf_url": "https://aclanthology.org/2026.findings-acl.642.pdf",
   "pdf_path": "raw/papers/2604.11096.pdf",
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "Currently, large language models (LLMs) predominantly focus on the text modality. To enable more natural human-AI interaction, speech LLMs are emerging, but building effective end-to-end speech LLMs remains challenging due to limited data and the difficulty in expanding to more languages. In this paper, we introduce Cross-lingual Speech Language Model (CSLM), an efficient training method for cross-lingual speech LLMs based on discrete speech tokens. We propose a novel alignment strategy that achieves cross-modal and cross-lingual alignment through continual pre-training. By conducting instruction fine-tuning following a speech-text interleaved chain-of-modality generation process, we enhance modal alignment at a finer granularity, thereby improving generation quality and reducing latency. CSLM aligns different modalities and languages simultaneously without the need for massive speech data, thus exhibiting good language scalability. Evaluations on cross-modal tasks, mono-lingual conversational tasks, and cross-lingual conversational tasks demonstrate CSLM's strong cross-modal alignment capabilities and general task abilities. (Code is available at: https://github.com/ictnlp/CSLM)",
   "arxiv_comment": "Accepted to Findings of ACL 2026",
   "task": [
@@ -34,5 +37,6 @@
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

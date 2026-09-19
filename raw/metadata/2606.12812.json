@@ -1,0 +1,33 @@
+{
+  "id": "2606.12812",
+  "source_ids": {
+    "arxiv": "2606.12812"
+  },
+  "title": "Vocal Identity Under Siege by AI Voice Cloning Technologies",
+  "authors": [
+    "Jyh-An Lee",
+    "Xuan Sun"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.12812",
+  "pdf_url": "https://arxiv.org/pdf/2606.12812.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The advent of sophisticated AI-driven voice cloning has brought to the fore critical legal and ethical challenges regarding the protection of vocal identity. Prompted by recent controversies - including the striking resemblance between OpenAI's ChatGPT-4o voice and that of Scarlett Johansson - this article examines how generative AI technologies undermine the unique value of the human voice and further complicate the legal questions surrounding personality right. Through a comparative analysis, the paper evaluates three principal legal frameworks: the right of publicity, personality rights, and the personal data protection right. Each framework - rooted in different legal traditions o offers distinct strengths and limitations in addressing the threats posed by AI-generated voice cloning. By analysing these doctrines' scope, remedies, and posthumous protections, the study offers a foundation for understanding how existing legal approaches may be applied to the evolving challenges of vocal identity in the era of generative AI.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "A legal/ethical commentary on AI voice cloning and vocal identity rights (prompted by the ChatGPT-4o/Scarlett Johansson controversy); relevant to TTS/VC ecosystem policy but unclear if it is an empirical ML contribution versus a law/ethics article.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

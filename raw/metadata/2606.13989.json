@@ -1,0 +1,40 @@
+{
+  "id": "2606.13989",
+  "source_ids": {
+    "arxiv": "2606.13989"
+  },
+  "title": "Mask, Sample, Revise: A Revisable CTMC Inference Stack for Guided Discrete Flow Matching Text-to-Speech",
+  "authors": [
+    "Alef Iury Siqueira Ferreira",
+    "Lucas Rafael Stefanel Gris",
+    "Luiz Fernando de Araújo Vidal",
+    "Frederico Santos de Oliveira",
+    "Christopher Dane Shulby",
+    "Anderson da Silva Soares",
+    "Arlindo Rodrigues Galvão Filho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-12",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.13989",
+  "pdf_url": "https://arxiv.org/pdf/2606.13989.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent alignment-free non-autoregressive (NAR) text-to-speech (TTS) models formulate synthesis as a conditional infilling task, bypassing explicit duration predictors and external aligners. When speech is represented with neural codec tokens, the infilling problem becomes discrete, making Discrete Flow Matching (DFM), a Continuous-Time Markov Chain (CTMC) framework for discrete generation, a natural fit. However, inference-time control for stable low-step conditional infilling remains underexplored. We propose Mask, Sample, Revise, an inference-time CTMC stack for alignment-free DFM-TTS. The stack combines predictor-free guidance to strengthen text conditioning, prompt-matched conditional coupling to align the probability path with the acoustic prompt, and SC-ReMask, a schedule-constrained remasking mechanism that introduces token-to-mask transitions so early de-masking decisions can be revised. These components require no post-hoc fine-tuning and operate in a single tau-leaping sampler. Controlled ablations show that this stack improves intelligibility and robustness in the low-NFE prompted setting, outperforming unguided and guidance-only samplers with substantially more steps.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Proposes a revisable CTMC inference stack for guided discrete flow-matching TTS, an alignment-free NAR TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

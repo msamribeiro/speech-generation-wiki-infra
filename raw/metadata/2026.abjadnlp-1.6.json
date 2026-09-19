@@ -1,0 +1,38 @@
+{
+  "id": "2026.abjadnlp-1.6",
+  "source_ids": {
+    "acl": "2026.abjadnlp-1.6",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.abjadnlp-1.6",
+    "url_acl": "https://aclanthology.org/2026.abjadnlp-1.6"
+  },
+  "title": "LLM-to-Speech: A Synthetic Data Pipeline for Training Dialectal Text-to-Speech Models",
+  "authors": [
+    "Ahmed Khamis",
+    "Hesham Ali Ahmed"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 3,
+  "published_date": "2026-03-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.abjadnlp-1.6",
+  "pdf_url": "https://aclanthology.org/2026.abjadnlp-1.6.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Despite the advances in neural text to speech (TTS), many Arabic dialectal varieties remain marginally addressed, with most resources con- centrated on Modern Spoken Arabic (MSA) and Gulf dialects, leaving Egyptian Arabic— the most widely understood Arabic dialect— severely under-resourced. We address this gap by introducing NileTTS: 38 hours of tran- scribed speech from two speakers across di- verse domains including medical, sales, and general conversations. We construct this dataset using a novel synthetic pipeline: large language models (LLM) generate Egyptian Arabic content, which is then converted to natu- ral speech using audio synthesis tools, followed by automatic transcription and speaker diariza- tion with manual quality verification. We fine- tune XTTS v2, a state-of-the-art multilingual TTS model, on our dataset and evaluate against the baseline model trained on other Arabic dialects. Our contributions include: (1) the first publicly available Egyptian Arabic TTS dataset, (2) a reproducible synthetic data gen- eration pipeline for dialectal TTS, and (3) an open-source fine-tuned model. All resources are released to advance Egyptian Arabic speech synthesis research.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "New TTS synthetic-data pipeline (NileTTS) targeting under-resourced Egyptian Arabic dialect; core TTS dataset/method contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

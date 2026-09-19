@@ -1,0 +1,44 @@
+{
+  "id": "2608.03021",
+  "source_ids": {
+    "arxiv": "2608.03021"
+  },
+  "title": "MeloCodec: Harnessing Melodic Priors for High-Fidelity Singing Voice Representation",
+  "authors": [
+    "Yizhong Geng",
+    "Wenxin Fu",
+    "Kecan Mao",
+    "Qifei Li",
+    "Yingming Gao",
+    "Ruimin Wang",
+    "Chunfeng Wang",
+    "Hao Li",
+    "Ya Li",
+    "Wei Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.03021",
+  "pdf_url": "https://arxiv.org/pdf/2608.03021.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs serve as fundamental tokenizers for LLM-based audio generation. While semantic priors are widely exploited to enhance linguistic intelligibility, the integration of explicit acoustic priors remains underexplored, limiting synthesis fidelity in frequency-sensitive domains. To address this gap, we introduce MeloCodec, a novel framework designed to effectively incorporate melodic priors, a critical form of acoustic information for singing. To address the optimization instability typically caused by the direct fusion of such explicit priors, we propose a Tokenize-then-Fuse paradigm that pre-trains a discrete melodic branch to lock in structures before feature fusion. To robustly realize this paradigm, we further propose a two-stage training strategy that prevents codebook collapse and ensures stable convergence. Experiments show that MeloCodec outperforms baselines in singing voice representation, improving pitch consistency and enabling controllable pitch manipulation with minimal timbre degradation.",
+  "arxiv_comment": "7 pages, 3 figures, 3 tables. Accepted at IEEE ICME 2026",
+  "task": [
+    "codec",
+    "singing"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "MeloCodec incorporates explicit melodic priors into a neural audio codec to improve singing voice representation fidelity, a core codec/singing contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

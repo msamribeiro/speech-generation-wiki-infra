@@ -1,0 +1,38 @@
+{
+  "id": "2606.21888",
+  "source_ids": {
+    "arxiv": "2606.21888"
+  },
+  "title": "ProsoCodec: Prosody-Oriented Speech Codec for Voice Conversion",
+  "authors": [
+    "Jeongsoo Choi",
+    "Ji-Hoon Kim",
+    "Shujie Hu",
+    "Joon Son Chung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-20",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21888",
+  "pdf_url": "https://arxiv.org/pdf/2606.21888.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural speech codecs efficiently compress speech and have become a foundation for speech generation, but they are typically learned as holistic representations that intertwine linguistic content, speaker identity, and prosody. While this design is effective for zero-shot voice cloning, it hinders downstream tasks that require prosody preservation or transfer, such as voice conversion. To address this, we introduce ProsoCodec, a prosody-oriented speech codec that models prosody as a conditional residual rather than as a disentangled stream. Specifically, by conditioning both the encoder and decoder on text and speaker embeddings as prefix tokens, the discrete bottleneck is encouraged to capture prosodic variation not explained by content and speaker. To further preserve prosody, we use the low-frequency mel band and train the model on paired same-speaker utterances. Experiments on voice conversion show improved prosody preservation and reduced source-timbre leakage.",
+  "arxiv_comment": "Interspeech 2026",
+  "task": [
+    "codec",
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "ProsoCodec proposes a prosody-oriented speech codec that disentangles content, speaker, and prosody to enable prosody-preserving voice conversion, a core codec/VC contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

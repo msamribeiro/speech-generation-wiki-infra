@@ -1,0 +1,35 @@
+{
+  "id": "2607.26541",
+  "source_ids": {
+    "arxiv": "2607.26541"
+  },
+  "title": "Prosody-driven Jailbreaks in Audio LLMs: A Controlled Study and Mechanistic Analysis",
+  "authors": [
+    "Jiachen Qian",
+    "Junyu Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-29",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.26541",
+  "pdf_url": "https://arxiv.org/pdf/2607.26541.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Audio-capable foundation models enable end-to-end spoken interaction, but they also introduce safety risks beyond transcript content. It remains unclear how much jailbreak capability can arise from matched-text variation in speech delivery rather than from lexical rewriting or broader style transfer. We study this question by holding transcript content fixed and varying six speech-delivery presets whose acoustic attributes may co-vary. We present PJ-Break, a black-box evaluation protocol with presets targeting arousal, authority, and speaking rate, together with AdvAudio-Prosody, a 600-sample benchmark with acoustically verified attributes. On the exact post-QC Qwen2-Audio panel, the Q=1 Panic (38/95), Anger (35/95), and Fast (32/95) presets are all well above Neutral (4/95). The fixed six-query pool covers 44/95 Qwen2-Audio seeds and 15/95 GPT-4o seeds and exceeds a matched-budget StyleBreak reimplementation (27/95) on Qwen2-Audio. A same-voice pool excluding the confounded Commanding condition still reaches 40/95, and a retained-panel ablation shows emotional-delivery audio alone (44/95) is far more effective than emotional text alone (11/95). Exploratory surrogate diagnostics and pilot mitigation observations are secondary, non-core analyses. Overall, matched-text speech delivery should be treated as a first-class factor in Audio LLM safety evaluation",
+  "arxiv_comment": "Accepted at ACM Multimedia 2026 (ACM MM '26). 9 pages, 3 figures. Supplementary material included",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.5,
+  "relevance_note": "Studies how prosodic delivery variation (holding transcript text fixed) affects jailbreak susceptibility in audio-capable foundation models; a safety/robustness analysis of spoken interaction models rather than a TTS/VC/SCA generation or evaluation-methodology contribution.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

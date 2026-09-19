@@ -1,0 +1,35 @@
+{
+  "id": "2606.06168",
+  "source_ids": {
+    "arxiv": "2606.06168"
+  },
+  "title": "ProSarc: Prosody-Aware Sarcasm Recognition Framework via Temporal Prosodic Incongruity",
+  "authors": [
+    "Prathamjyot Singh",
+    "Ashima Sood",
+    "Sahil Sharma",
+    "Jasmeet Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-04",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.06168",
+  "pdf_url": "https://arxiv.org/pdf/2606.06168.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present ProSarc, an audio-only framework that detects sarcasm by modelling temporal prosodic incongruity, that is, the mismatch between local prosodic dynamics and the utterance-level emotional baseline. Dual encoding paths, a Global Emotion Encoder and a Temporal Prosody Encoder (BiLSTM + multi-head attention), feed a Prosodic Incongruity Analyzer that produces a scalar incongruity score for classification. Monte Carlo dropout provides uncertainty estimates, and an attention-based mechanism localises sarcastic onset without frame-level labels. ProSarc outperforms prior audio-only methods on MUStARD++ (F1=75.3) and generalises to spontaneous (PodSarc, F1=62.9) and cross-lingual speech (MuSaG, F1=65.6). Ten-run validation confirms the contribution of incongruity modelling (Wilcoxon p=0.002, Cohen's d=1.51). Human evaluation shows that model uncertainty tracks perceptual ambiguity and predicted onsets align with human-annotated temporal windows.",
+  "arxiv_comment": "Accepted at Interspeech 2026, Sydney",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "ProSarc is an audio-only sarcasm-detection/classification framework; it studies prosody for recognition, not speech generation.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

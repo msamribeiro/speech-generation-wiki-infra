@@ -1,0 +1,38 @@
+{
+  "id": "2607.27768",
+  "source_ids": {
+    "arxiv": "2607.27768"
+  },
+  "title": "VocalRender: Score-Native Singing Voice Synthesis for Real-World Composition",
+  "authors": [
+    "Yukun Chen",
+    "Tianrui Wang",
+    "Zhaoxi Mu",
+    "Xinyu Yang",
+    "EngSiong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.27768",
+  "pdf_url": "https://arxiv.org/pdf/2607.27768.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Existing singing voice synthesis systems often require predefined durations, explicit duration prediction, or time-aligned acoustic guidance, which limits their compatibility with practical composition workflows. We propose VocalRender, a score-native system that directly synthesizes singing from lyrics, pitches, symbolic note values, and tempo. It uses an interleaved lyric--note representation and an autoregressive diffusion model to generate continuous acoustic latents while predicting the output length, eliminating the need for explicit duration prediction. Trained on a 2,300-hour singing dataset, VocalRender achieves strong intelligibility, strong melody control, and high speaker similarity across both in-domain and out-of-domain benchmarks. Notably, it outperforms the strongest baseline by $0.42$ points in naturalness CMOS, demonstrating the effectiveness of our proposed score-native architecture.",
+  "arxiv_comment": null,
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "VocalRender proposes a score-native singing voice synthesis system directly from lyrics, pitches, note values, and tempo, a core singing-synthesis contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

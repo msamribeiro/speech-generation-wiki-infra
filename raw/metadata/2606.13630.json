@@ -1,0 +1,36 @@
+{
+  "id": "2606.13630",
+  "source_ids": {
+    "arxiv": "2606.13630"
+  },
+  "title": "From Tokens to Faces: Investigating Discrete Speech Representations for 3D Facial Animation",
+  "authors": [
+    "Pedro Correa",
+    "Olivier Perrotin",
+    "Samir Sadok",
+    "Paula Costa",
+    "Thomas Hueber"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-11",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.13630",
+  "pdf_url": "https://arxiv.org/pdf/2606.13630.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The choice of speech representation is critical in speech-driven 3D facial animation. Representations differ in what they encode: SSL features emphasize segmental and semantic cues, neural codecs yield latents optimized for acoustic reconstruction, and ASR-style objectives produce label-based spaces. We evaluate four speech representation families for 3D facial synthesis, comparing their facial reconstruction quality across two facial decoders using objective metrics and a perceptual evaluation. We additionally conduct probing analyses that relate tokenized representations to phonetic units and to articulatory deformations. We found that encoding phonetic classes is beneficial for accurate facial animation prediction on both semantic and label-based representations with comparable facial animation quality. From the latter, we introduce an Audio Visual Text-to-Speech (AVTTS) pipeline that leverages, as a shared space, discrete representations to decode speech and 3D facial motion.",
+  "arxiv_comment": "This work has been accepted in Interspeech 2026",
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "Evaluates discrete speech representations (SSL, codec, ASR-style) for driving 3D facial animation; the target task is facial animation, not speech generation, though the representations studied are the same ones used in TTS/codec research.",
+  "status": "review",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

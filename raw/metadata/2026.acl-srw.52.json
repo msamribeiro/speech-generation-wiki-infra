@@ -1,0 +1,37 @@
+{
+  "id": "2026.acl-srw.52",
+  "source_ids": {
+    "acl": "2026.acl-srw.52",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.acl-srw.52",
+    "url_acl": "https://aclanthology.org/2026.acl-srw.52"
+  },
+  "title": "Counterspeech Generation using Small Language Models",
+  "authors": [
+    "Abubakar Sadiq Muhammad",
+    "Simona Frenda",
+    "Gavin Abercrombie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ACL",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-02",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.acl-srw.52",
+  "pdf_url": "https://aclanthology.org/2026.acl-srw.52.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "Counterspeech offers a way to tackle harmful content online without restricting freedom of expression. This work explores counterspeech generation using small language models (SLMs) as lightweight and cost-effective alternatives to large language models. We evaluate SLMs ranging from 100 million to 3 billion parameters using simple prompting strategies as well as fine-tuning, combining automatic and robust human evaluations. Our findings demonstrate that small language models can generate relevant, coherent, and high-quality counterspeech, suggesting their potential suitability for efficient and responsible deployments.",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Counterspeech generation with small language models is purely textual hate-speech mitigation with no audio synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

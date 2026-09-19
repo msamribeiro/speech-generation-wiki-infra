@@ -1,0 +1,42 @@
+{
+  "id": "2607.19859",
+  "source_ids": {
+    "arxiv": "2607.19859"
+  },
+  "title": "StellarTTS: Sparse Temporal Embedding for Low-Latency and Robust Speech Synthesis",
+  "authors": [
+    "Kaicheng Luo",
+    "Xuefei Gong",
+    "Yutao Sun",
+    "Jinling He",
+    "Yujie Hou",
+    "Xiaoyang Xing",
+    "Huiyan Li",
+    "Bing Han",
+    "Yanmin Qian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-22",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.19859",
+  "pdf_url": "https://arxiv.org/pdf/2607.19859.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The trade-off between robustness, latency, and prosody critically challenges text-to-speech (TTS) systems. Autoregressive models, despite fidelity, are slow and error-prone; non-autoregressive (NAR) alternatives, while fast, often sacrifice prosodic naturalness via rigid alignments. This paper introduces StellarTTS, a novel mobile-optimized NAR TTS framework based on a sparse temporal embedding strategy, enabling granular control of phoneme duration, pronunciation, and prosody. Furthermore, we propose a semantic-aware codec that facilitates efficient single-stage decoding. Conditioned on the sparse temporal embedding, our 83M-parameter lightweight masked generative transformer achieves a real-time factor (RTF) of 0.08. Experiments demonstrate that StellarTTS attains lower latency and stronger robustness compared to state-of-the-art TTS systems, while maintaining competitive performance in audio quality, prosodic naturalness, and speaker similarity.",
+  "arxiv_comment": "Accepted by ASRU 2025",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "StellarTTS introduces a sparse temporal embedding stack for a mobile-optimized non-autoregressive TTS framework balancing robustness, latency, and prosody, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

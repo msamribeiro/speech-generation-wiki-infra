@@ -1,0 +1,39 @@
+{
+  "id": "2606.25403",
+  "source_ids": {
+    "arxiv": "2606.25403"
+  },
+  "title": "CrossAccent-TTS: Cross-Lingual Accent-Intensity Controllable Text-to-Speech via Disentangled Speaker and Accent Representations",
+  "authors": [
+    "Ram Annamdevula",
+    "Ankit Tatawat",
+    "Ashishkumar P. Gudmalwar",
+    "Nirmesh J. Shah",
+    "Pankaj Wasnik"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-24",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.25403",
+  "pdf_url": "https://arxiv.org/pdf/2606.25403.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Accent conversion and controllability remain fundamental challenges in cross-lingual text-to-speech (TTS), particularly for low-resource and phonetically diverse Indic languages. While recent large language model (LLM)-based TTS systems exhibit strong cross-lingual generalization, they provide limited explicit control over accent characteristics and intensity. In this paper, we propose CrossAccentTTS, a framework that enables both accent control and conversion while preserving speaker identity. Specifically, we introduce an Accent Intensity Controller (AIC) that injects weighted language embeddings into the accent subspace, allowing smooth interpolation between accents and fine-grained modulation of accent strength at inference time. Experiments on the Indic Multilingual and L2-arctic datasets shows that CrossAccent-TTS achieves precise control of accent intensity, outperforming strong baselines in accent similarity and controllability by maintaining speaker similarity and naturalness.",
+  "arxiv_comment": "Accepted at INTERSPEECH 2026",
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "CrossAccent-TTS proposes cross-lingual accent-intensity controllable TTS via disentangled speaker and accent representations for low-resource Indic languages, a core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

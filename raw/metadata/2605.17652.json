@@ -1,7 +1,10 @@
 {
   "id": "2605.17652",
   "source_ids": {
-    "arxiv": "2605.17652"
+    "arxiv": "2605.17652",
+    "acl": "2026.lrec-1.544",
+    "doi": "10.63317/4d596vd4x2xr",
+    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-544"
   },
   "title": "Beyond Transcripts: Iterative Peer-Editing with Audio Unlocks High-Quality Human Summaries of Conversational Speech",
   "authors": [
@@ -14,16 +17,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "workshop",
+  "venue_type": "workshop",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-17",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2605.17652",
-  "pdf_url": "https://arxiv.org/pdf/2605.17652.pdf",
+  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-544.pdf",
   "pdf_path": null,
-  "pdf_source": "arxiv",
+  "pdf_source": "anthology",
   "abstract": "There are not enough established benchmarks for the task fo speech summarization. Creating new benchmarks demands human annotation, as LLMs could embed systemic errors and bias into datasets. We test ten annotation workflows varying input modality (audio, transcript, or both) and the inclusion of editing (self or peer-editing) to investigate potential quality tradeoffs from using human annotators to summarize audio. We compare human audio-based summaries to human transcript-based summaries to track the impact of the different information modalities on summary quality. We also compare the human outputs against four LLM benchmarks (three text, one audio) to examine whether human-written summaries are less informative than highly fluent automated outputs. We find that audio-based summaries are less informative and more compressed than transcript summaries. However, iterative peer-editing with audio mitigates this difference, enabling audio-based summaries to be as informative as their transcript counterparts and LLM summaries. These findings validate iterative peer-editing among human annotators for the creation of benchmarks informed by both lexical and prosodic information. This enables crucial dataset collection even in setting where transcripts are unavailable.",
   "arxiv_comment": "Accepted in LREC 2026",
   "task": [],
@@ -33,5 +36,6 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
 }

@@ -1,0 +1,36 @@
+{
+  "id": "2606.31365",
+  "source_ids": {
+    "arxiv": "2606.31365"
+  },
+  "title": "Beyond Cross-Reconstruction: Probing-Based Disentanglement Evaluation for Acoustic Teleportation Codecs",
+  "authors": [
+    "Philipp Grundhuber",
+    "Emanuël A. P. Habets"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.31365",
+  "pdf_url": "https://arxiv.org/pdf/2606.31365.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Some neural audio codecs disentangle speech into latent subspaces encoding content, speaker identity, and acoustics, enabling acoustic teleportation and voice conversion. Existing evaluations rely on cross-reconstruction quality, which cannot reliably detect leakage across partitions. We extend a probing based framework to assess disentanglement by regressing room-acoustic parameters (reverberation time, clarity, and direct-to-reverberant ratio) and classifying speaker identity, using the gap between intended and unintended partitions as the disentanglement measure. Applied to an acoustic teleportation codec, we find speaker identity is largely confined to its partition, while acoustics leak into the speech embeddings due to the training objective. Acoustic embeddings blindly estimate room parameters within 0.02 s of supervised baselines, indicating physically meaningful structure emerges without explicit supervision.",
+  "arxiv_comment": "Accepted for Interspeech 2026",
+  "task": [
+    "codec",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Extends a probing-based framework to evaluate disentanglement in acoustic-teleportation neural codecs that enable voice conversion, addressing leakage that cross-reconstruction evaluation cannot detect, a core codec/evaluation contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

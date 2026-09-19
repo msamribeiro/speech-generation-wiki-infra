@@ -1,0 +1,35 @@
+{
+  "id": "2606.21365",
+  "source_ids": {
+    "arxiv": "2606.21365"
+  },
+  "title": "LambdaMark: Semantic Audio Watermarking for Robustness and Radioactivity",
+  "authors": [
+    "Kexin Li",
+    "Xiao Hu",
+    "Ilya Grishchenko",
+    "David Lie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21365",
+  "pdf_url": "https://arxiv.org/pdf/2606.21365.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in generative audio have made voice cloning increasingly effortless, enabling voice fraud, impersonation, and other forms of unauthorized use. A common attack finetunes a speech generation model on recordings of a target speaker, allowing the model to synthesize speech in that speaker's voice. Audio watermarking offers a promising defense by embedding detectable signals into audio. A practical watermark must satisfy two key properties: robustness and radioactivity. Existing audio watermarking methods typically embed signals into low-level representations, such as waveforms or spectrograms, which makes them vulnerable to signal-level manipulations and limits their transfer to downstream models. We introduce LambdaMark -- the first generic radioactive watermarking scheme. Unlike all previous approaches, LambdaMark achieves generic radioactivity by embedding multi-bit watermark information into semantic audio latent representations. Our watermarks have semantic interpretation and are thus more likely to be learned by a downstream model through finetuning. LambdaMark includes a lightweight watermark encoder to inject multi-bit message-dependent perturbations into semantic audio representations and a decoder to detect watermark presence and recover the embedded bit information. Encoder and decoder are trained using a custom multi-component loss that preserves fidelity of the watermarked audio, increases bit-level recovery rate, and improves robustness against common distortions and adversarial removal attempts. Experiments show that LambdaMark achieves near-perfect robustness under common distortions. LambdaMark is also the only watermark that is robust against all evaluated removal attacks. Furthermore, LambdaMark exhibits general and robust radioactivity and remains robust to distortions and adversarial removal attacks even on the generated outputs of those finetuned models.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "LambdaMark is a semantic audio watermarking defense against voice-cloning fraud; a traceability/security contribution rather than an advance in TTS synthesis quality, consistent with other watermarking papers scored tangential.",
+  "status": "rejected",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

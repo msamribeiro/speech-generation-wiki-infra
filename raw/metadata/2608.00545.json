@@ -1,0 +1,36 @@
+{
+  "id": "2608.00545",
+  "source_ids": {
+    "arxiv": "2608.00545"
+  },
+  "title": "Beyond Prompt Adherence: Auditing Attribute-Level Voice Control in Speech Generation",
+  "authors": [
+    "Xianhao Zhou",
+    "Jianghao Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.00545",
+  "pdf_url": "https://arxiv.org/pdf/2608.00545.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Natural-language descriptions have become a flexible interface for controlling generated speech. Existing evaluations largely assess whether an output matches a prompt, but prompt matching alone does not reveal whether characteristics outside the intended change remain stable. We examine this distinction through a controlled paired audit of three speech-generation systems: CosyVoice3, VoxCPM2, and Fish-Speech-S2. The evaluation contains 5,940 outputs spanning six reference speakers, ten texts, three random seeds, and eleven conditions. Using acoustic, prosodic, content, and speaker measurements, we find that responses in the expected target direction are frequently accompanied by changes outside descriptor-specific signal-level target sets. This pattern remains among outputs whose target response exceeds baseline seed variation, and the accompanying changes differ substantially across systems. We further introduce VoDER-Cal, a training-free candidate selector that retains sufficiently strong target responses while favoring smaller off-target deviations. A three-candidate pool raises the joint success rate from 4.8% under single-sample direct generation to approximately 14% for all candidate-selection policies. Within the matched three-candidate budget, VoDER-Cal reduces held-out off-target deviation from 0.344 under target-only selection to 0.276 and improves listener-rated preservation. Preservation-sensitive evaluation therefore complements prompt-adherence evaluation, while candidate reranking offers a practical inference-time improvement. Code, configuration files, and analysis scripts are available at https://github.com/intelland/VoDER",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Audits whether attribute-level natural-language voice control in speech generation systems (CosyVoice3, VoxCPM2, and others) leaves unintended characteristics stable beyond simple prompt matching, a core TTS evaluation-methodology contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

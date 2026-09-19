@@ -1,0 +1,35 @@
+{
+  "id": "2606.31105",
+  "source_ids": {
+    "arxiv": "2606.31105"
+  },
+  "title": "Attacking UTMOS: Probing the Robustness of a Speech Quality Assessment Model",
+  "authors": [
+    "Wen-Chin Huang",
+    "Tomoki Toda"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-30",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.31105",
+  "pdf_url": "https://arxiv.org/pdf/2606.31105.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "UTMOS has become one of the most commonly used deep neural network-based speech quality assessment (SQA) metrics in speech processing research. In this paper, we attack UTMOS to probe its robustness. Starting from high-quality speech samples, we optimize the input in two directions: a score-preserving attack, which degrades perceived quality while maintaining the predicted score, and a quality-preserving attack, which lowers the predicted score while maintaining perceived quality. We consider three input spaces: raw waveform, mel spectrogram with a HiFi-GAN vocoder, and the latent space of EnCodec, a neural audio codec. Experimental results show that score-preserving attacks are effective against UTMOS. Although perfect quality-preserving attacks are more difficult, optimization in the EnCodec latent space provides the best chance of success. These results reveal failure modes of UTMOS and highlight the importance of robustness analysis for DNN-based SQA metrics.",
+  "arxiv_comment": "Preprint. Audio samples: https://unilight.github.io/attack-utmos-demo/",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.75,
+  "relevance_note": "Probes the robustness of UTMOS, a widely used automatic speech-quality assessment metric in TTS research, via score-preserving and quality-preserving adversarial attacks, a core TTS evaluation-methodology contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

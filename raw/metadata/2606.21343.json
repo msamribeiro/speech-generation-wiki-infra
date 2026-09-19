@@ -1,0 +1,40 @@
+{
+  "id": "2606.21343",
+  "source_ids": {
+    "arxiv": "2606.21343"
+  },
+  "title": "An Evaluation Framework for Text-to-Speech Voice Reconstruction",
+  "authors": [
+    "Ariadna Sanchez",
+    "Christoph Minixhofer",
+    "Korin Richmond",
+    "Ondrej Klejch",
+    "Peter Bell",
+    "Simon King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.21343",
+  "pdf_url": "https://arxiv.org/pdf/2606.21343.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Voice reconstruction using Text-to-Speech (TTS) offers a communication method for people with speech disorders, which aims to retain their speaker identity while improving intelligibility. Previous work generally relies on Mean Opinion Score (MOS) to evaluate naturalness and speaker similarity, but this has limited sensitivity and reliability. We propose an evaluation framework with subjective and objective components. Subjectively, we evaluate perceived intelligibility and speaker identity using Best Worst Scaling (BWS) with situational framing. Objectively, we demonstrate that standard measures fail to predict reconstruction success for highly unintelligible speakers, so we introduce a novel dual-reference distributional measure to assess the trade-off between intelligibility and speaker identity. By evaluating the output of 17 zero-shot TTS systems for 193 speakers, we show that our framework provides a reliable and task-aligned approach for assessing voice reconstruction.",
+  "arxiv_comment": "Accepted at Interspeech 2026",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Proposes a subjective+objective evaluation framework for TTS-based voice reconstruction for speech-disorder patients, a core TTS evaluation-methodology contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2026.americasnlp-6.1",
+  "source_ids": {
+    "acl": "2026.americasnlp-6.1",
+    "arxiv": null,
+    "doi": "10.18653/v1/2026.americasnlp-6.1",
+    "url_acl": "https://aclanthology.org/2026.americasnlp-6.1"
+  },
+  "title": "Neural Text-to-Speech for Myaamia: Speech Synthesis for an Indigenous Algonquian Language",
+  "authors": [
+    "Anita Baral",
+    "John Femiani",
+    "Hunter Lockwood",
+    "Daniela Inclezan",
+    "Balaram Bhandari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "workshop",
+  "venue_type": "workshop",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://aclanthology.org/2026.americasnlp-6.1",
+  "pdf_url": "https://aclanthology.org/2026.americasnlp-6.1.pdf",
+  "pdf_path": null,
+  "pdf_source": "anthology",
+  "abstract": "We present the first neural text-to-speech (TTS) implementation for Myaamia (Miami-Illinois), an Indigenous Algonquian language of North America. Developed in collaboration with the Myaamia Center at Miami University, our approach upholds principles of data sovereignty. Using 14,358 utterances (10.4 hours total, 8.18 hours for training) from seven speakers, we train and evaluate FastSpeech, Glow-TTS, and VITS, assessing synthesis quality through objective (MCD, F0 RMSE, duration RMSE) and subjective (expert evaluation) metrics. VITS outperforms other models in spectral and prosodic accuracy, but challenges remain in phonetic precision and prosody modeling. Our results confirm the feasibility of neural TTS for Myaamia, with direct implications for language learning and revitalization. This work offers a replicable framework for other low-resource Indigenous languages while ensuring ethical, linguistic data governance.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "First neural TTS system for Myaamia, an under-resourced Indigenous language, comparing FastSpeech/Glow-TTS-family models; core low-resource TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "conference_date": "2026-01-01"
+}

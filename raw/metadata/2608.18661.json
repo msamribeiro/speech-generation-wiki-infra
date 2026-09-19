@@ -1,0 +1,40 @@
+{
+  "id": "2608.18661",
+  "source_ids": {
+    "arxiv": "2608.18661"
+  },
+  "title": "X2Streaming-TTS: Causal Token-Level Text-to-Speech from Streaming Text with Speech-State Inheritance",
+  "authors": [
+    "Rime Wen",
+    "Zehan Liu",
+    "Shawn Qin",
+    "Lights Shi",
+    "Roy Gan",
+    "Hao Wang",
+    "Qian Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-19",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.18661",
+  "pdf_url": "https://arxiv.org/pdf/2608.18661.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Streaming text-to-speech is essential for low-latency spoken dialogue systems, yet many systems wait for sentence-level text and are therefore only pseudo-streaming. True token-level synthesis must generate speech from uncertain prefixes while maintaining perceptual continuity over an unbounded stream with bounded context. We present X2Streaming-TTS, a causal TTS framework that consumes asynchronously arriving text tokens and emits speech without accessing future input. To handle uncertain prefixes, we introduce causal commitment, which keeps ambiguous expressions provisional through uncertainty-aware buffering and performs capacity-adaptive, punctuation-aware segmentation. To preserve acoustic continuity, we further introduce causal speech-state inheritance, which carries the complete Code2Wav state and selected historical Talker states across segment boundaries. Together with an attention prior constraint, it blocks access to future positions while retaining bounded acoustic context. Experiments show that X2Streaming-TTS outperforms existing pseudo-streaming models on most subjective and objective metrics. Further analysis shows that causal commitment stabilizes online segmentation and reduces failures caused by insufficient context, while speech-state inheritance improves boundary continuity without degrading naturalness or speaker identity. X2Streaming-TTS thus achieves strict token-level synthesis with quality comparable to the evaluated offline baselines, a median time to first audio token (TTFT) of 15.8 ms for a single request, and a median TTFT of 260.8 ms at 128 concurrent requests. Our implementation is publicly available at https://github.com/X-Square-Robot/X2Streaming-TTS .",
+  "arxiv_comment": "11 pages, 3 figures, 4 tables. Equal contribution by Rime Wen and Zehan Liu. Corresponding author: Hao Wang. Code: https://github.com/X-Square-Robot/X2Streaming-TTS",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "X2Streaming-TTS proposes causal, token-level streaming TTS from asynchronous streaming text with speech-state inheritance for true (non-pseudo) streaming synthesis, a core TTS architectural contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

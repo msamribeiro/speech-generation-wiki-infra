@@ -1,0 +1,36 @@
+{
+  "id": "2607.00946",
+  "source_ids": {
+    "arxiv": "2607.00946"
+  },
+  "title": "A Geometric Perspective on Composable Emotion Steering in Text-to-Speech Models",
+  "authors": [
+    "Siyi Wang",
+    "James Bailey",
+    "Ting Dang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-01",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.00946",
+  "pdf_url": "https://arxiv.org/pdf/2607.00946.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "While prior work has explored emotion control in hybrid text-to-speech systems, the geometric properties of these modules, and their implications for steerability, remain poorly understood. We present the first comparative study of speech language model (SLM) and conditional flow-matching (CFM) modules as activation steering sites for mixed emotion speech synthesis. We first characterize emotion representations using linear probing and local intrinsic dimensionality (LID), and then evaluate single-site and joint steering for mixed-emotion synthesis. Our results show that SLM offers a clean, low-dimensional emotion-specific subspace with strong speaker--emotion disentanglement, while CFM exhibitspoor cross-speaker generalization due to speaker--emotion entanglement. Joint steering increases emotion intensity but degrades proportional control and speech quality on in-distribution data. These findings provide practical guidance for multi-site activation steering in hybrid TTS systems and highlight the importance of representation geometry in controllable speech generation.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Presents the first comparative geometric study of speech-LM and conditional-flow-matching modules as activation-steering sites for composable emotion control in TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

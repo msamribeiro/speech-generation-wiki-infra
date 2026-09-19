@@ -1,0 +1,37 @@
+{
+  "id": "2606.04418",
+  "source_ids": {
+    "arxiv": "2606.04418"
+  },
+  "title": "CleanCodec: Efficient and Robust Speech Tokenization via Perceptually Guided Encoding",
+  "authors": [
+    "Eugene Kwek",
+    "Feng Liu",
+    "Rui Zhang",
+    "Wenpeng Yin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 6,
+  "published_date": "2026-06-03",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2606.04418",
+  "pdf_url": "https://arxiv.org/pdf/2606.04418.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs are a key component of speech processing pipelines, compressing audio into discrete tokens for downstream modeling. However, existing codecs struggle to balance reconstruction quality with token efficiency, often encoding perceptually irrelevant information such as background noise and recording artifacts at the expense of linguistically and acoustically meaningful content. We reframe audio tokenization as a selective information bottleneck problem and propose CleanCodec, a denoising audio codec which learns to encode only perceptually important features and discard imperceptible information. At just 12.5 tokens per second, CleanCodec achieves state-of-the-art tokenization efficiency, substantially outperforming existing codecs in speaker similarity and speech intelligibility. Evaluations on downstream text-to-speech and voice conversion tasks further demonstrate improved performance and up to 17x faster inference, highlighting significant efficiency gains.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "CleanCodec proposes a perceptually-guided neural speech codec balancing reconstruction quality and token efficiency, core codec infrastructure.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

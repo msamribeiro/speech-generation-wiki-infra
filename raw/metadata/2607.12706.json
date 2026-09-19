@@ -1,0 +1,40 @@
+{
+  "id": "2607.12706",
+  "source_ids": {
+    "arxiv": "2607.12706"
+  },
+  "title": "AutoSIFT: Automatic Style Sifting for Controllable Speech Generation with Arbitrary Style Infilling",
+  "authors": [
+    "Haowei Lou",
+    "Junda Wu",
+    "Chengkai Huang",
+    "Tong Yu",
+    "Hye-young Paik",
+    "Wen Hu",
+    "Lina Yao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-14",
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2607.12706",
+  "pdf_url": "https://arxiv.org/pdf/2607.12706.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "State-of-the-art text-to-speech (TTS) models achieve impressive naturalness and expressiveness, yet fine-grained, disentangled control over speaking styles remains challenging. In professional scenarios such as film dubbing, game voice acting, and video content generation, users often need to modify a specific style category, such as emotion, age, or gender, while preserving all others. Existing style-controllable TTS methods typically rely on either text-described styles or speech-reference style transfer, making it difficult to jointly control explicit semantic attributes and preserve subtle, text-undescribed prosodic details. We propose AutoSIFT, a controllable speech generation framework for category-level style editing. AutoSIFT decomposes speaking style into known text-describable categories and unknown residual styles that capture non-verbal prosody and speaker-specific nuances. It consists of a generalized Style Disentangler, which extracts category-aware style prototypes from reference speech, and an Arbitrary Style Infiller, which selectively infills unspecified style categories from the reference. By replacing only text-specified style categories while preserving residual speech-derived styles, AutoSIFT enables natural, expressive, and highly customizable speech generation.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "AutoSIFT proposes automatic style sifting for fine-grained, disentangled controllable speech generation with arbitrary style infilling, a core TTS control contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-08-23",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}
