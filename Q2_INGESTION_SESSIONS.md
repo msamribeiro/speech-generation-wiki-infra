@@ -15,21 +15,23 @@ narrative.
 | Status | Count |
 |--------|-------|
 | Already ingested (Q2 2026) | 5 |
-| Remaining to ingest (accepted) | 230 |
-| Pending human triage (review) | 18 |
-| Rejected | 49 |
+| Remaining to ingest (accepted) | 241 |
+| Pending human triage (review) | 0 |
+| Rejected | 56 |
 | **Total Q2 2026 in scope so far** | **302** |
 
-As of 2026-08-23, after the arXiv fetch top-up and ACL Anthology 2026 fetch in this session (see
-Session Log). Breakdown by month (`published_date`-derived):
+As of 2026-09-21 (after the triage of the 18 Q2 `review` papers, 11 accepted and 7 rejected; the
+counts were 230 / 18 / 49 on 2026-08-23), following the arXiv fetch top-up and ACL Anthology 2026
+fetch (see Session Log). Breakdown by month (`published_date`-derived):
 
 | Month | Accepted | Ingested | Review | Rejected | Total |
 |-------|----------|----------|--------|----------|-------|
 | April 2026 | 77 | 5 | 0 | 19 | 101 |
-| May 2026 | 57 | 0 | 6 | 12 | 75 |
-| June 2026 | 96 | 0 | 12 | 18 | 126 |
+| May 2026 | 62 | 0 | 0 | 13 | 75 |
+| June 2026 | 102 | 0 | 0 | 24 | 126 |
 
-**Download and parse (2026-09-19): complete for all 230 `accepted` papers** (0 failures; 113 downloaded
+**Download and parse (2026-09-19): complete for the 230 papers `accepted` at that point** (the 11 papers
+accepted later from `review`, 5 May and 6 June, still have no PDF or parse) (0 failures; 113 downloaded
 and parsed on 2026-09-19, the other 117 were already done). By source: arXiv 181, ICLR 21, ACL 15,
 workshop 13. Of the 5 `ingested` records, 4 are real Q2 pages (all arXiv, April); the fifth is the
 ICLR record `iclr-2026-kYkfCs4ZAH`, a dedup pointer (`wiki_page_id: 2510.00981`) to a Q4 2025 page.
@@ -49,7 +51,7 @@ exists yet — confirmed by dry-run, consistent with EMNLP 2026's official Oct 2
 2026's date being unconfirmed as of this session). Re-check `acl.py --years 2026 --dry-run` closer
 to those dates. ICASSP 2026 still has no dedicated fetcher (`BACKLOG.md` Infrastructure section) —
 raised to the user 2026-08-23, not yet resolved; ASRU/SLT are in the same gap. The 18 `review`-status
-Q2 papers need human triage in `raw/review_queue.md` before the scope count is fully final. The 5
+Q2 papers were triaged by the user (2026-09-20) and the scope count is now final. The 5
 already-`ingested` April papers were not part of a chronological Q2 sweep — they were ingested
 individually back in late May 2026, before quarterly chronological ingest sessions existed, most
 likely via citation-discovery or an early top-up fetch run that happened to overlap April dates.
@@ -505,6 +507,33 @@ download and parse stage for Q2.
   it alone until they say the decisions are final, then apply them to metadata. Earlier this same session `work/ingest` was
   merged into `main` and pushed (`ab0bfb0`, then a `BACKLOG.md` update `df5176b`), and both ingest
   worktrees were fast-forwarded and their `wiki/` submodule checkout updated.
+
+### 2026-09-20 — Review triage applied, publication dates verified, conference_date repaired
+
+Commit `5f87b1b`. No ingest, no wiki (content repo) changes.
+
+- **The review pool was 43, not 18.** The 18 was the Q2-window count (by `published_date`); the full
+  `status: review` pool from the 08-23 filter runs was 43 (35 arXiv/cs.CL, 8 ACL Anthology), 25 of them
+  outside Q2 (4 Feb, 14 Jul, 7 Aug). The user ticked all 43 in `raw/review_queue.md`; applied to
+  `raw/metadata/` status: **29 accepted, 14 rejected**. By `published_date`: Feb 4A/0R, May 5A/1R,
+  Jun 6A/6R, Jul 8A/6R, Aug 6A/1R. Q2 window after triage: 241 accepted, 0 review, 56 rejected.
+- **The 29 newly accepted papers have no PDF or parse yet:** 11 in Q2 (5 May, 6 Jun), 14 in Q3
+  (8 Jul, 6 Aug), 4 IWSDS 2026 (Q1 stragglers, Q1 is already archived).
+- **Dates verified.** The 22 arXiv-sourced accepted papers match the arXiv API `published` date
+  exactly (including `2606.27380`, genuinely submitted 2026-05-11 despite its June-style ID). The 7
+  Anthology-only papers match their XML volume month (IWSDS 2026 = February 2026, Trento; DialRES and
+  LREC = May; NLPAICS = June), with day 01 by convention.
+- **`conference_date` repaired.** 65 records carried a placeholder `2026-01-01` / `2025-01-01` (written
+  before the date-table fix). Replaced with the Anthology XML volume month, day 01 (ACL and Findings
+  2026 -> 2026-07-01, LREC -> 05-01, EACL -> 03-01, IWSDS 2026 -> 02-01). 12 records were XML-confirmed
+  January (CHUM, CLTW, COLING 2025, MCG) and left alone. `month` was not touched: on arXiv-sourced
+  records it is the arXiv publication month by design. The field has no readers in scripts or the wiki,
+  so quarter counts were never affected. The fetcher's curated table has ACL 2026 at 2026-07-02, so
+  newly fetched ACL 2026 records read 07-02 while the repaired ones read 07-01 (same month).
+- **Left out of the commit:** `.gitignore` and the `openreview.py` change (handled in the 2026-09-21
+  entry below).
+- **Repo state at close:** committed on infra `work/ingest`, **not merged or pushed** (standing hold,
+  see the 2026-09-19 entry).
 
 ### 2026-09-21 — OpenReview block: diagnosis, fail-fast, saved-page import, ICML 2026
 
