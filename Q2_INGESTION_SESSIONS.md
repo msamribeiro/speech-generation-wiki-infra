@@ -97,26 +97,27 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Fetch, filter, download, and parse are all done for Q2 2026 (see Session Log, 2026-08-23 and
-2026-09-19): 230 `accepted` papers, every one parsed and ready to ingest. Ingest itself has not
-started.
+Fetch, filter, and review triage are done for Q2 2026 (see Session Log, 2026-08-23, 2026-09-19 and
+2026-09-21): 241 `accepted` papers in the window. 230 of them are downloaded, parsed and ready to
+ingest; **11 newly accepted ones (from the triage of 2026-09-21) still need a download and parse**.
+Ingest itself has not started.
 
 To resume:
 
-1. **Apply the user's offline review decisions.** The user is triaging the 18 Q2 `review` papers
-   offline in `raw/review_queue.md` (entries at lines 437–591, 821, 887, 898 as of 2026-09-19). When
-   decisions come back, update both the queue entry's decision line and `raw/metadata/{id}.json`
-   `status`, and log each to `raw/pipeline_log.md` (`review` operations). Any newly `accepted` paper
-   still needs a download and parse (`download_pdfs.py`, then `batch_convert.py`). Three entries
-   (`2026.dialres-1.18`, `2026.lrec-1.184`, `2026.nlpaics-1.18`) already have `[x] accept` ticked but
-   their metadata status is still `review`; who ticked them is unknown, so confirm with the user
-   rather than treating the ticks as decisions. Triage is not required to start ingest — the 230
-   `accepted` papers are independent of it.
-2. Build the first chronological candidate list from the 230 `accepted` Q2 papers (sort by
-   `published_date`, not ID prefix — see the ID-prefix note below). April is entirely parsed.
-3. Check with the user before starting: the trunk checkout's uncommitted `BACKLOG.md` (another
-   stream, Q4 2025 content cycle) marks ingest "P0 · queued" behind that cycle as of 2026-09-19.
+1. **Download and parse the newly accepted papers.** 29 papers were accepted from the review queue
+   across all quarters, 11 of them in the Q2 window (`accepted` with no `pdf_path`). Run
+   `download_pdfs.py` (scope with `--published-from` / `--published-to`), then `batch_convert.py`.
+   Triage is not required to start ingest; the 230 already-parsed papers are independent of it.
+2. Build the first chronological candidate list from the `accepted` Q2 papers (sort by
+   `published_date`, not ID prefix; see the ID-prefix note below). April is entirely parsed.
+3. Check with the user before starting: the trunk checkout's `BACKLOG.md` (another stream, Q4 2025
+   content cycle) marks ingest "P0 · queued" behind that cycle as of 2026-09-19.
 4. Proceed with the standard batches-of-4 cadence below.
+
+**OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
+gate, so use the saved-page path (`openreview.py --from-file`). 20 ICML 2026 candidates (Q3) are
+waiting in a dry run over the pages in `tmp/`; writing them needs the user's go-ahead. NeurIPS 2026
+had no accepted papers posted on 2026-09-21; re-save its pages later and run the same way.
 
 **Cadence:** carried forward unchanged from Q1 2026 — sequential batches of 4, one paper at a time,
 health check after each paper, a short batch summary plus explicit go-ahead before the next batch.
@@ -427,7 +428,11 @@ Investigated the ICLR/NeurIPS 2026 issue flagged in the previous entry. Two dist
    calls made tonight (across arXiv, ACL Anthology, and OpenReview fetchers) — not a broken venue ID
    or a "nothing new yet" signal. Deliberately did not keep retrying, to avoid extending any block.
 
-**Resume here next session:** re-run `openreview.py --venue ICLR --year 2026 --dry-run` and
+**Superseded 2026-09-21:** the rate-limiting diagnosis above was wrong (it is a browser-verification
+gate; waiting does not help). See the 2026-09-21 entry for the corrected diagnosis and the
+`--from-file` workaround.
+
+**Original resume note (obsolete):** re-run `openreview.py --venue ICLR --year 2026 --dry-run` and
 `--venue NeurIPS --year 2026 --dry-run` first, before anything else OpenReview-related. If still
 403ing, the block hasn't cleared — wait longer rather than retrying repeatedly. If it succeeds,
 proceed to a real (non-dry) fetch for both, then run the filter agent on whatever's new, same
@@ -500,6 +505,47 @@ download and parse stage for Q2.
   it alone until they say the decisions are final, then apply them to metadata. Earlier this same session `work/ingest` was
   merged into `main` and pushed (`ab0bfb0`, then a `BACKLOG.md` update `df5176b`), and both ingest
   worktrees were fast-forwarded and their `wiki/` submodule checkout updated.
+
+### 2026-09-21 — OpenReview block: diagnosis, fail-fast, saved-page import, ICML 2026
+
+No ingest, no wiki (content repo) changes. Earlier the same day a separate step (`5f87b1b`) applied the
+user's triage of all 43 `review` papers (29 accepted, 14 rejected) and repaired 65 placeholder
+`conference_date` values; see `raw/pipeline_log.md` and its commit message. That step left the Q2
+window at 241 accepted, 56 rejected, 5 ingested, with **11 newly accepted Q2 papers still lacking a
+PDF and parse** (29 across all quarters).
+
+- **Correction to the 2026-08-23 entry above:** the ICLR/NeurIPS 2026 403s are not rate limiting.
+  Anonymous scripted `GET /notes` on `api2.openreview.net` returns `403 ChallengeRequiredError`
+  ("Challenge verification required", with a `challengeUrl`), a browser-verification gate. The
+  rate-limit counter is untouched (179/180), so waiting and retrying cannot help.
+- **What was ruled out:** the fetcher (raw `curl` fails identically), the User-Agent, the client
+  library (the official `openreview-py` anonymous client gets the same error), the venue year
+  (ICLR 2025 and NeurIPS 2025 are gated too), and this network (a phone hotspot is gated too). A real
+  browser passes the check in a few seconds, in a normal and an incognito window, with no login.
+- **Timing is unknown:** the last successful live OpenReview fetch was **2026-06-05** (all 56
+  OpenReview records carry that `fetched_date`; the 06-29 date in `BACKLOG.md` was the local dedup
+  pass). The gate appeared sometime between then and 08-23. No announcement was found and the cause is
+  not established.
+- **`openreview.py` changes:** (1) `or_get` raises `OpenReviewChallengeError` at once on a
+  `ChallengeRequiredError` 403 instead of retrying for about 5 minutes; `main` exits with code 2 and
+  no `fetch_log.jsonl` entry is written. (2) New `--from-file` mode reads `/notes` pages saved from a
+  browser (`limit=1000`, `offset` stepped by 1000, `sort=cdate:asc`) and feeds them through the normal
+  parse, keyword filter and skip-existing path. It keeps only notes whose `venueid` matches, drops
+  duplicate note IDs, and warns when fewer notes load than the API's `count` (a missing page).
+  (3) ICML added to the venue table: `ICML.cc/2026/Conference`, `2026-07-06`, month 7 (ICML 2026 is
+  July 6-11, Seoul), which puts it in Q3 2026, not Q2. Workshops are not covered (each has its own
+  venue ID; the table and `venue_type` are conference-only).
+- **Validation, dry run only:** ICLR 2026 loaded 5,351 notes from 6 saved pages, 27 passed the
+  filter, all 27 already in the corpus, so the saved-page path reproduces the June live fetch exactly
+  and ICLR 2026 needs nothing more. ICML 2026 loaded 6,341 notes from 7 pages, 20 passed the filter,
+  0 existing. Dropping one page correctly triggers the incomplete-coverage warning. NeurIPS 2026's
+  first page came back empty as of 2026-09-21 (accepted papers not posted yet).
+- **Not done:** the 20 ICML 2026 records were **not written** (awaiting the user's go-ahead). A
+  credentialed `openreview-py` login was never tested (no account); it is unverified whether a token
+  would pass the gate. The saved pages sit in `tmp/` at the infra root: untracked, not gitignored,
+  about 93 MB, never to be staged with `git add -A`.
+- **Repo state at close:** the `openreview.py` and doc changes are committed on infra `work/ingest`,
+  ahead of `main`, **not merged or pushed** (see the standing hold in the 2026-09-19 entry).
 
 ---
 
