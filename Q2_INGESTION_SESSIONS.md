@@ -107,9 +107,11 @@ Ingest itself has not started.
 To resume:
 
 1. **Download and parse the newly accepted papers.** 29 papers were accepted from the review queue
-   across all quarters, 11 of them in the Q2 window (`accepted` with no `pdf_path`). Run
-   `download_pdfs.py` (scope with `--published-from` / `--published-to`), then `batch_convert.py`.
-   Triage is not required to start ingest; the 230 already-parsed papers are independent of it.
+   across all quarters: 11 in the Q2 window and 9 in Q1 (`accepted` with no `pdf_path`; the other 9
+   are July-August). Run `download_pdfs.py` (scope with `--published-from` / `--published-to`), then
+   `batch_convert.py`. Triage is not required to start ingest; the 230 already-parsed papers are
+   independent of it. The 9 Q1 papers are stragglers (see the 2026-09-21 continuation entry): ingest
+   them as a small closing Q1 batch.
 2. Build the first chronological candidate list from the `accepted` Q2 papers (sort by
    `published_date`, not ID prefix; see the ID-prefix note below). April is entirely parsed.
 3. Check with the user before starting: the trunk checkout's `BACKLOG.md` (another stream, Q4 2025
@@ -608,6 +610,25 @@ PDF and parse** (29 across all quarters).
 - **Cleanup:** the scratch directory `tmp/` (13 saved API pages, about 93 MB, plus the two PDFs) was
   removed; the PDFs were verified byte-identical to the filed copies and every record the pages
   produced already exists. To repeat an import, save the pages again (workflow in the entry above).
+- **2026 status by quarter, end of session** (by `published_date`; accepted = accepted + ingested; the
+  dedup pointer `iclr-2026-kYkfCs4ZAH` is not counted; downloaded and parsed checked on disk):
+
+  | | Q1 | Q2 | Q3 (partial) |
+  |---|---|---|---|
+  | Records / rejected | 237 / 66 | 302 / 56 | 157 / 43 |
+  | Accepted | 171 | 245 | 114 |
+  | Downloaded / parsed | 162 / 162 | 234 / 234 | 2 / 2 |
+  | Ingested | 162 | 4 | 0 |
+  | Awaiting ingest (parsed and ready / need PDF) | 9 (0 / 9) | 241 (230 / 11) | 114 (2 / 112) |
+
+  Total awaiting ingest across 2026: 364, of which 232 are parsed and ready. The parse tool's count of
+  accepted papers with no PDF is 132 (9 + 11 + 112), which matches.
+- **Finding: Q1 2026 is not fully closed.** It was archived on 2026-08-22 as 162 ingested / 0
+  remaining, but the ACL Anthology 2026 fetch of 2026-08-23 added 9 accepted workshop papers dated
+  Feb-Mar (5 IWSDS 2026, published 2026-02-01, plus `2026.abjadnlp-1.6`, `2026.africanlp-main.23`,
+  `2026.eacl-short.16`, `2026.loreslm-1.54`). None has a PDF. Tracked in `BACKLOG.md`.
+- **Q3 is partial on the fetch side:** latest `published_date` is 2026-08-20, nothing from September,
+  Interspeech 2026 not yet on ISCA, no ICASSP/ASRU/SLT fetchers. Tracked in `BACKLOG.md`.
 - **Known follow-ups, unchanged:** the 7 ingested wiki pages still cite only the arXiv version, not
   ICML acceptance (the deferred venue-migration item in `BACKLOG.md`); `dedup_openreview.py` still
   lacks the `icml-2026-` prefix; the fetcher's keyword filter passed 20 of 6,341 ICML papers and was
