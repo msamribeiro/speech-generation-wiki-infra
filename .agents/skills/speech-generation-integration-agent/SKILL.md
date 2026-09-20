@@ -43,6 +43,7 @@ path is a detached HEAD submodule. Writes there will be lost.
 
 **YOU WRITE:**
 - `wiki/_claims/{slug}.yaml` — the claim graph YAML
+- `PHASE2_CLUSTER_SUMMARIES.local.md` — local, Git-ignored Phase 2 cluster-summary log
 
 **YOU DO NOT:**
 - Write `wiki/papers/` pages — ingest agent
@@ -400,6 +401,36 @@ has passed without a trigger, surface it in the run summary.
 - `open_questions` — add new unresolved questions surfaced by new paper entries
 - `trend_notes` — add temporal observations (e.g. "growing adoption in streaming systems Q2 2026")
 
+### 2e. Draft the main-cluster summary
+
+After synthesis and validation succeed, write one plain-language paragraph of fewer than 200
+words describing the concept's main claim clusters and method families. This paragraph is the
+final Phase 2 handoff deliverable. Print it after the operational run summary and append it to
+`PHASE2_CLUSTER_SUMMARIES.local.md` in the infra root rather than storing it in the claim YAML or
+main wiki. The local log is intentionally Git-ignored.
+
+The paragraph must:
+
+- synthesize the field-level themes rather than enumerate papers or YAML identifiers;
+- emphasize the largest or most consequential clusters, including important trade-offs;
+- distinguish established findings from emerging or contested ones when that distinction matters;
+- use only conclusions supported by the completed concept YAML; and
+- remain useful to a speech researcher without explaining integration machinery.
+
+Create the local log with this heading if it does not exist, then append one entry per concept in
+completion order. Do not rewrite or deduplicate earlier entries; repeated Phase 2 passes are useful
+historical review points.
+
+```markdown
+# Phase 2 Cluster Summaries
+
+Local, untracked review notes generated after completed Phase 2 integrations.
+
+## {YYYY-MM-DD} — {concept slug}
+
+{one paragraph of fewer than 200 words}
+```
+
 After Phase 2, run inline Phase 2 validation:
 
 ```bash
@@ -486,6 +517,9 @@ Phase 1       : {P} entries written | {S} structured-claim pages | {L} legacy-cl
 Phase 2       : {M} clusters updated (new: {X} | promoted: {Y} | contested: {Z}) | {Q} reassessments ({TR} triggered | {OD} overdue)
 Validation    : all passed | {F} failures (fixed)
 Health check  : .venv/bin/python3 scripts/health_check.py --module integrate --concept {slug} --wiki-dir $WIKI
+
+Main clusters ({word_count} words):
+{one paragraph of fewer than 200 words describing the concept's main clusters}
 ```
 
 ---
@@ -510,3 +544,6 @@ Health check  : .venv/bin/python3 scripts/health_check.py --module integrate --c
 15. If a concept slug is not in the registry in `docs/content.md`, flag it and stop — do not create unsanctioned YAMLs.
 16. Never write `_claims/_reconciliation/`; cross-concept relationships are a separate reviewed
     stage.
+17. Every completed Phase 2 run ends with one main-cluster summary paragraph of fewer than 200
+    words. Print it in the handoff and append it to `PHASE2_CLUSTER_SUMMARIES.local.md`; do not
+    substitute an operational change summary or a paper-by-paper inventory.

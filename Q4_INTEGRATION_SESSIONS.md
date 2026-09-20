@@ -1,7 +1,7 @@
 # Q4 2025 Integration and Synthesis Session
 
 **Started:** 2026-09-19
-**Status:** Active; subjective-evaluation complete through Phase 2
+**Status:** Active; six concepts complete through Phase 2
 **Evidence scope:** Q4 2025 (`2025-10-01 <= published_date <= 2025-12-31`) layered onto the
 completed Q3-and-earlier claim graphs
 **Goal:** Complete the seven-stage Q4 cycle: Phase 1 integration, Phase 2 synthesis, validation,
@@ -25,13 +25,10 @@ reconciliation, snapshot, render, and report sequence recorded in
    export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-integrate
    ```
 
-3. Recompute the live Q4 candidate queue for `evaluation-metrics`; do not rely only on the
-   baseline table below.
-4. Start `evaluation-metrics` Phase 1 with the oldest eligible Q4 papers, processing sequentially
-   in batches of at most 20. The planning baseline was 61 candidates and no existing Q4 entries,
-   but live discovery is authoritative.
-5. Run and independently verify the concept-scoped integration health check after every batch.
-6. Append a dated Session Log entry before ending the session, including the exact next paper or
+3. Begin `autoregressive-codec-tts` Phase 1 after recomputing its live Q4 queue; the current
+   dashboard estimate is 31 pending entries.
+4. Run and independently verify the concept-scoped integration health check after every batch.
+5. Append a dated Session Log entry before ending the session, including the exact next paper or
    next phase.
 
 Starting commits recorded at bootstrap:
@@ -335,6 +332,446 @@ render or report publication follows the repository's normal publication workflo
 ---
 
 ## Session Log
+
+### 2026-09-20 — speech-to-speech Phase 2 synthesis complete
+
+- Synthesized the complete 94-paper YAML without re-reading paper pages; all 34 Q4 entries were
+  included in the evidence review.
+- Expanded the five established method families and added two Q4 families for incremental/concurrent
+  reasoning and retrieval/tool-augmented spoken agents. Reciprocal assignments cover 24/34 Q4 papers;
+  the other 10 are intentional benchmark, evaluation, or peripheral-task outliers.
+- Updated all 16 existing claim clusters and added three strongly supported Q4 clusters: incremental
+  reasoning during listening, structured and synthetic training for direct S2ST, and uneven
+  multilingual/code-switched performance. All 33 Q4 papers with high- or medium-relevance claims
+  map to at least one cluster.
+- Reviewed all five prior reassessment items. The staged-pretraining and cascade-gap triggers remain
+  unmet; the three due or overdue paper/scope items remain surfaced for human review. Added one
+  reassessment for natural-interaction transfer of incremental reasoning results.
+- Added two open questions and three Q4 trend notes. Appended the required sub-200-word cluster
+  summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and 28 accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 299 warnings, with 2,555 paper entries,
+  413 clusters (288 strongly supported, 15 contested), and `papers_not_in_any_yaml=184`.
+- Next: begin `autoregressive-codec-tts` Q4 Phase 1 after recomputing its live queue; the dashboard
+  currently shows 31 pending entries.
+
+### 2026-09-20 — speech-to-speech Phase 1 batch 2 and closure (80 → 94 cumulative)
+
+- Recomputed the live queue after batch 1 and processed the remaining 14 papers oldest-first,
+  from `2025.emnlp-main.1492` through `2512.20296`.
+- Preserved all 57 claims from 13 structured-claim pages and one legacy page (`2511.15848`), with
+  no empty claim lists or `source: not specified` entries.
+- Assigned concept-specific paper relevance of 12 high and 2 medium; claim relevance totals are 48
+  high, 4 medium, and 5 low. Persona-aware dialogue, direct retrieval, dubbing and translation,
+  multi-round full-duplex evaluation, audio-visual dialogue, acoustically grounded reasoning, and
+  modular cascaded interaction received the strongest relevance.
+- Canonical metadata dates match every written `published_date`; the YAML now contains 94
+  cumulative papers with no duplicate IDs.
+- The exact Q4 candidate-versus-YAML audit closes at 34/34, with no missing or extra candidate IDs,
+  superseding the 35-paper planning estimate.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 323 non-blocking warnings, with 2,555 total paper
+  entries and `papers_not_in_any_yaml=184`.
+- Next: run `speech-to-speech` Phase 2 synthesis across the complete 94-paper YAML.
+
+### 2026-09-20 — speech-to-speech Phase 1 batch 1 (60 → 80 cumulative)
+
+- Recomputed the bounded live Q4 queue from canonical metadata and YAML-parsed paper frontmatter.
+  The live set is 34 candidates with none already in the concept YAML, superseding the dashboard
+  baseline of 35 candidates.
+- Processed the first 20 eligible papers oldest-first, from `2510.00499` through
+  `2025.emnlp-main.1160`.
+- Preserved all 88 claims from 18 structured-claim pages and two legacy pages (`2510.07838` and
+  `2025.emnlp-demos.70`), with no empty claim lists or `source: not specified` entries.
+- Assigned concept-specific paper relevance of 15 high, 4 medium, and 1 low; claim relevance totals
+  are 65 high, 14 medium, and 9 low. Text-free dialogue, streaming retrieval and reasoning,
+  full-duplex interaction, code switching, direct translation, prosody transfer, persona and
+  emotional evaluation, and modular-versus-native architecture trade-offs received the strongest
+  relevance.
+- Canonical metadata dates match every written `published_date`; the YAML contains 80 cumulative
+  papers with no duplicate IDs after the batch.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. Q4 progress is
+  20/34, with 14 eligible papers remaining.
+- Next: close Phase 1 with `2025.emnlp-main.1492` through `2512.20296`.
+
+### 2026-09-20 — spoken-language-model Phase 2 synthesis complete
+
+- Synthesized the complete 173-paper YAML without re-reading paper pages; all 46 Q4 entries were
+  included in the evidence review.
+- Reviewed all 17 existing clusters and mapped every Q4 paper carrying high- or medium-relevance
+  claims to at least one cluster. Added one strongly supported cluster for incremental reasoning
+  and tool use during the user-listening window.
+- Promoted the safety, privacy, misuse, and provenance cluster from emerging to strongly supported
+  after new Q4 evidence on traceability gaps, multilingual refusal fragility, audio-channel
+  jailbreaks, deepfake-detector limits, and multi-round safety evaluation. All 18 clusters are now
+  strongly supported; none is contested.
+- Updated the six existing method families and added a 21-paper full-duplex streaming-dialogue
+  family spanning both earlier and Q4 systems. The graph now has 211 reciprocal memberships across
+  134/173 papers; 35/46 Q4 papers are assigned, while 11 Q4 and 28 earlier architecture-unspecified
+  benchmark, survey, dataset, or evaluation papers remain intentional outliers.
+- Added one method-family reassessment for future full-duplex subgroup boundaries, added two open
+  questions, and refreshed seven trend notes through Q4 2025.
+- The concept-scoped Phase 2 health check passes with 0 errors and 39 accepted method-family
+  warnings. The corpus-wide integration check passes with 0 errors and 289 non-blocking warnings;
+  totals remain 2,521 paper entries and rise to 410 clusters, with 285 strongly supported and 15
+  contested, and `papers_not_in_any_yaml=184`.
+- Added the required 150-word cluster overview to the local, ignored Phase 2 summary log.
+- Next: begin `speech-to-speech` Q4 Phase 1 after recomputing its live queue; the dashboard
+  baseline is 35 candidates and none already present.
+
+### 2026-09-20 — spoken-language-model Phase 1 batch 3 and closure (167 → 173 cumulative)
+
+- Recomputed the live queue after batch 2 and confirmed the final six eligible Q4 papers, from
+  `neurips-2025-vhPy3NMsO5` through `2512.23808`.
+- Extracted all 24 claims from six structured-claim pages, with no empty claim lists or
+  `source: not specified` entries.
+- Assigned concept-specific paper relevance of 5 high and 1 medium; claim relevance totals are 21
+  high and 3 medium. Online multimodal response generation, natural multi-turn evaluation,
+  modular low-latency dialogue, large-scale unified speech modeling, and full-duplex behavior
+  reasoning received the strongest relevance.
+- Canonical metadata dates match every written `published_date`; the YAML now contains 173
+  cumulative papers with no duplicate IDs.
+- The exact Q4 candidate-versus-YAML audit closes at 46/46, with no missing or extra candidate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 324 non-blocking warnings, with 2,521 total paper
+  entries and `papers_not_in_any_yaml=184`.
+- Next: run `spoken-language-model` Phase 2 synthesis across the complete 173-paper YAML.
+
+### 2026-09-20 — spoken-language-model Phase 1 batch 2 (147 → 167 cumulative)
+
+- Recomputed the live queue and confirmed 46 eligible Q4 papers, 20 already integrated, and 26
+  pending before this batch.
+- Processed the next 20 papers oldest-first, from `2511.01261` through
+  `neurips-2025-AsRB5nmlOD`.
+- Extracted all 85 paper-page claims. Fifteen pages used structured role/evidence claims; five
+  pages used the legacy format. Fifteen legacy evidence statements were reused from reviewed
+  entries in other concept YAMLs, while the remaining nine were reconstructed only from the
+  existing OpenS2S and Step-Audio-R1 paper-page methods, results, and limitations.
+- Assigned concept-specific paper relevance of 16 high, 2 medium, and 2 low; claim relevance totals
+  are 69 high, 10 medium, and 6 low. Human-aligned dialogue evaluation, empathetic generation,
+  multimodal grounding, persona-aware interaction, retrieval, multi-token prediction, audio-native
+  judging, full-duplex evaluation, and acoustically grounded reasoning received the strongest
+  relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML contains 167 cumulative papers with no duplicate
+  IDs after the batch.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. Q4 progress is
+  40/46, with six eligible papers remaining.
+- Next: close Phase 1 with `neurips-2025-vhPy3NMsO5` through `2512.23808`.
+
+### 2026-09-20 — spoken-language-model Phase 1 batch 1 (127 → 147 cumulative)
+
+- Recomputed the bounded live Q4 queue from canonical metadata and YAML-parsed paper frontmatter.
+  The live set is 46 candidates with none already in the concept YAML, superseding the planning
+  baseline of 49 candidates with 2 already present.
+- Processed the first 20 eligible papers oldest-first, from `2510.00499` through `2511.00850`.
+- Extracted all 90 paper-page claims. Eighteen pages used structured role/evidence claims;
+  `2510.00981` and `2510.07838` used the legacy format, so their ten evidence statements were
+  carried over from the already-reviewed neural-codec and evaluation-metrics entries.
+- Assigned concept-specific paper relevance of 14 high, 3 medium, and 3 low; claim relevance totals
+  are 66 high, 12 medium, and 12 low. Incremental reasoning, streaming retrieval and tool use,
+  full-duplex evaluation, multi-turn spoken context, modality-preserving architectures,
+  multilingual agent behavior, and expressive-dialogue data received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 147 cumulative papers with no
+  duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 298 non-blocking warnings, with 2,495 total paper
+  entries and `papers_not_in_any_yaml=191`.
+- Q4 progress is 20/46, with 26 eligible papers remaining. The next five are `2511.01261`,
+  `2025.emnlp-demos.70`, `2025.emnlp-main.1160`, `2025.emnlp-main.1447`, and
+  `2025.emnlp-main.1492`.
+- Phase 2 remains blocked until all 46 live Q4 candidates are integrated.
+- Next: `spoken-language-model` Phase 1 batch 2, starting at `2511.01261`.
+
+### 2026-09-20 — neural-codec Phase 2 synthesis complete
+
+- Synthesized the complete 239-paper YAML without re-reading paper pages; all 56 Q4 entries were
+  included in the evidence review.
+- Updated all seven established method families and assigned 47/56 Q4 papers. Nine Q4 papers
+  remain deliberate evaluation, benchmark, dialogue-context, or peripheral-use outliers. Overall
+  reciprocal family coverage is 218/239 papers with 351 memberships; all 21 warnings correspond
+  exactly to the retained outliers.
+- Updated all 17 existing claim clusters and added one strongly supported Q4 cluster:
+  `codec_robustness_requires_domain_aware_training`. All 18 clusters are strongly supported; none
+  is contested.
+- Reviewed all five reassessment items. Q4 evidence strengthens their rationales, but none meets
+  its explicit trigger for resolution or family subdivision. Replaced two open questions and
+  added one on ultra-low-rate designs; added three Q4 trend notes.
+- Appended the required sub-200-word cluster summary to the local ignored review log.
+- The concept-scoped Phase 2 health check passes with 0 errors and 21 accepted method-family
+  warnings. The corpus-wide integration check passes with 0 errors and 278 non-blocking warnings;
+  totals are 2,475 paper entries and 409 clusters, with 283 strongly supported and 15 contested,
+  and `papers_not_in_any_yaml=197`.
+- Next: begin `spoken-language-model` Q4 Phase 1 after recomputing its live queue; the planning
+  baseline is 49 candidates, 2 already present, and 47 pending.
+
+### 2026-09-20 — neural-codec Phase 1 batch 3 and closure (223 → 239 cumulative)
+
+- Recomputed the live queue and confirmed the final 16 eligible Q4 papers, from `2511.19734`
+  through `2512.23808`.
+- Extracted all 69 paper-page claims. Twelve pages used structured role/evidence claims;
+  `2512.04720`, `2502.03930`, `2512.13251`, and `2512.14291` used the legacy format, so their 19
+  evidence statements were reconstructed only from existing paper-page results and limitations.
+- Assigned concept-specific paper relevance of 12 high, 2 medium, and 2 low; claim relevance totals
+  are 51 high, 6 medium, and 12 low. Geometry-aware and semantic quantization, continuous VAE
+  tokens, streaming flow decoding, factorized codec control, anti-aliasing, and domain robustness
+  received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 239 cumulative papers with no
+  duplicate IDs.
+- The exact Q4 candidate-versus-YAML audit closes at 56/56, with no missing or extra candidate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings.
+- Next: run `neural-codec` Phase 2 synthesis across the complete 239-paper YAML.
+
+### 2026-09-20 — neural-codec Phase 1 batch 2 (203 → 223 cumulative)
+
+- Recomputed the live queue and confirmed 56 eligible Q4 papers, 20 already integrated, and 36
+  pending before this batch.
+- Processed the next 20 eligible papers oldest-first, from `2510.16718` through `2511.16639`.
+- Extracted all 87 paper-page claims. Eighteen pages used structured role/evidence claims;
+  `2025.emnlp-main.989` and `2511.12347` used the legacy format, so their ten evidence statements
+  were reconstructed only from the existing paper-page Key Results and limitations sections.
+- Assigned concept-specific paper relevance of 12 high, 6 medium, and 2 low; claim relevance totals
+  are 51 high, 12 medium, and 24 low. Ultra-low-rate reconstruction, separate semantic/acoustic
+  streams, compressed-spectrum streaming, spatial audio, continuous tokenization, codec evaluation,
+  controllable and factorized representations, and codec-token SSL received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 223 cumulative papers with no
+  duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 309 non-blocking warnings, with 2,459 total paper
+  entries and `papers_not_in_any_yaml=201`.
+- Q4 progress is 40/56, with 16 eligible papers remaining. The final batch starts with
+  `2511.19734`, `2511.20974`, `2511.22687`, `2512.01537`, and `2512.01865`.
+- Phase 2 remains blocked until all 56 live Q4 candidates are integrated.
+- Next: close `neural-codec` Phase 1 with the final 16-paper batch, starting at `2511.19734`.
+
+### 2026-09-20 — neural-codec Phase 1 batch 1 (183 → 203 cumulative)
+
+- Recomputed the bounded live Q4 queue from canonical metadata and YAML-parsed paper frontmatter.
+  The live set is 56 candidates with none already in the concept YAML, superseding the planning
+  baseline of 58 candidates with 2 already present.
+- Processed the first 20 eligible papers oldest-first, from `2510.00499` through `2510.15364`.
+- Extracted all 87 paper-page claims. Sixteen pages used structured role/evidence claims;
+  `2510.00981`, `2510.02848`, `2510.05758`, and `2510.12210` used the legacy format, so their 17
+  evidence statements were reconstructed only from the existing paper-page Key Results and
+  limitations sections.
+- Assigned concept-specific paper relevance of 9 high, 5 medium, and 6 low; claim relevance totals
+  are 36 high, 18 medium, and 33 low. Dynamic low-rate tokenization, 2D and single-codebook
+  compression, factorized sub-latents, sparse-to-dense bridging, controllable RVQ depth, and
+  low-compute decoding received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 203 cumulative papers with no
+  duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 289 non-blocking warnings, with 2,439 total paper
+  entries and `papers_not_in_any_yaml=206`.
+- Q4 progress is 20/56, with 36 eligible papers remaining. The next five are `2510.16718`,
+  `2510.16841`, `2510.19509`, `2510.21209`, and `2510.22241`.
+- Phase 2 remains blocked until all 56 live Q4 candidates are integrated.
+- Next: `neural-codec` Phase 1 batch 2, starting at `2510.16718`.
+
+### 2026-09-20 — zero-shot-tts Phase 2 synthesis complete
+
+- Synthesized the complete 262-paper YAML without re-reading paper pages; all 59 Q4 entries were
+  included in the evidence review.
+- Updated all nine method families and assigned 51/59 Q4 papers. Eight Q4 papers remain intentional
+  architecture, evaluation, optimization, or dataset outliers; together with 16 preserved
+  Q3-and-earlier outliers, method-family coverage is 238/262 and accounts for all 24 warnings.
+- Updated all 18 existing claim clusters and added two narrowly supported Q4 clusters. Preference
+  and reinforcement optimization is strongly supported, with explicit reward-control caveats;
+  non-audio conditioning from faces or descriptions is emerging and remains coarser than acoustic
+  reference conditioning.
+- The two previously contested conclusions remain contested: cross-lingual cloning still faces
+  language and accent leakage, and automatic metrics still do not fully capture perceived cloning
+  quality. No reassessment item was triggered or resolved.
+- Added two open questions on reward safeguards and multimodal identity validity and bias, plus
+  three trend notes covering broader generation settings, acceleration strategies, and Q4
+  post-training practices. The required sub-200-word cluster summary was appended to the local,
+  ignored review log.
+- The concept-scoped Phase 2 health check passes with 0 errors and 24 accepted method-family
+  warnings. The corpus-wide integration check passes with 0 errors and 269 non-blocking warnings;
+  totals are 2,419 paper entries and 408 clusters, with 282 strongly supported and 15 contested,
+  and `papers_not_in_any_yaml=213`.
+- Next: begin `neural-codec` Q4 Phase 1 after recomputing its live queue; the planning baseline is
+  58 candidates, 2 already present, and 56 pending.
+
+### 2026-09-20 — zero-shot-tts Phase 1 batch 3 and closure (243 → 262 cumulative)
+
+- Recomputed the live queue and confirmed the final 19 eligible Q4 papers, from `2512.00451`
+  through `2512.23808`.
+- Extracted all 87 paper-page claims. Fifteen pages used structured role/evidence claims;
+  `2512.04720`, `2502.03930`, `2512.13251`, and `2512.14291` used the legacy format, so their 19
+  evidence statements were reconstructed only from the existing paper-page Key Results and
+  limitations sections.
+- Assigned concept-specific paper relevance of 13 high and 6 medium; claim relevance totals are 58
+  high, 27 medium, and 2 low. Foundation speech generation, continuous-latent autoregression,
+  multilingual adaptation, fine-grained control, long-context dialogue, and robust zero-shot
+  generation received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 262 cumulative papers with no
+  duplicate IDs.
+- The exact Q4 candidate-versus-YAML audit closes at 59/59, with no missing or extra candidate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 320 non-blocking warnings, with 2,419 total paper
+  entries and `papers_not_in_any_yaml=213`.
+- Next: run `zero-shot-tts` Phase 2 synthesis across the complete 262-paper YAML.
+
+### 2026-09-20 — zero-shot-tts Phase 1 batch 2 (223 → 243 cumulative)
+
+- Recomputed the live queue and confirmed 59 eligible Q4 papers, 20 already integrated, and 39
+  pending before this batch.
+- Processed the next 20 eligible papers oldest-first, from `2510.23541` through `2511.21270`.
+- Extracted all 87 paper-page claims. Eighteen pages used structured role/evidence claims;
+  `2025.emnlp-main.40` and `2511.12347` used the legacy format, so their ten evidence statements
+  were reconstructed only from the existing paper-page synthesis and Key Results sections.
+- Assigned concept-specific paper relevance of 11 high, 5 medium, and 4 low; claim relevance totals
+  are 41 high, 30 medium, and 16 low. Long-form and streaming generation, multilingual cloning,
+  representation alignment, multimodal speaker control, accent mitigation, and evaluation validity
+  received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 243 cumulative papers with no
+  duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 301 non-blocking warnings, with 2,400 total paper
+  entries and `papers_not_in_any_yaml=225`.
+- Q4 progress is 40/59, with 19 eligible papers remaining. The next five are `2512.00451`,
+  `2512.04720`, `2512.04779`, `2512.04793`, and `2502.03930`.
+- Phase 2 remains blocked until all 59 live Q4 candidates are integrated.
+- Next: close `zero-shot-tts` Phase 1 with the final 19-paper batch, starting at `2512.00451`.
+
+### 2026-09-20 — zero-shot-tts Phase 1 batch 1 (203 → 223 cumulative)
+
+- Recomputed the live Q4 queue from canonical metadata and YAML-parsed paper frontmatter. The live
+  set is 59 candidates with none already in the concept YAML, superseding the planning baseline of
+  61 candidates with 2 already present.
+- Processed the first 20 eligible papers oldest-first, from `2025.vlsp-1.14` through
+  `2511.05516`.
+- Extracted all 87 paper-page claims. Seventeen pages used structured role/evidence claims;
+  `2510.02848`, `2510.07979`, and `2510.12210` used the legacy format, so their 13 evidence
+  statements were reconstructed only from the existing paper-page Key Results sections.
+- Assigned concept-specific paper relevance of 11 high, 7 medium, and 2 low; claim relevance totals
+  are 34 high, 42 medium, and 11 low. Direct voice-cloning architectures, sparse or continuous
+  representations, cross-lingual conditioning, evaluator-guided correction, and emotion control
+  received the strongest relevance.
+- The batch has no empty claim lists or `source: not specified` entries. Canonical metadata dates
+  match every written `published_date`; the YAML now contains 223 cumulative papers with no
+  duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 281 non-blocking warnings, with 2,380 total paper
+  entries and `papers_not_in_any_yaml=231`.
+- Q4 progress is 20/59, with 39 eligible papers remaining. The next five are `2510.23541`,
+  `2510.24372`, `2510.25577`, `2510.26190`, and `2511.01261`.
+- Phase 2 remains blocked until all 59 live Q4 candidates are integrated.
+- Next: `zero-shot-tts` Phase 1 batch 2, starting at `2510.23541`.
+
+### 2026-09-20 — evaluation-metrics Phase 2 synthesis complete
+
+- Synthesized the complete 346-paper YAML without re-reading paper pages; all 61 Q4 entries were
+  included in the evidence review.
+- Updated all 17 existing method families and assigned 55/61 Q4 papers. Six Q4 papers remain
+  intentional architecture, optimization, or robustness outliers; together with 14 preserved
+  Q3-and-earlier outliers, method-family coverage is 326/346 and accounts for all 20 warnings.
+- Reviewed and updated 24/31 existing claim clusters. No distinct Q4 proposition required a new
+  cluster, and the existing LLM/audio-judge cluster remains contested rather than resolving in
+  either direction.
+- Promoted `corpus_quality_filtering_criteria_introduce_data_distortions` from emerging to
+  strongly supported after independent Q4 evidence covered preprocessing trade-offs,
+  expressiveness filtering, automatic annotation/filtering, synthetic support-set construction,
+  and segmentation choices.
+- Reassessed the oversized `objective_perceptual_quality_metric_divergence` family after it
+  reached 120 papers. The umbrella is retained because narrower overlapping families already
+  isolate learned MOS predictors, codec suites, WER, speaker similarity, prosody, and
+  pronunciation; its completed reassessment item was removed. Six reassessment items remain.
+- Replaced the stale taxonomy-count open question with a modality-gap attribution question and
+  added Q4 trend notes on the shift toward audio-native, multi-turn, comprehension-based,
+  confounder-paired, and natural-human-speech evaluation protocols.
+- The concept-scoped Phase 2 health check passes with 0 errors and 20 accepted method-family
+  warnings. The corpus-wide integration check passes with 0 errors and 261 non-blocking warnings;
+  totals remain 2,360 paper entries and 406 clusters, now with 281 strongly supported and 15
+  contested, and `papers_not_in_any_yaml=242`.
+- Next: begin `zero-shot-tts` Q4 Phase 1 after recomputing its live queue.
+
+### 2026-09-20 — evaluation-metrics Phase 1 batch 4 and closure (345 → 346 cumulative)
+
+- Recomputed the live queue and confirmed `2512.23808` was the only remaining eligible Q4 paper.
+- Read the full paper page and extracted all four structured claims with their roles, evidence,
+  and cited sources; no legacy reconstruction or unspecified source was required.
+- Classified the paper as medium relevance to evaluation metrics, with SpeechMMLU's cross-modal
+  modality-gap diagnostic as the direct high-relevance claim and three scaling, instruction, and
+  reasoning findings as medium-relevance evidence.
+- Verified the written `published_date` (`2025-12-29`) against canonical metadata. The concept
+  YAML now contains 346 cumulative papers with no duplicate IDs or empty claim lists.
+- The exact Q4 candidate-versus-YAML audit closes at 61/61, with no missing or extra Q4 IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 316 non-blocking warnings, with 2,360 total paper
+  entries and `papers_not_in_any_yaml=242`.
+- Next: run `evaluation-metrics` Phase 2 synthesis across the complete 346-paper YAML.
+
+### 2026-09-20 — evaluation-metrics Phase 1 batch 3 (325 → 345 cumulative)
+
+- Recomputed the live Q4 queue and confirmed 61 eligible papers, 40 already integrated, and 21
+  pending before this batch.
+- Processed the next 20 eligible papers oldest-first, from `2511.06150` through `2512.14865`.
+- Extracted all 84 paper-page claims. All 20 pages used the structured role/evidence format, so no
+  legacy evidence reconstruction was required.
+- Assigned concept-specific paper relevance of 6 high and 14 medium; claim relevance totals are
+  40 high, 26 medium, and 18 low. Audio-native judges, multi-round/full-duplex benchmarks,
+  harmful-audio safety evaluation, codec-metric validity, multimodal singing feedback, and
+  natural multi-turn dialogue evaluation received the strongest relevance.
+- The finished batch has no empty claim lists and no `source: not specified` entries. Canonical
+  metadata dates match every written `published_date`; the YAML now contains 345 cumulative
+  papers with no duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 315 non-blocking warnings, with 2,359 total paper
+  entries and `papers_not_in_any_yaml=243`.
+- Q4 progress is 60/61. The exact oldest-first audit confirms that only `2512.23808` remains.
+- Phase 2 remains blocked until that final paper is integrated and the 61/61 closure audit passes.
+- Next: close `evaluation-metrics` Phase 1 with `2512.23808`, then run Phase 2 synthesis.
+
+### 2026-09-20 — evaluation-metrics Phase 1 batch 2 (305 → 325 cumulative)
+
+- Recomputed the live Q4 queue and confirmed 61 eligible papers, 20 already integrated, and 41
+  pending before this batch; the apparent earlier `2510.14664` page is Tier 2 and remains excluded.
+- Processed the next 20 eligible papers oldest-first, from `2510.22241` through
+  `2025.arabicnlp-main.38`.
+- Extracted all 83 paper-page claims: 18 pages used the structured role/evidence format, while
+  `2025.emnlp-main.40` and `2025.findings-emnlp.424` used the legacy format. Reconstructed their
+  ten evidence statements only from the existing Method, Key Results, and Limitations sections.
+- Assigned concept-specific paper relevance of 10 high and 10 medium; claim relevance totals are
+  55 high, 8 medium, and 20 low. Dedicated evaluation frameworks, benchmark-design evidence,
+  metric divergence, and human-aligned judge validation received the strongest relevance.
+- The finished batch has no empty claim lists and no `source: not specified` entries. The YAML now
+  contains 325 cumulative papers and remains internally consistent with no duplicate IDs.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings. The corpus-wide
+  integration check passes with 0 errors and 295 non-blocking warnings, with 2,339 total paper
+  entries and `papers_not_in_any_yaml=255`.
+- Q4 progress is 40/61, with 21 eligible papers remaining. The next five are `2511.06150`,
+  `2508.20916`, `2511.07135`, `2511.10112`, and `2511.10262`.
+- Phase 2 remains blocked until all 61 Q4 candidates are integrated.
+- Next: `evaluation-metrics` Phase 1 batch 3, starting at `2511.06150`.
+
+### 2026-09-20 — evaluation-metrics Phase 1 batch 1 (285 → 305 cumulative)
+
+- Recomputed the live Q4 queue and confirmed 61 eligible papers with no Q4 entries already in the
+  concept YAML.
+- Processed the first 20 papers oldest-first, from `2025.vlsp-1.13` through `2510.21209`.
+- Extracted all 88 paper-page claims: 18 pages used the structured role/evidence format, while
+  `2510.07838` and `2510.07979` used the legacy format and required evidence reconstruction from
+  their existing Method, Key Results, and Limitations sections.
+- Assigned concept-specific paper relevance of 11 high, 7 medium, and 2 low; claim relevance totals
+  are 40 high, 24 medium, and 24 low. Dedicated benchmarks, metric-validity studies, and evaluation
+  frameworks received the strongest evaluation-metrics relevance.
+- Corrected four source-parser misses on `2510.21209` caused by punctuation after the citation
+  marker. The finished batch has no empty claim lists and no `source: not specified` entries.
+- Validated after every paper write. The concept-scoped Phase 1 health check passes with 0 errors
+  and 0 warnings; the corpus-wide integration check passes with 0 errors and 275 non-blocking
+  warnings, with 2,319 total paper entries and `papers_not_in_any_yaml=264`.
+- Q4 progress is 20/61, with 41 remaining. The next five are `2510.22241`, `2510.23312`,
+  `2510.24372`, `2510.25566`, and `2510.25577`.
+- Phase 2 remains blocked until all 61 Q4 candidates are integrated.
+- Next: `evaluation-metrics` Phase 1 batch 2, starting at `2510.22241`.
 
 ### 2026-09-19 — subjective-evaluation Phase 2 synthesis complete
 

@@ -80,6 +80,14 @@ Cross-paper. Reads paper pages, writes `wiki/_claims/` YAML only. No wiki pages 
 4. **Validate YAML** — parse each touched file; verify top-level keys, `paper_count` matches `papers` list length, claim IDs are unique, supporting/contradicting paper IDs exist.
 5. **Write updated `wiki/_claims/{slug}.yaml`** files.
 6. **Log** — append to `wiki/log.md`: `- integrate | {N} papers | {M} concepts updated | {K} claims updated | {J} reassessments checked`
+7. **Close Phase 2 with a cluster summary** — after validation passes, provide one plain-language
+   paragraph of fewer than 200 words describing the concept's main claim clusters and method
+   families. Emphasize the most consequential themes, trade-offs, and meaningful
+   established/emerging/contested distinctions. Synthesize from the completed claim YAML; do not
+   enumerate papers or store the paragraph in the YAML. Print the paragraph in the handoff and
+   append a dated, concept-labeled entry to the infra-root
+   `PHASE2_CLUSTER_SUMMARIES.local.md`. This reader-convenience log is append-only, Git-ignored,
+   and not part of the main wiki.
 
 The integration agent writes exactly these files: top-level `wiki/_claims/{slug}.yaml` concept
 files and `wiki/log.md`. It never writes wiki pages or anything below
