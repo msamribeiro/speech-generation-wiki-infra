@@ -1,0 +1,41 @@
+{
+  "id": "icml-2026-hgKQemfVbS",
+  "source_ids": {
+    "openreview": "hgKQemfVbS"
+  },
+  "title": "AgentSteerTTS: A Multi-Agent Closed-Loop Framework for Composite-Instruction Text-to-Speech",
+  "authors": [
+    "Bin Kang",
+    "Shaoguo Wen",
+    "Yang Fan",
+    "Shunlong Wu",
+    "Junjie Wang",
+    "Yulin Li",
+    "Junzhi Zhao",
+    "Junle Wang",
+    "Zhuotao Tian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=hgKQemfVbS",
+  "pdf_url": "https://openreview.net/pdf?id=hgKQemfVbS",
+  "pdf_path": "raw/papers/icml-2026-hgKQemfVbS.pdf",
+  "pdf_source": "openreview",
+  "abstract": "While existing text-to-speech (TTS) models exhibit high expressiveness, fine-grained control over composite instructions remains challenging due to the structural mismatch between discrete textual intents and continuous acoustic realizations. Inspired by human cognitive decoupling, we introduce AgentSteerTTS, a multi-agent closed-loop framework designed for intent-faithful expressive control of composite instructions. First, in our framework, an adversarial disentanglement module mitigates speaker-emotion leakage through gradient reversal and cross-covariance regularization. Next, a Dual-Stream Anchoring Controller grounds abstract intents using a large-scale acoustic prototype library: a Retrieval Agent selects expressive anchors, while a Synthesis Agent fuses them into continuous control vectors via gated attention. Finally, a Fast–Slow Feedback Agent refines output intensity through latent gradient correction and resolves semantic–acoustic mismatches using high-level perceptual critique. Experiments on a composite-instruction benchmark and public test sets show that AgentSteerTTS yields consistent and significant improvements to the baselines, demonstrating the effectiveness of the proposed method. Our code and models will be released.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.92,
+  "relevance_note": "Multi-agent closed-loop framework for composite-instruction expressive TTS with adversarial disentanglement; core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

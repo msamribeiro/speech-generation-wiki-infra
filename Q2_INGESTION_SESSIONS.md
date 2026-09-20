@@ -117,9 +117,12 @@ To resume:
 4. Proceed with the standard batches-of-4 cadence below.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
-gate, so use the saved-page path (`openreview.py --from-file`). 20 ICML 2026 candidates (Q3) are
-waiting in a dry run over the pages in `tmp/`; writing them needs the user's go-ahead. NeurIPS 2026
-had no accepted papers posted on 2026-09-21; re-save its pages later and run the same way.
+gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
+browser). The 20 ICML 2026 candidates (Q3) are written, filtered and, for the 2 accepted, parsed (see
+the 2026-09-21 continuation entry); they are ready to ingest whenever Q3 is reached. OpenReview PDF
+downloads are behind the same gate, so an OpenReview-only paper needs its PDF saved by hand from
+`openreview.net/pdf?id=<forum id>` into `raw/papers/{id}.pdf`. NeurIPS 2026 had no accepted papers
+posted on 2026-09-21; re-save its pages later and run the same way.
 
 **Cadence:** carried forward unchanged from Q1 2026 — sequential batches of 4, one paper at a time,
 health check after each paper, a short batch summary plus explicit go-ahead before the next batch.
@@ -569,12 +572,46 @@ PDF and parse** (29 across all quarters).
   and ICLR 2026 needs nothing more. ICML 2026 loaded 6,341 notes from 7 pages, 20 passed the filter,
   0 existing. Dropping one page correctly triggers the incomplete-coverage warning. NeurIPS 2026's
   first page came back empty as of 2026-09-21 (accepted papers not posted yet).
-- **Not done:** the 20 ICML 2026 records were **not written** (awaiting the user's go-ahead). A
-  credentialed `openreview-py` login was never tested (no account); it is unverified whether a token
-  would pass the gate. The saved pages sit in `tmp/` at the infra root: untracked, not gitignored,
-  about 93 MB, never to be staged with `git add -A`.
+- **Not done at this point (superseded by the continuation entry below):** the 20 ICML 2026 records
+  had not yet been written. A credentialed `openreview-py` login was never tested (no account); it is
+  unverified whether a token would pass the gate.
 - **Repo state at close:** the `openreview.py` and doc changes are committed on infra `work/ingest`,
   ahead of `main`, **not merged or pushed** (see the standing hold in the 2026-09-19 entry).
+
+### 2026-09-21 (continued) — ICML 2026 written, filtered and deduplicated
+
+- **Written:** 20 ICML 2026 records as `pending` (`openreview.py --venue ICML --year 2026
+  --from-file`, `published_date` 2026-07-06, so Q3 2026).
+- **17 of the 20 already existed under arXiv IDs** (title match): 7 with an ingested wiki page, 8
+  `accepted` but not ingested, 2 `rejected`. Only DropoutTS, AgentSteerTTS and TAC had no arXiv twin.
+- **Decision (user, 2026-09-21): the arXiv record stays canonical.** The 17 ICML records were flagged
+  `is_duplicate: true`, `canonical_id` set to the arXiv ID, `status: rejected` (the same shape as the
+  existing losing-side records), and not re-scored; the arXiv record carries the relevance decision.
+  This reverses the proceedings-over-arXiv direction of `scripts/fetch/dedup_openreview.py` for these
+  papers, which also does not cover the `icml-2026-` prefix. Reasons: the arXiv copies already have
+  PDFs, parses, wiki pages and correct Q2 dates (four of the eight accepted ones are Q2 papers that
+  would have moved to Q3), and an OpenReview-canonical record would have needed a hand-saved PDF for
+  six of them. There is no precedent in the corpus for an accepted-but-not-ingested arXiv copy meeting
+  a proceedings record (the earlier ICLR/NeurIPS collisions were all ingested copies).
+- **Scored (3):** AgentSteerTTS `icml-2026-hgKQemfVbS` 0.92 TTS accepted; TAC
+  `icml-2026-icMRkTnuU7` 0.88 codec+TTS accepted (general-audio tokenizer with speech results and a
+  purely autoregressive TTS model built on it); DropoutTS `icml-2026-7sksHLUvhH` 0.03 rejected
+  (time-series forecasting, no audio). Logged in `raw/pipeline_log.md`. Final status of the 20: 2
+  accepted, 18 rejected (17 duplicates, 1 off-topic).
+- **PDFs:** `openreview.net/pdf?id=...` returns the same 403 challenge page to scripts, and neither
+  accepted paper is on arXiv (title search). The user saved both PDFs from a browser; each was checked
+  against its first-page text (TAC 22 pages, AgentSteerTTS 19), filed as `raw/papers/{id}.pdf`, and
+  `pdf_path` set (`needs_manual_pdf` cleared).
+- **Parse:** both done, 0 failed, `--workers 2`, 645 s total. `paper.md` 744 lines / 96 references
+  (TAC) and 474 lines / 47 references (AgentSteerTTS). This checks output files, not content. Corpus
+  parse status: 232 done, 0 failed, 0 pending.
+- **Cleanup:** the scratch directory `tmp/` (13 saved API pages, about 93 MB, plus the two PDFs) was
+  removed; the PDFs were verified byte-identical to the filed copies and every record the pages
+  produced already exists. To repeat an import, save the pages again (workflow in the entry above).
+- **Known follow-ups, unchanged:** the 7 ingested wiki pages still cite only the arXiv version, not
+  ICML acceptance (the deferred venue-migration item in `BACKLOG.md`); `dedup_openreview.py` still
+  lacks the `icml-2026-` prefix; the fetcher's keyword filter passed 20 of 6,341 ICML papers and was
+  not checked for misses.
 
 ---
 

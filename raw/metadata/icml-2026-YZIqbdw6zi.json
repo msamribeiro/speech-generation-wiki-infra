@@ -1,0 +1,39 @@
+{
+  "id": "icml-2026-YZIqbdw6zi",
+  "source_ids": {
+    "openreview": "YZIqbdw6zi"
+  },
+  "title": "Evaluating and Rewarding LALMs for Expressive Role-Play TTS via Mean Continuation Log-Probability",
+  "authors": [
+    "Yong Ren",
+    "Jingbei Li",
+    "Haiyang Sun",
+    "Yujie Chen",
+    "Cheng Yi",
+    "Yechang Huang",
+    "Hao Gu",
+    "Ye Bai",
+    "Xuerui Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=YZIqbdw6zi",
+  "pdf_url": "https://openreview.net/pdf?id=YZIqbdw6zi",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Recent advances in Large Audio Language Models (LALMs) have extended Text-to-Speech (TTS) to interactive role-play scenarios, which demand high expressiveness and strict adherence to role-play instructions. However, existing models struggle to maintain stylistic consistency with character profiles and scene descriptions across multi-turn dialogues. A critical bottleneck is the lack of objective metrics for quantifying speaking style. To bridge this gap, we propose **Mean Continuation Log-Probability (MCLP)** as both an evaluation metric and a reward signal, validated on LALM-based Role-Play TTS (RP-TTS) tasks. MCLP leverages the in-context learning capability of pretrained LALMs to measure the likelihood of ground-truth speech tokens conditioned on a contextual history consisting of the transcript, generated speech, and repeated transcript, serving as a proxy for stylistic continuity. Furthermore, we employ MCLP as a reinforcement learning reward to enhance the style alignment between generated speech and role-play instructions. To support this task, we construct a large-scale RP-TTS dataset with rich scene and character annotations. Experiments demonstrate that MCLP is well aligned with human judgments of stylistic consistency and serves as an effective reward for improving RP-TTS, leading to consistent gains in both objective metrics and subjective evaluations. Our code is publicly available at https://github.com/y-ren16/MCLP.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: ICML 2026 version of arXiv 2601.22661 (record status: ingested); the arXiv record stays canonical and carries the relevance decision.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2601.22661"
+}

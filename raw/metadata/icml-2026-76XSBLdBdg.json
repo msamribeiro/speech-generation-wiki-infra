@@ -1,0 +1,35 @@
+{
+  "id": "icml-2026-76XSBLdBdg",
+  "source_ids": {
+    "openreview": "76XSBLdBdg"
+  },
+  "title": "Simultaneous Speech-to-Speech Translation Without Aligned Data",
+  "authors": [
+    "Tom Labiausse",
+    "Romain Fabre",
+    "Yannick Estève",
+    "Alexandre Défossez",
+    "Neil Zeghidour"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=76XSBLdBdg",
+  "pdf_url": "https://openreview.net/pdf?id=76XSBLdBdg",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Simultaneous speech translation requires translating source speech into a target language in real-time while handling non-monotonic word dependencies. Traditional approaches rely on supervised training with word-level aligned data, which is difficult to collect at scale and thus depends on synthetic alignments using language-specific heuristics that are suboptimal. We propose Hibiki-Zero, which eliminates the need for word-level alignments entirely. This fundamentally simplifies the training pipeline and enables seamless scaling to diverse languages with varying grammatical structures, removing the bottleneck of designing language-specific alignment heuristics. We first train on sentence-level aligned data to learn speech translation at high latency, then apply a novel reinforcement learning strategy using GRPO to optimize latency while preserving translation quality. Hibiki-Zero achieves state-of-the-art performance in translation accuracy, latency, voice transfer, and naturalness across four X-to-English tasks.  Moreover, we demonstrate that our model can be adapted to support a new input language with less than 1000h of speech. We provide [examples](https://huggingface.co/spaces/kyutai/hibiki-zero-samples), [model weights](https://huggingface.co/kyutai/hibiki-zero-3b-pytorch-bf16), [inference code](https://github.com/kyutai-labs/hibiki-zero) and we release a [benchmark](https://huggingface.co/datasets/kyutai/Audio-NTREX-4L) containing 45h of multilingual data for speech translation evaluation.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: ICML 2026 version of arXiv 2602.11072 (record status: ingested); the arXiv record stays canonical and carries the relevance decision.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2602.11072"
+}

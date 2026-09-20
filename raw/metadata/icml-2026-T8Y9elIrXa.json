@@ -1,0 +1,32 @@
+{
+  "id": "icml-2026-T8Y9elIrXa",
+  "source_ids": {
+    "openreview": "T8Y9elIrXa"
+  },
+  "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
+  "authors": [
+    "Sang-Hoon Lee",
+    "Ha-Yeong Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=T8Y9elIrXa",
+  "pdf_url": "https://openreview.net/pdf?id=T8Y9elIrXa",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Representation alignment (REPA) has been investigated to accelerate diffusion training, but we observe that regularizing intermediate representations in diffusion Transformers (DiT) may implicitly entangle latents and limit generative capacity.  To address this issue, we propose ReGen, a hierarchical multi-prompt representation generation framework that jointly estimates multiple vector fields for both representations and data within a single diffusion model. We further introduce generalized flow matching (GFM) to improve the generalization of conditional flow matching (CFM). We validate ReGen on single-stage waveform diffusion models including neural audio codec and Wave-VAE. ReGen significantly improves waveform generation quality from highly compressed latent representations at 12.5 Hz. We also present ReGenVoice, a latent diffusion model (LDM)-based text-to-speech model that achieves strong speech intelligibility (WER) and speaker similarity (SIM) with a small dataset. Moreover, operating the LDM at 6.25 Hz with rich semantic and acoustic latent representation enables efficient training and sampling, requiring only 1 day of training on 4 GPUs and fast inference with an RTF of 0.08. Audio samples are available at https://regenvoice.github.io/demo/",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: ICML 2026 version of arXiv 2607.09134 (record status: accepted); the arXiv record stays canonical and carries the relevance decision.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.09134"
+}

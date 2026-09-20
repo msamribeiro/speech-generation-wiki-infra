@@ -1,0 +1,56 @@
+{
+  "id": "icml-2026-icMRkTnuU7",
+  "source_ids": {
+    "openreview": "icMRkTnuU7"
+  },
+  "title": "Scaling Transformers for End-to-End Discrete Audio Tokenization",
+  "authors": [
+    "Yitian Gong",
+    "Kuangwei Chen",
+    "Zhaoye Fei",
+    "Xiaogui Yang",
+    "Ke Chen",
+    "Yang Wang",
+    "Kexin Huang",
+    "Mingshu Chen",
+    "Ruixiao Li",
+    "Qinyuan Cheng"
+  ],
+  "authors_full": [
+    "Yitian Gong",
+    "Kuangwei Chen",
+    "Zhaoye Fei",
+    "Xiaogui Yang",
+    "Ke Chen",
+    "Yang Wang",
+    "Kexin Huang",
+    "Mingshu Chen",
+    "Ruixiao Li",
+    "Qinyuan Cheng",
+    "Shimin Li",
+    "Xipeng Qiu"
+  ],
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=icMRkTnuU7",
+  "pdf_url": "https://openreview.net/pdf?id=icMRkTnuU7",
+  "pdf_path": "raw/papers/icml-2026-icMRkTnuU7.pdf",
+  "pdf_source": "openreview",
+  "abstract": "Discrete audio tokenizers are fundamental to empowering large language models with native audio processing and generation capabilities. Despite recent progress, existing approaches often rely on pretrained encoders, semantic distillation, or heterogeneous CNN-based architectures. These designs introduce fixed inductive biases that limit reconstruction fidelity and hinder effective scaling. In this paper, we argue that discrete audio tokenization should be learned fully end-to-end using a homogeneous and scalable architecture.  Based on this perspective, we propose $\\textbf{TAC}$, a Transformer-based audio tokenizer that jointly optimizes the encoder, quantizer, and decoder from scratch for high-fidelity reconstruction of general audio. We show that a simple, fully end-to-end learned tokenizer built from homogeneous, causal Transformer blocks scales gracefully and supports high-fidelity reconstruction across diverse audio domains. Across speech, sound, and music, the proposed tokenizer consistently outperforms prior codecs over a wide range of bitrates, while exhibiting predictable improvements with increased scale. Notably, leveraging TAC’s discrete tokens, we develop the first purely autoregressive TTS model that surpasses prior non-autoregressive and cascaded systems. Furthermore, TAC enables competitive ASR performance without auxiliary encoders. Our findings position TAC as a unified, scalable interface for the next generation of native audio foundation models.",
+  "task": [
+    "codec",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Transformer-based end-to-end discrete audio tokenizer evaluated on speech, sound and music, plus a purely autoregressive TTS model built on its tokens; core codec and TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}
