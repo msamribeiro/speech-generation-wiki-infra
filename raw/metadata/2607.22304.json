@@ -33,7 +33,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Studies voice cloning as a data-augmentation approach for clinical paralinguistic tasks, evaluating downstream task performance rather than voice-cloning intelligibility/similarity metrics; VC used as one tool for an application study rather than the paper's primary object of study.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

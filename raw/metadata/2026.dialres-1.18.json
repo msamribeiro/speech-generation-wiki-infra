@@ -31,7 +31,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Uses off-the-shelf voice conversion (RVC) as a speaker-normalization tool to study dialect classification perception; VC is a black-box instrument for a perception study, not the paper's own method contribution.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

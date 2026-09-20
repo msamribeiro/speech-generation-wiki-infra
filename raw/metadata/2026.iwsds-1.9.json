@@ -26,7 +26,7 @@
   "task": [],
   "relevance_score": 0.4,
   "relevance_note": "Dataset construction pairing fixed text with five emotional speech renditions, used to predict emotional dialogue breakdown; the paper's own contribution is breakdown prediction (classification) rather than synthesis, though the paired-audio resource has TTS relevance.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

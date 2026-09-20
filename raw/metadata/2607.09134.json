@@ -25,7 +25,7 @@
   "task": [],
   "relevance_score": 0.5,
   "relevance_note": "ReGen proposes a hierarchical multi-prompt representation-generation framework to accelerate waveform diffusion model training; the abstract does not specify whether the target domain is speech or general audio, leaving TTS/VC/SCA relevance ambiguous.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

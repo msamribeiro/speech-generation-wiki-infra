@@ -28,7 +28,7 @@
   ],
   "relevance_score": 0.68,
   "relevance_note": "Multi-engine, 21-language evaluation of commodity TTS systems' acoustic properties (jitter/shimmer/HNR) against deepfake-detection features; a substantive empirical characterization of synthesized speech naturalness, though framed around detection evasion rather than synthesis improvement.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

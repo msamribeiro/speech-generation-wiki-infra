@@ -34,7 +34,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Audio-Oscar is a multi-agent system orchestrating complex audio scene generation across TTS, text-to-audio, and text-to-music; TTS is one of several generation types and the primary contribution is scene-level orchestration rather than speech synthesis quality.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

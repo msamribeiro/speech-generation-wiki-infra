@@ -30,7 +30,7 @@
   ],
   "relevance_score": 0.5,
   "relevance_note": "CAAD proposes contrastive audio-aware distillation for efficient speech language models to improve acoustic grounding over linguistic priors; relevant to SCA/speech-LM infrastructure, but unclear from the abstract whether the target SLM performs speech generation or is a speech-understanding/reasoning model only.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

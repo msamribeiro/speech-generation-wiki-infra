@@ -24,7 +24,7 @@
   "task": [],
   "relevance_score": 0.4,
   "relevance_note": "AudioTQ proposes a data-oblivious, psychoacoustic-free lossy audio compression scheme (randomized Hadamard rotation plus Lloyd-Max quantization) as a general alternative to MP3/AAC/Opus; unclear whether this is a learned neural speech codec in the sense used by TTS/VC/SCA generation research or a general-purpose classical audio-compression technique.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

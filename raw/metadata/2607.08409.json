@@ -33,7 +33,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Applies reinforcement learning (GRPO) to close the synthetic-real acoustic gap for LLM-based ASR trained on TTS-generated speech in privacy-constrained domains; primarily an ASR-adaptation paper that uses synthetic TTS speech as its training substrate rather than advancing TTS itself.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

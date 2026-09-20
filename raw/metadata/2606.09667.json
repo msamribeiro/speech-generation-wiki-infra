@@ -30,7 +30,7 @@
   ],
   "relevance_score": 0.48,
   "relevance_note": "Proposes cross-modal masking for silent speech synthesis from sEMG and lipreading signals; generates speech from non-text, non-acoustic input modalities, so fit with the text-to-speech/voice-conversion scope is ambiguous, similar to MindVoice (2605.31173).",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

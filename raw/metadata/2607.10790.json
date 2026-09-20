@@ -30,7 +30,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Investigates using TTS and voice cloning to convert written L2 English text into synthetic speech for augmenting L2 speaking-proficiency assessment training data; TTS is used as a data-augmentation tool for a downstream assessment task rather than the paper's primary object of study.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

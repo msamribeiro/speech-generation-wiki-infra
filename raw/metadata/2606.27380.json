@@ -30,10 +30,10 @@
   "task": [],
   "relevance_score": 0.5,
   "relevance_note": "Surveys automated presentation-coaching systems spanning pronunciation training, prosody/fluency coaching, and speech synthesis; speech synthesis is one of several dimensions covered rather than the survey's primary focus.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "conference_date": "2026-07-01"
 }

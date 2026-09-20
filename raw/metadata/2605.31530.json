@@ -48,7 +48,7 @@
   ],
   "relevance_score": 0.62,
   "relevance_note": "UNISON is primarily a unified general-audio generation/editing framework (text-to-audio, text-to-music, scene editing) with TTS and zero-shot speaker cloning as one of several capabilities; unclear how much of the paper's evidence specifically advances speech synthesis versus general audio generation.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

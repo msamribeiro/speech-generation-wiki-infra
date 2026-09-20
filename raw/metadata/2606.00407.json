@@ -30,10 +30,10 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Proposes self-supervised privacy-preserving prosody representation learning with speaker disentanglement; useful for generation but the paper trains no TTS/VC system and reports no synthesis-quality evaluation.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "conference_date": "2026-07-01"
 }

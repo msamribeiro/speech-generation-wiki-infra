@@ -28,7 +28,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Studies unsupervised extraction of global prosodic embeddings disentangled from linguistic/speaker information; a representation-learning contribution useful for TTS but the paper trains no synthesis system.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

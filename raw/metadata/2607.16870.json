@@ -30,7 +30,7 @@
   "task": [],
   "relevance_score": 0.62,
   "relevance_note": "Investigates whether speech tokens used in end-to-end speech language models leak speaker voiceprints via speaker-inversion attacks; a privacy/security analysis of speech-token representations used in SCA systems.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

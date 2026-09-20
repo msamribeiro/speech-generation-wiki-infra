@@ -29,7 +29,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Uses prompt-conditioned neural TTS as an experimental tool in a perception study of sarcasm; primary contribution is a human-perception finding about prosodic cues rather than a TTS system or evaluation-methodology advance.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

@@ -31,7 +31,7 @@
   ],
   "relevance_score": 0.58,
   "relevance_note": "Adapts and empirically evaluates an existing full-duplex spoken dialogue model's ability to reproduce proficiency-conditioned human dialogue features; studies SCA behavior but is not a new generation method.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

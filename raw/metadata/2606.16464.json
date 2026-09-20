@@ -25,7 +25,7 @@
   "task": [],
   "relevance_score": 0.42,
   "relevance_note": "Investigates generative speech enhancement using a VQ-based neural audio codec; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though it reuses codec/generative-modeling techniques.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

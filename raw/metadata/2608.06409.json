@@ -27,7 +27,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Introduces a generation-aligned diagnostic ladder separating decision-rule misalignment from readout-coverage limitations when evaluating paralinguistic-task accuracy in speech language models; an evaluation-methodology contribution for SLM understanding capability rather than a TTS/VC/SCA generation or synthesis-quality-evaluation paper.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

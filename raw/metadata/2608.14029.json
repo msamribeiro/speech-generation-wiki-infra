@@ -28,7 +28,7 @@
   "task": [],
   "relevance_score": 0.4,
   "relevance_note": "S2Dialog studies multimodal dialogue retrieval (retrieving similar dialogues by semantic and acoustic-conversational style) as an auxiliary resource for downstream dialogue tasks; a retrieval-system contribution rather than TTS/VC/SCA generation itself, though motivated by conversational speech synthesis applications.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

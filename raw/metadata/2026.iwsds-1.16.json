@@ -32,7 +32,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Applies an existing speech-to-speech LLM as a black-box component to build virtual standardized patients for medical education; an application paper rather than a method contribution to S2S/SCA.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
