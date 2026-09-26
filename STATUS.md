@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-09-20
+Last updated: 2026-09-26
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
@@ -10,12 +10,10 @@ the Q4 2025 cycle. Q2 2026 ingestion is queued behind that work.
 
 ## Current priorities
 
-1. Complete Q4 2025 Phase 1 and Phase 2 integration across the affected concept graphs.
-2. Validate the updated graphs, run Q4 cross-concept reconciliation, and obtain human decisions
-   for accepted relationships.
-3. Regenerate stale concept pages and the field overview.
-4. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
-5. Resume Q2 2026 parsing and ingestion after the Q4 content cycle.
+1. Run Q4 cross-concept reconciliation and obtain human decisions for accepted relationships.
+2. Regenerate stale concept pages and the field overview.
+3. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
+4. Resume Q2 2026 parsing and ingestion after the Q4 content cycle.
 
 The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
@@ -31,17 +29,17 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 | Parsed active papers | 1,025 | Includes ingested papers and accepted papers ready for ingest |
 | Accepted and parsed, ready to ingest | 117 | 76 April 2026 and 41 May 2026 papers |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
-| Concept paper entries | 2,555 | Includes six Q4 concepts complete through Phase 2 |
-| Claim clusters | 413 | 288 strongly supported, 15 contested |
+| Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
+| Claim clusters | 443 | 342 strongly supported, 17 contested |
 | Rendered concept pairs | 21/23 | `singing` and `fine-tuning` remain unrendered |
 | Reconciliation state | 64 relationships, 11 broader claims | Human-approved Q3 authority plus preserved non-authoritative audit history |
 | Published snapshots | 1 | Retrospective `2025-Q3` snapshot |
 | Published quarterly reports | 1 | `reports/quarterly/2025-Q3.md` |
 
-Live health baseline on 2026-09-20:
+Live health baseline on 2026-09-26:
 
 ```text
-integrate: PASS — global check 0 errors, 299 warnings; speech-to-speech Q4 Phase 2 check 0 errors, 28 accepted warnings; papers_not_in_any_yaml=184
+integrate: PASS — global check 0 errors, 324 warnings; transformer-enc-dec-tts Q4 Phase 2 check 0 errors, 1 accepted warning; papers_not_in_any_yaml=176
 render:    PASS — 0 errors, 7 warnings; 21 Overview/In Depth pairs
 reconcile: PASS — 0 errors, 1 warning; 2 runs and 1 snapshot
 ```
@@ -56,7 +54,7 @@ concept render pairs, and preserved reconciliation audit history.
 | Quarter | Ingest | Integrate | Reconcile | Render / report |
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
-| Q4 2025 | Complete | **Active** | Pending integration | Pending reconciliation |
+| Q4 2025 | Complete | Complete: all 22 affected concepts, 2,884 entries | **Next** | Pending reconciliation |
 | Q1 2026 | Original chronological sweep complete | Not started | Not started | Not started |
 | Q2 2026 | 5 ingested; 230 accepted; 18 review | Not started | Not started | Not started |
 | Q3 2026 to date | 98 accepted; 21 review | Not started | Not started | Not started |
@@ -68,16 +66,15 @@ were not part of the bounded Q1 ingest closeout. Reconcile them when the ingesti
 
 ## Active Q4 2025 content cycle
 
-Canonical live audit as of 2026-09-20:
+Canonical live audit as of 2026-09-26:
 
 - 174 ingested, non-Tier-2 Q4 paper pages.
 - 172 pages carry at least one canonical `related_concepts` assignment.
-- 2 pages have no concept assignment and require an audit.
+- 2 pages have no concept assignment and remain intentionally unassigned after audit.
 - 2 Tier 2 pages are excluded from integration.
-- 161 Q4 papers currently appear in at least one applicable concept YAML.
-- 22 concepts have Q4 work queued; `fine-tuning` has no current Q4 candidate.
-- The outstanding workload is approximately 329 concept-paper entries. This is larger than the
-  unique-paper count because one paper may contribute evidence to several concepts.
+- 169 distinct Q4 papers appear in at least one applicable concept YAML.
+- All 22 affected concepts are complete through Phase 2; `fine-tuning` had no Q4 candidate.
+- The exact candidate-versus-YAML closure audit reports no missing or extra IDs in any concept.
 
 Largest Q4 queues:
 
@@ -89,11 +86,12 @@ Largest Q4 queues:
 | neural-codec | 56 | 56 | 0 |
 | spoken-language-model | 46 | 46 | 0 |
 | speech-to-speech | 34 | 34 | 0 |
-| autoregressive-codec-tts | 33 | 2 | 31 |
-| multilingual-tts | 31 | 1 | 30 |
-| self-supervised-speech | 31 | 1 | 30 |
-| voice-conversion | 29 | 0 | 29 |
-| flow-matching | 30 | 2 | 28 |
+| autoregressive-codec-tts | 31 | 31 | 0 |
+| multilingual-tts | 30 | 30 | 0 |
+| self-supervised-speech | 30 | 30 | 0 |
+| voice-conversion | 29 | 29 | 0 |
+| flow-matching | 28 | 28 | 0 |
+| emotion-synthesis | 24 | 24 | 0 |
 
 `subjective-evaluation` is complete through Q4 Phase 2. Its remaining 61 concept warnings are
 accepted architecture-unspecified evaluation, benchmark, dataset, and metric outliers rather than
@@ -121,9 +119,134 @@ contains 18 strongly supported clusters and 7 method families.
 evaluation, survey, or peripheral-task outliers. All 33 Q4 papers carrying high- or
 medium-relevance claims map to at least one cluster.
 
-The remaining 11 affected concepts have queues between 5 and 24 entries. Recompute live discovery
-before each concept because canonical IDs, concept tags, or corrective reviews may change the
-denominator.
+`autoregressive-codec-tts` is complete through Q4 Phase 2 at 31/31 live candidates, superseding
+the 33-candidate planning baseline. Its 196-paper graph contains 19 claim clusters and 14 method
+families; 30/31 Q4 papers have family assignments, with one architecture-unspecified survey as an
+intentional outlier. All 31 Q4 papers carrying high- or medium-relevance claims map to at least one
+cluster.
+
+`multilingual-tts` is complete through Q4 Phase 2 at 30/30 eligible candidates, superseding the
+31-candidate dashboard estimate; one additional paper is Tier 2 and excluded. Its 105-paper graph
+contains 19 strongly supported claim clusters and seven method families. 28/30 Q4 papers have
+family assignments, with two architecture-unspecified orchestration and text-normalization
+outliers. All 26 Q4 papers carrying high- or medium-relevance claims map to at least one cluster.
+
+`self-supervised-speech` is complete through Q4 Phase 2 at 30/30 eligible candidates; one Tier 2
+paper is excluded. Its 176-paper graph contains 17 clusters (14 strongly supported, two contested,
+and one emerging) and seven method families. All 30 Q4 papers have reciprocal family assignments,
+and all 24 carrying high- or medium-relevance claims map to at least one cluster. Low-resource
+transfer advanced from emerging to strongly supported. The 19 concept warnings are preserved
+pre-Q4 architecture-unspecified or peripheral outliers.
+
+`voice-conversion` is complete through Q4 Phase 2 at 29/29 eligible candidates. Its 116-paper graph
+contains 19 clusters (17 strongly supported, one contested, and one emerging) and seven method
+families. 24/29 Q4 papers have reciprocal family assignments; the five remaining shared-task,
+benchmark, dataset, phonation, and survey papers are intentional outliers. All 28 Q4 papers with
+high- or medium-relevance claims map to at least one cluster. Q4 added clusters for reference-free
+generated speaker identities and synthetic parallel supervision, while non-parallel training and
+privacy-oriented conversion advanced to strongly supported.
+
+`flow-matching` is complete through Q4 Phase 2 at 28/28 eligible candidates, superseding the
+30-candidate dashboard estimate; no Tier 2 papers were excluded. Its 125-paper graph contains 35
+clusters (16 strongly supported, one contested, and 18 emerging) and seven method families. 27/28
+Q4 papers have reciprocal family assignments, with one architecture-spanning controllable-TTS
+survey retained as an intentional outlier. All 25 Q4 papers with high- or medium-relevance concept
+roles map to at least one cluster. Q4 added a strongly supported cluster for causal and chunked
+streaming flow matching and promoted seven clusters covering NAR efficiency, RL alignment, codec
+refinement, auxiliary attributes, cross-lingual transfer, robustness, and training-time alignment.
+
+`emotion-synthesis` is complete through Q4 Phase 2 at 24/24 eligible candidates, with no Tier 2
+exclusions. Its 97-paper graph retains 17 clusters (16 strongly supported and one emerging) and
+seven method families. 19/24 Q4 papers have reciprocal family assignments; five evaluation,
+dataset, dialogue-benchmark, or survey records are intentional outliers. All 23 Q4 papers with
+high- or medium-relevance concept roles map to at least one cluster. Multimodal affect context and
+data/taxonomy limitations advanced to strongly supported, and the preference-optimization
+reassessment was retired after independent reward-hacking and human-evaluation evidence satisfied
+its trigger.
+
+`gan-vocoder` is complete through Q4 Phase 2 at 21/21 eligible candidates, with no Tier 2
+exclusions. Its 81-paper graph contains 18 clusters (16 strongly supported and two emerging) and
+seven method families. 18/21 Q4 papers have reciprocal family assignments; three peripheral G2P,
+voice-quality-control, and endangered-language TTS records are intentional outliers. All 18 Q4
+papers with high- or medium-relevance concept roles map to at least one cluster. Q4 added a
+strongly supported cluster for frequency-structured representations and promoted causal streaming,
+GAN-training stabilization, and objective-metric misranking to strongly supported.
+
+`prosody-control` is complete through Q4 Phase 2 at 21/21 eligible candidates, with no Q4 Tier 2
+exclusions. Its 115-paper graph contains 19 clusters (18 strongly
+supported and one emerging) and 15 method families. 20/21 Q4 papers have reciprocal family
+assignments; the architecture-spanning controllable-TTS survey is an intentional outlier. All 20
+Q4 papers with high- or medium-relevance concept roles map to at least one cluster. Q4 added a
+strongly supported cluster for cross-attribute interference and an emerging cluster and method
+family for reward-optimized prosody control. Diversity–naturalness trade-offs, targeted expressive
+data, metric disagreement, and structured control plans advanced to strongly supported.
+
+`streaming-tts` is complete through Q4 Phase 2 at 21/21 eligible candidates, with no Q4 Tier 2
+exclusions. Its 75-paper graph contains 19 strongly supported clusters and five method families;
+all 21 Q4 papers have reciprocal family assignments. All Q4 contributors also carry high- or
+medium-relevance concept roles and map to at least one cluster. Q4 added strongly supported
+clusters for concurrent reasoning during listening and migrating end-to-end latency bottlenecks,
+while chunk-size trade-offs, shared streaming/offline modes, speech-reasoning gaps, and
+interaction-aware evaluation advanced to strongly supported.
+
+`rlhf-speech` is complete through Q4 Phase 2 at 20/20 eligible candidates, with no Q4 Tier 2
+exclusions. Its 49-paper graph contains 22 clusters (15 strongly supported, six emerging, and one
+contested) and six method families. 19/20 Q4 papers have reciprocal family assignments; the
+interaction-corpus paper is an intentional infrastructure outlier. All 19 Q4 papers with high- or
+medium-relevance concept roles map to at least one cluster. Q4 added strongly supported clusters
+for localized token-level alignment and reward-model brittleness, promoted four existing clusters,
+and made the claim that RL-trained reward models outperform supervised training contested.
+
+`speaker-adaptation` is complete through Q4 Phase 2 at 19/19 eligible candidates; one historical
+Tier 2 paper is excluded. Its 98-paper graph contains 19 clusters (17 strongly supported and two
+emerging) and seven method families. 17/19 Q4 papers have reciprocal family assignments; the
+architecture-unspecified shared-task overview and dataset paper are intentional outliers. All 19
+Q4 papers with high- or medium-relevance claims map to at least one cluster. Q4 added a strongly
+supported cluster for generated or cross-modally inferred speaker identities and an emerging
+cluster for location-aware speaker supervision, while codec-prompted in-context cloning advanced
+to strongly supported.
+
+`disentanglement` is complete through Q4 Phase 2 at 16/16 eligible candidates, with no Tier 2
+exclusions. Its 116-paper graph contains 19 clusters (15 strongly supported, two contested, and two
+emerging) and ten method families. All 16 Q4 papers have reciprocal family assignments and map to
+at least one cluster. Q4 added strongly supported clusters for architectural stream separation and
+cross-source compositional evaluation, promoted incomplete SSL disentanglement to strongly
+supported, and retired the mutual-information and prompt-leakage reassessment items after their
+triggers were satisfied. The 16 concept warnings are preserved pre-Q4 family outliers.
+
+`instruction-conditioned-tts` is complete through Q4 Phase 2 at 13/13 eligible candidates; five
+historical Tier 2 papers are excluded. Its 57-paper graph contains 17 clusters (ten strongly
+supported, five emerging, and two contested) and nine method families. All 13 Q4 papers have
+reciprocal family assignments and map to at least one cluster. Q4 added a guidance-based control
+family and strongly supported clusters for guidance-strength trade-offs and underconstrained
+text-only voice control. Stronger-interpreter benefits changed to contested, and the direct-prompt
+family reassessment was retired. Two preserved pre-Q4 family outliers remain.
+
+`diffusion-tts` is complete through Q4 Phase 2 at 11/11 eligible candidates, with no Tier 2
+exclusions. Its 57-paper graph contains 17 clusters (15 strongly supported and two emerging) and
+seven method families. Nine Q4 papers have reciprocal family assignments; the peripheral G2P/TTS
+deployment paper and architecture-spanning survey are intentional outliers. All ten Q4 papers with
+high- or medium-relevance concept roles map to at least one cluster. Q4 added emerging clusters for
+masked discrete diffusion with length control and for structured-surrogate or phase-corrected
+diffusion vocoders. Seven family-coverage warnings remain, five from before Q4.
+
+`singing` is complete through Q4 Phase 2 at 10/10 eligible candidates, with no Tier 2 exclusions.
+Its 20-paper graph contains 23 clusters (three strongly supported and 20 emerging) and five method
+families. Eight Q4 papers have reciprocal family assignments; the generative-feedback evaluator
+and field survey are intentional outliers. All ten Q4 papers map to at least one cluster. Q4 added
+six emerging directions covering annotation-light alignment, factorized low-resource and
+out-of-distribution timbre transfer, real-world conversion robustness, RL post-training,
+harmonic-aware vocoding, and data-scale constraints.
+
+`transformer-enc-dec-tts` is complete through Q4 Phase 2 at 5/5 eligible candidates, with no Tier 2
+exclusions. Its 33-paper graph contains 19 clusters (six strongly supported and 13 emerging) and
+seven method families. All five Q4 papers have reciprocal family memberships and cluster coverage.
+Adversarial restoration of acoustic detail advanced to strongly supported, and Q4 added a
+strongly supported data-curation cluster plus an emerging spontaneous-speech segmentation cluster.
+One preserved pre-Q4 family outlier remains.
+
+Q4 concept integration and its exact-set validation are complete. Cross-concept reconciliation is
+the next gated stage.
 
 ---
 

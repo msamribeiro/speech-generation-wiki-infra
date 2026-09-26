@@ -1,7 +1,7 @@
 # Q4 2025 Integration and Synthesis Session
 
 **Started:** 2026-09-19
-**Status:** Active; six concepts complete through Phase 2
+**Status:** Integration complete; all 22 affected concepts passed exact-set validation; reconciliation is next
 **Evidence scope:** Q4 2025 (`2025-10-01 <= published_date <= 2025-12-31`) layered onto the
 completed Q3-and-earlier claim graphs
 **Goal:** Complete the seven-stage Q4 cycle: Phase 1 integration, Phase 2 synthesis, validation,
@@ -25,11 +25,11 @@ reconciliation, snapshot, render, and report sequence recorded in
    export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-integrate
    ```
 
-3. Begin `autoregressive-codec-tts` Phase 1 after recomputing its live Q4 queue; the current
-   dashboard estimate is 31 pending entries.
-4. Run and independently verify the concept-scoped integration health check after every batch.
-5. Append a dated Session Log entry before ending the session, including the exact next paper or
-   next phase.
+3. Load the reconciliation workflow and generate deterministic `2025-Q4` cross-concept candidates
+   from the completed graphs without mutating the reviewed registry.
+4. Review candidates in the staged thematic batches defined below, keeping agent recommendations
+   separate from explicit human decisions.
+5. Preserve Q3 authority and validate the finalized Q4 run before rendering.
 
 Starting commits recorded at bootstrap:
 
@@ -143,38 +143,38 @@ render stage only if its evidence supports a useful page.
 
 ## Seven-stage program
 
-### Stage 1 — Q4 Phase 1 integration
+### Stage 1 — Q4 Phase 1 integration — complete
 
-- [ ] Recompute each concept's eligible Q4 queue from canonical metadata and YAML-parsed paper
+- [x] Recompute each concept's eligible Q4 queue from canonical metadata and YAML-parsed paper
       frontmatter.
-- [ ] Process candidates oldest-first, sequentially, in batches of at most 20 papers per concept.
-- [ ] Preserve every paper-page claim, role, source, limitation, and concept-local caveat.
-- [ ] Skip Tier 2 pages and record justified concept-specific exclusions explicitly.
-- [ ] Validate after every write and append a batch summary to this note and `log.md`.
+- [x] Process candidates oldest-first, sequentially, in batches of at most 20 papers per concept.
+- [x] Preserve every paper-page claim, role, source, limitation, and concept-local caveat.
+- [x] Skip Tier 2 pages and record justified concept-specific exclusions explicitly.
+- [x] Validate after every write and append a batch summary to this note and `log.md`.
 
 **Gate:** For each affected concept, the exact eligible Q4 candidate set equals the Q4 IDs present
 in its YAML, except for documented and justified concept-specific exclusions. No Q1 2026+ paper is
 introduced by the Q4 pass.
 
-### Stage 2 — Q4 Phase 2 synthesis
+### Stage 2 — Q4 Phase 2 synthesis — complete
 
-- [ ] Run only after the target concept's Phase 1 queue is closed.
-- [ ] Update method families and reciprocal paper memberships from the complete YAML.
-- [ ] Merge Q4 evidence into existing claim clusters or create narrowly supported new clusters.
-- [ ] Reassess status, confidence, caveats, and triggered reassessment items without using paper
+- [x] Run only after the target concept's Phase 1 queue is closed.
+- [x] Update method families and reciprocal paper memberships from the complete YAML.
+- [x] Merge Q4 evidence into existing claim clusters or create narrowly supported new clusters.
+- [x] Reassess status, confidence, caveats, and triggered reassessment items without using paper
       counts as a substitute for evidence independence.
-- [ ] Update open questions and trend notes with Q4-specific changes.
+- [x] Update open questions and trend notes with Q4-specific changes.
 
 **Gate:** Every affected concept has a coherent Q4-updated synthesis; `paper_count == len(papers)`;
 all cluster and family references resolve; warnings are inspected and explained.
 
-### Stage 3 — Integration validation and closure audit
+### Stage 3 — Integration validation and closure audit — complete
 
-- [ ] Run concept-scoped health after every Phase 1 batch and Phase 2 pass.
-- [ ] Run the corpus-wide integrate module after all 22 concepts close.
-- [ ] Compare the exact bounded Q4 candidate and YAML ID sets for every concept.
-- [ ] Audit the two Q4 pages without concept assignments.
-- [ ] Record all intentional exclusions and remaining warnings.
+- [x] Run concept-scoped health after every Phase 1 batch and Phase 2 pass.
+- [x] Run the corpus-wide integrate module after all 22 concepts close.
+- [x] Compare the exact bounded Q4 candidate and YAML ID sets for every concept.
+- [x] Audit the two Q4 pages without concept assignments.
+- [x] Record all intentional exclusions and remaining warnings.
 
 **Gate:** Integrate health reports zero errors, all Q4 discrepancies are explained, and the Q4
 claim-graph state is stable enough to become the source for reconciliation.
@@ -332,6 +332,466 @@ render or report publication follows the repository's normal publication workflo
 ---
 
 ## Session Log
+
+### 2026-09-26 — transformer-enc-dec-tts Phase 1 and Phase 2 complete; Q4 integration closed
+
+- Recomputed the bounded live queue and confirmed five eligible Q4 papers, no existing Q4 entries,
+  and no Tier 2 exclusions. Added all five papers and all 20 claims in one oldest-first batch.
+- Closed the exact concept audit at 5/5 with no missing or extra IDs, no empty claim lists, and no
+  `source: not specified` values.
+- Updated all seven method families; every Q4 paper has reciprocal family membership and maps to
+  at least one claim cluster.
+- Updated seven established clusters, promoted adversarial restoration of acoustic detail to
+  strongly supported, and added a strongly supported cluster for low-resource data curation plus
+  an emerging cluster for prosodically informed spontaneous-speech segmentation. The final graph
+  has 19 clusters: six strongly supported and 13 emerging.
+- Retained all five reassessment items because no Q4 evidence satisfied their cross-language,
+  matched-duration, hardware-normalized, or modern controlled-comparison triggers.
+- The concept health check passes with 0 errors and one preserved pre-Q4 family warning.
+- The corpus-wide exact-set audit reports no missing or extra Q4 IDs across any of the 23 concept
+  YAMLs. The two eligible pages outside every graph remain the previously audited pages without
+  concept assignments: `2511.21229` and `2512.16832`.
+- Global integration health passes with 0 errors and 324 non-blocking warnings: 2,884 paper
+  entries, 443 clusters, 342 strongly supported clusters, 17 contested clusters, and
+  `papers_not_in_any_yaml=176`.
+- Q4 integration Stages 1–3 are complete. Next: begin deterministic `2025-Q4` cross-concept
+  reconciliation while preserving the reviewed Q3 registry authority.
+
+### 2026-09-26 — singing Phase 1 and Phase 2 complete
+
+- Recomputed the bounded live queue and confirmed ten eligible Q4 papers, no existing Q4 entries,
+  and no Tier 2 exclusions. Added all ten papers and all 43 claims in one oldest-first batch.
+- Closed the exact concept audit at 10/10 with no missing or extra IDs, no empty claim lists, and no
+  `source: not specified` values.
+- Updated four established method families and added a fifth for flow-matching singing generation
+  and conversion. Eight Q4 papers have reciprocal family membership; the generative-feedback
+  evaluator and architecture-spanning survey are intentional outliers.
+- Updated five established clusters and added six emerging clusters covering annotation-light
+  alignment, factorized low-resource and out-of-distribution timbre transfer, robustness to
+  real-world artifacts, multi-objective RL, harmonic-aware vocoding, and singing-data constraints.
+- Explicit signal conditioning, style–naturalness trade-offs, and singing-metric scope limits
+  advanced to strongly supported. The final graph has 23 clusters: three strongly supported and
+  20 emerging. All ten Q4 contributors map to at least one cluster.
+- Retained all five reassessment items because their replication, cross-language, matched-latency,
+  or calibrated-benchmark triggers remain unsatisfied.
+- The concept health check passes with 0 errors and three accepted family warnings: one preserved
+  pre-Q4 outlier and the two intentional Q4 outliers.
+- Next at completion time: run the five-paper transformer encoder–decoder TTS queue.
+
+### 2026-09-26 — diffusion-tts Phase 1 and Phase 2 complete
+
+- Recomputed the bounded live queue and confirmed 11 eligible Q4 papers, no existing Q4 entries,
+  and no Tier 2 exclusions. The queue fit in one oldest-first Phase 1 batch, from `2510.05984`
+  through `2502.03930` by canonical publication date.
+- Added all 11 paper entries and all 47 claims. No paper has an empty claim list and no claim uses
+  `source: not specified`; the diffusion-only `2511.22293` page was integrated directly from its
+  full structured evidence.
+- Closed the exact Q4 candidate-versus-YAML audit at 11/11 with no missing or extra IDs.
+- Updated all seven established method families. Nine Q4 papers have reciprocal family membership;
+  `2506.12311` is peripheral G2P/TTS deployment evidence and `2025.emnlp-main.40` is an
+  architecture-spanning survey, so both remain intentional family outliers.
+- Updated all 15 established clusters and added two emerging clusters: masked diffusion supports
+  parallel discrete generation and exact length control, while structured surrogate starts or
+  fixed spectral correction can accelerate and stabilize diffusion vocoders. The final graph has
+  17 clusters: 15 strongly supported and two emerging.
+- All ten Q4 papers with high- or medium-relevance concept roles map to at least one cluster. No
+  reassessment items are open.
+- The concept-scoped Phase 2 health check passes with 0 errors and seven accepted family warnings,
+  five of them preserved from before Q4. The corpus-wide integration check passes with 0 errors and
+  322 non-blocking warnings, with 2,869 paper entries, 435 clusters, and 177 papers not yet
+  represented in any concept YAML.
+- The exact remaining Q4 queue is 15 concept-paper entries across two concepts: `singing` 10 and
+  `transformer-enc-dec-tts` 5.
+- Next: begin `singing` Phase 1; its complete 10-paper queue fits in one batch.
+
+### 2026-09-26 — instruction-conditioned-tts Phase 1 and Phase 2 complete
+
+- Recomputed the bounded live queue and confirmed 13 eligible Q4 papers, no existing Q4 entries,
+  and five historical Tier 2 exclusions. The queue fit in one oldest-first Phase 1 batch, from
+  `2510.13293` through `2512.23808`.
+- Added all 13 paper entries and all 58 claims. All pages use the structured claim format; no paper
+  has an empty claim list and no claim uses `source: not specified`.
+- Closed the exact Q4 candidate-versus-YAML audit at 13/13 with no missing or extra IDs.
+- Updated the eight established method families and added a ninth, guidance-based instruction
+  control, covering inference-time guidance, iterative regeneration, and preference distillation.
+  Every Q4 paper has reciprocal family membership and maps to at least one claim cluster.
+- Updated all 15 established clusters and added two strongly supported clusters: guidance strength
+  trades instruction adherence against output fidelity, and text-only voice control is flexible
+  but underconstrained relative to reference-audio conditioning.
+- Changed `stronger_interpreters_improve_fixed_renderers` from emerging to contested because
+  direct acoustic grounding can be more robust than LLM-mediated interpretation. The final graph
+  has 17 clusters: ten strongly supported, five emerging, and two contested.
+- Retired the direct-prompt-family reassessment after the three-paper guidance subgroup justified
+  its own family. Four reassessment items remain and none is overdue.
+- The concept-scoped Phase 2 health check passes with 0 errors and two accepted pre-Q4 family
+  warnings (`2310.00704` and `2502.11946`). The corpus-wide integration check passes with 0 errors
+  and 320 non-blocking warnings, with 2,858 paper entries, 433 clusters, and 178 papers not yet
+  represented in any concept YAML.
+- The exact remaining Q4 queue is 26 concept-paper entries across three concepts:
+  `diffusion-tts` 11, `singing` 10, and `transformer-enc-dec-tts` 5.
+- Next: begin `diffusion-tts` Phase 1; its complete 11-paper queue fits in one batch.
+
+### 2026-09-26 — disentanglement Phase 1 and Phase 2 complete
+
+- Recomputed the bounded live queue and confirmed 16 eligible Q4 papers, no existing Q4 entries,
+  and no Tier 2 exclusions. The queue fit in one oldest-first batch, from `2025.vlsp-1.15` through
+  `2512.13251`.
+- Added all 16 paper entries and all 70 claims. All pages use the structured claim format; no paper
+  has an empty claim list and no claim uses `source: not specified`.
+- Closed the exact Q4 candidate-versus-YAML audit at 16/16 with no missing or extra IDs.
+- Updated all ten established method families. Every Q4 paper has reciprocal family membership;
+  all 16 Q4 papers with high- or medium-relevance claims map to at least one cluster.
+- Updated all 17 established clusters and added two strongly supported clusters: architectural
+  semantic/acoustic or attribute-stream separation can replace explicit leakage losses, and
+  cross-source composition exposes control failures hidden by reconstruction and aggregate scores.
+- Promoted incomplete SSL disentanglement to strongly supported. The final graph has 19 clusters:
+  15 strongly supported, two contested, and two emerging.
+- Retired two reassessment items after their triggers fired: mutual-information minimization gained
+  a TTS application outside voice conversion, and three Q4 systems independently strengthened the
+  prompt-leakage finding. Five reassessments remain; none is overdue.
+- The concept-scoped Phase 2 health check passes with 0 errors and 16 accepted warnings, all
+  preserved pre-Q4 family outliers. The corpus-wide integration check passes with 0 errors and
+  320 non-blocking warnings, with 2,845 paper entries, 431 clusters, and 178 papers not yet
+  represented in any concept YAML.
+- The exact remaining Q4 queue is 39 concept-paper entries across four concepts:
+  `instruction-conditioned-tts` 13, `diffusion-tts` 11, `singing` 10, and
+  `transformer-enc-dec-tts` 5.
+- Next: begin `instruction-conditioned-tts` Phase 1; its complete 13-paper queue fits in one batch.
+
+### 2026-09-26 — speaker-adaptation Phase 1 and Phase 2 complete
+
+- Recomputed the bounded live queue and confirmed 19 eligible Q4 papers, no Q4 entries already
+  present, and one historical Tier 2 paper excluded. The entire queue fit in one oldest-first
+  Phase 1 batch, from `2025.vlsp-1.13` through `2512.04793`.
+- Added all 19 paper entries and all 83 claims. All pages use the structured claim format; no
+  paper has an empty claim list and no claim uses `source: not specified`.
+- Closed the exact Q4 candidate-versus-YAML audit at 19/19 with no missing or extra IDs.
+- Updated all seven established architecture families. Seventeen Q4 papers have reciprocal
+  family memberships; the architecture-unspecified VLSP shared-task overview and NaturalVoices
+  dataset paper are intentional outliers.
+- Updated all 17 established clusters and added two: a strongly supported cluster for generated
+  or cross-modally inferred speaker representations that do not require a conventional target
+  recording, and an emerging cluster for the non-uniform distribution of speaker information
+  across network depth and generative timesteps.
+- Promoted codec-prompted in-context voice cloning to strongly supported. The final graph has 19
+  clusters: 17 strongly supported and two emerging. Every Q4 paper with a high- or
+  medium-relevance claim maps to at least one cluster.
+- Reviewed all five reassessment items. None met its evidence trigger and none is overdue, so all
+  remain open.
+- The concept-scoped Phase 2 health check passes with 0 errors and 11 accepted warnings. The
+  warnings are the nine preserved pre-Q4 family outliers plus the two intentional Q4 outliers.
+  The corpus-wide integration check passes with 0 errors and 320 non-blocking warnings, with
+  2,829 paper entries, 429 clusters, and 178 papers not yet represented in any concept YAML.
+- The exact remaining Q4 queue is 55 concept-paper entries across five concepts:
+  `disentanglement` 16, `instruction-conditioned-tts` 13, `diffusion-tts` 11, `singing` 10, and
+  `transformer-enc-dec-tts` 5.
+- Next: begin `disentanglement` Phase 1; its complete 16-paper queue fits in one batch.
+
+### 2026-09-26 — rlhf-speech Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 20 eligible contributors, with none already present and no
+  Q4 Tier 2 exclusions.
+- Added all 20 papers in one capped Phase 1 batch, preserving 90 claims from 16 structured-claim
+  pages and four legacy pages. The cumulative graph grew from 29 to 49 papers, and the exact
+  closure audit reports 20/20 present with zero missing.
+- Assigned 19/20 Q4 papers to method families with reciprocal membership. The interaction-corpus
+  paper is an intentional infrastructure outlier. Added a sixth family for localized and
+  token-level reward alignment.
+- Updated all 20 existing clusters and added strongly supported clusters for localized token-level
+  alignment and for reward-model domain shift and brittleness. Promoted GRPO on
+  non-autoregressive systems, cross-lingual alignment, spoken-model semantic alignment, and
+  conversational-agent RLHF to strongly supported. Marked RL-based reward-model training as
+  contested after Q4 evidence found rationale-augmented supervised training could match or exceed
+  rule-based RL for speech-response judging. The graph now contains 15 strongly supported, six
+  emerging, and one contested cluster.
+- Mapped all 19 Q4 papers carrying high- or medium-relevance concept roles to relevant clusters.
+  The conversational-agent reassessment trigger was satisfied by multiple primary Q4 studies and
+  retired; two reassessments remain. Added three open questions, refreshed six Q4 trend notes, and
+  appended the required sub-200-word cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and five accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 318 warnings, with 2,810 paper
+  entries, 427 clusters (330 strongly supported, 16 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `speaker-adaptation` Q4 Phase 1 after recomputing its live queue; the dashboard
+  currently estimates 19 pending entries.
+
+### 2026-09-26 — streaming-tts Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 21 eligible contributors, with none already present and no
+  Q4 Tier 2 exclusions.
+- Added all 21 papers in two sequential Phase 1 batches (20 + 1), preserving 92 claims from 19
+  structured-claim pages and two legacy pages. The cumulative graph grew from 54 to 75 papers, and
+  the exact closure audit reports 21/21 present with zero missing.
+- Assigned every Q4 paper to at least one of the five existing method families with reciprocal
+  membership. The Q4 set spans autoregressive incremental generation, modular pipelines,
+  flow-matching decoders, causal GAN decoders, and compressed VAE latents.
+- Updated all 17 existing clusters and added strongly supported clusters for concurrent reasoning
+  during listening and for latency bottlenecks that migrate among LLM inference, ASR, acoustic
+  decoding, vocoding, retrieval, and orchestration. Promoted chunk-size trade-offs, shared
+  streaming/offline modes, speech-reasoning gaps, and interaction-aware evaluation to strongly
+  supported. All 19 clusters are now strongly supported.
+- Mapped all 21 Q4 papers to relevant clusters. Reviewed and retained all five reassessment items,
+  updating the speech-reasoning assessment to strongly supported while preserving its controlled
+  comparison trigger. Added three open questions, refreshed six Q4 trend notes, and appended the
+  required sub-200-word cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and three accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 317 warnings, with 2,790 paper
+  entries, 425 clusters (324 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `rlhf-speech` Q4 Phase 1 after recomputing its live queue; the dashboard currently
+  estimates 20 pending entries.
+
+### 2026-09-26 — prosody-control Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 21 eligible contributors, with none already present and no
+  Q4 Tier 2 exclusions.
+- Added all 21 papers in two sequential Phase 1 batches (20 + 1), preserving 95 claims from 16
+  structured-claim pages and five legacy pages. The cumulative graph grew from 94 to 115 papers,
+  and the exact closure audit reports 21/21 present with zero missing.
+- Assigned 20/21 Q4 papers to method families with reciprocal membership. The sole unassigned
+  paper is an architecture-spanning controllable-TTS survey retained as an intentional outlier.
+  Added a fifteenth family for reward-optimized prosody control.
+- Updated all 17 existing clusters and added a strongly supported cluster for cross-attribute
+  interference plus an emerging cluster for reward-guided post-training. Promoted
+  diversity–naturalness trade-offs, targeted expressive data, objective–perceptual metric
+  disagreement, and structured control plans to strongly supported. The graph now contains 18
+  strongly supported clusters and one emerging cluster.
+- Mapped all 20 Q4 papers carrying high- or medium-relevance concept roles to at least one cluster.
+  Reviewed and retained all seven reassessment items, updating three current assessments to
+  reflect stronger evidence while preserving their unresolved matched-evaluation triggers. Added
+  two open questions, refreshed six Q4 trend notes, and appended the required sub-200-word cluster
+  summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and 13 accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 317 warnings, with 2,769 paper
+  entries, 423 clusters (318 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `streaming-tts` Q4 Phase 1 after recomputing its live queue; the dashboard currently
+  estimates 21 pending entries.
+
+### 2026-09-26 — gan-vocoder Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 21 eligible contributors, with none already present and no
+  Tier 2 exclusions.
+- Added all 21 papers in two sequential Phase 1 batches (20 + 1), preserving 89 claims from 20
+  structured-claim pages and one legacy page. The cumulative graph grew from 60 to 81 papers, and
+  the exact closure audit reports 21/21 present with zero missing.
+- Assigned 18/21 Q4 papers to the seven existing method families with reciprocal membership. The
+  three unassigned papers are intentional peripheral G2P, voice-quality-control, and
+  endangered-language TTS records.
+- Updated all 17 existing clusters and added one strongly supported cluster for
+  frequency-structured representations spanning two-dimensional tokenization, residual band
+  cascades, band-split codecs, and harmonic discrimination. Promoted causal streaming,
+  GAN-training stabilization, and objective-metric misranking to strongly supported. The graph
+  now contains 16 strongly supported clusters and two emerging clusters.
+- Mapped all 18 Q4 papers carrying high- or medium-relevance concept roles to at least one cluster.
+  Retained the five reassessment items, updating the metric-validity item to reflect the stronger
+  evidence while preserving its unresolved calibration trigger. Refreshed six Q4 trend notes and
+  appended the required sub-200-word cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and three accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 316 warnings, with 2,748 paper
+  entries, 421 clusters (313 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `prosody-control` Q4 Phase 1 after recomputing its live queue; the dashboard currently
+  estimates 21 pending entries.
+
+### 2026-09-26 — emotion-synthesis Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 24 eligible contributors, with none already present and no
+  Tier 2 exclusions.
+- Added all 24 papers in two sequential Phase 1 batches (20 + 4), preserving 103 claims from 19
+  structured-claim pages and five legacy pages, with no empty claim lists or unspecified sources.
+  The cumulative graph grew from 73 to 97 papers, and the exact closure audit reports 24/24 present
+  with zero missing.
+- Assigned 19/24 Q4 papers to the seven existing method families with reciprocal membership. The
+  five unassigned papers are intentional evaluation, dataset, dialogue-benchmark, or survey
+  outliers whose architecture does not define their emotion-synthesis evidence.
+- Updated all 17 existing clusters without creating a new one. Promoted multimodal affect context
+  and data/taxonomy limitations from emerging to strongly supported. The graph now contains 16
+  strongly supported clusters and one emerging cluster.
+- Mapped all 23 Q4 papers carrying high- or medium-relevance concept roles to at least one cluster.
+  The preference-optimization reassessment trigger was satisfied by independent reward-hacking,
+  robust-reward-model, and human-evaluation evidence and was retired; four items remain, with none
+  overdue. Added two open questions and three Q4 trend notes, and appended the required sub-200-word
+  cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and 16 accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 313 warnings, with 2,727 paper
+  entries, 420 clusters (309 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `gan-vocoder` Q4 Phase 1 after recomputing its live queue; the dashboard currently
+  estimates 21 pending entries.
+
+### 2026-09-26 — flow-matching Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 28 eligible contributors, with none already present in the
+  Q4 work queue and no Tier 2 exclusions, superseding the stale 30-candidate dashboard estimate.
+- Added all 28 papers in two sequential Phase 1 batches (20 + 8), preserving 120 claims from 23
+  structured-claim pages and five legacy pages, with no empty claim lists or unspecified sources.
+  The cumulative graph grew from 97 to 125 papers, and the exact closure audit reports 28/28
+  present with zero missing.
+- Assigned 27/28 Q4 papers to the seven existing method families with reciprocal membership. The
+  architecture-spanning controllable-TTS survey is the sole intentional Q4 family outlier.
+- Updated 17 existing clusters and added one strongly supported cluster for causal and chunked
+  streaming generation. Promoted NAR efficiency, velocity-space alignment, post-quantization
+  refinement, prosody/attribute generation, cross-lingual adaptation, non-clean robustness, and
+  training-time alignment to strongly supported. The graph now contains 35 clusters: 16 strongly
+  supported, one contested, and 18 emerging.
+- Mapped all 25 Q4 papers carrying high- or medium-relevance concept roles to at least one cluster.
+  Reviewed and retained all three reassessment items; none was triggered or overdue. Added two
+  open questions and three Q4 trend notes, and appended the required sub-200-word cluster summary
+  to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and six accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 308 warnings, with 2,703 paper
+  entries, 420 clusters (307 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `emotion-synthesis` Q4 Phase 1 after recomputing its live queue; the dashboard
+  currently estimates 24 pending entries.
+
+### 2026-09-26 — voice-conversion Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 29 eligible contributors, with none already present and no
+  Tier 2 exclusions.
+- Added all 29 papers in two sequential Phase 1 batches (20 + 9), preserving 125 claims: 28
+  structured-claim pages and one legacy-claim page, with no empty claim lists or unspecified
+  sources. The cumulative graph grew from 87 to 116 papers, and the exact closure audit reports
+  29/29 present with zero missing.
+- Assigned 24/29 Q4 papers to the seven existing method families with reciprocal membership. The
+  five unassigned papers are intentional architecture-unspecified or peripheral shared-task,
+  benchmark, dataset, phonation, and survey records.
+- Updated all 17 prior clusters and added two: reference-free generated speaker identities is
+  strongly supported, while synthetic parallel supervision is emerging. Promoted non-parallel
+  training and privacy-oriented conversion from emerging to strongly supported. The graph now
+  contains 19 clusters: 17 strongly supported, one contested, and one emerging.
+- Mapped all 28 Q4 papers carrying high- or medium-relevance claims to at least one cluster.
+  Retained all five reassessment items, added two open questions and three Q4 trend notes, and
+  appended the required sub-200-word cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and 14 accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 307 warnings, with 2,675 paper
+  entries, 419 clusters (299 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=178`.
+- Next: begin `flow-matching` Q4 Phase 1 after recomputing its live queue; the dashboard currently
+  estimates 28 pending entries.
+
+### 2026-09-26 — self-supervised-speech Phase 1 and Phase 2 complete
+
+- Recomputed the bounded Q4 queue at 30 eligible contributors, with no remaining work-queue
+  entries already present and one Tier 2 paper (`2511.09690`) excluded.
+- Added all 30 papers in two sequential Phase 1 batches (20 + 10), preserving 128 structured
+  claims with no empty claim lists or unspecified sources. The cumulative graph grew from 146 to
+  176 papers, and the exact closure audit reports 30/30 present with zero missing.
+- Assigned all 30 Q4 papers to the seven existing method families with reciprocal membership.
+- Updated 15 of 17 claim clusters. No new cluster was required; low-resource transfer advanced
+  from emerging to strongly supported. The graph now contains 14 strongly supported, two
+  contested, and one emerging cluster.
+- Mapped all 24 Q4 papers carrying high- or medium-relevance claims to at least one cluster.
+  Retained all five reassessment items, added two open questions and two Q4 trend notes, and
+  appended the required sub-200-word cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and 19 accepted pre-Q4 method-family
+  warnings. The corpus-wide integration check passes with 0 errors and 302 warnings, with 2,646
+  paper entries, 417 clusters (296 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=179`.
+- Next: begin `voice-conversion` Q4 Phase 1 after recomputing its live queue; the dashboard
+  currently estimates 29 pending entries.
+
+### 2026-09-26 — multilingual-tts Phase 2 synthesis complete
+
+- Synthesized all 105 cumulative papers after exact Q4 closure, including all 30 eligible Q4
+  contributors.
+- Assigned 28/30 Q4 papers to seven reciprocal method families. Retained the script-first
+  orchestration and multilingual text-normalization papers as intentional architecture-unspecified
+  outliers.
+- Reviewed all 17 prior clusters and added two strongly supported clusters: synthetic or
+  pseudo-parallel speech enables low-resource cross-lingual generation, and explicit multilingual
+  prosody/style control remains uneven across identity, intelligibility, and naturalness.
+- Advanced code-switching and language/accent leakage from emerging to strongly supported. The
+  completed graph contains 19 strongly supported clusters and no contested or emerging clusters.
+- Mapped all 26 Q4 papers carrying high- or medium-relevance claims to at least one cluster.
+  Retained all five prior reassessment items and added watches for code-switching generalization,
+  synthetic-data error propagation, and expressive-transfer evaluation.
+- Added three open questions and three Q4 trend notes, and appended the required sub-200-word
+  cluster summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and 10 accepted method-family warnings.
+  The corpus-wide integration check passes with 0 errors and 302 warnings, with 2,616 paper
+  entries, 417 clusters (295 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=180`.
+- Next: begin `self-supervised-speech` Q4 Phase 1 after recomputing its live queue; the dashboard
+  currently estimates 30 pending entries.
+
+### 2026-09-26 — multilingual-tts Phase 1 batch 2 and closure (95 → 105 cumulative)
+
+- Processed the final 10 papers oldest-first, from `2511.20974` through `2512.22491`.
+- Preserved all 43 paper-page claims from nine structured-claim pages and one legacy page
+  (`2512.04720`), with no empty claim lists or `source: not specified` entries.
+- The exact Q4 closure audit confirms 30/30 eligible contributors in the concept YAML, with no
+  missing or extraneous Q4 entries; `2511.09690` is excluded as Tier 2.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings.
+- Phase 1 closed and Phase 2 followed immediately in the same session.
+
+### 2026-09-26 — multilingual-tts Phase 1 batch 1 (75 → 95 cumulative)
+
+- Recomputed the live Q4 queue and found 30 eligible papers with none already present, plus one
+  Tier 2 exclusion, superseding the dashboard estimate of 31 candidates with one presumed
+  existing entry.
+- Processed the first 20 papers oldest-first, from `2025.vlsp-1.14` through `2512.05126`.
+- Preserved all 83 paper-page claims from 19 structured-claim pages and one legacy page
+  (`2511.12347`), with no empty claim lists or `source: not specified` entries.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings.
+- Q4 progress reached 20/30, with 10 papers remaining before Phase 2.
+
+### 2026-09-26 — autoregressive-codec-tts Phase 2 synthesis complete
+
+- Synthesized all 196 cumulative papers after exact Q4 closure, including all 31 Q4 contributors.
+- Assigned 30/31 Q4 papers to 14 reciprocal method families. Added a five-paper family for
+  blockwise, multi-token, and speculative autoregression; retained the controllable-TTS survey as
+  the sole intentional Q4 architecture-unspecified outlier.
+- Reviewed all 17 prior clusters and added two strongly supported Q4 clusters: grouped prediction
+  reduces sequential steps subject to equivalence and latency trade-offs, and lower token rates
+  reduce language-model cost without guaranteeing proportional wall-clock speedups.
+- Advanced continuous-representation autoregression from emerging to strongly supported after Q4
+  added three independent systems. The final graph contains 19 clusters: 18 strongly supported and
+  one contested.
+- Mapped every Q4 paper carrying high- or medium-relevance claims to at least one cluster. Reviewed
+  the five prior reassessment items, retired the satisfied continuous-representation trigger, and
+  added two new watches for grouped decoding and end-to-end low-token-rate efficiency.
+- Added two open questions and three Q4 trend notes, and appended the required sub-200-word cluster
+  summary to the ignored local review log.
+- The concept-scoped Phase 2 check passes with 0 errors and one accepted survey-outlier warning.
+  The corpus-wide integration check passes with 0 errors and 300 warnings, with 2,586 paper
+  entries, 415 clusters (291 strongly supported, 15 contested), and
+  `papers_not_in_any_yaml=184`.
+- Next: begin `multilingual-tts` Q4 Phase 1 after recomputing its live queue; the dashboard
+  currently estimates 30 pending entries.
+
+### 2026-09-26 — autoregressive-codec-tts Phase 1 batch 2 and closure (185 → 196 cumulative)
+
+- Recomputed the live queue and processed the final 11 papers oldest-first, from `2511.13732`
+  through `2512.14291`.
+- Preserved all 52 paper-page claims from seven structured-claim pages and four legacy pages
+  (`2511.13732`, `2511.12347`, `2502.03930`, and `neurips-2025-pDWwz9F7Zh`), with no empty claim
+  lists or `source: not specified` entries.
+- The exact Q4 closure audit confirms 31/31 eligible contributors in the concept YAML, with no
+  missing or extraneous Q4 entries.
+- The concept-scoped Phase 1 health check passes with 0 errors and 0 warnings.
+- Phase 1 is complete; Phase 2 followed immediately in the same session.
+
+### 2026-09-26 — autoregressive-codec-tts Phase 1 batch 1 (165 → 185 cumulative)
+
+- Recomputed the live Q4 queue and found 31 eligible papers with none already present, superseding
+  the planning baseline of 33 candidates with two presumed existing entries.
+- Processed the first 20 papers oldest-first, from `2510.00499` through
+  `2025.findings-emnlp.1394`.
+- Preserved all 87 paper-page claims from 15 structured-claim pages and five legacy pages
+  (`2510.00981`, `2510.05758`, `2510.12210`, `2025.emnlp-main.40`, and
+  `2025.emnlp-main.989`), with no empty claim lists or `source: not specified` entries.
+- Added direct evidence on low-frame-rate and dynamically allocated tokens, hybrid AR-plus-diffusion
+  decoding, multi-token prediction, continuous-token generation, long-form history compression,
+  dialogue generation, controllability, and preference post-training.
+- Canonical metadata dates match every written `published_date`; the YAML now contains 185
+  cumulative papers with no duplicate IDs.
+- The concept-scoped Phase 1 check passes with 0 errors and 0 warnings. The corpus-wide integration
+  check passes with 0 errors and 319 non-blocking warnings, with 2,575 paper entries and
+  `papers_not_in_any_yaml=184`.
+- Q4 progress is 20/31, with 11 papers remaining. Next: process `2511.13732` through
+  `2512.14291`, close the exact Q4 audit, and then run Phase 2 synthesis.
 
 ### 2026-09-20 — speech-to-speech Phase 2 synthesis complete
 

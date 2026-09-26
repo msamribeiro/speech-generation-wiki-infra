@@ -6,13 +6,13 @@ Complete the first quarter-over-quarter update after the closed Q3 synthesis pro
 canonical `published_date` from `2025-10-01` through `2025-12-31`, inclusive. Track batches,
 decisions, validation results, and resume state in `Q4_INTEGRATION_SESSIONS.md`.
 
-- [ ] Phase 1 integration — add every eligible Q4 paper to each applicable concept YAML in
+- [x] Phase 1 integration — add every eligible Q4 paper to each applicable concept YAML in
   oldest-first batches of at most 20 papers per concept. Baseline: 174 non-Tier-2 Q4 paper pages,
   172 with canonical concept assignments, 22 affected concepts, and approximately 660 missing
   concept-paper entries
-- [ ] Phase 2 synthesis — after each concept's Q4 Phase 1 queue closes, update claim clusters,
+- [x] Phase 2 synthesis — after each concept's Q4 Phase 1 queue closes, update claim clusters,
   method families, reassessment items, open questions, and trend notes from the complete YAML
-- [ ] Validate the completed Q4 claim graphs — concept-scoped checks after every pass, followed by
+- [x] Validate the completed Q4 claim graphs — concept-scoped checks after every pass, followed by
   the corpus-wide integrate health check and an exact Q4 candidate-versus-YAML closure audit
 - [ ] Run `2025-Q4` cross-concept reconciliation — generate deterministic candidates only after
   all concept integrations close; review in themed batches, obtain explicit human decisions, and
