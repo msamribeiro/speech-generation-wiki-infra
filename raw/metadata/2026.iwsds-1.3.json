@@ -17,10 +17,10 @@
   "year": 2026,
   "month": 2,
   "published_date": "2026-02-01",
-  "ingested_date": null,
+  "ingested_date": "2026-09-27",
   "url": "https://aclanthology.org/2026.iwsds-1.3",
   "pdf_url": "https://aclanthology.org/2026.iwsds-1.3.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.iwsds-1.3.pdf",
   "pdf_source": "anthology",
   "abstract": "A consistent personality in a spoken dialogue system enhances the naturalness and friendliness of interactions. However, users may not accurately perceive all the personality traits that the system attempts to express. This study aims to identify which traits are most reliably perceived by users. We first analyzed third-party personality ratings of a dialogue corpus using principal component and factor analyses to uncover the underlying dimensions of user perception. We then conducted experiments under both text-only and speech-based dialogue conditions to evaluate how effectively each trait could be perceived. Crowd-sourced ratings showed that a trait concerning Extraversion and Openness can be reliably perceived through text alone, whereas accurate perception of the other traits requires speech-related features such as speech rate, backchannels, fillers, and turn-taking pause duration. These findings suggest that, rather than attempting to express all Big Five traits, focusing on a subset aligned with users’ perceptual tendencies enables more effective and expressive personality design in spoken dialogue systems.",
   "task": [
@@ -28,9 +28,21 @@
   ],
   "relevance_score": 0.5,
   "relevance_note": "Studies which personality traits are reliably perceived in a text-to-speech-realized spoken dialogue system; ambiguous whether the contribution is a synthesis method or a perception/corpus analysis study.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-09-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5",
+      "commit": "661697b"
+    }
+  ]
 }

@@ -634,6 +634,42 @@ PDF and parse** (29 across all quarters).
   lacks the `icml-2026-` prefix; the fetcher's keyword filter passed 20 of 6,341 ICML papers and was
   not checked for misses.
 
+### 2026-09-27 — Download + parse of 20 pending papers; Q1 stragglers ingested, Q1 fully closed
+
+- **Download + parse:** ran `download_pdfs.py --published-from 2026-02-01 --published-to 2026-06-30`
+  (dry-run confirmed scope first) for the combined set of 9 Q1 stragglers + 11 Q2 review-triage
+  papers — 20 downloaded, 0 failed. Then `batch_convert.py --workers 2 --ids ...` for the same 20 —
+  20 done, 0 failed, 12.0 min. The 11 Q2 papers are now parked as `accepted`/parsed/ready; only the 9
+  Q1 stragglers were ingested this session (see below).
+- **Ingested the 9 Q1 stragglers** in three batches (4 / 4 / 1), standard one-paper-at-a-time cadence
+  with a health check after each: `2026.iwsds-1.3`, `2026.iwsds-1.4`, `2026.iwsds-1.9`,
+  `2026.iwsds-1.10`, `2026.iwsds-1.16`, `2026.abjadnlp-1.6`, `2026.africanlp-main.23`,
+  `2026.eacl-short.16`, `2026.loreslm-1.54`. Corpus 900 → 909. Final health check pass on all 9: 0
+  errors, 0 warnings.
+- **QC catches:** `2026.iwsds-1.10` left 3 bare `[[id]]` wikilinks unfixed by the ingest agent
+  (caught by the post-ingest health check, corrected by hand). `2026.abjadnlp-1.6` and
+  `2026.eacl-short.16` each self-caught and fixed their own bare-wikilink warnings before reporting
+  done. All in-corpus references cited by the 9 pages were spot-checked to confirm the target page
+  actually exists.
+- **Manual Verification Queue resolved:** `2026.iwsds-1.16` (virtual standardized patient / Nova
+  Sonic pilot) came back with a `field_significance` review flag — moderate vs. low boundary, per the
+  agent's own note (narrow 20-participant single-model pilot with no comparison group, but its
+  role-confusion/over-disclosure failure modes plausibly generalize beyond the specific application).
+  Reviewed and downgraded to **low** in both frontmatter and the Field Significance prose section;
+  re-ran health check, still 0 errors / 0 warnings.
+- **Q1 2026 is now fully closed**, stragglers included: 171 accepted, 171 ingested, 0 remaining.
+- **2026 status by quarter, end of session** (by `published_date`; accepted = accepted + ingested):
+
+  | | Q1 | Q2 | Q3 (partial) |
+  |---|---|---|---|
+  | Accepted | 171 | 245 | 114 |
+  | Downloaded / parsed | 171 / 171 | 245 / 245 | 2 / 2 |
+  | Ingested | 171 | 4 | 0 |
+  | Awaiting ingest | 0 | 241 (all parsed and ready) | 114 (112 need a PDF) |
+
+  Total awaiting ingest across 2026: 355, of which 353 are parsed and ready — Q2's chronological
+  ingest sweep (241 papers) is next, per `BACKLOG.md`.
+
 ---
 
 ## Manual Verification Queue
@@ -643,6 +679,7 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2026.iwsds-1.16` | field_significance moderate/low boundary | Resolved 2026-09-27: downgraded to low (narrow 20-participant single-model pilot, no comparison group). |
 
 ---
 
