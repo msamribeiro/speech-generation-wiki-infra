@@ -21,7 +21,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.31729",
   "pdf_url": "https://arxiv.org/pdf/2606.31729.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.31729.pdf",
   "pdf_source": "arxiv",
   "abstract": "Text-to-speech (TTS) evaluation is an open challenge. While the primary target was \"naturalness,\" recent fidelity gains shifted focus toward \"appropriateness\" and whether speech is correct for its context. In this work, we examine how perception changes when the expected downstream use varies. We measure the appropriateness and human-likeness of five SOTA TTS systems across five domains: AI assistant, reader, actor, animated character, and spontaneous speaker. Results show appropriateness varies across domains independently of naturalness. While systems shine at reading, expressive domains remain challenging, and optimizing for one can degrade others. Furthermore, naturalness scores tend to penalize stylized speech while rewarding spontaneity. Finally, our study also highlights blind spots in one-size-fits-all evaluation metrics across more expressive domains. We demonstrate that TTS performance is not \"solved\" but depends on the target domain, requiring context-aware evaluation.",
   "arxiv_comment": "Accepted at Interspeech 26'",

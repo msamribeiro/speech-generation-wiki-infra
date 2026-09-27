@@ -29,7 +29,7 @@
   "task": [],
   "relevance_score": 0.45,
   "relevance_note": "Studies representation collapse in Q-Former audio-language connectors that lose paralinguistic cues (speaker, gender, prosody); relevant to audio-LLM understanding architecture, but unclear from the abstract whether the target system performs speech generation or is an understanding-only audio-language model.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

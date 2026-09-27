@@ -30,7 +30,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Studies whether speech language models exhibit human-like sound symbolism using genuine human speech recordings; a perceptual-alignment analysis of SLM representations rather than a TTS/VC/SCA generation or evaluation-methodology contribution.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

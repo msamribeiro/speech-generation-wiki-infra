@@ -441,7 +441,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** MindVoice reconstructs intelligible speech from non-invasive neural (EEG-like) signals using pretrained speech-generation priors; input modality is brain signals rather than text, so fit with the TTS/VC/SCA scope is ambiguous - it uses speech synthesis technology for a brain-computer-interface task, not text-to-speech or voice conversion per the controlled vocabulary.
 **Abstract excerpt:** Reconstructing continuous speech from non-invasive neural recordings is a fundamental problem for probing human auditory perception and building safe, scalable speech brain-computer interfaces. Despite recent progress, intelligible reconstruction remains elusive, as non-invasive recordings are inherently noisy, spatially blurred, and only partially preserve information about perceived speech.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -452,7 +452,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** UNISON is primarily a unified general-audio generation/editing framework (text-to-audio, text-to-music, scene editing) with TTS and zero-shot speaker cloning as one of several capabilities; unclear how much of the paper's evidence specifically advances speech synthesis versus general audio generation.
 **Abstract excerpt:** We present UNISON, a latent diffusion framework that unifies speech generation, sound generation, and audio editing within a single model. A single model handles text-to-audio, text-to-speech, zero-shot speaker cloning, mixed speech-and-sound generation, scene-level audio editing, speech-in-scene editing, and timed temporal composition, all of which share a single set of weights.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -463,7 +463,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Proposes self-supervised privacy-preserving prosody representation learning with speaker disentanglement; useful for generation but the paper trains no TTS/VC system and reports no synthesis-quality evaluation.
 **Abstract excerpt:** Speech representations that capture prosodic information can be useful for both understanding and generation. However, speaker characteristics are reflected in acoustic-prosodic features (e.g., pitch).
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -474,7 +474,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Audio-Oscar is a multi-agent system orchestrating complex audio scene generation across TTS, text-to-audio, and text-to-music; TTS is one of several generation types and the primary contribution is scene-level orchestration rather than speech synthesis quality.
 **Abstract excerpt:** In recent years, audio generation has made significant progress in tasks such as text-to-speech (TTS), text-to-audio (TTA) and text-to-music (TTM). However, generating long-form and controllable audio from complex audio scene descriptions remains a significant challenge, as such scenes often require coordinated speech, sound effects, music, songs, temporal structure, and post-production.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -485,7 +485,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** HoliDubber proposes holistic video dubbing combining text-guided speech and ambient-audio synthesis; core speech synthesis is one part of a broader dubbing/audio-scene system, similar to the UNISON/Audio-Oscar borderline pattern.
 **Abstract excerpt:** Video dubbing is a cornerstone of multimedia content creation, aiming to synthesize synchronized acoustic sequences for visual streams. While Text-to-Speech (TTS) and Text-to-Audio (TTA) generation have each achieved remarkable progress, existing dubbing systems remain confined to isolated speech synthesis without incorporating sound effects and ambient audio, forcing practitioners to rely on fragmented workflows and laborious manual post-mixing.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -496,7 +496,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Proposes cross-modal masking for silent speech synthesis from sEMG and lipreading signals; generates speech from non-text, non-acoustic input modalities, so fit with the text-to-speech/voice-conversion scope is ambiguous, similar to MindVoice (2605.31173).
 **Abstract excerpt:** Speech restoration through silent speech interfaces (SSIs) has emerged as a promising assistive technology for individuals with impaired or absent laryngeal voice production. Among non-invasive SSI modalities, surface electromyography (sEMG) and video-based lipreading provide complementary articulatory information, yet their integration for continuous speech synthesis remains underexplored.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -507,7 +507,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Uses prompt-conditioned neural TTS as an experimental tool in a perception study of sarcasm; primary contribution is a human-perception finding about prosodic cues rather than a TTS system or evaluation-methodology advance.
 **Abstract excerpt:** Prosody plays an important role in sarcasm perception, yet previous studies have relied on naturally produced speech that lacks fine-grained control over individual acoustic dimensions. As prosodic cues co-vary in natural data, isolating their independent contributions remains challenging.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -518,7 +518,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** A legal/ethical commentary on AI voice cloning and vocal identity rights (prompted by the ChatGPT-4o/Scarlett Johansson controversy); relevant to TTS/VC ecosystem policy but unclear if it is an empirical ML contribution versus a law/ethics article.
 **Abstract excerpt:** The advent of sophisticated AI-driven voice cloning has brought to the fore critical legal and ethical challenges regarding the protection of vocal identity. Prompted by recent controversies - including the striking resemblance between OpenAI's ChatGPT-4o voice and that of Scarlett Johansson - this article examines how generative AI technologies undermine the unique value of the human voice and further complicate the legal questions surrounding personality right.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -529,7 +529,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Evaluates discrete speech representations (SSL, codec, ASR-style) for driving 3D facial animation; the target task is facial animation, not speech generation, though the representations studied are the same ones used in TTS/codec research.
 **Abstract excerpt:** The choice of speech representation is critical in speech-driven 3D facial animation. Representations differ in what they encode: SSL features emphasize segmental and semantic cues, neural codecs yield latents optimized for acoustic reconstruction, and ASR-style objectives produce label-based spaces.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -540,7 +540,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies unsupervised extraction of global prosodic embeddings disentangled from linguistic/speaker information; a representation-learning contribution useful for TTS but the paper trains no synthesis system.
 **Abstract excerpt:** Prosody is central to oral communication, conveying information like the emotional state of the speaker and cues needed for meaning disambiguation. Many self-supervised models of speech produce embeddings that encode prosodic as well as linguistic, and speaker information.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -551,7 +551,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Investigates generative speech enhancement using a VQ-based neural audio codec; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though it reuses codec/generative-modeling techniques.
 **Abstract excerpt:** This work investigates modelling strategies in continuous and discrete latent spaces in the vector quantisation (VQ)-based neural audio codec (NAC) speech enhancement (SE), along with the role of VQ regularisation. We propose cNAC-SE and dNAC-SE frameworks that predict continuous representations and discrete tokens in latent space, respectively.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -562,7 +562,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** PhASE-Flow applies phonetic-conditioned flow matching in SSL representation space for speech enhancement; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though the flow-matching/SSL techniques are directly relevant.
 **Abstract excerpt:** Flow matching (FM) enables high-fidelity generation, while self-supervised learning (SSL) speech models provide hierarchical representations spanning acoustic and phonetic levels. However, existing FM-based speech enhancement (SE) methods operate primarily in the spectral domain, treating SSL features only as external conditions rather than modeling directly in the SSL latent space.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -573,7 +573,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies speaker verification robustness on non-verbal vocalizations (motivated by expressive TTS/VC systems increasingly generating NVVs); primarily an SV-system contribution rather than a TTS/VC/SCA generation or dedicated evaluation-methodology paper.
 **Abstract excerpt:** As expressive text-to-speech (TTS) and voice conversion (VC) systems increasingly generate non-verbal vocalizations (NVVs) to enhance naturalness, reliable speaker verification (SV) becomes essential to objectively assess identity consistency across both verbal and non-verbal segments. Yet current SV systems generalize poorly to NVVs, and fine-tuning on NVV data causes catastrophic forgetting of speech performance.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -584,7 +584,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** CAAD proposes contrastive audio-aware distillation for efficient speech language models to improve acoustic grounding over linguistic priors; relevant to SCA/speech-LM infrastructure, but unclear from the abstract whether the target SLM performs speech generation or is a speech-understanding/reasoning model only.
 **Abstract excerpt:** Speech Language Models achieve reasoning capabilities, but are often hindered by massive parameter counts and a tendency to prioritize linguistic priors over acoustic features. While contrastive decoding enhances grounding by contrasting audio-aware and text-only logits, it increases inference latency.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -595,7 +595,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Surveys automated presentation-coaching systems spanning pronunciation training, prosody/fluency coaching, and speech synthesis; speech synthesis is one of several dimensions covered rather than the survey's primary focus.
 **Abstract excerpt:** Automated coaching for oral presentations sits at the intersection of computer-assisted pronunciation training (CAPT), prosody modeling, and speech synthesis, yet no prior work has systematically surveyed and compared existing systems along these dimensions. This survey reviews and categorizes automated presentation coaching systems, spanning pronunciation tutors, fluency and prosody coaches, multimodal trainers, and conference Q&A practice tools.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -606,7 +606,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** LuxSQA investigates whether TTS can generate task-specific training data for low-resource Luxembourgish spoken question answering; TTS is used as a data-augmentation tool for a downstream QA task rather than the paper's primary object of study.
 **Abstract excerpt:** Spoken Question Answering (SQA) remains largely focused on high-resource languages and carefully recorded speech, limiting the reach of speech-LLM methods in low-resource settings. This paper investigates whether text-to-speech (TTS) can provide task-specific training data for Luxembourgish SQA without requiring a large human-recorded QA corpus.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -617,7 +617,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies representation collapse in Q-Former audio-language connectors that lose paralinguistic cues (speaker, gender, prosody); relevant to audio-LLM understanding architecture, but unclear from the abstract whether the target system performs speech generation or is an understanding-only audio-language model.
 **Abstract excerpt:** Audio-language models compress a speech encoder's output through a Querying Transformer (Q-Former) connector before feeding it to a large language model. We identify two failures in this compression.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -628,7 +628,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies whether discrete neural-audio-codec tokens (originally developed for speech synthesis) can be used for text-independent automatic speaker verification; primarily an ASV-system contribution using codec representations as a feature source, not a TTS/VC/SCA generation or codec-design paper itself.
 **Abstract excerpt:** Neural audio codecs (NACs) enable efficient audio compression and have achieved success in downstream tasks such as speech synthesis. However, their discrete representations consistently underperform traditional spectral features in automatic speaker verification (ASV).
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -639,7 +639,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Applies reinforcement learning (GRPO) to close the synthetic-real acoustic gap for LLM-based ASR trained on TTS-generated speech in privacy-constrained domains; primarily an ASR-adaptation paper that uses synthetic TTS speech as its training substrate rather than advancing TTS itself.
 **Abstract excerpt:** LLM-based ASR adapted to regulated domains such as banking is bottlenecked by privacy: real speech is costly and legally constrained to collect, making synthetic text-to-speech (TTS) an attractive substitute. Yet synthetic speech stays acoustically mismatched with real recordings, and work on this gap has stayed within supervised fine-tuning (SFT).
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -650,7 +650,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** ReGen proposes a hierarchical multi-prompt representation-generation framework to accelerate waveform diffusion model training; the abstract does not specify whether the target domain is speech or general audio, leaving TTS/VC/SCA relevance ambiguous.
 **Abstract excerpt:** Representation alignment (REPA) has been investigated to accelerate diffusion training, but we observe that regularizing intermediate representations in diffusion Transformers (DiT) may implicitly entangle latents and limit generative capacity. To address this issue, we propose ReGen, a hierarchical multi-prompt representation generation framework that jointly estimates multiple vector fields for both representations and data within a single diffusion model.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -661,7 +661,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies whether speech language models exhibit human-like sound symbolism using genuine human speech recordings; a perceptual-alignment analysis of SLM representations rather than a TTS/VC/SCA generation or evaluation-methodology contribution.
 **Abstract excerpt:** Sound symbolism, the human tendency to map speech sounds to perceptual qualities such as roundness or sharpness, arises primarily from the acoustics of speech rather than spelling. Whether Speech Language Models (SLMs) share this tendency remains open, as prior evaluations rely on text or images rather than real speech.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -672,7 +672,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Investigates using TTS and voice cloning to convert written L2 English text into synthetic speech for augmenting L2 speaking-proficiency assessment training data; TTS is used as a data-augmentation tool for a downstream assessment task rather than the paper's primary object of study.
 **Abstract excerpt:** Automated assessment of second language (L2) speaking proficiency relies on large-scale annotated speech data, which remains scarce compared to widely available written learner corpora. A promising direction for addressing this imbalance is to use text-to-speech (TTS) and voice cloning to convert written L2 production into synthetic speech.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -683,7 +683,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Investigates whether speech tokens used in end-to-end speech language models leak speaker voiceprints via speaker-inversion attacks; a privacy/security analysis of speech-token representations used in SCA systems.
 **Abstract excerpt:** End-to-end speech language models increasingly represent user speech with speech tokens rather than relying exclusively on cascaded ASR--LLM--TTS pipelines. Although these tokens support expressive and low-latency spoken interaction, they may also preserve sensitive speaker characteristics.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -694,7 +694,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** CS-ETS proposes a chaos-inspired architecture for EMG-to-speech synthesis; generates speech from a non-text, non-acoustic input modality (surface EMG), so fit with the text-to-speech/voice-conversion scope is ambiguous, similar to other silent-speech-interface papers.
 **Abstract excerpt:** We propose a chaos-inspired new architecture for EMG-to-Speech (ETS) synthesis called CS-ETS, which combines a Samba-based encoder with two novel chaos-inspired loss functions -- Lyapunov Exponent Regularization (LER) and Multi-Scale Detrended Fluctuation Analysis (MSDFA). LER is designed based on Lyapunov exponents to capture nonlinear fluctuations and sensitivity to initial conditions.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -705,7 +705,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Investigates continuous latent-space audio watermarking robust to neural codec re-encoding; a traceability/security contribution for codec-processed audio rather than an advance in codec reconstruction or speech generation quality.
 **Abstract excerpt:** Neural audio codecs are challenging transformations for audio watermarking because they re-encode, quantize, and resynthesize speech. This paper investigates continuous latent-space watermarking for codec robustness.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -716,7 +716,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies voice cloning as a data-augmentation approach for clinical paralinguistic tasks, evaluating downstream task performance rather than voice-cloning intelligibility/similarity metrics; VC used as one tool for an application study rather than the paper's primary object of study.
 **Abstract excerpt:** Synthetic data augmentation in speech is common practice for linguistic tasks like ASR, but has seen far less work for paralinguistic ones, especially clinical tasks where labelled data is expensive and some patient groups are underrepresented. Voice cloning is one such augmentation approach, but is typically evaluated on speech intelligibility (WER) or speaker similarity (SS) rather than on downstream performance, and it remains unclear whether these preserve the paralinguistic signal such tasks depend on.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -727,7 +727,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Investigates language sensitivity of self-supervised learning models trained on neural-audio-codec discrete tokens; a codec-based SSL representation-robustness study relevant to but not centrally about TTS/VC/SCA generation.
 **Abstract excerpt:** Neural audio codecs (NACs) have become popular for obtaining speech representations as discrete tokens. Beyond compression, discrete tokens can be used to train self-supervised learning (SSL) models.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -738,7 +738,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies how prosodic delivery variation (holding transcript text fixed) affects jailbreak susceptibility in audio-capable foundation models; a safety/robustness analysis of spoken interaction models rather than a TTS/VC/SCA generation or evaluation-methodology contribution.
 **Abstract excerpt:** Audio-capable foundation models enable end-to-end spoken interaction, but they also introduce safety risks beyond transcript content. It remains unclear how much jailbreak capability can arise from matched-text variation in speech delivery rather than from lexical rewriting or broader style transfer.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -749,7 +749,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Introduces a generation-aligned diagnostic ladder separating decision-rule misalignment from readout-coverage limitations when evaluating paralinguistic-task accuracy in speech language models; an evaluation-methodology contribution for SLM understanding capability rather than a TTS/VC/SCA generation or synthesis-quality-evaluation paper.
 **Abstract excerpt:** Speech language models are increasingly evaluated on paralinguistic tasks by the accuracy of prompted answers, but answer accuracy combines failures at different stages of the audio-to-answer computation. We introduce a generation-aligned diagnostic ladder that compares the emitted answer, the option logits, an affine readout of those logits, and a linear readout of the hidden state at the same answer token.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -760,7 +760,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies a denial-of-service attack that induces end-to-end speech language models to generate excessively long outputs; a security/robustness study of speech-LM systems rather than a TTS/VC/SCA generation, control, or evaluation-methodology contribution.
 **Abstract excerpt:** Many studies have shown that specially crafted inputs can induce large language models (LLMs) to generate excessively long outputs, resulting in significant computational overhead and resource consumption. While most existing denial-of-service (DoS) attacks target text-only LLMs, end-to-end (E2E) speech LLMs are rapidly emerging.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -771,7 +771,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** MiDashengLM-Gen proposes end-to-end unified audio scene generation blending speech, music, and sound effects via LLM-driven autoregressive flow matching; speech intelligibility is a stated motivation, but the paper's primary contribution is general audio-scene generation rather than speech synthesis specifically, similar to the UNISON/Audio-Oscar/HoliDubber borderline pattern.
 **Abstract excerpt:** Generating coherent audio scenes that simultaneously blend speech, music, and sound effects remains a significant challenge. Current approaches typically rely on a disjointed pipeline where a frozen, decoupled text encoder feeds a separate audio decoder, limiting cross-modal optimization and leading to poor speech intelligibility.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -782,7 +782,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Presents a unified framework covering six LM-based generative speech-enhancement modeling paradigms in neural-audio-codec latent space; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though it directly reuses codec/generative-modeling techniques from speech synthesis research.
 **Abstract excerpt:** Language model (LM)-based speech enhancement (SE) has recently emerged rapidly using latent space features of neural audio codecs (NACs). In this paper, first, we present a unified framework covering six popular LM-based generative SE modeling paradigms based on discrete/continuous latent NAC features: discrete or continuous autoregressive (D/CAR) SE, discrete or continuous non-autoregressive (D/CNAR) SE, discrete diffusion (DDiff) SE, and continuous flow matching (CFM) SE.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -793,7 +793,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** S2Dialog studies multimodal dialogue retrieval (retrieving similar dialogues by semantic and acoustic-conversational style) as an auxiliary resource for downstream dialogue tasks; a retrieval-system contribution rather than TTS/VC/SCA generation itself, though motivated by conversational speech synthesis applications.
 **Abstract excerpt:** Multimodal dialogue retrieval aims to retrieve dialogues from multimodal dialogue banks that are similar to a target dialogue in terms of both textual semantics and acoustic conversational styles. Such dialogue-level retrieval is crucial for many dialogue-related tasks, including Emotion Recognition in Conversation, Spoken Dialogue Systems, and Conversational Speech Synthesis, where external dialogue examples can provide valuable semantic and stylistic references.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -804,7 +804,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** AudioTQ proposes a data-oblivious, psychoacoustic-free lossy audio compression scheme (randomized Hadamard rotation plus Lloyd-Max quantization) as a general alternative to MP3/AAC/Opus; unclear whether this is a learned neural speech codec in the sense used by TTS/VC/SCA generation research or a general-purpose classical audio-compression technique.
 **Abstract excerpt:** Lossy audio compression algorithms traditionally rely on psychoacoustic modeling and frequency-domain representations (e.g., MP3, AAC, and Opus) to discard information that is imperceptible to the human auditory system. While highly effective, these approaches are computationally complex and domain-specific.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -815,7 +815,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Compares human deepfake-audio detection accuracy against pretrained detectors across TTS synthesizers released in 2019, 2022, and 2024, tracking how perceptually deceptive synthetic speech has become over time; a human-perception trend study of TTS realism, evaluation-adjacent but framed primarily around deepfake detection rather than TTS methodology.
 **Abstract excerpt:** Advances in speech synthesis have made deepfake audio highly realistic. Earlier studies reported 70-80% human detection accuracy, but relied primarily on older synthesizers.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 ## 2026.dialres-1.18 | Speaker Normalization via Voice Conversion Reveals a Human-Machine Dissociation in Dialect Classification | workshop | score: 0.45
@@ -825,7 +825,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Uses off-the-shelf Retrieval-based Voice Conversion (RVC) purely as a speaker-normalization instrument to study human vs. machine dialect classification; VC is a black-box tool for a perception study, not the paper's own method or evaluation contribution to VC itself.
 **Abstract excerpt:** This study evaluates whether Retrieval-based Voice Conversion (RVC) can be used to normalize speaker-specific variability while preserving dialect-relevant acoustic cues, and what the response of human and machine systems to this manipulation reveals about the architecture of dialect recognition.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -836,7 +836,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** GenuVoice is a deepfake detector for voice-conversion and singing-synthesis audio; it engages directly with synthetic speech/singing artifacts but the contribution is detection, not generation or a synthesis quality/evaluation methodology, so it sits outside the controlled task vocabulary.
 **Abstract excerpt:** High-fidelity audio generation techniques, such as voice conversion and singing voice synthesis, have significantly increased the risk of audio deepfakes. Although existing methods perform well on conversational speech deepfake detection, they fail severely under the speech-to-singing domain shift.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -847,7 +847,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Uses an existing speech-to-speech LLM as a black-box component to build a medical-education application (virtual standardized patients); an application/deployment paper rather than a method contribution advancing S2S or SCA generation itself.
 **Abstract excerpt:** To develop clinical reasoning skills, medical students are often tasked with interacting with trained standardized patients (SPs). Human SPs enable real conversations that can resemble authentic clinical scenarios.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -858,7 +858,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Studies which personality traits are reliably perceived when expressed through a text-to-speech-realized spoken dialogue system; ambiguous whether the paper's core contribution is a synthesis/control method or a corpus-based perception analysis.
 **Abstract excerpt:** A consistent personality in a spoken dialogue system enhances the naturalness and friendliness of interactions. However, users may not accurately perceive all the personality traits that the system attempts to express.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -869,7 +869,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Adapts and empirically evaluates an existing full-duplex spoken dialogue model's ability to reproduce proficiency-conditioned human dialogue features; a capability/behavior study of SCA rather than a new generation method.
 **Abstract excerpt:** Real-time, human-centered conversational AI requires systems that handle spoken dialogue with overlap and rapid turn-taking. Although full-duplex models promise these capabilities, empirical work applying them to conversational AI is still nascent.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -880,7 +880,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Constructs a "paraling-dial" dataset pairing fixed utterance text with five distinct emotional speech renditions, but the paper's own contribution is predicting emotional dialogue breakdown (a classification task) rather than synthesis; the paired-audio resource has latent emotional-TTS relevance.
 **Abstract excerpt:** In spoken dialogue systems, even when the utterance text is the same, speaking style or tone differences can change its nuance. To respond appropriately in such cases, systems must accurately interpret paralinguistic information.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -891,7 +891,7 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Presents a probing framework analyzing what phonetic/paralinguistic attributes are recoverable from discrete speech tokens used by spoken language models; a representation-analysis study relevant to codec/SLM design but not itself a new generation or codec method.
 **Abstract excerpt:** This paper presents a framework for systematic probing of discrete speech token representations in spoken language models (SLMs). We propose three complementary components: a distributional divergence analysis testing whether an attribute is reflected in token usage, token-based classifiers to quantify recoverability and an attribute-conditioned representation analysis.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
 
@@ -902,6 +902,6 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Reason for review:** Empirically characterizes commodity TTS engines' acoustic properties (jitter, shimmer, HNR) across 21 languages against deepfake-detection biomarkers; substantial synthesis-quality characterization content, but framed primarily around detection-evasion rather than TTS methodology or standard listening-test evaluation.
 **Abstract excerpt:** Jitter, shimmer, and harmonics-to-noise ratio (HNR) are often used to detect voice deepfakes, since these features capture biomechanical irregularities of vocal fold vibration that synthetic speech supposedly lacks. We test this assumption on three commodity TTS engines.
 
-**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---

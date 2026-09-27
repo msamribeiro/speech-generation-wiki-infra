@@ -31,7 +31,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Studies a denial-of-service attack that induces end-to-end speech language models to generate excessively long outputs; a security/robustness study of speech-LM systems rather than a TTS/VC/SCA generation, control, or evaluation-methodology contribution.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

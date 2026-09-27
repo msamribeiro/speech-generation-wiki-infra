@@ -35,7 +35,7 @@
   ],
   "relevance_score": 0.6,
   "relevance_note": "MiDashengLM-Gen proposes end-to-end unified audio scene generation blending speech, music, and sound effects via LLM-driven autoregressive flow matching; speech intelligibility is a stated motivation, but the paper's primary contribution is general audio-scene generation rather than speech synthesis specifically, similar to the UNISON/Audio-Oscar/HoliDubber borderline pattern.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

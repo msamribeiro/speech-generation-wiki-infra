@@ -21,7 +21,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.00407",
   "pdf_url": "https://aclanthology.org/2026.acl-short.26.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.00407.pdf",
   "pdf_source": "anthology",
   "abstract": "Speech representations that capture prosodic information can be useful for both understanding and generation. However, speaker characteristics are reflected in acoustic-prosodic features (e.g., pitch). To address privacy concerns from the leakage of identity information, we propose a new self-supervised approach to learning prosody representations that incorporates speaker disentanglement strategies. We evaluate our encoder on three tasks to probe representation capabilities, including pitch reconstruction and detection of different prosodic events. Our encoder outperforms raw prosody and HuBERT-base baselines, achieving strong speaker disentanglement without adverse impact on prosody-related downstream tasks.",
   "arxiv_comment": "Accepted to ACL 2026",
@@ -30,10 +30,10 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Proposes self-supervised privacy-preserving prosody representation learning with speaker disentanglement; useful for generation but the paper trains no TTS/VC system and reports no synthesis-quality evaluation.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "conference_date": "2026-07-01"
 }

@@ -27,10 +27,10 @@
   "task": [],
   "relevance_score": 0.42,
   "relevance_note": "GenuVoice is a deepfake detector for VC and singing-synthesis audio; engages with synthetic speech artifacts but its contribution is detection, not generation or a synthesis quality/evaluation methodology.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "conference_date": "2026-07-01"
 }

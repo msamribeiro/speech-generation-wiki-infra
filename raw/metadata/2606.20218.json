@@ -23,7 +23,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.20218",
   "pdf_url": "https://arxiv.org/pdf/2606.20218.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.20218.pdf",
   "pdf_source": "arxiv",
   "abstract": "Streaming zero-shot voice conversion struggles to disentangle timbre from linguistic content without degrading utility or inflating latency. Current methods rely on information bottleneck (IB) or speaker perturbation. While IB filters out timbre, it discards prosody, forcing models to explicitly inject features like fundamental frequency. This often requires buffering future frames, creating algorithmic lookahead latency. On the other hand, existing perturbation methods largely overlook the crucial trade-off between timbre leakage and utility preservation. Recognizing this neglected trade-off, we find that the inherent objective of Speaker Anonymization (SA) aligns well with balancing these factors. Thus, we introduce SA as a novel perturbation mechanism to explicitly mitigate timbre leakage while retaining prosodic utility. Crucially, SA's robust representations significantly alleviate the generator's reliance on future context, enabling our strictly causal, zero-lookahead network. Audio samples are available at https://amphionteam.github.io/Zero-VC-demo/.",
   "arxiv_comment": "Accepted to Interspeech 2026",

@@ -31,7 +31,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Investigates language sensitivity of self-supervised learning models trained on neural-audio-codec discrete tokens; a codec-based SSL representation-robustness study relevant to but not centrally about TTS/VC/SCA generation.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

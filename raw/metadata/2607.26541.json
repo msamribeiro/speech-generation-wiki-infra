@@ -27,7 +27,7 @@
   ],
   "relevance_score": 0.5,
   "relevance_note": "Studies how prosodic delivery variation (holding transcript text fixed) affects jailbreak susceptibility in audio-capable foundation models; a safety/robustness analysis of spoken interaction models rather than a TTS/VC/SCA generation or evaluation-methodology contribution.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

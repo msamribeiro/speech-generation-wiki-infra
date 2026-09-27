@@ -32,7 +32,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Investigates continuous latent-space audio watermarking robust to neural codec re-encoding; a traceability/security contribution for codec-processed audio rather than an advance in codec reconstruction or speech generation quality.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

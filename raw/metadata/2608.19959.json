@@ -32,7 +32,7 @@
   ],
   "relevance_score": 0.6,
   "relevance_note": "Compares human deepfake-audio detection accuracy against pretrained detectors across TTS synthesizers released in 2019, 2022, and 2024, tracking how perceptually deceptive synthetic speech has become over time; a human-perception trend study of TTS realism, evaluation-adjacent but framed primarily around deepfake detection rather than TTS methodology.",
-  "status": "review",
+  "status": "accepted",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

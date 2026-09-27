@@ -23,7 +23,7 @@
   "ingested_date": null,
   "url": "https://aclanthology.org/2026.swisstext-1.7",
   "pdf_url": "https://aclanthology.org/2026.swisstext-1.7.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.swisstext-1.7.pdf",
   "pdf_source": "anthology",
   "abstract": null,
   "task": [

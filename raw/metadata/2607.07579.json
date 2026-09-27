@@ -28,7 +28,7 @@
   ],
   "relevance_score": 0.4,
   "relevance_note": "Studies whether discrete neural-audio-codec tokens (originally developed for speech synthesis) can be used for text-independent automatic speaker verification; primarily an ASV-system contribution using codec representations as a feature source, not a TTS/VC/SCA generation or codec-design paper itself.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

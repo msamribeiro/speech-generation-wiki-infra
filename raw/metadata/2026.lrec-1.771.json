@@ -21,9 +21,9 @@
   "month": 5,
   "published_date": "2026-05-01",
   "ingested_date": null,
-  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-771",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-771.pdf",
-  "pdf_path": null,
+  "url": "https://aclanthology.org/2026.lrec-1.771",
+  "pdf_url": "https://aclanthology.org/2026.lrec-1.771.pdf",
+  "pdf_path": "raw/papers/2026.lrec-1.771.pdf",
   "pdf_source": "anthology",
   "abstract": "This paper introduces Nos_Brais-GL, a new open-access high-quality Galician speech corpus designed for the development of neural Text-to-Speech (TTS) systems. Nos_Brais-GL contains approximately 18 hours of professionally recorded male speech and a carefully curated set of utterances selected to ensure linguistic variation and phonetic and prosodic richness. Beyond its immediate application in synthetic speech generation, Nos_Brais-GL exemplifies good practices in TTS corpus design for lesser-resourced languages, emphasizing methodological transparency, open licensing, and interoperability.",
   "task": [

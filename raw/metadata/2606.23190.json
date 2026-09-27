@@ -22,7 +22,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.23190",
   "pdf_url": "https://arxiv.org/pdf/2606.23190.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.23190.pdf",
   "pdf_source": "arxiv",
   "abstract": "Existing Reinforcement Learning (RL) research for Text-to-Speech (TTS) focuses on large language models (LLMs), leaving Flow-Matching (FM) under-explored. We present FlowTTS-GRPO, an online RL framework for FM-based TTS. By converting ordinary differential equation (ODE) trajectories into stochastic differential equation (SDE) paths, our method enables direct fine-tuning of open-source FM models without auxiliary models. We show that a weighted reward combination converges faster than a probabilistic scheme, and identify three practical optimizations: omitting classifier-free guidance (CFG) during training accelerates convergence; synthesizing hard cases improves robustness; and applying RL to the FM component enhances audio-detail metrics. Experiments on CosyVoice 3.0 and F5-TTS demonstrate objective and subjective preference gains in speaker similarity and perceptual quality, with F5-TTS also improving intelligibility.",
   "arxiv_comment": "Accepted by Interspeech 2026",

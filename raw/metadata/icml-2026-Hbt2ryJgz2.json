@@ -1,0 +1,35 @@
+{
+  "id": "icml-2026-Hbt2ryJgz2",
+  "source_ids": {
+    "openreview": "Hbt2ryJgz2"
+  },
+  "title": "Sparse Autoencoders for Interpretable Emotion Control in Text-to-Speech",
+  "authors": [
+    "Hongfei Du",
+    "Jiacheng Shi",
+    "Sidi Lu",
+    "Gang Zhou",
+    "Ashley Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=Hbt2ryJgz2",
+  "pdf_url": "https://openreview.net/pdf?id=Hbt2ryJgz2",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Integrating large language models (LLMs) into text-to-speech (TTS) systems has improved speech expressiveness, yet interpretable emotional control remains challenging. Existing approaches primarily rely on external conditioning or global activation steering, offering limited insight into the internal representations underlying emotional control. In this work, we analyze emotion-related variation in the semantic hidden states of LLM-based TTS models using sparse autoencoders (SAEs) to identify sparse latent features. Our analysis shows that emotional variation is distributed across multiple sparse latent features, while intervening on a small subset enables interpretable emotion control. Building on this observation, we introduce a feature-level intervention framework for bidirectional emotion induction and suppression without modifying backbone parameters. We further show that distinct latent features are associated with specific acoustic attributes (e.g., pitch), suggesting that emotional expression arises from coordinated latent contributions rather than a single global shift. Empirically, steering these sparse latent features achieves comparable or superior emotion induction and suppression performance relative to global steering and existing TTS baselines.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: ICML 2026 version of arXiv 2606.01479 (record status: accepted); the arXiv record stays canonical and carries the relevance decision.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.01479"
+}

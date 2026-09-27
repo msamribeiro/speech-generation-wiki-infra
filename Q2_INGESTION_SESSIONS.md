@@ -15,19 +15,28 @@ narrative.
 | Status | Count |
 |--------|-------|
 | Already ingested (Q2 2026) | 5 |
-| Remaining to ingest (accepted) | 230 |
-| Pending human triage (review) | 18 |
-| Rejected | 49 |
+| Remaining to ingest (accepted) | 241 |
+| Pending human triage (review) | 0 |
+| Rejected | 56 |
 | **Total Q2 2026 in scope so far** | **302** |
 
-As of 2026-08-23, after the arXiv fetch top-up and ACL Anthology 2026 fetch in this session (see
-Session Log). Breakdown by month (`published_date`-derived):
+As of 2026-09-21 (after the triage of the 18 Q2 `review` papers, 11 accepted and 7 rejected; the
+counts were 230 / 18 / 49 on 2026-08-23), following the arXiv fetch top-up and ACL Anthology 2026
+fetch (see Session Log). Breakdown by month (`published_date`-derived):
 
 | Month | Accepted | Ingested | Review | Rejected | Total |
 |-------|----------|----------|--------|----------|-------|
 | April 2026 | 77 | 5 | 0 | 19 | 101 |
-| May 2026 | 57 | 0 | 6 | 12 | 75 |
-| June 2026 | 96 | 0 | 12 | 18 | 126 |
+| May 2026 | 62 | 0 | 0 | 13 | 75 |
+| June 2026 | 102 | 0 | 0 | 24 | 126 |
+
+**Download and parse (2026-09-19): complete for the 230 papers `accepted` at that point** (the 11 papers
+accepted later from `review`, 5 May and 6 June, still have no PDF or parse) (0 failures; 113 downloaded
+and parsed on 2026-09-19, the other 117 were already done). By source: arXiv 181, ICLR 21, ACL 15,
+workshop 13. Of the 5 `ingested` records, 4 are real Q2 pages (all arXiv, April); the fifth is the
+ICLR record `iclr-2026-kYkfCs4ZAH`, a dedup pointer (`wiki_page_id: 2510.00981`) to a Q4 2025 page.
+`2507.09318` is marked `ingested` with an April 2026 `published_date` despite a July 2025 ID prefix
+(not investigated; does not change the counts).
 
 **Fetch is now believed complete for all of Q2 2026** (April–June) across both arXiv and ACL
 Anthology sources. The arXiv top-up covered `--date-from 2026-05-25` through today (2026-08-23) on
@@ -42,7 +51,7 @@ exists yet — confirmed by dry-run, consistent with EMNLP 2026's official Oct 2
 2026's date being unconfirmed as of this session). Re-check `acl.py --years 2026 --dry-run` closer
 to those dates. ICASSP 2026 still has no dedicated fetcher (`BACKLOG.md` Infrastructure section) —
 raised to the user 2026-08-23, not yet resolved; ASRU/SLT are in the same gap. The 18 `review`-status
-Q2 papers need human triage in `raw/review_queue.md` before the scope count is fully final. The 5
+Q2 papers were triaged by the user (2026-09-20) and the scope count is now final. The 5
 already-`ingested` April papers were not part of a chronological Q2 sweep — they were ingested
 individually back in late May 2026, before quarterly chronological ingest sessions existed, most
 likely via citation-discovery or an early top-up fetch run that happened to overlap April dates.
@@ -90,20 +99,32 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Fetch top-up is done (see Session Log below) — Q2 2026 now has a complete, quarter-wide accepted
-pool (221 papers, April–June), matching the Q3/Q4/Q1 2026 precedent of not starting ingest until
-fetch+filter closes out the full quarter. The user explicitly chose to stop after the fetch+filter
-pass this session rather than start ingesting immediately.
+Fetch, filter, and review triage are done for Q2 2026 (see Session Log, 2026-08-23, 2026-09-19 and
+2026-09-21): 241 `accepted` papers in the window. 230 of them are downloaded, parsed and ready to
+ingest; **11 newly accepted ones (from the triage of 2026-09-21) still need a download and parse**.
+Ingest itself has not started.
 
 To resume:
 
-1. Optionally triage the 15 `review`-status Q2 papers in `raw/review_queue.md` first (not required
-   to start ingest — the 221 `accepted` papers are independent of these).
-2. Build the first chronological candidate list from the 221 `accepted` Q2 papers (sort by
-   `published_date`, not ID prefix — see the ID-prefix note below).
-3. ICASSP 2026 (and ASRU/SLT) still have no dedicated fetcher — raised to the user 2026-08-23, not
-   yet resolved either way. Worth a decision before or during the sweep on whether to build one.
+1. **Download and parse the newly accepted papers.** 29 papers were accepted from the review queue
+   across all quarters: 11 in the Q2 window and 9 in Q1 (`accepted` with no `pdf_path`; the other 9
+   are July-August). Run `download_pdfs.py` (scope with `--published-from` / `--published-to`), then
+   `batch_convert.py`. Triage is not required to start ingest; the 230 already-parsed papers are
+   independent of it. The 9 Q1 papers are stragglers (see the 2026-09-21 continuation entry): ingest
+   them as a small closing Q1 batch.
+2. Build the first chronological candidate list from the `accepted` Q2 papers (sort by
+   `published_date`, not ID prefix; see the ID-prefix note below). April is entirely parsed.
+3. Check with the user before starting: the trunk checkout's `BACKLOG.md` (another stream, Q4 2025
+   content cycle) marks ingest "P0 · queued" behind that cycle as of 2026-09-19.
 4. Proceed with the standard batches-of-4 cadence below.
+
+**OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
+gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
+browser). The 20 ICML 2026 candidates (Q3) are written, filtered and, for the 2 accepted, parsed (see
+the 2026-09-21 continuation entry); they are ready to ingest whenever Q3 is reached. OpenReview PDF
+downloads are behind the same gate, so an OpenReview-only paper needs its PDF saved by hand from
+`openreview.net/pdf?id=<forum id>` into `raw/papers/{id}.pdf`. NeurIPS 2026 had no accepted papers
+posted on 2026-09-21; re-save its pages later and run the same way.
 
 **Cadence:** carried forward unchanged from Q1 2026 — sequential batches of 4, one paper at a time,
 health check after each paper, a short batch summary plus explicit go-ahead before the next batch.
@@ -414,7 +435,11 @@ Investigated the ICLR/NeurIPS 2026 issue flagged in the previous entry. Two dist
    calls made tonight (across arXiv, ACL Anthology, and OpenReview fetchers) — not a broken venue ID
    or a "nothing new yet" signal. Deliberately did not keep retrying, to avoid extending any block.
 
-**Resume here next session:** re-run `openreview.py --venue ICLR --year 2026 --dry-run` and
+**Superseded 2026-09-21:** the rate-limiting diagnosis above was wrong (it is a browser-verification
+gate; waiting does not help). See the 2026-09-21 entry for the corrected diagnosis and the
+`--from-file` workaround.
+
+**Original resume note (obsolete):** re-run `openreview.py --venue ICLR --year 2026 --dry-run` and
 `--venue NeurIPS --year 2026 --dry-run` first, before anything else OpenReview-related. If still
 403ing, the block hasn't cleared — wait longer rather than retrying repeatedly. If it succeeds,
 proceed to a real (non-dry) fetch for both, then run the filter agent on whatever's new, same
@@ -447,6 +472,204 @@ the review queue (at least the 18 Q2-scoped entries) before treating Q2 scope as
 paused pending this session's fetch top-up; whenever convenient, the ICASSP/ASRU/SLT fetcher gap and
 the pre-2026 workshop-date backfill are both real but non-blocking.
 
+### 2026-09-19 — Q2 status review, then download + parse of all accepted papers
+
+No ingest, no wiki (content repo) changes. Started as a status review and turned into finishing the
+download and parse stage for Q2.
+
+- **Fetch gap analysis (Q2 only):** none for arXiv or ACL Anthology (no weekly holes in arXiv
+  coverage April onward). ICLR 2026 is fully in the corpus (27 records). Outside Q2 for reference:
+  arXiv is fetched only through 2026-08-20, so late August onward is unfetched for Q3 2026, and
+  `isca-archive.org/interspeech_2026/` returned 404.
+- **Found:** only 117 of the 230 accepted Q2 papers had a PDF and parse (the 08-23 top-up added
+  metadata only); the 98 accepted July–August papers had none.
+- **`download_pdfs.py`:** had no way to scope to one quarter (it takes every accepted paper), so
+  added `--published-from` / `--published-to` (filters on `published_date`). Used to keep the run to
+  Q2 and skip Q3.
+- **`acl.py` bug found and fixed:** the first download attempt aborted on 5 consecutive 404s. The
+  LREC 2026 volume's Anthology XML lists an external `https://lrec.elra.info/...` `<url>`, and
+  `acl.py` prefixed the Anthology base onto it (`https://aclanthology.org/https://lrec...`). Affected
+  LREC 2026 main, SIGUL, CAS, DialRES, and PoliticalNLP records. `acl.py` now falls back to the
+  canonical Anthology ID (`{collection}-{volume}.{paper}`) when the XML URL is absolute. Repaired
+  `pdf_url` (and `url` where it carried the same defect) in place on 17 records (9 accepted, 6
+  rejected, 2 review), deriving each canonical ID from the cached XML; diff verified to touch only
+  those URL lines. Canonical `aclanthology.org/{id}.pdf` URLs return 200.
+- **Download:** 113/113 Q2 PDFs downloaded, 0 failed.
+- **Parse:** 113/113 parsed, 0 failed, `--workers 2`, 204 minutes (about 1.8 min per paper; the first
+  papers finished much faster than the average, so do not extrapolate from an early rate). Post-parse
+  check on all 230 accepted Q2 papers: `paper.md` present, at least 100 lines, non-empty
+  `references.json`, 0 flagged. This checks output files, not paper-by-paper content.
+- **Citation index** rebuilt: 22,427 entries, 1,169 corpus papers.
+- **Review queue:** located the 18 Q2 entries in `raw/review_queue.md` (see Next Session). The user
+  will triage offline; nothing applied.
+- **Repo state at close:** all of the above committed on infra `work/ingest` (`2729cd2`), one commit
+  ahead of `main`, **not merged or pushed** (user's choice). The trunk checkout on `main` had another
+  stream's uncommitted work (`BACKLOG.md`, `STATUS.md`, `Q4_INTEGRATION_SESSIONS.md`), which is why
+  the merge was held. That work was committed to `main` as `d273f06` before session close, and a
+  read-only `git merge-tree` dry run confirmed `work/ingest` merges into it cleanly (both sides
+  edited `BACKLOG.md`, in different hunks). Content and site repos untouched. The user was also
+  editing `raw/review_queue.md` in this worktree (offline triage ticks, uncommitted) at close: leave
+  it alone until they say the decisions are final, then apply them to metadata. Earlier this same session `work/ingest` was
+  merged into `main` and pushed (`ab0bfb0`, then a `BACKLOG.md` update `df5176b`), and both ingest
+  worktrees were fast-forwarded and their `wiki/` submodule checkout updated.
+
+### 2026-09-20 — Review triage applied, publication dates verified, conference_date repaired
+
+Commit `5f87b1b`. No ingest, no wiki (content repo) changes.
+
+- **The review pool was 43, not 18.** The 18 was the Q2-window count (by `published_date`); the full
+  `status: review` pool from the 08-23 filter runs was 43 (35 arXiv/cs.CL, 8 ACL Anthology), 25 of them
+  outside Q2 (4 Feb, 14 Jul, 7 Aug). The user ticked all 43 in `raw/review_queue.md`; applied to
+  `raw/metadata/` status: **29 accepted, 14 rejected**. By `published_date`: Feb 4A/0R, May 5A/1R,
+  Jun 6A/6R, Jul 8A/6R, Aug 6A/1R. Q2 window after triage: 241 accepted, 0 review, 56 rejected.
+- **The 29 newly accepted papers have no PDF or parse yet:** 11 in Q2 (5 May, 6 Jun), 14 in Q3
+  (8 Jul, 6 Aug), 4 IWSDS 2026 (Q1 stragglers, Q1 is already archived).
+- **Dates verified.** The 22 arXiv-sourced accepted papers match the arXiv API `published` date
+  exactly (including `2606.27380`, genuinely submitted 2026-05-11 despite its June-style ID). The 7
+  Anthology-only papers match their XML volume month (IWSDS 2026 = February 2026, Trento; DialRES and
+  LREC = May; NLPAICS = June), with day 01 by convention.
+- **`conference_date` repaired.** 65 records carried a placeholder `2026-01-01` / `2025-01-01` (written
+  before the date-table fix). Replaced with the Anthology XML volume month, day 01 (ACL and Findings
+  2026 -> 2026-07-01, LREC -> 05-01, EACL -> 03-01, IWSDS 2026 -> 02-01). 12 records were XML-confirmed
+  January (CHUM, CLTW, COLING 2025, MCG) and left alone. `month` was not touched: on arXiv-sourced
+  records it is the arXiv publication month by design. The field has no readers in scripts or the wiki,
+  so quarter counts were never affected. The fetcher's curated table has ACL 2026 at 2026-07-02, so
+  newly fetched ACL 2026 records read 07-02 while the repaired ones read 07-01 (same month).
+- **Left out of the commit:** `.gitignore` and the `openreview.py` change (handled in the 2026-09-21
+  entry below).
+- **Repo state at close:** committed on infra `work/ingest`, **not merged or pushed** (standing hold,
+  see the 2026-09-19 entry).
+
+### 2026-09-21 — OpenReview block: diagnosis, fail-fast, saved-page import, ICML 2026
+
+No ingest, no wiki (content repo) changes. Earlier the same day a separate step (`5f87b1b`) applied the
+user's triage of all 43 `review` papers (29 accepted, 14 rejected) and repaired 65 placeholder
+`conference_date` values; see `raw/pipeline_log.md` and its commit message. That step left the Q2
+window at 241 accepted, 56 rejected, 5 ingested, with **11 newly accepted Q2 papers still lacking a
+PDF and parse** (29 across all quarters).
+
+- **Correction to the 2026-08-23 entry above:** the ICLR/NeurIPS 2026 403s are not rate limiting.
+  Anonymous scripted `GET /notes` on `api2.openreview.net` returns `403 ChallengeRequiredError`
+  ("Challenge verification required", with a `challengeUrl`), a browser-verification gate. The
+  rate-limit counter is untouched (179/180), so waiting and retrying cannot help.
+- **What was ruled out:** the fetcher (raw `curl` fails identically), the User-Agent, the client
+  library (the official `openreview-py` anonymous client gets the same error), the venue year
+  (ICLR 2025 and NeurIPS 2025 are gated too), and this network (a phone hotspot is gated too). A real
+  browser passes the check in a few seconds, in a normal and an incognito window, with no login.
+- **Timing is unknown:** the last successful live OpenReview fetch was **2026-06-05** (all 56
+  OpenReview records carry that `fetched_date`; the 06-29 date in `BACKLOG.md` was the local dedup
+  pass). The gate appeared sometime between then and 08-23. No announcement was found and the cause is
+  not established.
+- **`openreview.py` changes:** (1) `or_get` raises `OpenReviewChallengeError` at once on a
+  `ChallengeRequiredError` 403 instead of retrying for about 5 minutes; `main` exits with code 2 and
+  no `fetch_log.jsonl` entry is written. (2) New `--from-file` mode reads `/notes` pages saved from a
+  browser (`limit=1000`, `offset` stepped by 1000, `sort=cdate:asc`) and feeds them through the normal
+  parse, keyword filter and skip-existing path. It keeps only notes whose `venueid` matches, drops
+  duplicate note IDs, and warns when fewer notes load than the API's `count` (a missing page).
+  (3) ICML added to the venue table: `ICML.cc/2026/Conference`, `2026-07-06`, month 7 (ICML 2026 is
+  July 6-11, Seoul), which puts it in Q3 2026, not Q2. Workshops are not covered (each has its own
+  venue ID; the table and `venue_type` are conference-only).
+- **Validation, dry run only:** ICLR 2026 loaded 5,351 notes from 6 saved pages, 27 passed the
+  filter, all 27 already in the corpus, so the saved-page path reproduces the June live fetch exactly
+  and ICLR 2026 needs nothing more. ICML 2026 loaded 6,341 notes from 7 pages, 20 passed the filter,
+  0 existing. Dropping one page correctly triggers the incomplete-coverage warning. NeurIPS 2026's
+  first page came back empty as of 2026-09-21 (accepted papers not posted yet).
+- **Not done at this point (superseded by the continuation entry below):** the 20 ICML 2026 records
+  had not yet been written. A credentialed `openreview-py` login was never tested (no account); it is
+  unverified whether a token would pass the gate.
+- **Repo state at close:** the `openreview.py` and doc changes are committed on infra `work/ingest`,
+  ahead of `main`, **not merged or pushed** (see the standing hold in the 2026-09-19 entry).
+
+### 2026-09-21 (continued) — ICML 2026 written, filtered and deduplicated
+
+- **Written:** 20 ICML 2026 records as `pending` (`openreview.py --venue ICML --year 2026
+  --from-file`, `published_date` 2026-07-06, so Q3 2026).
+- **17 of the 20 already existed under arXiv IDs** (title match): 7 with an ingested wiki page, 8
+  `accepted` but not ingested, 2 `rejected`. Only DropoutTS, AgentSteerTTS and TAC had no arXiv twin.
+- **Decision (user, 2026-09-21): the arXiv record stays canonical.** The 17 ICML records were flagged
+  `is_duplicate: true`, `canonical_id` set to the arXiv ID, `status: rejected` (the same shape as the
+  existing losing-side records), and not re-scored; the arXiv record carries the relevance decision.
+  This reverses the proceedings-over-arXiv direction of `scripts/fetch/dedup_openreview.py` for these
+  papers, which also does not cover the `icml-2026-` prefix. Reasons: the arXiv copies already have
+  PDFs, parses, wiki pages and correct Q2 dates (four of the eight accepted ones are Q2 papers that
+  would have moved to Q3), and an OpenReview-canonical record would have needed a hand-saved PDF for
+  six of them. There is no precedent in the corpus for an accepted-but-not-ingested arXiv copy meeting
+  a proceedings record (the earlier ICLR/NeurIPS collisions were all ingested copies).
+- **Scored (3):** AgentSteerTTS `icml-2026-hgKQemfVbS` 0.92 TTS accepted; TAC
+  `icml-2026-icMRkTnuU7` 0.88 codec+TTS accepted (general-audio tokenizer with speech results and a
+  purely autoregressive TTS model built on it); DropoutTS `icml-2026-7sksHLUvhH` 0.03 rejected
+  (time-series forecasting, no audio). Logged in `raw/pipeline_log.md`. Final status of the 20: 2
+  accepted, 18 rejected (17 duplicates, 1 off-topic).
+- **PDFs:** `openreview.net/pdf?id=...` returns the same 403 challenge page to scripts, and neither
+  accepted paper is on arXiv (title search). The user saved both PDFs from a browser; each was checked
+  against its first-page text (TAC 22 pages, AgentSteerTTS 19), filed as `raw/papers/{id}.pdf`, and
+  `pdf_path` set (`needs_manual_pdf` cleared).
+- **Parse:** both done, 0 failed, `--workers 2`, 645 s total. `paper.md` 744 lines / 96 references
+  (TAC) and 474 lines / 47 references (AgentSteerTTS). This checks output files, not content. Corpus
+  parse status: 232 done, 0 failed, 0 pending.
+- **Cleanup:** the scratch directory `tmp/` (13 saved API pages, about 93 MB, plus the two PDFs) was
+  removed; the PDFs were verified byte-identical to the filed copies and every record the pages
+  produced already exists. To repeat an import, save the pages again (workflow in the entry above).
+- **2026 status by quarter, end of session** (by `published_date`; accepted = accepted + ingested; the
+  dedup pointer `iclr-2026-kYkfCs4ZAH` is not counted; downloaded and parsed checked on disk):
+
+  | | Q1 | Q2 | Q3 (partial) |
+  |---|---|---|---|
+  | Records / rejected | 237 / 66 | 302 / 56 | 157 / 43 |
+  | Accepted | 171 | 245 | 114 |
+  | Downloaded / parsed | 162 / 162 | 234 / 234 | 2 / 2 |
+  | Ingested | 162 | 4 | 0 |
+  | Awaiting ingest (parsed and ready / need PDF) | 9 (0 / 9) | 241 (230 / 11) | 114 (2 / 112) |
+
+  Total awaiting ingest across 2026: 364, of which 232 are parsed and ready. The parse tool's count of
+  accepted papers with no PDF is 132 (9 + 11 + 112), which matches.
+- **Finding: Q1 2026 is not fully closed.** It was archived on 2026-08-22 as 162 ingested / 0
+  remaining, but the ACL Anthology 2026 fetch of 2026-08-23 added 9 accepted workshop papers dated
+  Feb-Mar (5 IWSDS 2026, published 2026-02-01, plus `2026.abjadnlp-1.6`, `2026.africanlp-main.23`,
+  `2026.eacl-short.16`, `2026.loreslm-1.54`). None has a PDF. Tracked in `BACKLOG.md`.
+- **Q3 is partial on the fetch side:** latest `published_date` is 2026-08-20, nothing from September,
+  Interspeech 2026 not yet on ISCA, no ICASSP/ASRU/SLT fetchers. Tracked in `BACKLOG.md`.
+- **Known follow-ups, unchanged:** the 7 ingested wiki pages still cite only the arXiv version, not
+  ICML acceptance (the deferred venue-migration item in `BACKLOG.md`); `dedup_openreview.py` still
+  lacks the `icml-2026-` prefix; the fetcher's keyword filter passed 20 of 6,341 ICML papers and was
+  not checked for misses.
+
+### 2026-09-27 — Download + parse of 20 pending papers; Q1 stragglers ingested, Q1 fully closed
+
+- **Download + parse:** ran `download_pdfs.py --published-from 2026-02-01 --published-to 2026-06-30`
+  (dry-run confirmed scope first) for the combined set of 9 Q1 stragglers + 11 Q2 review-triage
+  papers — 20 downloaded, 0 failed. Then `batch_convert.py --workers 2 --ids ...` for the same 20 —
+  20 done, 0 failed, 12.0 min. The 11 Q2 papers are now parked as `accepted`/parsed/ready; only the 9
+  Q1 stragglers were ingested this session (see below).
+- **Ingested the 9 Q1 stragglers** in three batches (4 / 4 / 1), standard one-paper-at-a-time cadence
+  with a health check after each: `2026.iwsds-1.3`, `2026.iwsds-1.4`, `2026.iwsds-1.9`,
+  `2026.iwsds-1.10`, `2026.iwsds-1.16`, `2026.abjadnlp-1.6`, `2026.africanlp-main.23`,
+  `2026.eacl-short.16`, `2026.loreslm-1.54`. Corpus 900 → 909. Final health check pass on all 9: 0
+  errors, 0 warnings.
+- **QC catches:** `2026.iwsds-1.10` left 3 bare `[[id]]` wikilinks unfixed by the ingest agent
+  (caught by the post-ingest health check, corrected by hand). `2026.abjadnlp-1.6` and
+  `2026.eacl-short.16` each self-caught and fixed their own bare-wikilink warnings before reporting
+  done. All in-corpus references cited by the 9 pages were spot-checked to confirm the target page
+  actually exists.
+- **Manual Verification Queue resolved:** `2026.iwsds-1.16` (virtual standardized patient / Nova
+  Sonic pilot) came back with a `field_significance` review flag — moderate vs. low boundary, per the
+  agent's own note (narrow 20-participant single-model pilot with no comparison group, but its
+  role-confusion/over-disclosure failure modes plausibly generalize beyond the specific application).
+  Reviewed and downgraded to **low** in both frontmatter and the Field Significance prose section;
+  re-ran health check, still 0 errors / 0 warnings.
+- **Q1 2026 is now fully closed**, stragglers included: 171 accepted, 171 ingested, 0 remaining.
+- **2026 status by quarter, end of session** (by `published_date`; accepted = accepted + ingested):
+
+  | | Q1 | Q2 | Q3 (partial) |
+  |---|---|---|---|
+  | Accepted | 171 | 245 | 114 |
+  | Downloaded / parsed | 171 / 171 | 245 / 245 | 2 / 2 |
+  | Ingested | 171 | 4 | 0 |
+  | Awaiting ingest | 0 | 241 (all parsed and ready) | 114 (112 need a PDF) |
+
+  Total awaiting ingest across 2026: 355, of which 353 are parsed and ready — Q2's chronological
+  ingest sweep (241 papers) is next, per `BACKLOG.md`.
+
 ---
 
 ## Manual Verification Queue
@@ -456,6 +679,7 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2026.iwsds-1.16` | field_significance moderate/low boundary | Resolved 2026-09-27: downgraded to low (narrow 20-participant single-model pilot, no comparison group). |
 
 ---
 

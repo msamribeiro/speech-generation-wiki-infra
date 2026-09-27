@@ -18,7 +18,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.31365",
   "pdf_url": "https://arxiv.org/pdf/2606.31365.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.31365.pdf",
   "pdf_source": "arxiv",
   "abstract": "Some neural audio codecs disentangle speech into latent subspaces encoding content, speaker identity, and acoustics, enabling acoustic teleportation and voice conversion. Existing evaluations rely on cross-reconstruction quality, which cannot reliably detect leakage across partitions. We extend a probing based framework to assess disentanglement by regressing room-acoustic parameters (reverberation time, clarity, and direct-to-reverberant ratio) and classifying speaker identity, using the gap between intended and unintended partitions as the disentanglement measure. Applied to an acoustic teleportation codec, we find speaker identity is largely confined to its partition, while acoustics leak into the speech embeddings due to the training objective. Acoustic embeddings blindly estimate room parameters within 0.02 s of supervised baselines, indicating physically meaningful structure emerges without explicit supervision.",
   "arxiv_comment": "Accepted for Interspeech 2026",

@@ -19,7 +19,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.16472",
   "pdf_url": "https://arxiv.org/pdf/2606.16472.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.16472.pdf",
   "pdf_source": "arxiv",
   "abstract": "Despite the success of end-to-end (E2E) spoken dialogue systems, maintaining strict context adherence in multi-round conversations remains a challenge. While prior works attribute these failures to models forgetting dialogue history, we highlight an equally critical but overlooked bottleneck: a gap between latent context awareness and active adherence. Although models internally recognize relevant past utterances, strong parametric priors often overshadow these signals during decoding. To bridge this gap, we propose an audio-adapted Context-Aware Decoding (CAD) approach. By leveraging internal attention mechanisms to isolate key historical rounds, our approach contrasts output distributions with and without this key context during inference, directly amplifying multimodal contextual signals. Evaluations on the Audio MultiChallenge benchmark demonstrate significant improvements in Semantic Memory and Self Coherence subtasks, successfully enforcing strict, context-faithful adherence.",
   "arxiv_comment": "Interspeech 2026 Main Track",

@@ -314,6 +314,9 @@ def iter_papers(
 
             url_elem = paper.find("url")
             url_slug = (url_elem.text or acl_id).strip() if url_elem is not None else acl_id
+            if url_slug.startswith("http"):
+                # Some volumes (e.g. LREC 2026) list an external URL; use the canonical Anthology ID.
+                url_slug = acl_id
             paper_url = f"{ANTHOLOGY_BASE}/{url_slug}"
             pdf_url = f"{ANTHOLOGY_BASE}/{url_slug}.pdf"
 

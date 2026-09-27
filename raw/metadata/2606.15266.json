@@ -20,7 +20,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.15266",
   "pdf_url": "https://arxiv.org/pdf/2606.15266.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.15266.pdf",
   "pdf_source": "arxiv",
   "abstract": "Speech-to-speech translation (S2ST) systems have achieved impressive progress in semantic accuracy and speech naturalness. However, the cross-lingual transfer of lexical stress, a vital cue for emphasis and speaker intent, remains heavily underexplored, compounded by a lack of reliable automatic evaluation metrics for tonal languages like Chinese. We investigate English-to-Chinese S2ST stress transfer by constructing a stress-annotated Chinese dataset and an XLS-R-based Mandarin stress detector. Integrating this with the English EmphAssess system, we propose a novel objective metric for cross-lingual stress evaluation. Furthermore, we fine-tune CosyVoice3 to build a stress-aware S2ST system. Experiments demonstrate that our proposed S2ST architecture significantly outperforms existing systems in stress translation capability while maintaining competitive translation quality. Furthermore, our evaluation metric exhibits a strong correlation with human subjective judgments.",
   "arxiv_comment": "Accepted to Interspeech 2026",

@@ -12,6 +12,7 @@ Usage:
     python scripts/parse/download_pdfs.py --max-errors 3
     python scripts/parse/download_pdfs.py --source arxiv
     python scripts/parse/download_pdfs.py --limit 10 --dry-run
+    python scripts/parse/download_pdfs.py --published-from 2026-04-01 --published-to 2026-06-30
 """
 
 import argparse
@@ -62,7 +63,12 @@ def get_domain(url: str) -> str:
     return host
 
 
-def load_accepted(metadata_dir: Path, source_filter: Optional[str]) -> list[dict]:
+def load_accepted(
+    metadata_dir: Path,
+    source_filter: Optional[str],
+    published_from: Optional[str] = None,
+    published_to: Optional[str] = None,
+) -> list[dict]:
     papers = []
     for f in sorted(metadata_dir.glob("*.json")):
         try:
@@ -75,6 +81,11 @@ def load_accepted(metadata_dir: Path, source_filter: Optional[str]) -> list[dict
         if not d.get("pdf_url"):
             continue
         if source_filter and d.get("pdf_source") != source_filter:
+            continue
+        published = str(d.get("published_date", ""))[:10]
+        if published_from and published < published_from:
+            continue
+        if published_to and published > published_to:
             continue
         d["_meta_path"] = f
         papers.append(d)
@@ -197,6 +208,14 @@ def main() -> None:
         help="Only download papers from this source",
     )
     parser.add_argument(
+        "--published-from", metavar="YYYY-MM-DD",
+        help="Only papers with published_date on or after this date",
+    )
+    parser.add_argument(
+        "--published-to", metavar="YYYY-MM-DD",
+        help="Only papers with published_date on or before this date",
+    )
+    parser.add_argument(
         "--limit", type=int, metavar="N",
         help="Stop after downloading N papers (useful for testing)",
     )
@@ -209,7 +228,7 @@ def main() -> None:
     # ------------------------------------------------------------------
     # Load and partition
     # ------------------------------------------------------------------
-    all_papers = load_accepted(RAW_METADATA, args.source)
+    all_papers = load_accepted(RAW_METADATA, args.source, args.published_from, args.published_to)
 
     pending:  list[dict] = []
     skipped:  list[str]  = []

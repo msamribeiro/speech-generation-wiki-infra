@@ -22,7 +22,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2605.30965",
   "pdf_url": "https://aclanthology.org/2026.acl-long.1774.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2605.30965.pdf",
   "pdf_source": "anthology",
   "abstract": "Recent advancements in text-guided audio generation have yielded promising results in diverse domains, including sound effects, speech, and music. However, jointly generating speech with environmental audio remains challenging due to the inherent disparities in their acoustic patterns and temporal dynamics. We propose ImmersiveTTS, an environment-aware text-to-speech (TTS) model that generates natural speech seamlessly integrated within environmental contexts by explicitly modeling cross-modal interactions. Our model builds on a multimodal diffusion transformer and fuses transcript-aligned speech latent with text-conditioned environmental context via joint attention. To enhance semantic consistency, we introduce a domain-specific representation alignment objective tailored to environment-aware TTS, leveraging complementary self-supervised representations from speech and audio encoders. Experimental results show that ImmersiveTTS achieves higher naturalness, intelligibility, and audio fidelity than existing approaches across objective metrics and human listening tests.",
   "arxiv_comment": "Accepted to ACL 2026 main conference. Code is available at https://github.com/jjunak-yun/ImmersiveTTS",
@@ -36,5 +36,5 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "conference_date": "2026-07-01"
 }

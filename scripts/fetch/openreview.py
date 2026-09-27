@@ -2,7 +2,7 @@
 """
 openreview.py — Fetch conference proceedings metadata via the OpenReview API v2.
 
-Supports ICLR and NeurIPS (both have used OpenReview since 2023). Fetches only
+Supports ICLR, ICML and NeurIPS (all have used OpenReview since 2023). Fetches only
 accepted papers, identified by content.venueid matching the conference. Applies
 the standard keyword filter.
 
@@ -17,6 +17,12 @@ Usage:
     python scripts/fetch/openreview.py --venue NeurIPS --year 2025
     python scripts/fetch/openreview.py --venue ICLR --years 2025 2026
     python scripts/fetch/openreview.py --venue ICLR --year 2025 --dry-run
+    python scripts/fetch/openreview.py --venue ICLR --year 2026 --from-file tmp/iclr-2026-*.json
+
+--from-file: OpenReview currently puts anonymous scripted GET /notes behind a
+browser-verification challenge (403 ChallengeRequiredError). A real browser passes
+it, so pages saved from a browser (limit=1000, offset stepped by 1000) can be
+loaded instead of fetched live.
 """
 
 import argparse
@@ -59,6 +65,7 @@ ARXIV_ID_RE = re.compile(
 # CLI name / alias → canonical form used in table keys below
 _VENUE_ALIASES: Dict[str, str] = {
     "iclr":    "ICLR",
+    "icml":    "ICML",
     "neurips": "NeurIPS",
     "nips":    "NeurIPS",
 }
@@ -71,6 +78,7 @@ _VENUE_ALIASES: Dict[str, str] = {
 _VENUE_TABLE: Dict[Tuple[str, int], Tuple[str, str, str, int]] = {
     ("ICLR",    2025): ("iclr",    "ICLR.cc/2025/Conference",   "2025-04-24", 4),
     ("ICLR",    2026): ("iclr",    "ICLR.cc/2026/Conference",   "2026-04-27", 4),
+    ("ICML",    2026): ("icml",    "ICML.cc/2026/Conference",   "2026-07-06", 7),
     ("NeurIPS", 2025): ("neurips", "NeurIPS.cc/2025/Conference", "2025-12-10", 12),
     ("NeurIPS", 2026): ("neurips", "NeurIPS.cc/2026/Conference", "2026-12-06", 12),
 }
@@ -78,6 +86,7 @@ _VENUE_TABLE: Dict[Tuple[str, int], Tuple[str, str, str, int]] = {
 # Controlled vocabulary venue names (AGENTS.md contract)
 _VENUE_CV: Dict[str, str] = {
     "ICLR":    "ICLR",
+    "ICML":    "ICML",
     "NeurIPS": "NeurIPS",
 }
 
@@ -98,8 +107,16 @@ def get_venue_config(venue: str, year: int) -> Tuple[str, str, str, int]:
 # OpenReview API layer
 # ---------------------------------------------------------------------------
 
+class OpenReviewChallengeError(RuntimeError):
+    """OpenReview is demanding bot verification; retrying cannot succeed."""
+
+
 def or_get(session: requests.Session, path: str, params: dict) -> Optional[dict]:
-    """Single OpenReview API GET with retry on 429 / 5xx."""
+    """Single OpenReview API GET with retry on 429 / 5xx.
+
+    Raises OpenReviewChallengeError immediately on a ChallengeRequiredError 403
+    (bot-verification gate), since backoff cannot clear it.
+    """
     url = OR_API_BASE + path
     for attempt in range(MAX_RETRIES):
         wait = RETRY_BASE_SECONDS * (2 ** attempt)
@@ -109,6 +126,17 @@ def or_get(session: requests.Session, path: str, params: dict) -> Optional[dict]
                 print(f"  HTTP {resp.status_code} — waiting {wait}s (attempt {attempt + 1}/{MAX_RETRIES})...")
                 time.sleep(wait)
                 continue
+            if resp.status_code == 403:
+                try:
+                    body = resp.json()
+                except ValueError:
+                    body = {}
+                if isinstance(body, dict) and body.get("name") == "ChallengeRequiredError":
+                    raise OpenReviewChallengeError(
+                        "OpenReview is requiring browser/bot verification on anonymous "
+                        "GET /notes (ChallengeRequiredError). Retrying will not help; "
+                        "authenticated requests are needed."
+                    )
             resp.raise_for_status()
             return resp.json()
         except requests.RequestException as exc:
@@ -153,6 +181,57 @@ def fetch_all_notes(session: requests.Session, venue_id: str) -> List[dict]:
         time.sleep(RATE_LIMIT_SECONDS)
 
     return notes
+
+
+def load_notes_from_files(paths: List[Path], venue_id: str) -> Tuple[List[dict], List[str]]:
+    """
+    Load notes from API pages saved by hand (e.g. from a browser, when the live
+    API is behind a bot-verification challenge). Each file is one /notes response:
+    {"notes": [...], "count": N}.
+
+    Keeps only notes whose content.venueid equals venue_id, drops duplicate note
+    IDs (overlapping pages), and returns (notes, warnings). Warns when the notes
+    kept fall short of the API's reported count, which means a page is missing.
+    """
+    notes: List[dict] = []
+    warnings: List[str] = []
+    seen: set = set()
+    reported_total = 0
+    off_venue = duplicates = 0
+
+    for path in paths:
+        try:
+            data = json.loads(Path(path).read_text())
+        except (OSError, ValueError) as exc:
+            raise SystemExit(f"Cannot read {path}: {exc}")
+        if not isinstance(data, dict) or "notes" not in data:
+            raise SystemExit(f"{path}: not an OpenReview /notes response (no 'notes' key)")
+
+        reported_total = max(reported_total, data.get("count") or 0)
+        page = data["notes"]
+        print(f"  {Path(path).name}: {len(page)} notes")
+
+        for note in page:
+            if _cv(note, "venueid") != venue_id:
+                off_venue += 1
+                continue
+            note_id = note.get("id")
+            if note_id in seen:
+                duplicates += 1
+                continue
+            seen.add(note_id)
+            notes.append(note)
+
+    if off_venue:
+        warnings.append(f"{off_venue} notes skipped: venueid != {venue_id}")
+    if duplicates:
+        warnings.append(f"{duplicates} duplicate notes skipped (overlapping pages)")
+    if reported_total and len(notes) < reported_total:
+        warnings.append(
+            f"incomplete coverage: {len(notes)} notes loaded but API reported "
+            f"count={reported_total} (a page is probably missing)"
+        )
+    return notes, warnings
 
 
 # ---------------------------------------------------------------------------
@@ -265,7 +344,12 @@ def build_metadata(
 # Main fetcher
 # ---------------------------------------------------------------------------
 
-def fetch_openreview(venue: str, year: int, dry_run: bool = False) -> dict:
+def fetch_openreview(
+    venue: str,
+    year: int,
+    dry_run: bool = False,
+    from_files: Optional[List[Path]] = None,
+) -> dict:
     RAW_METADATA.mkdir(parents=True, exist_ok=True)
     kf = load_keyword_filter()
 
@@ -277,17 +361,24 @@ def fetch_openreview(venue: str, year: int, dry_run: bool = False) -> dict:
     print(f"Dry run  : {dry_run}")
     print()
 
-    session = requests.Session()
-    session.headers["User-Agent"] = "speech-generation-wiki/1.0 (research use)"
+    errors: List[str] = []
+    if from_files:
+        print(f"Loading accepted papers from {len(from_files)} saved file(s)...")
+        notes, warnings = load_notes_from_files(from_files, venue_id)
+        for w in warnings:
+            print(f"  WARNING: {w}")
+        errors.extend(warnings)
+    else:
+        session = requests.Session()
+        session.headers["User-Agent"] = "speech-generation-wiki/1.0 (research use)"
 
-    print("Fetching accepted papers from OpenReview...")
-    notes = fetch_all_notes(session, venue_id)
+        print("Fetching accepted papers from OpenReview...")
+        notes = fetch_all_notes(session, venue_id)
     print(f"  Total returned: {len(notes)}")
     print()
 
     discovered = len(notes)
     after_filter = written = skipped = 0
-    errors: List[str] = []
 
     for note in notes:
         paper = parse_note(note)
@@ -317,7 +408,7 @@ def fetch_openreview(venue: str, year: int, dry_run: bool = False) -> dict:
         "timestamp": datetime.utcnow().isoformat() + "Z",
         "source": "openreview",
         "venue": f"{venue_cv} {year}",
-        "query": f"content.venueid={venue_id}",
+        "query": f"content.venueid={venue_id}" + (" (from saved files)" if from_files else ""),
         "discovered": discovered,
         "after_keyword_filter": after_filter,
         "written": written,
@@ -370,11 +461,31 @@ def main() -> None:
         action="store_true",
         help="Fetch and filter but do not write any files",
     )
+    p.add_argument(
+        "--from-file",
+        nargs="+",
+        type=Path,
+        metavar="JSON",
+        help="Read /notes pages saved from a browser instead of calling the API "
+             "(for when anonymous API access is blocked). Requires a single --year.",
+    )
     args = p.parse_args()
+
+    if args.from_file and args.years and len(args.years) > 1:
+        p.error("--from-file requires a single --year")
 
     years = args.years if args.years else [args.year]
     for year in years:
-        fetch_openreview(venue=args.venue, year=year, dry_run=args.dry_run)
+        try:
+            fetch_openreview(
+                venue=args.venue,
+                year=year,
+                dry_run=args.dry_run,
+                from_files=args.from_file,
+            )
+        except OpenReviewChallengeError as exc:
+            print(f"\nERROR ({args.venue} {year}): {exc}", file=sys.stderr)
+            sys.exit(2)
         if len(years) > 1:
             print()
 
