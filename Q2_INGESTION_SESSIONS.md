@@ -21,8 +21,8 @@ narrative.
 | **Total Q2 2026 in scope so far** | **272** |
 
 As of 2026-10-04 these counts follow the canonical paper-date rule (`docs/schemas/metadata.md#paper-dates`);
-the earlier 241-accepted / 302-total figures used pre-rule dates, and 30 papers moved to Q3 or earlier quarters,
-while 5 older papers (2409.18512, 2502.14145, 2507.13563, 2601.04029, 2601.11329) moved in. As of 2026-09-21 (after the triage of the 18 Q2 `review` papers, 11 accepted and 7 rejected; the
+the earlier 241-accepted / 302-total figures used pre-rule dates, and the accepted count fell by a net 30 as papers moved
+to other quarters; 5 older papers (2409.18512, 2502.14145, 2507.13563, 2601.04029, 2601.11329) moved in. As of 2026-09-21 (after the triage of the 18 Q2 `review` papers, 11 accepted and 7 rejected; the
 counts were 230 / 18 / 49 on 2026-08-23), following the arXiv fetch top-up and ACL Anthology 2026
 fetch (see Session Log). Breakdown by month (`published_date`-derived):
 
