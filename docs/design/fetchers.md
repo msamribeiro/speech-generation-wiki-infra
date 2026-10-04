@@ -199,7 +199,7 @@ class PaperMetadata:
     venue_type: str             # conference | workshop | preprint | technical-report
     year: int
     month: int
-    published_date: str         # YYYY-MM-DD (arXiv v1 date or proceedings date)
+    published_date: str         # YYYY-MM-DD (venue date, else date of the arXiv version fetched)
 
     # Access
     url: str                    # canonical URL (arXiv abstract page or proceedings page)
@@ -682,4 +682,4 @@ The following decisions are deferred pending feedback:
 
 4. **Re-run cadence:** How often to re-run the fetchers for new arXiv preprints? Weekly is reasonable for a rolling review. A simple cron job or GitHub Action could automate this.
 
-5. **Version pinning for arXiv:** Should the fetcher always pull the latest version of an arXiv paper, or pin to v1 to preserve the state at time of discovery? Recommend: store v1 date in `published_date`, always download latest PDF, and store latest version number in metadata.
+5. **Version pinning for arXiv:** Resolved 2026-10-04: record the version actually fetched (`arxiv_version`, `version_date`), keep v1 as `preprint_date`, and use `version_date` as the canonical date for non-peer-reviewed preprints; download re-pins to the latest version. See `docs/schemas/metadata.md` (Paper Dates).

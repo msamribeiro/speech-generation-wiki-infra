@@ -135,6 +135,7 @@ def parse_record(record: ET.Element) -> Optional[dict]:
     abstract = _text(arxiv_elem.find(f"{{{ARXIV_NS}}}abstract")).replace("\n", " ")
     categories = _text(arxiv_elem.find(f"{{{ARXIV_NS}}}categories"))
     created = _text(arxiv_elem.find(f"{{{ARXIV_NS}}}created"))  # YYYY-MM-DD
+    updated = _text(arxiv_elem.find(f"{{{ARXIV_NS}}}updated"))  # latest revision, absent if never revised
     comments = _text(arxiv_elem.find(f"{{{ARXIV_NS}}}comments")) or None
 
     authors = parse_authors(arxiv_elem)
@@ -154,6 +155,7 @@ def parse_record(record: ET.Element) -> Optional[dict]:
         "authors": authors,
         "categories": categories,
         "published_date": published_date,
+        "version_date": updated[:10] if updated else published_date,
         "year": year,
         "month": month,
         "arxiv_comment": comments,
@@ -175,9 +177,14 @@ def build_metadata(paper: dict) -> dict:
         "organization": None,
         "venue": "arXiv",
         "venue_type": "preprint",
-        "year": paper["year"],
-        "month": paper["month"],
-        "published_date": paper["published_date"],
+        "year": int(paper["version_date"][:4]) if paper.get("version_date") else paper["year"],
+        "month": int(paper["version_date"][5:7]) if paper.get("version_date") else paper["month"],
+        "published_date": paper.get("version_date") or paper["published_date"],  # version harvested, until a venue date is known
+        "preprint_date": paper["published_date"],    # OAI "created" = v1 date
+        "arxiv_version": None,                       # OAI "arXiv" format does not expose the number
+        "version_date": paper.get("version_date") or paper["published_date"],
+        "version_estimated": False,
+        "conference_date": None,
         "ingested_date": None,
         "url": f"https://arxiv.org/abs/{paper['arxiv_id']}",
         "pdf_url": f"https://arxiv.org/pdf/{paper['arxiv_id']}.pdf",

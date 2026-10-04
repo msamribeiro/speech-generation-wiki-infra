@@ -73,7 +73,7 @@ _VENUE_ALIASES: Dict[str, str] = {
 # (canonical_name, year) → (id_slug, openreview_venue_id, conf_date, conf_month)
 #   id_slug    : prefix for our paper IDs, e.g. "iclr"
 #   venue_id   : content.venueid value on OpenReview for accepted papers
-#   conf_date  : conference start date (YYYY-MM-DD); used as published_date
+#   conf_date  : conference start date (YYYY-MM-DD); stored as conference_date and published_date
 #   conf_month : numeric month
 _VENUE_TABLE: Dict[Tuple[str, int], Tuple[str, str, str, int]] = {
     ("ICLR",    2025): ("iclr",    "ICLR.cc/2025/Conference",   "2025-04-24", 4),
@@ -322,7 +322,9 @@ def build_metadata(
         "venue_type": "conference",
         "year": year,
         "month": conf_month,
-        "published_date": conf_date,
+        "published_date": conf_date,   # = conference_date
+        "preprint_date": None,   # fill from the arXiv API when source_ids.arxiv is set (scripts/apply_date_rule.py)
+        "conference_date": conf_date,
         "ingested_date": None,
         "url": f"https://openreview.net/forum?id={forum_id}",
         "pdf_url": f"https://openreview.net/pdf?id={forum_id}",

@@ -21,7 +21,9 @@ in the output: EMNLP (Nov), findings, ACL (Jul), NAACL (Apr), then workshops.
 arXiv deduplication — prefer peer-reviewed version:
   A title-index is built from existing raw/metadata/ records. When an Anthology
   paper's normalised title matches an existing record, that record is enriched
-  in place: venue, venue_type, doi, and pdf_url (camera-ready) are updated.
+  in place: venue, venue_type, doi, and pdf_url (camera-ready) are updated, the arXiv v1
+  date is kept as preprint_date, and the proceedings date becomes conference_date and the
+  canonical published_date (see lib/paper_dates.py).
   The existing canonical ID (typically an arXiv ID) is preserved.
   Records with status='ingested' are left untouched; a warning is printed.
 
@@ -52,6 +54,7 @@ ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 from lib.keyword_filter import load_keyword_filter, passes_filter
+from lib.paper_dates import apply_date_rule
 
 # ---------------------------------------------------------------------------
 # Paths and constants
@@ -380,7 +383,9 @@ def build_metadata(paper: dict) -> dict:
         "venue_type": paper["venue_type"],
         "year": paper["year"],
         "month": paper["month"],
-        "published_date": paper["published_date"],
+        "published_date": paper["published_date"],   # = conference_date
+        "preprint_date": None,
+        "conference_date": paper["published_date"],
         "ingested_date": None,
         "url": paper["paper_url"],
         "pdf_url": paper["pdf_url"],
@@ -416,12 +421,13 @@ def enrich_existing_record(path: Path, paper: dict) -> bool:
 
     record["venue"] = paper["canonical_venue"]
     record["venue_type"] = paper["venue_type"]
-    record["year"] = paper["year"]
-    if paper.get("month"):
-        record["month"] = paper["month"]
-    # Preserve arXiv published_date; store conference date separately
+    # Paper-date rule (docs/schemas/metadata.md): keep the arXiv v1 date as preprint_date and make
+    # the proceedings date canonical. An existing published_date on an arXiv-born record is v1.
+    if record.get("source_ids", {}).get("arxiv") and not record.get("preprint_date"):
+        record["preprint_date"] = record.get("published_date")
     if paper.get("published_date"):
         record["conference_date"] = paper["published_date"]
+        apply_date_rule(record)
 
     record.setdefault("source_ids", {})
     record["source_ids"]["acl"] = paper["acl_id"]

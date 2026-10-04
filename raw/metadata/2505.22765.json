@@ -17,8 +17,13 @@
   "venue": "ACL",
   "venue_type": "conference",
   "year": 2026,
-  "month": 4,
-  "published_date": "2026-04-07",
+  "month": 7,
+  "published_date": "2026-07-02",
+  "preprint_date": "2025-05-28",
+  "arxiv_version": 3,
+  "version_date": "2026-04-07",
+  "version_estimated": true,
+  "conference_date": "2026-07-02",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2505.22765",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.64.pdf",
@@ -36,6 +41,5 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null,
-  "conference_date": "2026-07-01"
+  "canonical_id": null
 }

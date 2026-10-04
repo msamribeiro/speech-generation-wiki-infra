@@ -26,6 +26,7 @@ PHASE2_CLUSTER_SUMMARIES.local.md
 # Scratch files
 convert_paper_with_docling_tmp.py
 docs/THOUGHTS_FOR_IMPROVEMENTS.md
+NOTES_OPENREVIEW_BLOCKED.md
 
 # Claude Code project memory (session-local; not project code)
 memory/

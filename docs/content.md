@@ -96,6 +96,12 @@ files and `wiki/log.md`. It never writes wiki pages or anything below
 Every new or force-rewritten concept paper entry includes canonical `published_date`; see
 `docs/schemas/claims.md`. Integration stops rather than inferring a missing date.
 
+`published_date` is the canonical paper date: the conference date for peer-reviewed proceedings,
+otherwise the date of the arXiv version we ingested (`docs/schemas/metadata.md`, "Paper Dates"). Ingest copies it from
+the metadata JSON verbatim and never recomputes it; `preprint_date` and `conference_date` stay in
+metadata and are not written to page frontmatter. A re-ingest of a newer arXiv version moves
+`published_date` (re-pin the version first with `scripts/apply_date_rule.py`/`download_pdfs.py`).
+
 ---
 
 ## Reconcile Workflow

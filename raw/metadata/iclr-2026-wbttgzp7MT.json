@@ -19,6 +19,8 @@
   "year": 2026,
   "month": 4,
   "published_date": "2026-04-27",
+  "preprint_date": null,
+  "conference_date": "2026-04-27",
   "ingested_date": null,
   "url": "https://openreview.net/forum?id=wbttgzp7MT",
   "pdf_url": "https://openreview.net/pdf?id=wbttgzp7MT",

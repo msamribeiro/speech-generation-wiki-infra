@@ -16,8 +16,13 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2026,
-  "month": 6,
-  "published_date": "2026-06-05",
+  "month": 7,
+  "published_date": "2026-07-01",
+  "preprint_date": "2026-06-05",
+  "arxiv_version": 1,
+  "version_date": "2026-06-05",
+  "version_estimated": true,
+  "conference_date": "2026-07-01",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2606.07240",
   "pdf_url": "https://aclanthology.org/2026.iwslt-1.8.pdf",
@@ -34,6 +39,5 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null,
-  "conference_date": "2026-07-01"
+  "canonical_id": null
 }

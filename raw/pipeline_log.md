@@ -1,3 +1,8 @@
+## 2026-10-04
+
+- metadata | paper-date rule | 318 non-ingested records (63 published_date changes) | added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | quarter moves: 2024-Q3->2026-Q2: 1; 2025-Q1->2026-Q2: 1; 2025-Q3->2026-Q2: 1; 2026-Q1->2026-Q2: 2; 2026-Q2->2026-Q2: 28; 2026-Q2->2026-Q3: 12; 2026-Q3->2026-Q3: 18 | ingested and rejected records untouched | 2026-10-04
+- metadata | paper-date rule | 355 non-ingested records (34 published_date changes) | added preprint_date (arXiv v1) and conference_date; published_date = conference_date when set, else preprint_date | quarter moves: 2026-Q2->2024-Q3: 1; 2026-Q2->2025-Q1: 1; 2026-Q2->2025-Q3: 1; 2026-Q2->2026-Q1: 2; 2026-Q2->2026-Q2: 5; 2026-Q2->2026-Q3: 19; 2026-Q3->2022-Q2: 1; 2026-Q3->2026-Q2: 1; 2026-Q3->2026-Q3: 3 | ingested and rejected records untouched | 2026-10-04
+
 ## 2026-09-19
 
 - parse | Q2 2026 download + parse | 113 accepted papers with published_date 2026-04-01 to 2026-06-30 (2026.lrec-1.375 … 2608.00011) | 113 PDFs downloaded, 0 failed; 113 parsed, 0 failed (--workers 2, 204 min) | Q2 accepted papers now 230/230 parsed; 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | `download_pdfs.py` gained `--published-from`/`--published-to` to scope a run to one quarter

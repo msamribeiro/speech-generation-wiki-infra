@@ -60,7 +60,7 @@ venue: string
 venue_type: conference | workshop | preprint | technical-report
 year: YYYY
 month: M or null
-published_date: YYYY-MM-DD
+published_date: YYYY-MM-DD   # must equal raw/metadata published_date (canonical paper date)
 ingested_date: YYYY-MM-DD           ← preserve original; do not update
 task: [values from controlled vocabulary]
 architecture: [values from controlled vocabulary]

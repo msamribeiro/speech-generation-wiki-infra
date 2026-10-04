@@ -144,7 +144,7 @@ venue: {venue}
 venue_type: {conference | workshop | preprint | technical-report}
 year: {YYYY}
 month: {M or null}
-published_date: {YYYY-MM-DD}
+published_date: {YYYY-MM-DD}   # copy exactly from raw/metadata (canonical: venue date if peer reviewed, else date of the arXiv version fetched); never recompute
 ingested_date: {TODAY}
 corpus_role: {from metadata — tts-vc | sca | codec | audio-lm | foundation-lm | asr | speaker | dataset | evaluation | ml-method | survey | multimodal}
 ingest_tier: 2

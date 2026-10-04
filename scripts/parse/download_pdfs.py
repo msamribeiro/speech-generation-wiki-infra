@@ -27,6 +27,9 @@ import requests
 from typing import Optional
 
 ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(ROOT))
+
+from lib.arxiv_versions import fetch_versions, pin_version  # noqa: E402
 
 RAW_METADATA = ROOT / "raw" / "metadata"
 RAW_PAPERS   = ROOT / "raw" / "papers"
@@ -100,6 +103,13 @@ def append_log(record: dict) -> None:
 def update_pdf_path(meta_path: Path, paper_id: str) -> None:
     data = json.loads(meta_path.read_text())
     data["pdf_path"] = f"raw/papers/{paper_id}.pdf"
+    arxiv_id = (data.get("source_ids") or {}).get("arxiv")
+    if arxiv_id and data.get("status") != "ingested":
+        # Pin the arXiv version we just downloaded (the latest) and re-derive the canonical date.
+        try:
+            pin_version(data, fetch_versions(arxiv_id), None, estimated=False)
+        except Exception as exc:
+            print(f"  [warn] could not pin arXiv version for {paper_id}: {exc}")
     meta_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 

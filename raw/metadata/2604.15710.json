@@ -24,8 +24,13 @@
   "venue": "ACL",
   "venue_type": "conference",
   "year": 2026,
-  "month": 4,
-  "published_date": "2026-04-17",
+  "month": 7,
+  "published_date": "2026-07-02",
+  "preprint_date": "2026-04-17",
+  "arxiv_version": 1,
+  "version_date": "2026-04-17",
+  "version_estimated": true,
+  "conference_date": "2026-07-02",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2604.15710",
   "pdf_url": "https://aclanthology.org/2026.acl-long.459.pdf",
@@ -42,6 +47,5 @@
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null,
-  "conference_date": "2026-07-01"
+  "canonical_id": null
 }

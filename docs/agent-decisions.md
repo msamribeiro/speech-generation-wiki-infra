@@ -33,6 +33,23 @@ the operational logs remain authoritative for live state.
   specification is `docs/design/concept-rendering.md`. The obsolete `wiki/evidence/` directory was
   removed after all five integrated concepts had Overview and In Depth renderings.
 
+## 2026-10-04 — Canonical paper date rule
+
+- `published_date` is the single date the wiki follows. It equals `conference_date` when the paper
+  appeared in peer-reviewed proceedings (conference or workshop), else `journal_date` for a
+  peer-reviewed journal paper, else `version_date` (submission date of the arXiv version we
+  fetched and ingested), otherwise `preprint_date` (arXiv v1, kept as the priority date). All supporting dates (`preprint_date`, `arxiv_version`/`version_date`, `conference_date`, `journal_date`) are logged in each metadata record.
+- Why: the corpus mixed three conventions (conference date, arXiv v1, and arXiv revision date), and
+  records carried a revision date without recording which version we held. Evidence timing must
+  follow the content we ingested: a 2022 preprint rewritten in 2026 (2204.07228) is 2026 evidence,
+  and a snapshot cutoff must not see later revisions. Pinning the version makes the date
+  reproducible; fetch time alone would not be.
+- Implemented in `lib/paper_dates.py`, applied to `pending`/`review`/`accepted` records by
+  `scripts/apply_date_rule.py`, enforced by `health_check.py --module metadata`, and followed by
+  every fetcher. Ingested records are held back: their pages and claim YAML copy `published_date`
+  and the Q3 2025 snapshot is frozen, so they migrate with their pages (see `BACKLOG.md`).
+- Spec: [schemas/metadata.md](schemas/metadata.md#paper-dates).
+
 ## 2026-08-13 — Cross-concept reconciliation and temporal reporting
 
 - The content pipeline now separates concept integration from corpus-wide reconciliation:
