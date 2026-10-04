@@ -15,20 +15,22 @@ narrative.
 | Status | Count |
 |--------|-------|
 | Already ingested (Q2 2026) | 5 |
-| Remaining to ingest (accepted) | 241 |
+| Remaining to ingest (accepted) | 211 |
 | Pending human triage (review) | 0 |
 | Rejected | 56 |
-| **Total Q2 2026 in scope so far** | **302** |
+| **Total Q2 2026 in scope so far** | **272** |
 
-As of 2026-09-21 (after the triage of the 18 Q2 `review` papers, 11 accepted and 7 rejected; the
+As of 2026-10-04 these counts follow the canonical paper-date rule (`docs/schemas/metadata.md#paper-dates`);
+the earlier 241-accepted / 302-total figures used pre-rule dates, and 30 papers moved to Q3 or earlier quarters,
+while 5 older papers (2409.18512, 2502.14145, 2507.13563, 2601.04029, 2601.11329) moved in. As of 2026-09-21 (after the triage of the 18 Q2 `review` papers, 11 accepted and 7 rejected; the
 counts were 230 / 18 / 49 on 2026-08-23), following the arXiv fetch top-up and ACL Anthology 2026
 fetch (see Session Log). Breakdown by month (`published_date`-derived):
 
 | Month | Accepted | Ingested | Review | Rejected | Total |
 |-------|----------|----------|--------|----------|-------|
-| April 2026 | 77 | 5 | 0 | 19 | 101 |
-| May 2026 | 62 | 0 | 0 | 13 | 75 |
-| June 2026 | 102 | 0 | 0 | 24 | 126 |
+| April 2026 | 63 | 5 | 0 | 19 | 87 |
+| May 2026 | 56 | 0 | 0 | 13 | 69 |
+| June 2026 | 92 | 0 | 0 | 24 | 116 |
 
 **Download and parse (2026-09-19): complete for the 230 papers `accepted` at that point** (the 11 papers
 accepted later from `review`, 5 May and 6 June, still have no PDF or parse) (0 failures; 113 downloaded
