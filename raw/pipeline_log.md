@@ -1,3 +1,7 @@
+## 2026-10-16
+
+- metadata | paper-date rule | 175 ingested records from 2026-01-01 (39 pages synced) (39 published_date changes) | added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | quarter moves: 2026-Q1->2026-Q1: 23; 2026-Q1->2026-Q2: 15; 2026-Q2->2026-Q2: 1 | other records untouched | 2026-10-16
+
 ## 2026-10-04
 
 - metadata | paper-date rule | 318 non-ingested records (63 published_date changes) | added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | quarter moves: 2024-Q3->2026-Q2: 1; 2025-Q1->2026-Q2: 1; 2025-Q3->2026-Q2: 1; 2026-Q1->2026-Q2: 2; 2026-Q2->2026-Q2: 28; 2026-Q2->2026-Q3: 12; 2026-Q3->2026-Q3: 18 | ingested and rejected records untouched | 2026-10-04

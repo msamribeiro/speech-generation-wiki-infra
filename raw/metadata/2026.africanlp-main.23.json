@@ -21,6 +21,8 @@
   "year": 2026,
   "month": 3,
   "published_date": "2026-03-01",
+  "preprint_date": null,
+  "conference_date": "2026-03-01",
   "ingested_date": "2026-09-27",
   "url": "https://aclanthology.org/2026.africanlp-main.23",
   "pdf_url": "https://aclanthology.org/2026.africanlp-main.23.pdf",
@@ -38,7 +40,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-03-01",
   "generation_history": [
     {
       "schema_version": 2,

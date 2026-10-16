@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-10-04
+Last updated: 2026-10-16
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
@@ -55,23 +55,23 @@ concept render pairs, and preserved reconciliation audit history.
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete | Complete: all 22 affected concepts, 2,884 entries | **Next** | Pending reconciliation |
-| Q1 2026 | Complete: 171 ingested, 0 accepted | Not started | Not started | Not started |
-| Q2 2026 | 5 ingested; 211 accepted (all downloaded and parsed) | Not started | Not started | Not started |
+| Q1 2026 | Complete: 156 ingested, 0 accepted (15 moved to Q2 by the date rule) | Not started | Not started | Not started |
+| Q2 2026 | 19 ingested; 211 accepted (all downloaded and parsed) | Not started | Not started | Not started |
 | Q3 2026 to date | 144 accepted | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-10-04. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-10-16. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
 
 Since 2026-10-04 `published_date` follows one rule: the conference date for peer-reviewed
 proceedings, else the journal date, else the date of the arXiv version we fetched (`version_date`;
-`preprint_date` keeps v1) (`docs/schemas/metadata.md#paper-dates`). All non-ingested metadata
-records are migrated (318 records, 63 `published_date` changes under the version rule). The 917
-ingested records are held back because their pages, claim YAML, and the frozen Q3 2025 snapshot
-copy the old dates; 58 would change under v1-only dating, and the version-rule count has not been
-measured yet (tracked in `BACKLOG.md`, Infrastructure). Check with
-`.venv/bin/python scripts/health_check.py --module metadata`.
+`preprint_date` keeps v1) (`docs/schemas/metadata.md#paper-dates`). All non-ingested records and
+all ingested records published from 2026-01-01 are migrated (the latter on 2026-10-16, with their
+paper pages). Ingested records from 2025 and earlier are deliberately left on legacy dates so the
+frozen 2025 snapshot and claim YAML stay valid; the metadata health check reports them as legacy
+warnings.
+
 
 ---
 

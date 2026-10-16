@@ -21,6 +21,8 @@
   "year": 2026,
   "month": 2,
   "published_date": "2026-02-01",
+  "preprint_date": null,
+  "conference_date": "2026-02-01",
   "ingested_date": "2026-09-27",
   "url": "https://aclanthology.org/2026.iwsds-1.16",
   "pdf_url": "https://aclanthology.org/2026.iwsds-1.16.pdf",

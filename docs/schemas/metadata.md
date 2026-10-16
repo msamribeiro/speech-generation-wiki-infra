@@ -105,8 +105,10 @@ Rules:
    under the "never alter source documents" invariant.
 
 Ingested records: wiki paper pages and claim YAML copy `published_date`, and frozen snapshots
-depend on it, so ingested records are migrated only together with their pages (tracked in
-`BACKLOG.md`). Until then `scripts/health_check.py --module metadata` counts them as legacy and
+depend on it, so ingested records are migrated only together with their pages. Records published
+on or after 2026-01-01 were migrated on 2026-10-16
+(`apply_date_rule.py --ingested-from 2026-01-01 --apply`); ingested records from 2025 and earlier
+are deliberately left on their legacy dates, so the frozen 2025 snapshots stay valid. For those `scripts/health_check.py --module metadata` counts them as legacy and
 reports rule deviations as warnings; non-ingested records (`pending`, `review`, `accepted`)
 violating the rule are errors.
 

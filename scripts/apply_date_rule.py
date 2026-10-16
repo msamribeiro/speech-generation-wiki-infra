@@ -150,24 +150,57 @@ def quarter(value: str | None) -> str:
     return f"{value[:4]}-Q{(int(value[5:7]) - 1) // 3 + 1}"
 
 
-def load(statuses: set[str]) -> dict[str, tuple[Path, dict, bool]]:
+def load(statuses: set[str], ingested_from: str | None = None) -> dict[str, tuple[Path, dict, bool]]:
+    """Load records by status. With `ingested_from`, only ingested records whose current
+    published_date is on or after that date are loaded; dedup pointers (`wiki_page_id`) are skipped
+    because their page belongs to the canonical record."""
     records = {}
     for path in sorted(METADATA_DIR.glob("*.json")):
         text = path.read_text()
         record = json.loads(text)
-        if record.get("status") in statuses:
-            records[path.stem] = (path, record, text.endswith("\n"))
+        if record.get("status") not in statuses:
+            continue
+        if ingested_from and (record.get("wiki_page_id") or (record.get("published_date") or "") < ingested_from):
+            continue
+        records[path.stem] = (path, record, text.endswith("\n"))
     return records
+
+
+def update_page(wiki_dir: Path, pid: str, new: dict) -> bool:
+    """Sync published_date/year/month in the paper page frontmatter. Returns True if changed."""
+    page = wiki_dir / "papers" / f"{pid}.md"
+    if not page.exists():
+        return False
+    text = page.read_text()
+    head, sep, body = text.partition("\n---\n")
+    for key in ("published_date", "year", "month"):
+        match = re.search(rf"^{key}: *(.*)$", head, flags=re.M)
+        if not match:
+            continue
+        value = str(new[key])
+        if key == "published_date" and match.group(1).startswith('"'):
+            value = f'"{value}"'  # keep the page's existing quoting style
+        head = head[:match.start()] + f"{key}: {value}" + head[match.end():]
+    updated = head + sep + body
+    if updated == text:
+        return False
+    page.write_text(updated)
+    return True
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--apply", action="store_true", help="Write changes to non-ingested metadata records")
     parser.add_argument("--report-ingested", action="store_true", help="Report (never write) ingested records that deviate")
+    parser.add_argument(
+        "--ingested-from", metavar="YYYY-MM-DD",
+        help="Migrate ingested records published on/after this date: metadata plus paper-page frontmatter "
+             "(earlier ingested records stay as-is). Combine with --apply to write.",
+    )
     args = parser.parse_args()
 
-    statuses = REPORT_STATUSES if args.report_ingested else WRITE_STATUSES
-    records = load(statuses)
+    statuses = REPORT_STATUSES if (args.report_ingested or args.ingested_from) else WRITE_STATUSES
+    records = load(statuses, args.ingested_from)
     arxiv_ids = sorted({r["source_ids"]["arxiv"] for _, r, _ in records.values() if (r.get("source_ids") or {}).get("arxiv")})
     print(f"{len(records)} records in scope ({', '.join(sorted(statuses))}); resolving {len(arxiv_ids)} arXiv version histories")
     versions = resolve_versions(arxiv_ids)
@@ -198,22 +231,33 @@ def main() -> None:
         for note in notes:
             print(f"  NOTE {pid}: {note}")
 
-    if args.report_ingested or not args.apply:
+    if args.report_ingested or (args.ingested_from and not args.apply) or not args.apply:
         if args.report_ingested:
             print("Ingested records are never written by this script.")
         else:
             print("Dry run; pass --apply to write.")
         return
 
+    wiki_dir = None
+    if args.ingested_from:
+        import subprocess
+        wiki_dir = Path(subprocess.check_output([sys.executable, str(ROOT / "scripts" / "resolve_wiki_dir.py")], text=True).strip())
+    pages_updated = 0
     for pid, _, new, _ in changed:
         path, _, trailing_newline = records[pid]
         path.write_text(json.dumps(new, indent=2, ensure_ascii=False) + ("\n" if trailing_newline else ""))
+    if wiki_dir:
+        for pid, (_, record, _) in records.items():
+            new, _ = plan_record(record, versions)
+            if update_page(wiki_dir, pid, ordered(new)):
+                pages_updated += 1
 
+    scope = f"ingested records from {args.ingested_from} ({pages_updated} pages synced)" if args.ingested_from else "non-ingested records"
     quarter_summary = "; ".join(f"{a}->{b}: {n}" for (a, b), n in sorted(moved.items())) or "none"
     entry = (
-        f"- metadata | paper-date rule | {len(changed)} non-ingested records ({len(date_changes)} published_date changes) | "
+        f"- metadata | paper-date rule | {len(changed)} {scope} ({len(date_changes)} published_date changes) | "
         f"added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | "
-        f"quarter moves: {quarter_summary} | ingested and rejected records untouched | {date.today().isoformat()}\n"
+        f"quarter moves: {quarter_summary} | {"other" if args.ingested_from else "ingested and rejected"} records untouched | {date.today().isoformat()}\n"
     )
     log_text = PIPELINE_LOG.read_text()
     heading = f"## {date.today().isoformat()}\n"
