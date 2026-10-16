@@ -101,24 +101,23 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Fetch, filter, and review triage are done for Q2 2026 (see Session Log, 2026-08-23, 2026-09-19 and
-2026-09-21): 241 `accepted` papers in the window. 230 of them are downloaded, parsed and ready to
-ingest; **11 newly accepted ones (from the triage of 2026-09-21) still need a download and parse**.
-Ingest itself has not started.
+Fetch, filter, review triage, download and parse are all done for Q2 2026. As of 2026-10-16, by
+the canonical `published_date` (paper-date rule applied from 2026 onward): **211 `accepted`
+(all downloaded and parsed, ready to ingest) + 19 already ingested = 230 in the quarter**. Ingest
+has not started. Q1 2026 is closed at 156 ingested (15 papers moved to Q2 under the date rule).
 
 To resume:
 
-1. **Download and parse the newly accepted papers.** 29 papers were accepted from the review queue
-   across all quarters: 11 in the Q2 window and 9 in Q1 (`accepted` with no `pdf_path`; the other 9
-   are July-August). Run `download_pdfs.py` (scope with `--published-from` / `--published-to`), then
-   `batch_convert.py`. Triage is not required to start ingest; the 230 already-parsed papers are
-   independent of it. The 9 Q1 papers are stragglers (see the 2026-09-21 continuation entry): ingest
-   them as a small closing Q1 batch.
-2. Build the first chronological candidate list from the `accepted` Q2 papers (sort by
-   `published_date`, not ID prefix; see the ID-prefix note below). April is entirely parsed.
-3. Check with the user before starting: the trunk checkout's `BACKLOG.md` (another stream, Q4 2025
-   content cycle) marks ingest "P0 · queued" behind that cycle as of 2026-09-19.
-4. Proceed with the standard batches-of-4 cadence below.
+1. Build the chronological candidate list from the 211 `accepted` Q2 papers, sorted by
+   `published_date` (not ID prefix; see the ID-prefix note below). Note the 15 papers that moved
+   from Q1 are now dated into Q2 and are in the list. Skip dedup pointers (`wiki_page_id` set).
+2. Check with the user before starting: the trunk checkout's `BACKLOG.md` (another stream, Q4 2025
+   content cycle) marks ingest "P0 · queued" behind that cycle.
+3. Proceed with the standard batches-of-4 cadence below.
+4. **Extra QC per paper:** `health_check.py --module ingest` now emits a `related_concepts_complete`
+   warning when a `task` tag (`singing`, `VC`, `codec`) lacks its concept slug. Treat it as a fix-now
+   item. It deliberately does not cover `architecture` tags (about 227 mostly intentional hits in
+   the 2026-10-16 baseline), so keep checking those by hand per the standing QC rule.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -671,6 +670,30 @@ PDF and parse** (29 across all quarters).
 
   Total awaiting ingest across 2026: 355, of which 353 are parsed and ready — Q2's chronological
   ingest sweep (241 papers) is next, per `BACKLOG.md`.
+
+### Session 2026-10-16: paper-date migration and task/related_concepts QC (no ingest)
+
+No papers ingested; this session got the branch ready for the Q2 sweep.
+
+- **Paper-date rule applied from 2026 onward** (decision: leave 2025 and earlier as-is). Added
+  `--ingested-from` to `scripts/apply_date_rule.py`; migrated 175 ingested metadata records and synced
+  `published_date`/`month` on 39 paper pages. 39 `published_date` changes; 15 papers moved from
+  2026-Q1 to Q2. No claim YAML carries 2026 dates. First page-sync rewrote date quoting on 164 pages;
+  caught from the diff, reverted, and fixed to preserve each page's quoting style.
+- **2026 quarter counts after the rule:** Q1 156 ingested; Q2 19 ingested + 211 accepted; Q3 144
+  accepted (only the 2 ICML papers downloaded and parsed).
+- **`related_concepts_complete` health check added** (`scripts/checks/ingest.py`, mapping in
+  `config/health_check.yaml`). Baseline across 909 pages: 13 task-tag hits plus about 227 architecture-tag
+  hits, which were mostly intentional (component-level GAN/diffusion/flow usage), so the config maps
+  `task` only.
+- **13 task hits resolved.** Slugs added (with Wiki Connections entries): `singing` on
+  `2025.findings-acl.687`, `2310.00704`, `2508.01796`, `2508.16332`, `2512.14653`,
+  `interspeech-2025-0305`; `voice-conversion` on `2502.06490`; `neural-codec` on `2512.00451`.
+  Unsupported tags dropped (frontmatter and index row): `VC` on `2409.00750`, `2304.09116`,
+  `2504.18425`, `2509.24650` (demo-only or no VC metrics); `singing` on `2507.12197` (future work
+  only). These pages are not yet in the `singing`/VC claim YAML; the next integration pass picks them up.
+- **Branch hygiene:** content `work/ingest` was one commit behind `main` (missing the 9 straggler
+  pages); rebased before the work above landed.
 
 ---
 
