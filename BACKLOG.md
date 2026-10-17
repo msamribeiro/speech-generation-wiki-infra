@@ -76,6 +76,10 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
   - 2503.14345 → neurips-2025-MVlKSYR7HX (MoonCast)
   - 2510.00981 → iclr-2026-kYkfCs4ZAH (FlexiCodec)
   - 2508.16790 → neurips-2025-wHsFqmM1rp (TaDiCodec)
+- [ ] Resolve duplicate page pairs found during the Q2 2026 ingest (both sides full ingested pages, neither flagged `is_duplicate`); resolve the F5-TTS way (proceedings ID canonical) and repoint citations. User deferred these, so don't do them during the Q2 sweep. A corpus-wide title-match pass would likely find more:
+  - MELLE: `2407.08551` (arXiv) and `2025.acl-long.65` (ACL), found 2026-10-17
+  - SALM-Duplex: `2505.15670` (arXiv) and `interspeech-2025-0874` (Interspeech), found 2026-10-17
+- [ ] Decide on a task term for speech generation with no text input (lip/video-to-speech, brain-signal-to-speech), e.g. `V2S`. Pages currently on the `task: [TTS]` fallback (2026-10-17): `2602.11477` (SLD-L2S), `interspeech-2025-1478` (LightL2S), `2025.findings-naacl.130` (DiVISe), `interspeech-2025-1334` (MiSTR, iEEG); `interspeech-2025-0656` (EEG-based VC) is tagged VC. If added: update `docs/schemas/vocabulary.md`, retag the pages and index rows, and decide whether integration needs a matching concept. Text-driven TTS with visual conditioning stays `TTS`. Deferred by the user; revisit as the count grows
 - [ ] Write wiki/about.md: 3-repo structure, project philosophy, ingest pipeline overview, how to contribute or report errors; link from wiki/index.md
 
 ## Infrastructure [P1 · planned]

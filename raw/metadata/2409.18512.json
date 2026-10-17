@@ -27,7 +27,7 @@
   "version_date": "2026-04-03",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-17",
   "url": "https://arxiv.org/abs/2409.18512",
   "pdf_url": "https://arxiv.org/pdf/2409.18512.pdf",
   "pdf_path": "raw/papers/2409.18512.pdf",
@@ -39,9 +39,21 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Improved prompt selection for emotion intensity and speaker consistency in zero-shot TTS; directly advances TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-17",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "35aac07"
+    }
+  ]
 }

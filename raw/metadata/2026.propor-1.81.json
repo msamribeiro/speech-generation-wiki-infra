@@ -27,7 +27,7 @@
   "published_date": "2026-04-01",
   "preprint_date": null,
   "conference_date": "2026-04-01",
-  "ingested_date": null,
+  "ingested_date": "2026-10-17",
   "url": "https://aclanthology.org/2026.propor-1.81",
   "pdf_url": "https://aclanthology.org/2026.propor-1.81.pdf",
   "pdf_path": "raw/papers/2026.propor-1.81.pdf",
@@ -39,9 +39,21 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Certas Palavras: a spontaneous, noisy, multi-speaker Brazilian Portuguese radio corpus purpose-built to stress-test TTS models beyond clean studio data; core TTS evaluation-benchmark contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-17",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "35aac07"
+    }
+  ]
 }

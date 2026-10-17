@@ -365,7 +365,10 @@ given session's batches stay clean: `wiki/index.md`/venue-page count fabrication
 ### Known open vocabulary gap
 
 No canonical vocabulary term currently covers non-text-input speech generation (brain-signal
-decoding, lip-to-speech, audio-continuation-only systems). Several Q3/Q4/Q1 2026 papers were tagged
+decoding, lip-to-speech, audio-continuation-only systems). The gap applies only when there is no
+text input: text-driven TTS with visual or other non-text conditioning (e.g. sign-video prosody in
+`2604.10413`, video prosody in `interspeech-2025-1494`, face-based voices) is plain `TTS`, not a
+fallback. A possible `V2S`-style task term is a deferred `BACKLOG.md` item (2026-10-17). Several Q3/Q4/Q1 2026 papers were tagged
 `TTS` as the closest fit pending a user decision on whether to add a dedicated term (e.g.
 `2602.11477`, lip-to-speech, applied the standing fallback explicitly in Q1 2026). If this recurs in
 Q2 2026, tag `TTS` as the same fallback and flag it in the Manual Verification Queue rather than
@@ -695,6 +698,92 @@ No papers ingested; this session got the branch ready for the Q2 sweep.
 - **Branch hygiene:** content `work/ingest` was one commit behind `main` (missing the 9 straggler
   pages); rebased before the work above landed.
 
+### Session 2026-10-17: Q2 sweep started
+
+Pre-selected the first 16 candidates by `published_date` (2026-04-01 to 2026-04-14). Wiki writes go
+to the `speech-generation-wiki-content-ingest` worktree (`work/ingest`) via `SPEECH_WIKI_CONTENT_DIR`.
+
+**Batch 1** (`2026.propor-1.81`, `2409.18512`, `2604.06327`, `2604.06356`): all four ingested, health
+check clean per paper, page count 909 → 913 (index counts verified independently each paper).
+
+- `2026.propor-1.81` (Certas Palavras, PROPOR): dataset paper, in scope (fine-tunes YourTTS/F5-TTS,
+  27-rater MOS). Agent caught a σ mismatch in the source (Table 4 1.77 vs §5 1.17), verified.
+- `2409.18512` (ExpPro): v1 2024-09, fetched version 2026-04-03, no full-version comment, no title
+  duplicate. Fixed page `organization` to match the index row (Kuaishou co-affiliation).
+  `autoregressive-codec-tts` kept: consistent with CosyVoice/GPT-SoVITS-based pages.
+- `2604.06327` (speaker drift detection): arXiv comment says ICASSP 2026, but `published_date` is
+  the arXiv date (no ICASSP fetcher). Left as-is pending a user decision. Only two
+  `related_concepts`; `diffusion-tts`/`zero-shot-tts` judged mis-tags (no TTS system trained or
+  evaluated).
+- `2604.06356` (ICL in SpiritLM): in scope, `spoken-language-model` justified (HuBERT-unit speech
+  input). Agent worded the ablation claim to §5.2 ("substantial drop") rather than the abstract's
+  "completely removes".
+- `references.json` `in_corpus` flags missed most real matches on 3 of 4 papers; agents matched by hand.
+- **Pre-existing duplicate found:** MELLE has two ingested pages, `2407.08551` (arXiv) and
+  `2025.acl-long.65` (ACL), neither flagged `is_duplicate`. User deferred the fix; tracked in
+  `BACKLOG.md` (Wiki Quality Improvements).
+- **User decisions:** leave the `2604.06327` ICASSP date as the arXiv date for now; keep both
+  flagged `field_significance` levels as set.
+
+**Batch 2** (`2604.07467`, `2604.16456`, `2604.08363`, `2604.08709`): all four ingested, health check
+clean per paper, page count 913 → 917. Q2: 27 ingested, 203 accepted remaining.
+
+- `2604.07467` (lexical tone in discrete units, Edinburgh): analysis-of-existing-speech shape (2512.16832
+  precedent), no TTS trained; `task: [TTS, codec]` kept as closest terms with `neural-codec`. Arxiv
+  comment says Speech Prosody 2026; date left as arXiv (same decision as the ICASSP case). Agent's
+  report claimed bare `[[id]] (descriptor)` paper links "per the skill template"; the file actually had
+  piped links. The SKILL.md Wiki Connections template still shows the bare form; later prompts
+  override it explicitly.
+- `2604.16456` (EchoChain, Labelbox): full-duplex benchmark of four closed realtime models, accepted on
+  the AURA/VoiceAgentBench precedent. `subjective-evaluation` verified: a real paired human listening
+  study (240 ratings) on the cloned user voices.
+- `2604.08363` (CapTalk): architecture figure embedded and eyeballed. FlexiVoice
+  (`iclr-2026-F7GmbfyVg9`, accepted, no page) kept in `related_papers`, de-linked. Agent reported the
+  `references.json` in_corpus step returned null flags for this paper.
+- `2604.08709` (Meta, cascaded prompting + online RL): AR semantic-token model + frozen diffusion
+  acoustic model; `autoregressive-codec-tts` kept (consistent with CosyVoice tagging), `diffusion-tts`
+  omitted (diffusion stage frozen, not trained). CMOS values, 50 crowd / 5 expert raters, and
+  the Table 2 CI verified against the source.
+
+**Batch 3** (`2605.27376`, `2605.27383`, `2604.10065`, `2604.10413`): all four ingested, health check
+clean per paper, page count 917 → 921. Q2: 31 ingested, 199 accepted remaining.
+
+- `2605.27376`, `2605.27383`: 2605 ID prefix with April dates (`version_estimated: true`); verified
+  against the arXiv API (2026-04-09 / 2026-04-10), so the dates stand.
+- `2605.27376` (Sungkyunkwan, training-free style interpolation and KV-cache swap on Parler-TTS-mini):
+  Figure 5 embedded and eyeballed; 15 human participants verified.
+- `2605.27383` (BUPT, synthetic-data scaling + DPO for Thai/Lao on CosyVoice 2): agent wrote 5
+  "internal inconsistencies" into the warning callout; 2 were wrong (8,000 total vs 4,000 per language
+  is consistent; NMOS differences are across standard-TTS vs zero-shot settings, not "the same test
+  set"). Rewrote the callout to keep the real ones (TSynC-2 listed in training vs held out; α=100% 0h
+  vs fixed 300h; Figure 2 labels). Metadata `task` still says `[TTS, SCA]`; page and index use `[TTS]`.
+- `2604.10065` (ASPIRin, NTU, GRPO on Moshi): text claims a uniform 1-7% TOR reduction but Table 1
+  shows synthetic pause-handling TOR rising 0.467 → 0.482; verified, the page avoids the claim.
+  `rlhf-speech` for rule-reward GRPO follows `2511.21270` precedent.
+- `2604.10413` (Keio, sign-to-speech prosody transfer, ICPR 2026): non-text-input vocabulary gap,
+  `task: [TTS]` fallback applied and flagged. Two architecture figures embedded and eyeballed.
+- **Second pre-existing duplicate:** SALM-Duplex has pages under both `2505.15670` and
+  `interspeech-2025-0874`; added to the deferred `BACKLOG.md` duplicate item alongside MELLE.
+
+**Batch 4** (`2604.10580`, `2604.11424`, `2604.11803`, `2604.12383`): all four ingested, health check
+clean per paper, page count 921 → 925. Q2: 35 ingested, 195 accepted remaining. This completes the
+first 16 pre-selected papers (published 2026-04-01 to 2026-04-14).
+
+- `2604.10580` (CAST discourse-stress benchmark, HUJI/IBM): `prosody-control` and
+  `instruction-conditioned-tts` kept (the benchmark's explicit-markup and instruct modes directly test
+  stress control); 3 human listeners and WhiStress κ = 0.32 verified.
+- `2604.11424` (SA-SLM, CUHK-Shenzhen/Tencent): `SCA` kept (Whisper-encoded user speech into a
+  Qwen2.5-Omni Thinker, empathetic spoken dialogue). `disentanglement` verified against the bar
+  (explicit VIB objective §3.1.2, Table 6 ablation, linear probe). No `subjective-evaluation`: all
+  "subjective" scores are Gemini-judge. Figure 2 embedded and eyeballed.
+- `2604.11803` (Saar-Voice dialect corpus, DialRes-LREC26): trains and evaluates no model; TTS
+  experiments are future work. Kept as ingested on the VietNormalizer framing-plus-infrastructure
+  precedent (TTS-purposed, released resource), `low`, `related_concepts: []` (16 existing pages
+  have the same). Page `task: [TTS]` vs metadata `[TTS, evaluation]`. Raised to the user.
+- `2604.12383` (speech VAE distillation, SJTU/ByteDance): `codec` + `neural-codec` for a continuous
+  VAE; `TTS` + `flow-matching` kept because the paper trains F5-TTS on each representation. Table 1
+  values verified. Agent run took about 3.5 hours wall-clock; no stray writes (git status checked).
+
 ---
 
 ## Manual Verification Queue
@@ -705,6 +794,12 @@ after the session batch is complete — check the paper page and resolve each fl
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
 | `2026.iwsds-1.16` | field_significance moderate/low boundary | Resolved 2026-09-27: downgraded to low (narrow 20-participant single-model pilot, no comparison group). |
+| `2026.propor-1.81` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at moderate (user). |
+| `2604.06327` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at low (user); noted as a useful source for objective-metric evidence (`evaluation-metrics`). |
+| `2605.27383` | claims (numbers inconsistent across tables) | Resolved 2026-10-17: verified against source; warning callout rewritten (2 of 5 claimed inconsistencies were setting differences or per-language counts). Claims cite single tables. |
+| `2604.10065` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at moderate (user). The controlled finding (full-token GRPO degrades content, action-space projection avoids it) carries the level; the page already states the small, mixed gains over delayed Moshi. |
+| `2604.10413` | task (vocabulary gap) | Resolved 2026-10-17: not in the gap. The model is text (phoneme) driven FastSpeech 2 with sign-video prosody conditioning, same shape as `interspeech-2025-1494`, so `task: [TTS]` is correct. The real gap (no text input) is tracked in `BACKLOG.md`. |
+| `2604.11803` | field_significance / corpus scope | Resolved 2026-10-17: kept (user), on the VietNormalizer precedent at `low`, empty `related_concepts`. |
 
 ---
 
