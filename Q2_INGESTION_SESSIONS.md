@@ -101,23 +101,34 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-Fetch, filter, review triage, download and parse are all done for Q2 2026. As of 2026-10-16, by
-the canonical `published_date` (paper-date rule applied from 2026 onward): **211 `accepted`
-(all downloaded and parsed, ready to ingest) + 19 already ingested = 230 in the quarter**. Ingest
-has not started. Q1 2026 is closed at 156 ingested (15 papers moved to Q2 under the date rule).
+The Q2 sweep is under way. As of 2026-10-17 (session close), by canonical `published_date`:
+**35 ingested + 195 `accepted` remaining** (all downloaded and parsed). The last ingested paper is
+`2604.12383` (published 2026-04-14); everything published 2026-04-01 to 04-14 is done. Corpus: 925
+pages. The Manual Verification Queue is clear. Content `6f330ea`, infra `599e24b` and site `83734cc`
+are pushed; both `work/ingest` branches match `main`.
 
 To resume:
 
-1. Build the chronological candidate list from the 211 `accepted` Q2 papers, sorted by
-   `published_date` (not ID prefix; see the ID-prefix note below). Note the 15 papers that moved
-   from Q1 are now dated into Q2 and are in the list. Skip dedup pointers (`wiki_page_id` set).
-2. Check with the user before starting: the trunk checkout's `BACKLOG.md` (another stream, Q4 2025
-   content cycle) marks ingest "P0 · queued" behind that cycle.
-3. Proceed with the standard batches-of-4 cadence below.
-4. **Extra QC per paper:** `health_check.py --module ingest` now emits a `related_concepts_complete`
+1. Pre-select the next 16 by `published_date` (the user has been approving 16 at a time, run as 4
+   batches of 4). Next candidates start: `2601.11329` (04-15), `2604.15923`, `2604.16056`,
+   `2604.16287` (04-17), `2604.17435` (04-19), `2601.04029`, `2604.14548`, `2604.17958` (04-20).
+   `2601.11329` and `2601.04029` moved in from Q1 under the date rule: run the arXiv full-version
+   check (`arxiv_comment`, title match) before ingesting them. Skip dedup pointers (`wiki_page_id`
+   set).
+2. Point every ingest agent at the content-ingest worktree:
+   `SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`
+   (the resolver otherwise returns the trunk content checkout). Tell agents to use piped
+   `[[id|Name]]` paper links in Wiki Connections: the ingest SKILL.md template still shows the bare
+   form.
+3. **Extra QC per paper:** `health_check.py --module ingest` now emits a `related_concepts_complete`
    warning when a `task` tag (`singing`, `VC`, `codec`) lacks its concept slug. Treat it as a fix-now
    item. It deliberately does not cover `architecture` tags (about 227 mostly intentional hits in
    the 2026-10-16 baseline), so keep checking those by hand per the standing QC rule.
+4. **New recurring issues from 2026-10-17:** `references.json` `in_corpus` flags miss most real
+   matches (or come back null), so agents must match citations by hand; agents sometimes write
+   false "internal inconsistencies" onto the page (check each against the source: different test
+   conditions or per-group vs total counts are not inconsistencies); conference-accepted arXiv
+   papers (ICASSP, Speech Prosody, LREC) keep the arXiv date per the user.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -783,6 +794,11 @@ first 16 pre-selected papers (published 2026-04-01 to 2026-04-14).
 - `2604.12383` (speech VAE distillation, SJTU/ByteDance): `codec` + `neural-codec` for a continuous
   VAE; `TTS` + `flow-matching` kept because the paper trains F5-TTS on each representation. Table 1
   values verified. Agent run took about 3.5 hours wall-clock; no stray writes (git status checked).
+
+**Close:** content `6f330ea` and infra `599e24b` pushed to `main` (both fast-forwards; infra pushed
+as `work/ingest:main` because the trunk infra checkout is 16 behind origin with the integrate
+stream's uncommitted Q4 edits, left untouched). Site bumped to `6f330ea` at the user's request
+(`83734cc`), which also deployed the Q1 stragglers, date-rule sync and task-tag fixes.
 
 ---
 
