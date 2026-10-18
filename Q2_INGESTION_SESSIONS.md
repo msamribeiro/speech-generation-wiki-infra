@@ -102,18 +102,18 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 ## Next Session — Resume Here
 
 The Q2 sweep is under way. As of 2026-10-18 (session close), by canonical `published_date`:
-**52 ingested + 178 `accepted` remaining** (all downloaded and parsed). The second round of 16
+**52 ingested + 177 `accepted` remaining** (all downloaded and parsed). The second round of 16
 (published 2026-04-17 to 04-24, batches A-D in the Session Log) is done; `2601.11329` (F-Actor) was
 rejected as a duplicate of `2026.findings-acl.242` (canonical, Q3, parsed). Corpus: 941 pages.
-**The Manual Verification Queue has 13 open items**, deliberately held by the user ("keep these in
+**The Manual Verification Queue has 12 open items**, deliberately held by the user ("keep these in
 mind for now"); bring them up again before or after the next round. Site not yet bumped for this
 round.
 
 To resume:
 
-1. Resolve the VoxCPM dedup first: `iclr-2026-h5KLpGoqzC` (04-27) is the ICLR version of ingested
-   `2509.24650`; under the OpenReview rule it becomes `is_duplicate` + `rejected` (confirm with the
-   user), and `2604.16211`'s `related_papers` switches to `2509.24650`.
+1. VoxCPM dedup is resolved (see the queue). Q2 is now 52 ingested + 177 accepted. For any later
+   version found after ingest, follow `docs/schemas/metadata.md` (Duplicates and Later Versions):
+   mark the new record a duplicate and note the published version on the existing page.
 2. Pre-select the next 16 by `published_date`. Next candidates start: `2604.22542` (04-24),
    `2604.21164` (04-27), then the ICLR 2026 records dated 04-27 (`iclr-2026-0oXyMbPMtP`,
    `iclr-2026-17DNmdQ9aU`, `iclr-2026-5o0ZvYzh6B`, `iclr-2026-CcmDDh070o`, `iclr-2026-F7GmbfyVg9`,
@@ -947,7 +947,7 @@ after the session batch is complete — check the paper page and resolve each fl
 | `2601.04029` | concept scope | Open: `voice-conversion` tag rests on VC systems used to build the benchmark and judges tested on voice-cloning output; the paper has no VC system of its own. Check against the concept-scope mistag pattern. |
 | `2604.14548` | corpus scope | Open: speech-LM understanding safety benchmark, no speech-generation output evaluated; kept on the VoiceBench / `2510.02352` precedent pending confirmation. Only `evaluation-metrics` in `related_concepts`. |
 | `2604.14548` | metadata | Open: parsed author list has 13 names (adds Luchao Yao), metadata `authors_full` has 12; check the PDF before correcting. |
-| `iclr-2026-h5KLpGoqzC` | dedup | Open: ICLR 2026 version of VoxCPM `2509.24650` (ingested). Under the OpenReview dedup rule arXiv stays canonical and the ICLR record becomes `is_duplicate` + `rejected`. In the next pre-selection window (04-27); `2604.16211` lists the ICLR ID in `related_papers` and should switch to `2509.24650` once resolved. |
+| `iclr-2026-h5KLpGoqzC` | dedup | Resolved 2026-10-18 (user): ICLR record marked duplicate of ingested VoxCPM `2509.24650` (`rejected`, `canonical_id`); VoxCPM page notes the ICLR version and states the page summarises the preprint; `2604.16211` repointed. New general rule in `docs/schemas/metadata.md` (Duplicates and Later Versions): once a page exists, the ingested version stays canonical. |
 | `2604.12456` | architecture | Open: `architecture: [GAN]` for an MMDiT-style transformer converter trained with SAC's adversarial losses; no `gan-vocoder` concept. Check whether `GAN` is the right architecture term. |
 | `2604.20842` | task | Open: page `task: [SCA, evaluation]` differs from metadata `[TTS, evaluation]`; decide whether to align metadata. |
 | `2505.02625` / `2025.acl-long.912` | duplicate pages (pre-existing) | Open: LLaMA-Omni2 has two ingested pages, arXiv and ACL 2025. By the ACL precedent the ACL ID is canonical. Not caused by this session. |

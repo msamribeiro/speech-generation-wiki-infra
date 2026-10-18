@@ -48,10 +48,10 @@
     "TTS"
   ],
   "relevance_score": 0.92,
-  "relevance_note": "Proposes hierarchical semi-discrete residual representations that bridge semantic and acoustic modeling for expressive end-to-end TTS, directly addressing a core architecture challenge.",
-  "status": "accepted",
+  "relevance_note": "Proposes hierarchical semi-discrete residual representations that bridge semantic and acoustic modeling for expressive end-to-end TTS, directly addressing a core architecture challenge. Duplicate: ICLR 2026 version (retitled) of arXiv 2509.24650 (VoxCPM), which was ingested first and stays canonical.",
+  "status": "rejected",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2509.24650"
 }

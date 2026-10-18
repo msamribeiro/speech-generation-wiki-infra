@@ -122,6 +122,42 @@ rejected  → score < 0.40 or human confirmed irrelevant: skip
 ingested  → wiki paper page written
 ```
 
+## Duplicates and Later Versions
+
+One paper has one page (AGENTS.md invariant 4). When two records describe the same work (an arXiv
+preprint and its proceedings or journal version, possibly under a different title), the
+non-canonical record gets:
+
+- `is_duplicate: true`
+- `canonical_id`: the canonical record's ID
+- `status: rejected`
+- a `relevance_note` sentence naming the version it duplicates
+
+The canonical record keeps the relevance decision. Its `source_ids` may gain the duplicate's source
+ID (for example `"openreview": "h5KLpGoqzC"`).
+
+**Once a page exists, the ingested version stays canonical.** A version found after ingest (a
+proceedings or journal publication, often months later and sometimes retitled) is marked as a
+duplicate of the ingested record, whatever its venue. The page is not re-ingested, re-dated or
+re-ID'd, and its claims and claim YAML are untouched. Instead the page gets a short italic
+editorial note after the abstract callout. The note names the venue, title and link of the later
+version, and says that the page, its metrics and its claims summarise the version that was ingested.
+`published_date` stays on the ingested version, so quarter counts and frozen snapshots do not move.
+Log the change to `wiki/log.md` as `misc`. Re-ingesting from the later version is a separate,
+explicit user decision.
+
+**Before either version is ingested**, the existing source rules apply:
+
+- ACL Anthology: the proceedings record is canonical (e.g. F5-TTS `2025.acl-long.313`, F-Actor
+  `2026.findings-acl.242`).
+- OpenReview (ICLR, NeurIPS, ICML): the arXiv record stays canonical, and the proceedings record is
+  the duplicate.
+
+Detection: title-match every new batch against the whole corpus, then also check author overlap and
+abstract similarity, because camera-ready versions are sometimes retitled (VoxCPM `2509.24650` was
+published at ICLR 2026 as "Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual
+Representations ...").
+
 ## Venue Allowed Values
 
 `Interspeech` | `ICASSP` | `ACL` | `EMNLP` | `NAACL` | `NeurIPS` | `ICLR` | `ICML` | `ASRU` | `SLT` | `arXiv` | `technical-report` | `workshop` | `other`
