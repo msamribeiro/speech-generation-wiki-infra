@@ -106,8 +106,8 @@ The Q2 sweep is under way. As of 2026-10-18 (session close), by canonical `publi
 (published 2026-04-17 to 04-24, batches A-D in the Session Log) is done; `2601.11329` (F-Actor) was
 rejected as a duplicate of `2026.findings-acl.242` (canonical, Q3, parsed). Corpus: 941 pages.
 **The Manual Verification Queue has 12 open items**, deliberately held by the user ("keep these in
-mind for now"); bring them up again before or after the next round. Site not yet bumped for this
-round.
+mind for now"). **The user wants to start the next session by working through them,** before
+pre-selecting the next round. Site is bumped (`16c05a4`).
 
 To resume:
 
