@@ -924,6 +924,17 @@ Q2: 52 ingested, 178 accepted, 57 rejected. This completes the second round of 1
   judge; `spoken-language-model` off (judge, not dialogue). `subjective-evaluation` rests on the
   expert-annotated gold set; `zero-shot-tts` is borderline (see queue).
 
+**VoxCPM later-version rule:** the user decided that once a page exists, the ingested version stays
+canonical. Later proceedings/journal versions are marked duplicates, and the page gets an italic note
+linking the published version and stating the page summarises the ingested one. Written into
+`docs/schemas/metadata.md` (Duplicates and Later Versions) and applied to `iclr-2026-h5KLpGoqzC`.
+The 8 older ICLR/NeurIPS collisions (e.g. MaskGCT, proceedings ID canonical in metadata) predate
+the rule and were left as is.
+
+**Close:** content `2e66a35` then `5dc5be9`, infra `b17b59a` then `ca7abc5`, site `3142a48` then
+`16c05a4`, all pushed (both `work/ingest` branches match `main`). The 12 open queue items were
+held by the user for a later decision.
+
 ---
 
 ## Manual Verification Queue
