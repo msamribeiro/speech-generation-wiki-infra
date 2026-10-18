@@ -101,30 +101,39 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-17 (session close), by canonical `published_date`:
-**35 ingested + 195 `accepted` remaining** (all downloaded and parsed). The last ingested paper is
-`2604.12383` (published 2026-04-14); everything published 2026-04-01 to 04-14 is done. Corpus: 925
-pages. The Manual Verification Queue is clear. Content `6f330ea`, infra `599e24b` and site `83734cc`
-are pushed; both `work/ingest` branches match `main`.
+The Q2 sweep is under way. As of 2026-10-18 (session close), by canonical `published_date`:
+**52 ingested + 178 `accepted` remaining** (all downloaded and parsed). The second round of 16
+(published 2026-04-17 to 04-24, batches A-D in the Session Log) is done; `2601.11329` (F-Actor) was
+rejected as a duplicate of `2026.findings-acl.242` (canonical, Q3, parsed). Corpus: 941 pages.
+**The Manual Verification Queue has 13 open items**, deliberately held by the user ("keep these in
+mind for now"); bring them up again before or after the next round. Site not yet bumped for this
+round.
 
 To resume:
 
-1. Pre-select the next 16 by `published_date` (the user has been approving 16 at a time, run as 4
-   batches of 4). Next candidates start: `2601.11329` (04-15), `2604.15923`, `2604.16056`,
-   `2604.16287` (04-17), `2604.17435` (04-19), `2601.04029`, `2604.14548`, `2604.17958` (04-20).
-   `2601.11329` and `2601.04029` moved in from Q1 under the date rule: run the arXiv full-version
-   check (`arxiv_comment`, title match) before ingesting them. Skip dedup pointers (`wiki_page_id`
-   set).
-2. Point every ingest agent at the content-ingest worktree:
+1. Resolve the VoxCPM dedup first: `iclr-2026-h5KLpGoqzC` (04-27) is the ICLR version of ingested
+   `2509.24650`; under the OpenReview rule it becomes `is_duplicate` + `rejected` (confirm with the
+   user), and `2604.16211`'s `related_papers` switches to `2509.24650`.
+2. Pre-select the next 16 by `published_date`. Next candidates start: `2604.22542` (04-24),
+   `2604.21164` (04-27), then the ICLR 2026 records dated 04-27 (`iclr-2026-0oXyMbPMtP`,
+   `iclr-2026-17DNmdQ9aU`, `iclr-2026-5o0ZvYzh6B`, `iclr-2026-CcmDDh070o`, `iclr-2026-F7GmbfyVg9`,
+   ...). Title-match each ICLR record against the whole corpus first (OpenReview dedup rule). Skip
+   dedup pointers (`wiki_page_id` set).
+3. Main-session cleanup per paper (Mitigation B: agents write the page only): index row with Org
+   by hand (`organization` is null on nearly every 2026 record), all 3 `index.md` counts, `log.md`
+   entry, metadata `status`/`ingested_date`/`generation_history`, then the scoped health check,
+   date/ID quoting, callout, and citation-integrity checks. Run this after each paper, not at batch
+   end.
+4. Point every ingest agent at the content-ingest worktree:
    `SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`
    (the resolver otherwise returns the trunk content checkout). Tell agents to use piped
    `[[id|Name]]` paper links in Wiki Connections: the ingest SKILL.md template still shows the bare
    form.
-3. **Extra QC per paper:** `health_check.py --module ingest` now emits a `related_concepts_complete`
+5. **Extra QC per paper:** `health_check.py --module ingest` now emits a `related_concepts_complete`
    warning when a `task` tag (`singing`, `VC`, `codec`) lacks its concept slug. Treat it as a fix-now
    item. It deliberately does not cover `architecture` tags (about 227 mostly intentional hits in
    the 2026-10-16 baseline), so keep checking those by hand per the standing QC rule.
-4. **New recurring issues from 2026-10-17:** `references.json` `in_corpus` flags miss most real
+6. **Recurring issues (2026-10-17, confirmed again 2026-10-18):** `references.json` `in_corpus` flags miss most real
    matches (or come back null), so agents must match citations by hand; agents sometimes write
    false "internal inconsistencies" onto the page (check each against the source: different test
    conditions or per-group vs total counts are not inconsistencies); conference-accepted arXiv
@@ -800,6 +809,121 @@ as `work/ingest:main` because the trunk infra checkout is 16 behind origin with 
 stream's uncommitted Q4 edits, left untouched). Site bumped to `6f330ea` at the user's request
 (`83734cc`), which also deployed the Q1 stragglers, date-rule sync and task-tag fixes.
 
+### Session 2026-10-18: second round of 16 pre-selected
+
+**Pre-selection** (by `published_date`, 2026-04-17 to 04-24), as 4 batches:
+
+- A: `2604.15923`, `2604.16056`, `2604.16287`, `2604.17435`
+- B: `2601.04029`, `2604.14548`, `2604.17958`, `2604.15804`
+- C: `2604.16211`, `2605.00861`, `2604.12456`, `2604.20842`
+- D: `2604.19055`, `2604.21481`, `2604.21406`, `2604.22225`
+
+**Full-version / dedup check on the two Q1 movers:**
+
+- `2601.11329` (F-Actor) duplicates the Findings of ACL 2026 record `2026.findings-acl.242`
+  (same authors, "Behaviour"/"Behavior" title variant). Per the ACL precedent (F5-TTS
+  `2025.acl-long.313`), the proceedings record is canonical: `2601.11329` set `rejected`,
+  `is_duplicate: true`, `canonical_id: 2026.findings-acl.242` (user approved). The Anthology PDF was
+  downloaded and parsed (`raw/parsed/2026.findings-acl.242/`); it is Q3 (published 2026-07-02) and
+  will be ingested in the Q3 sweep. `2604.22225` (TTS-PRISM) took its slot.
+- `2601.04029` (SpeakerSleuth): no duplicate in metadata, review queue or wiki. `arxiv_comment` says
+  "Accepted at ACL 2026 (Main)" but no Anthology record exists yet, so the arXiv ID stays canonical;
+  if the Anthology record appears later, it is the same duplicate case.
+
+**Batch A** (`2604.15923`, `2604.16056`, `2604.16287`, `2604.17435`): all four pages clean on the
+per-paper health check; page count 925 → 929 (files and index rows agree, all 3 `index.md`
+occurrences fixed by hand). Q2: 39 ingested, 191 accepted remaining. Org filled by hand on all four
+rows (`organization` null in metadata). All wikilinked and `related_papers` targets have pages and
+are `ingested`. Abstract callouts are `[!abstract]`. Unquoted frontmatter dates on three pages (and
+the generation `date` on all four) quoted by hand after the batch. Health checks ran at batch end
+rather than per paper; follow the per-paper order from batch B.
+
+- `2604.15923` (HiCoDiT video-to-speech, Fudan): text-free video-to-speech is in the known vocabulary
+  gap, so `task: [TTS]` is the fallback (flagged). No `codec`/`neural-codec` (uses MaskGCT's
+  pretrained codec). Real inconsistencies recorded: text claims UTMOS/WER lead that FTV beats on
+  several splits.
+- `2604.16056` (AST training-free speech editing, ZJU): `hybrid` (AR semantic LM + DiT flow-matching
+  decoder); `evaluation-metrics` for the proposed WDTW metric. Abstract percentages verified against
+  Table 2.
+- `2604.16287` (NaijaS2ST benchmark, Mila): `speech-to-speech` only (S2S translation +
+  cascades); `multilingual-tts` deliberately off (LRL speech output only from un-adapted Gemini
+  TTS). `transformer-enc-dec` without `transformer-enc-dec-tts` is intentional (S2ST fine-tuning,
+  not TTS). One real table inconsistency recorded (GPT-Audio 1.5 average). The agent opened
+  `papers/2026.loreslm-1.54.md` once for frontmatter format only; no content used.
+- `2604.17435` (MoVE S2ST with non-verbal vocalizations, NTU/NVIDIA): `spoken-language-model`
+  (LoRA-adapted Kimi-Audio consuming source speech), `multilingual-tts` (own en↔zh fine-tuning,
+  borderline), `subjective-evaluation` (5 human raters). `disentanglement` off (no training
+  mechanism).
+
+**Batch B** (`2601.04029`, `2604.14548`, `2604.17958`, `2604.15804`): run one paper at a time with
+the main-session cleanup (index row, counts, log, metadata) and health check after each; all four
+clean. Page count 929 → 933 (files and rows agree). Q2: 43 ingested, 187 accepted remaining. From
+this batch the agents run as `claude-opus-5-5` (model switched mid-session); generation blocks and
+log entries record it. Org filled by hand on all four rows (`organization` null in metadata).
+
+- `2601.04029` (SpeakerSleuth, SNU): meta-evaluation of 12 prompted audio-language models as
+  speaker-consistency judges. `subjective-evaluation` kept (3 human annotators ranked 485
+  voice-cloning samples as ground truth, Kendall's W 0.860). `voice-conversion` tagged because VC
+  systems build the benchmark and §7.4 tests the judges on voice-cloning output; no VC task tag
+  (flagged, see queue). ACL 2026 Main acceptance noted on the page; arXiv ID stays canonical.
+- `2604.14548` (VoxSafeBench, CUHK-Shenzhen): safety/fairness/privacy benchmark for speech-LM
+  understanding; only text responses judged. Kept on the VoiceBench (`2410.17196`) / `2510.02352`
+  SCA-benchmark precedent, flagged for confirmation. `related_concepts: [evaluation-metrics]` only
+  (`spoken-language-model` off: prompting-only). Parsed author list has 13 names (adds Luchao Yao)
+  vs 12 in metadata `authors_full`; not changed.
+- `2604.17958` (MINT-Bench, NPU): instruction-following TTS benchmark over 14 systems, 10 languages.
+  `instruction-conditioned-tts` and `subjective-evaluation` (native-speaker raters) kept;
+  `multilingual-tts` off (no own system). Same-vendor judge caveat recorded.
+- `2604.15804` (Qwen3.5-Omni, Qwen Team): page focused on the Talker. `multilingual-tts` kept (own
+  Talker trained on 29 languages); no `codec` (tokenizer inherited, no reconstruction results); no
+  `subjective-evaluation`. One real inconsistency recorded (text says best in 10 of 12 cross-lingual
+  directions, Table 11 bolds 11). Thinker-Talker figure embedded and eyeballed.
+
+**Batch C** (`2604.16211`, `2605.00861`, `2604.12456`, `2604.20842`): one paper at a time with
+cleanup and health check after each; all four clean. Page count 933 → 937 (files and rows agree).
+Q2: 47 ingested, 183 accepted remaining. Org filled by hand on all four rows.
+
+- `2604.16211` (NVBench, Nanjing University / HKUST): non-verbal vocalization TTS benchmark over 15
+  systems; `instruction-conditioned-tts`, `evaluation-metrics`, `subjective-evaluation` (97 Prolific
+  raters plus CMOS). Table 3 numbers taken from the table image (parse garbled). The agent found that
+  `iclr-2026-h5KLpGoqzC` (accepted, Q2 04-27) is the ICLR 2026 version of VoxCPM `2509.24650`
+  (same authors, near-identical abstract); see queue.
+- `2605.00861` (TTS voice mapping, KTH): voice-quality metrics (CPPs, spectrum balance, crest
+  factor) over six public LJSpeech checkpoints and two vocoders; `low`, no listening test.
+  `gan-vocoder` and `transformer-enc-dec-tts` tagged for directly evaluated systems, with
+  `architecture: []` (no own model).
+- `2604.12456` (X-VC, SJTU): `task: [VC]` + `voice-conversion` (target speaker similarity, WER,
+  UTMOS, 15-listener SMOS). No `codec` (frozen pretrained SAC, no reconstruction results);
+  `neural-codec` concept kept for codec-latent conversion. `architecture: [GAN]` for an MMDiT-style
+  converter trained with SAC's adversarial losses (see queue). Figure embedded and eyeballed. Agent
+  run took about 95 minutes wall-clock; no stray writes.
+- `2604.20842` (SpeechParaling-Bench, Nanjing University / Xiaomi): scores the generated speech of
+  five LALMs, so in scope. Page `task: [SCA, evaluation]` vs metadata `[TTS, evaluation]` (all items
+  are spoken instructions to voice assistants answering in speech); index row follows the page.
+  One real count inconsistency recorded (104 vs 101 features, Tables 1 and 2).
+
+**Batch D** (`2604.19055`, `2604.21481`, `2604.21406`, `2604.22225`): one paper at a time with
+cleanup and health check after each; all four clean. Page count 937 → 941 (files and rows agree).
+Q2: 52 ingested, 178 accepted, 57 rejected. This completes the second round of 16 (published
+2026-04-17 to 04-24). Org filled by hand on all four rows.
+
+- `2604.19055` (ATRIE persona TTS, GDUT and others; ACM ICMR 2026): `low`. Seven inconsistencies
+  recorded on the page; spot-checked four against the source (two CCS definitions, cosine §4.2 vs
+  1−EER §4.4; 2,154 utterances attributed to both 3 and 50 characters; characters B/C inside the
+  3-character dataset presented as zero-shot; PersonaLLM in the Algorithm 1 inference path despite
+  "offline" framing) and all hold. No figure: Figure 1's image does not match its caption.
+- `2604.21481` (Indian-language TTS preference study, IIT Madras): 1,915 native raters, 120K
+  pairwise judgments over 7 systems; `related_concepts: [subjective-evaluation, evaluation-metrics]`
+  only (`multilingual-tts` off: no own system).
+- `2604.21406` (ICASSP 2026 HumDial full-duplex challenge, NPU / Nanjing University / AISHELL):
+  not a survey despite 5 pages (own dataset, protocol, leaderboard). `spoken-language-model` tagged
+  for directly evaluated full-duplex systems (see queue on consistency with `2604.14548`). Real
+  inconsistency recorded ("eight scenarios" vs 5 + 4 sub-scenarios); the "L_base set to 60" item
+  is closer to ambiguous wording but kept as written.
+- `2604.22225` (TTS-PRISM, Tsinghua / Xiaomi): fine-tuned MiMo-Audio as a 12-dimension TTS quality
+  judge; `spoken-language-model` off (judge, not dialogue). `subjective-evaluation` rests on the
+  expert-annotated gold set; `zero-shot-tts` is borderline (see queue).
+
 ---
 
 ## Manual Verification Queue
@@ -816,6 +940,19 @@ after the session batch is complete — check the paper page and resolve each fl
 | `2604.10065` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at moderate (user). The controlled finding (full-token GRPO degrades content, action-space projection avoids it) carries the level; the page already states the small, mixed gains over delayed Moshi. |
 | `2604.10413` | task (vocabulary gap) | Resolved 2026-10-17: not in the gap. The model is text (phoneme) driven FastSpeech 2 with sign-video prosody conditioning, same shape as `interspeech-2025-1494`, so `task: [TTS]` is correct. The real gap (no text input) is tracked in `BACKLOG.md`. |
 | `2604.11803` | field_significance / corpus scope | Resolved 2026-10-17: kept (user), on the VietNormalizer precedent at `low`, empty `related_concepts`. |
+| `2604.15923` | claims / concept scope | Open: `prosody-control` and `emotion-synthesis` tags (and the facial-emotion-as-prosody-proxy claim) rest on a coarse smoothed emotion-class signal; consider dropping `prosody-control`. |
+| `2604.15923` | task (vocabulary gap) | Open: video-to-speech with no text input, tagged `task: [TTS]` as the standing fallback. |
+| `2604.16287` | field_significance moderate/low boundary | Open: dataset-plus-benchmark preprint; only 2 `related_concepts` after the tagging rules. |
+| `2604.17435` | claims | Open: claim that objective emotion metrics miss non-verbal differences rests on the authors' remark, with no side-by-side objective NV numbers. |
+| `2601.04029` | concept scope | Open: `voice-conversion` tag rests on VC systems used to build the benchmark and judges tested on voice-cloning output; the paper has no VC system of its own. Check against the concept-scope mistag pattern. |
+| `2604.14548` | corpus scope | Open: speech-LM understanding safety benchmark, no speech-generation output evaluated; kept on the VoiceBench / `2510.02352` precedent pending confirmation. Only `evaluation-metrics` in `related_concepts`. |
+| `2604.14548` | metadata | Open: parsed author list has 13 names (adds Luchao Yao), metadata `authors_full` has 12; check the PDF before correcting. |
+| `iclr-2026-h5KLpGoqzC` | dedup | Open: ICLR 2026 version of VoxCPM `2509.24650` (ingested). Under the OpenReview dedup rule arXiv stays canonical and the ICLR record becomes `is_duplicate` + `rejected`. In the next pre-selection window (04-27); `2604.16211` lists the ICLR ID in `related_papers` and should switch to `2509.24650` once resolved. |
+| `2604.12456` | architecture | Open: `architecture: [GAN]` for an MMDiT-style transformer converter trained with SAC's adversarial losses; no `gan-vocoder` concept. Check whether `GAN` is the right architecture term. |
+| `2604.20842` | task | Open: page `task: [SCA, evaluation]` differs from metadata `[TTS, evaluation]`; decide whether to align metadata. |
+| `2505.02625` / `2025.acl-long.912` | duplicate pages (pre-existing) | Open: LLaMA-Omni2 has two ingested pages, arXiv and ACL 2025. By the ACL precedent the ACL ID is canonical. Not caused by this session. |
+| `2604.21406` / `2604.14548` | concept consistency | Open: `spoken-language-model` is tagged on the HumDial challenge page (directly evaluates Moshi, Freeze-Omni and submitted systems) but excluded on VoxSafeBench (prompting-only evaluation of Qwen3-Omni, Kimi-Audio etc.). Decide one rule for benchmarks that evaluate existing speech LMs and apply it to both. |
+| `2604.22225` | concept scope | Open: `zero-shot-tts` rests on six zero-shot TTS systems being scored, not built; dropping it leaves 2 concepts. |
 
 ---
 

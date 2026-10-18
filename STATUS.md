@@ -56,10 +56,10 @@ concept render pairs, and preserved reconciliation audit history.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete | Complete: all 22 affected concepts, 2,884 entries | **Next** | Pending reconciliation |
 | Q1 2026 | Complete: 156 ingested, 0 accepted (15 moved to Q2 by the date rule) | Not started | Not started | Not started |
-| Q2 2026 | 19 ingested; 211 accepted (all downloaded and parsed) | Not started | Not started | Not started |
+| Q2 2026 | In progress: 52 ingested; 178 accepted (all downloaded and parsed) | Not started | Not started | Not started |
 | Q3 2026 to date | 144 accepted | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-10-16. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-10-18. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates

@@ -35,10 +35,10 @@
     "SCA"
   ],
   "relevance_score": 0.88,
-  "relevance_note": "Instruction-following full-duplex spoken dialogue model with customizable conversational behaviour; advances SCA.",
-  "status": "accepted",
+  "relevance_note": "Instruction-following full-duplex spoken dialogue model with customizable conversational behaviour; advances SCA. Duplicate of the Findings of ACL 2026 record 2026.findings-acl.242, which is canonical.",
+  "status": "rejected",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2026.findings-acl.242"
 }

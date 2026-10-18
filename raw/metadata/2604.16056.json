@@ -26,7 +26,7 @@
   "version_date": "2026-04-17",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-18",
   "url": "https://arxiv.org/abs/2604.16056",
   "pdf_url": "https://arxiv.org/pdf/2604.16056.pdf",
   "pdf_path": "raw/papers/2604.16056.pdf",
@@ -38,9 +38,21 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Training-free speech editing using diffusion model temporal fidelity for precise text-guided segment modification",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-18",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-sonnet-5-5",
+      "commit": "0816d49"
+    }
+  ]
 }

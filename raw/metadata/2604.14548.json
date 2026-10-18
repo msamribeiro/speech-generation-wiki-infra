@@ -41,7 +41,7 @@
   "version_date": "2026-04-20",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-18",
   "url": "https://arxiv.org/abs/2604.14548",
   "pdf_url": "https://arxiv.org/pdf/2604.14548.pdf",
   "pdf_path": "raw/papers/2604.14548.pdf",
@@ -54,9 +54,21 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Safety benchmark for SLMs addressing speaker-identity, acoustic tone, and context-dependent safety evaluation",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-18",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0816d49"
+    }
+  ]
 }
