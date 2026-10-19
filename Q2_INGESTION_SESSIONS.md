@@ -105,9 +105,9 @@ The Q2 sweep is under way. As of 2026-10-18 (session close), by canonical `publi
 **52 ingested + 177 `accepted` remaining** (all downloaded and parsed). The second round of 16
 (published 2026-04-17 to 04-24, batches A-D in the Session Log) is done; `2601.11329` (F-Actor) was
 rejected as a duplicate of `2026.findings-acl.242` (canonical, Q3, parsed). Corpus: 941 pages.
-**The Manual Verification Queue has 12 open items**, deliberately held by the user ("keep these in
-mind for now"). **The user wants to start the next session by working through them,** before
-pre-selecting the next round. Site is bumped (`16c05a4`).
+**The Manual Verification Queue was cleared on 2026-10-19:** all 12 held items are resolved or
+deferred to `BACKLOG.md` (no-text-input task term, page-vs-metadata `task` divergence, duplicate page
+pairs, and a mechanism for editing ingested/integrated papers). The next round can be pre-selected. Content is at `088fdc0` (pushed); the site is still at `16c05a4`, so a bump is pending (ask first).
 
 To resume:
 
@@ -935,6 +935,30 @@ the rule and were left as is.
 `16c05a4`, all pushed (both `work/ingest` branches match `main`). The 12 open queue items were
 held by the user for a later decision.
 
+### Session 2026-10-19: Manual Verification Queue cleared (no ingest)
+
+Worked the 12 held items one at a time, each with a reasoned proposal and a user decision. All
+resolved or deferred; per-item outcomes are in the queue table below.
+
+- **Tag scope (mistag pattern):** dropped `prosody-control` from `2604.15923`, `voice-conversion`
+  from `2601.04029`, `zero-shot-tts` from `2604.22225`. Rule applied each time: a concept tag needs
+  the paper to perform or advance it, not just use or score it. The reachable value stays as a
+  clause in the remaining Wiki Connections bullet.
+- **`spoken-language-model` on benchmarks:** added to VoxSafeBench (`2604.14548`) so it matches
+  HumDial. New usage rule in the ingest `SKILL.md` (benchmarks that feed real audio into existing
+  speech LMs qualify; text-only ablations and AR TTS self-context do not). Agents check passes.
+- **Fixes:** X-VC architecture `GAN` to `transformer-enc-dec` (page + index row); NaijaS2ST
+  significance to `low`; MoVE objective-metric claim narrowed and re-evidenced with Table 1
+  (verified against `table-1.png`); VoxSafeBench gains author Luchao Yao (PDF page 1 lists 13), in
+  page and metadata (`authors` stays first-10).
+- **Kept in scope:** VoxSafeBench (SCA precedent `2510.02352`, VoiceBench).
+- **Deferred to `BACKLOG.md`:** no-text-input task term (now five fallback pages), page-vs-metadata
+  `task` divergence (210 of 935 ingested records), LLaMA-Omni2 duplicate pair (third pair; ACL ID
+  intended canonical; one integration-side pass for all pairs, run the reconcile health check before
+  and after), and a mechanism for editing ingested/integrated papers (living wiki).
+- **State:** ingest health check passes (941 papers, 0 errors). Content pushed at `088fdc0`; infra
+  commit follows. Trunk infra checkout is stale and dirty from the Q4 integration stream; left alone.
+
 ---
 
 ## Manual Verification Queue
@@ -951,19 +975,19 @@ after the session batch is complete — check the paper page and resolve each fl
 | `2604.10065` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at moderate (user). The controlled finding (full-token GRPO degrades content, action-space projection avoids it) carries the level; the page already states the small, mixed gains over delayed Moshi. |
 | `2604.10413` | task (vocabulary gap) | Resolved 2026-10-17: not in the gap. The model is text (phoneme) driven FastSpeech 2 with sign-video prosody conditioning, same shape as `interspeech-2025-1494`, so `task: [TTS]` is correct. The real gap (no text input) is tracked in `BACKLOG.md`. |
 | `2604.11803` | field_significance / corpus scope | Resolved 2026-10-17: kept (user), on the VietNormalizer precedent at `low`, empty `related_concepts`. |
-| `2604.15923` | claims / concept scope | Open: `prosody-control` and `emotion-synthesis` tags (and the facial-emotion-as-prosody-proxy claim) rest on a coarse smoothed emotion-class signal; consider dropping `prosody-control`. |
-| `2604.15923` | task (vocabulary gap) | Open: video-to-speech with no text input, tagged `task: [TTS]` as the standing fallback. |
-| `2604.16287` | field_significance moderate/low boundary | Open: dataset-plus-benchmark preprint; only 2 `related_concepts` after the tagging rules. |
-| `2604.17435` | claims | Open: claim that objective emotion metrics miss non-verbal differences rests on the authors' remark, with no side-by-side objective NV numbers. |
-| `2601.04029` | concept scope | Open: `voice-conversion` tag rests on VC systems used to build the benchmark and judges tested on voice-cloning output; the paper has no VC system of its own. Check against the concept-scope mistag pattern. |
-| `2604.14548` | corpus scope | Open: speech-LM understanding safety benchmark, no speech-generation output evaluated; kept on the VoiceBench / `2510.02352` precedent pending confirmation. Only `evaluation-metrics` in `related_concepts`. |
-| `2604.14548` | metadata | Open: parsed author list has 13 names (adds Luchao Yao), metadata `authors_full` has 12; check the PDF before correcting. |
+| `2604.15923` | claims / concept scope | Resolved 2026-10-19 (user): dropped `prosody-control` (no explicit pitch/duration/rate control, only a coarse smoothed emotion class); kept `emotion-synthesis`; Wiki Connections bullet reworded. |
+| `2604.15923` | task (vocabulary gap) | Resolved 2026-10-19 (user): kept on the `task: [TTS]` fallback; deferred again, now one of five pages in the `BACKLOG.md` no-text-input task-term item. Revisit around ten pages or at Q2 integration. |
+| `2604.16287` | field_significance moderate/low boundary | Resolved 2026-10-19 (user): downgraded to low (translation-focused dataset; synthesis is off-the-shelf TTS scored only via ASR, no listening test). Two `related_concepts` stay; `multilingual-tts` does not qualify. |
+| `2604.17435` | claims | Resolved 2026-10-19 (user): claim narrowed to the Aro-Val similarity metric and re-evidenced with Table 1 numbers (single-LoRA 0.51 / 26% NV match vs MoVE 0.53 / 76%), checked against the table image; caveats on 5 raters and unreported NV share of the Aro-Val set added. |
+| `2601.04029` | concept scope | Resolved 2026-10-19 (user): dropped `voice-conversion` (VC systems only build the benchmark inputs; no VC claim of its own); VC link kept as a clause in the `evaluation-metrics` bullet; VC Quality Ranking claim kept. |
+| `2604.14548` | corpus scope | Resolved 2026-10-19 (user): kept in scope as a spoken-conversational-agent benchmark (SCA precedent: `2510.02352`, VoiceBench); now also tagged `spoken-language-model`. |
+| `2604.14548` | metadata | Resolved 2026-10-19 (user): PDF page 1 lists 13 authors, adding Luchao Yao (4th); added to the page `authors`, metadata `authors_full` (13) and metadata `authors` (first-10 convention, so Lei Wang falls out of that list). |
 | `iclr-2026-h5KLpGoqzC` | dedup | Resolved 2026-10-18 (user): ICLR record marked duplicate of ingested VoxCPM `2509.24650` (`rejected`, `canonical_id`); VoxCPM page notes the ICLR version and states the page summarises the preprint; `2604.16211` repointed. New general rule in `docs/schemas/metadata.md` (Duplicates and Later Versions): once a page exists, the ingested version stays canonical. |
-| `2604.12456` | architecture | Open: `architecture: [GAN]` for an MMDiT-style transformer converter trained with SAC's adversarial losses; no `gan-vocoder` concept. Check whether `GAN` is the right architecture term. |
-| `2604.20842` | task | Open: page `task: [SCA, evaluation]` differs from metadata `[TTS, evaluation]`; decide whether to align metadata. |
-| `2505.02625` / `2025.acl-long.912` | duplicate pages (pre-existing) | Open: LLaMA-Omni2 has two ingested pages, arXiv and ACL 2025. By the ACL precedent the ACL ID is canonical. Not caused by this session. |
-| `2604.21406` / `2604.14548` | concept consistency | Open: `spoken-language-model` is tagged on the HumDial challenge page (directly evaluates Moshi, Freeze-Omni and submitted systems) but excluded on VoxSafeBench (prompting-only evaluation of Qwen3-Omni, Kimi-Audio etc.). Decide one rule for benchmarks that evaluate existing speech LMs and apply it to both. |
-| `2604.22225` | concept scope | Open: `zero-shot-tts` rests on six zero-shot TTS systems being scored, not built; dropping it leaves 2 concepts. |
+| `2604.12456` | architecture | Resolved 2026-10-19 (user): `architecture: [transformer-enc-dec]` (single-pass non-autoregressive MMDiT-style converter; adversarial losses are inherited SAC training terms, not the architecture); index row updated. |
+| `2604.20842` | task | Resolved 2026-10-19 (user): page `[SCA, evaluation]` stays; metadata left as filter output. The page-vs-metadata `task` divergence (210 of 935 ingested records) is tracked as a `BACKLOG.md` item. |
+| `2505.02625` / `2025.acl-long.912` | duplicate pages (pre-existing) | Resolved 2026-10-19 (user): deferred; logged as the third pair in the `BACKLOG.md` duplicate-pairs item (ACL ID intended canonical; one integration-side pass for all pairs). |
+| `2604.21406` / `2604.14548` | concept consistency | Resolved 2026-10-19 (user): benchmarks that feed real audio into existing speech LMs and measure their behaviour carry `spoken-language-model` (WildSpeech-Bench / ESPnet-SDS precedent). Added to VoxSafeBench with a Wiki Connections bullet; HumDial unchanged; rule added to the ingest SKILL.md. |
+| `2604.22225` | concept scope | Resolved 2026-10-19 (user): dropped `zero-shot-tts` (six systems are scored, not built); profiling finding kept as a clause in the `evaluation-metrics` bullet. |
 
 ---
 

@@ -550,6 +550,8 @@ Use these display names in `## Wiki Connections`. Do not open concept files to l
 
 **`prosody-control` usage rule:** Only include this slug if the paper introduces an explicit mechanism to control prosody (pitch, duration, speaking rate, stress) independently of content or speaker identity. Do NOT include it because the paper evaluates prosody metrics (F0-RMSE, MCD), includes a duration predictor as a standard pipeline component, or discusses prosody in related work.
 
+**`spoken-language-model` usage rule:** Include this slug when an LLM consumes an external speech signal (understanding or speech-to-speech), whether the paper built or adapted the model or is a benchmark that feeds real audio into existing speech LMs and measures their behaviour (e.g., HumDial, VoxSafeBench, WildSpeech-Bench). Do NOT include it for text-only ablations with no audio, or for autoregressive TTS that only consumes its own generated speech tokens.
+
 **`disentanglement` usage rule:** Only include this slug if the paper's training objective explicitly separates speech attributes (e.g., content, speaker identity, style, prosody) into distinct representation spaces. Standard AR architectures with separate codebook layers or fast/slow codec streams do not qualify.
 
 **`instruction-conditioned-tts` usage rule:** Only include this slug if the paper's system accepts natural language style instructions (e.g., "speak in a warm tone", "increase emphasis on key words") as a conditioning signal for TTS or VC. Do NOT include it for spoken conversational agents (SCA) that follow general dialogue or task instructions.
