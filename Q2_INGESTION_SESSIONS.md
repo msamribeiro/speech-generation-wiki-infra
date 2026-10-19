@@ -107,7 +107,7 @@ The Q2 sweep is under way. As of 2026-10-18 (session close), by canonical `publi
 rejected as a duplicate of `2026.findings-acl.242` (canonical, Q3, parsed). Corpus: 941 pages.
 **The Manual Verification Queue was cleared on 2026-10-19:** all 12 held items are resolved or
 deferred to `BACKLOG.md` (no-text-input task term, page-vs-metadata `task` divergence, duplicate page
-pairs, and a mechanism for editing ingested/integrated papers). The next round can be pre-selected. Content is at `088fdc0` (pushed); the site is still at `16c05a4`, so a bump is pending (ask first).
+pairs, and a mechanism for editing ingested/integrated papers). The next round can be pre-selected. Content is at `088fdc0` (pushed); the site is bumped (`4dd7ea7`).
 
 To resume:
 
