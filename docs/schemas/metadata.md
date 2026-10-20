@@ -146,6 +146,15 @@ version, and says that the page, its metrics and its claims summarise the versio
 Log the change to `wiki/log.md` as `misc`. Re-ingesting from the later version is a separate,
 explicit user decision.
 
+**Exception: technical report and peer-reviewed paper.** When the ingested record is an industry
+technical report and the later version is a peer-reviewed paper on the same system (same authors,
+but substantially rewritten and extended), the two are treated as separate works: each gets its own
+page dated by its own `published_date`, so each sits in its own quarter, neither is marked
+`is_duplicate`, and each page's Wiki Connections links the other with a bullet that names the
+relationship (technical report vs peer-reviewed version). Precedent: VibeVoice Technical Report
+`2508.19205` (Q3 2025) and the ICLR 2026 paper `iclr-2026-FihSkzyxdv` (Q2 2026), user decision
+2026-10-20. A plain camera-ready of an arXiv preprint is not an exception (VoxCPM).
+
 **Before either version is ingested**, the existing source rules apply:
 
 - ACL Anthology: the proceedings record is canonical (e.g. F5-TTS `2025.acl-long.313`, F-Actor

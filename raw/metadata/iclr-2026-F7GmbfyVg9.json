@@ -25,7 +25,7 @@
   "version_date": "2026-01-08",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-20",
   "url": "https://openreview.net/forum?id=F7GmbfyVg9",
   "pdf_url": "https://openreview.net/pdf?id=F7GmbfyVg9",
   "pdf_path": "raw/papers/iclr-2026-F7GmbfyVg9.pdf",
@@ -36,9 +36,21 @@
   ],
   "relevance_score": 0.93,
   "relevance_note": "FlexiVoice proposes an LLM-based zero-shot TTS system with natural language instruction control for speaking style and voice timbre — core TTS architecture with instruction conditioning.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-20",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "fb8dafe"
+    }
+  ]
 }

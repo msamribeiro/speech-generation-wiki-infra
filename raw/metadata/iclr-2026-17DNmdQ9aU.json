@@ -26,7 +26,7 @@
   "version_date": "2026-04-13",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-20",
   "url": "https://openreview.net/forum?id=17DNmdQ9aU",
   "pdf_url": "https://openreview.net/pdf?id=17DNmdQ9aU",
   "pdf_path": "raw/papers/iclr-2026-17DNmdQ9aU.pdf",
@@ -38,9 +38,21 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Proposes a noise-robust semantic speech tokenizer that improves stability of speech LLM inputs, directly advancing the foundation infrastructure for SCA and TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-20",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "fb8dafe"
+    }
+  ]
 }

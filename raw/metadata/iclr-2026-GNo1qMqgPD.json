@@ -1,7 +1,8 @@
 {
   "id": "iclr-2026-GNo1qMqgPD",
   "source_ids": {
-    "openreview": "GNo1qMqgPD"
+    "openreview": "GNo1qMqgPD",
+    "arxiv": "2601.19956"
   },
   "title": "VoxPrivacy: A Benchmark for Evaluating Interactional Privacy of Speech Language Models",
   "authors": [
@@ -20,7 +21,7 @@
   "published_date": "2026-04-27",
   "preprint_date": null,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-20",
   "url": "https://openreview.net/forum?id=GNo1qMqgPD",
   "pdf_url": "https://openreview.net/pdf?id=GNo1qMqgPD",
   "pdf_path": "raw/papers/iclr-2026-GNo1qMqgPD.pdf",
@@ -32,9 +33,21 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "VoxPrivacy is a benchmark for interactional privacy in speech language models; primarily an SLM safety/evaluation paper with speech generation as a component, not a synthesis advancement.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-20",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "fb8dafe"
+    }
+  ]
 }

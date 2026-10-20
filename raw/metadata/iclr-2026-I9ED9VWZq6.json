@@ -41,7 +41,7 @@
   "version_date": "2025-11-30",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-20",
   "url": "https://openreview.net/forum?id=I9ED9VWZq6",
   "pdf_url": "https://openreview.net/pdf?id=I9ED9VWZq6",
   "pdf_path": "raw/papers/iclr-2026-I9ED9VWZq6.pdf",
@@ -53,9 +53,21 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "SpeechJudge introduces a large-scale human preference dataset, benchmark, and reward model for speech naturalness evaluation — core evaluation contribution directly enabling RLHF for TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-20",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "fb8dafe"
+    }
+  ]
 }

@@ -23,7 +23,7 @@
   "version_date": "2026-02-10",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-20",
   "url": "https://openreview.net/forum?id=Tf4Lfw85lS",
   "pdf_url": "https://openreview.net/pdf?id=Tf4Lfw85lS",
   "pdf_path": "raw/papers/iclr-2026-Tf4Lfw85lS.pdf",
@@ -34,9 +34,21 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "TVTSyn proposes a streamable speech synthesizer with content-synchronous time-varying timbre for real-time voice conversion and speaker anonymization — core VC architecture.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-20",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "fb8dafe"
+    }
+  ]
 }

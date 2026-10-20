@@ -27,7 +27,7 @@
   "version_date": "2025-09-25",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-20",
   "url": "https://openreview.net/forum?id=5o0ZvYzh6B",
   "pdf_url": "https://openreview.net/pdf?id=5o0ZvYzh6B",
   "pdf_path": "raw/papers/iclr-2026-5o0ZvYzh6B.pdf",
@@ -39,9 +39,21 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "UniSS addresses expressive speech-to-speech translation preserving speaker identity and emotional style; primarily S2ST but with strong VC and TTS synthesis components.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-20",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "fb8dafe"
+    }
+  ]
 }

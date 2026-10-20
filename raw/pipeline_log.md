@@ -1,3 +1,7 @@
+## 2026-10-20
+
+- review | 2604.22542 (Controllable Spoken Dialogue Generation: An LLM-Driven Grading System for K-12 Non-Native English Learners) | 1 paper | rejected | caught at ingest time (Q2 2026 session, 2026-10-20) before any page was written; text-only LLM dialogue control (SFT and DDPO, a multi-turn GRPO variant, on Qwen2.5-7B / Llama3.1-8B) producing proficiency-graded text replies, evaluated by vocabulary violation rate, Rouge-L diversity and a GPT-5.1 judge; no TTS, ASR, audio or speech LM, speech only named as future work; "spoken" is the use case, not the modality (FAMA / MLC-SLM terminology-only reject shape); filter task [TTS, SCA] and note "TTS is a component" not supported by the paper | user decision
+
 ## 2026-10-16
 
 - metadata | paper-date rule | 175 ingested records from 2026-01-01 (39 pages synced) (39 published_date changes) | added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | quarter moves: 2026-Q1->2026-Q1: 23; 2026-Q1->2026-Q2: 15; 2026-Q2->2026-Q2: 1 | other records untouched | 2026-10-16

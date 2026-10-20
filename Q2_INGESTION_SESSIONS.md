@@ -101,43 +101,29 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-18 (session close), by canonical `published_date`:
-**52 ingested + 177 `accepted` remaining** (all downloaded and parsed). The second round of 16
-(published 2026-04-17 to 04-24, batches A-D in the Session Log) is done; `2601.11329` (F-Actor) was
-rejected as a duplicate of `2026.findings-acl.242` (canonical, Q3, parsed). Corpus: 941 pages.
-**The Manual Verification Queue was cleared on 2026-10-19:** all 12 held items are resolved or
-deferred to `BACKLOG.md` (no-text-input task term, page-vs-metadata `task` divergence, duplicate page
-pairs, and a mechanism for editing ingested/integrated papers). The next round can be pre-selected. Content is at `088fdc0` (pushed); the site is bumped (`4dd7ea7`).
+The Q2 sweep is under way. As of 2026-10-20 (session close), by canonical `published_date`:
+**68 ingested + 160 `accepted` remaining** (all downloaded and parsed), 59 rejected. The third round
+(17 candidates, 2026-04-24 to 04-27: 16 ingested, `2604.22542` rejected as text-only) is done; see
+the 2026-10-20 Session Log. Corpus: 957 pages. The procedure now lives in `docs/ingest-protocol.md`
+(read it first; it is canonical over this file's Methodology). Manual Verification Queue: one open,
+non-blocking item (59 legacy `[!note]` callouts, candidate for a scripted cleanup).
 
 To resume:
 
-1. VoxCPM dedup is resolved (see the queue). Q2 is now 52 ingested + 177 accepted. For any later
-   version found after ingest, follow `docs/schemas/metadata.md` (Duplicates and Later Versions):
-   mark the new record a duplicate and note the published version on the existing page.
-2. Pre-select the next 16 by `published_date`. Next candidates start: `2604.22542` (04-24),
-   `2604.21164` (04-27), then the ICLR 2026 records dated 04-27 (`iclr-2026-0oXyMbPMtP`,
-   `iclr-2026-17DNmdQ9aU`, `iclr-2026-5o0ZvYzh6B`, `iclr-2026-CcmDDh070o`, `iclr-2026-F7GmbfyVg9`,
-   ...). Title-match each ICLR record against the whole corpus first (OpenReview dedup rule). Skip
-   dedup pointers (`wiki_page_id` set).
-3. Main-session cleanup per paper (Mitigation B: agents write the page only): index row with Org
-   by hand (`organization` is null on nearly every 2026 record), all 3 `index.md` counts, `log.md`
-   entry, metadata `status`/`ingested_date`/`generation_history`, then the scoped health check,
-   date/ID quoting, callout, and citation-integrity checks. Run this after each paper, not at batch
-   end.
-4. Point every ingest agent at the content-ingest worktree:
-   `SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`
-   (the resolver otherwise returns the trunk content checkout). Tell agents to use piped
-   `[[id|Name]]` paper links in Wiki Connections: the ingest SKILL.md template still shows the bare
-   form.
-5. **Extra QC per paper:** `health_check.py --module ingest` now emits a `related_concepts_complete`
-   warning when a `task` tag (`singing`, `VC`, `codec`) lacks its concept slug. Treat it as a fix-now
-   item. It deliberately does not cover `architecture` tags (about 227 mostly intentional hits in
-   the 2026-10-16 baseline), so keep checking those by hand per the standing QC rule.
-6. **Recurring issues (2026-10-17, confirmed again 2026-10-18):** `references.json` `in_corpus` flags miss most real
-   matches (or come back null), so agents must match citations by hand; agents sometimes write
-   false "internal inconsistencies" onto the page (check each against the source: different test
-   conditions or per-group vs total counts are not inconsistencies); conference-accepted arXiv
-   papers (ICASSP, Speech Prosody, LREC) keep the arXiv date per the user.
+1. Pre-select the next 16 by `published_date`. Next candidates: the remaining ICLR 2026 records
+   dated 04-27 (`iclr-2026-l5re5ppqrX` EchoMind, `iclr-2026-llMfmDtWka`, `iclr-2026-uGai5lYHlV`
+   TTSDS2, `iclr-2026-wbttgzp7MT` EmotionThinker, `iclr-2026-zjaV5zmlkl`), then arXiv from 04-28
+   (`2604.22821`, `2604.25441`, `2604.25476`, ...). **`iclr-2026-zjaV5zmlkl` has a 0.91 title match
+   with `2510.00499`: run the dedup check before selecting it.**
+2. Screen every candidate's authors against ingested records (protocol section 2): retitled later
+   versions slip past title and abstract matching. A tech report plus a later peer-reviewed paper
+   are separate pages, cross-linked (VibeVoice precedent, `docs/schemas/metadata.md`).
+3. Follow `docs/ingest-protocol.md` for the per-paper loop. Q2-specific reminders: point agents
+   at the content-ingest worktree
+   (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`),
+   and fill the index Org by hand (`organization` is null on nearly every 2026 record).
+4. Conference-accepted arXiv papers (ICASSP, Speech Prosody, LREC) keep the arXiv date per the
+   user.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -147,10 +133,8 @@ downloads are behind the same gate, so an OpenReview-only paper needs its PDF sa
 `openreview.net/pdf?id=<forum id>` into `raw/papers/{id}.pdf`. NeurIPS 2026 had no accepted papers
 posted on 2026-09-21; re-save its pages later and run the same way.
 
-**Cadence:** carried forward unchanged from Q1 2026 — sequential batches of 4, one paper at a time,
-health check after each paper, a short batch summary plus explicit go-ahead before the next batch.
-The user may drop to one-paper-at-a-time-with-go-ahead mid-session (this happened during Q1 2026);
-follow whichever cadence was most recently requested rather than defaulting back silently.
+**Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
+recently requested.
 
 ---
 
@@ -166,130 +150,9 @@ follow whichever cadence was most recently requested rather than defaulting back
 
 ## Methodology
 
-### Claims format
-
-```markdown
-## Claims
-
-- **supports:** {Generalized, field-level claim sentence — no paper/model names or raw metrics.}
-  > *Evidence:* {Specific result, mechanism, comparison, dataset, or ablation.} *(§N.N, Table N)*
-- **complicates:** {Generalized claim sentence.}
-  > *Evidence:* {Specific limitation, failure case, or trade-off.} *(§N.N)*
-```
-
-Role prefix is one of `supports:`, `complicates:`, `contradicts:`, `refines:`, bolded. The
-`Evidence:` line is an italic-led blockquote with paper-local detail and a section citation.
-Named-section citations need the `§` prefix even for non-numbered sections (e.g. `*(§Limitations)*`).
-
-### Ingest cadence
-
-Default (as run throughout Q3/Q4/Q1 2026): pre-select the full remaining list chronologically up
-front, then work through it in batches of 4. Within each batch:
-
-1. One paper at a time — no parallel ingest workers.
-2. Run the per-paper health check after each paper; fix bare wikilinks and any schema errors
-   before moving to the next paper.
-3. After all 4 papers in the batch are clean, write a short batch summary (paper IDs, notable
-   QC catches, corpus page count, updated Q2 progress numbers) and append it to this file's
-   Session Log.
-4. Wait for an explicit go-ahead before starting the next batch.
-
-The user may drop to one-paper-at-a-time-with-go-ahead mid-session; follow whichever cadence
-was most recently requested rather than defaulting back silently.
-
-### Quality check after each paper
-
-```bash
-.venv/bin/python scripts/health_check.py --module ingest --id {ID} --wiki-dir /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content
-```
-
-Do not trust the ingest agent's own closing summary for any of the following — always verify
-the actual files independently:
-
-- **Paper count drift.** `wiki/index.md`'s paper-count callout (3 occurrences: abstract callout,
-  "Browse the Papers" section line, "Browse all N papers" link) drifts on most ingests, in both
-  directions, with no reliable pattern — including drift that leaves the 3 occurrences mutually
-  inconsistent with each other, not just stale. After every paper, independently run
-  `ls wiki/papers/*.md | grep -v index.md | wc -l` and `grep -c '^| \[\[' wiki/papers/index.md`
-  (these two should always match each other) and fix all 3 `index.md` occurrences directly against
-  that number. This is not fixable by prompting — budget for a manual fix on every single paper.
-- **Citation integrity.** Before trusting a `[[wikilink]]` the agent added to Wiki Connections,
-  confirm the target actually has a wiki page (`ls wiki/papers/{id}.md`) and isn't just
-  `status: accepted` or `rejected` in metadata. If it has no page yet, keep the ID in
-  `related_papers` frontmatter but remove it from the linked prose (do not cite a page that
-  doesn't exist). Agents' own `references.json` `in_corpus` flags are frequently stale in both
-  directions — cross-check against the real `wiki/papers/` directory, not the flag.
-- **Duplicate / row count.** Confirm exactly one row for the paper ID in `papers/index.md`.
-- **Index row completeness.** The Org column sometimes ships blank despite a valid frontmatter
-  `organization` field, and Task tags occasionally get truncated relative to the page's own
-  `title:`. Compare the index row against the page's own frontmatter directly, in full — don't
-  trust the row as written. See [[feedback_index_row_completeness]].
-- **Title truncation.** `papers/index.md` rows use a deliberate hard 55-character truncation
-  (`title[:55]`) — this is the intended convention, not a bug. Verify every new row's title is
-  truncated to (approximately) 55 characters, not the full untruncated title (agents sometimes
-  "fix" the truncation they see on neighboring rows) and not cut off mid-word at an unpredictable
-  point either. See [[feedback_title_truncation]].
-- **Metadata status.** Confirm `status: ingested` and `ingested_date` are actually set in
-  `raw/metadata/{id}.json`.
-- **Bare wikilinks.** Fix every `wikilink_format` warning the health check reports — pipe to
-  `[[id|Display Name]]`, don't just suppress the warning. The check's ID regex covers
-  ACL-Anthology-style dotted IDs (`YYYY.venue-track.number` e.g. `2025.acl-long.313`) as well as
-  numeric arXiv IDs — still worth a manual eyeball on any page with dotted-ID citations.
-- **Canonical paper IDs.** Some papers have a canonical wiki ID that differs from their arXiv ID
-  (e.g. F5-TTS is `2025.acl-long.313`, not the arXiv `2410.06885`) because the conference/proceedings
-  ID took precedence at ingest time. Verify any citation's ID against `wiki/papers/index.md`
-  before linking — don't assume the arXiv ID is right just because that's what the source paper's
-  own bibliography uses. See [[feedback_f5tts_paper_id]] for the canonical example.
-- **Rejected-paper citations.** Before linking to any in-corpus reference, check its `status` —
-  `accepted`-but-unwritten keeps the ID in `related_papers` frontmatter with prose de-linked;
-  `rejected` removes it entirely (do not link or cite by ID at all, mention unlinked in prose if
-  needed). This recurs even on papers the source paper discusses substantively in its own text.
-- **Concept-tag scope.** A concept tag is only legitimate if the paper actually performs or is
-  directly evaluated on that concept, not merely discusses, contrasts, or defers to it (e.g. citing
-  another system as background motivation). Check the concept's own scope note and the paper's own
-  Limitations section before trusting the tag. See [[feedback_concept_scope_mistag_pattern]] — this
-  applies equally to `architecture`-derived concept tags (e.g. `transformer-enc-dec-tts` should be
-  present whenever `architecture` includes `transformer-enc-dec` and the paper genuinely trains or
-  evaluates that architecture family), not just `task`-derived ones.
-- **Agent self-report is not evidence.** An ingest agent's closing summary ("everything checks out",
-  "health-check clean") can be flatly wrong even when it sounds confident — always re-run the health
-  check and the grep-based checks above yourself rather than trusting the narration. See
-  [[feedback_agent_selfreport_unreliable]].
-
-### Tagging rules to apply during ingest (not just structural QC)
-
-These are judgment calls the ingest agent makes per paper — verify independently, don't just
-trust the agent's own reasoning in its closing summary:
-
-- **VC task tag** — requires a dedicated VC system + genuine VC-specific metrics (zero metrics of
-  any kind fails the bar, even if the system nominally supports voice conversion/editing). See
-  [[feedback_vc_task_tagging]].
-- **`spoken-language-model` concept tag** — requires an EXTERNAL speech signal consumed by an
-  adapted LLM in a real spoken-dialogue context. An autoregressive TTS-LM consuming only its own
-  generated output does NOT qualify. See [[feedback_spoken_language_model_tagging]].
-- **`multilingual-tts` concept tag** — legitimate if the paper's OWN system was trained/adapted
-  across languages, even without full per-language metrics; spurious if it only cites an upstream
-  model's claimed multilingual capability. See [[feedback_multilingual_tts_tagging]].
-- **`subjective-evaluation` concept tag** — requires real human raters (MOS/listening test);
-  LLM-judge/automated scoring never qualifies. See [[feedback_subjective_evaluation_tagging]].
-- **Task/`related_concepts` consistency** — a task tag (e.g. `singing`) is frequently omitted from
-  `related_concepts` even when explicitly warned; verify independently every ingest. The same
-  omission recurs on `architecture` tags (e.g. `transformer-enc-dec` present but
-  `transformer-enc-dec-tts` missing from `related_concepts`) — check both directions. See
-  [[feedback_task_related_concepts_mismatch]].
-- **`autoregressive-codec-tts` concept tag** — scoped specifically to neural-codec-token
-  autoregression (VALL-E-style). Evaluating a classic mel-frame AR acoustic model (e.g. Tacotron 2)
-  does not qualify on its own, even in an otherwise legitimate `evaluation-metrics`-tagged paper.
-- **YAML date/ID coercion** — unquoted dates parse as YAML date objects, and unquoted numeric-
-  looking IDs (e.g. `1412.6980`) parse as floats, dropping trailing zeros. Quote all date fields
-  and the `id` field as strings. See [[feedback_yaml_coercion_gotchas]].
-- **`task` frontmatter serialization** — canonical form is bracket-unquoted (`task: [TTS, evaluation]`),
-  never bracket-quoted (`task: ["TTS", "evaluation"]`). This drift is a known, not-yet-corpus-wide-
-  fixed BACKLOG.md item; fix it on sight in any page an ingest agent touches.
-- **Abstract callout.** The abstract card is ALWAYS `[!abstract]`, never the same callout type
-  used in that page's own Field Significance section (`[!tip]` for high, `[!important]` for
-  foundational). This recurred repeatedly across Q4 — any *elevated* `field_significance.level`
-  appears to prime the mistake. Check this specifically before running the health check.
+The procedure (cadence, per-paper cleanup and QC, tagging rules, claims format, interruption
+recovery, commit workflow) is canonical in `docs/ingest-protocol.md` and the ingest `SKILL.md`.
+This section keeps only what is specific to the Q2 2026 sweep: scope precedents and gaps.
 
 ### Corpus-scope precedent chain (when a paper's generative-speech connection is unclear)
 
@@ -365,22 +228,6 @@ ordering and quarter assignment, not the ID prefix. This recurred repeatedly acr
 `2604.03279`, `2604.01247`, `2604.08558`, `2604.08562` were all genuinely Q1 papers despite the
 `2604` prefix) — expect the mirror-image case in Q2 2026 (a `2603.xxxxx`-prefixed paper that is
 actually April/May/June by `published_date`) and sort by date every time, never by ID prefix.
-
-### Interruption recovery (session limits, API errors)
-
-If an agent is cut off mid-ingest (session limit, API 5xx, etc.), before retrying: check the
-**standalone content repo** (never `infra/wiki/` — that's a submodule pointer and can be stale,
-giving a false "nothing written" signal) for whether the page file, index row, or metadata
-status actually got written. A clean "nothing written" state is safe to retry directly. A
-partial-write state (e.g. a stray copied figure asset with no page yet, or a page written but
-index/log/metadata not yet updated) needs the retry to verify and complete or reuse what's there
-rather than assuming either way. See [[feedback_session_limit_interruption]] for the full
-two-case recovery pattern.
-
-Two other long-standing corpus-wide QC bugs to keep verifying manually regardless of whether a
-given session's batches stay clean: `wiki/index.md`/venue-page count fabrication (see
-[[feedback_index_count_drift]]) and mid-string title truncation in `papers/index.md` rows (see
-[[feedback_title_truncation]]) — both are "not fixable by prompting."
 
 ### Known open vocabulary gap
 
@@ -959,6 +806,67 @@ resolved or deferred; per-item outcomes are in the queue table below.
 - **State:** ingest health check passes (941 papers, 0 errors). Content pushed at `088fdc0`; infra
   commit follows. Trunk infra checkout is stale and dirty from the Q4 integration stream; left alone.
 
+### Session 2026-10-20: third round of 16 pre-selected
+
+Protocol moved to the tracked `docs/ingest-protocol.md` (Q2 methodology trimmed to quarter-specific
+material). Pre-selected 16 by `published_date`: `2604.22542`, `2604.21164`, then 14 ICLR 2026 records
+dated 04-27 (all canonical over `rejected` arXiv twins). VoxPrivacy: arXiv `2601.19956` had been
+rejected on relevance rather than as a duplicate; per the user it is now `is_duplicate` with
+`canonical_id: iclr-2026-GNo1qMqgPD`, and the ICLR record keeps the paper in scope.
+
+**Batch A** (model `claude-opus-5-5`, cleanup and QC per paper):
+
+| Paper | Outcome | QC catches |
+|-------|---------|------------|
+| `2604.22542` | Rejected at ingest (user) | Text-only graded-vocabulary LLM dialogue for English learners; no speech anywhere; filter `task: [TTS, SCA]` unsupported. Logged in `raw/pipeline_log.md`. DrVoice (`iclr-2026-h5AiVx0Aiv`) added to the end of the list. |
+| `2604.21164` MAGIC-TTS | Ingested | Clean. Warning callout (test utterances drawn from the fine-tuning subset) verified against §5. |
+| `iclr-2026-0oXyMbPMtP` MambaVoiceCloning | Ingested | Two recorded table discrepancies verified real (RTF 0.0169 vs 0.0177 on otherwise identical rows; pitch error on three scales); added that Table 8 is long-form. |
+| `iclr-2026-17DNmdQ9aU` StableToken | Ingested | `TTS` added to task (Qwen2.5-3B TTS on Seed-TTS, Table 3); no `subjective-evaluation` (MOS protocol unreported). |
+| `iclr-2026-5o0ZvYzh6B` UniSS | Ingested | `related_papers` unquoted (`2503.01710` parsed as float); quoted. Retagged to the S2ST precedent: `task: [TTS]` (was `[TTS, VC]`), `voice-conversion` replaced by `multilingual-tts` (en-zh bilingual model; LiveInterpret, Timbre-Aware S2ST, MoVE precedent). Agent misreported LiveInterpret as `[TTS, VC]`. |
+
+Q2: 56 ingested, 172 accepted, 59 rejected. Corpus: 945 pages. Template em dashes (Wiki Connections
+separator, Field Significance `{level} — ` opening) clarified as non-defects in the protocol.
+
+**Batch B:**
+
+| Paper | Outcome | QC catches |
+|-------|---------|------------|
+| `iclr-2026-CcmDDh070o` ParaS2S | Ingested | Clean; human raters confirmed (Table 7). Review flag: field_significance moderate vs high (queue). |
+| `iclr-2026-F7GmbfyVg9` FlexiVoice | Ingested | Clean. `disentanglement` kept (PPT stage S2 explicitly trained to separate timbre and style, ablated in Table 5). The SKILL.md 3-6 slug cap pushed out `subjective-evaluation` and `emotion-synthesis`, both of which qualify (queue). |
+| `iclr-2026-FihSkzyxdv` VibeVoice (ICLR) | Ingested separately (user, after review) | Initially marked a duplicate of the ingested tech report `2508.19205` and used to enrich that page. Reverted the same day: the tech report is integrated (Q3 2025) and integration selects by quarter, so enrichment would never reach the claim YAMLs. Per the user the two are separate works (tech report vs peer-reviewed paper), each paged in its own quarter and cross-linked; new exception recorded in `docs/schemas/metadata.md`. `2508.19205` left as committed. |
+| `iclr-2026-GNo1qMqgPD` VoxPrivacy | Ingested | Emilia's canonical `2407.05361` added to `related_papers` (agent had dropped it because the full-version record `2501.15907` is rejected). |
+
+Q2: 59 ingested, 168 accepted, 60 rejected. Corpus: 948 pages. Batch C starts with SpeechJudge (`iclr-2026-I9ED9VWZq6`).
+
+**Batch C:**
+
+| Paper | Outcome | QC catches |
+|-------|---------|------------|
+| `iclr-2026-I9ED9VWZq6` SpeechJudge | Ingested | INTP Wiki Connections bullet carried an extra parenthetical before the separator; fixed. No `[!warning]` because of the two-callout limit (`writing-style.md`), limitation kept as prose. Surfaced a new full-page duplicate pair (DualCodec), added to `BACKLOG.md`. |
+| `iclr-2026-JbLmIoWwDC` Gogo | Ingested | `TTS` added to task (GogoSpeech trained and evaluated). `rlhf-speech` kept for GRPO with automatic rewards on a codec component (DMOSpeech 2 / F5R-TTS precedent). TFC arXiv citation mapped to `interspeech-2025-1289` (same paper, verified). |
+| `iclr-2026-MFrJ3NzA5H` CALM | Ingested | Clean; `[TTS, SCA]` matches the AudioLM page. Review flag: field_significance high vs moderate (queue). |
+| `iclr-2026-Pv5l6cvfno` Human or Machine? | Ingested | Clean. Warning (QC experts saw true human/machine labels; revisions lift judge accuracy 0.8791 to 0.9605) verified against §D.3 and Table 14. CUHK-Shenzhen affiliation confirmed from email domains. |
+
+Before batch C, every remaining candidate was screened by author overlap against ingested records (VibeVoice lesson): only same-group, different-system matches. Q2: 63 ingested, 164 accepted, 60 rejected. Corpus: 952 pages.
+
+**Batch D:**
+
+| Paper | Outcome | QC catches |
+|-------|---------|------------|
+| `iclr-2026-Tf4Lfw85lS` TVTSyn | Ingested | Clean. Page notes the anonymization gain claimed in the abstract does not hold against the semi-informed attacker (EER 14.57 vs DarkStream 20.83); verified against Table 3. `GAN, hybrid` matches DarkStream. |
+| `iclr-2026-U4GXPqm3Va` ComVo | Ingested | Matrix written as `$[[W_r, -W_i],...]$` would render as a broken wikilink in Quartz; rewritten as `bmatrix` (no other page affected). Tags match the HiFi-GAN and Vocos pages. |
+| `iclr-2026-eLsEjjFODE` SpeechOp | Ingested | Clean. Enhancement and separation have no vocabulary term, so `task: [TTS]` only. Editing scores read from the table image match the parsed row. |
+| `iclr-2026-h5AiVx0Aiv` DrVoice | Ingested | Clean. Review flag: field_significance moderate vs high (queue). Agent misread the legacy dedup-pointer convention as an inconsistency (see queue). |
+
+Q2: 67 ingested, 160 accepted, 60 rejected. Corpus: 956 pages.
+
+**VibeVoice follow-up (user):** enrichment of `2508.19205` reverted; `iclr-2026-FihSkzyxdv` ingested
+as its own Q2 page (tagged independently: no `spoken-language-model` or `disentanglement`; adds
+`subjective-evaluation` and `evaluation-metrics`; records the paper's own 90 vs 30 minute
+inconsistency, verified against the abstract, §4.1 and the OpenReview abstract). Both pages
+cross-linked; `2508.19205` otherwise unchanged (its 4 legacy bare-wikilink warnings and unquoted
+`related_papers` left as committed). Q2: 68 ingested, 160 accepted, 59 rejected. Corpus: 957 pages.
+
 ---
 
 ## Manual Verification Queue
@@ -968,6 +876,13 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2409.00750` / `iclr-2025-ExuBFYtCQU` | dedup pointer (pre-existing) | Resolved 2026-10-20: not a defect. Legacy dedup-pointer convention: the proceedings record is `ingested` with `wiki_page_id` set to the arXiv page, and the arXiv record carries `is_duplicate` plus `canonical_id` back to it. Eight records follow it consistently (MaskGCT, MoonCast, LLaMA-Omni, VITA-1.5, ...); the page is always the `wiki_page_id` target. Documented in `docs/ingest-protocol.md`. |
+| `iclr-2026-CcmDDh070o` | field_significance moderate/high boundary | Resolved 2026-10-20 (user): kept at moderate; benchmark-plus-alignment papers stay moderate until uptake is visible. |
+| `iclr-2026-F7GmbfyVg9` | related_concepts cap | Resolved 2026-10-20 (user): hard 3-6 cap kept; swapped `flow-matching` (frozen, inherited decoder; only the LLM is trained) for `subjective-evaluation` (expert-listener Q-MOS/CMOS, App. A.9). `flow-matching` stays in `architecture`. `emotion-synthesis` not added. |
+| `2508.19205` | related_concepts | Resolved 2026-10-20 (user): page left as committed (enrichment reverted); the tag recommendation was not applied. The ICLR page is tagged independently under current rules. |
+| `iclr-2026-MFrJ3NzA5H` | field_significance high/moderate boundary | Resolved 2026-10-20 (user): downgraded to moderate (continuous AR TTS predates it; speaker similarity lags; the contribution is the domain-general comparison and recipe). `[!tip]` callout converted to prose. |
+| `iclr-2026-h5AiVx0Aiv` | field_significance moderate/high boundary | Resolved 2026-10-20 (user): kept at moderate (builds on SLAM-Omni grouping and a Moshi-style parallel design; LLM-judge evaluation). |
+| corpus-wide | `[!note]` callouts | 59 other pages carry the disallowed legacy `[!note]` callout (converted on `2508.19205` only). Candidate for a scripted cleanup. |
 | `2026.iwsds-1.16` | field_significance moderate/low boundary | Resolved 2026-09-27: downgraded to low (narrow 20-participant single-model pilot, no comparison group). |
 | `2026.propor-1.81` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at moderate (user). |
 | `2604.06327` | field_significance low/moderate boundary | Resolved 2026-10-17: kept at low (user); noted as a useful source for objective-metric evidence (`evaluation-metrics`). |
@@ -1014,36 +929,5 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Commit / Push Workflow
 
-Not every batch needs a commit — batch within a session freely, commit at natural stopping
-points or when explicitly asked. When committing:
-
-1. Content repo: stage new paper pages + assets + `index.md`/`log.md`/`papers/index.md`, commit, push.
-2. Infra repo: stage `raw/metadata/*.json` status updates + this session log (and `BACKLOG.md` if
-   its Q2 progress line has gone stale), commit; then bump the `wiki/` submodule pointer to the
-   new content commit (checkout `main` in `wiki/`, `git pull`, commit the pointer bump in infra), push.
-3. Site repo: bump the `content` submodule pointer, commit, push — **ask before this step**
-   (though a durable standing instruction to always bump satisfies this too — check for one
-   before asking), it triggers a live deploy. Push order is always content → infra → site, since
-   site's submodule reference only resolves once content is on GitHub.
-
-Parallel-worktree note: if ingest and integrate/render streams are running concurrently (see
-[[project_parallel_worktrees]]), check `git log HEAD..origin/main` and `git status` on the trunk
-checkout before merging `work/ingest` into `main` — another stream may have already landed
-unpushed commits directly on `main`. Expect a single mechanical `log.md` conflict if both streams
-appended to the same date section; resolve by keeping both entry blocks. After merging and
-pushing, fast-forward the `work/ingest` worktree branch back to `main` in both repos. Also note:
-a worktree's `wiki/` submodule can appear as an empty, uninitialized directory even when
-`.gitmodules` lists it — run `git submodule update --init wiki` before trying to check it out or
-bump it, or `git remote -v` inside it will misleadingly report the parent repo's remote.
-
----
-
-Always edit and commit from the **standalone content repo**
-(`/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content`), never
-via `infra/wiki/` or `site/content/` submodule paths directly — both are detached-HEAD checkouts
-of specific commits, and committing there orphans the work. See [[project_repo_structure]] for
-the three-repo layout and [[feedback_site_submodule_bump]] for the submodule-bump specifics
-(use `git branch` not `git submodule status` to verify branch state). Commit messages: no
-`Co-Authored-By` trailers, no session-number prefix — describe what changed, not when (see
-[[feedback_commit_messages]]). Wiki prose: avoid em dashes, use comma/colon/parentheses instead
-(see [[feedback_em_dashes]]).
+See `docs/ingest-protocol.md` (section 9, Session close) for the commit, push, merge and
+site-bump sequence and the worktree notes.
