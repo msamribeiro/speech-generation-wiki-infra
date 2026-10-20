@@ -113,7 +113,15 @@ Tell the user which paper is running. Do not start the next paper until section 
 
 ## 5. Per paper: main-session cleanup (before the next paper)
 
-All of these target the content worktree.
+All of these target the content worktree. `scripts/ingest/cleanup.py` does steps 1 to 4 in one
+idempotent run, taking provenance from the page's `generation` block (it refuses a page without a
+version-2 block, which covers step 5):
+
+```bash
+.venv/bin/python scripts/ingest/cleanup.py {id} --org "Org A / Org B" --wiki-dir "$WIKI"   # --dry-run to preview
+```
+
+What it does, and what to check in its output:
 
 1. **Index row.** Add the row to `papers/index.md`:
    `| [[{id}]] | [{title[:55]}](papers/{id}.md) | {org} | {venue} | {year} | {tasks} | {architectures} | {date} |`
@@ -135,13 +143,17 @@ All of these target the content worktree.
 
 ## 6. Per paper: QC
 
-Run the scoped health check against the content worktree:
+Run the scoped health check plus the scripted checks below against the content worktree:
 
 ```bash
-.venv/bin/python scripts/health_check.py --module ingest --id {id} --wiki-dir "$WIKI" -v
+.venv/bin/python scripts/ingest/qc.py {id} --wiki-dir "$WIKI"
 ```
 
-Then verify the actual file yourself. Treat every statement in the agent's closing summary
+It prints the health check result, a frontmatter summary to read, and a list per check; an
+empty list means nothing was found. It covers quoting, the concept count, callouts, em dashes,
+"SCA" in prose, bare links, stray `[[`, citation integrity, adoption language, leaked instructions,
+"inconsistency" claims and the index row and counts. Then verify the actual file yourself: the
+judgment items below (tag scope, significance, numbers against the source) are not scriptable. Treat every statement in the agent's closing summary
 ("clean", "not tagged", "count updated") as a hypothesis, including its defence of a format as
 intentional. Checks the health check does not (fully) cover:
 
