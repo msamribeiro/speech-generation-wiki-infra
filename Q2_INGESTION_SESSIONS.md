@@ -106,7 +106,8 @@ The Q2 sweep is under way. As of 2026-10-20 (session close), by canonical `publi
 (17 candidates, 2026-04-24 to 04-27: 16 ingested, `2604.22542` rejected as text-only) is done; see
 the 2026-10-20 Session Log. Corpus: 957 pages. The procedure now lives in `docs/ingest-protocol.md`
 (read it first; it is canonical over this file's Methodology). Manual Verification Queue: one open,
-non-blocking item (59 legacy `[!note]` callouts, candidate for a scripted cleanup).
+non-blocking item (59 legacy `[!note]` callouts, candidate for a scripted cleanup). Content is at `6c95028`
+(pushed); infra `3a5a13f`; the site is bumped (`8b651bb`).
 
 To resume:
 
