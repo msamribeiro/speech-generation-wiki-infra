@@ -52,10 +52,10 @@
     "TTS"
   ],
   "relevance_score": 0.92,
-  "relevance_note": "Proposes a true speech-to-speech LLM that directly understands and generates speech without text intermediates, directly advancing end-to-end SCA and speech generation.",
-  "status": "accepted",
+  "relevance_note": "Proposes a true speech-to-speech LLM that directly understands and generates speech without text intermediates, directly advancing end-to-end SCA and speech generation. Duplicate: ICLR 2026 version (title without the MOSS-Speech prefix) of arXiv 2510.00499 (MOSS-Speech), which was ingested first and stays canonical.",
+  "status": "rejected",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2510.00499"
 }

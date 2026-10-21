@@ -42,7 +42,7 @@
   "version_date": "2026-02-06",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-21",
   "url": "https://openreview.net/forum?id=llMfmDtWka",
   "pdf_url": "https://openreview.net/pdf?id=llMfmDtWka",
   "pdf_path": "raw/papers/iclr-2026-llMfmDtWka.pdf",
@@ -54,9 +54,21 @@
   ],
   "relevance_score": 0.92,
   "relevance_note": "SiTok proposes a diffusion autoencoder speech tokenizer that jointly learns semantic and acoustic representations, scaling to lower bit and token rates — core codec/tokenizer contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-21",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "afa19d3"
+    }
+  ]
 }

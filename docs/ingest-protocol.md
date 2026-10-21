@@ -70,6 +70,9 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   - **Scope doubt** (ASR/translation/diarization-only, non-speech audio, zero metrics): read the
     paper and apply the precedent chain in the session doc; surface the matching precedent
     explicitly instead of re-deciding from scratch.
+  - **Accepted in human triage:** a record whose box is ticked `accept` in `raw/review_queue.md` is
+    in scope by the user's decision even when its filter note calls it tangential. Tell the agent
+    not to stop on scope; tagging and significance are still judged normally.
 - Number the list. Show it to the user and wait for confirmation.
 
 ## 3. Cadence
@@ -197,14 +200,24 @@ intentional. Checks the health check does not (fully) cover:
 - `related_concepts` includes the concept slug for every `task` tag (`singing`, `VC`, `codec`,
   and so on) **and** every architecture-derived tag, in both directions. A
   `related_concepts_complete` warning is a fix-now item; it does not cover architecture tags.
-- `related_concepts` is a hard 3-6 slugs (user, 2026-10-20). When more qualify, drop slugs that
-  describe frozen or inherited components first (an architecture tag can stay in `architecture`
-  without its slug), and keep evidence concepts such as `subjective-evaluation`.
+- `related_concepts`: at most 6 slugs (hard cap, user 2026-10-20); 3-6 is the target, but scope
+  wins over the minimum (user, 2026-10-21): never pad with an out-of-scope slug, and 1-2 slugs are
+  fine when that is all that qualifies (common for benchmarks and narrow system papers). When more
+  than 6 qualify, drop slugs that describe frozen or inherited components first (an architecture
+  tag can stay in `architecture` without its slug), and keep evidence concepts such as
+  `subjective-evaluation`.
 - Concept-tag scope: a tag is legitimate only if the paper's own method performs or is evaluated
   on the concept, not merely discusses, contrasts or defers to it. Check the concept's scope note
   and the paper's Limitations section.
 - Rules to apply specifically:
-  - `VC` task: dedicated VC system plus VC-specific metrics; zero metrics fails the bar.
+  - `VC` task: dedicated VC system plus VC-specific metrics; zero metrics fails the bar. An
+    off-the-shelf VC system qualifies when the converted speech itself is the object of measurement
+    (acoustic before/after analysis, listeners judging converted audio), not when VC is only a
+    preprocessing step (user, 2026-10-21, `2026.dialres-1.18`).
+  - Evaluation papers that only score existing systems do not earn those systems' concepts
+    (TTS-PRISM, SpeakerSleuth, EchoMind `emotion-synthesis`), except `spoken-language-model` for
+    benchmarks of speech LMs. A paper that evaluates how to measure a concept does earn it (The False
+    Resonance `2604.26347`, `emotion-synthesis`; user, 2026-10-21).
   - `spoken-language-model`: an external speech signal consumed by an adapted LLM; benchmarks that
     feed real audio into existing speech LMs and measure them also qualify. AR TTS-LMs consuming
     their own output do not.
@@ -291,6 +304,10 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Agent self-report contradicts file | Narrated decision differs from the written frontmatter | Whole of step 6 |
 | Batch undercount or list drift | 3 agents launched for a batch of 4, or wrong `#` range | Section 3 |
 | Cleanup deferred to batch end | Slipped on 2026-10-18; led to unquoted dates and a skipped log | Section 5 |
+| Padding `related_concepts` | Out-of-scope slug added to reach 3 (2026-10-21, before the scope-wins rule) | Step 6 |
+| Org mismatch page vs index | `cleanup.py --org` does not sync the page; strings drift (2026-10-21, three of four papers) | Step 5.1 |
+| One-sided critique of author framing | Agent cites only the comparisons that go against the authors (2026-10-21) | Step 6; ask for the full comparison in the prompt |
+| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled | Step 6; check the table PNG |
 
 ## Known discrepancies to resolve
 

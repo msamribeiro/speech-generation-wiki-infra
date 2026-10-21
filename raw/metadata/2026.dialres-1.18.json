@@ -22,7 +22,7 @@
   "published_date": "2026-05-01",
   "preprint_date": null,
   "conference_date": "2026-05-01",
-  "ingested_date": null,
+  "ingested_date": "2026-10-21",
   "url": "https://aclanthology.org/2026.dialres-1.18",
   "pdf_url": "https://aclanthology.org/2026.dialres-1.18.pdf",
   "pdf_path": "raw/papers/2026.dialres-1.18.pdf",
@@ -33,9 +33,21 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "Uses off-the-shelf voice conversion (RVC) as a speaker-normalization tool to study dialect classification perception; VC is a black-box instrument for a perception study, not the paper's own method contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-21",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "afa19d3"
+    }
+  ]
 }

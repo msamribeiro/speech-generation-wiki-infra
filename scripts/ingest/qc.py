@@ -5,7 +5,7 @@ Per-paper QC after ingest cleanup (docs/ingest-protocol.md section 6).
 Runs the scoped ingest health check, then the checks it does not cover:
   - frontmatter summary (task / architecture / related_concepts / significance) for a manual read
   - YAML quoting: id, dates and related_papers must be strings (unquoted IDs parse as floats)
-  - related_concepts outside the hard 3-6 range
+  - related_concepts above the hard cap of 6 (or empty); 1-2 is allowed when scope limits it
   - callouts: at most two, only abstract/important/tip/warning, never note
   - em dashes outside template separators; "SCA" in prose; bare paper wikilinks in prose
   - `[[` outside real wikilinks (Quartz parses it even inside math)
@@ -84,7 +84,7 @@ def main() -> int:
 
     concepts = re.search(r"^related_concepts:\s*\[(.*)\]", fm_text, re.M)
     n_concepts = len([c for c in concepts.group(1).split(",") if c.strip()]) if concepts else 0
-    section("related_concepts count", [] if 3 <= n_concepts <= 6 else [f"{n_concepts} (hard range is 3-6)"])
+    section("related_concepts count", [] if 1 <= n_concepts <= 6 else [f"{n_concepts} (cap is 6; empty only on the 2604.11803 precedent)"])
 
     callouts = re.findall(r"^> \[!(\w+)\]", body, re.M)
     problems = [f"disallowed [!{c}]" for c in callouts if c not in ALLOWED_CALLOUTS]

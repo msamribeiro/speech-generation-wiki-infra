@@ -22,7 +22,7 @@
   "version_date": "2026-03-02",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-21",
   "url": "https://openreview.net/forum?id=uGai5lYHlV",
   "pdf_url": "https://openreview.net/pdf?id=uGai5lYHlV",
   "pdf_path": "raw/papers/iclr-2026-uGai5lYHlV.pdf",
@@ -33,9 +33,21 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "TTSDS2 introduces a validated objective TTS evaluation benchmark designed for modern systems that approach human-level quality — core evaluation methodology contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-21",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "afa19d3"
+    }
+  ]
 }

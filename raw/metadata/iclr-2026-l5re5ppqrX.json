@@ -28,7 +28,7 @@
   "version_date": "2026-03-05",
   "version_estimated": true,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-21",
   "url": "https://openreview.net/forum?id=l5re5ppqrX",
   "pdf_url": "https://openreview.net/pdf?id=l5re5ppqrX",
   "pdf_path": "raw/papers/iclr-2026-l5re5ppqrX.pdf",
@@ -40,9 +40,21 @@
   ],
   "relevance_score": 0.65,
   "relevance_note": "EchoMind is a multi-level benchmark for empathetic SLMs evaluating perception and response generation; primarily evaluates SLM understanding with speech generation as a secondary component.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-21",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "afa19d3"
+    }
+  ]
 }

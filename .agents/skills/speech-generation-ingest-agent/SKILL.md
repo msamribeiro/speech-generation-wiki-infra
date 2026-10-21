@@ -200,7 +200,7 @@ metrics:
 code_available: true | false | null
 demo_available: true | false | null
 url: "{original paper URL — arXiv abstract page or proceedings URL, from raw/metadata/{ID}.json}"
-related_concepts: [{3-6 slugs from the allowed list below}]
+related_concepts: [{up to 6 slugs from the allowed list below; 3-6 typical, never pad}]
 related_papers: [{in-corpus paper IDs cited by this paper}]
 field_significance:
   level: "{low | moderate | high | foundational}"
@@ -301,7 +301,7 @@ Do not include adoption claims such as "widely adopted" or "standard" unless thi
 Rules:
 - Bullet points only. Use `|` only inside concept wikilink aliases. Do not use dots `·`, inline comma-separated wikilinks, or bold section headers.
 - Every [[wikilink]] must have a descriptive clause after the em dash.
-- Concept slugs come from `related_concepts` (3–6 total). Display each concept using its human-readable title from the concept title map below, not the raw slug.
+- Concept slugs come from `related_concepts` (at most 6). Display each concept using its human-readable title from the concept title map below, not the raw slug.
 - Paper IDs come from in-corpus references identified in step 2. If more than 8 in-corpus references exist, include only the most important 3–8 references.
 - Prioritize in-corpus references that this paper directly builds on, extends, compares against, uses as a baseline, uses as a dataset/metric/tool, or explicitly challenges.
 - Omit incidental background citations from Wiki Connections; the references list already preserves them.
@@ -512,7 +512,8 @@ Choose based on what the paper's *primary contribution* is — not what it incid
 
 Common errors to avoid: do not assign `architectural-novelty` to papers that use existing architectures (LLM backbones, standard Transformers) in a new context — those are `engineering-integration`. Do not assign `empirical-benchmark` to surveys — those are `conceptual-contribution`. A paper can have multiple types, but pick only those that represent genuine contributions.
 
-### `related_concepts` — allowed slugs (choose 3–6 per paper)
+### `related_concepts` — allowed slugs (at most 6 per paper)
+3–6 is typical, but concept scope wins over the minimum: never add an out-of-scope slug to reach 3; 1–2 slugs are correct when that is all that genuinely applies. When more than 6 qualify, drop slugs for frozen or inherited components first.
 Write as bracket-unquoted YAML: `related_concepts: [flow-matching, zero-shot-tts]`. Never quote
 the slugs and never use a YAML block list.
 

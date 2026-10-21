@@ -21,7 +21,7 @@
   "published_date": "2026-04-27",
   "preprint_date": null,
   "conference_date": "2026-04-27",
-  "ingested_date": null,
+  "ingested_date": "2026-10-21",
   "url": "https://openreview.net/forum?id=wbttgzp7MT",
   "pdf_url": "https://openreview.net/pdf?id=wbttgzp7MT",
   "pdf_path": "raw/papers/iclr-2026-wbttgzp7MT.pdf",
@@ -30,9 +30,21 @@
   "task": [],
   "relevance_score": 0.45,
   "relevance_note": "EmotionThinker applies RL to speech emotion reasoning/recognition with prosody awareness; primarily a speech understanding/SER paper with only incidental connection to synthesis.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-21",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "afa19d3"
+    }
+  ]
 }

@@ -101,30 +101,38 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-20 (session close), by canonical `published_date`:
-**68 ingested + 160 `accepted` remaining** (all downloaded and parsed), 59 rejected. The third round
-(17 candidates, 2026-04-24 to 04-27: 16 ingested, `2604.22542` rejected as text-only) is done; see
-the 2026-10-20 Session Log. Corpus: 957 pages. The procedure now lives in `docs/ingest-protocol.md`
-(read it first; it is canonical over this file's Methodology). Manual Verification Queue: one open,
-non-blocking item (59 legacy `[!note]` callouts, candidate for a scripted cleanup). Content is at `6c95028`
-(pushed); infra `3a5a13f`; the site is bumped (`8b651bb`).
+The Q2 sweep is under way. As of 2026-10-21 (session close), by canonical `published_date`:
+**80 ingested + 147 `accepted` remaining** (55 May, 92 June; all downloaded and parsed), 60
+rejected. April is finished. The fourth round reached Batch 3 of 4: 12 of 16 pre-selected papers
+ingested (2026-04-27 to 05-01), plus the MOSS-Speech ICLR duplicate (`iclr-2026-zjaV5zmlkl`)
+rejected; see the 2026-10-21 Session Log. Corpus: 969 pages. The procedure is
+`docs/ingest-protocol.md` (canonical over this file's Methodology). Manual Verification Queue: only
+the non-blocking legacy `[!note]` item is open.
+
+Rules changed this session (all in `docs/ingest-protocol.md`): `related_concepts` is capped at 6
+but scope wins over the 3-slug minimum (never pad; 1-2 slugs are fine); evaluation papers do not
+earn concepts of systems they only score (except `spoken-language-model`), but a paper about how to
+measure a concept does; an off-the-shelf VC system earns `VC` when the converted speech is measured.
 
 To resume:
 
-1. Pre-select the next 16 by `published_date`. Next candidates: the remaining ICLR 2026 records
-   dated 04-27 (`iclr-2026-l5re5ppqrX` EchoMind, `iclr-2026-llMfmDtWka`, `iclr-2026-uGai5lYHlV`
-   TTSDS2, `iclr-2026-wbttgzp7MT` EmotionThinker, `iclr-2026-zjaV5zmlkl`), then arXiv from 04-28
-   (`2604.22821`, `2604.25441`, `2604.25476`, ...). **`iclr-2026-zjaV5zmlkl` has a 0.91 title match
-   with `2510.00499`: run the dedup check before selecting it.**
-2. Screen every candidate's authors against ingested records (protocol section 2): retitled later
-   versions slip past title and abstract matching. A tech report plus a later peer-reviewed paper
-   are separate pages, cross-linked (VibeVoice precedent, `docs/schemas/metadata.md`).
-3. Follow `docs/ingest-protocol.md` for the per-paper loop. Q2-specific reminders: point agents
-   at the content-ingest worktree
-   (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`),
-   and fill the index Org by hand (`organization` is null on nearly every 2026 record).
-4. Conference-accepted arXiv papers (ICASSP, Speech Prosody, LREC) keep the arXiv date per the
-   user.
+1. Finish the pre-selected round with Batch 4 (#13-#16, LREC 2026, dated 05-01):
+   `2026.lrec-1.184` Probing Discrete Speech Tokens of SLMs, `2026.lrec-1.375` TTSVowelViz (tool
+   paper; check the zero-metric precedent), `2026.lrec-1.437` Prominence/Boundary Prediction from
+   Text (possibly text-only; compare the `2604.22542` rejection), `2026.lrec-1.465` IMaSC Malayalam
+   corpus. Then pre-select the next 16 by `published_date` from the remaining 05-01 LREC records
+   (`2026.lrec-1.48`, `2026.lrec-1.771`, `2026.lrec-1.859`, ...).
+2. Screen every candidate's authors and titles against the whole corpus (protocol section 2).
+   Several ICLR records had arXiv twins already flagged as duplicates; check for
+   `is_duplicate`/`canonical_id` on both records.
+3. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
+   worktree
+   (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`)
+   and fill the index Org by hand. `cleanup.py --org` does not sync the Org back to the page: make
+   the page string match (concise institution names, matching existing index rows).
+4. Papers accepted by the user in review triage (`raw/review_queue.md`) are in scope even when the
+   filter note calls them tangential (EmotionThinker, `2026.dialres-1.18`); tell the agent so
+   instead of letting it stop on scope.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -135,7 +143,7 @@ downloads are behind the same gate, so an OpenReview-only paper needs its PDF sa
 posted on 2026-09-21; re-save its pages later and run the same way.
 
 **Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
-recently requested.
+recently requested (this session: one at a time, summary and go-ahead per batch of 4).
 
 ---
 
@@ -870,6 +878,78 @@ cross-linked; `2508.19205` otherwise unchanged (its 4 legacy bare-wikilink warni
 
 ---
 
+### Session 2026-10-21: fourth round of 16 pre-selected
+
+Pre-selection (by `published_date`, 04-27 to 05-01): 16 candidates in four batches. Dedup screen:
+`iclr-2026-zjaV5zmlkl` is the ICLR version of ingested MOSS-Speech `2510.00499` (same abstract,
+authors and headline numbers; the camera-ready adds a double-blind human evaluation, App. H, and a
+split-layer ablation). Marked `is_duplicate`, `rejected`, `canonical_id: 2510.00499`; italic
+"Published version" note added to the MOSS-Speech page, which notes the "no human listening test"
+limitation applies to the preprint only (user, later-version rule). The ICLR twins of #1-#3 already
+carried duplicate flags on their arXiv records; `2601.15668` (EmotionThinker arXiv) now does too.
+
+**Batch 1** (#1-#4, IDs checked against the list): `iclr-2026-l5re5ppqrX` EchoMind,
+`iclr-2026-llMfmDtWka` SiTok, `iclr-2026-uGai5lYHlV` TTSDS2, `iclr-2026-wbttgzp7MT` EmotionThinker.
+- QC catches: Org strings aligned between page and index on EchoMind (index convention), SiTok
+  (page had only Meta; PDF lists CUHK-Shenzhen too) and EmotionThinker. No structural defects; all
+  four pass the health check. Metrics spot-checked against source tables on all four. EchoMind's
+  UTMOS (text) vs "DNMOS" (Table 4 header) mismatch correctly left off the page.
+- EmotionThinker is understanding-only (SER speech LLM); it was accepted by the user in review
+  triage, so it was ingested without re-deciding scope.
+- Flags added to the Manual Verification Queue: EchoMind `emotion-synthesis` scope; SiTok
+  high/moderate; EmotionThinker task term. TTSDS2 moderate/high resolved by the ParaS2S precedent.
+- Q2: 72 ingested, 155 accepted, 60 rejected. Corpus: 961 pages.
+
+---
+
+**Batch 2** (#5-#8, IDs checked against the list): `2604.22821` Audio2Tool, `2604.25441` Praxy Voice,
+`2604.25476` PSP, `2604.19330` Chain-of-Details.
+- Audio2Tool: in scope on the AURA / VoiceAgentBench precedent. QC caught an overstatement: the page
+  said §5.3's "Qwen-3-Omni-30B best on Tiers 5-7" holds for Tool Accuracy, but the cascade wins Tool
+  Accuracy on Tier 7 (56.2 vs 54.6, checked on the table image); narrowed to Tiers 5 and 6.
+- Praxy Voice: the page's Table II note (Config B values equal the Sarvam-Te reference row despite a
+  Cartesia-Te caption) verified on the table PNGs and kept. PSP linked from the page once written;
+  the cited "~46%" native-Telugu noise floor now notes PSP's own table gives 0.43.
+- PSP: `low` and two concepts, both flagged. Companion pages cross-linked.
+- Chain-of-Details: agent shipped one concept; `autoregressive-codec-tts` added in QC (masked
+  codec-token generator, MaskGCT/SoundStorm precedent, compared directly with MaskGCT).
+- New recurring issue: the hard 3-6 `related_concepts` minimum vs strict scope. The first agent
+  padded with an out-of-scope slug; later prompts said not to pad, and three of four pages came in
+  at two. Queued for a rule decision.
+- Q2: 76 ingested, 151 accepted, 60 rejected. Corpus: 965 pages.
+
+---
+
+**Batch 3** (#9-#12, IDs checked against the list): `2604.26281` DiffAnon, `2604.26347` The False
+Resonance, `2604.27393` MiniCPM-o 4.5, `2026.dialres-1.18` Speaker Normalization via VC.
+- DiffAnon: the page said the authors' "competitive" semi-informed privacy is unsupported, citing
+  only the systems that beat it. Checked on the Table 1 image and rebalanced: DiffAnon (14.5-22.8
+  test EER) is above B1, B2, B6 and below B3-B5 and T8-T10. Org shortened to the index convention
+  (Johns Hopkins University).
+- The False Resonance: Table 1 distractor values checked on the image; two retitled references
+  (EmoPro, LibriQuote) confirmed as the same arXiv IDs. `emotion-synthesis` joins the EchoMind item.
+- MiniCPM-o 4.5: interrupted by a session limit after copying two figures and before the page; stray
+  assets removed, clean retry. Verified that the headline SeedTTS numbers are the non-duplex mode
+  (Table 10: TAIL 1.04 / 3.93 vs fixed 0.86 / 2.38).
+- Speaker Normalization via VC (accepted by the user in triage): the page's five departures from the
+  authors' framing (large effect at d = 0.65, "double" dissociation, train-time vs test-time
+  comparison, 55.6% size-matched control, F1 shift) checked against the text. Org quoted.
+- Recurring: agents now explicitly decline to pad `related_concepts`; one more two-slug page.
+  Agents also produce well-founded but one-sided critiques of author framing; the prompt now asks for
+  the full comparison.
+- Q2: 80 ingested, 147 accepted, 60 rejected. Corpus: 969 pages.
+
+---
+
+**Verification queue cleared** (same session, after Batch 3): user accepted all seven
+recommendations (minimum-vs-scope rule; EchoMind drops `emotion-synthesis`, The False Resonance
+keeps it; SiTok to moderate; PSP stays low; MiniCPM-o stays moderate; EmotionThinker keeps `[SCA]`
+and drops `evaluation-metrics`; `2026.dialres-1.18` keeps `VC`). Pages, protocol, ingest SKILL.md,
+vocabulary and `qc.py` updated; agent compatibility check passes. Session closed after Batch 3;
+Batch 4 carries over.
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these
@@ -877,6 +957,14 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2026.dialres-1.18` | task (`VC` close call) | Resolved 2026-10-21 (user): `task: [VC]` and `voice-conversion` kept; clarification added to `docs/schemas/vocabulary.md` and the protocol (off-the-shelf VC counts when the converted speech is measured, not when VC is only preprocessing). |
+| `2604.27393` | field_significance moderate/high boundary | Resolved 2026-10-21 (user): kept at moderate. |
+| `2604.25476` | field_significance low/moderate boundary | Resolved 2026-10-21 (user): kept at low. |
+| `2604.22821` | related_concepts minimum vs scope | Resolved 2026-10-21 (user): scope wins over the minimum; cap of 6 stays hard, 1-2 slugs allowed when that is all that qualifies, never pad. Audio2Tool's padded `speech-to-speech` dropped (cascade comparison kept in the `spoken-language-model` bullet). Praxy Voice, PSP, Chain-of-Details and `2026.dialres-1.18` stand at two. Rule updated in `docs/ingest-protocol.md`, the ingest SKILL.md and `scripts/ingest/qc.py`. |
+| `iclr-2026-wbttgzp7MT` | task (vocabulary gap: speech understanding) | Resolved 2026-10-21 (user): `task: [SCA]` kept on the `2508.07273` precedent; gap logged in `BACKLOG.md` beside the no-text-input item; `evaluation-metrics` dropped (two slugs remain). |
+| `iclr-2026-uGai5lYHlV` | field_significance moderate/high boundary | Resolved 2026-10-21 by precedent (`iclr-2026-CcmDDh070o`: benchmark papers stay moderate until uptake is visible). TTSDS2 kept at moderate; revisit only if the user overrides. |
+| `iclr-2026-llMfmDtWka` | field_significance high/moderate boundary | Resolved 2026-10-21 (user): downgraded to moderate (Continuous Audio Language Models precedent); `[!tip]` converted to prose naming the precedents. |
+| `iclr-2026-l5re5ppqrX` | concept scope (`emotion-synthesis`) | Resolved 2026-10-21 (user): EchoMind drops `emotion-synthesis` (finding folded into the `evaluation-metrics` bullet); The False Resonance keeps it (evaluates how to measure emotion synthesis). Rule added to `docs/ingest-protocol.md`. |
 | `2409.00750` / `iclr-2025-ExuBFYtCQU` | dedup pointer (pre-existing) | Resolved 2026-10-20: not a defect. Legacy dedup-pointer convention: the proceedings record is `ingested` with `wiki_page_id` set to the arXiv page, and the arXiv record carries `is_duplicate` plus `canonical_id` back to it. Eight records follow it consistently (MaskGCT, MoonCast, LLaMA-Omni, VITA-1.5, ...); the page is always the `wiki_page_id` target. Documented in `docs/ingest-protocol.md`. |
 | `iclr-2026-CcmDDh070o` | field_significance moderate/high boundary | Resolved 2026-10-20 (user): kept at moderate; benchmark-plus-alignment papers stay moderate until uptake is visible. |
 | `iclr-2026-F7GmbfyVg9` | related_concepts cap | Resolved 2026-10-20 (user): hard 3-6 cap kept; swapped `flow-matching` (frozen, inherited decoder; only the LLM is trained) for `subjective-evaluation` (expert-listener Q-MOS/CMOS, App. A.9). `flow-matching` stays in `architecture`. `emotion-synthesis` not added. |
@@ -909,20 +997,18 @@ after the session batch is complete — check the paper page and resolve each fl
 
 ## Progress
 
-Track with the same script as in the Scope section above (repeated here for convenience):
+Count by canonical `published_date` (the protocol's selection basis), not `year`/`month`:
 
 ```bash
 .venv/bin/python3 -c "
 import json, glob
-accepted, ingested, rejected = 0, 0, 0
+from collections import Counter
+c = Counter()
 for path in glob.glob('raw/metadata/*.json'):
     m = json.load(open(path))
-    y, mo = str(m.get('year','')), str(m.get('month','0')).zfill(2)
-    if y == '2026' and mo in ('04','05','06'):
-        if m['status'] == 'accepted': accepted += 1
-        if m['status'] == 'ingested': ingested += 1
-        if m['status'] == 'rejected': rejected += 1
-print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
+    if '2026-04-01' <= str(m.get('published_date') or '') <= '2026-06-30':
+        c[m['status']] += 1
+print(f\"Ingested: {c['ingested']} | Remaining: {c['accepted']} | Rejected: {c['rejected']}\")
 "
 ```
 
