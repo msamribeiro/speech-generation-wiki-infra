@@ -107,7 +107,8 @@ rejected. April is finished. The fourth round reached Batch 3 of 4: 12 of 16 pre
 ingested (2026-04-27 to 05-01), plus the MOSS-Speech ICLR duplicate (`iclr-2026-zjaV5zmlkl`)
 rejected; see the 2026-10-21 Session Log. Corpus: 969 pages. The procedure is
 `docs/ingest-protocol.md` (canonical over this file's Methodology). Manual Verification Queue: only
-the non-blocking legacy `[!note]` item is open.
+the non-blocking legacy `[!note]` item is open. Content is at `fa68ab8` (pushed); infra `9f297af`; the site is
+bumped (`91cbcbe`).
 
 Rules changed this session (all in `docs/ingest-protocol.md`): `related_concepts` is capped at 6
 but scope wins over the 3-slug minimum (never pad; 1-2 slugs are fine); evaluation papers do not
