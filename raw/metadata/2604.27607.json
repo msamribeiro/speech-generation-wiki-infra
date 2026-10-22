@@ -26,7 +26,7 @@
   "version_date": "2026-05-07",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-22",
   "url": "https://arxiv.org/abs/2604.27607",
   "pdf_url": "https://arxiv.org/pdf/2604.27607.pdf",
   "pdf_path": "raw/papers/2604.27607.pdf",
@@ -38,9 +38,21 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "State-of-the-art Thai voice cloning TTS with direct numeral/code-switch handling; advances multilingual TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

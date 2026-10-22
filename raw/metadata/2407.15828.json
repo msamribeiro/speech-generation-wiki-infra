@@ -4,7 +4,7 @@
     "arxiv": "2407.15828",
     "acl": "2026.lrec-1.444",
     "doi": "10.63317/2rjcajopifoh",
-    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-444"
+    "url_acl": "https://aclanthology.org/2026.lrec-1.444"
   },
   "title": "J-CHAT: Japanese Large-scale Spoken Dialogue Corpus for Spoken Dialogue Language Modeling",
   "authors": [
@@ -17,8 +17,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-01",
@@ -27,7 +27,7 @@
   "version_date": "2026-04-02",
   "version_estimated": true,
   "conference_date": "2026-05-01",
-  "ingested_date": null,
+  "ingested_date": "2026-10-22",
   "url": "https://arxiv.org/abs/2407.15828",
   "pdf_url": "https://aclanthology.org/2026.lrec-1.444.pdf",
   "pdf_path": "raw/papers/2407.15828.pdf",
@@ -39,9 +39,21 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "76k-hour Japanese spoken dialogue corpus for spoken dialogue language modeling; directly enables SCA training.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

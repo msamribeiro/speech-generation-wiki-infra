@@ -4,7 +4,7 @@
     "arxiv": "2605.17652",
     "acl": "2026.lrec-1.544",
     "doi": "10.63317/4d596vd4x2xr",
-    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-544"
+    "url_acl": "https://aclanthology.org/2026.lrec-1.544"
   },
   "title": "Beyond Transcripts: Iterative Peer-Editing with Audio Unlocks High-Quality Human Summaries of Conversational Speech",
   "authors": [
@@ -17,8 +17,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-17",

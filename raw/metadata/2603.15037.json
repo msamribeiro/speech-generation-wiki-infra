@@ -4,7 +4,7 @@
     "arxiv": "2603.15037",
     "acl": "2026.lrec-1.469",
     "doi": "10.63317/5b4zfxnfqwm4",
-    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-469"
+    "url_acl": "https://aclanthology.org/2026.lrec-1.469"
   },
   "title": "PhonemeDF: A Synthetic Speech Dataset for Audio Deepfake Detection and Naturalness Evaluation",
   "authors": [
@@ -15,8 +15,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 3,
   "published_date": "2026-03-16",

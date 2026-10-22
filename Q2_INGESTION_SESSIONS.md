@@ -101,39 +101,42 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-21 (session close), by canonical `published_date`:
-**80 ingested + 147 `accepted` remaining** (55 May, 92 June; all downloaded and parsed), 60
-rejected. April is finished. The fourth round reached Batch 3 of 4: 12 of 16 pre-selected papers
-ingested (2026-04-27 to 05-01), plus the MOSS-Speech ICLR duplicate (`iclr-2026-zjaV5zmlkl`)
-rejected; see the 2026-10-21 Session Log. Corpus: 969 pages. The procedure is
-`docs/ingest-protocol.md` (canonical over this file's Methodology). Manual Verification Queue: only
-the non-blocking legacy `[!note]` item is open. Content is at `fa68ab8` (pushed); infra `9f297af`; the site is
-bumped (`91cbcbe`).
+The Q2 sweep is under way. As of 2026-10-22 (session close), by canonical `published_date`:
+**96 ingested + 131 `accepted` remaining** (39 May, 92 June; all downloaded and parsed), 60
+rejected. The fifth round of 16 is complete (2026-05-01 to 05-07: the LREC 2026 batch, SIGUL,
+PoliticalNLP, J-CHAT, LASE, SPARCLE, Balalaika, PS-TTS, Tibetan-TTS, JaiTTS); see the
+2026-10-22 Session Log. Corpus: 985 pages. The procedure is `docs/ingest-protocol.md` (canonical
+over this file's Methodology). Manual Verification Queue: only the non-blocking legacy `[!note]`
+item is open. Commit state: see `git log` in both repos (content and infra pushed and merged at
+the 2026-10-22 wrap-up).
 
-Rules changed this session (all in `docs/ingest-protocol.md`): `related_concepts` is capped at 6
-but scope wins over the 3-slug minimum (never pad; 1-2 slugs are fine); evaluation papers do not
-earn concepts of systems they only score (except `spoken-language-model`), but a paper about how to
-measure a concept does; an off-the-shelf VC system earns `VC` when the converted speech is measured.
+Rules changed this session (all in `docs/ingest-protocol.md`): `multilingual-tts` needs evaluated
+output in more than one language (single-language adaptation no longer qualifies); below the
+6-slug cap a frozen component keeps its slug and the page says it is frozen; VITS is `[VAE, GAN]`
+with `gan-vocoder` (no backfill); Glow-TTS-style normalizing flows get no architecture term.
 
 To resume:
 
-1. Finish the pre-selected round with Batch 4 (#13-#16, LREC 2026, dated 05-01):
-   `2026.lrec-1.184` Probing Discrete Speech Tokens of SLMs, `2026.lrec-1.375` TTSVowelViz (tool
-   paper; check the zero-metric precedent), `2026.lrec-1.437` Prominence/Boundary Prediction from
-   Text (possibly text-only; compare the `2604.22542` rejection), `2026.lrec-1.465` IMaSC Malayalam
-   corpus. Then pre-select the next 16 by `published_date` from the remaining 05-01 LREC records
-   (`2026.lrec-1.48`, `2026.lrec-1.771`, `2026.lrec-1.859`, ...).
+1. Pre-select the next 16 by `published_date` from 2026-05-07 onward: `2605.06407` WavCube,
+   `2605.05927` (speech LLM modality gap), `2605.05611` X-Voice, `2605.09386` (discrete flow
+   matching scheduling), `2605.10084` PoDAR, `2605.10199` (full-duplex user-stream routing),
+   `2605.11192` (latent audio tokenizer manipulation), `2604.12928` MoshiRAG, ... Re-derive the list
+   from metadata; do not trust this one.
 2. Screen every candidate's authors and titles against the whole corpus (protocol section 2).
-   Several ICLR records had arXiv twins already flagged as duplicates; check for
-   `is_duplicate`/`canonical_id` on both records.
+   Author-overlap screening produces many false hits on common surnames and large tech reports;
+   inspect any overlap of 3 or more authors by title and abstract. Check `arxiv_comment` and the
+   ID prefix against `published_date` (SPARCLE's 2607 ID with a 05-01 date was genuine; confirmed
+   on the arXiv API).
 3. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
    worktree
    (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`)
-   and fill the index Org by hand. `cleanup.py --org` does not sync the Org back to the page: make
-   the page string match (concise institution names, matching existing index rows).
+   and fill the index Org by hand (" / " between institutions; make the page string match).
+   The 2026-10-22 prompt template held well: quote `related_papers`, spell out the Wiki Connections
+   separator, and ask the agent to state how each architecture tag is covered and what is frozen.
 4. Papers accepted by the user in review triage (`raw/review_queue.md`) are in scope even when the
-   filter note calls them tangential (EmotionThinker, `2026.dialres-1.18`); tell the agent so
-   instead of letting it stop on scope.
+   filter note calls them tangential; tell the agent so instead of letting it stop on scope.
+5. ACL Anthology records merged onto arXiv IDs (J-CHAT, Quechua) carry the proceedings venue and
+   Anthology URL on the page; the arXiv ID stays the page ID.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -951,6 +954,112 @@ Batch 4 carries over.
 
 ---
 
+### Session 2026-10-22: fifth round of 16 pre-selected
+
+Pre-selection (by `published_date`, 05-01 to 05-07): the carried-over LREC Batch 4 as Batch A,
+then `2026.lrec-1.48`, `.771`, `.859`, `2026.sigul-1.11`, `2407.15828` J-CHAT, `2604.13288`,
+`2605.00777` LASE, `2607.01238` SPARCLE, `2507.13563` Balalaika, `2604.09111` PS-TTS,
+`2605.02496` Tibetan-TTS, `2604.27607` JaiTTS. Dedup screen: no title duplicates; Balalaika shares
+all six authors with ingested `2604.01247` but is a different paper (cross-link, not a duplicate);
+SPARCLE's 2607 ID with a 05-01 date was confirmed against the arXiv API (v1 2026-05-01).
+
+**Batch A** (#1-#4, IDs checked against the list): `2026.lrec-1.184` Probing Discrete Speech
+Tokens, `2026.lrec-1.375` TTSVowelViz, `2026.lrec-1.437` Prominence/Boundary Prediction,
+`2026.lrec-1.465` IMaSC.
+- Probing Discrete Speech Tokens (accepted in triage): all metrics checked against Tables 1-5.
+  `spoken-language-model` correctly withheld (probed systems are AR TTS-LMs). Org shortened to the
+  index convention (University of Stuttgart).
+- TTSVowelViz: not zero-metric (23-listener accent perception test, Figure 4), so no precedent
+  needed. QC added `transformer-enc-dec-tts` for the `transformer-enc-dec` architecture tag
+  (fine-tuned Tacotron 2 is the object of analysis; corpus tags Tacotron 2 with that slug).
+- Prominence/Boundary Prediction: scope surfaced; user ruled it in (TTS front-end prosody
+  prediction; label-prediction accuracy only, no synthesis). QC added `transformer-enc-dec-tts`
+  (the authors train their own modified FastSpeech2 as one of the three strategies). Docling
+  numbers the paper's Tables 4a-4d as 4-7 out of order; the page cites the paper's labels.
+- IMaSC: no earlier IMaSC version in the corpus. VITS tagged `[VAE, GAN]` with `gan-vocoder`.
+  MOS values checked against Table 3.
+- Recurring: architecture tag without its concept slug (2 of 4 pages, 2026-10-22). LREC 2026
+  records carry `venue: "workshop"` in metadata (9 records); pages use `LREC 2026` / `conference`.
+- Q2: 84 ingested, 143 accepted, 60 rejected. Corpus: 973 pages.
+
+---
+
+**Batch B** (#5-#8, IDs checked against the list): `2026.lrec-1.48` Central Kurdish TTS,
+`2026.lrec-1.771` Nos_Brais-GL, `2026.lrec-1.859` URDUTTS, `2026.sigul-1.11` Creole TTS transfer.
+- Central Kurdish TTS: two errors caught against the Table 3 PNG and §4.3. Studio-M's PESQ range
+  was 3.78 to 4.16, not 4.00 to 4.16. The Table 4 bullet credited the 79.95 BLEU result to real
+  speech; it is the all-synthetic run, and 92.42 is the real-speech upper bound. `multilingual-tts`
+  (English F5-TTS fine-tuned to Kurdish) flagged to the Manual Verification Queue.
+- Nos_Brais-GL: Figures 2 and 3 values verified on the PNGs. QC caught unquoted numeric IDs in
+  `related_papers` (`[2010.05646, 2106.15561]`); quoted. Prompts now say to quote `related_papers`.
+- URDUTTS: the page's source-side observations verified on the table PNGs: the abstract's 9.6%
+  VITS MOS gain does not match Table 5 (13.5%); the VITS-Rm and GlowTTS-Rm rows are identical in
+  Tables 6 and 8; the "Romanized" input is a vowelless consonant skeleton (Table 1). Wiki
+  Connections bullets used a colon instead of the template separator (the agent over-applied the
+  no-em-dash rule); fixed. One `adoption language` QC hit was a false positive ("dominant error").
+- Creole TTS transfer: Figures 1, 3 and 4 checked. First SIGUL page: `venue: SIGUL 2026`,
+  `venue_type: workshop`. The paper's "informal subjective evaluation" is the authors' own
+  impressions, so no `subjective-evaluation`.
+- Recurring: an agent replaced the Wiki Connections separator to avoid em dashes (2026-10-22);
+  the prompt now spells out the template. Unquoted numeric `related_papers` IDs recurred.
+- Q2: 88 ingested, 139 accepted, 60 rejected. Corpus: 977 pages.
+
+---
+
+**Batch C** (#9-#12, IDs checked against the list): `2407.15828` J-CHAT, `2604.13288` Quechua/Spanish
+Constitution TTS, `2605.00777` LASE, `2607.01238` SPARCLE.
+- J-CHAT: the arXiv record carries the LREC 2026 proceedings (`2026.lrec-1.444`); page keeps the
+  arXiv ID with the LREC venue and Anthology URL. Metadata `url_acl` is malformed
+  (`https://aclanthology.org/https://lrec.elra.info/...`), as on `2604.13288`. `spoken-language-model`
+  for a textless dGSLM-style unit LM kept on the Behavior-SD / Align-SLM precedent. Tables 2 and 3
+  and the 68k-vs-57k train-hour confound checked against the source.
+- Quechua/Spanish TTS: PoliticalNLP 2026 workshop (co-located with LREC). Table 1 checked; the page
+  states that the cross-lingual-transfer conclusion is untested (no Quechua-only baseline).
+- LASE: Praxel companion to Praxy Voice and PSP (cross-linked; the paper never evaluates Praxy with
+  LASE). Four prose-vs-table mismatches on the page checked against Table I (0.082/0.105 vs
+  0.083/0.107; 0.141 vs 0.144; the "2.4-2.7x over both baselines" margin claim is 1.3x against ECAPA
+  on Indian voices; ECAPA+GRL has the larger Western margin). `disentanglement` queued.
+  `2505.14410` (cited, rejected) replaced by its canonical `interspeech-2025-2283` page.
+- SPARCLE: Tables 1 and 2 checked, including the per-budget WER reductions (51%, 72%, 70%, 51%,
+  31%) and the small text-vs-table mismatches. ParrotTTS tagged `transformer-enc-dec` from its known
+  architecture (not described in the paper; ParrotTTS has no corpus page), with the slug.
+- No structural QC defects this batch; the tightened prompt (quoted `related_papers`, explicit
+  Wiki Connections separator, architecture-slug coverage) held on all four pages.
+- Q2: 92 ingested, 135 accepted, 60 rejected. Corpus: 981 pages.
+
+---
+
+**Batch D** (#13-#16, IDs checked against the list): `2507.13563` Balalaika, `2604.09111` PS-TTS,
+`2605.02496` Tibetan-TTS, `2604.27607` JaiTTS.
+- Balalaika: companion of ingested `2604.01247` (same six authors), which trains only on
+  Balalaika's Yandex Podcasts split; a one-line Wiki Connections back-link was added to that page
+  (health check passes). Tables 1 and 2 checked: the "on par with the strongest baselines" CER is
+  4th of 12, and the TMR "top" ties M-AILABS. The §4.1 "Table 8" cross-reference is wrong (Table 8
+  is the curated-dataset list; the comparison is Table 1). Emilia cited as rejected `2501.15907`;
+  canonical `2407.05361` linked.
+- PS-TTS: two source mismatches verified on the table PNGs (§4.3 prose UTMOS 2.362 vs Table 2
+  2.562; Table 3 baseline LSE-D 11.092 is not the Table 1 average, while the other cells are).
+  `speech-to-speech` withheld (only the text-selection and TTS stages are evaluated).
+- Tibetan-TTS: proprietary Xingchen AGI Lab AR LM + flow-matching backbone, not CosyVoice 2. The
+  flow-matching stage is frozen (Figure 2); slug kept and queued. Org separator normalised to
+  " / ". Reference [9] in the source carries placeholder text ("Example venue; please replace"),
+  noted on the page. The `inconsistency` QC hit was a false positive ("inconsistent speech data").
+- JaiTTS: VoxCPM continually trained on Thai. `autoregressive-codec-tts` for continuous-latent AR
+  kept on the VoxCPM / Continuous Audio Language Models precedent. Table 1 (including where JaiTTS
+  loses long-form SIM) and Figure 2 (161 + 122 = 283 of 400 wins) checked.
+- Round sweep: all 16 IDs have a page, one index row, one log entry and `status: ingested`; the
+  full ingest health check passes (0 errors, 985 papers).
+- Q2: 96 ingested, 131 accepted, 60 rejected. Corpus: 985 pages.
+
+**Verification queue cleared** (same session, after Batch D): user rulings on six items. New
+`multilingual-tts` rule (output must span more than one language), so three pages drop the slug;
+the VITS `gan-vocoder` convention is confirmed going forward; frozen components keep their slug
+below the cap; `autoregressive-codec-tts` on `2026.lrec-1.184` and `disentanglement` on LASE kept;
+LREC metadata (venue, `url_acl`) repaired on 14 records, with the fetcher fix in `BACKLOG.md`.
+Health checks re-run on the three edited pages and JaiTTS (pass).
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these
@@ -958,6 +1067,12 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2026.lrec-1.48` | concept scope (`multilingual-tts`) | Resolved 2026-10-22 (user): adaptation to a single new language with monolingual output does not earn `multilingual-tts`; the evaluated output must span more than one language. Dropped from `2026.lrec-1.48`, `2605.02496` and `2026.sigul-1.11`; kept on PS-TTS `2604.09111` (bilingual YourTTS), JaiTTS `2604.27607` (code-switching evaluated, bullet reworded) and `2604.13288` (pooled Spanish+Quechua). Rule in `docs/ingest-protocol.md`. |
+| `2026.lrec-1.184` | concept scope (`autoregressive-codec-tts`) | Resolved 2026-10-22 (user): kept. |
+| `2605.00777` | concept scope (`disentanglement`) | Resolved 2026-10-22 (user): kept. |
+| `2605.02496` | concept scope (frozen `flow-matching`) | Resolved 2026-10-22 (user): below the 6-slug cap a frozen component that is part of the evaluated system keeps its slug, with the page stating it is frozen. Rule in `docs/ingest-protocol.md`. |
+| VITS pages | `gan-vocoder` convention | Resolved 2026-10-22 (user): VITS `[VAE, GAN]` carries `gan-vocoder` going forward; older pages not backfilled. Rule in `docs/ingest-protocol.md`. |
+| LREC 2026 records | metadata `venue` | Resolved 2026-10-22 (user): fixed now. 13 `2026.lrec-1.*` records set to `LREC` / `conference`; 5 malformed `url_acl` values corrected (14 records in all, logged in `raw/pipeline_log.md`). Fetcher fix tracked in `BACKLOG.md` (Infrastructure). |
 | `2026.dialres-1.18` | task (`VC` close call) | Resolved 2026-10-21 (user): `task: [VC]` and `voice-conversion` kept; clarification added to `docs/schemas/vocabulary.md` and the protocol (off-the-shelf VC counts when the converted speech is measured, not when VC is only preprocessing). |
 | `2604.27393` | field_significance moderate/high boundary | Resolved 2026-10-21 (user): kept at moderate. |
 | `2604.25476` | field_significance low/moderate boundary | Resolved 2026-10-21 (user): kept at low. |

@@ -205,7 +205,11 @@ intentional. Checks the health check does not (fully) cover:
   fine when that is all that qualifies (common for benchmarks and narrow system papers). When more
   than 6 qualify, drop slugs that describe frozen or inherited components first (an architecture
   tag can stay in `architecture` without its slug), and keep evidence concepts such as
-  `subjective-evaluation`.
+  `subjective-evaluation`. Below the cap, a frozen component that is part of the evaluated system
+  keeps its slug, and the page says it is frozen (user, 2026-10-22, Tibetan-TTS `2605.02496`).
+- VITS is tagged `architecture: [VAE, GAN]` with `gan-vocoder` in `related_concepts` when the
+  paper trains or fine-tunes it (user, 2026-10-22; older VITS pages are not backfilled).
+  Normalizing-flow acoustic models such as Glow-TTS have no architecture term; leave them untagged.
 - Concept-tag scope: a tag is legitimate only if the paper's own method performs or is evaluated
   on the concept, not merely discusses, contrasts or defers to it. Check the concept's scope note
   and the paper's Limitations section.
@@ -223,7 +227,12 @@ intentional. Checks the health check does not (fully) cover:
     their own output do not.
   - `speech-to-speech`: must fit a sub-paradigm (dialogue, S2S translation, cascade); codec-level
     audio transforms do not qualify.
-  - `multilingual-tts`: the paper's own system trained or adapted across languages.
+  - `multilingual-tts`: the paper's own system trained or adapted across languages, **and** its
+    evaluated output spans more than one language (bilingual or pooled training evaluated on each
+    language, or code-switched synthesis). Adapting a model pretrained on other languages to a
+    single new language does not qualify when each resulting voice is monolingual (user,
+    2026-10-22: Central Kurdish `2026.lrec-1.48`, Tibetan `2605.02496`, Creole `2026.sigul-1.11`
+    dropped; PS-TTS, JaiTTS and the Quechua/Spanish page kept).
   - `subjective-evaluation`: real human raters; LLM-judge or automated scoring never qualifies.
   - `disentanglement`: explicit training mechanism with ablation evidence.
   - `self-supervised-speech`: only when the method itself uses HuBERT/WavLM/wav2vec2/w2v-BERT,
@@ -297,7 +306,7 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Full title in index row | Agent writes the untruncated title | Step 5.1 |
 | Bare wikilinks | `[[id]]` in prose; agent defends it as template-mandated | Step 6 |
 | Wrong abstract callout | Abstract uses the Field Significance callout type | Step 6 |
-| Task/architecture tag missing from `related_concepts` | Health check silent for architecture | Step 6 |
+| Task/architecture tag missing from `related_concepts` | Health check silent for architecture (2026-10-22, 2 of 4 pages; cured by an explicit per-tag coverage line in the prompt) | Step 6 |
 | Concept-tag scope mistag | Tag because the paper discusses it, not performs it | Step 6 |
 | Unquoted date or numeric-looking ID | Parsed as date object or float | Step 4 prompt, step 6 |
 | False "inconsistency" on page | Agent misreads per-group vs total or different conditions | Step 6 |
@@ -308,6 +317,8 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Org mismatch page vs index | `cleanup.py --org` does not sync the page; strings drift (2026-10-21, three of four papers) | Step 5.1 |
 | One-sided critique of author framing | Agent cites only the comparisons that go against the authors (2026-10-21) | Step 6; ask for the full comparison in the prompt |
 | Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled | Step 6; check the table PNG |
+| Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
+| Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
 
 ## Known discrepancies to resolve
 

@@ -1,3 +1,7 @@
+## 2026-10-22
+
+- lint | LREC 2026 metadata repair (user, Q2 ingest session) | 14 metadata records | 13 `2026.lrec-1.*` records (8 ingested, 5 rejected) changed from `venue: workshop` / `venue_type: workshop` to `LREC` / `conference`; 5 malformed `source_ids.url_acl` values (`https://aclanthology.org/https://lrec.elra.info/...`, on 2407.15828, 2603.00958, 2603.15037, 2604.13288, 2605.17652) set to `https://aclanthology.org/{acl_id}` | cause: `scripts/fetch/acl.py` treats the LREC XML as a co-located workshop (no `lrec` main-venue entry); the url_acl bug was already fixed in the fetcher, these records predate it. SIGUL and PoliticalNLP records correctly stay `workshop`. Fetcher fix tracked in BACKLOG.md.
+
 ## 2026-10-20
 
 - review | 2604.22542 (Controllable Spoken Dialogue Generation: An LLM-Driven Grading System for K-12 Non-Native English Learners) | 1 paper | rejected | caught at ingest time (Q2 2026 session, 2026-10-20) before any page was written; text-only LLM dialogue control (SFT and DDPO, a multi-turn GRPO variant, on Qwen2.5-7B / Llama3.1-8B) producing proficiency-graded text replies, evaluated by vocabulary violation rate, Rouge-L diversity and a GPT-5.1 judge; no TTS, ASR, audio or speech LM, speech only named as future work; "spoken" is the use case, not the modality (FAMA / MLC-SLM terminology-only reject shape); filter task [TTS, SCA] and note "TTS is a component" not supported by the paper | user decision

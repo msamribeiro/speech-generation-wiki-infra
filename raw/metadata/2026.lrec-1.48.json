@@ -13,14 +13,14 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-01",
   "preprint_date": null,
   "conference_date": "2026-05-01",
-  "ingested_date": null,
+  "ingested_date": "2026-10-22",
   "url": "https://aclanthology.org/2026.lrec-1.48",
   "pdf_url": "https://aclanthology.org/2026.lrec-1.48.pdf",
   "pdf_path": "raw/papers/2026.lrec-1.48.pdf",
@@ -31,9 +31,21 @@
   ],
   "relevance_score": 0.83,
   "relevance_note": "Builds F5-TTS-based Central Kurdish TTS models from limited resources, surpassing studio-recorded-data baselines, with application to speech-to-text translation; core low-resource TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

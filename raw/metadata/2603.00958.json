@@ -4,7 +4,7 @@
     "arxiv": "2603.00958",
     "acl": "2026.lrec-1.860",
     "doi": "10.63317/4hnrkbo6dhi5",
-    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-860"
+    "url_acl": "https://aclanthology.org/2026.lrec-1.860"
   },
   "title": "S-VoCAL: A Dataset and Evaluation Framework for Inferring Speaking Voice Character Attributes in Literature",
   "authors": [
@@ -15,8 +15,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 3,
   "published_date": "2026-03-01",

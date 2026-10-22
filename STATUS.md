@@ -1,11 +1,11 @@
 # Project Status
 
-Last updated: 2026-10-21
+Last updated: 2026-10-22
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
 the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion runs in parallel in the ingest worktree
-(80 of 227 Q2 papers ingested as of 2026-10-21).
+(96 of 227 Q2 papers ingested as of 2026-10-22).
 
 ---
 
@@ -25,11 +25,11 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 1,648 | 977 ingested, 291 accepted, 0 review, 380 rejected |
-| Published paper pages | 969 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Metadata records | 1,648 | 993 ingested, 275 accepted, 0 review, 380 rejected |
+| Published paper pages | 985 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,268 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,158 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 180 | 147 Q2 2026 (55 May, 92 June) and 33 Q3 2026 |
+| Parsed active papers | 1,157 | Includes ingested papers and accepted papers ready for ingest |
+| Accepted and parsed, ready to ingest | 164 | 131 Q2 2026 (39 May, 92 June) and 33 Q3 2026 |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
 | Claim clusters | 443 | 342 strongly supported, 17 contested |
@@ -58,10 +58,10 @@ concept render pairs, and preserved reconciliation audit history.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete | Complete: all 22 affected concepts, 2,884 entries | **Next** | Pending reconciliation |
 | Q1 2026 | Complete: 156 ingested, 0 accepted (15 moved to Q2 by the date rule) | Not started | Not started | Not started |
-| Q2 2026 | In progress: 80 ingested; 147 accepted (all downloaded and parsed) | Not started | Not started | Not started |
+| Q2 2026 | In progress: 96 ingested; 131 accepted (all downloaded and parsed) | Not started | Not started | Not started |
 | Q3 2026 to date | 144 accepted | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-10-21. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-10-22. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
@@ -270,21 +270,22 @@ available ACL Anthology 2026 material.
 
 | Status | Count |
 |---|---:|
-| Ingested | 80 |
-| Accepted, awaiting ingest | 147 |
+| Ingested | 96 |
+| Accepted, awaiting ingest | 131 |
 | Awaiting human triage | 0 |
 | Rejected | 60 |
 
-All 147 accepted papers are downloaded, parsed, and ready to ingest (counts by canonical
-`published_date` as of 2026-10-21). April is finished; the sweep has reached 2026-05-01 (LREC 2026), and
-the next session starts with Batch 4 of the pre-selected round (four LREC records). ICASSP, ASRU, and SLT remain fetch-coverage gaps. The ingest
-procedure is `docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
+All 131 accepted papers are downloaded, parsed, and ready to ingest (counts by canonical
+`published_date` as of 2026-10-22). The sweep has reached 2026-05-07; the next session pre-selects
+16 from 2026-05-07 onward (WavCube `2605.06407` first). LREC 2026 main-proceedings metadata was
+repaired on 2026-10-22 (venue and `url_acl`); the `acl.py` fix is in `BACKLOG.md`. ICASSP, ASRU, and
+SLT remain fetch-coverage gaps. The ingest procedure is `docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
 
 ---
 
 ## Repository and setup state
 
-- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-10-21
+- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-10-22
   ingest wrap-up (see `git log`). The Q4 integration stream works on the content repository's
   `work/integrate` branch (`speech-generation-wiki-content-integrate` worktree), not yet merged.
 - Ingest sessions write to the content-ingest worktree:
