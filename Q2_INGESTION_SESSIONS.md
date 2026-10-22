@@ -107,8 +107,8 @@ rejected. The fifth round of 16 is complete (2026-05-01 to 05-07: the LREC 2026 
 PoliticalNLP, J-CHAT, LASE, SPARCLE, Balalaika, PS-TTS, Tibetan-TTS, JaiTTS); see the
 2026-10-22 Session Log. Corpus: 985 pages. The procedure is `docs/ingest-protocol.md` (canonical
 over this file's Methodology). Manual Verification Queue: only the non-blocking legacy `[!note]`
-item is open. Commit state: see `git log` in both repos (content and infra pushed and merged at
-the 2026-10-22 wrap-up).
+item is open. Content is at `8e077e7` (pushed); infra `ccdf305`; the site is bumped
+(`227515d`).
 
 Rules changed this session (all in `docs/ingest-protocol.md`): `multilingual-tts` needs evaluated
 output in more than one language (single-language adaptation no longer qualifies); below the
