@@ -102,9 +102,8 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 ## Next Session — Resume Here
 
 The Q2 sweep is under way. As of 2026-10-23 (session close), by canonical `published_date`:
-**100 ingested + 125 `accepted` remaining** (all downloaded and parsed), 1 `review`
-(UrduSpeech `2605.17846`, awaiting the user's triage decision in `raw/review_queue.md`), 60
-rejected. The sixth round of 16 was pre-selected and screened, and Batch A (#1-#4: WavCube,
+**100 ingested + 125 `accepted` remaining** (all downloaded and parsed), 61 rejected
+(UrduSpeech `2605.17846` rejected in triage at close). The sixth round of 16 was pre-selected and screened, and Batch A (#1-#4: WavCube,
 TextPro-SLM, X-Voice, GibbsTTS) is ingested; see the 2026-10-23 Session Log. Corpus: 989 pages.
 The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). Manual
 Verification Queue: only the non-blocking legacy `[!note]` item is open.
@@ -126,7 +125,7 @@ To resume:
    and fill the index Org by hand (" / " between institutions; make the page string match).
    The prompt template held well; since 2026-10-23 it also asks agents to check the sign
    convention of any derived metric they define, and to set `organization` themselves.
-4. Pending user decision: UrduSpeech triage. PACC `2605.18001` is now a Q4 2025 straggler
+4. Pending user decision: PACC `2605.18001` is now a Q4 2025 straggler
    (`published_date` 2025-10-01); whether to ingest it is undecided.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
@@ -1093,6 +1092,8 @@ RobustSpeechFlow.
   to check it). Protocol wording "not cut mid-word" for index titles contradicts the hard
   `title[:55]` cut every row uses; fix the protocol text at wrap-up.
 - Q2: 100 ingested, 125 accepted, 1 review, 60 rejected. Corpus: 989 pages.
+- At close the user rejected UrduSpeech (`review -> rejected`). Q2: 100 ingested, 125 accepted,
+  61 rejected.
 
 ---
 
