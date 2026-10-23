@@ -106,7 +106,8 @@ The Q2 sweep is under way. As of 2026-10-23 (session close), by canonical `publi
 (UrduSpeech `2605.17846` rejected in triage at close). The sixth round of 16 was pre-selected and screened, and Batch A (#1-#4: WavCube,
 TextPro-SLM, X-Voice, GibbsTTS) is ingested; see the 2026-10-23 Session Log. Corpus: 989 pages.
 The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). Manual
-Verification Queue: only the non-blocking legacy `[!note]` item is open.
+Verification Queue: only the non-blocking legacy `[!note]` item is open. Content is at `9d9a0e3`
+(pushed); infra `331157d`; the site is bumped (`4f9dc72`).
 
 To resume:
 
