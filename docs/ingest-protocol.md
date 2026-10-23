@@ -108,6 +108,9 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
 - Match `references.json` citations to corpus pages by hand: its `in_corpus` flags are stale or
   null on most real matches.
 - Do not write "internal inconsistencies" on the page unless verified against the source.
+- When defining a derived metric (a gap, delta or relative score), check its sign convention
+  against the table.
+- Set `organization` from the first-page affiliations, institutions joined with " / ".
 - Stop and flag, do not write, if the paper is scope-ambiguous.
 - Emit `INGEST_RESULT` JSON including `review_flags` only when a precision-gate judgment call
   (claims, `field_significance`, concept scope, vocabulary gap) is genuinely uncertain.
@@ -129,7 +132,8 @@ What it does, and what to check in its output:
 1. **Index row.** Add the row to `papers/index.md`:
    `| [[{id}]] | [{title[:55]}](papers/{id}.md) | {org} | {venue} | {year} | {tasks} | {architectures} | {date} |`
    - ID column is the bare `[[id]]`.
-   - Title truncated to about 55 characters (deliberate), not the full title, not cut mid-word.
+   - Title hard-cut at 55 characters (`title[:55]`, deliberate; mid-word cuts are expected), never
+     the full title.
    - **Org filled by hand** (`organization` is null on nearly every 2026 record; take it from the
      page or PDF first page). Include every task tag. Exactly one row per ID.
 2. **Counts.** Fix all three paper-count occurrences in `wiki/index.md` (abstract callout, "Browse
@@ -319,6 +323,8 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled | Step 6; check the table PNG |
 | Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
+| Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
+| Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23) | Step 6; read the whole table |
 
 ## Known discrepancies to resolve
 

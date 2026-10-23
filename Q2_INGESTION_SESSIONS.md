@@ -101,42 +101,33 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-22 (session close), by canonical `published_date`:
-**96 ingested + 131 `accepted` remaining** (39 May, 92 June; all downloaded and parsed), 60
-rejected. The fifth round of 16 is complete (2026-05-01 to 05-07: the LREC 2026 batch, SIGUL,
-PoliticalNLP, J-CHAT, LASE, SPARCLE, Balalaika, PS-TTS, Tibetan-TTS, JaiTTS); see the
-2026-10-22 Session Log. Corpus: 985 pages. The procedure is `docs/ingest-protocol.md` (canonical
-over this file's Methodology). Manual Verification Queue: only the non-blocking legacy `[!note]`
-item is open. Content is at `8e077e7` (pushed); infra `ccdf305`; the site is bumped
-(`227515d`).
-
-Rules changed this session (all in `docs/ingest-protocol.md`): `multilingual-tts` needs evaluated
-output in more than one language (single-language adaptation no longer qualifies); below the
-6-slug cap a frozen component keeps its slug and the page says it is frozen; VITS is `[VAE, GAN]`
-with `gan-vocoder` (no backfill); Glow-TTS-style normalizing flows get no architecture term.
+The Q2 sweep is under way. As of 2026-10-23 (session close), by canonical `published_date`:
+**100 ingested + 125 `accepted` remaining** (all downloaded and parsed), 1 `review`
+(UrduSpeech `2605.17846`, awaiting the user's triage decision in `raw/review_queue.md`), 60
+rejected. The sixth round of 16 was pre-selected and screened, and Batch A (#1-#4: WavCube,
+TextPro-SLM, X-Voice, GibbsTTS) is ingested; see the 2026-10-23 Session Log. Corpus: 989 pages.
+The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). Manual
+Verification Queue: only the non-blocking legacy `[!note]` item is open.
 
 To resume:
 
-1. Pre-select the next 16 by `published_date` from 2026-05-07 onward: `2605.06407` WavCube,
-   `2605.05927` (speech LLM modality gap), `2605.05611` X-Voice, `2605.09386` (discrete flow
-   matching scheduling), `2605.10084` PoDAR, `2605.10199` (full-duplex user-stream routing),
-   `2605.11192` (latent audio tokenizer manipulation), `2604.12928` MoshiRAG, ... Re-derive the list
-   from metadata; do not trust this one.
-2. Screen every candidate's authors and titles against the whole corpus (protocol section 2).
-   Author-overlap screening produces many false hits on common surnames and large tech reports;
-   inspect any overlap of 3 or more authors by title and abstract. Check `arxiv_comment` and the
-   ID prefix against `published_date` (SPARCLE's 2607 ID with a 05-01 date was genuine; confirmed
-   on the arXiv API).
+1. Continue the sixth round at #5 with the already-screened list (no re-screening needed):
+   5 `2605.10084` PoDAR, 6 `2605.10199` user-stream routing, 7 `2605.11192` LATTE,
+   8 `2604.12928` MoshiRAG (ICML 2026, keeps arXiv date), 9 `2605.12310` Poly-SVC,
+   10 `2605.16026` S2ST-Omni 2 (separate work from Q3 `2026.findings-acl.1004` S2ST-Omni; that
+   page is accepted-but-unwritten, so keep its ID in `related_papers` and de-link it in prose),
+   11 `2605.16964` SemaVoice, 12 `2605.17085` Target-KL VAE, 13 `2605.19541` 300bps RL codec,
+   14 `2605.20830` Raon-OpenTTS, 15 `2605.20946` Thinking-while-speaking, 16 `2605.22083`
+   RobustSpeechFlow. Reserve: `2605.26136` deepfake perception study (screened clean).
+2. Re-verify the list's statuses from metadata before launching (nothing should have changed).
 3. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
    worktree
    (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`)
    and fill the index Org by hand (" / " between institutions; make the page string match).
-   The 2026-10-22 prompt template held well: quote `related_papers`, spell out the Wiki Connections
-   separator, and ask the agent to state how each architecture tag is covered and what is frozen.
-4. Papers accepted by the user in review triage (`raw/review_queue.md`) are in scope even when the
-   filter note calls them tangential; tell the agent so instead of letting it stop on scope.
-5. ACL Anthology records merged onto arXiv IDs (J-CHAT, Quechua) carry the proceedings venue and
-   Anthology URL on the page; the arXiv ID stays the page ID.
+   The prompt template held well; since 2026-10-23 it also asks agents to check the sign
+   convention of any derived metric they define, and to set `organization` themselves.
+4. Pending user decision: UrduSpeech triage. PACC `2605.18001` is now a Q4 2025 straggler
+   (`published_date` 2025-10-01); whether to ingest it is undecided.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -1057,6 +1048,51 @@ the VITS `gan-vocoder` convention is confirmed going forward; frozen components 
 below the cap; `autoregressive-codec-tts` on `2026.lrec-1.184` and `disentanglement` on LASE kept;
 LREC metadata (venue, `url_acl`) repaired on 14 records, with the fetcher fix in `BACKLOG.md`.
 Health checks re-run on the three edited pages and JaiTTS (pass).
+
+---
+
+### Session 2026-10-23: sixth round of 16 pre-selected
+
+Pre-selection (2026-05-07 onward, re-derived from metadata) and pre-flight screening. Three
+decisions, all confirmed by the user:
+- `2605.16026` S2ST-Omni 2 extends `2026.findings-acl.1004` S2ST-Omni (accepted, 2026-07-02, Q3;
+  4 shared authors). Treated as separate works (new named system, VibeVoice precedent): ingest each
+  in its own quarter, cross-link, neither a duplicate.
+- `2605.17846` UrduSpeech moved `accepted -> review` (general corpus, no TTS/VC experiment; MOS
+  rates the recordings, TTS baselines are future work). `raw/review_queue.md` entry added.
+- `2605.18001` PACC re-dated: preprint notice plus Crossref show it in the ICICC 2025 proceedings
+  (Springer LNNS, online 2025-10-01); `conference_date` set and the date rule re-applied, so
+  `published_date` is 2025-10-01 (Q4 2025 straggler, not in this sweep).
+- Replacements: `2605.20946` Thinking-while-speaking and `2605.22083` RobustSpeechFlow (screened
+  clean); reserve `2605.26136` (deepfake perception study).
+- MoshiRAG (`2604.12928`, ICML 2026) keeps its arXiv date like all 14 arXiv/ICML pairs.
+
+Numbered list: 1 `2605.06407` WavCube, 2 `2605.05927` TextPro-SLM, 3 `2605.05611` X-Voice,
+4 `2605.09386` GibbsTTS, 5 `2605.10084` PoDAR, 6 `2605.10199` user-stream routing, 7 `2605.11192`
+LATTE, 8 `2604.12928` MoshiRAG, 9 `2605.12310` Poly-SVC, 10 `2605.16026` S2ST-Omni 2,
+11 `2605.16964` SemaVoice, 12 `2605.17085` Target-KL VAE, 13 `2605.19541` 300bps RL codec,
+14 `2605.20830` Raon-OpenTTS, 15 `2605.20946` Thinking-while-speaking, 16 `2605.22083`
+RobustSpeechFlow.
+
+**Batch A** (#1-#4, IDs checked against the list): `2605.06407` WavCube, `2605.05927` TextPro-SLM,
+`2605.05611` X-Voice, `2605.09386` GibbsTTS.
+- WavCube: Tables 1-3, 5-7 checked. Two Key Results overstatements fixed: the Stage 1 to Stage 2
+  loss list omitted ER, and "best MCD" / "highest ASV" on SUPERB-SG VC held only among the final
+  latents (Stage 1 and WavLM-Large beat both). Org widened to SJTU / SII / Tencent, page synced.
+- TextPro-SLM: task changed `[TTS] -> [SCA]` on the page (no speech output; synthesis is out of
+  scope by the authors' Remark 1); metadata `task` left as filter output per precedent. The page
+  defined the modality gap with the wrong sign ("speech minus text"); Table 3 shows text minus
+  speech, fixed. One slug (`spoken-language-model`), scope over the minimum.
+- X-Voice: VC dropped (prompt-based cloning is TTS). Cross-linked to Cross-Lingual F5-TTS
+  `2509.14579`. Qwen3-TTS / OmniVoice comparisons verified on Table 5; native-rater IMOS/SMOS
+  confirmed. RTF kept as a metric (7 existing pages use it).
+- GibbsTTS: frozen MaskGCT codec keeps `neural-codec` below the cap, page says frozen.
+  `multilingual-tts` on pooled en/zh training evaluated in both. Tables 2-4 verified; an
+  unattributed "first application" novelty claim in Field Significance attributed to the authors.
+- Recurring: sign convention of a derived metric written backwards (new; prompt now asks agents
+  to check it). Protocol wording "not cut mid-word" for index titles contradicts the hard
+  `title[:55]` cut every row uses; fix the protocol text at wrap-up.
+- Q2: 100 ingested, 125 accepted, 1 review, 60 rejected. Corpus: 989 pages.
 
 ---
 

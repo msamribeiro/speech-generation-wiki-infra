@@ -905,3 +905,14 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
 
 ---
+
+---
+
+## 2605.17846 | UrduSpeech: A 156-Hour Urdu Speech Corpus with 12-Dimension Paralinguistic Annotations | arXiv | score: 0.72
+
+**Authors:** Attia Nafees ul Haq, Zeyu Zhu, Jingbin Hu et al.
+**Task guess:** [TTS]
+**Reason for review:** Flagged at Q2 ingest pre-flight (2026-10-23). A general Urdu speech corpus with no TTS/VC experiment: the model-selection section chooses a transcription (ASR) model, the MOS of 4.6 rates the curated recordings rather than synthesized speech, and TTS baselines appear only as future work (§6). Closer to the general-corpus/ASR shape than to the 2510.03111 TTS-data-curation precedent.
+**Abstract excerpt:** Despite 230 million speakers, Urdu remains critically under-resourced in speech technology. We introduce UrduSpeech: a large high-fidelity Urdu corpus comprising 156 hours of audio with 12-dimension paralinguistic metadata, encompassing US-Std, US-CS, US-EngPk.
+
+**Decision:** [ ] accept  [ ] reject  [ ] accept-partial (note: _________)
