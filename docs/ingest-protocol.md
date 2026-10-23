@@ -67,6 +67,11 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   - **Extended/full versions** under an unrelated ID: check `arxiv_comment` for "full version of",
     "extended version", "journal version", especially when the ID prefix disagrees with
     `published_date`. Surface to the user; do not decide alone.
+  - **Prior publication notices** in the PDF itself: skim the first page of `raw/parsed/{id}/paper.md`
+    for "preprint of", "published in" or "final authenticated version" notices, which
+    `arxiv_comment` often omits. If the paper already appeared in proceedings or a journal, look up
+    the date (Crossref via the DOI), set `conference_date` or `journal_date` and re-apply the date
+    rule; the paper may leave the quarter (PACC `2605.18001`, ICICC 2025, 2026-10-23).
   - **Scope doubt** (ASR/translation/diarization-only, non-speech audio, zero metrics): read the
     paper and apply the precedent chain in the session doc; surface the matching precedent
     explicitly instead of re-deciding from scratch.
