@@ -115,6 +115,8 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
 - Do not write "internal inconsistencies" on the page unless verified against the source.
 - When defining a derived metric (a gap, delta or relative score), check its sign convention
   against the table.
+- List every superlative written on the page ("best", "largest", "outperforms") in the closing
+  summary, with the table cells that support it across all rows (a tie is not "best").
 - Set `organization` from the first-page affiliations, institutions joined with " / ".
 - Stop and flag, do not write, if the paper is scope-ambiguous.
 - Emit `INGEST_RESULT` JSON including `review_flags` only when a precision-gate judgment call
