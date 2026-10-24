@@ -107,7 +107,8 @@ The Q2 sweep is under way. As of 2026-10-24 (session close), by canonical `publi
 the sixth round (#5-#16) and a seventh round of 8; see the 2026-10-24 Session Log. Corpus: 1,009
 pages. The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). The
 Manual Verification Queue has no open items (all 14 resolved 2026-10-24; only the legacy
-corpus-wide `[!note]` item remains). Content and infra commits are in `git log` (pushed at close).
+corpus-wide `[!note]` item remains). Content is at `4f73e1c` (pushed); infra `cabadba`; the
+site is bumped (`ed30299`).
 
 To resume:
 
