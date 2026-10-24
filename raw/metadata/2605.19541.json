@@ -25,7 +25,7 @@
   "version_date": "2026-05-19",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-24",
   "url": "https://arxiv.org/abs/2605.19541",
   "pdf_url": "https://arxiv.org/pdf/2605.19541.pdf",
   "pdf_path": "raw/papers/2605.19541.pdf",
@@ -37,9 +37,21 @@
   ],
   "relevance_score": 0.87,
   "relevance_note": "RL-optimised neural speech codec for 300 bps communication; core codec.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "9a3901f"
+    }
+  ]
 }

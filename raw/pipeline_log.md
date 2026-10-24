@@ -1,3 +1,13 @@
+## 2026-10-24
+
+- review | 2605.25504 (Toward Natural Emotional Text-To-Speech System with Fine-Grained Non-Verbal Expressions) | 1 paper | re-dated | arXiv comment and Crossref (DOI 10.1109/o-cocosda68185.2025.11385230) show publication in the O-COCOSDA 2025 proceedings (2025-11-12); conference_date set to 2025-11-12 and the date rule re-applied, moving published_date 2026-05-25 -> 2025-11-12 (Q4 2025 straggler, to be ingested with PACC 2605.18001 at the next pre-selection) | status: accepted (unchanged)
+
+## 2026-10-23
+
+- review | 2605.17846 (UrduSpeech: A 156-Hour Urdu Speech Corpus with 12-Dimension Paralinguistic Annotations) | 1 paper | flagged for review | caught at Q2 ingest pre-flight before any page was written; general speech corpus with no TTS/VC experiment (ASR model selection, MOS rates the recordings, TTS baselines future work); user agreed to move it to triage | status: accepted -> review, review_queue.md entry recorded
+- review | 2605.18001 (Bridging the Gap: Converting Read Text to Conversational Dialogue) | 1 paper | re-dated | PDF preprint notice and Crossref (DOI 10.1007/978-981-96-6681-2_38) show publication in the ICICC 2025 proceedings (Springer LNNS, published online 2025-10-01); conference_date set to 2025-10-01 and the date rule re-applied, moving published_date 2026-05-18 -> 2025-10-01 (Q4 2025 straggler, not ingested in the Q2 sweep) | status: accepted (unchanged)
+- review | 2605.17846 (UrduSpeech) | 1 paper | rejected | user confirmed reject: general speech corpus with no TTS/VC experiment; out of corpus scope | status: review -> rejected, review_queue.md decision recorded
+
 ## 2026-10-22
 
 - lint | LREC 2026 metadata repair (user, Q2 ingest session) | 14 metadata records | 13 `2026.lrec-1.*` records (8 ingested, 5 rejected) changed from `venue: workshop` / `venue_type: workshop` to `LREC` / `conference`; 5 malformed `source_ids.url_acl` values (`https://aclanthology.org/https://lrec.elra.info/...`, on 2407.15828, 2603.00958, 2603.15037, 2604.13288, 2605.17652) set to `https://aclanthology.org/{acl_id}` | cause: `scripts/fetch/acl.py` treats the LREC XML as a co-located workshop (no `lrec` main-venue entry); the url_acl bug was already fixed in the fetcher, these records predate it. SIGUL and PoliticalNLP records correctly stay `workshop`. Fetcher fix tracked in BACKLOG.md.
@@ -237,9 +247,3 @@ Infra-only operations (filter, parse, discover, lint, review). Not rendered on t
 ## 2026-09-21
 
 - filter | ICML 2026 OpenReview saved-page import (`openreview.py --venue ICML --year 2026 --from-file`, 6,341 notes loaded, 20 passed the keyword filter, 20 written pending) | 20 pending papers processed | 2 accepted, 0 review, 18 rejected | 17 of the 20 are ICML versions of papers already in the corpus under arXiv IDs (7 ingested, 8 accepted not yet ingested, 2 rejected) and were flagged `is_duplicate` with `canonical_id` set to the arXiv ID and `status: rejected`, arXiv stays canonical (user decision 2026-09-21, reverses the proceedings-over-arXiv rule of `dedup_openreview.py` for these; that script does not cover the `icml-2026-` prefix); the 3 without an arXiv twin were scored: AgentSteerTTS (0.92, TTS, accepted), TAC (0.88, codec+TTS, accepted), DropoutTS (0.03, rejected, time-series forecasting); both accepted papers are flagged `needs_manual_pdf` because `openreview.net/pdf` is behind the same browser-verification gate as the API | runtime: claude-code | provider: anthropic | model: claude-sonnet-5
-
-## 2026-10-23
-
-- review | 2605.17846 (UrduSpeech: A 156-Hour Urdu Speech Corpus with 12-Dimension Paralinguistic Annotations) | 1 paper | flagged for review | caught at Q2 ingest pre-flight before any page was written; general speech corpus with no TTS/VC experiment (ASR model selection, MOS rates the recordings, TTS baselines future work); user agreed to move it to triage | status: accepted -> review, review_queue.md entry recorded
-- review | 2605.18001 (Bridging the Gap: Converting Read Text to Conversational Dialogue) | 1 paper | re-dated | PDF preprint notice and Crossref (DOI 10.1007/978-981-96-6681-2_38) show publication in the ICICC 2025 proceedings (Springer LNNS, published online 2025-10-01); conference_date set to 2025-10-01 and the date rule re-applied, moving published_date 2026-05-18 -> 2025-10-01 (Q4 2025 straggler, not ingested in the Q2 sweep) | status: accepted (unchanged)
-- review | 2605.17846 (UrduSpeech) | 1 paper | rejected | user confirmed reject: general speech corpus with no TTS/VC experiment; out of corpus scope | status: review -> rejected, review_queue.md decision recorded

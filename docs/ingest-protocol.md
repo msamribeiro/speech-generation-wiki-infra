@@ -219,6 +219,13 @@ intentional. Checks the health check does not (fully) cover:
 - VITS is tagged `architecture: [VAE, GAN]` with `gan-vocoder` in `related_concepts` when the
   paper trains or fine-tunes it (user, 2026-10-22; older VITS pages are not backfilled).
   Normalizing-flow acoustic models such as Glow-TTS have no architecture term; leave them untagged.
+- `gan-vocoder` (user, 2026-10-24): tag it when the paper trains a standalone GAN vocoder (WaveNeXt 2
+  `2605.25506`; FMelCodec `2605.25669` retraining HiFi-GAN; CosyEdit2 `2605.25930` training
+  BigVGAN), or when a codec/VAE decoder's adversarial training is part of the paper's own
+  contribution or is ablated (Target-KL `2605.17085`, CQT discriminator ablated). A codec or VAE
+  whose GAN losses are inherited unchanged from a standard recipe (DAC, Stable Audio, Vocos) lists
+  `GAN` in `architecture` without the slug (PoDAR, ClariCodec, AffectCodec). Existing codec pages
+  (EnCodec, BigCodec and others carry it) are not backfilled.
 - Concept-tag scope: a tag is legitimate only if the paper's own method performs or is evaluated
   on the concept, not merely discusses, contrasts or defers to it. Check the concept's scope note
   and the paper's Limitations section.
@@ -244,8 +251,13 @@ intentional. Checks the health check does not (fully) cover:
     dropped; PS-TTS, JaiTTS and the Quechua/Spanish page kept).
   - `subjective-evaluation`: real human raters; LLM-judge or automated scoring never qualifies.
   - `disentanglement`: explicit training mechanism with ablation evidence.
-  - `self-supervised-speech`: only when the method itself uses HuBERT/WavLM/wav2vec2/w2v-BERT,
-    never for Whisper.
+  - `self-supervised-speech`: only when the method itself uses a self-supervised speech model
+    (HuBERT, WavLM, wav2vec2, w2v-BERT, data2vec-based models such as emotion2vec; user,
+    2026-10-24, AffectCodec `2605.23373`), never Whisper (supervised) and never when SSL appears
+    only in an evaluation metric (WavLM speaker similarity).
+  - `zero-shot-tts`: the paper's own system is evaluated on prompt-based cloning of speakers unseen
+    in training. Omit it when the evaluated voices are in the training or fine-tuning data, even if
+    the paper says "zero-shot" (user, 2026-10-24: Poly-SVC `2605.12310`, F5-TTS-DPS `2605.23859`).
   - `autoregressive-codec-tts`: neural-codec-token autoregression, not mel-frame AR models.
 - Surveys: `## Scope and Coverage` section and `tags: ["survey"]`.
 - No text input (lip-to-speech, brain decoding): use `task: [TTS]` as the standing fallback and
@@ -328,8 +340,9 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled | Step 6; check the table PNG |
 | Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
+| Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
 | Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
-| Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23) | Step 6; read the whole table |
+| Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve
 

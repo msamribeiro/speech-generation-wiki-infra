@@ -101,33 +101,35 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-23 (session close), by canonical `published_date`:
-**100 ingested + 125 `accepted` remaining** (all downloaded and parsed), 61 rejected
-(UrduSpeech `2605.17846` rejected in triage at close). The sixth round of 16 was pre-selected and screened, and Batch A (#1-#4: WavCube,
-TextPro-SLM, X-Voice, GibbsTTS) is ingested; see the 2026-10-23 Session Log. Corpus: 989 pages.
-The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). Manual
-Verification Queue: only the non-blocking legacy `[!note]` item is open. Content is at `9d9a0e3`
-(pushed); infra `331157d`; the site is bumped (`4f9dc72`).
+The Q2 sweep is under way. As of 2026-10-24 (session close), by canonical `published_date`:
+**120 ingested + 104 `accepted` remaining** (all downloaded and parsed; 12 May, 92 June),
+61 rejected. April is complete. This session ingested 20 papers in five batches (B-F): the rest of
+the sixth round (#5-#16) and a seventh round of 8; see the 2026-10-24 Session Log. Corpus: 1,009
+pages. The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). The
+Manual Verification Queue has no open items (all 14 resolved 2026-10-24; only the legacy
+corpus-wide `[!note]` item remains). Content and infra commits are in `git log` (pushed at close).
 
 To resume:
 
-1. Continue the sixth round at #5 with the already-screened list (no re-screening needed):
-   5 `2605.10084` PoDAR, 6 `2605.10199` user-stream routing, 7 `2605.11192` LATTE,
-   8 `2604.12928` MoshiRAG (ICML 2026, keeps arXiv date), 9 `2605.12310` Poly-SVC,
-   10 `2605.16026` S2ST-Omni 2 (separate work from Q3 `2026.findings-acl.1004` S2ST-Omni; that
-   page is accepted-but-unwritten, so keep its ID in `related_papers` and de-link it in prose),
-   11 `2605.16964` SemaVoice, 12 `2605.17085` Target-KL VAE, 13 `2605.19541` 300bps RL codec,
-   14 `2605.20830` Raon-OpenTTS, 15 `2605.20946` Thinking-while-speaking, 16 `2605.22083`
-   RobustSpeechFlow. Reserve: `2605.26136` deepfake perception study (screened clean).
-2. Re-verify the list's statuses from metadata before launching (nothing should have changed).
+1. **Pre-select the eighth round** and include the two Q4 2025 stragglers the user wants
+   ingested (2026-10-24): PACC `2605.18001` (`published_date` 2025-10-01, ICICC 2025) and
+   `2605.25504` (2025-11-12, O-COCOSDA 2025). Both are accepted and parsed. They are not part of
+   the closed Q4 integration; note them for explicit inclusion in the next integration cycle.
+2. Then continue Q2 from 2026-05-26 onward: the next accepted records by date start with
+   `2605.26978` PashtoTTS-Bench, `2605.27190`, `2605.27772` (ICML 2026, keeps arXiv date),
+   `2605.27258` PilotTTS, `2605.27984`, `2605.29209`, `2605.29859` MELD. Run the full pre-flight
+   (title dedup, author overlap with ingested records, `arxiv_comment`, first-page notices,
+   Crossref for any proceedings or journal version).
 3. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
    worktree
    (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`)
    and fill the index Org by hand (" / " between institutions; make the page string match).
-   The prompt template held well; since 2026-10-23 it also asks agents to check the sign
-   convention of any derived metric they define, and to set `organization` themselves.
-4. Pending user decision: PACC `2605.18001` is now a Q4 2025 straggler
-   (`published_date` 2025-10-01); whether to ingest it is undecided.
+   New rules from 2026-10-24 are in the protocol: `gan-vocoder` (standalone vocoder, or codec
+   decoder adversarial training that is a contribution or ablated), `self-supervised-speech`
+   (any SSL speech model the method uses), `zero-shot-tts` (unseen speakers only). Ask agents to
+   list every superlative with its supporting table cells (cured the recurring over-broad
+   "best" claims). No PDF renderer is installed; agents work from the parse and table PNGs, and
+   several runs took 15-100 minutes of wall time with ordinary tool counts.
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -1098,6 +1100,142 @@ RobustSpeechFlow.
 
 ---
 
+### Session 2026-10-24: sixth round continued
+
+**Batch B** (#5-#8, IDs checked against the list): `2605.10084` PoDAR, `2605.10199` user-stream
+routing, `2605.11192` LATTE, `2604.12928` MoshiRAG. Statuses re-verified and the new
+prior-publication pre-flight run on all 13 remaining candidates first (no notices).
+- PoDAR: Table 2 is scrambled in the markdown; all six comparisons verified on the PNG, Table 1
+  on the markdown. `task: [codec, TTS]` on the page (F5-TTS generators trained from scratch,
+  all results on TTS benchmarks); metadata `task` left as filter output per precedent.
+  `multilingual-tts` kept: the paper's own generator is trained on Emilia ZH-EN and evaluated on
+  EN and ZH, which meets the rule, though the bilingual setup is inherited from the F5-TTS recipe
+  (agent review flag, surfaced to the user).
+- User-stream routing: Table 1 and Table 4 values verified. One omitted comparison added
+  (GLM-4-Voice ties CF-Duplex on LLaMA Questions speech and leads on text, 50.7 | 64.7). The
+  Table 4 vs Table 10 EN | ZH order swap for stage-1 CF-Duplex TTS WER is real (both PNGs) and
+  noted neutrally. Agent noticed SALM-Duplex has two un-linked pages (`interspeech-2025-0874`,
+  `2505.15670`, neither marked duplicate); surfaced, not changed.
+- LATTE: VC kept (parallel VCTK slot-swap VC measured with target-speaker similarity against
+  codec baselines, Table 4), though the authors frame it as an analysis intervention, not a
+  conversion system. A speculative Limitations bullet about an unexplained discriminator in
+  Figure 1 removed (the text does not describe it; not a verified defect). Agent run took about
+  80 minutes of wall time for unclear reasons.
+- MoshiRAG: Table 1 verified row by row (Docling scrambled it); every baseline win reported
+  (GPT-4o Audio on all sets, Qwen3-Omni over the Gemma config on all four). ICML record
+  `icml-2026-4aI2vOyyHH` already a flagged duplicate. Review flags: `evaluation-metrics` scope
+  (keyword delay / E2EKD defined and measured across baselines) and moderate vs high
+  significance; both left as written and surfaced.
+- No new recurring issue class. Cleanup and QC ran clean on all four after each paper.
+- Q2: 104 ingested, 121 accepted, 61 rejected. Corpus: 993 pages.
+
+**Batch C** (#9-#12, IDs checked against the list): `2605.12310` Poly-SVC, `2605.16026`
+S2ST-Omni 2, `2605.16964` SemaVoice, `2605.17085` Target-KL VAE.
+- Poly-SVC: Table 1 verified (subjective only, 12 raters). Fine-tuned Firefly-GAN vocoder earns
+  `gan-vocoder`; six slugs. Review flags: `zero-shot-tts` omitted (paper claims zero-shot, but the
+  PopBuTFy target singers may be in training data) and `disentanglement` borderline (alignment
+  loss plus input perturbation, ablations within about one CI). Both queued.
+- S2ST-Omni 2: separate work from `2026.findings-acl.1004` (accepted, no page): kept in
+  `related_papers`, mentioned unlinked. `task: [SCA, TTS]` on the SimulS2S-LLM precedent
+  (off-the-shelf TTS backends, output speech evaluated with ASR-BLEU and BLASER 2.0). Two slugs.
+  Affiliation footnotes verified (seven institutions). Cascade beats it on German to English;
+  reported.
+- SemaVoice: Table 1 verified; the paper's "consistently outperforms" holds only for English WER,
+  and the page gives the full comparison. Continuous sigma-VAE latents, so no
+  `autoregressive-codec-tts`; `gan-vocoder` dropped under the 6-slug cap (inherited DAC recipe).
+- Target-KL VAE: `task: [TTS, codec]` kept (own 740M DiT TTS trained per VAE and evaluated on
+  Seed-TTS test-en). Reconstruction is general-audio only (AudioSet mel loss), stated on the
+  page. One overstatement fixed in Key Results and the claim: the 7.65 kbps VAE ties the
+  11.56 kbps VAE for best speaker similarity (0.68), not best alone. Review flag: `gan-vocoder`
+  from the GAN-trained DAC-VAE decoder; note PoDAR (Batch B) left it off for the same shape
+  (GAN discriminator in a retrained VAE recipe), so the two pages are inconsistent pending a
+  decision. Queued.
+- Agents twice took 80-100 minutes of wall time (LATTE, S2ST-Omni 2) with normal tool counts;
+  the S2ST-Omni 2 agent reported missing PDF tools. Later prompts tell agents not to wait on
+  unavailable tools. Agents also report the legacy MaskGCT pointer (`2409.00750` /
+  `iclr-2025-ExuBFYtCQU`) as inverted; it is the documented legacy convention, no change.
+- Q2: 108 ingested, 117 accepted, 61 rejected. Corpus: 997 pages.
+
+**Batch D** (#13-#16, IDs checked against the list; sixth round complete): `2605.19541`
+ClariCodec (300bps RL codec), `2605.20830` Raon-OpenTTS, `2605.20946` InterRS
+(Thinking-while-speaking), `2605.22083` RobustSpeechFlow.
+- ClariCodec: Table 1 verified. GRPO on the encoder plus stochastic FSQ with an ASR-WER reward
+  earns `rlhf-speech`; two slugs. Loses to SAC and FlexiCodec on WER, PESQ and SIM at higher
+  bitrates; reported. Review flag: `gan-vocoder` left off under the pending GAN-decoder convention,
+  although a Vocos vocoder is trained from scratch with the codec (added to that queue row).
+- Raon-OpenTTS: agent set `high` with a `[!tip]`; downgraded to moderate on the benchmark/dataset
+  precedent (`iclr-2026-CcmDDh070o`, TTSDS2: moderate until uptake is visible) and the callout
+  converted to prose. `task: [TTS, evaluation]` (Raon-OpenTTS-Eval is a core contribution).
+  Frozen HiFi-GAN vocoder not tagged. DiTTo-TTS cross-linked as related KRAFTON work.
+- InterRS: no speech output is evaluated (text metrics, LLM-judge fluency), so no
+  `streaming-tts` or `speech-to-speech` (TextPro-SLM precedent); `rlhf-speech` for GRPO with
+  new rewards. Fixed a wrong "largest gain on KK-audio" statement (largest over Fast CoT is SMQA;
+  on KK-audio InterRS is best overall). Quoted `architecture`/`type` lists normalised.
+- RobustSpeechFlow: agent listed every superlative with its supporting cells; spot-checked
+  Tables 1-2. Review flag: `multilingual-tts` omitted because the paper trains on about 10k h
+  "per language" (English and Korean) without saying whether one joint model was trained.
+  VibeVoice cited as the ICLR page `iclr-2026-FihSkzyxdv` (separate-pages precedent).
+- Over-broad superlative claims recurred twice in this batch (InterRS) and once in Batch C
+  (Target-KL); asking agents to list each superlative with its cells (RobustSpeechFlow) worked.
+- Q2: 112 ingested, 113 accepted, 61 rejected. Corpus: 1,001 pages.
+
+---
+
+### Session 2026-10-24 (continued): seventh round of 8 pre-selected
+
+Pre-selection (2026-05-21 onward, re-derived from metadata) and pre-flight screening (title
+dedup, author overlap with ingested records, arXiv comments, first-page notices, Crossref for
+proceedings/journal versions). `2605.25504` left off (O-COCOSDA 2025, queued); TASLP
+`journal_date` precision for #5 and #8 queued. Lineage noted: CORTIS follows `2507.20140`,
+CosyEdit2 follows `2601.05329` (separate works, cross-link). #1 ticked `accept` in triage.
+
+Numbered list: 1 `2605.26136` deepfake perception study, 2 `2605.23373` AffectCodec,
+3 `2605.23859` F5-TTS-DPS (WildSpoof), 4 `2605.25506` WaveNeXt 2, 5 `2605.25669` ultra-low-bitrate
+mel coding, 6 `2605.25962` CORTIS, 7 `2605.25930` CosyEdit2, 8 `2605.26812` CFMDCTCodec.
+
+---
+
+**Batch E** (seventh round #1-#4, IDs checked against the list): `2605.26136` deepfake perception
+study, `2605.23373` AffectCodec, `2605.23859` F5-TTS-DPS, `2605.25506` WaveNeXt 2.
+- Deepfake study: triage-accepted, so scope not re-opened. `task: [TTS, evaluation]`,
+  `subjective-evaluation` only (evaluation-paper rule: no system concepts for stimulus
+  families). Review flag: VC dropped although one stimulus family is listener-judged VC output.
+- AffectCodec: `task: [codec]` (no TTS or speech LM trained on the tokens). Tables 1-2 checked;
+  the two losses to X-Codec / SpeechTokenizer at 3.0 kbps reported. `disentanglement` on the
+  block-diagonal projections with a direct ablation. Queued: `self-supervised-speech` for a frozen
+  emotion2vec (data2vec-based) teacher, which is outside the rule's model list. GAN decoder from
+  the DAC recipe, `gan-vocoder` left off (pending convention).
+- F5-TTS-DPS: WildSpoof TTS Track report, low significance, `flow-matching` only. Cross-linked to
+  WildSpoof submissions `2512.17293` and `2602.05770` (verified). Rejected WildSpoof evaluation
+  plan `2508.16858` removed. Review flag: `zero-shot-tts` omitted (official evaluation is on seen
+  speakers in the fine-tuning data).
+- WaveNeXt 2: standalone GAN and diffusion vocoders, so `gan-vocoder` and `diffusion-tts` apply.
+  Table 1 checked, superlatives listed by the agent hold. The main-session prompt gave a wrong
+  title ending ("Sub-band processing"); the agent used the metadata title.
+- Agent wall time again long on two runs (AffectCodec about 45 min, WaveNeXt 2 about 14 min) with
+  ordinary tool counts; PDF renderers are missing in the environment.
+- Q2: 116 ingested, 109 accepted, 61 rejected. Corpus: 1,005 pages.
+
+**Batch F** (seventh round #5-#8, IDs checked against the list; seventh round complete):
+`2605.25669` FMelCodec, `2605.25962` CORTIS, `2605.25930` CosyEdit2, `2605.26812` CFMDCTCodec.
+- FMelCodec: Tables I-II spot-checked. Retrains a standalone HiFi-GAN v1 vocoder (not a
+  contribution), tagged `gan-vocoder`; added to the GAN convention queue row. Journal date left
+  unchanged pending the queued decision.
+- CORTIS: own page, cross-linked to `2507.20140` with what is new. VoiceBox partly fine-tuned
+  (saliency-masked 30%). Review flag: `speaker-adaptation` kept to match `2507.20140`, but
+  unlearning removes rather than adapts a speaker.
+- CosyEdit2: own page, cross-linked to `2601.05329`. Table 9 spot-checked. `multilingual-tts`
+  excluded (editing post-training English only; four-language ability inherited from CosyVoice 2,
+  per the 2026-10-22 rule). Trains and separately evaluates a standalone BigVGAN, so
+  `gan-vocoder`. Review flag: moderate vs high (CosyEdit was high).
+- CFMDCTCodec: the first agent run was cut off by a session limit with nothing written
+  (checked: no page, assets, index row, log line or metadata change); retried cleanly. Non-adversarial
+  training, so no GAN tag. The abstract's "outperforms" does not hold against BigCodec; the page
+  says so.
+- Q2: 120 ingested, 105 accepted, 61 rejected. Corpus: 1,009 pages.
+
+---
+
 ## Manual Verification Queue
 
 Papers where the ingest agent emitted `review_flags` in its INGEST_RESULT signal. Review these
@@ -1105,6 +1243,21 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2605.25962` | concept scope (`speaker-adaptation`) | Resolved 2026-10-24 (user): kept, consistent with `2507.20140` (speaker-targeted fine-tuning). |
+| `2605.25930` | field_significance moderate/high boundary | Resolved 2026-10-24 (user): kept at moderate. |
+| `2605.26136` | task (`VC` dropped) | Resolved 2026-10-24 (user): VC stays dropped (one analysis family; evaluation-paper rule). |
+| `2605.23373` | concept scope (`self-supervised-speech`) | Resolved 2026-10-24 (user): kept. Any self-supervised speech model the method itself uses counts (emotion2vec, data2vec); never Whisper, never metric-only use. Rule in `docs/ingest-protocol.md` (the ingest SKILL.md already said "or similar"). |
+| `2605.23859` | concept scope (`zero-shot-tts` omitted) | Resolved 2026-10-24 (user): stays omitted; evaluated voices seen in training do not earn `zero-shot-tts`. Rule in `docs/ingest-protocol.md`. |
+| `2605.25504` | paper date (prior publication) | Resolved 2026-10-24 (user): re-dated (`conference_date` 2025-11-12, `published_date` 2025-11-12; logged in `raw/pipeline_log.md`). Now a Q4 2025 straggler; the user wants it ingested, picked up with PACC `2605.18001` at the next pre-selection (see Resume Here). |
+| `2605.25669` / `2605.26812` | paper date (`journal_date` precision) | Resolved 2026-10-24 (user): `journal_date` left unset (Crossref gives the year only; quarter unaffected). |
+| `2605.22083` | concept scope (`multilingual-tts` omitted) | Resolved 2026-10-24 (user): stays omitted (joint training not stated). |
+| `2605.20830` | field_significance high/moderate | Resolved 2026-10-24 by precedent (`iclr-2026-CcmDDh070o`, TTSDS2): downgraded to moderate, `[!tip]` converted to prose; user did not override. |
+| `2605.12310` | concept scope (`zero-shot-tts` omitted) | Resolved 2026-10-24 (user): stays omitted (target singers seen in training). Rule in `docs/ingest-protocol.md`. |
+| `2605.12310` | concept scope (`disentanglement`) | Resolved 2026-10-24 (user): kept (explicit mechanism plus ablation meets the rule). |
+| `2605.17085` / `2605.10084` | concept scope (`gan-vocoder` for a GAN-trained VAE decoder) | Resolved 2026-10-24 (user): option C. Tag for a standalone GAN vocoder trained in the paper, or when the codec/VAE decoder's adversarial training is the paper's own contribution or is ablated; not for GAN losses inherited unchanged from DAC/Stable Audio/Vocos. Corpus check: 28 of 76 codec+GAN pages carry the slug (EnCodec, BigCodec, HiFi-Codec in the integrated YAML); not backfilled. No page changes: Target-KL keeps it (CQT discriminator ablated, Table 1); PoDAR, ClariCodec, AffectCodec stay without; FMelCodec, CosyEdit2, WaveNeXt 2 keep it. Rule in `docs/ingest-protocol.md`. |
+| `2605.10084` | concept scope (`multilingual-tts`) | Resolved 2026-10-24 (user): kept (own generator trained and evaluated on EN and ZH; GibbsTTS precedent). |
+| `2604.12928` | concept scope (`evaluation-metrics`) | Resolved 2026-10-24 (user): kept (defines and measures new latency metrics). |
+| `2604.12928` | field_significance moderate/high boundary | Resolved 2026-10-24 (user): kept at moderate. |
 | `2026.lrec-1.48` | concept scope (`multilingual-tts`) | Resolved 2026-10-22 (user): adaptation to a single new language with monolingual output does not earn `multilingual-tts`; the evaluated output must span more than one language. Dropped from `2026.lrec-1.48`, `2605.02496` and `2026.sigul-1.11`; kept on PS-TTS `2604.09111` (bilingual YourTTS), JaiTTS `2604.27607` (code-switching evaluated, bullet reworded) and `2604.13288` (pooled Spanish+Quechua). Rule in `docs/ingest-protocol.md`. |
 | `2026.lrec-1.184` | concept scope (`autoregressive-codec-tts`) | Resolved 2026-10-22 (user): kept. |
 | `2605.00777` | concept scope (`disentanglement`) | Resolved 2026-10-22 (user): kept. |
