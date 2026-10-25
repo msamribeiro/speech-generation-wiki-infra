@@ -108,7 +108,8 @@ April and May are complete. This session ingested the eighth round: the two Q4 2
 see the 2026-10-25 Session Log. Corpus: 1,027 pages. The procedure is `docs/ingest-protocol.md`
 (canonical over this file's Methodology). The Manual Verification Queue has no open items (only the
 legacy corpus-wide `[!note]` item remains). Content, infra and the `wiki` submodule pointer were
-committed, merged and pushed at the 2026-10-25 wrap-up (see `git log`).
+committed, merged and pushed at the 2026-10-25 wrap-up: content `6d05e57`, infra
+`b0b4a0e`; the site is bumped (`14fdf3c`).
 
 To resume:
 
