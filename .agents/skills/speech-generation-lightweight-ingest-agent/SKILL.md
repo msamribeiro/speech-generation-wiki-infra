@@ -141,7 +141,7 @@ title: "{title}"
 authors: [{comma-separated quoted strings}]
 organization: {string or null}
 venue: {venue}
-venue_type: {conference | workshop | preprint | technical-report}
+venue_type: {conference | journal | workshop | preprint | technical-report}
 year: {YYYY}
 month: {M or null}
 published_date: {YYYY-MM-DD}   # copy exactly from raw/metadata (canonical: venue date if peer reviewed, else date of the arXiv version fetched); never recompute
@@ -180,7 +180,7 @@ generation:
 - This is the most common mistake: if you just assigned `[!tip]` or `[!important]` to Field Significance, do NOT reuse that callout type on the abstract card.
 - The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!info]` (Citation Stub banner — required, always second), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!caution]` — write prose instead.
 
-> [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Workshop | Preprint | Technical Report}
+> [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Journal | Workshop | Preprint | Technical Report}
 > **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. One sentence, no bold label.}

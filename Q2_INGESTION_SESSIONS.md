@@ -101,36 +101,39 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 
 ## Next Session — Resume Here
 
-The Q2 sweep is under way. As of 2026-10-24 (session close), by canonical `published_date`:
-**120 ingested + 104 `accepted` remaining** (all downloaded and parsed; 12 May, 92 June),
-61 rejected. April is complete. This session ingested 20 papers in five batches (B-F): the rest of
-the sixth round (#5-#16) and a seventh round of 8; see the 2026-10-24 Session Log. Corpus: 1,009
-pages. The procedure is `docs/ingest-protocol.md` (canonical over this file's Methodology). The
-Manual Verification Queue has no open items (all 14 resolved 2026-10-24; only the legacy
-corpus-wide `[!note]` item remains). Content is at `4f73e1c` (pushed); infra `cabadba`; the
-site is bumped (`ed30299`).
+The Q2 sweep is under way. As of 2026-10-25 (session close), by canonical `published_date`:
+**136 ingested + 88 `accepted` remaining** (all downloaded and parsed; all June), 61 rejected.
+April and May are complete. This session ingested the eighth round: the two Q4 2025 stragglers
+(PACC `2605.18001`, `2605.25504`) plus 16 Q2 papers in batches A-D (#3-#18, through 2026-06-02);
+see the 2026-10-25 Session Log. Corpus: 1,027 pages. The procedure is `docs/ingest-protocol.md`
+(canonical over this file's Methodology). The Manual Verification Queue has no open items (only the
+legacy corpus-wide `[!note]` item remains). Content, infra and the `wiki` submodule pointer were
+committed, merged and pushed at the 2026-10-25 wrap-up (see `git log`).
 
 To resume:
 
-1. **Pre-select the eighth round** and include the two Q4 2025 stragglers the user wants
-   ingested (2026-10-24): PACC `2605.18001` (`published_date` 2025-10-01, ICICC 2025) and
-   `2605.25504` (2025-11-12, O-COCOSDA 2025). Both are accepted and parsed. They are not part of
-   the closed Q4 integration; note them for explicit inclusion in the next integration cycle.
-2. Then continue Q2 from 2026-05-26 onward: the next accepted records by date start with
-   `2605.26978` PashtoTTS-Bench, `2605.27190`, `2605.27772` (ICML 2026, keeps arXiv date),
-   `2605.27258` PilotTTS, `2605.27984`, `2605.29209`, `2605.29859` MELD. Run the full pre-flight
-   (title dedup, author overlap with ingested records, `arxiv_comment`, first-page notices,
-   Crossref for any proceedings or journal version).
+1. **Q4 integration hand-off:** the two stragglers `2605.18001` (PACC, `low`) and `2605.25504`
+   are Q4 2025 by `published_date` and were ingested after Q4 integration closed. Include them
+   explicitly in the next Q4 integration pass (tell the integration stream).
+2. **Pre-select the ninth round** from 2026-06-02 onward. Next accepted records by date:
+   `2606.03241` S2ST benchmarking, `2606.03455` WavTTS, `2502.14145` full-duplex dialogue
+   management (old arXiv ID dated 2026-06-03: check `arxiv_comment` and versions for a later
+   full version before accepting the date), `2606.04418` CleanCodec, `2606.05852` UniVoice,
+   `2606.05876`, `2606.05889` GLASS, `2606.05892` VoCodec. Run the full pre-flight (title dedup,
+   author overlap with ingested and accepted records, `arxiv_comment`, first-page notices, Crossref
+   for any proceedings or journal version).
 3. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
    worktree
    (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`)
-   and fill the index Org by hand (" / " between institutions; make the page string match).
-   New rules from 2026-10-24 are in the protocol: `gan-vocoder` (standalone vocoder, or codec
-   decoder adversarial training that is a contribution or ablated), `self-supervised-speech`
-   (any SSL speech model the method uses), `zero-shot-tts` (unseen speakers only). Ask agents to
-   list every superlative with its supporting table cells (cured the recurring over-broad
-   "best" claims). No PDF renderer is installed; agents work from the parse and table PNGs, and
-   several runs took 15-100 minutes of wall time with ordinary tool counts.
+   and fill the index Org by hand. New from 2026-10-25: the frozen-component rule is narrowed
+   (TTS-side components central to the evaluated output only); `venue_type: journal` is in the
+   schema (first use: `2606.01905`, IEEE TBME); journal Early Access dates come from the IEEE
+   Xplore "Date of Publication" (scripted requests are blocked, so ask the user; Crossref often
+   has only the print issue); single-author automated benchmarks without human evaluation sit at
+   `low` (PashtoTTS-Bench, NLPAICS). The standing prompt now also spells out the two-callout limit
+   and allowed types, the `Preprint` card convention, quoting `organization`, and linking evaluated
+   baselines that have pages. Agent runs took 2-90 minutes; one was cut by a usage limit with
+   nothing written (retried cleanly).
 
 **OpenReview (side thread, not blocking ingest):** live fetches are blocked by a browser-verification
 gate, so use the saved-page path (`openreview.py --from-file`; the user saves the API pages from a
@@ -141,7 +144,8 @@ downloads are behind the same gate, so an OpenReview-only paper needs its PDF sa
 posted on 2026-09-21; re-save its pages later and run the same way.
 
 **Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
-recently requested (this session: one at a time, summary and go-ahead per batch of 4).
+recently requested (2026-10-25: a pre-selected set of 16 in batches of 4, one paper at a time,
+summary and go-ahead per batch).
 
 ---
 
@@ -1235,6 +1239,125 @@ study, `2605.23373` AffectCodec, `2605.23859` F5-TTS-DPS, `2605.25506` WaveNeXt 
   says so.
 - Q2: 120 ingested, 105 accepted, 61 rejected. Corpus: 1,009 pages.
 
+### Session 2026-10-25: eighth round (2 Q4 stragglers + 16) pre-selected
+
+Pre-selection re-derived from metadata (canonical `published_date`, accepted and parsed) with the
+full pre-flight (title dedup against the whole corpus, author overlap with ingested and accepted
+records, arXiv comments, first-page notices, Crossref). Findings: PilotTTS shares 10/14 authors
+with QTTS `2507.12197` but is a separate system that does not cite it; UniAudio-Token uses
+StableToken `iclr-2026-17DNmdQ9aU` only as a baseline; SwanVoice and `2605.28618` are different
+papers by one team; accepted `2605.11098` "AffectCodec" (ACL Findings 2026, Q3) is a name
+collision with ingested `2605.23373` (disjoint authors), not a duplicate. The ICML OpenReview
+records for #5 and #14 are already rejected duplicates pointing to the arXiv IDs.
+
+Stragglers (ingested first, outside the 16): S1 `2605.18001` PACC (ICICC 2025), S2 `2605.25504`
+non-verbal emotional TTS (O-COCOSDA 2025). Both are Q4 2025 by `published_date` and must be added
+explicitly to the next Q4 integration pass.
+
+Numbered list (user asked for 16 in batches of 4): **A** 3 `2605.26978` PashtoTTS-Bench,
+4 `2605.27190` think-while-listening, 5 `2605.27772` VoxParadox, 6 `2605.27258` PilotTTS;
+**B** 7 `2605.27984` KVoiceBench, 8 `2605.29209` WER Trap, 9 `2605.29859` MELD,
+10 `2605.30792` OpenSTBench; **C** 11 `2605.30993` SwanVoice, 12 `2605.31521` UniAudio-Token,
+13 `2606.00851` Sympatheia, 14 `2606.01479` SAE emotion control (ICML 2026; completes May);
+**D** 15 `2026.nlpaics-1.18`, 16 `2026.swisstext-1.7`, 17 `2606.01905` electrolaryngeal
+enhancement, 18 `2605.31530` UNISON. #4, #5, #7, #15 and #18 are triage-accepted.
+**Pending at #17 (user: decide when reached):** IEEE TBME, Crossref vol. 73(8) print issue dated
+2026-08 with no `published-online`; record created 2026-05-19 (likely Early Access). Early-access
+`journal_date` keeps it in Q2; the print month moves it to Q3 (swap in `2606.03241`).
+
+---
+
+**Stragglers** (S1-S2, IDs checked): `2605.18001` PACC, `2605.25504` non-verbal emotional TTS.
+- PACC: `task: [VC]` (read-speech-to-conversational style conversion; no text input). The
+  agent warned that the index row would take TTS+VC from metadata; `cleanup.py` reads the page, so
+  the row is correct. Table 2 values checked against the PNG (Docling shifted the columns); the
+  PESQ 4.64 out of the stated range and Figure 2 MOS above 5 verified. Review flag: re-triage vs
+  keeping a `low` page.
+- Non-verbal emotional TTS: the agent wrote three callouts including `[!note]` (recurring
+  wrong-callout class); converted to prose. 78.8% (abstract, §5.3) vs 82.0% (Figure 2,
+  conclusion) accuracy discrepancy verified. HiFi-GAN off the shelf, so no `gan-vocoder`.
+- Standing prompt now spells out the two-callout limit and the allowed types.
+
+**Batch A** (#3-#6, IDs checked against the list): `2605.26978` PashtoTTS-Bench, `2605.27190`
+think-while-listening, `2605.27772` VoxParadox, `2605.27258` PilotTTS.
+- PashtoTTS-Bench: Table 5 checked; the per-set ordering differs from the paper's "same ordering"
+  sentence (stated neutrally). Org "Independent Researcher". Main-session flag: moderate vs low
+  (PSP precedent).
+- Think-while-listening: Table 2 and Figure 1 checked. Two agent flags (`rlhf-speech` for
+  speech-in/text-out RL; `architectural-novelty` type) resolved by precedent (Step-Audio-R1,
+  ASPIRin, SHANKS). Agent wall time about 46 min with 15 tool calls.
+- VoxParadox: Table 2 checked; the Qwen2-Audio speaker-counting drop (12.50 to 11.50 with PCLM)
+  against the paper's "all 10 tasks" claim verified. `rlhf-speech` kept by the same precedent;
+  `subjective-evaluation` omission (Prolific label validation) queued for the user.
+- PilotTTS: Tables 1, 2, 4 checked; three text/table mismatches verified (Table 2 averages, Table
+  3 "smallest drop", Table 4 Overall). Seven slugs qualified; `flow-matching` (inherited CFM
+  decoder) dropped under the cap rule. QTTS not linked (not cited).
+- Q2: 124 ingested, 100 accepted, 61 rejected. Corpus: 1,015 pages.
+
+**Batch B** (#7-#10, IDs checked against the list): `2605.27984` KVoiceBench, `2605.29209` WER
+Trap, `2605.29859` MELD, `2605.30792` OpenSTBench.
+- KVoiceBench: Table 1 checked (drops, MMAU-Pro gaps, "second-lowest English" qualifier). The
+  top-ranked model is the authors' own (KRAFTON), disclosed on the page. The agent corrected two
+  of its own over-broad statements before finishing.
+- WER Trap: Org verified (UNSW / NTU; the StepFun "overlap" was common author names). Baselines
+  WavTokenizer and SpeechTokenizer are evaluated but not in the reference list; linked by the
+  main session (OmniVoice precedent from #3). `flow-matching` kept (§5/App. B.2 flow-matching
+  generative probe). Significance low/moderate queued.
+- MELD: Table 2 checked. `task: [TTS]` (no adapted LLM, so no `spoken-language-model`); not
+  codec-token AR. Org taken from the PDF (parse dropped the affiliation line). MELLE double page
+  (`2407.08551` / `2025.acl-long.65`) already tracked in `BACKLOG.md`. Agent wall time about 90 min
+  with 17 tool calls.
+- OpenSTBench: Table 6 checked. `speech-to-speech` kept on the "evaluates how to measure the
+  concept" rule (False Resonance precedent): the contribution is how to evaluate S2ST speech output.
+  UniSS linked via its canonical ICLR ID (`iclr-2026-5o0ZvYzh6B`), not the rejected arXiv duplicate.
+- Recurring class (2 of 4): the agent links or omits evaluated-but-uncited systems inconsistently;
+  standing prompt now says to link evaluated baselines that have pages.
+- Q2: 128 ingested, 96 accepted, 61 rejected. Corpus: 1,019 pages.
+
+**Batch C** (#11-#14, IDs checked against the list; May 2026 complete): `2605.30993` SwanVoice,
+`2605.31521` UniAudio-Token, `2606.00851` Sympatheia, `2606.01479` SAE emotion control.
+- SwanVoice: Table 1 checked; aligner prose ("about 10 ms behind LattifAI") contradicted by Table 3
+  (29.92 vs 36.00), verified. Agent set `venue_type: technical-report` and card "Technical Report";
+  main session restored `preprint` / "Preprint" (metadata and the Step-Audio tech-report
+  convention). `multilingual-tts` kept on the pooled precedent.
+- UniAudio-Token: Table 3 checked. Tags match the sibling StableToken page exactly.
+- Sympatheia: Table 1 checked. Main session added `flow-matching` for GLM-4-Voice's inherited,
+  frozen decoder (frozen-component rule; bullet says frozen) and quoted `organization`.
+- SAE emotion control: Table 1 checked (trailing cells reported). `training: [self-supervised]`
+  changed to `[]` (vocabulary reserves the term for SSL speech representations). Frozen IndexTTS2
+  components keep their slugs.
+- Recurring classes this batch: frozen-component rule not applied by the agent (1, now in the
+  prompt), non-canonical `venue_type` / card label (1, now in the prompt).
+- Q2: 132 ingested, 92 accepted, 61 rejected. May 2026: 59 ingested, 14 rejected, 0 accepted.
+  Corpus: 1,023 pages.
+
+**Queue review (user, 2026-10-25, after Batch C):** PACC kept at low; PashtoTTS-Bench downgraded
+to low; VoxParadox stays without `subjective-evaluation`; WER Trap stays moderate; the
+frozen-component rule narrowed to TTS-side components central to the evaluated output
+(Sympatheia's `flow-matching` removed; protocol and ingest SKILL.md updated; agents check PASS).
+
+**Batch D** (#15, #16, #18 done; #17 pending, IDs checked against the list):
+`2026.nlpaics-1.18`, `2026.swisstext-1.7`, `2605.31530` UNISON.
+- NLPAICS: the first agent run hit the session limit with nothing written (checked: no page,
+  assets, index row, log line or metadata change); retried cleanly. Table 2 checked. Downgraded to
+  low by the PashtoTTS-Bench decision (single-author automated study, no human evaluation).
+  `venue: NLPAICS 2026` (metadata holds the placeholder `workshop`).
+- SwissText: Table 3 checked. `multilingual-tts` off (Swiss German output only);
+  `self-supervised-speech` on (wav2vec2 phoneme recognizer and alignment build the compared
+  phoneme intermediate).
+- UNISON: Tables 2-3 checked. The agent reported a KL mis-ordering in its own summary but did not
+  fix it (agent self-report class); main session corrected the sentence (GenAU-L 1.290 lowest).
+  `zero-shot-tts` kept on Seed-TTS cloning (no SIM reported, stated on the page).
+- #17 `2606.01905` (IEEE TBME): user confirmed the IEEE Xplore Date of Publication (Early
+  Access) 2026-05-19. `journal_date` set and the date rule re-applied via `lib/paper_dates`
+  (`published_date` 2026-06-01 -> 2026-05-19, stays Q2, now a May record); logged in
+  `raw/pipeline_log.md`. Ingested: Table III checked against the PNG (Docling merged rows and dropped
+  P-HF-3); pitch-metric ties and trails listed. First journal-venue page in the corpus: the agent
+  wrote `venue_type: journal`, which the schema enum does not include (queued for the user).
+- Round complete: all 18 IDs swept (one index row, one log line, metadata `ingested` each);
+  corpus ingest check 0 errors, none of the 1,167 legacy warnings on this round's pages.
+- Q2: 136 ingested, 88 accepted, 61 rejected. Corpus: 1,027 pages.
+
 ---
 
 ## Manual Verification Queue
@@ -1244,6 +1367,24 @@ after the session batch is complete — check the paper page and resolve each fl
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2606.01905` | schema gap (`venue_type: journal`) | Resolved 2026-10-25 (user): option (a). `journal` added to the `venue_type` enum in `docs/schemas/metadata.md` and the ingest, lightweight-ingest and review SKILL.md files (card label "Journal"); agents check PASS. Page keeps `venue: IEEE TBME` / `journal`; metadata keeps `venue: arXiv` per the re-date precedent. |
+| `2605.31530` | concept scope (`zero-shot-tts` on intelligibility-only cloning evidence) | Resolved 2026-10-25 by rule: kept. The rule requires evaluation on prompt-based cloning of unseen speakers (Seed-TTS EN/ZH, Table 3 checked); it does not require a similarity score. The page's warning callout states that no SIM or MOS is reported. Main session also corrected the KL ordering in Key Results (GenAU-L 1.290 is lowest, not Tango 1.305); the agent had identified but not fixed it. |
+| `2026.swisstext-1.7` | concept scope (`multilingual-tts` omitted; `self-supervised-speech` kept) | Resolved 2026-10-25 by rule (main session). `multilingual-tts`: evaluated output is Swiss German only (High German text in, Swiss German speech out; 8 SwissDial dialects pooled), so the output does not span more than one language. `self-supervised-speech`: a wav2vec2-based phoneme recognizer plus dual wav2vec2 CTC alignment build the phoneme intermediate that is one of the three compared conditions, so the method itself uses the SSL model (not metric-only). |
+| `2026.nlpaics-1.18` | field_significance moderate/low; concept scope (`evaluation-metrics` only) | Resolved 2026-10-25 (main session, by the user's same-day PashtoTTS-Bench decision): downgraded to low (single-author automated study of three commercial engines, no human evaluation). `evaluation-metrics` kept (tests whether jitter/shimmer/HNR discriminate synthetic speech; deepfake-evaluation pages carry the slug). `venue: NLPAICS 2026` follows the SIGUL/ABJAD-NLP workshop convention (metadata holds the placeholder `workshop`). |
+| `2606.01479` | field_significance type (`architectural-novelty` vs engineering-integration) | Resolved 2026-10-25 (main session): kept. SAE steering exists for text LLMs, but the paired sentence-level selectivity criterion and the semantic-backbone intervention point are new to TTS and ablated (Table 3); Figure 2 embed stays. Main session also set `training: []` (agent wrote `self-supervised`, which the vocabulary reserves for SSL speech representations; only the SAE is trained, on a frozen IndexTTS2). Frozen IndexTTS2 AR and CFM components keep `autoregressive-codec-tts` and `flow-matching` under the frozen-component rule, matching the IndexTTS2 page. |
+| `2606.00851` | concept scope (`flow-matching` for an inherited frozen decoder) | Resolved 2026-10-25 (user): narrow view. The frozen-component rule applies only to TTS-side components central to the evaluated output (Tibetan TTS, SAE emotion control); an untouched inherited decoder inside a speech LM or dialogue system does not earn its slug. `flow-matching` and its bullet removed from Sympatheia (stays in `architecture`). Rule updated in `docs/ingest-protocol.md` and the ingest SKILL.md. |
+| `2605.31521` | task (`TTS`, `SCA` added beyond the filter's `codec`) | Resolved 2026-10-25 by precedent: kept. The paper trains a Qwen2.5-0.5B codec-token TTS and a 3B understanding LLM on its tokens; tags and concepts match the sibling StableToken page `iclr-2026-17DNmdQ9aU` exactly. Metadata `task` stays as filter output (existing `BACKLOG.md` divergence item). |
+| `2605.30993` | concept scope (`multilingual-tts`) | Resolved 2026-10-25 by precedent: kept. Trained on about 2M h of Chinese and English; SwanBench evaluation covers Chinese (CER) and English (WER) sets, pooled in the tables (pooled Spanish+Quechua precedent `2604.13288`). Main session also set `venue_type: preprint` and the card to "Preprint" (agent wrote technical-report; tech-report convention is preprint, e.g. Step-Audio 2). |
+| `2605.29859` | task (`SCA` / `spoken-language-model` dropped) | Resolved 2026-10-25 by rule: MELD is a ~200M from-scratch mel-frame decoder (TTS plus STT), no adapted LLM, no dialogue, so `spoken-language-model` fails; page `task: [TTS]`. Metadata `task` stays as filter output (page-vs-metadata divergence is the existing `BACKLOG.md` item). Not `autoregressive-codec-tts` (mel frames, k-means latents). |
+| `2605.29209` | field_significance low/moderate boundary | Resolved 2026-10-25 (user): kept at moderate. |
+| `2605.29209` | concept scope (`flow-matching`) | Resolved 2026-10-25 (main session): kept. §5 and App. B.2 name a trained flow-matching decoder as the generative probe; the App. A ResNet MSE decoder is the reconstruction-loss probe. The page notes the paper does not tie each figure to a decoder. |
+| `2605.27258` | concept scope (`flow-matching` dropped at the 6-slug cap) | Resolved 2026-10-25 by rule: seven slugs qualified; the stock CosyVoice-style CFM decoder (not ablated, training not stated) is the inherited component and drops first; `flow-matching` stays in `architecture` and the page says so. |
+| `2605.27772` | concept scope (`rlhf-speech` for understanding-side DPO) | Resolved 2026-10-25 by precedent: kept, same reasoning as `2605.27190` (Step-Audio-R1 `2511.15848`): DPO on a speech-input LLM is the paper's own training stage. Revisit with `2605.27190` if the user narrows `rlhf-speech` to speech-generation alignment. |
+| `2605.27772` | concept scope (`subjective-evaluation` omitted) | Resolved 2026-10-25 (user): stays off. A perceptual annotation study that validates benchmark labels is not a listening test of system output. |
+| `2605.27190` | concept scope (`rlhf-speech` with speech input, text output) | Resolved 2026-10-25 by precedent: kept. Step-Audio-R1 `2511.15848` (RL on a speech-input reasoning model with text output) and ASPIRin `2604.10065` carry the slug; DAPO with a reward-composition ablation is the paper's own training. Revisit only if the user overrides. |
+| `2605.27190` | field_significance type (`architectural-novelty` vs engineering-integration) | Resolved 2026-10-25 by precedent: kept (new wait/think/answer action space and reward over an unchanged backbone). SHANKS `2510.06917` (think-while-listening) and ASPIRin `2604.10065` (RL action space) are both moderate `architectural-novelty`. Figure 1 embed stays. |
+| `2605.26978` | field_significance moderate/low boundary | Resolved 2026-10-25 (user): downgraded to low (PSP `2604.25476` precedent: single-language automated benchmark without human evaluation). Field Significance prose updated. |
+| `2605.18001` | field_significance / corpus scope (re-triage?) | Resolved 2026-10-25 (user): kept as a `low` page (in scope; the page states the unspecified module, unnamed baseline and out-of-range metrics). No change. |
 | `2605.25962` | concept scope (`speaker-adaptation`) | Resolved 2026-10-24 (user): kept, consistent with `2507.20140` (speaker-targeted fine-tuning). |
 | `2605.25930` | field_significance moderate/high boundary | Resolved 2026-10-24 (user): kept at moderate. |
 | `2605.26136` | task (`VC` dropped) | Resolved 2026-10-24 (user): VC stays dropped (one analysis family; evaluation-paper rule). |

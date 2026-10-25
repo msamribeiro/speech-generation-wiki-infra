@@ -72,6 +72,14 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     `arxiv_comment` often omits. If the paper already appeared in proceedings or a journal, look up
     the date (Crossref via the DOI), set `conference_date` or `journal_date` and re-apply the date
     rule; the paper may leave the quarter (PACC `2605.18001`, ICICC 2025, 2026-10-23).
+    Re-date with `lib/paper_dates.apply_date_rule` (never by hand) and log a `review | re-dated`
+    line in `raw/pipeline_log.md`; metadata `venue` stays as fetched.
+  - **Journal Early Access dates.** `journal_date` is the first online date. For IEEE journals
+    Crossref often carries only the print issue (no `published-online`); its record `created`
+    date usually matches Early Access but is not proof. IEEE Xplore blocks scripted requests, so
+    ask the user to read the article page's "Date of Publication" (TBME `2606.01905`: print
+    2026-08, Early Access 2026-05-19, stayed in Q2; user, 2026-10-25). On the page use
+    `venue_type: journal` and the card label `Journal`.
   - **Scope doubt** (ASR/translation/diarization-only, non-speech audio, zero metrics): read the
     paper and apply the precedent chain in the session doc; surface the matching precedent
     explicitly instead of re-deciding from scratch.
@@ -117,7 +125,14 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
   against the table.
 - List every superlative written on the page ("best", "largest", "outperforms") in the closing
   summary, with the table cells that support it across all rows (a tie is not "best").
-- Set `organization` from the first-page affiliations, institutions joined with " / ".
+- Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it.
+- Link systems the paper evaluates as baselines when they have pages, even if the reference list
+  omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
+- Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
+  reports are `Preprint`; a workshop page names the workshop with its year (`SIGUL 2026`,
+  `NLPAICS 2026`) when metadata holds the placeholder `workshop`.
+- Spell out the callout limit in the prompt: two at most, the abstract card included; only
+  `[!abstract]`, `[!tip]`, `[!important]`, `[!warning]`, never `[!note]`.
 - Stop and flag, do not write, if the paper is scope-ambiguous.
 - Emit `INGEST_RESULT` JSON including `review_flags` only when a precision-gate judgment call
   (claims, `field_significance`, concept scope, vocabulary gap) is genuinely uncertain.
@@ -205,6 +220,9 @@ intentional. Checks the health check does not (fully) cover:
   Significance or Wiki Connections.
 - `field_significance.type` is plausible (no `empirical-benchmark` on a system paper, no
   `architectural-novelty` on engineering integration).
+- Single-author or single-language automated benchmarks without human evaluation sit at `low`
+  even when their cautions are useful (PSP `2604.25476`; PashtoTTS-Bench `2605.26978` and NLPAICS
+  `2026.nlpaics-1.18`, user 2026-10-25). Larger benchmarks with uptake potential stay `moderate`.
 - Every metric traces to a table or figure; missing values are `"not reported"`.
 
 **Tagging**
@@ -216,8 +234,13 @@ intentional. Checks the health check does not (fully) cover:
   fine when that is all that qualifies (common for benchmarks and narrow system papers). When more
   than 6 qualify, drop slugs that describe frozen or inherited components first (an architecture
   tag can stay in `architecture` without its slug), and keep evidence concepts such as
-  `subjective-evaluation`. Below the cap, a frozen component that is part of the evaluated system
-  keeps its slug, and the page says it is frozen (user, 2026-10-22, Tibetan-TTS `2605.02496`).
+  `subjective-evaluation`. Below the cap, a frozen component keeps its slug only when it is on the
+  TTS side and central to the evaluated output (a frozen acoustic model or AR backbone that a TTS
+  paper adapts or steers), and the page says it is frozen (user, 2026-10-22, Tibetan-TTS
+  `2605.02496`; SAE emotion control `2606.01479`). An inherited decoder inside a speech LM or
+  dialogue system that the paper never touches does not earn its slug (user, 2026-10-25,
+  Sympatheia `2606.00851`: GLM-4-Voice's flow-matching decoder, no `flow-matching`); it can stay
+  in `architecture`.
 - VITS is tagged `architecture: [VAE, GAN]` with `gan-vocoder` in `related_concepts` when the
   paper trains or fine-tunes it (user, 2026-10-22; older VITS pages are not backfilled).
   Normalizing-flow acoustic models such as Glow-TTS have no architecture term; leave them untagged.
@@ -329,11 +352,14 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Full title in index row | Agent writes the untruncated title | Step 5.1 |
 | Bare wikilinks | `[[id]]` in prose; agent defends it as template-mandated | Step 6 |
 | Wrong abstract callout | Abstract uses the Field Significance callout type | Step 6 |
+| Disallowed `[!note]` / third callout | Agent adds a `[!note]` caveat callout beside abstract and warning (2026-10-25, `2605.25504`) | Step 4 prompt (spell out the limit), `qc.py` callouts check |
+| Evaluated baselines left unlinked | Systems scored in the paper's tables but absent from its reference list are linked on some pages, not others (2026-10-25, 2 of 4 in one batch) | Step 4 prompt, step 6 |
+| Non-canonical `venue_type` / card label | Agent writes `technical-report` / "Technical Report" against metadata `preprint` (2026-10-25) | Step 4 prompt, step 6 |
 | Task/architecture tag missing from `related_concepts` | Health check silent for architecture (2026-10-22, 2 of 4 pages; cured by an explicit per-tag coverage line in the prompt) | Step 6 |
 | Concept-tag scope mistag | Tag because the paper discusses it, not performs it | Step 6 |
 | Unquoted date or numeric-looking ID | Parsed as date object or float | Step 4 prompt, step 6 |
 | False "inconsistency" on page | Agent misreads per-group vs total or different conditions | Step 6 |
-| Agent self-report contradicts file | Narrated decision differs from the written frontmatter | Whole of step 6 |
+| Agent self-report contradicts file | Narrated decision differs from the written frontmatter; or the summary names an error on the page without fixing it (2026-10-25, UNISON KL ordering) | Whole of step 6; act on every defect the summary mentions |
 | Batch undercount or list drift | 3 agents launched for a batch of 4, or wrong `#` range | Section 3 |
 | Cleanup deferred to batch end | Slipped on 2026-10-18; led to unquoted dates and a skipped log | Section 5 |
 | Padding `related_concepts` | Out-of-scope slug added to reach 3 (2026-10-21, before the scope-wins rule) | Step 6 |

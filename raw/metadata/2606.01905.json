@@ -19,14 +19,14 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2026,
-  "month": 6,
-  "published_date": "2026-06-01",
+  "month": 5,
+  "published_date": "2026-05-19",
   "preprint_date": "2026-06-01",
   "arxiv_version": 1,
   "version_date": "2026-06-01",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-25",
   "url": "https://arxiv.org/abs/2606.01905",
   "pdf_url": "https://arxiv.org/pdf/2606.01905.pdf",
   "pdf_path": "raw/papers/2606.01905.pdf",
@@ -38,9 +38,22 @@
   ],
   "relevance_score": 0.78,
   "relevance_note": "Proposes a seq2seq voice-conversion-based approach for converting electrolaryngeal speech to normal speech, a dedicated VC system with speech-quality evaluation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "journal_date": "2026-05-19",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

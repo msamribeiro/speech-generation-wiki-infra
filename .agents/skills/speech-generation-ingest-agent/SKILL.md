@@ -179,7 +179,7 @@ title: "{title}"
 authors: [{comma-separated quoted strings}]
 organization: {string or null}
 venue: {venue}
-venue_type: {conference | workshop | preprint | technical-report}
+venue_type: {conference | journal | workshop | preprint | technical-report}
 year: {YYYY}
 month: {M or null}
 published_date: {YYYY-MM-DD}   # copy exactly from raw/metadata (canonical: venue date if peer reviewed, else date of the arXiv version fetched); never recompute
@@ -220,7 +220,7 @@ generation:
 - This is the most common mistake: if you just assigned `[!tip]` or `[!important]` to Field Significance, do NOT reuse that callout type on the abstract card.
 - The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!info]`, `[!caution]` — write prose instead.
 
-> [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Workshop | Preprint | Technical Report}
+> [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Journal | Workshop | Preprint | Technical Report}
 > **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. No bold label — position implies it.}
@@ -513,7 +513,7 @@ Choose based on what the paper's *primary contribution* is — not what it incid
 Common errors to avoid: do not assign `architectural-novelty` to papers that use existing architectures (LLM backbones, standard Transformers) in a new context — those are `engineering-integration`. Do not assign `empirical-benchmark` to surveys — those are `conceptual-contribution`. A paper can have multiple types, but pick only those that represent genuine contributions.
 
 ### `related_concepts` — allowed slugs (at most 6 per paper)
-3–6 is typical, but concept scope wins over the minimum: never add an out-of-scope slug to reach 3; 1–2 slugs are correct when that is all that genuinely applies. When more than 6 qualify, drop slugs for frozen or inherited components first.
+3–6 is typical, but concept scope wins over the minimum: never add an out-of-scope slug to reach 3; 1–2 slugs are correct when that is all that genuinely applies. When more than 6 qualify, drop slugs for frozen or inherited components first. Below the cap, a frozen component keeps its slug only when it is on the TTS side and central to the evaluated output (a frozen acoustic model or AR backbone that a TTS paper adapts or steers), and the page says it is frozen; an inherited decoder inside a speech LM or dialogue system that the paper never touches does not earn its slug (it can stay in `architecture`).
 Write as bracket-unquoted YAML: `related_concepts: [flow-matching, zero-shot-tts]`. Never quote
 the slugs and never use a YAML block list.
 

@@ -27,7 +27,7 @@
   "version_date": "2026-05-28",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-25",
   "url": "https://arxiv.org/abs/2605.29859",
   "pdf_url": "https://arxiv.org/pdf/2605.29859.pdf",
   "pdf_path": "raw/papers/2605.29859.pdf",
@@ -40,9 +40,21 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "MELD introduces a mel-spectrogram-based speech LM with joint encoder-LM optimization via discrete latent variables, advancing unified speech modeling for generation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

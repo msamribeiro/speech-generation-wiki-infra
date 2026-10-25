@@ -57,7 +57,7 @@ title: "{title}"
 authors: [comma-separated quoted strings]
 organization: string or null
 venue: string
-venue_type: conference | workshop | preprint | technical-report
+venue_type: conference | journal | workshop | preprint | technical-report
 year: YYYY
 month: M or null
 published_date: YYYY-MM-DD   # must equal raw/metadata published_date (canonical paper date)

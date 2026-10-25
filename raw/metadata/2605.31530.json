@@ -41,7 +41,7 @@
   "version_date": "2026-06-02",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-25",
   "url": "https://arxiv.org/abs/2605.31530",
   "pdf_url": "https://arxiv.org/pdf/2605.31530.pdf",
   "pdf_path": "raw/papers/2605.31530.pdf",
@@ -53,9 +53,21 @@
   ],
   "relevance_score": 0.62,
   "relevance_note": "UNISON is primarily a unified general-audio generation/editing framework (text-to-audio, text-to-music, scene editing) with TTS and zero-shot speaker cloning as one of several capabilities; unclear how much of the paper's evidence specifically advances speech synthesis versus general audio generation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

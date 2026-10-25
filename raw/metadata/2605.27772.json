@@ -21,7 +21,7 @@
   "version_date": "2026-05-26",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-25",
   "url": "https://arxiv.org/abs/2605.27772",
   "pdf_url": "https://arxiv.org/pdf/2605.27772.pdf",
   "pdf_path": "raw/papers/2605.27772.pdf",
@@ -33,9 +33,21 @@
   ],
   "relevance_score": 0.5,
   "relevance_note": "VoxParadox is an adversarial benchmark testing paralinguistic understanding in audio LLMs using controlled TTS stimuli — the primary contribution is audio LLM evaluation, with TTS used as a test construction tool rather than advanced.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

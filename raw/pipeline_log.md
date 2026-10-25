@@ -1,3 +1,7 @@
+## 2026-10-25
+
+- review | 2606.01905 (Advancing Electrolaryngeal Speech Enhancement Through Speech-Text Representation Learning) | 1 paper | re-dated | arXiv comment (accepted to IEEE TBME) and Crossref (DOI 10.1109/tbme.2026.3694703; print issue vol. 73(8), 2026-08, no published-online) checked at Q2 ingest pre-flight; user confirmed the IEEE Xplore Date of Publication (Early Access) as 2026-05-19; journal_date set to 2026-05-19 and the date rule re-applied, moving published_date 2026-06-01 -> 2026-05-19 (stays in Q2 2026) | 2026-10-25
+
 ## 2026-10-24
 
 - review | 2605.25504 (Toward Natural Emotional Text-To-Speech System with Fine-Grained Non-Verbal Expressions) | 1 paper | re-dated | arXiv comment and Crossref (DOI 10.1109/o-cocosda68185.2025.11385230) show publication in the O-COCOSDA 2025 proceedings (2025-11-12); conference_date set to 2025-11-12 and the date rule re-applied, moving published_date 2026-05-25 -> 2025-11-12 (Q4 2025 straggler, to be ingested with PACC 2605.18001 at the next pre-selection) | status: accepted (unchanged)

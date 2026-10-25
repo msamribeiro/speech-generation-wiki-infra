@@ -1,17 +1,20 @@
 # Project Status
 
-Last updated: 2026-10-24
+Last updated: 2026-10-25
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
 the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion runs in parallel in the ingest worktree
-(120 of 224 Q2 papers ingested as of 2026-10-24).
+(136 of 224 Q2 papers ingested as of 2026-10-25).
 
 ---
 
 ## Current priorities
 
 1. Run Q4 cross-concept reconciliation and obtain human decisions for accepted relationships.
+   Before freezing, integrate the two Q4 2025 stragglers ingested on 2026-10-25 (`2605.18001`
+   PACC, `voice-conversion` / `gan-vocoder` / `subjective-evaluation`; `2605.25504`,
+   `emotion-synthesis` / `diffusion-tts` / `subjective-evaluation`).
 2. Regenerate stale concept pages and the field overview.
 3. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
 4. Continue Q2 2026 ingestion in parallel (procedure: `docs/ingest-protocol.md`; operating record:
@@ -25,11 +28,11 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 1,648 | 1,017 ingested, 250 accepted, 0 review, 381 rejected |
-| Published paper pages | 1,009 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Metadata records | 1,648 | 1,035 ingested, 232 accepted, 0 review, 381 rejected |
+| Published paper pages | 1,027 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,267 | Basis of `scripts/corpus_summary.py` |
 | Parsed active papers | 1,156 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 139 | 104 Q2 2026 (12 May, 92 June), 33 Q3 2026, and 2 Q4 2025 stragglers (`2605.18001` ICICC 2025, `2605.25504` O-COCOSDA 2025; both re-dated to their proceedings, to be ingested at the next pre-selection) |
+| Accepted and parsed, ready to ingest | 121 | 88 Q2 2026 (all June) and 33 Q3 2026 |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
 | Claim clusters | 443 | 342 strongly supported, 17 contested |
@@ -56,12 +59,12 @@ concept render pairs, and preserved reconciliation audit history.
 | Quarter | Ingest | Integrate | Reconcile | Render / report |
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
-| Q4 2025 | Complete except 2 re-dated stragglers (accepted, queued for ingest) | Complete: all 22 affected concepts, 2,884 entries | **Next** | Pending reconciliation |
+| Q4 2025 | Complete (2 re-dated stragglers `2605.18001`, `2605.25504` ingested 2026-10-25) | Complete: all 22 affected concepts, 2,884 entries; the 2 stragglers still to add | **Next** | Pending reconciliation |
 | Q1 2026 | Complete: 156 ingested, 0 accepted (15 moved to Q2 by the date rule) | Not started | Not started | Not started |
-| Q2 2026 | In progress: 120 ingested; 104 accepted (all downloaded and parsed) | Not started | Not started | Not started |
+| Q2 2026 | In progress: 136 ingested; 88 accepted (all downloaded and parsed) | Not started | Not started | Not started |
 | Q3 2026 to date | 144 accepted | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-10-24. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-10-25. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
@@ -270,23 +273,25 @@ available ACL Anthology 2026 material.
 
 | Status | Count |
 |---|---:|
-| Ingested | 120 |
-| Accepted, awaiting ingest | 104 |
+| Ingested | 136 |
+| Accepted, awaiting ingest | 88 |
 | Awaiting human triage | 0 |
 | Rejected | 61 |
 
-All 104 accepted papers are downloaded, parsed, and ready to ingest (counts by canonical
-`published_date` as of 2026-10-24). April is complete; the sweep has reached 2026-05-26 (seventh
-round complete). The next session pre-selects an eighth round that also includes the two Q4 2025
-stragglers, PACC `2605.18001` and `2605.25504` (re-dated to O-COCOSDA 2025 on 2026-10-24). LREC 2026 main-proceedings metadata was
-repaired on 2026-10-22 (venue and `url_acl`); the `acl.py` fix is in `BACKLOG.md`. ICASSP, ASRU, and
-SLT remain fetch-coverage gaps. The ingest procedure is `docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
+All 88 accepted papers are downloaded, parsed, and ready to ingest (counts by canonical
+`published_date` as of 2026-10-25). April and May are complete; the sweep has reached 2026-06-02
+(eighth round complete, including the Q4 2025 stragglers PACC `2605.18001` and `2605.25504`, which
+the next Q4 integration pass must pick up explicitly). `2606.01905` was re-dated to its IEEE TBME
+Early Access date (2026-05-19) and is the first `venue_type: journal` page. LREC 2026 main-proceedings
+metadata was repaired on 2026-10-22 (venue and `url_acl`); the `acl.py` fix is in `BACKLOG.md`. ICASSP,
+ASRU, and SLT remain fetch-coverage gaps. The ingest procedure is `docs/ingest-protocol.md`;
+quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
 
 ---
 
 ## Repository and setup state
 
-- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-10-24
+- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-10-25
   ingest wrap-up (see `git log`). The Q4 integration stream works on the content repository's
   `work/integrate` branch (`speech-generation-wiki-content-integrate` worktree), not yet merged.
 - Ingest sessions write to the content-ingest worktree:

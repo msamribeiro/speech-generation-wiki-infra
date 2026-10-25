@@ -26,7 +26,7 @@
   "version_date": "2026-05-28",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-25",
   "url": "https://arxiv.org/abs/2605.29209",
   "pdf_url": "https://arxiv.org/pdf/2605.29209.pdf",
   "pdf_path": "raw/papers/2605.29209.pdf",
@@ -39,9 +39,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Demonstrates that low-WER speech tokens do not preserve information necessary for intelligible synthesis, revealing a fundamental flaw in unified token assumptions for speech LMs.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

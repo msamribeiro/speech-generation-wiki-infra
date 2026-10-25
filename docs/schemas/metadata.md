@@ -17,7 +17,7 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "authors": ["list of strings"],
   "organization": "string or null — primary affiliated org (e.g. Google, Microsoft, CMU)",
   "venue": "one of the venue values listed below",
-  "venue_type": "one of: conference | workshop | preprint | technical-report",
+  "venue_type": "one of: conference | journal | workshop | preprint | technical-report",
   "year": 2025,
   "month": 11,
   "published_date": "YYYY-MM-DD — canonical wiki date; conference_date, else journal_date, else version_date, else preprint_date (see Paper Dates)",
