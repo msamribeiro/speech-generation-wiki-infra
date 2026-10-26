@@ -44,7 +44,18 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
 - Only `status: accepted` with a parsed paper (`raw/parsed/{id}/`). Never ingest `pending`,
   `review` or `rejected` without explicit instruction.
 - Skip dedup pointers (`wiki_page_id` set) and records marked `is_duplicate`.
-- Conference-accepted arXiv papers (ICASSP, Speech Prosody, LREC) keep the arXiv date.
+- Conference-accepted arXiv papers keep the arXiv date (ICASSP, Speech Prosody, LREC, ICML and
+  the 14 arXiv/ICML pairs, ACL, IJCAI, AAAI; MoshiRAG precedent; user, 2026-10-26), with one
+  exception so far: **Interspeech 2026**, whose proceedings are on the ISCA archive, is applied
+  under rule 1 (`conference_date: 2026-09-27`; 97 records re-dated 2026-10-26, see
+  `raw/pipeline_log.md`). A one-pass migration for the other venues is tracked in `BACKLOG.md`.
+  Card label and `venue_type` follow the page's canonical date: arXiv-dated pages stay
+  `arXiv · Preprint`; re-dated Interspeech pages read `Interspeech · 2026 · Conference`.
+- **Proceedings check at pre-flight.** When a candidate's `arxiv_comment` says "accepted to"
+  a venue, check whether those proceedings are already published (ISCA archive for Interspeech:
+  match titles against `isca-archive.org/interspeech_YYYY/index.html`, then confirm by author
+  overlap; titles can change between versions). Venues already migrated under rule 1 move the
+  record out of the quarter; for the others, follow the arXiv-date rule above.
 - Pre-flight each candidate before it enters the list:
   - **ID/title dedup.** Title-match against the whole corpus, then check authors and abstract
     (retitled versions slip past title matching).
@@ -370,6 +381,8 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
 | Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
 | Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
+| Stale "proceedings not yet published" note | Session doc said Interspeech 2026 was not on ISCA a month after it was; 51 Q2 records were in fact Q3 (2026-10-26) | Section 2, proceedings check |
+| Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS) | Step 4: copy tagging rules from section 6, not from memory; step 6 |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve

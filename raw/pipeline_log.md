@@ -1,3 +1,7 @@
+## 2026-10-26
+
+- review | Interspeech 2026 proceedings (ISCA archive, Sydney, 2026-09-27 to 2026-10-01) | 97 records | re-dated | found at Q2 ingest pre-flight: the proceedings are now published, so rule 1 of the paper-date rule applies (user confirmed). Titles of all accepted and ingested records dated 2026-01-01 to 2026-09-26 were matched against the 1,379 archive entries (95 exact, 2 retitled: 2603.20743 The Binding Effect, 2603.24589 YingMusic-Singer-Plus) and every match was confirmed by author overlap; conference_date set to 2026-09-27 (first conference day, Interspeech convention) and the date rule re-applied via lib/paper_dates.apply_date_rule. 65 accepted (51 Q2 -> Q3, 14 already Q3) and 32 ingested (22 Q1, 10 Q2 -> Q3; their paper pages and papers/index.md rows synced in the content repo); metadata venue stays as fetched | status unchanged
+
 ## 2026-10-25
 
 - review | 2606.01905 (Advancing Electrolaryngeal Speech Enhancement Through Speech-Text Representation Learning) | 1 paper | re-dated | arXiv comment (accepted to IEEE TBME) and Crossref (DOI 10.1109/tbme.2026.3694703; print issue vol. 73(8), 2026-08, no published-online) checked at Q2 ingest pre-flight; user confirmed the IEEE Xplore Date of Publication (Early Access) as 2026-05-19; journal_date set to 2026-05-19 and the date rule re-applied, moving published_date 2026-06-01 -> 2026-05-19 (stays in Q2 2026) | 2026-10-25
