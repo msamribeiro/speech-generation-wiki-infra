@@ -114,6 +114,12 @@ bumped (`0139632`).
 
 To resume:
 
+0. **First: peer-reviewed-version rule (user decision 2026-10-26).** Write the spec and implement
+   the `BACKLOG.md` item "Peer-reviewed versions after ingest": re-date freely before integration,
+   freeze the quarter after integration, and always link the peer-reviewed PDF with an italic
+   "summarises the preprint" note. Backfill the 32 re-dated Interspeech 2026 pages (ISCA link and
+   note), then re-date the other pre-integration conference-accepted records. This changes how
+   `2606.12940`, `2606.13006` and `2606.17126` in the next round are dated.
 1. **Q4 integration hand-off (unchanged):** `2605.18001` (PACC) and `2605.25504` are Q4 2025
    stragglers ingested after Q4 integration closed; the next Q4 integration pass must add them.
 2. **Tenth (final) round: the remaining 21**, in date order: `2606.12940` Self-Guidance (ICML
