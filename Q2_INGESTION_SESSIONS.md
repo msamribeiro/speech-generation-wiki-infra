@@ -109,7 +109,8 @@ proceedings are on the ISCA archive and, by user decision, re-dated 97 records t
 pages also moved), then ingested the ninth round of 16 (`2606.03241` through `2606.09962`, batches
 A-D). Corpus: 1,043 pages. The Manual Verification Queue has no open items (only the legacy
 corpus-wide `[!note]` item). Content, infra and the `wiki` submodule pointer were committed,
-merged and pushed at the 2026-10-26 wrap-up.
+merged and pushed at the 2026-10-26 wrap-up: content `3553351`, infra `48beae9`; the site is
+bumped (`0139632`).
 
 To resume:
 
