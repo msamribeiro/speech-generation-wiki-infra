@@ -112,28 +112,59 @@ corpus-wide `[!note]` item). Content, infra and the `wiki` submodule pointer wer
 merged and pushed at the 2026-10-26 wrap-up: content `3553351`, infra `48beae9`; the site is
 bumped (`0139632`).
 
+**Update 2026-10-27:** the pre-flight of the final 21 is done (see the 2026-10-27 Session Log);
+no papers were ingested and counts are unchanged. The numbered list below is the pre-flighted
+round. On 2026-10-27 the user chose pre-flight before the peer-reviewed-version rule; the rule
+(item 0) is still open.
+
 To resume:
 
-0. **First: peer-reviewed-version rule (user decision 2026-10-26).** Write the spec and implement
-   the `BACKLOG.md` item "Peer-reviewed versions after ingest": re-date freely before integration,
-   freeze the quarter after integration, and always link the peer-reviewed PDF with an italic
-   "summarises the preprint" note. Backfill the 32 re-dated Interspeech 2026 pages (ISCA link and
-   note), then re-date the other pre-integration conference-accepted records. This changes how
-   `2606.12940`, `2606.13006` and `2606.17126` in the next round are dated.
-1. **Q4 integration hand-off (unchanged):** `2605.18001` (PACC) and `2605.25504` are Q4 2025
+0. **Open decisions from the 2026-10-27 pre-flight (ask the user first):**
+   - **#1 `2606.12940` and #2 `2606.13006` (ICML / IJCAI 2026):** hold them out of this round
+     (recommended: the pending peer-reviewed-version rule moves both to Q3, so ingesting now means
+     re-dating the pages later), or ingest now on the arXiv date.
+   - **#6 `2606.17126` (TASLP):** ask the user for the IEEE Xplore "Date of Publication" (Crossref
+     DOI `10.1109/TASLPRO.2026.3705561`, created 2026-06-19), set `journal_date`, re-date with
+     `lib/paper_dates.apply_date_rule`, log `review | re-dated`. Ingest as its own page with
+     `venue_type: journal`, cross-linked to VibE-SVC `interspeech-2025-1397`. Can run last.
+   - **#11 `2606.21933` (challenge proposal, zero metrics):** accept as a `low` dataset and
+     evaluation-protocol page, or reject (main-session lean: reject).
+1. **Peer-reviewed-version rule (user decision 2026-10-26, still open).** Write the spec and
+   implement the `BACKLOG.md` item "Peer-reviewed versions after ingest": re-date freely before
+   integration, freeze the quarter after integration, and always link the peer-reviewed PDF with
+   an italic "summarises the preprint" note. Backfill the 32 re-dated Interspeech 2026 pages (ISCA
+   link and note), then re-date the other pre-integration conference-accepted records.
+2. **Q4 integration hand-off (unchanged):** `2605.18001` (PACC) and `2605.25504` are Q4 2025
    stragglers ingested after Q4 integration closed; the next Q4 integration pass must add them.
-2. **Tenth (final) round: the remaining 21**, in date order: `2606.12940` Self-Guidance (ICML
-   2026, keeps arXiv date), `2606.13006` Emo-LiPO (IJCAI 2026, keeps arXiv date), `2606.14004`
-   (pre-flighted clean), `2606.14528` BayLing-Duplex, `2606.14922`, `2606.09098` HoliDubber
-   (accepted in human triage; same group as Audio-Oscar), `2606.16668` CraBERT, `2606.17126`
-   (accepted to IEEE TASLP: look up the journal Early Access date, ask the user for the IEEE
-   Xplore "Date of Publication"; it may leave Q2), `2606.18323`, `2606.19453` (survey: lightweight
-   handling, `## Scope and Coverage`), `2606.21933` (ISCSLP 2026 challenge proposal: scope check),
-   `2606.05367` (v2, check versions), `2606.24714`, `2606.25369` Sarashina2.2-TTS, `2606.25529`
-   STEB, `2606.24320` ZONOS2, `2606.26618`, `2606.28249` HPRO, `2606.25672`, `2606.30944`,
-   `2606.31055`. Run the full pre-flight, including the new proceedings check (section 2 of
-   `docs/ingest-protocol.md`). After it, Q2 is closed.
-3. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
+3. **Tenth (final) round, pre-flighted 2026-10-27.** Numbered in date order, with per-paper ingest
+   notes to put in the agent prompts:
+   1. `2606.12940` Self-Guidance (ICML): decision 0.
+   2. `2606.13006` Emo-LiPO (IJCAI): decision 0.
+   3. `2606.14922` latent representations for emotional TTS (4 pages, 2 authors).
+   4. `2606.14528` BayLing-Duplex (LLaMA-Omni group, different system).
+   5. `2606.14004` unsupervised global prosodic embeddings.
+   6. `2606.17126` VibE-SVC2 (TASLP): decision 0.
+   7. `2606.16668` CraBERT.
+   8. `2606.09098` HoliDubber v2: accepted in human triage (do not stop on scope); Audio-Oscar
+      precedent: state on the page if the evaluation is not speech-specific.
+   9. `2606.18323` ASR self-verification for codec TTS.
+   10. `2606.19453` full-duplex dialogue survey: `## Scope and Coverage`, `tags: ["survey"]`.
+   11. `2606.21933` ISCSLP CoT-TTS Challenge: decision 0.
+   12. `2606.24714` CN-NewsTTS Bench: single-author automated benchmark, likely `low` (PSP precedent).
+   13. `2606.05367` task-vector emotion control v2 (v2 only expands related work).
+   14. `2606.25369` Sarashina2.2-TTS: check `multilingual-tts` against the rule.
+   15. `2606.25529` STEB (S2ST expressiveness benchmark).
+   16. `2606.24320` ZONOS2 technical report v2: card "Preprint", `venue_type: preprint`.
+   17. `2606.26618` VoxCPM2 LoRA for Khmer and Korean: check `multilingual-tts` (separate
+       per-language adapters may mean monolingual voices).
+   18. `2606.28249` HPRO.
+   19. `2606.25672` CFG residual reweighting for flow-matching zero-shot TTS v2.
+   20. `2606.30944` PRIME-Speech.
+   21. `2606.31055` reference-based prosody evaluation for spoken dialogue (evaluation-paper rule).
+
+   If #1, #2 and #11 come out, 18 remain: four batches of 4 plus one of 2, starting at #3. After
+   the round, Q2 is closed (apart from any held papers).
+4. Follow `docs/ingest-protocol.md` for the per-paper loop. Point agents at the content-ingest
    worktree
    (`SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`)
    and fill the index Org by hand. New from 2026-10-26: conference-accepted arXiv papers keep the
@@ -1465,6 +1496,34 @@ Crossref, Interspeech 2026 archive): 1 `2606.03241` COMPASS, 2 `2606.03455` WavT
 - Round complete: all 16 IDs swept (one index row, one log line, metadata `ingested` each);
   corpus ingest check 0 errors and the same 1,167 legacy warnings, none on this round's pages.
 - Q2: 142 ingested, 21 accepted, 61 rejected. Corpus: 1,043 pages.
+
+### Session 2026-10-27: pre-flight of the final 21 (no ingest)
+
+Re-derived counts (142 ingested, 21 accepted, 61 rejected; 1,043 pages) and ran the full
+pre-flight on all 21 accepted Q2 records: all parsed, none a dedup pointer, `is_duplicate` or Tier
+2; title match against the whole corpus and author-overlap screen against ingested/accepted
+records; first-page publication-notice grep; v2 dates checked (`published_date` = `version_date`
+on `2606.09098`, `2606.05367`, `2606.24320`, `2606.25672`). No duplicates of existing pages found.
+Findings (open user decisions are carried in Resume Here):
+
+- `2606.12940` Self-Guidance (ICML 2026): its OpenReview record `icml-2026-druaDr7zNI` is already
+  `is_duplicate`/`rejected` with `canonical_id` back to it. Current protocol keeps the arXiv date
+  (Q2); the pending peer-reviewed-version rule would move it to Q3 (ICML 2026-07-06).
+- `2606.13006` Emo-LiPO (IJCAI 2026): same situation; IJCAI 2026 date not yet verified.
+- `2606.17126` VibE-SVC2 (IEEE TASLP): Crossref DOI `10.1109/TASLPRO.2026.3705561`, record
+  `created` 2026-06-19, print date year-only, no `published-online`. Needs the user's IEEE Xplore
+  "Date of Publication"; likely stays in Q2. Journal extension of ingested Interspeech 2025
+  VibE-SVC `interspeech-2025-1397` (§1 "extends our previous work", new system name, four new
+  components): its own page, cross-linked, not a duplicate.
+- `2606.21933` ISCSLP 2026 CoT-TTS Challenge: a challenge proposal (organizers, timeline, reviewer
+  list, data, evaluation plan, Qwen3 0.6B baseline) with no quantitative results. Precedents: LRAC
+  challenge description `2510.23312` (moderate, has benchmark content), HumDial `2601.05564`,
+  VietNormalizer zero-metric accept (not a blanket rule). Main-session lean: reject.
+- Author-overlap hits checked and cleared as different systems: BayLing-Duplex vs LLaMA-Omni,
+  CraBERT vs other Saruwatari-lab pages, PRIME-Speech `2606.30944` vs `2506.04518`,
+  Sarashina2.2-TTS vs `2603.12565`, the full-duplex survey `2606.19453` vs WavChat `2411.13577`,
+  HoliDubber vs Audio-Oscar (same group, triage-accepted). ZONOS2 title hits are generic
+  "Technical Report" matches; no ZONOS v1 page exists.
 
 ---
 

@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-10-26
+Last updated: 2026-10-27
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
@@ -285,7 +285,10 @@ available ACL Anthology 2026 material.
 
 All 21 accepted papers are downloaded, parsed, and ready to ingest (counts by canonical
 `published_date` as of 2026-10-26); they span 2026-06-11 to 2026-06-30, so one more round closes Q2.
-The sweep has reached 2026-06-08 (ninth round complete). The Q4 2025 stragglers PACC `2605.18001`
+The sweep has reached 2026-06-08 (ninth round complete). The final 21 were pre-flighted on
+2026-10-27 with no duplicates found; four await user decisions before ingest (ICML/IJCAI
+`2606.12940`/`2606.13006` hold-or-ingest, TASLP `2606.17126` Early Access date, challenge
+proposal `2606.21933` scope), listed in the session doc's Resume Here. The Q4 2025 stragglers PACC `2605.18001`
 and `2605.25504`, ingested 2026-10-25, still need the explicit Q4 integration pass. `2606.17126`
 (accepted to IEEE TASLP) needs its journal Early Access date before ingest. ICASSP, ASRU, and SLT
 remain fetch-coverage gaps; Interspeech 2026 is now on ISCA but not yet fetched. The ingest
