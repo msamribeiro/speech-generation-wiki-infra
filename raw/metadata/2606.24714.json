@@ -19,7 +19,7 @@
   "version_date": "2026-06-23",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-31",
   "url": "https://arxiv.org/abs/2606.24714",
   "pdf_url": "https://arxiv.org/pdf/2606.24714.pdf",
   "pdf_path": "raw/papers/2606.24714.pdf",
@@ -32,9 +32,21 @@
   ],
   "relevance_score": 0.78,
   "relevance_note": "CN-NewsTTS Bench introduces a target-level automatic benchmark for Chinese news TTS pronunciation of dense written forms, a core TTS evaluation contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-31",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4de0600"
+    }
+  ]
 }

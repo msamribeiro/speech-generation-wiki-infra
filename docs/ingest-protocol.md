@@ -144,7 +144,16 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
   `NLPAICS 2026`) when metadata holds the placeholder `workshop`.
 - Spell out the callout limit in the prompt: two at most, the abstract card included; only
   `[!abstract]`, `[!tip]`, `[!important]`, `[!warning]`, never `[!note]`.
-- Stop and flag, do not write, if the paper is scope-ambiguous.
+- Stop and flag, do not write, if the paper is scope-ambiguous. Agents sometimes write the page
+  anyway and cite a precedent (`2606.14004`, 2026-10-31); treat that as a flag and confirm with the
+  user in the batch summary.
+- When Docling garbles a table (split or lost row labels, merged rows, swapped table numbers), read
+  the PDF text with `pypdfium2` from `.venv` (`raw/papers/{id}.pdf`) and resolve it; never leave a
+  "check against the PDF" note on the page.
+- Never link a corpus page on a guess that a product or API is that model (CN-NewsTTS: the
+  `mimo-v2.5-tts` API is not evidence of MiMo-Audio `2512.23808`).
+- Agent runtimes vary widely: most take 2-7 minutes, some 45 minutes to 3 hours (2026-10-31).
+  Wait for the foreground agent; do not relaunch.
 - Emit `INGEST_RESULT` JSON including `review_flags` only when a precision-gate judgment call
   (claims, `field_significance`, concept scope, vocabulary gap) is genuinely uncertain.
 
@@ -234,6 +243,8 @@ intentional. Checks the health check does not (fully) cover:
 - Single-author or single-language automated benchmarks without human evaluation sit at `low`
   even when their cautions are useful (PSP `2604.25476`; PashtoTTS-Bench `2605.26978` and NLPAICS
   `2026.nlpaics-1.18`, user 2026-10-25). Larger benchmarks with uptake potential stay `moderate`.
+  The same applies to system papers whose evaluation is single-language and automatic-only,
+  even with released weights (Sarashina2.2-TTS `2606.25369`, user 2026-10-31).
 - Every metric traces to a table or figure; missing values are `"not reported"`.
 
 **Tagging**
@@ -273,7 +284,12 @@ intentional. Checks the health check does not (fully) cover:
   - Evaluation papers that only score existing systems do not earn those systems' concepts
     (TTS-PRISM, SpeakerSleuth, EchoMind `emotion-synthesis`), except `spoken-language-model` for
     benchmarks of speech LMs. A paper that evaluates how to measure a concept does earn it (The False
-    Resonance `2604.26347`, `emotion-synthesis`; user, 2026-10-21).
+    Resonance `2604.26347`, `emotion-synthesis`; user, 2026-10-21), but only when it actually
+    measures that concept's system output: a protocol calibrated on human speech alone does not
+    (`2606.31055`, `speech-to-speech` dropped; user, 2026-10-31). A concept also needs evaluated
+    evidence: an unevaluated control (ZONOS2 `2606.24320` rate tokens, no `prosody-control`) or a
+    benchmark that reuses existing scorers without validating them (no `evaluation-metrics`) does
+    not earn the slug (user, 2026-10-31).
   - `spoken-language-model`: an external speech signal consumed by an adapted LLM; benchmarks that
     feed real audio into existing speech LMs and measure them also qualify. AR TTS-LMs consuming
     their own output do not.
@@ -284,17 +300,28 @@ intentional. Checks the health check does not (fully) cover:
     language, or code-switched synthesis). Adapting a model pretrained on other languages to a
     single new language does not qualify when each resulting voice is monolingual (user,
     2026-10-22: Central Kurdish `2026.lrec-1.48`, Tibetan `2605.02496`, Creole `2026.sigul-1.11`
-    dropped; PS-TTS, JaiTTS and the Quechua/Spanish page kept).
+    dropped; PS-TTS, JaiTTS and the Quechua/Spanish page kept). One LoRA adapter trained on pooled
+    languages and evaluated on each qualifies (`2606.26618`); an inference-only method on a
+    pretrained bilingual model does not, since it trains nothing across languages (`2606.25672`).
   - `subjective-evaluation`: real human raters; LLM-judge or automated scoring never qualifies.
+    Humans rating actual system output count even when the study exists to validate an automatic
+    judge (STEB `2606.25529`); humans checking benchmark labels do not (`2605.27772`; user,
+    2026-10-31).
   - `disentanglement`: explicit training mechanism with ablation evidence.
   - `self-supervised-speech`: only when the method itself uses a self-supervised speech model
     (HuBERT, WavLM, wav2vec2, w2v-BERT, data2vec-based models such as emotion2vec; user,
     2026-10-24, AffectCodec `2605.23373`), never Whisper (supervised) and never when SSL appears
-    only in an evaluation metric (WavLM speaker similarity).
+    only in an evaluation metric (WavLM speaker similarity). An SSL model applied only to the
+    visual stream (AV-HuBERT as a lip encoder) does not count (HoliDubber `2606.09098`; user,
+    2026-10-31).
   - `zero-shot-tts`: the paper's own system is evaluated on prompt-based cloning of speakers unseen
     in training. Omit it when the evaluated voices are in the training or fine-tuning data, even if
-    the paper says "zero-shot" (user, 2026-10-24: Poly-SVC `2605.12310`, F5-TTS-DPS `2605.23859`).
+    the paper says "zero-shot" (user, 2026-10-24: Poly-SVC `2605.12310`, F5-TTS-DPS `2605.23859`),
+    and when unseen status cannot be established (base model's training data unknown, targets
+    from a common public corpus such as ESD; `2606.05367`, user 2026-10-31).
   - `autoregressive-codec-tts`: neural-codec-token autoregression, not mel-frame AR models.
+  - A diffusion transformer trained with a flow-matching objective (VoxCPM2 LocDiT) takes
+    `flow-matching`, not also `diffusion-tts` (HoliDubber, `2606.26618`; user, 2026-10-31).
 - Surveys: `## Scope and Coverage` section and `tags: ["survey"]`.
 - No text input (lip-to-speech, brain decoding): use `task: [TTS]` as the standing fallback and
   flag it in the verification queue; do not invent a term. Text-driven TTS with non-text
@@ -376,13 +403,16 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Padding `related_concepts` | Out-of-scope slug added to reach 3 (2026-10-21, before the scope-wins rule) | Step 6 |
 | Org mismatch page vs index | `cleanup.py --org` does not sync the page; strings drift (2026-10-21, three of four papers) | Step 5.1 |
 | One-sided critique of author framing | Agent cites only the comparisons that go against the authors (2026-10-21) | Step 6; ask for the full comparison in the prompt |
-| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled | Step 6; check the table PNG |
+| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost (2026-10-31, five of 18 papers) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
 | Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
 | Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
 | Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
 | Stale "proceedings not yet published" note | Session doc said Interspeech 2026 was not on ISCA a month after it was; 51 Q2 records were in fact Q3 (2026-10-26) | Section 2, proceedings check |
 | Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS) | Step 4: copy tagging rules from section 6, not from memory; step 6 |
+| Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`) | Step 4 prompt, step 6 |
+| "Check the PDF" note on page | Agent leaves a reader-facing note about a garbled parse instead of resolving it (2026-10-31, STEB) | Step 4 prompt, step 6 |
+| Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo) | Step 4 prompt, step 6 |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve

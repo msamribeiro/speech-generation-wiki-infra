@@ -23,7 +23,7 @@
   "version_date": "2026-06-25",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-10-31",
   "url": "https://arxiv.org/abs/2606.26618",
   "pdf_url": "https://arxiv.org/pdf/2606.26618.pdf",
   "pdf_path": "raw/papers/2606.26618.pdf",
@@ -36,9 +36,21 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Studies LoRA fine-tuning of VoxCPM2 to close the quality gap in low-resource TTS for Khmer and Korean, a core multilingual/low-resource TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-31",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4de0600"
+    }
+  ]
 }

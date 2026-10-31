@@ -53,7 +53,7 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Describes the ISCSLP 2026 CoT-TTS Challenge on chain-of-thought reasoning for automatically determining speaking style in context-aware TTS, a core TTS challenge proposal.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

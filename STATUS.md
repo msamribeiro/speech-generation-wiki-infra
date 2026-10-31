@@ -1,11 +1,11 @@
 # Project Status
 
-Last updated: 2026-10-27
+Last updated: 2026-10-31
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
-the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion runs in parallel in the ingest worktree
-(142 of 163 Q2 papers ingested as of 2026-10-26, after the Interspeech 2026 re-dating).
+the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion, run in parallel in the ingest worktree,
+is complete (160 ingested on 2026-10-31; 2 ICML/IJCAI papers held for the peer-reviewed-version rule).
 
 ---
 
@@ -17,7 +17,8 @@ the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion runs in parallel in t
    `emotion-synthesis` / `diffusion-tts` / `subjective-evaluation`).
 2. Regenerate stale concept pages and the field overview.
 3. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
-4. Continue Q2 2026 ingestion in parallel (procedure: `docs/ingest-protocol.md`; operating record:
+4. Ingest stream (parallel): implement the peer-reviewed-version rule (`BACKLOG.md`), then begin
+   Q3 2026 ingestion (procedure: `docs/ingest-protocol.md`; Q2 operating record:
    `Q2_INGESTION_SESSIONS.md`).
 
 The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
@@ -28,11 +29,11 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 1,648 | 1,051 ingested, 216 accepted, 0 review, 381 rejected |
-| Published paper pages | 1,043 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
-| Active accepted + ingested corpus | 1,267 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,156 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 105 | 21 Q2 2026 (June 11-30) and 84 Q3 2026 |
+| Metadata records | 1,648 | 1,069 ingested, 197 accepted, 0 review, 382 rejected |
+| Published paper pages | 1,061 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Active accepted + ingested corpus | 1,266 | Basis of `scripts/corpus_summary.py` |
+| Parsed active papers | 1,155 | Includes ingested papers and accepted papers ready for ingest |
+| Accepted and parsed, ready to ingest | 86 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 84 Q3 2026 |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
 | Claim clusters | 443 | 342 strongly supported, 17 contested |
@@ -61,10 +62,10 @@ concept render pairs, and preserved reconciliation audit history.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete (2 re-dated stragglers `2605.18001`, `2605.25504` ingested 2026-10-25) | Complete: all 22 affected concepts, 2,884 entries; the 2 stragglers still to add | **Next** | Pending reconciliation |
 | Q1 2026 | Complete: 134 ingested, 0 accepted (15 moved to Q2 by the date rule; 22 to Q3 as Interspeech 2026 papers) | Not started | Not started | Not started |
-| Q2 2026 | In progress: 142 ingested; 21 accepted (all downloaded and parsed) | Not started | Not started | Not started |
+| Q2 2026 | Complete: 160 ingested; 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI) | Not started | Not started | Not started |
 | Q3 2026 to date | 32 ingested (re-dated Interspeech 2026 pages); 195 accepted | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-10-26. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-10-31. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
@@ -278,21 +279,19 @@ available ACL Anthology 2026 material.
 
 | Status | Count |
 |---|---:|
-| Ingested | 142 |
-| Accepted, awaiting ingest | 21 |
+| Ingested | 160 |
+| Accepted, held | 2 |
 | Awaiting human triage | 0 |
-| Rejected | 61 |
+| Rejected | 62 |
 
-All 21 accepted papers are downloaded, parsed, and ready to ingest (counts by canonical
-`published_date` as of 2026-10-26); they span 2026-06-11 to 2026-06-30, so one more round closes Q2.
-The sweep has reached 2026-06-08 (ninth round complete). The final 21 were pre-flighted on
-2026-10-27 with no duplicates found; four await user decisions before ingest (ICML/IJCAI
-`2606.12940`/`2606.13006` hold-or-ingest, TASLP `2606.17126` Early Access date, challenge
-proposal `2606.21933` scope), listed in the session doc's Resume Here. The Q4 2025 stragglers PACC `2605.18001`
-and `2605.25504`, ingested 2026-10-25, still need the explicit Q4 integration pass. `2606.17126`
-(accepted to IEEE TASLP) needs its journal Early Access date before ingest. ICASSP, ASRU, and SLT
-remain fetch-coverage gaps; Interspeech 2026 is now on ISCA but not yet fetched. The ingest
-procedure is `docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
+The Q2 sweep closed on 2026-10-31 with the tenth round (18 papers; counts by canonical
+`published_date`). Held by user decision: `2606.12940` (ICML 2026) and `2606.13006` (IJCAI 2026),
+which the peer-reviewed-version rule will re-date to Q3. On 2026-10-31 `2606.17126` was re-dated
+to its IEEE TASLP Date of Publication (2026-06-19, stays Q2) and ingested as a journal page, and the
+ISCSLP challenge proposal `2606.21933` was rejected. The Q4 2025 stragglers PACC `2605.18001` and
+`2605.25504` still need the explicit Q4 integration pass. ICASSP, ASRU, and SLT remain
+fetch-coverage gaps; Interspeech 2026 is on ISCA but not yet fetched. The ingest procedure is
+`docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
 
 ---
 
