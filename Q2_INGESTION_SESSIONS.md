@@ -112,6 +112,12 @@ the site is bumped (`188be12`).
 
 To resume:
 
+0. **Planned for the next session (user, 2026-10-31): fetch the Interspeech 2026 proceedings from
+   the ISCA archive for Q3 2026.** Only the 97 arXiv records matched on 2026-10-26 are in the
+   corpus; the rest of the proceedings are not fetched. Dedup the fetch against those 97 re-dated
+   records (title match plus author overlap; retitled versions exist). Context: Interspeech is why
+   Q3 2025 has 369 pages against 134-178 in other quarters (122 Interspeech 2025 pages from the ISCA
+   fetch, plus 34 ACL 2025), so Q3 2026 is expected to grow similarly.
 1. **Peer-reviewed-version rule (next piece of work; user, 2026-10-31: round first, rule next).**
    Implement the `BACKLOG.md` item "Peer-reviewed versions after ingest". Inputs already confirmed
    there: field name `url_peer_reviewed`; ICASSP 2026 `conference_date: 2026-05-03` (moves the Q1
