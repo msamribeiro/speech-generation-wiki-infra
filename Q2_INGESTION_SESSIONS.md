@@ -107,7 +107,8 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 pre-flight decisions, ingested the tenth and final round (18 papers, #3-#10 and #12-#21 of the
 2026-10-27 list) in five batches, and cleared the Manual Verification Queue (no open items; only
 the legacy corpus-wide `[!note]` item remains). Content, infra and the `wiki` submodule pointer
-were committed, merged and pushed at the 2026-10-31 wrap-up.
+were committed, merged and pushed at the 2026-10-31 wrap-up: content `0e25496`, infra `f73dd45`;
+the site is bumped (`188be12`).
 
 To resume:
 
