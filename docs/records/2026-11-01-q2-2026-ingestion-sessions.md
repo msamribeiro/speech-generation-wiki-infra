@@ -1,5 +1,15 @@
 # Q2 2026 Ingest Session
 
+Document type: archived operational record
+Archived: 2026-11-01 (moved from infra root `Q2_INGESTION_SESSIONS.md`)
+Superseded by: `Q3_2026_INGESTION_SESSIONS.md` (infra root), which carries forward the Q2 scope
+precedents and Q3 next steps without the per-session narrative log.
+
+This file is kept as a historical record only: the full session-by-session log of the Q2 2026
+chronological ingest (sweep closed 2026-10-31, 158 pages after two moved to Q3 on 2026-11-01), the
+Manual Verification Queue decisions, and the 2026-11-01 Interspeech 2026 ISCA fetch. For the current
+procedure see `docs/ingest-protocol.md`; for current state see `STATUS.md` and the Q3 session doc.
+
 **Date:** 2026-08-22
 **Goal:** Ingest all accepted Q2 2026 (April–June 2026) papers into the wiki.
 

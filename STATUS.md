@@ -19,8 +19,8 @@ the ISCA archive on 2026-11-01 (70 new accepted papers, PDFs downloaded, not yet
    parse the 70 downloaded ISCA PDFs and download and parse the other Q3 accepted records without
    PDFs, then work the accepted queue (procedure: `docs/ingest-protocol.md`).
 
-The completed Q2 ingest record remains `Q2_INGESTION_SESSIONS.md`; create the Q3 operating record
-when its preflight closes. The completed Q4 integration record is archived at
+The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;
+the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 2026-11-01). The completed Q4 integration record is archived at
 `docs/records/2026-11-01-q4-2025-integration-and-synthesis-sessions.md`.
 
 ---
@@ -305,8 +305,8 @@ which the peer-reviewed-version rule will re-date to Q3. On 2026-10-31 `2606.171
 to its IEEE TASLP Date of Publication (2026-06-19, stays Q2) and ingested as a journal page, and the
 ISCSLP challenge proposal `2606.21933` was rejected. The Q4 2025 stragglers PACC `2605.18001` and
 `2605.25504` are now included in the completed Q4 integration. ICASSP, ASRU, and SLT remain
-fetch-coverage gaps; Interspeech 2026 is on ISCA and is the next dedup-aware fetch. The ingest procedure is
-`docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
+fetch-coverage gaps; Interspeech 2026 was fetched from ISCA with dedup on 2026-11-01. The ingest procedure is
+`docs/ingest-protocol.md`; quarter-specific state is in `Q3_2026_INGESTION_SESSIONS.md`.
 
 ---
 

@@ -14,7 +14,7 @@ This file orchestrates; it does not duplicate the specifications it points to:
 | Controlled vocabulary | [schemas/vocabulary.md](schemas/vocabulary.md) |
 | Generation provenance block | [schemas/generation.md](schemas/generation.md) |
 | Stage overview and templates | [content.md](content.md) |
-| Quarter-specific counts, queue, log | the active session doc (currently `Q2_INGESTION_SESSIONS.md`) |
+| Quarter-specific counts, queue, log | the active session doc (currently `Q3_2026_INGESTION_SESSIONS.md`) |
 
 **Maintenance.** Update this file whenever the procedure changes or a new recurring issue class
 is confirmed (see [Recurring issue classes](#recurring-issue-classes)). It is tracked in git and is
