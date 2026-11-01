@@ -262,6 +262,24 @@ def _check_related_concepts(paper_id: str, fm: dict, concept_slugs: set[str]) ->
     return issues
 
 
+def _load_tag_concepts() -> dict[str, dict[str, str]]:
+    cfg = yaml.safe_load((ROOT / "config" / "health_check.yaml").read_text(encoding="utf-8")) or {}
+    return (cfg.get("ingest") or {}).get("tag_concepts") or {}
+
+
+def _check_related_concepts_complete(paper_id: str, fm: dict, tag_concepts: dict) -> list[Issue]:
+    """Warn when a task/architecture tag with a matching concept is missing from related_concepts."""
+    present = set(fm.get("related_concepts") or [])
+    issues = []
+    for field, mapping in tag_concepts.items():
+        for tag in (fm.get(field) or []):
+            slug = mapping.get(tag)
+            if slug and slug not in present:
+                issues.append(_issue("warning", paper_id, "related_concepts_complete",
+                                     f"{field}: {tag} but related_concepts lacks {slug!r}"))
+    return issues
+
+
 def _check_wikilink_format(paper_id: str, body: str) -> list[Issue]:
     issues = []
     for m in re.finditer(r"\[\[([^\]]+)\]\]", body):
@@ -369,6 +387,7 @@ def _check_page(
     vocab: dict,
     index_ids: set[str],
     concept_slugs: set[str],
+    tag_concepts: dict | None = None,
 ) -> list[Issue]:
     paper_id = page.stem
     content = page.read_text(encoding="utf-8")
@@ -392,6 +411,7 @@ def _check_page(
     issues += _check_claims_section(paper_id, fm, body)
     issues += _check_figure_links(paper_id, body)
     issues += _check_related_concepts(paper_id, fm, concept_slugs)
+    issues += _check_related_concepts_complete(paper_id, fm, tag_concepts or {})
     issues += _check_wikilink_format(paper_id, body)
     issues += _check_in_index(paper_id, fm, index_ids)
     issues += _check_tier2_callout(paper_id, fm, body)
@@ -410,6 +430,7 @@ def run(args: CheckArgs) -> ModuleResult:
 
     vocab = _load_vocabulary()
     index_ids = _load_index_ids(index_md)
+    tag_concepts = _load_tag_concepts()
     concept_slugs = {p.stem for p in wiki_concepts.glob("*.md") if p.stem != "index"} if wiki_concepts.exists() else set()
 
     if args.paper_id:
@@ -426,7 +447,7 @@ def run(args: CheckArgs) -> ModuleResult:
             issues.append(_issue("error", args.paper_id or page.stem, "frontmatter_parses",
                                  f"Page not found: {page}"))
             continue
-        issues.extend(_check_page(page, vocab, index_ids, concept_slugs))
+        issues.extend(_check_page(page, vocab, index_ids, concept_slugs, tag_concepts))
 
     errors = sum(1 for i in issues if i.severity == "error")
     warnings = sum(1 for i in issues if i.severity == "warning")

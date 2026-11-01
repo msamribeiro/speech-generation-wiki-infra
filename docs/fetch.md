@@ -44,6 +44,21 @@ After marking a decision in the review queue, update the metadata JSON `status` 
 
 ---
 
+## Paper Dates
+
+Every fetcher records `preprint_date` (arXiv v1), the fetched arXiv version (`arxiv_version`,
+`version_date`) and `conference_date` (proceedings date, null if not peer reviewed), then derives `published_date`, `year`, and `month`
+with `lib.paper_dates.apply_date_rule`: `published_date = conference_date` if set, else the
+optional `journal_date` (peer-reviewed journal paper), else `version_date`, else `preprint_date`.
+`scripts/parse/download_pdfs.py` re-pins the version to what it downloads. An `arxiv_comment`
+such as "Accepted by <journal>" is a cue to look up the journal date. When a proceedings record is matched to an existing arXiv record, set
+`conference_date` on the existing record and re-apply the rule. On a venue's first fetch of a new
+year, spot-check that its date table yields real dates rather than `-01` placeholders. Validate
+with `.venv/bin/python scripts/health_check.py --module metadata`. Spec:
+[schemas/metadata.md](schemas/metadata.md#paper-dates).
+
+---
+
 ## Citation Discovery Workflow
 
 Surfaces candidate papers from the corpus citation graph that are not yet in the corpus.

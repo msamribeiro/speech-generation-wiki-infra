@@ -4,7 +4,7 @@
     "arxiv": "2407.15828",
     "acl": "2026.lrec-1.444",
     "doi": "10.63317/2rjcajopifoh",
-    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-444"
+    "url_acl": "https://aclanthology.org/2026.lrec-1.444"
   },
   "title": "J-CHAT: Japanese Large-scale Spoken Dialogue Corpus for Spoken Dialogue Language Modeling",
   "authors": [
@@ -17,14 +17,19 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 4,
-  "published_date": "2026-04-02",
-  "ingested_date": null,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "preprint_date": "2024-07-22",
+  "arxiv_version": 2,
+  "version_date": "2026-04-02",
+  "version_estimated": true,
+  "conference_date": "2026-05-01",
+  "ingested_date": "2026-10-22",
   "url": "https://arxiv.org/abs/2407.15828",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-444.pdf",
+  "pdf_url": "https://aclanthology.org/2026.lrec-1.444.pdf",
   "pdf_path": "raw/papers/2407.15828.pdf",
   "pdf_source": "anthology",
   "abstract": "Spoken dialogue is essential for human-AI interactions, providing expressive capabilities beyond text. Developing effective spoken dialogue systems (SDSs) requires large-scale, high-quality, and diverse spoken dialogue corpora. However, existing datasets are often limited in size, spontaneity, or linguistic coherence. To address these limitations, we introduce J-CHAT, a 76,000-hour open-source Japanese spoken dialogue corpus. Constructed using an automated, language-independent methodology, J-CHAT ensures acoustic cleanliness, diversity, and natural spontaneity. The corpus is built from YouTube and podcast data, with extensive filtering and denoising to enhance quality. Experimental results with generative spoken dialogue language models trained on J-CHAT demonstrate its effectiveness for SDS development. By providing a robust foundation for training advanced dialogue models, we anticipate that J-CHAT will drive progress in human-AI dialogue research and applications.",
@@ -34,10 +39,21 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "76k-hour Japanese spoken dialogue corpus for spoken dialogue language modeling; directly enables SCA training.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

@@ -13,15 +13,17 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-01",
-  "ingested_date": null,
-  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-048",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-048.pdf",
-  "pdf_path": null,
+  "preprint_date": null,
+  "conference_date": "2026-05-01",
+  "ingested_date": "2026-10-22",
+  "url": "https://aclanthology.org/2026.lrec-1.48",
+  "pdf_url": "https://aclanthology.org/2026.lrec-1.48.pdf",
+  "pdf_path": "raw/papers/2026.lrec-1.48.pdf",
   "pdf_source": "anthology",
   "abstract": "In this study, we show how from available resources develop high-quality TTS models for low-resource scenarios that according to our extensive evaluation surpass the models trained on dedicated TTS data recorded in the studio. We develop three Text-to-Speech (TTS) models for Central Kurdish as a low-resource language using F5-TTS architecture. The models are trained on Central Kurdish TTS datasets in which two of them are curated from audiobooks during this study and the third one is evaluated for the first time. We also demonstrate the potential of TTS models for developing other speech technologies in low-resource languages by proposing a speech synthesis framework used in a speech-to-text translation application, achieving promising results on standard speech translation benchmarks. The curated TTS resources and models will be publicly available under CC BY-NC-ND 4.0 license",
   "task": [
@@ -29,9 +31,21 @@
   ],
   "relevance_score": 0.83,
   "relevance_note": "Builds F5-TTS-based Central Kurdish TTS models from limited resources, surpassing studio-recorded-data baselines, with application to speech-to-text translation; core low-resource TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

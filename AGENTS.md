@@ -9,7 +9,8 @@ For stage-specific details, read the relevant doc from the tables at the bottom.
 1. Inspect `git status` in the infra repository and in the sibling wiki content repository.
 2. Read `STATUS.md` and the relevant active section of `BACKLOG.md`.
 3. For a pipeline operation, load the matching skill from `.agents/skills/` and only the stage
-   documentation it references.
+   documentation it references. For an ingestion session, also read
+   [docs/ingest-protocol.md](docs/ingest-protocol.md).
 4. Derive current state from tracked files and logs, never from prior chat or private agent memory.
 5. Preserve unrelated and uncommitted changes unless the user explicitly authorizes otherwise.
 
@@ -164,6 +165,10 @@ Never violated under any circumstances:
     the content repository must carry the version-2 `generation` block from
     [docs/schemas/generation.md](docs/schemas/generation.md), including runtime, provider, exact
     model ID, logical agent, date, and infra commit.
+13. **One canonical paper date** — `published_date` is the conference date for peer-reviewed
+    proceedings or the journal publication date for journal papers, otherwise the date of the arXiv
+    version we fetched and ingested (`version_date`); `preprint_date` (v1), `conference_date`, and
+    `journal_date` are logged alongside it. Spec: [docs/schemas/metadata.md](docs/schemas/metadata.md#paper-dates).
 
 ---
 
@@ -174,6 +179,7 @@ Never violated under any circumstances:
 | Fetch + Filter | [docs/fetch.md](docs/fetch.md) |
 | Parse | [docs/parse.md](docs/parse.md) |
 | Ingest + Integrate + Reconcile + Render + Report | [docs/content.md](docs/content.md) |
+| Ingestion session procedure (cadence, per-paper cleanup and QC, wrap-up) | [docs/ingest-protocol.md](docs/ingest-protocol.md) |
 
 ## Schema Documentation
 

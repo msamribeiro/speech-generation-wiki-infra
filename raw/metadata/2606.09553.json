@@ -19,10 +19,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-08",
-  "ingested_date": null,
+  "preprint_date": "2026-06-08",
+  "arxiv_version": 1,
+  "version_date": "2026-06-08",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-26",
   "url": "https://arxiv.org/abs/2606.09553",
   "pdf_url": "https://arxiv.org/pdf/2606.09553.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.09553.pdf",
   "pdf_source": "arxiv",
   "abstract": "Recent advances in neural text-to-speech (TTS) and multilingual speech generation have substantially improved synthetic speech quality, yet these gains remain unevenly distributed across the world's languages. Existing models are still dominated by a small set of high-resource languages, while many studies of low-resource TTS are simulated on artificially downsampled high-resource corpora that do not reflect the orthographic variation and limited phonetic coverage encountered in genuinely underrepresented settings. As such, we introduce OpenBibleTTS, which is a large-scale benchmark for low-resource speech synthesis spanning 37 underrepresented languages. Moreover, a systematic comparison of various TTS architectures and large-scale speech generation models is conducted across in-domain Biblical text and out-of-domain material. Results show that no single system dominates across languages and metrics: Gemini-TTS achieves the highest listener ratings on most evaluated languages, but monolingual EveryVoice models trained on OpenBibleTTS remain strongest for intelligibility and are preferred in several African languages, while open from-scratch systems degrade sharply on out-of-domain text, revealing a persistent gap between broad multilingual coverage and reliable synthesis quality in underserved linguistic communities. We complement automatic evaluation with subjective human judgments, and open-source all processed datasets, alignments, and trained models to support future low-resource TTS research.",
   "arxiv_comment": null,
@@ -32,9 +37,21 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "OpenBibleTTS introduces large-scale speech resources and TTS models for low-resource languages.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-26",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "295f564"
+    }
+  ]
 }

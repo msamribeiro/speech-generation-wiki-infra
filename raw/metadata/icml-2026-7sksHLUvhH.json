@@ -1,0 +1,37 @@
+{
+  "id": "icml-2026-7sksHLUvhH",
+  "source_ids": {
+    "openreview": "7sksHLUvhH"
+  },
+  "title": "DropoutTS: Sample-Adaptive Dropout for Robust Time Series Forecasting",
+  "authors": [
+    "Siru Zhong",
+    "Yiqiu Liu",
+    "Zhiqing Cui",
+    "Zezhi Shao",
+    "Fei Wang",
+    "Qingsong Wen",
+    "Yuxuan Liang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=7sksHLUvhH",
+  "pdf_url": "https://openreview.net/pdf?id=7sksHLUvhH",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Deep time series models are vulnerable to noisy data ubiquitous in real-world applications. Existing robustness strategies either prune data or rely on costly prior quantification, failing to balance effectiveness and efficiency. In this paper, we introduce DropoutIS, a model-agnostic plugın that shifts the paradigm from what to learn to how much to learn. DropoutTS employs a Sample-Adaptive Dropout mechanism: leveraging spectral sparsity to efficiently quantify instance-level noise via reconstruction residuals, it dynamically calibrates model learning capacity by mapping noise to adaptive dropout rates, selectively suppressing spurious fluctuations while preserving fine-grained fidelity. Extensive experiments across diverse noise regimes and open benchmarks show DropoutTS consistently boosts superior backbones' performance, delivering advanced robustness with negligible parameter overhead and no architectural modifications. Code is available at https://github.com/CityMind-Lab/DropoutTS.",
+  "task": [],
+  "relevance_score": 0.03,
+  "relevance_note": "Time-series forecasting robustness method; no speech or audio component, matched the keyword filter only incidentally.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

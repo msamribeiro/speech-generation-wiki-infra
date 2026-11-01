@@ -16,15 +16,17 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "workshop",
-  "venue_type": "workshop",
+  "venue": "LREC",
+  "venue_type": "conference",
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-01",
-  "ingested_date": null,
-  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-437",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-main-437.pdf",
-  "pdf_path": null,
+  "preprint_date": null,
+  "conference_date": "2026-05-01",
+  "ingested_date": "2026-10-22",
+  "url": "https://aclanthology.org/2026.lrec-1.437",
+  "pdf_url": "https://aclanthology.org/2026.lrec-1.437.pdf",
+  "pdf_path": "raw/papers/2026.lrec-1.437.pdf",
   "pdf_source": "anthology",
   "abstract": "In Text-to-Speech synthesis (TTS), the prediction of prosodic information from text is a difficult challenge, since it requires information related to the context that may not be present in the text. Previous studies have shown that prosodic annotations from an oracle benefit TTS models and improve their prosodic rendering as well as their controllability. In this paper, we investigate different strategies to automatically predict prominence and boundary strength from text. We compare three prediction strategies on a French audiobook dataset: dedicated predictors jointly trained in a TTS model, a BERT-informed Prosody Predictor (BIPP) and its auto-regressive counterpart, both benefiting from semantic text embeddings. BIPP exhibits the best performance in our experiments, indicating that using phonetized syllables as complementary information to the semantic embedding provided by a BERT-like model is the best strategy to predict prosodic events.",
   "task": [
@@ -32,9 +34,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Predicts prosodic prominence and boundary strength from text for use in TTS prosody rendering; core TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

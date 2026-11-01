@@ -29,7 +29,7 @@
   ],
   "relevance_score": 0.45,
   "relevance_note": "MindVoice reconstructs intelligible speech from non-invasive neural (EEG-like) signals using pretrained speech-generation priors; input modality is brain signals rather than text, so fit with the TTS/VC/SCA scope is ambiguous - it uses speech synthesis technology for a brain-computer-interface task, not text-to-speech or voice conversion per the controlled vocabulary.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

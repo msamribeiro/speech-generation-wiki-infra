@@ -24,6 +24,7 @@ from checks._base import CheckArgs, ModuleResult
 from checks import agents as _agents
 from checks import ingest as _ingest
 from checks import integrate as _integrate
+from checks import metadata as _metadata
 from checks import reconcile as _reconcile
 from checks import render as _render
 
@@ -31,6 +32,7 @@ AVAILABLE_MODULES = {
     "agents": _agents,
     "ingest": _ingest,
     "integrate": _integrate,
+    "metadata": _metadata,
     "reconcile": _reconcile,
     "render": _render,
 }

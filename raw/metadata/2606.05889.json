@@ -16,10 +16,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-04",
-  "ingested_date": null,
+  "preprint_date": "2026-06-04",
+  "arxiv_version": 1,
+  "version_date": "2026-06-04",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-26",
   "url": "https://arxiv.org/abs/2606.05889",
   "pdf_url": "https://arxiv.org/pdf/2606.05889.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.05889.pdf",
   "pdf_source": "arxiv",
   "abstract": "We propose GLASS, a framework for composable acoustic style control in zero-shot autoregressive text-to-speech (TTS) that learns controls from post-generation rewards rather than style labels. In zero-shot TTS, a speaker prompt often entangles speaker identity with prosodic attributes such as speaking rate and pitch, making it difficult to change style without changing the prompt itself. GLASS instead treats each acoustic attribute as a reward-defined control direction. For each control axis, GLASS freezes the TTS backbone and trains one lightweight LoRA adapter with Group Relative Policy Optimization (GRPO), using speech-token length and mean F0 as style rewards and WER as an intelligibility anchor. Because each control is represented as a LoRA weight update, independently trained adapters can be swapped, interpolated, and composed through linear LoRA arithmetic without retraining the backbone. Experiments on speaking rate and pitch control show targeted style shifts while preserving naturalness, speaker similarity, and intelligibility, and demonstrate smooth interpolation and multi-axis composition across independently trained adapters.",
   "arxiv_comment": null,
@@ -28,9 +33,21 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "GLASS proposes GRPO-trained LoRA for composable acoustic style steering in zero-shot TTS, a core RLHF/control contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-26",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "295f564"
+    }
+  ]
 }

@@ -151,8 +151,10 @@ The field can be manually edited or revised using full paper context without re-
 ## Publication Date
 
 Every `papers:` entry requires `published_date`, copied exactly from canonical paper frontmatter or
-metadata. It determines eligibility for snapshots and temporal reports. Missing, invalid, or
-conflicting dates are errors. Never infer it from a paper ID, arXiv version, `entry_date`,
+metadata. It is the canonical paper date (conference date for peer-reviewed proceedings, otherwise
+date of the arXiv version ingested; see [metadata.md](metadata.md#paper-dates)) and determines eligibility for snapshots
+and temporal reports. Missing, invalid, or
+conflicting dates are errors. Never infer it from a paper ID, arXiv revision, `entry_date`,
 `last_updated`, filesystem time, or integration order.
 
 `entry_date` remains the date on which the concept entry was written or force-rewritten. Adding

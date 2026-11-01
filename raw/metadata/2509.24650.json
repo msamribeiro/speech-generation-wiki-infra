@@ -1,7 +1,8 @@
 {
   "id": "2509.24650",
   "source_ids": {
-    "arxiv": "2509.24650"
+    "arxiv": "2509.24650",
+    "openreview": "h5KLpGoqzC"
   },
   "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
   "authors": [

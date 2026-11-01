@@ -221,7 +221,9 @@ def build_metadata(paper: dict, year: int) -> dict:
         "venue_type": "conference",
         "year": year,
         "month": _CONF_MONTHS.get(year, None),
-        "published_date": _CONF_DATES.get(year, f"{year}-01-01"),
+        "published_date": _CONF_DATES.get(year, f"{year}-01-01"),   # = conference_date
+        "preprint_date": None,
+        "conference_date": _CONF_DATES.get(year, f"{year}-01-01"),
         "ingested_date": None,
         "url": paper["paper_url"],
         "pdf_url": paper["pdf_url"],

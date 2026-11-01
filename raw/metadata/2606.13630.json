@@ -28,7 +28,7 @@
   "task": [],
   "relevance_score": 0.4,
   "relevance_note": "Evaluates discrete speech representations (SSL, codec, ASR-style) for driving 3D facial animation; the target task is facial animation, not speech generation, though the representations studied are the same ones used in TTS/codec research.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

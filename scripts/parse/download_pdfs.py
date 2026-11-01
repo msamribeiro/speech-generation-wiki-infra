@@ -12,6 +12,7 @@ Usage:
     python scripts/parse/download_pdfs.py --max-errors 3
     python scripts/parse/download_pdfs.py --source arxiv
     python scripts/parse/download_pdfs.py --limit 10 --dry-run
+    python scripts/parse/download_pdfs.py --published-from 2026-04-01 --published-to 2026-06-30
 """
 
 import argparse
@@ -26,6 +27,9 @@ import requests
 from typing import Optional
 
 ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(ROOT))
+
+from lib.arxiv_versions import fetch_versions, pin_version  # noqa: E402
 
 RAW_METADATA = ROOT / "raw" / "metadata"
 RAW_PAPERS   = ROOT / "raw" / "papers"
@@ -62,7 +66,12 @@ def get_domain(url: str) -> str:
     return host
 
 
-def load_accepted(metadata_dir: Path, source_filter: Optional[str]) -> list[dict]:
+def load_accepted(
+    metadata_dir: Path,
+    source_filter: Optional[str],
+    published_from: Optional[str] = None,
+    published_to: Optional[str] = None,
+) -> list[dict]:
     papers = []
     for f in sorted(metadata_dir.glob("*.json")):
         try:
@@ -75,6 +84,11 @@ def load_accepted(metadata_dir: Path, source_filter: Optional[str]) -> list[dict
         if not d.get("pdf_url"):
             continue
         if source_filter and d.get("pdf_source") != source_filter:
+            continue
+        published = str(d.get("published_date", ""))[:10]
+        if published_from and published < published_from:
+            continue
+        if published_to and published > published_to:
             continue
         d["_meta_path"] = f
         papers.append(d)
@@ -89,6 +103,13 @@ def append_log(record: dict) -> None:
 def update_pdf_path(meta_path: Path, paper_id: str) -> None:
     data = json.loads(meta_path.read_text())
     data["pdf_path"] = f"raw/papers/{paper_id}.pdf"
+    arxiv_id = (data.get("source_ids") or {}).get("arxiv")
+    if arxiv_id and data.get("status") != "ingested":
+        # Pin the arXiv version we just downloaded (the latest) and re-derive the canonical date.
+        try:
+            pin_version(data, fetch_versions(arxiv_id), None, estimated=False)
+        except Exception as exc:
+            print(f"  [warn] could not pin arXiv version for {paper_id}: {exc}")
     meta_path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
 
 
@@ -197,6 +218,14 @@ def main() -> None:
         help="Only download papers from this source",
     )
     parser.add_argument(
+        "--published-from", metavar="YYYY-MM-DD",
+        help="Only papers with published_date on or after this date",
+    )
+    parser.add_argument(
+        "--published-to", metavar="YYYY-MM-DD",
+        help="Only papers with published_date on or before this date",
+    )
+    parser.add_argument(
         "--limit", type=int, metavar="N",
         help="Stop after downloading N papers (useful for testing)",
     )
@@ -209,7 +238,7 @@ def main() -> None:
     # ------------------------------------------------------------------
     # Load and partition
     # ------------------------------------------------------------------
-    all_papers = load_accepted(RAW_METADATA, args.source)
+    all_papers = load_accepted(RAW_METADATA, args.source, args.published_from, args.published_to)
 
     pending:  list[dict] = []
     skipped:  list[str]  = []

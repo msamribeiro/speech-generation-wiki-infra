@@ -101,7 +101,10 @@ digest: "sha256:..."
 ## Semantics
 
 `included_papers` contains every unique eligible paper used anywhere in the snapshot. Eligibility
-requires an exact canonical `published_date` on or before `evidence_cutoff`. The activity window is
+requires an exact canonical `published_date` (see [metadata.md](metadata.md#paper-dates)) on or
+before `evidence_cutoff`. A paper whose canonical date later changes (for example a legacy
+revision date reclassified under the version-date rule) does not alter a published snapshot; correct it by
+explicit supersession. The activity window is
 inclusive at both ends and is a subset of the evidence window. `baseline_cutoff` immediately
 precedes the activity window for quarterly snapshots.
 

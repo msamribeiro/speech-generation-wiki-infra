@@ -17,10 +17,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-15",
-  "ingested_date": null,
+  "preprint_date": "2026-06-15",
+  "arxiv_version": 1,
+  "version_date": "2026-06-15",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-31",
   "url": "https://arxiv.org/abs/2606.16668",
   "pdf_url": "https://arxiv.org/pdf/2606.16668.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.16668.pdf",
   "pdf_source": "arxiv",
   "abstract": "This paper introduces CraBERT, a pre-trained phoneme encoder (PPEnc) designed for efficient pre-training in text-to-speech (TTS). CraBERT employs a cascade-fusion architecture and a subword-phoneme alignment algorithm to integrate representations from a pre-trained subword-level BERT into a phoneme-level BERT. This design provides prior word- and sentence-level information, reducing the amount of pre-training required by the phoneme encoder. Subjective listening evaluations show that CraBERT achieves MOS values comparable to existing PPEncs after approximately one epoch of pre-training, whereas the baselines in our comparison are pre-trained for approximately ten epochs. These results demonstrate that CraBERT can efficiently learn representations suitable for improving the perceived naturalness and prosody of synthesized speech.",
   "arxiv_comment": null,
@@ -29,9 +34,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "CraBERT proposes an efficient pre-trained phoneme encoder using cascade fusion of subword representations for TTS, a core TTS front-end contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-31",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4de0600"
+    }
+  ]
 }

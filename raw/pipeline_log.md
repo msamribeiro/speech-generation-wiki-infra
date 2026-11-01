@@ -2,6 +2,53 @@
 
 - lint | Q4 content-cycle closeout | corrected canonical proceedings metadata and ingest status for `2605.18001` (ICICC 2025) and `2605.25504` (O-COCOSDA 2025), restored both published pages to the paper catalog, refreshed the homepage and status counters, and reran the full health suite before archival | Q4 snapshot and report remain unchanged because their content evidence and canonical publication dates were already correct
 
+## 2026-10-31
+
+- review | 2606.21933 (ISCSLP 2026 CoT-TTS Challenge: Chain-of-Thought Reasoning for Context-Aware Text-to-Speech) | 1 paper | rejected | user decision at Q2 ingest (final-round pre-flight item #11), before any page was written; a challenge proposal (organizers, timeline, session plan, reviewer list, ~16K h EN/ZH training set, planned objective/LLM-judge/listening-test evaluation, Qwen3 0.6B baseline) with no quantitative results anywhere, so no evidence-backed claims; unlike the LRAC 2510.23312 and HumDial 2601.05564 challenge pages it measures nothing, and the VietNormalizer zero-metric accept is not a blanket rule; a later challenge summary with results would be the paper to ingest | status: accepted -> rejected
+- review | 2606.17126 (Vibrato Expression Control for Singing Voice Conversion with Improving Independent Control) | 1 paper | re-dated | arXiv comment (accepted to IEEE TASLP) and Crossref (DOI 10.1109/TASLPRO.2026.3705561; vol. 34, pp. 3358-3370; created 2026-06-19, print date year-only, no published-online) checked at Q2 ingest pre-flight; user confirmed the IEEE Xplore Date of Publication as 2026-06-19; journal_date set to 2026-06-19 and the date rule re-applied, moving published_date 2026-06-15 -> 2026-06-19 (stays in Q2 2026) | status: accepted (unchanged)
+
+## 2026-10-26
+
+- review | Interspeech 2026 proceedings (ISCA archive, Sydney, 2026-09-27 to 2026-10-01) | 97 records | re-dated | found at Q2 ingest pre-flight: the proceedings are now published, so rule 1 of the paper-date rule applies (user confirmed). Titles of all accepted and ingested records dated 2026-01-01 to 2026-09-26 were matched against the 1,379 archive entries (95 exact, 2 retitled: 2603.20743 The Binding Effect, 2603.24589 YingMusic-Singer-Plus) and every match was confirmed by author overlap; conference_date set to 2026-09-27 (first conference day, Interspeech convention) and the date rule re-applied via lib/paper_dates.apply_date_rule. 65 accepted (51 Q2 -> Q3, 14 already Q3) and 32 ingested (22 Q1, 10 Q2 -> Q3; their paper pages and papers/index.md rows synced in the content repo); metadata venue stays as fetched | status unchanged
+
+## 2026-10-25
+
+- review | 2606.01905 (Advancing Electrolaryngeal Speech Enhancement Through Speech-Text Representation Learning) | 1 paper | re-dated | arXiv comment (accepted to IEEE TBME) and Crossref (DOI 10.1109/tbme.2026.3694703; print issue vol. 73(8), 2026-08, no published-online) checked at Q2 ingest pre-flight; user confirmed the IEEE Xplore Date of Publication (Early Access) as 2026-05-19; journal_date set to 2026-05-19 and the date rule re-applied, moving published_date 2026-06-01 -> 2026-05-19 (stays in Q2 2026) | 2026-10-25
+
+## 2026-10-24
+
+- review | 2605.25504 (Toward Natural Emotional Text-To-Speech System with Fine-Grained Non-Verbal Expressions) | 1 paper | re-dated | arXiv comment and Crossref (DOI 10.1109/o-cocosda68185.2025.11385230) show publication in the O-COCOSDA 2025 proceedings (2025-11-12); conference_date set to 2025-11-12 and the date rule re-applied, moving published_date 2026-05-25 -> 2025-11-12 (Q4 2025 straggler, to be ingested with PACC 2605.18001 at the next pre-selection) | status: accepted (unchanged)
+
+## 2026-10-23
+
+- review | 2605.17846 (UrduSpeech: A 156-Hour Urdu Speech Corpus with 12-Dimension Paralinguistic Annotations) | 1 paper | flagged for review | caught at Q2 ingest pre-flight before any page was written; general speech corpus with no TTS/VC experiment (ASR model selection, MOS rates the recordings, TTS baselines future work); user agreed to move it to triage | status: accepted -> review, review_queue.md entry recorded
+- review | 2605.18001 (Bridging the Gap: Converting Read Text to Conversational Dialogue) | 1 paper | re-dated | PDF preprint notice and Crossref (DOI 10.1007/978-981-96-6681-2_38) show publication in the ICICC 2025 proceedings (Springer LNNS, published online 2025-10-01); conference_date set to 2025-10-01 and the date rule re-applied, moving published_date 2026-05-18 -> 2025-10-01 (Q4 2025 straggler, not ingested in the Q2 sweep) | status: accepted (unchanged)
+- review | 2605.17846 (UrduSpeech) | 1 paper | rejected | user confirmed reject: general speech corpus with no TTS/VC experiment; out of corpus scope | status: review -> rejected, review_queue.md decision recorded
+
+## 2026-10-22
+
+- lint | LREC 2026 metadata repair (user, Q2 ingest session) | 14 metadata records | 13 `2026.lrec-1.*` records (8 ingested, 5 rejected) changed from `venue: workshop` / `venue_type: workshop` to `LREC` / `conference`; 5 malformed `source_ids.url_acl` values (`https://aclanthology.org/https://lrec.elra.info/...`, on 2407.15828, 2603.00958, 2603.15037, 2604.13288, 2605.17652) set to `https://aclanthology.org/{acl_id}` | cause: `scripts/fetch/acl.py` treats the LREC XML as a co-located workshop (no `lrec` main-venue entry); the url_acl bug was already fixed in the fetcher, these records predate it. SIGUL and PoliticalNLP records correctly stay `workshop`. Fetcher fix tracked in BACKLOG.md.
+
+## 2026-10-20
+
+- review | 2604.22542 (Controllable Spoken Dialogue Generation: An LLM-Driven Grading System for K-12 Non-Native English Learners) | 1 paper | rejected | caught at ingest time (Q2 2026 session, 2026-10-20) before any page was written; text-only LLM dialogue control (SFT and DDPO, a multi-turn GRPO variant, on Qwen2.5-7B / Llama3.1-8B) producing proficiency-graded text replies, evaluated by vocabulary violation rate, Rouge-L diversity and a GPT-5.1 judge; no TTS, ASR, audio or speech LM, speech only named as future work; "spoken" is the use case, not the modality (FAMA / MLC-SLM terminology-only reject shape); filter task [TTS, SCA] and note "TTS is a component" not supported by the paper | user decision
+
+## 2026-10-16
+
+- metadata | paper-date rule | 175 ingested records from 2026-01-01 (39 pages synced) (39 published_date changes) | added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | quarter moves: 2026-Q1->2026-Q1: 23; 2026-Q1->2026-Q2: 15; 2026-Q2->2026-Q2: 1 | other records untouched | 2026-10-16
+
+## 2026-10-04
+
+- metadata | paper-date rule | 318 non-ingested records (63 published_date changes) | added preprint_date (arXiv v1), arxiv_version/version_date (version fetched) and conference_date; published_date = conference_date, else journal_date, else version_date, else preprint_date | quarter moves: 2024-Q3->2026-Q2: 1; 2025-Q1->2026-Q2: 1; 2025-Q3->2026-Q2: 1; 2026-Q1->2026-Q2: 2; 2026-Q2->2026-Q2: 28; 2026-Q2->2026-Q3: 12; 2026-Q3->2026-Q3: 18 | ingested and rejected records untouched | 2026-10-04
+- metadata | paper-date rule | 355 non-ingested records (34 published_date changes) | added preprint_date (arXiv v1) and conference_date; published_date = conference_date when set, else preprint_date | quarter moves: 2026-Q2->2024-Q3: 1; 2026-Q2->2025-Q1: 1; 2026-Q2->2025-Q3: 1; 2026-Q2->2026-Q1: 2; 2026-Q2->2026-Q2: 5; 2026-Q2->2026-Q3: 19; 2026-Q3->2022-Q2: 1; 2026-Q3->2026-Q2: 1; 2026-Q3->2026-Q3: 3 | ingested and rejected records untouched | 2026-10-04
+
+## 2026-09-19
+
+- parse | Q2 2026 download + parse | 113 accepted papers with published_date 2026-04-01 to 2026-06-30 (2026.lrec-1.375 … 2608.00011) | 113 PDFs downloaded, 0 failed; 113 parsed, 0 failed (--workers 2, 204 min) | Q2 accepted papers now 230/230 parsed; 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | `download_pdfs.py` gained `--published-from`/`--published-to` to scope a run to one quarter
+- fetch | acl.py external-URL fix | LREC 2026 (and SIGUL/CAS/DialRES/PoliticalNLP) Anthology XML lists an external lrec.elra.info `<url>`, which acl.py prefixed with the Anthology base, yielding 404 pdf_urls; acl.py now falls back to the canonical Anthology ID; `pdf_url`/`url` repaired in place on 17 records (9 accepted, 6 rejected, 2 review) using the cached XML, no other fields touched
+- discover | 22427 entries (710 merge groups collapsed, 7 fuzzy candidates), 1169 corpus papers
+
+
 ## 2026-08-13
 
 - review | 2602.04796 (LALM-as-a-Judge: Benchmarking Large Audio-Language Models for Safety Evaluation in Multi-Turn Spoken Dialogues) | 1 paper | rejected | caught at ingest time (Q1 2026 session, batch 17) before any page was written; benchmarks off-the-shelf LALMs as zero-shot safety judges outputting a scalar score for spoken dialogues, Coqui XTTS-v2 used only to synthesize one injected "unsafe" turn for benchmark construction, no TTS quality metric anywhere, judges' own output is always a scalar score; clean match to the FastLongSpeech (2507.14815) reject pattern (TTS synthesizes input, never model output); filter-pass relevance_note had already flagged "evaluation not generation" | status: accepted → rejected, review_queue.md decision recorded
@@ -208,3 +255,12 @@ Infra-only operations (filter, parse, discover, lint, review). Not rendered on t
 
 - filter | cs.SD+eess.AS arXiv top-up (--date-from 2026-05-25, 213 written) + cs.CL OAI-PMH top-up (--date-from 2026-05-25, 40 written) | 253 pending papers scored | 185 accepted, 35 review, 33 rejected | accept rate 73% | runtime: claude-code | provider: anthropic | model: claude-sonnet-5
 - filter | ACL Anthology 2026 top-up (main track + co-located workshops: SIGUL, *SEM, SwissText, TACL, LREC, SIGDIAL, PROPOR, IWSDS, IWSLT, AmericasNLP, AfricaNLP, DravidianLangTech, LoResLM, CAS, DialRES, NLPAICS, AbjadNLP; `scripts/fetch/acl.py --years 2026 --all-workshops`) | 49 pending papers scored | 31 accepted, 8 review, 10 rejected | accept rate 63% | runtime: claude-code | provider: anthropic | model: claude-sonnet-5
+
+## 2026-09-20
+
+- review | arXiv (cs.SD+eess.AS, cs.CL) + ACL Anthology 2026 top-up borderline batch | 43 papers | 29 accepted, 14 rejected | review queue cleared (35 arXiv/cs.CL + 8 ACL workshop; 18 fall in the Q2 window by published_date, 25 outside it: 4 Feb, 14 Jul, 7 Aug) | by published_date: Feb 4A/0R, May 5A/1R, Jun 6A/6R, Jul 8A/6R, Aug 6A/1R | 29 accepted papers still need download and parse; IWSDS 2026 published_date 2026-02-01 verified against Anthology XML (February 2026, Trento), so those 4 are Q1 | status: review -> accepted/rejected, review_queue.md decisions recorded by user
+- review | conference_date repair | 65 metadata records (2026: 53 candidates, 2025: 24 candidates; 12 already correct) | conference_date placeholder 2026-01-01 / 2025-01-01 replaced with the Anthology XML volume month (day 01) from raw/anthology_xml_cache (e.g. ACL/Findings 2026 -> 2026-07-01, LREC -> 2026-05-01, EACL -> 2026-03-01, IWSDS 2026 -> 2026-02-01) | published_date and month untouched (arXiv-sourced month = arXiv publication month by design); field has no readers in scripts or wiki, quarter counts unaffected | 12 records XML-confirmed January (CHUM, CLTW, COLING 2025, MCG) left as is
+
+## 2026-09-21
+
+- filter | ICML 2026 OpenReview saved-page import (`openreview.py --venue ICML --year 2026 --from-file`, 6,341 notes loaded, 20 passed the keyword filter, 20 written pending) | 20 pending papers processed | 2 accepted, 0 review, 18 rejected | 17 of the 20 are ICML versions of papers already in the corpus under arXiv IDs (7 ingested, 8 accepted not yet ingested, 2 rejected) and were flagged `is_duplicate` with `canonical_id` set to the arXiv ID and `status: rejected`, arXiv stays canonical (user decision 2026-09-21, reverses the proceedings-over-arXiv rule of `dedup_openreview.py` for these; that script does not cover the `icml-2026-` prefix); the 3 without an arXiv twin were scored: AgentSteerTTS (0.92, TTS, accepted), TAC (0.88, codec+TTS, accepted), DropoutTS (0.03, rejected, time-series forecasting); both accepted papers are flagged `needs_manual_pdf` because `openreview.net/pdf` is behind the same browser-verification gate as the API | runtime: claude-code | provider: anthropic | model: claude-sonnet-5

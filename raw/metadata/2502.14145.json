@@ -19,10 +19,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-03",
-  "ingested_date": null,
+  "preprint_date": "2025-02-19",
+  "arxiv_version": 3,
+  "version_date": "2026-06-03",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-26",
   "url": "https://arxiv.org/abs/2502.14145",
   "pdf_url": "https://arxiv.org/pdf/2502.14145.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2502.14145.pdf",
   "pdf_source": "arxiv",
   "abstract": "Achieving full-duplex communication in spoken dialogue systems (SDS) requires real-time coordination between listening, speaking, and thinking. This paper proposes a semantic voice activity detection (VAD) module as a dialogue manager (DM) to efficiently manage turn-taking in full-duplex SDS. Implemented as a lightweight (0.5B) LLM fine-tuned on full-duplex conversation data, the semantic VAD predicts four control tokens to regulate turn-switching and turn-keeping, distinguishing between intentional and unintentional barge-ins while detecting query completion for handling user pauses and hesitations. By processing input speech in short intervals, the semantic VAD enables real-time decision-making, while the core dialogue engine (CDE) is only activated for response generation, reducing computational overhead. This design allows independent DM optimization without retraining the CDE, balancing interaction accuracy and inference efficiency for scalable, next-generation full-duplex SDS.",
   "arxiv_comment": null,
@@ -31,9 +36,21 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Proposes a lightweight LLM-based semantic VAD dialogue manager for turn-taking in full-duplex spoken dialogue systems, a core SCA infrastructure contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-26",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "295f564"
+    }
+  ]
 }

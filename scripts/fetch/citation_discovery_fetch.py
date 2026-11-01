@@ -34,6 +34,8 @@ import requests
 ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
+from lib.arxiv_versions import feed_entry_version  # noqa: E402
+
 RAW_METADATA = ROOT / "raw" / "metadata"
 FETCH_LOG = ROOT / "raw" / "fetch_log.jsonl"
 DEFAULT_MANIFEST = ROOT / "docs" / "records" / "2026-06-07-discovery-fetch-manifest.md"
@@ -325,6 +327,10 @@ def build_metadata(entry, arxiv_id: str, manifest_data: dict) -> dict:
     else:
         published_date, year, month = None, None, None
 
+    version_n, version_date = feed_entry_version(entry)
+    if version_date and published_date:
+        year, month = int(version_date[:4]), int(version_date[5:7])
+
     authors_all = [a["name"] for a in entry.get("authors", [])]
     authors = authors_all[:10]
 
@@ -351,7 +357,12 @@ def build_metadata(entry, arxiv_id: str, manifest_data: dict) -> dict:
         "venue_type": "preprint",
         "year": year,
         "month": month,
-        "published_date": published_date,
+        "published_date": version_date or published_date,
+        "preprint_date": published_date,
+        "arxiv_version": version_n,
+        "version_date": version_date or published_date,
+        "version_estimated": False,
+        "conference_date": None,
         "ingested_date": None,
         "url": f"https://arxiv.org/abs/{arxiv_id}",
         "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}.pdf",

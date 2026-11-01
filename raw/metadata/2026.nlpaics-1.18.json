@@ -16,10 +16,12 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-01",
-  "ingested_date": null,
+  "preprint_date": null,
+  "conference_date": "2026-06-01",
+  "ingested_date": "2026-10-25",
   "url": "https://aclanthology.org/2026.nlpaics-1.18",
   "pdf_url": "https://aclanthology.org/2026.nlpaics-1.18.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.nlpaics-1.18.pdf",
   "pdf_source": "anthology",
   "abstract": "Jitter, shimmer, and harmonics-to-noise ratio (HNR) are often used to detect voice deepfakes, since these features capture biomechanical irregularities of vocal fold vibration that synthetic speech supposedly lacks. We test this assumption on three commodity TTS engines (Google TTS, Microsoft Edge TTS, macOS system voice) with 1,850 samples across 21 languages, measured against 29 emotion corpora in 24 languages (35,091 utterances). Three classifiers (logistic regression, SVM-RBF, Random Forest) all fail to reliably detect Edge TTS: the best result is F1 = 0.78. Effect sizes drop 2.1x-7.4x from Google TTS to Edge TTS. In ablation, no single feature exceeds F1 = 0.60 against Edge TTS. These three perturbation features, taken alone, can no longer separate commodity neural TTS from natural speech.",
   "task": [
@@ -28,9 +30,21 @@
   ],
   "relevance_score": 0.68,
   "relevance_note": "Multi-engine, 21-language evaluation of commodity TTS systems' acoustic properties (jitter/shimmer/HNR) against deepfake-detection features; a substantive empirical characterization of synthesized speech naturalness, though framed around detection evasion rather than synthesis improvement.",
-  "status": "review",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

@@ -16,12 +16,15 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "ICICC",
-  "venue_type": "conference",
+  "venue": "arXiv",
+  "venue_type": "preprint",
   "year": 2025,
   "month": 10,
   "published_date": "2025-10-01",
   "preprint_date": "2026-05-18",
+  "arxiv_version": 1,
+  "version_date": "2026-05-18",
+  "version_estimated": true,
   "conference_date": "2025-10-01",
   "ingested_date": "2026-10-25",
   "url": "https://arxiv.org/abs/2605.18001",
@@ -40,5 +43,17 @@
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-25",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "1ec963a"
+    }
+  ]
 }

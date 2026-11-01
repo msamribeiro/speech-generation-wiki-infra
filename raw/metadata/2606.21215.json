@@ -32,7 +32,7 @@
   ],
   "relevance_score": 0.5,
   "relevance_note": "Studies speaker verification robustness on non-verbal vocalizations (motivated by expressive TTS/VC systems increasingly generating NVVs); primarily an SV-system contribution rather than a TTS/VC/SCA generation or dedicated evaluation-methodology paper.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

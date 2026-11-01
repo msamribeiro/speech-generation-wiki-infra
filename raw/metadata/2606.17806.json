@@ -28,7 +28,7 @@
   "task": [],
   "relevance_score": 0.42,
   "relevance_note": "PhASE-Flow applies phonetic-conditioned flow matching in SSL representation space for speech enhancement; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though the flow-matching/SSL techniques are directly relevant.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

@@ -25,7 +25,7 @@
   "task": [],
   "relevance_score": 0.4,
   "relevance_note": "A legal/ethical commentary on AI voice cloning and vocal identity rights (prompted by the ChatGPT-4o/Scarlett Johansson controversy); relevant to TTS/VC ecosystem policy but unclear if it is an empirical ML contribution versus a law/ethics article.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

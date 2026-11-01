@@ -32,6 +32,7 @@ ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 from lib.keyword_filter import load_keyword_filter, passes_filter
+from lib.arxiv_versions import feed_entry_version
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -71,6 +72,11 @@ def build_metadata(entry, arxiv_id: str) -> dict:
     else:
         published_date, year, month = None, None, None
 
+    # The API returns the latest version: its number is in the entry id, its date is `updated`.
+    version_n, version_date = feed_entry_version(entry)
+    if version_date and published_date:
+        year, month = int(version_date[:4]), int(version_date[5:7])
+
     authors_all = [a["name"] for a in entry.get("authors", [])]
     authors = authors_all[:10]
 
@@ -85,7 +91,12 @@ def build_metadata(entry, arxiv_id: str) -> dict:
         "venue_type": "preprint",
         "year": year,
         "month": month,
-        "published_date": published_date,
+        "published_date": version_date or published_date,   # version fetched, until a venue date is known
+        "preprint_date": published_date,    # arXiv v1 (feedparser "published")
+        "arxiv_version": version_n,
+        "version_date": version_date or published_date,
+        "version_estimated": False,
+        "conference_date": None,
         "ingested_date": None,
         "url": f"https://arxiv.org/abs/{arxiv_id}",
         "pdf_url": f"https://arxiv.org/pdf/{arxiv_id}.pdf",

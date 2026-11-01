@@ -14,10 +14,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-23",
-  "ingested_date": null,
+  "preprint_date": "2026-06-23",
+  "arxiv_version": 1,
+  "version_date": "2026-06-23",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-31",
   "url": "https://arxiv.org/abs/2606.24714",
   "pdf_url": "https://arxiv.org/pdf/2606.24714.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.24714.pdf",
   "pdf_source": "arxiv",
   "abstract": "Chinese news text contains dense written forms such as scores, hyphenated model names, ranges, unit symbols, percentages, English abbreviations, and mixed Chinese-Latin-digit names. These forms are frequent in real listening workflows, and a text-to-speech (TTS) system can preserve the written string while changing the spoken meaning. We introduce CN-NewsTTS Bench v0.1, an open target-level benchmark for evaluating whether Chinese news TTS products pronounce such targets correctly from raw text, without user-side rules, LLM rewriting, SSML hints, or manual edits. The release contains a 200-record development set, an 800-record public test set, 992 public auto-evaluable targets, fixed transcripts from a three-ASR ensemble, an automatic target scorer, and initial results for seven product TTS systems. We additionally report ASR-route diagnostics, ASR-subset ablations, category-level results, confidence intervals, and provider configuration metadata. The best system reaches 0.879 strict accuracy, while several systems remain below 0.60.",
   "arxiv_comment": "5 pages, 1 figure, 8 tables. ICASSP-style preprint",
@@ -27,9 +32,21 @@
   ],
   "relevance_score": 0.78,
   "relevance_note": "CN-NewsTTS Bench introduces a target-level automatic benchmark for Chinese news TTS pronunciation of dense written forms, a core TTS evaluation contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-31",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4de0600"
+    }
+  ]
 }

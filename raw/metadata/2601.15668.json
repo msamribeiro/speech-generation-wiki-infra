@@ -28,10 +28,10 @@
   "arxiv_comment": "ICLR 2026 (Oral). Project page: https://github.com/dingdongwang/EmotionThinker",
   "task": [],
   "relevance_score": 0.25,
-  "relevance_note": "Reinforcement learning for speech emotion reasoning and recognition; primary task is SER not speech generation",
+  "relevance_note": "Reinforcement learning for speech emotion reasoning and recognition; primary task is SER not speech generation Duplicate: arXiv version of iclr-2026-wbttgzp7MT (EmotionThinker, ICLR 2026), which was accepted in review triage and is the canonical page.",
   "status": "rejected",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "iclr-2026-wbttgzp7MT"
 }

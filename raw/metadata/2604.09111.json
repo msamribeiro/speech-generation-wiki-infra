@@ -18,9 +18,14 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2026,
-  "month": 4,
-  "published_date": "2026-04-10",
-  "ingested_date": null,
+  "month": 5,
+  "published_date": "2026-05-02",
+  "preprint_date": "2026-04-10",
+  "arxiv_version": 4,
+  "version_date": "2026-05-02",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-22",
   "url": "https://arxiv.org/abs/2604.09111",
   "pdf_url": "https://arxiv.org/pdf/2604.09111.pdf",
   "pdf_path": "raw/papers/2604.09111.pdf",
@@ -32,9 +37,21 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "PS-TTS: phonetic synchronization framework for natural multilingual automated video dubbing",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

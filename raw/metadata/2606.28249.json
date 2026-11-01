@@ -21,10 +21,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-26",
-  "ingested_date": null,
+  "preprint_date": "2026-06-26",
+  "arxiv_version": 1,
+  "version_date": "2026-06-26",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-31",
   "url": "https://arxiv.org/abs/2606.28249",
   "pdf_url": "https://arxiv.org/pdf/2606.28249.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.28249.pdf",
   "pdf_source": "arxiv",
   "abstract": "Recently, Large Language Model (LLM)-based Text-to-Speech (TTS) models have achieved remarkable naturalness. However, the standard Supervised Fine-Tuning paradigm often converges to statistically averaged prosody, limiting emotional expressiveness. While preference-driven optimization offers a promising alternative, existing approaches suffer from two structural mismatches: information conflict, where content and emotion in a shared latent space produce conflicting gradients, leading to reward hacking and semantic degradation; and scale gap, where sparse sentence-level rewards struggle to guide dense frame-level generation. To overcome these challenges, we propose HPRO, a hierarchical progressive reward optimization framework. Within HPRO, we introduce the HD-Emo codec as a novel differentiable reward model to resolve the information conflict. It extracts speech into distinct content and style preference tokens, structurally isolating emotional optimization from semantic content. Building upon this structured preference space, HPRO bridges the scale gap by progressively aligning frame-, word- and sentence-level objectives. Experiments demonstrate that HPRO significantly enhances emotional expressiveness, while effectively preserving linguistic intelligibility. The code and audio samples are publicly available at https://xxh333.github.io/hpro-demo/.",
   "arxiv_comment": "7 pages, 3 figures, 3 tables; Preprint",
@@ -33,9 +38,21 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "HPRO proposes hierarchical progressive reward optimization via preference extraction to improve emotional expressiveness in LLM-based TTS, a core TTS/RLHF contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-31",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4de0600"
+    }
+  ]
 }

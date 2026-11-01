@@ -26,7 +26,7 @@
   "task": [],
   "relevance_score": 0.42,
   "relevance_note": "Presents a unified framework covering six LM-based generative speech-enhancement modeling paradigms in neural-audio-codec latent space; speech enhancement is adjacent to but outside the TTS/VC/SCA/codec-generation scope, though it directly reuses codec/generative-modeling techniques from speech synthesis research.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

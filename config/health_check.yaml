@@ -33,6 +33,17 @@ integrate:
   # cluster_last_reviewed warning threshold (Phase 2)
   cluster_staleness_days: 180
 
+ingest:
+  # Unambiguous frontmatter tag -> concept slug. The related_concepts_complete check warns when a
+  # page carries the tag but omits the slug (a recurring ingest-agent omission). Only task tags are
+  # mapped: architecture tags (GAN, diffusion, ...) are often component-level and the concept
+  # scope notes say to omit the slug then (baselined 2026-10-16: ~227 mostly intentional hits).
+  tag_concepts:
+    task:
+      singing: singing
+      VC: voice-conversion
+      codec: neural-codec
+
 reconcile:
   # Pending or deferred candidates at or above this aggregate score remain visible
   # as advisory health warnings until a reviewer resolves them.

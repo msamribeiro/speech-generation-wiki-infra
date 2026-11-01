@@ -4,7 +4,7 @@
     "arxiv": "2604.13288",
     "acl": "2026.politicalnlp-1.7",
     "doi": "10.63317/39457jk69sij",
-    "url_acl": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-politicalnlp-07"
+    "url_acl": "https://aclanthology.org/2026.politicalnlp-1.7"
   },
   "title": "Giving Voice to the Constitution: Low-Resource Text-to-Speech for Quechua and Spanish Using a Bilingual Legal Corpus",
   "authors": [
@@ -17,11 +17,16 @@
   "venue": "workshop",
   "venue_type": "workshop",
   "year": 2026,
-  "month": 4,
-  "published_date": "2026-04-14",
-  "ingested_date": null,
+  "month": 5,
+  "published_date": "2026-05-01",
+  "preprint_date": "2026-04-14",
+  "arxiv_version": 1,
+  "version_date": "2026-04-14",
+  "version_estimated": true,
+  "conference_date": "2026-05-01",
+  "ingested_date": "2026-10-22",
   "url": "https://arxiv.org/abs/2604.13288",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-politicalnlp-07.pdf",
+  "pdf_url": "https://aclanthology.org/2026.politicalnlp-1.7.pdf",
   "pdf_path": "raw/papers/2604.13288.pdf",
   "pdf_source": "anthology",
   "abstract": "We present a unified pipeline for synthesizing high-quality Quechua and Spanish speech for the Peruvian Constitution using three state-of-the-art text-to-speech (TTS) architectures: XTTS v2, F5-TTS, and DiFlow-TTS. Our models are trained on independent Spanish and Quechua speech datasets with heterogeneous sizes and recording conditions, and leverage bilingual and multilingual TTS capabilities to improve synthesis quality in both languages. By exploiting cross-lingual transfer, our framework mitigates data scarcity in Quechua while preserving naturalness in Spanish. We release trained checkpoints, inference code, and synthesized audio for each constitutional article, providing a reusable resource for speech technologies in indigenous and multilingual contexts. This work contributes to the development of inclusive TTS systems for political and legal content in low-resource settings.",
@@ -31,10 +36,21 @@
   ],
   "relevance_score": 0.83,
   "relevance_note": "Multilingual TTS pipeline for low-resource Quechua and Spanish; directly advances multilingual/low-resource TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "conference_date": "2026-01-01"
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

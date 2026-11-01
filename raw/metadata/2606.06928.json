@@ -42,10 +42,15 @@
   "year": 2026,
   "month": 6,
   "published_date": "2026-06-05",
-  "ingested_date": null,
+  "preprint_date": "2026-06-05",
+  "arxiv_version": 1,
+  "version_date": "2026-06-05",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-26",
   "url": "https://arxiv.org/abs/2606.06928",
   "pdf_url": "https://arxiv.org/pdf/2606.06928.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.06928.pdf",
   "pdf_source": "arxiv",
   "abstract": "We present VoxCPM2, a https://info.arxiv.org/help/prep#abstractsfully open-source multilingual and controllable speech generation foundation model that extends the hierarchical diffusion-autoregressive modeling paradigm of VoxCPM. VoxCPM2 advances the framework in three key dimensions: (i) capability, by unifying 30 languages, 9 Chinese dialects, natural-language voice design, style-controllable voice cloning, and high-fidelity continuation cloning within a single backbone; (ii) quality, through an asymmetric AudioVAE that encodes at 16 kHz and reconstructs at 48 kHz, enabling implicit super-resolution with high encoding efficiency; and (iii) scale, by jointly scaling the model to 2B parameters and the training data to over 2 million hours of multilingual speech. To support these diverse capabilities within one model, we introduce a unified sequence organization that expresses all generation modes through different arrangements of the same input building blocks, allowing joint training under a single set of parameters and objective. VoxCPM2 achieves state-of-the-art or competitive performance on public zero-shot and instruction-following TTS benchmarks. On our internal 30-language evaluation set, it attains an average WER of 1.68%. These results demonstrate that hierarchical continuous-latent modeling, without relying on any external discrete speech tokenizer, offers a viable and powerful foundation for large-scale multilingual and controllable speech generation. The model weights, fine-tuning code, and inference tools are publicly released under the Apache 2.0 license to foster community research and development.",
   "arxiv_comment": "The technical report of VoxCPM2, a TTS foundation model (GitHub: https://github.com/OpenBMB/VoxCPM)",
@@ -54,9 +59,21 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "VoxCPM2 is a fully open-source multilingual controllable speech generation foundation model extending a hierarchical diffusion-autoregressive TTS paradigm.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-26",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "295f564"
+    }
+  ]
 }

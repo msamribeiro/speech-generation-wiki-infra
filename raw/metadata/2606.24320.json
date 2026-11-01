@@ -17,11 +17,16 @@
   "venue_type": "preprint",
   "year": 2026,
   "month": 6,
-  "published_date": "2026-06-23",
-  "ingested_date": null,
+  "published_date": "2026-06-25",
+  "preprint_date": "2026-06-23",
+  "arxiv_version": 2,
+  "version_date": "2026-06-25",
+  "version_estimated": true,
+  "conference_date": null,
+  "ingested_date": "2026-10-31",
   "url": "https://arxiv.org/abs/2606.24320",
   "pdf_url": "https://arxiv.org/pdf/2606.24320.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2606.24320.pdf",
   "pdf_source": "arxiv",
   "abstract": "We present ZONOS2 8B, our latest TTS model, which achieves state-of-the-art naturalness, prosody, and voice cloning fidelity. We improve upon Zonos-v0.1 across scale, data, and training recipe. We scale the model from 1.6B to 8B total parameters (900M active) with a novel mixture-of-experts (MoE) backbone, improving inference latency and throughput. We expand our training corpus from 200K to over 6M hours using a new data processing pipeline, and we simplify our post-training and conditioning recipes to improve naturalness and voice cloning fidelity. We evaluate ZONOS2 8B on quality, speaker similarity, WER, and ZTTS1-Eval, our novel TTS benchmark, where it performs competitively with state-of-the-art systems while maintaining good streaming latency. We release our model weights and example inference code under an Apache 2.0 license on GitHub and Hugging Face.",
   "arxiv_comment": "15 pages, 7 figures, 7 tables. Technical report. Model weights, inference code, and the ZTTS1-Eval benchmark released under Apache 2.0. Code: https://github.com/Zyphra/ZONOS2 ; weights: https://huggingface.co/Zyphra/ZONOS2 ; benchmark: https://github.com/Zyphra/ZTTS1-Eval",
@@ -30,9 +35,21 @@
   ],
   "relevance_score": 0.9,
   "relevance_note": "ZONOS2 8B is a state-of-the-art TTS model advancing naturalness, prosody, and voice-cloning fidelity via a mixture-of-experts backbone and expanded training corpus.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-31",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4de0600"
+    }
+  ]
 }

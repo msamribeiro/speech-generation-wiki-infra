@@ -30,7 +30,7 @@
   ],
   "relevance_score": 0.48,
   "relevance_note": "CS-ETS proposes a chaos-inspired architecture for EMG-to-speech synthesis; generates speech from a non-text, non-acoustic input modality (surface EMG), so fit with the text-to-speech/voice-conversion scope is ambiguous, similar to other silent-speech-interface papers.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

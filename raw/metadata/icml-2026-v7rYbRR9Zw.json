@@ -1,0 +1,33 @@
+{
+  "id": "icml-2026-v7rYbRR9Zw",
+  "source_ids": {
+    "openreview": "v7rYbRR9Zw"
+  },
+  "title": "Do Audio LLMs Listen or Read? Analyzing and Mitigating Paralinguistic Failures with VoxParadox",
+  "authors": [
+    "Jiacheng Pang",
+    "Ashutosh Chaubey",
+    "Mohammad Soleymani"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=v7rYbRR9Zw",
+  "pdf_url": "https://openreview.net/pdf?id=v7rYbRR9Zw",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Audio large language models (Audio LLMs) demonstrate strong performance on speech understanding tasks, yet their ability to understand paralinguistic information remains limited. To systematically quantify this issue, we introduce **VoxParadox**, an adversarial benchmark with 2,000 verified examples, spanning 10 paralinguistic tasks, created with controlled speech synthesis to intentionally mismatch transcript claims and speaking style, enabling direct measurement of speech paralinguistic understanding. Evaluation of a diverse set of Audio LLMs reveals consistently low accuracy on acoustic ground truth and a strong tendency to follow language-implied (incorrect) answers. To understand the cause of this gap, we perform layer-wise probing and find that (i) paralinguistic cues can degrade in deeper encoder layers and at the encoder--LLM interface, and (ii) even when such cues are available in audio tokens, the language model frequently ignores them. To address these problems, we propose **Prompt-Conditioned Layer Mixer (PCLM)**, which adaptively combines information from multiple audio layers based on the input prompt, and pair it with **Direct Preference Optimization (DPO)** to explicitly prefer acoustically supported options over language-implied alternatives. These methods substantially improve Audio LLM paralinguistic understanding, improving Audio Flamingo 3 from **17.40%** to **65.20%** on VoxParadox, and from **37.74%** to **54.78%** on MMSU paralinguistic subset. Our project page is available at https://voxparadox.github.io/.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: ICML 2026 version of arXiv 2605.27772 (record status: accepted); the arXiv record stays canonical and carries the relevance decision.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2605.27772"
+}

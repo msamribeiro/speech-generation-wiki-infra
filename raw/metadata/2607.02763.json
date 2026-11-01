@@ -28,7 +28,7 @@
   ],
   "relevance_score": 0.6,
   "relevance_note": "LuxSQA investigates whether TTS can generate task-specific training data for low-resource Luxembourgish spoken question answering; TTS is used as a data-augmentation tool for a downstream QA task rather than the paper's primary object of study.",
-  "status": "review",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

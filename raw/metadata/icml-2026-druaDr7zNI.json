@@ -1,0 +1,35 @@
+{
+  "id": "icml-2026-druaDr7zNI",
+  "source_ids": {
+    "openreview": "druaDr7zNI"
+  },
+  "title": "Self-Guidance: Enhancing Neural Codecs via Decoder Manifold Alignment",
+  "authors": [
+    "Xiang Li",
+    "Yixuan Zhou",
+    "Jingran Xie",
+    "Zhiyong Wu",
+    "Hui Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICML",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 7,
+  "published_date": "2026-07-06",
+  "ingested_date": null,
+  "url": "https://openreview.net/forum?id=druaDr7zNI",
+  "pdf_url": "https://openreview.net/pdf?id=druaDr7zNI",
+  "pdf_path": null,
+  "pdf_source": "openreview",
+  "abstract": "Neural speech codecs based on Vector-Quantized VAEs (VQ-VAEs) are core audio tokenizers for speech LLMs, yet their reconstruction fidelity is bottlenecked by quantization error. Modifying the quantizer or increasing model capacity are common fixes, but they complicate downstream language modeling. Our core idea is to align the decoder's internal feature manifolds when processing both the quantized tokens and their original continuous embeddings, using a lightweight feature-mapping loss. This requires minimal training overhead and no inference-time changes. Applied to XCodec2, self-guidance improves all reconstruction metrics, achieving state-of-the-art low-bitrate performance. Notably, it enables a 4× codebook reduction without fidelity loss, which downstream TTS experiments show significantly improves LLM-based synthesis by simplifying the token modeling space. Multiple statistical observations and visualizations corroborate the enhanced internal manifold alignment in the decoder. Extensive experiments confirm its generality across various inductive biases. Self-guidance thus establishes an efficient, broadly applicable method for high-fidelity neural audio coding.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: ICML 2026 version of arXiv 2606.12940 (record status: accepted); the arXiv record stays canonical and carries the relevance decision.",
+  "status": "rejected",
+  "fetched_date": "2026-09-21",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.12940"
+}

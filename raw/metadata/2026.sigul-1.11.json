@@ -18,10 +18,12 @@
   "year": 2026,
   "month": 5,
   "published_date": "2026-05-01",
-  "ingested_date": null,
-  "url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-sigul-11",
-  "pdf_url": "https://aclanthology.org/https://lrec.elra.info/lrec2026-ws-sigul-11.pdf",
-  "pdf_path": null,
+  "preprint_date": null,
+  "conference_date": "2026-05-01",
+  "ingested_date": "2026-10-22",
+  "url": "https://aclanthology.org/2026.sigul-1.11",
+  "pdf_url": "https://aclanthology.org/2026.sigul-1.11.pdf",
+  "pdf_path": "raw/papers/2026.sigul-1.11.pdf",
   "pdf_source": "anthology",
   "abstract": "In this early-stage study, we investigate whether transfer learning from lexifier or substrate languages can improve text-to-speech (TTS) performance for low-resource creoles. We conducted a controlled experiment using two creoles of distinct lexical origins: Nigerian Pidgin (English-based) and Guadeloupean Creole (French-based). Single-speaker TTS datasets of approximately 30 minutes each were recorded and used to fine-tune pretrained models for English, French, and Yoruba. Objective metrics and informal subjective evaluations were employed to assess synthesis quality. Though partially inconclusive, our results suggest that the French-based models outperform others for both creoles, while Yoruba-based models yield weaker performance. These findings may suggest that lexical similarity or historic influences alone do not fully predict transfer learning effectiveness, and that phonotactic compatibility and orthographic depth may also be relevant factors. Our work provides insight into TTS model development for creoles and other low-resource languages, and highlights avenues for further research on leveraging relevant linguistic and orthographic features for model development.",
   "task": [
@@ -29,9 +31,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Pilot study on transfer learning from substrate vs. lexifier languages for low-resource Creole TTS; core TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-10-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0af2ec2"
+    }
+  ]
 }

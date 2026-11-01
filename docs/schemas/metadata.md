@@ -17,10 +17,16 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "authors": ["list of strings"],
   "organization": "string or null — primary affiliated org (e.g. Google, Microsoft, CMU)",
   "venue": "one of the venue values listed below",
-  "venue_type": "one of: conference | workshop | preprint | technical-report",
+  "venue_type": "one of: conference | journal | workshop | preprint | technical-report",
   "year": 2025,
   "month": 11,
-  "published_date": "YYYY-MM-DD — date of first public availability",
+  "published_date": "YYYY-MM-DD — canonical wiki date; conference_date, else journal_date, else version_date, else preprint_date (see Paper Dates)",
+  "preprint_date": "YYYY-MM-DD or null — arXiv v1 submission date; null if no preprint",
+  "arxiv_version": "int or null — arXiv version number of the content we fetched/downloaded",
+  "version_date": "YYYY-MM-DD or null — submission date of that arXiv version (equals preprint_date for v1)",
+  "version_estimated": "bool — true if the version was inferred from file/fetch dates, false if pinned at fetch or download",
+  "conference_date": "YYYY-MM-DD or null — date of the peer-reviewed proceedings; null if not peer-reviewed or unknown",
+  "journal_date": "YYYY-MM-DD — optional; first online publication date in a peer-reviewed journal (omit if not a journal paper)",
   "ingested_date": "YYYY-MM-DD or null — set on ingest",
   "generation_history": [
     {
@@ -54,6 +60,58 @@ Entries without `schema_version` are legacy version-1 provenance and remain vali
 re-ingest, review, and re-review entries use version 2. See
 [generation.md](generation.md) for field semantics.
 
+## Paper Dates
+
+Each record logs supporting dates and one canonical date. Every date-dependent feature of the
+wiki (quarter assignment, paper-page and claim-YAML `published_date`, snapshot eligibility,
+temporal reports, corpus summaries) uses the canonical `published_date`.
+
+| Field | Meaning |
+|-------|---------|
+| `preprint_date` | arXiv **v1** submission date. Null when the paper has no preprint. The priority date: when the idea first appeared. |
+| `arxiv_version`, `version_date` | The arXiv version whose content we fetched and downloaded, and that version's submission date. Equal to v1 (`preprint_date`) when we have the original. `arxiv_version` is null when the fetch source does not expose it (OAI harvests). |
+| `version_estimated` | `false` when the version was pinned at fetch or PDF download; `true` when inferred (see rule 4). |
+| `conference_date` | Date of the peer-reviewed proceedings (conference or workshop) in which the paper appeared. Null when not peer reviewed, or when the date is unknown. |
+| `journal_date` | Optional. First online publication date (Crossref `published-online`, or the journal site) in a peer-reviewed journal. Omit for non-journal papers. |
+| `published_date` | **Canonical.** `conference_date` if set, then `journal_date`, then `version_date`, otherwise `preprint_date`. |
+
+Rules:
+
+1. **Peer-reviewed venues win.** If the paper appeared at a conference or workshop,
+   `published_date = conference_date`; if it appeared in a peer-reviewed journal,
+   `published_date = journal_date`, even when an earlier preprint exists. A paper in both uses
+   the conference date.
+2. **Otherwise the date of the version we ingest.** A preprint's content can change after v1
+   (new evidence, rewrites), and snapshots must not credit later evidence to an earlier date, so
+   `published_date = version_date`. Journal acceptance noted in `arxiv_comment` is a cue to look
+   up the journal date (for example via Crossref).
+3. **Only the version we hold counts.** Never use the arXiv "latest revision" date of a version we
+   have not fetched, and never derive the date from the arXiv ID (IDs can lag the submission
+   month). When we re-fetch or re-ingest a newer version, the new version is the one that counts:
+   the date moves, and any frozen snapshot is corrected by explicit supersession, not edited.
+4. **Pinning.** Fetchers record the version they harvest (`version_estimated: false`).
+   `scripts/parse/download_pdfs.py` re-pins to the latest version at download. Records predating
+   pinning were estimated by `scripts/apply_date_rule.py` as the latest version submitted on or
+   before the local PDF's modification date, else `fetched_date` (`version_estimated: true`).
+5. **Keep `year` and `month` in sync** with `published_date`.
+6. **Precision.** A `-01` day means month-only precision (an Anthology volume month) unless the
+   venue table in `scripts/fetch/acl.py` (`_CONF_META`) supplies the exact conference date, in
+   which case the fetcher upgrades it.
+7. **Do not edit by hand.** Set the supporting dates, then call
+   `lib/paper_dates.apply_date_rule(record)`, which derives `published_date`, `year`, and `month`.
+   Fetchers do this; `lib/arxiv_versions.pin_version` pins versions;
+   `scripts/apply_date_rule.py` is the batch migration.
+8. **Never changes the paper's content.** These are pipeline fields: correcting them is allowed
+   under the "never alter source documents" invariant.
+
+Ingested records: wiki paper pages and claim YAML copy `published_date`, and frozen snapshots
+depend on it, so ingested records are migrated only together with their pages. Records published
+on or after 2026-01-01 were migrated on 2026-10-16
+(`apply_date_rule.py --ingested-from 2026-01-01 --apply`); ingested records from 2025 and earlier
+are deliberately left on their legacy dates, so the frozen 2025 snapshots stay valid. For those `scripts/health_check.py --module metadata` counts them as legacy and
+reports rule deviations as warnings; non-ingested records (`pending`, `review`, `accepted`)
+violating the rule are errors.
+
 ## Status Lifecycle
 
 ```
@@ -63,6 +121,51 @@ accepted  → score > 0.70 or human confirmed relevant: ready to ingest
 rejected  → score < 0.40 or human confirmed irrelevant: skip
 ingested  → wiki paper page written
 ```
+
+## Duplicates and Later Versions
+
+One paper has one page (AGENTS.md invariant 4). When two records describe the same work (an arXiv
+preprint and its proceedings or journal version, possibly under a different title), the
+non-canonical record gets:
+
+- `is_duplicate: true`
+- `canonical_id`: the canonical record's ID
+- `status: rejected`
+- a `relevance_note` sentence naming the version it duplicates
+
+The canonical record keeps the relevance decision. Its `source_ids` may gain the duplicate's source
+ID (for example `"openreview": "h5KLpGoqzC"`).
+
+**Once a page exists, the ingested version stays canonical.** A version found after ingest (a
+proceedings or journal publication, often months later and sometimes retitled) is marked as a
+duplicate of the ingested record, whatever its venue. The page is not re-ingested, re-dated or
+re-ID'd, and its claims and claim YAML are untouched. Instead the page gets a short italic
+editorial note after the abstract callout. The note names the venue, title and link of the later
+version, and says that the page, its metrics and its claims summarise the version that was ingested.
+`published_date` stays on the ingested version, so quarter counts and frozen snapshots do not move.
+Log the change to `wiki/log.md` as `misc`. Re-ingesting from the later version is a separate,
+explicit user decision.
+
+**Exception: technical report and peer-reviewed paper.** When the ingested record is an industry
+technical report and the later version is a peer-reviewed paper on the same system (same authors,
+but substantially rewritten and extended), the two are treated as separate works: each gets its own
+page dated by its own `published_date`, so each sits in its own quarter, neither is marked
+`is_duplicate`, and each page's Wiki Connections links the other with a bullet that names the
+relationship (technical report vs peer-reviewed version). Precedent: VibeVoice Technical Report
+`2508.19205` (Q3 2025) and the ICLR 2026 paper `iclr-2026-FihSkzyxdv` (Q2 2026), user decision
+2026-10-20. A plain camera-ready of an arXiv preprint is not an exception (VoxCPM).
+
+**Before either version is ingested**, the existing source rules apply:
+
+- ACL Anthology: the proceedings record is canonical (e.g. F5-TTS `2025.acl-long.313`, F-Actor
+  `2026.findings-acl.242`).
+- OpenReview (ICLR, NeurIPS, ICML): the arXiv record stays canonical, and the proceedings record is
+  the duplicate.
+
+Detection: title-match every new batch against the whole corpus, then also check author overlap and
+abstract similarity, because camera-ready versions are sometimes retitled (VoxCPM `2509.24650` was
+published at ICLR 2026 as "Hierarchical Semantic-Acoustic Modeling via Semi-Discrete Residual
+Representations ...").
 
 ## Venue Allowed Values
 
