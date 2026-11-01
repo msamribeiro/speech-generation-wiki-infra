@@ -5,6 +5,100 @@ Each entry records the completion date, a prose summary of the outcome, and the 
 
 ---
 
+## Q4 2025 Content Cycle [completed: 2026-11-01]
+
+Complete the first quarter-over-quarter update after the closed Q3 synthesis program. Scope is
+canonical `published_date` from `2025-10-01` through `2025-12-31`, inclusive. The full operating
+record is archived at
+`docs/records/2026-11-01-q4-2025-integration-and-synthesis-sessions.md`.
+
+- [x] Phase 1 integration — add every eligible Q4 paper to each applicable concept YAML in
+  oldest-first batches of at most 20 papers per concept. Baseline: 174 non-Tier-2 Q4 paper pages,
+  172 with canonical concept assignments, 22 affected concepts, and approximately 660 missing
+  concept-paper entries
+- [x] Phase 2 synthesis — after each concept's Q4 Phase 1 queue closes, update claim clusters,
+  method families, reassessment items, open questions, and trend notes from the complete YAML
+- [x] Validate the completed Q4 claim graphs — concept-scoped checks after every pass, followed by
+  the corpus-wide integrate health check and an exact Q4 candidate-versus-YAML closure audit
+- [x] Correct late Q4 Phase 1 drift discovered after the original closure — import the two late
+  proceedings-dated pages (`2605.18001`, `2605.25504`), sync the later `singing` and `neural-codec`
+  concept tags on `2512.14653` and `2512.00451`, add 8 paper-concept entries across 7 concepts,
+  and close the current exact audit at 173 eligible non-Tier-2 pages with 0 missing memberships
+- [x] Run targeted corrective Phase 2 synthesis for `gan-vocoder`, `voice-conversion`,
+  `subjective-evaluation`, `emotion-synthesis`, `diffusion-tts`, `singing`, and `neural-codec`
+- [x] Run bounded corrective reconciliation for cluster changes caused by the late Q4 evidence;
+  preserve the finalized original Q4 run as the audit trail and refresh derived evidence for the
+  automatic-judge, multiattribute-disentanglement, semantic–acoustic-hierarchy, and
+  multidimensional-evaluation broader claims
+- [x] Run `2025-Q4` cross-concept reconciliation — generate deterministic candidates only after
+  all concept integrations close; review in themed batches, obtain explicit human decisions, and
+  finalize with no pending candidates before using new relationships downstream
+  - [x] Generate the deterministic human-review run: 3,946 pending candidates across eight themes;
+    the reviewed Q3 registry remained byte-for-byte unchanged
+  - [x] Review all eight themes, beginning with evaluation, and resolve the Q4-induced derived
+    evidence drift in existing broader claims through explicit human decisions; evaluation is
+    complete with 98 accepted, 624 rejected, and 0 deferred decisions across 722 candidates; seven
+    themes and 3,224 candidates remained after evaluation; efficiency is now complete with 28
+    accepted, 129 rejected, and 0 deferred decisions across 157 candidates, leaving six themes and
+    3,067 candidates; speaker triage is complete with 67 proposed acceptances, 889 proposed
+    rejections, and 0 deferrals; the first three speaker bundles approved 47 decisions covering
+    reference conditioning, cross-lingual identity/accent, disentanglement/attribute leakage,
+    singing timbre/pitch transfer, and speaker trade-offs/robustness/metrics; all 889 audited speaker
+    rejections are applied, closing the theme with 67 accepted and 889 rejected decisions and
+    leaving five themes and 2,111 candidates pending overall; the complete 677-candidate
+    controllability is complete with 111 accepted, 566 rejected, and 0 deferred decisions; its 61
+    new direct relationships and 50 carry-forward decisions preserve existing reviewed authority
+    without duplicate registry entries; robustness review has started with 3 existing-authority
+    carry-forwards, 6 multilingual/generalization relationships, and 6 low-resource/representation
+    transfer relationships approved; the text/pronunciation/alignment bundle added 4 acceptances
+    and 2 rejections; the remaining 133 robustness candidates are now audited into 21 proposed
+    acceptances across four semantic bundles and 112 proposed rejections across two categories;
+    robustness is complete with 40 accepted, 114 rejected, and 0 deferred decisions; three themes
+    and 1,280 candidates remain; all 1,014 codecs/language-modeling candidates are now audited into
+    101 proposed acceptances across nine broad bundles and 913 proposed rejections across two
+    categories; all 101 proposed acceptances across the nine broad bundles are approved, including
+    20 existing-authority carry-forwards and 81 new direct relationships; all 913 audited
+    rejections are applied, closing codecs/language modeling and leaving streaming/agents (138)
+    and post-training (128), 266 candidates total; streaming/agents is now audited into 42 proposed
+    acceptances across six broad bundles and 96 proposed rejections across two categories; the 9
+    existing-authority carry-forwards, 8 incremental-reasoning/latency links, 8 explicit-interaction/
+    turn-taking links, 5 unified/low-rate-interface links, 5 interaction-evaluation/context links,
+    and 7 Q4-strengthened full-duplex links are approved; the 96 categorized rejections are also
+    applied, closing streaming/agents at 42 accepted and 96 rejected; post-training is audited into
+    51 proposed acceptances across six broad bundles and 77 proposed rejections across two
+    categories; the 28 existing-authority carry-forwards are approved without duplicate registry
+    entries; the 5 post-training capability extensions are approved, adding four members to the
+    preference-post-training synthesis and one direct supports link; the 4 preference-data and
+    reward-control links are approved, adding three unique qualifying members to the synthesis;
+    the 9 reward-trade-off and evaluator-limit links are approved as new direct relationships;
+    the 4 speech-text capability and instruction-adaptation links are approved as new direct
+    relationships; the final guidance/control trade-off link is approved; all 51 proposed
+    acceptances are resolved; the final 44 Q3 agent scope-gap reaffirmations and 33 low-semantic-
+    overlap rejections are applied, closing post-training at 51 accepted and 77 rejected and the
+    complete Q4 run at 538 accepted, 3,408 rejected, 0 deferred, and 0 pending
+  - [x] Finalize and validate the run with no pending candidates
+- [x] Regenerate every stale concept Overview/In Depth pair from the Q4-updated YAMLs; include the
+  still-missing production pairs if their evidence supports useful synthesis. Progress:
+  `gan-vocoder`, `voice-conversion`, `subjective-evaluation`, `emotion-synthesis`, `diffusion-tts`,
+  `singing`, `neural-codec`, `evaluation-metrics`, `zero-shot-tts`, `spoken-language-model`,
+  `speech-to-speech`, `autoregressive-codec-tts`, `multilingual-tts`, and
+  `self-supervised-speech`, `flow-matching`, `prosody-control`, `streaming-tts`, and `rlhf-speech`
+  plus `speaker-adaptation`, `disentanglement`, `instruction-conditioned-tts`, and
+  `transformer-enc-dec-tts` fully regenerated through 2026-11-01. All 22 existing pairs are
+  current; `fine-tuning` now has its first evidence-bounded production pair, closing concept
+  rendering at 23/23 current pairs.
+- [x] Regenerate the field overview from all 23 concept YAMLs and the human-approved reconciliation
+  registry, deduplicating linked claims and paper evidence while preserving local caveats
+  *(completed 2026-11-01: 668 unique papers, 2,892 memberships, 444 local clusters, 373 approved
+  direct relationships, and 11 approved broader claims; render health 0 errors/0 warnings)*
+- [x] Freeze the retrospective `2025-Q4` snapshot and publish the Q4 quarterly report; validate
+  source digests, cutoff semantics, provenance, indexes, and supersession rules *(completed
+  2026-11-01: 668 included papers, 497 baseline, 171 Q4 activity; snapshot and report validators
+  pass; digest `sha256:97ebbcfe40a97bc05208e9c8d7209c88a77225485310e425716d83d7f5af3b4c`)*
+
+
+---
+
 ## Cross-Concept Synthesis and Temporal Reporting [completed: 2026-09-13]
 
 Built and validated the first complete cross-concept and temporal-reporting cycle over all 23 Q3

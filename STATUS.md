@@ -2,29 +2,26 @@
 
 Last updated: 2026-11-01
 
-The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
-retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
-the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion, run in parallel in the ingest worktree,
-is complete (158 ingested after two pages moved to Q3 on 2026-11-01; 2 ICML/IJCAI papers held for
-the peer-reviewed-version rule). The Interspeech 2026 proceedings were fetched from the ISCA archive
-on 2026-11-01 for Q3 2026 (70 new accepted papers, PDFs downloaded, not yet parsed).
+The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
+retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 ingestion is complete
+(158 ingested after two pages moved to Q3 on 2026-11-01); the active corpus priority is the Q3 2026
+frontier and its peer-reviewed-version preflight. The Interspeech 2026 proceedings were fetched from
+the ISCA archive on 2026-11-01 (70 new accepted papers, PDFs downloaded, not yet parsed).
 
 ---
 
 ## Current priorities
 
-1. Run Q4 cross-concept reconciliation and obtain human decisions for accepted relationships.
-   Before freezing, integrate the two Q4 2025 stragglers ingested on 2026-10-25 (`2605.18001`
-   PACC, `voice-conversion` / `gan-vocoder` / `subjective-evaluation`; `2605.25504`,
-   `emotion-synthesis` / `diffusion-tts` / `subjective-evaluation`).
-2. Regenerate stale concept pages and the field overview.
-3. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
-4. Ingest stream (parallel): parse the 70 Interspeech 2026 ISCA PDFs and download and parse the
-   other Q3 accepted records without PDFs; implement the peer-reviewed-version rule (`BACKLOG.md`);
-   then begin Q3 2026 ingestion (procedure: `docs/ingest-protocol.md`; Q2 operating record:
-   `Q2_INGESTION_SESSIONS.md`).
+1. Preserve the published Q4 snapshot and report as immutable historical artifacts.
+2. Complete the peer-reviewed-version preflight and resolve the two Q2-held ICML/IJCAI records
+   into their canonical Q3 dates.
+3. Bootstrap and ingest Q3 2026. The dedup-aware Interspeech 2026 fetch is done (2026-11-01); next,
+   parse the 70 downloaded ISCA PDFs and download and parse the other Q3 accepted records without
+   PDFs, then work the accepted queue (procedure: `docs/ingest-protocol.md`).
 
-The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
+The completed Q2 ingest record remains `Q2_INGESTION_SESSIONS.md`; create the Q3 operating record
+when its preflight closes. The completed Q4 integration record is archived at
+`docs/records/2026-11-01-q4-2025-integration-and-synthesis-sessions.md`.
 
 ---
 
@@ -38,23 +35,31 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 | Parsed active papers | 1,155 | Includes ingested papers and accepted papers ready for ingest |
 | Accepted and parsed, ready to ingest | 86 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 84 Q3 2026; 70 more Q3 ISCA PDFs downloaded, awaiting parse |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
-| Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
-| Claim clusters | 443 | 342 strongly supported, 17 contested |
-| Rendered concept pairs | 21/23 | `singing` and `fine-tuning` remain unrendered |
-| Reconciliation state | 64 relationships, 11 broader claims | Human-approved Q3 authority plus preserved non-authoritative audit history |
-| Published snapshots | 1 | Retrospective `2025-Q3` snapshot |
-| Published quarterly reports | 1 | `reports/quarterly/2025-Q3.md` |
+| Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
+| Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
+| Rendered concept pairs | 23/23 present and current for Q4 | Every canonical concept has a current Overview and In Depth page |
+| Current field overview | Complete for Q4 | 23 concepts, 668 unique papers, 2,892 memberships, 444 local clusters, and 11 approved broader claims |
+| Reconciliation state | 388 relationships, 11 broader claims; 3,946 Q4 decisions finalized, 0 pending | Original run and bounded late-evidence corrective refresh complete |
+| Published snapshots | 2 | Retrospective `2025-Q3` and `2025-Q4` snapshots |
+| Published quarterly reports | 2 | `reports/quarterly/2025-Q3.md` and `reports/quarterly/2025-Q4.md` |
 
-Live health baseline on 2026-09-26:
+Live health baseline on 2026-11-01:
 
 ```text
-integrate: PASS — global check 0 errors, 324 warnings; transformer-enc-dec-tts Q4 Phase 2 check 0 errors, 1 accepted warning; papers_not_in_any_yaml=176
-render:    PASS — 0 errors, 7 warnings; 21 Overview/In Depth pairs
-reconcile: PASS — 0 errors, 1 warning; 2 runs and 1 snapshot
+agents:    PASS — 0 errors, 0 warnings; 8 workflows checked
+ingest:    PASS — 0 errors, 1,167 accepted warnings; 1,061 paper pages checked
+integrate: PASS — 0 errors, 324 accepted warnings; 2,892 entries, 444 clusters; papers_not_in_any_yaml=335 against the later ingest frontier
+metadata:  PASS — 0 errors, 17 accepted warnings; 1,266 active records checked
+reconcile: PASS — 0 errors, 2 expected warnings; 2 published snapshots and finalized decisions remain intact
+render:    PASS — 0 errors, 0 warnings; all 23 Q4 concept pairs and the field overview current
 ```
 
-Warnings are non-blocking and primarily reflect accepted method-family outliers, the two missing
-concept render pairs, and preserved reconciliation audit history.
+Integration warnings are non-blocking and primarily reflect accepted method-family outliers. The
+bounded corrective reconciliation added exactly four inherited paper references across the
+automatic-judge, multiattribute-disentanglement, semantic–acoustic-hierarchy, and
+multidimensional-evaluation broader claims. The two remaining warnings reflect one retained
+high-similarity rejection and 15 historical agent-proposed registry records that remain
+non-authoritative.
 
 ---
 
@@ -63,7 +68,7 @@ concept render pairs, and preserved reconciliation audit history.
 | Quarter | Ingest | Integrate | Reconcile | Render / report |
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
-| Q4 2025 | Complete (2 re-dated stragglers `2605.18001`, `2605.25504` ingested 2026-10-25) | Complete: all 22 affected concepts, 2,884 entries; the 2 stragglers still to add | **Next** | Pending reconciliation |
+| Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Complete: 134 ingested, 0 accepted (15 moved to Q2 by the date rule; 22 to Q3 as Interspeech 2026 papers) | Not started | Not started | Not started |
 | Q2 2026 | Complete: 158 ingested (2 re-dated to Q3 on 2026-11-01); 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI) | Not started | Not started | Not started |
 | Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 265 accepted (154 with PDFs, 84 parsed) | Not started | Not started | Not started |
@@ -96,7 +101,7 @@ and await the peer-reviewed link (`raw/pipeline_log.md`, 2026-11-01).
 
 ---
 
-## Active Q4 2025 content cycle
+## Completed Q4 2025 content cycle
 
 Canonical live audit as of 2026-09-26:
 
@@ -277,8 +282,8 @@ Adversarial restoration of acoustic detail advanced to strongly supported, and Q
 strongly supported data-curation cluster plus an emerging spontaneous-speech segmentation cluster.
 One preserved pre-Q4 family outlier remains.
 
-Q4 concept integration and its exact-set validation are complete. Cross-concept reconciliation is
-the next gated stage.
+Q4 concept integration, reconciliation, rendering, snapshot, and reporting are complete. Active
+work has moved to the Q3 2026 ingestion frontier.
 
 ---
 
@@ -299,8 +304,8 @@ The Q2 sweep closed on 2026-10-31 with the tenth round (18 papers; counts by can
 which the peer-reviewed-version rule will re-date to Q3. On 2026-10-31 `2606.17126` was re-dated
 to its IEEE TASLP Date of Publication (2026-06-19, stays Q2) and ingested as a journal page, and the
 ISCSLP challenge proposal `2606.21933` was rejected. The Q4 2025 stragglers PACC `2605.18001` and
-`2605.25504` still need the explicit Q4 integration pass. ICASSP, ASRU, and SLT remain
-fetch-coverage gaps; Interspeech 2026 is on ISCA but not yet fetched. The ingest procedure is
+`2605.25504` are now included in the completed Q4 integration. ICASSP, ASRU, and SLT remain
+fetch-coverage gaps; Interspeech 2026 is on ISCA and is the next dedup-aware fetch. The ingest procedure is
 `docs/ingest-protocol.md`; quarter-specific state is in `Q2_INGESTION_SESSIONS.md`.
 
 ---

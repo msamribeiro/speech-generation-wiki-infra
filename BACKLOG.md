@@ -1,34 +1,8 @@
 # Backlog
 
-## Q4 2025 Content Cycle [P0 · active]
+## Ingest [P0 · active]
 
-Complete the first quarter-over-quarter update after the closed Q3 synthesis program. Scope is
-canonical `published_date` from `2025-10-01` through `2025-12-31`, inclusive. Track batches,
-decisions, validation results, and resume state in `Q4_INTEGRATION_SESSIONS.md`.
-
-- [x] Phase 1 integration — add every eligible Q4 paper to each applicable concept YAML in
-  oldest-first batches of at most 20 papers per concept. Baseline: 174 non-Tier-2 Q4 paper pages,
-  172 with canonical concept assignments, 22 affected concepts, and approximately 660 missing
-  concept-paper entries
-- [x] Phase 2 synthesis — after each concept's Q4 Phase 1 queue closes, update claim clusters,
-  method families, reassessment items, open questions, and trend notes from the complete YAML
-- [x] Validate the completed Q4 claim graphs — concept-scoped checks after every pass, followed by
-  the corpus-wide integrate health check and an exact Q4 candidate-versus-YAML closure audit
-- [ ] Run `2025-Q4` cross-concept reconciliation — generate deterministic candidates only after
-  all concept integrations close; review in themed batches, obtain explicit human decisions, and
-  finalize with no pending candidates before using new relationships downstream
-- [ ] Regenerate every stale concept Overview/In Depth pair from the Q4-updated YAMLs; include the
-  still-missing `singing` and `fine-tuning` production pairs if their evidence supports useful
-  synthesis
-- [ ] Regenerate the field overview from all 23 concept YAMLs and the human-approved reconciliation
-  registry, deduplicating linked claims and paper evidence while preserving local caveats
-- [ ] If approved after reconciliation, freeze the retrospective `2025-Q4` snapshot and publish
-  the Q4 quarterly report; validate source digests, cutoff semantics, provenance, indexes, and
-  supersession rules
-
-## Ingest [P0 · queued]
-
-Resume the corpus frontier after the Q4 2025 content cycle closes.
+Resume the corpus frontier with Q3 2026 now that the Q2 ingest and Q4 integration cycles are closed.
 
 Status snapshot 2026-09-27 (by `published_date`; accepted = accepted + ingested; a dedup pointer such as `iclr-2026-kYkfCs4ZAH` is not counted). Accepted / downloaded / parsed / ingested: **Q1** 171 / 171 / 171 / 171 (closed, see below — the 9 stragglers are now ingested); **Q2** 245 / 245 / 245 / 4 (241 awaiting ingest, all downloaded and parsed); **Q3, partial** 114 / 2 / 2 / 0. Across 2026, 355 accepted papers await ingest, 353 of them parsed and ready. Review and pending are 0 everywhere.
 

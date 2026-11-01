@@ -1,0 +1,2446 @@
+schema_version: 1
+triage_id: 2025-Q4-efficiency
+source_run: 2025-Q4
+source:
+  infra_commit: b672c6b
+  content_commit: 9b3c59f
+  concept_digests:
+    autoregressive-codec-tts: sha256:64750c9a9296905e0839185aaeffe073661907ded5bedb627c934accb1eb289b
+    diffusion-tts: sha256:c1e5185ac9070873cf00aed7538c3fcccc39d0de745c1ad5371ef9de6806db64
+    disentanglement: sha256:69719d730690cbb2c547f56f01da2e0d6474f1b5e620856f3f5a4c15a6e19832
+    emotion-synthesis: sha256:d540d18c7a4ce4888d344a7defbde9dfdaea9469d7f9149d4a03b3517c82cf8d
+    evaluation-metrics: sha256:6f4e3c74f448adf702453162096d30daed4381ad058a6a71d1375bf21f956c4f
+    fine-tuning: sha256:dd9957be9daed440bb84a09183096213a87844daffb49d0a523fb662958e5cf4
+    flow-matching: sha256:e6ff69ecea4847b03f32e8ef87721b2aeabbaf2b803f32a1d6f12c4340e3d440
+    gan-vocoder: sha256:9af243780b6e7116f21708f79b32c2e18915db51b1aba69b875dac7d727e869f
+    instruction-conditioned-tts: sha256:22ad4c300a3e1d1cdaf4d2443c53feeee1fcdc1efce8c3a4dcbda04fee0caa20
+    multilingual-tts: sha256:6906ef9063970e4e43a31a61fae07ab6a87bc09c5df3c1c9084427512d8ab01e
+    neural-codec: sha256:f5e4e8ac420a4b8c3b918eab96232b700db04dba4fe5506801b8bb7ac563886e
+    prosody-control: sha256:3fb8c43d59c1871d0940a3e67f0872cbeebc23a3cc348df220d99a8f232ad99d
+    rlhf-speech: sha256:5584c6a304870507f9e5fabbdfae794bd723121ed5707113aba57f958ec4b1f4
+    self-supervised-speech: sha256:990c1809b4fe155453bebc410113de930763b6a072e43aae62d94cf71143e56f
+    singing: sha256:dbc3ec82ed669e3aa41a5b31077241d963385b493086f50206b4784d84edb7dc
+    speaker-adaptation: sha256:d0f7a4bc9655eea134ce3bfef81a6cea2a12bb3d54e34f63bcebc367394ef35a
+    speech-to-speech: sha256:7df25558aa08008dffa738eabb570730cc6d9ec4579cdf79df7a96f455cded49
+    spoken-language-model: sha256:ef09c36fe8b5d41ae3c046b77364e441156f70aeb0a05ba908af5358b0d6d3cb
+    streaming-tts: sha256:b67c400abf8b3a9f53509cef60db7b0bf32f3f23500ea4b72d35544195224c1c
+    subjective-evaluation: sha256:6822e75656abd0652bf6e912c1f9660a44ac24e82c9707a8d16170b93b54be79
+    transformer-enc-dec-tts: sha256:77984971ca140c823c4126d9411a4b4755d3e9345893dbd899b24b522ed181a5
+    voice-conversion: sha256:5941905ebe3f065cb152c505e6094d629b626623ae173ad383c538e935533773
+    zero-shot-tts: sha256:07e59423ba61df753ac6018ae8835bb40b93382e5fee2ec1d86d1cc0f2c7fbd0
+theme: efficiency
+review_mode: agent_adjudication
+reviewed_on: '2026-10-10'
+status: complete
+policy:
+  carry_forward: Propose acceptance when the endpoints already resolve to the same human-approved relationship and Q4 evidence
+    does not reverse the semantics.
+  new_acceptance: Require a decision-relevant proposition-level relationship after comparing complete cluster claims, evidence
+    roles, caveats, and Q4 additions; shared papers alone are insufficient.
+  rejection: Reaffirm prior Q3 rejections unless Q4 evidence closes the recorded scope gap; otherwise reject new pairs whose
+    shared evidence concerns different variables, mechanisms, tasks, or outcomes.
+  authority: Agent recommendations are advisory and do not change the human-review run or registry authority until approved
+    in chat.
+already_human_reviewed:
+  accepted: 0
+  rejected: 0
+summary:
+  candidates_triaged: 157
+  proposed_acceptances: 28
+  proposed_rejections: 129
+  proposed_deferrals: 0
+  acceptance_bundles:
+    existing_reviewed_authority: 10
+    flow_diffusion_acceleration: 3
+    interactive_streaming_latency: 5
+    parallel_token_decoding: 10
+  rejection_categories:
+    low_semantic_overlap: 48
+    q3_rejection_reaffirmed: 75
+    shared_evidence_scope_mismatch: 6
+recommendations:
+- id: cand_9015320da31ce943
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.3765
+    text_similarity: 0.252737
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.emnlp-demos.70
+    - 2025.findings-acl.1051
+    - '2409.06666'
+    - '2411.13577'
+    - '2412.02612'
+    - '2508.15827'
+    - '2509.17765'
+    - '2510.02044'
+    - '2510.02066'
+    - '2510.05150'
+    - '2512.18706'
+    - neurips-2025-vhPy3NMsO5
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: supports
+  registry_target: rel_8fb877f8ca4d4191
+  basis: existing human-approved direct relationship
+- id: cand_365e51efb3f4c196
+  left: spoken-language-model#incremental_reasoning_and_tool_use_improve_streaming_dialogue
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.316389
+    text_similarity: 0.226327
+    shared_supporting_papers:
+    - '2510.02044'
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+  disposition: accepted
+  bundle: interactive_streaming_latency
+  relationship: related
+  registry_target: null
+  basis: Incremental reasoning during user speech and incremental acoustic generation are complementary latency-reduction
+    stages in an interactive spoken pipeline; neither alone guarantees end-to-end responsiveness.
+- id: cand_6e2a3aba6e1fdbc7
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.312236
+    text_similarity: 0.265374
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - interspeech-2025-2447
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: The deployment cost of causal token-by-token speech generation supplies the motivation and mechanism-level contrast
+    for parallel, multi-token, and speculative decoding.
+- id: cand_2866f39f203a0490
+  left: flow-matching#fm_streaming_chunked_generation
+  right: gan-vocoder#flow_and_diffusion_trade_speed_for_iterative_quality
+  signals:
+    aggregate_score: 0.29548
+    text_similarity: 0.166825
+    shared_supporting_papers:
+    - '2510.08392'
+    - neurips-2025-1cURNMriee
+  disposition: accepted
+  bundle: flow_diffusion_acceleration
+  relationship: related
+  registry_target: null
+  basis: Chunked or causal flow generation and iterative flow or diffusion vocoding expose the same speed-quality boundary,
+    while applying it at different generation stages.
+- id: cand_5b8d1758e95ba440
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.276403
+    text_similarity: 0.139726
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2509.15969'
+    - '2510.11646'
+    - '2510.12210'
+    - '2511.13732'
+    - interspeech-2025-2447
+    - neurips-2025-pDWwz9F7Zh
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: The serial cost of autoregressive codec decoding establishes the deployment bottleneck that zero-shot inference-acceleration
+    methods are intended to reduce.
+- id: cand_c48a36803d7b9c43
+  left: diffusion-tts#distillation_and_caching_accelerate_diffusion
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.274302
+    text_similarity: 0.229614
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.18924'
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: supports
+  registry_target: rel_c084f3b53d7340c9
+  basis: existing human-approved direct relationship
+- id: cand_5c3ababb11ea1576
+  left: streaming-tts#incremental_generation_reduces_first_packet_latency
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.270329
+    text_similarity: 0.172427
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2509.15969'
+    - '2509.17765'
+    - '2510.24372'
+    - neurips-2025-pDWwz9F7Zh
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: Incremental speech-token or acoustic generation is a direct streaming mechanism by which zero-shot TTS can reduce
+    response latency while retaining usable quality.
+- id: cand_6bd255a25ce1e72d
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.268997
+    text_similarity: 0.180205
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2408.02622'
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_69dc75292b6baa09
+  left: gan-vocoder#flow_and_diffusion_trade_speed_for_iterative_quality
+  right: neural-codec#parallel_latent_generation_improves_robustness
+  signals:
+    aggregate_score: 0.268828
+    text_similarity: 0.192503
+    shared_supporting_papers:
+    - iclr-2025-uxDFlPGRLX
+    - neurips-2025-1cURNMriee
+  disposition: rejected
+  bundle: shared_evidence_scope_mismatch
+  relationship: null
+  registry_target: null
+  basis: shared papers support distinct variables, mechanisms, tasks, or outcomes rather than a direct claim relationship
+- id: cand_9cf3fc5820965641
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: voice-conversion#flow_matching_improves_parallel_conversion
+  signals:
+    aggregate_score: 0.2679
+    text_similarity: 0.114751
+    shared_supporting_papers:
+    - 2025.acl-long.87
+    - '2412.04724'
+    - '2509.08379'
+    - '2509.15629'
+    - interspeech-2025-1779
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: specialization
+  registry_target: rel_7b385ee219f15061
+  basis: existing human-approved direct relationship
+- id: cand_70004ba21ce16fc0
+  left: autoregressive-codec-tts#scaling_data_and_models_improves_ar_codec_tts
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.264088
+    text_similarity: 0.184586
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2406.02430'
+    - '2509.15969'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_64a08b59b8d9db88
+  left: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.260104
+    text_similarity: 0.162208
+    shared_supporting_papers:
+    - '2509.17765'
+    - '2510.16718'
+    - interspeech-2025-2447
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: supports
+  registry_target: rel_717ab705d3330843
+  basis: existing human-approved direct relationship
+- id: cand_d1f542ec029f36b1
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#latency_bottlenecks_shift_across_pipeline_components
+  signals:
+    aggregate_score: 0.255276
+    text_similarity: 0.169921
+    shared_supporting_papers:
+    - '2510.02044'
+    - '2512.18706'
+  disposition: accepted
+  bundle: interactive_streaming_latency
+  relationship: refines
+  registry_target: null
+  basis: 'Shifting bottlenecks across the language model, ASR, decoder, vocoder, retrieval, and orchestration qualifies claims
+    of interactive latency: a local speedup is insufficient unless the end-to-end critical path also improves.'
+- id: cand_4166926b9729f45b
+  left: neural-codec#parallel_latent_generation_improves_robustness
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.253446
+    text_similarity: 0.156343
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2509.17765'
+    - '2510.02848'
+    - '2510.12210'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: Parallel or non-autoregressive generation over codec latents provides a concrete mechanism for accelerating zero-shot
+    speech generation while avoiding serial error accumulation.
+- id: cand_7bbfb0b2794c8bf7
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#parallel_latent_generation_improves_robustness
+  signals:
+    aggregate_score: 0.246531
+    text_similarity: 0.163119
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: Parallel latent generation directly addresses the sequential latency and throughput cost identified for autoregressive
+    codec TTS.
+- id: cand_6c843a486b3c2e1c
+  left: flow-matching#fm_nar_speed_quality_competitive_ar
+  right: neural-codec#parallel_latent_generation_improves_robustness
+  signals:
+    aggregate_score: 0.242255
+    text_similarity: 0.120415
+    shared_supporting_papers:
+    - '2510.02848'
+    - '2512.04720'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: specialization
+  registry_target: null
+  basis: Large-scale non-autoregressive flow-matching TTS is a concrete architecture-level instance of replacing sequential
+    codec prediction with parallel latent generation while retaining competitive intelligibility.
+- id: cand_0592a68cfc654a1c
+  left: gan-vocoder#signal_processing_constraints_improve_extrapolation_and_efficiency
+  right: subjective-evaluation#codec_and_vocoder_choices_set_perceptual_ceilings
+  signals:
+    aggregate_score: 0.241405
+    text_similarity: 0.081192
+    shared_supporting_papers:
+    - '2507.01611'
+    - '2507.20731'
+    - '2510.03735'
+    - '2512.16519'
+    - '2512.20211'
+    - interspeech-2025-1819
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_b5eca3a3a9adc9b8
+  left: autoregressive-codec-tts#grouped_prediction_reduces_sequential_steps_with_equivalence_tradeoffs
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.241145
+    text_similarity: 0.125282
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+    - '2511.13732'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: Grouped, patchwise, and speculative prediction supplies a specific acceleration mechanism for zero-shot TTS, with
+    explicit within-group dependency and token-equivalence caveats.
+- id: cand_451c8eb71b84c9ab
+  left: flow-matching#fm_inference_acceleration
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.236606
+    text_similarity: 0.079419
+    shared_supporting_papers:
+    - '2502.18924'
+    - '2509.08379'
+    - '2510.02848'
+    - '2510.07979'
+    - '2510.08392'
+    - interspeech-2025-1779
+    - neurips-2025-SoRe80Tg48
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_aa253b43bf8bd31f
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#token_rate_drives_sequence_cost
+  signals:
+    aggregate_score: 0.236493
+    text_similarity: 0.121331
+    shared_supporting_papers:
+    - '2510.11646'
+    - '2510.12210'
+    - '2511.13732'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: Codec frame rate and token hierarchy determine sequence length and therefore contribute directly to the latency and
+    throughput cost of autoregressive decoding.
+- id: cand_9c0b5b4c8890ebaf
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: voice-conversion#diffusion_supports_flexible_voice_conversion
+  signals:
+    aggregate_score: 0.235675
+    text_similarity: 0.035615
+    shared_supporting_papers:
+    - 2025.acl-long.87
+    - '2412.04724'
+    - '2509.08379'
+    - '2509.15629'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_90dd8c93319f04a8
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.234241
+    text_similarity: 0.118983
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2502.11946'
+    - '2509.17765'
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: supports
+  registry_target: rel_87621803d5e0e99a
+  basis: existing human-approved direct relationship
+- id: cand_abb6a4a10f9ebb77
+  left: voice-conversion#reference_conditioning_controls_zero_shot_fidelity
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.233944
+    text_similarity: 0.136279
+    shared_supporting_papers:
+    - '2412.04724'
+    - '2510.08392'
+  disposition: rejected
+  bundle: shared_evidence_scope_mismatch
+  relationship: null
+  registry_target: null
+  basis: shared papers support distinct variables, mechanisms, tasks, or outcomes rather than a direct claim relationship
+- id: cand_db826ccc5e355114
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.233321
+    text_similarity: 0.100529
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2509.15969'
+    - neurips-2025-pDWwz9F7Zh
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: refines
+  registry_target: rel_5ea55292502acd36
+  basis: existing human-approved direct relationship
+- id: cand_64eeadc957941086
+  left: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.231087
+    text_similarity: 0.098841
+    shared_supporting_papers:
+    - 2025.acl-demo.37
+    - '2412.04724'
+    - '2507.14534'
+    - '2510.08392'
+    - interspeech-2025-1081
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_56ef9c6f840f6ceb
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.230499
+    text_similarity: 0.064883
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.emnlp-demos.70
+    - '2409.06666'
+    - '2410.17799'
+    - '2411.13577'
+    - '2508.15827'
+    - '2509.17765'
+    - '2510.02066'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_95ab058a7df5410d
+  left: self-supervised-speech#ssl_units_support_low_bitrate_neural_codecs
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.229977
+    text_similarity: 0.150205
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2510.11646'
+  disposition: rejected
+  bundle: shared_evidence_scope_mismatch
+  relationship: null
+  registry_target: null
+  basis: shared papers support distinct variables, mechanisms, tasks, or outcomes rather than a direct claim relationship
+- id: cand_70362e36956183ed
+  left: flow-matching#fm_prosody_latent_diversity
+  right: subjective-evaluation#preference_alignment_has_cross_dimension_tradeoffs
+  signals:
+    aggregate_score: 0.22914
+    text_similarity: 0.106462
+    shared_supporting_papers:
+    - 2025.emnlp-main.1730
+    - '2510.21685'
+    - '2511.18487'
+  disposition: rejected
+  bundle: shared_evidence_scope_mismatch
+  relationship: null
+  registry_target: null
+  basis: shared papers support distinct variables, mechanisms, tasks, or outcomes rather than a direct claim relationship
+- id: cand_c6d969b3d44c2ef3
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: streaming-tts#chunk_size_controls_latency_quality_tradeoff
+  signals:
+    aggregate_score: 0.222367
+    text_similarity: 0.084924
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_aef5b97a2fb28cb2
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: voice-conversion#diffusion_supports_flexible_voice_conversion
+  signals:
+    aggregate_score: 0.222313
+    text_similarity: 0.073411
+    shared_supporting_papers:
+    - '2509.08379'
+    - interspeech-2025-1101
+    - interspeech-2025-1747
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_342469b7b3911509
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: subjective-evaluation#perceptual_tests_validate_quality_speed_tradeoffs
+  signals:
+    aggregate_score: 0.21969
+    text_similarity: 0.05292
+    shared_supporting_papers:
+    - '2105.06337'
+    - '2509.08696'
+    - '2509.18470'
+    - interspeech-2025-1747
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_26ccca83f1fb82f2
+  left: speech-to-speech#incremental_reasoning_reduces_spoken_response_latency
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.219669
+    text_similarity: 0.059361
+    shared_supporting_papers:
+    - '2510.02044'
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.06917'
+  disposition: accepted
+  bundle: interactive_streaming_latency
+  relationship: supports
+  registry_target: null
+  basis: Incremental reasoning and tool planning during user speech supplies an orchestration-level mechanism for reaching
+    interactive spoken-model latency, subject to short-chunk and premature-action failure modes.
+- id: cand_1bd55fa96965388b
+  left: spoken-language-model#low_frame_rate_and_variable_rate_tokens_reduce_sequence_cost
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.219642
+    text_similarity: 0.073726
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_1f22a1ec11e2965c
+  left: flow-matching#fm_nar_speed_quality_competitive_ar
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.21951
+    text_similarity: 0.084885
+    shared_supporting_papers:
+    - 2025.acl-long.313
+    - '2412.04724'
+    - '2510.02848'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_51b2f57ae49f8203
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#codec_tokens_enable_language_model_generation
+  signals:
+    aggregate_score: 0.219428
+    text_similarity: 0.061071
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2502.03930'
+    - '2510.10003'
+    - '2510.11646'
+    - '2510.12210'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_16f16bad7558d642
+  left: flow-matching#fm_inference_acceleration
+  right: voice-conversion#flow_matching_improves_parallel_conversion
+  signals:
+    aggregate_score: 0.219104
+    text_similarity: 0.053897
+    shared_supporting_papers:
+    - 2025.acl-long.790
+    - '2508.04996'
+    - '2509.08379'
+    - '2510.08392'
+    - interspeech-2025-1779
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: specialization
+  registry_target: rel_4b22c174cef17670
+  basis: existing human-approved direct relationship
+- id: cand_3db75190837d2e74
+  left: autoregressive-codec-tts#speaker_and_style_control_conflict_with_token_disentanglement
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.216593
+    text_similarity: 0.100769
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2406.02430'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_ae50bd21e04baefd
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: flow-matching#fm_surpasses_diffusion_speed_quality
+  signals:
+    aggregate_score: 0.216398
+    text_similarity: 0.078942
+    shared_supporting_papers:
+    - '2210.02747'
+    - '2509.08379'
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: supports
+  registry_target: rel_0ef5d7332dfb8c42
+  basis: existing human-approved direct relationship
+- id: cand_5ae65b2fc24f7c7f
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.21503
+    text_similarity: 0.103015
+    shared_supporting_papers:
+    - '2412.02612'
+    - '2512.20156'
+  disposition: rejected
+  bundle: shared_evidence_scope_mismatch
+  relationship: null
+  registry_target: null
+  basis: shared papers support distinct variables, mechanisms, tasks, or outcomes rather than a direct claim relationship
+- id: cand_a2bb300997563767
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.214743
+    text_similarity: 0.065767
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2510.11646'
+    - '2510.12210'
+    - '2510.16718'
+    - '2511.13732'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: Reducing codec frame rate and sequence length supports zero-shot decoding acceleration, provided intelligibility
+    and speaker fidelity survive the more compact representation.
+- id: cand_42fee25e3c084e75
+  left: gan-vocoder#frequency_domain_generation_improves_phase_and_efficiency
+  right: neural-codec#adversarial_objectives_improve_perceptual_reconstruction
+  signals:
+    aggregate_score: 0.214696
+    text_similarity: 0.044693
+    shared_supporting_papers:
+    - '2306.00814'
+    - '2510.01903'
+    - '2510.03735'
+    - '2511.06150'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_0e11ab31ca7f436a
+  left: diffusion-tts#alignment_supervision_improves_training
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.214227
+    text_similarity: 0.096878
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.18924'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_877021cd696b2fb8
+  left: gan-vocoder#frequency_domain_generation_improves_phase_and_efficiency
+  right: neural-codec#learned_codec_low_bitrate_quality
+  signals:
+    aggregate_score: 0.213935
+    text_similarity: 0.081712
+    shared_supporting_papers:
+    - '2510.01903'
+    - '2511.06150'
+  disposition: rejected
+  bundle: shared_evidence_scope_mismatch
+  relationship: null
+  registry_target: null
+  basis: shared papers support distinct variables, mechanisms, tasks, or outcomes rather than a direct claim relationship
+- id: cand_11a1b1e290ae7488
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#chunk_size_controls_latency_quality_tradeoff
+  signals:
+    aggregate_score: 0.212951
+    text_similarity: 0.061935
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2505.02625'
+    - '2510.02066'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_119c55d6c7c13f24
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    aggregate_score: 0.211466
+    text_similarity: 0.085807
+    shared_supporting_papers:
+    - '2510.15227'
+    - '2510.16718'
+  disposition: accepted
+  bundle: parallel_token_decoding
+  relationship: supports
+  registry_target: null
+  basis: The general dependence of sequence cost on codec token rate supports the streaming-specific result that low-rate
+    tokenizers shorten decoding sequences and reduce latency.
+- id: cand_4121be5c9af40077
+  left: self-supervised-speech#discrete_ssl_units_enable_language_modeling
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.211312
+    text_similarity: 0.087952
+    shared_supporting_papers:
+    - 2025.acl-long.682
+    - '2408.02622'
+    - '2511.11124'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_576342b12efba869
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    aggregate_score: 0.211179
+    text_similarity: 0.101812
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.emnlp-main.989
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_3eee8c4ffc4921ad
+  left: diffusion-tts#flow_and_consistency_offer_faster_paths
+  right: flow-matching#fm_surpasses_diffusion_speed_quality
+  signals:
+    aggregate_score: 0.211155
+    text_similarity: 0.049652
+    shared_supporting_papers:
+    - '2210.02747'
+    - '2509.08379'
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: supports
+  registry_target: rel_b31f3b4b3b5056c3
+  basis: existing human-approved direct relationship
+- id: cand_f9f6edb604382b4e
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    aggregate_score: 0.210898
+    text_similarity: 0.0602
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_389c3378ab005e07
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#continuous_discrete_representation_tradeoff
+  signals:
+    aggregate_score: 0.207542
+    text_similarity: 0.058141
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.11646'
+    - '2510.12210'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_c1dd9d832aee2283
+  left: autoregressive-codec-tts#unified_speech_text_lms_enable_spoken_generation
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.207521
+    text_similarity: 0.093454
+    shared_supporting_papers:
+    - '2410.03751'
+    - '2412.02612'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_bb679a2f7682da39
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: speaker-adaptation#flow_and_diffusion_support_scalable_adaptation
+  signals:
+    aggregate_score: 0.206889
+    text_similarity: 0.071389
+    shared_supporting_papers:
+    - '2507.15272'
+    - interspeech-2025-1747
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_60260e26de8501a5
+  left: speech-to-speech#frozen_decoupled_llm_preserves_text_capability
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.205699
+    text_similarity: 0.02206
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2505.15670'
+    - '2510.05150'
+    - '2511.11124'
+    - neurips-2025-vhPy3NMsO5
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_a50355f37ab5445f
+  left: diffusion-tts#diffusion_enables_high_fidelity_synthesis
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.205504
+    text_similarity: 0.068006
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.03930'
+    - '2502.18924'
+    - '2509.08379'
+    - '2510.12210'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_d873d55b584bbcd6
+  left: neural-codec#codec_bottlenecks_shape_intelligibility
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.204682
+    text_similarity: 0.050428
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2509.25131'
+    - '2510.11646'
+    - '2510.12210'
+    - '2510.16718'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_c40d981fbc08351f
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: self-supervised-speech#ssl_units_support_low_bitrate_neural_codecs
+  signals:
+    aggregate_score: 0.203846
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2505.13000'
+    - '2510.11646'
+    - '2510.15227'
+    - '2512.07168'
+    - interspeech-2025-0468
+    - neurips-2025-7Z3wQSu3mH
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_75f6311d8ebb77ee
+  left: flow-matching#fm_streaming_chunked_generation
+  right: neural-codec#parallel_latent_generation_improves_robustness
+  signals:
+    aggregate_score: 0.202467
+    text_similarity: 0.045751
+    shared_supporting_papers:
+    - '2510.08373'
+    - neurips-2025-1cURNMriee
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_380c0f4c5f18b164
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.198032
+    text_similarity: 0.034366
+    shared_supporting_papers:
+    - 2025.acl-long.313
+    - '2412.04724'
+    - '2509.08379'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_8353ee3ba19f4f32
+  left: autoregressive-codec-tts#grouped_prediction_reduces_sequential_steps_with_equivalence_tradeoffs
+  right: neural-codec#token_rate_drives_sequence_cost
+  signals:
+    aggregate_score: 0.197823
+    text_similarity: 0.049365
+    shared_supporting_papers:
+    - '2510.12210'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_0ed3753711c314f3
+  left: voice-conversion#diffusion_supports_flexible_voice_conversion
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.197364
+    text_similarity: 0.045102
+    shared_supporting_papers:
+    - '2412.04724'
+    - '2509.08379'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_84ea7cecf21c7b81
+  left: gan-vocoder#signal_processing_constraints_improve_extrapolation_and_efficiency
+  right: neural-codec#adversarial_objectives_improve_perceptual_reconstruction
+  signals:
+    aggregate_score: 0.197255
+    text_similarity: 0.048401
+    shared_supporting_papers:
+    - '2510.03735'
+    - '2512.20211'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_421688bbc888d877
+  left: speech-to-speech#frozen_decoupled_llm_preserves_text_capability
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.196012
+    text_similarity: 0.034673
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2510.05150'
+    - neurips-2025-vhPy3NMsO5
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_0f58fa60f8931236
+  left: neural-codec#continuous_discrete_representation_tradeoff
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.195694
+    text_similarity: 0.014236
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2502.18924'
+    - '2510.11646'
+    - '2510.12210'
+    - '2510.16718'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_43e50ce96ad99676
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#codec_tokens_support_unified_speech_systems
+  signals:
+    aggregate_score: 0.195607
+    text_similarity: 0.064018
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2510.10003'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_0cbf910d4d7cd3ff
+  left: self-supervised-speech#explicit_disentanglement_improves_controllable_generation
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.195557
+    text_similarity: 0.051655
+    shared_supporting_papers:
+    - 2025.acl-demo.37
+    - '2402.08093'
+    - '2412.04724'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_73fe4969e92c0176
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#codec_representations_enable_multilingual_transfer
+  signals:
+    aggregate_score: 0.19551
+    text_similarity: 0.060205
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2505.02625'
+    - '2510.10003'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_ead6be786d41d5be
+  left: autoregressive-codec-tts#continuous_representations_avoid_quantization_tradeoffs
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.195399
+    text_similarity: 0.066621
+    shared_supporting_papers:
+    - '2502.03930'
+    - neurips-2025-pDWwz9F7Zh
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_fa18440adacbea70
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  signals:
+    aggregate_score: 0.192998
+    text_similarity: 0.064637
+    shared_supporting_papers:
+    - 2025.acl-long.313
+    - '2508.14049'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_4863a3df3f3903ea
+  left: diffusion-tts#flow_and_consistency_offer_faster_paths
+  right: flow-matching#fm_inference_acceleration
+  signals:
+    aggregate_score: 0.192847
+    text_similarity: 0.020578
+    shared_supporting_papers:
+    - 2025.naacl-long.110
+    - '2509.08379'
+    - interspeech-2025-0554
+  disposition: accepted
+  bundle: flow_diffusion_acceleration
+  relationship: supports
+  registry_target: null
+  basis: Faster flow and consistency paths within diffusion TTS provide direct architectural support for the broader inference-acceleration
+    mechanisms documented for flow-matching speech models.
+- id: cand_fe7a8ed3dead433f
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.192847
+    text_similarity: 0.042832
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2408.16725'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_24542233477d07e3
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: self-supervised-speech#discrete_ssl_units_enable_language_modeling
+  signals:
+    aggregate_score: 0.191565
+    text_similarity: 0.068198
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2510.11646'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_1b6f1c9e203ca89f
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    aggregate_score: 0.191156
+    text_similarity: 0.011981
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2411.18803'
+    - '2412.02612'
+    - '2512.20156'
+  disposition: accepted
+  bundle: interactive_streaming_latency
+  relationship: supports
+  registry_target: null
+  basis: Low-frame-rate tokenizers reduce streaming sequence cost and therefore provide a concrete representation-level mechanism
+    supporting interactive spoken-model latency.
+- id: cand_c6b9010c32e6bd12
+  left: spoken-language-model#low_frame_rate_and_variable_rate_tokens_reduce_sequence_cost
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.188935
+    text_similarity: 0.003586
+    shared_supporting_papers:
+    - '2509.02020'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_60899bc7ddf0df54
+  left: diffusion-tts#diffusion_enables_high_fidelity_synthesis
+  right: flow-matching#fm_inference_acceleration
+  signals:
+    aggregate_score: 0.18855
+    text_similarity: 0.011147
+    shared_supporting_papers:
+    - 2025.naacl-long.110
+    - '2502.18924'
+    - '2509.08379'
+    - '2509.08696'
+    - interspeech-2025-0554
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_056d585fd5da9f7b
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#residual_quantization_supports_scalable_bitrate
+  signals:
+    aggregate_score: 0.187861
+    text_similarity: 0.028863
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2305.09636'
+    - '2406.07855'
+    - '2510.11646'
+    - '2510.12210'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_5c5b61f003d8b8ba
+  left: neural-codec#codec_tokens_enable_language_model_generation
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.18782
+    text_similarity: 0.008012
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2502.03930'
+    - '2510.11646'
+    - '2510.12210'
+    - '2510.16718'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_7e4d3cfa3f96750d
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#codec_bottlenecks_shape_intelligibility
+  signals:
+    aggregate_score: 0.187578
+    text_similarity: 0.009039
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2505.02625'
+    - '2510.10003'
+    - '2510.11646'
+    - '2510.12210'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_008b84b1aa89e699
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.187539
+    text_similarity: 0.021267
+    shared_supporting_papers:
+    - '2509.17765'
+    - '2510.02044'
+    - '2512.18706'
+  disposition: accepted
+  bundle: interactive_streaming_latency
+  relationship: related
+  registry_target: null
+  basis: 'Claims of interactive spoken-model latency and the requirement for first-packet, timing, throughput, and cache metrics
+    are decision-relevant counterparts: the latter defines how the former must be verified.'
+- id: cand_1a125c0cd0fb633a
+  left: diffusion-tts#representation_choice_shapes_diffusion_quality
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.187501
+    text_similarity: 0.008038
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2502.18924'
+    - '2509.08379'
+    - '2510.12210'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_8e5beb35dd34848a
+  left: autoregressive-codec-tts#parallel_and_masked_models_challenge_full_autoregression
+  right: neural-codec#parallel_latent_generation_improves_robustness
+  signals:
+    aggregate_score: 0.187263
+    text_similarity: 0.262801
+    shared_supporting_papers:
+    - 2025.acl-long.65
+    - '2502.03930'
+    - '2510.12210'
+    - interspeech-2025-1776
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: specialization
+  registry_target: rel_88454dccfd9d8da1
+  basis: existing human-approved direct relationship
+- id: cand_8f034e3d65a96f12
+  left: flow-matching#fm_inference_acceleration
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    aggregate_score: 0.187083
+    text_similarity: 0.04679
+    shared_supporting_papers:
+    - 2025.acl-long.790
+    - '2510.08392'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_be5e7d6723aa3966
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  signals:
+    aggregate_score: 0.186942
+    text_similarity: 0.0368
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2505.02625'
+    - '2509.15969'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_7c4086120906fc0d
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: subjective-evaluation#codec_and_vocoder_choices_set_perceptual_ceilings
+  signals:
+    aggregate_score: 0.186036
+    text_similarity: 0.047816
+    shared_supporting_papers:
+    - '2510.16841'
+    - '2512.01537'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_67134b6b0dfa64dd
+  left: voice-conversion#robust_conversion_requires_domain_invariance
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.185191
+    text_similarity: 0.041273
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2510.08392'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_38c3cd8b642e3384
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: flow-matching#fm_inference_acceleration
+  signals:
+    aggregate_score: 0.184572
+    text_similarity: 0.01143
+    shared_supporting_papers:
+    - '2509.08379'
+    - '2509.08696'
+    - '2509.09748'
+  disposition: accepted
+  bundle: flow_diffusion_acceleration
+  relationship: supports
+  registry_target: null
+  basis: The latency cost of iterative diffusion sampling supplies the bottleneck that few-step solver optimization, distillation,
+    learned priors, and source-distribution design mitigate in flow-matching models.
+- id: cand_d49bddbeac50d52b
+  left: gan-vocoder#frequency_domain_generation_improves_phase_and_efficiency
+  right: subjective-evaluation#codec_and_vocoder_choices_set_perceptual_ceilings
+  signals:
+    aggregate_score: 0.184231
+    text_similarity: 0.008653
+    shared_supporting_papers:
+    - '2306.00814'
+    - '2507.20731'
+    - '2510.03735'
+    - '2512.03486'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_28b068963372d651
+  left: autoregressive-codec-tts#unified_speech_text_lms_enable_spoken_generation
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.184124
+    text_similarity: 0.029754
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2509.02020'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_e63c7432f347844b
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.183605
+    text_similarity: 0.010483
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - 2025.findings-acl.1051
+    - '2410.17799'
+    - '2412.02612'
+    - '2508.15827'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_17a7be4bf462e4bc
+  left: diffusion-tts#diffusion_supports_zero_shot_voice_transfer
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.183098
+    text_similarity: 0.023535
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.18924'
+    - '2509.08379'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f280d0ca3b23e8c9
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.183028
+    text_similarity: 0.054792
+    shared_supporting_papers:
+    - 2025.acl-long.313
+    - '2512.19090'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_7967cb8ae71f26c1
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: neural-codec#decoder_capacity_compensates_for_compression
+  signals:
+    aggregate_score: 0.182744
+    text_similarity: 0.004938
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2406.07855'
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_e3ad78800a1af15f
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#speech_reasoning_lags_text_and_cascaded_systems
+  signals:
+    aggregate_score: 0.18266
+    text_similarity: 0.006649
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2510.02044'
+    - '2512.18706'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_3efcc24b60d19615
+  left: autoregressive-codec-tts#rvq_structure_supports_staged_generation
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.18204
+    text_similarity: 0.026974
+    shared_supporting_papers:
+    - '2510.12210'
+    - '2510.16718'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_a018d9b95f9f3807
+  left: diffusion-tts#transformer_backbones_scale_diffusion_tts
+  right: flow-matching#fm_inference_acceleration
+  signals:
+    aggregate_score: 0.181396
+    text_similarity: 0.012314
+    shared_supporting_papers:
+    - 2025.naacl-long.110
+    - '2509.08696'
+    - '2509.09748'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_1ea5b457b107adf9
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  signals:
+    aggregate_score: 0.181074
+    text_similarity: 0.043595
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.emnlp-main.989
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_c6564a4a911b1f8e
+  left: self-supervised-speech#ssl_conditioning_improves_speech_generation
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.18072
+    text_similarity: 0.052991
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2510.11646'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_48a9aaf89e1fd724
+  left: autoregressive-codec-tts#explicit_alignment_constraints_improve_robustness
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.180475
+    text_similarity: 0.038688
+    shared_supporting_papers:
+    - '2406.02430'
+    - interspeech-2025-2447
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_04a113c2c8c08d78
+  left: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.180266
+    text_similarity: 0.01138
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.emnlp-demos.70
+    - '2409.06666'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_0365ed122e26f516
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  signals:
+    aggregate_score: 0.180045
+    text_similarity: 0.018863
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_40f9382428d11c7f
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: speech-to-speech#model_scale_doesnt_predict_quality
+  signals:
+    aggregate_score: 0.179941
+    text_similarity: 0.006672
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_8429426dcd6c74c9
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: diffusion-tts#transformer_backbones_scale_diffusion_tts
+  signals:
+    aggregate_score: 0.179664
+    text_similarity: 0.027286
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_fcff782f8b1b20f0
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.179566
+    text_similarity: 0.010086
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2411.13577'
+    - '2510.02066'
+    - '2510.05150'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_24b4aabcecef5af3
+  left: flow-matching#fm_inference_acceleration
+  right: neural-codec#parallel_latent_generation_improves_robustness
+  signals:
+    aggregate_score: 0.179554
+    text_similarity: 0.022629
+    shared_supporting_papers:
+    - '2510.02848'
+    - '2512.04720'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_49c9dcd9cc3ed5b3
+  left: diffusion-tts#representation_choice_shapes_diffusion_quality
+  right: flow-matching#fm_inference_acceleration
+  signals:
+    aggregate_score: 0.179389
+    text_similarity: 0.019901
+    shared_supporting_papers:
+    - '2502.18924'
+    - '2509.08379'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f6b9785e4e2b72f6
+  left: diffusion-tts#noise_robust_training_improves_generation
+  right: flow-matching#fm_inference_acceleration
+  signals:
+    aggregate_score: 0.179247
+    text_similarity: 0.021394
+    shared_supporting_papers:
+    - '2502.18924'
+    - '2509.08696'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_02c58ad8a6f6019c
+  left: streaming-tts#one_model_can_support_streaming_and_offline_modes
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.178973
+    text_similarity: 0.024046
+    shared_supporting_papers:
+    - '2510.24372'
+    - neurips-2025-pDWwz9F7Zh
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_428b38b7534dfbb0
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#semantic_codec_tokens_improve_intelligibility
+  signals:
+    aggregate_score: 0.178701
+    text_similarity: 0.022839
+    shared_supporting_papers:
+    - '2305.09636'
+    - '2510.11646'
+    - '2511.13732'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_56c5f8b1f70f7fb7
+  left: spoken-language-model#cascaded_and_end_to_end_systems_have_complementary_strengths
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    aggregate_score: 0.178416
+    text_similarity: 0.019903
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    - '2512.20156'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f5eb0c80b99bcec4
+  left: gan-vocoder#flow_and_diffusion_trade_speed_for_iterative_quality
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.177812
+    text_similarity: 0.027863
+    shared_supporting_papers:
+    - '2510.08392'
+    - interspeech-2025-1081
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_ebb79656b95dd411
+  left: gan-vocoder#frequency_structured_representations_improve_wideband_reconstruction
+  right: neural-codec#token_rate_drives_sequence_cost
+  signals:
+    aggregate_score: 0.176865
+    text_similarity: 0.007162
+    shared_supporting_papers:
+    - '2510.01903'
+    - '2511.06150'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_d217284e6e6aa709
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: prosody-control#scale_and_data_improve_implicit_prosody_modeling
+  signals:
+    aggregate_score: 0.176795
+    text_similarity: 0.009296
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2502.04128'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f957fef39996fbb7
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: diffusion-tts#representation_choice_shapes_diffusion_quality
+  signals:
+    aggregate_score: 0.176776
+    text_similarity: 0.006939
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_f4401ab3d34c61e8
+  left: spoken-language-model#cascaded_and_end_to_end_systems_have_complementary_strengths
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.176667
+    text_similarity: 0.030952
+    shared_supporting_papers:
+    - '2509.17765'
+    - '2512.18706'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_bbd6537639edc30c
+  left: voice-conversion#flow_matching_improves_parallel_conversion
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.176667
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2412.04724'
+    - '2509.08379'
+    - '2510.08392'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e333dffdab5c1604
+  left: speech-to-speech#cascade_outperforms_e2e_on_benchmarks
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.176193
+    text_similarity: 0.006271
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2505.15670'
+    - '2511.11124'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_8a47823a68716c12
+  left: neural-codec#residual_quantization_supports_scalable_bitrate
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.175422
+    text_similarity: 0.020698
+    shared_supporting_papers:
+    - 2025.naacl-srw.6
+    - '2509.25131'
+    - '2510.11646'
+    - '2510.12210'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e051135af6dd9c45
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: diffusion-tts#diffusion_enables_high_fidelity_synthesis
+  signals:
+    aggregate_score: 0.175225
+    text_similarity: 0.028971
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_6b4bae0228111c1c
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#causality_and_lookahead_trade_latency_for_quality
+  signals:
+    aggregate_score: 0.174887
+    text_similarity: 0.005968
+    shared_supporting_papers:
+    - '2411.18803'
+    - '2509.17765'
+    - '2510.02066'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_23dbeb48736d49a2
+  left: gan-vocoder#frequency_domain_generation_improves_phase_and_efficiency
+  right: neural-codec#token_rate_drives_sequence_cost
+  signals:
+    aggregate_score: 0.17348
+    text_similarity: 0.008701
+    shared_supporting_papers:
+    - '2510.01903'
+    - '2511.06150'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_4f14ed39a4269f64
+  left: disentanglement#asr_text_alignment_beats_ssl_distillation_for_content_isolation
+  right: neural-codec#token_rate_drives_sequence_cost
+  signals:
+    aggregate_score: 0.173324
+    text_similarity: 0.006586
+    shared_supporting_papers:
+    - '2510.00981'
+    - '2510.16841'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_6f04d5f7718c14e8
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    aggregate_score: 0.173077
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - 2025.acl-long.87
+    - '2412.04724'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_382e62f83ec000c0
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    aggregate_score: 0.172735
+    text_similarity: 0.01092
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2510.11646'
+    - '2511.12347'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_4678fd8f933e2a70
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.17269
+    text_similarity: 0.015816
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2509.02020'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_abe83617ae9a052c
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: self-supervised-speech#explicit_disentanglement_improves_controllable_generation
+  signals:
+    aggregate_score: 0.172592
+    text_similarity: 0.017005
+    shared_supporting_papers:
+    - 2025.acl-long.87
+    - '2412.04724'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_d032b8816710c3d3
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#hybrid_semantic_acoustic_generation_balances_quality
+  signals:
+    aggregate_score: 0.172555
+    text_similarity: 0.007473
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2509.15969'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_274e43a9140e6fc8
+  left: flow-matching#fm_surpasses_diffusion_speed_quality
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    aggregate_score: 0.17187
+    text_similarity: 0.036383
+    shared_supporting_papers:
+    - '2412.04724'
+    - interspeech-2025-1779
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_a0406066133ade98
+  left: autoregressive-codec-tts#tokenizer_quality_is_downstream_generation_bottleneck
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.171769
+    text_similarity: 0.00655
+    shared_supporting_papers:
+    - '2410.03751'
+    - '2412.02612'
+    - '2502.11946'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_0e40feb0a003d7dc
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.1717
+    text_similarity: 0.027935
+    shared_supporting_papers:
+    - '2509.17765'
+    - '2509.25131'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_719cbf314575cf5b
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: zero-shot-tts#disentangling_content_speaker_and_prosody_improves_control
+  signals:
+    aggregate_score: 0.171276
+    text_similarity: 0.021499
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2509.19592'
+    - '2510.16841'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e046cf08933d34d6
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    aggregate_score: 0.170453
+    text_similarity: 0.005677
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_34ea5c7c988f4767
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: self-supervised-speech#speaker_and_prosody_leakage_persists_in_ssl_features
+  signals:
+    aggregate_score: 0.169898
+    text_similarity: 0.008837
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2505.13000'
+    - interspeech-2025-0468
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_fd28a218170576e5
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.169575
+    text_similarity: 0.00482
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2509.17765'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_2a5760188f9fa763
+  left: flow-matching#fm_inference_acceleration
+  right: neural-codec#continuous_discrete_representation_tradeoff
+  signals:
+    aggregate_score: 0.169238
+    text_similarity: 0.010596
+    shared_supporting_papers:
+    - '2502.18924'
+    - '2512.04720'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_9e0a0ff3d20b2c78
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.169102
+    text_similarity: 0.010254
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2502.11946'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_bd14de1bee3d29d5
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: subjective-evaluation#quality_control_tradeoffs_are_perceptually_nonmonotonic
+  signals:
+    aggregate_score: 0.168872
+    text_similarity: 0.005514
+    shared_supporting_papers:
+    - '2105.06337'
+    - '2509.08696'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_8991768897a4bf70
+  left: diffusion-tts#noise_robust_training_improves_generation
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.168815
+    text_similarity: 0.007564
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.18924'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f5f85e67e29011ba
+  left: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    aggregate_score: 0.168484
+    text_similarity: 0.006737
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2508.15827'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_944c4df6267189c7
+  left: neural-codec#quantizer_structure_affects_downstream_modelability
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    aggregate_score: 0.168367
+    text_similarity: 0.010204
+    shared_supporting_papers:
+    - '2502.11946'
+    - '2508.19205'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_80d3bdbb8e461c53
+  left: spoken-language-model#cascaded_and_end_to_end_systems_have_complementary_strengths
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.168277
+    text_similarity: 0.011601
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_068e09abc4c62f2b
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#parallel_and_speculative_decoding_accelerate_streaming
+  signals:
+    aggregate_score: 0.167867
+    text_similarity: 0.005194
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2408.16725'
+    - '2509.17765'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_a89f14184880a38e
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: spoken-language-model#discrete_tokens_enable_scalable_speech_language_modeling
+  signals:
+    aggregate_score: 0.167793
+    text_similarity: 0.015263
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - 2025.findings-acl.1051
+    - '2505.02625'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_0090a68609eb1c64
+  left: diffusion-tts#transformer_backbones_scale_diffusion_tts
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.16679
+    text_similarity: 0.007883
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_05e89097626f08d7
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    aggregate_score: 0.166433
+    text_similarity: 0.006991
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.11646'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_1aeb83ce66ee8a04
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: zero-shot-tts#disentangling_content_speaker_and_prosody_improves_control
+  signals:
+    aggregate_score: 0.165873
+    text_similarity: 0.015488
+    shared_supporting_papers:
+    - '2507.15272'
+    - interspeech-2025-1101
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_7f8428aea7c9a741
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#continuous_targets_support_high_fidelity_cloning
+  signals:
+    aggregate_score: 0.165
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2502.03930'
+    - neurips-2025-pDWwz9F7Zh
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_f3304c8d398679e0
+  left: self-supervised-speech#discrete_ssl_units_enable_language_modeling
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.164006
+    text_similarity: 0.007237
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2510.11646'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_392ec73c80f9e4f6
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: self-supervised-speech#semantic_acoustic_hierarchies_balance_coherence_and_fidelity
+  signals:
+    aggregate_score: 0.163636
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2305.09636'
+    - '2510.11646'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_0fa58d10df94d1e3
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: zero-shot-tts#intelligibility_and_speaker_similarity_trade_off
+  signals:
+    aggregate_score: 0.162766
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2502.04128'
+    - '2505.13000'
+    - '2509.19592'
+    - '2510.16841'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_9bc8eef495193349
+  left: neural-codec#token_rate_drives_sequence_cost
+  right: subjective-evaluation#naturalness_intelligibility_and_identity_are_distinct_axes
+  signals:
+    aggregate_score: 0.162307
+    text_similarity: 0.013121
+    shared_supporting_papers:
+    - '2510.16841'
+    - '2511.12347'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_fac6a053af9554ad
+  left: self-supervised-speech#ssl_features_encode_linguistic_content
+  right: zero-shot-tts#inference_acceleration_preserves_usable_quality
+  signals:
+    aggregate_score: 0.161039
+    text_similarity: 0.007049
+    shared_supporting_papers:
+    - '2507.14534'
+    - '2510.11646'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_f722a9721626b8a1
+  left: spoken-language-model#discrete_tokens_enable_scalable_speech_language_modeling
+  right: streaming-tts#streaming_evaluation_requires_interaction_metrics
+  signals:
+    aggregate_score: 0.158955
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - 2025.emnlp-main.989
+    - '2509.02020'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_5b2417781bc31733
+  left: diffusion-tts#iterative_sampling_limits_latency
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    aggregate_score: 0.157059
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2507.15272'
+    - interspeech-2025-1101
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_03d797a73157e33a
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    aggregate_score: 0.156742
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2406.07855'
+    - '2507.02380'
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_8541d008a1122eb3
+  left: autoregressive-codec-tts#autoregressive_decoding_creates_latency_cost
+  right: zero-shot-tts#intelligibility_and_speaker_similarity_trade_off
+  signals:
+    aggregate_score: 0.156667
+    text_similarity: 0.0
+    shared_supporting_papers:
+    - '2509.15969'
+    - interspeech-2025-2447
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_d7b6f697d4676b96
+  left: autoregressive-codec-tts#parallel_and_masked_models_challenge_full_autoregression
+  right: diffusion-tts#representation_choice_shapes_diffusion_quality
+  signals:
+    aggregate_score: 0.074986
+    text_similarity: 0.062466
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_7f2e801fdde54e2c
+  left: autoregressive-codec-tts#parallel_and_masked_models_challenge_full_autoregression
+  right: diffusion-tts#transformer_backbones_scale_diffusion_tts
+  signals:
+    aggregate_score: 0.031095
+    text_similarity: 0.006309
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap
+- id: cand_66ae36af2f7de5de
+  left: autoregressive-codec-tts#parallel_and_masked_models_challenge_full_autoregression
+  right: diffusion-tts#diffusion_enables_high_fidelity_synthesis
+  signals:
+    aggregate_score: 0.028456
+    text_similarity: 0.025686
+    shared_supporting_papers:
+    - '2502.03930'
+    - '2510.12210'
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: shared papers or vocabulary do not yield material claim-text overlap

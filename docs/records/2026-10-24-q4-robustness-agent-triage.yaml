@@ -1,0 +1,2923 @@
+schema_version: 1
+triage_id: 2025-Q4-robustness
+source_run: 2025-Q4
+source:
+  infra_commit: b672c6b
+  content_commit: 9b3c59f
+  concept_digests:
+    autoregressive-codec-tts: sha256:f01aa0a91355c87669935b9ce0712829368e6d465b16d6d11a20f31d293e7645
+    diffusion-tts: sha256:796588d7daae595d59891012c47f87a1d76af6ad7785b355e67d9853e553b431
+    disentanglement: sha256:23b1064250d0b8981b5127011e44931f454aac1670c5f95acd75600de7091861
+    emotion-synthesis: sha256:0d69149f1c79512596406f7848eb04394a50302313c961ed994fa7f712f13234
+    evaluation-metrics: sha256:fab944018529965c09eacaffa721f58c39956e3465808a0cdeb927429f9bb6ce
+    fine-tuning: sha256:4ab077da7b5118a10fa8c9ef9b124109c198b8111d4248a62e96004ba5398d0f
+    flow-matching: sha256:2d319beec1c7bd161c173301920e398607c0622462579e93873744ef1c801715
+    gan-vocoder: sha256:13eb27ed05d28b8ac20d6e8ae1e328f36f97c150d86cd7221c4ce13d1b949678
+    instruction-conditioned-tts: sha256:d5116987efa8fd8043e58c27efe7d619fbf656586dc4ebf94314a840d36ee17c
+    multilingual-tts: sha256:56c68d61bc8392253beb117f8c96b4c8cb189b922fd38484ccfe5301acab4d9a
+    neural-codec: sha256:6bb82bb490058cb52c553ee99c0e16b921d2390483713f44cf11f62f6e4ff67e
+    prosody-control: sha256:eaadfe172bfb10a8a871ed1f8fbdb89d0548973bea7b8c52c37c73a604a29b9f
+    rlhf-speech: sha256:766c2b73052bca91ff791c7b1217559681cfc81ca71310f65201f72c85c6d566
+    self-supervised-speech: sha256:b86f39ae462eea2e3bbf18419972487b977493d83c8e92cb3f75673553a5c3a1
+    singing: sha256:ff2cb28f6a45809893bc2ce2d90785318556b92a4a3b37856014e9f1f9e7084f
+    speaker-adaptation: sha256:8553347b2985ce39012d3702d4b2d9fdbbae75a1bf23ec5229d662a987c6be2d
+    speech-to-speech: sha256:558f9d55db72af701dbdce1ddc9b0893f480a3a55cc5cd2af28c4172b4c67d22
+    spoken-language-model: sha256:9f57b07c7528b1f7779431d4cc582fae2430e7c55dbf52373d5c4c0fe59fbf37
+    streaming-tts: sha256:32f776ef512706a91b758a2acbb154922e9679c827e58ea6c3bade505eaf1569
+    subjective-evaluation: sha256:d54a46d994e29b05edc79762c8176c0cf06f10a887a212ce40dce426eb01bd35
+    transformer-enc-dec-tts: sha256:79e9f2df7cb526fa0c30594b708037cb7faba2ae051312d591a2c6dd45069564
+    voice-conversion: sha256:8559be85bc9fa08a2fe1a6a2ef3c5a8e86614942f5293dcf7f5182afdef4896c
+    zero-shot-tts: sha256:2ba3066dbba761f254326b8dd833325c69460405463c218870e500e97e6a124c
+theme: robustness
+review_mode: agent_adjudication
+reviewed_on: '2026-10-24'
+status: complete
+policy:
+  carry_forward: Preserve the three already approved links to the human-reviewed unseen-voice training-diversity broader claim.
+  new_acceptance: Require proposition-level compatibility after comparing full cluster claims, evidence roles, caveats, and
+    Q4 additions; shared papers or generic robustness vocabulary alone are insufficient.
+  rejection: Reaffirm prior Q3 rejections unless Q4 evidence closes the recorded scope gap; otherwise reject new pairs whose
+    shared evidence concerns different mechanisms, tasks, variables, or outcomes.
+  authority: Agent recommendations are advisory and do not change the human-review run or registry authority until approved
+    in chat.
+already_human_reviewed:
+  accepted: 19
+  rejected: 2
+summary:
+  candidates_triaged: 133
+  proposed_acceptances: 21
+  proposed_rejections: 112
+  proposed_deferrals: 0
+  acceptance_bundles:
+    scalable_supervision: 4
+    cross_lingual_representations_and_pronunciation: 7
+    domain_shift_and_evaluation: 4
+    unseen_voice_and_acoustic_robustness: 6
+  rejection_categories:
+    q3_rejection_reaffirmed: 56
+    low_semantic_overlap: 56
+recommendations:
+- id: cand_ac4740ddfde5ff35
+  left: instruction-conditioned-tts#instruction_diversity_improves_generalization
+  right: multilingual-tts#multilingual_data_scale_improves_generalization
+  signals:
+    text_similarity: 0.193184
+    shared_evidence_score: 0.111111
+    shared_supporting_papers:
+    - 2025.acl-long.681
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.111111
+    shared_terms:
+    - corpora
+    - diverse
+    aggregate_score: 0.277273
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_760c9bbaf5b2d808
+  left: emotion-synthesis#synthetic_and_automatic_annotations_scale_emotional_data
+  right: instruction-conditioned-tts#automatic_instruction_data_construction_scales_supervision
+  signals:
+    text_similarity: 0.128623
+    shared_evidence_score: 0.2
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - 2025.emnlp-main.180
+    - 2025.findings-acl.101
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.090909
+    shared_terms:
+    - annotation
+    - automatic
+    aggregate_score: 0.275086
+  disposition: accepted
+  bundle: scalable_supervision
+  relationship: related
+  registry_target: null
+  basis: The claims describe compatible ways that diverse, automatically constructed, or task-rich supervision expands generalization
+    beyond narrow manually labeled datasets.
+- id: cand_dbbe7a97eb8a9192
+  left: multilingual-tts#continued_pretraining_and_fine_tuning_extend_language_coverage
+  right: speaker-adaptation#few_shot_fine_tuning_improves_distinctive_voice_matching
+  signals:
+    text_similarity: 0.133884
+    shared_evidence_score: 0.15
+    shared_supporting_papers:
+    - '2406.04904'
+    - '2509.22727'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.111111
+    shared_terms:
+    - fine-tuning
+    - low-resource
+    aggregate_score: 0.26522
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_55627ca5d672be16
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.128585
+    shared_evidence_score: 0.155556
+    shared_supporting_papers:
+    - 2025.coling-main.685
+    - '2303.03926'
+    - '2407.05361'
+    - '2508.07426'
+    - '2509.17765'
+    - '2511.12347'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.058824
+    shared_terms:
+    - generalization
+    aggregate_score: 0.256924
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: related
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_788f54347bf9fe8e
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.196929
+    shared_evidence_score: 0.040816
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1077
+    - '2509.14579'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.1
+    shared_terms:
+    - unseen
+    - zero-shot
+    aggregate_score: 0.256017
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_bf72c081aa4e9737
+  left: instruction-conditioned-tts#instruction_diversity_improves_generalization
+  right: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  signals:
+    text_similarity: 0.08363
+    shared_evidence_score: 0.2
+    shared_supporting_papers:
+    - 2025.findings-acl.534
+    - '2305.11000'
+    - '2510.22588'
+    - '2512.23808'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - diverse
+    aggregate_score: 0.251347
+  disposition: accepted
+  bundle: scalable_supervision
+  relationship: related
+  registry_target: null
+  basis: The claims describe compatible ways that diverse, automatically constructed, or task-rich supervision expands generalization
+    beyond narrow manually labeled datasets.
+- id: cand_3b1befe7d5dfe74c
+  left: autoregressive-codec-tts#explicit_alignment_constraints_improve_robustness
+  right: multilingual-tts#multilingual_data_scale_improves_generalization
+  signals:
+    text_similarity: 0.140124
+    shared_evidence_score: 0.086957
+    shared_supporting_papers:
+    - '2507.21138'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.117647
+    shared_terms:
+    - improve
+    - robustness
+    aggregate_score: 0.249784
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_1efcc87dbdf3f659
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  signals:
+    text_similarity: 0.142214
+    shared_evidence_score: 0.076923
+    shared_supporting_papers:
+    - 2025.findings-acl.75
+    - '2306.12925'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.105263
+    shared_terms:
+    - cross-lingual
+    - multilingual
+    aggregate_score: 0.245752
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: related
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_d5355ee517f2f54c
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.081279
+    shared_evidence_score: 0.18
+    shared_supporting_papers:
+    - 2025.coling-main.685
+    - '2312.01479'
+    - '2406.04904'
+    - '2407.05361'
+    - '2505.17589'
+    - '2508.07426'
+    - '2511.12347'
+    - interspeech-2025-1344
+    - interspeech-2025-raju25_interspeech
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - zero-shot
+    aggregate_score: 0.243654
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: related
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_55d58e4b005c3931
+  left: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.13524
+    shared_evidence_score: 0.060976
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1381
+    - 2025.naacl-short.65
+    - '2411.19770'
+    - '2508.02038'
+    - '2510.20677'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.076923
+    shared_terms:
+    - unseen-speaker
+    aggregate_score: 0.233927
+  disposition: accepted
+  bundle: unseen_voice_and_acoustic_robustness
+  relationship: related
+  registry_target: null
+  basis: The claims provide compatible task-specific evidence that unseen-voice and acoustic-condition robustness depends
+    on reference conditioning, training coverage, or domain-tolerant representations.
+- id: cand_bd9ec1fc8b8121db
+  left: autoregressive-codec-tts#scaling_data_and_models_improves_ar_codec_tts
+  right: multilingual-tts#multilingual_data_scale_improves_generalization
+  signals:
+    text_similarity: 0.110034
+    shared_evidence_score: 0.097561
+    shared_supporting_papers:
+    - '2303.03926'
+    - '2507.21138'
+    - '2511.12347'
+    - '2511.21270'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.05
+    shared_terms:
+    - generalization
+    aggregate_score: 0.230782
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_cc795db47ab97220
+  left: emotion-synthesis#synthetic_and_automatic_annotations_scale_emotional_data
+  right: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  signals:
+    text_similarity: 0.110493
+    shared_evidence_score: 0.068966
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.05
+    shared_terms:
+    - expand
+    aggregate_score: 0.222387
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_1f2e6bc1e79466fb
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  signals:
+    text_similarity: 0.103196
+    shared_evidence_score: 0.064516
+    shared_supporting_papers:
+    - 2025.findings-acl.75
+    - '2412.02612'
+    - '2510.00499'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.045455
+    shared_terms:
+    - language
+    aggregate_score: 0.217451
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_33f57fb93f57f7c1
+  left: self-supervised-speech#speaker_and_prosody_leakage_persists_in_ssl_features
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.084694
+    shared_evidence_score: 0.056338
+    shared_supporting_papers:
+    - 2025.naacl-short.65
+    - '2402.08093'
+    - '2411.19770'
+    - interspeech-2025-1101
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.105263
+    shared_terms:
+    - speaker
+    - training
+    aggregate_score: 0.216569
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_6f38c9af466561dc
+  left: speaker-adaptation#cross_lingual_adaptation_remains_language_sensitive
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.048244
+    shared_evidence_score: 0.130435
+    shared_supporting_papers:
+    - 2025.findings-naacl.279
+    - '2406.04904'
+    - '2510.10774'
+    - '2511.12347'
+    - interspeech-2025-1344
+    - interspeech-2025-raju25_interspeech
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - speaker
+    aggregate_score: 0.215571
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: related
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_d917701a6cfe7508
+  left: multilingual-tts#shared_multilingual_training_improves_low_resource_tts
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.092489
+    shared_evidence_score: 0.071429
+    shared_supporting_papers:
+    - 2025.naacl-short.69
+    - '2511.12347'
+    - interspeech-2025-0469
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.045455
+    shared_terms:
+    - low-resource
+    aggregate_score: 0.215243
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_186065c8ff54492b
+  left: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.093487
+    shared_evidence_score: 0.058824
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1381
+    - 2025.naacl-short.65
+    - '2507.09282'
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.066667
+    shared_terms:
+    - zero-shot
+    aggregate_score: 0.215042
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_379c3f16246a4252
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: neural-codec#codebook_utilization_requires_explicit_control
+  signals:
+    text_similarity: 0.113473
+    shared_evidence_score: 0.040816
+    shared_supporting_papers:
+    - '2411.01156'
+    - '2502.05512'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - bottlenecks
+    aggregate_score: 0.214777
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_acec319eb747e41d
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.115154
+    shared_evidence_score: 0.031746
+    shared_supporting_papers:
+    - '2412.02612'
+    - '2507.18119'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.055556
+    shared_terms:
+    - text
+    aggregate_score: 0.213919
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_a7d784ccde6ae5b8
+  left: speaker-adaptation#few_shot_fine_tuning_improves_distinctive_voice_matching
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.065191
+    shared_evidence_score: 0.122449
+    shared_supporting_papers:
+    - 2025.findings-naacl.279
+    - '2406.04904'
+    - '2409.03283'
+    - '2510.10774'
+    - interspeech-2025-1344
+    - interspeech-2025-1726
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.212811
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_39cd010c2a358356
+  left: multilingual-tts#shared_phonetic_representations_enable_transfer
+  right: prosody-control#language_specific_structure_matters_for_prosody
+  signals:
+    text_similarity: 0.038405
+    shared_evidence_score: 0.136364
+    shared_supporting_papers:
+    - 2025.acl-industry.42
+    - 2025.unlp-1.11
+    - '2512.22491'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.041667
+    shared_terms:
+    - representations
+    aggregate_score: 0.212521
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: related
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_c296edc2c967bcd7
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  signals:
+    text_similarity: 0.073384
+    shared_evidence_score: 0.078947
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1077
+    - '2503.11026'
+    - '2508.14049'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.055556
+    shared_terms:
+    - multilingual
+    aggregate_score: 0.211371
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_6807543ef13bb443
+  left: instruction-conditioned-tts#automatic_instruction_data_construction_scales_supervision
+  right: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  signals:
+    text_similarity: 0.008598
+    shared_evidence_score: 0.190476
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - 2025.findings-acl.534
+    - '2305.11000'
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.210582
+  disposition: accepted
+  bundle: scalable_supervision
+  relationship: related
+  registry_target: null
+  basis: The claims describe compatible ways that diverse, automatically constructed, or task-rich supervision expands generalization
+    beyond narrow manually labeled datasets.
+- id: cand_94b1045739abf4a7
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.072113
+    shared_evidence_score: 0.080645
+    shared_supporting_papers:
+    - '2507.16875'
+    - '2509.05863'
+    - '2510.25178'
+    - '2511.12347'
+    - interspeech-2025-0469
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - low-resource
+    aggregate_score: 0.210182
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_434b1ae3c430895f
+  left: multilingual-tts#continued_pretraining_and_fine_tuning_extend_language_coverage
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.096273
+    shared_evidence_score: 0.047619
+    shared_supporting_papers:
+    - '2508.08715'
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - low-resource
+    aggregate_score: 0.209938
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_0cfc53a1992157b2
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.080046
+    shared_evidence_score: 0.090909
+    shared_supporting_papers:
+    - 2025.findings-acl.75
+    - '2306.12925'
+    - '2412.02612'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.209291
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_9ae529eb2a32dde9
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: speaker-adaptation#reference_conditioning_enables_unseen_speaker_adaptation
+  signals:
+    text_similarity: 0.089385
+    shared_evidence_score: 0.055556
+    shared_supporting_papers:
+    - '2406.04904'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.045455
+    shared_terms:
+    - unseen
+    aggregate_score: 0.209239
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_b6015fc45f9a5553
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: zero-shot-tts#robustness_requires_in_the_wild_prompt_coverage
+  signals:
+    text_similarity: 0.098921
+    shared_evidence_score: 0.042553
+    shared_supporting_papers:
+    - '2406.04904'
+    - '2505.17589'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.043478
+    shared_terms:
+    - coverage
+    aggregate_score: 0.208856
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_af66f9cbeee72322
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: zero-shot-tts#low_resource_adaptation_can_preserve_voice_cloning
+  signals:
+    text_similarity: 0.06678
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - '2508.07426'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.058824
+    shared_terms:
+    - improve
+    aggregate_score: 0.207758
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_cba75528ded16fcb
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.101074
+    shared_evidence_score: 0.037736
+    shared_supporting_papers:
+    - '2511.12347'
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.04
+    shared_terms:
+    - transfer
+    aggregate_score: 0.20775
+  disposition: accepted
+  bundle: domain_shift_and_evaluation
+  relationship: supports
+  registry_target: null
+  basis: The task-specific failure or leakage finding supplies a compatible reason to evaluate across language, domain, modality,
+    or streaming shifts rather than relying on clean aggregate results.
+- id: cand_b1a534a864c3e90b
+  left: autoregressive-codec-tts#preference_optimization_improves_multiple_quality_dimensions
+  right: multilingual-tts#multilingual_data_scale_improves_generalization
+  signals:
+    text_similarity: 0.070662
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - '2507.21138'
+    - '2511.21270'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - improve
+    aggregate_score: 0.20763
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_d4f94241b54b2f6d
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.069538
+    shared_evidence_score: 0.063492
+    shared_supporting_papers:
+    - '2510.23541'
+    - interspeech-2025-1344
+    - interspeech-2025-raju25_interspeech
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.071429
+    shared_terms:
+    - acoustic
+    aggregate_score: 0.207577
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_37a3a4b08645c639
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.055713
+    shared_evidence_score: 0.081081
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1077
+    - 2025.vlsp-1.15
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.071429
+    shared_terms:
+    - acoustic
+    aggregate_score: 0.207324
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_5f94d70375d44fa9
+  left: gan-vocoder#gan_vocoders_remain_effective_in_low_resource_and_cross_domain_settings
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.067021
+    shared_evidence_score: 0.076923
+    shared_supporting_papers:
+    - '2512.14653'
+    - '2512.20211'
+    - interspeech-2025-2151
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - low-resource
+    aggregate_score: 0.207028
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_4683481354fb6b41
+  left: flow-matching#fm_handles_nonclean_acoustic_conditions
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.040837
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2510.20677'
+    - '2512.04793'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.027778
+    shared_terms:
+    - acoustic
+    aggregate_score: 0.205796
+  disposition: accepted
+  bundle: unseen_voice_and_acoustic_robustness
+  relationship: related
+  registry_target: null
+  basis: The claims provide compatible task-specific evidence that unseen-voice and acoustic-condition robustness depends
+    on reference conditioning, training coverage, or domain-tolerant representations.
+- id: cand_a7e4070d4ce95d8c
+  left: speaker-adaptation#reference_conditioning_enables_unseen_speaker_adaptation
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.185185
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1381
+    - 2025.vlsp-1.15
+    - '2510.20677'
+    - '2511.08496'
+    - '2512.04793'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.205556
+  disposition: accepted
+  bundle: unseen_voice_and_acoustic_robustness
+  relationship: related
+  registry_target: null
+  basis: The claims provide compatible task-specific evidence that unseen-voice and acoustic-condition robustness depends
+    on reference conditioning, training coverage, or domain-tolerant representations.
+- id: cand_ca449ed4800deb01
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.077794
+    shared_evidence_score: 0.051282
+    shared_supporting_papers:
+    - '2412.02612'
+    - '2509.23147'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.058824
+    shared_terms:
+    - multilingual
+    aggregate_score: 0.205326
+  disposition: accepted
+  bundle: domain_shift_and_evaluation
+  relationship: related
+  registry_target: null
+  basis: The task-specific failure or leakage finding supplies a compatible reason to evaluate across language, domain, modality,
+    or streaming shifts rather than relying on clean aggregate results.
+- id: cand_3d9e2cef77baef63
+  left: streaming-tts#incremental_generation_reduces_first_packet_latency
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.059079
+    shared_evidence_score: 0.068966
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2509.15969'
+    - '2509.17765'
+    - '2510.24372'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.066667
+    shared_terms:
+    - acoustic
+    aggregate_score: 0.204321
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_1d703a4a58f646fa
+  left: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.04784
+    shared_evidence_score: 0.090909
+    shared_supporting_papers:
+    - 2025.findings-acl.75
+    - 2025.iwslt-1.5
+    - '2306.12925'
+    - '2512.01865'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.05
+    shared_terms:
+    - transfer
+    aggregate_score: 0.203909
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e25b2bc79cc61fb1
+  left: autoregressive-codec-tts#explicit_alignment_constraints_improve_robustness
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    text_similarity: 0.073573
+    shared_evidence_score: 0.05
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0625
+    shared_terms:
+    - explicit
+    aggregate_score: 0.203804
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_26281c8602795aa1
+  left: speaker-adaptation#few_shot_fine_tuning_improves_distinctive_voice_matching
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    text_similarity: 0.076632
+    shared_evidence_score: 0.073171
+    shared_supporting_papers:
+    - '2409.03283'
+    - '2509.22727'
+    - '2510.10774'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.202604
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_5af23aa887a8bb08
+  left: multilingual-tts#continued_pretraining_and_fine_tuning_extend_language_coverage
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.077244
+    shared_evidence_score: 0.037975
+    shared_supporting_papers:
+    - '2406.04904'
+    - '2508.07302'
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.066667
+    shared_terms:
+    - fine-tuning
+    aggregate_score: 0.20229
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f1f823af10ecd047
+  left: subjective-evaluation#preference_alignment_has_cross_dimension_tradeoffs
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.069914
+    shared_evidence_score: 0.052632
+    shared_supporting_papers:
+    - '2510.20677'
+    - '2511.00256'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.05
+    shared_terms:
+    - diversity
+    aggregate_score: 0.201255
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_66eefe308698b110
+  left: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  right: voice-conversion#robust_conversion_requires_domain_invariance
+  signals:
+    text_similarity: 0.045732
+    shared_evidence_score: 0.083333
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1077
+    - '2510.09061'
+    - interspeech-2025-1639
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.043478
+    shared_terms:
+    - representations
+    aggregate_score: 0.199815
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_15f56cd95f2d14e9
+  left: autoregressive-codec-tts#scaling_data_and_models_improves_ar_codec_tts
+  right: speaker-adaptation#data_scale_and_diversity_drive_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.048425
+    shared_evidence_score: 0.075
+    shared_supporting_papers:
+    - '2301.02111'
+    - '2305.07243'
+    - '2509.15969'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - speaker
+    aggregate_score: 0.199765
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f0841abc5db3e754
+  left: singing#robust_training_improves_real_world_singing_conversion
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.0088
+    shared_evidence_score: 0.153846
+    shared_supporting_papers:
+    - '2510.20677'
+    - '2512.04793'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.199674
+  disposition: accepted
+  bundle: unseen_voice_and_acoustic_robustness
+  relationship: related
+  registry_target: null
+  basis: The claims provide compatible task-specific evidence that unseen-voice and acoustic-condition robustness depends
+    on reference conditioning, training coverage, or domain-tolerant representations.
+- id: cand_996c3e3268c46067
+  left: speaker-adaptation#prompt_length_and_quality_control_cloning_quality
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.045687
+    shared_evidence_score: 0.069767
+    shared_supporting_papers:
+    - '2301.02111'
+    - '2409.03283'
+    - '2411.19770'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0625
+    shared_terms:
+    - acoustic
+    aggregate_score: 0.19858
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_447d5082015d884c
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  signals:
+    text_similarity: 0.062136
+    shared_evidence_score: 0.052632
+    shared_supporting_papers:
+    - '2412.02612'
+    - '2510.00499'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - language
+    aggregate_score: 0.197787
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_d1a5450646123fde
+  left: singing#robust_training_improves_real_world_singing_conversion
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.051768
+    shared_evidence_score: 0.0625
+    shared_supporting_papers:
+    - '2510.20677'
+    - '2512.04793'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.045455
+    shared_terms:
+    - conversion
+    aggregate_score: 0.196275
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_721e8f3eb77af435
+  left: gan-vocoder#gan_vocoders_remain_effective_in_low_resource_and_cross_domain_settings
+  right: voice-conversion#adversarial_training_reduces_identity_leakage
+  signals:
+    text_similarity: 0.008158
+    shared_evidence_score: 0.142857
+    shared_supporting_papers:
+    - '2511.21045'
+    - interspeech-2025-1081
+    - interspeech-2025-2151
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.19612
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_7a232e1d7f101d15
+  left: speech-to-speech#multilingual_and_codeswitched_s2s_remains_uneven
+  right: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  signals:
+    text_similarity: 0.046845
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - 2025.emnlp-main.1160
+    - '2510.07881'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.027778
+    shared_terms:
+    - language
+    aggregate_score: 0.195127
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_e741f463dab39205
+  left: diffusion-tts#noise_robust_training_improves_generation
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.059695
+    shared_evidence_score: 0.040816
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.18924'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.058824
+    shared_terms:
+    - training
+    aggregate_score: 0.194946
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_bdee7077efe437f8
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.048431
+    shared_evidence_score: 0.081395
+    shared_supporting_papers:
+    - '2312.01479'
+    - '2406.04904'
+    - '2503.11026'
+    - '2505.17589'
+    - '2508.07302'
+    - '2511.12347'
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.193791
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_5915a340351d468d
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: rlhf-speech#composite_multiobjective_rewards_outperform_single_metric_but_need_balancing
+  signals:
+    text_similarity: 0.027362
+    shared_evidence_score: 0.095238
+    shared_supporting_papers:
+    - '2507.21138'
+    - '2511.21270'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.02381
+    shared_terms:
+    - improve
+    aggregate_score: 0.193088
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_28d276c9bfdd1dc7
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.036211
+    shared_evidence_score: 0.095238
+    shared_supporting_papers:
+    - '2412.02612'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.193056
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_52fabb3202f2d7ae
+  left: neural-codec#continuous_discrete_representation_tradeoff
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.060865
+    shared_evidence_score: 0.033333
+    shared_supporting_papers:
+    - '2305.07243'
+    - '2502.18924'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - acoustic
+    aggregate_score: 0.192241
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_fe53228ba092bfae
+  left: voice-conversion#robust_conversion_requires_domain_invariance
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.049469
+    shared_evidence_score: 0.048387
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2411.19770'
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - speaker
+    aggregate_score: 0.192198
+  disposition: accepted
+  bundle: unseen_voice_and_acoustic_robustness
+  relationship: related
+  registry_target: null
+  basis: The claims provide compatible task-specific evidence that unseen-voice and acoustic-condition robustness depends
+    on reference conditioning, training coverage, or domain-tolerant representations.
+- id: cand_25b1cdf06d9ca564
+  left: speaker-adaptation#multi_speaker_training_learns_shared_voice_structure
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    text_similarity: 0.062296
+    shared_evidence_score: 0.057143
+    shared_supporting_papers:
+    - '2510.10774'
+    - interspeech-2025-0596
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.192061
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_d10337cd320df344
+  left: multilingual-tts#shared_phonetic_representations_enable_transfer
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.042157
+    shared_evidence_score: 0.061224
+    shared_supporting_papers:
+    - 2025.naacl-short.69
+    - '2511.12347'
+    - interspeech-2025-0469
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.04
+    shared_terms:
+    - transfer
+    aggregate_score: 0.19123
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_530c0c318d6e8ddf
+  left: disentanglement#data_level_disentanglement_without_new_architecture
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.136364
+    shared_supporting_papers:
+    - 2025.vlsp-1.15
+    - '2411.19770'
+    - '2510.09061'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.190909
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_7b70a255ce2d33f5
+  left: multilingual-tts#synthetic_parallel_data_enables_low_resource_cross_lingual_generation
+  right: self-supervised-speech#ssl_conditioning_improves_speech_generation
+  signals:
+    text_similarity: 0.060822
+    shared_evidence_score: 0.054054
+    shared_supporting_papers:
+    - '2510.09061'
+    - '2511.12690'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.190545
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_78088a2f76a7259c
+  left: multilingual-tts#shared_phonetic_representations_enable_transfer
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    text_similarity: 0.006151
+    shared_evidence_score: 0.125
+    shared_supporting_papers:
+    - 2025.vlsp-1.14
+    - '2509.22727'
+    - '2511.12347'
+    - interspeech-2025-2031
+    - interspeech-2025-raju25_interspeech
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.18996
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: supports
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_ded4f57d7dec43c6
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: speaker-adaptation#parameter_efficient_adaptation_limits_forgetting
+  signals:
+    text_similarity: 0.009713
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2508.18006'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.189179
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_19d0197dfae01281
+  left: self-supervised-speech#masked_and_contrastive_pretraining_learn_reusable_speech_features
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.006335
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2411.19770'
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.187828
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_fff2cf3090624e90
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.056832
+    shared_evidence_score: 0.047619
+    shared_supporting_papers:
+    - '2303.03926'
+    - '2505.17589'
+    - '2508.07302'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.187018
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_23b0ce4c707f84e2
+  left: speaker-adaptation#parameter_efficient_adaptation_limits_forgetting
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.03553
+    shared_evidence_score: 0.044444
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1381
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - speaker
+    aggregate_score: 0.18544
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_90d65540d44b8df9
+  left: self-supervised-speech#speaker_and_prosody_leakage_persists_in_ssl_features
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.036949
+    shared_evidence_score: 0.066667
+    shared_supporting_papers:
+    - 2025.naacl-short.65
+    - '2411.19770'
+    - '2510.09061'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.18478
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_a16745242bfee48b
+  left: disentanglement#data_level_disentanglement_without_new_architecture
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.040273
+    shared_evidence_score: 0.04
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2411.19770'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.034483
+    shared_terms:
+    - data
+    aggregate_score: 0.183281
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_ce4cada1facca53b
+  left: autoregressive-codec-tts#scaling_data_and_models_improves_ar_codec_tts
+  right: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  signals:
+    text_similarity: 0.05429
+    shared_evidence_score: 0.032258
+    shared_supporting_papers:
+    - '2502.05512'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.181393
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_9cad49252829a609
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.008963
+    shared_evidence_score: 0.092593
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1077
+    - 2025.vlsp-1.14
+    - 2025.vlsp-1.15
+    - '2509.14579'
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.181363
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_911cb9c4c4adaa00
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: zero-shot-tts#low_resource_adaptation_can_preserve_voice_cloning
+  signals:
+    text_similarity: 0.007298
+    shared_evidence_score: 0.090909
+    shared_supporting_papers:
+    - '2508.07426'
+    - '2512.12297'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.180192
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e04181d3d507c794
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: speaker-adaptation#reference_conditioning_enables_unseen_speaker_adaptation
+  signals:
+    text_similarity: 0.041309
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - 2025.vlsp-1.15
+    - '2512.05126'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.18016
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_fe47d1ac1180c92f
+  left: multilingual-tts#explicit_language_conditioning_reduces_confusion
+  right: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.1
+    shared_supporting_papers:
+    - '2510.07881'
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.18
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_a67727bc35b4d0a9
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: speaker-adaptation#few_shot_fine_tuning_improves_distinctive_voice_matching
+  signals:
+    text_similarity: 0.011788
+    shared_evidence_score: 0.08
+    shared_supporting_papers:
+    - '2508.18006'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.178715
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e502d2bfaa7f1527
+  left: emotion-synthesis#synthetic_and_automatic_annotations_scale_emotional_data
+  right: instruction-conditioned-tts#instruction_diversity_improves_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.095238
+    shared_supporting_papers:
+    - 2025.emnlp-main.180
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.178571
+  disposition: accepted
+  bundle: scalable_supervision
+  relationship: related
+  registry_target: null
+  basis: The claims describe compatible ways that diverse, automatically constructed, or task-rich supervision expands generalization
+    beyond narrow manually labeled datasets.
+- id: cand_b5f04d20988205f7
+  left: speaker-adaptation#reference_conditioning_enables_unseen_speaker_adaptation
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.092593
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1381
+    - '2301.02111'
+    - '2406.04904'
+    - '2511.12347'
+    - interspeech-2025-1726
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.177778
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_593c1bb7b5fd8915
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.009088
+    shared_evidence_score: 0.08
+    shared_supporting_papers:
+    - 2025.acl-short.81
+    - '2303.03926'
+    - '2505.17589'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.177635
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_3d42874d3e76d175
+  left: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  right: zero-shot-tts#robustness_requires_in_the_wild_prompt_coverage
+  signals:
+    text_similarity: 0.012297
+    shared_evidence_score: 0.075
+    shared_supporting_papers:
+    - '2411.19770'
+    - '2510.20677'
+    - '2512.04793'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.177419
+  disposition: accepted
+  bundle: unseen_voice_and_acoustic_robustness
+  relationship: supports
+  registry_target: null
+  basis: The claims provide compatible task-specific evidence that unseen-voice and acoustic-condition robustness depends
+    on reference conditioning, training coverage, or domain-tolerant representations.
+- id: cand_0d456455e14f39a3
+  left: diffusion-tts#latent_diffusion_reduces_generation_complexity
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.088889
+    shared_supporting_papers:
+    - '2305.07243'
+    - '2403.03100'
+    - '2406.02430'
+    - '2502.18924'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.176667
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_67af320bb3f72bef
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: zero-shot-tts#long_form_generation_needs_alignment_and_memory_controls
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.085714
+    shared_supporting_papers:
+    - 2025.acl-short.81
+    - '2303.03926'
+    - '2510.08373'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.175714
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_d8ab089213b13a2e
+  left: disentanglement#data_level_disentanglement_without_new_architecture
+  right: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.083333
+    shared_supporting_papers:
+    - '2510.09061'
+    - '2510.11124'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.175
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_0c7722b3c14f75ac
+  left: emotion-synthesis#paralinguistic_events_require_dedicated_modeling
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    text_similarity: 0.0086
+    shared_evidence_score: 0.071429
+    shared_supporting_papers:
+    - '2507.18119'
+    - '2509.03940'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174869
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_27234eac5c4ea9cd
+  left: diffusion-tts#diffusion_enables_high_fidelity_synthesis
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.014482
+    shared_evidence_score: 0.061538
+    shared_supporting_papers:
+    - '2305.07243'
+    - '2403.03100'
+    - '2406.02430'
+    - '2502.18924'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174254
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_a08385d364a5a310
+  left: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  right: zero-shot-tts#speaker_encoder_choice_changes_reported_similarity
+  signals:
+    text_similarity: 0.006792
+    shared_evidence_score: 0.071429
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1381
+    - 2025.naacl-short.65
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174145
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_1efb4430c57f4727
+  left: speaker-adaptation#reference_conditioning_enables_unseen_speaker_adaptation
+  right: subjective-evaluation#preference_alignment_has_cross_dimension_tradeoffs
+  signals:
+    text_similarity: 0.026097
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - '2510.20677'
+    - '2512.05126'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174075
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_84aeb805a5fa77ff
+  left: multilingual-tts#synthetic_parallel_data_enables_low_resource_cross_lingual_generation
+  right: self-supervised-speech#ssl_features_encode_linguistic_content
+  signals:
+    text_similarity: 0.028141
+    shared_evidence_score: 0.042553
+    shared_supporting_papers:
+    - '2510.09061'
+    - '2511.12690'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174023
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_8973a5d195a9b32a
+  left: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  right: voice-conversion#data_diversity_drives_unseen_speaker_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.08
+    shared_supporting_papers:
+    - 2025.findings-emnlp.1077
+    - '2510.09061'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_782f8c031e39c4e1
+  left: subjective-evaluation#preference_alignment_has_cross_dimension_tradeoffs
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.017959
+    shared_evidence_score: 0.053571
+    shared_supporting_papers:
+    - '2510.10785'
+    - '2510.20677'
+    - '2511.10112'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.173255
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_0c14567efa268a16
+  left: diffusion-tts#diffusion_enables_high_fidelity_synthesis
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.031669
+    shared_evidence_score: 0.033898
+    shared_supporting_papers:
+    - '2510.10785'
+    - interspeech-2025-1434
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.172837
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_ab5e85fa8ef77379
+  left: speaker-adaptation#data_scale_and_diversity_drive_unseen_speaker_generalization
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    text_similarity: 0.013174
+    shared_evidence_score: 0.054054
+    shared_supporting_papers:
+    - '2510.10774'
+    - interspeech-2025-0596
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.171486
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_b8958061903d9c0e
+  left: multilingual-tts#language_and_accent_leakage_persist
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.01306
+    shared_evidence_score: 0.054054
+    shared_supporting_papers:
+    - '2511.12347'
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.17144
+  disposition: accepted
+  bundle: domain_shift_and_evaluation
+  relationship: supports
+  registry_target: null
+  basis: The task-specific failure or leakage finding supplies a compatible reason to evaluate across language, domain, modality,
+    or streaming shifts rather than relying on clean aggregate results.
+- id: cand_16ad31ceb2dcc52d
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: speaker-adaptation#few_shot_fine_tuning_improves_distinctive_voice_matching
+  signals:
+    text_similarity: 0.005937
+    shared_evidence_score: 0.0625
+    shared_supporting_papers:
+    - '2406.04904'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.171125
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_eaa2ac94e86e1465
+  left: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.013281
+    shared_evidence_score: 0.051948
+    shared_supporting_papers:
+    - '2402.08093'
+    - '2509.14784'
+    - '2509.15969'
+    - '2509.17765'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.170897
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_4d73ce5d808f08b2
+  left: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  right: zero-shot-tts#speaker_encoder_choice_changes_reported_similarity
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.068966
+    shared_supporting_papers:
+    - '2503.11026'
+    - '2510.11124'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.17069
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_0da9fe41a03edaf8
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: prosody-control#linguistic_context_improves_prosody_prediction
+  signals:
+    text_similarity: 0.016575
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - 2025.unlp-1.11
+    - '2512.22491'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.170266
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_2e914d84f85aeb16
+  left: gan-vocoder#vocoder_bottlenecks_interact_with_upstream_acoustic_models
+  right: zero-shot-tts#text_and_pronunciation_modeling_improve_intelligibility
+  signals:
+    text_similarity: 0.013042
+    shared_evidence_score: 0.05
+    shared_supporting_papers:
+    - '1712.05884'
+    - '2512.14291'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.170217
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_42d89f997e1d576b
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  signals:
+    text_similarity: 0.013395
+    shared_evidence_score: 0.04878
+    shared_supporting_papers:
+    - '2510.22588'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.169992
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_2e1406ea50d68903
+  left: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.005738
+    shared_evidence_score: 0.058824
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.169942
+  disposition: accepted
+  bundle: domain_shift_and_evaluation
+  relationship: related
+  registry_target: null
+  basis: The task-specific failure or leakage finding supplies a compatible reason to evaluate across language, domain, modality,
+    or streaming shifts rather than relying on clean aggregate results.
+- id: cand_ba0b3c2f013420b2
+  left: multilingual-tts#shared_phonetic_representations_enable_transfer
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.006857
+    shared_evidence_score: 0.056604
+    shared_supporting_papers:
+    - '2312.01479'
+    - '2511.12347'
+    - interspeech-2025-raju25_interspeech
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.169724
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_7c87c369c317a1dd
+  left: gan-vocoder#gan_vocoders_remain_effective_in_low_resource_and_cross_domain_settings
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.007043
+    shared_evidence_score: 0.055556
+    shared_supporting_papers:
+    - '2511.21045'
+    - interspeech-2025-1081
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.169484
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_492ae67440c04988
+  left: gan-vocoder#periodic_and_antialiasing_biases_improve_robustness
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.008718
+    shared_evidence_score: 0.052632
+    shared_supporting_papers:
+    - '2206.04658'
+    - '2512.20211'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.169277
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_297d5212154a7bbc
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.014726
+    shared_evidence_score: 0.044118
+    shared_supporting_papers:
+    - '2312.01479'
+    - '2511.12347'
+    - interspeech-2025-raju25_interspeech
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.169126
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_e651c4da9fcd1abb
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: rlhf-speech#rlhf_posttraining_beats_sft_baseline
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '2507.21138'
+    - '2511.21270'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.168182
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_762e60dc01933c03
+  left: speaker-adaptation#multi_speaker_training_learns_shared_voice_structure
+  right: subjective-evaluation#preference_alignment_has_cross_dimension_tradeoffs
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '1609.03499'
+    - '2511.00256'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.168182
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_aaddae66cf5f3d16
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.007183
+    shared_evidence_score: 0.05
+    shared_supporting_papers:
+    - 2025.acl-long.598
+    - 2025.naacl-short.69
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167873
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_be9b50ae01f03cca
+  left: instruction-conditioned-tts#automatic_instruction_data_construction_scales_supervision
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.00792
+    shared_evidence_score: 0.04878
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2305.11000'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167802
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_ffcc7bd1f4689e11
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: subjective-evaluation#preference_alignment_has_cross_dimension_tradeoffs
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.058824
+    shared_supporting_papers:
+    - '2511.18487'
+    - '2512.05126'
+    - '2512.12297'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167647
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_723658a39f987422
+  left: multilingual-tts#parameter_efficient_modules_support_language_extension
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007581
+    shared_evidence_score: 0.047619
+    shared_supporting_papers:
+    - interspeech-2025-1344
+    - interspeech-2025-raju25_interspeech
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167318
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_215ce261bb9a6c87
+  left: streaming-tts#one_model_can_support_streaming_and_offline_modes
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007576
+    shared_evidence_score: 0.047619
+    shared_supporting_papers:
+    - '2509.14784'
+    - '2510.24372'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167316
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_a4b00089f3dc529f
+  left: self-supervised-speech#masked_and_contrastive_pretraining_learn_reusable_speech_features
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007907
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - '2411.19770'
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.166799
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_cd8edf90d4cc852e
+  left: speaker-adaptation#multi_speaker_training_learns_shared_voice_structure
+  right: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  signals:
+    text_similarity: 0.00583
+    shared_evidence_score: 0.047619
+    shared_supporting_papers:
+    - '2510.10774'
+    - '2511.00256'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.166618
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_0adec27027cad154
+  left: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  right: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  signals:
+    text_similarity: 0.017998
+    shared_evidence_score: 0.03125
+    shared_supporting_papers:
+    - 2025.findings-acl.75
+    - 2025.iwslt-1.5
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.166574
+  disposition: accepted
+  bundle: cross_lingual_representations_and_pronunciation
+  relationship: related
+  registry_target: null
+  basis: The claims connect language coverage, transferable speech representations, phonetic structure, and pronunciation
+    modeling at compatible cross-lingual generalization scope.
+- id: cand_6ed7be9f5e939616
+  left: multilingual-tts#continued_pretraining_and_fine_tuning_extend_language_coverage
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.008083
+    shared_evidence_score: 0.043478
+    shared_supporting_papers:
+    - '2406.04904'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.166277
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_c53ef9e385d05db9
+  left: speaker-adaptation#few_shot_fine_tuning_improves_distinctive_voice_matching
+  right: voice-conversion#zero_shot_any_to_any_conversion_is_feasible
+  signals:
+    text_similarity: 0.006829
+    shared_evidence_score: 0.044444
+    shared_supporting_papers:
+    - 2025.acl-long.87
+    - interspeech-2025-0816
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.166065
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_7191a3c30aabe2b4
+  left: diffusion-tts#distillation_and_caching_accelerate_diffusion
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007833
+    shared_evidence_score: 0.042553
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2502.18924'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.165899
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_7bb24f0e0aef8ef9
+  left: flow-matching#fm_inference_acceleration
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.052632
+    shared_supporting_papers:
+    - '2312.15821'
+    - '2502.18924'
+    - interspeech-2025-0455
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.165789
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_d51a50e7b9e1e127
+  left: multilingual-tts#codec_language_models_enable_multilingual_generation
+  right: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  signals:
+    text_similarity: 0.011155
+    shared_evidence_score: 0.037736
+    shared_supporting_papers:
+    - '2412.02612'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.165783
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_d0616f464429beef
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: subjective-evaluation#naturalness_intelligibility_and_identity_are_distinct_axes
+  signals:
+    text_similarity: 0.016573
+    shared_evidence_score: 0.027027
+    shared_supporting_papers:
+    - '2511.12347'
+    - '2511.21270'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.164737
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_e8d42241c29dc8fd
+  left: multilingual-tts#training_imbalance_biases_multilingual_quality
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007721
+    shared_evidence_score: 0.038462
+    shared_supporting_papers:
+    - 2025.acl-short.81
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.164627
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_5f94590b915e2729
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: zero-shot-tts#intelligibility_and_speaker_similarity_trade_off
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.048193
+    shared_supporting_papers:
+    - '2303.03926'
+    - '2407.05361'
+    - '2507.21138'
+    - interspeech-2025-1344
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.164458
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_f4d461f79c7968b4
+  left: streaming-tts#causality_and_lookahead_trade_latency_for_quality
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007733
+    shared_evidence_score: 0.037736
+    shared_supporting_papers:
+    - '2509.17765'
+    - '2510.24372'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.164414
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_d9fd428859af7d53
+  left: voice-conversion#ssl_units_improve_content_representation
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.009716
+    shared_evidence_score: 0.031746
+    shared_supporting_papers:
+    - 2025.naacl-short.65
+    - '2411.19770'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.16341
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_cfda9b9a56ea23fc
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.008801
+    shared_evidence_score: 0.029412
+    shared_supporting_papers:
+    - '2509.17765'
+    - '2512.23808'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.162344
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_cba04f2ee172c8a6
+  left: autoregressive-codec-tts#explicit_alignment_constraints_improve_robustness
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.039216
+    shared_supporting_papers:
+    - '2406.02430'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.161765
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_cc42a5ad29b3fe12
+  left: multilingual-tts#shared_multilingual_training_improves_low_resource_tts
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.0375
+    shared_supporting_papers:
+    - '2303.03926'
+    - '2508.07302'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.16125
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_cbbf3e3c3bc25644
+  left: subjective-evaluation#evaluation_must_cover_domain_and_language_shift
+  right: zero-shot-tts#data_scale_and_diversity_improve_generalization
+  signals:
+    text_similarity: 0.007139
+    shared_evidence_score: 0.027027
+    shared_supporting_papers:
+    - '2510.10774'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.160964
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_23cb48d1472b7eb1
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.02381
+    shared_supporting_papers:
+    - '2303.03926'
+    - '2511.12347'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.157143
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_1e6ec9c70401c10c
+  left: self-supervised-speech#multilingual_ssl_supports_cross_lingual_transfer
+  right: zero-shot-tts#reference_conditioning_preserves_speaker_identity
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.023256
+    shared_supporting_papers:
+    - '2503.11026'
+    - '2510.11124'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.156977
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship
+- id: cand_67a4e90b35deba86
+  left: multilingual-tts#multilingual_data_scale_improves_generalization
+  right: zero-shot-tts#cross_lingual_cloning_faces_language_leakage
+  signals:
+    text_similarity: 0.155101
+    shared_evidence_score: 0.087719
+    shared_supporting_papers:
+    - 2025.coling-main.685
+    - '2303.03926'
+    - '2507.21138'
+    - '2511.12347'
+    - interspeech-2025-1344
+    status_compatible: false
+    polarity_compatible: false
+    status_polarity_score: 0.0
+    technical_vocabulary_score: 0.111111
+    shared_terms:
+    - cross-lingual
+    - language
+    aggregate_score: 0.105023
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_5b40a3979f018cad
+  left: multilingual-tts#zero_shot_models_generalize_to_unseen_languages_imperfectly
+  right: zero-shot-tts#cross_lingual_cloning_faces_language_leakage
+  signals:
+    text_similarity: 0.094784
+    shared_evidence_score: 0.189655
+    shared_supporting_papers:
+    - 2025.coling-main.685
+    - '2312.01479'
+    - '2406.04904'
+    - '2503.11026'
+    - '2505.17589'
+    - '2508.07302'
+    - '2509.14579'
+    - '2511.12347'
+    - '2512.12297'
+    - interspeech-2025-1344
+    - interspeech-2025-raju25_interspeech
+    status_compatible: false
+    polarity_compatible: false
+    status_polarity_score: 0.0
+    technical_vocabulary_score: 0.043478
+    shared_terms:
+    - language
+    aggregate_score: 0.101332
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_6bfcceed8fdd1150
+  left: multilingual-tts#continued_pretraining_and_fine_tuning_extend_language_coverage
+  right: zero-shot-tts#cross_lingual_cloning_faces_language_leakage
+  signals:
+    text_similarity: 0.031728
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - '2406.04904'
+    - '2508.07302'
+    - '2512.12297'
+    - interspeech-2025-1344
+    status_compatible: false
+    polarity_compatible: false
+    status_polarity_score: 0.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.034913
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_c5fabf5447e19fbe
+  left: multilingual-tts#shared_multilingual_training_improves_low_resource_tts
+  right: zero-shot-tts#cross_lingual_cloning_faces_language_leakage
+  signals:
+    text_similarity: 0.046467
+    shared_evidence_score: 0.053571
+    shared_supporting_papers:
+    - '2303.03926'
+    - '2508.07302'
+    - '2511.12347'
+    status_compatible: false
+    polarity_compatible: false
+    status_polarity_score: 0.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.034658
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
+- id: cand_9ffd42a21277771b
+  left: multilingual-tts#text_front_ends_remain_a_low_resource_bottleneck
+  right: zero-shot-tts#cross_lingual_cloning_faces_language_leakage
+  signals:
+    text_similarity: 0.012433
+    shared_evidence_score: 0.08
+    shared_supporting_papers:
+    - 2025.vlsp-1.14
+    - '2312.01479'
+    - '2508.07302'
+    - '2509.05863'
+    - '2511.12347'
+    - interspeech-2025-raju25_interspeech
+    status_compatible: false
+    polarity_compatible: false
+    status_polarity_score: 0.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.028973
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the Q3 agent review
