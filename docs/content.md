@@ -8,7 +8,8 @@ published snapshot.
 See also: [docs/schemas/metadata.md](schemas/metadata.md), [docs/schemas/claims.md](schemas/claims.md),
 [docs/schemas/reconciliation.md](schemas/reconciliation.md),
 [docs/schemas/snapshots.md](schemas/snapshots.md),
-[docs/schemas/vocabulary.md](schemas/vocabulary.md), [docs/writing-style.md](writing-style.md)
+[docs/schemas/vocabulary.md](schemas/vocabulary.md), [docs/writing-style.md](writing-style.md),
+and the quarterly [integration protocol](integration-protocol.md)
 
 ---
 
@@ -66,6 +67,11 @@ The ingest agent writes exactly these files: `wiki/papers/{id}.md`, `wiki/papers
 ## Integrate Workflow
 
 Cross-paper. Reads paper pages, writes `wiki/_claims/` YAML only. No wiki pages are touched.
+
+For a bounded quarterly cycle—including canonical-date preflight, a frozen candidate manifest,
+worktree coordination, reconciliation, rendering, snapshot/report gates, merging, and site
+publication—follow [integration-protocol.md](integration-protocol.md). This section describes the
+stage itself; the protocol orchestrates the complete cycle.
 
 **Batch size:** up to 25 papers per pass. Run every ~25 ingested papers.
 
