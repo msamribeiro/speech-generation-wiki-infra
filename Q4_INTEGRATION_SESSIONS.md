@@ -1,7 +1,8 @@
 # Q4 2025 Integration and Synthesis Session
 
 **Started:** 2026-09-19
-**Status:** Integration complete; all 22 affected concepts passed exact-set validation; reconciliation is next
+**Status:** Integration, reconciliation, all 23 concept renders, and field overview complete;
+optional snapshot/report awaiting approval
 **Evidence scope:** Q4 2025 (`2025-10-01 <= published_date <= 2025-12-31`) layered onto the
 completed Q3-and-earlier claim graphs
 **Goal:** Complete the seven-stage Q4 cycle: Phase 1 integration, Phase 2 synthesis, validation,
@@ -25,11 +26,9 @@ reconciliation, snapshot, render, and report sequence recorded in
    export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-integrate
    ```
 
-3. Load the reconciliation workflow and generate deterministic `2025-Q4` cross-concept candidates
-   from the completed graphs without mutating the reviewed registry.
-4. Review candidates in the staged thematic batches defined below, keeping agent recommendations
-   separate from explicit human decisions.
-5. Preserve Q3 authority and validate the finalized Q4 run before rendering.
+3. Review the completed Q4 concept pages and field overview if desired.
+4. With explicit approval, freeze the
+   `2025-Q4` snapshot and publish the retrospective report.
 
 Starting commits recorded at bootstrap:
 
@@ -181,7 +180,7 @@ claim-graph state is stable enough to become the source for reconciliation.
 
 ### Stage 4 — Q4 cross-concept reconciliation
 
-- [ ] Generate deterministic `2025-Q4` candidates only after Stage 3 closes.
+- [x] Generate deterministic `2025-Q4` candidates only after Stage 3 closes.
 - [ ] Preserve existing Q3 human-approved registry authority and audit history.
 - [ ] Review candidates in themed batches: evaluation; efficiency; speaker; controllability;
       robustness; codecs/language modeling; streaming/spoken agents; post-training.
@@ -193,28 +192,1088 @@ claim-graph state is stable enough to become the source for reconciliation.
 **Gate:** The Q4 run is finalized with no pending candidates; only human-approved relationships and
 broader claims are authoritative downstream.
 
+Candidate-generation checkpoint (2026-09-27):
+
+- Generated `_claims/_reconciliation/runs/2025-Q4.yaml` from all 23 completed concept graphs with
+  evidence cutoff `2025-12-31`, assessment date `2026-09-27`, and `review_mode: human_review`.
+- The deterministic queue contains 3,946 pending candidates from 93,490 cross-concept pairs. All
+  3,946 candidates share at least two supporting papers, so the evidence-preservation rule keeps
+  them even though the nominal ranking-only review cap is 500.
+- Theme counts are: evaluation 722; efficiency 157; speaker 956; controllability 677; robustness
+  154; codecs/language modeling 1,014; streaming/spoken agents 138; and post-training 128.
+- Regeneration from the same source commits and configuration is byte-identical (2,702,439 bytes).
+  Every disposition is pending; no candidate was automatically accepted.
+- The reviewed registry remained byte-for-byte unchanged at SHA-256
+  `50730517c9cc59041aa7b11641568f8873207d36f84b991b3b726cf2b1422190`.
+- Reconciliation health resolves the run and reports the expected 3,946 pending-candidate warning.
+  It also reports 22 derived-evidence errors on all 11 existing broader claims because Q4 integration
+  changed their member clusters while the Q3 registry was intentionally left untouched. Resolve
+  those stale derived evidence lists during thematic review; do not rewrite them mechanically.
+- The existing generator's `--apply` path assumes no registry exists. This run was therefore
+  materialized from the same deterministic generator core while writing only the new run artifact;
+  harden the reusable apply path before the next quarterly candidate-generation cycle.
+
+Controllability agent-triage checkpoint (2026-10-17):
+
+- Audited all 677 pending controllability candidates and saved the advisory record at
+  `docs/records/2026-10-17-q4-controllability-agent-triage.yaml`.
+- Proposed 111 acceptances, 566 rejections, and 0 deferrals. The acceptance bundles are existing
+  reviewed authority (50), control trade-offs and evaluation (24), disentanglement and factorized
+  control (20), cross-lingual expressive control (10), and emotion and local prosody control (7).
+- Rejections comprise 284 reaffirmed Q3 scope decisions, 280 low-overlap pairs, and 2 pairs whose
+  shared evidence does not establish the same proposition.
+- This audit was agent-only and did not mutate the human-review run or registry. Its first staged
+  bundle was `cross_lingual_expressive_control`, reviewed immediately below.
+
+Controllability cross-lingual expressive-control review (2026-10-17):
+
+- The user approved all 10 staged candidates in chat.
+- Added 10 human-approved direct relationships covering cross-lingual emotion and style transfer,
+  multilingual data imbalance, language-specific prosody and alignment, explicit prosodic and
+  language conditioning, and dimension-specific perceptual evaluation.
+- Cumulative Q4 review state is 203 accepted, 1,642 rejected, 0 deferred, and 2,101 pending. The
+  registry now contains 171 direct relationships and 11 broader claims.
+- Reconciliation health found no new structural, reference, or cycle errors. The nine expected
+  derived-evidence errors remain assigned to later review themes.
+
+Controllability disentanglement and factorized-control review (2026-10-17):
+
+- The user approved all 20 staged candidates in chat, including the two tightened `refines`
+  classifications for cross-source leakage evaluation.
+- Added 20 human-approved direct relationships covering identity/style separation, signal-level
+  prosody decomposition, representation leakage, preservation losses, singing and voice-conversion
+  factorization, instruction interfaces, orthogonality constraints, and data-level separation.
+- Cumulative Q4 review state is 223 accepted, 1,642 rejected, 0 deferred, and 2,081 pending. The
+  registry now contains 191 direct relationships and 11 broader claims.
+- Reconciliation health found no new structural, reference, or cycle errors. The nine expected
+  derived-evidence errors remain assigned to later review themes.
+
+Controllability emotion and local-prosody review (2026-10-24):
+
+- The user approved all 7 staged candidates in chat, including the tightened `related`
+  classification for fine-grained emotion versus duration/rhythm control.
+- Added 7 human-approved direct relationships covering synthetic emotion supervision,
+  cross-speaker and hierarchical emotion control, speech-singing prosody transfer, fine-grained
+  temporal conditioning, and targeted or automatically constructed expressive-control data.
+- Cumulative Q4 review state is 230 accepted, 1,642 rejected, 0 deferred, and 2,074 pending. The
+  registry now contains 198 direct relationships and 11 broader claims.
+- Reconciliation health found no new structural, reference, or cycle errors. The nine expected
+  derived-evidence errors remain assigned to later review themes.
+
+Controllability control-tradeoff and evaluation review (2026-10-24):
+
+- The user approved all 24 staged candidates in chat, including the tightened `related`
+  classifications for emotion-strength versus preference trade-offs and reward-guided prosody
+  versus composite multi-objective rewards.
+- Added 24 human-approved direct relationships covering control-strength trade-offs,
+  multidimensional instruction and preference control, dimension-specific perceptual tests,
+  automatic-judge limitations, and matched evaluation of emotion, prosody, singing, and voice
+  conversion.
+- Cumulative Q4 review state is 254 accepted, 1,642 rejected, 0 deferred, and 2,050 pending. The
+  registry now contains 222 direct relationships and 11 broader claims.
+- Reconciliation health found no new structural, reference, or cycle errors. The nine expected
+  derived-evidence errors remain assigned to later review themes.
+
+Controllability existing-reviewed-authority review (2026-10-24):
+
+- The user approved all 50 staged carry-forward candidates in chat.
+- Recorded 44 decisions against the existing multiattribute-disentanglement broader claim, 2
+  against the unseen-voice-transfer broader claim, and 4 against existing direct relationships.
+- No registry records were created or duplicated: every target was already human-approved.
+- Cumulative Q4 review state is 304 accepted, 1,642 rejected, 0 deferred, and 2,000 pending. The
+  registry remains at 222 direct relationships and 11 broader claims.
+- Reconciliation health found no new structural, reference, or cycle errors. The nine expected
+  derived-evidence errors remain assigned to later review themes.
+
+Controllability theme closure (2026-10-24):
+
+- The user approved the final audited rejection set in chat.
+- Applied 566 rejections: 284 Q3 proposition-scope decisions reaffirmed, 280 low-semantic-overlap
+  pairs, and 2 shared-evidence scope mismatches. Every rejection retains its audit rationale and a
+  category-specific reconsideration trigger.
+- Complete controllability result: 111 accepted, 566 rejected, and 0 deferred across 677
+  candidates. Overall Q4 state is 304 accepted, 2,208 rejected, 0 deferred, and 1,434 pending.
+- The registry remains at 222 direct relationships and 11 broader claims. Reconciliation health
+  found no new structural, reference, or cycle errors; the nine expected derived-evidence errors
+  remain assigned to later themes.
+
+Robustness existing-reviewed-authority review (2026-10-24):
+
+- The user approved all 3 staged candidates in chat.
+- Recorded the three pairwise carry-forwards among the speaker-adaptation, voice-conversion, and
+  zero-shot-TTS members of `broader_training_diversity_drives_unseen_voice_generalization`.
+- Refreshed the broader claim's deduplicated evidence through 2025-12-31. No registry relationship
+  was created or duplicated.
+- Cumulative Q4 review state is 307 accepted, 2,208 rejected, 0 deferred, and 1,431 pending. The
+  registry remains at 222 direct relationships and 11 broader claims.
+
+Robustness multilingual coverage and generalization review (2026-10-24):
+
+- The user approved all 6 staged candidates in chat.
+- Added 6 human-approved direct `related` relationships covering pretraining-language coverage,
+  synthetic or pseudo-parallel cross-lingual data, multilingual corpus diversity, shared codec
+  representations, multi-speaker structure, and unseen-speaker transfer.
+- Cumulative Q4 review state is 313 accepted, 2,208 rejected, 0 deferred, and 1,425 pending. The
+  registry now contains 228 direct relationships and 11 broader claims.
+
+Robustness low-resource and representation-transfer review (2026-10-24):
+
+- The user approved all 6 staged candidates in chat.
+- Added 6 human-approved direct `related` relationships covering shared multilingual training,
+  multilingual codec-LM voice transfer, factorized singing transfer, multilingual SSL, SSL units
+  for voice conversion, synthetic parallel speech, and unseen-voice generalization.
+- Cumulative Q4 review state is 319 accepted, 2,208 rejected, 0 deferred, and 1,419 pending. The
+  registry now contains 234 direct relationships and 11 broader claims.
+
+Robustness text, pronunciation, and alignment review (2026-10-24):
+
+- The user approved the staged recommendations in chat: 4 acceptances and 2 rejections.
+- Added 4 human-approved direct relationships covering unseen-language pronunciation failures,
+  multilingual text-front-end bottlenecks, language-specific prosody, and structured alignment in
+  direct speech-to-speech translation.
+- Rejected 2 scope-mismatched pairs: text-front-end versus spoken-LM modality alignment, and
+  unseen-speaker voice conversion versus TTS pronunciation modeling. Both retain specific
+  reconsideration triggers.
+- Cumulative Q4 review state is 323 accepted, 2,210 rejected, 0 deferred, and 1,413 pending. The
+  registry now contains 238 direct relationships and 11 broader claims.
+
+Robustness remaining-candidate agent-triage checkpoint (2026-10-24):
+
+- Audited all 133 still-pending robustness candidates and saved the advisory record at
+  `docs/records/2026-10-24-q4-robustness-agent-triage.yaml`.
+- Proposed 21 acceptances across scalable supervision (4), cross-lingual representations and
+  pronunciation (7), domain shift and evaluation (4), and unseen-voice/acoustic robustness (6).
+- Proposed 112 rejections: 56 Q3 proposition-scope decisions reaffirmed and 56 new
+  low-semantic-overlap pairs. No deferrals were proposed.
+- This audit is agent-only and did not mutate the human-review run or registry. Human review
+  resumes with the scalable-supervision bundle.
+
+Robustness scalable-supervision review (2026-10-24):
+
+- The user approved all 4 staged candidates in chat.
+- Added 4 human-approved direct `related` relationships connecting automatic emotional annotation,
+  automatic instruction-data construction, diverse instruction supervision, and spoken-language-
+  model dataset scale.
+- Cumulative Q4 review state is 327 accepted, 2,210 rejected, 0 deferred, and 1,409 pending. The
+  registry now contains 242 direct relationships and 11 broader claims.
+
+Robustness cross-lingual representation and pronunciation review (2026-10-24):
+
+- The user approved all 7 staged candidates in chat.
+- Added 7 human-approved direct relationships connecting training coverage, multilingual codec
+  language models, multilingual SSL, cross-lingual adaptation, shared phonetic representations,
+  pronunciation modeling, language-specific prosody, and speech-text alignment.
+- These candidates were rejected only in the superseded Q3 agent-adjudication run and were absent
+  from the finalized Q3 corrective human-review run. Q4 human review accepted six conservative
+  `related` links and one specific `supports` link; no human-approved Q3 authority was reversed.
+- Cumulative Q4 review state is 334 accepted, 2,210 rejected, 0 deferred, and 1,402 pending. The
+  registry now contains 249 direct relationships and 11 broader claims.
+
+Robustness domain-shift/evaluation and unseen-voice/acoustic review (2026-10-24):
+
+- The user approved both remaining acceptance bundles together: 10 candidates total.
+- Added 10 human-approved direct relationships: 4 connect multilingual, accent, modality, and
+  streaming failures to domain-aware evaluation; 6 connect realistic speaker, prompt, channel, and
+  acoustic-condition coverage to unseen-voice robustness.
+- Relationship types are 7 `related` and 3 `supports`. Cumulative Q4 review state is 344 accepted,
+  2,210 rejected, 0 deferred, and 1,392 pending. The registry now contains 259 direct relationships
+  and 11 broader claims.
+
+Robustness theme closure (2026-10-24):
+
+- The user approved the final categorized rejection set in chat.
+- Applied 112 rejections: 56 Q3 agent scope-gap decisions reaffirmed and 56 new
+  low-semantic-overlap pairs. Every rejection retains its audit rationale and a category-specific
+  reconsideration trigger.
+- Complete robustness result: 40 accepted, 114 rejected, and 0 deferred across 154 candidates.
+  Overall Q4 state is 344 accepted, 2,322 rejected, 0 deferred, and 1,280 pending.
+- The registry remains at 259 direct relationships and 11 broader claims.
+
+Codecs/language-modeling theme-wide agent-triage checkpoint (2026-10-25):
+
+- Audited all 1,014 pending candidates in one pass and saved the advisory record at
+  `docs/records/2026-10-25-q4-codecs-language-modeling-agent-triage.yaml`.
+- Proposed 101 acceptances: 20 existing-authority carry-forwards plus broad bundles for unified
+  codec/LM interfaces (12), semantic-acoustic representation trade-offs (15), token-rate and
+  parallelism costs (8), multilingual codec transfer (10), SSL semantic units and modular
+  generation (12), low-bitrate reconstruction and vocoder limits (12), in-context cloning and
+  prompting (6), and codec evaluation/downstream validity (6).
+- Proposed 913 rejections: 500 superseded-Q3 agent scope-gap decisions reaffirmed and 413 new
+  low-semantic-overlap pairs. No deferrals were proposed.
+- This is an advisory audit only: the Q4 human-review run and registry remain unchanged. Human
+  review resumes with the 20 existing-authority carry-forwards, without proposition-by-proposition
+  review.
+
+Codecs/language-modeling existing-authority review (2026-10-25):
+
+- The user approved all 20 carry-forward candidates in chat.
+- Ten decisions reaffirm direct Q3 relationships covering codec reconstruction, tokenizer
+  modelability, multilingual transfer, language-model generation, speech-text interleaving and
+  alignment, and in-context cloning. Ten decisions reaffirm memberships in the reviewed
+  semantic-acoustic hierarchy, speech-token trade-off, and multiattribute-disentanglement broader
+  claims.
+- No duplicate registry records were created. The three affected broader claims were refreshed
+  from their complete member evidence through 2025-12-31; this resolved the four codec-related
+  derived-evidence errors, leaving three errors confined to the two full-duplex claims assigned to
+  the streaming/agents theme.
+- Cumulative Q4 review state is 364 accepted, 2,322 rejected, 0 deferred, and 1,260 pending. The
+  registry remains at 259 direct relationships and 11 broader claims.
+
+Codecs/language-modeling unified codec/LM interface review (2026-10-25):
+
+- The user approved all 12 staged candidates in chat.
+- Added 12 human-approved direct `related` relationships: 6 connect codec or SSL speech units to
+  language-model generation and conditioning, 3 connect codec-token interfaces to unified
+  speech-text systems, and 3 connect token generation to speech-text alignment or interleaving.
+- Three accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. Conservative `related` typing preserves differences in
+  semantic abstraction, acoustic detail, token rate, reconstructability, and modality scope.
+- Cumulative Q4 review state is 376 accepted, 2,322 rejected, 0 deferred, and 1,248 pending. The
+  registry now contains 271 direct relationships and 11 broader claims.
+
+Codecs/language-modeling semantic-acoustic representation review (2026-10-25):
+
+- The user approved all 15 staged candidates in chat.
+- Added 15 human-approved direct `related` relationships: 7 connect hierarchical speech systems
+  to the semantic-acoustic fidelity trade-off, 5 connect continuous, discrete, and separated
+  representations, and 3 connect codec representation claims to orthogonal semantic/acoustic
+  evaluation objectives.
+- Six accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. Conservative typing preserves task, architecture,
+  modelability, reconstruction, and controllability differences.
+- Cumulative Q4 review state is 391 accepted, 2,322 rejected, 0 deferred, and 1,233 pending. The
+  registry now contains 286 direct relationships and 11 broader claims.
+
+Codecs/language-modeling token-rate and parallelism review (2026-10-25):
+
+- The user approved all 8 staged candidates in chat.
+- Added 8 human-approved direct `related` relationships: 3 connect token rate to language-model
+  sequence cost, 3 connect grouped or masked prediction to parallel latent generation, and 2
+  connect low-rate or parallel representations to streaming generation choices.
+- One accepted pair supersedes a scope-gap judgment from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. The rationales preserve architecture-dependent
+  encoding, reconstruction, scheduling, robustness, length-control, latency, and quality costs.
+- Cumulative Q4 review state is 399 accepted, 2,322 rejected, 0 deferred, and 1,225 pending. The
+  registry now contains 294 direct relationships and 11 broader claims.
+
+Codecs/language-modeling multilingual codec-transfer review (2026-10-25):
+
+- The user approved all 10 staged candidates in chat.
+- Added 10 human-approved direct `related` relationships: 4 connect multilingual codec language
+  modeling to shared training, zero-shot generalization, or cross-language generation; 5 connect
+  codec transfer to multilingual SSL or shared phonetic representations; and 1 connects
+  multilingual codec representations to unified spoken models.
+- Two accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. The rationales preserve language and speaker coverage,
+  phonetic distance, training balance, architecture, representation-content, and capability scope.
+- Cumulative Q4 review state is 409 accepted, 2,322 rejected, 0 deferred, and 1,215 pending. The
+  registry now contains 304 direct relationships and 11 broader claims.
+
+Codecs/language-modeling SSL semantic-unit review (2026-10-25):
+
+- The user approved all 12 staged candidates in chat.
+- Added 12 human-approved direct `related` relationships: 6 connect SSL guidance to codec semantics
+  or robust modular generation, 4 connect discrete codec/SSL units to language modeling,
+  low-bitrate coding, synthesis, or conversion, and 2 connect early RVQ semantic concentration to
+  linguistic representations and downstream quantizer behavior.
+- Three accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. The rationales retain incomplete factor separation and
+  differences in abstraction, reconstructability, token rate, acoustic detail, and task scope.
+- Cumulative Q4 review state is 421 accepted, 2,322 rejected, 0 deferred, and 1,203 pending. The
+  registry now contains 316 direct relationships and 11 broader claims.
+
+Codecs/language-modeling low-bitrate reconstruction review (2026-10-25):
+
+- The user approved all 12 staged candidates in chat.
+- Added 12 human-approved direct `related` relationships: 5 connect compression-aware adversarial
+  reconstruction, decoder capacity, frequency structure, and vocoder stress; 4 connect codec,
+  vocoder, quantizer, and reconstruction limits to perceptual ceilings; and 3 connect tokenizer or
+  codec choices to low-bitrate, downstream-generation, or causal-streaming quality.
+- Three accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. The rationales preserve bitrate, quantizer,
+  discriminator, bandwidth, metric, and downstream-task dependencies.
+- Cumulative Q4 review state is 433 accepted, 2,322 rejected, 0 deferred, and 1,191 pending. The
+  registry now contains 328 direct relationships and 11 broader claims.
+
+Codecs/language-modeling in-context cloning review (2026-10-25):
+
+- The user approved all 6 staged candidates in chat.
+- Added 6 human-approved direct `related` relationships: 4 connect codec-language-model cloning to
+  speaker prompting, semantic-token intelligibility, prompt quality/duration, and in-the-wild
+  reference coverage; 2 connect reusable codec-token or reference representations across speaker
+  adaptation, synthesis, and modular voice conversion.
+- Three accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. The rationales preserve reference and training limits,
+  identity robustness, task objectives, target construction, and content/speaker partitioning.
+- Cumulative Q4 review state is 439 accepted, 2,322 rejected, 0 deferred, and 1,185 pending. The
+  registry now contains 334 direct relationships and 11 broader claims.
+
+Codecs/language-modeling evaluation/downstream-validity review (2026-10-25):
+
+- The user approved all 6 staged candidates in chat, completing all nine acceptance bundles.
+- Added 6 human-approved direct `related` relationships: 3 distinguish tokenizer or SSL semantic
+  utility from reconstruction and orthogonal codec objectives, 2 connect metric limitations to
+  language-model and multilingual-transfer validity, and 1 connects codebook utilization to
+  perceptual codec/vocoder ceilings.
+- Three accepted pairs supersede scope-gap judgments from the Q3 agent-adjudication run; no
+  human-approved Q3 decision was reversed. All 101 codecs/language-modeling acceptances are now
+  recorded: 20 existing-authority carry-forwards and 81 new direct relationships.
+- Cumulative Q4 review state is 445 accepted, 2,322 rejected, 0 deferred, and 1,179 pending. The
+  registry now contains 340 direct relationships and 11 broader claims. The final theme step is the
+  categorized review of 913 audited rejections.
+
+Codecs/language-modeling theme closure (2026-10-25):
+
+- The user approved the final categorized rejection set in chat.
+- Applied 913 rejections: 500 superseded-Q3 agent proposition-scope decisions reaffirmed and 413
+  new low-semantic-overlap pairs. Every rejection retains a category-specific rationale and
+  reconsideration trigger.
+- Complete theme result: 101 accepted, 913 rejected, and 0 deferred across 1,014 candidates. The
+  acceptances comprise 20 existing-authority carry-forwards and 81 new direct relationships.
+- Overall Q4 state is 445 accepted, 3,235 rejected, 0 deferred, and 266 pending. The registry
+  remains at 340 direct relationships and 11 broader claims. Streaming/agents is next.
+
+Streaming/agents theme-wide agent-triage checkpoint (2026-10-25):
+
+- Audited all 138 pending candidates and saved the advisory record at
+  `docs/records/2026-10-25-q4-streaming-agents-agent-triage.yaml`.
+- Proposed 42 acceptances: 9 existing-authority carry-forwards, 8 incremental-reasoning/latency
+  links, 8 explicit interaction/turn-taking links, 5 unified and low-rate streaming-interface
+  links, 5 interaction-evaluation/context links, and 7 Q4-strengthened full-duplex links.
+- Proposed 96 rejections: 73 superseded-Q3 agent scope-gap decisions reaffirmed and 23 new
+  low-semantic-overlap pairs. No deferrals were proposed.
+- This audit is advisory only and did not mutate the Q4 run or registry. Human review resumes with
+  the 9 existing-authority carry-forwards.
+
+Streaming/agents existing-authority review (2026-10-25):
+
+- The user approved all 9 carry-forward candidates in chat.
+- Six decisions reaffirm memberships in the joint-interaction and responsiveness/floor-holding
+  broader claims; three reaffirm existing direct relationships for backchannel limitations,
+  full-duplex interaction coupling, and interruption detection.
+- No duplicate registry records were created. Both full-duplex broader claims were refreshed from
+  complete member evidence through 2025-12-31, resolving the final three derived-evidence errors.
+- Cumulative Q4 state is 454 accepted, 3,235 rejected, 0 deferred, and 257 pending. Reconciliation
+  health now passes with 0 errors and 2 expected warnings.
+
+Streaming/agents incremental-reasoning and latency review (2026-10-25):
+
+- The user approved all 8 staged candidates in chat.
+- Added 8 human-approved direct `related` relationships connecting reasoning during listening and
+  incremental response preparation to interactive latency, simultaneous listening/speaking,
+  turn-taking, barge-in, and floor-holding behavior.
+- Cumulative Q4 state is 462 accepted, 3,235 rejected, 0 deferred, and 249 pending. The registry
+  now contains 348 direct relationships and 11 broader claims; health passes with 0 errors.
+
+Streaming/agents explicit interaction and turn-taking review (2026-10-25):
+
+- The user approved all 8 staged candidates in chat.
+- Added 8 human-approved direct `related` relationships connecting simultaneous listening and
+  speaking, explicit turn-taking and barge-in modeling, internal interruption detection,
+  backchannel coordination, interactive latency, and interleaved speech-text training.
+- The rationales preserve the distinction between enabling architecture, detection mechanisms,
+  training interfaces, end-to-end latency, and successful interaction behavior.
+- Cumulative Q4 state is 470 accepted, 3,235 rejected, 0 deferred, and 241 pending. The registry
+  now contains 356 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Streaming/agents unified and low-rate streaming-interface review (2026-10-25):
+
+- The user approved all 5 staged candidates in chat.
+- Added 5 human-approved direct `related` relationships: 2 connect self-supervised speech
+  representations to unified spoken models and speech-text alignment, and 3 connect low-rate,
+  variable-rate, codec, and linguistic interfaces to reduced streaming sequence cost.
+- The rationales preserve differences in architecture, training objective, alignment quality,
+  discretization, reconstruction, latency, linguistic retention, and downstream quality.
+- Cumulative Q4 state is 475 accepted, 3,235 rejected, 0 deferred, and 236 pending. The registry
+  now contains 361 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Streaming/agents interaction-evaluation and conversational-context review (2026-10-26):
+
+- The user approved all 5 staged candidates in chat.
+- Added 5 human-approved direct `related` relationships connecting dialogue context to expressive
+  appropriateness, full-duplex responsiveness to multi-turn degradation and multidimensional
+  evaluation, and benchmark evidence to commercial/open-source gaps and floor-holding weaknesses.
+- The commercial/open-source relationship concerns multidimensional benchmark evidence and does
+  not restore the previously rejected automatic-duplex-evaluation relationship.
+- Cumulative Q4 state is 480 accepted, 3,235 rejected, 0 deferred, and 231 pending. The registry
+  now contains 366 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Streaming/agents Q4-strengthened full-duplex review (2026-10-26):
+
+- The user approved all 7 staged candidates in chat.
+- Added 7 human-approved direct `related` relationships connecting evaluated responsiveness and
+  backchannel failures to floor control and joint listening/speaking, connecting full-duplex
+  capability to curricula and alignment, and connecting interactive latency to simultaneous
+  listening/speaking and explicit turn control.
+- These pairs supersede Q3 agent-only scope-gap judgments because Q4 evidence now closes the
+  specific interaction-scope gaps; no human-approved Q3 authority was reversed.
+- All 42 proposed streaming/agents acceptances are now recorded. Cumulative Q4 state is 487
+  accepted, 3,235 rejected, 0 deferred, and 224 pending. The registry now contains 373 direct
+  relationships and 11 broader claims; health passes with 0 errors and 2 expected warnings.
+
+Streaming/agents categorized rejection review and theme closure (2026-10-26):
+
+- The user approved the broad rejection recommendation in chat.
+- Applied all 96 proposed rejections: 73 superseded-Q3 agent scope-gap decisions reaffirmed and 23
+  low-semantic-overlap pairs rejected. Every decision records a category-specific rationale and
+  concrete reconsideration trigger.
+- Complete theme result: 42 accepted, 96 rejected, and 0 deferred across 138 candidates.
+- Overall Q4 state is 487 accepted, 3,331 rejected, 0 deferred, and 128 pending. The registry
+  remains at 373 direct relationships and 11 broader claims; reconciliation health passes with 0
+  errors and 2 expected warnings. Post-training is the only remaining theme.
+
+Post-training theme-wide agent-triage checkpoint (2026-10-26):
+
+- Audited all 128 pending candidates and saved the advisory record at
+  `docs/records/2026-10-26-q4-post-training-agent-triage.yaml`.
+- Proposed 51 acceptances: 28 existing-authority carry-forwards, 5 post-training capability
+  extensions, 4 preference-data and reward-control links, 9 reward-trade-off and evaluator-limit
+  links, 4 speech-text capability and instruction-adaptation links, and 1 guidance/control link.
+- Proposed 77 rejections: 44 superseded-Q3 agent scope-gap decisions reaffirmed and 33 new
+  low-semantic-overlap pairs. No deferrals were proposed.
+- This audit is advisory only and did not mutate the Q4 run or registry. Human review begins with
+  the 28 existing-authority carry-forwards.
+
+Post-training existing-authority review (2026-10-26):
+
+- The user approved all 28 carry-forward candidates in chat.
+- Twenty-six decisions reaffirm membership in the human-approved preference-post-training broader
+  claim: 14 connect targeted gains across architectures and tasks, and 12 connect those gains to
+  multi-objective reward balancing, reward hacking, or base-model capability limits.
+- Two decisions reaffirm existing direct `related` relationships for long-form hierarchical
+  coherence and conversational memory versus zero-shot alignment and memory controls.
+- No duplicate registry records were created. Cumulative Q4 state is 515 accepted, 3,331 rejected,
+  0 deferred, and 100 pending. The registry remains at 373 direct relationships and 11 broader
+  claims; health passes with 0 errors and 2 expected warnings.
+
+Post-training capability-extension review (2026-10-26):
+
+- The user approved all 5 staged candidates in chat.
+- Added non-autoregressive CTC emotional alignment, semantic spoken-model alignment, reward-guided
+  prosody control, and conversational-agent failure-mode distinctions to the human-approved
+  preference-post-training broader claim.
+- Added one direct human-approved `supports` relationship from data- and compute-efficient alignment
+  to targeted perceptual improvement. This supersedes a Q3 agent-only scope-gap judgment because
+  Q4 evidence closes the resource/outcome connection; no human-approved Q3 authority was reversed.
+- Cumulative Q4 state is 520 accepted, 3,331 rejected, 0 deferred, and 95 pending. The registry now
+  contains 374 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Post-training preference-data and reward-control review (2026-10-26):
+
+- The user approved all 4 staged candidates in chat.
+- Added localized token-level alignment, preference-pair construction, and reward-model domain
+  shift and brittleness as three unique refinements of the human-approved preference-post-training
+  broader claim. The two approved candidates involving preference-pair construction share one
+  cluster member, and the emotional-alignment cluster was already present, so no duplicate members
+  were created.
+- Refreshed the broader claim's deduplicated evidence and rationale to represent localized
+  supervision, pair construction, and evaluator reliability.
+- Cumulative Q4 state is 524 accepted, 3,331 rejected, 0 deferred, and 91 pending. The registry
+  remains at 374 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Post-training reward-trade-off and evaluator-limit review (2026-10-26):
+
+- The user approved all 9 staged candidates in chat.
+- Added nine direct human-approved relationships connecting proxy optimization and reward-model
+  brittleness to cross-dimension perceptual regression, domain-shift evaluation, multidimensional
+  spoken-model benchmarks, and task-specific emotion and zero-shot synthesis trade-offs.
+- One relationship between reward hacking and the intelligibility-speaker-similarity trade-off
+  supersedes a Q3 agent-only scope-gap judgment because Q4 evidence closes the specific gap; no
+  human-approved Q3 authority was reversed.
+- Cumulative Q4 state is 533 accepted, 3,331 rejected, 0 deferred, and 82 pending. The registry now
+  contains 383 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Post-training speech-text capability and instruction-adaptation review (2026-10-26):
+
+- The user approved all 4 staged candidates in chat.
+- Added four direct human-approved relationships connecting frozen or decoupled speech adaptation,
+  speech-text alignment, staged pretraining, and instruction-data scale to preservation of language
+  capability and instruction following.
+- Two relationships supersede Q3 agent-only scope-gap judgments because Q4 evidence closes the
+  specific connections; no human-approved Q3 authority was reversed.
+- Cumulative Q4 state is 537 accepted, 3,331 rejected, 0 deferred, and 78 pending. The registry now
+  contains 387 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Post-training guidance/control trade-off review (2026-10-26):
+
+- The user approved the final staged acceptance candidate in chat.
+- Added one direct human-approved `related` relationship connecting preference-based emotional
+  alignment to the control-versus-fidelity boundary exposed by stronger inference-time guidance,
+  while preserving the distinction between training-time and inference-time mechanisms.
+- All 51 proposed post-training acceptances across six semantic bundles are now resolved.
+- Cumulative Q4 state is 538 accepted, 3,331 rejected, 0 deferred, and 77 pending. The registry now
+  contains 388 direct relationships and 11 broader claims; health passes with 0 errors and 2
+  expected warnings.
+
+Post-training rejection closure and Q4 finalization (2026-10-26):
+
+- The user approved both broad rejection categories in chat.
+- Applied all 77 proposed rejections: 44 superseded-Q3 agent scope-gap decisions reaffirmed and 33
+  low-semantic-overlap pairs rejected. Every decision retains a category-specific rationale and
+  reconsideration trigger.
+- Complete post-training result: 51 accepted, 77 rejected, and 0 deferred across 128 candidates.
+- Finalized the full `2025-Q4` run at 538 accepted, 3,408 rejected, 0 deferred, and 0 pending across
+  all 3,946 candidates. The registry contains 388 direct relationships and 11 broader claims.
+- Reconciliation health passes with 0 errors and 2 expected warnings: one retained high-similarity
+  rejection and 15 historical agent-proposed registry records that remain non-authoritative.
+
+Late Q4 corrective Phase 1 (2026-10-31):
+
+- Confirmed that two proceedings-dated Q4 papers were ingested after the original integration
+  branch closed: `2605.18001` (ICICC, 2025-10-01) and `2605.25504` (O-COCOSDA, 2025-11-12).
+- The current-corpus audit also found two later concept-tag additions requiring integration:
+  `2512.14653` into `singing` and `2512.00451` into `neural-codec`.
+- Imported the four current paper pages into the integration worktree and added 8 Phase 1 entries
+  across 7 concepts: `gan-vocoder`, `voice-conversion`, `subjective-evaluation`,
+  `emotion-synthesis`, `diffusion-tts`, `singing`, and `neural-codec`.
+- Preserved every structured claim from each paper page, with concept-scoped relevance, evidence
+  roles, limitations, and caveats. Concept paper entries increased from 2,884 to 2,892.
+- All seven concept-scoped Phase 1 checks pass against the authoritative ingest metadata. The
+  exact current Q4 audit closes at 173 eligible non-Tier-2 pages, two intentional Tier-2 exclusions
+  (`2510.14664`, `2511.09690`), zero missing memberships, and zero page/metadata date conflicts.
+- The original finalized reconciliation run remains intact as audit history but predates these
+  evidence additions. Targeted Phase 2 and bounded corrective reconciliation must precede render,
+  snapshot, and report work.
+
+Late Q4 corrective Phase 2 (2026-10-31):
+
+- Completed targeted synthesis for all seven affected concepts. Assigned all eight new entries to
+  reciprocal method families and refreshed 20 existing claim clusters.
+- Added one emerging singing cluster for uncertainty-aware objectives and differentiable
+  discriminator-feature augmentation. No existing claim status was promoted, weakened, contested,
+  or reversed.
+- The two low-significance late papers were integrated conservatively: PACC primarily refines
+  metric and conversion-validity cautions, while the non-verbal Grad-TTS study strengthens
+  emotion-control, multidimensional evaluation, and naturalness-versus-expressiveness trade-offs.
+- STCTS strengthens ultra-low-rate semantic compression, factorized representations, token-rate
+  trade-offs, intelligibility bottlenecks, and codec-metric limitations. The VISinger2 paper adds
+  qualified singing-synthesis robustness evidence across uncertainty and adversarial training.
+- Checked 24 reassessment items: none triggered, and 19 due in 2026-10 remain open because the late
+  evidence does not satisfy their matched-comparison or independent-replication triggers.
+- Appended seven new sub-200-word concept summaries to the ignored local Phase 2 review log.
+- Every concept-scoped Phase 2 check passes. The corpus-wide integration check passes with 0 errors
+  and 324 accepted warnings; totals are 2,892 concept entries and 444 claim clusters.
+- Reconciliation health now reports exactly four expected derived-evidence errors, bounded to
+  `broader_automatic_judges_require_scoped_human_validation`,
+  `broader_disentanglement_improves_multiattribute_control`,
+  `broader_semantic_acoustic_hierarchies_balance_coherence_and_fidelity`, and
+  `broader_speech_evaluation_requires_multidimensional_coverage`. These define the minimum
+  corrective reconciliation scope; the finalized original Q4 decisions remain unchanged.
+
+Late Q4 corrective reconciliation (2026-10-31):
+
+- Refreshed only the exact derived evidence lists on the four affected human-approved broader
+  claims. Added `2605.18001` as refining evidence for scoped automatic-judge validation,
+  `2605.25504` as supporting evidence for multiattribute disentanglement,
+  `2512.00451` as supporting evidence for semantic–acoustic hierarchy, and `2605.25504` as
+  supporting evidence for multidimensional evaluation.
+- Preserved all 388 relationships, 11 broader-claim memberships and assessments, and all 3,946
+  finalized Q4 candidate decisions. The original run remains unchanged as audit history.
+- Reconciliation health passes with 0 errors and the same 2 expected warnings: one retained
+  high-similarity rejection and 15 historical agent-proposed registry records that remain
+  non-authoritative.
+
+#### Evaluation review — batch 1 staged (2026-09-27)
+
+Reviewed the 20 highest-ranked evaluation-theme candidates against the complete local clusters,
+role-specific evidence, Q3 human decisions, and current registry semantics. The user approved all
+20 decisions in chat on 2026-09-27 after a focused discussion of `cand_c22293967937dc87`.
+
+Recommended carry-forward acceptances (11):
+
+- `cand_31d848f2cf2d5339` → `broader_automatic_judges_require_scoped_human_validation` (`related`).
+- `cand_184ac5726f07e431` → `rel_3733fe08a5fc7076` (`specialization`).
+- `cand_8194d81e627f9448` → `rel_1b6a20de587131eb` (`related`).
+- `cand_298329dc3edc248a` → `rel_22890ef4dd862881` (`specialization`).
+- `cand_e84332e805b35868` → `rel_20d9d582181c57af` (`refines`).
+- `cand_42c602ac1a8bc20d` → `rel_6a2203a04cbad29b` (`refines`).
+- `cand_655acebcfc38f1b1` → `rel_42f1a17a289b494b` (`specialization`).
+- `cand_d3f194ba5acc8ef7` → `rel_f727d5f51b38c24f` (`specialization`).
+- `cand_2876c19350b52278` → `broader_automatic_judges_require_scoped_human_validation` (`related`).
+- `cand_ee63d0aa7024e7a8` → `rel_8cabbbc9cd73fcf3` (`specialization`).
+- `cand_8073539c0af36d87` → `broader_speech_evaluation_requires_multidimensional_coverage`
+  (`related`).
+
+The endpoint propositions and relationship semantics still match the Q3-reviewed targets. Q4
+evidence broadens the supporting records and caveats but does not reverse or materially change
+these relationships.
+
+Recommended new acceptances (5):
+
+- `cand_0a9c17412e5b2ad6` (`refines`): the speech-to-speech cluster adds concurrent response
+  generation, premature-action, short-chunk, and coherence boundaries to the spoken-language-model
+  claim that incremental reasoning and tool use reduce latency while improving dialogue quality.
+- `cand_81f685e451ad14c7` (`related`) and `cand_87fca0cc2d332354` (`related`) should extend
+  `broader_preference_posttraining_improves_targeted_speech_attributes`: the Q4 singing cluster and
+  continuous-output GRPO cluster extend the reviewed principle to flow-based singing and
+  non-autoregressive generation, while retaining task-specific reward and balancing caveats.
+- `cand_c2fadf3be7fe906d` (`refines`): the evaluation-metrics cluster supplies the concrete
+  multi-condition protocol consequence of the neural-codec finding that no single clean-speech
+  proxy captures listener quality, robustness, and downstream utility.
+- `cand_466ad22f33810376` (`related`): new Q4 streaming evidence now links iterative
+  flow/diffusion-vocoder quality-versus-cost results to the operational step-count, caching, and
+  algorithmic-delay trade-off, while the two clusters retain distinct offline and streaming scope.
+
+Recommended rejections (4):
+
+- `cand_da7660f07e660179`: a cross-task SSL-conditioning claim and a voice-conversion-specific
+  speaker-reduced-content claim remain different propositions; added shared papers do not change
+  the Q3 rejection.
+- `cand_3ec70c5e083f09d1`: codec reconstruction and source-identity suppression use adversarial
+  objectives for different targets, failure modes, and evaluation outcomes.
+- `cand_d3fb513e0955e1eb`: general linguistic information in SSL features does not itself establish
+  the voice-conversion claim that speaker-reduced units improve conversion transfer.
+- `cand_c22293967937dc87`: feasibility of annotation-free duplex metrics is an evaluation-method
+  claim, while the commercial/open-source gap is a comparative system-performance claim.
+
+Final batch state: 16 accepted, 4 rejected, 0 deferred, and 0 pending. The accepted decisions
+reaffirm 11 existing reviewed targets, add three human-approved direct relationships, and extend
+`broader_preference_posttraining_improves_targeted_speech_attributes` with the reviewed singing and
+non-autoregressive GRPO members. The automatic-judge, preference-post-training, and
+multidimensional-evaluation broader claims now carry exact Q4-derived evidence lists and a
+`2025-12-31` cutoff. Reconciliation validation accepts all 19 decisions; the remaining 16 errors
+are stale derived-evidence lists on the eight broader claims not yet reached in thematic review.
+The duplex-metrics/commercial-gap candidate was rejected because feasibility of automatic
+measurement neither supports nor refines a comparative performance claim, and the shared papers'
+judge-calibration, narrow-coverage, and commercial-model circularity caveats make a direct link
+especially liable to overstate the evidence.
+
+#### Evaluation review — batch 2 staged (2026-09-27)
+
+Reviewed evaluation-theme candidates ranked 21–40. The user approved all 20 recommendations in
+chat on 2026-09-27.
+
+Recommended carry-forward acceptances (3):
+
+- `cand_0e0e160a399e03dd` → `rel_e6b0093f2569a674` (`tradeoff`).
+- `cand_e791168113c7a4ba` → `rel_583eed0f1d70062f` (`specialization`).
+- `cand_dc369885b66923fc` → `broader_automatic_judges_require_scoped_human_validation` (`related`).
+
+Recommended new acceptances (11):
+
+- `cand_23be215613c3d0fc` (`supports`): Q4 evidence now makes auxiliary flow-matched prosody
+  latents a concrete stochastic mechanism supporting one-to-many prosody variation.
+- `cand_cf4bd7a58d1f21ad` (`supports`): prompt interpretation and training-data stereotypes supply
+  a mechanism for the demographic bias exposed by instruction-TTS evaluation.
+- `cand_b01b451c86ca73b5` (`refines`): the evaluation cluster turns codec domain-shift failures
+  into concrete multi-condition and multi-metric protocol requirements.
+- `cand_90b2f6a64c900adf` (`related`) should extend
+  `broader_preference_posttraining_improves_targeted_speech_attributes` with the zero-shot
+  multidimensional-reward and stopping-criteria member.
+- `cand_4ab58397bd8524b3` (`refines`): incomplete speaker and paralinguistic leakage bounds the
+  voice-conversion claim that SSL units are speaker-reduced content representations.
+- `cand_cdbbf97b9111c85d` (`supports`): cross-source composition is a concrete diagnostic exposing
+  the cross-attribute interference asserted by the prosody-control cluster.
+- `cand_cfa459061c8beedc` (`related`): clean/in-domain evaluation and subjective transfer failure
+  converge on the need to test domain and language shift, while retaining different protocol scope.
+- `cand_5fcd1510cac09c0d` (`related`) should extend
+  `broader_speech_evaluation_requires_multidimensional_coverage` with the prosody-metric member.
+- `cand_6e9a3b2cec8922f8` (`related`): flow-matching chunk controls and causal GAN mitigation are
+  distinct architectural instances of maintaining quality under bounded streaming context.
+- `cand_eb4e02daf389830c` (`refines`): the zero-shot intelligibility/identity trade-off bounds the
+  claim that preference optimization improves multiple targeted dimensions.
+- `cand_301f028d844eb706` (`supports`): emotion-metric disagreement supplies the reason that
+  fine-grained style and prosody require dimension-specific perceptual tests.
+
+Recommended rejections (6):
+
+- `cand_5d8c53007d978530`: domain-specific validation requirements and the feasibility of producing
+  personalized assistive voices are separate evaluation and capability claims.
+- `cand_5b314e5e7c81027e`: lag behind text LLMs on semantic reasoning and the within-speech gap
+  between semantic and paralinguistic understanding are different comparisons.
+- `cand_96e0e1da77bf5dc4`: demographic/fine-control bias and an open-versus-closed instruction-
+  following gap have different variables and mechanisms.
+- `cand_da6850dd15cbc1e3`: automatic duplex metric feasibility does not establish that backchannel
+  and interruption handling remain unsolved.
+- `cand_5f3dca1a2ffe808f`: metric misranking of vocoders does not establish the reconstruction
+  benefit of adversarial codec objectives.
+- `cand_8fe9ed455d7f70e5`: transcript-based evaluation blindness and a model capability gap in
+  paralinguistic understanding are measurement and performance claims, respectively.
+
+Final batch totals: 14 accepted, 6 rejected, and 0 deferred. The accepted decisions reaffirm three
+Q3-reviewed targets, add nine human-approved direct relationships, extend the preference-
+post-training broader claim with a zero-shot reward-control member, and extend the multidimensional-
+evaluation broader claim with a prosody-metric member. Validation accepts all 40 decisions recorded
+across the first two batches; 3,906 candidates remain pending.
+
+#### Q3 cadence audit and Q4 correction (2026-09-27)
+
+The initial 20-candidate Q4 cadence does not match the successful Q3 process. Q3 handled its 2,049
+raw candidates in eight agent-adjudication passes—one per theme—not 103 human-reviewed chunks. The
+agent pass rejected 1,939 candidates and surfaced 110 proposed acceptances. Only those 110 were
+opened for explicit human review, grouped into 20 coherent semantic bundles such as automatic
+evaluators, multidimensional evaluation, diffusion/flow acceleration, unseen-speaker transfer,
+full-duplex interaction, and preference optimization.
+
+Q3 theme totals were: evaluation 351 candidates / 28 proposed acceptances; efficiency 90/10;
+speaker 522/19; controllability 319/14; robustness 77/3; codecs/language modeling 541/15;
+streaming/agents 89/9; and post-training 60/12. The corrective human-review run therefore contained
+110 candidates rather than all 2,049.
+
+Recommended Q4 cadence after the already approved 40 decisions:
+
+1. Preserve the 40 recorded human decisions.
+2. Agent-adjudicate the remaining queue one complete theme at a time, retaining every rejection in
+   a separate audit trail.
+3. Surface only proposed acceptances and genuine deferrals in coherent semantic bundles for chat
+   review, with theme-level rejection counts and rationale categories visible to the user.
+4. Apply registry authority only after the user approves each semantic bundle.
+
+This restores the Q3 separation between exhaustive machine-scale triage and focused human review,
+reducing the projected 200 chat batches to eight broad agent passes plus a much smaller number of
+acceptance bundles. The user approved this cadence in chat on 2026-09-27.
+
+#### Evaluation theme-wide agent triage (2026-09-27)
+
+Preserved the 40 completed human decisions and reviewed all 682 remaining evaluation candidates in
+one agent-only thematic pass. The complete advisory audit is stored at
+`docs/records/2026-09-27-q4-evaluation-agent-triage.yaml`; it records source commits and concept
+digests, component signals, endpoints, recommendation, bundle, and rejection rationale category for
+every candidate. It is not registry or rendering authority.
+
+Triage outcome:
+
+- 68 proposed acceptances, grouped into 27 links already covered by reviewed authority plus 41 new
+  proposition-level recommendations.
+- 614 proposed rejections: 296 Q3 scope-gap rejections reaffirmed, 232 pairs with low semantic
+  overlap despite shared papers, and 86 new shared-evidence pairs whose variables, mechanisms,
+  tasks, or outcomes remain materially different.
+- 0 proposed deferrals.
+
+The 41 new proposals form seven semantic bundles: automatic metric validity (6), multidimensional/
+domain/fairness evaluation (9), preference/control trade-offs (8), codec/streaming architecture
+(9), spoken-interaction benchmarks (5), attribute interference (3), and prompt/identity boundaries
+(1). The 27 carry-forward proposals will be folded into the nearest semantic bundle rather than
+reviewed as an undifferentiated block.
+
+First human bundle staged for chat: automatic speech evaluators (9 candidates). Eight endpoint
+pairs already belong to `broader_automatic_judges_require_scoped_human_validation`; the ninth,
+`cand_d6de859adebc318f`, proposes that known LLM/audio-judge reliability limits refine how
+multidimensional spoken-model benchmark gaps should be interpreted. The user approved all nine in
+chat on 2026-09-27. The run now records 39 accepted and 10 rejected decisions with 3,897 pending;
+the registry has 77 direct relationships and 11 broader claims. Eight decisions reaffirm the
+existing broader claim, while `rel_5c57017ce97f4a3e` records the new benchmark refinement.
+
+Second human bundle approved in chat: learned and objective metric validity (12 candidates). Three
+existing direct relationships and four links within
+`broader_learned_quality_metrics_are_useful_but_domain_sensitive` were reaffirmed. Four new direct
+relationships connect WER/CER to perceptual divergence, learned quality metrics to LLM/audio-judge
+limitations, speaker-similarity confounds to zero-shot cloning evaluation, and singing metric limits
+to voice-conversion evaluation. The automatic-evaluator broader claim gained the zero-shot cloning
+metric-limit cluster as a specialization. Both affected broader claims now carry exact derived
+evidence through `2025-12-31`. The run records 51 accepted and 10 rejected decisions with 3,885
+pending; the registry has 81 direct relationships and 11 broader claims. Validation reduced the
+expected transitional derived-evidence errors from 16 to 13, with no errors in the approved bundle.
+
+Third human bundle approved in chat: multidimensional, domain-aware, and fairness-aware evaluation
+(15 candidates). Six decisions reaffirm
+`broader_speech_evaluation_requires_multidimensional_coverage`; nine new direct relationships cover
+demographic fairness methodology and prompt or perceptual bias, multilingual training imbalance and
+per-language reporting, language-specific prosody, emotion-metric limits, subjective-protocol
+saturation, and the distinct perceptual axes needed for voice-conversion and zero-shot-cloning
+evaluation. The run records 66 accepted and 10 rejected decisions with 3,870 pending; the registry
+has 90 direct relationships and 11 broader claims.
+
+Fourth human bundle approved in chat: preference optimization and control-quality trade-offs (14
+candidates). Five decisions reaffirm the preference-post-training broader claim and one reaffirms an
+existing direct refinement from preference-pair construction to targeted perceptual gains. Eight new
+direct relationships cover guidance strength, prosodic diversity, zero-shot reward controls,
+post-LM pipeline limits, RLHF/DPO instability, and multi-objective balancing of intelligibility and
+speaker similarity. The run records 80 accepted and 10 rejected decisions with 3,856 pending; the
+registry has 98 direct relationships and 11 broader claims.
+
+Fifth human bundle approved in chat: spoken-interaction architectures and benchmarks (5
+candidates). Five new direct relationships connect cascade/end-to-end trade-offs to the persistent
+paralinguistic gap, frozen or decoupled LLM training to preservation of text reasoning, cascade
+benchmark advantages to multidimensional interpretation, backchannel timing failures to full-duplex
+modeling requirements, and the spoken-versus-text semantic gap to multidimensional benchmarks. The
+run records 85 accepted and 10 rejected decisions with 3,851 pending; the registry has 103 direct
+relationships and 11 broader claims.
+
+Sixth human bundle approved in chat on 2026-10-09: codec, vocoder, and streaming architecture
+trade-offs (9 candidates). Nine new direct relationships connect cascade/end-to-end benchmark
+results to streaming architecture trade-offs; iterative flow/diffusion refinement to causal
+reconstruction; flow matching to voice conversion; tokenizer bottlenecks to codec evaluation scope;
+causality and lookahead to accelerated zero-shot TTS; codec-TTS perceptual metrics to codec metric
+consensus; flow acceleration to iterative generation cost; real-time vocoder choices; and parallel
+codec generation to zero-shot acceleration. The run records 94 accepted and 10 rejected decisions
+with 3,842 pending; the registry has 112 direct relationships and 11 broader claims.
+
+Seventh and final evaluation acceptance bundle approved in chat on 2026-10-10: prompt boundaries,
+annotation, and attribute interference (4 candidates). Four new direct relationships connect prompt
+duration and quality across speaker adaptation and zero-shot cloning, prosodic cross-attribute
+interference to non-monotonic perceptual control, automated annotation to scalable emotional-speech
+data, and disentanglement leakage to emotion-strength trade-offs.
+
+After the final approvals, the complete audited rejection set was applied under the Q3-style cadence
+approved earlier in the session. All 614 agent-rejected evaluation candidates now carry their audit
+rationale and a category-specific reconsideration trigger: 296 reaffirm Q3 proposition-scope gaps,
+232 have low semantic overlap, and 86 share evidence while retaining different variables,
+mechanisms, tasks, or outcomes. Evaluation is closed with 98 accepted, 624 rejected, and 0 deferred
+decisions across 722 candidates. The full Q4 run now has 722 reviewed and 3,224 pending candidates;
+the registry has 116 direct relationships and 11 broader claims.
+
+#### Efficiency theme-wide agent triage (2026-10-10)
+
+Reviewed all 157 efficiency candidates in one agent-only thematic pass. The complete advisory audit
+is stored at `docs/records/2026-10-10-q4-efficiency-agent-triage.yaml`; it records source commits and
+concept digests, component signals, endpoints, recommendation, bundle, and rejection rationale for
+every candidate. It is not registry or rendering authority.
+
+Triage outcome:
+
+- 28 proposed acceptances: 10 links already covered by reviewed direct relationships, 5 interactive
+  and streaming-latency links, 10 parallel or token-decoding links, and 3 flow/diffusion-acceleration
+  links.
+- 129 proposed rejections: 75 Q3 proposition-scope rejections reaffirmed, 48 pairs with low semantic
+  overlap despite shared papers or vocabulary, and 6 pairs whose shared evidence supports different
+  variables, mechanisms, tasks, or outcomes.
+- 0 proposed deferrals.
+
+The 18 new proposals and five Q3-rejection reversals are grouped by mechanism rather than candidate
+score. Only the 28 proposed acceptances will be surfaced for chat review; the complete rejection set
+will be applied after those bundles are resolved, following the same cadence used for evaluation.
+
+First efficiency human bundle approved in chat: interactive end-to-end latency (6 candidates). One
+decision reaffirms the reviewed link from incremental generation to interactive spoken-model
+latency. Five new direct relationships connect incremental reasoning and acoustic generation,
+end-to-end bottleneck shifts, incremental reasoning as an orchestration mechanism, interaction-aware
+streaming metrics, and low-rate tokenization. The full run records 104 accepted and 624 rejected
+decisions with 3,218 pending; 151 efficiency candidates remain pending until the other acceptance
+bundles and audited rejections are applied.
+
+Third and final efficiency human bundle approved in chat: flow and diffusion acceleration (8
+candidates). Five decisions reaffirm reviewed relationships covering flow matching versus diffusion,
+diffusion distillation, parallel voice conversion, iterative-sampling latency, and faster flow or
+consistency paths. Three new direct relationships connect chunked flow generation to iterative
+vocoder trade-offs and connect both faster diffusion paths and iterative diffusion latency to
+few-step flow-matching acceleration.
+
+After the final approvals, all 129 audited efficiency rejections were applied: 75 reaffirm Q3
+proposition-scope gaps, 48 have low semantic overlap, and 6 share evidence while retaining distinct
+variables, mechanisms, tasks, or outcomes. Each rejection carries its rationale and a category-
+specific reconsideration trigger. Efficiency is closed with 28 accepted, 129 rejected, and 0
+deferred decisions across 157 candidates. The full Q4 run records 126 accepted and 753 rejected
+decisions with 3,067 pending; the registry has 134 direct relationships and 11 broader claims.
+
+#### Speaker theme-wide agent triage (2026-10-10)
+
+Reviewed all 956 speaker candidates in one agent-only thematic pass. The complete advisory audit is
+stored at `docs/records/2026-10-10-q4-speaker-agent-triage.yaml`; it records source commits and
+concept digests, component signals, endpoints, recommendation, semantic bundle, and rejection
+rationale for every candidate. It is not registry or rendering authority.
+
+Triage outcome:
+
+- 67 proposed acceptances: 29 pairs already covered by reviewed direct or broader authority, plus
+  38 new or Q4-strengthened proposals grouped into reference conditioning and speaker encoders (7),
+  cross-lingual identity and accent (9), disentanglement and attribute leakage (6), singing timbre
+  and pitch transfer (6), and speaker trade-offs, robustness, and metrics (10).
+- 889 proposed rejections: 486 Q3 proposition-scope rejections reaffirmed, 344 pairs with low
+  semantic overlap, and 59 shared-evidence pairs whose variables, mechanisms, tasks, or outcomes
+  remain materially different.
+- 0 proposed deferrals.
+
+Only the 67 proposed acceptances will be surfaced for chat review. The complete audited rejection
+set will be applied after those semantic bundles are resolved.
+
+First speaker human bundle approved in chat on 2026-10-17: reference conditioning and speaker
+encoders (12 candidates). Five decisions reaffirm the existing broader claim that reference
+conditioning enables unseen-voice transfer, and five Q4-strengthened decisions extend or refine
+that claim with learned speaker encoders, cross-lingual sensitivity, voice-conversion reference
+controls, and in-the-wild prompt robustness. Four new local members were added to the broader claim,
+whose exact supporting, contradicting, and refining evidence was refreshed through the
+`2025-12-31` cutoff. Two new direct relationships connect generated reference-free speaker
+representations across adaptation and conversion and connect adaptation failures under noise or
+domain mismatch to the need for in-the-wild prompt coverage. The full run now records 138 accepted
+and 753 rejected decisions with 3,055 pending; 55 proposed speaker acceptances remain for semantic-
+bundle review. The registry has 136 direct relationships and 11 broader claims.
+
+Second speaker human bundle approved in chat on 2026-10-17: cross-lingual identity and accent (11
+candidates). Two decisions reaffirm reviewed direct relationships linking multilingual cloning and
+cross-lingual conversion to zero-shot language leakage. Nine new direct relationships connect the
+identity-language fidelity trade-off with accent and pronunciation control, language-sensitive
+adaptation, low-resource cloning, similarity-intelligibility trade-offs, multilingual SSL, and
+shared phonetic representations. The full run now records 149 accepted and 753 rejected decisions
+with 3,044 pending; 44 proposed speaker acceptances remain for semantic-bundle review. The registry
+has 145 direct relationships and 11 broader claims.
+
+Third speaker human bundle approved in chat on 2026-10-17: disentanglement and attribute leakage
+(24 candidates). Eighteen decisions reaffirm the existing reviewed multiattribute-disentanglement
+broader claim. Six Q4-strengthened decisions add ASR/text-aligned content isolation, architectural
+stream separation, identity-expressiveness adaptation trade-offs, persistent speaker/prosody
+leakage in SSL features, incomplete SSL disentanglement, and intervention-level cross-attribute
+interference as reviewed members. The broader claim's exact evidence was refreshed through the
+`2025-12-31` cutoff. The full run now records 173 accepted and 753 rejected decisions with 3,020
+pending; 20 proposed speaker acceptances remain for semantic-bundle review. The registry retains
+145 direct relationships and 11 broader claims.
+
+Fourth speaker human bundle approved in chat on 2026-10-17: singing timbre and pitch transfer (6
+candidates). Six new direct relationships connect shared speech-singing prosody learning with
+cross-modal timbre transfer and pitch-preserving conversion; factorized low-resource singing
+representations, explicit signal conditioning, and robust augmentation with pitch preservation;
+and real-world singing conversion with the broader need for domain-invariant conversion
+representations. The full run now records 179 accepted and 753 rejected decisions with 3,014
+pending; 14 proposed speaker acceptances remain for the final acceptance bundle. The registry has
+151 direct relationships and 11 broader claims.
+
+Fifth and final speaker human bundle approved in chat on 2026-10-17: trade-offs, robustness, and
+metrics (14 candidates). Four decisions reaffirm reviewed relationships covering the
+privacy-personalization tension, mismatch-sensitive adaptation and conversion, speaker-similarity
+metric divergence, and the content/prosody trade-off in SSL representations. Ten new direct
+relationships connect cross-attribute interference and prosodic diversity limits with preference
+and perceptual trade-offs; non-clean flow matching with robust conversion and reference
+adaptation; learned speaker encoders and zero-shot conversion with metric and encoder sensitivity;
+and aligned identity, expressiveness, intelligibility, and similarity trade-offs across tasks.
+
+After the final acceptance bundle, all 889 audited speaker rejections were applied: 486 reaffirm
+Q3 proposition-scope gaps, 344 have low semantic overlap, and 59 share evidence while retaining
+different variables, mechanisms, tasks, or outcomes. Each rejection carries its rationale and a
+category-specific reconsideration trigger. Speaker is closed with 67 accepted, 889 rejected, and 0
+deferred decisions across 956 candidates. The full run records 193 accepted and 1,642 rejected
+decisions with 2,111 pending; the registry has 161 direct relationships and 11 broader claims.
+
+Second efficiency human bundle approved in chat: parallel and token-efficient decoding (14
+candidates). Four decisions reaffirm reviewed relationships covering parallel or speculative
+streaming, zero-shot acceleration, incremental generation, and masked codec generation. Ten new
+direct relationships connect autoregressive latency to parallel decoding and codec token rate;
+parallel latent generation and grouped prediction to zero-shot acceleration; non-autoregressive
+flow TTS to parallel latent generation; and low-rate tokenization to streaming efficiency. The full
+run records 118 accepted and 624 rejected decisions with 3,204 pending; 137 efficiency candidates
+remain pending until the final acceptance bundle and audited rejections are applied.
+
 ### Stage 5 — Concept rendering
 
-- [ ] Identify every Overview/In Depth pair stale against its Q4-updated YAML.
-- [ ] Render both formats from one shared editorial plan per concept.
-- [ ] Preserve uncertainty, evidence roles, scope limits, and representative traceability.
-- [ ] Render `singing` and `fine-tuning` if their complete evidence now supports useful production
+- [x] Identify every Overview/In Depth pair stale against its Q4-updated YAML.
+- [x] Render both formats from one shared editorial plan per concept.
+- [x] Preserve uncertainty, evidence roles, scope limits, and representative traceability.
+- [x] Render `singing` and `fine-tuning` if their complete evidence now supports useful production
       synthesis; otherwise document why a placeholder remains.
-- [ ] Update the concept catalog and content log.
+- [x] Update the concept catalog and content log.
 
 **Gate:** Render health reports zero errors; every Q4-updated concept either has current production
 formats or an explicit evidence-based reason for deferral.
 
+Rendering checkpoint (2026-10-31):
+
+- The staleness audit found all 23 concept graphs ahead of their rendered pages: 21 existing pairs
+  were stale and the `singing` and `fine-tuning` pairs were missing.
+- Fully regenerated the `gan-vocoder` Overview and In Depth pages from its 82-paper Q4 graph,
+  updated the concept catalog and log, and validated target lengths at 848 and 2,736 words.
+- Fully regenerated the `voice-conversion` Overview and In Depth pages from its 117-paper Q4 graph,
+  incorporating synthetic supervision, reference-free identities, robust singing conversion, and
+  the late metric-protocol caveat. Target lengths validate at 855 and 2,879 words.
+- Fully regenerated the `subjective-evaluation` Overview and In Depth pages from its 255-paper Q4
+  graph. The pair preserves contested learned-metric and automated-judge conclusions, integrates
+  the late PACC and non-verbal emotion evidence conservatively, and validates at 871 and 2,821
+  words.
+- Fully regenerated the `emotion-synthesis` Overview and In Depth pages from its 98-paper Q4 graph,
+  preserving long-horizon emotional coherence as emerging and treating the late non-verbal study
+  as qualified temporal-control, event-modeling, and trade-off evidence. Target lengths validate
+  at 801 and 2,509 words.
+- Fully regenerated the `diffusion-tts` Overview and In Depth pages from its 58-paper Q4 graph,
+  adding masked discrete generation, structured diffusion-vocoder surrogates, and the late
+  fine-grained non-verbal conditioning evidence. Target lengths validate at 934 and 2,857 words.
+- Promoted `singing` from its placeholder to its first production Overview and In Depth pair from
+  the 21-paper Q4 graph. The synthesis treats explicit conditioning, style–naturalness trade-offs,
+  and metric limits as established within the graph while preserving the remaining clusters as
+  emerging. Target lengths validate at 809 and 2,701 words.
+- Fully regenerated `neural-codec` from its 240-paper corrected Q4 graph, adding domain-aware codec
+  robustness, sub-10-Hz and single-codebook trends, and matched reconstruction-versus-downstream
+  interpretation. Target lengths validate at 914 and 2,747 words.
+- Fully regenerated `evaluation-metrics` from its 346-paper Q4 graph, incorporating full-duplex
+  responsiveness, fairness, accessibility, provenance robustness, and spoken-reasoning evaluation.
+  Target lengths validate at 860 and 2,802 words.
+- Fully regenerated `zero-shot-tts` from its 262-paper Q4 graph, adding multi-reward post-training,
+  reward-saturation controls, and the emerging boundary between acoustic cloning and coarse
+  identity generation from faces or descriptions. Target lengths validate at 903 and 2,865 words.
+- Fully regenerated `spoken-language-model` from its 173-paper Q4 graph, adding incremental
+  reasoning and tool use during listening plus audio-native bias, misuse, privacy, and provenance
+  evaluation. Target lengths validate at 885 and 2,800 words.
+- Render health passes with 0 errors and 53 warnings. Ten pairs are now current; the warnings
+  describe the 12 remaining stale pairs, one missing pair, and three pre-existing
+  under-length pages that will be replaced during this pass.
+
+Rendering checkpoint (2026-11-01):
+
+- Fully regenerated `speech-to-speech` from its 94-paper Q4 graph, adding incremental reasoning
+  during listening, structured and synthetic direct translation, and condition-specific
+  multilingual and code-switching limits. Target lengths validate at 914 and 2,980 words.
+- Fully regenerated `autoregressive-codec-tts` from its 196-paper Q4 graph, adding grouped,
+  patchwise, sparse, and speculative decoding while separating reduced LM steps from complete
+  rendering latency. Target lengths validate at 843 and 2,780 words.
+- Fully regenerated `multilingual-tts` from its 105-paper Q4 graph, updating code-switching and
+  accent-leakage assessments and adding synthetic parallel data plus uneven cross-lingual style
+  transfer. Target lengths validate at 863 and 2,830 words.
+- Fully regenerated `self-supervised-speech` from its 176-paper Q4 graph, adding cross-lingual
+  interleaving and preserving the contested boundary around automated fine-grained prosody
+  judging. Target lengths validate at 841 and 2,642 words.
+- Fully regenerated `flow-matching` from its 125-paper Q4 graph, adding explicit and implicit
+  alignment boundaries, token-wise coarse-to-fine synthesis, streaming deployment, and the
+  expanded role of flow decoders in hybrid systems. Target lengths validate at 841 and 2,704
+  words.
+- Fully regenerated `prosody-control` from its 115-paper Q4 graph, adding cross-attribute
+  interference and reward-guided post-training while retaining reward guidance as the sole
+  emerging cluster. Target lengths validate at 923 and 3,817 words.
+- Fully regenerated `streaming-tts` from its 75-paper Q4 graph, adding concurrent reasoning during
+  listening and the movement of latency bottlenecks across the full interactive pipeline. Target
+  lengths validate at 835 and 2,921 words.
+- Fully regenerated `rlhf-speech` from its 49-paper Q4 graph, adding localized token-level
+  alignment, reward-model brittleness, pipeline placement, and iterative human-preference
+  recovery. Target lengths validate at 811 and 2,839 words.
+- Fully regenerated `speaker-adaptation` from its 98-paper Q4 graph, adding reference-free speaker
+  generation, cross-modal identity inputs, and the emerging result that speaker supervision should
+  vary across generator layers and timesteps. Target lengths validate at 936 and 3,364 words.
+- Fully regenerated `disentanglement` from its 116-paper Q4 graph, adding dedicated semantic,
+  acoustic, speaker, and environment streams plus cross-source intervention tests for hidden
+  attribute leakage. Target lengths validate at 952 and 3,318 words.
+- Fully regenerated `instruction-conditioned-tts` from its 57-paper Q4 graph, adding guidance
+  strength versus fidelity, iterative editing, text-only voice control, and the contested boundary
+  between stronger instruction interpretation and a fixed renderer. Target lengths validate at
+  1,027 and 3,323 words.
+- Fully regenerated `transformer-enc-dec-tts` from its 33-paper Q4 graph, emphasizing prosodic
+  segmentation, low-resource curation, synthetic augmentation, adversarial acoustic detail, and
+  the continuing operational value of transparent duration and pitch modules. Target lengths
+  validate at 876 and 3,186 words.
+- Render health passes with 0 errors and 2 warnings. All 22 existing pairs are current and no stale
+  pair remains; both warnings belong to the missing `fine-tuning` Overview and In Depth pages.
+- Created the first production `fine-tuning` Overview and In Depth pair from its one-paper graph.
+  Both clusters remain explicitly emerging, no method family is inferred below the two-paper
+  threshold, and the pages separate the adapter-versus-full-tuning result from the confounded
+  pretraining speaker-diversity result. Target lengths validate at 855 and 2,608 words.
+- Render health now passes with 0 errors and 0 warnings. All 23 canonical concepts have current
+  Overview and In Depth pages, so the Stage 5 gate is closed.
+
 ### Stage 6 — Field overview rendering
 
-- [ ] Regenerate `overview.md` from all 23 concept YAMLs and the human-approved registry.
-- [ ] Deduplicate linked clusters and paper evidence while retaining local caveats.
-- [ ] Separate Q4 evidence change from publication volume and attention.
-- [ ] State the evidence cutoff and retrospective assessment date precisely.
-- [ ] Refresh reader navigation if concept or report availability changes.
+- [x] Regenerate `overview.md` from all 23 concept YAMLs and the human-approved registry.
+- [x] Deduplicate linked clusters and paper evidence while retaining local caveats.
+- [x] Separate Q4 evidence change from publication volume and attention.
+- [x] State the evidence cutoff and current assessment date precisely.
+- [x] Refresh reader navigation for all 23 completed concept pairs.
 
 **Gate:** All 23 concepts inform the field view; no candidate or agent-only proposal affects the
 published synthesis; every factual conclusion remains traceable.
+
+Field-overview checkpoint (2026-11-01):
+
+- Regenerated the 3,085-word current-state overview from all 23 Q4 concept graphs and the reviewed
+  registry, covering 668 unique papers, 2,892 concept memberships, and 444 local claim clusters.
+- Presented all 11 human-approved broader claims once, used 373 approved direct relationships for
+  cross-concept interpretation, preserved material caveats, and excluded all 15 agent-proposed
+  registry records from evidence authority.
+- Added a dedicated Q4-change section that distinguishes coverage growth from scientific progress
+  and avoids treating changed cluster-status totals as direct promotion counts.
+- Updated navigation for the completed `fine-tuning` and `singing` pairs and recorded the exact
+  2025-12-31 evidence cutoff, 2026-11-01 assessment date, and current registry digest.
+- Render and agent-workflow health both pass with 0 errors and 0 warnings. Stage 6 is closed.
 
 ### Stage 7 — Optional Q4 snapshot and quarterly report
 

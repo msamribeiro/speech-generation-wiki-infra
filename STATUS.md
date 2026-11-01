@@ -1,19 +1,19 @@
 # Project Status
 
-Last updated: 2026-09-26
+Last updated: 2026-11-01
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
-retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
-the Q4 2025 cycle. Q2 2026 ingestion is queued behind that work.
+retrospective snapshot, field rendering, and quarterly reporting. Q4 2025 is complete through
+integration, reconciliation, concept rendering, and current field-overview rendering. Q2 2026
+ingestion is queued behind the optional Q4 snapshot and report decision.
 
 ---
 
 ## Current priorities
 
-1. Run Q4 cross-concept reconciliation and obtain human decisions for accepted relationships.
-2. Regenerate stale concept pages and the field overview.
-3. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
-4. Resume Q2 2026 parsing and ingestion after the Q4 content cycle.
+1. Decide whether to freeze the Q4 snapshot and publish the Q4 retrospective report.
+2. If approved, complete and validate the immutable snapshot/report pair.
+3. Resume Q2 2026 parsing and ingestion after the Q4 content cycle.
 
 The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
@@ -29,23 +29,28 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 | Parsed active papers | 1,025 | Includes ingested papers and accepted papers ready for ingest |
 | Accepted and parsed, ready to ingest | 117 | 76 April 2026 and 41 May 2026 papers |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
-| Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
-| Claim clusters | 443 | 342 strongly supported, 17 contested |
-| Rendered concept pairs | 21/23 | `singing` and `fine-tuning` remain unrendered |
-| Reconciliation state | 64 relationships, 11 broader claims | Human-approved Q3 authority plus preserved non-authoritative audit history |
+| Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
+| Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
+| Rendered concept pairs | 23/23 present and current for Q4 | Every canonical concept has a current Overview and In Depth page |
+| Current field overview | Complete for Q4 | 23 concepts, 668 unique papers, 2,892 memberships, 444 local clusters, and 11 approved broader claims |
+| Reconciliation state | 388 relationships, 11 broader claims; 3,946 Q4 decisions finalized, 0 pending | Original run and bounded late-evidence corrective refresh complete |
 | Published snapshots | 1 | Retrospective `2025-Q3` snapshot |
 | Published quarterly reports | 1 | `reports/quarterly/2025-Q3.md` |
 
-Live health baseline on 2026-09-26:
+Live health baseline on 2026-11-01:
 
 ```text
-integrate: PASS — global check 0 errors, 324 warnings; transformer-enc-dec-tts Q4 Phase 2 check 0 errors, 1 accepted warning; papers_not_in_any_yaml=176
-render:    PASS — 0 errors, 7 warnings; 21 Overview/In Depth pairs
-reconcile: PASS — 0 errors, 1 warning; 2 runs and 1 snapshot
+integrate: PASS — global Phase 2 check 0 errors, 324 accepted warnings; 2,892 entries, 444 clusters; papers_not_in_any_yaml=326 against the later ingest frontier
+render:    PASS — 0 errors, 0 warnings; all 23 Q4 concept pairs and the field overview current
+reconcile: PASS — 0 errors, 2 expected warnings; finalized decisions remain intact
 ```
 
-Warnings are non-blocking and primarily reflect accepted method-family outliers, the two missing
-concept render pairs, and preserved reconciliation audit history.
+Integration warnings are non-blocking and primarily reflect accepted method-family outliers. The
+bounded corrective reconciliation added exactly four inherited paper references across the
+automatic-judge, multiattribute-disentanglement, semantic–acoustic-hierarchy, and
+multidimensional-evaluation broader claims. The two remaining warnings reflect one retained
+high-similarity rejection and 15 historical agent-proposed registry records that remain
+non-authoritative.
 
 ---
 
@@ -54,7 +59,7 @@ concept render pairs, and preserved reconciliation audit history.
 | Quarter | Ingest | Integrate | Reconcile | Render / report |
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
-| Q4 2025 | Complete | Complete: all 22 affected concepts, 2,884 entries | **Next** | Pending reconciliation |
+| Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Current rendering complete: 23/23 concept pairs and field overview; snapshot/report await approval |
 | Q1 2026 | Original chronological sweep complete | Not started | Not started | Not started |
 | Q2 2026 | 5 ingested; 230 accepted; 18 review | Not started | Not started | Not started |
 | Q3 2026 to date | 98 accepted; 21 review | Not started | Not started | Not started |

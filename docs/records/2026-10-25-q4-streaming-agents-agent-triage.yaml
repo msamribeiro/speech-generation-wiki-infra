@@ -1,0 +1,3168 @@
+schema_version: 1
+triage_id: 2025-Q4-streaming-agents
+source_run: 2025-Q4
+source:
+  infra_commit: b672c6b
+  content_commit: 9b3c59f
+  concept_digests:
+    autoregressive-codec-tts: sha256:f01aa0a91355c87669935b9ce0712829368e6d465b16d6d11a20f31d293e7645
+    diffusion-tts: sha256:796588d7daae595d59891012c47f87a1d76af6ad7785b355e67d9853e553b431
+    disentanglement: sha256:23b1064250d0b8981b5127011e44931f454aac1670c5f95acd75600de7091861
+    emotion-synthesis: sha256:0d69149f1c79512596406f7848eb04394a50302313c961ed994fa7f712f13234
+    evaluation-metrics: sha256:fab944018529965c09eacaffa721f58c39956e3465808a0cdeb927429f9bb6ce
+    fine-tuning: sha256:4ab077da7b5118a10fa8c9ef9b124109c198b8111d4248a62e96004ba5398d0f
+    flow-matching: sha256:2d319beec1c7bd161c173301920e398607c0622462579e93873744ef1c801715
+    gan-vocoder: sha256:13eb27ed05d28b8ac20d6e8ae1e328f36f97c150d86cd7221c4ce13d1b949678
+    instruction-conditioned-tts: sha256:d5116987efa8fd8043e58c27efe7d619fbf656586dc4ebf94314a840d36ee17c
+    multilingual-tts: sha256:56c68d61bc8392253beb117f8c96b4c8cb189b922fd38484ccfe5301acab4d9a
+    neural-codec: sha256:6bb82bb490058cb52c553ee99c0e16b921d2390483713f44cf11f62f6e4ff67e
+    prosody-control: sha256:eaadfe172bfb10a8a871ed1f8fbdb89d0548973bea7b8c52c37c73a604a29b9f
+    rlhf-speech: sha256:766c2b73052bca91ff791c7b1217559681cfc81ca71310f65201f72c85c6d566
+    self-supervised-speech: sha256:b86f39ae462eea2e3bbf18419972487b977493d83c8e92cb3f75673553a5c3a1
+    singing: sha256:ff2cb28f6a45809893bc2ce2d90785318556b92a4a3b37856014e9f1f9e7084f
+    speaker-adaptation: sha256:8553347b2985ce39012d3702d4b2d9fdbbae75a1bf23ec5229d662a987c6be2d
+    speech-to-speech: sha256:558f9d55db72af701dbdce1ddc9b0893f480a3a55cc5cd2af28c4172b4c67d22
+    spoken-language-model: sha256:9f57b07c7528b1f7779431d4cc582fae2430e7c55dbf52373d5c4c0fe59fbf37
+    streaming-tts: sha256:32f776ef512706a91b758a2acbb154922e9679c827e58ea6c3bade505eaf1569
+    subjective-evaluation: sha256:d54a46d994e29b05edc79762c8176c0cf06f10a887a212ce40dce426eb01bd35
+    transformer-enc-dec-tts: sha256:79e9f2df7cb526fa0c30594b708037cb7faba2ae051312d591a2c6dd45069564
+    voice-conversion: sha256:8559be85bc9fa08a2fe1a6a2ef3c5a8e86614942f5293dcf7f5182afdef4896c
+    zero-shot-tts: sha256:2ba3066dbba761f254326b8dd833325c69460405463c218870e500e97e6a124c
+theme: streaming-agents
+review_mode: agent_adjudication
+reviewed_on: '2026-10-25'
+status: complete
+policy:
+  carry_forward: Preserve compatible human-approved full-duplex authority and refresh its complete Q4 evidence.
+  new_acceptance: Require proposition-level compatibility across latency, interaction, representation, evaluation, and context;
+    shared papers alone are insufficient.
+  rejection: Reaffirm prior Q3 agent rejections unless Q4 evidence closes the scope gap; reject new pairs with different mechanisms,
+    tasks, variables, or outcomes.
+  authority: Recommendations are advisory until explicitly approved in chat.
+already_human_reviewed:
+  accepted: 0
+  rejected: 0
+summary:
+  candidates_triaged: 138
+  proposed_acceptances: 42
+  proposed_rejections: 96
+  proposed_deferrals: 0
+  acceptance_bundles:
+    existing_reviewed_authority: 9
+    explicit_interaction_and_turn_taking: 8
+    incremental_reasoning_and_latency: 8
+    interaction_evaluation_and_context: 5
+    q3_strengthened_full_duplex_links: 7
+    unified_and_low_rate_streaming_interfaces: 5
+  rejection_categories:
+    low_semantic_overlap: 23
+    q3_rejection_reaffirmed: 73
+recommendations:
+- id: cand_0ef656d3b8a5409f
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  signals:
+    text_similarity: 0.367691
+    shared_evidence_score: 0.461538
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2507.23159'
+    - '2509.22243'
+    - '2510.06917'
+    - '2511.10262'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.230769
+    shared_terms:
+    - between
+    - both
+    - dialogue
+    - face
+    - floor-holding
+    - full-duplex
+    - responsiveness
+    - spoken
+    - trade-off
+    aggregate_score: 0.470153
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: broader_full_duplex_responsiveness_trades_against_floor_holding
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_5337b20c73da50fb
+  left: speech-to-speech#incremental_reasoning_reduces_spoken_response_latency
+  right: streaming-tts#concurrent_reasoning_during_listening_improves_streaming_responses
+  signals:
+    text_similarity: 0.275731
+    shared_evidence_score: 0.6
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.171429
+    shared_terms:
+    - during
+    - improve
+    - latency
+    - performing
+    - quality
+    - reasoning
+    aggregate_score: 0.466007
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_3758467e92315eca
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_2d3d75ad4adf9f54
+  left: spoken-language-model#incremental_reasoning_and_tool_use_improve_streaming_dialogue
+  right: streaming-tts#concurrent_reasoning_during_listening_improves_streaming_responses
+  signals:
+    text_similarity: 0.167076
+    shared_evidence_score: 0.6
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.111111
+    shared_terms:
+    - improve
+    - latency
+    - reasoning
+    aggregate_score: 0.413497
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_c2f324df87c7c779
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_83a051f873cff265
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.227348
+    shared_evidence_score: 0.433333
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.00037'
+    - '2410.11190'
+    - '2410.17799'
+    - '2411.00774'
+    - '2411.13577'
+    - '2508.07375'
+    - '2509.06502'
+    - '2510.02066'
+    - '2510.05150'
+    - interspeech-2025-0874
+    - interspeech-2025-2564
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.142857
+    shared_terms:
+    - natural
+    - requires
+    - turn
+    aggregate_score: 0.392368
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: broader_full_duplex_requires_joint_interaction_modeling
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_f3cc64f488c0cf5c
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.264715
+    shared_evidence_score: 0.333333
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.00037'
+    - '2410.11190'
+    - '2410.17799'
+    - '2411.00774'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.210526
+    shared_terms:
+    - dialogue
+    - explicit
+    - streaming
+    - turn
+    aggregate_score: 0.387465
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: broader_full_duplex_requires_joint_interaction_modeling
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_6ee8220258307465
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  signals:
+    text_similarity: 0.107647
+    shared_evidence_score: 0.5
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    - '2510.06917'
+    - '2511.10262'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.069767
+    shared_terms:
+    - dialogue
+    - full-duplex
+    - spoken
+    aggregate_score: 0.353524
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_6f133da4189447fc
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.219176
+    shared_evidence_score: 0.3
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.00037'
+    - '2410.17799'
+    - '2411.13577'
+    - '2508.07375'
+    - '2510.02066'
+    - '2510.05150'
+    - interspeech-2025-0874
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.117647
+    shared_terms:
+    - full-duplex
+    - speaking
+    aggregate_score: 0.345318
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: broader_full_duplex_requires_joint_interaction_modeling
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_b4d9516bd886f564
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: instruction-conditioned-tts#situated_context_improves_expressive_speech_with_bounded_returns
+  signals:
+    text_similarity: 0.290646
+    shared_evidence_score: 0.125
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - 2025.findings-acl.101
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.210526
+    shared_terms:
+    - context
+    - dialogue
+    - improve
+    - narrative
+    aggregate_score: 0.335337
+  disposition: accepted
+  bundle: interaction_evaluation_and_context
+  relationship: related
+  registry_target: null
+  basis: The claims connect multidimensional interaction evaluation and conversational context to duplex failure modes and
+    response appropriateness.
+- id: cand_583a78a9a4d256d0
+  left: speech-to-speech#multiturn_dialogue_degradation
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    text_similarity: 0.158321
+    shared_evidence_score: 0.315789
+    shared_supporting_papers:
+    - 2025.findings-acl.470
+    - '2508.17623'
+    - '2508.18240'
+    - '2510.07838'
+    - '2511.10262'
+    - '2512.14865'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.12
+    shared_terms:
+    - context
+    - multi-turn
+    - spoken
+    aggregate_score: 0.326065
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_d0be4b339c37bf70
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: speech-to-speech#commercial_vs_opensource_duplex_gap
+  signals:
+    text_similarity: 0.09892
+    shared_evidence_score: 0.4
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    - '2510.07838'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.075
+    shared_terms:
+    - dialogue
+    - full-duplex
+    - spoken
+    aggregate_score: 0.320818
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_0059bac2e63f8f3a
+  left: evaluation-metrics#backchannel_generation_remains_unsolved
+  right: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  signals:
+    text_similarity: 0.155364
+    shared_evidence_score: 0.285714
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.125
+    shared_terms:
+    - current
+    - dialogue
+    - full-duplex
+    - spoken
+    aggregate_score: 0.31661
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: specialization
+  registry_target: rel_0aa422d48c79f223
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_cb587a81a8acb75a
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.146096
+    shared_evidence_score: 0.290323
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2503.04721'
+    - '2507.23159'
+    - '2509.22243'
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.06917'
+    - interspeech-2025-0739
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.090909
+    shared_terms:
+    - full-duplex
+    - interaction
+    - interruption
+    aggregate_score: 0.309172
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: rel_9661ee198d10a663
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_ad1238a8b023a0de
+  left: evaluation-metrics#backchannel_generation_remains_unsolved
+  right: speech-to-speech#commercial_vs_opensource_duplex_gap
+  signals:
+    text_similarity: 0.102539
+    shared_evidence_score: 0.333333
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.1
+    shared_terms:
+    - dialogue
+    - full-duplex
+    - spoken
+    aggregate_score: 0.306016
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_2f8f983c1f02b6dc
+  left: self-supervised-speech#ssl_representations_enable_unified_speech_models
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.266305
+    shared_evidence_score: 0.057143
+    shared_supporting_papers:
+    - '2410.03751'
+    - '2503.06211'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.142857
+    shared_terms:
+    - shared
+    - understanding
+    aggregate_score: 0.295094
+  disposition: accepted
+  bundle: unified_and_low_rate_streaming_interfaces
+  relationship: related
+  registry_target: null
+  basis: The claims connect unified speech representations, speech-text alignment, and low-rate token interfaces to modelable
+    streaming sequences without treating them as equivalent architectures.
+- id: cand_dfcfa1a6ee829066
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.10535
+    shared_evidence_score: 0.3125
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.033333
+    shared_terms:
+    - full-duplex
+    aggregate_score: 0.29089
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_dde909e6e872b6bb
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.181451
+    shared_evidence_score: 0.166667
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.00037'
+    - '2410.11190'
+    - '2410.17799'
+    - '2411.00774'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.095238
+    shared_terms:
+    - full-duplex
+    - turn
+    aggregate_score: 0.286866
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: broader_full_duplex_requires_joint_interaction_modeling
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_01eb68735b4f68e6
+  left: evaluation-metrics#backchannel_generation_remains_unsolved
+  right: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  signals:
+    text_similarity: 0.136234
+    shared_evidence_score: 0.181818
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.117647
+    shared_terms:
+    - current
+    - dialogue
+    - full-duplex
+    - spoken
+    aggregate_score: 0.276686
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_353fc3a44919eefe
+  left: spoken-language-model#incremental_reasoning_and_tool_use_improve_streaming_dialogue
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.109576
+    shared_evidence_score: 0.25
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.05
+    shared_terms:
+    - speaking
+    aggregate_score: 0.27633
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_b98ebfe9b58cfeb9
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_931866c290bea457
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.064509
+    shared_evidence_score: 0.294118
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2408.16725'
+    - '2409.06666'
+    - '2411.13577'
+    - '2412.02612'
+    - '2505.02625'
+    - '2510.02044'
+    - '2512.18706'
+    - neurips-2025-vhPy3NMsO5
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - latency
+    aggregate_score: 0.271182
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_38596126300091c1
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#incremental_reasoning_and_tool_use_improve_streaming_dialogue
+  signals:
+    text_similarity: 0.038968
+    shared_evidence_score: 0.333333
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.06917'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.027027
+    shared_terms:
+    - coherence
+    aggregate_score: 0.269641
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_d1122444b94d3826
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_7c0155f0a6c24744
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.099297
+    shared_evidence_score: 0.230769
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.00037'
+    - '2410.17799'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.058824
+    shared_terms:
+    - full-duplex
+    aggregate_score: 0.267773
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: related
+  registry_target: broader_full_duplex_requires_joint_interaction_modeling
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_4418d91dc63bf062
+  left: speech-to-speech#commercial_vs_opensource_duplex_gap
+  right: spoken-language-model#spoken_models_require_bias_privacy_and_security_evaluation
+  signals:
+    text_similarity: 0.101732
+    shared_evidence_score: 0.222222
+    shared_supporting_papers:
+    - '2510.02352'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.068966
+    shared_terms:
+    - bias
+    - spoken
+    aggregate_score: 0.267704
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_5fe2ce72f9e6cee2
+  left: speech-to-speech#internal_interruption_detection_beats_external_vad
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.111228
+    shared_evidence_score: 0.1875
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2411.00774'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.08
+    shared_terms:
+    - barge-in
+    - dialogue
+    aggregate_score: 0.262741
+  disposition: accepted
+  bundle: existing_reviewed_authority
+  relationship: specialization
+  registry_target: rel_802f90e81782a85b
+  basis: The pair already resolves to human-approved full-duplex direct or broader authority, and Q4 evidence does not reverse
+    it.
+- id: cand_953a24d7e2013474
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.099364
+    shared_evidence_score: 0.2
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2503.04721'
+    - '2509.22243'
+    - '2510.06917'
+    - interspeech-2025-0739
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0625
+    shared_terms:
+    - full-duplex
+    - interruption
+    aggregate_score: 0.259121
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_8dcffe5ac7659dc5
+  left: evaluation-metrics#fullduplex_automatic_metrics_feasible_without_human_raters
+  right: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  signals:
+    text_similarity: 0.070264
+    shared_evidence_score: 0.230769
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2507.23159'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.066667
+    shared_terms:
+    - dialogue
+    - full-duplex
+    - semantic
+    aggregate_score: 0.257336
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_ba255caf86dca284
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: streaming-tts#concurrent_reasoning_during_listening_improves_streaming_responses
+  signals:
+    text_similarity: 0.044174
+    shared_evidence_score: 0.272727
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.025641
+    shared_terms:
+    - dialogue
+    aggregate_score: 0.253334
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_d05d5324107ca56a
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_08e3e583de74c153
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.08948
+    shared_evidence_score: 0.205882
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2503.04721'
+    - '2507.23159'
+    - '2509.22243'
+    - '2510.02066'
+    - interspeech-2025-0739
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.032258
+    shared_terms:
+    - both
+    aggregate_score: 0.252395
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_875f8db3e80ecbd5
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.084604
+    shared_evidence_score: 0.2
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.17799'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.047619
+    shared_terms:
+    - full-duplex
+    aggregate_score: 0.250985
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_b003322f34831a86
+  left: spoken-language-model#incremental_reasoning_and_tool_use_improve_streaming_dialogue
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.090538
+    shared_evidence_score: 0.1875
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.04
+    shared_terms:
+    - response
+    aggregate_score: 0.248465
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_f97be42472bcf814
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_5332eecadcfa2ed2
+  left: speech-to-speech#internal_interruption_detection_beats_external_vad
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.101465
+    shared_evidence_score: 0.172414
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2411.00774'
+    - '2510.06917'
+    - interspeech-2025-0739
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.038462
+    shared_terms:
+    - interruption
+    aggregate_score: 0.248079
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_6acdc651557c6339
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: speech-to-speech#internal_interruption_detection_beats_external_vad
+  signals:
+    text_similarity: 0.082068
+    shared_evidence_score: 0.181818
+    shared_supporting_papers:
+    - '2510.06917'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.054054
+    shared_terms:
+    - barge-in
+    - dialogue
+    aggregate_score: 0.245481
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_bf0108f807307a2e
+  left: speech-to-speech#incremental_reasoning_reduces_spoken_response_latency
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.084097
+    shared_evidence_score: 0.1875
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.027778
+    shared_terms:
+    - response
+    aggregate_score: 0.244056
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_f3e1b69a2bc230a5
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_2d4afa00ca08e8dc
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.033111
+    shared_evidence_score: 0.25
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.028571
+    shared_terms:
+    - dialogue
+    aggregate_score: 0.24253
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_9e94a8b76aa5f971
+  left: evaluation-metrics#cascaded_vs_endtoend_sca_tradeoffs
+  right: speech-to-speech#commercial_vs_opensource_duplex_gap
+  signals:
+    text_similarity: 0.106313
+    shared_evidence_score: 0.133333
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.066667
+    shared_terms:
+    - dialogue
+    - show
+    - spoken
+    aggregate_score: 0.242525
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_f928c9e681d5e10d
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.107364
+    shared_evidence_score: 0.133333
+    shared_supporting_papers:
+    - '2410.17799'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.035714
+    shared_terms:
+    - full-duplex
+    aggregate_score: 0.238303
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_5145d2fd425ea904
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: speech-to-speech#internal_interruption_detection_beats_external_vad
+  signals:
+    text_similarity: 0.038439
+    shared_evidence_score: 0.222222
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2411.00774'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.04
+    shared_terms:
+    - dialogue
+    aggregate_score: 0.238042
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_6bcc15f3cc96c821
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: speech-to-speech#multiturn_dialogue_degradation
+  signals:
+    text_similarity: 0.065196
+    shared_evidence_score: 0.153846
+    shared_supporting_papers:
+    - '2510.07838'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.051282
+    shared_terms:
+    - dialogue
+    - spoken
+    aggregate_score: 0.229924
+  disposition: accepted
+  bundle: interaction_evaluation_and_context
+  relationship: related
+  registry_target: null
+  basis: The claims connect multidimensional interaction evaluation and conversational context to duplex failure modes and
+    response appropriateness.
+- id: cand_05def887dc387d31
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.043073
+    shared_evidence_score: 0.193548
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2507.23159'
+    - '2509.06502'
+    - '2509.22243'
+    - '2510.06917'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.028571
+    shared_terms:
+    - full-duplex
+    aggregate_score: 0.229579
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_da551f4bd61dd0a9
+  left: speech-to-speech#paralinguistic_semantic_capability_gap
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    text_similarity: 0.040451
+    shared_evidence_score: 0.181818
+    shared_supporting_papers:
+    - '2507.18119'
+    - '2508.18240'
+    - '2509.03940'
+    - '2512.14865'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.030303
+    shared_terms:
+    - spoken
+    aggregate_score: 0.225271
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_adf3f73df2508719
+  left: speech-to-speech#model_scale_doesnt_predict_quality
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    text_similarity: 0.071448
+    shared_evidence_score: 0.129032
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.emnlp-demos.70
+    - '2409.06666'
+    - '2505.02625'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.034483
+    shared_terms:
+    - spoken
+    aggregate_score: 0.222461
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_4bb16af76861290a
+  left: speech-to-speech#commercial_vs_opensource_duplex_gap
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.108988
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.068966
+    shared_terms:
+    - full-duplex
+    - interruption
+    aggregate_score: 0.222122
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_2b64fb6b1fc547e1
+  left: emotion-synthesis#synthetic_and_automatic_annotations_scale_emotional_data
+  right: instruction-conditioned-tts#situated_context_improves_expressive_speech_with_bounded_returns
+  signals:
+    text_similarity: 0.047689
+    shared_evidence_score: 0.176471
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - 2025.findings-acl.101
+    - '2509.17516'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.222017
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_137b83fe9bef6769
+  left: evaluation-metrics#cascaded_vs_endtoend_sca_tradeoffs
+  right: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  signals:
+    text_similarity: 0.079323
+    shared_evidence_score: 0.1
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.06
+    shared_terms:
+    - dialogue
+    - semantic
+    - spoken
+    aggregate_score: 0.220729
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_69f149be75ecc585
+  left: evaluation-metrics#cascaded_vs_endtoend_sca_tradeoffs
+  right: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  signals:
+    text_similarity: 0.065756
+    shared_evidence_score: 0.125
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.040816
+    shared_terms:
+    - dialogue
+    - spoken
+    aggregate_score: 0.219925
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_32ca3b04d4341ee9
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.069745
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2507.23159'
+    - '2509.22243'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.032258
+    shared_terms:
+    - both
+    aggregate_score: 0.218031
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_1934bb725c574c68
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.055045
+    shared_evidence_score: 0.151515
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2411.13577'
+    - '2510.02066'
+    - '2510.05150'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.217473
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_98729e6e3f24a05a
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  signals:
+    text_similarity: 0.039434
+    shared_evidence_score: 0.169492
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2408.16725'
+    - '2411.18803'
+    - '2412.02612'
+    - '2502.11946'
+    - '2505.02625'
+    - '2508.15827'
+    - '2509.17765'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.216621
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_e5da1729c85328f6
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    text_similarity: 0.096815
+    shared_evidence_score: 0.0625
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.11190'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - enable
+    aggregate_score: 0.215371
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_21c8c29bad1cef06
+  left: speech-to-speech#commercial_vs_opensource_duplex_gap
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    text_similarity: 0.041659
+    shared_evidence_score: 0.142857
+    shared_supporting_papers:
+    - 2025.findings-acl.470
+    - '2510.07838'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.034483
+    shared_terms:
+    - spoken
+    aggregate_score: 0.214693
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_50e09eed31c1a8bd
+  left: emotion-synthesis#paralinguistic_events_require_dedicated_modeling
+  right: speech-to-speech#paralinguistic_semantic_capability_gap
+  signals:
+    text_similarity: 0.067085
+    shared_evidence_score: 0.111111
+    shared_supporting_papers:
+    - '2507.18119'
+    - '2509.03940'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.027778
+    shared_terms:
+    - paralinguistic
+    aggregate_score: 0.214334
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_6fc10a2a48133597
+  left: speech-to-speech#model_scale_doesnt_predict_quality
+  right: streaming-tts#interleaved_text_speech_generation_supports_streaming
+  signals:
+    text_similarity: 0.0244
+    shared_evidence_score: 0.181818
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2409.06666'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.214306
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_13f2eb1463182f70
+  left: speech-to-speech#frozen_decoupled_llm_preserves_text_capability
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.044672
+    shared_evidence_score: 0.136364
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - interspeech-2025-0874
+    - neurips-2025-vhPy3NMsO5
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.03125
+    shared_terms:
+    - end-to-end
+    aggregate_score: 0.213465
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_8a0a27567ddff585
+  left: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.007792
+    shared_evidence_score: 0.2
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - 2025.findings-acl.1051
+    - '2408.16725'
+    - '2412.02612'
+    - '2505.02625'
+    - '2510.02044'
+    - neurips-2025-4iehXI36QG
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.213117
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_77ce029f6c2b9e12
+  left: autoregressive-codec-tts#explicit_alignment_constraints_improve_robustness
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.043601
+    shared_evidence_score: 0.125
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2411.00774'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.05
+    shared_terms:
+    - explicit
+    aggregate_score: 0.212441
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_0420b4f71b30e79b
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    text_similarity: 0.083215
+    shared_evidence_score: 0.068966
+    shared_supporting_papers:
+    - '2508.04585'
+    - '2509.02020'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - context
+    aggregate_score: 0.21187
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_914f36d4f4f53103
+  left: multilingual-tts#flow_and_diffusion_support_multilingual_scaling
+  right: self-supervised-speech#ssl_representations_enable_unified_speech_models
+  signals:
+    text_similarity: 0.106571
+    shared_evidence_score: 0.0625
+    shared_supporting_papers:
+    - '2503.11026'
+    - neurips-2025-RTjr4DnS79
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.211378
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_77df397518b9f371
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: subjective-evaluation#benchmark_design_needs_multidimensional_coverage
+  signals:
+    text_similarity: 0.082172
+    shared_evidence_score: 0.064516
+    shared_supporting_papers:
+    - '2503.04721'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.057143
+    shared_terms:
+    - interaction
+    - semantic
+    aggregate_score: 0.210795
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_b4dfa174f240e42e
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.067912
+    shared_evidence_score: 0.111111
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2411.13577'
+    - '2510.02066'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.210498
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_d4e00042b1bbf13c
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: spoken-language-model#cascaded_and_end_to_end_systems_have_complementary_strengths
+  signals:
+    text_similarity: 0.093369
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.06502'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.058824
+    shared_terms:
+    - latency
+    - spoken
+    aggregate_score: 0.209808
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_d7db46e642adbb3d
+  left: spoken-language-model#discrete_tokens_enable_scalable_speech_language_modeling
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.067179
+    shared_evidence_score: 0.084507
+    shared_supporting_papers:
+    - '2410.00037'
+    - '2410.11190'
+    - '2508.07375'
+    - '2510.02066'
+    - '2510.05150'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.041667
+    shared_terms:
+    - modeling
+    aggregate_score: 0.208474
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_612b3dc9a44f7d05
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  signals:
+    text_similarity: 0.077179
+    shared_evidence_score: 0.068182
+    shared_supporting_papers:
+    - '2410.00037'
+    - '2410.17799'
+    - '2411.00774'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.045455
+    shared_terms:
+    - streaming
+    aggregate_score: 0.208144
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_080b85a25ad5f0eb
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.068624
+    shared_evidence_score: 0.1
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2508.07375'
+    - interspeech-2025-0874
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.20745
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_8068fa9c73fcfeef
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.02618
+    shared_evidence_score: 0.15625
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2503.04721'
+    - '2509.22243'
+    - interspeech-2025-0739
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.207347
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_197c6a9dc92dfcfa
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.040169
+    shared_evidence_score: 0.111111
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2408.16725'
+    - '2410.17799'
+    - '2508.15827'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.052632
+    shared_terms:
+    - training
+    aggregate_score: 0.207295
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_21a99d11980332ad
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.075182
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.17799'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.045455
+    shared_terms:
+    - full-duplex
+    aggregate_score: 0.205073
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_a2a57d380641cf22
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    text_similarity: 0.037574
+    shared_evidence_score: 0.114286
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.06917'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.03125
+    shared_terms:
+    - spoken
+    aggregate_score: 0.204003
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_ef8899d6e2709711
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.006116
+    shared_evidence_score: 0.166667
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2410.11190'
+    - '2411.13577'
+    - '2510.02066'
+    - '2510.05150'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.202447
+  disposition: accepted
+  bundle: q3_strengthened_full_duplex_links
+  relationship: related
+  registry_target: null
+  basis: Q4 evidence now closes the earlier agent-recorded scope gap for this specific full-duplex interaction relationship.
+- id: cand_e99629caed27174a
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: instruction-conditioned-tts#automatic_instruction_data_construction_scales_supervision
+  signals:
+    text_similarity: 0.009401
+    shared_evidence_score: 0.157895
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - 2025.findings-acl.101
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.201129
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_d5e514555d4398e0
+  left: self-supervised-speech#ssl_representations_enable_unified_speech_models
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    text_similarity: 0.081753
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '2410.03751'
+    - '2511.11124'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.200883
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_f50fd6ff4e0bcde4
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#concurrent_reasoning_during_listening_improves_streaming_responses
+  signals:
+    text_similarity: 0.062798
+    shared_evidence_score: 0.066667
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.037037
+    shared_terms:
+    - turn
+    aggregate_score: 0.200675
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_8a404fdf7d5d5094
+  left: speech-to-speech#frozen_decoupled_llm_preserves_text_capability
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.037891
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2510.05150'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.200451
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_ed436719e2751941
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.035643
+    shared_evidence_score: 0.105263
+    shared_supporting_papers:
+    - '2410.17799'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.030303
+    shared_terms:
+    - dialogue
+    aggregate_score: 0.200382
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_959522e07bf5ed09
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: subjective-evaluation#benchmark_design_needs_multidimensional_coverage
+  signals:
+    text_similarity: 0.059102
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - '2503.04721'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.029412
+    shared_terms:
+    - behavior
+    aggregate_score: 0.200275
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_5e71d4323bf167e0
+  left: spoken-language-model#discrete_tokens_enable_scalable_speech_language_modeling
+  right: streaming-tts#concurrent_reasoning_during_listening_improves_streaming_responses
+  signals:
+    text_similarity: 0.088483
+    shared_evidence_score: 0.03125
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.035714
+    shared_terms:
+    - compact
+    aggregate_score: 0.200125
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_44563e103843373c
+  left: speech-to-speech#model_scale_doesnt_predict_quality
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.01105
+    shared_evidence_score: 0.15
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2409.06666'
+    - '2505.02625'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.19942
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_46686c275513ea41
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: speech-to-speech#cascade_outperforms_e2e_on_benchmarks
+  signals:
+    text_similarity: 0.042283
+    shared_evidence_score: 0.105263
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.06502'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.198492
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_17dc95398283e148
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.056099
+    shared_evidence_score: 0.064516
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2410.17799'
+    - '2508.07375'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.04
+    shared_terms:
+    - explicit
+    aggregate_score: 0.197794
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_a4cab7913744c585
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    text_similarity: 0.014521
+    shared_evidence_score: 0.137931
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2510.02066'
+    - '2510.05150'
+    - '2510.09592'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.197188
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_46eabb659f6e6bce
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    text_similarity: 0.058629
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '2510.06917'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.033333
+    shared_terms:
+    - spoken
+    aggregate_score: 0.196633
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_e43b99a88a5e26e3
+  left: speech-to-speech#frozen_decoupled_llm_preserves_text_capability
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.003596
+    shared_evidence_score: 0.15
+    shared_supporting_papers:
+    - '2411.00774'
+    - '2510.05150'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.196439
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_4b35325f75f0ba51
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.076486
+    shared_evidence_score: 0.050847
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2508.07375'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.195849
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_fc48f27d30308e07
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#concurrent_reasoning_during_listening_improves_streaming_responses
+  signals:
+    text_similarity: 0.041036
+    shared_evidence_score: 0.068966
+    shared_supporting_papers:
+    - '2510.02066'
+    - '2510.05150'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.041667
+    shared_terms:
+    - latency
+    aggregate_score: 0.193354
+  disposition: accepted
+  bundle: incremental_reasoning_and_latency
+  relationship: related
+  registry_target: rel_31846c12aa8f15ee
+  basis: The claims connect reasoning during listening or incremental response preparation with interactive latency and interaction
+    control. They are related rather than causal or equivalent because premature commitments, chunking, turn timing, and coherence
+    remain independent constraints.
+- id: cand_d386a00052d9dd09
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  signals:
+    text_similarity: 0.03392
+    shared_evidence_score: 0.083333
+    shared_supporting_papers:
+    - '2510.07838'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.029412
+    shared_terms:
+    - spoken
+    aggregate_score: 0.19298
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_47d1c39bd016e396
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.006364
+    shared_evidence_score: 0.133333
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2408.02622'
+    - '2408.16725'
+    - '2508.15827'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.192546
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_022d2103e0719b63
+  left: self-supervised-speech#ssl_representations_enable_unified_speech_models
+  right: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  signals:
+    text_similarity: 0.061962
+    shared_evidence_score: 0.058824
+    shared_supporting_papers:
+    - '2410.03751'
+    - '2511.11124'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.192432
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_2b734e1d90bc6b0c
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#cascaded_and_end_to_end_systems_have_complementary_strengths
+  signals:
+    text_similarity: 0.062944
+    shared_evidence_score: 0.042553
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2510.05150'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.028571
+    shared_terms:
+    - spoken
+    aggregate_score: 0.192229
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_f707208f10823a71
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.048863
+    shared_evidence_score: 0.075
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.192045
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_6ca23aa2ec9ea428
+  left: spoken-language-model#low_frame_rate_and_variable_rate_tokens_reduce_sequence_cost
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.02609
+    shared_evidence_score: 0.105263
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.192015
+  disposition: accepted
+  bundle: unified_and_low_rate_streaming_interfaces
+  relationship: related
+  registry_target: null
+  basis: The claims connect unified speech representations, speech-text alignment, and low-rate token interfaces to modelable
+    streaming sequences without treating them as equivalent architectures.
+- id: cand_60aa00342088d9dc
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.006446
+    shared_evidence_score: 0.128205
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2410.17799'
+    - '2411.13577'
+    - '2510.02066'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.19104
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_2de305b0ea72dbd9
+  left: self-supervised-speech#ssl_representations_enable_unified_speech_models
+  right: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  signals:
+    text_similarity: 0.062173
+    shared_evidence_score: 0.053571
+    shared_supporting_papers:
+    - '2410.03751'
+    - '2503.06211'
+    - '2511.11124'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.190941
+  disposition: accepted
+  bundle: unified_and_low_rate_streaming_interfaces
+  relationship: related
+  registry_target: null
+  basis: The claims connect unified speech representations, speech-text alignment, and low-rate token interfaces to modelable
+    streaming sequences without treating them as equivalent architectures.
+- id: cand_a0d245e56b704f55
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.010499
+    shared_evidence_score: 0.121951
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2408.16725'
+    - '2409.06666'
+    - '2411.13577'
+    - '2505.02625'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.190785
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_cb645af1003fa068
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  signals:
+    text_similarity: 0.059432
+    shared_evidence_score: 0.035714
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2410.17799'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.041667
+    shared_terms:
+    - explicit
+    aggregate_score: 0.190737
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_794a8bcf7076c834
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.006706
+    shared_evidence_score: 0.125
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2408.16725'
+    - '2410.17799'
+    - '2508.15827'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.190183
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_34c0fa9fe5df6c51
+  left: emotion-synthesis#paralinguistic_events_require_dedicated_modeling
+  right: self-supervised-speech#ssl_representations_enable_unified_speech_models
+  signals:
+    text_similarity: 0.009481
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2503.11026'
+    - '2508.09600'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.189087
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_f27affa37bf35008
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.045823
+    shared_evidence_score: 0.068182
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2508.04585'
+    - '2509.02020'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.188784
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_3364ec2105c79e73
+  left: neural-codec#continuous_discrete_representation_tradeoff
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.045208
+    shared_evidence_score: 0.068966
+    shared_supporting_papers:
+    - '2507.22746'
+    - '2510.16718'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.188773
+  disposition: accepted
+  bundle: unified_and_low_rate_streaming_interfaces
+  relationship: related
+  registry_target: null
+  basis: The claims connect unified speech representations, speech-text alignment, and low-rate token interfaces to modelable
+    streaming sequences without treating them as equivalent architectures.
+- id: cand_5db8b2518096d417
+  left: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.007336
+    shared_evidence_score: 0.117647
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2408.16725'
+    - '2412.02612'
+    - '2509.17765'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.188229
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_a8c047d79d605f8c
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  signals:
+    text_similarity: 0.057545
+    shared_evidence_score: 0.048387
+    shared_supporting_papers:
+    - '2508.04585'
+    - '2509.02020'
+    - neurips-2025-4iehXI36QG
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.187534
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_a5ca1fd8227d7315
+  left: instruction-conditioned-tts#situated_context_improves_expressive_speech_with_bounded_returns
+  right: zero-shot-tts#long_form_generation_needs_alignment_and_memory_controls
+  signals:
+    text_similarity: 0.038072
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - 2025.findings-acl.1226
+    - '2509.17516'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.187451
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_ebfcba680022a6f4
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.00741
+    shared_evidence_score: 0.114754
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2408.16725'
+    - '2412.02612'
+    - '2505.02625'
+    - interspeech-2025-0874
+    - neurips-2025-4iehXI36QG
+    - neurips-2025-vhPy3NMsO5
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.18739
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_536bf2087afed97c
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.050622
+    shared_evidence_score: 0.054054
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.186465
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_01539cb6aed5303d
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: spoken-language-model#low_frame_rate_and_variable_rate_tokens_reduce_sequence_cost
+  signals:
+    text_similarity: 0.024467
+    shared_evidence_score: 0.086957
+    shared_supporting_papers:
+    - '2508.04585'
+    - '2509.02020'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.185874
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_d853c2b1d369b544
+  left: speech-to-speech#multiturn_dialogue_degradation
+  right: subjective-evaluation#benchmark_design_needs_multidimensional_coverage
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.115385
+    shared_supporting_papers:
+    - '2508.17623'
+    - '2508.18240'
+    - '2511.00850'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.184615
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_73f0b3568af38819
+  left: autoregressive-codec-tts#multistream_autoregression_enables_full_duplex_dialogue
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.040881
+    shared_evidence_score: 0.058824
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2410.17799'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.183999
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_1e9ea3a152cc063d
+  left: autoregressive-codec-tts#unified_speech_text_lms_enable_spoken_generation
+  right: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  signals:
+    text_similarity: 0.036778
+    shared_evidence_score: 0.058824
+    shared_supporting_papers:
+    - '2508.04585'
+    - '2509.02020'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.182358
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_2940451e4f885d5c
+  left: spoken-language-model#low_frame_rate_and_variable_rate_tokens_reduce_sequence_cost
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.005752
+    shared_evidence_score: 0.1
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2509.17765'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.182301
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_d567d4b1f64f54c6
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.01463
+    shared_evidence_score: 0.086957
+    shared_supporting_papers:
+    - 2025.findings-acl.1051
+    - '2408.16725'
+    - '2412.02612'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.181939
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_73b0e1933d1ca877
+  left: speech-to-speech#internal_interruption_detection_beats_external_vad
+  right: spoken-language-model#streaming_spoken_models_can_reach_interactive_latency
+  signals:
+    text_similarity: 0.004252
+    shared_evidence_score: 0.1
+    shared_supporting_papers:
+    - '2410.11190'
+    - '2510.06917'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.181701
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_5b88ebf41d57e8bc
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.008981
+    shared_evidence_score: 0.090909
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2508.07375'
+    - interspeech-2025-0874
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.180865
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_b45309fe261843a5
+  left: speech-to-speech#full_duplex_backchannel_interruption_unsolved
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.038627
+    shared_evidence_score: 0.051282
+    shared_supporting_papers:
+    - '2410.17799'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.180836
+  disposition: accepted
+  bundle: explicit_interaction_and_turn_taking
+  relationship: related
+  registry_target: null
+  basis: The claims connect simultaneous listening/speaking, interruption detection, backchannels, floor holding, and explicit
+    turn-taking as coupled interaction requirements.
+- id: cand_cb9349b2ef4123d5
+  left: speech-to-speech#commercial_vs_opensource_duplex_gap
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.007465
+    shared_evidence_score: 0.090909
+    shared_supporting_papers:
+    - '2503.04721'
+    - '2509.22243'
+    - '2510.02352'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.180259
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_bb13083345817c22
+  left: speech-to-speech#internal_interruption_detection_beats_external_vad
+  right: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  signals:
+    text_similarity: 0.004481
+    shared_evidence_score: 0.09375
+    shared_supporting_papers:
+    - '2410.11190'
+    - interspeech-2025-0739
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.179917
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_beb91defbd350e48
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.035725
+    shared_evidence_score: 0.051724
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.179807
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_d3fc89b5644f62a2
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  signals:
+    text_similarity: 0.017911
+    shared_evidence_score: 0.074074
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - '2510.22588'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.179387
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_b4a784fb78afedb4
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.010365
+    shared_evidence_score: 0.083333
+    shared_supporting_papers:
+    - '2408.02622'
+    - '2509.06502'
+    - interspeech-2025-2564
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.179146
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_27d3ea9ed05f101b
+  left: spoken-language-model#cascaded_and_end_to_end_systems_have_complementary_strengths
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.010161
+    shared_evidence_score: 0.083333
+    shared_supporting_papers:
+    - '2411.13577'
+    - '2509.06502'
+    - '2510.05150'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.179064
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_2b54410a4869598e
+  left: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.026025
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.178592
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_11fde292af2b2b03
+  left: autoregressive-codec-tts#explicit_alignment_constraints_improve_robustness
+  right: streaming-tts#full_duplex_requires_simultaneous_listening_and_speaking
+  signals:
+    text_similarity: 0.0
+    shared_evidence_score: 0.095238
+    shared_supporting_papers:
+    - '2410.17799'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.178571
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_5999e3d1a47fe477
+  left: speech-to-speech#model_scale_doesnt_predict_quality
+  right: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  signals:
+    text_similarity: 0.026999
+    shared_evidence_score: 0.043478
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2505.02625'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.03125
+    shared_terms:
+    - quality
+    aggregate_score: 0.17853
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_28843ff418279d77
+  left: spoken-language-model#full_duplex_requires_joint_listening_speaking_and_turn_taking
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.014076
+    shared_evidence_score: 0.071429
+    shared_supporting_papers:
+    - '2411.13577'
+    - '2509.06502'
+    - interspeech-2025-0874
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.177059
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_397f522f965b23fc
+  left: spoken-language-model#instruction_and_conversational_data_scale_slm_capability
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.015882
+    shared_evidence_score: 0.066667
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2409.06666'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.176353
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_b9e101d12c1370b5
+  left: spoken-language-model#interleaved_training_bridges_modalities
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.010773
+    shared_evidence_score: 0.073171
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    - '2509.09174'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.17626
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_63bca5b7ef3b0371
+  left: self-supervised-speech#ssl_features_encode_linguistic_content
+  right: streaming-tts#low_rate_tokenizers_reduce_streaming_sequence_cost
+  signals:
+    text_similarity: 0.033664
+    shared_evidence_score: 0.037736
+    shared_supporting_papers:
+    - '2509.16195'
+    - '2510.15227'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174786
+  disposition: accepted
+  bundle: unified_and_low_rate_streaming_interfaces
+  relationship: related
+  registry_target: null
+  basis: The claims connect unified speech representations, speech-text alignment, and low-rate token interfaces to modelable
+    streaming sequences without treating them as equivalent architectures.
+- id: cand_2ddaf705469c115d
+  left: autoregressive-codec-tts#scaling_data_and_models_improves_ar_codec_tts
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.010603
+    shared_evidence_score: 0.068182
+    shared_supporting_papers:
+    - '2410.17799'
+    - '2411.00774'
+    - interspeech-2025-2564
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.174696
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_f0e6ff36b429a7a6
+  left: rlhf-speech#sca_rlhf_addresses_distinct_failure_modes_from_tts_quality_alignment
+  right: streaming-tts#continuous_generators_trade_steps_for_streaming_quality
+  signals:
+    text_similarity: 0.016819
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - '2502.11946'
+    - '2512.20156'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.02439
+    shared_terms:
+    - quality
+    aggregate_score: 0.174022
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_dbe8ac18e1cdb8a0
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: spoken-language-model#multidimensional_benchmarks_expose_spoken_model_gaps
+  signals:
+    text_similarity: 0.003234
+    shared_evidence_score: 0.075
+    shared_supporting_papers:
+    - '2507.23159'
+    - '2510.07838'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.173794
+  disposition: accepted
+  bundle: interaction_evaluation_and_context
+  relationship: related
+  registry_target: null
+  basis: The claims connect multidimensional interaction evaluation and conversational context to duplex failure modes and
+    response appropriateness.
+- id: cand_5e312a56e4f8d7c3
+  left: emotion-synthesis#dialogue_context_supports_appropriate_emotional_responses
+  right: streaming-tts#incremental_generation_reduces_first_packet_latency
+  signals:
+    text_similarity: 0.012443
+    shared_evidence_score: 0.060606
+    shared_supporting_papers:
+    - 2025.emnlp-demos.70
+    - neurips-2025-4iehXI36QG
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.173159
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_a861c77404a9eb79
+  left: evaluation-metrics#fullduplex_dialogue_has_fundamental_responsiveness_tradeoffs
+  right: subjective-evaluation#benchmark_design_needs_multidimensional_coverage
+  signals:
+    text_similarity: 0.003213
+    shared_evidence_score: 0.071429
+    shared_supporting_papers:
+    - '2503.04721'
+    - interspeech-2025-0739
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.172714
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_1e94ee221cb6357f
+  left: spoken-language-model#long_context_and_memory_are_required_for_conversation
+  right: streaming-tts#modular_and_end_to_end_systems_have_distinct_tradeoffs
+  signals:
+    text_similarity: 0.009403
+    shared_evidence_score: 0.0625
+    shared_supporting_papers:
+    - 2025.acl-long.912
+    - '2505.02625'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.172511
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_3226efd08a8c20b5
+  left: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.004977
+    shared_evidence_score: 0.066667
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2508.15827'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.171991
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_26c1f1cff20629f8
+  left: spoken-language-model#unified_models_support_joint_understanding_and_generation
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.007731
+    shared_evidence_score: 0.052632
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2509.17765'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.168882
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_cea4f0d2d706413a
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#curricula_and_alignment_enable_full_duplex_training
+  signals:
+    text_similarity: 0.004733
+    shared_evidence_score: 0.054545
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2410.17799'
+    - '2508.15827'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.168257
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_af37c20e0c03fed9
+  left: speech-to-speech#commercial_vs_opensource_duplex_gap
+  right: spoken-language-model#multidimensional_benchmarks_expose_spoken_model_gaps
+  signals:
+    text_similarity: 0.006284
+    shared_evidence_score: 0.051282
+    shared_supporting_papers:
+    - '2510.07838'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167898
+  disposition: accepted
+  bundle: interaction_evaluation_and_context
+  relationship: related
+  registry_target: null
+  basis: The claims connect multidimensional interaction evaluation and conversational context to duplex failure modes and
+    response appropriateness.
+- id: cand_769811af1d3ca2c0
+  left: spoken-language-model#speech_text_alignment_preserves_language_model_capabilities
+  right: streaming-tts#multilingual_and_cross_domain_streaming_remain_uneven
+  signals:
+    text_similarity: 0.005456
+    shared_evidence_score: 0.050847
+    shared_supporting_papers:
+    - '2408.16725'
+    - '2412.02612'
+    - '2509.17765'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.167437
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_b043339b72446ace
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#interleaved_training_bridges_modalities
+  signals:
+    text_similarity: 0.005597
+    shared_evidence_score: 0.046512
+    shared_supporting_papers:
+    - '2410.17799'
+    - neurips-2025-AsRB5nmlOD
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.166192
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
+- id: cand_1ac6881d6b864a48
+  left: spoken-language-model#paralinguistic_reasoning_remains_weaker_than_semantics
+  right: streaming-tts#turn_taking_and_barge_in_need_explicit_modeling
+  signals:
+    text_similarity: 0.005329
+    shared_evidence_score: 0.044444
+    shared_supporting_papers:
+    - '2410.00037'
+    - '2411.13577'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.165465
+  disposition: rejected
+  bundle: q3_rejection_reaffirmed
+  relationship: null
+  registry_target: null
+  basis: Q4 evidence does not close the proposition-scope gap identified in the superseded Q3 agent review.
+- id: cand_c5a2f9d4aab7e6f7
+  left: speech-to-speech#full_duplex_responsiveness_floorholding_tradeoff
+  right: spoken-language-model#multidimensional_benchmarks_expose_spoken_model_gaps
+  signals:
+    text_similarity: 0.003381
+    shared_evidence_score: 0.045455
+    shared_supporting_papers:
+    - '2507.23159'
+    - '2511.10262'
+    status_compatible: true
+    polarity_compatible: true
+    status_polarity_score: 1.0
+    technical_vocabulary_score: 0.0
+    shared_terms: []
+    aggregate_score: 0.164989
+  disposition: accepted
+  bundle: interaction_evaluation_and_context
+  relationship: related
+  registry_target: null
+  basis: The claims connect multidimensional interaction evaluation and conversational context to duplex failure modes and
+    response appropriateness.
+- id: cand_25bc176478d5b565
+  left: speech-to-speech#staged_pretraining_effect_on_instruction_following
+  right: spoken-language-model#speech_modality_introduces_reasoning_and_robustness_gaps
+  signals:
+    text_similarity: 0.099369
+    shared_evidence_score: 0.076923
+    shared_supporting_papers:
+    - '2502.17239'
+    - '2510.00499'
+    status_compatible: false
+    polarity_compatible: false
+    status_polarity_score: 0.0
+    technical_vocabulary_score: 0.025
+    shared_terms:
+    - instruction-following
+    aggregate_score: 0.066574
+  disposition: rejected
+  bundle: low_semantic_overlap
+  relationship: null
+  registry_target: null
+  basis: The proposition-level overlap is too weak or indirect to justify a reviewed cross-concept relationship.
