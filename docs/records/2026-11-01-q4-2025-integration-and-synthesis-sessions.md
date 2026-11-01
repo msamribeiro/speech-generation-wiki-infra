@@ -11,7 +11,8 @@ cross-concept reconciliation, concept rendering, field-overview rendering, andâ€
 retrospective snapshot and quarterly report.
 
 This is the authoritative multi-session handoff note for the Q4 2025 content cycle. It follows the
-concept-by-concept batching discipline established in `Q3_INTEGRATION_SESSIONS.md` and the gated
+concept-by-concept batching discipline established in
+`docs/records/2026-08-02-q3-2025-integration-sessions.md` and the gated
 reconciliation, snapshot, render, and report sequence recorded in
 `docs/records/2026-09-13-cross-concept-synthesis-and-temporal-reporting.md`.
 

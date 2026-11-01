@@ -1,6 +1,8 @@
-# Q3 2025 (and Earlier) Integration Session
+# Q3 2025 (and Earlier) Integration Session (Archived)
 
 **Date:** 2026-07-18
+**Completed:** 2026-08-02
+**Archived:** 2026-11-01
 **Goal:** Integrate every ingested paper published before Q4 2025 (`published_date < 2025-10-01`)
 into `wiki/_claims/{slug}.yaml`, across all 23 canonical concepts. This is the **integrate**
 stage of the three-stage content pipeline (ingest → integrate → render) — distinct from, and a
@@ -320,7 +322,8 @@ shapes, so it's worth guarding the same way here.
 
 Integration work only touches the **content repo** (`wiki/_claims/*.yaml`, `wiki/log.md`) — the
 integration agent never writes to `raw/metadata/` or any infra file. This session log
-(`Q3_INTEGRATION_SESSIONS.md`) lives in the **infra repo**, so that's the only infra-side commit
+(`docs/records/2026-08-02-q3-2025-integration-sessions.md`) lives in the **infra repo**, so that's
+the only infra-side commit
 needed.
 
 1. Content repo: stage changed/new `_claims/*.yaml` files + `log.md`, commit, push.
