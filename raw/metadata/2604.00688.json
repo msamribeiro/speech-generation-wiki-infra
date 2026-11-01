@@ -1,7 +1,9 @@
 {
   "id": "2604.00688",
   "source_ids": {
-    "arxiv": "2604.00688"
+    "arxiv": "2604.00688",
+    "isca": "zhu26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-3256"
   },
   "title": "OmniVoice: Towards Omnilingual Zero-Shot Text-to-Speech with Diffusion Language Models",
   "authors": [

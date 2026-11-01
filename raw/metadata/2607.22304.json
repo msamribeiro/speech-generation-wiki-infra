@@ -1,7 +1,9 @@
 {
   "id": "2607.22304",
   "source_ids": {
-    "arxiv": "2607.22304"
+    "arxiv": "2607.22304",
+    "isca": "polle26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2993"
   },
   "title": "Synthetic Speech, Real Signal: Paralinguistic Preservation and Cross-Lingual Augmentation via Voice Cloning",
   "authors": [

@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-3088",
+  "source_ids": {
+    "isca": "kim26u_interspeech",
+    "doi": "10.21437/Interspeech.2026-3088"
+  },
+  "title": "ETC-TTS: Emotion Trajectory Learning for Controllable Emotional Text-to-Speech",
+  "authors": [
+    "Gaeun Kim",
+    "Jaeuk Lee",
+    "Joon-Hyuk Chang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kim26u_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kim26u_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-3088.pdf",
+  "pdf_source": "isca",
+  "abstract": "Emotional text-to-speech (TTS) systems have achieved high speech quality, yet controllable emotion intensity modeling remains challenging. Existing approaches control emotion embeddings via scaling or interpolation at inference time, so intermediate emotional states are not explicitly learned. To address this limitation, we propose Emotion Trajectory learning for Controllable emotional TTS (ETC-TTS), a framework that models emotion intensity as continuous trajectories in latent style space. A residual vector quantization (RVQ)-based style extractor provides emotion-aware representations, and a flow-matching objective learns trajectories between neutral and target emotions. Unlike prior methods, ETC-TTS learns emotion transitions during training, enabling stable intensity control. Experiments on Korean and English datasets show improved controllability while preserving speech quality. Subjective and objective evaluations confirm more stable emotional expressions than baseline methods.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "ETC-TTS, emotion-trajectory learning for controllable emotion intensity in TTS; core TTS method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-1777",
+  "source_ids": {
+    "isca": "dutta26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1777"
+  },
+  "title": "Spashta Audio-Bench: Unified ASR and TTS Evaluation Framework across Indian Languages",
+  "authors": [
+    "Bikash Dutta",
+    "Siddhant Gahankari",
+    "Abhinav Kumar",
+    "Siddarth Modugu",
+    "Shalini Kapoor",
+    "Mayank Vatsa",
+    "Richa Singh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/dutta26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/dutta26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1777.pdf",
+  "pdf_source": "isca",
+  "abstract": "Evaluation of speech systems for Indian languages remains severely fragmented. Models are benchmarked on disjoint datasets with inconsistent preprocessing and metrics, making reproducibility and fair comparison nearly impossible. We address this with Spashta Audio-Bench, a modular, plug-and-play framework analogous to HuggingFace Evaluate, where any model checkpoint or dataset registers through a standardized interface without modifying the core pipeline. Evaluating ten open-source ASR and TTS models across seven corpora spanning 22 Indian languages and Indian-accented English, it reveals what single-dataset, single-metric benchmarking conceals: parameter scaling does not guarantee cross-language robustness, naturalness and intelligibility diverge in TTS, and domain sensitivity persists across all ASR architectures. Crucially, it introduces TTS-ASR degradation as an objective, reproducible intelligibility measure, jointly evaluating naturalness and intelligibility where prior benchmarks assess at most one. We release it as reusable infrastructure to promote standardized, multi-metric speech evaluation for Indian languages.",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Unified ASR and TTS evaluation framework for Indian languages; TTS evaluation is a core half of the benchmark.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

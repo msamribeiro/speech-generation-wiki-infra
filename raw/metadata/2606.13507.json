@@ -1,7 +1,9 @@
 {
   "id": "2606.13507",
   "source_ids": {
-    "arxiv": "2606.13507"
+    "arxiv": "2606.13507",
+    "isca": "chen26l_interspeech",
+    "doi": "10.21437/Interspeech.2026-1148"
   },
   "title": "Leveraging Audio-LLMs to Filter Speech-to-Speech Training Data",
   "authors": [

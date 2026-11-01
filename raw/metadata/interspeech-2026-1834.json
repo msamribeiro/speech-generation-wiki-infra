@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-1834",
+  "source_ids": {
+    "isca": "wu26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-1834"
+  },
+  "title": "EmoInstruct-TTS: Dual-Path Instruction-Guided Emotional Speech Synthesis",
+  "authors": [
+    "Minghui Wu",
+    "Ganjun Liu",
+    "Zikun Fang",
+    "Ting Meng",
+    "Hongchuan Wu",
+    "Bingao Xu",
+    "Yonglong Cai",
+    "Jiasheng Chen",
+    "Jun Du"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wu26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wu26f_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Instruction-based controllable speech synthesis enables users to specify emotions through natural language. However, existing approaches often rely on coarse emotion labels and lack explicit modeling of fine-grained intensity. We propose EmoInstruct-TTS, a dual-path instruction-guided framework for emotional speech synthesis. We introduce Emotion2embed, a supervised semantic-acoustic emotion embedding covering 48 emotional states, including fine-grained categories and intensity levels. To infer embeddings from free-form instructions, we design an Instruction-Conditioned Emotion Flow Model (ICE-Flow) that generates acoustically grounded emotion representations. The inferred embeddings are integrated into an LLM-based synthesis pipeline to provide explicit emotional control while preserving semantic planning. Experiments show improved emotional controllability and speech naturalness over strong baselines.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.20650 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.20650"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-0646",
+  "source_ids": {
+    "isca": "lee26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-646"
+  },
+  "title": "RAF: Relativistic Adversarial Feedback For Universal Speech Synthesis",
+  "authors": [
+    "Yongjoon Lee",
+    "Jung-Woo Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lee26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lee26e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "We propose Relativistic Adversarial Feedback (RAF), a novel training objective for GAN vocoders that improves in-domain fidelity and generalization to unseen scenarios. Although modern GAN vocoders employ advanced architectures, their training objectives often fail to promote generalizable representations. RAF addresses this problem by leveraging speech self-supervised learning models to assist discriminators in evaluating sample quality, encouraging the generator to learn richer representations. Furthermore, we utilize relativistic pairing for real and fake waveforms to improve the modeling of the training data distribution. Experiments across multiple datasets show consistent gains in both objective and subjective metrics on GAN-based vocoders. Importantly, the RAF-trained BigVGAN-base outperforms the LSGAN-trained BigVGAN in perceptual quality using only 12% of the parameters. Comparative studies further confirm the effectiveness of RAF as a training framework for GAN vocoders.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.11678 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.11678"
+}

@@ -1,7 +1,9 @@
 {
   "id": "2606.06740",
   "source_ids": {
-    "arxiv": "2606.06740"
+    "arxiv": "2606.06740",
+    "isca": "kothari26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3330"
   },
   "title": "Multilingual Multi-Speaker Unit Vocoders: A Systematic Analysis of Discrete Speech Representations",
   "authors": [

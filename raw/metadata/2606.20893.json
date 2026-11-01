@@ -1,7 +1,9 @@
 {
   "id": "2606.20893",
   "source_ids": {
-    "arxiv": "2606.20893"
+    "arxiv": "2606.20893",
+    "isca": "bhattacharya26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-3055"
   },
   "title": "Exploiting Neural Audio Codec Latents for Adversarial Audio Attacks",
   "authors": [

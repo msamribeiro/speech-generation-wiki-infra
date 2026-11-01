@@ -1,7 +1,9 @@
 {
   "id": "2603.24589",
   "source_ids": {
-    "arxiv": "2603.24589"
+    "arxiv": "2603.24589",
+    "isca": "hao26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1547"
   },
   "title": "YingMusic-Singer-Plus: Controllable Singing Voice Synthesis with Flexible Lyric Manipulation and Annotation-free Melody Guidance",
   "authors": [

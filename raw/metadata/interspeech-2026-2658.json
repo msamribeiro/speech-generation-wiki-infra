@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2658",
+  "source_ids": {
+    "isca": "tamiru26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2658"
+  },
+  "title": "High-Quality Speech Synthesis for Under-Resourced Ethiopian Languages",
+  "authors": [
+    "Rahel Mekonen Tamiru",
+    "Solomon Teferra Abate",
+    "Martha Yifiru Tachbelie",
+    "Abel Mulat Alemu",
+    "Samuel Rahimeto Kebede",
+    "Rosa Tsegaye Aga"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/tamiru26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/tamiru26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2658.pdf",
+  "pdf_source": "isca",
+  "abstract": "This work presents high-quality Text to Speech (TTS) systems for Amharic and Afan Oromo, two widely spoken but under-resourced languages in Ethiopia using the SpeechT5, a Transformer-based self-supervised model. A phonetically rich and diverse text corpus was created, then professionally recorded in a studio to produce 200 hours of high-quality speech data (100 per language). To resolve linguistic complexities such as gemination and context-sensitive pronunciation in Amharic,we created a special dataset and extended the training to 113 hours. We evaluated the models both objectively and subjectively. Human raters assigned mean opinion scores of 4.65 for Amharic and 4.43 for Afan Oromo, highlighting the naturalness, intelligibility, and accurate pronunciation of the models. These results demonstrate that linguistically informed data combined with self-supervised learning enables robust, natural-sounding TTS for low-resource languages.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "200-hour studio TTS corpora and SpeechT5 TTS for Amharic and Afan Oromo; low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

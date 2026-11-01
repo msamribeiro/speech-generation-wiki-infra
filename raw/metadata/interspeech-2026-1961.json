@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-1961",
+  "source_ids": {
+    "isca": "ma26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1961"
+  },
+  "title": "MeanVC 2: Robust Low-Latency Streaming Zero-Shot Voice Conversion",
+  "authors": [
+    "Guobin Ma",
+    "Yuxuan Xia",
+    "Yuepeng Jiang",
+    "Dake Guo",
+    "Hanke Xie",
+    "Jingbin Hu",
+    "Yanbo Wang",
+    "Lei Xie",
+    "Pengcheng Zhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ma26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ma26c_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Streaming zero-shot voice conversion (VC) has become increasingly popular due to its potential for real-time applications. The recently proposed MeanVC achieves lightweight streaming zero-shot VC, but it has several limitations: its chunkwise autoregressive denoising doubles the effective training sequence length, conversion quality degrades under small-chunk settings, and its timbre encoder directly relies on reference melspectrograms, making it sensitive to reference audio quality. To address these limitations we propose MeanVC 2. We introduce future-receptive chunking (FRC), which explicitly schedules past and future receptive fields across diffusion transformer decoder layers and removes clean-chunk teacher forcing. By incorporating bounded future context, FRC enables stable conversion with a 40 ms chunk size. We further introduce a universal timbre token encoder, which constructs a timbre representation from a global speaker embedding and retrieves fine-grained timbre cues via cross-attention, improving robustness to low-quality references and enhancing zero-shot speaker similarity. Experimental results show that MeanVC 2 significantly outperforms MeanVC, while reducing latency from 211 ms to 110 ms. Audio samples are publicly available. The source code will be publicly released.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.09050 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.09050"
+}

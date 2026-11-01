@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-1038",
+  "source_ids": {
+    "isca": "xu26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-1038"
+  },
+  "title": "A barrier or a booster? Familiarity effects on Mandarin emotion prosody recognition using AI-powered voice cloning",
+  "authors": [
+    "Feng Xu",
+    "Gaoyuan Zhang",
+    "Shanshan Xue",
+    "Yixiang Chen",
+    "Hanrui Zhou",
+    "Xurong Xie",
+    "Hui Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/xu26i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/xu26i_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Emotion prosody perception requires simultaneous processing of acoustic cues and speaker identity. While listeners effortlessly decode natural speech, AI synthetic voices introduce cognitive complexities due to subtle acoustic atypicalities. It remains unclear how these synthetic features interact with a listener's prior social knowledge and memory of a familiar speaker. This study investigated how speech sources (human vs. AI) and speaker familiarity affect emotion recognition accuracy and cognitive load. A within-subject task with Mandarin-speaking adults evaluated behavioral (accuracy, reaction time) and physiological data (heart rate variability). Results showed that human voices yielded significantly higher accuracy and faster processing times than AI voices, while HRV did not significantly differentiate between conditions. These findings show that decoding synthetic speech is gated by top-down social cognition, highlighting limitations in current AI synthesis technologies.",
+  "task": [],
+  "relevance_score": 0.48,
+  "relevance_note": "Perception study of emotion-prosody recognition in human vs AI-cloned voices of familiar speakers. User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

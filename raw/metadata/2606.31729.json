@@ -1,7 +1,9 @@
 {
   "id": "2606.31729",
   "source_ids": {
-    "arxiv": "2606.31729"
+    "arxiv": "2606.31729",
+    "isca": "woszczyk26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3392"
   },
   "title": "Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation",
   "authors": [

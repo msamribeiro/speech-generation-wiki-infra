@@ -1,7 +1,9 @@
 {
   "id": "2606.21735",
   "source_ids": {
-    "arxiv": "2606.21735"
+    "arxiv": "2606.21735",
+    "isca": "phukan26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2283"
   },
   "title": "Bridging the Age Gap: Towards Detecting Neural Audio Codec Synthesized Elderly Speech Deepfake",
   "authors": [

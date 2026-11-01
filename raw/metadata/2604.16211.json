@@ -1,7 +1,9 @@
 {
   "id": "2604.16211",
   "source_ids": {
-    "arxiv": "2604.16211"
+    "arxiv": "2604.16211",
+    "isca": "xue26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-2513"
   },
   "title": "NVBench: A Benchmark for Speech Synthesis with Non-Verbal Vocalizations",
   "authors": [
@@ -34,13 +36,13 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2026,
-  "month": 4,
-  "published_date": "2026-04-21",
+  "month": 9,
+  "published_date": "2026-09-27",
   "preprint_date": "2026-04-17",
   "arxiv_version": 2,
   "version_date": "2026-04-21",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-09-27",
   "ingested_date": "2026-10-18",
   "url": "https://arxiv.org/abs/2604.16211",
   "pdf_url": "https://arxiv.org/pdf/2604.16211.pdf",

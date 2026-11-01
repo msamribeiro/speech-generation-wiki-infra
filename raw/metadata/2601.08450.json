@@ -1,7 +1,9 @@
 {
   "id": "2601.08450",
   "source_ids": {
-    "arxiv": "2601.08450"
+    "arxiv": "2601.08450",
+    "isca": "zhao26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-1339"
   },
   "title": "Decoding Order Matters in Autoregressive Speech Synthesis",
   "authors": [

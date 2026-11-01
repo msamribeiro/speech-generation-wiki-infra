@@ -1,7 +1,9 @@
 {
   "id": "2603.24430",
   "source_ids": {
-    "arxiv": "2603.24430"
+    "arxiv": "2603.24430",
+    "isca": "shen26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-2414"
   },
   "title": "Iterate to Differentiate: Enhancing Discriminability and Reliability in Zero-Shot TTS Evaluation",
   "authors": [

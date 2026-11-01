@@ -1,7 +1,9 @@
 {
   "id": "2511.19734",
   "source_ids": {
-    "arxiv": "2511.19734"
+    "arxiv": "2511.19734",
+    "isca": "lanzendoerfer26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1809"
   },
   "title": "Evaluating Objective Speech Quality Metrics for Neural Audio Codecs",
   "authors": [

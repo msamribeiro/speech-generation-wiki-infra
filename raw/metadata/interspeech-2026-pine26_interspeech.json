@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-pine26_interspeech",
+  "source_ids": {
+    "isca": "pine26_interspeech",
+    "doi": null
+  },
+  "title": "Two Lessons Learned from the SGILE project: Efficient Building and Evaluation of TTS Voices",
+  "authors": [
+    "Aidan Pine",
+    "Korin Richmond"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/pine26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/pine26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-pine26_interspeech.pdf",
+  "pdf_source": "isca",
+  "abstract": "In line with the \"Speaking Together\" theme for Interspeech 2026, our Show & Tell showcases two contributions arising from recent work on the \"Speech Generation for Indigenous Language Education\" (SGILE) project. Both contributions facilitate building TTS voices for under-resourced languages: 1) the open-source EveryVoice TTS Toolkit can build high-quality voices using constrained amounts of audio data typical for under-resourced languages; 2) we have methodically evaluated speech evaluation techniques with the aim of maximising insights gained while minimising listener effort, especially important when few listeners are available. Our demo takes the form of a web app which combines both these aspects in a single interactive interface: users can experience first-hand a selection of EveryVoice TTS voices through a listening test design that has been little used in the speech synthesis field so far.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Show & Tell on the EveryVoice toolkit for low-resource TTS voices and an efficient TTS evaluation approach from the SGILE project; TTS tooling and evaluation.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

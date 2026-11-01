@@ -1,7 +1,9 @@
 {
   "id": "2606.11681",
   "source_ids": {
-    "arxiv": "2606.11681"
+    "arxiv": "2606.11681",
+    "isca": "lee26h_interspeech",
+    "doi": "10.21437/Interspeech.2026-909"
   },
   "title": "UR-BERT: Scaling Text Encoders for Massively Multilingual TTS Through Universal Romanization and Speech Token Prediction",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2606.21970",
   "source_ids": {
-    "arxiv": "2606.21970"
+    "arxiv": "2606.21970",
+    "isca": "jiang26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-3114"
   },
   "title": "Integrating Facial Generation into Full-Duplex Spoken Dialogue Systems",
   "authors": [

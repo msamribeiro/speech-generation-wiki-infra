@@ -1,0 +1,45 @@
+{
+  "id": "interspeech-2026-1882",
+  "source_ids": {
+    "isca": "chen26t_interspeech",
+    "doi": "10.21437/Interspeech.2026-1882"
+  },
+  "title": "A Preclinical Study of Electrolaryngeal Voice Conversion for a Novel Nasal Electrolarynx: Feature Choice and Data Augmentation",
+  "authors": [
+    "Qi-Yan Chen",
+    "Ming-Chi Yen",
+    "Fo-Rui Li",
+    "Hsin-Te Hwang",
+    "Ching-Hung Lai",
+    "Shu-Wei Tsai",
+    "Ping-Cheng Yeh",
+    "Jyh-Shing Roger Jang",
+    "Yu Tsao",
+    "Hsin-Min Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26t_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26t_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1882.pdf",
+  "pdf_source": "isca",
+  "abstract": "Electrolaryngeal (EL) speech often exhibits reduced intelligibility and naturalness due to imperfect excitation and fixed pitch. In this preclinical study, we present the first systematic investigation of electrolaryngeal voice conversion (ELVC) for speech produced by a newly invented nasal electrolarynx (NEL), extending previous work that mainly targets cervical EL (CEL) speech. We examine the choice of features under NEL's distinctive acoustics by comparing Mel-spectrograms and WavLM features as input to a seq2seq ELVC system. To address NEL data scarcity, we propose an LLE-VC-based augmentation strategy to synthesize paired sNEL--sNL speech for VC pretraining. Experiments reveal device-dependent trends: WavLM features benefit CEL-oriented conversion and augmentation, whereas Mel-spectrogram inputs better preserve NEL-specific spectral characteristics and yield better intelligibility-related metrics and listener preferences for NEL-to-NL conversion.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Electrolaryngeal voice conversion for a nasal electrolarynx with feature and augmentation study; VC method and evaluation, matching the EL enhancement precedent.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-2159",
+  "source_ids": {
+    "isca": "zhao26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-2159"
+  },
+  "title": "MSpoofTTS: Multi-Resolution Spoof-Guided Inference for Discrete Speech Synthesis",
+  "authors": [
+    "Junchuan Zhao",
+    "Minh Duc Vu",
+    "Ye Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhao26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhao26g_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural codec language models enable high-quality discrete speech synthesis, yet their inference remains vulnerable to token-level artifacts and distributional drift that degrade perceptual realism. Rather than relying on preference optimization or retraining, we propose MSpoofTTS, a training-free inference framework that improves zero-shot synthesis through multi-resolution spoof guidance. We introduce a Multi-Resolution Token-based Spoof Detection framework that evaluates codec sequences at different temporal granularities to detect locally inconsistent or unnatural patterns. We then integrate the spoof detectors into a hierarchical decoding strategy, progressively pruning low-quality candidates and re-ranking hypotheses. This discriminator-guided generation enhances robustness without modifying model parameters. Experiments validate the effectiveness of our framework for robust and high-quality codec-based speech generation. Demos are available online.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.05373 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.05373"
+}

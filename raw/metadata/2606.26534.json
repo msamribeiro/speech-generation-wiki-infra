@@ -1,7 +1,9 @@
 {
   "id": "2606.26534",
   "source_ids": {
-    "arxiv": "2606.26534"
+    "arxiv": "2606.26534",
+    "isca": "xie26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1757"
   },
   "title": "VoiceTTA: Enhancing Zero-Shot Text-to-Speech via Reinforcement Learning-Based Test-Time Adaptation",
   "authors": [

@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-2730",
+  "source_ids": {
+    "isca": "wang26ea_interspeech",
+    "doi": "10.21437/Interspeech.2026-2730"
+  },
+  "title": "Not Flat, But Dissociated: Prosodic and Segmental Divergence in Neural TTS",
+  "authors": [
+    "Rong Wang",
+    "Kun Sun",
+    "Harald Baayen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wang26ea_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wang26ea_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2730.pdf",
+  "pdf_source": "isca",
+  "abstract": "Standard TTS metrics such as MOS and mel-cepstral distortion provide global scores but do not locate where synthesis diverges from natural speech. To examine this, four systems (Tacotron2-DDC, FastSpeech2, Glow-TTS, MixerTTS) are analysed across 13,100 matched LJ-TTS utterances. At the prosodic level, global F0 variability is compressed (d = −0.55) while local pitch reversals increase (d = +0.82), suggesting a cross-timescale dissociation, rather than monotone intonation. Timing metrics show no reliable deviation, localizing the deficit to F0 coordination. At the segmental level, vowel spaces shrink to 9–30% of the human baseline, directional formant biases indicate articulatory undershoot, and locus analysis confirms reduced place-conditioned coarticulation most consistently for alveolars. Deviations at these two levels are largely uncorrelated, suggesting prosodic organisation and segmental precision are distinct dimensions of synthesis quality conflated by standard metrics.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Locates prosodic and segmental divergence of four neural TTS systems from natural speech; TTS output analysis.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

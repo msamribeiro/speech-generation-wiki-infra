@@ -1,7 +1,9 @@
 {
   "id": "2511.01056",
   "source_ids": {
-    "arxiv": "2511.01056"
+    "arxiv": "2511.01056",
+    "isca": "liu26o_interspeech",
+    "doi": "10.21437/Interspeech.2026-2002"
   },
   "title": "WhisperVC: Decoupled Cross-Domain Alignment and Speech Generation for Low-Resource Whisper-to-Normal Conversion",
   "authors": [

@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2743",
+  "source_ids": {
+    "isca": "turetzky26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2743"
+  },
+  "title": "Knowing What to Stress: A Discourse-Conditioned Text-to-Speech Benchmark",
+  "authors": [
+    "Arnon Turetzky",
+    "Avihu Dekel",
+    "Hagai Aronowitz",
+    "Ron Hoory",
+    "Yossi Adi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/turetzky26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/turetzky26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Spoken meaning often depends not only on what is said, but also on which word is emphasized. The same sentence can convey correction, contrast, or clarification depending on where emphasis falls. Although modern text-to-speech (TTS) systems generate expressive speech, it remains unclear whether they infer contextually appropriate stress from discourse alone. To address this gap, we present Context-Aware Stress TTS (CAST), a benchmark for evaluating context-conditioned word-level stress in TTS. Items are defined as contrastive context pairs: identical sentences paired with distinct contexts requiring different stressed words. We evaluate state-of-the-art systems and find a consistent gap: text-only language models reliably recover the intended stress from context, yet TTS systems frequently fail to realize it in speech. We release the benchmark, evaluation framework, construction pipeline and a synthetic corpus to support future work on context-aware speech synthesis.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2604.10580 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2604.10580"
+}

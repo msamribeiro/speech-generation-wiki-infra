@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-0887",
+  "source_ids": {
+    "isca": "you26_interspeech",
+    "doi": "10.21437/Interspeech.2026-887"
+  },
+  "title": "Uncovering the Impact of G2P Precision on Korean TTS: A Large-Scale Statistical Validation via a Novel Morphological Engine",
+  "authors": [
+    "Heejo You",
+    "Sungwoo Moon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/you26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/you26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0887.pdf",
+  "pdf_source": "isca",
+  "abstract": "Grapheme-to-Phoneme (G2P) conversion is vital for TTS, yet the widely used Korean g2pk library suffers from high latency and inaccurate phonological modeling at word boundaries. Such inaccuracies act as \"label noise\", degrading TTS performance and training efficiency. To resolve this, we propose a novel rule-based G2P engine featuring an object-oriented data structure with syllable-morpheme connectivity and a recursive re-evaluation mechanism for sequential phonological rules. Rigorous benchmarking shows that the proposed engine significantly outperforms g2pk in both speed (3.14ms vs. 14.98ms, p < 0.001) and accuracy (85.7% vs. 27.2%). Furthermore, large-scale statistical validation via 96 VITS models (32 per condition) demonstrates that our engine achieves statistically significant improvements in intelligibility. The results confirm that our approach enhances not only the final audio quality but also the overall training efficiency of TTS models by providing consistent phonetic representations.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "New Korean G2P engine with large-scale statistical validation of its effect on TTS quality; TTS front-end contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

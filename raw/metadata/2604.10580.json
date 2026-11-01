@@ -1,7 +1,9 @@
 {
   "id": "2604.10580",
   "source_ids": {
-    "arxiv": "2604.10580"
+    "arxiv": "2604.10580",
+    "isca": "turetzky26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2743"
   },
   "title": "Knowing What to Stress: A Discourse-Conditioned Text-to-Speech Benchmark",
   "authors": [

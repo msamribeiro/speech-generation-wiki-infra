@@ -1,7 +1,9 @@
 {
   "id": "2607.13864",
   "source_ids": {
-    "arxiv": "2607.13864"
+    "arxiv": "2607.13864",
+    "isca": "zhou26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-2436"
   },
   "title": "Rethinking Speech Foundation Model Fine-tuning: Better SFT or Better Match?",
   "authors": [

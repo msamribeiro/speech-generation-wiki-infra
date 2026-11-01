@@ -1,7 +1,9 @@
 {
   "id": "2509.22167",
   "source_ids": {
-    "arxiv": "2509.22167"
+    "arxiv": "2509.22167",
+    "isca": "niu26_interspeech",
+    "doi": "10.21437/Interspeech.2026-533"
   },
   "title": "Semantic-VAE: Semantic-Alignment Latent Representation for Better Speech Synthesis",
   "authors": [

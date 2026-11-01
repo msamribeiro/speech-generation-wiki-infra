@@ -1,7 +1,9 @@
 {
   "id": "2606.20457",
   "source_ids": {
-    "arxiv": "2606.20457"
+    "arxiv": "2606.20457",
+    "isca": "makarov26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3448"
   },
   "title": "Repurposing a Speech Classifier for Guided Diffusion-Based Speech Generation",
   "authors": [

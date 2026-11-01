@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2321",
+  "source_ids": {
+    "isca": "song26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-2321"
+  },
+  "title": "Evaluating and Preserving Lexical Stress in English-to-Chinese Speech-to-Speech Translation",
+  "authors": [
+    "Yuchen Song",
+    "Xi Chen",
+    "Mingze Li",
+    "Satoshi Nakamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/song26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/song26f_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech-to-speech translation (S2ST) systems have achieved impressive progress in semantic accuracy and speech naturalness. However, the cross-lingual transfer of lexical stress-a vital cue for emphasis and speaker intent-remains heavily under-explored, compounded by a lack of reliable automatic evaluation metrics for tonal languages like Chinese. We investigate English-to-Chinese S2ST stress transfer by constructing a stress-annotated Chinese dataset and an XLS-R-based Mandarin stress detector. Integrating this with the English EmphAssess system, we propose a novel objective metric for cross-lingual stress evaluation. Furthermore, we fine-tune CosyVoice3 to build a stress-aware S2ST system. Experiments demonstrate that our proposed S2ST architecture significantly outperforms existing systems in stress translation capability while maintaining competitive translation quality. Furthermore, our evaluation metric exhibits a strong correlation with human subjective judgments.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.15266 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.15266"
+}

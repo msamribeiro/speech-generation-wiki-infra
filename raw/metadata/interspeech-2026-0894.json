@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0894",
+  "source_ids": {
+    "isca": "hjuler26_interspeech",
+    "doi": "10.21437/Interspeech.2026-894"
+  },
+  "title": "Listenability of Synthetic Speech: On the Effect of Linguistic Registers in Text-to-Speech Input",
+  "authors": [
+    "Maja Jønck Hjuler",
+    "Tuyet Katie Nhi Tran",
+    "Laurianne Sitbon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/hjuler26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/hjuler26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0894.pdf",
+  "pdf_source": "isca",
+  "abstract": "With the rapid advancement of Large Language Models (LLMs), LLM-generated text is increasingly being used as input for speech synthesis, yet little is known about its listenability compared to other linguistic registers. This paper presents a preliminary study of listenability across conversational, formal written, simplified written, and LLM-generated registers in terms of listener effort and comprehension during synthesized delivery. An experiment with 47 participants measured subjective mental effort, cognitive load, and cued recall in a within-subjects design. Register characteristics were examined through readability metrics and Biber's Multi-Dimensional Analysis. Our findings indicate higher listenability for synthesized speech from written sources compared to radio transcripts, demonstrating the intricacies of language and register. Furthermore, LLM-generated text was as listenable as Wikipedia-sourced text, supporting its suitability in synthetic speech applications.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.74,
+  "relevance_note": "Listener study of synthesized-speech listenability across text registers including LLM-generated input; evaluation of TTS output with human listeners.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

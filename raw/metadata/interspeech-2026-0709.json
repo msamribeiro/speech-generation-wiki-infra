@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-0709",
+  "source_ids": {
+    "isca": "francis26_interspeech",
+    "doi": "10.21437/Interspeech.2026-709"
+  },
+  "title": "No-Shot Text-to-Speech: Limitations of Zero-Shot TTS and its Evaluation Methods in Representing Queer and Transgender Voices",
+  "authors": [
+    "Juliana Francis",
+    "Robin Netzorg",
+    "Joakim Gustafson",
+    "Éva Székely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/francis26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/francis26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0709.pdf",
+  "pdf_source": "isca",
+  "abstract": "Gender expansive voices remain underrepresented in speech datasets, which could cause challenges with generalizability in zero-shot Text-To-Speech (TTS) systems. We evaluate six zero-shot TTS models on two datasets: one containing non gender expansive voices (N-GE) and one with gender expansive (GE) voices from self-identified speakers. Human ratings found that 2 of the 6 models synthesize less similar GE voices compared to N-GE voices, and 3 have improved performance for GE voices. Automated evaluations yield conflicting results, with speaker similarity and automated mean opinion score predictors rating performance of GE voices inconsistently between models and human ratings. This highlights a potential blind spot in evaluation pipelines, emphasizing a need for more representative data and metrics that better capture human perceptual judgments. Our findings stress the need to include transgender, queer, and minority communities in creation of better datasets and model training.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Evaluates six zero-shot TTS models and their evaluation metrics on gender-expansive voices with human ratings; TTS bias evaluation in line with gender-bias TTS precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,9 @@
 {
   "id": "2509.19852",
   "source_ids": {
-    "arxiv": "2509.19852"
+    "arxiv": "2509.19852",
+    "isca": "wang26x_interspeech",
+    "doi": "10.21437/Interspeech.2026-1345"
   },
   "title": "Eliminating stability hallucinations in llm-based tts models via attention guidance",
   "authors": [

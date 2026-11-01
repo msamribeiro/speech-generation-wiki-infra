@@ -1,7 +1,9 @@
 {
   "id": "2606.06168",
   "source_ids": {
-    "arxiv": "2606.06168"
+    "arxiv": "2606.06168",
+    "isca": "singh26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-3451"
   },
   "title": "ProSarc: Prosody-Aware Sarcasm Recognition Framework via Temporal Prosodic Incongruity",
   "authors": [

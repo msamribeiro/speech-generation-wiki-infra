@@ -1,0 +1,57 @@
+{
+  "id": "interspeech-2026-0533",
+  "source_ids": {
+    "isca": "niu26_interspeech",
+    "doi": "10.21437/Interspeech.2026-533"
+  },
+  "title": "Semantic-VAE: Semantic-Alignment Latent Representation for Better Speech Synthesis",
+  "authors": [
+    "Zhikang Niu",
+    "Shujie Hu",
+    "Jeongsoo Choi",
+    "Yushen Chen",
+    "Peining Chen",
+    "Pengcheng Zhu",
+    "Yunting Yang",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Chunhui Wang"
+  ],
+  "authors_full": [
+    "Zhikang Niu",
+    "Shujie Hu",
+    "Jeongsoo Choi",
+    "Yushen Chen",
+    "Peining Chen",
+    "Pengcheng Zhu",
+    "Yunting Yang",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Chunhui Wang",
+    "Xie Chen"
+  ],
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/niu26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/niu26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Mel-spectrograms have been widely used in zero-shot text-to-speech (TTS); their inherent redundancy leads to inefficiency in text-speech alignment. Compact VAE-based latent representations have emerged as a stronger alternative but exhibit an optimization dilemma: higher-dimensional latents improve reconstruction quality and speaker similarity but degrade intelligibility, while lower-dimensional latents improve intelligibility at the cost of reconstruction fidelity. To overcome this dilemma, we propose Semantic-VAE, which uses semantic alignment regularization in the latent space. This design alleviates the reconstruction-generation trade-off by capturing semantic structure in high-dimensional latent representations. When integrated into F5-TTS, our method achieves 2.10% WER and 0.64 speaker similarity on LibriSpeech-PC, outperforming mel-based systems and vanilla acoustic VAE baselines with improved training efficiency. Demo and codes: https://zhikangniu.github.io/semantic-vae/",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2509.22167 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2509.22167"
+}

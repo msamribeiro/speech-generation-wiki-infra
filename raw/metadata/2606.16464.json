@@ -1,7 +1,9 @@
 {
   "id": "2606.16464",
   "source_ids": {
-    "arxiv": "2606.16464"
+    "arxiv": "2606.16464",
+    "isca": "zhao26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-2564"
   },
   "title": "Towards Robust Generative Speech Enhancement Using Vector Quantisation-Based Neural Audio Codec",
   "authors": [

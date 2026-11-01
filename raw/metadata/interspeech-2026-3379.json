@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-3379",
+  "source_ids": {
+    "isca": "otani26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3379"
+  },
+  "title": "Speaker-Independent Speech Synthesis from Real-time MRI Articulatory Data",
+  "authors": [
+    "Yuto Otani",
+    "Shun Sawada",
+    "Hidefumi Ohmura",
+    "Kouichi Katsurada"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/otani26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/otani26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "This paper proposes a speaker-independent speech synthesis method that generates speech waveforms from real-time MRI (rtMRI) videos. The proposed model uses EfficientNetV2 for per-frame feature extraction, E-Branchformer for temporal modeling, and BigVGAN-v2 for speech synthesis. Speaker characteristics are acquired from rtMRI videos through cross-modal training with speaker embeddings, enabling speaker-independent synthesis from rtMRI videos alone. Experiments using the USC 75-Speaker Speech MRI Database demonstrate that the proposed method achieves favorable linguistic accuracy for read speech in a speaker-independent setting. F0 correlation analysis indicates that relative prosodic patterns are captured to a reasonable extent, as expected from visual articulatory information, though absolute F0 estimation remains challenging. Speaker similarity results show that although within-gender speaker discrimination proved difficult, speaker identity is reproduced to a reasonable degree.",
+  "task": [],
+  "relevance_score": 0.38,
+  "relevance_note": "Speaker-independent speech synthesis from real-time MRI articulatory video; biosignal-to-speech, consistent with rejected silent-speech precedents (2510.23969 emg2speech, 2607.18629 CS-ETS).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

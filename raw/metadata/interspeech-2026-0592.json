@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-0592",
+  "source_ids": {
+    "isca": "higuchi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-592"
+  },
+  "title": "Incremental End-to-End Spoken Dialogue State Tracking with a Multimodal LLM and Reinforcement Learning",
+  "authors": [
+    "Tomoya Higuchi",
+    "Michimasa Inaba"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/higuchi26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/higuchi26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "End-to-end spoken dialogue state tracking (DST) infers belief states directly from speech, avoiding cascading errors in ASR-DST pipelines. This paper proposes an incremental DST method using a multimodal large language model (Qwen2.5-Omni-7B) that generates transcripts and symbolic state updates from raw audio. Unlike conventional approaches that regenerate the full state each turn, our method predicts only symbolic edit operations relative to the previous state, reducing output length and the risk of corrupting unchanged slots. We apply a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization (GRPO), which directly optimizes generation-level rewards for transcript accuracy, DST correctness, and format validity. Experiments on SpokenWOZ demonstrate that incremental updates substantially outperform full-state prediction, and GRPO further improves accuracy, achieving the best reported results on this benchmark.",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Incremental spoken dialogue state tracking with a multimodal LLM; speech understanding with no generation component (DST scope expansion is deferred), consistent with the rejected joint speech-text E2E dialogue precedent.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

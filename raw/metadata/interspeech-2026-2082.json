@@ -1,0 +1,46 @@
+{
+  "id": "interspeech-2026-2082",
+  "source_ids": {
+    "isca": "chen26v_interspeech",
+    "doi": "10.21437/Interspeech.2026-2082"
+  },
+  "title": "SARA: A Dual-Stream VAE for High-Fidelity Speech Generation via Integrating Semantic and Acoustic Representations",
+  "authors": [
+    "Peijie Chen",
+    "Wenhao Guan",
+    "Weijie Wu",
+    "Kaidi Wang",
+    "Daiyu Huang",
+    "Zhuanling Zha",
+    "Junbo Li",
+    "Jun Fang",
+    "Qingyang Hong",
+    "Lin Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26v_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26v_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Zero-shot text-to-speech (TTS) relies on robust speech representations. However, current speech tokenizers face a fundamental trade-off: acoustic codecs preserve high-fidelity audio but lack linguistic constraints, causing content errors during generation, whereas semantic tokens from self-supervised learning (SSL) models ensure precise text alignment but discard some acoustic information. To bridge this gap, we propose SARA, a dual-stream VAE that directly fuses a frozen SSL semantic anchor with a dedicated residual acoustic encoder. This effectively mitigates the dilemma, creating an efficient and compact latent space without relying on complex regularizers. SARA achieves superior reconstruction quality over strong baselines. Furthermore, in downstream zero-shot TTS tasks, it yields highly natural and expressive synthesis quality, and maintains robust generation performance even under accelerated inference, offering a favorable trade-off between synthesis speed and computational cost.",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.11611 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.11611"
+}

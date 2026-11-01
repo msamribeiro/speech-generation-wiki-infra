@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2942",
+  "source_ids": {
+    "isca": "ito26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2942"
+  },
+  "title": "Unified Prosody Restoration Using Diffusion Models for Controllable Text-to-Speech Synthesis",
+  "authors": [
+    "Yuki Ito",
+    "Junki Ohmura",
+    "Hayato Futami",
+    "Toshiyuki Sekiya",
+    "Toshiyuki Kumakura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ito26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ito26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2942.pdf",
+  "pdf_source": "isca",
+  "abstract": "Controllable text-to-speech systems that use explicit prosodic features enable fine-grained control, which is particularly useful for emotional speech synthesis. However, specifying frame-level details often imposes a heavy burden on users. To alleviate this burden, we formulate prosody restoration as a unified problem of recovering frame-level prosody from simplified and easy-to-specify prosodic inputs. By expanding two prior tasks with three novel ones, we address a total of five tasks. Together, they support practical user workflows by enabling restoration from prosody that is partial, coarse, or both. We also propose two diffusion-based prosody restorers: a supervised model trained to reverse simulated degradations, and an unsupervised model leveraging samplers for linear inverse problems. Experiments across all five tasks show that our methods restore prosody more accurately than non-diffusion baselines, preserving linguistically valid prosodic structures.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Diffusion-based unified prosody restoration for controllable TTS; TTS control method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

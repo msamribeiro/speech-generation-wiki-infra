@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1487",
+  "source_ids": {
+    "isca": "li26x_interspeech",
+    "doi": "10.21437/Interspeech.2026-1487"
+  },
+  "title": "What Makes Synthetic Speech Sound Sarcastic? A Prosody-Controlled Perception Study",
+  "authors": [
+    "Zhu Li",
+    "Shekhar Nayak",
+    "Matt Coler"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/li26x_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/li26x_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Prosody plays an important role in sarcasm perception, yet previous studies have relied on naturally produced speech that lacks fine-grained control over individual acoustic dimensions. As prosodic cues co-vary in natural data, isolating their independent contributions remains challenging. We introduce a controlled framework using neural text-to-speech (TTS) with prompt-based prosodic conditioning to manipulate speech rate, pitch variation, and loudness. An orthogonal stimulus set was constructed to enable causal testing of prosodic cue effects. Human listeners rated sarcasm and naturalness, and their judgments were compared with predictions from a foundation model capable of processing audio input. Results show that loudness primarily drives human sarcasm perception, whereas the model assigns greater weight to speech rate, indicating limited behavioral alignment. This study shows how controllable neural TTS enables investigation of prosodic cue weighting in speech perception.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.09717 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.09717"
+}

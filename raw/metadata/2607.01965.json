@@ -1,7 +1,9 @@
 {
   "id": "2607.01965",
   "source_ids": {
-    "arxiv": "2607.01965"
+    "arxiv": "2607.01965",
+    "isca": "raybarman26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3311"
   },
   "title": "Towards a Phonology-Informed Evaluation of Multilingual TTS",
   "authors": [

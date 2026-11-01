@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-2125",
+  "source_ids": {
+    "isca": "liu26p_interspeech",
+    "doi": "10.21437/Interspeech.2026-2125"
+  },
+  "title": "audiobook-cc: Controllable Long-context Speech Generation for Multicast Audiobook",
+  "authors": [
+    "Min Liu",
+    "JingJing Yin",
+    "Xiang Zhang",
+    "JianHao Ye",
+    "Siyu Hao",
+    "Siwei Xia",
+    "Hongbin Zhou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/liu26p_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/liu26p_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Existing text-to-speech systems predominantly focus on single-sentence synthesis and lack adequate contextual modeling and fine-grained control for coherent multicast audiobooks. To address this, we propose a context-aware, emotion-controllable speech synthesis framework with three innovations: a context mechanism for consistency, a disentanglement paradigm to decouple style from prompts, and self-distillation to boost expressiveness. Experiments show consistent gains: chapter-level generation achieves 4.25 M-MOS(14% relative gain over the strongest baseline), dialog reaches 4.11 S-MOS, and emotion control improves by 31 percentage points in high-intensity discrimination. Ablation studies validate our methods. Demo: https://semisemi-ux.github.io/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2509.17516 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2509.17516"
+}

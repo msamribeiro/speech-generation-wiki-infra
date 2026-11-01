@@ -1,7 +1,9 @@
 {
   "id": "2606.11766",
   "source_ids": {
-    "arxiv": "2606.11766"
+    "arxiv": "2606.11766",
+    "isca": "kim26t_interspeech",
+    "doi": "10.21437/Interspeech.2026-3071"
   },
   "title": "Fast Speech Foundation Model Distillation Using Interleaved Stacking",
   "authors": [

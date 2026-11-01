@@ -1,7 +1,9 @@
 {
   "id": "2606.15266",
   "source_ids": {
-    "arxiv": "2606.15266"
+    "arxiv": "2606.15266",
+    "isca": "song26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-2321"
   },
   "title": "Evaluating and Preserving Lexical Stress in English-to-Chinese Speech-to-Speech Translation",
   "authors": [

@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2026-rackauckas26_interspeech",
+  "source_ids": {
+    "isca": "rackauckas26_interspeech",
+    "doi": null
+  },
+  "title": "AdaptLingo: A Speech-to-Speech English Practice System with Fluency-Adaptive Responses",
+  "authors": [
+    "Zackary Rackauckas"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/rackauckas26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/rackauckas26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "We demonstrate AdaptLingo, an open-source, speech-to-speech English conversational agent for second-language learners. Beginners may be overwhelmed by many static language learning systems, which use complex language and fast speech, while advanced learners may disengage from simplified dialogue. AdaptLingo addresses this problem by predicting a learner's spoken fluency from temporal acoustic features, constraining responses to the learner's EIKEN-aligned vocabulary level, and adapting text-to-speech rate. In demonstration, users speak to the chatbot and receive spoken responses adapted to beginner, intermediate, or advanced fluency. Preliminary evaluation shows fluency classification works well on labeled data but remains challenging on noisy user-study speech, and user feedback suggests that adaptive spoken practice is promising when matched to learner background and conversational goals.",
+  "task": [],
+  "relevance_score": 0.5,
+  "relevance_note": "AdaptLingo speech-to-speech conversational agent for L2 learners that adapts responses to predicted fluency (demo). User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -68,6 +68,9 @@ def get_html(session: requests.Session, url: str) -> Optional[str]:
     try:
         resp = session.get(url, timeout=REQUEST_TIMEOUT)
         resp.raise_for_status()
+        # The archive serves UTF-8 without a charset header; requests would fall back to Latin-1
+        if "charset" not in resp.headers.get("Content-Type", "").lower():
+            resp.encoding = "utf-8"
         return resp.text
     except Exception as exc:
         print(f"  Fetch error for {url}: {exc}")
@@ -159,13 +162,12 @@ def scrape_paper_page(session: requests.Session, paper: dict, year: int) -> dict
         paper["authors"] = h5.get_text(" ", strip=True)
     paper["authors_list"] = _split_authors(paper["authors"])
 
-    # Abstract: inside <div id="abstract"><p>...</p></div>
+    # Abstract: <div id="abstract"><p>...</p></div> (2025), bare text in the div (2026)
     abstract = None
     abstract_div = soup.find("div", id="abstract")
     if abstract_div:
         p = abstract_div.find("p")
-        if p:
-            abstract = p.get_text(" ", strip=True)
+        abstract = (p or abstract_div).get_text(" ", strip=True) or None
     paper["abstract"] = abstract
 
     # DOI: scan all text for 10.21437/Interspeech.{year}-{seq}
@@ -196,11 +198,13 @@ def _split_authors(authors_str: str) -> list[str]:
 _CONF_DATES = {
     2024: "2024-09-01",
     2025: "2025-08-17",
+    2026: "2026-09-27",
 }
 
 _CONF_MONTHS = {
     2024: 9,
     2025: 8,
+    2026: 9,
 }
 
 

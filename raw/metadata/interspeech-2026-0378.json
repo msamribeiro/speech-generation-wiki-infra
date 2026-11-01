@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-0378",
+  "source_ids": {
+    "isca": "ghosh26_interspeech",
+    "doi": "10.21437/Interspeech.2026-378"
+  },
+  "title": "Phy-VC: Physics-Informed Voice Conversion for Privacy-Preserving Pathological Speech",
+  "authors": [
+    "Suhita Ghosh",
+    "Yamini Sinha",
+    "Melanie Jouaiti",
+    "Tim Wansiedler",
+    "Kim Hakenberg",
+    "Julian Karcher",
+    "Ingo Siegert",
+    "Sebastian Stober"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ghosh26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ghosh26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0378.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech anonymisation aims to conceal the speaker's identity while retaining task-relevant information. Existing methods struggle with acoustic patterns rarely seen during training, such as dysfluencies in pathological speech. This fragility arises from purely data-driven spectral envelope estimation without physical constraints. We introduce Phy-VC, a voice conversion method that enforces articulatory-acoustic coupling as an inductive bias through a differentiable vocal tract resonance model. Trained on standard speech, Phy-VC improves intelligibility, prosody, and naturalness over state-of-the-art baselines on diverse speech patterns, including stuttering, dementia, elderly, and emotion datasets, while achieving effective anonymisation. Expert assessment confirms significant preservation of clinically relevant speech attributes. Further, the articulatory representation enables interpretable, systematic control of speaker variation.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Physics-informed voice conversion for anonymising pathological speech; a new VC method evaluated on conversion quality and privacy, matching VC-anonymisation precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

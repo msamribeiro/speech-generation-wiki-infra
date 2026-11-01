@@ -1,7 +1,9 @@
 {
   "id": "2607.06986",
   "source_ids": {
-    "arxiv": "2607.06986"
+    "arxiv": "2607.06986",
+    "isca": "feng26_interspeech",
+    "doi": "10.21437/Interspeech.2026-137"
   },
   "title": "MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres",
   "authors": [

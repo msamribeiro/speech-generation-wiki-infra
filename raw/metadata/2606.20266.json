@@ -1,7 +1,9 @@
 {
   "id": "2606.20266",
   "source_ids": {
-    "arxiv": "2606.20266"
+    "arxiv": "2606.20266",
+    "isca": "eom26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3190"
   },
   "title": "Transcript-Free Flow-Matching Text-to-Speech via Speech Feature Conditioning",
   "authors": [

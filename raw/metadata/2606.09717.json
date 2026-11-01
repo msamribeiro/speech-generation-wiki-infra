@@ -1,7 +1,9 @@
 {
   "id": "2606.09717",
   "source_ids": {
-    "arxiv": "2606.09717"
+    "arxiv": "2606.09717",
+    "isca": "li26x_interspeech",
+    "doi": "10.21437/Interspeech.2026-1487"
   },
   "title": "What Makes Synthetic Speech Sound Sarcastic? A Prosody-Controlled Perception Study",
   "authors": [

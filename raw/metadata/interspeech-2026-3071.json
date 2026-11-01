@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-3071",
+  "source_ids": {
+    "isca": "kim26t_interspeech",
+    "doi": "10.21437/Interspeech.2026-3071"
+  },
+  "title": "Fast Speech Foundation Model Distillation Using Interleaved Stacking",
+  "authors": [
+    "Eungbeom Kim",
+    "Kyogu Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kim26t_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kim26t_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Distilling a large speech foundation model (SFM) into an efficient student model has been successfully applied to low-resource environments. Although distillation reduces inference latency, it requires an additional student model training. However, the training efficiency of SFM distillation remains underexplored. In this work, we explore training acceleration of SFM distillation to speed up model deployment. We examine the potential of stacking, in which the model depth is progressively increased through training until the target model depth is reached. While existing stacking methods improve training speed, they suffer from performance degradation. To handle this limitation, we propose interleaved stacking, a novel stacking method that consistently preserves layer position throughout the stacking process. This property is particularly critical in SFMs, in which each layer encodes distinct layer-specific knowledge. We validate the effectiveness of the proposed method on SUPERB.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.11766 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.11766"
+}

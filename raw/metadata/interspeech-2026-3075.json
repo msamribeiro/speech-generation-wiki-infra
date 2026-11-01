@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-3075",
+  "source_ids": {
+    "isca": "shim26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3075"
+  },
+  "title": "Should Robots Sound more like Machines than like Humans? User Expectations Affect the Perception of Prosody in TTS Voices",
+  "authors": [
+    "Ha Eun Shim",
+    "Paige Tuttösí",
+    "Olivia Yung",
+    "Ivan Fong",
+    "Sara Ng",
+    "Angelica Lim",
+    "Yue Wang",
+    "H. Henny Yeung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/shim26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/shim26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-3075.pdf",
+  "pdf_source": "isca",
+  "abstract": "Prosodic and indexical features of artificial voices, like naturalness, tone, and emotion, are often treated as distinct from intelligibility. Yet prosody can be critical: Consider, \"She has to pull Bart\" (without commas/prosodic boundaries) versus \"She has to pull, Bart\" (with commas/prosodic boundaries). Here, we asked how humans disambiguated such sentences while listening to a robot avatar, as prosodic and indexical features in the robot voice were manipulated. Prosodic pitch changes to make the voice either affective or monotonic had little effect on intelligibility. Surprisingly, indexical changes to increase machine-like (and less human-like) voice quality, despite being phonetically irrelevant to this prosodic contrast, increased intelligibility, but only for sentences with commas. Results imply that hearing machine-like voices changes listener expectations, biasing or pushing listeners to hear prosodic boundaries (i.e., commas) that are otherwise hard to detect.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.52,
+  "relevance_note": "Perception study of how prosodic and indexical features of a robot's TTS voice affect sentence disambiguation under user expectations. User decision at review (2026-11-01): accepted.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

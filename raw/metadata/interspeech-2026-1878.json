@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-1878",
+  "source_ids": {
+    "isca": "spiesberger26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1878"
+  },
+  "title": "Predicting Menstrual Cycle Phases from Speech: A Paralinguistic Approach",
+  "authors": [
+    "Anika A. Spiesberger",
+    "Andreas Triantafyllopoulos",
+    "Melanie Weirich",
+    "Bjoern Schuller"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/spiesberger26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/spiesberger26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Hormonal changes throughout the menstrual cycle can affect speech production. However, studies investigating differences in acoustic parameters have found inconsistent results. This could be because changes are likely subtle and multivariate. We therefore apply handcrafted and embedding-based features, combined with machine learning methods. We use a German read speech dataset of 76 participants in two cycle phases (ovulation and luteal). Additionally, we investigate whether speaker-level accuracy is correlated with hormonal levels, the magnitude of hormonal changes between phases, or age. Our results show small, non-significant effects of loudness, formant amplitudes, H1-H2, and spectral flux. We achieve 62.5 % accuracy with handcrafted features, but chance-level performance with learnt embeddings. Speaker-level accuracies show no correlation with hormonal levels or age. We suggest using more cycle phases and personalisation techniques in future research.",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Predicting menstrual cycle phase from speech features; paralinguistic analysis, no synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

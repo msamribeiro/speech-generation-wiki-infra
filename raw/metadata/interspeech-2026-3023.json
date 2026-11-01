@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-3023",
+  "source_ids": {
+    "isca": "sonkar26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3023"
+  },
+  "title": "Tongue2Speech: Real-Time Speech Synthesis from Tongue Ultrasound Videos via Spatiotemporal Transformers",
+  "authors": [
+    "Yash Sonkar",
+    "Yasaswi Kilaru",
+    "Sudheera Yelimeli",
+    "Neil Shah",
+    "Vineet Gandhi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/sonkar26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/sonkar26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Ultrasound-to-Speech aims to synthesize intelligible speech from tongue ultrasound video. Prior approaches rely mainly on purely convolutional or recurrent architectures. We present Tongue2Speech, a lightweight framework combining explicit 3D spatio-temporal encoding with a multi-layer Transformer to model long-range articulatory dynamics. Spectral distortion metrics (such as MSE) commonly used in prior work are weak indicators of lexical accuracy when used in isolation. Therefore, we evaluate performance using word error rate (WER). On the English TaL corpus, Tongue2Speech achieves 15.93% WER in single-speaker and 31.64% in multi-speaker settings, outperforming six strong baselines. Speaker-specific fine-tuning further improves intelligibility for unseen users. These results highlight tongue-only ultrasound as a promising pathway toward practical silent speech synthesis. Audio samples are available at: https://tongue2speech.github.io/",
+  "task": [],
+  "relevance_score": 0.38,
+  "relevance_note": "Tongue-ultrasound-to-speech synthesis; biosignal-to-speech with a non-text, non-acoustic input, consistent with rejected silent-speech precedents (2510.23969 emg2speech, 2607.18629 CS-ETS).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

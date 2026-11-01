@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2026-0689",
+  "source_ids": {
+    "isca": "ali26_interspeech",
+    "doi": "10.21437/Interspeech.2026-689"
+  },
+  "title": "Fed-SpeechLLM: Federated Learning Speech Language Models for Multilingual ASR",
+  "authors": [
+    "Mohamed Nabih Ali",
+    "Daniele Falavigna",
+    "Alessio Brutti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ali26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ali26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "SpeechLLMs show strong promise for multilingual ASR, yet centralized training conflicts with privacy constraints over distributed, linguistically diverse data. This paper presents Fed-SpeechLLM, a federated learning framework for multilingual SpeechLLM-based ASR evaluated on a bilingual English and Italian setting. We study federated optimization under compounded non-IID conditions from acoustic and cross-lingual heterogeneity. Standard FL methods degrade when clients hold language-skewed distributions. Moreover, we propose language-aware gradient aggregation and a sampling clustering-based method to mitigate multilingual imbalance, using selective aggregation of speech encoders and projection layers with a frozen LLM backbone. Results confirm competitive performance against centralized training.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Federated learning for SpeechLLM-based multilingual ASR; ASR only.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

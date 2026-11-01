@@ -1,7 +1,9 @@
 {
   "id": "2606.21893",
   "source_ids": {
-    "arxiv": "2606.21893"
+    "arxiv": "2606.21893",
+    "isca": "wang26y_interspeech",
+    "doi": "10.21437/Interspeech.2026-1490"
   },
   "title": "AugCodec: A Low-Bitrate Disentangled Neural Speech Codec via Data Augmentation",
   "authors": [

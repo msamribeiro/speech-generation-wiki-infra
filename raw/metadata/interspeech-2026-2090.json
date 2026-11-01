@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2090",
+  "source_ids": {
+    "isca": "hu26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-2090"
+  },
+  "title": "Singing Voice Conversion via Shared Speaker Space and Min-Pooling Adversarially Enhanced Flow Matching",
+  "authors": [
+    "Yuye Hu",
+    "Ayiduosi Tuohan",
+    "Tianqi Ning",
+    "CuiCui Zhu",
+    "Hao Huang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/hu26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/hu26g_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2090.pdf",
+  "pdf_source": "isca",
+  "abstract": "Singing Voice Conversion (SVC) faces a trade-off between singer feature disentanglement and singing quality. To address this, this paper proposes the MinFlow-SVC framework, a conditional flow matching-based SVC method enhanced by min-pooling adversarial training. We adopt a KNN-based approach to map source singer features into a shared singer space, removing source timbre to obtain content features like pitch, phonetics and singing expression. To further enhance generation quality, we introduce a min-pooling adversarial training strategy, which can detect and correct KNN-induced feature inconsistencies and improve conditional flow matching generation quality with harmonic awareness. Experiments show our method outperforms existing state-of-the-art SVC baselines in naturalness, intelligibility, timbre similarity and singing stability.",
+  "task": [
+    "singing",
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "MinFlow-SVC, flow-matching singing voice conversion with min-pooling adversarial training; core singing VC method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

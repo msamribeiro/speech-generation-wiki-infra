@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-0616",
+  "source_ids": {
+    "isca": "yang26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-616"
+  },
+  "title": "K-DIALECT : Korean Dialect-Aware Face-Based Speech Synthesis",
+  "authors": [
+    "Seongyeon Yang",
+    "Juyeob Lee",
+    "Eunil Park"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/yang26d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/yang26d_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0616.pdf",
+  "pdf_source": "isca",
+  "abstract": "Korean exhibits substantial regional variation, comprising five major dialects in addition to the standard Seoul dialect. These dialects convey distinctive prosodic patterns and reflect important aspects of cultural and speaker identities. However, most Text-to-Speech (TTS) systems are primarily designed for standard language, limiting their ability to represent dialectal characteristics, particularly in low-resource dialect settings. Although face-based speech synthesis provides a viable alternative when reference audio is scarce or noisy, modeling dialectal prosody within this paradigm remains largely unexplored. To address this gap, we propose K-DIALECT, a multimodal face-based TTS framework for synthesizing low-resource Korean dialects. The model integrates a face encoder, a dialect-conditioned pitch predictor, and a FiLM-based fusion module. Experiments on six Korean dialects demonstrate improvements in dialectal fluency, naturalness, and modality alignment.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Korean dialect-aware face-based speech synthesis; new TTS method for dialectal and face-conditioned synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

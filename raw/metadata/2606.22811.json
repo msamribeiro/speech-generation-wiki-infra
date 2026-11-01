@@ -1,7 +1,9 @@
 {
   "id": "2606.22811",
   "source_ids": {
-    "arxiv": "2606.22811"
+    "arxiv": "2606.22811",
+    "isca": "tian26_interspeech",
+    "doi": "10.21437/Interspeech.2026-873"
   },
   "title": "Bagpiper-TTS: Natural Language Guided Universal Speech Synthesis",
   "authors": [

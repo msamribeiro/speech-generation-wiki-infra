@@ -1,7 +1,9 @@
 {
   "id": "2607.26350",
   "source_ids": {
-    "arxiv": "2607.26350"
+    "arxiv": "2607.26350",
+    "isca": "takizawa26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3002"
   },
   "title": "Dissecting Sensitivity to Training Language in Self-Supervised Speech Learning Using Neural Audio Codec Tokens",
   "authors": [

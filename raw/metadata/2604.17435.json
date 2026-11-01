@@ -1,7 +1,9 @@
 {
   "id": "2604.17435",
   "source_ids": {
-    "arxiv": "2604.17435"
+    "arxiv": "2604.17435",
+    "isca": "chen26_interspeech",
+    "doi": "10.21437/Interspeech.2026-42"
   },
   "title": "MoVE: Translating Laughter and Tears via Mixture of Vocalization Experts in Speech-to-Speech Translation",
   "authors": [

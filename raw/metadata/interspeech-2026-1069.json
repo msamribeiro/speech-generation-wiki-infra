@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1069",
+  "source_ids": {
+    "isca": "jin26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1069"
+  },
+  "title": "Learning to Rescale: On-the-Fly Sequence Length Adaptation in Non-Autoregressive Speech Synthesis",
+  "authors": [
+    "Jiawei Jin",
+    "Ren Wang",
+    "Zhiyu Cui",
+    "Shun Lei",
+    "Yixuan Zhou",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/jin26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/jin26b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1069.pdf",
+  "pdf_source": "isca",
+  "abstract": "Non-autoregressive (NAR) text-to-speech (TTS) models excel in parallel inference and style consistency. However, their reliance on accurate character-level or global duration predictions remains a critical bottleneck, limiting both synthesis fidelity and naturalness. This paper proposes ElasticDLM (Elastic-length Diffusion Language Model), a novel variable-length NAR TTS model that eliminates the strong dependency on accurate duration predictions. We introduce two functional tokens, along with a Differentiated Length-Scaling Training Scheme (DLTS) and a Hierarchical Confidence-Guided Inference (HCGI) strategy tailored for speech characteristics, enabling the model to learn length-scaling features and automatically adjust sequence length during inference. Experiments show that ElasticDLM produces high-fidelity, natural speech from arbitrary-length inputs, demonstrating a more flexible and simplified approach to high-quality speech synthesis. Audio samples are available at https://thuhcsi.github.io/ElasticDLM/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "ElasticDLM, a variable-length non-autoregressive diffusion-LM TTS reducing reliance on duration prediction; core TTS model.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

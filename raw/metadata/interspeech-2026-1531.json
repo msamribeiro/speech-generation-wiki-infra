@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1531",
+  "source_ids": {
+    "isca": "liu26l_interspeech",
+    "doi": "10.21437/Interspeech.2026-1531"
+  },
+  "title": "Decoupling Search and Evaluation: Efficient Beam Decoding for Language Model-Based Text-to-Speech Synthesis",
+  "authors": [
+    "Chenlin Liu",
+    "Jie Gao",
+    "Wei Zhou",
+    "Guangyan Zhang",
+    "Minghui Fang",
+    "Jiqing Han"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/liu26l_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/liu26l_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1531.pdf",
+  "pdf_source": "isca",
+  "abstract": "Language model (LM)-based text-to-speech (TTS) systems typically rely on sampling-based decoding, which suffers from stochastic instability. While beam search offers a maximization-based alternative, it is limited in speech generation due to severe degeneration (e.g., temporal collapse) and high latency. Our analysis reveals that beam search cost is highly imbalanced between search and evaluation stages. Motivated by this, we propose Search-and-eValuatE beam decoding (SaVE-Beam), which decouples hypothesis expansion from sequence scoring. Specifically, a lightweight student model performs chunk-wise beam construction, while the teacher LM retains exact evaluation. Hard repetition constraints are introduced to prevent degenerate loops. Experiments show that SaVE-Beam achieves up to 5.1x speedup over conventional beam search without degrading speech quality, and reduces WER by up to 50% compared to sampling, enabling practical maximization-based decoding for real-time LM-based TTS.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Search-and-evaluation decoupled beam decoding for LM-based TTS; TTS decoding method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

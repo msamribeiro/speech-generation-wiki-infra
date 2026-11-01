@@ -1,7 +1,9 @@
 {
   "id": "2510.25577",
   "source_ids": {
-    "arxiv": "2510.25577"
+    "arxiv": "2510.25577",
+    "isca": "lameris26_interspeech",
+    "doi": "10.21437/Interspeech.2026-736"
   },
   "title": "Lost in Phonation: Voice Quality Variation as an Evaluation Dimension for Speech Foundation Models",
   "authors": [

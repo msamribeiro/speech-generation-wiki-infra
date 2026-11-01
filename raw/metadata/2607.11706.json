@@ -1,7 +1,9 @@
 {
   "id": "2607.11706",
   "source_ids": {
-    "arxiv": "2607.11706"
+    "arxiv": "2607.11706",
+    "isca": "sharma26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-2712"
   },
   "title": "VoxENES 2026: Benchmarking Generalization of Speech Spoofing Detectors Against LLM-Era TTS and Voice Conversion",
   "authors": [

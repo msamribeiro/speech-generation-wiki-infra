@@ -1,7 +1,9 @@
 {
   "id": "2603.10371",
   "source_ids": {
-    "arxiv": "2603.10371"
+    "arxiv": "2603.10371",
+    "isca": "shi26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-3135"
   },
   "title": "Speech Codec Probing from Semantic and Phonetic Perspectives",
   "authors": [

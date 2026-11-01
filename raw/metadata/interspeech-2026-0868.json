@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2026-0868",
+  "source_ids": {
+    "isca": "wan26_interspeech",
+    "doi": "10.21437/Interspeech.2026-868"
+  },
+  "title": "Enhancing Visual Paralinguistics: Motion-Guided Spatial Denoising for Non-Verbal Interaction Analysis",
+  "authors": [
+    "Junjie Wan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wan26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wan26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "In Human-Computer Interaction, non-verbal cues like micro-gestures are essential for understanding human intent alongside speech. However, extracting these subtle movements in unconstrained environments is difficult due to severe visual clutter and spatial ambiguity. We propose a signal processing-inspired framework centered on a Motion-Guided Spatial Refinement Module (MG-SRM). Rather than relying solely on heavy spatial encoders, MG-SRM utilizes multi-order temporal differences to explicitly filter out static background artifacts in pose heatmaps. In addition, we introduce a Class-Learnable Fusion (CLF) strategy that adapts modality weights based on action semantics, prioritizing input streams according to the target micro-gesture. Experiments on the challenging MA-52 dataset show that our approach achieves state-of-the-art performance by directly improving the signal-to-noise ratio of micro-movements. Our proposed framework is highly accurate and computationally efficient, providing a robust visual frontend for multimodal conversational systems.",
+  "task": [],
+  "relevance_score": 0.05,
+  "relevance_note": "Visual micro-gesture analysis for non-verbal interaction; no speech synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

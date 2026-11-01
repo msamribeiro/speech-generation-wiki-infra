@@ -1,7 +1,9 @@
 {
   "id": "2606.13450",
   "source_ids": {
-    "arxiv": "2606.13450"
+    "arxiv": "2606.13450",
+    "isca": "udupa26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2196"
   },
   "title": "Endpoint Anticipation for Low-Latency Spoken Dialogue",
   "authors": [

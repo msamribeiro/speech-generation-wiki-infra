@@ -1,7 +1,9 @@
 {
   "id": "2603.14328",
   "source_ids": {
-    "arxiv": "2603.14328"
+    "arxiv": "2603.14328",
+    "isca": "huang26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-1273"
   },
   "title": "CodecMOS-Accent: A MOS Benchmark of Resynthesized and TTS Speech from Neural Codecs Across English Accents",
   "authors": [

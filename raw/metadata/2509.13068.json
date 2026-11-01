@@ -1,7 +1,9 @@
 {
   "id": "2509.13068",
   "source_ids": {
-    "arxiv": "2509.13068"
+    "arxiv": "2509.13068",
+    "isca": "li26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-301"
   },
   "title": "MSR-Codec: A Low-Bitrate Multi-Stream Residual Codec for High-Fidelity Speech Generation with Information Disentanglement",
   "authors": [

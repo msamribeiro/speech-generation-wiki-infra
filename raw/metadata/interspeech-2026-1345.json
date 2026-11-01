@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-1345",
+  "source_ids": {
+    "isca": "wang26x_interspeech",
+    "doi": "10.21437/Interspeech.2026-1345"
+  },
+  "title": "Eliminating Stability Hallucinations in LLM-based TTS models via Attention Guidance",
+  "authors": [
+    "Shiming Wang",
+    "Zhihao Du",
+    "Yang Xiang",
+    "Tianyu Zhao",
+    "Han Zhao",
+    "Qian Chen",
+    "Xiangang Li",
+    "Hanjie Guo",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wang26x_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wang26x_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "This paper focuses on resolving stability hallucinations (e.g., repetitive or omitted speech) in LLM-based Text-to-Speech (TTS) models by improving and leveraging the attention mechanism. First, we analyzed the alignment mechanism between text tokens and speech tokens in LLMs. We then proposed a metric termed the Optimal Alignment Score (OAS), which employs the Viterbi algorithm to evaluate text-speech alignment quality. Subsequently, OAS was integrated into the training of CosyVoice2 to assist LLMs in learning continuous, stable alignment. Additionally, the pre-trained attention value is employed to guide the training of the student CosyVoice2 via chain-of-thought (CoT), which further reduces stability hallucinations in synthesized speech. Experiments on the Seed-TTS-Eval and CV3-Eval test sets demonstrate that the proposed methods can effectively reduce the stability hallucinations of CosyVoice2 without introducing additional negative effects. The appendix is available at https://wsmzzz.github.io/llm_attn/ index.html.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2509.19852 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2509.19852"
+}

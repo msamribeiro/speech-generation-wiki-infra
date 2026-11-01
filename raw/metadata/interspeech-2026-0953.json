@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2026-0953",
+  "source_ids": {
+    "isca": "park26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-953"
+  },
+  "title": "Countering Neural Audio Codec Distortions in Watermarking with Adaptive Restoration",
+  "authors": [
+    "Sungho Park",
+    "Thien An Nguyen",
+    "Souhwan Jung"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/park26d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/park26d_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural audio codecs offer high compression efficiency but introduce structured and non-linear distortions that severely degrade audio watermarks. To address this, we propose an adaptive codec-aware restoration framework that reconstructs codec-distorted spectrograms prior to extraction. Our method employs a ConvNeXt-based U-Net to recover fine-grained spectrogram patterns and introduces a lightweight classifier to dynamically select specialized restoration models for each codec. Experimental results across various neural codecs demonstrate that our model improves bitwise accuracy from near-random levels to over 98% for RVQ-based codecs. Furthermore, by analyzing the impact of quantizer configurations on watermark survivability, we show that our method can effectively improve watermark robustness in modern codec environments.",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Restoration of codec-distorted spectrograms for audio watermark extraction; watermark robustness rather than synthesis or codec design, consistent with rejected Latent-Mark and self-VC watermark-attack precedents.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

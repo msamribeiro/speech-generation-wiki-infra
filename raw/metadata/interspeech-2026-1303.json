@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1303",
+  "source_ids": {
+    "isca": "gu26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1303"
+  },
+  "title": "ProWhistress: An Enhanced Dual-Stream Transcription Architecture for Prosody-Aware Sentence Stress Detection",
+  "authors": [
+    "Hujian Gu",
+    "Li Tao",
+    "Fei Jiang",
+    "Ying Wang",
+    "Jingwei Qu",
+    "Zhaofang Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/gu26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/gu26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Sentence stress is crucial for conveying speaker intent and meaning. Yet recent alignment-free stress detection models struggle to capture fine-grained prosody due to dominant semantic representations. In this work, we introduce ProWhistress, an enhanced dual-stream transcription architecture that integrates explicit acoustic modeling to effectively preserve fine-grained acoustic details and significantly improve stress detection robustness. To mitigate the scarcity of Mandarin sentence stress data, we introduce a customized data generation pipeline specifically tailored for Mandarin, yielding the 12-hour synthetic SinoStress-Syn and the 3-hour human-recorded SinoStress-Real benchmark. Evaluations across five English and Mandarin datasets show that ProWhistress significantly surpasses competitive baselines, demonstrating superior accuracy and impressive zero-shot generalization on real-world speech. Code page: https://github.com/Guhujian/ProWhistress.git.",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Sentence stress detection with a dual-stream transcription architecture; prosody recognition, not synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

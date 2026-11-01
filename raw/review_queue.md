@@ -916,3 +916,113 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Abstract excerpt:** Despite 230 million speakers, Urdu remains critically under-resourced in speech technology. We introduce UrduSpeech: a large high-fidelity Urdu corpus comprising 156 hours of audio with 12-dimension paralinguistic metadata, encompassing US-Std, US-CS, US-EngPk.
 
 **Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+## interspeech-2026-1038 | A barrier or a booster? Familiarity effects on Mandarin emotion prosody recognition using AI-powered voice cloning | Interspeech | score: 0.48
+
+**Authors:** Feng Xu, Gaoyuan Zhang, Shanshan Xue, et al.
+**Task guess:** [TTS]
+**Reason for review:** Voice cloning supplies the stimuli for a human perception study of emotion prosody and speaker familiarity; findings bear on how cloned voices are perceived, but the paper does not advance or directly evaluate a synthesis system (cf. sarcasm-perception precedent accepted at 0.55).
+**Abstract excerpt:** Emotion prosody perception requires simultaneous processing of acoustic cues and speaker identity. While listeners effortlessly decode natural speech, AI synthetic voices introduce cognitive complexities due to subtle acoustic atypicalities.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-1152 | A System-Agnostic Approach to Modelling Interaction Quality in Spoken Dialogue Systems | Interspeech | score: 0.42
+
+**Authors:** Paul Gering, Roger K. Moore
+**Task guess:** [SCA]
+**Reason for review:** Models interaction quality of spoken dialogue systems from user-side acoustic/textual/temporal features; SDS evaluation, but the system's speech output is not studied and the work is closer to dialogue analytics than SCA generation.
+**Abstract excerpt:** Previous studies have used system-dependent (SD) input features, such as system log data, and machine learning to automatically evaluate user interactions with spoken dialogue systems. However, this approach lacks generalisability across different systems.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-1479 | Perceptual and Acoustic Correlates of Racial Identity in Text-to-Speech Voices | Interspeech | score: 0.62
+
+**Authors:** Noah Khaloo, Nicole Holliday, Sarah Creel
+**Task guess:** [TTS, evaluation]
+**Reason for review:** Studies whether listeners perceive race in TTS voices and the acoustic correlates; a social-perception evaluation of synthetic voices similar to accepted TTS gender-bias papers, but no system or metric development and TTS voices may be treated as fixed stimuli.
+**Abstract excerpt:** Voice-activated artificial intelligence (Voice-AI) systems are increasingly human-like in production, raising questions regarding how these synthetic voices are socially perceived. In this study, we show that listeners are generally capable of perceiving a sense of speaker race when hearing synthesized speech, and that they even engage in racial stereotyping.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-1588 | BACH: Benchmarking Audio Codecs for Bio-Acoustic Health | Interspeech | score: 0.45
+
+**Authors:** Zixing Zhang, Xiaojun Mo, Zhongren Dong, et al.
+**Task guess:** [codec, evaluation]
+**Reason for review:** Codec evaluation, but on bio-acoustic health signals (diagnostic task preservation) rather than speech generation; accept only if the benchmark includes speech signals with reconstruction evidence (narrow nonspeech-audio codec precedent).
+**Abstract excerpt:** Bio-acoustic health signals are increasingly vital for remote diagnostics, yet efficient transmission remains a bottleneck for clinical adoption. While audio codecs offer strong compression for general audio, they preserve diagnostically critical information in bio-acoustic signals is unclear.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-2165 | AudioNoisePrints: Model-free audio watermarking using spatial correlation in flow matching TTS | Interspeech | score: 0.60
+
+**Authors:** Timothy Tin-Long Tse, Jian Zhu, Aidan Pine, et al.
+**Task guess:** [TTS]
+**Reason for review:** Watermarking built into flow-matching/diffusion TTS sampling (noise-output correlation); closer to the accepted 'Efficient Speech Watermarking for Speech Synthesis' than post-hoc watermarks, but the comparable Smark diffusion-TTS watermark was rejected at 0.55.
+**Abstract excerpt:** We present AudioNoisePrints, a training-free watermarking pipeline for flow matching and diffusion TTS models, which requires minimal extra computation during inference and does not require retraining the TTS model or reducing the generation quality. We exploited the fact that there are strong correlations between the initial Gaussian noises and the generated outputs in diffusion and flow matching models, such that a simple cosine correlation between the initial noise and the generated output can be used to perform watermaking.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-2391 | Bilingual Speaker Phonetic Alignment to Voice Assistants | Interspeech | score: 0.40
+
+**Authors:** Alyssa Allen, Kathryn Campbell-Kibler
+**Task guess:** [SCA]
+**Reason for review:** Phonetic accommodation toward voice assistants versus human voices; a human-behaviour study where the assistant voice is a fixed stimulus, relevant to SCA user interaction only indirectly.
+**Abstract excerpt:** Users engage in conversation with ASR-powered voice assistants, but these models favor Standard American English (SAE) speech. Model bias impacts how non-SAE users engage with human versus system voices.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-2797 | A Unified Safety Subspace Exists in Speech Language Models | Interspeech | score: 0.45
+
+**Authors:** Nurdaulet Mukhituly, Muhammad Cendekia Airlangga, Rifo Ahmad Genadi, et al.
+**Task guess:** [SCA]
+**Reason for review:** Safety/jailbreak representation analysis in speech language models; precedents split (SPIRIT jailbreak defence rejected 0.42, prosody-driven jailbreaks accepted 0.50); concerns speech-LM internals rather than generation.
+**Abstract excerpt:** Speech Language Models (SLMs) extend large language models to spoken interaction, but this multimodal integration introduces modality-specific vulnerabilities. While prior work has typically addressed speech and text safety in isolation, our work uncovers a shared safety subspace where benign, harmful, and jailbreak representations exist regardless of input modality.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-3075 | Should Robots Sound more like Machines than like Humans? User Expectations Affect the Perception of Prosody in TTS Voices | Interspeech | score: 0.52
+
+**Authors:** Ha Eun Shim, Paige Tuttösí, Olivia Yung, et al.
+**Task guess:** [TTS]
+**Reason for review:** Perception study of robot TTS voice prosody and user expectations on sentence disambiguation; uses TTS voices as manipulated stimuli and informs TTS prosody design, but does not develop synthesis.
+**Abstract excerpt:** Prosodic and indexical features of artificial voices, like naturalness, tone, and emotion, are often treated as distinct from intelligibility. Yet prosody can be critical: Consider, "She has to pull Bart" (without commas/prosodic boundaries) versus "She has to pull, Bart" (with commas/prosodic boundaries).
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-arai26b_interspeech | Programmable Speech Synthesis without Computers | Interspeech | score: 0.42
+
+**Authors:** Takayuki Arai
+**Task guess:** [TTS]
+**Reason for review:** Literally speech synthesis but via mechanical physical vocal-tract models for education/demonstration, outside the neural TTS/VC scope; likely no quantitative evaluation (Show & Tell).
+**Abstract excerpt:** We present mechanical speech synthesis devices based on dynamic physical models of the human vocal tract. The models consist of a main vocal tract, with or without nasal branches.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---
+
+## interspeech-2026-rackauckas26_interspeech | AdaptLingo: A Speech-to-Speech English Practice System with Fluency-Adaptive Responses | Interspeech | score: 0.50
+
+**Authors:** Zackary Rackauckas
+**Task guess:** [SCA]
+**Reason for review:** Cascade speech-to-speech conversational agent demo for language learners; the dialogue system likely treats TTS as a black-box component and contributions are pedagogical (fluency prediction, response constraint).
+**Abstract excerpt:** We demonstrate AdaptLingo, an open-source, speech-to-speech English conversational agent for second-language learners. Beginners may be overwhelmed by many static language learning systems, which use complex language and fast speech, while advanced learners may disengage from simplified dialogue.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
+
+---

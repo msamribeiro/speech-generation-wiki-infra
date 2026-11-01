@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1214",
+  "source_ids": {
+    "isca": "zhang26r_interspeech",
+    "doi": "10.21437/Interspeech.2026-1214"
+  },
+  "title": "PRISM: Prosody-Integrated Multi-Agent Reasoning Framework for Empathetic Spoken Dialogue",
+  "authors": [
+    "Wen Zhang",
+    "Xiaocui Yang",
+    "Zhuoyue Gao",
+    "Shi Feng",
+    "Daling Wang",
+    "Yifei Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhang26r_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhang26r_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Empathetic spoken dialogue systems require not only semantically appropriate responses but also emotionally aligned prosodic expression. However, cascade pipelines often discard acoustic cues during speech-to-text conversion, while end-to-end speech models lack interpretable control over emotion and knowledge integration. To address these challenges, we propose PRISM, a multi-agent framework for empathetic spoken dialogue that decouples speech perception, response generation, and speech synthesis into coordinated components. PRISM introduces a prosody-to-language translation mechanism to stabilize large language model reasoning and enables on-demand invocation of external knowledge tools for empathetic dialogue generation. Experimental results demonstrate that PRISM achieves consistent improvements in empathy, prosodic appropriateness, and text response generation quality across objective and subjective metrics. Our code is available at: https://github.com/Bxzfrm/PRISM.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.12902 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.12902"
+}

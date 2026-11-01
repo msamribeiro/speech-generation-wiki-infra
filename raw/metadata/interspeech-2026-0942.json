@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0942",
+  "source_ids": {
+    "isca": "ulgen26_interspeech",
+    "doi": "10.21437/Interspeech.2026-942"
+  },
+  "title": "Rethinking Speaker Embeddings for Speech Generation: Sub-Center Modeling for Capturing Intra-Speaker Diversity",
+  "authors": [
+    "Ismail Rasim Ulgen",
+    "John Hansen",
+    "Carlos Busso",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ulgen26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ulgen26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0942.pdf",
+  "pdf_source": "isca",
+  "abstract": "Modeling speech variation is key to natural, expressive generation. Speaker embeddings are commonly used to condition personalized speech systems, but they are typically trained for speaker recognition, where intra-speaker variability is suppressed and inter-speaker separation is maximized. This objective leads to overly compact representations that may discard variations crucial for generation. We revisit this design choice and propose a sub-center modeling framework for speaker embeddings. Instead of a single prototype per speaker, we learn multiple sub-centers during discriminative training, allowing utterances to align with different prototypes. This strategy preserves structured intra-speaker variability while maintaining discriminability. In zero-shot voice conversion, our method improves intelligibility, increases pitch variability, achieves higher naturalness ratings, and retains strong speaker verification performance.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Sub-center speaker embeddings that retain intra-speaker variability for speech generation conditioning; TTS speaker-representation method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,9 @@
 {
   "id": "2606.25403",
   "source_ids": {
-    "arxiv": "2606.25403"
+    "arxiv": "2606.25403",
+    "isca": "annamdevula26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1744"
   },
   "title": "CrossAccent-TTS: Cross-Lingual Accent-Intensity Controllable Text-to-Speech via Disentangled Speaker and Accent Representations",
   "authors": [

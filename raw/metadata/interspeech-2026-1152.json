@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-1152",
+  "source_ids": {
+    "isca": "gering26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1152"
+  },
+  "title": "A System-Agnostic Approach to Modelling Interaction Quality in Spoken Dialogue Systems",
+  "authors": [
+    "Paul Gering",
+    "Roger K. Moore"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/gering26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/gering26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Previous studies have used system-dependent (SD) input features, such as system log data, and machine learning to automatically evaluate user interactions with spoken dialogue systems. However, this approach lacks generalisability across different systems. This study implements a system-agnostic (SA) approach, using acoustic, textual and temporal features to model interaction quality (IQ). Across two experimental phases, we compare the performance of IQ classifiers trained on static and fine-tuned SD and SA features. We found that while the SD features were superior in a static pipeline, the SA features achieved comparable performance when end-to-end fine-tuning was employed. Therefore, our results demonstrate that SA features, when fine-tuned, offer a viable, system-independent alternative for IQ modelling, enabling more scalable evaluations across different dialogue systems.",
+  "task": [],
+  "relevance_score": 0.42,
+  "relevance_note": "System-agnostic interaction-quality modelling for spoken dialogue systems from acoustic, textual and temporal features. User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

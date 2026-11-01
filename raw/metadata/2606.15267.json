@@ -1,7 +1,9 @@
 {
   "id": "2606.15267",
   "source_ids": {
-    "arxiv": "2606.15267"
+    "arxiv": "2606.15267",
+    "isca": "mou26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-2312"
   },
   "title": "Dynamic Prosody Prediction in LLM-based TTS for Improving Speaker Similarity",
   "authors": [

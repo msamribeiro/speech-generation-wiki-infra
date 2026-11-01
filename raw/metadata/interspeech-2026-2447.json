@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2447",
+  "source_ids": {
+    "isca": "chen26z_interspeech",
+    "doi": "10.21437/Interspeech.2026-2447"
+  },
+  "title": "DiaMoE-TTS: A Unified IPA-Based Dialect TTS Framework with Parameter-Efficient Adaptation and Reward-Driven Optimization",
+  "authors": [
+    "Ziqi Chen",
+    "Gongyu Chen",
+    "Yihua Wang",
+    "Zihao Chen",
+    "Wei-Qiang Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26z_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26z_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2447.pdf",
+  "pdf_source": "isca",
+  "abstract": "Dialect speech embodies rich cultural and linguistic diversity, yet building a unified text-to-speech (TTS) system for dialects remains challenging due to scarce data, inconsistent phonetic representations, and dialect interference in joint modeling. We explore a unified dialect TTS pipeline based on a Diffusion Transformer (DiT) architecture. A unified International Phonetic Alphabet (IPA) front-end is adopted to reduce pronunciation ambiguity across dialects. Built upon the F5-TTS framework, we introduce a dialect-aware Mixture-of-Experts (MoE) text encoder to mitigate style averaging in multidialect training. For low-resource dialect expansion, we employ parameter-efficient fine-tuning (PEFT) to enable adaptation with only a few hours of speech data. We further investigate incorporating high-quality dialect data into the unified model. Experiments show that GRPO-based reinforcement learning reduces the word error rate (WER) for both the target dialect and several related dialects.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "DiaMoE-TTS, unified IPA-based DiT dialect TTS with parameter-efficient adaptation and reward optimization; core TTS model.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

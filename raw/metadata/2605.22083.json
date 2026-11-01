@@ -1,7 +1,9 @@
 {
   "id": "2605.22083",
   "source_ids": {
-    "arxiv": "2605.22083"
+    "arxiv": "2605.22083",
+    "isca": "yang26p_interspeech",
+    "doi": "10.21437/Interspeech.2026-3086"
   },
   "title": "RobustSpeechFlow: Learning Robust Text-to-Speech Trajectories via Augmentation-based Contrastive Flow Matching",
   "authors": [

@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-2196",
+  "source_ids": {
+    "isca": "udupa26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2196"
+  },
+  "title": "Endpoint Anticipation for Low-Latency Spoken Dialogue",
+  "authors": [
+    "Sathvik Udupa",
+    "Shinji Watanabe",
+    "Petr Schwarz",
+    "Honza Černocký"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/udupa26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/udupa26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "While low-latency interaction is critical for spoken dialogue, cascaded architectures are often bottlenecked by reactive turn-completion detection. We propose Endpoint Anticipation, shifting from reactive detection to proactive forecasting of end-of-turn signals. Our speech-based model anticipates endpoints up to 2.56 seconds in advance, enabling speculative execution of LLM and TTS pipelines on partial context. We introduce metrics to quantify the trade-off between realized latency reduction and computational redundancy. Evaluation across conversational and task-oriented datasets shows our model consistently outperforms competitive VAP-based baselines. Integration with the Unmute framework demonstrates a 505 ms average latency reduction with a 28.4% increase in speculative computation, effectively masking sequential bottlenecks to enable complex reasoning in real-time speech-to-speech interaction.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.13450 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.13450"
+}

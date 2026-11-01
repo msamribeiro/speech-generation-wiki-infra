@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2026-1148",
+  "source_ids": {
+    "isca": "chen26l_interspeech",
+    "doi": "10.21437/Interspeech.2026-1148"
+  },
+  "title": "Leveraging Audio-LLMs to Filter Speech-to-Speech Training Data",
+  "authors": [
+    "Qixu Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26l_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26l_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Large-scale mined corpora provide abundant training data for end-to-end speech-to-speech translation (S2ST) but may contain noise, misalignment, and semantic errors. Filtering noisy data is crucial to maintain robust speech translation performance. We study how to train an audio-language model to make keep/drop decisions on paired speech directly from audio. To obtain reliable supervision without manual labels, we adopt a scalable two-stage Rank→Distill strategy. A lightweight ranker generates keep/drop pseudo-labels from noisy speech pairs, then trains an audio large language model to predict keep/drop directly from raw paired speech. The resulting model jointly captures acoustic fidelity and cross-lingual semantic consistency for the selection of speech-conditioned data. Experiments on CVSS-C and SpeechMatrix show consistent improvements over unfiltered training, yielding up to +1.4 ASR-BLEU for end-to-end S2ST.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.13507 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.13507"
+}

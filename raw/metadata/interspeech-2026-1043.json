@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-1043",
+  "source_ids": {
+    "isca": "nguyen26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-1043"
+  },
+  "title": "DiFlow-TTS: Compact and Low-Latency Zero-Shot Text-to-Speech with Discrete Flow Matching",
+  "authors": [
+    "Son Nguyen",
+    "Thanh Tran",
+    "Nghia Huynh",
+    "Son Hy",
+    "Van Nguyen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/nguyen26d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/nguyen26d_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Zero-shot text-to-speech (TTS) has made significant progress in replicating unseen voices, yet balancing generation quality and inference efficiency remains challenging. Autoregressive models suffer from high latency, while diffusion-based approaches are constrained by training-time configurations. Moreover, most flow-based methods operate in continuous space, which introduces optimization challenges because continuous token spaces are inherently more complex than discrete ones. To address these limitations, we propose DiFlow-TTS, a novel zero-shot TTS framework based on discrete flow matching. The model consists of a deterministic Phoneme-Content Mapper for linguistic modeling and a Factorized Discrete Flow Denoiser that simultaneously generates prosody and acoustic token streams. Experimental results demonstrate the effectiveness of our approach across multiple evaluation metrics.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2509.09631 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2509.09631"
+}

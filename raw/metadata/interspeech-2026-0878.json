@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0878",
+  "source_ids": {
+    "isca": "jang26_interspeech",
+    "doi": "10.21437/Interspeech.2026-878"
+  },
+  "title": "End-to-End Model Compression for Personalized Neural Speech Codecs",
+  "authors": [
+    "Inseon Jang",
+    "Minje Kim",
+    "Wootaek Lim",
+    "Seungkwon Beack"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/jang26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/jang26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0878.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural speech coding (NSC) leverages deep learning to achieve high-quality speech compression, surpassing conventional methods. However, recent NSC models have grown substantially in size and complexity, limiting their feasibility for real-time processing on resource-constrained devices. To address this issue, we propose a speaker-aware model compression framework for end-to-end NSC. In this approach, speakers are clustered by perceptual similarity, and both encoder and decoder are trained with group-specific data, reducing computation while preserving perceptual quality. Subjective listening tests show that the proposed method reduces the model size by 96% and the bitrate by 50% (from 2 kbps to 1 kbps), while maintaining the perceptual quality of the state-of-the-art Descript audio codec (DAC). Moreover, the personalized models remain robust under noisy conditions, consistently outperforming baselines under acoustic distortions. These results highlight the feasibility of deploying NSC on low-power devices in both clean and noisy environments.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Speaker-aware end-to-end compression of neural speech codecs; codec design for speech.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

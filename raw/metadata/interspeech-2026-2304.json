@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-2304",
+  "source_ids": {
+    "isca": "pangsatabam26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2304"
+  },
+  "title": "Scalable Neural TTS for Latin-Script Low-Resource Languages of Manipur",
+  "authors": [
+    "Hoomexsun Pangsatabam",
+    "Khumanthem Chanchanbi",
+    "Kansham Tungran Maring",
+    "Yambem Jina Chanu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/pangsatabam26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/pangsatabam26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2304.pdf",
+  "pdf_source": "isca",
+  "abstract": "Many low-resource languages in Northeast India lack native scripts, limiting speech technology development. This work presents text-to-speech resources for two Manipuri tribal languages, Tangkhul (9.58h) and Maring(10.79h), based on studio recordings in their standard dialects. The dataset consists of read speech collected from textbooks, storybooks, and Bible translations, together with an automatic preprocessing pipeline for segmentation and normalization. We train monolingual character-level TTS systems using Tacotron 2 and FastSpeech 2 and evaluate them with objective and subjective metrics. The results show that these corpora and baseline systems can support TTS development for low-resource Latin-script languages of Manipur and provide a useful starting point for future work.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "TTS datasets and models for two Latin-script Manipuri tribal languages; low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

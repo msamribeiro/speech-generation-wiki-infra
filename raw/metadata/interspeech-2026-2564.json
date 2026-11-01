@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-2564",
+  "source_ids": {
+    "isca": "zhao26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-2564"
+  },
+  "title": "Towards Robust Generative Speech Enhancement Using Vector Quantisation-Based Neural Audio Codec",
+  "authors": [
+    "Haixin Zhao",
+    "Nilesh Madhu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhao26i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhao26i_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "This work investigates modelling strategies in continuous and discrete latent spaces in the vector quantisation (VQ)-based neural audio codec (NAC) speech enhancement (SE), along with the role of VQ regularisation. We propose cNAC-SE and dNAC-SE frameworks that predict continuous representations and discrete tokens in latent space, respectively. Theoretical analysis and visualisations in latent space are performed to exhibit their inherent modelling mechanisms. Experimental results show that the fully fine-tuned cNAC-SE model consistently outperforms all dNAC-SE variants across diverse test conditions and achieves leading performance among established generative approaches in DNS-MOS metrics. Comparison with the discriminative counterpart shows that VQ enhances robustness through an intrinsic effect of clean-prior-constrained regularisation, independent of discrete token processing. This highlights the transferable value of VQ regularisation to other continuous modelling methods.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.16464 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.16464"
+}

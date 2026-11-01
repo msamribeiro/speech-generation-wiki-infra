@@ -1,7 +1,9 @@
 {
   "id": "2606.24648",
   "source_ids": {
-    "arxiv": "2606.24648"
+    "arxiv": "2606.24648",
+    "isca": "jeon26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-2021"
   },
   "title": "ParaPairAudioBench: Paralinguistic Pairwise Audio Benchmark for LALM-as-a-Judge",
   "authors": [

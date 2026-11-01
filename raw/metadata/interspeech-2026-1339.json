@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-1339",
+  "source_ids": {
+    "isca": "zhao26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-1339"
+  },
+  "title": "Decoding Order Matters in Autoregressive Speech Synthesis",
+  "authors": [
+    "Minghui Zhao",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhao26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhao26e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Autoregressive speech synthesis has traditionally followed a left-to-right order, yet generation order is a modelling choice. This paper investigates decoding order through a masked diffusion framework that enables arbitrary decoding orders at inference time. To isolate the effect of decoding order from inductive biases introduced by learned discrete encoders, we operate on scalar quantised Mel-spectrograms. Our results demonstrate that the left-to-right strategy is suboptimal for capturing complex acoustic dependencies. The reverse, right-to-left, order consistently outperforms the traditional approach, while the adaptive confidence-based strategy top1 achieves the highest Mean Opinion Score (MOS) among all model outputs. Analysis reveals that the most effective orders maintain local clusters of consecutive frames to balance long-range temporal dependencies with local coherence. These results establish decoding order as a critical parameter for improving synthesis quality.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2601.08450 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2601.08450"
+}

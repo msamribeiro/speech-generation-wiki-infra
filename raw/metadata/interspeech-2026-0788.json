@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-0788",
+  "source_ids": {
+    "isca": "madha26_interspeech",
+    "doi": "10.21437/Interspeech.2026-788"
+  },
+  "title": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
+  "authors": [
+    "Wasim Madha",
+    "Nityanand Mathur",
+    "Hamees Sayed",
+    "Apoorv Singh",
+    "Sameer Khurana",
+    "Akshat Mandloi",
+    "Sudarshan Kamath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/madha26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/madha26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Current text-to-speech systems face a trade-off: autoregressive codec language models produce highly intelligible speech but require large-scale models and training data and decode tokens sequentially, while non-autoregressive approaches improve speed at the cost of linguistic accuracy. We present DLLM-TTS, a framework that formulates TTS as conditional block discrete diffusion over X-Codec2 neural audio codec tokens. The model decomposes sequences into blocks and applies masked diffusion within each block while processing blocks sequentially, learning both local acoustic coherence and global text-speech alignment. During inference, parallel token prediction within blocks enables efficient generation with a real-time factor (RTF) of 0.15. A 0.6B-parameter model trained on 20K hours achieves competitive performance on the Seed-TTS-eval benchmark, demonstrating that block discrete diffusion language models enable practical and data-efficient speech synthesis with parallel generation.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2608.00011 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2608.00011"
+}

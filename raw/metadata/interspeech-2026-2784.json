@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2784",
+  "source_ids": {
+    "isca": "ploujnikov26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2784"
+  },
+  "title": "HybridCodec: Modeling Discrete and Continuous Representations For Efficient Speech Language Models",
+  "authors": [
+    "Artem Ploujnikov",
+    "Francesco Verdini",
+    "Samir Sadok",
+    "Mirco Ravanelli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ploujnikov26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ploujnikov26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2784.pdf",
+  "pdf_source": "isca",
+  "abstract": "Discrete audio representations have become increasingly popular for building multimodal text-audio systems and integrating audio capabilities into Large Language Models (LLMs). However, numerous studies report performance degradation on various downstream tasks due to information loss during discretization. To address this, we propose a novel approach combining temporally compressed discrete tokens with dimensionality-reduced continuous residuals. Our framework consists of a hybridized discrete-continuous focal modulation codec and a hybrid Transformer. This architecture performs autoregressive inference in the discrete domain, coupled with non-autoregressive prediction and continuous residual upsampling. Experimental results show that our approach significantly improves the retention of speaker characteristics compared to discrete-only methods, while simultaneously reducing the number of required autoregressive steps.",
+  "task": [
+    "codec",
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "HybridCodec combining discrete tokens with continuous residuals for speech language models; codec design for SLMs.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

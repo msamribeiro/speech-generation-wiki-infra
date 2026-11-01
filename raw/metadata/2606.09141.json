@@ -1,7 +1,9 @@
 {
   "id": "2606.09141",
   "source_ids": {
-    "arxiv": "2606.09141"
+    "arxiv": "2606.09141",
+    "isca": "xie26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1692"
   },
   "title": "FlashTTS: Fast Streaming TTS with MTP Acceleration and X-pred Mean Flow Distillation",
   "authors": [

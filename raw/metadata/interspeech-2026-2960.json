@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-2960",
+  "source_ids": {
+    "isca": "ferreira26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2960"
+  },
+  "title": "CAL-MOS: Bridging Layers with Adapters for Robust MOS Prediction Across Speech Foundation Models",
+  "authors": [
+    "Alef Iury Ferreira",
+    "Pedro Botelho",
+    "Fernanda Silva",
+    "Daniel Casanova",
+    "Rafael Faustino",
+    "Frederico Oliveira",
+    "Arlindo Galvão Filho",
+    "Anderson da Silva Soares"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ferreira26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ferreira26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2960.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech Quality Assessment (SQA) is essential for modern speech technologies, and recent non-intrusive SQA predictors increasingly rely on Speech Foundation Models (SFMs). However, because SFMs expose representations from many layers, it remains unclear which depths are most informative for MOS prediction and how multi-layer information should be combined reliably across backbones and datasets. We benchmark ten SFMs on four MOS datasets under three regimes: full fine-tuning, last-layer probing with a frozen encoder, and naive cross-layer weighted aggregation. We find that the best layer is strongly backbone- and dataset-dependent, and that naive weighted fusion can be unstable across settings. We further evaluate a layer-calibrated aggregation variant that applies per-layer adapters before pooling, which improves the robustness of multi-layer fusion and narrows the gap to full fine-tuning while keeping the backbone frozen.",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.76,
+  "relevance_note": "CAL-MOS, multi-layer adapter MOS prediction benchmarked across ten speech foundation models; speech quality assessment, consistent with accepted MOS-predictor precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-1547",
+  "source_ids": {
+    "isca": "hao26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1547"
+  },
+  "title": "YingMusic-Singer: Controllable Singing Voice Synthesis with Flexible Lyric Manipulation and Annotation-free Melody Guidance",
+  "authors": [
+    "Chunbo Hao",
+    "Junjie Zheng",
+    "Guobin Ma",
+    "Yuepeng Jiang",
+    "Huakang Chen",
+    "Wenjie Tian",
+    "Gongyu Chen",
+    "Zihao Chen",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/hao26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/hao26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Regenerating singing voices with altered lyrics while preserving melody consistency remains challenging, as existing methods either offer limited controllability or require laborious manual alignment. We propose YingMusic-Singer, a fully diffusion-based model enabling melody-controllable singing voice synthesis with flexible lyric manipulation. The model takes three inputs: an optional timbre reference, a melody-providing singing clip, and modified lyrics, without manual alignment. Trained with curriculum learning and Group Relative Policy Optimization, YingMusic-Singer achieves stronger melody preservation and lyric adherence than Vevo2, the most comparable baseline supporting melody control without manual alignment. We also introduce LyricEditBench, the first benchmark for melody-preserving lyric modification evaluation. The code, weights, benchmark, and demos are publicly available at https://github.com/ASLP-lab/YingMusic-Singer-Plus.",
+  "task": [
+    "singing"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.24589 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.24589"
+}

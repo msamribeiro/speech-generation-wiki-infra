@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-0409",
+  "source_ids": {
+    "isca": "wang26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-409"
+  },
+  "title": "Dual-Space Constrained Face-Based Zero-Shot Text-to-Speech Synthesis",
+  "authors": [
+    "Jianrong Wang",
+    "Shengjie Zhou",
+    "Ju Zhang",
+    "Dengcheng Hu",
+    "Qi Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wang26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wang26f_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0409.pdf",
+  "pdf_source": "isca",
+  "abstract": "A human face conveys rich cues about speaker identity, enabling face-based zero-shot text-to-speech (TTS) for unseen speakers. However, in modular face-based TTS systems, the acoustic model is typically trained on speech-derived embeddings, while face-derived representations are introduced only at inference time, often resulting in identity drift. We propose Dual-Space Constrained TTS (DSC-TTS), a modular framework that enforces identity consistency during acoustic model training in both the speaker embedding space and a shared identity space learned through face-voice alignment. By constraining representations across these complementary spaces, the proposed framework improves speaker identity stability while preserving speech quality. Experiments demonstrate higher speaker similarity and stronger identity consistency than existing face-based TTS methods.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Face-based zero-shot TTS with dual-space identity constraints; new TTS conditioning method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

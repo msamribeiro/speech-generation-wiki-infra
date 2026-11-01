@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1798",
+  "source_ids": {
+    "isca": "wan26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1798"
+  },
+  "title": "Continuous Time-Varying Emotion Control Zero-Shot Text-To-Speech With Emotion Orthogonal LoRA",
+  "authors": [
+    "Chenchen Wan",
+    "Minchuan Chen",
+    "Yan Shi",
+    "Peng Qi",
+    "Shaojun Wang",
+    "Jing Xiao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wan26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wan26b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1798.pdf",
+  "pdf_source": "isca",
+  "abstract": "High-quality emotional text-to-speech (TTS) often depends on large scale corpora and coarse discrete emotion labels, which limits fine-grained and time-varying control in practice. We address this by integrating continuous Valence, Arousal, and Dominance (VAD) control into a pretrained model via low-rank updates inserted into the backbone transformations. Our Emotion Orthogonal LoRA (EO-LoRA) uses three separate low-rank branches aligned to valence, arousal, and dominance, and an orthogonality regularizer encourages the branches to capture distinct effects. We further introduce Flow-DGPO, a reinforcement learning alignment stage for flow matching TTS that improves emotion controllability while preserving intelligibility and speaker similarity. Experiments show that our method improves continuous and time-varying emotion control while maintaining synthesis quality with limited training data.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Emotion-orthogonal LoRA for continuous time-varying VAD emotion control in zero-shot TTS; TTS control method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

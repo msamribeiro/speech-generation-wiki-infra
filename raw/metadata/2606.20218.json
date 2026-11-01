@@ -1,7 +1,9 @@
 {
   "id": "2606.20218",
   "source_ids": {
-    "arxiv": "2606.20218"
+    "arxiv": "2606.20218",
+    "isca": "li26w_interspeech",
+    "doi": "10.21437/Interspeech.2026-1340"
   },
   "title": "Zero-VC: Zero-Lookahead Streaming Voice Conversion via Speaker Anonymization",
   "authors": [

@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-0747",
+  "source_ids": {
+    "isca": "seebauer26_interspeech",
+    "doi": "10.21437/Interspeech.2026-747"
+  },
+  "title": "Application context in speech synthesis evaluation: A problem and a solution",
+  "authors": [
+    "Fritz Seebauer",
+    "Markus Rothgänger",
+    "Sven Wachsmuth",
+    "Petra Wagner"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/seebauer26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/seebauer26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0747.pdf",
+  "pdf_source": "isca",
+  "abstract": "Advancements in research of synthetic speech can only be properly quantified and driven by well-proven evaluation procedures, the most prevalent of which being the subjective listening test. In this paper, the ecological validity of such tests is evaluated empirically in an experiment comparing rating outcomes of four synthetic speech systems across four different application contexts. It is shown that, depending on the scenario in which they are obtained, the ratings for a respective synthesis system change significantly. Additionally, it is found that the impact of the application also depends on the system in question, highlighting a potential confound in evaluations comparing systems without a specified application context. Further, it is discovered that ratings collected in a digital twin provide statistically equivalent ratings to the ones obtained in a physical setting, suggesting that simulation testing might prove a beneficial path to achieving ecologically valid evaluations.",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Empirically tests the ecological validity of synthetic speech listening tests across application contexts; TTS evaluation methodology.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

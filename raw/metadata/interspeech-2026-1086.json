@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-1086",
+  "source_ids": {
+    "isca": "chen26j_interspeech",
+    "doi": "10.21437/Interspeech.2026-1086"
+  },
+  "title": "Spiking Vocos: An Energy-Efficient Neural Vocoder",
+  "authors": [
+    "Yukun Chen",
+    "Zhaoxi Mu",
+    "Andong Li",
+    "Peilin Li",
+    "Xingyu Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26j_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26j_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1086.pdf",
+  "pdf_source": "isca",
+  "abstract": "Spiking Neural Networks (SNNs), widely recognized for their high energy efficiency due to their event-driven nature, offer a promising solution for low-resource scenarios. In this paper, we propose Spiking Vocos, a novel spiking neural vocoder with ultra-low energy consumption. To mitigate the inherent information bottleneck in SNNs, we design a Spiking ConvNeXt module to reduce Multiply-Accumulate (MAC) operations and incorporate an amplitude shortcut path to preserve crucial signal dynamics. Furthermore, to bridge the performance gap with its Artificial Neural Network (ANN) counterpart, we introduce a self-architectural distillation strategy to effectively transfer knowledge. A lightweight Temporal Shift Module is also integrated to enhance the model's ability to fuse information across the temporal dimension. Experiments demonstrate that our model achieves performance comparable to its ANN counterpart with only 14.7% of the energy. The source code and demos are available at https://github.com/pymaste r17/Spiking-Vocos.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Spiking Vocos, an energy-efficient spiking neural vocoder; vocoder method for speech synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

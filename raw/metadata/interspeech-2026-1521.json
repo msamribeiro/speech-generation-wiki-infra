@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-1521",
+  "source_ids": {
+    "isca": "cooper26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1521"
+  },
+  "title": "A Large-Scale Dataset of Listener Impressions of Emotional TTS",
+  "authors": [
+    "Erica Cooper",
+    "Xiaoxue Gao",
+    "Takuma Okamoto",
+    "Tomoki Toda",
+    "Nancy Chen",
+    "Hisashi Kawai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/cooper26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/cooper26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1521.pdf",
+  "pdf_source": "isca",
+  "abstract": "We present the first large-scale dataset for speech quality assessment of emotional synthesized speech. The dataset consists of 18,208 speech samples in five emotional styles from 13 state-of-the-art synthesis systems and natural emotional speech, along with ratings from 262 listeners for quality and several aspects of emotional content, including perceived emotional categories, how well the speech matches the target emotion, valence, arousal, and dominance. Analyses of the ratings show the relationships between the different types of ratings, and experiments using pretrained emotion recognizers, speech quality predictors, and LLM-as-judge prediction approaches reveal reasonable correlations with human ratings in some cases, with room for improvement and varying results observed depending on the emotion category. This dataset will be made public to the research community as a resource for the developing automatic speech quality assessment models for emotional synthesized speech.",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Large-scale dataset of listener ratings for emotional synthesized speech from 13 systems; TTS evaluation dataset.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

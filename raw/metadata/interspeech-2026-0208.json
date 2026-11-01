@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0208",
+  "source_ids": {
+    "isca": "murata26_interspeech",
+    "doi": "10.21437/Interspeech.2026-208"
+  },
+  "title": "Exploring Pre-training Benefits on Phoneme Addition through Fine-tuning in Speech Synthesis",
+  "authors": [
+    "Masato Murata",
+    "Koichi Miyazaki",
+    "Tomoki Koriyama",
+    "Tomoki Toda"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/murata26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/murata26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Transfer learning is widely used for low-resource text-to-speech. When the target corpus contains phonemes unseen in pre-training, the model must expand its phoneme inventory during fine-tuning; we call the process \"phoneme addition.\" However, it remains unclear whether the pre-trained ability to generate seen phonemes contributes to this process. This study investigates phoneme addition in two settings: (1) a simulation setup using LLM-generated phoneme-controlled corpora that enables investigation without considering confounding factors, and (2) a real-speech cross-lingual transfer setup (English to Japanese) to validate whether the findings hold in practice. Experiments in both settings showed that while fine-tuning achieved higher naturalness than training from scratch, it required as much or more data to achieve comparable PER for new phonemes. These results indicate that pre-training mainly contributes to naturalness improvement, but offers limited benefit for phoneme addition.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.19792 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.19792"
+}

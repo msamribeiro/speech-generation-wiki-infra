@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-2813",
+  "source_ids": {
+    "isca": "fortier26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2813"
+  },
+  "title": "Where Do Backdoors Live? A Component-Level Analysis of Backdoor Propagation in Speech Language Models",
+  "authors": [
+    "Alexandrine Fortier",
+    "Thomas Thebaud",
+    "Jesús Villalba-Lopez",
+    "Najim Dehak",
+    "Patrick Cardinal",
+    "Peter West"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/fortier26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/fortier26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech language models (SLMs) are systems of systems: independent components that unite to achieve a common goal. Despite their heterogeneous nature, SLMs are often studied end-to-end; how information flows through the pipeline remains obscure. We investigate this question through the lens of backdoor attacks. We first establish that backdoors can propagate through the SLM, leaving all tasks highly vulnerable. From this, we design a component analysis to discover the role each component takes in backdoor learning. We find that backdoor persistence or erasure is highly dependent on the targeted component. Beyond propagation, we examine how backdoors are encoded in shared multitask embeddings, showing that poisoned samples are not directly separable from benign ones, challenging a common separability assumption used in filtering defenses. Our findings emphasize the need to treat multimodal pipelines as intricate systems with unique vulnerabilities, not solely extensions of unimodal ones.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2510.01157 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2510.01157"
+}

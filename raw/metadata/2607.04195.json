@@ -1,7 +1,9 @@
 {
   "id": "2607.04195",
   "source_ids": {
-    "arxiv": "2607.04195"
+    "arxiv": "2607.04195",
+    "isca": "li26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-512"
   },
   "title": "Noisy Environment Adaptation of Neural Speech Codec via Focal Mask and Noise Feature Separation",
   "authors": [

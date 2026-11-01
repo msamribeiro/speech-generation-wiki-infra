@@ -1,0 +1,45 @@
+{
+  "id": "interspeech-2026-0390",
+  "source_ids": {
+    "isca": "ward26_interspeech",
+    "doi": "10.21437/Interspeech.2026-390"
+  },
+  "title": "The Interspeech 2026 Challenge on Transfer of Pragmatic Intent in Speech-to-Speech Translation",
+  "authors": [
+    "Nigel G. Ward",
+    "Marcel de Korte",
+    "Javier Vazquez",
+    "Montserrat G. Molina",
+    "Vanessa Bolado",
+    "Carol Figueroa",
+    "Eliya Nachmani",
+    "John E. Ortega",
+    "Satoshi Nakamura"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ward26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ward26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0390.pdf",
+  "pdf_source": "isca",
+  "abstract": "The Interspeech 2026 challenge task on Transfer of Pragmatic Intent in Speech-to-Speech Translation was motivated by the fact that current speech-to-speech translation systems do not prioritize pragmatic fidelity, and thus do not ideally support people conversing across languages. This paper describes the design, datasets, and evaluation methods for the challenge, and the results for the submissions. We find that even the best system lags human performance by 1.2 points on a 5-point scale, and note strengths and weaknesses of our evaluation methods.",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Interspeech 2026 challenge on transferring pragmatic intent in speech-to-speech translation, with datasets, evaluation methods and submission results; S2ST output-speech fidelity, in line with accepted S2ST precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

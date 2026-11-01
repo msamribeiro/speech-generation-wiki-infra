@@ -1,7 +1,9 @@
 {
   "id": "2606.18485",
   "source_ids": {
-    "arxiv": "2606.18485"
+    "arxiv": "2606.18485",
+    "isca": "ghosh26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-1461"
   },
   "title": "MagpieTTS-LF: Inference-Time Long-Form Speech Generation Without Training on Long-Form data",
   "authors": [

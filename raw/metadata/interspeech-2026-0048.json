@@ -1,0 +1,36 @@
+{
+  "id": "interspeech-2026-0048",
+  "source_ids": {
+    "isca": "song26_interspeech",
+    "doi": "10.21437/Interspeech.2026-48"
+  },
+  "title": "CFLOW-VC: An unsupervised cycle training strategy based on normalizing flows for Voice Conversion",
+  "authors": [
+    "FeiBao Song"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/song26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/song26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0048.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice conversion (VC) aims to transfer the timbre of a target speaker while preserving the content of a source speech. A key challenge, especially in non-parallel settings, is the train-test mismatch: during training, models often learn from utterances where content and timbre are from the same speaker, hindering their ability to disentangle these factors effectively during inference. In this work, we propose CFLOW-VC, an unsupervised cycle training strategy based on normalizing flows, built upon the end-to-end VITS framework for high-fidelity waveform generation. We introduce a mel-style encoder to capture expressive style features and employ data augmentation to improve robustness in noisy environments. Experimental results demonstrate that CFLOW-VC outperforms state-of-the-art baselines in both objective and subjective evaluations. Audio samples are publicly available.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Proposes CFLOW-VC, a normalizing-flow cycle-training strategy for non-parallel voice conversion; core VC method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

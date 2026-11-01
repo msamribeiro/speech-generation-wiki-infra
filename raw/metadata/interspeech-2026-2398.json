@@ -1,0 +1,57 @@
+{
+  "id": "interspeech-2026-2398",
+  "source_ids": {
+    "isca": "yang26n_interspeech",
+    "doi": "10.21437/Interspeech.2026-2398"
+  },
+  "title": "U-Codec: Neural Speech Codec under Extreme Temporal Compression for Fast High-Fidelity Speech Generation",
+  "authors": [
+    "Xusheng Yang",
+    "Long Zhou",
+    "Wenfu Wang",
+    "Kai Hu",
+    "Zixiang Wan",
+    "Yushen Chen",
+    "Shulin Feng",
+    "Chenxing Li",
+    "Meng Yu",
+    "Dong Yu"
+  ],
+  "authors_full": [
+    "Xusheng Yang",
+    "Long Zhou",
+    "Wenfu Wang",
+    "Kai Hu",
+    "Zixiang Wan",
+    "Yushen Chen",
+    "Shulin Feng",
+    "Chenxing Li",
+    "Meng Yu",
+    "Dong Yu",
+    "Yuexian Zou"
+  ],
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/yang26n_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/yang26n_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "We propose U-Codec, an Ultra low frame-rate neural speech Codec that achieves high-fidelity reconstruction and fast speech generation at a frame-rate of 5Hz (5 frames per second). Extreme temporal compression typically leads to severe intelligibility and spectral detail loss. We overcome this by introducing a Transformer-based inter-frame long-term dependency module and systematically exploring residual vector quantization (RVQ) depth and codebook size to identify optimal configurations. Moreover, we apply U-Codec to a large language model (LLM)-based auto-regressive TTS model, which leverages global and local hierarchical architecture to effectively capture dependencies across multi-layer tokens. Experiments demonstrate that U-Codec improves LLM-based TTS inference speed by 3x over high-frame-rate codecs while maintaining similarity and naturalness. These results validate the feasibility of using 5Hz discrete tokens for fast and high-fidelity speech synthesis.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2510.16718 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2510.16718"
+}

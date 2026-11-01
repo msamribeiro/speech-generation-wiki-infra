@@ -1,7 +1,9 @@
 {
   "id": "2606.21053",
   "source_ids": {
-    "arxiv": "2606.21053"
+    "arxiv": "2606.21053",
+    "isca": "han26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-2107"
   },
   "title": "Imitation Learning for Elder-Facing Speech Synthesis",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2606.21727",
   "source_ids": {
-    "arxiv": "2606.21727"
+    "arxiv": "2606.21727",
+    "isca": "girish26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2116"
   },
   "title": "Towards Detecting Neural Audio Codec Synthesized Heart Sounds",
   "authors": [

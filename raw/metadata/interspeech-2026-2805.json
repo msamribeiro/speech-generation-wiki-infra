@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-2805",
+  "source_ids": {
+    "isca": "mathur26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2805"
+  },
+  "title": "How Do Instructions Shape Speech? Cross-Attention Attribution for Style-Captioned Text-to-Speech",
+  "authors": [
+    "Nityanand Mathur",
+    "Hamees Sayed",
+    "Wasim Madha",
+    "Apoorv Singh",
+    "Sameer Khurana",
+    "Akshat Mandloi",
+    "Sudarshan Kamath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/mathur26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/mathur26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2805.pdf",
+  "pdf_source": "isca",
+  "abstract": "Style-captioned text-to-speech systems use natural language to control voice characteristics, but how individual words influence acoustic output remains unclear. Understanding this is critical for diagnosing failure modes and improving controllability in expressive TTS. We propose cross-attention attribution for speech diffusion models, adapting the DAAM framework to the speech domain for the first time, and apply it to CapSpeechTTS. Our method extracts per-token heatmaps across 25 layers and 24 ODE steps. We analyze 3,600 (style caption, text transcript) combinations comprising 120 style captions conditioning the generation of 30 text transcripts each, revealing how caption tokens shape waveforms. Results show: (1) style tokens have lower temporal variance than content/function tokens, confirming global conditioning; (2) style attention correlates with F0 and energy; (3) style conditioning peaks in early steps and deep layers; (4) attention entropy reaches its minimum at layer 17, co-occurring with the style importance peak, indicating maximal network selectivity at the most style-critical stage. This is the first study of how natural language influences cross-attention in speech diffusion models.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Cross-attention attribution of instruction words in style-captioned diffusion TTS; TTS interpretability analysis.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

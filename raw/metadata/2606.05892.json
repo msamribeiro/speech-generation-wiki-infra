@@ -1,7 +1,9 @@
 {
   "id": "2606.05892",
   "source_ids": {
-    "arxiv": "2606.05892"
+    "arxiv": "2606.05892",
+    "isca": "jiang26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-466"
   },
   "title": "VoCodec: A Low-bitrate Streamable Neural Speech Codec with Voicing-driven Quantization",
   "authors": [

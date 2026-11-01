@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1479",
+  "source_ids": {
+    "isca": "khaloo26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1479"
+  },
+  "title": "Perceptual and Acoustic Correlates of Racial Identity in Text-to-Speech Voices",
+  "authors": [
+    "Noah Khaloo",
+    "Nicole Holliday",
+    "Sarah Creel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/khaloo26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/khaloo26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1479.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice-activated artificial intelligence (Voice-AI) systems are increasingly human-like in production, raising questions regarding how these synthetic voices are socially perceived. In this study, we show that listeners are generally capable of perceiving a sense of speaker race when hearing synthesized speech, and that they even engage in racial stereotyping. We do, however, see a bias towards rating voices as sounding 'White'. To explore this, we train a Gradient Boosted Decision Tree classifier on acoustic features to distinguish between voices rated as Black from White. Our model performs with an accuracy of 65%. From this analysis, we find that voices with lower Residual H1* and spectral tilt in the lower/higher frequencies are more regularly rated as Black. Noise measurements, as well as formants (F1, F2, and F4), also seem to vary reliably between race labels. These results have implications regarding the development, use, and efficacy of racially-marked AI.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.62,
+  "relevance_note": "Listener perception of racial identity in TTS voices and its acoustic correlates. User decision at review (2026-11-01): accepted.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,9 @@
 {
   "id": "2606.07015",
   "source_ids": {
-    "arxiv": "2606.07015"
+    "arxiv": "2606.07015",
+    "isca": "zhang26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-481"
   },
   "title": "Towards Unified Song Generation and Singing Voice Conversion with Accompaniment Co-Generation",
   "authors": [

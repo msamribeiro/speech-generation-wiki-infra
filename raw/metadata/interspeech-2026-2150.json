@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-2150",
+  "source_ids": {
+    "isca": "wu26l_interspeech",
+    "doi": "10.21437/Interspeech.2026-2150"
+  },
+  "title": "One-to-Many Electrolaryngeal Voice Conversion with Synthetic Data",
+  "authors": [
+    "Bowen Wu",
+    "Haruto Ueno",
+    "Carlos Toshinori Ishi",
+    "Chaoran Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wu26l_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wu26l_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2150.pdf",
+  "pdf_source": "isca",
+  "abstract": "Restoring natural (NL) speech from electrolarynx (EL) speech is crucial for EL users who have undergone laryngectomy. While previous works have shown the effectiveness of deep learning methods for converting EL-to-NL speech with data augmentation, time-aligned conversion remains underexplored, where data scarcity is more severe due to temporal constraints. We propose a data-driven learning framework to learn from small-scale (13 minutes) EL speech data to synthesize time-aligned EL speech from NL speech of multiple speakers, for developing one-to-many EL-to-NL conversion models. Our method leverages pretrained deep learning-based any-to-many voice conversion (VC) models for finetuning on EL speech for NL-to-EL conversion, to convert the NL speech in a large-scale multi-speaker corpus to synthetic EL speech, which is used to supervise a pretrained VC model for one-to-many EL-to-NL VC. Experiments show the effectiveness of our method against baselines in intonation and intelligibility.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "One-to-many time-aligned electrolaryngeal VC trained with synthetic data; VC method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

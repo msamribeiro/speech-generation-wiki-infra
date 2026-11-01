@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-1663",
+  "source_ids": {
+    "isca": "mandel26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1663"
+  },
+  "title": "From A to B to A: Palindromic Zero-Shot Voice Conversion with Non-Parallel Data",
+  "authors": [
+    "Moshe Mandel",
+    "Shlomi E. Chazan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/mandel26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/mandel26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "We present a voice conversion (VC) framework that utilizes K-Nearest Neighbors (KNN) retrieval over WavLM representations to align non-parallel source and target speech, constructing synthetic training pairs for supervised learning. The retrieved segments serve as synthetic inputs, while real target audio provides ground-truth outputs, forming a synthetic-to-real training paradigm that naturally supports multilingual data without requiring parallel corpora or explicit alignment. To ensure consistent target-speaker identity, we incorporate a speaker loss derived from a pretrained speaker verification model. Experiments across multiple languages demonstrate that the proposed approach achieves high naturalness and strong speaker similarity, outperforming competitive VC baselines, despite being trained exclusively on English data. Samples can be accessed at: https://palindromic-vc.github.io.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.08843 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.08843"
+}

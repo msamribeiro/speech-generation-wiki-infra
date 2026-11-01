@@ -1,7 +1,9 @@
 {
   "id": "2509.17516",
   "source_ids": {
-    "arxiv": "2509.17516"
+    "arxiv": "2509.17516",
+    "isca": "liu26p_interspeech",
+    "doi": "10.21437/Interspeech.2026-2125"
   },
   "title": "Audiobook-CC: Controllable Long-context Speech Generation for Multicast Audiobook",
   "authors": [

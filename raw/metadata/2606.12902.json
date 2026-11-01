@@ -1,7 +1,9 @@
 {
   "id": "2606.12902",
   "source_ids": {
-    "arxiv": "2606.12902"
+    "arxiv": "2606.12902",
+    "isca": "zhang26r_interspeech",
+    "doi": "10.21437/Interspeech.2026-1214"
   },
   "title": "PRISM: Prosody-Integrated Multi-Agent Reasoning Framework for Empathetic Spoken Dialogue",
   "authors": [

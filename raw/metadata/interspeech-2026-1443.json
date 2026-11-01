@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1443",
+  "source_ids": {
+    "isca": "leoni26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1443"
+  },
+  "title": "Indigenising Speech Technology: Building a TTS Model for te Reo Māori",
+  "authors": [
+    "Gianna Leoni",
+    "Peter-Lucas Jones",
+    "Tūreiti Keith",
+    "Suzanne Duncan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/leoni26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/leoni26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1443.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper introduces an Indigenous-led approach for creating a high-quality text-to-speech (TTS) model for the Māori language (the Indigenous language of Aotearoa, New Zealand). The paper focuses on data curation, collection, and quality assurance, and the decisions made throughout that process, as examples of how this process could be replicated for other Indigenous, endangered, or minority languages. Despite the common assumption that the more data a model has, the better it will perform, this study demonstrates that meticulous attention to detail produces high-quality data and better results for Indigenous languages.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Indigenous-led te reo Maori TTS with data curation and quality-assurance methodology; low-resource TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

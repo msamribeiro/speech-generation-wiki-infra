@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-1760",
+  "source_ids": {
+    "isca": "zheng26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1760"
+  },
+  "title": "CtrlSpeech: Coarse-to-Fine Control for Expressive Speech Synthesis",
+  "authors": [
+    "Zhisheng Zheng",
+    "Xiaohang Sun",
+    "Zhu Liu",
+    "Caren Chen",
+    "Rohith Kumar",
+    "Manoj Aggarwal",
+    "Gerard Medioni",
+    "David Harwath"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zheng26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zheng26c_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Recent Text-To-Speech (TTS) systems have achieved strong naturalness and zero-shot voice cloning performance, but fine-grained control of expressive speech at the word or phoneme level remains challenging. We propose CTRLSPEECH, a controllable, expressive TTS framework with coarse-to-fine control. Built on the DiTAR architecture, CTRLSPEECH combines global speaker conditioning with phone-aligned pitch, loudness, and duration signals, enabling localized prosodic control while preserving the target speaker's timbre. This design allows users to adjust expressive attributes at a fine temporal granularity, making speech refinement more flexible and controllable. Experimental results show that CTRLSPEECH achieves competitive zero-shot TTS performance and improves controllability over expressive attributes, demonstrating its effectiveness for flexible and practical expressive speech synthesis. Our demo, code and model weights are available at CTRLSPEECH.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2608.08362 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2608.08362"
+}

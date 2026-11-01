@@ -1,0 +1,59 @@
+{
+  "id": "interspeech-2026-0494",
+  "source_ids": {
+    "isca": "hu26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-494"
+  },
+  "title": "OmniCodec: Low Frame Rate Universal Audio Codec with Semantic–Acoustic Disentanglement",
+  "authors": [
+    "Jingbin Hu",
+    "Haoyu Zhang",
+    "Dake Guo",
+    "Qirui Zhan",
+    "Wenhao Li",
+    "Huakang Chen",
+    "Guobin Ma",
+    "Hanke Xie",
+    "Chengyou Wang",
+    "Pengyuan Xie"
+  ],
+  "authors_full": [
+    "Jingbin Hu",
+    "Haoyu Zhang",
+    "Dake Guo",
+    "Qirui Zhan",
+    "Wenhao Li",
+    "Huakang Chen",
+    "Guobin Ma",
+    "Hanke Xie",
+    "Chengyou Wang",
+    "Pengyuan Xie",
+    "Chuan Xie",
+    "Qiang Zhang",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/hu26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/hu26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Large Language Models (LLMs) have advanced audio generation through discrete representation learning. However, most existing neural codecs focus on speech and emphasize reconstruction fidelity, overlooking unified low frame rate modeling across diverse audio domains, including speech, music, and general sound. Moreover, high reconstruction quality does not necessarily yield semantically informative representations, limiting effectiveness in downstream generation tasks. We propose OmniCodec, a universal neural audio codec tailored for low frame rate. It adopts a hierarchical multi-codebook design with semantic-acoustic decoupling by leveraging the audio encoder of the pre-trained understanding model, along with a self-guidance strategy to improve codebook utilization and reconstruction. Compared with the Mimi, experiments show that OmniCodec achieves outstanding performance at the same bitrate, delivering superior reconstruction quality while also providing more semantically informative representations that benefit downstream generation tasks. Our model and code will be open-sourced. Our demo page is available.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.20638 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.20638"
+}

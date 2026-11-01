@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-0803",
+  "source_ids": {
+    "isca": "turavecino26_interspeech",
+    "doi": "10.21437/Interspeech.2026-803"
+  },
+  "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis",
+  "authors": [
+    "Biel Tura-Vecino",
+    "Yoach Lacombe",
+    "Julian Weber",
+    "Zbigniew Latka",
+    "Haitong Zhang",
+    "Logan Hart",
+    "Eren Golge"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/turavecino26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/turavecino26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0803.pdf",
+  "pdf_source": "isca",
+  "abstract": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Learnable classifier-free guidance null embeddings for controllable TTS; TTS training/inference method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

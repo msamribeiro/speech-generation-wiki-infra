@@ -1,7 +1,9 @@
 {
   "id": "2606.20650",
   "source_ids": {
-    "arxiv": "2606.20650"
+    "arxiv": "2606.20650",
+    "isca": "wu26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-1834"
   },
   "title": "EmoInstruct-TTS: Dual-Path Instruction-Guided Emotional Speech Synthesis",
   "authors": [

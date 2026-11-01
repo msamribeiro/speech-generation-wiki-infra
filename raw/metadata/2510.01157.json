@@ -1,7 +1,9 @@
 {
   "id": "2510.01157",
   "source_ids": {
-    "arxiv": "2510.01157"
+    "arxiv": "2510.01157",
+    "isca": "fortier26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2813"
   },
   "title": "Where Do Backdoors Live? A Component-Level Analysis of Backdoor Propagation in Speech Language Models",
   "authors": [

@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-0137",
+  "source_ids": {
+    "isca": "feng26_interspeech",
+    "doi": "10.21437/Interspeech.2026-137"
+  },
+  "title": "MMGenre: Benchmarking Singing Voice Synthesis across Multiple Musical Genres",
+  "authors": [
+    "Wenhao Feng",
+    "Yuxun Tang",
+    "Jiatong Shi",
+    "Qin Jin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/feng26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/feng26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Singing voice synthesis (SVS) has progressed rapidly, yet its ability to generalize across diverse musical genres remains underexplored. Existing benchmarks are heavily biased toward pop music, limiting systematic analysis of genre-dependent behavior. We introduce MMGenre, a benchmark for multi-genre SVS diagnosis, supported by an automatic pipeline for constructing genre-aligned music scores. MMGenre spans 10 major genres and 26 subgenres, enabling comprehensive analysis of genre-aware synthesis. Extensive evaluation of representative SVS models reveals limited genre discrimination: synthesized vocals across genres exhibit highly similar acoustic characteristics and weak separability. While zero-shot genre adaptation yields only marginal improvements, lightweight genre-specific continued training leads to substantial gains. MMGenre provides a standardized framework for multi-genre SVS evaluation and exposes critical challenges in achieving genre-aware singing voice synthesis.",
+  "task": [
+    "singing",
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.06986 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.06986"
+}

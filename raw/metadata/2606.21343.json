@@ -1,7 +1,9 @@
 {
   "id": "2606.21343",
   "source_ids": {
-    "arxiv": "2606.21343"
+    "arxiv": "2606.21343",
+    "isca": "sanchez26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2600"
   },
   "title": "An Evaluation Framework for Text-to-Speech Voice Reconstruction",
   "authors": [

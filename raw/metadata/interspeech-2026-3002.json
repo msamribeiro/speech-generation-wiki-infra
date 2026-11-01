@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-3002",
+  "source_ids": {
+    "isca": "takizawa26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3002"
+  },
+  "title": "Dissecting Sensitivity to Training Language in Self-Supervised Speech Learning Using Neural Audio Codec Tokens",
+  "authors": [
+    "Daigo Takizawa",
+    "Tomohiko Nakamura",
+    "Samuele Cornell",
+    "William Chen",
+    "Satoru Fukayama",
+    "Shinji Watanabe"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/takizawa26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/takizawa26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural audio codecs (NACs) have become popular for obtaining speech representations as discrete tokens. Beyond compression, discrete tokens can be used to train self-supervised learning (SSL) models. Such models, referred to as codec-based SSL models, reduce data storage and computational cost, enabling scalable SSL pre-training. However, their language sensitivity remains unclear. When the language changes, codec-based SSL models may require retraining, which undermines their efficiency. In this paper, we present a systematic analysis of language sensitivity by varying either the NAC training language or the SSL pre-training language while keeping the other fixed. Experimental results show that downstream performance is insensitive to the NAC training language but strongly dependent on the SSL pre-training language. These findings suggest that a single NAC can be reused across languages, while aligning the SSL pre-training language with the target language is crucial.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.26350 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.26350"
+}

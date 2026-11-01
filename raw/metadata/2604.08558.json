@@ -1,7 +1,9 @@
 {
   "id": "2604.08558",
   "source_ids": {
-    "arxiv": "2604.08558"
+    "arxiv": "2604.08558",
+    "isca": "lee26j_interspeech",
+    "doi": "10.21437/Interspeech.2026-943"
   },
   "title": "WAND: Windowed Attention and Knowledge Distillation for Efficient Autoregressive Text-to-Speech Models",
   "authors": [

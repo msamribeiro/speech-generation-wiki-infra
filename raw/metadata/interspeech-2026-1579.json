@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1579",
+  "source_ids": {
+    "isca": "udawatta26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1579"
+  },
+  "title": "Phonetically Grounded Vowel Space Metrics for Evaluating Synthetic Speech During TTS Model Training",
+  "authors": [
+    "Pasindu Udawatta",
+    "Jesin James",
+    "Sally Akevai Nicholas",
+    "B. T. Balamurali",
+    "C. I. Watson"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/udawatta26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/udawatta26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1579.pdf",
+  "pdf_source": "isca",
+  "abstract": "Synthetic speech is generally evaluated using subjective listening tests, which are costly and impractical to perform during text-to-speech (TTS) model training. Traditional loss curves in model training lack linguistic interpretability and fail to reflect perceptual changes. We propose using phonetically grounded objective metrics, Vowel Space Overlap and Procrustes Normalised Disparity, to evaluate synthetic speech during training by quantifying the similarity between synthesised and ground-truth vowel space shapes. We fine-tuned a TTS model on two accents, computed the metrics at training steps, and conducted perception tests to assess the relationship between the metrics and perceived accent similarity. Our results show significant correlations between metrics and accent perception across both accents. This suggests that the proposed metrics provide reliable, perceptually meaningful, and interpretable complements to loss curves for evaluating synthetic speech during training.",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Phonetically grounded vowel-space metrics for evaluating synthetic speech during TTS training; TTS evaluation metric.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

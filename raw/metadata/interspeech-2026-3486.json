@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-3486",
+  "source_ids": {
+    "isca": "park26l_interspeech",
+    "doi": "10.21437/Interspeech.2026-3486"
+  },
+  "title": "Prosody-Aware Speech Representations for Emotion Recognition under Pragmatic Ambiguity",
+  "authors": [
+    "Yeonwoo Park",
+    "Chioh Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/park26l_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/park26l_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech emotion recognition (SER) systems often rely on semantic or spectral representations learned by speech encoders, while prosodic cues conveying emotional intent are not explicitly modeled. In real-world conversations, emotional meaning is conveyed through prosody when linguistic cues alone are insufficient, especially in pragmatically ambiguous utterances. We propose a prosody-aware speech representation for emotion recognition and downstream applications by injecting pitch and energy into shared hidden representations of a pretrained Whisper encoder. We evaluate the approach using a 59-class emotion classification task and a Pragmatic Ambiguity Resolution (PAR) evaluation task. Experiments show improvements up to 13.93%p in emotion classification and 11.6%p in PAR compared to the same Whisper model without prosody. The proposed model also outperforms text-based LLM inference (GPT-4o mini) on PAR, highlighting the importance of prosody-aware representations for emotion systems.",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Prosody-aware speech representations for emotion recognition; SER, no synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

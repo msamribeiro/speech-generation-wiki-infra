@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0796",
+  "source_ids": {
+    "isca": "bargum26_interspeech",
+    "doi": "10.21437/Interspeech.2026-796"
+  },
+  "title": "Improving Model Expressivity and Speaker Matching in Low-Latency Voice Conversion",
+  "authors": [
+    "Anders R. Bargum",
+    "Simon Lajboschitz",
+    "Stefania Serafin",
+    "Cumhur Erkut"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/bargum26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/bargum26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0796.pdf",
+  "pdf_source": "isca",
+  "abstract": "Real-time voice conversion systems struggle to achieve high speaker similarity in zero-shot scenarios, especially under lightweight computational constraints. This challenge stems from a lack of model expressivity and the difficulty of capturing comprehensive speaker-relevant information within the strict latency requirements. We propose a real-time voice conversion framework that addresses this limitation by adding lost prosody explicitly through an excitation signal and by fusing complementary information into the conventional global speaker embeddings. To ensure robust feature disentanglement, we furthermore employ an encoder-specific information perturbation strategy during training. Our approach maintains causal inference requirements and preserves prosodic and linguistic content while operating under low-latency constraints. Experimental evaluations demonstrate improvements in speaker-matching metrics over state-of-the-art real-time baselines.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Real-time low-latency zero-shot voice conversion with explicit prosody and improved speaker matching; core VC method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

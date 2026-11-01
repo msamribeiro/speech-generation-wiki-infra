@@ -1,7 +1,9 @@
 {
   "id": "2606.19792",
   "source_ids": {
-    "arxiv": "2606.19792"
+    "arxiv": "2606.19792",
+    "isca": "murata26_interspeech",
+    "doi": "10.21437/Interspeech.2026-208"
   },
   "title": "Exploring Pre-training Benefits on Phoneme Addition through Fine-tuning in Speech Synthesis",
   "authors": [

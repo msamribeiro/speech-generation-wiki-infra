@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-0739",
+  "source_ids": {
+    "isca": "lin26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-739"
+  },
+  "title": "The Role of Context and Prosody in the Understanding of English Irony by Chinese L2 Learners",
+  "authors": [
+    "Yinan Lin",
+    "Shanpeng Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lin26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lin26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Irony conveys a meaning opposite to its literal expression and is frequently used for humorous, critical, or satirical purposes. Because of its ambiguity, ironic interpretation relies heavily on contextual cues and prosodic features. However, the interplay between context and prosody in second language (L2) irony comprehension remains unclear. This study investigates their relative contributions and examines whether language proficiency affects Chinese English learners’ ability to interpret irony. A perception experiment was conducted using English materials with three contextual and three prosodic conditions. Results showed that context played a dominant role in irony comprehension, while prosody contributed independently when contextual information was limited. Language proficiency had only a minor effect. The findings support the Parallel Constraint Satisfaction Model and offer implications for irony research and English language teaching.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "L2 perception study of context and prosody in irony comprehension; no synthesis component.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

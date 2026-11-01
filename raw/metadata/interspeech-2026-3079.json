@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-3079",
+  "source_ids": {
+    "isca": "park26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-3079"
+  },
+  "title": "Word-level Emotional Intensity Control in TTS via Emotion Residual Vectors",
+  "authors": [
+    "Ji-Hyun Park",
+    "Nam-Seok Song",
+    "Joon-Hyuk Chang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/park26i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/park26i_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-3079.pdf",
+  "pdf_source": "isca",
+  "abstract": "Modern emotional text-to-speech (TTS) models typically rely on utterance-level conditioning. However, natural emotional speech requires fine-grained variations across words to achieve nuanced, human-like expressiveness. To address this, we introduce emotion residual vectors (ERVs), which capture neutral-to-emotional deviations in word-aligned self-supervised speech embeddings as an annotation-free cue for local prosody. To stabilize intensity control, we compress ERVs into a low-dimensional bottleneck space and train a RoBERTa-based predictor to infer the projected vectors from text and emotion. During inference, the predicted vectors are converted into additive hidden-state offsets and injected into a neutral-conditioned TTS model, enabling continuous word-level intensity control. Experimental results show that our method improves local emotional controllability while preserving naturalness compared to controllable emotional TTS baselines.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Emotion residual vectors for word-level emotional intensity control in TTS; TTS control method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

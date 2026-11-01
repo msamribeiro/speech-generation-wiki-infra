@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-1881",
+  "source_ids": {
+    "isca": "niu26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1881"
+  },
+  "title": "Improving Stable Speech Synthesis Post-Training with ChatScorer and Margin-Based Preference Construction",
+  "authors": [
+    "Shihao Niu",
+    "Jianguo Wei",
+    "Wenhuan Lu",
+    "Xianghu Yue",
+    "Wei Li",
+    "Ming Zhou",
+    "Ming Cai",
+    "Luo Si"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/niu26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/niu26c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1881.pdf",
+  "pdf_source": "isca",
+  "abstract": "Existing post-training methods for codec-based text-to-speech (TTS) often rely on multiple automatic metrics, such as character or word error rate (CER/WER) for content consistency, speaker similarity (SIM) for speaker preservation, and their weighted combinations as reward signals. However, directly fusing heterogeneous metrics into a single scalar reward can yield weakly separated candidate scores, leading to ambiguous supervision. In this paper, we propose a new post-training framework for stable speech synthesis, which introduces ChatScorer as an auxiliary reward model and combines it with margin-based preference construction. We instantiate the proposed framework using different post-training methods, and experiments on codec-based TTS show that it reduces undesirable outputs and improves generation stability, while maintaining competitive intelligibility and speaker similarity.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "ChatScorer reward and margin-based preference construction for codec TTS post-training; TTS training method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

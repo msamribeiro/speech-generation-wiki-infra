@@ -1,7 +1,9 @@
 {
   "id": "2608.00998",
   "source_ids": {
-    "arxiv": "2608.00998"
+    "arxiv": "2608.00998",
+    "isca": "zhou26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-1696"
   },
   "title": "Beyond One-Size-Fits-All: Personalized and Culturally Adaptive Emotional TTS via Interactive Optimization of Individual Emotion Perception Spaces",
   "authors": [

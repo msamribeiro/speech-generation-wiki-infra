@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-2941",
+  "source_ids": {
+    "isca": "ye26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-2941"
+  },
+  "title": "ZipCodec: Simple and Pretrained-Model-Free Speech Tokenizer via Flow-Matching",
+  "authors": [
+    "Lingxuan Ye",
+    "Han Zhu",
+    "Liyong Guo",
+    "Zengwei Yao",
+    "Wei Kang",
+    "Fangjun Kuang",
+    "Zhifeng Han",
+    "Long Lin",
+    "Daniel Povey"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ye26d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ye26d_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2941.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech tokenizers serve as the critical interface for integrating continuous audio into large language models. However, most existing speech tokenizers require massive pretrained models or complex multi-stage training pipelines. To address this, we propose ZipCodec, a single-stage-trained, pretrained-model-free tokenizer that bypasses the need for heavy encoder architectures. By offloading acoustic reconstruction to a powerful Zipformer-based flow-matching decoder, ZipCodec enables an ultra-lightweight encoder of just 4.4M parameters. Furthermore, we introduce an Encoder Consistency Regularization (ECR) loss to enhance the encoder's semantic capacity in a purely self-supervised manner, without relying on external teachers or labels. Experimental results demonstrate that ZipCodec achieves competitive acoustic and semantic performance, outperforming models with encoders more than 20 times larger and delivering improved zero-shot TTS generation.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "ZipCodec, single-stage pretrained-model-free flow-matching speech tokenizer; neural codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

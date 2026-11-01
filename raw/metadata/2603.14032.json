@@ -1,7 +1,9 @@
 {
   "id": "2603.14032",
   "source_ids": {
-    "arxiv": "2603.14032"
+    "arxiv": "2603.14032",
+    "isca": "ai26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-2875"
   },
   "title": "Beyond Two-stage Diffusion TTS: Joint Structure and Content Refinement via Jump Diffusion",
   "authors": [

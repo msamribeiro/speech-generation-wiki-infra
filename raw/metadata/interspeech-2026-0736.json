@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0736",
+  "source_ids": {
+    "isca": "lameris26_interspeech",
+    "doi": "10.21437/Interspeech.2026-736"
+  },
+  "title": "Lost in Phonation: Voice Quality Variation as an Evaluation Dimension for Speech Foundation Models",
+  "authors": [
+    "Harm Lameris",
+    "Shree Harsha Bokkahalli Satish",
+    "Joakim Gustafson",
+    "Éva Székely"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lameris26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lameris26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Recent advances in Speech Foundation Models (SFMs) enable direct processing of raw audio, allowing models to respond to subtle paralinguistic variation. However, how these models interpret non-lexical cues remains largely unstudied. We introduce VQ-Bench, a controlled evaluation suite featuring a parallel dataset of synthesized modal, breathy, creaky, and end-creak phonation types. We evaluate SFM sensitivity through open-ended generation across four ecologically valid domains, alongside speech emotion recognition. Our results reveal performance gaps: while a leading commercial API failed basic biometric sanity checks, other models exhibited systematic shifts in agency, empathy, and leadership based on phonation. Our findings also highlight gender asymmetries in salary and leadership endorsements, demonstrating that SFMs may mirror or amplify human social biases. This work establishes a reproducible framework for ensuring responsible paralinguistic interpretation in speech-based AI.",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2510.25577 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2510.25577"
+}

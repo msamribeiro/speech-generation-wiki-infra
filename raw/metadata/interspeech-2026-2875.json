@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-2875",
+  "source_ids": {
+    "isca": "ai26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-2875"
+  },
+  "title": "Beyond Two-stage Diffusion TTS: Joint Structure and Content Refinement via Jump Diffusion",
+  "authors": [
+    "Jiabao Ai",
+    "Minghui Zhao",
+    "Anton Ragni"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ai26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ai26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Diffusion and flow matching TTS faces a tension between discrete temporal structure and continuous spectral modeling. Two-stage models diffuse on fixed alignments, often collapsing to mean prosody; single-stage models avoid explicit durations but suffer alignment instability. We propose a jump-diffusion framework where discrete jumps model temporal structure and continuous diffusion refines spectral content within one process. Even in its one-shot degenerate form, our framework achieves 3.37% WER vs. 4.38% for Grad-TTS with improved UTMOSv2 on LJSpeech. The full iterative UDD variant further enables adaptive prosody, autonomously inserting natural pauses in out-of-distribution slow speech rather than stretching uniformly. Audio samples are available at https://anonymousinterpseech.github.io/TTS_Demo/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.14032 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.14032"
+}

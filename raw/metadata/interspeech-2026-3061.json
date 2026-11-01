@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-3061",
+  "source_ids": {
+    "isca": "tatsumi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3061"
+  },
+  "title": "Universality of Speech Emotion Recognition in Humans and Speech Language Models",
+  "authors": [
+    "Yuka Tatsumi",
+    "Nathan Roll",
+    "Robert D. Hawkins",
+    "Meghan Sumner",
+    "Dan Jurafsky"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/tatsumi26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/tatsumi26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Humans can recognize the emotional content of speech in unfamiliar languages fairly accurately, a phenomenon known as universality. However, it remains unclear whether computational speech encoder models also exhibit universality in detecting emotions. This study compares 101 English monolingual human listeners and two English monolingual speech language models (SLMs) on cross-language recognition of basic emotions in French, Japanese, Greek, and Thai. Both humans and SLMs performed well above chance level, supporting universality. Yet we found differences across emotions: humans were more accurate for negative emotions and tended to default to neutral responses, whereas models performed best on and defaulted to happy and surprise. These findings demonstrate universality in SLM emotion recognition while highlighting that machines have distinct recognition patterns from humans, underscoring the need for cross-disciplinary study of emotion.",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Cross-language emotion recognition universality in humans versus speech encoder models; speech emotion recognition, no synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-kato26_interspeech",
+  "source_ids": {
+    "isca": "kato26_interspeech",
+    "doi": null
+  },
+  "title": "Coco-VC: Degradation-Robust Streaming Voice Conversion System on the Listener Side",
+  "authors": [
+    "Ryo Kato",
+    "Ryutaro Matsunaga",
+    "Toshio Imamura",
+    "Akinori Maeda",
+    "Shuhei Takahara",
+    "Shinnosuke Takamichi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kato26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kato26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-kato26_interspeech.pdf",
+  "pdf_source": "isca",
+  "abstract": "In telephone conversations, speakers lack the means to know how clearly their voice reaches the listener. This degradation in naturalness stems not only from the acoustic and communication environments but also from the speaker's unintelligible timbre. To address this issue, our real-time voice conversion (VC) system, Coco-VC, performs on the listener side. It is built with telephony data augmentation and multi-teacher distillation to extract robust representations. The interactive demonstration showcases a real-time, low-latency streaming VC on a standard laptop, allowing users to seamlessly switch VC settings via an intuitive GUI. Experimental evaluations demonstrate that Coco-VC maintains high quality even for degraded telephony speech compared to existing streaming VC systems.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Coco-VC, degradation-robust listener-side streaming voice conversion for telephony; VC system.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

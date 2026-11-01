@@ -1,7 +1,9 @@
 {
   "id": "2606.16969",
   "source_ids": {
-    "arxiv": "2606.16969"
+    "arxiv": "2606.16969",
+    "isca": "gichamba26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3493"
   },
   "title": "Probing Low Frame Rate Degradation in Neural Audio Codecs",
   "authors": [

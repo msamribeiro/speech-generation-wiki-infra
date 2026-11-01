@@ -1,7 +1,9 @@
 {
   "id": "2607.04515",
   "source_ids": {
-    "arxiv": "2607.04515"
+    "arxiv": "2607.04515",
+    "isca": "edet26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1868"
   },
   "title": "Towards Digital Preservation of Efik: TTS for a Low-Resource African Language",
   "authors": [

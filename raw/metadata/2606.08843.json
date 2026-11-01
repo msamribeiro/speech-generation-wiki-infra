@@ -1,7 +1,9 @@
 {
   "id": "2606.08843",
   "source_ids": {
-    "arxiv": "2606.08843"
+    "arxiv": "2606.08843",
+    "isca": "mandel26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1663"
   },
   "title": "From A to B to A: Palindromic Zero-Shot Voice Conversion with Non-Parallel Data",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2603.17061",
   "source_ids": {
-    "arxiv": "2603.17061"
+    "arxiv": "2603.17061",
+    "isca": "koch26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2417"
   },
   "title": "Collecting Prosody in the Wild: A Content-Controlled, Privacy-First Smartphone Protocol and Empirical Evaluation",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2606.16472",
   "source_ids": {
-    "arxiv": "2606.16472"
+    "arxiv": "2606.16472",
+    "isca": "lee26m_interspeech",
+    "doi": "10.21437/Interspeech.2026-1589"
   },
   "title": "From Awareness to Adherence: Bridging the Context Gap in Spoken Dialogue Systems via Context-Aware Decoding",
   "authors": [

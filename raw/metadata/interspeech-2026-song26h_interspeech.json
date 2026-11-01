@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-song26h_interspeech",
+  "source_ids": {
+    "isca": "song26h_interspeech",
+    "doi": null
+  },
+  "title": "MER-Live: An Interactive Browser Demo of Prosody-Driven Multimodal Emotion Recognition",
+  "authors": [
+    "Haoyu Song",
+    "Xiaoxiao Miao",
+    "Pai Chet Ng",
+    "Timothy Liu",
+    "Aik Beng Ng",
+    "Ian McLoughlin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/song26h_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/song26h_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "MER-Live is a real-time multimodal emotion recognition demo in which speech is the dominant signal, supported by video and lexical cues. The acoustic branch uses a novel lightweight masked auto-encoder SER model (MSMC) on log-mel spectrograms, while the text branch acts only as an auxiliary tie-breaker rather than a keyword trigger. Users speak to the camera and watch emotion estimates update four times per second. They can hot-swap ten speaker-holdout checkpoints, record a five second utterance for IEMOCAP-style logit averaging, or upload audio files for side-by-side comparison with an open SER baseline. The 6.77M-parameter audio model, exported to TensorRT FP16, serves a batch of five in 0.24 ms on one H200, giving a 14x speed-up over PyTorch FP32. On 10-fold IEMOCAP, the deployed audio-only MSMC checkpoint used in MER-Live reaches 74.03% WA and 66.39% UA. Multimodal performance exceeds 83%.",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Real-time multimodal emotion recognition demo; no synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

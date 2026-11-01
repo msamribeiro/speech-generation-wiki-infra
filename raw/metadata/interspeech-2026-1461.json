@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-1461",
+  "source_ids": {
+    "isca": "ghosh26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-1461"
+  },
+  "title": "MagpieTTS-LF: Inference-Time Long-Form Speech Generation Without Training on Long-Form data",
+  "authors": [
+    "Subhankar Ghosh",
+    "Jason Li",
+    "Paarth Neekhara",
+    "Shehzeen Hussain",
+    "Ryan Langman",
+    "Xuesong Yang",
+    "Roy Fejgin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ghosh26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ghosh26f_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural Text-to-Speech (TTS) systems achieve remarkable quality on short utterances but long-form speech generation shows prosodic drift, speaker inconsistencies and sentence boundary artifacts. Existing approaches either compress sequences, increase context length or naively concatenate independently synthesized chunks. We present an inference-time approach called MagpieTTS-LF that enables MagpieTTS to produce coherent long-form speech without model retraining. Our method introduces three key innovations: (1) soft attention priors to guide monotonic alignment while preserving past and future context; (2) a stateful inference algorithm that maintains context across sentence chunks, ensuring prosodic continuity; (3) history-aware text encoding that uses past text for discourse-level prosodic planning. Experiments on long texts show significant improvements in long-range intelligibility, prosodic coherence, speaker consistency, and boundary naturalness compared to other baselines.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.18485 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.18485"
+}

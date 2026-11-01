@@ -1,7 +1,9 @@
 {
   "id": "2603.20638",
   "source_ids": {
-    "arxiv": "2603.20638"
+    "arxiv": "2603.20638",
+    "isca": "hu26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-494"
   },
   "title": "OmniCodec: Low Frame Rate Universal Audio Codec with Semantic-Acoustic Disentanglement",
   "authors": [

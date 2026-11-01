@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-2749",
+  "source_ids": {
+    "isca": "hayden26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2749"
+  },
+  "title": "Accent-Emotion Entanglement in LM-Based Text-to-Speech Systems",
+  "authors": [
+    "Matthew Hayden",
+    "Jinzuomu Zhong",
+    "Korin Richmond"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/hayden26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/hayden26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2749.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speaker similarity metrics (SSM) are widely used for quick and easy evaluation of zero-shot text-to-speech (ZS-TTS) systems. However, using a case study of two ZS-TTS systems that have comparable SSM, we show such metrics may fail to capture important speech characteristics such as accent, and that relying on them can hide errors. We identify a phenomenon termed accent-emotion entanglement, whereby emotion conditioning can unintentionally alter accent, which is not reflected in previously reported high speaker similarity scores. We evaluate the systems with accent SMOS listening tests, and visualisation and cosine-distance analysis of embeddings. One has substantial accent variability, with SMOS ranging from 1.17–4.13 and centroid cosine distances up to 0.06, while the other is stable. The results of our proposed approach highlight the limitations of standard speaker similarity metrics, and that targeted subjective and objective measures are needed to reveal hidden synthesis errors.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Identifies accent-emotion entanglement in LM-based zero-shot TTS and shows speaker-similarity metrics miss it; TTS evaluation analysis.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

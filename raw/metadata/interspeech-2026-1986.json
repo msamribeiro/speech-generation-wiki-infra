@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-1986",
+  "source_ids": {
+    "isca": "peng26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-1986"
+  },
+  "title": "Cross-modal Consistency Guidance for Robust Emotion Control in Auto-Regressive TTS Models",
+  "authors": [
+    "Yizhou Peng",
+    "Yukun Ma",
+    "Chong Zhang",
+    "Yi-Wen Chao",
+    "Chongjia Ni",
+    "Bin Ma",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/peng26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/peng26g_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "While Text-to-Speech (TTS) systems enable emotional control via natural-language instructions, expressiveness, naturalness, and speech quality degrade when the target emotion conflicts with the textual semantics. We propose a Cross-modal Consistency Guided Classifier-Free Guidance (CCG-CFG) method with dynamic scales based on the degree of inconsistency between the text emotion and the explicit speech emotion, replacing the dropout condition with the text emotion. We also distill the CCG-CFG guidance signal using a hard-sample mining strategy, improving the TTS model's emotional alignment capability. Evaluations on five emotional corpora and two TTS benchmarks show that our approaches applied to CosyVoice2 achieve up to a 12% absolute improvement in emotion-recognition accuracy and a 10% relative improvement in subjective scores, outperforming baselines including HierSpeech++, Qwen3-TTS, and the original CosyVoice2, while preserving intelligibility, naturalness, and high speech quality.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2510.13293 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2510.13293"
+}

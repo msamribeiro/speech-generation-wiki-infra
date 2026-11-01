@@ -1,0 +1,35 @@
+{
+  "id": "interspeech-2026-2391",
+  "source_ids": {
+    "isca": "allen26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2391"
+  },
+  "title": "Bilingual Speaker Phonetic Alignment to Voice Assistants",
+  "authors": [
+    "Alyssa Allen",
+    "Kathryn Campbell-Kibler"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/allen26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/allen26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Users engage in conversation with ASR-powered voice assistants, but these models favor Standard American English (SAE) speech. Model bias impacts how non-SAE users engage with human versus system voices. Linguistic accommodation measures how interlocutors engage with each other and can be used to examine individuals' relative acceptance of voice assistants as social agents. This study asks how Spanish dominant Spanish-English bilingual speakers phonetically align on voice onset time (VOT) and vowel duration to human versus machine voices in each language. Participants (N=50) in an online lexical shadowing experiment read a list of words, then shadowed a human or voice assistant saying each word. Convergence was found in terms of vowel duration and VOT across languages and conditions, signaling bilingual speakers respond to machine voices in human-like ways across languages. Condition and language effects were mitigated by social information like dialectal region and gender.",
+  "task": [],
+  "relevance_score": 0.4,
+  "relevance_note": "Phonetic accommodation of bilingual speakers toward voice assistants versus human voices. User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

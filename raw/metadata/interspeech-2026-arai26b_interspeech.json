@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2026-arai26b_interspeech",
+  "source_ids": {
+    "isca": "arai26b_interspeech",
+    "doi": null
+  },
+  "title": "Programmable Speech Synthesis without Computers",
+  "authors": [
+    "Takayuki Arai"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/arai26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/arai26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "We present mechanical speech synthesis devices based on dynamic physical models of the human vocal tract. The models consist of a main vocal tract, with or without nasal branches. The configuration of the main tract is controlled by six sliding blocks inserted from the bottom. To control the position of each block, we tested two cam mechanisms: linear cams and rotating cams. In both cases, the cam profile determines the height of each block. Therefore, for each target phrase, the cam shapes must be redesigned. To make this process “programmable,” we developed a set of interchangeable plates with different profiles, allowing arbitrary cam shapes to be realized by inserting them into the base. This programmable approach allows the synthesis of multiple speech phrases using sliding-block-type vocal-tract models.",
+  "task": [],
+  "relevance_score": 0.42,
+  "relevance_note": "Mechanical, computer-free speech synthesis devices from physical vocal tract models (Show & Tell). User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

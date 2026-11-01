@@ -1,7 +1,9 @@
 {
   "id": "2606.10317",
   "source_ids": {
-    "arxiv": "2606.10317"
+    "arxiv": "2606.10317",
+    "isca": "tanabu26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1688"
   },
   "title": "SSL-GMMVC: Interpretable Voice Conversion via Locally Linear GMM Transforms in Self-Supervised Representation Space",
   "authors": [

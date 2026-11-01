@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-2018",
+  "source_ids": {
+    "isca": "yang26l_interspeech",
+    "doi": "10.21437/Interspeech.2026-2018"
+  },
+  "title": "CraftTTS: Fine-Grained Prosody Control for Text-to-Speech",
+  "authors": [
+    "Wenbing Yang",
+    "Qihang Lu",
+    "Bingsong Bai",
+    "Zihan Sun",
+    "Yueran Hou",
+    "Peilei Jia",
+    "Yingming Gao",
+    "Ya Li",
+    "Jun Gao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/yang26l_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/yang26l_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2018.pdf",
+  "pdf_source": "isca",
+  "abstract": "While zero-shot text-to-speech models perform well in global voice cloning, they struggle with fine-grained prosodic control, as strict word-level intensity and tempo manipulation can disrupt acoustic priors and introduce artifacts. We propose CraftTTS, a three-stage framework enabling stable word-level control without sacrificing fluency. First, a compute-driven zero-shot pipeline automatically constructs large-scale preference pairs without manual annotation. Second, joint supervised fine-tuning and direct preference optimization improve sensitivity to local prosodic tags. Third, group relative policy optimization with a multi-dimensional prosodic reward balances local controllability and global naturalness by regulating intelligibility, intensity contrast, and rhythm. Experiments demonstrate that CraftTTS achieves state-of-the-art fine-grained expressiveness while preserving zero-shot generation capability.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "CraftTTS, word-level prosody (intensity, tempo) control for zero-shot TTS with preference data; core TTS method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,9 @@
 {
   "id": "2603.08231",
   "source_ids": {
-    "arxiv": "2603.08231"
+    "arxiv": "2603.08231",
+    "isca": "buitrago26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2745"
   },
   "title": "Quantifying Cross-Lingual Transfer in Paralinguistic Speech Tasks",
   "authors": [

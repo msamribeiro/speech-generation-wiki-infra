@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-1340",
+  "source_ids": {
+    "isca": "li26w_interspeech",
+    "doi": "10.21437/Interspeech.2026-1340"
+  },
+  "title": "Zero-VC: Zero-Lookahead Streaming Voice Conversion via Speaker Anonymization",
+  "authors": [
+    "Yudong Li",
+    "Zihao Fang",
+    "Junwen Qiu",
+    "Ruihai Jing",
+    "Ruixiang Hang",
+    "Yingda Shen",
+    "Zhizheng Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/li26w_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/li26w_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Streaming zero-shot voice conversion struggles to disentangle timbre from linguistic content without degrading utility or inflating latency. Current methods rely on information bottleneck (IB) or speaker perturbation. While IB filters out timbre, it discards prosody, forcing models to explicitly inject features like fundamental frequency. This often requires buffering future frames, creating algorithmic lookahead latency. On the other hand, existing perturbation methods largely overlook the crucial trade-off between timbre leakage and utility preservation. Recognizing this neglected trade-off, we find that the inherent objective of Speaker Anonymization (SA) aligns well with balancing these factors. Thus, we introduce SA as a novel perturbation mechanism to explicitly mitigate timbre leakage while retaining prosodic utility. Crucially, SA's robust representations significantly alleviate the generator's reliance on future context, enabling our strictly causal, zero-lookahead network.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.20218 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.20218"
+}

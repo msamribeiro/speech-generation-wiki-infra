@@ -1,7 +1,9 @@
 {
   "id": "2607.16657",
   "source_ids": {
-    "arxiv": "2607.16657"
+    "arxiv": "2607.16657",
+    "isca": "yang26k_interspeech",
+    "doi": "10.21437/Interspeech.2026-1759"
   },
   "title": "HARP: Harmonic-Aware Residual Partitioning for Neural Audio Codecs",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2606.21157",
   "source_ids": {
-    "arxiv": "2606.21157"
+    "arxiv": "2606.21157",
+    "isca": "kim26v_interspeech",
+    "doi": "10.21437/Interspeech.2026-3108"
   },
   "title": "SDP-Codec: A Speaker-Decoupled Speech Codec with Pitch Injection for Low-Bitrate Coding and Zero-Shot Voice Conversion",
   "authors": [

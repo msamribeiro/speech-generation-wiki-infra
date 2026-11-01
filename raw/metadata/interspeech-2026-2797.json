@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2797",
+  "source_ids": {
+    "isca": "mukhituly26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2797"
+  },
+  "title": "A Unified Safety Subspace Exists in Speech Language Models",
+  "authors": [
+    "Nurdaulet Mukhituly",
+    "Muhammad Cendekia Airlangga",
+    "Rifo Ahmad Genadi",
+    "Nhi Hoai Doan",
+    "Amirbek Djanibekov",
+    "Samuel Munachiso Nwadike",
+    "Zangir Iklassov",
+    "Kentaro Inui"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/mukhituly26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/mukhituly26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech Language Models (SLMs) extend large language models to spoken interaction, but this multimodal integration introduces modality-specific vulnerabilities. While prior work has typically addressed speech and text safety in isolation, our work uncovers a shared safety subspace where benign, harmful, and jailbreak representations exist regardless of input modality. We identify this subspace via a PCA projection, revealing a well-defined boundary separating refusal from jailbreak compliance. Causal intervention along this boundary shifts model behavior between refusal and compliance across modalities and attack types without additional training. For example, a refusal vector derived from an audio attack reduces text jailbreak success from 76.5% to 2.2%, while a refusal vector derived from the text attack reduces audio jailbreak success from 79.0% to 3.1%. We demonstrate these results on Qwen2-Audio and GLM-4-Voice, and confirm transferability across five different attacks.",
+  "task": [],
+  "relevance_score": 0.45,
+  "relevance_note": "Identifies a shared safety subspace across modalities in speech language models. User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

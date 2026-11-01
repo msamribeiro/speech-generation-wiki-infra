@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-1331",
+  "source_ids": {
+    "isca": "ulgen26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1331"
+  },
+  "title": "DiffAnon: Diffusion-based Prosody Control for Voice Anonymization",
+  "authors": [
+    "Ismail Rasim Ulgen",
+    "Zexin Cai",
+    "Nicholas Andrews",
+    "Philipp Koehn",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ulgen26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ulgen26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "To preserve or not to preserve prosody is a central question in voice anonymization. Prosody conveys meaning and affect, yet is tightly coupled with speaker identity. Existing methods either discard prosody for privacy or lack a principled mechanism to control the utility-privacy trade-off, operating at fixed design points. We propose DiffAnon, a diffusion-based anonymization method with classifier-free guidance (CFG) that provides explicit, continuous inference-time control over prosody preservation. DiffAnon refines acoustic detail over semantic embeddings of an RVQ codec, enabling smooth interpolation between anonymization strength and prosodic fidelity within a single model. To the best of our knowledge, it is the first voice anonymization framework to provide structured, interpolatable inference-time prosody control. Experiments demonstrate structured trade-off behavior, achieving strong utility while maintaining competitive privacy across controllable operating points.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2604.26281 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2604.26281"
+}

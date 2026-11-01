@@ -1,7 +1,9 @@
 {
   "id": "2606.09050",
   "source_ids": {
-    "arxiv": "2606.09050"
+    "arxiv": "2606.09050",
+    "isca": "ma26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1961"
   },
   "title": "MeanVC 2: Robust Low-Latency Streaming Zero-Shot Voice Conversion",
   "authors": [

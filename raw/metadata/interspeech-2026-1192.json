@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-1192",
+  "source_ids": {
+    "isca": "liu26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-1192"
+  },
+  "title": "Prosodic Boundary-Aware Streaming Generation for LLM-Based TTS with Streaming Text Input",
+  "authors": [
+    "Changsong Liu",
+    "Tianrui Wang",
+    "Ye Ni",
+    "Yizhou Peng",
+    "Eng Siong Chng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/liu26i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/liu26i_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Streaming TTS that receives streaming text is essential for interactive systems, yet this scheme faces two major challenges: unnatural prosody due to missing lookahead and long-form collapse due to unbounded context. We propose a prosodic-boundary-aware post-training strategy, adapting a pre-trained LLM-based TTS model using weakly time-aligned data. Specifically, the model is adapted to learn early stopping at specified content boundaries when provided with limited future text. During inference, a sliding-window prompt carries forward previous text and speech tokens, ensuring bounded context and seamless concatenation. Evaluations show our method outperforms CosyVoice-Style interleaved baseline in both short and long-form scenarios. In long-text synthesis, especially, it achieves a 66.2% absolute reduction in word error rate (from 71.0% to 4.8%) and increases speaker and emotion similarity by 16.1% and 1.5% relatively, offering a robust solution for streaming TTS with incremental text.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.06444 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.06444"
+}

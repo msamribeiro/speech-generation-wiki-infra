@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-0131",
+  "source_ids": {
+    "isca": "bai26_interspeech",
+    "doi": "10.21437/Interspeech.2026-131"
+  },
+  "title": "Towards Chinese Yue Opera Singing Voice Synthesis: A Benchmark with Dataset, Data Augmentation and Baseline Model",
+  "authors": [
+    "Peng Bai",
+    "Chenyang Lyu",
+    "Yue Zhou",
+    "Wujin Sun",
+    "Longyue Wang",
+    "Weihua Luo",
+    "Xiaodong Shi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/bai26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/bai26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0131.pdf",
+  "pdf_source": "isca",
+  "abstract": "This paper establishes the first comprehensive benchmark for Singing Voice Synthesis (SVS) of Chinese Yue Opera in the Wu dialect, addressing a critical gap in this unexplored field. Our benchmark integrates three key components: (1) the Yue Opera Audio-Text (YOAT) dataset, a high-quality corpus of 565 studio recordings with phoneme-level alignments for duration and pitch; (2) targeted data augmentation methods from the perspectives of pronunciation and pitch; and (3) YueOpera-Singer, a strong baseline model built on conditional flow-matching. Comprehensive objective and subjective evaluations verify the reliability of the YOAT dataset and the effectiveness of the proposed data augmentation methods. YueOpera-Singer delivers competitive synthesis quality with a subjective MOS of 3.92, acting as a robust baseline for the benchmark. The dataset, code, and demo samples are publicly available on the https://anonymous.4open.science/api/repo/YueOpera_Benchmark-6914/file/index.html.",
+  "task": [
+    "singing"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "First Yue Opera singing voice synthesis benchmark with dataset, augmentation methods and baseline model; core singing synthesis contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

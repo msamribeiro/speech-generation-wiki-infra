@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-0540",
+  "source_ids": {
+    "isca": "lee26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-540"
+  },
+  "title": "NaturalFlow: Reducing Disruptive Pauses for Natural Speech Flow in Simultaneous Speech-to-Speech Translation",
+  "authors": [
+    "Dongwook Lee",
+    "Youngho Cho",
+    "Sangkwon Park",
+    "Heeseung Kim",
+    "Sungroh Yoon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lee26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lee26c_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Simultaneous speech-to-speech translation aims to enable near-real-time communication by minimizing latency, offering a compelling, real-time alternative to the high latency of consecutive translation. However, the excessive pursuit of low latency often results in fragmented chunk-wise speech. Consequently, listeners are subjected to an unnatural acoustic flow punctuated by frequent pauses, which could increase their cognitive load. To bridge this gap, we introduce a fluency-aware optimization framework designed to discover the sweet spot between the low-latency benefits of simultaneous translation and the natural flow of consecutive translation. Our framework minimizes inter-chunk silences by leveraging model-internal signals, including linguistic diversity and induced temporal variability in speech durations. Experiments on short- and long-form benchmarks show that our framework produces natural speech flow while maintaining competitive latency and translation quality.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.13121 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.13121"
+}

@@ -1,7 +1,9 @@
 {
   "id": "2606.11611",
   "source_ids": {
-    "arxiv": "2606.11611"
+    "arxiv": "2606.11611",
+    "isca": "chen26v_interspeech",
+    "doi": "10.21437/Interspeech.2026-2082"
   },
   "title": "SARA: A Dual-Stream VAE for High-Fidelity Speech Generation via Integrating Semantic and Acoustic Representations",
   "authors": [

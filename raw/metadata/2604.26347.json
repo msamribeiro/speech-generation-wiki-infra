@@ -1,7 +1,9 @@
 {
   "id": "2604.26347",
   "source_ids": {
-    "arxiv": "2604.26347"
+    "arxiv": "2604.26347",
+    "isca": "tsai26_interspeech",
+    "doi": "10.21437/Interspeech.2026-39"
   },
   "title": "The False Resonance: A Critical Examination of Emotion Embedding Similarity for Speech Generation Evaluation",
   "authors": [

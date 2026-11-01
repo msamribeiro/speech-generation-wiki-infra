@@ -1,7 +1,9 @@
 {
   "id": "2607.20951",
   "source_ids": {
-    "arxiv": "2607.20951"
+    "arxiv": "2607.20951",
+    "isca": "lee26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-932"
   },
   "title": "Designed Vocalizations Dataset: Sound-Designed Human and Animal Voices for Non-human Voice Conversion",
   "authors": [

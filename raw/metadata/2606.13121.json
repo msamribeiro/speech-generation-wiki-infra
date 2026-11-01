@@ -1,7 +1,9 @@
 {
   "id": "2606.13121",
   "source_ids": {
-    "arxiv": "2606.13121"
+    "arxiv": "2606.13121",
+    "isca": "lee26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-540"
   },
   "title": "NaturalFlow: Reducing Disruptive Pauses for Natural Speech Flow in Simultaneous Speech-to-Speech Translation",
   "authors": [

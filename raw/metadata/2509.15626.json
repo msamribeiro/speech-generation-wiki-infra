@@ -1,7 +1,9 @@
 {
   "id": "2509.15626",
   "source_ids": {
-    "arxiv": "2509.15626"
+    "arxiv": "2509.15626",
+    "isca": "ohmura26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2231"
   },
   "title": "LibriTTS-VI: A Public Corpus and Novel Methods for Efficient Voice Impression Control",
   "authors": [

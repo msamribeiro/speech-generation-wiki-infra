@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0449",
+  "source_ids": {
+    "isca": "miniconi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-449"
+  },
+  "title": "TDScore: Learning Synthetic Speech Quality Predictors from TTS Training Dynamics without Human annotation",
+  "authors": [
+    "Natacha Miniconi",
+    "Meysam Shamsi",
+    "Anthony Larcher"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/miniconi26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/miniconi26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0449.pdf",
+  "pdf_source": "isca",
+  "abstract": "Subjective listening tests are the standard for evaluating synthetic speech quality, but they are costly, time-consuming, and difficult to scale. Automatic speech synthetic quality predictors reduce reliance on human ratings, but still depend on large amounts of human-annotated data and generalize poorly across languages, speakers, and synthesis paradigms. This paper proposes a framework without human annotation for learning synthetic speech quality predictors by exploiting training dynamics of text-to-speech systems as pseudo annotation. Synthetic speech is collected from multiple TTS models at different training checkpoints and paired with training-derived metadata such as iteration index and loss. A quality predictor is trained from audio without human perceptual labels. Experiments on benchmark datasets covering multiple languages show that iteration annotation correlates with human annotation across datasets and languages.",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Learns synthetic speech quality predictors from TTS training dynamics without human labels; automatic evaluation of synthesized speech.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

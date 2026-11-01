@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-1227",
+  "source_ids": {
+    "isca": "geng26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1227"
+  },
+  "title": "Stabilizing Instruction Supervision for Instruct-TTS via Controllable Diversification and Drift Filtering",
+  "authors": [
+    "Yizhong Geng",
+    "Kecan Mao",
+    "Qifei Li",
+    "Cong Wang",
+    "Yingming Gao",
+    "Ruimin Wang",
+    "Chunfeng Wang",
+    "Hao Li",
+    "Ya Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/geng26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/geng26b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1227.pdf",
+  "pdf_source": "isca",
+  "abstract": "Instruct-TTS systems expand structured style labels into natural-language training instructions through LLM rewriting, yet we find that over 40% of unconstrained rewrites contain semantic drift that corrupts supervision and weakens generalization. We formalize this problem as instruction supervision instability and propose a data-centric stabilization recipe that jointly improves coverage and fidelity through three mechanisms: controllable instruction diversification for systematic expansion, LLM-based drift filtering for quality control, and attribute-aligned supervision that grounds prosody control in acoustic perturbations. On the Chinese split of InstructTTSEval, our recipe raises instruction-following from 34.5% without fine-tuning and 51.0% with naive fine-tuning to 56.4%, while constrained rewriting reduces drift from 40.4% to 15.4%. Ablations confirm the three mechanisms are complementary, and the drift taxonomy may generalize to instruction-driven generation beyond TTS. 1",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Data-centric stabilization of LLM-rewritten instruction supervision for Instruct-TTS; TTS training method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

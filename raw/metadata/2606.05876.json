@@ -1,7 +1,9 @@
 {
   "id": "2606.05876",
   "source_ids": {
-    "arxiv": "2606.05876"
+    "arxiv": "2606.05876",
+    "isca": "jiang26h_interspeech",
+    "doi": "10.21437/Interspeech.2026-3506"
   },
   "title": "An Ultra-Low-Bitrate Neural Speech Codec with Plain-to-Pseudo Synergistic Vector Quantization",
   "authors": [

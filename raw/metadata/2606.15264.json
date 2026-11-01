@@ -1,7 +1,9 @@
 {
   "id": "2606.15264",
   "source_ids": {
-    "arxiv": "2606.15264"
+    "arxiv": "2606.15264",
+    "isca": "mou26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2298"
   },
   "title": "DuraMark: Duration-Embedded Watermarking in LLM-based TTS",
   "authors": [

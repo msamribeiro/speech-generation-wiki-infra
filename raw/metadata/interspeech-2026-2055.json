@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-2055",
+  "source_ids": {
+    "isca": "kim26p_interspeech",
+    "doi": "10.21437/Interspeech.2026-2055"
+  },
+  "title": "SALT: Selective Allophone-Level Tokenization for Korean Text-to-Speech Synthesis",
+  "authors": [
+    "Kwangsung Kim",
+    "Cellik Adams",
+    "EunKyoung Jo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kim26p_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kim26p_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2055.pdf",
+  "pdf_source": "isca",
+  "abstract": "Recent Korean TTS studies often use direct grapheme input due to the phonetic transparency of the Korean alphabet, Hangul. However, Korean orthography is also morphophonemic, and grapheme sequences do not always correspond to the actual pronunciation. Since the mapping between graphemes, phonemes, and allophones is almost deterministic in the Standard Korean Pronunciation, we propose Selective Allophone-Level Tokenization (SALT), which incorporates a selected set of allophonic phenomena into the input rather than relying on implicit learning by the TTS model. In experiments fine-tuning a pre-trained model, SALT-N, which improves token distributional balance, outperformed baselines. In a 12.75-hour dataset, SALT-N obtained a CER of 3.30% and achieved the highest NMOS, whereas grapheme input resulted in a CER of 4.74%. In an extremely low-resource 1-hour setting, SALT-N was the only method to achieve a CER below 10% (8.19%), whereas all baseline models suffered from severe degradation.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Selective allophone-level tokenization for Korean TTS; TTS input-representation method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

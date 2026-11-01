@@ -1,0 +1,42 @@
+{
+  "id": "interspeech-2026-2600",
+  "source_ids": {
+    "isca": "sanchez26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2600"
+  },
+  "title": "An Evaluation Framework for Text-to-Speech Voice Reconstruction",
+  "authors": [
+    "Ariadna Sanchez",
+    "Christoph Minixhofer",
+    "Korin Richmond",
+    "Ondřej Klejch",
+    "Peter Bell",
+    "Simon King"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/sanchez26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/sanchez26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Voice reconstruction using Text-to-Speech (TTS) offers a communication method for people with speech disorders, which aims to retain their speaker identity while improving intelligibility. Previous work generally relies on Mean Opinion Score (MOS) to evaluate naturalness and speaker similarity, but this has limited sensitivity and reliability. We propose an evaluation framework with subjective and objective components. Subjectively, we evaluate perceived intelligibility and speaker identity using Best Worst Scaling (BWS) with situational framing. Objectively, we demonstrate that standard measures fail to predict reconstruction success for highly unintelligible speakers, so we introduce a novel dual-reference distributional measure to assess the trade-off between intelligibility and speaker identity. By evaluating the output of 17 zero-shot TTS systems for 193 speakers, we show that our framework provides a reliable and task-aligned approach for assessing voice reconstruction.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.21343 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.21343"
+}

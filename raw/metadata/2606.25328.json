@@ -1,7 +1,9 @@
 {
   "id": "2606.25328",
   "source_ids": {
-    "arxiv": "2606.25328"
+    "arxiv": "2606.25328",
+    "isca": "pan26_interspeech",
+    "doi": "10.21437/Interspeech.2026-908"
   },
   "title": "Supervised Post-training of Speech Foundation Models for Robust Adaptation in Speech Deepfake Detection",
   "authors": [

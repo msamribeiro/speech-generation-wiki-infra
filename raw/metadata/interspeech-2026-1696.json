@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-1696",
+  "source_ids": {
+    "isca": "zhou26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-1696"
+  },
+  "title": "Beyond One-Size-Fits-All: Personalized and Culturally Adaptive Emotional TTS via Interactive Optimization of Individual Emotion Perception Spaces",
+  "authors": [
+    "Wangzixi Zhou",
+    "Bagus Tris Atmaja",
+    "Sakriani Sakti"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhou26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhou26e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "The rise of conversational AI has increased interest in emotional Text-to-Speech (TTS). Most systems rely on discrete emotion labels, which fail to capture the nuanced nature of human affect. Recent models employ dimensional representations such as Russell's arousal-valence (A-V) model, offering finer control. However, emotional perception varies across individuals and cultures, which may cause mismatches between modeled and perceived emotions. We propose a personalized and culturally adaptive emotional TTS framework that performs interactive optimization of individualized A-V perception spaces using an Interactive Genetic Algorithm. By adapting emotion representations to each listener, the system produces speech with more perceptually aligned emotional expression than models using averaged A-V values. Evaluations with Japanese, Chinese, and Indonesian participants highlight the importance of personalization and cultural adaptation for moving beyond one-size-fits-all emotional TTS.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2608.00998 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2608.00998"
+}

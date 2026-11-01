@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-2944",
+  "source_ids": {
+    "isca": "park26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-2944"
+  },
+  "title": "NaVo: Natural Voice Protection against Voice Cloning Attacks via Generative Universal Adversarial Audio",
+  "authors": [
+    "Seoyoung Park",
+    "Seungmin Kim",
+    "Sohee Park",
+    "Dain Kim",
+    "Thien An Nguyen",
+    "Thien-Phuc Doan",
+    "Souhwan Jung",
+    "Daeseon Choi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/park26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/park26g_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2944.pdf",
+  "pdf_source": "isca",
+  "abstract": "Proactive defense against voice cloning disrupts synthesis by injecting adversarial perturbations. However, prior methods rely on iterative optimization, often causing perceptual distortion and high latency that limit real-time deployment. We propose NaVo, a generative framework that produces natural-sounding universal adversarial audio. NaVo guides a latent diffusion–based text-to-audio model with fine-tuned low-rank adaptation modules tailored to gender and acoustic categories such as rain, music, and babble, enabling high-fidelity, speaker-independent adversarial audio generation. Unlike optimization-based approaches, NaVo supports real-time protection through simple audio mixing without gradient-based inference. It achieves a 76% defense success rate against a widely used commercial voice cloning system in a black-box setting. By jointly addressing universality, audio quality, and computational efficiency, NaVo offers a practical solution for proactive voice protection.",
+  "task": [
+    "VC",
+    "TTS"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "NaVo, generative universal adversarial audio protecting voices from cloning; anti-cloning defense evaluated against VC/TTS, consistent with accepted Mimic Blocker and VoiceMark precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

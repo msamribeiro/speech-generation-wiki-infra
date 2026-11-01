@@ -1,7 +1,9 @@
 {
   "id": "2509.09631",
   "source_ids": {
-    "arxiv": "2509.09631"
+    "arxiv": "2509.09631",
+    "isca": "nguyen26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-1043"
   },
   "title": "DiFlow-TTS: Compact and Low-Latency Zero-Shot Text-to-Speech with Factorized Discrete Flow Matching",
   "authors": [

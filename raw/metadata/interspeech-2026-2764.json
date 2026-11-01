@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-2764",
+  "source_ids": {
+    "isca": "singh26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-2764"
+  },
+  "title": "FlowEdit: Associative Memory for Lifelong Pronunciation Adaptation in Flow-Matching TTS",
+  "authors": [
+    "Harshit Singh",
+    "Ayush Pratap Singh",
+    "Nityanand Mathur"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/singh26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/singh26c_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2764.pdf",
+  "pdf_source": "isca",
+  "abstract": "Flow-matching text-to-speech systems achieve remarkable zero-shot quality but remain static after deployment: pronunciation errors on out-of-vocabulary proper nouns persist unless the model is retrained. We introduce FlowEdit, a lifelong adaptation framework for frozen flow-matching TTS that learns pronunciation corrections as latent conditioning edits rather than weight updates. When corrective feedback is provided, FlowEdit optimizes a token-level perturbation in the text embedding space, then stores the correction in a Modern Hopfield Network serving as content-addressable episodic memory. At inference, corrections are retrieved via soft attention with a similarity gate, enabling fuzzy morphological matching. On our curated benchmark of 312 multilingual proper nouns across 18 language families, FlowEdit reduces target-word Phoneme Error Rate by 92.7% relative to the zero-shot baseline while maintaining identical general-speech quality. Corrections complete in approximately 15 seconds on a single GPU.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "FlowEdit, lifelong pronunciation adaptation for frozen flow-matching TTS via latent conditioning edits; TTS method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-3366",
+  "source_ids": {
+    "isca": "varadhan26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3366"
+  },
+  "title": "IN-F5: Adapting an English TTS Foundation Model for Multilingual and Zero-Resource Indian Speech Synthesis",
+  "authors": [
+    "Praveen Srinivasa Varadhan",
+    "Srija Anand",
+    "Siddhartha Soma",
+    "Mitesh M Khapra"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/varadhan26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/varadhan26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-3366.pdf",
+  "pdf_source": "isca",
+  "abstract": "We investigate whether an English TTS foundation model (F5-TTS) can serve as an effective prior for low-resource multilingual speech synthesis. Starting from an English-pretrained checkpoint, we adapt to 11 Indian languages using less than 2% of the original pretraining data scale. Through a controlled comparison of training from scratch, direct fine-tuning, and fine-tuning with continued English exposure, we find that direct fine-tuning on Indian data alone performs best, challenging the assumption that multilingual systems benefit from continued high-resource exposure. Extensive subjective and objective evaluations show that the resulting model, IN-F5, approaches human-level naturalness and speaker similarity while exhibiting emergent capabilities including polyglot voice transfer, code-mixing, and expressive style control. We analyze data scaling and demonstrate zero-resource cross-lingual transfer to Bhojpuri and Tulu to extend TTS to under-represented languages.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "IN-F5, adapting English F5-TTS to 11 Indian languages including zero-resource settings; multilingual TTS method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

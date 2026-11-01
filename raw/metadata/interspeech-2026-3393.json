@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-3393",
+  "source_ids": {
+    "isca": "gangwar26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3393"
+  },
+  "title": "HybridCodec: Fast Dual-Stream, Semantically Enhanced Neural Audio Codec",
+  "authors": [
+    "Arjun Gangwar",
+    "S Umesh"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/gangwar26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/gangwar26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "The popularity of neural audio codecs as speech tokenizers has surged with the advent of Multimodal Large Language Models. New codec architectures with semantic and acoustic disentanglement have emerged. There are two main approaches to introduce semantic information into codec models: one distills semantic information from SSL representations into the first RVQ layer, while the other maintains separate streams for semantic and acoustic features. We propose HybridCodec, a unified architecture that combines both paradigms. It employs separate semantic and acoustic branches while distilling SSL representations into the semantic stream. This design ensures strong disentanglement without requiring an SSL model during inference. HybridCodec shows superior semantic specialization (RVQ-1) on in-domain test set and competitive reconstruction (RVQ-all). We demonstrate its robustness in out-of-domain and zero-shot cross-lingual settings, achieving a 3x speedup over existing dual-stream models.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.06743 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.06743"
+}

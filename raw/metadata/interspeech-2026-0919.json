@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-0919",
+  "source_ids": {
+    "isca": "fujita26_interspeech",
+    "doi": "10.21437/Interspeech.2026-919"
+  },
+  "title": "Scalable Direction-Following TTS via Voice Impression-Guided Pseudo Triplet Construction",
+  "authors": [
+    "Kenichi Fujita",
+    "Yusuke Ijima"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/fujita26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/fujita26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0919.pdf",
+  "pdf_source": "isca",
+  "abstract": "Voice actors often re-read the same script while modifying their delivery in response to performance directions. We study this setting as direction-following TTS, where a system generates a new utterance that reflects a given direction relative to a reference utterance while preserving speaker identity and linguistic content. A key challenge is the lack of training data capturing such relative modifications. To address this, we propose a scalable pseudo-triplet construction pipeline that generates (reference utterance, direction text, modified utterance) triplets. It generates controlled style variations using an impression-controllable TTS model and uses an LLM to produce natural language directions from estimated impression differences. Experimental results demonstrate that pseudo-triplets alone enable stable speaker-preserving modification, and that combining pseudo and recorded data further improves direction alignment while maintaining speaker similarity.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Direction-following TTS with voice-impression-guided pseudo-triplet data construction; new expressive TTS task and method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

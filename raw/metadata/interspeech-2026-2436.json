@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-2436",
+  "source_ids": {
+    "isca": "zhou26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-2436"
+  },
+  "title": "Rethinking Speech Foundation Model Fine-tuning: Better SFT or Better Match?",
+  "authors": [
+    "Wangjin Zhou",
+    "Yizhou Zhang",
+    "Yichi Wang",
+    "Tatsuya Kawahara"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhou26i_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhou26i_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Supervised fine-tuning (SFT) is widely used to adapt self-supervised speech representations to downstream classification tasks. Small gains observed under a single pretrained checkpoint are often interpreted as method-level improvements, i.e., a higher attainable performance ceiling. We show that such conclusions are not always reliable because SFT outcomes depend strongly on the specific pretrained instance. We conduct a systematic study on three SUPERB classification tasks, evaluating eight SFT variants across nine pretrained checkpoints from wav2vec 2.0, HuBERT, and WavLM, with multi-seed repetitions on representative base-scale models. We find that the identity of the statistically indistinguishable top-group SFT recipe is often checkpoint-dependent, with limited transferability across pretrained instances. These findings suggest that many reported downstream gains reflect instance and seed dependent elicitation match, rather than universally improving the attainable performance ceiling.",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.13864 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.13864"
+}

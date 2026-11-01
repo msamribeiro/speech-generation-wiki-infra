@@ -1,7 +1,9 @@
 {
   "id": "2608.00011",
   "source_ids": {
-    "arxiv": "2608.00011"
+    "arxiv": "2608.00011",
+    "isca": "madha26_interspeech",
+    "doi": "10.21437/Interspeech.2026-788"
   },
   "title": "DLLM-TTS: Block Discrete Diffusion Language Model for Text-to-Speech Synthesis",
   "authors": [

@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2002",
+  "source_ids": {
+    "isca": "liu26o_interspeech",
+    "doi": "10.21437/Interspeech.2026-2002"
+  },
+  "title": "WhisperVC: Decoupled Cross-Domain Alignment and Speech Generation for Low-Resource Whisper-to-Normal Conversion",
+  "authors": [
+    "Dong Liu",
+    "Juan Liu",
+    "Wei Ju",
+    "Yao Tian",
+    "Ming Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/liu26o_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/liu26o_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Whispered speech lacks vocal-fold excitation, making the intelligible conversion challenging. We propose WhisperVC, a three-stage framework for low-resource Whisper-to-Normal (W2N) conversion that decouples cross-domain alignment from speech generation. Stage 1 uses limited paired whisper-normal data with a content encoder and a Conformer-based variational autoencoder (VAE) with soft-DTW alignment to learn domain-invariant semantic representations. Stage 2, trained only on normal speech, employs a Length-Channel Aligner and a two-stage speaker-conditioned mel generator for timbre and prosody modeling. Stage 3 fine-tunes a HiFi-GAN vocoder for waveform synthesis. Experimental results on AISHELL6-Whisper show competitive quality (DNSMOS 3.07, UTMOS 2.83, CER 16.93%) and WavLM speaker similarity (0.95). The framework also supports privacy-preserving communication as well as nonvocal communication and a rehabilitation tool for post-surgical vocal-fold patients. Samples are available online.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2511.01056 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2511.01056"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1596",
+  "source_ids": {
+    "isca": "kaneko26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1596"
+  },
+  "title": "MeanVoiceFlow2: Joint Optimization of Mean Flow and Content Encoder for Fast One-Step Zero-Shot Voice Conversion",
+  "authors": [
+    "Takuhiro Kaneko",
+    "Hirokazu Kameoka",
+    "Kou Tanaka",
+    "Yuto Kondo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kaneko26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kaneko26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1596.pdf",
+  "pdf_source": "isca",
+  "abstract": "Flow-matching approaches to voice conversion (VC) have gained attention owing to their high speech quality and strong speaker similarity. Among them, one-step models such as MeanVoiceFlow are particularly attractive because they enable efficient inference; however, their reliance on a computationally intensive content encoder remains a bottleneck. We therefore propose MeanVoiceFlow2, a framework that jointly optimizes a flow-based conversion module and a computationally efficient content encoder. The model is trained through conversion distillation using MeanVoiceFlow and the reconstruction of real data. We further incorporate diffusion-GAN training with sample mixing and teacher-guided conditioning augmentation to enhance realism and disentanglement. Experiments on zero-shot VC showed that MeanVoiceFlow2 achieved higher perceptual quality and approximately 9× faster inference than MeanVoiceFlow while maintaining comparable speaker similarity.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "MeanVoiceFlow2, one-step mean-flow zero-shot VC with a jointly optimized content encoder; core VC method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

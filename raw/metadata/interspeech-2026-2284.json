@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2284",
+  "source_ids": {
+    "isca": "ye26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-2284"
+  },
+  "title": "Refining Emphasis Control in Flow-Matching TTS via Preference Alignment and Reinforcement Learning",
+  "authors": [
+    "Jiangnan Ye",
+    "Jiawei Jin",
+    "Pengfei Tan",
+    "Chao Yan",
+    "Xuerui Yang",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ye26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ye26b_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2284.pdf",
+  "pdf_source": "isca",
+  "abstract": "Achieving fine-grained emphasis control in speech synthesis remains challenging due to data scarcity and the inherent complexity of prosody. To address this issue, we extend F5-TTS with an additional Emphasis Encoder and propose a three-stage optimization framework that progressively enhances emphasis controllability. The framework begins with Supervised Fine-Tuning on manually annotated data, followed by Direct Preference Optimization, where preference pairs are constructed by ranking SFT-generated samples using the Wavelet Prosody Toolkit (WPT). In the final stage, we adapt Flow-CPS to perform online reinforcement learning (RL) for flow-matching models. Using WPT as a reward model, this stage refines the flow trajectories through the estimation of the relative advantage of the group. Experimental results demonstrate that the proposed pipeline substantially improves emphasis intensity and controllability while preserving natural prosody. Audio samples are available at https://thuhcsi.github.io/interspeech2026-F5Emphasis.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Emphasis control in F5-TTS via SFT, DPO and RL; TTS control method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-3135",
+  "source_ids": {
+    "isca": "shi26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-3135"
+  },
+  "title": "Speech Codec Probing from Semantic and Phonetic Perspectives",
+  "authors": [
+    "Xuan Shi",
+    "Chang Zeng",
+    "Tiantian Feng",
+    "Shih-Heng Wang",
+    "Jianbo Ma",
+    "Shrikanth Narayanan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/shi26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/shi26g_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Speech tokenizers are essential for connecting speech to large language models (LLMs) in multimodal systems. Speech tokenizers are expected to preserve both semantic and acoustic information for downstream understanding and generation tasks. However, emerging evidence suggests that the term \"semantic\" in speech processing does not align with linguistic lexical-semantic, leading to a mismatch between speech and text modality. In this paper, we systematically analyze the information encoded by several widely used speech tokenizers, evaluating their lexical-semantic and phonetic content through three tasks. Our results show that current tokenizers primarily capture phonetic rather than lexical-semantic structure, deriving practical implications for the design of next-generation speech tokenization methods. Code is released to public at https://github.com/Alexuan/codec_probing_release.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.10371 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.10371"
+}

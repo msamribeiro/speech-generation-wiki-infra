@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1172",
+  "source_ids": {
+    "isca": "kishi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1172"
+  },
+  "title": "Do speech foundation models perceive speaker similarity as humans do?",
+  "authors": [
+    "Minoru Kishi",
+    "Hayato Yagi",
+    "Shinnosuke Takamichi",
+    "Yuki Saito"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kishi26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kishi26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "This study presents a comparative analysis between the speaker embeddings of speech foundation models and human subjective perception of speaker similarity. Human listeners have the ability to judge speaker similarity on a continuous scale discerning how similar two voices are. In contrast, speech foundation models embed speaker characteristics into numerical representation. However, a question remains: does the numerical distance between speaker embeddings in these models truly align with the similarity perceived by humans? To address this, we conduct a comprehensive investigation using more than 40 models to compare model-derived distances with human-perceived similarity scores. Furthermore, we identify which factors in model configuration contribute most to a speaker embedding that mirrors human perception. Our findings provide insights for the development of more perceptually grounded speech foundation models.",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.05739 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.05739"
+}

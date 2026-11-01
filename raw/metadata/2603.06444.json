@@ -1,7 +1,9 @@
 {
   "id": "2603.06444",
   "source_ids": {
-    "arxiv": "2603.06444"
+    "arxiv": "2603.06444",
+    "isca": "liu26i_interspeech",
+    "doi": "10.21437/Interspeech.2026-1192"
   },
   "title": "Prosodic Boundary-Aware Streaming Generation for LLM-Based TTS with Streaming Text Input",
   "authors": [

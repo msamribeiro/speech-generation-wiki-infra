@@ -1,7 +1,9 @@
 {
   "id": "2606.06743",
   "source_ids": {
-    "arxiv": "2606.06743"
+    "arxiv": "2606.06743",
+    "isca": "gangwar26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3393"
   },
   "title": "HybridCodec: Fast Dual-Stream, Semantically Enhanced Neural Audio Codec",
   "authors": [

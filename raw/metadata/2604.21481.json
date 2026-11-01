@@ -1,7 +1,9 @@
 {
   "id": "2604.21481",
   "source_ids": {
-    "arxiv": "2604.21481"
+    "arxiv": "2604.21481",
+    "isca": "anand26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-3357"
   },
   "title": "Preferences of a Voice-First Nation: Large-Scale Pairwise Evaluation and Preference Analysis for TTS in Indian Languages",
   "authors": [

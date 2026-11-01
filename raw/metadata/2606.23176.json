@@ -1,7 +1,9 @@
 {
   "id": "2606.23176",
   "source_ids": {
-    "arxiv": "2606.23176"
+    "arxiv": "2606.23176",
+    "isca": "akti26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1159"
   },
   "title": "Synthesizing the Lombard Effect: Multi-Level Control of Speech Clarity and Vocal Effort in TTS",
   "authors": [

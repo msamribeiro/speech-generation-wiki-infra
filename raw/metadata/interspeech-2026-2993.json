@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-2993",
+  "source_ids": {
+    "isca": "polle26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2993"
+  },
+  "title": "Synthetic Speech, Real Signal: Paralinguistic Preservation and Cross-Lingual Augmentation via Voice Cloning",
+  "authors": [
+    "Roseline Polle",
+    "Owen Parsons",
+    "George Fairs",
+    "Luis Miguel San Martin Fernandez",
+    "Cole Looney",
+    "Xiaoliang Wu",
+    "Alexandra Livia Georgescu",
+    "Stefano Goria"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/polle26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/polle26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Synthetic data augmentation in speech is common practice for linguistic tasks like ASR, but has seen far less work for paralinguistic ones, especially clinical tasks where labelled data is expensive and some patient groups are underrepresented. Voice cloning is one such augmentation approach, but is typically evaluated on speech intelligibility (WER) or speaker similarity (SS) rather than on downstream performance, and it remains unclear whether these preserve the paralinguistic signal such tasks depend on. We benchmark eight voice cloning models on five paralinguistic tasks across public and clinical datasets, showing most preserve signal with modest degradation. We then clone English clinical speech into Japanese and find that training on cloned data outperforms raw cross-lingual transfer for depression and anxiety detection on real Japanese speech, suggesting voice cloning is a promising direction for augmenting clinical speech data in low-resource languages.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.22304 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.22304"
+}

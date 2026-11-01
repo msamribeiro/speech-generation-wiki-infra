@@ -1,7 +1,9 @@
 {
   "id": "2606.21882",
   "source_ids": {
-    "arxiv": "2606.21882"
+    "arxiv": "2606.21882",
+    "isca": "du26_interspeech",
+    "doi": "10.21437/Interspeech.2026-235"
   },
   "title": "Streaming T5-based Text-to-Speech Synthesis with Limited Lookahead",
   "authors": [

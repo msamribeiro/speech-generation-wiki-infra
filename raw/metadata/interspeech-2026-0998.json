@@ -1,0 +1,43 @@
+{
+  "id": "interspeech-2026-0998",
+  "source_ids": {
+    "isca": "lu26_interspeech",
+    "doi": "10.21437/Interspeech.2026-998"
+  },
+  "title": "PolyBench: Benchmarking LLM-based TTS Systems for Chinese Polyphone Disambiguation",
+  "authors": [
+    "Chunhui Lu",
+    "Rui Zhou",
+    "Feifan Chen",
+    "Liming Song",
+    "YoonChoon Hwang",
+    "Junkwang Oh",
+    "Gunu Jho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lu26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lu26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0998.pdf",
+  "pdf_source": "isca",
+  "abstract": "Large Language Model-based Text-to-Speech (LLM-TTS) systems have achieved remarkable progress in speech synthesis. However, evaluating their ability to handle Chinese polyphonic characters remains unexplored. This paper introduces PolyBench, a comprehensive benchmark for evaluating Chinese polyphone disambiguation in LLM-TTS systems. We construct three test sets covering 494 polyphonic characters and 88 polyphonic words across diverse categories. Additionally, we explore automatic pronunciation labeling using Large Audio Language Models (LALMs) and benchmark 17 open source systems. Evaluation results reveal that even the best system achieves only 82.02% pronunciation accuracy on polyphonic characters, with significant performance gaps in dialectal, colloquial, and literary categories, revealing the limitations of current TTS systems in polyphone disambiguation and the need for improvement.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "PolyBench, a benchmark for Chinese polyphone disambiguation in LLM-based TTS; TTS evaluation benchmark.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,7 +1,9 @@
 {
   "id": "2608.08362",
   "source_ids": {
-    "arxiv": "2608.08362"
+    "arxiv": "2608.08362",
+    "isca": "zheng26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1760"
   },
   "title": "CtrlSpeech: Coarse-to-Fine Control for Expressive Speech Synthesis",
   "authors": [

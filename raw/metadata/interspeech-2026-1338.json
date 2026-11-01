@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1338",
+  "source_ids": {
+    "isca": "lin26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-1338"
+  },
+  "title": "BridgeCodec: Mamba Enhanced Neural Audio Codec with Schrödinger Bridge at Low Bitrate",
+  "authors": [
+    "Zijian Lin",
+    "Jing Yang",
+    "Jinghao Luo",
+    "Zhuo Wang",
+    "Fan Fan",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lin26d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lin26d_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1338.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural audio codecs achieve remarkable performance but operate as closed ecosystems with rigidly co-trained encoder-decoder pairs, severely hindering interoperability. To resolve this, we propose BridgeCodec, a versatile framework that decouples these pairs by translating latent representations between mismatched, frozen endpoints. We formulate this cross-codec translation as a Schrödinger Bridge optimal transport problem, enabling robust mapping between disparate distributions without predefined noise priors. To efficiently capture long-range speech temporal dependencies, we integrate a Mamba-enhanced U-Net architecture. We validate BridgeCodec on an extreme deployment scenario: mapping a lightweight 8 kHz source encoder directly to a 48 kHz target decoder at an ultra-low bitrate of 1 kbps. Experimental results demonstrate that BridgeCodec achieves superior wideband reconstruction and high perceptual quality, successfully bridging heavily bottlenecked, heterogeneous codecs.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "BridgeCodec: Schrodinger-bridge cross-codec latent translation with Mamba at low bitrate; neural codec design.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

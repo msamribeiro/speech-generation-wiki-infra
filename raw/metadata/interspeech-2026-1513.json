@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-1513",
+  "source_ids": {
+    "isca": "chen26p_interspeech",
+    "doi": "10.21437/Interspeech.2026-1513"
+  },
+  "title": "Bridging the Gap: A Hierarchical Framework for Cross-Modal Style Modeling in Expressive TTS",
+  "authors": [
+    "Jiale Chen",
+    "Jiaxun Li",
+    "Wei Li",
+    "Yuanpeng Wang",
+    "Yuehai Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26p_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26p_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1513.pdf",
+  "pdf_source": "isca",
+  "abstract": "Natural language prompts offer a highly flexible interface for expressive text-to-speech (TTS), yet cross-modal gaps and one-to-many mapping problem hinder reliable style control. To address this, we propose OTAFlow, a novel hierarchical cross-modal style modeling framework. First, optimal transport alignment, contrastive learning, and multi-task supervision are jointly optimized to construct a unified style space that preserves instance-level correspondence and expressive factor separability. Second, a conditional flow matching module is introduced to capture the residual modality gap, explicitly addressing the one-to-many challenge by generating diverse acoustic style embeddings from a single prompt. When plugged into a downstream TTS backbone, evaluations show that our method substantially outperforms baseline models in fine-grained style retrieval and synthesized style accuracy, effectively delivering diverse and controllable expressive speech. Audio samples can be found in our demo page.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "OTAFlow hierarchical cross-modal style modelling for prompt-based expressive TTS; core TTS method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

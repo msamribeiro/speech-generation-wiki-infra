@@ -1,7 +1,9 @@
 {
   "id": "2603.15352",
   "source_ids": {
-    "arxiv": "2603.15352"
+    "arxiv": "2603.15352",
+    "isca": "ni26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2211"
   },
   "title": "NV-Bench: Benchmark of Nonverbal Vocalization Synthesis for Expressive Text-to-Speech Generation",
   "authors": [

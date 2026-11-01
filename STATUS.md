@@ -1,11 +1,13 @@
 # Project Status
 
-Last updated: 2026-10-31
+Last updated: 2026-11-01
 
 The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
 retrospective snapshot, field rendering, and quarterly reporting. The active content priority is
 the Q4 2025 cycle (reconciliation next). Q2 2026 ingestion, run in parallel in the ingest worktree,
-is complete (160 ingested on 2026-10-31; 2 ICML/IJCAI papers held for the peer-reviewed-version rule).
+is complete (158 ingested after two pages moved to Q3 on 2026-11-01; 2 ICML/IJCAI papers held for
+the peer-reviewed-version rule). The Interspeech 2026 proceedings were fetched from the ISCA archive
+on 2026-11-01 for Q3 2026 (70 new accepted papers, PDFs downloaded, not yet parsed).
 
 ---
 
@@ -17,8 +19,9 @@ is complete (160 ingested on 2026-10-31; 2 ICML/IJCAI papers held for the peer-r
    `emotion-synthesis` / `diffusion-tts` / `subjective-evaluation`).
 2. Regenerate stale concept pages and the field overview.
 3. If approved, freeze the Q4 snapshot and publish the Q4 retrospective report.
-4. Ingest stream (parallel): implement the peer-reviewed-version rule (`BACKLOG.md`), then begin
-   Q3 2026 ingestion (procedure: `docs/ingest-protocol.md`; Q2 operating record:
+4. Ingest stream (parallel): parse the 70 Interspeech 2026 ISCA PDFs and download and parse the
+   other Q3 accepted records without PDFs; implement the peer-reviewed-version rule (`BACKLOG.md`);
+   then begin Q3 2026 ingestion (procedure: `docs/ingest-protocol.md`; Q2 operating record:
    `Q2_INGESTION_SESSIONS.md`).
 
 The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
@@ -29,11 +32,11 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 1,648 | 1,069 ingested, 197 accepted, 0 review, 382 rejected |
+| Metadata records | 1,851 | 1,069 ingested, 267 accepted, 0 review, 515 rejected (incl. 109 Interspeech 2026 ISCA duplicates) |
 | Published paper pages | 1,061 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
-| Active accepted + ingested corpus | 1,266 | Basis of `scripts/corpus_summary.py` |
+| Active accepted + ingested corpus | 1,336 | Basis of `scripts/corpus_summary.py` |
 | Parsed active papers | 1,155 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 86 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 84 Q3 2026 |
+| Accepted and parsed, ready to ingest | 86 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 84 Q3 2026; 70 more Q3 ISCA PDFs downloaded, awaiting parse |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,884 | All 22 affected Q4 concepts are complete through Phase 2 |
 | Claim clusters | 443 | 342 strongly supported, 17 contested |
@@ -62,10 +65,10 @@ concept render pairs, and preserved reconciliation audit history.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete (2 re-dated stragglers `2605.18001`, `2605.25504` ingested 2026-10-25) | Complete: all 22 affected concepts, 2,884 entries; the 2 stragglers still to add | **Next** | Pending reconciliation |
 | Q1 2026 | Complete: 134 ingested, 0 accepted (15 moved to Q2 by the date rule; 22 to Q3 as Interspeech 2026 papers) | Not started | Not started | Not started |
-| Q2 2026 | Complete: 160 ingested; 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI) | Not started | Not started | Not started |
-| Q3 2026 to date | 32 ingested (re-dated Interspeech 2026 pages); 195 accepted | Not started | Not started | Not started |
+| Q2 2026 | Complete: 158 ingested (2 re-dated to Q3 on 2026-11-01); 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI) | Not started | Not started | Not started |
+| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 265 accepted (154 with PDFs, 84 parsed) | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-10-31. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-11-01. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
@@ -82,6 +85,13 @@ On 2026-10-26 rule 1 was applied to the published Interspeech 2026 proceedings (
 accepted or ingested 2026 records got `conference_date: 2026-09-27` and moved to Q3 (32 ingested pages
 synced). Other conference-accepted arXiv records (ICASSP, ICML, ACL, ...) keep the arXiv date for now
 by user decision; a one-pass migration is tracked in `BACKLOG.md`.
+
+On 2026-11-01 the full Interspeech 2026 proceedings were fetched from the ISCA archive (203 records
+past the keyword filter). 109 duplicated existing records and were marked `is_duplicate` with the
+existing record canonical; the canonical records gained `source_ids.isca` and `doi`. Two Q2 pages
+missed by the 2026-10-26 title match because they were retitled (`2603.05373`, `2604.16211`) were
+re-dated to Q3; 10 ingested Q3/Q4 2025 pages that are Interspeech 2026 papers keep their frozen dates
+and await the peer-reviewed link (`raw/pipeline_log.md`, 2026-11-01).
 
 
 ---

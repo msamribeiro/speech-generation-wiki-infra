@@ -1,7 +1,9 @@
 {
   "id": "2603.04219",
   "source_ids": {
-    "arxiv": "2603.04219"
+    "arxiv": "2603.04219",
+    "isca": "choi26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1269"
   },
   "title": "ZeSTA: Zero-Shot TTS Augmentation with Domain-Conditioned Training for Data-Efficient Personalized Speech Synthesis",
   "authors": [

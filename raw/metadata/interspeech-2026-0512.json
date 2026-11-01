@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-0512",
+  "source_ids": {
+    "isca": "li26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-512"
+  },
+  "title": "Noisy Environment Adaptation of Neural Speech Codec via Focal Mask and Noise Feature Separation",
+  "authors": [
+    "Shaokai Li",
+    "Weiping Tu",
+    "Yuhong Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/li26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/li26e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural speech codec has attracted extensive attention for high-quality reconstruction at low-bitrate. However, real-world noise severely degrades its performance and hinders high-quality clean speech reconstruction. To tackle this problem, we propose FocalSE, a novel speech enhancement method that performs feature denoising, noise feature separation and noise recognition in the continuous embedding space of neural speech codecs. Specifically, we develop focal modulation-based compression and decompression to capture global context and local mutual information, and generate focal masks to recover clean feature embeddings. We then separate noise embeddings from noisy embeddings to improve denoising performance. Finally, we use ResNet1D-18 to recognize noise categories for better separation effectiveness. Extensive experiments on two standard datasets, LibriTTS and ESC50, demonstrate that our method outperforms state-of-the-art approaches under low-bitrate and low-SNR conditions.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.04195 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.04195"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1242",
+  "source_ids": {
+    "isca": "wang26v_interspeech",
+    "doi": "10.21437/Interspeech.2026-1242"
+  },
+  "title": "TC-DBI: A Plug-and-Play Trajectory Confidence-Guided Dynamic Block Inference Strategy for Speech Synthesis with Continuous Block Flow Matching",
+  "authors": [
+    "Ren Wang",
+    "Zhiyu Cui",
+    "Shun Lei",
+    "Jiawei Jin",
+    "Dongfu Song",
+    "Zhiyong Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/wang26v_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wang26v_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1242.pdf",
+  "pdf_source": "isca",
+  "abstract": "Block Flow Matching combines block-level autoregression with intra-block parallelism for efficient and high-quality Text-to-Speech (TTS). However, using a fixed block size during inference ignores the non-uniform modeling difficulty of speech, which can cause unstable velocity estimation in challenging regions. This motivates the need for a reliability metric that can guide dynamic adjustment of block size. We propose Trajectory Confidence (TC), a geometric measure derived from trajectory straightness during ODE integration, and introduce TC-Guided Dynamic Block Inference (TC-DBI), a plug-and-play strategy that truncates and regenerates unreliable regions to adapt block size without architectural changes. Experiments show that TC correlates strongly with generation errors, and TC-DBI improves robustness and perceptual quality while maintaining comparable efficiency. Audio samples are available at https://thuhcsi.github.io/ interspeech2026-TC-DBI/.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Trajectory-confidence-guided dynamic block inference for block flow-matching TTS; TTS inference method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

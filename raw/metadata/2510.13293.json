@@ -1,7 +1,9 @@
 {
   "id": "2510.13293",
   "source_ids": {
-    "arxiv": "2510.13293"
+    "arxiv": "2510.13293",
+    "isca": "peng26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-1986"
   },
   "title": "Cross-modal Consistency Guidance for Robust Emotion Control in Auto-Regressive TTS Models",
   "authors": [

@@ -1,0 +1,37 @@
+{
+  "id": "interspeech-2026-2384",
+  "source_ids": {
+    "isca": "yadav26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2384"
+  },
+  "title": "ARTIST: Universal Articulatory Space Modeling for Multilingual Indic-to-English Speech-to-Speech Translation",
+  "authors": [
+    "Khushal Yadav",
+    "Vinayak Abrol"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/yadav26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/yadav26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2384.pdf",
+  "pdf_source": "isca",
+  "abstract": "We present ARTIST, a novel end-to-end framework for multilingual Indic-to-English Speech-to-Speech Translation (S2ST) operating in a universal articulatory space. It utilizes a Conformer encoder with intermediate CTC supervision over source articulatory features, explicitly aligning diverse acoustic inputs with quantized, language-agnostic representations. To map these features, we introduce a Convolution-Augmented Differential Transformer decoder designed to capture both local phonetic nuances and global context. We demonstrate exceptional cross-lingual transfer across 11 Indic languages, including extreme low-resource settings (10hr/language). For instance, with only 166M parameters, ARTIST outperforms the 1.2B parameter SeamlessM4T baseline on BLEU, COMET, and chrF. ARTIST also achieves superior VRAM efficiency, establishing a high-performance paradigm for scaling direct S2ST to resource-constrained environments.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.76,
+  "relevance_note": "ARTIST, end-to-end multilingual Indic-to-English speech-to-speech translation in articulatory space; S2ST generating speech, in line with accepted S2ST precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

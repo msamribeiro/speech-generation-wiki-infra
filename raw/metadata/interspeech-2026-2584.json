@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2584",
+  "source_ids": {
+    "isca": "ogunremi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2584"
+  },
+  "title": "Turning Speech Language Models into Multilingual Listeners",
+  "authors": [
+    "Tolúlọpẹ́ Ògúnrẹ̀mí",
+    "Dan Jurafsky",
+    "Christopher D. Manning",
+    "Ahnmet Üstün",
+    "Martijn Bartelds"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/ogunremi26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ogunremi26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2584.pdf",
+  "pdf_source": "isca",
+  "abstract": "Speech Language Models (SLMs) that understand spoken language questions support only a few high-resource languages, limiting access to millions of people worldwide. This gap stems from the scarcity of multilingual speech instruction-tuning datasets. We present MULTISPEECHQA, a large-scale, synthetically generated and human-verified dataset comprising 9200 hours of 10.8 million spoken question-answer pairs in 23 typologically diverse languages. Using MULTISPEECHQA, we also introduce MULTISPEECH-BENCH, a multi-task benchmark for evaluating SLM performance on 23 languages. We compare the performance of a cascading system to open-weight and closed SLMs on MULTISPEECH-BENCH and find that the cascading system outperforms open-weight SLMs but not all closed SLMs. We use MULTISPEECHQA to finetune Qwen 2.5-Omni, which improves its performance on our benchmark. Our findings show that high-quality synthetic datasets offer a cheap solution to improving the multilingual capabilities of SLMs.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "MULTISPEECHQA, a 9,200-hour synthetic multilingual spoken QA dataset for instruction-tuning speech language models; SLM capability work, consistent with accepted SLM-understanding precedents.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

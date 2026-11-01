@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-0446",
+  "source_ids": {
+    "isca": "valentinibotinhao26_interspeech",
+    "doi": "10.21437/Interspeech.2026-446"
+  },
+  "title": "Exploring Active Sampling Strategies for Pairwise Comparisons in Speech Synthesis Evaluation",
+  "authors": [
+    "Cassia Valentini-Botinhao",
+    "Andrea Lorena Aldana Blanco",
+    "Dan Wells",
+    "Aidan Pine",
+    "Korin Richmond"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/valentinibotinhao26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/valentinibotinhao26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0446.pdf",
+  "pdf_source": "isca",
+  "abstract": "Subjective tests are the gold standard for text-to-speech evaluation. Tests based on preference tasks are favoured by participants and are less prone to listener-dependent biases. Despite their advantages, preference-based tests are less widely adopted than absolute rating tests like MOS due to the misconception that all possible pairs must be tested in order for results to be reliable. In this paper, we compare different approaches for pair selection in AB and BWS tests, contrasting random selection with two active sampling methods: a sorting-based method and an information-gain-based method called ASAP. We found that the ASAP method reveals more significant differences compared to others, and that BWS tests are more effective than AB tests for the same test duration. This is evident in both number of significant differences and system rank correlation, with ASAP further amplifying the improvements.",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Compares active pair-sampling strategies for preference-based subjective TTS evaluation; listening-test methodology for synthetic speech.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

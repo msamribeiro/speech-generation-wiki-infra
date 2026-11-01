@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-0466",
+  "source_ids": {
+    "isca": "jiang26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-466"
+  },
+  "title": "VoCodec: A Low-bitrate Streamable Neural Speech Codec with Voicing-driven Quantization",
+  "authors": [
+    "Xiao-Hang Jiang",
+    "Yang Ai",
+    "Rui-Chen Zheng",
+    "Lirong Dai",
+    "Zhen-Hua Ling",
+    "Ji Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/jiang26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/jiang26b_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural speech codecs are key to speech transmission and storage, but most use uniform quantization across frames, allocating the same bitrate regardless of content and wasting bits. We propose VoCodec, a low-bitrate streamable neural speech codec with voicing-driven quantization that assigns higher bitrate to voiced frames and lower bitrate to unvoiced frames according to perceptual sensitivity. VoCodec embeds a voicing detector in a fully causal encoder-quantizer-decoder neural coding framework, using residual scalar-vector quantization for voiced frames and simple scalar quantization for unvoiced ones. Experiments show that on the LibriTTS dataset at a 16 kHz sampling rate, VoCodec outperforms baseline neural speech codecs even at a bitrate as low as 1.1 kbps. Our further experiments also confirm that introducing voicing-driven quantization can effectively reduce the bitrate by approximately 27% compared with uniform quantization strategy.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.05892 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.05892"
+}

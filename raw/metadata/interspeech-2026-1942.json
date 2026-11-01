@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1942",
+  "source_ids": {
+    "isca": "chang26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-1942"
+  },
+  "title": "Personalized Electrolaryngeal Voice Conversion with a Single Pre-operative Utterance",
+  "authors": [
+    "Devin Chang",
+    "Hsin-Te Hwang",
+    "Ming-Chi Yen",
+    "Shu-Wei Tsai",
+    "Yu Tsao",
+    "Hsin-Min Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chang26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chang26e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1942.pdf",
+  "pdf_source": "isca",
+  "abstract": "Electrolaryngeal voice conversion (ELVC) enhances the mechanical speech of laryngectomees to improve naturalness and intelligibility. While personalized ELVC typically requires extensive pre-operative recordings for supervised training, this paper investigates a one-shot scenario where only one natural utterance is available for timbre preservation. We evaluate two strategies using zero-shot VC models: (1) a cascaded approach, performing ELVC followed by secondary conversion to the target timbre; and (2) a pseudo-target strategy, using a zero-shot model to generate synthetic training data for a supervised ELVC model. Results indicate that the cascaded approach outperforms the pseudo-target strategy, remarkably improving speaker similarity and quality with minimal impact on intelligibility. We also demonstrate that direct application of zero-shot models to ELVC fails due to domain mismatch, confirming the necessity of our proposed framework for one-shot personalized voice restoration.",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "One-shot personalized electrolaryngeal voice conversion using zero-shot VC models; VC method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

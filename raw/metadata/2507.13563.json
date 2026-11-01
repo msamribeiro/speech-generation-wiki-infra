@@ -1,7 +1,9 @@
 {
   "id": "2507.13563",
   "source_ids": {
-    "arxiv": "2507.13563"
+    "arxiv": "2507.13563",
+    "isca": "borodin26_interspeech",
+    "doi": "10.21437/Interspeech.2026-83"
   },
   "title": "Balalaika: Data-Centric, Prosody-Aware Annotation Pipeline for Russian Speech",
   "authors": [

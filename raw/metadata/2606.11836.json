@@ -1,7 +1,9 @@
 {
   "id": "2606.11836",
   "source_ids": {
-    "arxiv": "2606.11836"
+    "arxiv": "2606.11836",
+    "isca": "xu26h_interspeech",
+    "doi": "10.21437/Interspeech.2026-1010"
   },
   "title": "Towards Data-free and Training-free Compression for Speech Foundation Models Using Parameter Clustering",
   "authors": [

@@ -102,8 +102,10 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 ## Next Session — Resume Here
 
 **The Q2 2026 ingest sweep is complete** apart from two papers held by user decision. As of
-2026-10-31 (session close), by canonical `published_date`: **160 ingested, 2 `accepted` (held),
-62 rejected**; corpus 1,061 pages. The 2026-10-31 session (see its Session Log) settled the four
+2026-11-01 (session close), by canonical `published_date`: **158 ingested, 2 `accepted` (held),
+62 rejected** (two pages re-dated to Q3 on 2026-11-01); corpus 1,061 pages. The 2026-11-01 session
+ran the Interspeech 2026 ISCA fetch for Q3 (see its Session Log); its commits are recorded in
+`STATUS.md` and git history. The 2026-10-31 session (see its Session Log) settled the four
 pre-flight decisions, ingested the tenth and final round (18 papers, #3-#10 and #12-#21 of the
 2026-10-27 list) in five batches, and cleared the Manual Verification Queue (no open items; only
 the legacy corpus-wide `[!note]` item remains). Content, infra and the `wiki` submodule pointer
@@ -112,12 +114,10 @@ the site is bumped (`188be12`).
 
 To resume:
 
-0. **Planned for the next session (user, 2026-10-31): fetch the Interspeech 2026 proceedings from
-   the ISCA archive for Q3 2026.** Only the 97 arXiv records matched on 2026-10-26 are in the
-   corpus; the rest of the proceedings are not fetched. Dedup the fetch against those 97 re-dated
-   records (title match plus author overlap; retitled versions exist). Context: Interspeech is why
-   Q3 2025 has 369 pages against 134-178 in other quarters (122 Interspeech 2025 pages from the ISCA
-   fetch, plus 34 ACL 2025), so Q3 2026 is expected to grow similarly.
+0. **Interspeech 2026 ISCA fetch: done 2026-11-01** (see "Session 2026-11-01" in the Session Log). Next step for it:
+   parse the 70 downloaded ISCA PDFs (`docs/parse.md`, batches of 40 or fewer), then download and
+   parse the remaining Q3 accepted records without PDFs (111, mostly the re-dated arXiv
+   Interspeech records).
 1. **Peer-reviewed-version rule (next piece of work; user, 2026-10-31: round first, rule next).**
    Implement the `BACKLOG.md` item "Peer-reviewed versions after ingest". Inputs already confirmed
    there: field name `url_peer_reviewed`; ICASSP 2026 `conference_date: 2026-05-03` (moves the Q1
@@ -131,14 +131,12 @@ To resume:
    already cited (accepted, no page) by `2606.28249` HPRO.
 3. **Q4 integration hand-off (unchanged):** `2605.18001` (PACC) and `2605.25504` are Q4 2025
    stragglers ingested after Q4 integration closed; the next Q4 integration pass must add them.
-4. **Next ingest quarter:** Q3 2026: 32 ingested, 195 accepted (84 of them parsed; the rest,
-   mostly the re-dated Interspeech 2026 records, need download and parse first), 43 rejected at
-   2026-10-31, before the rule moves the ICML/IJCAI records in. Pre-flight per protocol section 2
-   before selecting.
+4. **Next ingest quarter:** Q3 2026: 34 ingested, 265 accepted (154 with PDFs, 84 parsed), 176
+   rejected at 2026-11-01, before the rule moves the ICML/IJCAI records in. Pre-flight per
+   protocol section 2 before selecting.
 
 **Side threads (not blocking):** duplicate page pairs in `BACKLOG.md` (now including SLAM-Omni
-`2412.15649` / `2025.findings-acl.115`, found 2026-10-31); an Interspeech 2026 ISCA fetch must dedup
-against the 97 re-dated arXiv records. OpenReview: live fetches are blocked by a
+`2412.15649` / `2025.findings-acl.115`, found 2026-10-31). OpenReview: live fetches are blocked by a
 browser-verification gate, so use the saved-page path (`openreview.py --from-file`).
 
 **Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
@@ -1600,6 +1598,42 @@ ingested this session = list #3-#10 and #12-#21 (#1, #2 held, #11 rejected).
   against the PDF.
 
 ---
+
+### Session 2026-11-01: Interspeech 2026 ISCA fetch for Q3 (no ingest)
+
+- **Fetcher fixes (`scripts/fetch/isca.py`).** 2026 was missing from the date tables, so records
+  would have taken the `2026-01-01` placeholder; added `2026-09-27` (month 9), the date used for the
+  2026-10-26 re-dating. The first run also saved no abstracts (2026 pages put the abstract text
+  directly in `<div id="abstract">`, 2025 pages wrap it in `<p>`) and garbled non-ASCII text (the
+  archive sends no charset, so `requests` decoded UTF-8 as Latin-1). Both fixed; the 218 first-run
+  records were deleted and the year re-fetched.
+- **Fetch.** 1,379 index entries, 203 written (all with abstracts, all `2026-09-27`), 15 dropped at
+  the abstract-level keyword check, 0 errors. 6 pages have no DOI yet and keep slug IDs
+  (`interspeech-2026-{slug}_interspeech`).
+- **Dedup against the whole corpus.** 109 duplicates: 102 exact title, 4 fuzzy title, 3 retitles
+  found by abstract overlap (`2603.05373` MSpoofTTS, `2510.16718` U-Codec, `2604.16211`
+  NVV-SuperBench), each confirmed by authors. The existing record stays canonical (56 accepted, 38
+  ingested, 15 rejected); the ISCA records are `is_duplicate`/`rejected`, and the canonical records
+  gained `source_ids.isca` and `doi` (input for the `url_peer_reviewed` backfill). 82 canonicals
+  already had `conference_date: 2026-09-27`; the other 15 of the 97 re-dated records matched ISCA
+  entries that did not pass the keyword filter, so no ISCA record was written for them. An
+  authors-only retitle check was tried and dropped (large labs share author lists across papers).
+- **Re-dated (user decision, rule (a)).** `2603.05373` and `2604.16211`, Q2 pages missed by the
+  2026-10-26 title match, moved to Q3 exactly as on 2026-10-26 (metadata, frontmatter, card, index
+  row, `misc` log entry). Q2 is now 158 ingested.
+- **Not re-dated (rule (b), frozen).** 10 ingested Q3/Q4 2025 pages are Interspeech 2026 papers:
+  `2509.09631` DiFlow-TTS, `2509.13068`, `2509.15626`, `2509.17516`, `2509.22167`, `2510.13293`,
+  `2510.16718` U-Codec, `2510.25577`, `2511.01056`, `2511.19734`. They need only the peer-reviewed
+  link and note when the rule is implemented.
+- **Filter.** 94 new records: 67 accepted, 10 review, 17 rejected. Review queue resolved by the
+  user after reading the full text of five: accepted 1479 (racial identity in TTS voices), 2165
+  (AudioNoisePrints, watermark inside flow-matching TTS sampling), 3075 (robot TTS prosody
+  listening study, fine-tuned Matcha-TTS, 160 raters); rejected 1038, 1152, 1588, 2391, 2797,
+  arai26b, rackauckas26. Scope line (user): papers worth reading out of curiosity but not about
+  generating or evaluating synthetic speech are out (synthetic voice only as a stimulus, speech-LM
+  safety internals, dialogue interaction-quality analytics, mechanical synthesis with no metrics).
+  Final: 70 accepted, 24 rejected.
+- **Download.** 70 ISCA PDFs, 0 failures, all verified as real PDFs. Not parsed yet.
 
 ## Manual Verification Queue
 

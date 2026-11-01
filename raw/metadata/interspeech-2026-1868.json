@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1868",
+  "source_ids": {
+    "isca": "edet26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1868"
+  },
+  "title": "Towards Digital Preservation of Efik: TTS for a Low-Resource African Language",
+  "authors": [
+    "Offiong Bassey Edet",
+    "Emmanuel Oyo-Ita",
+    "Archibong Okon Archibong",
+    "David Effanga Bassey",
+    "Mbuotidem Sunday Awak"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/edet26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/edet26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Efik, a tonal language spoken by about 3 million second language speakers and 1.5 million native speakers in Southeastern Nigeria, remains underrepresented in speech synthesis research. We present the first documented end-to-end text-to-speech study for Efik, introducing a curated single speaker corpus of 2,632 utterances totaling three hours and a comparative evaluation of four neural models (VITS, MMS-TTS, SpeechT5, and Orpheus-TTS) under low resource conditions. Native speakers evaluated the systems using MOS, Nat-MOS, and A-MOS. MMS-TTS achieved the highest MOS of 3.80 ± 0.63 and produced more stable long form speech, though tonal errors persisted. Other models showed greater tonal and prosodic inconsistencies. These results provide a reproducible baseline and highlight the need for larger corpora and tone aware modeling for tonal African languages.",
+  "task": [
+    "TTS",
+    "multilingual"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.04515 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.04515"
+}

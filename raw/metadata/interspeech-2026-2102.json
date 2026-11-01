@@ -1,0 +1,34 @@
+{
+  "id": "interspeech-2026-2102",
+  "source_ids": {
+    "isca": "tiwari26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2102"
+  },
+  "title": "Say That Again: Visualizing Paralinguistic Cues with Prosody-Aware Diffusion",
+  "authors": [
+    "Shyamji Tiwari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/tiwari26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/tiwari26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Text-to-image models ignore paralinguistic cues. Pitch, rate, and emotional inflection shape how listeners visualize a scene, yet audio-to-image methods treat speech as a single opaque vector. NovaDiffusion conditions diffusion-based synthesis on emotion-correlated prosodic features extracted alongside general audio representations. It comprises (1) Prosody-CLIP, trained on 168K human-annotated speech-emotion-image triplets to align prosody-enriched embeddings with visual representations; (2) a 280M-parameter distilled U-Net with multi-scale fusion; and (3) a decoupled cross-attention adapter injecting prosodic embeddings via IP-Adapter. On RAVDESS (8 emotions, chance 12.5%), NovaDiffusion achieves 71.3% ECA, outperforming SonicDiffusion by 23.1pp; on held-out IEMOCAP speakers it reaches 63.4% vs. 41.7%. ECA relies on facial expression classification and does not capture scene-level emotion. Scope is limited to emotion-correlated prosody; full prosodic control remains open.",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Prosody-aware diffusion for speech-to-image generation; speech is an input for image synthesis, not speech generation.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

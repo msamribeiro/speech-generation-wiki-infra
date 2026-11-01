@@ -1,0 +1,45 @@
+{
+  "id": "interspeech-2026-3256",
+  "source_ids": {
+    "isca": "zhu26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-3256"
+  },
+  "title": "OmniVoice: Towards Omnilingual Zero-Shot Text-to-Speech with Diffusion Language Models",
+  "authors": [
+    "Han Zhu",
+    "Lingxuan Ye",
+    "Wei Kang",
+    "Zengwei Yao",
+    "Liyong Guo",
+    "Fangjun Kuang",
+    "Zhifeng Han",
+    "Weiji Zhuang",
+    "Long Lin",
+    "Daniel Povey"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhu26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhu26e_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "We present OmniVoice, a massively multilingual zero-shot text-to-speech (TTS) model that scales to over 600 languages. At its core is a novel diffusion language model-style discrete non-autoregressive (NAR) architecture. Unlike conventional discrete NAR models that suffer from performance bottlenecks in complex two-stage (text-to-semantic-to-acoustic) pipelines, OmniVoice directly maps text to multi-codebook acoustic tokens. This simplified approach is facilitated by two key technical innovations: (1) a full-codebook random masking strategy for efficient training, and (2) initialization from a pre-trained LLM to ensure superior intelligibility. By leveraging a 581k-hour multilingual dataset curated entirely from open-source data, OmniVoice achieves the broadest language coverage to date and delivers state-of-the-art performance across Chinese, English, and diverse multilingual benchmarks. Our code and pre-trained models are publicly available.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2604.00688 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2604.00688"
+}

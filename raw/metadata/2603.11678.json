@@ -1,7 +1,9 @@
 {
   "id": "2603.11678",
   "source_ids": {
-    "arxiv": "2603.11678"
+    "arxiv": "2603.11678",
+    "isca": "lee26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-646"
   },
   "title": "RAF: Relativistic Adversarial Feedback For Universal Speech Synthesis",
   "authors": [

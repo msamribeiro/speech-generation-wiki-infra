@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2769",
+  "source_ids": {
+    "isca": "vendrame26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2769"
+  },
+  "title": "Joint Speech And Text Training For LLM-based End-To-End Spoken Dialogue State Tracking",
+  "authors": [
+    "Katia Vendrame",
+    "Bolaji Yusuf",
+    "Santosh Kesiraju",
+    "Šimon Sedláček",
+    "Oldřich Plchot",
+    "Honza Černocký"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/vendrame26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/vendrame26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "End-to-end spoken dialogue state tracking (DST) is made difficult by having to handle speech input with scarce training data. Combining speech foundation encoders and large language models has emerged as an approach to alleviate this difficulty. Although this approach results in strong spoken DST models, achieving state-of-the-art performance in realistic multi-turn DST, it struggles to generalize across domains and requires annotated spoken DST training data for each domain of interest. However, collecting such data for every target domain is both costly and difficult. Noting that textual DST data is more easily obtained for various domains, in this work, we propose jointly training on available spoken DST data and written textual data from other domains as a way to achieve cross-domain generalization. We conduct experiments which show the efficacy of our proposed method for getting good cross-domain DST performance without relying on spoken training data from the target domains.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2511.22503 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2511.22503"
+}

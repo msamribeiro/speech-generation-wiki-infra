@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-1224",
+  "source_ids": {
+    "isca": "yang26g_interspeech",
+    "doi": "10.21437/Interspeech.2026-1224"
+  },
+  "title": "Pitch-Injected Residual Adapter for Tonal Language in Neural Audio Codec",
+  "authors": [
+    "Jie-Shiang Yang",
+    "Ya-Tse Wu",
+    "Chi-Chun Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/yang26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/yang26g_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1224.pdf",
+  "pdf_source": "isca",
+  "abstract": "Neural Audio Codecs (NACs) achieve high-fidelity reconstruction at low bitrates but remain insensitive to fundamental frequency (F0) distortion—a critical limitation for tonal languages, covering 40%+ of the world's languages, where F0 contour marks lexical distinctions. We propose the Pitch-Injected Residual Adapter (PIRA), a lightweight plug-and-play module that restores tonal information in frozen NACs through explicit F0 and voiced/unvoiced side-information injection. PIRA processes quantized F0 through dilated convolutions to capture tone sandhi dependencies, supervised by a CREPE embedding loss for pitch-specific gradients. A confidence network gates injection per-frame, suppressing it for checked tones and unvoiced segments. With 1.25M–1.65M trainable parameters, PIRA reduces codec-induced Tone Error Rate (dTER) by 35.7% on average (macro-averaged across five codecs, each averaged over three tonal languages), while preserving English quality and adding ≤0.4 kbps overhead.",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Pitch-injected residual adapter restoring F0/tonal information in frozen neural audio codecs; codec design for speech.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

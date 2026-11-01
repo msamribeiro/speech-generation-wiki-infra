@@ -1,7 +1,9 @@
 {
   "id": "2606.23052",
   "source_ids": {
-    "arxiv": "2606.23052"
+    "arxiv": "2606.23052",
+    "isca": "chen26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-645"
   },
   "title": "CAAD: Contrastive Audio-Aware Distillation for Efficient Speech Language Models",
   "authors": [

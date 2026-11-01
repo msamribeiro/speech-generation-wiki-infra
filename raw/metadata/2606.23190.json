@@ -1,7 +1,9 @@
 {
   "id": "2606.23190",
   "source_ids": {
-    "arxiv": "2606.23190"
+    "arxiv": "2606.23190",
+    "isca": "wang26s_interspeech",
+    "doi": "10.21437/Interspeech.2026-1102"
   },
   "title": "FlowTTS-GRPO: Online Reinforcement Learning with Multi-Objective Reward Optimization for Flow-Matching Based Text-to-Speech",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2602.19574",
   "source_ids": {
-    "arxiv": "2602.19574"
+    "arxiv": "2602.19574",
+    "isca": "liu26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-653"
   },
   "title": "CTC-TTS: LLM-based dual-streaming text-to-speech with CTC alignment",
   "authors": [

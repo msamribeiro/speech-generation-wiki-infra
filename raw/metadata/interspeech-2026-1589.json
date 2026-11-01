@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-1589",
+  "source_ids": {
+    "isca": "lee26m_interspeech",
+    "doi": "10.21437/Interspeech.2026-1589"
+  },
+  "title": "From Awareness to Adherence: Bridging the Context Gap in Spoken Dialogue Systems via Context-Aware Decoding",
+  "authors": [
+    "Che Hyun Lee",
+    "Heeseung Kim",
+    "Sungroh Yoon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/lee26m_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lee26m_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Despite the success of end-to-end (E2E) spoken dialogue systems, maintaining strict context adherence in multi-round conversations remains a challenge. While prior works attribute these failures to models forgetting dialogue history, we highlight an equally critical but overlooked bottleneck: a gap between latent context awareness and active adherence. Although models internally recognize relevant past utterances, strong parametric priors often overshadow these signals during decoding. To bridge this gap, we propose an audio-adapted Context-Aware Decoding (CAD) approach. By leveraging internal attention mechanisms to isolate key historical rounds, our approach contrasts output distributions with and without this key context during inference, directly amplifying multimodal contextual signals. Evaluations on the Audio MultiChallenge benchmark demonstrate significant improvements in Semantic Memory and Self Coherence subtasks, successfully enforcing strict, context-faithful adherence.",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2606.16472 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2606.16472"
+}

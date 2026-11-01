@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-1588",
+  "source_ids": {
+    "isca": "zhang26w_interspeech",
+    "doi": "10.21437/Interspeech.2026-1588"
+  },
+  "title": "BACH: Benchmarking Audio Codecs for Bio-Acoustic Health",
+  "authors": [
+    "Zixing Zhang",
+    "Xiaojun Mo",
+    "Zhongren Dong",
+    "Bin Wang",
+    "Jing Han"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/zhang26w_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/zhang26w_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Bio-acoustic health signals are increasingly vital for remote diagnostics, yet efficient transmission remains a bottleneck for clinical adoption. While audio codecs offer strong compression for general audio, they preserve diagnostically critical information in bio-acoustic signals is unclear. To address this gap, we introduce BACH, the first systematic Benchmark for evaluating Audio Codecs on bio-acoustic Health tasks. BACH assesses eight codecs across five bio-acoustic health tasks, utilizing a unified framework covering original audio, compressed representations, and reconstructed audio. Our central finding reveals a critical misalignment between reconstruction fidelity and downstream task performance: codecs excelling at signal reconstruction do not always retain task-relevant semantic cues. This highlights a fundamental challenge for future research: codecs for medical applications must be co-designed to optimize for both perceptual quality and diagnostic information preservation.",
+  "task": [],
+  "relevance_score": 0.45,
+  "relevance_note": "Benchmark of eight audio codecs on bio-acoustic health tasks. User decision at review (2026-11-01): rejected as out of scope (interesting, but not about generating or evaluating synthetic speech).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

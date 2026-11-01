@@ -1,0 +1,44 @@
+{
+  "id": "interspeech-2026-2414",
+  "source_ids": {
+    "isca": "shen26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-2414"
+  },
+  "title": "Iterate to Differentiate: Enhancing Discriminability and Reliability in Zero-Shot TTS Evaluation",
+  "authors": [
+    "Shengfan Shen",
+    "Di Wu",
+    "Xingchen Song",
+    "Dinghao Zhou",
+    "Liumeng Xue",
+    "Meng Meng",
+    "Jian Luan",
+    "Shuai Wang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/shen26d_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/shen26d_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Reliable evaluation of modern zero-shot text-to-speech (TTS) models remains challenging. Subjective tests are expensive and difficult to reproduce, while objective metrics often saturate, and therefore fail to distinguish state-of-the-art systems. To address this, we propose Iterate to Differentiate (I2D), an evaluation framework that recursively synthesizes speech using each model’s previously synthesized outputs as subsequent references. Stronger models tend to preserve intelligibility, speaker identity, and perceptual quality over more iterations, whereas weaker systems degrade faster as reference quality and text-audio consistency deteriorate. I2D exploits this differential degradation to amplify performance gaps and reveal robustness. By aggregating objective metrics across iterations, I2D improves metric discriminability and alignment with human judgments, increasing system-level SRCC from 0.118 to 0.464 for UTMOSv2. Experiments on 11 models across Chinese, English, and emotion datasets demonstrate that I2D enables more reliable automated evaluation for zero-shot TTS. Project page: https://ssf-1103.github.io/I2D-Bench/.",
+  "task": [
+    "TTS",
+    "evaluation"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.24430 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.24430"
+}

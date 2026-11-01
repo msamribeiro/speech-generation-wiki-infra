@@ -1,7 +1,9 @@
 {
   "id": "2510.16718",
   "source_ids": {
-    "arxiv": "2510.16718"
+    "arxiv": "2510.16718",
+    "isca": "yang26n_interspeech",
+    "doi": "10.21437/Interspeech.2026-2398"
   },
   "title": "U-Codec: Ultra Low Frame-rate Neural Speech Codec for Fast High-fidelity Speech Generation",
   "authors": [

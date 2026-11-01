@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-1031",
+  "source_ids": {
+    "isca": "nguyen26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-1031"
+  },
+  "title": "MamTra: A Hybrid Mamba-Transformer Backbone for Speech Synthesis",
+  "authors": [
+    "Tan Dat Nguyen",
+    "Sangmin Bae",
+    "Joon Son Chung",
+    "Ji-Hoon Kim"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/nguyen26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/nguyen26c_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Despite the remarkable quality of LLM-based text-to-speech systems, their reliance on autoregressive Transformers leads to quadratic computational complexity, which severely limits practical applications. Linear-time alternatives, notably Mamba, offer a potential remedy; however, they often sacrifice the global context essential for expressive synthesis. In this paper, we propose MamTra, an interleaved Mamba-Transformer framework designed to leverage the advantages of Mamba's efficiency and Transformers' modeling capability. We also introduce novel knowledge transfer strategies to distill insights from a pretrained Transformer into our hybrid architecture, thereby bypassing the prohibitive costs of training from scratch. Systematic experiments identify the optimal hybrid configuration, and demonstrate that MamTra reduces inference VRAM usage by up to 34% without compromising speech fidelity-even trained on only 2% of the original training dataset. Audio samples are available at.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2603.12342 (ingested), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2603.12342"
+}

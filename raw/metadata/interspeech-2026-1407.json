@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-1407",
+  "source_ids": {
+    "isca": "perezgonzalezdemartos26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1407"
+  },
+  "title": "Not Quite My Tempo: Voice Activity-aware Speech Synthesis for Lip-Synchronous Dubbing",
+  "authors": [
+    "Alejandro Pérez-González-de-Martos",
+    "Florian Lux",
+    "Angelina Elizarova",
+    "Milana Shkhanukova",
+    "Andreas Kellner",
+    "Mattia Antonino Di Gangi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/perezgonzalezdemartos26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/perezgonzalezdemartos26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-1407.pdf",
+  "pdf_source": "isca",
+  "abstract": "Automatic lip-synchronous dubbing requires a speech synthesis model to generate alternating voice and silence patterns in the target language that match the timing of the source clip precisely to ensure an optimal viewing experience. Prior works address this problem by conditioning the speech synthesis process on lip movements extracted from the video signal. In this work, we condition the speech generation on a binary voice-activity signal, which has a lightweight representation and can be produced in multiple ways. We show that the model follows the voice-activity signal with high accuracy while maintaining natural prosody and semantically appropriate pause placement within sentences, as demonstrated through extensive objective and subjective evaluations. By randomly masking this condition during training, we make the feature entirely optional during inference, allowing editors to enforce or relax lip-sync constraints when desired.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.87,
+  "relevance_note": "Voice-activity-conditioned speech synthesis for lip-synchronous dubbing; new TTS conditioning method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

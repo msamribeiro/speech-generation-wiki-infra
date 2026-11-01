@@ -1,7 +1,9 @@
 {
   "id": "2606.05739",
   "source_ids": {
-    "arxiv": "2606.05739"
+    "arxiv": "2606.05739",
+    "isca": "kishi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1172"
   },
   "title": "Do speech foundation models perceive speaker similarity as humans do?",
   "authors": [

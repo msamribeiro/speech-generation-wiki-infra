@@ -1,7 +1,9 @@
 {
   "id": "2606.19209",
   "source_ids": {
-    "arxiv": "2606.19209"
+    "arxiv": "2606.19209",
+    "isca": "zhou26h_interspeech",
+    "doi": "10.21437/Interspeech.2026-2280"
   },
   "title": "FineCombo-TTS: Collaborative and Precise Controllable Speech Synthesis Using Text Descriptions and Reference Speech",
   "authors": [

@@ -1,7 +1,9 @@
 {
   "id": "2511.22503",
   "source_ids": {
-    "arxiv": "2511.22503"
+    "arxiv": "2511.22503",
+    "isca": "vendrame26_interspeech",
+    "doi": "10.21437/Interspeech.2026-2769"
   },
   "title": "Joint Speech and Text Training for LLM-Based End-to-End Spoken Dialogue State Tracking",
   "authors": [

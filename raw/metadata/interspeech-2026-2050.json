@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-2050",
+  "source_ids": {
+    "isca": "kumar26e_interspeech",
+    "doi": "10.21437/Interspeech.2026-2050"
+  },
+  "title": "Lightweight Cross-Lingual Speaker Adaptation for Indic TTS",
+  "authors": [
+    "Tarun Kumar",
+    "Keshav Agarwal",
+    "Pawan Goyal",
+    "Laxmidhar Behera",
+    "Hema A. Murthy"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kumar26e_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kumar26e_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2050.pdf",
+  "pdf_source": "isca",
+  "abstract": "Text-to-Speech (TTS) systems have improved significantly, but most work focuses on high-resource languages, leaving Indian languages less explored. Voice-cloning models trained on Indic data often suffer from word-dropping errors and slow inference, making deployment difficult. We propose a lightweight speaker adaptation pipeline that uses only a 10-second reference sample. Synthetic speech generated from a voice-cloning model is filtered through a four-stage quality-control pipeline and used to fine-tune a FastSpeech2 model with dual-site speaker conditioning and a cosine consistency loss. Phoneme unification through the Common Label Set (CLS) enables the adapted voice to synthesize speech across Hindi, Marathi, Tamil, and Telugu without additional recordings. The resulting system produces deterministic outputs, runs 53x faster than the baseline, and improves intelligibility and naturalness while preserving speaker characteristics in cross-lingual synthesis.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Lightweight cross-lingual speaker adaptation for Indic TTS from a 10-second reference; low-resource TTS method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

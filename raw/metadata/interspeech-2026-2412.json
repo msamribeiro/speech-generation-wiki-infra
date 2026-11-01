@@ -1,0 +1,41 @@
+{
+  "id": "interspeech-2026-2412",
+  "source_ids": {
+    "isca": "chen26y_interspeech",
+    "doi": "10.21437/Interspeech.2026-2412"
+  },
+  "title": "Improving Flow Matching based Text-to-Speech with Dual-Model Preference Optimization and Classifier-Free Guidance",
+  "authors": [
+    "Minchuan Chen",
+    "Chenchen Wan",
+    "Junjie Li",
+    "Peng Qi",
+    "Shaojun Wang",
+    "Jing Xiao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/chen26y_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/chen26y_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-2412.pdf",
+  "pdf_source": "isca",
+  "abstract": "Flow matching is a powerful generative model and has become a core component of modern text-to-speech (TTS) systems. In order to ensure high-quality speech synthesis, Classifier-Free Guidance (CFG) is widely used during the training and inference stages of flow matching based TTS models. However, in zero-shot TTS, conventional training and inference paradigms typically cannot effectively integrate human feedback, resulting in a mismatch between training objectives and evaluation metrics. In this work, we propose a preference optimization method by separately modeling preferred and dispreferred information with two distinct models, which enables better utilization of preferred and dispreferred data. We further incorporate an improved CFG technique to enhance synthesis adherence to the text and reference audio. Experiments demonstrate that these optimizations significantly enhance intelligibility, speaker similarity and naturalness of synthesized speech, outperforming the baseline model.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Dual-model preference optimization with CFG for flow-matching zero-shot TTS; TTS training method.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

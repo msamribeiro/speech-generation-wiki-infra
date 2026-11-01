@@ -1,0 +1,38 @@
+{
+  "id": "interspeech-2026-3485",
+  "source_ids": {
+    "isca": "han26f_interspeech",
+    "doi": "10.21437/Interspeech.2026-3485"
+  },
+  "title": "TAP-ETS: Time Aligned Phoneme Guiding for EMG-to-Speech Synthesis",
+  "authors": [
+    "Dongyub Han",
+    "Injune Hwang",
+    "Jaejun Lee",
+    "Jiwon Lee",
+    "Kyogu Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/han26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/han26f_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Electromyography (EMG)-to-speech (ETS) synthesis generates speech from articulatory muscle activity without acoustic input. We propose TAP-ETS, a time-aligned phoneme guiding framework that conditions mel-spectrogram generation on frame-wise phoneme sequences through cross-attention. Unlike prior work that treats phonemes as auxiliary supervision, our model injects aligned phoneme embeddings directly into the decoder. We also introduce refinement strategies that redistribute merged semantic guidance over frame-wise EMG signals, enabling the seamless integration of arbitrary phoneme-or text-level correction methods without modifying the synthesis model. On the Gaddy silent EMG benchmark, TAP-ETS reduces WER from 25.12% to 19.77%, achieving state-of-the-art performance and demonstrating the importance of accurate frame-level alignment.",
+  "task": [],
+  "relevance_score": 0.38,
+  "relevance_note": "TAP-ETS phoneme-guided EMG-to-speech synthesis; biosignal-to-speech, consistent with rejected silent-speech precedents (2510.23969 emg2speech, 2607.18629 CS-ETS).",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

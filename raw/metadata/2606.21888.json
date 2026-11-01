@@ -1,7 +1,9 @@
 {
   "id": "2606.21888",
   "source_ids": {
-    "arxiv": "2606.21888"
+    "arxiv": "2606.21888",
+    "isca": "choi26d_interspeech",
+    "doi": "10.21437/Interspeech.2026-2146"
   },
   "title": "ProsoCodec: Prosody-Oriented Speech Codec for Voice Conversion",
   "authors": [

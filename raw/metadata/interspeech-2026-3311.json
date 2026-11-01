@@ -1,0 +1,40 @@
+{
+  "id": "interspeech-2026-3311",
+  "source_ids": {
+    "isca": "raybarman26_interspeech",
+    "doi": "10.21437/Interspeech.2026-3311"
+  },
+  "title": "Towards a Phonology-Informed Evaluation of Multilingual TTS",
+  "authors": [
+    "Sneha Ray Barman",
+    "Neeraj Kumar Sharma",
+    "Shakuntala Mahanta"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/raybarman26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/raybarman26_interspeech.pdf",
+  "pdf_path": null,
+  "pdf_source": "isca",
+  "abstract": "Neural TTS systems can sound natural across languages, but naturalness does not guarantee the preservation of sound contrasts that distinguish words from their grammatical forms. Standard metrics like MOS do not test for this. We propose a classifier-based framework that audits TTS output against language-specific phonological patterns using human speech as a benchmark. Testing Assamese advanced tongue root (ATR) vowel harmony with Meta's MMS TTS, we show that a classifier trained on human speech transfers to synthesized speech with minimal loss. The faithfulness audit reveals that [+ATR] mid vowels are realized as [-ATR] in 1/3 tokens despite an underlying [+ATR] specification, a bias absent in human speech. At the word level, predicted ATR labels classify harmony more accurately than transcription labels, indicating a gap between intended and produced phonology. The framework offers task-specific diagnostics and generalizes to other phonological contrasts with measurable acoustic cues.",
+  "task": [
+    "TTS",
+    "evaluation",
+    "multilingual"
+  ],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: Interspeech 2026 proceedings version of 2607.01965 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "2607.01965"
+}

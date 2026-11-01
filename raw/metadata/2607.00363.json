@@ -1,7 +1,9 @@
 {
   "id": "2607.00363",
   "source_ids": {
-    "arxiv": "2607.00363"
+    "arxiv": "2607.00363",
+    "isca": "yu26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-1015"
   },
   "title": "Enhancing Flow Matching with A Unified Guidance Framework for Efficient and Robust Speech Synthesis",
   "authors": [

@@ -1,0 +1,39 @@
+{
+  "id": "interspeech-2026-0604",
+  "source_ids": {
+    "isca": "kolani26_interspeech",
+    "doi": "10.21437/Interspeech.2026-604"
+  },
+  "title": "Phonikud: Overcoming Phonetic Underspecification for Hebrew Text-To-Speech",
+  "authors": [
+    "Yakov Kolani",
+    "Maxim Melichov",
+    "Cobi Calev",
+    "Morris Alper"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "Interspeech",
+  "venue_type": "conference",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": null,
+  "conference_date": "2026-09-27",
+  "ingested_date": null,
+  "url": "https://www.isca-archive.org/interspeech_2026/kolani26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/kolani26_interspeech.pdf",
+  "pdf_path": "raw/papers/interspeech-2026-0604.pdf",
+  "pdf_source": "isca",
+  "abstract": "Text-to-speech (TTS) for Modern Hebrew is challenged by the language's orthographic complexity, with existing solutions ignoring underspecified phonetic features such as stress. We present a framework for more phonetically accurate Hebrew TTS with four contributions: (1) Phonikud, an open-source Hebrew grapheme-to-phoneme (G2P) system that outputs fully-specified International Phonetic Alphabet (IPA) transcriptions, designed by augmenting a base diacritizer. (2) The ILSpeech corpus of paired Hebrew audio, text, and expert IPA annotations. (3) A benchmark for the previously unmeasured task of Hebrew G2P conversion. (4) Hebrew audio-to-IPA models capturing previously disregarded phonetic details for automatic TTS evaluation. Our results show that Phonikud more accurately predicts Hebrew phonemes than prior methods, and that small, local TTS models with phonetic input from Phonikud approach large proprietary systems. We release our code, data, and models at https://phonikud.github.io.",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Hebrew G2P with stress and a phonetically accurate Hebrew TTS framework; advances low-resource TTS front-end and synthesis.",
+  "status": "accepted",
+  "fetched_date": "2026-11-01",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}
