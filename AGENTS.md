@@ -10,7 +10,8 @@ For stage-specific details, read the relevant doc from the tables at the bottom.
 2. Read `STATUS.md` and the relevant active section of `BACKLOG.md`.
 3. For a pipeline operation, load the matching skill from `.agents/skills/` and only the stage
    documentation it references. For an ingestion session, also read
-   [docs/ingest-protocol.md](docs/ingest-protocol.md).
+   [docs/ingest-protocol.md](docs/ingest-protocol.md); for a bounded integration cycle, read
+   [docs/integration-protocol.md](docs/integration-protocol.md).
 4. Derive current state from tracked files and logs, never from prior chat or private agent memory.
 5. Preserve unrelated and uncommitted changes unless the user explicitly authorizes otherwise.
 
@@ -180,6 +181,7 @@ Never violated under any circumstances:
 | Parse | [docs/parse.md](docs/parse.md) |
 | Ingest + Integrate + Reconcile + Render + Report | [docs/content.md](docs/content.md) |
 | Ingestion session procedure (cadence, per-paper cleanup and QC, wrap-up) | [docs/ingest-protocol.md](docs/ingest-protocol.md) |
+| Integration-cycle procedure (scope freeze, both phases, reconciliation, publication, wrap-up) | [docs/integration-protocol.md](docs/integration-protocol.md) |
 
 ## Schema Documentation
 
