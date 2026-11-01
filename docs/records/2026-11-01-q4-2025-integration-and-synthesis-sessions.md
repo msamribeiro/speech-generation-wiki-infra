@@ -1,6 +1,7 @@
-# Q4 2025 Integration and Synthesis Session
+# Q4 2025 Integration and Synthesis Session (Archived)
 
 **Started:** 2026-09-19
+**Archived:** 2026-11-01
 **Status:** Complete through integration, reconciliation, all 23 concept renders, field overview,
 immutable snapshot, and quarterly report
 **Evidence scope:** Q4 2025 (`2025-10-01 <= published_date <= 2025-12-31`) layered onto the
@@ -35,6 +36,21 @@ Starting commits recorded at bootstrap:
 - Content: `872959f` on `work/integrate`.
 
 Both worktrees were clean when the Q4 plan was created.
+
+---
+
+## Closeout
+
+The Q4 program closed on 2026-11-01 with all seven stages complete. The final closeout audit also
+repaired an ingest-catalog inconsistency for `2605.18001` and `2605.25504`: their content pages and
+Q4 integration were already correct, while raw metadata still carried later arXiv dates and the
+paper catalog omitted both rows. Canonical proceedings dates, ingest status, catalog coverage,
+homepage counts, and project status now agree at 910 ingested metadata records and 902 published
+paper pages.
+
+Final validation passed for agents, ingest, integrate, reconcile, and render with zero errors. The
+remaining warnings are the accepted corpus-wide baseline documented in `STATUS.md`. The completed
+Q4 backlog group was moved to `ARCHIVE.md`; active work returns to `Q2_INGESTION_SESSIONS.md`.
 
 ---
 

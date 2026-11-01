@@ -10,12 +10,13 @@ returns to the Q2 2026 ingestion frontier.
 
 ## Current priorities
 
-1. Triage the 18 Q2 2026 papers still in `review` and begin the 230-paper accepted ingest sweep.
+1. Triage the 18 Q2 2026 papers still in `review` and begin the 228-paper accepted ingest sweep.
 2. Reconcile the five accepted Q1 2026 records added after the original Q1 closeout when the
    ingestion frontier reaches them.
 3. Preserve the published Q4 snapshot and report as immutable historical artifacts.
 
-The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
+The next operating record is `Q2_INGESTION_SESSIONS.md`. The completed Q4 record is archived at
+`docs/records/2026-11-01-q4-2025-integration-and-synthesis-sessions.md`.
 
 ---
 
@@ -23,11 +24,11 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 1,628 | 908 ingested, 333 accepted, 43 review, 344 rejected |
-| Published paper pages | 900 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Metadata records | 1,628 | 910 ingested, 331 accepted, 43 review, 344 rejected |
+| Published paper pages | 902 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,241 | Basis of `scripts/corpus_summary.py` |
 | Parsed active papers | 1,025 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 117 | 76 April 2026 and 41 May 2026 papers |
+| Accepted and parsed, ready to ingest | 228 | 77 April, 55 May, and 96 June 2026 papers |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
@@ -40,9 +41,11 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 Live health baseline on 2026-11-01:
 
 ```text
-integrate: PASS — global Phase 2 check 0 errors, 324 accepted warnings; 2,892 entries, 444 clusters; papers_not_in_any_yaml=326 against the later ingest frontier
-render:    PASS — 0 errors, 0 warnings; all 23 Q4 concept pairs and the field overview current
+agents:    PASS — 0 errors, 0 warnings; 8 workflows checked
+ingest:    PASS — 0 errors, 1,171 accepted warnings; 902 paper pages checked
+integrate: PASS — 0 errors, 324 accepted warnings; 2,892 entries, 444 clusters; papers_not_in_any_yaml=176 against the later ingest frontier
 reconcile: PASS — 0 errors, 2 expected warnings; 2 published snapshots and finalized decisions remain intact
+render:    PASS — 0 errors, 0 warnings; all 23 Q4 concept pairs and the field overview current
 ```
 
 Integration warnings are non-blocking and primarily reflect accepted method-family outliers. The
@@ -61,7 +64,7 @@ non-authoritative.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Original chronological sweep complete | Not started | Not started | Not started |
-| Q2 2026 | 5 ingested; 230 accepted; 18 review | Not started | Not started | Not started |
+| Q2 2026 | 5 ingested; 228 accepted; 18 review | Not started | Not started | Not started |
 | Q3 2026 to date | 98 accepted; 21 review | Not started | Not started | Not started |
 
 Five accepted Q1 2026 records are present in the live metadata after the later corpus top-up and
@@ -250,8 +253,8 @@ Adversarial restoration of acoustic detail advanced to strongly supported, and Q
 strongly supported data-curation cluster plus an emerging spontaneous-speech segmentation cluster.
 One preserved pre-Q4 family outlier remains.
 
-Q4 concept integration and its exact-set validation are complete. Cross-concept reconciliation is
-the next gated stage.
+Q4 concept integration, reconciliation, rendering, snapshot, and reporting are complete. Active
+work has returned to the Q2 2026 ingestion frontier.
 
 ---
 
@@ -263,13 +266,13 @@ available ACL Anthology 2026 material.
 | Status | Count |
 |---|---:|
 | Already ingested | 5 |
-| Accepted, awaiting ingest | 230 |
+| Accepted, awaiting ingest | 228 |
 | Awaiting human triage | 18 |
 | Rejected | 49 |
 
-Of the 230 accepted papers, 117 are currently parsed and ready to ingest; approximately 113 still
-need parsing. ICASSP, ASRU, and SLT remain fetch-coverage gaps. The Q2 cadence and paper-level QC
-contract remain in `Q2_INGESTION_SESSIONS.md`.
+All 228 accepted papers are currently parsed and ready to ingest. ICASSP, ASRU, and SLT remain
+fetch-coverage gaps. The Q2 cadence and paper-level QC contract remain in
+`Q2_INGESTION_SESSIONS.md`.
 
 ---
 

@@ -1,3 +1,7 @@
+## 2026-11-01
+
+- lint | Q4 content-cycle closeout | corrected canonical proceedings metadata and ingest status for `2605.18001` (ICICC 2025) and `2605.25504` (O-COCOSDA 2025), restored both published pages to the paper catalog, refreshed the homepage and status counters, and reran the full health suite before archival | Q4 snapshot and report remain unchanged because their content evidence and canonical publication dates were already correct
+
 ## 2026-08-13
 
 - review | 2602.04796 (LALM-as-a-Judge: Benchmarking Large Audio-Language Models for Safety Evaluation in Multi-Turn Spoken Dialogues) | 1 paper | rejected | caught at ingest time (Q1 2026 session, batch 17) before any page was written; benchmarks off-the-shelf LALMs as zero-shot safety judges outputting a scalar score for spoken dialogues, Coqui XTTS-v2 used only to synthesize one injected "unsafe" turn for benchmark construction, no TTS quality metric anywhere, judges' own output is always a scalar score; clean match to the FastLongSpeech (2507.14815) reject pattern (TTS synthesizes input, never model output); filter-pass relevance_note had already flagged "evaluation not generation" | status: accepted → rejected, review_queue.md decision recorded

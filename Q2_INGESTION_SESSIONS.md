@@ -15,10 +15,10 @@ narrative.
 | Status | Count |
 |--------|-------|
 | Already ingested (Q2 2026) | 5 |
-| Remaining to ingest (accepted) | 230 |
+| Remaining to ingest (accepted) | 228 |
 | Pending human triage (review) | 18 |
 | Rejected | 49 |
-| **Total Q2 2026 in scope so far** | **302** |
+| **Total Q2 2026 in scope so far** | **300** |
 
 As of 2026-08-23, after the arXiv fetch top-up and ACL Anthology 2026 fetch in this session (see
 Session Log). Breakdown by month (`published_date`-derived):
@@ -26,7 +26,7 @@ Session Log). Breakdown by month (`published_date`-derived):
 | Month | Accepted | Ingested | Review | Rejected | Total |
 |-------|----------|----------|--------|----------|-------|
 | April 2026 | 77 | 5 | 0 | 19 | 101 |
-| May 2026 | 57 | 0 | 6 | 12 | 75 |
+| May 2026 | 55 | 0 | 6 | 12 | 73 |
 | June 2026 | 96 | 0 | 12 | 18 | 126 |
 
 **Fetch is now believed complete for all of Q2 2026** (April–June) across both arXiv and ACL
@@ -91,15 +91,15 @@ print(f'Ingested: {ingested} | Remaining: {accepted} | Rejected: {rejected}')
 ## Next Session — Resume Here
 
 Fetch top-up is done (see Session Log below) — Q2 2026 now has a complete, quarter-wide accepted
-pool (221 papers, April–June), matching the Q3/Q4/Q1 2026 precedent of not starting ingest until
+pool (228 papers, April–June), matching the Q3/Q4/Q1 2026 precedent of not starting ingest until
 fetch+filter closes out the full quarter. The user explicitly chose to stop after the fetch+filter
 pass this session rather than start ingesting immediately.
 
 To resume:
 
-1. Optionally triage the 15 `review`-status Q2 papers in `raw/review_queue.md` first (not required
-   to start ingest — the 221 `accepted` papers are independent of these).
-2. Build the first chronological candidate list from the 221 `accepted` Q2 papers (sort by
+1. Optionally triage the 18 `review`-status Q2 papers in `raw/review_queue.md` first (not required
+   to start ingest — the 228 `accepted` papers are independent of these).
+2. Build the first chronological candidate list from the 228 `accepted` Q2 papers (sort by
    `published_date`, not ID prefix — see the ID-prefix note below).
 3. ICASSP 2026 (and ASRU/SLT) still have no dedicated fetcher — raised to the user 2026-08-23, not
    yet resolved either way. Worth a decision before or during the sweep on whether to build one.
@@ -443,7 +443,7 @@ Known gaps, roughly in priority order:
 
 Next steps for future sessions, roughly in order: retry the OpenReview fetch once unblocked; triage
 the review queue (at least the 18 Q2-scoped entries) before treating Q2 scope as final; start the Q2
-2026 chronological ingest sweep (230 accepted papers, standard batches-of-4 cadence) — this was
+2026 chronological ingest sweep (228 accepted papers, standard batches-of-4 cadence) — this was
 paused pending this session's fetch top-up; whenever convenient, the ICASSP/ASRU/SLT fetcher gap and
 the pre-2026 workshop-date backfill are both real but non-blocking.
 
