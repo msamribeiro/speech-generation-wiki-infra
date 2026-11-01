@@ -1634,6 +1634,8 @@ ingested this session = list #3-#10 and #12-#21 (#1, #2 held, #11 rejected).
   safety internals, dialogue interaction-quality analytics, mechanical synthesis with no metrics).
   Final: 70 accepted, 24 rejected.
 - **Download.** 70 ISCA PDFs, 0 failures, all verified as real PDFs. Not parsed yet.
+- **Wrap-up.** Content `cf260aa`, infra `ea85f64` (wiki submodule at `cf260aa`); site bumped to
+  content `cf260aa` (`1f18f73`).
 
 ## Manual Verification Queue
 
