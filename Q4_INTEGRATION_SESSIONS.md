@@ -1,8 +1,8 @@
 # Q4 2025 Integration and Synthesis Session
 
 **Started:** 2026-09-19
-**Status:** Integration, reconciliation, all 23 concept renders, and field overview complete;
-optional snapshot/report awaiting approval
+**Status:** Complete through integration, reconciliation, all 23 concept renders, field overview,
+immutable snapshot, and quarterly report
 **Evidence scope:** Q4 2025 (`2025-10-01 <= published_date <= 2025-12-31`) layered onto the
 completed Q3-and-earlier claim graphs
 **Goal:** Complete the seven-stage Q4 cycle: Phase 1 integration, Phase 2 synthesis, validation,
@@ -26,9 +26,8 @@ reconciliation, snapshot, render, and report sequence recorded in
    export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-integrate
    ```
 
-3. Review the completed Q4 concept pages and field overview if desired.
-4. With explicit approval, freeze the
-   `2025-Q4` snapshot and publish the retrospective report.
+3. Review the completed Q4 concept pages, field overview, snapshot, and quarterly report if desired.
+4. Resume the Q2 2026 ingestion frontier from `Q2_INGESTION_SESSIONS.md`.
 
 Starting commits recorded at bootstrap:
 
@@ -1277,18 +1276,33 @@ Field-overview checkpoint (2026-11-01):
 
 ### Stage 7 — Optional Q4 snapshot and quarterly report
 
-- [ ] Obtain approval to continue from current-state rendering into immutable temporal reporting.
-- [ ] Freeze `2025-Q4` from the finalized human-review run with baseline cutoff `2025-09-30`,
+- [x] Obtain approval to continue from current-state rendering into immutable temporal reporting.
+- [x] Freeze `2025-Q4` from the finalized human-review run with baseline cutoff `2025-09-30`,
       activity window `2025-10-01` through `2025-12-31`, and evidence cutoff `2025-12-31`.
-- [ ] Validate canonical dates, source commits and digests, retrospective assessment semantics,
+- [x] Validate canonical dates, source commits and digests, retrospective assessment semantics,
       reproducibility, and published-snapshot immutability.
-- [ ] Generate `reports/quarterly/2025-Q4.md` only from the published snapshot.
-- [ ] Compare Q4 activity and knowledge-state changes against the Q3 boundary without equating
+- [x] Generate `reports/quarterly/2025-Q4.md` only from the published snapshot.
+- [x] Compare Q4 activity and knowledge-state changes against the Q3 boundary without equating
       publication counts with evidence strength, adoption, or consensus.
-- [ ] Update the reports index, navigation, provenance, and log.
+- [x] Update the reports index, navigation, provenance, and log.
 
 **Gate:** Snapshot and report validation pass; the report is reproducible from the immutable Q4
 snapshot and is explicitly labeled as a retrospective assessment.
+
+Snapshot and report checkpoint (2026-11-01):
+
+- Added and finalized `2025-Q4-corrective-refresh`, a zero-candidate human-review audit record that
+  binds the late corrective evidence refresh to the current 23 concept digests without changing
+  any relationship decision.
+- Materialized, byte-checked, and published the immutable `2025-Q4` snapshot with 668 papers: 497
+  in the pre-Q4 baseline and 171 in the inclusive Q4 activity window. The snapshot contains 444
+  local clusters and 11 human-approved broader claims; digest
+  `sha256:97ebbcfe40a97bc05208e9c8d7209c88a77225485310e425716d83d7f5af3b4c`.
+- Published the 2,185-word Q4 retrospective report from that snapshot only. It records 666 Q4
+  concept memberships, 38 new local clusters, 37 strengthened clusters, three newly contested
+  clusters, six newly represented method families, and one changed broader-claim assessment.
+- Updated the reports index and content log. Snapshot, quarterly-report, reconciliation, render,
+  and agent-workflow validation all pass; Stage 7 and the seven-stage Q4 cycle are closed.
 
 ---
 

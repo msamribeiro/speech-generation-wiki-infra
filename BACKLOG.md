@@ -85,9 +85,10 @@ decisions, validation results, and resume state in `Q4_INTEGRATION_SESSIONS.md`.
   registry, deduplicating linked claims and paper evidence while preserving local caveats
   *(completed 2026-11-01: 668 unique papers, 2,892 memberships, 444 local clusters, 373 approved
   direct relationships, and 11 approved broader claims; render health 0 errors/0 warnings)*
-- [ ] If approved after reconciliation, freeze the retrospective `2025-Q4` snapshot and publish
-  the Q4 quarterly report; validate source digests, cutoff semantics, provenance, indexes, and
-  supersession rules
+- [x] Freeze the retrospective `2025-Q4` snapshot and publish the Q4 quarterly report; validate
+  source digests, cutoff semantics, provenance, indexes, and supersession rules *(completed
+  2026-11-01: 668 included papers, 497 baseline, 171 Q4 activity; snapshot and report validators
+  pass; digest `sha256:97ebbcfe40a97bc05208e9c8d7209c88a77225485310e425716d83d7f5af3b4c`)*
 
 ## Ingest [P0 · queued]
 

@@ -2,18 +2,18 @@
 
 Last updated: 2026-11-01
 
-The Q3 2025 content cycle is complete through integration, human-reviewed reconciliation,
-retrospective snapshot, field rendering, and quarterly reporting. Q4 2025 is complete through
-integration, reconciliation, concept rendering, and current field-overview rendering. Q2 2026
-ingestion is queued behind the optional Q4 snapshot and report decision.
+The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
+retrospective snapshots, field rendering, and quarterly reporting. The active content priority now
+returns to the Q2 2026 ingestion frontier.
 
 ---
 
 ## Current priorities
 
-1. Decide whether to freeze the Q4 snapshot and publish the Q4 retrospective report.
-2. If approved, complete and validate the immutable snapshot/report pair.
-3. Resume Q2 2026 parsing and ingestion after the Q4 content cycle.
+1. Triage the 18 Q2 2026 papers still in `review` and begin the 230-paper accepted ingest sweep.
+2. Reconcile the five accepted Q1 2026 records added after the original Q1 closeout when the
+   ingestion frontier reaches them.
+3. Preserve the published Q4 snapshot and report as immutable historical artifacts.
 
 The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 
@@ -34,15 +34,15 @@ The multi-session operating record is `Q4_INTEGRATION_SESSIONS.md`.
 | Rendered concept pairs | 23/23 present and current for Q4 | Every canonical concept has a current Overview and In Depth page |
 | Current field overview | Complete for Q4 | 23 concepts, 668 unique papers, 2,892 memberships, 444 local clusters, and 11 approved broader claims |
 | Reconciliation state | 388 relationships, 11 broader claims; 3,946 Q4 decisions finalized, 0 pending | Original run and bounded late-evidence corrective refresh complete |
-| Published snapshots | 1 | Retrospective `2025-Q3` snapshot |
-| Published quarterly reports | 1 | `reports/quarterly/2025-Q3.md` |
+| Published snapshots | 2 | Retrospective `2025-Q3` and `2025-Q4` snapshots |
+| Published quarterly reports | 2 | `reports/quarterly/2025-Q3.md` and `reports/quarterly/2025-Q4.md` |
 
 Live health baseline on 2026-11-01:
 
 ```text
 integrate: PASS — global Phase 2 check 0 errors, 324 accepted warnings; 2,892 entries, 444 clusters; papers_not_in_any_yaml=326 against the later ingest frontier
 render:    PASS — 0 errors, 0 warnings; all 23 Q4 concept pairs and the field overview current
-reconcile: PASS — 0 errors, 2 expected warnings; finalized decisions remain intact
+reconcile: PASS — 0 errors, 2 expected warnings; 2 published snapshots and finalized decisions remain intact
 ```
 
 Integration warnings are non-blocking and primarily reflect accepted method-family outliers. The
@@ -59,7 +59,7 @@ non-authoritative.
 | Quarter | Ingest | Integrate | Reconcile | Render / report |
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
-| Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Current rendering complete: 23/23 concept pairs and field overview; snapshot/report await approval |
+| Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Original chronological sweep complete | Not started | Not started | Not started |
 | Q2 2026 | 5 ingested; 230 accepted; 18 review | Not started | Not started | Not started |
 | Q3 2026 to date | 98 accepted; 21 review | Not started | Not started | Not started |
@@ -69,7 +69,7 @@ were not part of the bounded Q1 ingest closeout. Reconcile them when the ingesti
 
 ---
 
-## Active Q4 2025 content cycle
+## Completed Q4 2025 content cycle
 
 Canonical live audit as of 2026-09-26:
 
