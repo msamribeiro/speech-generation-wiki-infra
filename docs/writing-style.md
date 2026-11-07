@@ -19,6 +19,46 @@ alone as evidence of progress or adoption.
 
 Write for people who know what a vocoder is, understand MOS, and have read at least a few TTS papers. Do not explain foundational ML concepts unless the paper's contribution is specifically about them.
 
+### Plain language for synthesis and navigation
+
+Concept pages, the field overview, reports, and navigation pages use direct technical English.
+This house style borrows selected ideas from ASD-STE100 without requiring strict controlled-English
+compliance. Speech terminology stays precise; the surrounding prose stays simple.
+
+- Put the main finding or reader action first.
+- Give each sentence one main job. Keep most sentences under about 25 words.
+- Use concrete subjects and active verbs.
+- Prefer familiar verbs over noun-heavy phrases: “the model reduces latency,” not “latency
+  reduction is achieved by the model.”
+- Break long qualification chains into separate sentences. Keep the qualification next to the
+  claim it limits.
+- Keep paragraphs focused and usually two to four sentences long.
+- Use bullets for choices, findings, or routes that readers need to scan. Use prose to explain
+  causal or evidential relationships.
+- Remove formal filler such as “it is important to note,” “with respect to,” “in the context of,”
+  and “it can be observed that.”
+- Explain an uncommon term once. Do not explain MOS, WER, codecs, vocoders, or other standard terms
+  to the primary audience.
+- Write dates, evidence boundaries, and uncertainty in direct language.
+
+Do not make the prose choppy or reduce technical precision to meet a sentence-length target. Keep
+exact metric names, architecture names, evaluation conditions, population limits, and evidence
+status. A shorter sentence must not become a stronger claim.
+
+**Avoid:**
+> The utilization of multi-objective evaluation facilitates the identification of performance
+> degradation across dimensions that may otherwise remain unobserved.
+
+**Prefer:**
+> Multi-objective evaluation exposes losses that one score can miss.
+
+**Avoid:**
+> It is important to note that the current assessment is subject to the evidence boundary of the
+> reviewed corpus.
+
+**Prefer:**
+> This assessment covers the reviewed corpus through Q4 2025.
+
 ---
 
 ## 2. Write About the Field, Not About the Paper

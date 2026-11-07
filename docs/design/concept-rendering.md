@@ -71,6 +71,11 @@ The plan contains:
 Both renderings must agree on claim strength, scope, method-family relationships, and the direction
 of contested evidence. They may differ in detail and citation density, but not in assessment.
 
+Both also follow the plain-language standard in `docs/writing-style.md`: lead with the conclusion,
+use concrete subjects and active verbs, keep most sentences focused on one idea, and preserve every
+technical qualification that changes the claim. Plain language simplifies the prose, not the
+evidence.
+
 ## Overview Specification
 
 **Reader question:** What should I know about the current state of this concept?
@@ -219,6 +224,8 @@ Before replacing the existing renderer:
 
 - the Overview can be read alongside 20 or more concept overviews without excessive repetition;
 - the In Depth page teaches the concept rather than exposing the YAML structure;
+- both pages use direct technical English without formal filler, noun-heavy phrasing, or avoidable
+  qualification chains;
 - both pages agree on scope and assessment;
 - representative citations are traceable to YAML evidence;
 - no important contested or weakened finding disappears through consolidation;

@@ -74,6 +74,43 @@ not a render target.
 Write for readers who understand TTS, VC, spoken conversational agents, MOS, WER, codecs, and
 acoustic models, but may not know the internal theory of this concept.
 
+### Plain-language house style
+
+Use plain language without simplifying the science. The target is a clear technical review, not a
+beginner tutorial and not formal academic prose. The style is loosely informed by ASD-STE100, but
+natural speech-research terminology and normal English take priority over strict compliance.
+
+- Lead with the finding or practical consequence. Give background after the reader knows why it
+  matters.
+- Give each sentence one main job. Split long chains of claims, qualifications, or contrasts into
+  separate sentences.
+- Use concrete subjects and active verbs: “the metric misses prosody,” not “a failure of prosodic
+  sensitivity is observed.”
+- Prefer short, familiar verbs such as “use,” “show,” “change,” “reduce,” and “depend on.” Keep a
+  technical term when it is more precise than a simpler substitute.
+- Keep most sentences under about 25 words. Longer sentences are acceptable when splitting them
+  would hide an important relationship.
+- Keep paragraphs focused and usually two to four sentences long.
+- Explain an uncommon technical term once. Do not explain standard speech terms that the target
+  reader already knows.
+- Remove formal filler such as “it is important to note,” “with respect to,” “in the context of,”
+  “the utilization of,” and “it can be observed that.”
+- Use bullets for items readers compare or scan. Use prose when the relationship between ideas is
+  the point.
+- State uncertainty directly and locally. “Two studies support this result” is clearer than “the
+  available evidence may be taken to suggest.”
+- Use a calm, neutral voice. Do not sound promotional, bureaucratic, or artificially casual.
+
+Plain language must not erase evidence boundaries. Keep exact metric names, architecture names,
+population limits, evaluation conditions, and distinctions between established, emerging, and
+contested findings. Never turn a qualified result into a universal claim just to shorten it.
+
+Before writing, test each section against three questions:
+
+1. Can the reader identify the main point from the first sentence?
+2. Can any noun-heavy phrase become a direct verb without losing precision?
+3. Can a long sentence be split without breaking its scientific logic?
+
 - Start with what the concept changes in speech generation and why it matters.
 - Explain unavoidable technical terms once in plain language.
 - Prefer practical consequences over mechanism-first descriptions in the Overview.
