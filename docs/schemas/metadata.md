@@ -161,6 +161,12 @@ relationship (technical report vs peer-reviewed version). Precedent: VibeVoice T
   `2026.findings-acl.242`).
 - OpenReview (ICLR, NeurIPS, ICML): the arXiv record stays canonical, and the proceedings record is
   the duplicate.
+- ISCA (Interspeech): the record already in the corpus stays canonical, whichever source it came
+  from. The 2026-11-01 ISCA fetch kept existing arXiv records canonical; the 2026-11-07 arXiv top-up
+  kept existing ISCA records canonical. The canonical record gains the duplicate's source ID; when
+  an ISCA record gains `source_ids.arxiv`, also copy the arXiv `preprint_date`, `arxiv_version`,
+  `version_date` and `version_estimated` (the metadata check requires them, and `published_date`
+  stays on the conference date).
 
 Detection: title-match every new batch against the whole corpus, then also check author overlap and
 abstract similarity, because camera-ready versions are sometimes retitled (VoxCPM `2509.24650` was

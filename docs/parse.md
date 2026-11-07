@@ -59,6 +59,14 @@ artifacts and are not tracked in git.
 ## Docling Gotchas
 
 - **MPS/CPU fix**: If Docling crashes on Apple Silicon GPU, set `DOCLING_DEVICE=cpu` before running.
+- **Background run length**: a batch of 40 with `--workers 2` takes 75–130 min, which can exceed an
+  agent's 2 h background-task limit. Run each batch of 40 as two runs of 20 (`--ids`). A killed run
+  leaves in-progress papers as PENDING (a partial `assets/` dir, no `paper.md`); re-run just those.
+- **Headless bibliography after back matter**: the after-Conclusion fallback in
+  `extract_references` stops at the next section header, so an AAAI-style reference list that
+  follows Acknowledgements or an AI-disclosure heading yields an empty `references.json` while
+  `paper.md` holds the references. Rebuild it from those paragraphs with `_parse_ref_string` and
+  `build_corpus_index` (done for `2608.05727`, 2026-11-07), then re-run `citation_index.py`.
 - **REFERENCE label fallback**: Docling sometimes labels reference sections with uppercase `REFERENCES`; the parser handles this via a fallback regex — patch `_REFS_HEADER_RE` in `convert_paper.py` if you see reference sections missing from `references.json`.
 - **Label names**: Docling uses uppercase label names internally; do not lowercase them in matching logic.
 - **Re-parse rule**: Never re-run `convert_paper.py --force` on a paper without first applying a code fix. Re-running without a fix produces identical output.
