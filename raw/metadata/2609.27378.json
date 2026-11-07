@@ -1,0 +1,40 @@
+{
+  "id": "2609.27378",
+  "source_ids": {
+    "arxiv": "2609.27378"
+  },
+  "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+  "authors": [
+    "Kian Shamsaie",
+    "Iman Modarressi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-23",
+  "preprint_date": "2026-09-23",
+  "arxiv_version": 1,
+  "version_date": "2026-09-23",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.27378",
+  "pdf_url": "https://arxiv.org/pdf/2609.27378.pdf",
+  "pdf_path": "raw/papers/2609.27378.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "End-to-end speech-to-speech dialogue models listen and speak simultaneously, so a continuously open acoustic channel is exposed to adversarial manipulation. We formalize imperceptible attacks on full-duplex agents as optimization over additive perturbations confined beneath the psychoacoustic masking threshold of the carrier speech, under three goals: targeted semantic hijacking, response suppression, and policy jailbreaking. Against an undefended Moshi-style agent, white-box attacks succeed in up to 91.7% of trials. We then introduce psychoacoustically aligned latent smoothing (PALS), which injects anisotropic Gaussian noise shaped by local codebook covariance at the residual-vector-quantized latent interface, with input noise shaped by the masking threshold constraining the attacker and trained by a Kullback--Leibler consistency objective. Deployed with no inference-time cost, PALS reduces hijack to 8.3%, mute to 11.2%, and jailbreak to 9.1% at clean quality within 2.3%. A Monte Carlo-smoothed variant certifies an ellipsoidal latent radius up to 0.616, a guaranteed floor that the empirical robustness far exceeds.",
+  "arxiv_comment": "Accepted to IEEE SLT 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.5,
+  "relevance_note": "Psychoacoustic adversarial attacks (hijack, mute, jailbreak) on Moshi-style full-duplex agents and a latent-smoothing defence at the RVQ interface; safety work close to the rejected SPIRIT jailbreak-patching shape, but it evaluates agent response behaviour and clean output quality rather than internals only.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

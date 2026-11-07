@@ -12,39 +12,40 @@ QC, commit workflow) is canonical in `docs/ingest-protocol.md`.
 
 ## Scope
 
-By canonical `published_date` (2026-07-01 to 2026-09-30) as of 2026-11-01:
+By canonical `published_date` (2026-07-01 to 2026-09-30) as of 2026-11-07:
 
 | Month | Accepted | Ingested | Rejected | Total |
 |-------|----------|----------|----------|-------|
-| July 2026 | 77 | 0 | 38 | 115 |
-| August 2026 | 47 | 0 | 5 | 52 |
-| September 2026 | 141 | 34 | 133 | 308 |
-| **Total** | **265** | **34** | **176** | **475** |
+| July 2026 | 69 | 0 | 38 | 107 |
+| August 2026 | 50 | 0 | 8 | 58 |
+| September 2026 | 245 | 34 | 183 | 462 |
+| **Total** | **364** | **34** | **229** | **627** |
 
-September is almost entirely Interspeech 2026 (proceedings date 2026-09-27, first conference
-day). The 34 ingested pages are arXiv records re-dated to the proceedings date (32 on 2026-10-26, 2
-on 2026-11-01). September rejections include the 109 ISCA records marked as duplicates.
+September is mostly Interspeech 2026 (proceedings date 2026-09-27, first conference day). The 34
+ingested pages are arXiv records re-dated to the proceedings date (32 on 2026-10-26, 2 on
+2026-11-01). Rejections include the 109 ISCA records and 13 arXiv preprints marked as duplicates.
 
-Accepted papers by source, and download/parse status:
+Accepted papers by source, and download/parse status (every accepted Q3 record now has a PDF):
 
-| Source | Accepted | PDF + parsed | PDF, not parsed | No PDF |
-|--------|---------:|-------------:|----------------:|-------:|
-| Interspeech 2026, ISCA records | 70 | 0 | 70 | 0 |
-| Interspeech 2026, arXiv records (re-dated) | 65 | 52 | 0 | 13 |
-| arXiv | 92 | 10 | 0 | 82 |
-| ACL 2026 | 27 | 17 | 0 | 10 |
-| Workshops | 9 | 3 | 0 | 6 |
-| ICML 2026 | 2 | 2 | 0 | 0 |
-| **Total** | **265** | **84** | **70** | **111** |
+| Source | Accepted | Parsed | PDF, not parsed |
+|--------|---------:|-------:|----------------:|
+| Interspeech 2026, ISCA records | 70 | 0 | 70 |
+| Interspeech 2026, arXiv records (re-dated) | 65 | 52 | 13 |
+| arXiv | 191 | 114 | 77 |
+| ACL 2026 | 27 | 27 | 0 |
+| Workshops | 9 | 9 | 0 |
+| ICML 2026 | 2 | 2 | 0 |
+| **Total** | **364** | **204** | **160** |
 
 Not yet in scope: the two Q2-held papers `2606.12940` (ICML 2026) and `2606.13006` (IJCAI 2026),
-which move to Q3 under the peer-reviewed-version rule.
+which move to Q3 under the peer-reviewed-version rule. Q2 also gained one accepted paper on
+2026-11-07, `2608.26146` (Vagdhenu, PDF downloaded, not parsed), when its real v1 date (28 Jun 2026)
+replaced the fetch-time version date.
 
 **Fetch coverage gaps (pre-flight):**
 
-- **arXiv:** fetched only through 2026-08-20 (`BACKLOG.md`, Q3 bootstrap item). Late August and
-  all of September are unfetched; a top-up fetch and filter (`docs/fetch.md`) is needed before the
-  sweep, and it will need deduplicating against the Interspeech records.
+- **arXiv:** fetched through 2026-09-30 (top-up 2026-11-07, see Session Log). Q3 is complete for
+  cs.SD, eess.AS and cs.CL.
 - **Interspeech 2026:** fetched from ISCA 2026-11-01 (complete; see Session Log).
 - **ICASSP, ASRU, SLT:** no fetcher (`BACKLOG.md`, Infrastructure). ICASSP 2026 is Q2 by its
   conference date (2026-05-03) in any case.
@@ -54,13 +55,21 @@ which move to Q3 under the peer-reviewed-version rule.
 
 ## Next Session — Resume Here
 
-Q3 2026 pre-flight is in progress; no Q3 page has been written by a sweep yet. To resume:
+Q3 2026 pre-flight is in progress; no Q3 page has been written by a sweep yet. Done on 2026-11-07:
+arXiv top-up, dedup and filter, review queue cleared, all 224 missing PDFs downloaded, parse
+batches 1-3 of 7. To resume:
 
-1. **Parse the 70 Interspeech 2026 ISCA PDFs** (`docs/parse.md`, batches of 40 or fewer).
-2. **arXiv top-up** for 2026-08-20 to 2026-09-30 (cs.SD, eess.AS, cs.CL), then filter. Title-match
-   and abstract-check the new records against the Interspeech records (ISCA and re-dated arXiv).
-3. **Download and parse** every Q3 accepted record without a PDF (111 at 2026-11-01, plus whatever
-   the top-up adds).
+1. **Finish parsing: batches 4-7** (160 papers, every accepted Q3 record with a PDF and no
+   `paper.md`, ordered by `published_date`; batch 4 starts at 2026-09-11). Regenerate the list
+   from metadata (the batch files lived in the session scratchpad). The user reviews one batch at a
+   time: run each batch of 40 as two background runs of 20 (`batch_convert.py --workers 2 --ids
+   ...`, about 40 min each), since a single run of 40 can exceed the 2 h background-task limit
+   (batch 2 did). After each batch: post-parse check (paper.md < 100 lines or empty
+   references.json), `citation_index.py`, one log line, then report. Most of batches 5-7 are the
+   70 ISCA PDFs: check their figure-1 for the ISCA logo at ingest
+   ([[feedback_interspeech_figure_sanity]]). Also parse `2608.26146` (now Q2).
+2. *(done 2026-11-07)* arXiv top-up 2026-08-20 to 2026-09-30.
+3. *(done 2026-11-07)* Download every Q3 accepted record without a PDF.
 4. **Peer-reviewed-version rule** (`BACKLOG.md` "Peer-reviewed versions after ingest"): implement
    before the sweep so Q3 pages are written with the peer-reviewed link. Inputs confirmed: field
    `url_peer_reviewed`; ICASSP 2026 `conference_date: 2026-05-03`. Still pinned: frozen-date
@@ -79,7 +88,9 @@ blocked by a browser-verification gate, so use the saved-page path (`openreview.
 **Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
 recently requested (2026-10-31: decisions walked through one at a time first, then batches of 4,
 one paper at a time, summary and go-ahead per batch, queue reviewed one item at a time at round
-end; 2026-11-01: full-text details on request before the user overrides a recommendation).
+end; 2026-11-01: full-text details on request before the user overrides a recommendation;
+2026-11-07: review-queue decisions in themed batches, each paper with precedents and a
+recommendation; parse one batch of 40 at a time with a go-ahead between batches).
 
 ---
 
@@ -154,6 +165,24 @@ own. See [[feedback_corpus_scope_asr_false_accept]] for the full precedent chain
   Accepted: listener studies that evaluate TTS output itself with real raters (racial identity in
   TTS voices; robot TTS prosody with a fine-tuned Matcha-TTS and 160 raters), and watermarking
   built into TTS sampling. See [[feedback_corpus_scope_curiosity_papers]].
+- **Review-queue decisions, 2026-11-07** (arXiv top-up; full reasons in `raw/review_queue.md`):
+  - *Prosody analysis with no system:* the curiosity rule wins over the one-off `2512.16832`
+    accept (`2608.30260` syntax-prosody rejected); an analysis framed entirely as design input
+    for a generation task is accepted (`2608.27848`, cross-lingual prosody for expressive S2ST).
+  - *Brain-signal input:* no standing rule, decide each paper by hand (user). Accepted
+    `2609.04455` Brain2Speech-Net (TTS latent-space backbone, the MiSTR shape; `TTS` fallback tag,
+    flag at ingest); rejected `2609.37601` SENSE (non-invasive EEG neuroscience, MindVoice shape).
+  - *Anti-cloning and detection:* imperceptible protection evaluated against VC/TTS models is
+    accepted (Mimic Blocker, NaVo, `2610.00662`); so is work that modifies and evaluates a TTS
+    system to study detection evidence (`2609.30983`). Pure detectors, attribution and forensics
+    stay rejected.
+  - *Full-duplex speech LMs:* memory (`2608.26005`), adversarial robustness with a trained
+    defence (`2609.27378`) and an S2S gender-bias audit of the rendered voice (`2609.09263`)
+    accepted. `2609.15759` (ASR head in a duplex S2S model) was accepted over a recommended reject
+    and is not a precedent: plain ASR-with-speech-LM-framing papers stay rejected (TS-OPD
+    `2609.29464`).
+  - *Turn-taking detection benchmarks* are accepted (`2608.25218` TurnBench), following Easy Turn
+    and DualTurn.
 
 ### Interspeech 2026 duplicates and peer-reviewed versions
 
@@ -163,7 +192,9 @@ canonical record's `source_ids`. So for the 65 accepted re-dated arXiv records t
 Interspeech papers, ingest the arXiv record (its PDF and parse) as usual. 56 of them have
 `source_ids.isca`; the other 9 matched ISCA entries the keyword filter dropped, so look their key up
 on the ISCA index when the link is needed. The ISCA URL for the peer-reviewed link is
-`https://www.isca-archive.org/interspeech_2026/{source_ids.isca}.html`. Before writing any Q3 page,
+`https://www.isca-archive.org/interspeech_2026/{source_ids.isca}.html`. The reverse case (from the
+2026-11-07 top-up): 13 ISCA records have an arXiv preprint marked as their duplicate, with the
+ISCA record canonical; ingest those from the ISCA PDF, and the arXiv ID is in `source_ids.arxiv`. Before writing any Q3 page,
 check whether the peer-reviewed-version rule (`BACKLOG.md`) has landed: if it has, the page needs
 the `url_peer_reviewed` link and note from the start.
 
@@ -218,6 +249,31 @@ inventing a new term unilaterally.
 Created from the Q2 doc after the Q2 sweep closed. The same day's Interspeech 2026 ISCA fetch
 (fetcher fixes, 203 records, 109 duplicates, 70 new accepted, two Q2 pages re-dated, PDFs
 downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_log.md`.
+
+### Session 2026-11-07: arXiv top-up, downloads, parse batches 1-3
+
+- **Fetch.** `arxiv.py --date-from 2026-08-20 --date-to 2026-09-30` (cs.SD+eess.AS, 144 written)
+  and `arxiv_oai.py --set cs.CL` for the same window (29 written, 53 already in the corpus).
+- **Dedup.** Title, author and abstract match of the 173 against the whole corpus: 13 are arXiv
+  preprints of Interspeech 2026 ISCA records. Neither version ingested, so the existing ISCA
+  record stays canonical (now written into `docs/schemas/metadata.md`); the ISCA records gained
+  `source_ids.arxiv` and the arXiv dates (the metadata check requires `preprint_date` and
+  `version_date` on any record with an arXiv ID). Kept as separate works: `2609.34052` (extends
+  ingested `2603.18359`) and `2609.15184` Cross-Lingual F5-TTS 2.
+- **Filter** (filter agent): 160 scored, 110 accepted, 11 review, 39 rejected (14 pure
+  deepfake-detection papers rejected per the corpus precedent). User decided the 11 in five
+  themed batches: 9 accepted, 2 rejected (see the Methodology precedent list).
+- **Downloads.** 224 arXiv PDFs, 0 failures. Re-pinning to the downloaded version changed 37
+  `published_date`s: 13 papers moved to Q4 (October/November revisions), and `2608.26146` moved
+  to Q2 (arXiv's only version is dated 28 Jun 2026 despite the 2608 ID). Expect this on any
+  download run: the version date of what is downloaded is canonical.
+- **Parse** batches 1-3 (120 papers, July 1 to September 11), 0 failures. Batch 2 hit the 2 h
+  background limit at 38/40 (finished in a second run); batch 3 ran as two runs of 20. LILAC
+  `2608.05727` had an empty `references.json` (headless AAAI bibliography after an AI-disclosure
+  and an Acknowledgements heading, which stop the after-Conclusion fallback); rebuilt by hand from
+  `paper.md` with the converter's `_parse_ref_string` (36 refs). The user declined an extractor
+  fix for now.
+- Commits: `ac1427c` (fetch, filter, review), `6c4fe03` (downloads), plus the wrap-up commit.
 
 ---
 

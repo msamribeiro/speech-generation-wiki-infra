@@ -2,7 +2,8 @@
   "id": "interspeech-2026-0843",
   "source_ids": {
     "isca": "xu26e_interspeech",
-    "doi": "10.21437/Interspeech.2026-843"
+    "doi": "10.21437/Interspeech.2026-843",
+    "arxiv": "2609.10025"
   },
   "title": "SCNet: Enhancing GAN-based Speech Generation with Subband Condition Network and Magnitude-aware Phase Loss",
   "authors": [
@@ -16,7 +17,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-09",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/xu26e_interspeech.html",
@@ -33,5 +34,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-09",
+  "version_estimated": false
 }

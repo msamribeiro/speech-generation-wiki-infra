@@ -1,0 +1,43 @@
+{
+  "id": "2609.16989",
+  "source_ids": {
+    "arxiv": "2609.16989"
+  },
+  "title": "Taming Long-form Text-to-Speech",
+  "authors": [
+    "Rongxiang Wang",
+    "Berkin Durmus",
+    "Aysegul Orhon",
+    "Eduardo Pacheco",
+    "Atila Orhon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-15",
+  "preprint_date": "2026-09-15",
+  "arxiv_version": 1,
+  "version_date": "2026-09-15",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.16989",
+  "pdf_url": "https://arxiv.org/pdf/2609.16989.pdf",
+  "pdf_path": "raw/papers/2609.16989.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Long-form text-to-speech (TTS) enables multi-turn conversations with consistent prosody and higher quality voice cloning from longer reference audio. Recent open-weights autoregressive TTS models such as Qwen3-TTS and VoxCPM2 attain state-of-the-art word error rate (WER) and speaker similarity (SIM) on short-form prompts but significantly deteriorate when used with long-form prompts. We propose Localized Attention-Constrained Inference (LACI), an inference-only method to detect TTS errors in near real-time, roll back to the error onset and regenerate with temporary guardrails, adding negligible computational overhead. Using LACI, we improve worst-of-N WER across 10 RNG seeds for Qwen3-TTS-0.6B from 35.2% to 3.4% on prompts longer than 1500 words, even surpassing its short-form reliability of 5.4\\% on prompts with fewer than 500 words. To demonstrate the efficacy of LACI on voice cloning reliability, we propose a sliding-window version of the SIM metric that we call wSIM. wSIM exposes several novel failure patterns that are not captured by SIM. LACI improves worst-of-N wSIM from 0.01 to 0.47 on 120 seconds of reference audio while reducing the rate of catastrophic generations with WER above 30% from 26% to below 1%",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Localized attention-constrained inference for robust long-form autoregressive TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

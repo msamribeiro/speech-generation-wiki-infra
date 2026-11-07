@@ -1,0 +1,41 @@
+{
+  "id": "2608.30738",
+  "source_ids": {
+    "arxiv": "2608.30738"
+  },
+  "title": "Not All Fallbacks Are Failures: Understanding and Recovering from Fallbacks in Mobile Voice Assistants",
+  "authors": [
+    "Phillip Schneider",
+    "Alexandre Mercier",
+    "Joshua Oehms",
+    "Kristiina Jokinen",
+    "Florian Matthes"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-01",
+  "preprint_date": "2026-08-31",
+  "arxiv_version": null,
+  "version_date": "2026-09-01",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.30738",
+  "pdf_url": "https://arxiv.org/pdf/2608.30738.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Robust understanding of user input is a core requirement for voice assistants deployed in real-world environments. In practice, these systems encounter heterogeneous fallback situations caused by noisy audio input, transcription errors, ambiguous requests, incomplete utterances, or unintended activations. Existing systems typically respond with generic fallback messages, which do not resolve the underlying interaction failure and can degrade user experience. We study fallback handling in a deployed smartwatch-based voice assistant for general health support in everyday environments. Our analysis is based on six months of real-world usage data from more than 500 users, yielding a dataset of 3,030 anonymized, naturally occurring fallback-triggering utterances. We contribute (1) an operational taxonomy and the annotated VoxFallbacks dataset of these interactions, (2) a comparative evaluation of different models within a classification pipeline under practical deployment constraints, and (3) practical lessons for designing robust and cost-efficient fallback mechanisms. Results show that lightweight embedding-based classifiers outperform larger generative models on most classification tasks while requiring substantially fewer computational resources.",
+  "arxiv_comment": "Accepted to EMNLP 2026",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Fallback handling in mobile voice assistants (ASR/NLU failures and recovery responses); no speech generation studied.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

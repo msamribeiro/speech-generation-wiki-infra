@@ -1,0 +1,41 @@
+{
+  "id": "2609.08948",
+  "source_ids": {
+    "arxiv": "2609.08948"
+  },
+  "title": "Disentangled Global-Local Feature Learning with E-Branchformer for Audio Deepfake Detection",
+  "authors": [
+    "Phuong Tuan Dat",
+    "Ho Bao Thu",
+    "Nguyen Tran Trung",
+    "Pham Viet Hoang",
+    "Nguyen Thi Thu Trang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-08",
+  "preprint_date": "2026-09-08",
+  "arxiv_version": 1,
+  "version_date": "2026-09-08",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.08948",
+  "pdf_url": "https://arxiv.org/pdf/2609.08948.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of voice synthesis technologies such as text-to-speech and voice conversion poses significant threats to speech-based authentication systems, necessitating robust deepfake detection methods. In this work, we propose a novel E-Branchformer-based architecture that effectively leverages self-supervised speech representations for audio deepfake detection. Our model employs parallel branches to simultaneously capture global contextual dependencies through multi-head self-attention and local temporal patterns through convolutional processing. To enhance discriminative capability, we integrate depthwise convolution and Squeeze-and-Excitation modules that enrich the classification token with refined patch token information after feature merging. Extensive experiments on ASVspoof 2021 LA, DF, and In-the-Wild datasets demonstrate state-of-the-art performance with equal error rates of 0.88%, 1.85%, and 6.30% respectively, substantially outperforming existing methods. Comprehensive ablation studies validate that the dual-branch architecture provides complementary discriminative information, Squeeze-and-Excitation Aggregation significantly improves SSL feature integration, and the combination of DWConv and SE modules is critical for effective class token enhancement. The superior performance on real-world scenarios demonstrates strong generalization capability to diverse acoustic conditions and unseen spoofing attacks.",
+  "arxiv_comment": "Accepted to SALMA Workshop @ EMNLP 2026",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Audio deepfake detection architecture; anti-spoofing detection, which corpus precedent consistently rejects.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

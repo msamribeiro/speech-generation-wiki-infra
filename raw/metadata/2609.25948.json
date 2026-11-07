@@ -1,0 +1,39 @@
+{
+  "id": "2609.25948",
+  "source_ids": {
+    "arxiv": "2609.25948"
+  },
+  "title": "Challenges of Multi-Speaker Extraction for Real Conversational Speech Enhancement",
+  "authors": [
+    "Robert Sutherland",
+    "Stefan Goetze",
+    "Jon Barker"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-22",
+  "preprint_date": "2026-09-22",
+  "arxiv_version": 1,
+  "version_date": "2026-09-22",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.25948",
+  "pdf_url": "https://arxiv.org/pdf/2609.25948.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Target-speaker and multi-speaker extraction are techniques for extracting speech from a desired speaker or desired speakers in the presence of other speakers and/or noise. Neural network approaches for this task are often trained and evaluated using simulated datasets, with balanced amounts of target speech and speaker enrolment samples which closely match the target speech. However, in real multi-party conversations, participants are often silent for more time than they are speaking, and their enrolment speech samples can differ substantially from the target speech in the conversation. These factors can impact the training and evaluation of these techniques on recordings of real conversations. This work proposes a new loss function, which helps mitigate the effect of excess silence in training, improving STOI from 0.55 to 0.60, and frequency-weighted segmental SNR from 4.35 to 5.12. Additionally, the impact of the mismatch between the enrolment speech and target speech is explored.",
+  "arxiv_comment": "Accepted to the International Workshop on Acoustic Signal Enhancement (IWAENC), Cremona, Italy, September 2026",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Multi-speaker/target-speaker extraction for real conversational speech enhancement; separation, not synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

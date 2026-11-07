@@ -1,0 +1,40 @@
+{
+  "id": "2609.27230",
+  "source_ids": {
+    "arxiv": "2609.27230"
+  },
+  "title": "One-Step Voice Conversion by Learning kNN Transport in WavLM Space",
+  "authors": [
+    "Anton Selitskiy",
+    "David Millard"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-24",
+  "preprint_date": "2026-09-23",
+  "arxiv_version": 2,
+  "version_date": "2026-09-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.27230",
+  "pdf_url": "https://arxiv.org/pdf/2609.27230.pdf",
+  "pdf_path": "raw/papers/2609.27230.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice conversion (VC) systems fall into two families: non-parametric embedding-space methods, which need no trained model but degrade on short target utterances, and spectrogram-based neural architectures, which achieve strong quality via multi-module pipelines with tens of millions of parameters. We propose kNN-FM-VC, a single conditional flow-matching network that learns to approximate the kNN-VC mapping between WavLM embedding distributions of source and target speakers, replacing explicit pointwise kNN matching with a neural regressor trained on kNN-generated pairs. The model is conditioned on the target speaker via cross-attention and FiLM, and trained under three Gaussian conditional paths (Schrödinger bridge, straight line, and constant-variance Gaussian tube), enabling few-step sampling. Unlike Phoneme Hallucinator, which uses an upsampling stage followed by kNN matching, our 13M-parameter model performs conversion with a single learned network and supports one-step inference. On LibriSpeech, the one-step Gaussian Bridge achieves lower WER and higher estimated speech quality than FreeVC and Phoneme Hallucinator. Relative to kNN and kDOT, it substantially reduces WER.",
+  "arxiv_comment": "5 pages, 1 figure, 2 tables",
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "One-step flow-matching voice conversion approximating kNN-VC transport in WavLM space.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

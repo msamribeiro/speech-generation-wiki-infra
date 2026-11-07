@@ -1,0 +1,41 @@
+{
+  "id": "2609.22586",
+  "source_ids": {
+    "arxiv": "2609.22586"
+  },
+  "title": "SEABED: SouthEast Asian Benchmark for Evaluating Audio Reasoning",
+  "authors": [
+    "Harshit Rajgarhia",
+    "Asif Shaik",
+    "Rachuri Lokesh",
+    "Sushanta Kumar Pani",
+    "Abhishek Mukherji"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-18",
+  "preprint_date": "2026-09-18",
+  "arxiv_version": 1,
+  "version_date": "2026-09-18",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.22586",
+  "pdf_url": "https://arxiv.org/pdf/2609.22586.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Modern audio-language models are no longer judged only on what words they can transcribe, but on whether they can reason over what they hear: recovering meaning that lives in tone and prosody, telling dialects and regional languages apart, and resolving ambiguity that the written form leaves open. This capability is now measured by a growing family of audio-reasoning benchmarks, but almost entirely in English and on general-domain audio. Southeast Asia (SEA) is served instead by benchmarks that inherit an English task taxonomy of recognition, translation, and paralinguistic classification, and therefore test whether a model hears SEA speech rather than whether it can reason from it. We introduce SEABED, an audio-first question answering dataset designed to benchmark language and audio reasoning models on SEA speech. SEABED comprises a suite of six audio-reasoning tasks built entirely from real, openly available SEA speech corpora, yielding 5,404 question-answer pairs. We evaluate six frontier and region-specific audio LLMs: even the state-of-the-art model Gemini 3.5 Flash achieves only 50.3% weighted average accuracy. SEABED evaluates not only answer accuracy, but also whether models' stated reasoning is grounded in the audio evidence. A sample of the benchmark data is available here: https://huggingface.co/datasets/CentificAIResearch/SEABED.",
+  "arxiv_comment": "Accepted at SALMA[EMNLP 2026] Workshop",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Southeast Asian audio-reasoning benchmark for audio-language model understanding; no generation.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

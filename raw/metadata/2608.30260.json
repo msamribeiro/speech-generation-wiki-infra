@@ -1,0 +1,43 @@
+{
+  "id": "2608.30260",
+  "source_ids": {
+    "arxiv": "2608.30260"
+  },
+  "title": "Using Prosody to Predict Syntactic Structure",
+  "authors": [
+    "Junghyun Min",
+    "Alex Warstadt",
+    "Tamar I. Regev",
+    "Tiago Pimentel",
+    "Ethan Gotlieb Wilcox"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-01",
+  "preprint_date": "2026-08-31",
+  "arxiv_version": null,
+  "version_date": "2026-09-01",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.30260",
+  "pdf_url": "https://arxiv.org/pdf/2608.30260.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "While it is well-established that prosody carries crucial cues for syntactic structure, the degree and nature of correspondence between these two domains remains contested. We investigate the syntax-prosody interface through an information-theoretic lens, quantifying the interaction between prosodic features and syntactic representations as their mutual information. We provide a general-purpose framework for estimating this quantity over large speech-text corpora using multimodal language models. Our framework is structure-agnostic and modular, insofar as it can be used to measure the contributions of individual prosodic features or components of structure. We evaluate the syntax-prosody relationship for two features (word duration and inter-word pauses) across two domains--read audiobooks and spontaneous conversations--both in English. Our results demonstrate that prosody contains measurable syntactic information, with prosodic features reducing syntactic uncertainty in spontaneous conversations by up to 10.2%. Our findings offer new empirical support for several theoretical accounts of the syntax-prosody interface.",
+  "arxiv_comment": "15 pages, 4 figures. EMNLP 2026 camera-ready",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.52,
+  "relevance_note": "User rejected (2026-11-07): syntax–prosody interface linguistics with no synthesis system or framing; curiosity-paper rule, 2512.16832 not extended.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

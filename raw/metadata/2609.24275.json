@@ -1,0 +1,40 @@
+{
+  "id": "2609.24275",
+  "source_ids": {
+    "arxiv": "2609.24275"
+  },
+  "title": "Structure Before Sampling: Community-Aware Core-Set Selection for Data-Efficient Text-to-Speech",
+  "authors": [
+    "Mizbaul Haque Maruf",
+    "Muhammad Nur Yanhaona"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-21",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": 1,
+  "version_date": "2026-09-21",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.24275",
+  "pdf_url": "https://arxiv.org/pdf/2609.24275.pdf",
+  "pdf_path": "raw/papers/2609.24275.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech (TTS) corpora are costly to record, yet many utterances add little new phonetic information. Core-set selection reduces this cost by choosing a small training subset under a fixed audio-duration budget. We represent a corpus as a phonotactic graph that links each utterance to its most phonemically similar ones, and we first test whether this graph has structure. In Bangla and English corpora, its clustering is 199 and 56 times that of a size-matched random graph, and its modularity is more than twice that of a degree-preserving random graph. We then propose Community Representative, a selector that samples across graph communities and spreads its choices within each one, starting from utterances rich in rare phonemes. At every budget and in both languages, it covers more rare phoneme bigrams than random and entropy-based selection, and this lead holds on held-out utterances. TTS models trained on its 20% core-sets have a significantly lower character error rate (CER) than models trained on equal-duration random or entropy-based subsets in both languages. When all models train for the same number of epochs, the Bangla core-set model also outperforms full-corpus training (3.93% vs. 4.47% CER) with 4.5x less training time.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Community-aware phonotactic core-set selection for data-efficient TTS training.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "2609.30416",
+  "source_ids": {
+    "arxiv": "2609.30416"
+  },
+  "title": "All In Good Time: Causality-Aware Framework for LLM-Based Simultaneous Speech-to-Speech Translation",
+  "authors": [
+    "Amir Hussein",
+    "Enas Albasiri",
+    "Travis M. Bartley",
+    "Nourchene Ferchichi",
+    "Ke Hu",
+    "Harishchandra Dubey",
+    "Myungjong Kim",
+    "Zhehuai Chen",
+    "Oluwatobi Olabiyi",
+    "Sanjeev Khudanpur"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-24",
+  "preprint_date": "2026-09-24",
+  "arxiv_version": 1,
+  "version_date": "2026-09-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.30416",
+  "pdf_url": "https://arxiv.org/pdf/2609.30416.pdf",
+  "pdf_path": "raw/papers/2609.30416.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Language Models (LLMs) have shown strong performance in low-resource offline translation; however, extending them to simultaneous speech-to-speech translation (Simul-S2ST) remains challenging due to the scarcity of causally aligned training data with high cross-lingual speaker fidelity. In addition, existing approaches rely on fixed translation policy or confidence heuristics, leading to suboptimal quality and higher latency. We propose a causality-aware Simul-S2ST framework with a novel data pipeline that generates high-fidelity, causally aligned segments with improved voice transfer. The framework introduces (i) a factorized S2ST architecture (FAST), (ii) a causality-aware adaptive policy (CAP), and (iii) causality-aware latency metric. Experiments on CVSS Spanish, German, and French show that FAST-CAP consistently improves the quality-latency trade-off, achieving up to +1.2 BLEU and a 26% relative latency reduction over a fixed policy. Despite using substantially less training data than existing systems, FAST-CAP achieves state-of-the-art results in speech translation quality and speaker fidelity while yielding up to a 38.8% relative reduction in latency.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Causality-aware LLM-based simultaneous speech-to-speech translation with speaker fidelity.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

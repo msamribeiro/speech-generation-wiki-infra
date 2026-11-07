@@ -1,0 +1,43 @@
+{
+  "id": "2609.25411",
+  "source_ids": {
+    "arxiv": "2609.25411"
+  },
+  "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis",
+  "authors": [
+    "Biel Tura Vecino",
+    "Yoach Lacombe",
+    "Julian Weber",
+    "Zbigniew Łatka",
+    "Haitong Zhang",
+    "Logan Hart",
+    "Eren Gölge"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-21",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": 1,
+  "version_date": "2026-09-21",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.25411",
+  "pdf_url": "https://arxiv.org/pdf/2609.25411.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+  "arxiv_comment": "Accepted paper at Interspeech 2026",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-0803 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-0803"
+}

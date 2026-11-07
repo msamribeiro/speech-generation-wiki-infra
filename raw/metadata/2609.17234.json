@@ -1,0 +1,39 @@
+{
+  "id": "2609.17234",
+  "source_ids": {
+    "arxiv": "2609.17234"
+  },
+  "title": "Self-Distilled Pronunciation and Accent Control for Neural Text-to-Speech",
+  "authors": [
+    "Shuhei Kato"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-24",
+  "preprint_date": "2026-09-15",
+  "arxiv_version": 3,
+  "version_date": "2026-09-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.17234",
+  "pdf_url": "https://arxiv.org/pdf/2609.17234.pdf",
+  "pdf_path": "raw/papers/2609.17234.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech that reads raw text has no lexicon: a rare word is read as guessed, and a native Japanese listener accepts a word only if its reading and pitch accent are both right. A known remedy installs a reading-and-accent channel into a released model, but it needs many recordings. This paper removes the recordings: the frozen backbone reads a sentence containing a common word it already says correctly, and that output serves as the teacher for the same sentence with the word replaced by an annotated reading with its pitch accent. Screened raters judged the tag right on 0.80 to 0.93 of unseen difficult words on four backbones spanning autoregressive, diffusion, and encoder-decoder synthesis; plain kana, which cannot express an accent, got 0.38 to 0.60. On words needing no edit, naturalness is non-inferior on one backbone; on the other three, listeners prefer the unedited rendition by 0.19 to 0.26.",
+  "arxiv_comment": "5 pages, 1 figure, 2 tables. Submitted to ICASSP 2027",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Self-distilled pronunciation and pitch-accent control for Japanese neural TTS without new recordings.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

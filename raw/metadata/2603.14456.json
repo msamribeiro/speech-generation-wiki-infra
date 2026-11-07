@@ -1,0 +1,41 @@
+{
+  "id": "2603.14456",
+  "source_ids": {
+    "arxiv": "2603.14456"
+  },
+  "title": "PARSA-Bench: A Comprehensive Persian Audio-Language Model Benchmark",
+  "authors": [
+    "Mohammad Javad Ranjbar Kalahroodi",
+    "Mohammad Amini",
+    "Parmis Bathayan",
+    "Heshaam Faili",
+    "Azadeh Shakery"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-16",
+  "preprint_date": "2026-09-14",
+  "arxiv_version": null,
+  "version_date": "2026-09-16",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2603.14456",
+  "pdf_url": "https://arxiv.org/pdf/2603.14456.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Persian poses unique audio understanding challenges through its classical poetry, traditional music, and pervasive code-switching, none of which is captured by existing benchmarks. We introduce \\textbf{PARSA-Bench} (\\textbf{P}ersian \\textbf{A}udio \\textbf{R}easoning and \\textbf{S}peech \\textbf{A}ssessment Benchmark), the first dedicated benchmark for evaluating LALMs on Persian language and culture. It covers 16 tasks, ten of them new, spanning speech understanding, paralinguistic analysis, and culturally grounded audio reasoning. Across most tasks, text-only baselines outperform their audio counterparts, so audio understanding rather than language knowledge remains the main limitation, and supplying the transcript alongside the audio lifts weak models to near their text-only level. The consistent exception is Persian poetry, where prosody carries information the written form cannot: audio beats text on both poetry tasks, and metre detection shows the first signs of being learnable only at the largest model scale. The dataset is publicly available at: https://huggingface.co/datasets/MohammadJRanjbar/PARSA-Bench",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Persian audio-language model understanding benchmark (speech understanding, paralinguistic analysis, audio reasoning); no speech generation or evaluation of synthetic speech.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

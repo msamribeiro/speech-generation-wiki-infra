@@ -1,0 +1,39 @@
+{
+  "id": "2609.23807",
+  "source_ids": {
+    "arxiv": "2609.23807"
+  },
+  "title": "Synthetic speech detection in Brazilian Portuguese through accent-related features",
+  "authors": [
+    "Pedro H. L. Leite",
+    "Pedro Benevenuto Valadares",
+    "Luiz Wagner Pereira Biscainho"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-20",
+  "preprint_date": "2026-09-20",
+  "arxiv_version": 1,
+  "version_date": "2026-09-20",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.23807",
+  "pdf_url": "https://arxiv.org/pdf/2609.23807.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Leading commercial and open-source Text-to-Speech (TTS) models fail to emulate the regional phonetic diversity of Brazilian Portuguese (pt-BR). By aggregating disparate dialects into a single training distribution, they generate a synthetic \"diluted\" accent: a phonetic profile attempting to represent all regional distributions simultaneously, but ultimately carrying phonological ambiguity dissociated from natural socio-phonetic realizations. This work introduces a speech deepfake detection methodology combining multilingual phone recognizers with classical signal processing to extract phoneme-level features in consonantal and vocalic realizations with high geographic variance. The analysis reveals that the distributional gap over these features suffices to distinguish natural and synthetic voices through unsupervised Kernel Density Estimation, establishing dialectal inconsistency as a useful and interpretable feature for spoofing detection in pt-BR. Evaluation on pt-BR anti-spoofing datasets shows that these explainable, lightweight, low-dimensional features can boost the performance of foundation models on the task, and show generalization capabilities in a cross-dataset leave-one-out setup.",
+  "arxiv_comment": "\\c{opyright} 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works",
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Speech deepfake detection for Brazilian Portuguese from accent-related phonetic features; detection paper, though it documents TTS dialect dilution as a side finding.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "2608.23791",
+  "source_ids": {
+    "arxiv": "2608.23791"
+  },
+  "title": "EmoTra-TTS: Smooth Intra-Utterance Emotion Transitions for Speech Synthesis",
+  "authors": [
+    "Tianchi Liu",
+    "Zeyang Song",
+    "Tianrui Wang",
+    "Zhipeng Li",
+    "Chenglin Xu",
+    "Yiwen Guo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-24",
+  "preprint_date": "2026-08-24",
+  "arxiv_version": 1,
+  "version_date": "2026-08-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.23791",
+  "pdf_url": "https://arxiv.org/pdf/2608.23791.pdf",
+  "pdf_path": "raw/papers/2608.23791.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Psychological research on emotion dynamics has established that human affect is a continuous, evolving process: emotions rise, decay, and transition within seconds. Current emotional text-to-speech (TTS) systems, however, condition on a single discrete label or static embedding per utterance, fundamentally misaligning with the temporal nature of affect. While recent LLM-based TTS systems may implicitly vary prosody through text understanding, such variation is neither explicitly controllable nor precise enough for targeted intra-utterance transitions. We address three challenges: (1) a multi-pass flow blending pipeline synthesizes frame-aligned transition audio, circumventing the scarcity of natural intra-utterance transitions; (2) dual-stage Valence-Arousal-Dominance (VAD) conditioning guides prosodic planning in the LLM and acoustic realization in the flow decoder via frame-level VAD embeddings; (3) direction-magnitude decoupled injection structurally separates emotion direction from injection magnitude, preventing content degradation. EmoTra-TTS adds only +0.43% parameters with no latency overhead, achieves 30%-87% relative improvement on emotion transition quality, corroborated by 64.4%-79.5% overall win rates in pairwise preference tests against four SOTA baselines and two commercial systems.",
+  "arxiv_comment": "Accepted to EMNLP 2026 (Main Conference)",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Emotional TTS modelling smooth intra-utterance emotion transitions; core TTS contribution.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

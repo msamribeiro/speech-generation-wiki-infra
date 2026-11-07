@@ -28,7 +28,7 @@
   "ingested_date": null,
   "url": "https://aclanthology.org/2026.acl-long.998",
   "pdf_url": "https://aclanthology.org/2026.acl-long.998.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.acl-long.998.pdf",
   "pdf_source": "anthology",
   "abstract": "While diffusion and flow-matching models have advanced TTS, generating high-arousal emotions remains a persistent challenge due to the trade-off between stability and expressiveness. Existing systems often suffer from linguistic collapse when pursuing high intensity or fail to meet target emotional levels under stable settings. In this work, we identify that standard Gaussian initialization inevitably introduces a neutral prosody bias, while uniform Classifier-Free Guidance often distorts the acoustic manifold, leading to artifacts. To address this, we propose an inference framework that rectifies the emotional trajectory. An Emotion-Rectified Noise Prior injects a semantic gradient at initialization to align sampling with the target emotional manifold, and Likelihood-Inverse Guidance adaptively schedules guidance via a conditional/unconditional likelihood ratio, strengthening guidance only when the trajectory drifts toward a neutral fallback. Extensive experiments demonstrate that our method effectively resolves the stability bottleneck in high-intensity scenarios, achieving superior linguistic accuracy and emotional fidelity without model retraining. Audio samples are available at https://showtts.github.io/emotionTTS/.",
   "task": [

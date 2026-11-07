@@ -42,7 +42,7 @@
   "ingested_date": null,
   "url": "https://aclanthology.org/2026.iwslt-1.11",
   "pdf_url": "https://aclanthology.org/2026.iwslt-1.11.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.iwslt-1.11.pdf",
   "pdf_source": "anthology",
   "abstract": "This paper presents HW-TSC’s submission to the IWSLT 2026 Cross-Lingual Voice Cloning Track. The Cross-Lingual Voice Cloning Track includes three target languages: Arabic, Chinese, and French. We take part in two language tasks of this track, namely Chinese and French. We employ the Qwen3-TTS-12Hz-1.7B-Base multilingual model as the core voice cloning model. To tackle problems such as excessively long duration of the original reference audio and scattered features, we design a sliding-window audio segmentation preprocessing method, which continuously splits long audio into standardized short segments with overlapping redundancy. This method avoids feature attenuation caused by overly long audio and maximizes the preservation of complete timbre information through step overlap. To select the outputs with the highest timbre similarity from numerous synthetic results, this study conducts voiceprint recognition based on the Enhanced Context-Dependent Adversarial Time Delay Neural Network (ECAPA-TDNN), with cosine similarity as the core quantitative evaluation metric, and selects the result with the highest similarity as the optimal output.",
   "task": [

@@ -1,0 +1,45 @@
+{
+  "id": "2609.24163",
+  "source_ids": {
+    "arxiv": "2609.24163"
+  },
+  "title": "Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis",
+  "authors": [
+    "Chee-En Yu",
+    "Yi-Cheng Lin",
+    "Sung-Feng Huang",
+    "Yun-Shao Tsai",
+    "Ho-Lam Chung",
+    "Xuanjun Chen",
+    "Hung-yi Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-21",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": 1,
+  "version_date": "2026-09-21",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.24163",
+  "pdf_url": "https://arxiv.org/pdf/2609.24163.pdf",
+  "pdf_path": "raw/papers/2609.24163.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Large Audio Language Models (LALMs) can follow diverse instructions to synthesize speech in specified styles. However, complex instructions that require simultaneous control over pitch dynamics, speaking rate, and emotional tone often exceed what a single-pass generation can faithfully realize. While recent reasoning models have shown that intermediate \"thinking\" tokens improve output quality, this paradigm has been confined to the text modality. In this work, we extend reasoning to the audio token space by training a LALM with reinforcement learning to reason over its own speech output. The model first generates a draft speech as a form of audio-token reasoning, critiques its own generation by reflecting on the acoustic realization in text, and then produces a refined version conditioned on both the first-pass speech and the critique, all within a single model. After RL training, the refined two-hop outputs achieve a relative improvement of 7.15\\% on the InstructTTSEval benchmark, demonstrating the model's reflective ability.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "RL-based listen-critique-refine self-refinement for instruction-following speech synthesis in LALMs.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

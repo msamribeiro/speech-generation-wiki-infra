@@ -1,0 +1,39 @@
+{
+  "id": "2609.20063",
+  "source_ids": {
+    "arxiv": "2609.20063"
+  },
+  "title": "Robust Workflow Generation via Adversarial Learning for Audio Deepfake Detection",
+  "authors": [
+    "Xiang Li",
+    "Pin-Yu Chen",
+    "Wenqi Wei"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-17",
+  "preprint_date": "2026-09-17",
+  "arxiv_version": 1,
+  "version_date": "2026-09-17",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.20063",
+  "pdf_url": "https://arxiv.org/pdf/2609.20063.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The rapid advancement of speech synthesis and voice conversion technologies has made audio deepfakes increasingly realistic, posing serious security risks in practical applications. While existing detection methods achieve strong performance under controlled conditions, they often fail to generalize under real-world perturbations and corruptions. In this paper, we propose ROGUE, a framework that dynamically constructs robust detection workflows by orchestrating multiple detection tools. ROGUE formulates workflow generation as a sequential decision-making problem and introduces a dual-agent paradigm, where a perturbation agent generates audio perturbations and a policy agent learns to select and execute detection tools under perturbed conditions. Through adversarial learning, ROGUE enables perturbation-aware tool selection, adaptive execution strategies, and improved robustness to distribution shifts. Extensive experiments across multiple datasets and real-world corruptions demonstrate that ROGUE consistently outperforms strong baselines in both robustness and generalization. Our results highlight the effectiveness of adversarially optimized workflow generation for building reliable audio deepfake detection systems in real-world deployment settings.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Robust detection-workflow generation for audio deepfake detection; anti-spoofing (corpus precedent reject).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -2,7 +2,8 @@
   "id": "interspeech-2026-0930",
   "source_ids": {
     "isca": "zhang26m_interspeech",
-    "doi": "10.21437/Interspeech.2026-930"
+    "doi": "10.21437/Interspeech.2026-930",
+    "arxiv": "2608.20387"
   },
   "title": "Poly-InstructTTS: Learning In-the-Wild Expressive Speech Synthesis from Open-Ended Instructions",
   "authors": [
@@ -21,7 +22,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-06-30",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/zhang26m_interspeech.html",
@@ -38,5 +39,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": null,
+  "version_date": "2026-08-24",
+  "version_estimated": false
 }

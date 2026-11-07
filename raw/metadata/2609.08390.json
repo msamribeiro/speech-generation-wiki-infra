@@ -1,0 +1,41 @@
+{
+  "id": "2609.08390",
+  "source_ids": {
+    "arxiv": "2609.08390"
+  },
+  "title": "Noise Adaptive Streaming Audio-Visual Speech Token Enhancement for Robust Full-Duplex Spoken Dialogue Models",
+  "authors": [
+    "Bella Godiva",
+    "Yeonju Kim",
+    "Yong Man Ro"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-08",
+  "preprint_date": "2026-09-08",
+  "arxiv_version": 1,
+  "version_date": "2026-09-08",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.08390",
+  "pdf_url": "https://arxiv.org/pdf/2609.08390.pdf",
+  "pdf_path": "raw/papers/2609.08390.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Full-duplex spoken dialogue systems enable simultaneous listening and speaking, but their audio-only perception often fails under background noise and overlapping speech, leading to incoherent responses. Recent audio-visual dialogue approaches show that incorporating visual cues such as lip movements improve robustness under audio corruption. However, existing approaches often adapt the large speech dialogue model itself to process visual input, requiring costly multimodal training. We propose AV-STE, a modular streaming audio-visual front-end that restores corrupted semantic speech tokens from noisy audio and lip video before they reach the speech LLM. The downstream dialogue model remains entirely frozen, preserving its pretrained conversational capabilities. When integrated with frozen Moshi, AV-STE improves average GPT-4o-judged response coherence from 1.42 to 1.91 under same-dataset speaker interference while largely preserving turn-taking behavior. Gains also transfer to out-of-domain Seamless Interaction.",
+  "arxiv_comment": "Accepted to EMNLP 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Streaming audio-visual front-end restoring speech tokens for a frozen full-duplex dialogue model (Moshi), evaluated on response coherence and turn-taking.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

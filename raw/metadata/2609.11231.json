@@ -1,0 +1,37 @@
+{
+  "id": "2609.11231",
+  "source_ids": {
+    "arxiv": "2609.11231"
+  },
+  "title": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies",
+  "authors": [
+    "Tianxiang Zhou"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-15",
+  "preprint_date": "2026-09-14",
+  "arxiv_version": null,
+  "version_date": "2026-09-15",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.11231",
+  "pdf_url": "https://arxiv.org/pdf/2609.11231.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents SurgicalRoomAgent, a voice-interactive multi-agent system for smart operating rooms based on large language models (LLMs). The system achieves natural language understanding, device control, intraoperative recording, and surgical report generation through a layered architecture comprising a voice interaction pipeline (wake, ASR, turn detection, agent reasoning, TTS) and an agent core (skill registry, task planner, device manager). Three key technologies are investigated: (1) KV Cache prefix warming for low-latency inference, reducing recomputation overhead from approximately 500 ms to tens of milliseconds via byte-level Longest Common Prefix reuse; (2) streaming partial JSON parsing with early parallel task execution, reducing end-to-end latency by approximately 30%; and (3) progressive skill prompt disclosure, which dynamically filters system prompts based on user role, connected devices, and surgical phase to maximize information density within limited context windows. The system is implemented using the Qwen3-27B model with llama.cpp/sglang inference engines. Experimental analysis demonstrates effective operation within a 16,384-token context limit and multi-device parallel control response times meeting OR real-time requirements.",
+  "arxiv_comment": "The current technical approach is immature and may involve information security concerns. We hereby request the withdrawal of the manuscript",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Voice-interactive multi-agent system for operating rooms; TTS is a black-box pipeline component and contributions are LLM latency/prompting (cf. AdaptLingo reject).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2609.13909",
+  "source_ids": {
+    "arxiv": "2609.13909"
+  },
+  "title": "DiTAR+: Dual Optimization for Robust Autoregressive Diffusion Speech Synthesis",
+  "authors": [
+    "Ziyu Zhang",
+    "Tianlun Zuo",
+    "Hanzhao Li",
+    "Haoyu Zhang",
+    "Lei Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-12",
+  "preprint_date": "2026-09-12",
+  "arxiv_version": 1,
+  "version_date": "2026-09-12",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.13909",
+  "pdf_url": "https://arxiv.org/pdf/2609.13909.pdf",
+  "pdf_path": "raw/papers/2609.13909.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Continuous-latent Autoregressive Diffusion Transformer (AR-DiT) models have demonstrated immense potential in zero-shot speech generation. However, they still suffer from limited decoding stability when synthesizing long utterances or complex linguistic structures. This instability primarily stems from a restricted historical receptive field and an acoustic inertia dependency within the diffusion decoder, which causes the model to ignore semantic conditions. To address these challenges, we propose DiTAR+, a dual-optimization framework. First, we introduce Dilated Context Sampling to expand the macro-level historical receptive field without violating physical temporal continuity, thereby preventing cumulative error propagation. Second, we propose Hierarchical Acoustic Masking to prevent shallow layers from attending to acoustic pre-context, explicitly decoupling semantic alignment from acoustic detail reconstruction. Extensive experiments show that our framework effectively mitigates pronunciation errors and semantic hallucinations, enhances generation robustness on challenging sentences, and maintains exceptionally high speaker similarity throughout the entirety of long-form utterances. On the linguistically challenging ZH-Hard set, DiTAR+ reduces the word error rate from 12.478% to 9.893%, and on extended utterances of 25 to 35 seconds it improves speaker similarity from 0.741 to 0.759 while simultaneously lowering the word error rate from 2.778% to 2.173%, outperforming both discrete-token and pure flow-matching baselines.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Robustness improvements for continuous-latent autoregressive diffusion TTS (DiTAR+).",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

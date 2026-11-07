@@ -2,7 +2,8 @@
   "id": "interspeech-2026-2481",
   "source_ids": {
     "isca": "syllas26_interspeech",
-    "doi": "10.21437/Interspeech.2026-2481"
+    "doi": "10.21437/Interspeech.2026-2481",
+    "arxiv": "2609.10022"
   },
   "title": "Deterministic Prompting for Speaker-Stable Low-Resource Greek TTS",
   "authors": [
@@ -18,7 +19,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-09",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/syllas26_interspeech.html",
@@ -35,5 +36,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-09",
+  "version_estimated": false
 }

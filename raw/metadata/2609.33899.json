@@ -1,0 +1,40 @@
+{
+  "id": "2609.33899",
+  "source_ids": {
+    "arxiv": "2609.33899"
+  },
+  "title": "NSV-Shift: A Contrastive Benchmark for Non-Speech Vocalization Understanding and Response Adaptation in Speech-to-Speech Models",
+  "authors": [
+    "Ziwei Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": "2026-09-27",
+  "arxiv_version": 1,
+  "version_date": "2026-09-27",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.33899",
+  "pdf_url": "https://arxiv.org/pdf/2609.33899.pdf",
+  "pdf_path": "raw/papers/2609.33899.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce NSV-Shift, a contrastive benchmark for evaluating whether speech-to-speech models can understand non-speech vocalizations (NSVs) and adapt their responses accordingly. Each pair contains two conversations with identical lexical content that differ only in the NSV embedded in the final turn. Our pilot contains 22 human-verified pairs (44 audio conditions) and evaluates five models on NSV perception, emotion understanding, and response adaptation. Results show that models generally perform better at detecting NSVs than at interpreting their fine-grained emotional meaning or producing appropriately differentiated responses. The data construction pipeline, dataset, and evaluation pipeline are publicly available at https://github.com/ChenzwNina/nsv-construction.",
+  "arxiv_comment": "Technical Report",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Contrastive benchmark for whether speech-to-speech models perceive non-speech vocalizations and adapt their responses (small 22-pair pilot).",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

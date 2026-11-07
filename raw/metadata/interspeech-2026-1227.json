@@ -2,7 +2,8 @@
   "id": "interspeech-2026-1227",
   "source_ids": {
     "isca": "geng26b_interspeech",
-    "doi": "10.21437/Interspeech.2026-1227"
+    "doi": "10.21437/Interspeech.2026-1227",
+    "arxiv": "2609.08204"
   },
   "title": "Stabilizing Instruction Supervision for Instruct-TTS via Controllable Diversification and Drift Filtering",
   "authors": [
@@ -23,7 +24,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-08",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/geng26b_interspeech.html",
@@ -40,5 +41,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-08",
+  "version_estimated": false
 }

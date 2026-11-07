@@ -1,3 +1,14 @@
+## 2026-11-07
+
+- parse | Q3 2026 batch 3 of 7 | 40 papers (published 2026-08-26 to 2026-09-11) | 40 done, 0 failed (two runs of 20, `--workers 2`, 77 min) | 1 flagged: 2608.05727 (LILAC) has an empty references.json because its bibliography has no heading (AAAI style, list follows Acknowledgements); references.json rebuilt by hand from the 36 reference paragraphs in paper.md (between Acknowledgements and the technical supplement) with convert_paper.py's own `_parse_ref_string` and corpus index, years set by hand for the 2023a/2023b pair; no re-parse; root cause: the third (after-Conclusion) fallback in `extract_references` stops at the next section header, here AI Assistance Disclosure and Acknowledgements | citation index rebuilt
+- discover | 24364 entries (745 merge groups collapsed, 7 fuzzy candidates), 1312 corpus papers
+- parse | Q3 2026 batch 2 of 7 | 40 papers (published 2026-07-27 to 2026-08-24) | 40 done, 0 failed (`--workers 2`; the run hit the 2 h background limit at 38/40 and the 2 in-progress papers were finished in a second run, ~130 min total) | 0 flagged by post-parse check | citation index rebuilt
+- parse | Q3 2026 batch 1 of 7 | 40 papers (published 2026-07-01 to 2026-07-27, ordered by published_date) | 40 done, 0 failed (`batch_convert.py --workers 2 --ids ...`, 106 min) | 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | citation index rebuilt
+- download | Q3 2026 accepted records without PDFs (`download_pdfs.py --published-from 2026-07-01 --published-to 2026-09-30`) | 224 downloaded, 0 failed (all arXiv) | version re-pinned on download: 38 records got the downloaded arXiv version, 37 changed published_date; 14 left Q3: 13 to Q4 because the downloaded version is an October/November revision (2607.03666, 2607.04140, 2607.08409, 2607.10162, 2607.18317, 2607.23027, 2607.23811, 2607.29125, 2608.02673, 2608.07462, 2608.09930, 2608.16235, 2608.19515), and 2608.26146 (Vagdhenu) to Q2 (2026-06-28): arXiv lists its only version as submitted 28 Jun 2026 despite the 2608 ID, so the fetch-time version_date 2026-08-28 was wrong | Q3 accepted now 364 (84 parsed, 280 with PDF awaiting parse incl. the 70 ISCA PDFs); 6 October-dated accepted records from the top-up were outside the window and not downloaded
+- review | arXiv top-up 2026-08-20 to 2026-09-30 borderline batch | 11 papers | 9 accepted, 2 rejected | reviewed by theme, user decisions: prosody analysis with no system: 2608.30260 rejected (syntax–prosody linguistics; curiosity rule wins, 2512.16832 stays a one-off), 2608.27848 accepted (framed as design input for expressive S2ST); brain-signal input: 2609.04455 Brain2Speech-Net accepted (TTS latent-space backbone, MiSTR shape; TTS fallback tag), 2609.37601 SENSE rejected (non-invasive EEG neuroscience, MindVoice shape), no standing rule, case by case; anti-cloning/detection: 2610.00662 Silence-the-Mimic accepted (Mimic Blocker/NaVo shape), 2609.30983 accepted (fine-tunes and evaluates F5-TTS, commodity-TTS-evasion shape); full-duplex speech LMs: 2608.26005 VoiceMem, 2609.15759 streaming user ASR head (over a recommended reject, not a precedent), 2609.27378 PALS, 2609.09263 gender-bias audit all accepted; 2608.25218 TurnBench accepted (turn-taking detection precedent) | by published_date: Aug 2A/0R, Sep 7A/1R, Oct 0A/1R | status: review -> accepted/rejected, review_queue.md decisions recorded by user
+- review | arXiv top-up 2026-08-20 to 2026-09-30 dedup | 13 duplicates | rejected | title-matched the 173 new records against the whole corpus, then checked author overlap and abstract similarity; 13 are arXiv preprints of Interspeech 2026 ISCA records (11 accepted, 2 rejected: 0026, 1038) and were set `is_duplicate`/`canonical_id`/`rejected` with the existing ISCA record canonical (neither version ingested; consistent with the 2026-11-01 existing-record rule and the ACL proceedings-canonical rule); the ISCA records gained `source_ids.arxiv` plus the arXiv `preprint_date`/`arxiv_version`/`version_date`/`version_estimated` (required by the metadata check for records with an arXiv ID; `published_date` unchanged at the 2026-09-27 conference date); checked and kept as separate works: 2609.34052 (extends ingested 2603.18359 to age/gender/accent steering), 2609.15184 Cross-Lingual F5-TTS 2 (follow-up to 2509.14579)
+- filter | arXiv top-up 2026-08-20 to 2026-09-30 (`scripts/fetch/arxiv.py --date-from 2026-08-20 --date-to 2026-09-30`, cs.SD+eess.AS, 144 written; `scripts/fetch/arxiv_oai.py --set cs.CL --date-from 2026-08-20 --date-to 2026-09-30`, 29 written; 13 of the 173 already rejected as Interspeech 2026 ISCA duplicates and not re-scored; 160 pending filtered) | 110 accepted, 11 review, 39 rejected | runtime: claude-code | provider: anthropic | model: claude-opus-5-5
+
 ## 2026-11-01
 
 - fetch | ISCA Interspeech 2026 (isca.py --year 2026) | 1379 discovered, 203 written | first fetch of the 2026 proceedings, for Q3 2026; isca.py fixed first: 2026 added to the date tables (conference_date 2026-09-27, the date used for the 2026-10-26 re-dating; it previously fell back to a 2026-01-01 placeholder), abstracts read from the bare `<div id="abstract">` used on 2026 pages (2025 pages wrap it in `<p>`), and UTF-8 forced when the archive sends no charset (it was decoded as Latin-1); a first run without the abstract and encoding fixes (218 records) was deleted and re-fetched; 6 pages have no DOI yet and keep slug IDs (`interspeech-2026-{slug}`)
@@ -50,7 +61,6 @@
 
 - parse | Q2 2026 download + parse | 113 accepted papers with published_date 2026-04-01 to 2026-06-30 (2026.lrec-1.375 … 2608.00011) | 113 PDFs downloaded, 0 failed; 113 parsed, 0 failed (--workers 2, 204 min) | Q2 accepted papers now 230/230 parsed; 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | `download_pdfs.py` gained `--published-from`/`--published-to` to scope a run to one quarter
 - fetch | acl.py external-URL fix | LREC 2026 (and SIGUL/CAS/DialRES/PoliticalNLP) Anthology XML lists an external lrec.elra.info `<url>`, which acl.py prefixed with the Anthology base, yielding 404 pdf_urls; acl.py now falls back to the canonical Anthology ID; `pdf_url`/`url` repaired in place on 17 records (9 accepted, 6 rejected, 2 review) using the cached XML, no other fields touched
-- discover | 22427 entries (710 merge groups collapsed, 7 fuzzy candidates), 1169 corpus papers
 
 
 ## 2026-08-13
@@ -117,7 +127,6 @@
 
 
 ## 2026-06-08
-- discover | 21262 entries (652 merge groups collapsed, 8 fuzzy candidates), 1056 corpus papers
 
 - parse | citation-discovery batch 18 | 2/2 done, 0 failures | ~7 min | quality report: raw/parsed/batch_18_cd_quality_report.md | clean | PARSE PIPELINE COMPLETE: 861/861 accepted papers parsed (699 standard + 162 citation-discovery)
 - parse | citation-discovery batch 17 | 40/40 done, 0 failures | ~79 min | quality report: raw/parsed/batch_17_cd_quality_report.md | RapidOCR warnings on 4 papers, PIL warnings on 2 (all non-fatal) | clean
@@ -131,7 +140,6 @@
 
 ## 2026-06-07
 
-- discover | 16476 entries (570 merge groups collapsed, 5 fuzzy candidates), 894 corpus papers
 
 
 # Pipeline Log
@@ -187,8 +195,6 @@ Infra-only operations (filter, parse, discover, lint, review). Not rendered on t
 
 ## 2026-05-24
 
-- discover | 450 candidates surfaced (86 speech-relevant), 264 corpus papers
-- discover | 458 candidates surfaced (112 speech-relevant), 270 corpus papers
 
 ## 2026-05-25
 

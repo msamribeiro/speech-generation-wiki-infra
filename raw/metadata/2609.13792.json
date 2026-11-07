@@ -1,0 +1,46 @@
+{
+  "id": "2609.13792",
+  "source_ids": {
+    "arxiv": "2609.13792"
+  },
+  "title": "The VoiceMOS Challenge 2026: Evaluating Speech Enhancement, Emotional TTS and Accented TTS Systems",
+  "authors": [
+    "Wen-Chin Huang",
+    "Wei Wang",
+    "Marvin Sach",
+    "Xiaoxue Gao",
+    "Nicholas Sanders",
+    "Erica Cooper",
+    "Toda Tomoki"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-12",
+  "preprint_date": "2026-09-12",
+  "arxiv_version": 1,
+  "version_date": "2026-09-12",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.13792",
+  "pdf_url": "https://arxiv.org/pdf/2609.13792.pdf",
+  "pdf_path": "raw/papers/2609.13792.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present the results of the VoiceMOS Challenge 2026, the fifth edition of a scientific challenge on automatic prediction of subjective speech assessments. After expanding the scope to music and general audio in 2025, we refocused the evaluation target on speech and organized three tracks: prediction of absolute and comparative category ratings for enhanced speech, prediction of naturalness and emotion-related tasks for emotional text-to-speech systems, and prediction of speaker and accent similarity for codec-based speech synthesis systems. The challenge attracted a total of 18 teams worldwide, with most teams successfully surpassing the provided baselines. We summarize the challenge results, representative top-performing systems, participant feedback, and directions for future editions.",
+  "arxiv_comment": "Preprint",
+  "task": [
+    "evaluation",
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "VoiceMOS Challenge 2026 results on automatic prediction of subjective ratings, including emotional and accented TTS tracks.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

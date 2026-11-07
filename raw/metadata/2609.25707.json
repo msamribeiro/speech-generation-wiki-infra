@@ -1,0 +1,49 @@
+{
+  "id": "2609.25707",
+  "source_ids": {
+    "arxiv": "2609.25707"
+  },
+  "title": "Interactive TTS: Dynamic Speaking Style Adaptation for Expressive Speech Synthesis",
+  "authors": [
+    "Wenjie Tian",
+    "Kangxiang Xia",
+    "Jingbin Hu",
+    "Xinfa Zhu",
+    "HangRui Hu",
+    "Ziyue Jiang",
+    "Kexin Huang",
+    "Ting He",
+    "Lei Xie",
+    "Jin Xu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-22",
+  "preprint_date": "2026-09-22",
+  "arxiv_version": 1,
+  "version_date": "2026-09-22",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.25707",
+  "pdf_url": "https://arxiv.org/pdf/2609.25707.pdf",
+  "pdf_path": "raw/papers/2609.25707.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Dynamic speaking style adaptation in multi-turn multimodal interaction remains a major challenge for text-to-speech (TTS) systems. Existing context-aware TTS (CTTS) methods typically map dialogue context to speech in an end-to-end manner. Such implicit modeling makes contextual style decisions difficult to supervise, while the entanglement of style, timbre, and content often leads to weak instruction-following and severe timbre drift across turns. To overcome these limitations, we propose Interactive TTS, a dynamic, style-adaptive framework for contextually appropriate and speaker-consistent speech generation. Interactive TTS decouples the process by explicitly modeling contextual style decisions as executable instructions. To bridge the gap between style decisions and speech generation, we introduce Iterative Rejection Sampling Fine-Tuning (Iterative RSFT) and Context-Aware Direct Preference Optimization (CADPO), which significantly enhance instruction-following and align the generated speech with conversational contexts. Extensive experiments demonstrate that Interactive TTS outperforms state-of-the-art models on VStyle and SpeechParaling-Bench. Demo is available at https://wjtian-wonderful.github.io/InteractiveTTS/",
+  "arxiv_comment": null,
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Interactive TTS with explicit dynamic speaking-style adaptation across multi-turn multimodal dialogue.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

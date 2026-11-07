@@ -1,0 +1,43 @@
+{
+  "id": "2609.38794",
+  "source_ids": {
+    "arxiv": "2609.38794"
+  },
+  "title": "A barrier or a booster? Familiarity effects on Mandarin emotion prosody recognition using AI-powered voice cloning",
+  "authors": [
+    "Feng Xu",
+    "Gaoyuan Zhang",
+    "Shanshan Xue",
+    "Yixiang Chen",
+    "Hanrui Zhou",
+    "Xurong Xie",
+    "Hui Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-30",
+  "preprint_date": "2026-09-30",
+  "arxiv_version": 1,
+  "version_date": "2026-09-30",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.38794",
+  "pdf_url": "https://arxiv.org/pdf/2609.38794.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Emotion prosody perception requires simultaneous processing of acoustic cues and speaker identity. While listeners effortlessly decode natural speech, AI synthetic voices introduce cognitive complexities due to subtle acoustic atypicalities. It remains unclear how these synthetic features interact with a listener's prior social knowledge and memory of a familiar speaker. This study investigated how speech sources (human vs. AI) and speaker familiarity affect emotion recognition accuracy and cognitive load. A within-subject task with Mandarin-speaking adults evaluated behavioral (accuracy, reaction time) and physiological data (heart rate variability). Results showed that human voices yielded significantly higher accuracy and faster processing times than AI voices, while HRV did not significantly differentiate between conditions. These findings show that decoding synthetic speech is gated by top-down social cognition, highlighting limitations in current AI synthesis technologies.",
+  "arxiv_comment": "Accepted by Interspeech 2026",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-1038 (rejected), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-1038"
+}

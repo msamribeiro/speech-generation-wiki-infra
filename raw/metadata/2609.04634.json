@@ -1,0 +1,40 @@
+{
+  "id": "2609.04634",
+  "source_ids": {
+    "arxiv": "2609.04634"
+  },
+  "title": "SCAPES: Semantically Conditioned Autoregressive Prior for Environmental Sounds",
+  "authors": [
+    "Esteban Gutiérrez",
+    "Lonce Wyse",
+    "Frederic Font",
+    "Xavier Serra"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-04",
+  "preprint_date": "2026-09-04",
+  "arxiv_version": 1,
+  "version_date": "2026-09-04",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.04634",
+  "pdf_url": "https://arxiv.org/pdf/2609.04634.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "As generative audio models grow in complexity, the computational and ecological costs of synthesizing everyday sounds have become increasingly prohibitive, often requiring industrial-scale resources and massive datasets. In this paper, we present SCAPES: a Semantically Conditioned Autoregressive Prior for Environmental Sounds. SCAPES is a lightweight, resource-efficient generative model designed to synthesize high-fidelity environmental textures through high-level semantic control. By operating on the continuous latent manifold of a neural audio codec, our approach bypasses the rigid structural constraints inherent to discrete tokenization. We propose a segmentation strategy that decomposes audio into overlapping segments, enabling a Continuous Normalizing Flow (CNF) to model the evolution of latent trajectories using Flow Matching. Our experiments demonstrate that a 36-million parameter instance of SCAPES can be trained on limited, uncurated datasets using a single consumer-grade GPU. Notably, convergence is achieved after training for approximately twice the source audio duration, yielding high-fidelity outputs with robust long-term stability and semantic consistency. Furthermore, we showcase the model's capacity for smooth semantic interpolation, providing a flexible and accessible tool for open research and creative sound design. Code, pretrained weights, audio examples, and an interactive demo are publicly available on our project page https://cordutie.github.io/projects/scapes.html",
+  "arxiv_comment": "Accepted to the Digital Audio Fx (DAFx) Conference 2026 to be held in Cambridge, USA. 8 pages, 3 figures and 2 tables",
+  "task": [],
+  "relevance_score": 0.1,
+  "relevance_note": "Lightweight generative model for environmental sound textures; non-speech audio.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

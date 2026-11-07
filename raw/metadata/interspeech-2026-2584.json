@@ -2,7 +2,8 @@
   "id": "interspeech-2026-2584",
   "source_ids": {
     "isca": "ogunremi26_interspeech",
-    "doi": "10.21437/Interspeech.2026-2584"
+    "doi": "10.21437/Interspeech.2026-2584",
+    "arxiv": "2609.33204"
   },
   "title": "Turning Speech Language Models into Multilingual Listeners",
   "authors": [
@@ -19,7 +20,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-27",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/ogunremi26_interspeech.html",
@@ -36,5 +37,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": null,
+  "version_date": "2026-09-29",
+  "version_estimated": false
 }

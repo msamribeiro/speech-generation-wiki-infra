@@ -25,7 +25,7 @@
   "ingested_date": null,
   "url": "https://aclanthology.org/2026.findings-acl.740",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.740.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.findings-acl.740.pdf",
   "pdf_source": "anthology",
   "abstract": "Emotional interaction is increasingly crucial for conversational AI, yet current systems lack a self-emotion determination mechanism to drive the streaming text-to-speech (TTS) synthesis. We propose an emotion-planning framework that determines the emotion prior to the textual generation, grounding the downstream emotional TTS in a streaming manner. The framework is implemented by a plug-and-play LLM module, initialized from pretrained LLMs, and trained by reinforcement learning (RL) with emotions as the actions. A hybrid reward is employed which combines imitation signals with theory-driven scoring, in which the theory of Plutchik’s wheel of emotions is adopted. By experiments on DailyDialog, EmoryNLP, IMEOCAP, and MELD, our method outperforms prompting and finetuning baselines on both emotion determination and response quality. We finally implement an entire streaming pipeline for real-time deployment, with the speech quality confirming the framework’s emotional alignment, contextual coherence, and expressive fluency. Codes, cases, and demos are available in https://sixingdeguo.github.io/EmoQ-page/.",
   "task": [

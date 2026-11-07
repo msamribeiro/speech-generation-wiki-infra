@@ -1,0 +1,42 @@
+{
+  "id": "2609.29464",
+  "source_ids": {
+    "arxiv": "2609.29464"
+  },
+  "title": "TS-OPD: Reconciling ASR and QA in Speech Language Models via Task-Specific On-Policy Distillation",
+  "authors": [
+    "Yujie Guo",
+    "Hongjie Chen",
+    "Jian Kang",
+    "Jie Li",
+    "Yongxiang Li",
+    "Yong Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-24",
+  "preprint_date": "2026-09-24",
+  "arxiv_version": 1,
+  "version_date": "2026-09-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.29464",
+  "pdf_url": "https://arxiv.org/pdf/2609.29464.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech Language Models (SLMs) inherit strong instruction-following capabilities from pretrained language models, yet ASR specialization can substantially degrade them. To address this ASR--QA trade-off, we propose Task-Specific On-Policy Distillation (TS-OPD), which leverages models before and after ASR specialization as complementary QA and ASR teachers. The student generates separate task-conditioned trajectories for ASR and QA, each supervised only by its corresponding teacher, thereby reducing direct competition between the two supervision signals. Experiments on basic ASR, contextual ASR, and QA demonstrate that TS-OPD improves recognition while preserving QA capability. Moreover, TS-OPD remains robust across different balancing coefficients and continues to benefit from increased distillation data.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "On-policy distillation balancing ASR specialization and QA in speech LMs; speech-in/text-out understanding (ASR with speech-LM framing reject shape).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

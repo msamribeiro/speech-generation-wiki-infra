@@ -1,0 +1,45 @@
+{
+  "id": "2609.39088",
+  "source_ids": {
+    "arxiv": "2609.39088"
+  },
+  "title": "SCIC: Scope- and Codebook-Aware Instruction Conditioning for Speaker-Adapted Expressive TTS",
+  "authors": [
+    "Longyu Lu",
+    "Zongwei Du",
+    "Mengtao Xing",
+    "Zhuoqun Liu",
+    "Zifan Guan",
+    "Meiguang Jin",
+    "Junfeng Ma"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-30",
+  "preprint_date": "2026-09-30",
+  "arxiv_version": 1,
+  "version_date": "2026-09-30",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.39088",
+  "pdf_url": "https://arxiv.org/pdf/2609.39088.pdf",
+  "pdf_path": "raw/papers/2609.39088.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Long-form live-streaming TTS requires context-dependent prosody and paragraph-level coherence. However, many existing instruction-based TTS systems use global or uniform conditions, providing limited explicit control over clause-level relative prosodic changes. We introduce Speaker-Relative Inline Prosody Control, where each Pitch, Energy, or Speed instruction targets a clause relative to the preceding clause from the same speaker, while Pause uses an absolute duration interval. In codec-based TTS, Speed and Pause affect sequence length, whereas Pitch and Energy rely on residual codebooks. By analyzing Qwen3-TTS RVQ codebooks, we find that Energy concentrates in early residual codebooks, whereas Pitch accumulates across a deeper prefix. We therefore propose Scope- and Codebook-Aware Instruction Conditioning (SCIC), combining a Temporal Instruction Router for frame-level tag activation with Tag-Specific Codebook Weighting over residual codebooks. SCIC improves speaker-relative Pitch and Energy control over standard instruction fine-tuning using text-token tags. We further apply multi-reward GDPO post-training to jointly optimize control and quality, improving control accuracy while preserving CER and speaker similarity. In long-form synthesis, SCIC produces a more distinct paragraph-level expressive hierarchy than speaker-adapted SFT without instructions. Audio demos are available at: https://taoliveaigc.github.io/SCIC/",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Scope- and codebook-aware inline clause-level prosody instructions for speaker-adapted live-streaming TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

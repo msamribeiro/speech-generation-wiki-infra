@@ -1,0 +1,39 @@
+{
+  "id": "2609.33375",
+  "source_ids": {
+    "arxiv": "2609.33375"
+  },
+  "title": "What Survives the Codec Shift: Pooled No-Vocals Residuals for Speech Deepfake Detection",
+  "authors": [
+    "Jiajun Xu",
+    "Menglu Li",
+    "Xiao-Ping Zhang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": "2026-09-27",
+  "arxiv_version": 1,
+  "version_date": "2026-09-27",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.33375",
+  "pdf_url": "https://arxiv.org/pdf/2609.33375.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The transition from vocoder-based to neural-codec speech synthesis makes generalization more difficult for speech deepfake detectors, particularly those relying on speech-oriented representations. It remains unclear which acoustic representations retain discriminative information when the generation mechanism changes. We therefore compare 12 acoustic representations using a shared low-capacity linear classifier to identify effective evidence under codec shift. The analysis shows that hierarchical XLS-R leads on the pooled test set, while pooled no-vocals residual statistics perform best on the unseen-codec condition, revealing complementary behavior across generation conditions. Building on this finding, we propose MN-P, a dual-view detector that integrates an utterance-level pooled no-vocals representation with token-level XLS-R features through adaptive gating. The proposed MN-P reduces EER by 54.2% overall and by 60.9% on the codec-unseen condition relative to the best-performing retrained state-of-the-art system, with consistent gains across different detector backends. These results indicate that pooled no-vocals residual statistics provide effective complementary evidence for cross-generation speech deepfake detection.",
+  "arxiv_comment": "5 pages, 2 figures, 3 tables. Prepared for submission to ICASSP 2027",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Compares acoustic representations for speech deepfake detection under codec-based synthesis; anti-spoofing (corpus precedent reject).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

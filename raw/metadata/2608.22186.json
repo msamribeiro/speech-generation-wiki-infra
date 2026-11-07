@@ -1,0 +1,40 @@
+{
+  "id": "2608.22186",
+  "source_ids": {
+    "arxiv": "2608.22186"
+  },
+  "title": "AudioNoisePrints: Model-free audio watermarking using spatial correlation in flow matching TTS",
+  "authors": [
+    "Timothy Tin-Long",
+    "Jian Zhu",
+    "Aidan Pine",
+    "Mengzhe Geng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-23",
+  "preprint_date": "2026-08-23",
+  "arxiv_version": 1,
+  "version_date": "2026-08-23",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.22186",
+  "pdf_url": "https://arxiv.org/pdf/2608.22186.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present AudioNoisePrints, a training-free watermarking pipeline for flow matching and diffusion TTS models, which requires minimal extra computation during inference and does not require retraining the TTS model or reducing the generation quality. We exploited the fact that there are strong correlations between the initial Gaussian noises and the generated outputs in diffusion and flow matching models, such that a simple cosine correlation between the initial noise and the generated output can be used to perform watermaking. Moreover, we train a lightweight detector on top for more aggressive augmentations. Our method outperforms AudioSeal, a strong baseline for audio watermarking under strong augmentations. We experimented on F5TTS and other TTS and vocoder models, and concluded that they all exhibit similar spatial correlation properties, suggesting our watermarking scheme can be used for more flow-matching TTS models and even vocoders in the future.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-2165 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-2165"
+}

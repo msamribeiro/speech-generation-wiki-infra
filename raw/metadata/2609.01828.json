@@ -1,0 +1,38 @@
+{
+  "id": "2609.01828",
+  "source_ids": {
+    "arxiv": "2609.01828"
+  },
+  "title": "AVERT: Audio-Verified Adjudication for Spoken Dialogue State Tracking",
+  "authors": [
+    "Chunggi Lee",
+    "Hanspeter Pfister"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-03",
+  "preprint_date": "2026-09-01",
+  "arxiv_version": null,
+  "version_date": "2026-09-03",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.01828",
+  "pdf_url": "https://arxiv.org/pdf/2609.01828.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Spoken dialogue state tracking recovers slot-value pairs from speech, where ASR errors concentrate in entity values and persist across turns, making it both a generation and an editing problem. A strong per-turn text editor corrects much of this but, operating on the transcript alone, leaves three recoverable errors: a value predicted inconsistently across turns, an omitted slot, and a value the audio does not support. We present AVERT, which scores each candidate value by combining cross-turn agreement with a trained audio-conditioned verifier and resolves the three error types with three operators, vote, add, and swap, each restricted to the slots where its error is common. On SpokenWOZ, a base speech-LLM reaches 33.04 JGA, a text editor 38.34, and AVERT 40.13, without retraining either. This is in the range of a 1B end-to-end system that consumes the full spoken history (39.32), though AVERT uses two 1B decoders rather than one. The audio verifier contributes a statistically significant gain, and restricting each operator to a selected slot subset matters: removing it lets unrestricted voting overwrite correct categorical values and fall below the editor.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Spoken dialogue state tracking with audio-verified adjudication; DST is outside scope (2511.22503 precedent reject, 2510.09424 was a one-off override).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

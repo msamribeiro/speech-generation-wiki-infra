@@ -1,0 +1,43 @@
+{
+  "id": "2609.16514",
+  "source_ids": {
+    "arxiv": "2609.16514"
+  },
+  "title": "The Evolving Bottleneck in Speech Generation: Interface Co-design and Staged Alignment from CosyVoice to Qwen-Audio-3.0-TTS",
+  "authors": [
+    "Qian Chen",
+    "Xiangang Li",
+    "Xiang Lv",
+    "Han Zhao",
+    "Tianyu Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-15",
+  "preprint_date": "2026-09-15",
+  "arxiv_version": 1,
+  "version_date": "2026-09-15",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.16514",
+  "pdf_url": "https://arxiv.org/pdf/2609.16514.pdf",
+  "pdf_path": "raw/papers/2609.16514.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Speech synthesis systems are commonly narrated as a sequence of larger models, better tokenizers, and broader data. This technical retrospective offers a different account of the CosyVoice lineage, from CosyVoice through CosyVoice 2 and CosyVoice 3 to Qwen-Audio-3.0-TTS: progress came from repeatedly relocating the system's dominant bottleneck. Across the lineage, a stable decomposition separates an autoregressive language model that plans speech from a flow-matching model that renders acoustics. What changes is the contract between them. CosyVoice establishes supervised semantic tokens as a content-aligned interface; CosyVoice 2 makes that interface causally available for streaming and removes the utterance-level speaker embedding from the language model; CosyVoice 3 improves the learnability and coverage of the interface through multitask supervision, scaling, and differentiable reward optimization; and Qwen-Audio-3.0-TTS reduces token rate, conditions its renderer on continuous language-model hidden states instead of token embeddings, and progressively aligns the coupled system. We formalize this history through four interface dimensions---representation, ownership, availability, and gradient reach---and separate within-paper evidence from cross-paper comparison. The resulting synthesis connects discrete autoregressive, continuous non-autoregressive, hybrid, and continuous autoregressive speech-generation paradigms, and yields practical principles for diagnosing and training modular speech generators.",
+  "arxiv_comment": "11 pages, technical retrospective",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Technical retrospective of the CosyVoice to Qwen-Audio-3.0-TTS lineage, analysing interface co-design and staged alignment.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

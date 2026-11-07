@@ -1,0 +1,38 @@
+{
+  "id": "2609.32050",
+  "source_ids": {
+    "arxiv": "2609.32050"
+  },
+  "title": "Tracing Decoder Artifacts for Compact Synthetic Speech Screening",
+  "authors": [
+    "Yi Chen Liu",
+    "Jian Liu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-25",
+  "preprint_date": "2026-09-25",
+  "arxiv_version": 1,
+  "version_date": "2026-09-25",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.32050",
+  "pdf_url": "https://arxiv.org/pdf/2609.32050.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent advances in speech synthesis and voice cloning have increased the need for reliable synthetic-speech detection, yet high-accuracy detectors increasingly rely on large pretrained models that are costly to invoke on every recording. Rather than replacing such detectors, we investigate a compact front-end screen that processes all inputs cheaply and forwards only suspicious recordings for more expensive analysis. To enable lightweight screening without a large learned encoder, we exploit spectral traces introduced by speech-generation operations. We analyze how learned upsampling and inverse short-time Fourier transform synthesis can produce predictable spectral artifacts and measure their presence directly in generated waveforms. Because the strength of these artifacts varies across generators, we combine decoder-guided spectral measurements with complementary descriptors of short-time spectral shape and temporal variation in a compact gradient-boosted tree. Across seven speech generators and two human-speech sources, the proposed screen achieves an equal error rate of 0.021\\% with an estimated model storage of 151 KiB. When used as the first stage of a simulated cascade with a 1.15-billion-parameter detector, it reduces estimated detection energy by 84.4\\% while operating at a 0.050\\% synthetic-speech miss rate, demonstrating the potential of decoder-guided acoustic evidence for low-cost front-end screening.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Compact front-end screen for synthetic speech detection from decoder artifacts; anti-spoofing (corpus precedent reject).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

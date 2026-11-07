@@ -1,0 +1,41 @@
+{
+  "id": "2609.33204",
+  "source_ids": {
+    "arxiv": "2609.33204"
+  },
+  "title": "Turning Speech Language Models into Multilingual Listeners",
+  "authors": [
+    "Tolúlopé Ògúnrèmí",
+    "Dan Jurafsky",
+    "Chris Manning",
+    "Ahmet Üstün",
+    "Martijn Bartelds"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-29",
+  "preprint_date": "2026-09-27",
+  "arxiv_version": null,
+  "version_date": "2026-09-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.33204",
+  "pdf_url": "https://arxiv.org/pdf/2609.33204.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech Language Models (SLMs) that understand spoken language questions support only a few high-resource languages, limiting access to millions of people worldwide. This gap stems from the scarcity of multilingual speech instruction-tuning datasets. We present MULTISPEECHQA, a large-scale, synthetically generated and human-verified dataset comprising 9200 hours of 10.8 million spoken question-answer pairs in 23 typologically diverse languages. Using MULTISPEECHQA, we also introduce MULTISPEECH-BENCH, a multi-task benchmark for evaluating SLM performance on 23 languages. We compare the performance of a cascading system to open-weight and closed SLMs on MULTISPEECH-BENCH and find that the cascading system outperforms open-weight SLMs but not all closed SLMs. We use MULTISPEECHQA to finetune Qwen 2.5-Omni, which improves its performance on our benchmark. Our findings show that high-quality synthetic datasets offer a cheap solution to improving the multilingual capabilities of SLMs.",
+  "arxiv_comment": "Interspeech 2026 Long",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-2584 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-2584"
+}

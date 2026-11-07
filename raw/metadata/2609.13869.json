@@ -1,0 +1,43 @@
+{
+  "id": "2609.13869",
+  "source_ids": {
+    "arxiv": "2609.13869"
+  },
+  "title": "Bangla Sentence Function Classification: Corpus Development, Model Benchmarking, and Interpretability",
+  "authors": [
+    "Swapnil Kundu Argha",
+    "Abdullah Al Shafi",
+    "Rowzatul Zannat",
+    "Shoumik Barman Polok",
+    "Abdul Muntakim",
+    "Jannatul Ferdousi",
+    "M. A. Moyeen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-15",
+  "preprint_date": "2026-09-12",
+  "arxiv_version": null,
+  "version_date": "2026-09-15",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.13869",
+  "pdf_url": "https://arxiv.org/pdf/2609.13869.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Automatic sentence function identification is important for many downstream natural language processing (NLP) applications such as dialogue systems, text-to-speech synthesis, and machine translation. However, benchmark resources for Bangla sentence function classification remain limited. To mitigate this gap, this paper introduces a corpus of 10,000 Bangla sentences, manually annotated into four functional categories, namely declarative, interrogative, imperative, and exclamatory. The corpus is nearly balanced across the four classes, with high annotation reliability reflected by a Fleiss\\' Kappa of 0.82. Furthermore, we evaluate multiple feature representations, including Bag-of-Words (BoW), TF-IDF, and Word2Vec, with several classical machine learning classifiers. In addition, two heterogeneous ensemble models, namely Single-Level Ensemble (SLE) and Double-Level Ensemble (DLE), are utilized to improve classification performance. Experimental results show that TF-IDF consistently outperforms Word2Vec, likely due to its ability to emphasize discriminative lexical cues associated with sentence functions, particularly given the relatively small corpus used to train Word2Vec. The DLE model with TF-IDF features achieves the best performance with accuracy and macro-F1 of 0.95, demonstrating the effectiveness of sparse lexical representations and heterogeneous ensemble learning for this task. Further cross-validation confirms the robustness of the approach, while LIME-based interpretability provides insights into model predictions. The developed corpus and model benchmarking establish strong baselines for Bangla sentence function classification.",
+  "arxiv_comment": "Accepted at 2026 IEEE 5th International Conference on Robotics, Automation, Artificial-Intelligence and Internet-of-Things (RAAICON)",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "Bangla sentence function classification corpus; text NLP, TTS mentioned only as a downstream application.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

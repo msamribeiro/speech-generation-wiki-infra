@@ -1,0 +1,44 @@
+{
+  "id": "2609.36324",
+  "source_ids": {
+    "arxiv": "2609.36324"
+  },
+  "title": "Distill Locally, Schedule Globally: Flow Maps for Few-Step Text-to-Speech",
+  "authors": [
+    "Yentl Collin",
+    "Evan Dufraisse",
+    "Amr Mohamed",
+    "Amine Khelif Khelif",
+    "Dani Bouch",
+    "Guokan Shang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-28",
+  "preprint_date": "2026-09-28",
+  "arxiv_version": 1,
+  "version_date": "2026-09-28",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.36324",
+  "pdf_url": "https://arxiv.org/pdf/2609.36324.pdf",
+  "pdf_path": "raw/papers/2609.36324.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Flow-matching text-to-speech (TTS) models achieve high synthesis quality but require many neural function evaluations (NFEs) to integrate their generative trajectories. Recent few-step flow-map distillation approaches for TTS construct targets from numerically integrated teacher trajectories, creating a trade-off between target accuracy and training cost. We propose Local Flow-Map Distillation (LFMD), which adapts Eulerian Map Distillation to conditional TTS and avoids teacher trajectory integration during target construction. For inference, we derive a sampling schedule (TD-DP) from teacher dynamics and consistency of the learned maps, with a single cost graph supporting multiple NFE budgets without external audio-metric evaluation. Because scheduling offers no flexibility at one NFE, we refine this regime with alignment-aware temporal self-distillation using soft-DTW. Across Seed-TTS and LibriSpeech-PC, LFMD improves low-NFE synthesis over a matched integral-distillation baseline. On Seed-TTS, the refined student reaches 1.80% WER with 1-NFE, compared with 1.76% for its 32-NFE teacher.",
+  "arxiv_comment": "5 pages, Submitted to ICASSP 2027",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Local flow-map distillation for few-step flow-matching TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

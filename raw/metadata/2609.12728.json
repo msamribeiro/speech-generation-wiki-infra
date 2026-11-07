@@ -1,0 +1,61 @@
+{
+  "id": "2609.12728",
+  "source_ids": {
+    "arxiv": "2609.12728"
+  },
+  "title": "X-Pred MeanFlow for Streaming Token-to-Mel Speech Decoding",
+  "authors": [
+    "Hanke Xie",
+    "Xiaming Ren",
+    "Qirui Zhan",
+    "Jingbin Hu",
+    "Wenhao Li",
+    "Haoyu Zhang",
+    "Ruonan You",
+    "Chengyou Wang",
+    "Yunxiang Chen",
+    "Houdun Liu"
+  ],
+  "authors_full": [
+    "Hanke Xie",
+    "Xiaming Ren",
+    "Qirui Zhan",
+    "Jingbin Hu",
+    "Wenhao Li",
+    "Haoyu Zhang",
+    "Ruonan You",
+    "Chengyou Wang",
+    "Yunxiang Chen",
+    "Houdun Liu",
+    "Su Feng",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-11",
+  "preprint_date": "2026-09-11",
+  "arxiv_version": 1,
+  "version_date": "2026-09-11",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.12728",
+  "pdf_url": "https://arxiv.org/pdf/2609.12728.pdf",
+  "pdf_path": "raw/papers/2609.12728.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Recent advancements in discrete token-based speech generation have highlighted the importance of efficient token-to-waveform synthesis in streaming and dialogue scenarios. Flow-matching acoustic decoders achieve high-quality token-to-mel generation, but their iterative sampling requires multiple neural function evaluations, limiting low-latency speech synthesis. MeanFlow reduces the sampling budget by modeling the average velocity over a temporal interval, yet maintaining high acoustic quality under extremely few-step token-to-mel generation remains challenging. To address this challenge, we propose X-Pred MeanFlow, a few-step streaming token-to-mel decoder that reparameterizes MeanFlow with mel-space prediction. The decoder predicts a generalized mel field and analytically derives the corresponding average velocity for sampling, thereby preserving the MeanFlow formulation while providing a direct acoustic prediction target. We further introduce layer-selective block-wise attention to enable continuous chunk-wise generation with bounded context. Experiments show that X-Pred MeanFlow improves few-step token-to-mel synthesis over Direct-$u$ MeanFlow and supports stable streaming generation. Speech samples are available.https://renxiaming.github.io/xpred-meanflow-stream-demo",
+  "arxiv_comment": "Accepted By ISCSLP2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "X-prediction MeanFlow for few-step streaming token-to-mel decoding in token-based speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2609.03622",
+  "source_ids": {
+    "arxiv": "2609.03622"
+  },
+  "title": "Test-time adaptation for speech enhancement with an autoregressive speech prior",
+  "authors": [
+    "Sofiene Kammoun",
+    "Simon Leglaive",
+    "Xavier Alameda-Pineda",
+    "Timo Gerkmann"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-03",
+  "preprint_date": "2026-09-03",
+  "arxiv_version": 1,
+  "version_date": "2026-09-03",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.03622",
+  "pdf_url": "https://arxiv.org/pdf/2609.03622.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Test-time adaptation (TTA) offers a promising direction for improving speech enhancement models under mismatched acoustic conditions, without requiring access to labeled target data. In this work, we propose a single-utterance TTA method that regularizes a pretrained speech enhancement model using an autoregressive prior trained on clean speech latent representations extracted from a neural audio codec. Adaptation is performed by minimizing the Kullback-Leibler divergence between the enhanced speech distribution and the clean speech prior. Experiments across multiple noisy speech datasets show consistent improvements in speech quality, particularly under training-testing noise mismatch conditions. Code and audio examples are available online.",
+  "arxiv_comment": "Submitted to IWAENC 2026",
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Test-time adaptation for speech enhancement using an autoregressive prior on codec latents; speech enhancement, which the corpus consistently rejects.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

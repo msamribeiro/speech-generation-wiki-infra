@@ -1,12 +1,13 @@
 # Project Status
 
-Last updated: 2026-11-01
+Last updated: 2026-11-07
 
 The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
 retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 ingestion is complete
 (158 ingested after two pages moved to Q3 on 2026-11-01); the active corpus priority is the Q3 2026
-frontier and its peer-reviewed-version preflight. The Interspeech 2026 proceedings were fetched from
-the ISCA archive on 2026-11-01 (70 new accepted papers, PDFs downloaded, not yet parsed).
+frontier and its peer-reviewed-version preflight. Q3 fetch coverage is complete (Interspeech 2026
+from ISCA on 2026-11-01; arXiv top-up through 2026-09-30 on 2026-11-07), every accepted Q3 record
+has a PDF, and 204 of 364 are parsed (batches 1-3 of 7).
 
 ---
 
@@ -15,9 +16,9 @@ the ISCA archive on 2026-11-01 (70 new accepted papers, PDFs downloaded, not yet
 1. Preserve the published Q4 snapshot and report as immutable historical artifacts.
 2. Complete the peer-reviewed-version preflight and resolve the two Q2-held ICML/IJCAI records
    into their canonical Q3 dates.
-3. Bootstrap and ingest Q3 2026. The dedup-aware Interspeech 2026 fetch is done (2026-11-01); next,
-   parse the 70 downloaded ISCA PDFs and download and parse the other Q3 accepted records without
-   PDFs, then work the accepted queue (procedure: `docs/ingest-protocol.md`).
+3. Bootstrap and ingest Q3 2026. Fetch, filter, review and PDF download are done (2026-11-07); next,
+   parse batches 4-7 (160 papers, from 2026-09-11, incl. the 70 ISCA PDFs), then work the accepted
+   queue (procedure: `docs/ingest-protocol.md`).
 
 The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;
 the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 2026-11-01). The completed Q4 integration record is archived at
@@ -29,11 +30,11 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 1,851 | 1,069 ingested, 267 accepted, 0 review, 515 rejected (incl. 109 Interspeech 2026 ISCA duplicates) |
+| Metadata records | 2,024 | 1,069 ingested, 386 accepted, 0 review, 569 rejected (incl. 109 Interspeech 2026 ISCA duplicates and 13 arXiv preprints of ISCA records) |
 | Published paper pages | 1,061 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
-| Active accepted + ingested corpus | 1,336 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,155 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 86 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 84 Q3 2026; 70 more Q3 ISCA PDFs downloaded, awaiting parse |
+| Active accepted + ingested corpus | 1,455 | Basis of `scripts/corpus_summary.py` |
+| Parsed active papers | 1,275 | Includes ingested papers and accepted papers ready for ingest |
+| Accepted and parsed, ready to ingest | 206 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 204 Q3 2026; 160 more Q3 PDFs (incl. the 70 ISCA) await parse, plus Q2 `2608.26146` and 19 Q4 records |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
@@ -70,8 +71,8 @@ non-authoritative.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Complete: 134 ingested, 0 accepted (15 moved to Q2 by the date rule; 22 to Q3 as Interspeech 2026 papers) | Not started | Not started | Not started |
-| Q2 2026 | Complete: 158 ingested (2 re-dated to Q3 on 2026-11-01); 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI) | Not started | Not started | Not started |
-| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 265 accepted (154 with PDFs, 84 parsed) | Not started | Not started | Not started |
+| Q2 2026 | Complete: 158 ingested (2 re-dated to Q3 on 2026-11-01); 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI); 1 accepted re-dated into Q2 on 2026-11-07 (`2608.26146` Vagdhenu, PDF, not parsed) | Not started | Not started | Not started |
+| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 364 accepted (all with PDFs, 204 parsed) | Not started | Not started | Not started |
 
 Quarter counts above are by canonical `published_date` as of 2026-11-01. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
@@ -296,6 +297,7 @@ available ACL Anthology 2026 material.
 |---|---:|
 | Ingested | 160 |
 | Accepted, held | 2 |
+| Accepted, re-dated into Q2 (2026-11-07) | 1 |
 | Awaiting human triage | 0 |
 | Rejected | 62 |
 
@@ -312,9 +314,9 @@ fetch-coverage gaps; Interspeech 2026 was fetched from ISCA with dedup on 2026-1
 
 ## Repository and setup state
 
-- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-10-26
-  ingest wrap-up (see `git log`). The Q4 integration stream works on the content repository's
-  `work/integrate` branch (`speech-generation-wiki-content-integrate` worktree), not yet merged.
+- Infrastructure repository: `main` and `work/ingest` in sync at the 2026-11-07 ingest wrap-up
+  (see `git log`). The content repository was not touched on 2026-11-07 (no pages written); its
+  Q4 integration stream was merged into `main` on 2026-11-01.
 - Ingest sessions write to the content-ingest worktree:
 
 ```bash
