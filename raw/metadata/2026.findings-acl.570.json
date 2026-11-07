@@ -26,7 +26,7 @@
   "ingested_date": null,
   "url": "https://aclanthology.org/2026.findings-acl.570",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.570.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2026.findings-acl.570.pdf",
   "pdf_source": "anthology",
   "abstract": "We present VoiceStar, the first zero-shot TTS model that achieves both output duration control and extrapolation. VoiceStar is an autoregressive encoder-decoder neural codec language model, that leverages a novel Progress-Monitoring Rotary Position Embedding (PM-RoPE) and is trained with Continuation-Prompt Mixed (CPM) training. PM-RoPE enables the model to better align text and speech tokens, indicates the target duration for the generated speech, and also allows the model to generate speech waveforms much longer in duration than those seen during training. CPM training also helps to mitigate the training/inference mismatch, and significantly improves the quality of the generated speech in terms of speaker similarity and intelligibility. VoiceStar outperforms or is on par with current state-of-the-art models on short-form benchmarks such as LibriSpeech and Seed-TTS, and significantly outperforms these models on long-form/extrapolation benchmarks (20-50s) in terms of intelligibility and naturalness. Code and model: https://github.com/jasonppy/VoiceStar. Audio samples: https://jasonppy.github.io/VoiceStar_web.",
   "task": [

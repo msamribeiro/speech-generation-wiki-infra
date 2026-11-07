@@ -26,7 +26,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2610.00658",
   "pdf_url": "https://arxiv.org/pdf/2610.00658.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2610.00658.pdf",
   "pdf_source": "arxiv",
   "abstract": "Long-form text-to-speech must retain requested words over extended generations, yet sentence-level training and evaluation can hide omissions and early stops. We introduce Balalaika-Longform, an open Russian corpus of 189 hours in continuous units of 30 seconds to 15 minutes. Long units and matched short windows support fine-tuning comparisons on the same source recordings, and the accompanying evaluation retains every synthesis attempt. We fine-tune CosyVoice3, Qwen3-TTS, VoxCPM2 and F5-TTS on either view and test continuous synthesis on 50 text-voice pairs with voices unseen in fine-tuning, at about 75, 300 and 1,200 words. At 1,200 words, CosyVoice3 WER falls from 99.9% after short-window fine-tuning to 47.3% with long targets, and to 16.6% with punctuated, format-matched transcripts; paired intervals favor long targets for Qwen3-TTS and VoxCPM2, and by a small margin for F5-TTS, whose absolute WER stays above 90%. The results isolate the effect of training sequence length under a fixed continuous-generation protocol.",
   "arxiv_comment": "Submitted to IEEE ICASSP 2027. Dataset: https://huggingface.co/datasets/lab260/Balalaika-longform ; code: https://github.com/lab260ru/balalaika-longform",

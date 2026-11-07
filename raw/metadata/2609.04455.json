@@ -26,7 +26,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.04455",
   "pdf_url": "https://arxiv.org/pdf/2609.04455.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.04455.pdf",
   "pdf_source": "arxiv",
   "abstract": "The loss of speech limits communication for individuals with paralysis. Direct neural-to-speech synthesis is challenging due to the limited availability of neural data for training speech brain-computer interfaces. Most existing systems rely on cascaded neural-to-text-to-speech pipelines, which increase inference latency and propagate errors across stages. We present Brain2Speech-Net, a single-stage neural-to-speech generation framework without intermediate text decoding. We use a differentiable phoneme bottleneck and a deep-HMM alignment mechanism to map long neural recordings into the latent space of a text-to-speech (TTS) model, enabling high-quality speech synthesis. Brain2Speech-Net is the only system in our comparison that produces intelligible speech while generating faster than real time.",
   "arxiv_comment": null,

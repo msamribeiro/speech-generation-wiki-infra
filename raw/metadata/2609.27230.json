@@ -23,7 +23,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.27230",
   "pdf_url": "https://arxiv.org/pdf/2609.27230.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.27230.pdf",
   "pdf_source": "arxiv",
   "abstract": "Voice conversion (VC) systems fall into two families: non-parametric embedding-space methods, which need no trained model but degrade on short target utterances, and spectrogram-based neural architectures, which achieve strong quality via multi-module pipelines with tens of millions of parameters. We propose kNN-FM-VC, a single conditional flow-matching network that learns to approximate the kNN-VC mapping between WavLM embedding distributions of source and target speakers, replacing explicit pointwise kNN matching with a neural regressor trained on kNN-generated pairs. The model is conditioned on the target speaker via cross-attention and FiLM, and trained under three Gaussian conditional paths (Schrödinger bridge, straight line, and constant-variance Gaussian tube), enabling few-step sampling. Unlike Phoneme Hallucinator, which uses an upsampling stage followed by kNN matching, our 13M-parameter model performs conversion with a single learned network and supports one-step inference. On LibriSpeech, the one-step Gaussian Bridge achieves lower WER and higher estimated speech quality than FreeVC and Phoneme Hallucinator. Relative to kNN and kDOT, it substantially reduces WER.",
   "arxiv_comment": "5 pages, 1 figure, 2 tables",

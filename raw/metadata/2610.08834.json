@@ -52,7 +52,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2610.08834",
   "pdf_url": "https://arxiv.org/pdf/2610.08834.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2610.08834.pdf",
   "pdf_source": "arxiv",
   "abstract": "We present JoyAI-Voice~2.0, an end-to-end anthropomorphic speech generation model built upon a fully continuous, dual-encoder architecture. Raw speech is encoded into continuous latents and partitioned into patches. Each patch is decomposed by a semantic-acoustic dual encoder into a semantically purified representation and an acoustic representation, which are fused and jointly fed to a causal autoregressive Transformer for planning. The Transformer predicts the conditioning for the next patch, and a local diffusion Transformer renders its full latents for 48\\,kHz synthesis. The model is trained with a joint flow-matching and stop-prediction objective, followed by supervised fine-tuning and reinforcement learning with DiffusionNFT to improve model performance. It achieves the lowest average word error rate of 2.51\\% on Seed-TTS, a 14.9\\% relative reduction over the strongest baseline, and state-of-the-art attribute fidelity on InstructTTSEval in both Chinese and English, leading on 5 of 10 perceptual dimensions with the highest overall score of 0.893 on MDVD-Eval.",
   "arxiv_comment": null,

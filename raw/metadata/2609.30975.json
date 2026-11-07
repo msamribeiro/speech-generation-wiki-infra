@@ -24,7 +24,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.30975",
   "pdf_url": "https://arxiv.org/pdf/2609.30975.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.30975.pdf",
   "pdf_source": "arxiv",
   "abstract": "Speech content representations are central to voice conversion, speech-to-speech translation, and multimodal language models, yet they are rarely compared under a common generative framework that directly measures what each representation contains. We address this by training a generative model conditioned solely on each representation and evaluating the generated audio along the content, speaker identity, and prosody axes. Across SSL features, supervised tokens, posteriorgrams, and neural audio codecs, we find two distinct regimes: representations that nearly reconstruct the original audio, and representations that effectively disentangle speaker identity. These results show that disentanglement depends not on supervision alone, but on the interaction between the training objective and the representation's information capacity: supervised representations only disentangle speaker identity when their capacity is sufficiently constrained.",
   "arxiv_comment": "5 pages, 1 figure",

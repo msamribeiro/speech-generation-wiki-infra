@@ -22,7 +22,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2610.00662",
   "pdf_url": "https://arxiv.org/pdf/2610.00662.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2610.00662.pdf",
   "pdf_source": "arxiv",
   "abstract": "Deep neural network-based Voice Conversion (VC) and Text-to-Speech (TTS) models have rapidly advanced, enabling realistic voice cloning with minimal input data. Such capabilities raise serious concerns over unauthorized cloning of speaker identities and the associated privacy and security risks. Current imperceptible adversarial protection methods rely on quality control losses that are highly sensitive to hyperparameter tuning and computationally expensive due to lengthy optimization. To address these limitations, we propose a fast protection method that generates perceptually constrained perturbations in the frequency domain under a psychoacoustic masking-based constraint. Our approach strictly enforces perceptibility bounds during adversarial training, eliminating the need for iterative quality balancing and significantly reducing computational cost. Experiments on multiple state-of-the-art VC and TTS models show that STM achieves competitive or superior protection performance with substantially better perceptual quality and up to $45.3\\times$ speedup over existing white-box baselines. These results demonstrate the effectiveness of frequency-domain perturbations with perceptual constraints as a practical paradigm for protecting against voice cloning.",
   "arxiv_comment": "Accepted at IEEE SLT 2026",

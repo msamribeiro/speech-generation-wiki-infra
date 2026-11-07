@@ -24,7 +24,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.07200",
   "pdf_url": "https://arxiv.org/pdf/2609.07200.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.07200.pdf",
   "pdf_source": "arxiv",
   "abstract": "Realizing full-duplex spoken dialogue requires large amounts of two-channel, one-speaker-per-channel conversational speech data. Although conversational text-to-speech (TTS) engines have been developed, they are not necessarily robust to two-party simultaneous phenomena such as backchannels, interruptions, and overlaps that occur while the interlocutor is speaking. In this work, aiming at conversational speech synthesis that reproduces human-like overlap, we propose KABURI-TTS. KABURI-TTS takes a per-speaker phoneme raster as input and renders the speech of the two speakers on separate channels, conditioned on the per-frame phonemes and the voice activity derived from them. Because the phoneme raster is supplied by a separate module, the proposed method enables controllable generation of one-speaker-per-channel, two-party spoken dialogue. A user evaluation shows that, compared with strong baselines, the proposed method attains higher naturalness at both the utterance and the interaction level. Furthermore, an analysis of voice activity confirms that the proposed method produces more overlap and more frequent turn-taking.",
   "arxiv_comment": "Accepted at APSIPA ASC 2026",

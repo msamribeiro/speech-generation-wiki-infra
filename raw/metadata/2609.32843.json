@@ -24,7 +24,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.32843",
   "pdf_url": "https://arxiv.org/pdf/2609.32843.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.32843.pdf",
   "pdf_source": "arxiv",
   "abstract": "Environmental noise obscures the content cues needed for whisper-to-normal conversion. We propose WhisperVC-AV, which restores acoustic content features while leaving the original WhisperVC conversion module unchanged. Its context-guided restoration module combines temporal acoustic context with synchronized lip features through attention and gated residual correction. Experiments on AISHELL6-Whisper show lower character error rates (CERs) than WhisperVC across three ASR systems, on clean speech and under all six signal-to-noise ratio (SNR) conditions with MUSAN noise. The largest gains occur at 0 dB SNR, where Qwen3-ASR CER falls from 36.29% to 28.88%. WhisperVC-AV also improves predicted speech quality while maintaining speaker similarity. The CER gains extend to unseen background noise without retraining, while visual controls support the use of utterance-specific lip cues. Audio examples are available on our demo page.",
   "arxiv_comment": "5 pages, 2 figures. Submitted to ICASSP 2027. Audio demos: https://larry-ziyue-yin.github.io/demo-whispervc-av/",

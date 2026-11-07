@@ -26,7 +26,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.36951",
   "pdf_url": "https://arxiv.org/pdf/2609.36951.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.36951.pdf",
   "pdf_source": "arxiv",
   "abstract": "Dynamic-frame-rate neural speech codecs replace a uniform frame grid with variable-duration tokens, making boundary placement part of the representation itself. Yet it is unclear what these boundaries encode and whether interpretable boundaries are also useful for neural speech reconstruction. This work combines boundary interpretation and controlled reconstruction analysis by comparing predicted boundaries with linguistic and acoustic references. We find that boundary meaning depends on the underlying speech representation. For the ASR-oriented SenseVoice and Whisper encoders, shallow layers emphasize phonetic, voicing, and acoustic transitions, whereas deeper layers shift toward syllable and subword structure. In a comparison of six dynamic-frame-rate algorithms and a uniform (fixed-frame-rate) baseline, higher-level linguistic alignment is associated with lower pooling distortion and better reconstruction from semantic tokens. Frame-rate-matched boundary tests make the distinction concrete: a syllable-derived partition improves over both Uniform and Similarity, while a phoneme-derived partition does not improve over Uniform. We infer that for semantically rich speech representations, useful codec boundaries are best understood as allocation decisions organized around the syllable scale.",
   "arxiv_comment": "5pages, 3 figures",

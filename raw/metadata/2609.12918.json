@@ -31,7 +31,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.12918",
   "pdf_url": "https://arxiv.org/pdf/2609.12918.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.12918.pdf",
   "pdf_source": "arxiv",
   "abstract": "A vocoder is a pivotal component of modern text-to-speech (TTS) systems. Despite the significant progress of neural network-based vocoders, accurate phase reconstruction remains the main challenge limiting both audio quality and modeling efficiency. We introduce PhaseGAN, a lightweight vocoder that addresses this limitation through a \"mel $\\rightarrow$ Amplitude $\\rightarrow$ Phase\" reconstruction pipeline. By reconstructing amplitude and phase spectra via distinct methodologies, the proposed PhaseGAN outperforms state-of-the-art baselines while utilizing fewer model parameters and reduced computational requirements. The compact version generates high-fidelity audio with approximately 500K parameters and 1 GMAC computational load, making it highly suitable for real-time applications on edge devices. In addition, our approach exhibits exceptional musical audio synthesis capabilities despite no training on musical data, illustrating unprecedented cross-domain generalization. See https://github.com/phasegan/phasegan-audio-demo for demos of our work.",
   "arxiv_comment": "15 pages, 1 figure",

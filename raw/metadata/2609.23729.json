@@ -29,7 +29,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.23729",
   "pdf_url": "https://arxiv.org/pdf/2609.23729.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.23729.pdf",
   "pdf_source": "arxiv",
   "abstract": "The rapid maturation of zero-shot Text-to-Speech (TTS) models has turned high-quality voice cloning into a widely available capability, raising acute concerns over unauthorised replication, fine-tuning and resale of proprietary speech models. Yet ownership verification for TTS remains largely open: speech is a continuous waveform whose perturbations are easily destroyed by routine signal processing, and the human auditory system imposes a much tighter perceptual budget than vision. We present \\textbf{TTS-Guard}, a black-box ownership verification framework for TTS models built on \\emph{adversarial speaker-pair fingerprints}. TTS-Guard(i) selects key speaker pairs in a \\emph{dual} embedding space for architecture-agnostic stealth;(ii) optimises a perturbation through an \\emph{adaptive curriculum} of shadow models covering fine-tuning, pruning, quantisation and distillation; and (iii) aggregates black-box queries into a calibrated \\emph{Verification Confidence Score}. On five mainstream TTS systems, TTS-Guard reaches an average Fingerprint Success Rate of $96.4\\%$ at a False Positive Rate of $5.8\\%$, while preserving intelligibility and naturalness. The fingerprint remains effective against ten audio attacks, six model modifications, and two state-of-the-art adversarial purifiers.",
   "arxiv_comment": null,

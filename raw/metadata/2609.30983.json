@@ -26,7 +26,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.30983",
   "pdf_url": "https://arxiv.org/pdf/2609.30983.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.30983.pdf",
   "pdf_source": "arxiv",
   "abstract": "Recent audio deepfake detectors separate bona fide speech from synthetic speech, yet it remains unclear which stage of a text-to-speech system supplies the detection evidence. We address this with controlled resynthesis and detector adaptation in an F5-TTS-BigVGAN pipeline. Since vocoder reconstruction of a real mel can itself be separable from the source utterance, we fix the vocoder and trace the larger change in detector separation to acoustic generation. Adversarially fine-tuning the acoustic model, with no detector in its objective, raises EER against fixed detectors at comparable quality. However, adapting a detector only on the tuned model's VCTK outputs lowers its LibriSpeech EER from 19.42% to 7.46% and improves detection of unseen base F5-TTS outputs. These results suggest that acoustic-model updates can reduce the detection evidence available to fixed detectors, while detector adaptation keeps the updated outputs detectable in this pipeline.",
   "arxiv_comment": "Submitted to ICASSP 2027",

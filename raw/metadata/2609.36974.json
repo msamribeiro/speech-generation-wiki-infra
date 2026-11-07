@@ -25,7 +25,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.36974",
   "pdf_url": "https://arxiv.org/pdf/2609.36974.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.36974.pdf",
   "pdf_source": "arxiv",
   "abstract": "Text-to-speech models loop, truncate and lose count on text that repeats a phrase many times. We show that repetition itself is what breaks them, not the length that comes with it. Every repeated sentence in our test set is paired with a control of matched sentence and word count in which no word ever repeats back-to-back. Six models from three architectures render the controls almost perfectly and fail the repeated twins: 94.3% against 18.2% exactly right at k >= 6. The gap survives greedy decoding, repetition-penalty sweeps, four independent speech recognisers and 420 analysis specifications without once reversing sign; a held-out fourth architecture lands within a point of its predicted gap, and one of two non-autoregressive baselines shows the same failure. Varying the period of the text shows the failure grows smoothly with periodicity, half of it surviving when no word is adjacent to itself.",
   "arxiv_comment": "Submitted to IEEE ICASSP 2027. Code and data: https://github.com/lab260ru/tts-counting-failure",

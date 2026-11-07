@@ -24,7 +24,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2610.00735",
   "pdf_url": "https://arxiv.org/pdf/2610.00735.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2610.00735.pdf",
   "pdf_source": "arxiv",
   "abstract": "Modern neural text-to-speech (TTS) systems achieve remarkable acoustic fidelity but act as black boxes, offering little interpretable control over the vocal tract filter. We propose a controllable source-filter TTS architecture grounded in articulatory kinematics. An Acoustic-to-Articulatory Inversion (AAI) model, enhanced by large-scale pretrained representations, generates kinematic pseudo-trajectories for a large TTS corpus. These trajectories condition the filter response, while predicted pitch and energy contours parameterise the glottal source. Source and filter are predicted independently, and the source is refined by an Optimal Transport Conditional Flow Matching (OT-CFM) module before recombination into the final spectrogram. Our model achieves intelligibility and naturalness competitive with similarly sized baselines, with only a modest spectral fidelity cost in exchange for explicit control. Evaluations reveal clear source-filter disentanglement, enabling stable prosodic scaling and cross-speaker source/filter recombination, where F0 remains tied to the source speaker while vocal-tract characteristics follow the filter speaker. Finally, direct manipulation of articulatory trajectories enables fine-grained control, such as accent modification, offering a new direction for interpretable speech synthesis. Audio samples: https://coding-phoenix-12.github.io/ArticulatorySFTTS/",
   "arxiv_comment": null,

@@ -44,7 +44,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.12728",
   "pdf_url": "https://arxiv.org/pdf/2609.12728.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.12728.pdf",
   "pdf_source": "arxiv",
   "abstract": "Recent advancements in discrete token-based speech generation have highlighted the importance of efficient token-to-waveform synthesis in streaming and dialogue scenarios. Flow-matching acoustic decoders achieve high-quality token-to-mel generation, but their iterative sampling requires multiple neural function evaluations, limiting low-latency speech synthesis. MeanFlow reduces the sampling budget by modeling the average velocity over a temporal interval, yet maintaining high acoustic quality under extremely few-step token-to-mel generation remains challenging. To address this challenge, we propose X-Pred MeanFlow, a few-step streaming token-to-mel decoder that reparameterizes MeanFlow with mel-space prediction. The decoder predicts a generalized mel field and analytically derives the corresponding average velocity for sampling, thereby preserving the MeanFlow formulation while providing a direct acoustic prediction target. We further introduce layer-selective block-wise attention to enable continuous chunk-wise generation with bounded context. Experiments show that X-Pred MeanFlow improves few-step token-to-mel synthesis over Direct-$u$ MeanFlow and supports stable streaming generation. Speech samples are available.https://renxiaming.github.io/xpred-meanflow-stream-demo",
   "arxiv_comment": "Accepted By ISCSLP2026",

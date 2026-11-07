@@ -28,7 +28,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.36287",
   "pdf_url": "https://arxiv.org/pdf/2609.36287.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.36287.pdf",
   "pdf_source": "arxiv",
   "abstract": "Instruction-based text-to-speech (ITTS) systems enable natural-language control of expressive speech generation, but often offer limited transparency and fine-grained control over individual text units. Character-level controllable TTS systems provide explicit acoustic control, yet typically rely on user-specified acoustic attributes. To bridge this gap, we propose InstCharVoice, a unified framework that grounds natural-language instructions in character-level acoustic control. We first construct grounded instruction annotations on the WordVoice-5A-zh corpus using Qwen3-Omni. With this supervision, we train an autoregressive model to identify instruction-relevant characters and predict their acoustic attributes before generating the corresponding speech tokens. Keyword prediction and grounding-aware loss weighting help the model focus on instruction-relevant characters and attributes. Experiments show improved instruction following and keyword-level acoustic control over representative ITTS systems, with competitive speech naturalness and explicit character-level controllability. Audio samples are available at https://xxh333.github.io/instcharvoice-demo/.",
   "arxiv_comment": "5 pages, 3 figures, 5 tables; Submitted to ICASSP 2027",

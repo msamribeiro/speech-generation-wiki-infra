@@ -31,7 +31,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.14740",
   "pdf_url": "https://arxiv.org/pdf/2609.14740.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.14740.pdf",
   "pdf_source": "arxiv",
   "abstract": "The ISCSLP 2026 CoT-TTS Challenge requires TTS systems to generate Chain-of-Thought (CoT) reasoning from dialogue history before synthesizing contextually appropriate speech. While the official baseline establishes a unified architecture, it remains constrained by limited contextual comprehension, weak instruction fidelity, and suboptimal audio quality. We present a systematic optimization pipeline to address these limitations. First, we develop a data process framework that cleans raw data via FullSubNet denoising, Qwen3-ASR re-transcription, and Qwen3.5-35B-A3B-based history-CoT consistency analysis, while distilling 545K high-fidelity instruction samples using Qwen3-TTS and Seed-VC under strict quality filtration. Second, we propose a Context-Aware Direct Preference Optimization (CA-DPO) method. By employing a cascaded filtering strategy, ASR prescreening, LLM tournament ranking, and speaker similarity verification, we obtain high-confidence preference pairs that significantly enhance holistic ``Context$\\rightarrow$CoT$\\rightarrow$Speech'' consistency during DPO training. Third, we establish an evaluation method featuring a 500-sample test set and an LLM-as-Judge framework to independently assess reasoning and execution fidelity. Experiments demonstrate that our system significantly outperforms the baseline across all objective and subjective metrics, validating our data governance and alignment strategies.",
   "arxiv_comment": "accepted by ISCSLP 2026, the ISCSLP 2026 CoT-TTS Challenge",

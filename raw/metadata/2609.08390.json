@@ -24,7 +24,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.08390",
   "pdf_url": "https://arxiv.org/pdf/2609.08390.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.08390.pdf",
   "pdf_source": "arxiv",
   "abstract": "Full-duplex spoken dialogue systems enable simultaneous listening and speaking, but their audio-only perception often fails under background noise and overlapping speech, leading to incoherent responses. Recent audio-visual dialogue approaches show that incorporating visual cues such as lip movements improve robustness under audio corruption. However, existing approaches often adapt the large speech dialogue model itself to process visual input, requiring costly multimodal training. We propose AV-STE, a modular streaming audio-visual front-end that restores corrupted semantic speech tokens from noisy audio and lip video before they reach the speech LLM. The downstream dialogue model remains entirely frozen, preserving its pretrained conversational capabilities. When integrated with frozen Moshi, AV-STE improves average GPT-4o-judged response coherence from 1.42 to 1.91 under same-dataset speaker interference while largely preserving turn-taking behavior. Gains also transfer to out-of-domain Seamless Interaction.",
   "arxiv_comment": "Accepted to EMNLP 2026",

@@ -24,7 +24,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.12432",
   "pdf_url": "https://arxiv.org/pdf/2609.12432.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.12432.pdf",
   "pdf_source": "arxiv",
   "abstract": "Large speech corpora support research, but recordings can expose speaker identity because voice remains a recognizable biometric. Meanwhile, speech data derived from media can be difficult to redistribute reliably. We present \\emph{VoxTubeS}, a family of speaker-anonymized synthetic speech corpora designed for redistribution, comprising three method families and seven variants derived from the VoxTube corpus, which is distributed under CC BY-NC-SA 4.0, using 1.29M quality-filtered English utterances from 1,511 speakers. The synthesis methods span voice conversion, latent-space anonymization, and controllable text-to-speech. We evaluate VoxTubeS using utterance-level unlinkability, conversation-level linkability and singling-out, downstream speaker verification, linguistic consistency, speaker diversity, and fairness metrics for gender and accents. Our comprehensive analysis exposes a complex trade-off: stronger identity suppression often reduces linkability but sacrifices utility and population diversity, whereas speaker consistency training improves both utterance- and conversation-level privacy while retaining comparable utility and a broader speaker space. Fairness varies independently of aggregate performance. No method dominates; VoxTubeS therefore treats corpus construction as a choice among operating points that balances privacy, utility, diversity, fairness, and responsible redistribution under the source license.",
   "arxiv_comment": null,

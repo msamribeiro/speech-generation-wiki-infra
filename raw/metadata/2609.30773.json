@@ -25,7 +25,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.30773",
   "pdf_url": "https://arxiv.org/pdf/2609.30773.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.30773.pdf",
   "pdf_source": "arxiv",
   "abstract": "Tandem speech-to-speech architectures couple a responsive speech frontend with an asynchronous text backend. In KAME, a large language model (LLM) serves as the backend, supplying candidate responses as guidance to the speech frontend while the user is still speaking. Ordinary conversation recordings capture the eventual response but not the guidance the backend would supply during the user's utterance. Generating the missing guidance with a simulator LLM adds substantial data-preparation overhead when training on real conversations. We propose randomized intermediate guidance, which derives guidance directly from the conversation corpus rather than simulating backend LLM behavior. During training, target responses provide informative guidance, while randomly sampled responses provide potentially irrelevant updates during the utterance. This combination aims to teach the frontend to use backend information selectively. On synthetic dialogues, KAME trained with this recipe achieves response quality comparable to that of the LLM-generated and similarity-based baselines. Training on 3.8k hours of real conversations improves smooth turn-taking and audio-judge naturalness over synthetic-data KAME while retaining a response-quality advantage over Moshi. These results show that randomized guidance offers a practical route to combining the response-quality benefits of tandem models with natural conversational behavior learned from real speech.",
   "arxiv_comment": "Submitted to ICASSP 2027. 5 pages, 1 figure, 2 tables",
