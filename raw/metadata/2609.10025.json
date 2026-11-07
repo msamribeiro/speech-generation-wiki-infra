@@ -1,0 +1,38 @@
+{
+  "id": "2609.10025",
+  "source_ids": {
+    "arxiv": "2609.10025"
+  },
+  "title": "SCNet: Enhancing GAN-based Speech Generation with Subband Condition Network and Magnitude-aware Phase Loss",
+  "authors": [
+    "Nan Xu",
+    "Mingxue Yang"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-09",
+  "preprint_date": "2026-09-09",
+  "arxiv_version": 1,
+  "version_date": "2026-09-09",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.10025",
+  "pdf_url": "https://arxiv.org/pdf/2609.10025.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent speech generation has been predominantly driven by GAN-based networks aimed at high-quality waveform synthesis from mel-spectrograms. However, these methods often operate as black-box models, leading to the loss of inherent spectral information. In this work, we propose SCNet, a GAN-based vocoder augmented with a Subband Condition Network to address this issue. Specifically, SCNet leverages a subband signal predicted by a lightweight condition network as prior knowledge. This subband signal is then transformed via STFT to obtain Fourier coefficients, which are integrated into the backbone for the enhanced reconstruction. Additionally, to mitigate the phase wrapping, we introduce a magnitude-aware phase loss that computes instantaneous phase errors weighted by the corresponding magnitude, emphasizing regions with higher energy. Experimental results demonstrate that SCNet achieves superior performance in both objective and subjective evaluations for high-quality speech generation.",
+  "arxiv_comment": "Accepted by Interspeech 2026",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-0843 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-0843"
+}

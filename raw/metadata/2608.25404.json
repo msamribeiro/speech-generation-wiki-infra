@@ -1,0 +1,43 @@
+{
+  "id": "2608.25404",
+  "source_ids": {
+    "arxiv": "2608.25404"
+  },
+  "title": "CSAVocoder: A Causal Spatial Audio Vocoder Towards Real-Time Spatial Audio Generation",
+  "authors": [
+    "Zhiyuan Zhu",
+    "Han Wang",
+    "Wenxiang Guo",
+    "Yu Zhang",
+    "Changhao Pan",
+    "Rui Yang",
+    "Zhou Zhao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-26",
+  "preprint_date": "2026-08-26",
+  "arxiv_version": 1,
+  "version_date": "2026-08-26",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.25404",
+  "pdf_url": "https://arxiv.org/pdf/2608.25404.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Spatial audio vocoders are able to convert mel-spectrograms produced by generative models into spatial audio waveforms. Most neural vocoders are designed for monaural audio, and direct extensions to spatial audio can degrade spatial quality by ignoring inter-channel cues. We present CSAVocoder, a causal GAN-based spatial audio vocoder that jointly optimizes waveform fidelity and spatial rendering. Our framework introduces a Spatial Adaptor that fuses multi-channel mel-spectrograms with dynamic source-listener pose information, together with a spatial consistency discriminator that supervises inter-channel cues. To meet real-time requirements, we design a strictly causal, stateful generator that supports efficient streaming inference with constant memory overhead. Experiments on large-scale spatial audio datasets show that CSAVocoder improves spatial fidelity at competitive audio quality and real-time performance.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.3,
+  "relevance_note": "Causal GAN vocoder for multi-channel spatial audio generation evaluated on general spatial audio datasets; no speech-specific synthesis evaluation, matching earlier spatial-audio rejects.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

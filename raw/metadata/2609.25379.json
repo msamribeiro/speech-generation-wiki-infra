@@ -1,0 +1,42 @@
+{
+  "id": "2609.25379",
+  "source_ids": {
+    "arxiv": "2609.25379"
+  },
+  "title": "Narrowband Voice Communication Using Streaming Neural Compression",
+  "authors": [
+    "Dahong Luo",
+    "Anannya Trehan",
+    "Aritrik Ghosh",
+    "Nirupam Roy"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-21",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": 1,
+  "version_date": "2026-09-21",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.25379",
+  "pdf_url": "https://arxiv.org/pdf/2609.25379.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Low-bitrate speech communication on resource-constrained edge devices remains challenging due to stringent computational, memory, and bandwidth constraints. We present TinyCall, a lightweight neural audio codec designed for real-time speech communication on low-power platforms such as the ESP32 microcontroller and Raspberry Pi. The proposed system targets emergency communication and other bandwidth-limited scenarios while preserving speech intelligibility, speaker identity, and vocal expressiveness. To enable efficient deployment, we propose a minimal neural audio codec architecture together with a framework for converting a causally trained codec into a truly streamable codec through pseudo-lookahead decoding and decoder-input caching. We further replace conventional residual vector quantization (RVQ) with Residual Finite Scalar Quantization (RFSQ) to reduce inference complexity on edge processors and employ a progressive three-stage training strategy for stable optimization under latent quantization. An MFCC-based perceptual loss encourages preservation of speaker characteristics, including harmonic structure and vocal timbre. Experimental results demonstrate real-time operation on a Raspberry Pi 3 while achieving intelligible speech reconstruction at bitrates as low as 2.3 kbps. The proposed approach demonstrates that practical neural speech communication is feasible on highly resource-constrained edge devices.",
+  "arxiv_comment": null,
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Lightweight streaming neural speech codec for narrowband voice communication on microcontroller-class devices.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

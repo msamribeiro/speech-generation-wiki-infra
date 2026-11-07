@@ -1,0 +1,41 @@
+{
+  "id": "2609.27372",
+  "source_ids": {
+    "arxiv": "2609.27372"
+  },
+  "title": "Neither Silence nor Overlap Is Failure: Intent-Conditioned Evaluation of Turn-Taking in Full-Duplex Spoken Dialogue Models",
+  "authors": [
+    "Kian Shamsaie",
+    "Iman Modarressi"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-23",
+  "preprint_date": "2026-09-23",
+  "arxiv_version": 1,
+  "version_date": "2026-09-23",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.27372",
+  "pdf_url": "https://arxiv.org/pdf/2609.27372.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Benchmarks for full-duplex spoken dialogue models score turn-taking with binary fixed-window rules that reward immediate response or silence by completeness of the prior turn. We argue that the appropriateness of a response offset, whether delayed silence or anticipatory overlap, is conditional on the speaker's latent intent, identifiable only from that speaker's behavior. We introduce TACT, a benchmark of 9,728 episodes and 73.2 hours from five dyadic corpora; each episode carries dialogue history, a per-speaker memory profile, and an annotator-derived posterior over six intent classes. Scoring replaces binary windows with a strictly proper threshold-weighted continuous ranked probability score whose weights are intent-conditioned timing kernels fitted to human floor-transfer-offset distributions, proving boundedness, consistency, and binary reduction. Across eleven systems the best model reaches 0.47 against a human topline of 0.86, is nearly invariant to speaker profiles, and TACT agrees with human judgments at Spearman 0.81 versus 0.46 for binary metrics.",
+  "arxiv_comment": "Accepted to IEEE SLT 2026",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "Intent-conditioned turn-taking benchmark (TACT) for full-duplex spoken dialogue models.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2609.21683",
+  "source_ids": {
+    "arxiv": "2609.21683"
+  },
+  "title": "Listen Before You Speak: Response Planning from Listener Facial Reactions for Conversational Speech Generation",
+  "authors": [
+    "Yunji Chu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-18",
+  "preprint_date": "2026-09-18",
+  "arxiv_version": 1,
+  "version_date": "2026-09-18",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.21683",
+  "pdf_url": "https://arxiv.org/pdf/2609.21683.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Conversational speech depends on dialogue context and the listener's immediately preceding behavior. We propose ReACT-TTS, a two-stage framework that uses a one-second pre-response listener facial sequence to plan the next utterance's emotion and prosody before speech realization. On a strict dyadic MELD protocol, Temporal conditioning yields higher mean macro-F1 and VAD concordance than Text-only across ten seeds, while accuracy remains essentially unchanged. Ablations show that temporal modeling performs best among the visual variants and that an explicit early-to-late difference is unnecessary; correct listener reactions also outperform cyclic mismatches on average. In a contextual-appropriateness study with 20 speech researchers, 76% of judgments prefer Temporal, 9% Text-only, and 15% report no preference. We further connect the predicted response style to a Grad-TTS backbone for end-to-end speech realization. Overall, the results support pre-response listener dynamics as complementary cues for conversational response planning. The source code is available at https://github.com/CYJ1/ReACT-TTS_public.",
+  "arxiv_comment": "15 pages, 2 figures, 2026 ECCV Workshop (11th ABAW) Best Student Paper Award",
+  "task": [
+    "TTS",
+    "SCA"
+  ],
+  "relevance_score": 0.8,
+  "relevance_note": "ReACT-TTS plans emotion and prosody for conversational speech generation from listener facial reactions.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

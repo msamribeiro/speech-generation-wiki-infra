@@ -1,0 +1,37 @@
+{
+  "id": "2609.15616",
+  "source_ids": {
+    "arxiv": "2609.15616"
+  },
+  "title": "OLAC: An Overlapped Lossless Audio Codec in the Time-Domain with MDCT Compatibility",
+  "authors": [
+    "Jean-Marc Valin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-14",
+  "preprint_date": "2026-09-14",
+  "arxiv_version": 1,
+  "version_date": "2026-09-14",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.15616",
+  "pdf_url": "https://arxiv.org/pdf/2609.15616.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Lossless audio coding is a highly mature field of research, with limited potential for significant improvements in pure compression performance. However, emerging real-time wireless applications increasingly require dynamic transitions between lossy and lossless coding to adapt to fluctuating network capacities. Existing standalone lossless codecs cannot achieve this seamless switching without discontinuity. In this paper, we propose a lossless codec based on time-domain aliasing cancellation (TDAC) that can match the overlap in the CELT mode of the Opus codec. This allows the transition between lossy and lossless coding to be achieved without discontinuity or the transmission of redundant information. We show that the proposed codec still achieves state-of-the-art lossless compression without being penalized by its use of TDAC.",
+  "arxiv_comment": "5 pages",
+  "task": [],
+  "relevance_score": 0.2,
+  "relevance_note": "Lossless MDCT-compatible time-domain audio codec for wireless switching; classical lossless coding, not neural speech codec for generation.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

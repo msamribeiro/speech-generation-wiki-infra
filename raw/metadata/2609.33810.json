@@ -1,0 +1,45 @@
+{
+  "id": "2609.33810",
+  "source_ids": {
+    "arxiv": "2609.33810"
+  },
+  "title": "Controlling Speaking Rate in Autoregressive TTS via Activation Steering",
+  "authors": [
+    "Francesco Verdini",
+    "Antonis Asonitis",
+    "Aref Farhadipour",
+    "Marzieh Razavi",
+    "Pierre-Edouard Honnet",
+    "Vijeta Avijeet",
+    "Juan Pablo Zuluaga Gomez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": "2026-09-27",
+  "arxiv_version": 1,
+  "version_date": "2026-09-27",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.33810",
+  "pdf_url": "https://arxiv.org/pdf/2609.33810.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Autoregressive text-to-speech (TTS) systems synthesize natural speech but, once trained, offer little control over speaking rate. We show that speaking rate can be steered at inference time, without retraining, by clamping a single decoder block's activation along a discovered speed axis. A decoder-block analysis recovers the rate axis, a neutral operating point, and a per-step intensity scale; at inference, the activation's projection onto this axis is set to a fixed scalar. Learning this direction from synthetically time-stretched and time-compressed speech yields rate control that largely preserves speaker identity, generalizes across model architectures, and maintains high naturalness in objective and human evaluations. Unlike standard additive steering, which breaks at the slow extreme, clamping remains stable on all three systems tested; at moderate targets, the better rule depends on the model. Finally, we show that rate information is decodable across layers but causally steerable only within a mid-depth window, and demonstrate the effectiveness of our approach on the public Seed-TTS-Eval benchmark.",
+  "arxiv_comment": "Accepted at IEEE SLT 2026. 8 pages, 3 figures, 5 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Inference-time speaking-rate control in autoregressive TTS via activation steering.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

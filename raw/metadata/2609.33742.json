@@ -1,0 +1,48 @@
+{
+  "id": "2609.33742",
+  "source_ids": {
+    "arxiv": "2609.33742"
+  },
+  "title": "DuraS2ST: Chain-of-Thought and Reinforcement Learning for Duration-Aligned Speech-to-Speech Translation",
+  "authors": [
+    "Yayue Deng",
+    "Dingdong Wang",
+    "Yuxuan Hu",
+    "Jinyu Li",
+    "Yanqing Liu",
+    "Yuanyuan Wang",
+    "Weidong Chen",
+    "Helen M. Meng",
+    "Shujie Liu",
+    "Xixin Wu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-27",
+  "preprint_date": "2026-09-27",
+  "arxiv_version": 1,
+  "version_date": "2026-09-27",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.33742",
+  "pdf_url": "https://arxiv.org/pdf/2609.33742.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-speech translation (S2ST) in time-sensitive applications such as video dubbing requires not only semantic fidelity and speaker preservation, but also strict duration consistency to avoid audio-visual misalignment. However, existing S2ST systems largely generate target speech without explicit temporal planning, making duration control an unresolved challenge. We introduce DuraS2ST, a duration-aligned reasoning framework that enables a single speech language model to first generate an explicit chain-of-thought (CoT) for planning target wording and phonetic length, and then synthesize the corresponding speech tokens. To support this paradigm, we construct DuraSet-440K, a high-quality duration-aligned CoT corpus for supervised initialization. We further optimize the model with multi-modal multi-dimensional reinforcement learning, using a Duration Margin Reward to balance translation quality and duration consistency, and Modality-Aware Reward Attribution to assign rewards to appropriate token spans. Experiments on CVSS-T show that DuraS2ST achieves a strong balance between translation quality and duration consistency, outperforming competitive open-source and commercial baselines. Project page: https://github.com/Mia11939/DuraS2ST.",
+  "arxiv_comment": "Accepted to EMNLP 2026 (Main Conference)",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Duration-aligned speech-to-speech translation for dubbing with chain-of-thought and RL.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "2609.12918",
+  "source_ids": {
+    "arxiv": "2609.12918"
+  },
+  "title": "PhaseGAN: High-Fidelity Vocoder via Decoupled Amplitude and GAN-Driven Phase Reconstruction",
+  "authors": [
+    "Wenzheng Zhang",
+    "Xueliang Zhang",
+    "Shulin He",
+    "Fei Zhao",
+    "Xin Liu",
+    "Pengjie Shen",
+    "Zhenlong Guo",
+    "Zixuan Xue",
+    "Hongtao Bao",
+    "Zixuan Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-11",
+  "preprint_date": "2026-09-11",
+  "arxiv_version": 1,
+  "version_date": "2026-09-11",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.12918",
+  "pdf_url": "https://arxiv.org/pdf/2609.12918.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "A vocoder is a pivotal component of modern text-to-speech (TTS) systems. Despite the significant progress of neural network-based vocoders, accurate phase reconstruction remains the main challenge limiting both audio quality and modeling efficiency. We introduce PhaseGAN, a lightweight vocoder that addresses this limitation through a \"mel $\\rightarrow$ Amplitude $\\rightarrow$ Phase\" reconstruction pipeline. By reconstructing amplitude and phase spectra via distinct methodologies, the proposed PhaseGAN outperforms state-of-the-art baselines while utilizing fewer model parameters and reduced computational requirements. The compact version generates high-fidelity audio with approximately 500K parameters and 1 GMAC computational load, making it highly suitable for real-time applications on edge devices. In addition, our approach exhibits exceptional musical audio synthesis capabilities despite no training on musical data, illustrating unprecedented cross-domain generalization. See https://github.com/phasegan/phasegan-audio-demo for demos of our work.",
+  "arxiv_comment": "15 pages, 1 figure",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Lightweight GAN vocoder with decoupled amplitude and phase reconstruction for TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

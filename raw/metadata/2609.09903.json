@@ -1,0 +1,61 @@
+{
+  "id": "2609.09903",
+  "source_ids": {
+    "arxiv": "2609.09903"
+  },
+  "title": "SphereVAE: Hyperspherical Latent Autoencoders for Robust Autoregressive Speech Representation Modeling",
+  "authors": [
+    "Haoyu Zhang",
+    "Jingbin Hu",
+    "Hanke Xie",
+    "Qirui Zhan",
+    "Wenhao Li",
+    "Ziyu Zhang",
+    "Xiaming Ren",
+    "Yue Li",
+    "Xunyu Zhu",
+    "Zhipeng Chen"
+  ],
+  "authors_full": [
+    "Haoyu Zhang",
+    "Jingbin Hu",
+    "Hanke Xie",
+    "Qirui Zhan",
+    "Wenhao Li",
+    "Ziyu Zhang",
+    "Xiaming Ren",
+    "Yue Li",
+    "Xunyu Zhu",
+    "Zhipeng Chen",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-09",
+  "preprint_date": "2026-09-09",
+  "arxiv_version": 1,
+  "version_date": "2026-09-09",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.09903",
+  "pdf_url": "https://arxiv.org/pdf/2609.09903.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "With the rapid development of speech generation technology, discrete codec representations have been widely used because they provide a stable prediction paradigm. In expressive speech generation, however, the quantization bottleneck of discrete codecs results in information gaps in fine-grained prosody, timbre, pronunciation, and frame-to-frame continuity. Continuous representations (e.g., VAE latents), by eliminating this constraint, have emerged as a more effective alternative for autoregressive modeling. Yet when continuous representations are used as autoregressive prediction targets, prediction errors can accumulate along the generation chain, causing latent drift and degrading long-form stability. To mitigate this problem, we propose SphereVAE, which constrains the VAE latent space to the unit hypersphere. SphereVAE defines a Power Spherical posterior on the hypersphere and regularizes the latent distribution toward a uniform prior, so that information is encoded mainly by directional variation, providing a bounded geometric target for autoregressive prediction and reducing the risk of norm drift. SphereVAE underperforms the standard VAE on reconstruction metrics due to reduced latent freedom. However, when integrated into VoxCPM for zero-shot TTS and long-text generation, it yields lower content error rates with comparable speaker similarity, and shows more stable long-range speaker consistency. These results indicate that an appropriate latent geometric constraint can effectively mitigate autoregressive error accumulation and drift in speech generation.",
+  "arxiv_comment": "15 pages, 4 figures. Accepted to NCMMSC 2026",
+  "task": [
+    "TTS",
+    "codec"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "Hyperspherical VAE latents for robust autoregressive continuous-representation speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

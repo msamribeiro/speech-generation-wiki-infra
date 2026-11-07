@@ -1,0 +1,42 @@
+{
+  "id": "2609.37007",
+  "source_ids": {
+    "arxiv": "2609.37007"
+  },
+  "title": "RVQ Position Aware Speculative Decoding for On Device Text to Speech",
+  "authors": [
+    "Berkin Durmus",
+    "Eduardo Pacheco",
+    "Zach Nagengast",
+    "Atila Orhon"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-29",
+  "preprint_date": "2026-09-29",
+  "arxiv_version": 1,
+  "version_date": "2026-09-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.37007",
+  "pdf_url": "https://arxiv.org/pdf/2609.37007.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Autoregressive decoding (AR) with Transformer models is memory bandwidth bound at single stream inference, the typical deployment regime for on device text to speech (TTS). Real time streaming with Qwen3-TTS requires more than 200 sequential model calls per second, dominated by the inner loop MultiCodeDecoder that emits the 15 residual vector quantization (RVQ) codes per 80 ms audio frame. We propose RVQ position aware speculative decoding for the MultiCodeDecoder, attaining 2.47 accepted tokens per model call at $5\\times10^{-4}$ percent added parameters and 10 to 20 percent per round speculation/verification overhead, reducing real time synthesis from 200 to 88 sequential model calls per second. The scheme is distributionally lossless under the deployed top-k sampling, and WER parity with the original system is consistent with this guarantee. We deliver 2 to 2.2x speedup for RVQ token generation with Qwen3-TTS 0.6B on recent iPhone and Apple Silicon Mac devices.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.85,
+  "relevance_note": "RVQ-position-aware speculative decoding for on-device streaming Qwen3-TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

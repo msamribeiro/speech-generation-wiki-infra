@@ -1,0 +1,37 @@
+{
+  "id": "2609.08797",
+  "source_ids": {
+    "arxiv": "2609.08797"
+  },
+  "title": "Bridging Network Psychometrics and Artificial Intelligence: An Ising-Potts Model with LLM-Derived Weights",
+  "authors": [
+    "Matthias von Davier"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-15",
+  "preprint_date": "2026-09-14",
+  "arxiv_version": null,
+  "version_date": "2026-09-15",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.08797",
+  "pdf_url": "https://arxiv.org/pdf/2609.08797.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The Potts model extends the Ising model to multinomial data. We introduce a Rater Ising-Potts model that uses agreement indicators between pairs of ratings and category labels, with weights derived from LLM embeddings. The model does not presuppose ordered category thresholds or equidistant scoring; instead, it focuses on pairwise agreement among ratings and assigns category-specific positive weights, making it suited for multi-category scoring reliability. We evaluate the model on three constructed-response datasets spanning a corpus of K=14,466 short answers on a three-level rubric and two AERA essay prompts of roughly 1,200-1,400 responses on four-point rubrics. We compare three strategies for sharpening the similarity signal: top-K pruning, min-max normalization with a power transformation, and ColBERT late-interaction similarities. Top-K pruning, which replaces the dense similarity graph with a sparse local network of strongest semantic neighbors, consistently yields the highest accuracy and Cohen's kappa, and the selected neighborhoods are always a small fraction of the corpus. Power tuning consistently ranks second, while ColBERT is competitive on longer essay prompts and adds little on short answers. Across all settings, most misclassifications occur between adjacent score levels, confirming that the model preserves the ordinal structure of scoring rubrics without imposing rigid assumptions. These findings suggest that LLM-derived similarities, combined with a parsimonious Potts formulation and a sparse local graph, offer a robust and interpretable framework for reliability auditing in educational assessment. We discuss extensions to multiple raters and hierarchical rating designs.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.02,
+  "relevance_note": "Psychometric Ising-Potts rater model with LLM-derived weights; no speech component.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

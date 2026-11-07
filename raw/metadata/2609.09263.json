@@ -1,0 +1,43 @@
+{
+  "id": "2609.09263",
+  "source_ids": {
+    "arxiv": "2609.09263"
+  },
+  "title": "Voice or Stereotype? Disentangling Acoustic and Content-Based Gender in Speech-to-Speech Models",
+  "authors": [
+    "Xiaoqun Liu",
+    "Tanu Mitra",
+    "Harshit Rajgarhia",
+    "Abhishek Mukherji"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-08",
+  "preprint_date": "2026-09-08",
+  "arxiv_version": 1,
+  "version_date": "2026-09-08",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.09263",
+  "pdf_url": "https://arxiv.org/pdf/2609.09263.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech-to-speech (S2S) models now run inside dubbing, translation, and voice agents. Unlike text models, they hear the speaker's voice, which carries the speaker's gender. A faithful system should treat a speaker as who they sound like, not as whoever usually says what they said. Testing this is harder than it looks, since most S2S models answer in a single, fixed output voice, hard-coded so it cannot drift toward a stereotype. Checking the output voice comes back clean even when the model is biased. We therefore ask two questions. When a model re-speaks the input, does the stereotype in the words shift the perceived gender of the output voice (voice rendering)? And when the model states the speaker's gender, does it follow the voice or the content (gender attribution)? We answer both with one controlled experiment crossing male and female voices with masculine-, neutral-, and feminine-stereotyped passages, on five open- and closed-source models in English, Spanish, and Mandarin. The rendered voice shows no stereotype drift. But every model decides the speaker's gender from the content, not the voice. Making the content one step more feminine (masculine -> neutral -> feminine) multiplies the odds of a \"female\" judgment by 1.7-24. When the content clashes with the voice, the worst model misgenders the speaker in 90% of cases. When they agree, it misgenders in only 2%. The bias thus hides in gender attribution, where fixed-voice evaluation cannot see, and where audits must look as S2S systems increasingly speak for real people.",
+  "arxiv_comment": null,
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.55,
+  "relevance_note": "Bias audit of speech-to-speech models: checks whether the rendered output voice drifts with stereotyped content and whether gender attribution follows voice or content; partly evaluates generated output, but the main finding is about attribution (understanding).",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

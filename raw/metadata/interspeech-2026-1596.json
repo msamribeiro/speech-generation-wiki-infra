@@ -2,7 +2,8 @@
   "id": "interspeech-2026-1596",
   "source_ids": {
     "isca": "kaneko26_interspeech",
-    "doi": "10.21437/Interspeech.2026-1596"
+    "doi": "10.21437/Interspeech.2026-1596",
+    "arxiv": "2609.40087"
   },
   "title": "MeanVoiceFlow2: Joint Optimization of Mean Flow and Content Encoder for Fast One-Step Zero-Shot Voice Conversion",
   "authors": [
@@ -18,7 +19,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-30",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/kaneko26_interspeech.html",
@@ -35,5 +36,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-30",
+  "version_estimated": false
 }

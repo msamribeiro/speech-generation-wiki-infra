@@ -1,0 +1,43 @@
+{
+  "id": "2609.04455",
+  "source_ids": {
+    "arxiv": "2609.04455"
+  },
+  "title": "Brain2Speech-Net: Fast and Intelligible Brain-to-Speech Synthesis Without Text Decoding",
+  "authors": [
+    "Shreeram Suresh Chandra",
+    "Zexin Cai",
+    "Yu Tsao",
+    "Simon King",
+    "Berrak Sisman"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-22",
+  "preprint_date": "2026-09-03",
+  "arxiv_version": 2,
+  "version_date": "2026-09-22",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.04455",
+  "pdf_url": "https://arxiv.org/pdf/2609.04455.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "The loss of speech limits communication for individuals with paralysis. Direct neural-to-speech synthesis is challenging due to the limited availability of neural data for training speech brain-computer interfaces. Most existing systems rely on cascaded neural-to-text-to-speech pipelines, which increase inference latency and propagate errors across stages. We present Brain2Speech-Net, a single-stage neural-to-speech generation framework without intermediate text decoding. We use a differentiable phoneme bottleneck and a deep-HMM alignment mechanism to map long neural recordings into the latent space of a text-to-speech (TTS) model, enabling high-quality speech synthesis. Brain2Speech-Net is the only system in our comparison that produces intelligible speech while generating faster than real time.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.62,
+  "relevance_note": "Single-stage brain-to-speech synthesis mapping neural recordings into a TTS latent space; it generates speech, but the input is neural signals, and earlier brain-to-speech decisions split (EEG VC ingested, a brain-to-speech prosody paper rejected).",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

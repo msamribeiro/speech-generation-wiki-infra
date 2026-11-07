@@ -1,0 +1,44 @@
+{
+  "id": "2608.28970",
+  "source_ids": {
+    "arxiv": "2608.28970"
+  },
+  "title": "Diagnose, Then Refine: A Closed-Loop TTS System with AudioLLM-Guided Correction",
+  "authors": [
+    "Zeyang Song",
+    "Tianchi Liu",
+    "Tianrui Wang",
+    "Chenglin Xu",
+    "Steven Y. Guo",
+    "Haizhou Li"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-29",
+  "preprint_date": "2026-08-29",
+  "arxiv_version": 1,
+  "version_date": "2026-08-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.28970",
+  "pdf_url": "https://arxiv.org/pdf/2608.28970.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Current TTS systems typically rely on open-loop, single-pass generation and can produce sporadic local prosodic defects, such as misplaced stress, unnatural pauses, or flattened intonation, that utterance-level metrics often fail to expose. We present LoopTTS, a judge-guided Filter-Judge-Refiner framework for recovering low-quality TTS outputs diagnosed by an AudioLLM. Given an initial utterance from a base TTS model, an AudioLLM Judge identifies salient prosodic issues and generates structured refine instructions; a Refiner, our fine-grained instruction-following TTS model, then performs guided expressive re-synthesis conditioned on the initial utterance, target text, and instruction. To train the Refiner, we construct Refiner-DB, a 42K-example AudioLLM-annotated dataset with word-level prosodic weak supervision. Human evaluation on diagnosed low-quality utterances shows that LoopTTS can detect perceptually salient errors and correct them with the Refiner, outperforming raw generated audio and practical open-loop re-generation baselines in recovery quality. The Refiner also demonstrates stronger instruction-following ability for stress and pause control in targeted prosody modification.",
+  "arxiv_comment": "Accepted by EMNLP 2026 main conference",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "LoopTTS closed-loop Filter-Judge-Refiner framework that repairs local prosodic defects in TTS output using an AudioLLM judge.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

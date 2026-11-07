@@ -2,7 +2,8 @@
   "id": "interspeech-2026-1407",
   "source_ids": {
     "isca": "perezgonzalezdemartos26_interspeech",
-    "doi": "10.21437/Interspeech.2026-1407"
+    "doi": "10.21437/Interspeech.2026-1407",
+    "arxiv": "2609.26486"
   },
   "title": "Not Quite My Tempo: Voice Activity-aware Speech Synthesis for Lip-Synchronous Dubbing",
   "authors": [
@@ -20,7 +21,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-22",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/perezgonzalezdemartos26_interspeech.html",
@@ -37,5 +38,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-22",
+  "version_estimated": false
 }

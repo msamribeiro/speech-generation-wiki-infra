@@ -1,0 +1,41 @@
+{
+  "id": "2609.24688",
+  "source_ids": {
+    "arxiv": "2609.24688"
+  },
+  "title": "Understanding Hyperspherical Geometry of ECAPA-TDNN Embedding and Its Impact on Zero-Shot Voice Conversion",
+  "authors": [
+    "Mathilde Abrassart",
+    "Nicolas Obin",
+    "Axel Roebel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-21",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": 1,
+  "version_date": "2026-09-21",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.24688",
+  "pdf_url": "https://arxiv.org/pdf/2609.24688.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Angular-margin speaker encoders are widely used in voice conversion, yet the geometry of their classifier prototypes remains poorly understood. We analyze ECAPA-TDNN classifier prototypes as points on the unit hypersphere and characterize their organization using rotation-invariant angular statistics together with global and local effective dimensionality measures. Our analysis shows that standard training can induce angular concentration and a substantial reduction in effective dimensionality. To address this, we investigate two geometric regularization strategies (hinged Riesz log-energy and effective-dimension maximization) applied to classifier prototypes to encourage more uniform hyperspherical coverage. The resulting prototype sets exhibit higher effective dimensionality and improved isotropy, with configuration-dependent effects on speaker-recognition performance. When the corresponding ECAPA-TDNN models are used as speaker encoders for Fast-VGAN, the regularized systems also exhibit improved robustness in zero-shot voice conversion, particularly for previously unseen speakers.",
+  "arxiv_comment": null,
+  "task": [
+    "VC"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Analysis of ECAPA-TDNN speaker-embedding hyperspherical geometry and its effect on zero-shot voice conversion.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

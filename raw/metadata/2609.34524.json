@@ -1,0 +1,40 @@
+{
+  "id": "2609.34524",
+  "source_ids": {
+    "arxiv": "2609.34524"
+  },
+  "title": "Measurement-Based Bitrate-Energy-Quality Analysis of Neural Audio Codec Decoders on Laptop and Phone Platforms",
+  "authors": [
+    "Seunghyeon Shin",
+    "Seokjin Lee"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-28",
+  "preprint_date": "2026-09-28",
+  "arxiv_version": 1,
+  "version_date": "2026-09-28",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.34524",
+  "pdf_url": "https://arxiv.org/pdf/2609.34524.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs can achieve similar objective quality at lower bitrates than conventional codecs, but their decoder-side computational cost may offset this bitrate advantage on battery-powered client devices. This paper presents a measurement-based rate--energy--quality analysis of four neural audio codecs--EnCodec, DAC, HILCodec, and SNAC--and two conventional baselines, AAC-LC and Opus, on laptop and phone platforms. Speech and music are evaluated separately using the original-reference ViSQOL protocol. For the main comparison, operating points are matched by selecting the measured point nearest to the midpoint of the common overlap in treatment-level mean ViSQOL. A secondary analysis includes only explicitly evaluated bitrate settings. Decoder energy is measured as idle-subtracted energy per second of audio (J/s), and results are summarized as the median of three repeated runs for execution-valid runtime and device paths. Pairwise break-even transmission-energy thresholds are then derived analytically from the measured decoder energy and bitrate. At the matched-quality operating points, the evaluated neural codecs achieved similar ViSQOL scores at lower bitrates but generally required more decoder-side energy than the applicable conventional codecs. EnCodec produced the lowest neural break-even thresholds in both matched-quality cohorts on both platforms. By contrast, several DAC and SNAC comparisons on the Phone XNNPACK CPU path exceeded 200 mJ/kbit, and their full-band Phone configurations required more than 1 s to decode 1 s of audio. These results show that lower bitrate alone does not guarantee an energy benefit: deployment efficiency also depends on decoder complexity, the effective runtime and device mapping, execution validity, accelerator availability, and the transmission-energy coefficient.",
+  "arxiv_comment": "11 pages, 14 figures, Submitted to IEEE Transactions on Consumer Electronics",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Measured rate-energy-quality analysis of neural audio codec decoders (EnCodec, DAC, HILCodec, SNAC) on laptop and phone for speech and music.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

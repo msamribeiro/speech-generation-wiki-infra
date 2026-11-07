@@ -1,0 +1,41 @@
+{
+  "id": "2609.11523",
+  "source_ids": {
+    "arxiv": "2609.11523"
+  },
+  "title": "Post-Training Zero-Shot TTS for Fine-Grained Emotion and Duration Control via Natural Language",
+  "authors": [
+    "Lianru Gao",
+    "Yujie Guo",
+    "Yong Qin"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 10,
+  "published_date": "2026-10-10",
+  "preprint_date": "2026-09-10",
+  "arxiv_version": 3,
+  "version_date": "2026-10-10",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.11523",
+  "pdf_url": "https://arxiv.org/pdf/2609.11523.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Audiobook narration, conversational agents, and audiovisual dubbing require fine-grained control over emotion and pacing within an utterance, yet many text-to-speech (TTS) systems remain limited to utterance-level conditioning. We propose a unified post-training framework for natural-language segment-level emotion and duration control. Supervised fine-tuning (SFT) establishes instruction following, while group relative policy optimization (GRPO) further improves control accuracy using emotion, duration, content, and speaker rewards. Without modifying the pretrained architecture or adding inference-time control modules, our method improves fine-grained controllability while preserving intelligibility and speaker identity, demonstrating post-training as an effective way to extend pretrained TTS models.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "SFT+GRPO post-training of zero-shot TTS for natural-language segment-level emotion and duration control.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

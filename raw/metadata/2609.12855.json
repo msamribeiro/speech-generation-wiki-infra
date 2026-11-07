@@ -1,0 +1,44 @@
+{
+  "id": "2609.12855",
+  "source_ids": {
+    "arxiv": "2609.12855"
+  },
+  "title": "AlignDPO: Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS",
+  "authors": [
+    "Xiao Zhou",
+    "Oisín Turbitt",
+    "Kit Bower-Morris",
+    "Jonathan Carlton",
+    "Jamie Stacey",
+    "Kris Y. Hong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-11",
+  "preprint_date": "2026-09-11",
+  "arxiv_version": 1,
+  "version_date": "2026-09-11",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.12855",
+  "pdf_url": "https://arxiv.org/pdf/2609.12855.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Decoder-only text-to-speech (TTS) models scale efficiently but remain prone to content hallucinations that arise from weak text-speech alignment during autoregressive generation. We find that robustness is governed by a non-monotone relation to the sharpness of the alignment-bearing attention heads: a moderate degree is best, whereas over-sharpening is no better than the unaligned backbone and even less robust. Guided by this, we present AlignDPO, a post-training method that reaches this moderate regime by folding a lightweight connectionist-temporal-classification (CTC) alignment term into Direct Preference Optimization (DPO), applied only to the chosen samples, with no architectural or inference-time change. On the Seed-TTS-Eval English set, this significantly reduces the content-hallucination and word error rates relative to a strong DPO baseline and lowers the severe content-hallucination rate to ~0.6% (from 4.4%); a listening study further finds it preferred for naturalness over both the backbone and that baseline. Alignment is thus best learned and kept moderate rather than maximized or imposed at decoding. Audio samples are available at https://align-dpo-demo.vercel.app.",
+  "arxiv_comment": "6 pages, 4 figures, 4 tables. Accepted to IEEE SLT 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Preference-gated DPO alignment reducing content hallucination in decoder-only TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

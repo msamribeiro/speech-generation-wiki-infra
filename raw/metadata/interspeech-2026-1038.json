@@ -2,7 +2,8 @@
   "id": "interspeech-2026-1038",
   "source_ids": {
     "isca": "xu26i_interspeech",
-    "doi": "10.21437/Interspeech.2026-1038"
+    "doi": "10.21437/Interspeech.2026-1038",
+    "arxiv": "2609.38794"
   },
   "title": "A barrier or a booster? Familiarity effects on Mandarin emotion prosody recognition using AI-powered voice cloning",
   "authors": [
@@ -21,7 +22,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-30",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/xu26i_interspeech.html",
@@ -36,5 +37,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-30",
+  "version_estimated": false
 }

@@ -1,0 +1,39 @@
+{
+  "id": "2609.38502",
+  "source_ids": {
+    "arxiv": "2609.38502"
+  },
+  "title": "Multi-Rate Bandwidth Extension by Token Completion in Neural Audio Codecs",
+  "authors": [
+    "Benoît Ginies",
+    "Olivier Fercoq",
+    "Gaël Richard"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-29",
+  "preprint_date": "2026-09-29",
+  "arxiv_version": 1,
+  "version_date": "2026-09-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.38502",
+  "pdf_url": "https://arxiv.org/pdf/2609.38502.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Bandwidth extension, the task of reconstructing the high-frequency components of an audio signal from its low-passed counterpart, is a long-standing problem in audio processing. In this work, we extend recent advances in neural architectures by framing bandwidth extension as an audio token prediction problem. Specifically, we train a transformer-based language model on the discrete representations produced by a disentangled neural audio codec, where the disentanglement is guided by a Harmonic-Percussive decomposition of the input signals, highlighting spectral structures particularly relevant for bandwidth extension. Our approach introduces a novel codec design that explicitly accounts for the downstream token prediction task, enabling a more effective coupling between codec structure and transformer modeling. This joint design yields high-quality reconstructions of the original signal, as measured by both objective metrics and subjective evaluations. These results highlight the importance of aligning codec disentanglement and representation learning with the generative modeling stage, and demonstrate the potential of global, representation-aware design for advancing bandwidth extension.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": 0.35,
+  "relevance_note": "Bandwidth extension as token completion in a harmonic-percussive disentangled audio codec; matches the rejected 0.45 HP-disentangled codec BWE precedent (general audio enhancement, not speech generation).",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2609.03363",
+  "source_ids": {
+    "arxiv": "2609.03363"
+  },
+  "title": "PACodec: A Low-bitrate Neural Speech Codec with Parallel Additive Vector Quantization",
+  "authors": [
+    "Fei Liu",
+    "Yang Ai",
+    "Xiao-Hang Jiang",
+    "Zhen-Hua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-03",
+  "preprint_date": "2026-09-03",
+  "arxiv_version": 1,
+  "version_date": "2026-09-03",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.03363",
+  "pdf_url": "https://arxiv.org/pdf/2609.03363.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "This paper proposes PACodec, a novel low-bitrate neural speech codec based on parallel additive vector quantization (PAVQ). Unlike the mainstream residual vector quantization (RVQ) used in most neural speech codecs, where vector quantizers (VQs) are sequentially dependent, the PAVQ strategy adopted in PACodec aggregates parallel quantization results to optimize bitrate usage. Specifically, the PAVQ adopts a \"global-local-global\" (GLG) design: the global encoded features are quantized in parallel by multiple independent VQs, each attending to a local component of the representation, and their outputs are aggregated through addition to yield the final global quantization result for decoding. Experimental results show that PACodec, as each VQ focuses only on local information, supports smaller codebooks and reduces bitrate by 30% compared with baselines at the same decoding quality, with only minor model complexity. Further analysis shows that, owing to the GLG framework of PAVQ, the proposed PACodec is disentanglement-friendly, and each independent VQ captures different aspects of speech, e.g., content, timbre, and acoustic details, suggesting potential for application to downstream tasks such as voice conversion.",
+  "arxiv_comment": "Accepted by APSIPA 2026",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Low-bitrate neural speech codec with parallel additive vector quantization.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

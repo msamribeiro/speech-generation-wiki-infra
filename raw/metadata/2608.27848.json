@@ -1,0 +1,43 @@
+{
+  "id": "2608.27848",
+  "source_ids": {
+    "arxiv": "2608.27848"
+  },
+  "title": "Is Prosody Lost in Translation? Fine-Grained Cross-Lingual Prosody Similarity Across Languages",
+  "authors": [
+    "Haopeng Xie",
+    "Ismail Rasim Ulgen",
+    "Sofia Son",
+    "Berrak Sisman",
+    "Philipp Koehn"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-28",
+  "preprint_date": "2026-08-28",
+  "arxiv_version": 1,
+  "version_date": "2026-08-28",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.27848",
+  "pdf_url": "https://arxiv.org/pdf/2608.27848.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Prosody plays an important role in speech translation, conveying information such as emphasis, emotion, and intent beyond lexical content. However, despite recent progress in expressive speech-to-speech translation (S2ST), little is known about how prosodic patterns are similar/different across languages. Understanding these cross-lingual similarities and differences is crucial for effectively incorporating prosody into expressive S2ST systems. In this work, we present the first fine-grained cross-lingual analysis of prosody using multilingual dubbing data across English-German, English-Spanish, and English-French language pairs. We analyze the similarity of pitch, energy, and temporal feature patterns between source and target speech and investigate the linguistic and alignment-related factors affecting this similarity. Our analysis reveals inherent cross-lingual correlations in prosodic structure between certain languages. The findings provide important insights into the transferability of prosody across languages and offer empirical guidance for future expressive speech-to-speech translation systems.",
+  "arxiv_comment": "Accepted to EMNLP 2026 Findings",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.58,
+  "relevance_note": "Analysis of cross-lingual prosody similarity in multilingual dubbing data to guide expressive S2ST; analysis-of-existing-speech shape (cf. 2512.16832 accept) but no S2ST system built or evaluated, and the 2026-11-01 curiosity rule cuts the other way.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

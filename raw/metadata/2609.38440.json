@@ -1,0 +1,41 @@
+{
+  "id": "2609.38440",
+  "source_ids": {
+    "arxiv": "2609.38440"
+  },
+  "title": "Monotonicity-Guided Semantic Alignment for Zero-shot Multispeaker Image-to-Speech Synthesis",
+  "authors": [
+    "Lijun Wang",
+    "Yixian Lu",
+    "Shogo Okada"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-29",
+  "preprint_date": "2026-09-29",
+  "arxiv_version": 1,
+  "version_date": "2026-09-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.38440",
+  "pdf_url": "https://arxiv.org/pdf/2609.38440.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Direct image-to-speech (Img2Sp) poses an alignment challenge in mapping visual content to ordered speech sequences, as images permit multiple spoken descriptions and lack monotonic correspondence with speech sequences. We propose Monotonicity-Guided Semantic Alignment (MGSA), to the best of our knowledge, the first framework for zero-shot multispeaker Img2Sp synthesis. We use semantic speech units to provide shared content targets across speakers with reference speech for speaker conditioning. A query aligner maps semantic memory learned from visual content to speech unit positions via a soft monotonic prior, which yields position-specific conditioning states. A blockwise masked diffusion generator is employed for the speech unit generation conditioning on these states. Experiments on Flickr8k-Audio show competitive captioning performance against single-speaker baselines, while evaluation with LibriTTS-R references supports zero-shot synthesis for unseen speakers. Ablations validate the effectiveness of aligner and block diffusion. Audio samples are available at https://alizeded.github.io/mgsa-demo.",
+  "arxiv_comment": "5-pages, 1 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Zero-shot multispeaker image-to-speech synthesis with monotonicity-guided semantic alignment.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

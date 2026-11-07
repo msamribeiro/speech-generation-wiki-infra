@@ -1,0 +1,41 @@
+{
+  "id": "2609.11642",
+  "source_ids": {
+    "arxiv": "2609.11642"
+  },
+  "title": "ZipCodec: Ultra-Low-Frame-Rate Streaming Speech Coding",
+  "authors": [
+    "Luca Della Libera",
+    "Cem Subakan",
+    "Mirco Ravanelli"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-10",
+  "preprint_date": "2026-09-10",
+  "arxiv_version": 1,
+  "version_date": "2026-09-10",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.11642",
+  "pdf_url": "https://arxiv.org/pdf/2609.11642.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Neural audio codecs are a fundamental component of modern speech generation systems. While recent codecs achieve increasingly low bitrates, reducing frame rate remains challenging, as each token must preserve more information while maintaining reconstruction quality. We present ZipCodec, a streaming neural speech codec operating at 6.25 Hz and 0.80 kbps with a theoretical latency of 160 ms. Our approach combines large-scale WavLM distillation with a redesigned transformer-based architecture, a scalar spherical quantizer, and a latency-aware streaming decoder. Experiments show that ZipCodec substantially outperforms existing streaming codecs at comparable bitrates in both reconstruction and downstream tasks, while operating at a significantly lower frame rate. Despite its 842M parameters, ZipCodec achieves real-time single-stream inference on a consumer-grade CPU. Demo samples, code and checkpoints are available at https://lucadellalib.github.io/zipcodec-web/.",
+  "arxiv_comment": "5 pages, 1 figure",
+  "task": [
+    "codec"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Streaming 6.25 Hz / 0.80 kbps neural speech codec with WavLM distillation for speech generation.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

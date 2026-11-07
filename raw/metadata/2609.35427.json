@@ -1,0 +1,43 @@
+{
+  "id": "2609.35427",
+  "source_ids": {
+    "arxiv": "2609.35427"
+  },
+  "title": "LLMs are General Asynchronous Agents",
+  "authors": [
+    "George Yakushev",
+    "Denis Mazur",
+    "Vladimir Bartenev",
+    "Vyacheslav Zhdanovskiy",
+    "Timofey Byzov",
+    "Vladimir Kaurkin",
+    "Vadim Pastushenko"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-29",
+  "preprint_date": "2026-09-28",
+  "arxiv_version": null,
+  "version_date": "2026-09-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.35427",
+  "pdf_url": "https://arxiv.org/pdf/2609.35427.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Modern LLMs are increasingly capable as autonomous agents, but they follow sequential interaction cycles: read, think, reply or call tools, repeat. Many real-world use cases are not sequential: voice assistants, embodied agents, and monitoring systems receive new inputs while they think or perform another task. Modern LLMs address this with specialized architectures for voice interaction and video streams, VLAs for robot control, asynchronous tool calling for API usage, and others. In this work, we generalize from different asynchronous tasks to general asynchronous agents that can adapt to different types of concurrency. To achieve this, we develop an asynchronous LLM framework that lets users (or the agents themselves) define inference coroutines with overlapping memory states. We showcase that Qwen 3.x models are capable of asynchronous operation for streaming video understanding, videogames, and monitoring, without task-specific training.",
+  "arxiv_comment": "Preprint",
+  "task": [],
+  "relevance_score": 0.15,
+  "relevance_note": "General asynchronous LLM agent framework demonstrated on video, games and monitoring; voice assistants only mentioned as motivation.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "2609.24812",
+  "source_ids": {
+    "arxiv": "2609.24812"
+  },
+  "title": "MSI-Bench: Evaluating Multi-Speaker Voice Interaction for Collaborative AI Agents",
+  "authors": [
+    "Chenxu Xiong",
+    "Dongming Shen",
+    "Yuzhi Tang",
+    "Wentao Ma",
+    "Mu Li",
+    "Alex Smola"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-22",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": null,
+  "version_date": "2026-09-22",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.24812",
+  "pdf_url": "https://arxiv.org/pdf/2609.24812.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Voice provides a natural and immediate interface for AI agents. Many settings in which voice agents could be useful, including meetings, households, and collaborative work, are inherently multi-speaker. Supporting these settings introduces challenges that are largely absent from one-on-one interaction. We introduce the Multi-Speaker Interaction Benchmark (MSI-Bench) for evaluating multi-speaker voice interaction. Each test case is a short multi-party multi-turn audio scene with participant context, expected tool calls, and atomic rubrics. The benchmark targets three capability families: multi-speaker memory, multi-speaker instruction following, and multi-speaker reasoning. It comprises 1,152 test cases, evenly split between Mandarin Chinese and English (576 each). The strongest configuration on each split passes all rubrics on only 66.8% of English and 54.5% of Mandarin cases, and the strongest open-weight configuration on 34.0% and 19.3%. Failure analysis separates perception from reasoning: open-weight models are bottlenecked by the multi-speaker audio front-end, while frontier systems still fail speaker-scoped decision making on clean transcripts---and models across the board often respond when no one has addressed them. These results identify speaker-grounded perception, speaker-scoped decision making, and conversational restraint as concrete targets for future voice agents.",
+  "arxiv_comment": "23 pages, 6 figures, 5 tables. Dataset: https://huggingface.co/datasets/M2cha4l1124/MSI-Bench ; Code: https://github.com/boson-ai/MSI-Bench",
+  "task": [
+    "SCA",
+    "evaluation"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "Multi-speaker voice-agent interaction benchmark with tool calls and rubrics; matches the AURA/VoiceAgentBench agentic-benchmark accept precedent although speech output is not evaluated.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

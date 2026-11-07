@@ -1,0 +1,40 @@
+{
+  "id": "2609.40087",
+  "source_ids": {
+    "arxiv": "2609.40087"
+  },
+  "title": "MeanVoiceFlow2: Joint Optimization of Mean Flow and Content Encoder for Fast One-Step Zero-Shot Voice Conversion",
+  "authors": [
+    "Takuhiro Kaneko",
+    "Hirokazu Kameoka",
+    "Kou Tanaka",
+    "Yuto Kondo"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-30",
+  "preprint_date": "2026-09-30",
+  "arxiv_version": 1,
+  "version_date": "2026-09-30",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.40087",
+  "pdf_url": "https://arxiv.org/pdf/2609.40087.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Flow-matching approaches to voice conversion (VC) have gained attention owing to their high speech quality and strong speaker similarity. Among them, one-step models such as MeanVoiceFlow are particularly attractive because they enable efficient inference; however, their reliance on a computationally intensive content encoder remains a bottleneck. We therefore propose MeanVoiceFlow2, a framework that jointly optimizes a flow-based conversion module and a computationally efficient content encoder. The model is trained through conversion distillation using MeanVoiceFlow and the reconstruction of real data. We further incorporate diffusion-GAN training with sample mixing and teacher-guided conditioning augmentation to enhance realism and disentanglement. Experiments on zero-shot VC showed that MeanVoiceFlow2 achieved higher perceptual quality and approximately $9\\times$ faster inference than MeanVoiceFlow while maintaining comparable speaker similarity. Audio samples are available at https://www.kecl.ntt.co.jp/people/kaneko.takuhiro/projects/meanvoiceflow2/.",
+  "arxiv_comment": "Accepted to Interspeech 2026. Project page: https://www.kecl.ntt.co.jp/people/kaneko.takuhiro/projects/meanvoiceflow2/",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-1596 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-1596"
+}

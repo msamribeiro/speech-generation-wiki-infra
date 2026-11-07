@@ -1,0 +1,45 @@
+{
+  "id": "2609.36287",
+  "source_ids": {
+    "arxiv": "2609.36287"
+  },
+  "title": "InstCharVoice: Grounding Natural-Language Instructions for Character-Level Control in Text-to-Speech",
+  "authors": [
+    "Sihang Nie",
+    "Xueru Li",
+    "Xiaofen Xing",
+    "Deyi Tuo",
+    "Cheng-Bin Jin",
+    "Jingyuan Xing",
+    "Jinxin Ji"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-28",
+  "preprint_date": "2026-09-28",
+  "arxiv_version": 1,
+  "version_date": "2026-09-28",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.36287",
+  "pdf_url": "https://arxiv.org/pdf/2609.36287.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Instruction-based text-to-speech (ITTS) systems enable natural-language control of expressive speech generation, but often offer limited transparency and fine-grained control over individual text units. Character-level controllable TTS systems provide explicit acoustic control, yet typically rely on user-specified acoustic attributes. To bridge this gap, we propose InstCharVoice, a unified framework that grounds natural-language instructions in character-level acoustic control. We first construct grounded instruction annotations on the WordVoice-5A-zh corpus using Qwen3-Omni. With this supervision, we train an autoregressive model to identify instruction-relevant characters and predict their acoustic attributes before generating the corresponding speech tokens. Keyword prediction and grounding-aware loss weighting help the model focus on instruction-relevant characters and attributes. Experiments show improved instruction following and keyword-level acoustic control over representative ITTS systems, with competitive speech naturalness and explicit character-level controllability. Audio samples are available at https://xxh333.github.io/instcharvoice-demo/.",
+  "arxiv_comment": "5 pages, 3 figures, 5 tables; Submitted to ICASSP 2027",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Grounding natural-language instructions into character-level acoustic control for TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

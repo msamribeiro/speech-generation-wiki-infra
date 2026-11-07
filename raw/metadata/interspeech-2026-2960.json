@@ -2,7 +2,8 @@
   "id": "interspeech-2026-2960",
   "source_ids": {
     "isca": "ferreira26_interspeech",
-    "doi": "10.21437/Interspeech.2026-2960"
+    "doi": "10.21437/Interspeech.2026-2960",
+    "arxiv": "2609.14956"
   },
   "title": "CAL-MOS: Bridging Layers with Adapters for Robust MOS Prediction Across Speech Foundation Models",
   "authors": [
@@ -22,7 +23,7 @@
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
-  "preprint_date": null,
+  "preprint_date": "2026-09-14",
   "conference_date": "2026-09-27",
   "ingested_date": null,
   "url": "https://www.isca-archive.org/interspeech_2026/ferreira26_interspeech.html",
@@ -39,5 +40,8 @@
   "fetched_date": "2026-11-01",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "arxiv_version": 1,
+  "version_date": "2026-09-14",
+  "version_estimated": false
 }

@@ -1,0 +1,41 @@
+{
+  "id": "2609.18677",
+  "source_ids": {
+    "arxiv": "2609.18677"
+  },
+  "title": "Voice of Reason: Reinforcement Learning for Spoken Math",
+  "authors": [
+    "Timothée Weisselberger",
+    "Edouard Graves",
+    "Alexandre Défossez"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-17",
+  "preprint_date": "2026-09-16",
+  "arxiv_version": null,
+  "version_date": "2026-09-17",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.18677",
+  "pdf_url": "https://arxiv.org/pdf/2609.18677.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Speech language models enable richer spoken interactions between humans and machines than cascaded systems, allowing access to paralinguistic information and lower latency. However, their accuracy on mathematical reasoning benchmarks has lagged behind those of text models. Reinforcement learning (RL) with verifiable rewards has been instrumental in extending text models' capabilities for solving complex problems and limiting hallucinations. In this work, we explore applying RL to the GLM-4-Voice speech model (Zeng et al., 2024) to bridge the gap between textual and spoken mathematical problem solving. We first adapt the model to the domain using supervised fine-tuning on synthesized spoken question-answering data. We then show that, even without extra reasoning tokens, RL improves the accuracy on GSM8K beyond levels previously achieved for speech models only with supplementary reasoning traces. When combined with existing streaming reasoning techniques, we show further gains to 74.8% free-form accuracy. This establishes a new state-of-the-art for mathematical spoken abilities with speech-native models.",
+  "arxiv_comment": "Accepted at COLM 2026",
+  "task": [
+    "SCA"
+  ],
+  "relevance_score": 0.72,
+  "relevance_note": "RL with verifiable rewards on the GLM-4-Voice speech LM for spoken math reasoning; advances speech-LM capability though evaluation centres on answer accuracy rather than output speech.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

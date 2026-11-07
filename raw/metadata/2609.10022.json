@@ -1,0 +1,40 @@
+{
+  "id": "2609.10022",
+  "source_ids": {
+    "arxiv": "2609.10022"
+  },
+  "title": "Deterministic Prompting for Speaker-Stable Low-Resource Greek TTS",
+  "authors": [
+    "Georgios Syllas",
+    "Efthymios Georgiou",
+    "Kosmas Kritsis",
+    "Alexandros Potamianos"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-09",
+  "preprint_date": "2026-09-09",
+  "arxiv_version": 1,
+  "version_date": "2026-09-09",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.10022",
+  "pdf_url": "https://arxiv.org/pdf/2609.10022.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Modern TTS systems approach human quality for high-resource languages but degrade when clean speech data is scarce. Modern Greek exemplifies this, lacking the curated corpora behind state-of-the-art synthesis. We propose a data curation recipe that transforms audiobook recordings into TTS-ready data via WhisperX alignment and filtering. Then we fine-tune Parler-TTS (880M), a prompt-based multilingual model whose pre-training encodes phonetic priors transferable to Greek. During development, we find that LLM-generated style prompts introduce speaker drift at inference. Replacing them with deterministic prompts resolves this, and a speaker-specific LoRA stage trained on 3.5 h of single-speaker data anchors identity while updating ~5% of parameters. Our system achieves WER 10.7% (2.9 above the ASR floor), MOS-I 4.00 (vs. 4.36 human speech), and near-human speaker consistency (MOS-C 4.24 vs. 4.30), showing that robust single-speaker Greek TTS is achievable with limited curated data.",
+  "arxiv_comment": "Interspeech 2026",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-2481 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-2481"
+}

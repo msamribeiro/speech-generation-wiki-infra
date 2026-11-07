@@ -1,0 +1,43 @@
+{
+  "id": "2608.20387",
+  "source_ids": {
+    "arxiv": "2608.20387"
+  },
+  "title": "Poly-InstructTTS: Learning In-the-Wild Expressive Speech Synthesis from Open-Ended Instructions",
+  "authors": [
+    "Junhui Zhang",
+    "Qianhui Xu",
+    "Qingxiang Guo",
+    "Dawei Yang",
+    "Ling Miao",
+    "Qiangqiang Wang",
+    "Yang Song"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-24",
+  "preprint_date": "2026-06-30",
+  "arxiv_version": null,
+  "version_date": "2026-08-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.20387",
+  "pdf_url": "https://arxiv.org/pdf/2608.20387.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "While recent text-to-speech (TTS) models achieve high naturalness, controlling fine-grained expression via natural-language instructions remains challenging. We introduce Poly- InstructTTS, which learns expressive speech from open-ended instructions using in-the-wild audiovisual data. We build a scalable multi-modal pipeline to construct a 1,000-hour instruction-annotated corpus covering 1,000+ fine-grained emotions and styles. The framework uses a prompt-free GPT with attribute-based thinking tokens, followed by a flow-matching module that injects timbre from a reference audio. We also present a speaker fine-tuning procedure to transfer instruction control to specific speakers while preserving persona. We further extend InstructTTSEval with broader tasks. Experiments show that Poly-InstructTTS delivers strong performance in instruction adherence and expressiveness. Audio demos and the expanded testset are available on our project page.",
+  "arxiv_comment": "Accepted to Interspeech 2026. Demo page: https://zhangjh915.github.io/PolyInstructTTS-demo/",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Duplicate: arXiv preprint of the Interspeech 2026 paper interspeech-2026-0930 (accepted), which stays canonical.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": true,
+  "canonical_id": "interspeech-2026-0930"
+}

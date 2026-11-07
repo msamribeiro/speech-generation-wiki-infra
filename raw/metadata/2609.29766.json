@@ -1,0 +1,39 @@
+{
+  "id": "2609.29766",
+  "source_ids": {
+    "arxiv": "2609.29766"
+  },
+  "title": "Anatomy-aware cross-speaker adaptation of complete vocal-tract acoustic-to-articulatory inversion",
+  "authors": [
+    "Nhat-Nam Nguyen",
+    "Pierre-Andre Vuissoz",
+    "Yves Laprie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-24",
+  "preprint_date": "2026-09-24",
+  "arxiv_version": 1,
+  "version_date": "2026-09-24",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.29766",
+  "pdf_url": "https://arxiv.org/pdf/2609.29766.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Cross-speaker acoustic-to-articulatory inversion requires accounting for anatomical differences between speakers. We propose a geometric adaptation framework that uses anatomical landmarks, primarily on vertebrae and dental structures,to transfer predictions from a fixed inversion model to unseen speakers. An affine transformation followed by thin-plate spline (TPS) deformation maps the predicted contours of 10 vocal-tract structures into each target speaker's geometry without retraining. Landmarks are identified in one selected /u/ frame per speaker as a common phonetic reference without assuming identical articulatory configurations across speakers, and the resulting mapping is reused across recordings. We train the model on a single-speaker rt-MRI database and evaluate adaptation on eight speakers from a separate multi-speaker rt-MRI database. We compare affine and TPS configurations using 12 or 14 landmarks. Affine12+TPS14 achieves the lowest mean point-to-closest-point error of 3.19mm. These results support the combined value of anatomical landmark information and nonrigid alignment.",
+  "arxiv_comment": "Submitted to IEEE ICASSP 2027",
+  "task": [],
+  "relevance_score": 0.25,
+  "relevance_note": "Anatomy-aware cross-speaker acoustic-to-articulatory inversion; articulatory analysis, no synthesis.",
+  "status": "rejected",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

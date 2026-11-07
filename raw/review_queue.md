@@ -1026,3 +1026,124 @@ After marking a decision below, update `status` in `raw/metadata/{id}.json`.
 **Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________)
 
 ---
+
+## 2608.25218 | TurnBench: A Multi-Domain Benchmark for Turn-Taking Dynamics in Spoken Dialogue | arXiv | score: 0.60
+
+**Authors:** Freeman Jiang, Ramon Sanabria, Soham Deshmukh, et al.
+**Task guess:** [SCA, evaluation]
+**Reason for review:** Turn-taking benchmark (hand-labelled human dyadic corpus, end-of-turn and interruption detection for 14 systems); evaluates a full-duplex SCA component but not generated speech, unlike TurnNat (accepted) it scores detection only.
+**Abstract excerpt:** Speakers in natural conversation take turns speaking and listening, deciding in real time when to take, hold, or yield the floor. However, turn-taking evaluation remains limited due to the lack of a consistent, linguistically grounded evaluation protocol and hand-annotated data covering diverse conversation types.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): turn-taking evaluation benchmark (hand-labelled multi-domain corpus, end-of-turn and interruption detection, 14 systems); turn-taking detection is a consistently accepted SCA component (Easy Turn 2509.23938, DualTurn 2603.08216, interspeech-2025-2660). task: [SCA, evaluation].
+
+---
+
+## 2608.26005 | VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction | arXiv | score: 0.55
+
+**Authors:** Zhifei Xie, Jiaqi Lang, Ze An, et al.
+**Task guess:** [SCA]
+**Reason for review:** Streaming memory architecture for duplex speech LMs; contributions are memory retrieval/persona accuracy and latency rather than speech generation, so SCA relevance depends on how much speech-side training/evaluation it contains.
+**Abstract excerpt:** Conversational systems, such as duplex speech language models (SLMs), still lack a streaming, accurate, and empathetic memory system as their soul. We introduce VoiceMem, a simple memory architecture with a parallel informational left brain, an emotional right brain, and streaming memory I/O mechanisms.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): streaming memory architecture with memory-aware speech-LM training for duplex interaction, the CarMem (2025.coling-industry.29) shape. task: [SCA].
+
+---
+
+## 2608.27848 | Is Prosody Lost in Translation? Fine-Grained Cross-Lingual Prosody Similarity Across Languages | arXiv | score: 0.58
+
+**Authors:** Haopeng Xie, Ismail Rasim Ulgen, Sofia Son, et al.
+**Task guess:** [SCA]
+**Reason for review:** Analysis of cross-lingual prosody similarity in multilingual dubbing data to guide expressive S2ST; analysis-of-existing-speech shape (cf. 2512.16832 accept) but no S2ST system built or evaluated, and the 2026-11-01 curiosity rule cuts the other way.
+**Abstract excerpt:** Prosody plays an important role in speech translation, conveying information such as emphasis, emotion, and intent beyond lexical content. However, despite recent progress in expressive speech-to-speech translation (S2ST), little is known about how prosodic patterns are similar/different across languages.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): no system built, but the whole paper is framed as design input for expressive speech-to-speech translation (cross-lingual prosody transfer in dubbing data), closer to the 2510.03111 in-service-of-generation shape than to a curiosity paper. task: [SCA].
+
+---
+
+## 2608.30260 | Using Prosody to Predict Syntactic Structure | arXiv | score: 0.52
+
+**Authors:** Junghyun Min, Alex Warstadt, Tamar I. Regev, et al.
+**Task guess:** [TTS]
+**Reason for review:** Information-theoretic analysis of how much syntactic information prosody (duration, pauses) carries; near-identical shape to the accepted 2512.16832 prosody/text analysis precedent, but it builds and evaluates no synthesis system, which the 2026-11-01 curiosity rule would reject.
+**Abstract excerpt:** While it is well-established that prosody carries crucial cues for syntactic structure, the degree and nature of correspondence between these two domains remains contested. We investigate the syntax-prosody interface through an information-theoretic lens, quantifying the interaction between prosodic features and syntactic representations as their mutual information.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________) — user confirmed reject (2026-11-07): syntax–prosody linguistics written for theory, no synthesis framing; the 2026-11-01 curiosity rule wins over the one-off 2512.16832 accept, which stays a one-off and is not extended to this research line.
+
+---
+
+## 2609.04455 | Brain2Speech-Net: Fast and Intelligible Brain-to-Speech Synthesis Without Text Decoding | arXiv | score: 0.62
+
+**Authors:** Shreeram Suresh Chandra, Zexin Cai, Yu Tsao, et al.
+**Task guess:** [TTS]
+**Reason for review:** Single-stage brain-to-speech synthesis mapping neural recordings into a TTS latent space; it generates speech, but the input is neural signals, and earlier brain-to-speech decisions split (EEG VC ingested, a brain-to-speech prosody paper rejected).
+**Abstract excerpt:** The loss of speech limits communication for individuals with paralysis. Direct neural-to-speech synthesis is challenging due to the limited availability of neural data for training speech brain-computer interfaces.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): single-stage neural-to-speech system built on a TTS model latent space (phoneme bottleneck, deep-HMM alignment, faster-than-real-time generation), the MiSTR (interspeech-2025-1334) shape; task: [TTS] as the standing non-text-input fallback, flag in the Manual Verification Queue at ingest. Brain-signal papers stay case-by-case, no standing rule (user, 2026-11-07).
+
+---
+
+## 2609.09263 | Voice or Stereotype? Disentangling Acoustic and Content-Based Gender in Speech-to-Speech Models | arXiv | score: 0.55
+
+**Authors:** Xiaoqun Liu, Tanu Mitra, Harshit Rajgarhia, et al.
+**Task guess:** [SCA, evaluation]
+**Reason for review:** Bias audit of speech-to-speech models: checks whether the rendered output voice drifts with stereotyped content and whether gender attribution follows voice or content; partly evaluates generated output, but the main finding is about attribution (understanding).
+**Abstract excerpt:** Speech-to-speech (S2S) models now run inside dubbing, translation, and voice agents. Unlike text models, they hear the speaker's voice, which carries the speaker's gender.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): gender-bias audit of five S2S models that evaluates the rendered output voice as well as gender attribution, the 2510.02352 / Hear Me Out S2S bias-audit shape. task: [SCA, evaluation].
+
+---
+
+## 2609.15759 | Enabling Streaming User Transcription in Full-Duplex Speech-to-Speech Models | arXiv | score: 0.45
+
+**Authors:** Ke Hu, Nourchene Ferchichi, Edresson Casanova, et al.
+**Task guess:** [SCA]
+**Reason for review:** Adds a streaming ASR head to a full-duplex S2S model while preserving its dialogue behaviour; the contribution is user transcription (ASR), close to the reject shape for ASR with speech-LM framing, but it modifies a speech-generating duplex model.
+**Abstract excerpt:** Full-duplex speech-to-speech (S2S) models enable natural conversational AI by allowing simultaneous listening and speaking. However, these models typically lack inherent user speech transcription, which is essential for applications such as conversation logging, accessibility features, and quality monitoring.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): streaming ASR head added to a full-duplex S2S model; accepted over the recommended reject (contribution and metrics are ASR, FAMA shape). Not a precedent for plain ASR-with-speech-LM-framing papers: TS-OPD (2609.29464, same fetch) stays rejected. task: [SCA].
+
+---
+
+## 2609.27378 | Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models | arXiv | score: 0.50
+
+**Authors:** Kian Shamsaie, Iman Modarressi
+**Task guess:** [SCA]
+**Reason for review:** Psychoacoustic adversarial attacks (hijack, mute, jailbreak) on Moshi-style full-duplex agents and a latent-smoothing defence at the RVQ interface; safety work close to the rejected SPIRIT jailbreak-patching shape, but it evaluates agent response behaviour and clean output quality rather than internals only.
+**Abstract excerpt:** End-to-end speech-to-speech dialogue models listen and speak simultaneously, so a continuously open acoustic channel is exposed to adversarial manipulation. We formalize imperceptible attacks on full-duplex agents as optimization over additive perturbations confined beneath the psychoacoustic masking threshold of the carrier speech, under three goals: targeted semantic hijacking, response suppression, and policy jailbreaking.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): psychoacoustic attacks on Moshi-style full-duplex agents and a latent-smoothing defence trained into the model, evaluated on agent responses and clean output quality; closer to the accepted prosody-jailbreak study (2607.26541) than to SPIRIT (2025.emnlp-main.734). task: [SCA].
+
+---
+
+## 2609.30983 | Tracing and Relearning Detection Evidence in Text-to-Speech Systems | arXiv | score: 0.50
+
+**Authors:** Eunji Shin, Kyudan Jung, Jihwan Kim, et al.
+**Task guess:** [TTS]
+**Reason for review:** Traces which TTS stage (acoustic model vs vocoder) supplies deepfake-detection evidence and adversarially fine-tunes F5-TTS to evade detectors; detection-framed (usually rejected) but it modifies and evaluates a TTS system, similar to the ingested "commodity TTS evade detection" paper (0.68).
+**Abstract excerpt:** Recent audio deepfake detectors separate bona fide speech from synthetic speech, yet it remains unclear which stage of a text-to-speech system supplies the detection evidence. We address this with controlled resynthesis and detector adaptation in an F5-TTS-BigVGAN pipeline.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): adversarially fine-tunes and evaluates F5-TTS and traces which TTS stage supplies detection evidence, the commodity-TTS-evasion (2026.nlpaics-1.18) shape; the detector-adaptation half is out of scope and the page should say so. Pure detector papers stay rejected. task: [TTS].
+
+---
+
+## 2609.37601 | SENSE: Semantic Neural Speech Synthesis from Brain Dynamics via Spatial Graph Encoding | arXiv | score: 0.60
+
+**Authors:** Jisoo Park, Seonghak Lee, Hyojin Park, et al.
+**Task guess:** [TTS]
+**Reason for review:** EEG-to-speech synthesis with semantic objectives and spatial graph encoding; generates speech, but the brain-signal input makes it borderline (EEG VC ingested, a brain-to-speech prosody paper rejected).
+**Abstract excerpt:** Reconstructing speech from non-invasive brain signals offers a promising pathway for restoring communication in individuals who are cognitively intact but unable to speak. Existing EEG-to-speech approaches formulate this task as acoustic reconstruction, optimizing waveform fidelity while ignoring whether the generated speech preserves high-level semantic content.
+
+**Decision:** [ ] accept  [x] reject  [ ] accept-partial (note: _________) — user confirmed reject (2026-11-07): non-invasive EEG reconstruction in an N400 neuroscience paradigm whose contributions are EEG encoding and channel attribution, closest to the rejected MindVoice (2605.31173). Brain-signal papers stay case-by-case, no standing rule.
+
+---
+
+## 2610.00662 | Silence-the-Mimic: Accelerating Imperceptible Perturbation Generation Against Voice Cloning | arXiv | score: 0.55
+
+**Authors:** Runqiu Xu
+**Task guess:** [VC, TTS]
+**Reason for review:** Faster imperceptible adversarial perturbations protecting voices against VC/TTS cloning; corpus precedent is split (NaVo accepted 0.72; SceneGuard and De-AntiFake rejected 0.35).
+**Abstract excerpt:** Deep neural network-based Voice Conversion (VC) and Text-to-Speech (TTS) models have rapidly advanced, enabling realistic voice cloning with minimal input data. Such capabilities raise serious concerns over unauthorized cloning of speaker identities and the associated privacy and security risks.
+
+**Decision:** [x] accept  [ ] reject  [ ] accept-partial (note: _________) — user confirmed accept (2026-11-07): imperceptible anti-cloning perturbations evaluated against multiple VC and TTS models, the Mimic Blocker (interspeech-2025-1625) / NaVo (interspeech-2026-2944) shape; SceneGuard (audible noise) and De-AntiFake (attacks on protections) rejects do not apply. task: [VC, TTS].
+
+---

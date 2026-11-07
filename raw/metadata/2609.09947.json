@@ -1,0 +1,62 @@
+{
+  "id": "2609.09947",
+  "source_ids": {
+    "arxiv": "2609.09947"
+  },
+  "title": "SpeechAnnotator: A Context-Aware Multi-Agent Framework and Benchmark for Multidimensional Speech Annotation",
+  "authors": [
+    "Qirui Zhan",
+    "Shuiyuan Wang",
+    "Jingbin Hu",
+    "Haoyu Zhang",
+    "Xiaming Ren",
+    "Jinrui Liang",
+    "Chaoren Yu",
+    "Bengu Wu",
+    "Yunxiang Chen",
+    "Houdun Liu"
+  ],
+  "authors_full": [
+    "Qirui Zhan",
+    "Shuiyuan Wang",
+    "Jingbin Hu",
+    "Haoyu Zhang",
+    "Xiaming Ren",
+    "Jinrui Liang",
+    "Chaoren Yu",
+    "Bengu Wu",
+    "Yunxiang Chen",
+    "Houdun Liu",
+    "Su Feng",
+    "Liumeng Xue",
+    "Lei Xie"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-09",
+  "preprint_date": "2026-09-09",
+  "arxiv_version": 1,
+  "version_date": "2026-09-09",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.09947",
+  "pdf_url": "https://arxiv.org/pdf/2609.09947.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent controllable speech generation requires training data with fine-grained annotations of speaker traits, prosody, emotion, paralinguistic cues, acoustic scenes, and context. Existing workflows often rely on manual correction, paid hosted multimodal services, or fixed processing chains, which limits large-scale data processing through annotation cost, external-service dependence, or weak cross-stage recovery. We introduce SpeechAnnotator, a locally deployable, context-aware multi-agent framework built entirely from open-source models and tools. Supporting frontend modules first obtain speaker-aware segments and final segment transcripts, while prior evidence extractors attach heterogeneous segment-level cues. Three specialist agents then collaborate through shared state: the Planning Agent converts local audio evidence, speaker history, neighboring segments, and recording-level context into field-specific contracts; the Labeling Agent performs contract-guided multimodal prediction for directly observable attributes; and the Review Agent runs a bounded review loop that checks evidence support and cross-segment consistency, triggering relabeling only for unsupported or inconsistent fields. To address the fragmentation of existing evaluation resources across isolated tasks and narrow-domain test sets, we introduce SpeechAnnotator-Bench (SA-Bench), containing 8.87 hours of human-annotated audio across nine source formats, together with SpeechAnnotator-Eval (SA-Eval), which separates Timeline-Eval for speaker-aware timeline recovery, Closed-Eval for finite-set attributes, and Open-Eval for open-ended attributes. Experiments and ablations show that SpeechAnnotator provides a locally deployable alternative to commercial audio-capable systems, while the bounded review loop improves multidimensional annotation through evidence- and context-aware field-level recovery.",
+  "arxiv_comment": "15 pages, 3 figures, to be published in NCMMSC 2026",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.76,
+  "relevance_note": "Multi-agent framework and benchmark for multidimensional annotation of training data for controllable speech generation (2510.03111 TTS data-curation precedent).",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

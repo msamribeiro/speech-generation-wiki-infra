@@ -1,0 +1,43 @@
+{
+  "id": "2609.37028",
+  "source_ids": {
+    "arxiv": "2609.37028"
+  },
+  "title": "RAWD-TTS: Ratio-Free Reward Alignment for Discrete-Diffusion Voice Cloning",
+  "authors": [
+    "Maxim Maslov",
+    "Kirill Borodin",
+    "Vasilii Kudryavtsev",
+    "Nikita Vasiliev",
+    "Grach Mkrtchian"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-29",
+  "preprint_date": "2026-09-29",
+  "arxiv_version": 1,
+  "version_date": "2026-09-29",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.37028",
+  "pdf_url": "https://arxiv.org/pdf/2609.37028.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot text-to-speech synthesizes new utterances in a speaker's voice from a short reference recording. Voice cloning requires accurate content and preserved speaker identity, but supervised acoustic-token prediction does not directly optimize these waveform-level properties. Reward-based post-training addresses this mismatch, but in discrete diffusion, token choices and reveal positions jointly define the sampling trajectory, complicating alignment. We introduce RAWD-TTS (Ratio-free Advantage-Weighted Denoising), which scores decoded samples with recognition and speaker rewards and uses group-relative advantages to weight masked-token reconstruction of those samples, without reverse-trajectory likelihoods or target audio. On 500 Russian CV3-Eval voice-cloning prompts, joint alignment reduces word error rate from 3.18% to 2.42% at the reward-selected checkpoint (24.0% relative) and to 2.58% at the final checkpoint (19.0%), while WavLM speaker cosine rises from 0.733 to 0.748 and 0.755. Controlled experiments characterize recognition-identity trade-offs and the effects of corruption count, group composition, and weighting.",
+  "arxiv_comment": "Submitted to IEEE ICASSP 2027",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Ratio-free reward alignment for discrete-diffusion zero-shot voice cloning TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

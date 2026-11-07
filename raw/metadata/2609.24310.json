@@ -1,0 +1,39 @@
+{
+  "id": "2609.24310",
+  "source_ids": {
+    "arxiv": "2609.24310"
+  },
+  "title": "Morpho-VITS: Variational Inference with Morphological Modeling for End-to-End Speech Synthesis of a Tonal Bantu Language",
+  "authors": [
+    "Antoine Nzeyimana"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-21",
+  "preprint_date": "2026-09-21",
+  "arxiv_version": 1,
+  "version_date": "2026-09-21",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.24310",
+  "pdf_url": "https://arxiv.org/pdf/2609.24310.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Text-to-speech models for Bantu tonal languages are challenged by a tonal system that is rooted in both the lexis (i.e., the inventory of words, stems, and affixes) and the grammar (i.e., morpho-syntax). To complicate matters, the standard writing systems of these languages often omit tone markings and syllable duration information, which must be disambiguated by the reader based on context. Motivated by linguistic descriptions of Bantu language tone systems, we propose an end-to-end text-to-speech model that augments the text encoding mechanism with a morpho-syntactic prior. We replace the standard phoneme encoder in the VITS architecture with a morpheme sequence encoder and a phoneme-to-morpheme attention network. We posit that, by using this explicit morphological modeling, we can capture the information required to produce the correct tone. Experiments conducted on the Kinyarwanda language, a tonal and morphologically complex Bantu language, reveal substantial TTS improvement from this morphological modeling. Specifically, the proposed method significantly improves the naturalness, intonation, and intelligibility of the produced synthetic voices.",
+  "arxiv_comment": "5 pages, 2 figures, 2 tables",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "VITS variant with morphological modelling for TTS of a tonal Bantu language.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

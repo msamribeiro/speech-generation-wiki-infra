@@ -1,0 +1,45 @@
+{
+  "id": "2609.29889",
+  "source_ids": {
+    "arxiv": "2609.29889"
+  },
+  "title": "EditVoice: Variable-Length Non-Autoregressive Zero-Shot TTS and Speech Editing with Edit Flows",
+  "authors": [
+    "Hongyao Deng",
+    "Wenhao Guan",
+    "Xuetao Lin",
+    "Peijie Chen",
+    "Weijie Wu",
+    "Lin Li",
+    "Qingyang Hong"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 10,
+  "published_date": "2026-10-12",
+  "preprint_date": "2026-09-24",
+  "arxiv_version": 2,
+  "version_date": "2026-10-12",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.29889",
+  "pdf_url": "https://arxiv.org/pdf/2609.29889.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Recent non-autoregressive (NAR) zero-shot text-to-speech (TTS) models generate in parallel but typically require the target sequence length to be specified before generation. We introduce EditVoice, to our knowledge the first variable-length NAR zero-shot TTS model, which uses Edit Flows to jointly update speech content and sequence length through insertions, deletions, and substitutions. EditVoice adopts speech-infilling training, which unifies zero-shot TTS and text-based speech editing and allows both prefix and suffix speech prompt placements at inference. We introduce Complementary Prompt Sampling (CPS) to leverage the complementary Edit Flow predictions induced by the two prompt placements. We further find that EditVoice can edit source and model-generated speech beyond its training sources. We use this generalization for end-to-end editing and training-free post-generation refinement. With the Edit Flow model trained on 10K h of GigaSpeech, EditVoice demonstrates competitive zero-shot TTS performance on Seed-TTS Eval EN and LibriSpeech-PC and speech editing performance on RealEdit.",
+  "arxiv_comment": "5 pages, 3 figures. v2: added code link. Audio samples ( https://dhy02.github.io/editvoice-demo/ ); code ( https://github.com/DHY02/EditVoice )",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Variable-length non-autoregressive zero-shot TTS and speech editing with Edit Flows.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

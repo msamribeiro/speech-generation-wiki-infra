@@ -1,0 +1,44 @@
+{
+  "id": "2609.03283",
+  "source_ids": {
+    "arxiv": "2609.03283"
+  },
+  "title": "Is Semantics Enough for Speech Mean Opinion Score Prediction?",
+  "authors": [
+    "Tianyu Lan",
+    "Yufei Shi",
+    "Yang Ai",
+    "Honghao Sun",
+    "Huipeng Du",
+    "Zhenhua Ling"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-03",
+  "preprint_date": "2026-09-03",
+  "arxiv_version": 1,
+  "version_date": "2026-09-03",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.03283",
+  "pdf_url": "https://arxiv.org/pdf/2609.03283.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Mean Opinion Score (MOS) is the gold standard for evaluating synthesized speech naturalness. However, current automatic MOS predictors are dominated by self-supervised learning (SSL) models that prioritize high-level semantics, potentially compromising their ability to capture critical acoustic details. In this paper, we systematically investigate representations from three paradigms: SSLs, acoustic-only neural audio codecs (NACs), and unified NACs that integrate semantics into reconstruction-based architectures. Extensive benchmarking on the standard BVCC and multiple out-of-domain (OOD) datasets demonstrates that features synergizing semantic understanding with fine-grained acoustic modeling achieve a higher performance upper bound in speech quality assessment. Ultimately, our findings highlight that semantics alone are not enough; a dual focus on semantic content and acoustic fidelity is essential for robust MOS prediction.",
+  "arxiv_comment": "5 pages, 2 figures, accepted by ISCSLP 2026",
+  "task": [
+    "evaluation"
+  ],
+  "relevance_score": 0.82,
+  "relevance_note": "Investigates SSL vs codec representations for automatic MOS prediction of synthesized speech naturalness.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

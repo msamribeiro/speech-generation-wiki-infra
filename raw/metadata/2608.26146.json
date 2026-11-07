@@ -1,0 +1,39 @@
+{
+  "id": "2608.26146",
+  "source_ids": {
+    "arxiv": "2608.26146"
+  },
+  "title": "Vagdhenu: A Vrutta (Meter) Aware Shloka-to-Chant (TTS) System for Sanskrit",
+  "authors": [
+    "Prathosh A P"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 8,
+  "published_date": "2026-08-28",
+  "preprint_date": "2026-06-28",
+  "arxiv_version": null,
+  "version_date": "2026-08-28",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2608.26146",
+  "pdf_url": "https://arxiv.org/pdf/2608.26146.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "We present Vagdhenu, a vrutta (meter) aware shloka-to-chant system for Sanskrit: a text-to-speech system that maps   a metrical verse to its chanted parayana recitation at high fidelity. This is an experience report, not a new   architecture. We take an off-the-shelf flow-matching TTS backbone and a large-scale neural vocoder, and add the   components a faithful Sanskrit chant pipeline needs: a frontend that routes Sanskrit through Kannada orthography to   avoid the Hindi-style schwa deletion that Devanagari triggers in Indic models; a frontend that obeys subtle   Sanskrit phonology (visarga sandhi with its jihvamuliya and upadhmaniya allophones, the aspiration contrast of   alpaprana and mahaprana, and the dental, retroflex, and palatal sibilants kept distinct); and a vrutta-aware   mechanism that detects the meter and picks an exactly matched reference under a half-reference rule. We report a   negative result that shaped the system: in a self-infilling flow-matching backbone, a text-side prosody conditioner   is architecturally inert, because the model recovers pitch from the context mel and the embedding gets no   gradient; the reference clip and a voice-steering retrain are the only working prosody levers. We also report a   comparative lineage across four families (StyleTTS2, VITS2, Matcha-TTS, and the flow-matching backbone), where each   earlier family hit a ceiling on conjuncts or prosody that a five-hour clone cleared at an expert MOS near 4.6. The   system shipped two deployments: a 32-chapter, 5183-verse video corpus (about 17.5 hours) and an audio app covering   about 18000 verses across 12 books. We release the frontend, inference and training code, weights, a   single-speaker chant dataset, and an interactive demo.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.78,
+  "relevance_note": "Sanskrit meter-aware shloka-to-chant TTS built on a flow-matching TTS backbone and vocoder; experience report but squarely a TTS system for a low-resource language.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

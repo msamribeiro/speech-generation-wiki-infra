@@ -1,0 +1,42 @@
+{
+  "id": "2609.34431",
+  "source_ids": {
+    "arxiv": "2609.34431"
+  },
+  "title": "Harmonizing Spectral Evolution in Conditional Flow Matching for TTS",
+  "authors": [
+    "Isha Pandey",
+    "Varad Deshpande",
+    "Abhijat Bharadwaj",
+    "Ganesh Ramakrishnan"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-30",
+  "preprint_date": "2026-09-28",
+  "arxiv_version": 2,
+  "version_date": "2026-09-30",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.34431",
+  "pdf_url": "https://arxiv.org/pdf/2609.34431.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Conditional Flow Matching (CFM) models for text-to-speech (TTS) suffer from incoherent frequency evolution during inference. While similar spectral imbalances are addressed in diffusion models for other domains, those generic solutions fail to generalize to the inherently uncoordinated acoustic dynamics of CFM. We demonstrate that this issue can be effectively mitigated by introducing a novel training-free frequency-selective boosting strategy. Using the Discrete Wavelet Transform (DWT), our method dynamically modulates mel-spectrogram sub-bands during ODE integration, synchronizing spectral development by penalizing aggressive low-frequency growth and boosting lagging high-frequency details. Validated across diverse architectures (Matcha-TTS, F5-TTS, IndicF5), our approach reduces the required Number of Function Evaluations (NFE) from 32 to 26 and improves Frechet Audio Distance (FAD) by up to 61%, all without compromising mean opinion scores, speaker similarity, and speech intelligibility.",
+  "arxiv_comment": "4 Pages, 5 figures",
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.88,
+  "relevance_note": "Training-free frequency-selective boosting to fix spectral evolution in conditional flow-matching TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}

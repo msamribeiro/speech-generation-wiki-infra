@@ -1,0 +1,63 @@
+{
+  "id": "2609.15184",
+  "source_ids": {
+    "arxiv": "2609.15184"
+  },
+  "title": "Cross-Lingual F5-TTS 2: A Simplified Framework for Language-Agnostic Voice Cloning",
+  "authors": [
+    "Qingyu Liu",
+    "Rixi Xu",
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Haitao Li",
+    "Pengcheng Zhu",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Yunting Yang",
+    "Qinyuan Cheng"
+  ],
+  "authors_full": [
+    "Qingyu Liu",
+    "Rixi Xu",
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Haitao Li",
+    "Pengcheng Zhu",
+    "Bowen Zhang",
+    "Jian Zhao",
+    "Yunting Yang",
+    "Qinyuan Cheng",
+    "Xipeng Qiu",
+    "Berrak Sisman",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2026,
+  "month": 9,
+  "published_date": "2026-09-14",
+  "preprint_date": "2026-09-14",
+  "arxiv_version": 1,
+  "version_date": "2026-09-14",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2609.15184",
+  "pdf_url": "https://arxiv.org/pdf/2609.15184.pdf",
+  "pdf_path": null,
+  "pdf_source": "arxiv",
+  "abstract": "Zero-shot text-to-speech (TTS) can clone a speaker's voice from a short audio prompt, yet most TTS systems still require the audio prompt transcript during inference. This dependency prevents cross-lingual voice cloning when the audio prompt transcript is unavailable, particularly for unseen languages. Cross-Lingual F5-TTS removes this dependency and enables transcript-free cross-lingual voice cloning, but it prepares its training data with forced alignment. Forced alignment is sensitive to boundary errors, and its cost grows as more languages are covered. Its speaking rate predictor is also unreliable at estimating duration when the audio prompt begins or ends with silence. In this paper, we present Cross-Lingual F5-TTS 2, a simplified framework for transcript-free cross-lingual voice cloning without forced alignment. Instead of using forced alignment to segment real utterances, we build same-speaker prompt and target pairs using a pretrained F5-TTS model and fine-tune the same model on these constructed pairs. This simplifies data preparation and preserves the acoustic modeling capability of the pretrained model, enabling adaptation with only a short fine-tuning stage. We further make the syllable-level speaking rate predictor robust to leading and trailing silence through silence-aware augmentation. Experiments show that Cross-Lingual F5-TTS 2 reaches higher speaker similarity than F5-TTS and Cross-Lingual F5-TTS while maintaining intelligibility. All related resources are publicly available.",
+  "arxiv_comment": null,
+  "task": [
+    "TTS"
+  ],
+  "relevance_score": 0.9,
+  "relevance_note": "Simplified transcript-free cross-lingual voice cloning framework built on F5-TTS.",
+  "status": "accepted",
+  "fetched_date": "2026-11-07",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null
+}
