@@ -4,9 +4,9 @@
 
 **Owner:** current Codex session (`/root`); sole owner until the migration is merged
 
-**Status:** Phase 1 in progress; contract drafted and deterministic inventory generated; no migration applied
+**Status:** Q1 execution batch validated; content released; infrastructure release pending
 
-**Infrastructure base:** `4add1a2` (`main`)
+**Infrastructure base:** `5bea40d` (`main`)
 
 **Content base:** `416ccd6` (`main`)
 
@@ -199,7 +199,7 @@ The first bounded execution batch is the Q1 preflight dependency recorded in
 This batch changes no claim YAML, reconciliation state, snapshot, concept render, or report.
 After application, the repeat dry-run manifest SHA-256 was
 `0185d2f26c43234bb83518e9a39a38ab5b5106f56c03ac9ef635ab8d84711688` and reported zero metadata,
-page, catalog, or quarter changes. The full 52-test suite and all six health modules passed. The
+page, catalog, or quarter changes. The full 53-test suite and all six health modules passed. The
 resulting Q1 set is 116 ingested pages: 105 arXiv, nine workshop, and two AAAI records; none is yet
 present in a top-level claim YAML.
 
@@ -234,17 +234,15 @@ than accepted silently.
 
 ## Release Record
 
-These fields remain intentionally blank until all gates pass:
-
-- Reviewed manifest path: _pending_
-- Reviewed manifest SHA-256: _pending_
-- Content migration commit: _pending_
-- Infrastructure migration commit: _pending_
-- Content `main` merge commit: _pending_
+- Reviewed manifest path: `docs/records/2026-11-08-q1-peer-reviewed-versions.yaml`
+- Reviewed manifest SHA-256: `4f68061ab59326f0dcbe1e4de27d5b8ae68e27f45041fda75df44cc39cc7460c`
+- Content migration commit: `844fb57`
+- Infrastructure migration commit: `e90a717`
+- Content `main` merge commit: `844fb57` (fast-forward)
 - Infrastructure `main` merge commit: _pending_
-- Post-merge health baseline: _pending_
-- Final canonical Q1 page count: _pending_
-- Final canonical Q1 concept-membership count: _pending_
+- Post-content-merge health baseline: all six modules pass; zero errors
+- Final canonical Q1 page count: 116
+- Final canonical Q1 concept-membership count: 453 across 22 concepts
 
 ## Downstream Release Conditions
 
