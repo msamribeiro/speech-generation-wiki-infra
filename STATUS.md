@@ -8,7 +8,7 @@ retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 inges
 frontier and Q1 integration. The peer-reviewed-version rule and its verified Q1 batch are complete;
 Q3 fetch coverage is complete (Interspeech 2026
 from ISCA on 2026-11-01; arXiv top-up through 2026-09-30 on 2026-11-07), every accepted Q3 record
-has a PDF, and 204 of 364 are parsed (batches 1-3 of 7).
+has a PDF, and 284 of 364 are parsed (batches 1-5 of 7).
 
 ---
 
@@ -20,8 +20,8 @@ has a PDF, and 204 of 364 are parsed (batches 1-3 of 7).
 3. Continue the corpus-wide peer-reviewed-version batches, including the two Q2-held ICML/IJCAI
    records and historical frozen records, without duplicating the released migration path.
 4. Bootstrap and ingest Q3 2026. Fetch, filter, review and PDF download are done (2026-11-07); next,
-   parse batches 4-7 (160 papers, from 2026-09-11, incl. the 70 ISCA PDFs), then work the accepted
-   queue (procedure: `docs/ingest-protocol.md`).
+   parse batches 6-7 (80 papers, from 2026-09-27, incl. the remaining 57 ISCA PDFs), then work the
+   accepted queue (procedure: `docs/ingest-protocol.md`).
 
 The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;
 the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 2026-11-01). The completed Q4 integration record is archived at
@@ -36,8 +36,8 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 | Metadata records | 2,024 | 1,069 ingested, 386 accepted, 0 review, 569 rejected (incl. 109 Interspeech 2026 ISCA duplicates and 13 arXiv preprints of ISCA records) |
 | Published paper pages | 1,061 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,455 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,275 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 206 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 204 Q3 2026; 160 more Q3 PDFs (incl. the 70 ISCA) await parse, plus Q2 `2608.26146` and 19 Q4 records |
+| Parsed active papers | 1,355 | Includes ingested papers and accepted papers ready for ingest |
+| Accepted and parsed, ready to ingest | 286 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 in a peer-reviewed-version batch) and 284 Q3 2026; 80 more Q3 PDFs (incl. 57 ISCA) await parse, plus Q2 `2608.26146` and 19 Q4 records |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
@@ -75,7 +75,7 @@ non-authoritative.
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Complete: 116 ingested, 0 accepted after the verified peer-reviewed-version batch | Not started; manifest-ready (22 concepts, 453 memberships) | Not started | Not started |
 | Q2 2026 | Complete: 174 ingested after 16 Q1 pages moved to verified May proceedings dates; 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI); 1 accepted re-dated into Q2 on 2026-11-07 (`2608.26146` Vagdhenu, PDF, not parsed) | Not started | Not started | Not started |
-| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 364 accepted (all with PDFs, 204 parsed) | Not started | Not started | Not started |
+| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 364 accepted (all with PDFs, 284 parsed) | Not started | Not started | Not started |
 
 Quarter counts above are by canonical `published_date` as of 2026-11-08. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.

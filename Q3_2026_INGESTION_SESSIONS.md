@@ -29,13 +29,13 @@ Accepted papers by source, and download/parse status (every accepted Q3 record n
 
 | Source | Accepted | Parsed | PDF, not parsed |
 |--------|---------:|-------:|----------------:|
-| Interspeech 2026, ISCA records | 70 | 0 | 70 |
-| Interspeech 2026, arXiv records (re-dated) | 65 | 52 | 13 |
-| arXiv | 191 | 114 | 77 |
+| Interspeech 2026, ISCA records | 70 | 13 | 57 |
+| Interspeech 2026, arXiv records (re-dated) | 65 | 65 | 0 |
+| arXiv | 191 | 168 | 23 |
 | ACL 2026 | 27 | 27 | 0 |
 | Workshops | 9 | 9 | 0 |
 | ICML 2026 | 2 | 2 | 0 |
-| **Total** | **364** | **204** | **160** |
+| **Total** | **364** | **284** | **80** |
 
 Not yet in scope: the two Q2-held papers `2606.12940` (ICML 2026) and `2606.13006` (IJCAI 2026),
 which move to Q3 under the peer-reviewed-version rule. Q2 also gained one accepted paper on
@@ -55,30 +55,31 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-Q3 2026 pre-flight is in progress; no Q3 page has been written by a sweep yet. Done on 2026-11-07:
-arXiv top-up, dedup and filter, review queue cleared, all 224 missing PDFs downloaded, parse
-batches 1-3 of 7. To resume:
+Q3 2026 pre-flight is in progress; no Q3 page has been written by a sweep yet. Done so far: arXiv
+top-up, dedup and filter, review queue cleared, all 224 missing PDFs downloaded (2026-11-07), and
+parse batches 1-5 of 7 (2026-11-07 and 2026-11-08). To resume:
 
-1. **Finish parsing: batches 4-7** (160 papers, every accepted Q3 record with a PDF and no
-   `paper.md`, ordered by `published_date`; batch 4 starts at 2026-09-11). Regenerate the list
-   from metadata (the batch files lived in the session scratchpad). The user reviews one batch at a
-   time: run each batch of 40 as two background runs of 20 (`batch_convert.py --workers 2 --ids
-   ...`, about 40 min each), since a single run of 40 can exceed the 2 h background-task limit
-   (batch 2 did). After each batch: post-parse check (paper.md < 100 lines or empty
-   references.json), `citation_index.py`, one log line, then report. Most of batches 5-7 are the
-   70 ISCA PDFs: check their figure-1 for the ISCA logo at ingest
+1. **Finish parsing: batches 6-7** (80 papers: 57 ISCA and 23 arXiv records, every accepted Q3
+   record with a PDF and no `paper.md`, ordered by `published_date`; batch 6 continues from
+   2026-09-27). Regenerate the list from metadata (the batch files lived in the session
+   scratchpad). The user reviews one batch at a time: run each batch of 40 as two background runs
+   of 20 (`batch_convert.py --workers 2 --ids ...`, 22 to 51 min per run on 2026-11-08), since a
+   single run of 40 can exceed the 2 h background-task limit (batch 2 did). After each batch:
+   post-parse check (paper.md < 100 lines or empty references.json), `citation_index.py`, one log
+   line, then report. Check the figure-1 of all 70 ISCA papers for the ISCA logo at ingest
    ([[feedback_interspeech_figure_sanity]]). Also parse `2608.26146` (now Q2).
 2. *(done 2026-11-07)* arXiv top-up 2026-08-20 to 2026-09-30.
 3. *(done 2026-11-07)* Download every Q3 accepted record without a PDF.
-4. **Peer-reviewed-version rule** (`BACKLOG.md` "Peer-reviewed versions after ingest"): implement
-   before the sweep so Q3 pages are written with the peer-reviewed link. Inputs confirmed: field
-   `url_peer_reviewed`; ICASSP 2026 `conference_date: 2026-05-03`. Still pinned: frozen-date
-   detection by claim-YAML presence (recommended) vs an explicit `date_frozen` flag. Backfill: the
-   34 re-dated Interspeech pages (ISCA keys now in `source_ids.isca`) and the 10 frozen 2025 pages
-   that are Interspeech 2026 papers (`2509.09631`, `2509.13068`, `2509.15626`, `2509.17516`,
-   `2509.22167`, `2510.13293`, `2510.16718`, `2510.25577`, `2511.01056`, `2511.19734`).
-5. **Held papers:** `2606.12940` and `2606.13006` move to Q3 under the rule; ingest them as Q3
-   papers. `2606.13006` is already cited (accepted, no page) by `2606.28249` HPRO.
+4. **Peer-reviewed-version rule:** *implemented 2026-11-08 by the peer-reviewed-version stream*
+   (`docs/records/2026-11-08-peer-reviewed-version-migration.md`, `docs/ingest-protocol.md`
+   section 2); claim membership is the sole freeze authority, so the `date_frozen` question is
+   closed. Only the verified Q1 batch has been applied. The Interspeech, ICML, ACL and other venue
+   batches remain open in `BACKLOG.md`, including the 34 re-dated Interspeech pages and the 10
+   frozen 2025 pages. Do not duplicate that migration here; before the sweep, check what it has
+   covered so far.
+5. **Held papers:** `2606.12940` and `2606.13006` move to Q3 through a peer-reviewed-version batch;
+   ingest them as Q3 papers afterwards. `2606.13006` is already cited (accepted, no page) by
+   `2606.28249` HPRO.
 6. **Start the sweep:** pre-flight per `docs/ingest-protocol.md` section 2, then chronological
    selection by `published_date`.
 
@@ -274,6 +275,17 @@ downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_
   `paper.md` with the converter's `_parse_ref_string` (36 refs). The user declined an extractor
   fix for now.
 - Commits: `ac1427c` (fetch, filter, review), `6c4fe03` (downloads), plus the wrap-up commit.
+
+### Session 2026-11-08: parse batches 4-5
+
+- **Batch 4** (40 papers, published 2026-09-11 to 09-24): 40 done, 0 failed, two runs of 20
+  (78 min), 0 flagged by the post-parse check.
+- **Batch 5** (40 papers, published 2026-09-24 to 09-27, including the first 13 ISCA PDFs): 40 done,
+  0 failed, two runs of 20 (48 min), 0 flagged.
+- Citation index rebuilt after each batch (now 25,248 entries, 1,392 corpus papers). The
+  content-ingest worktree was fast-forwarded to content `main`. The sibling peer-reviewed-version
+  stream landed on `main` during the session and was merged into `work/ingest` at wrap-up; no ingest
+  pages were written.
 
 ---
 
