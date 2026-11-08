@@ -78,6 +78,7 @@ metrics:
 code_available: true | false | null
 demo_available: true | false | null
 url: "string"
+url_peer_reviewed: "string — preserve/add from metadata when present; otherwise omit"
 related_concepts: [3–6 slugs from allowed list]
 related_papers: [in-corpus IDs cited by this paper]
 field_significance:
@@ -94,9 +95,12 @@ generation:
 ---
 
 > [!abstract] {venue} · {year} · {Capitalised venue_type}
-> **{First Author et al.}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: ✓/✗/? · Code: ✓/✗/?
+> **{First Author et al.}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set} · Demo: ✓/✗/? · Code: ✓/✗/?
 >
 > {One sentence: the single most important thing this paper does. No bold label.}
+
+{When `url_peer_reviewed` is set, preserve or add exactly one italic paragraph here stating that
+the page, metrics, and claims summarize the ingested version and linking the peer-reviewed version.}
 
 ## Problem
 ## Method
@@ -204,8 +208,14 @@ Never use `[!note]`, `[!info]`, `[!caution]` in a Tier 1 page.
 Check that the abstract callout:
 - Uses `[!abstract]`
 - Header line: `{venue} · {year} · {Capitalised venue_type}` (e.g. `Conference`, not `conference`)
-- Second line: `**{Author et al.}** ({org}) · [→ Paper]({url}) · Demo: {✓/✗/?} · Code: {✓/✗/?}`
+- Second line: `**{Author et al.}** ({org}) · [→ Paper]({url})` plus a separate
+  `[→ Peer-reviewed version]({url_peer_reviewed})` link when metadata supplies it, then
+  `· Demo: {✓/✗/?} · Code: {✓/✗/?}`
 - Body: one sentence summarising the single most important thing the paper does
+
+When `url_peer_reviewed` is set, verify exactly one italic post-callout note explains that the page,
+metrics, and claims summarize the ingested version. Do not use the peer-reviewed paper's new
+results to rewrite the page unless the invocation explicitly authorizes a re-ingest from it.
 
 If the callout is wrong or malformed, fix it. Do not change the one-sentence summary unless it is factually incorrect.
 

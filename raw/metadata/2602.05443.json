@@ -1,7 +1,8 @@
 {
   "id": "2602.05443",
   "source_ids": {
-    "arxiv": "2602.05443"
+    "arxiv": "2602.05443",
+    "doi": "10.1109/icassp55912.2026.11461239"
   },
   "title": "Wave-Trainer-Fit: Neural Vocoder with Trainable Prior and Fixed-Point Iteration towards High-Quality Speech Generation from SSL features",
   "authors": [
@@ -11,16 +12,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 2,
-  "published_date": "2026-02-05",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2026-02-05",
   "arxiv_version": 1,
   "version_date": "2026-02-05",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-08-13",
   "url": "https://arxiv.org/abs/2602.05443",
   "pdf_url": "https://arxiv.org/pdf/2602.05443.pdf",
@@ -49,5 +50,6 @@
       "model": "claude-sonnet-5",
       "commit": "fd03e29"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11461239/"
 }

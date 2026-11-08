@@ -1,7 +1,8 @@
 {
   "id": "2506.04518",
   "source_ids": {
-    "arxiv": "2506.04518"
+    "arxiv": "2506.04518",
+    "doi": "10.1109/asru65441.2025.11434766"
   },
   "title": "Towards Efficient Speech-Text Jointly Decoding within One Speech Language Model",
   "authors": [
@@ -30,16 +31,16 @@
     "Jinyu Li"
   ],
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
-  "year": 2026,
-  "month": 2,
-  "published_date": "2026-02-11",
+  "venue": "ASRU",
+  "venue_type": "conference",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-06",
   "preprint_date": "2025-06-04",
   "arxiv_version": 3,
   "version_date": "2026-02-11",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2025-12-06",
   "ingested_date": "2026-08-13",
   "url": "https://arxiv.org/abs/2506.04518",
   "pdf_url": "https://arxiv.org/pdf/2506.04518.pdf",
@@ -69,5 +70,6 @@
       "model": "claude-sonnet-5",
       "commit": "fd03e29"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11434766/"
 }

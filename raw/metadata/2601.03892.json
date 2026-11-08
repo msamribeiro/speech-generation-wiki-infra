@@ -1,7 +1,8 @@
 {
   "id": "2601.03892",
   "source_ids": {
-    "arxiv": "2601.03892"
+    "arxiv": "2601.03892",
+    "doi": "10.1109/icassp55912.2026.11461243"
   },
   "title": "Lightweight and perceptually-guided voice conversion for electro-laryngeal speech",
   "authors": [
@@ -12,16 +13,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 1,
-  "published_date": "2026-01-22",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2026-01-07",
   "arxiv_version": 2,
   "version_date": "2026-01-22",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-08-03",
   "url": "https://arxiv.org/abs/2601.03892",
   "pdf_url": "https://arxiv.org/pdf/2601.03892.pdf",
@@ -50,5 +51,6 @@
       "model": "claude-sonnet-5",
       "commit": "ae5381c"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11461243/"
 }

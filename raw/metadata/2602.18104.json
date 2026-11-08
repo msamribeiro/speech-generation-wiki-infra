@@ -1,7 +1,8 @@
 {
   "id": "2602.18104",
   "source_ids": {
-    "arxiv": "2602.18104"
+    "arxiv": "2602.18104",
+    "doi": "10.1109/icassp55912.2026.11460769"
   },
   "title": "MeanVoiceFlow: One-step Nonparallel Voice Conversion with Mean Flows",
   "authors": [
@@ -12,16 +13,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 2,
-  "published_date": "2026-02-20",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2026-02-20",
   "arxiv_version": 1,
   "version_date": "2026-02-20",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-08-14",
   "url": "https://arxiv.org/abs/2602.18104",
   "pdf_url": "https://arxiv.org/pdf/2602.18104.pdf",
@@ -50,5 +51,6 @@
       "model": "claude-sonnet-5",
       "commit": "6d33c87"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11460769/"
 }

@@ -1,7 +1,8 @@
 {
   "id": "2601.13758",
   "source_ids": {
-    "arxiv": "2601.13758"
+    "arxiv": "2601.13758",
+    "doi": "10.1609/aaai.v40i36.40298"
   },
   "title": "GOMPSNR: Reflourish the Signal-to-Noise Ratio Metric for Audio Generation Tasks",
   "authors": [
@@ -14,8 +15,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "AAAI",
+  "venue_type": "conference",
   "year": 2026,
   "month": 1,
   "published_date": "2026-01-20",
@@ -23,7 +24,7 @@
   "arxiv_version": 1,
   "version_date": "2026-01-20",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-01-20",
   "ingested_date": "2026-08-11",
   "url": "https://arxiv.org/abs/2601.13758",
   "pdf_url": "https://arxiv.org/pdf/2601.13758.pdf",
@@ -53,5 +54,6 @@
       "model": "claude-sonnet-5",
       "commit": "646e2be"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ojs.aaai.org/index.php/AAAI/article/view/40298"
 }

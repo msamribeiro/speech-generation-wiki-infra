@@ -1,7 +1,8 @@
 {
   "id": "2601.12289",
   "source_ids": {
-    "arxiv": "2601.12289"
+    "arxiv": "2601.12289",
+    "doi": "10.1609/aaai.v40i38.40505"
   },
   "title": "ParaMETA: Towards Learning Disentangled Paralinguistic Speaking Styles Representations from Speech",
   "authors": [
@@ -12,16 +13,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "AAAI",
+  "venue_type": "conference",
   "year": 2026,
   "month": 1,
-  "published_date": "2026-01-18",
+  "published_date": "2026-01-20",
   "preprint_date": "2026-01-18",
   "arxiv_version": 1,
   "version_date": "2026-01-18",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-01-20",
   "ingested_date": "2026-08-03",
   "url": "https://arxiv.org/abs/2601.12289",
   "pdf_url": "https://arxiv.org/pdf/2601.12289.pdf",
@@ -50,5 +51,6 @@
       "model": "claude-sonnet-5",
       "commit": "ae5381c"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ojs.aaai.org/index.php/AAAI/article/view/40505"
 }

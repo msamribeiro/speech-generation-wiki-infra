@@ -57,6 +57,11 @@ Before freezing the candidate set:
 - exclude duplicate pointers and Tier 2 pages according to the current schema; and
 - apply the peer-reviewed-version and frozen-quarter rules before using the date in integration.
 
+A date is frozen only when the canonical paper ID occurs in the `papers:` list of a top-level
+canonical `_claims/*.yaml`. Reconciliation, snapshots, reports, and rendered pages do not create a
+freeze. If a known peer-reviewed version has not yet been applied, integration stops at this gate;
+Phase 1 must not be used to freeze a provisional preprint date.
+
 A later discovery of an earlier proceedings date can silently move a paper into the quarter. The
 Q4 2025 cycle exposed this with `2605.18001` and `2605.25504`; the date audit is therefore a hard
 preflight gate, not a closeout cleanup task.

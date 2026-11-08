@@ -1,7 +1,8 @@
 {
   "id": "2601.21886",
   "source_ids": {
-    "arxiv": "2601.21886"
+    "arxiv": "2601.21886",
+    "doi": "10.1109/icassp55912.2026.11464613"
   },
   "title": "Speech Quality-Based Localization of Low-Quality Speech and Text-to-Speech Synthesis Artefacts",
   "authors": [
@@ -12,16 +13,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 1,
-  "published_date": "2026-01-29",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2026-01-29",
   "arxiv_version": 1,
   "version_date": "2026-01-29",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-08-12",
   "url": "https://arxiv.org/abs/2601.21886",
   "pdf_url": "https://arxiv.org/pdf/2601.21886.pdf",
@@ -51,5 +52,6 @@
       "model": "claude-sonnet-5",
       "commit": "e9c3bbc"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11464613/"
 }

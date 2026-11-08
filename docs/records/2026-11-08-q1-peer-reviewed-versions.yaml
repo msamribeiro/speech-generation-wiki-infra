@@ -1,0 +1,29 @@
+schema_version: 1
+scope: Q1 2026 canonical records with authoritative peer-reviewed publication records
+verification_rule: exact normalized title plus publisher or proceedings metadata
+entries:
+  - {id: "2412.17048", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11461483", url: "https://ieeexplore.ieee.org/document/11461483/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.03892", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11461243", url: "https://ieeexplore.ieee.org/document/11461243/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.13835", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11464984", url: "https://ieeexplore.ieee.org/document/11464984/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.14472", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11461026", url: "https://ieeexplore.ieee.org/document/11461026/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.16618", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11462723", url: "https://ieeexplore.ieee.org/document/11462723/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.19781", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11464405", url: "https://ieeexplore.ieee.org/document/11464405/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.20094", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11463729", url: "https://ieeexplore.ieee.org/document/11463729/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.21886", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11464613", url: "https://ieeexplore.ieee.org/document/11464613/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.22873", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11464460", url: "https://ieeexplore.ieee.org/document/11464460/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.02591", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11463272", url: "https://ieeexplore.ieee.org/document/11463272/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.05207", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11463968", url: "https://ieeexplore.ieee.org/document/11463968/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.05443", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11461239", url: "https://ieeexplore.ieee.org/document/11461239/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.05770", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11464250", url: "https://ieeexplore.ieee.org/document/11464250/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.17157", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11463299", url: "https://ieeexplore.ieee.org/document/11463299/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.18104", venue: ICASSP, venue_type: conference, conference_date: "2026-05-03", doi: "10.1109/icassp55912.2026.11460769", url: "https://ieeexplore.ieee.org/document/11460769/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2601.12289", venue: AAAI, venue_type: conference, conference_date: "2026-01-20", doi: "10.1609/aaai.v40i38.40505", url: "https://ojs.aaai.org/index.php/AAAI/article/view/40505", verified_by: AAAI proceedings plus official AAAI-26 dates}
+  - {id: "2601.13758", venue: AAAI, venue_type: conference, conference_date: "2026-01-20", doi: "10.1609/aaai.v40i36.40298", url: "https://ojs.aaai.org/index.php/AAAI/article/view/40298", verified_by: AAAI proceedings plus official AAAI-26 dates}
+  - {id: "2506.04518", venue: ASRU, venue_type: conference, conference_date: "2025-12-06", doi: "10.1109/asru65441.2025.11434766", url: "https://ieeexplore.ieee.org/document/11434766/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2602.10164", venue: SLT, venue_type: conference, conference_date: "2024-12-02", doi: "10.1109/slt61566.2024.10832287", url: "https://ieeexplore.ieee.org/document/10832287/", verified_by: Crossref IEEE publisher deposit}
+  - {id: "2603.14035", venue: Speech Prosody, venue_type: conference, conference_date: "2026-05-26", doi: "10.21437/speechprosody.2026-5", url: "https://www.isca-archive.org/speechprosody_2026/vigneaux26_speechprosody.html", verified_by: ISCA Archive Crossref deposit}
+deferred:
+  - id: "2603.19831"
+    reason: arXiv comment identifies an explicitly non-archival AAAI workshop, not a peer-reviewed proceedings publication
+  - id: "2603.24144"
+    reason: ICME 2026 acceptance is asserted, but no exact authoritative proceedings record was found in the verification pass

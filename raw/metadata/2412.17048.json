@@ -1,7 +1,8 @@
 {
   "id": "2412.17048",
   "source_ids": {
-    "arxiv": "2412.17048"
+    "arxiv": "2412.17048",
+    "doi": "10.1109/icassp55912.2026.11461483"
   },
   "title": "Why Do Speech Language Models Fail to Generate Semantically Coherent Outputs? A Modality Evolving Perspective",
   "authors": [
@@ -14,16 +15,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 1,
-  "published_date": "2026-01-27",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2024-12-22",
   "arxiv_version": 2,
   "version_date": "2026-01-27",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-05-26",
   "url": "https://arxiv.org/abs/2412.17048",
   "pdf_url": "https://arxiv.org/pdf/2412.17048.pdf",
@@ -50,5 +51,6 @@
       "model": "claude-sonnet-4-6",
       "commit": "24ea64d"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11461483/"
 }

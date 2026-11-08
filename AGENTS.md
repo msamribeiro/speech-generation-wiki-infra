@@ -166,10 +166,13 @@ Never violated under any circumstances:
     the content repository must carry the version-2 `generation` block from
     [docs/schemas/generation.md](docs/schemas/generation.md), including runtime, provider, exact
     model ID, logical agent, date, and infra commit.
-13. **One canonical paper date** — `published_date` is the conference date for peer-reviewed
-    proceedings or the journal publication date for journal papers, otherwise the date of the arXiv
-    version we fetched and ingested (`version_date`); `preprint_date` (v1), `conference_date`, and
-    `journal_date` are logged alongside it. Spec: [docs/schemas/metadata.md](docs/schemas/metadata.md#paper-dates).
+13. **One canonical paper date** — before integration, `published_date` is the conference date for
+    peer-reviewed proceedings or the journal publication date for journal papers, otherwise the
+    date of the arXiv version fetched and ingested (`version_date`). Once the canonical paper ID
+    occurs in a top-level claim YAML, that quarter date is frozen; later peer-reviewed versions add
+    their venue/date/link without moving it. `preprint_date` (v1), `conference_date`, and
+    `journal_date` remain recorded alongside it. Spec:
+    [docs/schemas/metadata.md](docs/schemas/metadata.md#paper-dates).
 
 ---
 
