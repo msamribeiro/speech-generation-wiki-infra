@@ -44,26 +44,25 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
 - Only `status: accepted` with a parsed paper (`raw/parsed/{id}/`). Never ingest `pending`,
   `review` or `rejected` without explicit instruction.
 - Skip dedup pointers (`wiki_page_id` set) and records marked `is_duplicate`.
-- Conference-accepted arXiv papers keep the arXiv date (ICASSP, Speech Prosody, LREC, ICML and
-  the 14 arXiv/ICML pairs, ACL, IJCAI, AAAI; MoshiRAG precedent; user, 2026-10-26), with one
-  exception so far: **Interspeech 2026**, whose proceedings are on the ISCA archive, is applied
-  under rule 1 (`conference_date: 2026-09-27`; 97 records re-dated 2026-10-26, see
-  `raw/pipeline_log.md`). A one-pass migration for the other venues is tracked in `BACKLOG.md`.
-  Card label and `venue_type` follow the page's canonical date: arXiv-dated pages stay
-  `arXiv · Preprint`; re-dated Interspeech pages read `Interspeech · 2026 · Conference`.
+- Apply the peer-reviewed-version rule before selecting the queue. A verified proceedings or
+  journal version fully re-dates a paper that is absent from all top-level claim YAMLs. If the
+  canonical ID already occurs in a claim YAML, preserve `published_date`, year, and month while
+  recording the peer-reviewed venue/date/link and page note. Claim membership, not ingest status,
+  is the freeze authority. Never infer acceptance from “submitted to” prose.
 - **Proceedings check at pre-flight.** When a candidate's `arxiv_comment` says "accepted to"
-  a venue, check whether those proceedings are already published (ISCA archive for Interspeech:
-  match titles against `isca-archive.org/interspeech_YYYY/index.html`, then confirm by author
-  overlap; titles can change between versions). Venues already migrated under rule 1 move the
-  record out of the quarter; for the others, follow the arXiv-date rule above.
+  a venue, verify the authoritative proceedings landing page, identity, and venue date. Match
+  titles and authors because camera-ready titles can change. An acceptance comment is a discovery
+  signal, not sufficient evidence for mutation. Once verified, apply the rule above before the
+  paper enters a quarterly queue.
 - Pre-flight each candidate before it enters the list:
   - **ID/title dedup.** Title-match against the whole corpus, then check authors and abstract
     (retitled versions slip past title matching).
   - **OpenReview records** that duplicate an existing arXiv record: arXiv stays canonical; the
     OpenReview record is flagged `is_duplicate` and `rejected`.
   - **Later versions** (proceedings or journal version of an already-ingested paper): the ingested
-    version stays canonical; mark the new record a duplicate and add an italic note on the existing
-    page. Never re-ingest or re-date. Rule: `schemas/metadata.md`, "Duplicates and Later Versions".
+    record stays canonical; mark the new record a duplicate and add the peer-reviewed link and
+    italic note to the existing page. Re-date only when the canonical ID is absent from every
+    top-level claim YAML. Rule: `schemas/metadata.md`, "Duplicates and Later Versions".
     Retitled versions with rewritten abstracts slip past title and abstract matching (VibeVoice ICLR
     2026 vs its tech report, abstract similarity 0.12): screen every candidate's author list against
     ingested records and compare the systems when most authors overlap. Exception: an ingested

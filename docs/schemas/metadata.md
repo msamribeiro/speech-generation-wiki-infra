@@ -41,6 +41,7 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
     }
   ],
   "url": "string — arXiv or proceedings URL",
+  "url_peer_reviewed": "string or null — landing page for a later peer-reviewed version when url identifies the version summarized by the wiki page",
   "pdf_path": "raw/papers/filename.pdf",
   "task": ["list — one or more task values; see docs/schemas/vocabulary.md"],
   "relevance_score": 0.95,
@@ -73,44 +74,49 @@ temporal reports, corpus summaries) uses the canonical `published_date`.
 | `version_estimated` | `false` when the version was pinned at fetch or PDF download; `true` when inferred (see rule 4). |
 | `conference_date` | Date of the peer-reviewed proceedings (conference or workshop) in which the paper appeared. Null when not peer reviewed, or when the date is unknown. |
 | `journal_date` | Optional. First online publication date (Crossref `published-online`, or the journal site) in a peer-reviewed journal. Omit for non-journal papers. |
-| `published_date` | **Canonical.** `conference_date` if set, then `journal_date`, then `version_date`, otherwise `preprint_date`. |
+| `published_date` | **Canonical quarter date.** Before integration: `conference_date` if set, then `journal_date`, then `version_date`, otherwise `preprint_date`. After integration it is frozen at the value already copied into claim YAMLs. |
 
 Rules:
 
-1. **Peer-reviewed venues win.** If the paper appeared at a conference or workshop,
+1. **Peer-reviewed venues win before integration.** If the paper appeared at a conference or workshop,
    `published_date = conference_date`; if it appeared in a peer-reviewed journal,
    `published_date = journal_date`, even when an earlier preprint exists. A paper in both uses
-   the conference date.
-2. **Otherwise the date of the version we ingest.** A preprint's content can change after v1
+   the conference date. This rule applies fully until the paper enters a canonical claim YAML.
+2. **Claim membership freezes the quarter.** A paper is integrated when its canonical ID occurs
+   in the `papers:` list of any top-level canonical `_claims/*.yaml` file. Once integrated,
+   `published_date`, `year`, and `month` remain unchanged when a later peer-reviewed version is
+   found. Still record `conference_date` or `journal_date`, update the venue fields, add
+   `url_peer_reviewed`, and add the page note defined under “Duplicates and Later Versions.”
+   Reconciliation runs, snapshots, reports, and rendered pages do not independently create a
+   freeze. There is no `date_frozen` metadata field; claim membership is the authority.
+3. **Otherwise the date of the version we ingest.** A preprint's content can change after v1
    (new evidence, rewrites), and snapshots must not credit later evidence to an earlier date, so
    `published_date = version_date`. Journal acceptance noted in `arxiv_comment` is a cue to look
    up the journal date (for example via Crossref).
-3. **Only the version we hold counts.** Never use the arXiv "latest revision" date of a version we
+4. **Only the version we hold counts.** Never use the arXiv "latest revision" date of a version we
    have not fetched, and never derive the date from the arXiv ID (IDs can lag the submission
    month). When we re-fetch or re-ingest a newer version, the new version is the one that counts:
    the date moves, and any frozen snapshot is corrected by explicit supersession, not edited.
-4. **Pinning.** Fetchers record the version they harvest (`version_estimated: false`).
+5. **Pinning.** Fetchers record the version they harvest (`version_estimated: false`).
    `scripts/parse/download_pdfs.py` re-pins to the latest version at download. Records predating
    pinning were estimated by `scripts/apply_date_rule.py` as the latest version submitted on or
    before the local PDF's modification date, else `fetched_date` (`version_estimated: true`).
-5. **Keep `year` and `month` in sync** with `published_date`.
-6. **Precision.** A `-01` day means month-only precision (an Anthology volume month) unless the
+6. **Keep `year` and `month` in sync** with `published_date`.
+7. **Precision.** A `-01` day means month-only precision (an Anthology volume month) unless the
    venue table in `scripts/fetch/acl.py` (`_CONF_META`) supplies the exact conference date, in
    which case the fetcher upgrades it.
-7. **Do not edit by hand.** Set the supporting dates, then call
-   `lib/paper_dates.apply_date_rule(record)`, which derives `published_date`, `year`, and `month`.
-   Fetchers do this; `lib/arxiv_versions.pin_version` pins versions;
-   `scripts/apply_date_rule.py` is the batch migration.
-8. **Never changes the paper's content.** These are pipeline fields: correcting them is allowed
+8. **Do not edit by hand.** Set the supporting dates, then call the shared date-rule API with an
+   explicit preserve-date decision from the migration or checking layer. Fetchers use the normal
+   pre-integration path; only claim-membership-aware workflows may preserve an integrated date.
+   `lib/arxiv_versions.pin_version` pins versions.
+9. **Never changes the paper's content.** These are pipeline fields: correcting them is allowed
    under the "never alter source documents" invariant.
 
-Ingested records: wiki paper pages and claim YAML copy `published_date`, and frozen snapshots
-depend on it, so ingested records are migrated only together with their pages. Records published
-on or after 2026-01-01 were migrated on 2026-10-16
-(`apply_date_rule.py --ingested-from 2026-01-01 --apply`); ingested records from 2025 and earlier
-are deliberately left on their legacy dates, so the frozen 2025 snapshots stay valid. For those `scripts/health_check.py --module metadata` counts them as legacy and
-reports rule deviations as warnings; non-ingested records (`pending`, `review`, `accepted`)
-violating the rule are errors.
+Ingested but not integrated records are migrated together with their paper pages and catalog rows.
+Integrated records retain their claim-graph date while gaining the verified venue metadata and
+peer-reviewed link. Health validation resolves claim membership from the explicit content checkout:
+a mismatch with the normal date priority is valid only for an integrated record whose retained
+`published_date`, `year`, and `month` agree with its paper page and claim entries.
 
 ## Status Lifecycle
 
@@ -136,15 +142,22 @@ non-canonical record gets:
 The canonical record keeps the relevance decision. Its `source_ids` may gain the duplicate's source
 ID (for example `"openreview": "h5KLpGoqzC"`).
 
-**Once a page exists, the ingested version stays canonical.** A version found after ingest (a
-proceedings or journal publication, often months later and sometimes retitled) is marked as a
-duplicate of the ingested record, whatever its venue. The page is not re-ingested, re-dated or
-re-ID'd, and its claims and claim YAML are untouched. Instead the page gets a short italic
-editorial note after the abstract callout. The note names the venue, title and link of the later
-version, and says that the page, its metrics and its claims summarise the version that was ingested.
-`published_date` stays on the ingested version, so quarter counts and frozen snapshots do not move.
-Log the change to `wiki/log.md` as `misc`. Re-ingesting from the later version is a separate,
-explicit user decision.
+**Once a page exists, the ingested record stays canonical.** A later proceedings or journal record
+is marked as a duplicate of the ingested record, whatever its venue, and the canonical record gains
+the later source identifiers. The existing `url` continues to identify the version summarized by
+the page; `url_peer_reviewed` points to the later version's authoritative landing page.
+
+- **Before integration:** record the peer-reviewed venue and date, reapply the canonical date rule,
+  and update the paper page and catalog. The paper may move quarters.
+- **After integration:** record the same venue, date, source IDs, and link, but preserve
+  `published_date`, `year`, and `month`. Claim YAMLs, reconciliation state, snapshots, and reports
+  remain unchanged.
+
+In both cases, add one short italic editorial note after the abstract callout. It names and links
+the peer-reviewed version and states that the page, its metrics, and its claims summarize the
+ingested version. The abstract card keeps `[→ Paper]({url})` and adds a separate
+`[→ Peer-reviewed version]({url_peer_reviewed})` link. Log the change to `wiki/log.md` as `misc`.
+Re-ingesting from the later version is a separate, explicit user decision.
 
 **Exception: technical report and peer-reviewed paper.** When the ingested record is an industry
 technical report and the later version is a peer-reviewed paper on the same system (same authors,

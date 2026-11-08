@@ -159,6 +159,7 @@ metrics: []
 code_available: true | false | null
 demo_available: true | false | null
 url: "{original paper URL from raw/metadata/{ID}.json}"
+url_peer_reviewed: "{later peer-reviewed landing page from metadata; omit when null or identical to url}"
 related_concepts: [{0–4 relevant slugs from the allowed list below — empty list [] if none clearly apply}]
 related_papers: []
 tags: [{for corpus_role == "survey" only: ["survey"]; omit this field for all other corpus_roles}]
@@ -181,9 +182,13 @@ generation:
 - The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!info]` (Citation Stub banner — required, always second), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!caution]` — write prose instead.
 
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Journal | Workshop | Preprint | Technical Report}
-> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
+> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set} · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. One sentence, no bold label.}
+
+{When `url_peer_reviewed` is set, add exactly one italic paragraph here: *This page, its metrics,
+and its claims summarize the ingested version. A peer-reviewed version is available at
+[{venue and title}]({url_peer_reviewed}).* Omit the paragraph when the field is absent.}
 
 > [!info] Citation Stub
 > This paper is not a speech generation paper but is cited by the corpus. See Context in Speech Generation below for why it is relevant.

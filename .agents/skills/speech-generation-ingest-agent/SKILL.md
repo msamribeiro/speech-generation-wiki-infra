@@ -200,6 +200,7 @@ metrics:
 code_available: true | false | null
 demo_available: true | false | null
 url: "{original paper URL — arXiv abstract page or proceedings URL, from raw/metadata/{ID}.json}"
+url_peer_reviewed: "{later peer-reviewed landing page from metadata; omit when null or identical to url}"
 related_concepts: [{up to 6 slugs from the allowed list below; 3-6 typical, never pad}]
 related_papers: [{in-corpus paper IDs cited by this paper}]
 field_significance:
@@ -221,9 +222,13 @@ generation:
 - The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!info]`, `[!caution]` — write prose instead.
 
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Journal | Workshop | Preprint | Technical Report}
-> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}) · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
+> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set} · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. No bold label — position implies it.}
+
+{When `url_peer_reviewed` is set, add exactly one italic paragraph here: *This page, its metrics,
+and its claims summarize the ingested version. A peer-reviewed version is available at
+[{venue and title}]({url_peer_reviewed}).* Omit the paragraph when the field is absent.}
 
 ## Problem
 
