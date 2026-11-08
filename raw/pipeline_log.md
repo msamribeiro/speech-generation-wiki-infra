@@ -1,3 +1,11 @@
+## 2026-11-08
+- parse | Q3 2026 batch 5 of 7 | 40 papers (published 2026-09-24 to 2026-09-27, incl. the first ISCA PDFs) | 40 done, 0 failed (two runs of 20, `--workers 2`, 48 min) | 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | citation index rebuilt
+- discover | 25248 entries (794 merge groups collapsed, 7 fuzzy candidates), 1392 corpus papers
+
+- parse | Q3 2026 batch 4 of 7 | 40 papers (published 2026-09-11 to 2026-09-24) | 40 done, 0 failed (two runs of 20, `--workers 2`, 78 min) | 0 flagged by post-parse check (paper.md < 100 lines or empty references.json) | citation index rebuilt
+- discover | 24822 entries (768 merge groups collapsed, 7 fuzzy candidates), 1352 corpus papers
+
+
 ## 2026-11-07
 
 - parse | Q3 2026 batch 3 of 7 | 40 papers (published 2026-08-26 to 2026-09-11) | 40 done, 0 failed (two runs of 20, `--workers 2`, 77 min) | 1 flagged: 2608.05727 (LILAC) has an empty references.json because its bibliography has no heading (AAAI style, list follows Acknowledgements); references.json rebuilt by hand from the 36 reference paragraphs in paper.md (between Acknowledgements and the technical supplement) with convert_paper.py's own `_parse_ref_string` and corpus index, years set by hand for the 2023a/2023b pair; no re-parse; root cause: the third (after-Conclusion) fallback in `extract_references` stops at the next section header, here AI Assistance Disclosure and Acknowledgements | citation index rebuilt
