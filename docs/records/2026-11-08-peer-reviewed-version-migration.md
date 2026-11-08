@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-11-08
 
-**Owner:** current Codex session (`/root`); sole owner until the migration is merged
+**Owner:** current Codex session (`/root`); Q1 batch completed and released
 
-**Status:** Q1 execution batch validated; content released; infrastructure release pending
+**Status:** Q1 execution batch merged and released
 
 **Infrastructure base:** `5bea40d` (`main`)
 
@@ -239,8 +239,8 @@ than accepted silently.
 - Content migration commit: `844fb57`
 - Infrastructure migration commit: `e90a717`
 - Content `main` merge commit: `844fb57` (fast-forward)
-- Infrastructure `main` merge commit: _pending_
-- Post-content-merge health baseline: all six modules pass; zero errors
+- Infrastructure `main` merge commit: `8e25555` (fast-forward; release-record follow-up corrects the content gitlink to the exact `844fb57cbe88cdafe9b3a61ccd87d10a6f1b4117` object)
+- Post-merge health baseline: 53 tests pass; all six health modules pass with zero errors
 - Final canonical Q1 page count: 116
 - Final canonical Q1 concept-membership count: 453 across 22 concepts
 
