@@ -1,7 +1,8 @@
 {
   "id": "2601.13835",
   "source_ids": {
-    "arxiv": "2601.13835"
+    "arxiv": "2601.13835",
+    "doi": "10.1109/icassp55912.2026.11464984"
   },
   "title": "The Role of Prosodic and Lexical Cues in Turn-Taking with Self-Supervised Speech Representations",
   "authors": [
@@ -11,16 +12,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 1,
-  "published_date": "2026-01-20",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2026-01-20",
   "arxiv_version": 1,
   "version_date": "2026-01-20",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-08-11",
   "url": "https://arxiv.org/abs/2601.13835",
   "pdf_url": "https://arxiv.org/pdf/2601.13835.pdf",
@@ -49,5 +50,6 @@
       "model": "claude-sonnet-5",
       "commit": "646e2be"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11464984/"
 }

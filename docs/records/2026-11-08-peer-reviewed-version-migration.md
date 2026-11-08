@@ -43,9 +43,11 @@ at the relevant write boundary and report the dependency rather than reimplement
    any top-level canonical `_claims/*.yaml` file. No new `date_frozen` metadata field is added.
 3. Before integration, a verified conference or journal version fully updates the canonical date,
    year, month, venue, and venue type; the paper may move quarters.
-4. After integration, `published_date`, year, and month remain frozen. The peer-reviewed venue,
-   venue type, supporting conference/journal date, source IDs, and `url_peer_reviewed` are still
-   recorded.
+4. After integration, `published_date`, year, and month remain frozen. The summarized-version
+   `venue` and `venue_type` also remain on the canonical record so its frozen year is not displayed
+   as the peer-reviewed venue year. The later publication is recorded in `peer_reviewed_venue`,
+   `peer_reviewed_venue_type`, its supporting conference/journal date, source IDs, and
+   `url_peer_reviewed`.
 5. The existing `url` continues to identify the version summarized by the page. The new link is
    shown separately, and an italic editorial note states that the page, metrics, and claims
    summarize the ingested version while a peer-reviewed version is available.
@@ -180,6 +182,26 @@ recorded in this file.
 4. Run the migration again in dry-run mode. It must report zero changes.
 
 **Gate:** second dry run is a no-op and `git diff` matches the reviewed manifest exactly.
+
+### Reviewed Q1 execution batch (2026-11-08)
+
+The first bounded execution batch is the Q1 preflight dependency recorded in
+`2026-11-08-q1-peer-reviewed-versions.yaml`. Two independent dry runs produced the same manifest:
+
+- manifest SHA-256: `4f68061ab59326f0dcbe1e4de27d5b8ae68e27f45041fda75df44cc39cc7460c`;
+- 20 verified records, 20 metadata changes, 20 page changes, and 20 catalog-row changes;
+- zero frozen records (none of the IDs occurs in a top-level canonical claim YAML);
+- 18 quarter moves: 16 Q1 2026 to Q2 2026, one to Q4 2025, and one to Q4 2024;
+- two AAAI records remain in Q1 2026; and
+- two records are explicitly deferred: `2603.19831` is an explicitly non-archival workshop paper,
+  while `2603.24144` lacks an exact authoritative ICME proceedings record.
+
+This batch changes no claim YAML, reconciliation state, snapshot, concept render, or report.
+After application, the repeat dry-run manifest SHA-256 was
+`0185d2f26c43234bb83518e9a39a38ab5b5106f56c03ac9ef635ab8d84711688` and reported zero metadata,
+page, catalog, or quarter changes. The full 52-test suite and all six health modules passed. The
+resulting Q1 set is 116 ingested pages: 105 arXiv, nine workshop, and two AAAI records; none is yet
+present in a top-level claim YAML.
 
 ### Phase 5 — Validate
 

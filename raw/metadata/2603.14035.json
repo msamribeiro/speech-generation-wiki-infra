@@ -1,7 +1,8 @@
 {
   "id": "2603.14035",
   "source_ids": {
-    "arxiv": "2603.14035"
+    "arxiv": "2603.14035",
+    "doi": "10.21437/speechprosody.2026-5"
   },
   "title": "Probing neural audio codecs for distinctions among English nuclear tunes",
   "authors": [
@@ -10,16 +11,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Speech Prosody",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 3,
-  "published_date": "2026-03-14",
+  "month": 5,
+  "published_date": "2026-05-26",
   "preprint_date": "2026-03-14",
   "arxiv_version": 1,
   "version_date": "2026-03-14",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-26",
   "ingested_date": "2026-08-19",
   "url": "https://arxiv.org/abs/2603.14035",
   "pdf_url": "https://arxiv.org/pdf/2603.14035.pdf",
@@ -48,5 +49,6 @@
       "model": "claude-sonnet-5",
       "commit": "c14883f"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://www.isca-archive.org/speechprosody_2026/vigneaux26_speechprosody.html"
 }

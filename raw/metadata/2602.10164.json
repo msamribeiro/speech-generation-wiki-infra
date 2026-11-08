@@ -1,7 +1,8 @@
 {
   "id": "2602.10164",
   "source_ids": {
-    "arxiv": "2602.10164"
+    "arxiv": "2602.10164",
+    "doi": "10.1109/slt61566.2024.10832287"
   },
   "title": "Emotion-Coherent Speech Data Augmentation and Self-Supervised Contrastive Style Training for Enhancing Kids's Story Speech Synthesis",
   "authors": [
@@ -9,16 +10,16 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
-  "year": 2026,
-  "month": 2,
-  "published_date": "2026-02-10",
+  "venue": "SLT",
+  "venue_type": "conference",
+  "year": 2024,
+  "month": 12,
+  "published_date": "2024-12-02",
   "preprint_date": "2026-02-10",
   "arxiv_version": 1,
   "version_date": "2026-02-10",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2024-12-02",
   "ingested_date": "2026-08-13",
   "url": "https://arxiv.org/abs/2602.10164",
   "pdf_url": "https://arxiv.org/pdf/2602.10164.pdf",
@@ -47,5 +48,6 @@
       "model": "claude-sonnet-5",
       "commit": "fd03e29"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/10832287/"
 }

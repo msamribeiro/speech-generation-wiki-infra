@@ -41,9 +41,19 @@ def canonical_published_date(record: dict) -> str | None:
     return None
 
 
-def apply_date_rule(record: dict) -> bool:
-    """Set `published_date`, `year`, and `month` from the rule. Returns True if anything changed."""
-    target = canonical_published_date(record)
+def apply_date_rule(record: dict, *, preserve_published_date: bool = False) -> bool:
+    """Apply the canonical date rule and return whether the record changed.
+
+    ``preserve_published_date`` is only for claim-membership-aware workflows.  It keeps an
+    integrated record's existing canonical date while still normalizing ``year`` and ``month``.
+    Fetchers must use the default path.
+    """
+    if preserve_published_date:
+        target = record.get("published_date")
+        if not valid_iso_date(target):
+            return False
+    else:
+        target = canonical_published_date(record)
     if target is None:
         return False
     changed = False

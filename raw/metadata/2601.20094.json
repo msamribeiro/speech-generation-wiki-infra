@@ -1,7 +1,8 @@
 {
   "id": "2601.20094",
   "source_ids": {
-    "arxiv": "2601.20094"
+    "arxiv": "2601.20094",
+    "doi": "10.1109/icassp55912.2026.11463729"
   },
   "title": "T-Mimi: A Transformer-based Mimi Decoder for Real-Time On-Phone TTS",
   "authors": [
@@ -32,16 +33,16 @@
     "Yuzong Liu"
   ],
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICASSP",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 1,
-  "published_date": "2026-01-27",
+  "month": 5,
+  "published_date": "2026-05-03",
   "preprint_date": "2026-01-27",
   "arxiv_version": 1,
   "version_date": "2026-01-27",
   "version_estimated": true,
-  "conference_date": null,
+  "conference_date": "2026-05-03",
   "ingested_date": "2026-08-12",
   "url": "https://arxiv.org/abs/2601.20094",
   "pdf_url": "https://arxiv.org/pdf/2601.20094.pdf",
@@ -71,5 +72,6 @@
       "model": "claude-sonnet-5",
       "commit": "e9c3bbc"
     }
-  ]
+  ],
+  "url_peer_reviewed": "https://ieeexplore.ieee.org/document/11463729/"
 }

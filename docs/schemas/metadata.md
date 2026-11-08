@@ -18,6 +18,8 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "organization": "string or null — primary affiliated org (e.g. Google, Microsoft, CMU)",
   "venue": "one of the venue values listed below",
   "venue_type": "one of: conference | journal | workshop | preprint | technical-report",
+  "peer_reviewed_venue": "string or null — later peer-reviewed venue when an integrated record keeps its summarized-version venue",
+  "peer_reviewed_venue_type": "conference | journal | workshop or null — type of peer_reviewed_venue",
   "year": 2025,
   "month": 11,
   "published_date": "YYYY-MM-DD — canonical wiki date; conference_date, else journal_date, else version_date, else preprint_date (see Paper Dates)",
@@ -85,8 +87,11 @@ Rules:
 2. **Claim membership freezes the quarter.** A paper is integrated when its canonical ID occurs
    in the `papers:` list of any top-level canonical `_claims/*.yaml` file. Once integrated,
    `published_date`, `year`, and `month` remain unchanged when a later peer-reviewed version is
-   found. Still record `conference_date` or `journal_date`, update the venue fields, add
-   `url_peer_reviewed`, and add the page note defined under “Duplicates and Later Versions.”
+   found. Still record `conference_date` or `journal_date`, add `peer_reviewed_venue`,
+   `peer_reviewed_venue_type`, `url_peer_reviewed`, and the page note defined under “Duplicates
+   and Later Versions.” Keep `venue` and `venue_type` naming the version summarized by the page;
+   this prevents a frozen 2025 record from being displayed as though its 2026 venue occurred in
+   2025.
    Reconciliation runs, snapshots, reports, and rendered pages do not independently create a
    freeze. There is no `date_frozen` metadata field; claim membership is the authority.
 3. **Otherwise the date of the version we ingest.** A preprint's content can change after v1
@@ -147,11 +152,13 @@ is marked as a duplicate of the ingested record, whatever its venue, and the can
 the later source identifiers. The existing `url` continues to identify the version summarized by
 the page; `url_peer_reviewed` points to the later version's authoritative landing page.
 
-- **Before integration:** record the peer-reviewed venue and date, reapply the canonical date rule,
-  and update the paper page and catalog. The paper may move quarters.
-- **After integration:** record the same venue, date, source IDs, and link, but preserve
-  `published_date`, `year`, and `month`. Claim YAMLs, reconciliation state, snapshots, and reports
-  remain unchanged.
+- **Before integration:** replace `venue` and `venue_type` with the peer-reviewed venue, record its
+  date and link, reapply the canonical date rule, and update the paper page and catalog. The paper
+  may move quarters.
+- **After integration:** keep `venue` and `venue_type` naming the summarized version; record the
+  later publication in `peer_reviewed_venue`, `peer_reviewed_venue_type`, its supporting date,
+  source IDs, and link; and preserve `published_date`, `year`, and `month`. Claim YAMLs,
+  reconciliation state, snapshots, and reports remain unchanged.
 
 In both cases, add one short italic editorial note after the abstract callout. It names and links
 the peer-reviewed version and states that the page, its metrics, and its claims summarize the
@@ -188,7 +195,7 @@ Representations ...").
 
 ## Venue Allowed Values
 
-`Interspeech` | `ICASSP` | `ACL` | `EMNLP` | `NAACL` | `NeurIPS` | `ICLR` | `ICML` | `ASRU` | `SLT` | `arXiv` | `technical-report` | `workshop` | `other`
+`Interspeech` | `ICASSP` | `AAAI` | `Speech Prosody` | `ICME` | `ACL` | `EMNLP` | `NAACL` | `NeurIPS` | `ICLR` | `ICML` | `ASRU` | `SLT` | `arXiv` | `technical-report` | `workshop` | `other`
 
 ## corpus_role Allowed Values
 

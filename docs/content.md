@@ -104,8 +104,9 @@ Every new or force-rewritten concept paper entry includes canonical `published_d
 
 `published_date` is the canonical quarter date. Before integration it follows the peer-reviewed
 conference/journal date, otherwise the date of the arXiv version ingested. Once the canonical ID
-appears in any top-level claim YAML, that date is frozen; later peer-reviewed versions update venue
-metadata and `url_peer_reviewed` but do not move the paper's quarter. Ingest copies the metadata
+appears in any top-level claim YAML, that date is frozen; later peer-reviewed versions add
+`peer_reviewed_venue`, `peer_reviewed_venue_type`, and `url_peer_reviewed` but do not move the
+paper's quarter or relabel the version summarized by its page. Ingest copies the metadata
 date verbatim and never recomputes it. See `docs/schemas/metadata.md`, “Paper Dates” and
 “Duplicates and Later Versions.”
 
