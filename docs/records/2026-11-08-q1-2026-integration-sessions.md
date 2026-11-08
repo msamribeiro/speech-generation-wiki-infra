@@ -115,7 +115,7 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 
 ### subjective-evaluation
 
-**Progress:** 0/52; three planned batches (20, 20, 12).
+**Progress:** 1/52. The first invocation wrote `2601.01459`; 51 remain.
 
 **Batch 1 — next (20 IDs, frozen order):**
 
@@ -140,7 +140,13 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 19. `2601.22661`
 20. `2026.iwsds-1.16`
 
-No claim YAML has been changed at bootstrap.
+**Invocation 1 — complete (1 ID):**
+
+- Added `2601.01459` with all four page claims, canonical date `2026-01-04`, and
+  concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 255 to 256; the ID occurs exactly once.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2601.04233`.
 
 ## Preflight Validation
 
@@ -154,4 +160,4 @@ No claim YAML has been changed at bootstrap.
 - [x] Deterministic manifest generated twice with identical bytes.
 - [x] Full health suite rerun from the dedicated worktrees: 54 tests and all six modules pass with
       zero errors.
-- [ ] Bootstrap tooling and record committed before the first claim write.
+- [x] Bootstrap tooling and record committed as `85a2a49` before the first claim write.
