@@ -365,6 +365,52 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### speech-to-speech
+
+**Progress:** 30/30. Two invocations wrote all 30 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2505.15727` through `2603.07599` in order, including the canonical
+  peer-reviewed IDs `2026.iwsds-1.10`, `2026.iwsds-1.16`, `2026.iwsds-1.4`, and
+  `2026.loreslm-1.54` without separate preprint aliases.
+- Preserved all 87 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 94 to 114; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2603.09180`; 10 entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (10 IDs; Phase 1 closure):**
+
+- Added the final frozen range `2603.09180` through `2603.25750` in order.
+- Preserved all 44 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 114 to 124; the integrated Q1 IDs equal the complete 30-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `speech-to-speech`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 18 applicable established clusters; the retrieval/tool-use cluster received no Q1 evidence
+  and remains unchanged.
+- Added one strongly supported cluster:
+  `conversational_data_structure_shapes_turn_taking_behavior`, backed by three independent Q1 papers
+  on corpus interaction patterns, behavior-conditioned fine-tuning, and overlap-preserving preprocessing.
+- Assigned 22/30 Q1 papers to 34 reciprocal memberships across the seven existing method families and
+  two new families: masked-diffusion speech-to-speech models and explicit dialogue-state control agents.
+  Eight benchmark, evaluation, or data-infrastructure papers remain legitimate family outliers.
+- Audited all six reassessment items. None of their substantive triggers fired; three older items are
+  overdue (`2412.15649`, `2025.naacl-long.484`, and `2025.iwsds-1.27`) because their canonical-ID or
+  concept-scope decisions remain unresolved.
+- Added two open questions and three Q1 trend notes covering conversational-data preservation, explicit
+  versus implicit dialogue-state control, semantic triggering, and long-form simultaneous translation.
+- Concept-scoped Phase 2 health: 0 errors and 36 expected method-family coverage warnings across the
+  full 124-paper concept history, including the eight Q1 family outliers.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
+  local Phase 2 summary log.
+
 ### zero-shot-tts
 
 **Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
