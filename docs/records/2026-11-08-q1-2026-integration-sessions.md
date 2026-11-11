@@ -273,6 +273,58 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
   the full 396-paper concept history.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
+### zero-shot-tts
+
+**Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2601.04233` through `2602.04683` in order.
+- Preserved all 76 available page claims. `2601.03888` and `2601.15621` have empty source-page
+  Claims sections and were retained as `claims: []`.
+- `paper_count` advanced from 262 to 282; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2602.10735`; 21 entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (20 IDs):**
+
+- Added the frozen range `2602.10735` through `2603.29339` in order, including the canonical
+  peer-reviewed ID `2026.abjadnlp-1.6` without a separate preprint alias.
+- Preserved all 71 available page claims. `2603.08823`, `2603.18090`, `2603.26364`, and
+  `2603.29339` have empty source-page Claims sections and were retained as `claims: []`.
+- `paper_count` advanced from 282 to 302; the integrated Q1 IDs equal the first 40 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2604.01247`; one entry remains.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 3 — complete (1 ID; Phase 1 closure):**
+
+- Added `2604.01247` with all five page claims.
+- `paper_count` advanced from 302 to 303; the integrated Q1 IDs equal the complete 41-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `zero-shot-tts`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 19 established claim clusters and added one strongly supported cluster:
+  `training_free_steering_enables_posthoc_identity_and_accent_control`.
+- The new cluster captures Q1 evidence that activation or parameter steering can alter accent or
+  suppress speaker identity without retraining the base model, while exposing linguistic-fidelity
+  and correlated-attribute trade-offs.
+- Assigned all 41 Q1 papers to reciprocal architecture families across six of the nine existing
+  method families; no Q1 paper remains a family outlier.
+- Added two open questions and three Q1 trend notes covering privacy safeguards, steering transfer,
+  low-resource and cross-lingual cloning, and expansion beyond short-form timbre copying.
+- No reassessment items were open or triggered.
+- Concept-scoped Phase 2 health: 0 errors and 24 expected method-family coverage warnings, all from
+  earlier papers in the full 303-paper concept history.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ## Preflight Validation
 
 - [x] Peer-reviewed-version Q1 migration released on both main branches.
