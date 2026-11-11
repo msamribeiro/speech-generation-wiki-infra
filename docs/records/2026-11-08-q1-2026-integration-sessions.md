@@ -22,7 +22,7 @@ informally after Phase 1 begins.
    export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-q1-integrate
    ```
 
-3. Start `subjective-evaluation` Phase 1 with the first 20 IDs listed below.
+3. Continue `subjective-evaluation` Phase 1 from the next frozen ID recorded below.
 4. After every batch, validate the concept with `health_check.py --module integrate --phase 1`,
    compare actual IDs with the frozen batch, and record the result here.
 5. Do not edit paper pages, the paper catalog, reconciliation state, snapshots, renders, or reports.
@@ -115,9 +115,9 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 
 ### subjective-evaluation
 
-**Progress:** 9/52. Three invocations have written nine entries; 43 remain.
+**Progress:** 29/52. Four invocations have written 29 entries; 23 remain.
 
-**Batch 1 — next (20 IDs, frozen order):**
+**Frozen queue prefix (first 20 IDs):**
 
 1. `2601.01459`
 2. `2601.04233`
@@ -163,6 +163,22 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - `paper_count` advanced from 260 to 264; all nine Q1 IDs occur exactly once.
 - Concept-scoped Phase 1 health: 0 errors, 0 warnings.
 - Next frozen ID: `2602.06053`.
+
+**Invocation 4 — complete (20 IDs):**
+
+- Added `2602.06053`, `2601.12966`, `2601.13055`, `2602.11172`, `2601.10629`,
+  `2601.14960`, `2601.17086`, `2601.13742`, `2601.18281`, `2601.22661`,
+  `2026.iwsds-1.16`, `2026.iwsds-1.3`, `2602.03420`, `2602.09041`, `2601.05564`,
+  `2602.04683`, `2602.11072`, `2602.11477`, `2602.13891`, and `2602.14664` in
+  frozen order.
+- Preserved all 89 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 264 to 284; the integrated Q1 IDs equal the first 29 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Canonical peer-reviewed IDs in this batch remain `2026.iwsds-1.16` and `2026.iwsds-1.3`;
+  no preprint aliases were added separately.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2026.africanlp-main.23`. The remaining 23 entries fit in two invocations
+  of 20 and 3 papers.
 
 ## Preflight Validation
 
