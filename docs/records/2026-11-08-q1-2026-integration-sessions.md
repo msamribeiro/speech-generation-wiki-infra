@@ -273,6 +273,51 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
   the full 396-paper concept history.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
+### neural-codec
+
+**Progress:** 36/36. Two invocations wrote all 36 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2601.02776` through `2602.11072` in order, including the canonical
+  peer-reviewed ID `2026.iwsds-1.4` without a separate preprint alias.
+- Preserved all 81 available page claims. `2601.15621` has an empty source-page Claims section and
+  was retained as `claims: []`.
+- `paper_count` advanced from 240 to 260; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2602.10934`; 16 entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (16 IDs; Phase 1 closure):**
+
+- Added the final frozen range `2602.10934` through `2603.26364` in order.
+- Preserved all 58 available page claims. `2603.08823`, `2603.18090`, and `2603.26364` have empty
+  source-page Claims sections and were retained as `claims: []`.
+- `paper_count` advanced from 260 to 276; the integrated Q1 IDs equal the complete 36-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `neural-codec`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated all 18 established claim clusters; no new cluster was required because the Q1 evidence
+  strengthens the existing rate, quantization, semantic-acoustic, robustness, and evaluation themes.
+- Back-filled 74 reciprocal architecture-family memberships for 35 Q1 papers across all seven
+  existing method families. `2602.00269`, an architecture-unspecified serving paper, remains the
+  sole Q1 family outlier.
+- Added two open questions and three Q1 trend notes covering variable and linguistically aligned
+  token rates, privacy and speaker leakage, explicit semantic-acoustic factorization, and broader
+  robustness evaluation.
+- Checked all five reassessment items. None triggered; all five are overdue because Q1 did not
+  provide the matched representation study, shared listener-calibrated benchmark, matched semantic
+  integration comparisons, conventional-codec reproduction, or task-separated leakage study named
+  by their triggers.
+- Concept-scoped Phase 2 health: 0 errors and 22 expected method-family coverage warnings across
+  the full 276-paper concept history.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### zero-shot-tts
 
 **Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
