@@ -115,7 +115,7 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 
 ### subjective-evaluation
 
-**Progress:** 5/52. Two invocations have written five entries; 47 remain.
+**Progress:** 9/52. Three invocations have written nine entries; 43 remain.
 
 **Batch 1 — next (20 IDs, frozen order):**
 
@@ -155,6 +155,14 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - `paper_count` advanced from 256 to 260; all five Q1 IDs occur exactly once.
 - Concept-scoped Phase 1 health: 0 errors, 0 warnings.
 - Next frozen ID: `2601.01568`.
+
+**Invocation 3 — complete (4 IDs):**
+
+- Added `2601.01568`, `2601.05329`, `2601.05554`, and `2505.15727` in frozen order.
+- Preserved all 17 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 260 to 264; all nine Q1 IDs occur exactly once.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2602.06053`.
 
 ## Preflight Validation
 
