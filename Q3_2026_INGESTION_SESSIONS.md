@@ -55,13 +55,15 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-Q3 2026 pre-flight is complete; no Q3 page has been written by a sweep yet. Done: arXiv top-up,
-dedup and filter, review queue cleared, all 224 missing PDFs downloaded (2026-11-07), all 7 parse
-batches (2026-11-07 to 2026-11-11: **all 364 accepted Q3 records parsed**, plus Q2 `2608.26146`),
-and the peer-reviewed-version check (2026-11-11, see the Session Log). To resume:
+The Q3 sweep is under way: **batches 1-2 done (2026-11-11), 8 pages, last ingested `2607.00946`
+(#8)**. Q3: 42 ingested, 356 accepted (355 in the sweep; StellarTTS excluded), 229 rejected; corpus
+1,069 pages. The Manual Verification Queue is empty (all three items resolved 2026-11-11). Pre-flight
+(fetch, filter, downloads, all 7 parse batches, peer-reviewed-version check) is complete. To resume:
 
-1. **Start the sweep:** 363 accepted Q3 records (364 minus StellarTTS `2607.19859`, see 3). Build a
-   numbered list in `published_date` order with the per-paper pre-flight from
+1. **Continue the sweep with batch 3 (#9-#12):** the next records by `published_date` are the
+   2026-07-02 ACL 2026 main-conference papers (`2026.acl-long.6`, `2026.acl-long.863`, ...), which
+   are proceedings records (nothing to switch; check for a known arXiv twin and set `url_preprint`).
+   Build a numbered list in `published_date` order with the per-paper pre-flight from
    `docs/ingest-protocol.md` section 2 (ID/title dedup against the whole corpus, author screen,
    full-version comments, prior-publication notices on the first page of `paper.md`), show it and
    wait for confirmation. Check figure-1 of all 70 ISCA papers for the ISCA logo
@@ -93,12 +95,21 @@ and the peer-reviewed-version check (2026-11-11, see the Session Log). To resume
 **Side threads (not blocking):** duplicate page pairs in `BACKLOG.md`; OpenReview live fetches are
 blocked by a browser-verification gate, so use the saved-page path (`openreview.py --from-file`).
 
+**Agent prompts (2026-11-11):** agents start in the session's own worktree, which has no `raw/`
+data; the standing prompt names `speech-generation-wiki-infra-ingest` as the working directory and
+the infra commit source, and the session worktree must be fast-forwarded to `main` so the preloaded
+skill is current. For switched records the prompt spells out the source-version block (primary
+`paper.md`, `preprint/` context only, `url`/`url_preprint`, no note). Ask for bracket-unquoted list
+fields. Copy the relevant tagging rules into each prompt.
+
 **Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
 recently requested (2026-10-31: decisions walked through one at a time first, then batches of 4,
 one paper at a time, summary and go-ahead per batch, queue reviewed one item at a time at round
 end; 2026-11-01: full-text details on request before the user overrides a recommendation;
 2026-11-07: review-queue decisions in themed batches, each paper with precedents and a
-recommendation; parse one batch of 40 at a time with a go-ahead between batches).
+recommendation; parse one batch of 40 at a time with a go-ahead between batches; 2026-11-11:
+batches of 4, papers one at a time with no per-paper go-ahead, batch summary then go-ahead,
+verification queue one item at a time with options and a recommendation).
 
 ---
 
@@ -353,6 +364,45 @@ downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_
   batch, then ingest it as a Q4 2025 page; the catch-up Q4 integration for it and `2506.04518` is a
   `BACKLOG.md` item.
 
+### Session 2026-11-11: Q3 sweep batch 1
+
+Numbered list confirmed by the user; actual IDs match #1-#4. All four are ACL Anthology workshop
+records (proceedings-canonical, no known arXiv twin, so no `url_preprint`). One paper at a time,
+cleanup and QC after each.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 1 | `2026.americasnlp-6.1` Myaamia TTS | low; `transformer-enc-dec-tts`, `gan-vocoder`, `subjective-evaluation` | Clean. Agent restored ± signs Docling dropped from Table 3 (Duration RMSE). Index count line 19 missed by `cleanup.py` (fixed by hand). |
+| 2 | `2026.dravidianlangtech-1.3` Dravidian S2ST | low; `speech-to-speech` | **Architecture `transformer-enc-dec` removed** (vocabulary term is FastSpeech-family NAR; the paper's Whisper/IndicTrans2/SeamlessM4T are AR ASR/MT and nothing on the synthesis side is trained; 52 S2S pages use `[]`). Agent rebuilt garbled Table 1 cells from the PDF; cascade-beats-E2E in every cell verified against both tables. Same count miss, fixed by hand. |
+| 3 | `2026.iwslt-1.11` HW-TSC cloning | low; `autoregressive-codec-tts` | Task VC dropped on the page (prompt-based TTS cloning, no source speech converted); metadata `task` left as the filter's value (239 pages already differ, the page is authoritative). Text-vs-table note (§4.2 names the wrong lowest Chinese similarity) verified against Table 1. |
+| 4 | `2026.iwslt-1.12` four-system cloning benchmark | low; `related_concepts: []` | Garbled Table 1 rebuilt from the PDF text, verified row by row. Figure 2/3 vs Table 1 disagreements in the `[!warning]` verified visually (MOSS-TTS ja, Qwen3-TTS de, CosyVoice3 ja; Qwen3-TTS mean 0.10 vs 0.16). Review flag queued. |
+
+- **New recurring issue, fixed:** `scripts/ingest/cleanup.py` did not update the homepage's
+  `> N paper summaries` line (introduced by content commit `416ccd6`); a third pattern was added
+  and verified on #3 and #4.
+- **Prompt practice:** agents run from the session's own worktree, so the standing prompt now
+  names the infra-ingest worktree as the working directory; the session worktree was fast-forwarded
+  to `main` first so the preloaded skill is current.
+- Corpus at **1,065** pages. Q3: 38 ingested, 360 accepted remaining (359 in the sweep), 229
+  rejected.
+
+### Session 2026-11-11: Q3 sweep batch 2
+
+Actual IDs match #5-#8. First use of `use_peer_reviewed.py`: #5-#7 were arXiv-canonical records
+with verified ACL Anthology versions (title, authors, DOI, July 2026), switched with `--apply`
+(ACL PDF downloaded, arXiv parse moved to `preprint/`, metadata `url`/`url_preprint` updated) and
+re-parsed (3 done, 0 failed, 39 s). Their pages link `[→ Paper]` (ACL) and `[→ Preprint]` (arXiv).
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 5 | `2604.26136` OmniVoice LoRA cloning (IWSLT) | low; `diffusion-tts` | **The switch mattered:** the camera-ready Table 3 changed the fine-tuning results (French SIM 0.748 → 0.760, Chinese 0.719 → 0.732, Arabic CER 0.071 → 0.060) while §5.1 prose still quotes the preprint numbers; the page uses the proceedings table and says so (verified against both PDFs). VC dropped. Architecture `[diffusion, hybrid]` → `[diffusion]` to match the OmniVoice page's frontmatter (its index row says `diffusion, hybrid`). |
+| 6 | `2606.07240` KIT GRPO cloning (IWSLT) | low; `autoregressive-codec-tts`, `multilingual-tts`, `rlhf-speech` | Proceedings and preprint text identical. List fields written in quoted form (`["TTS"]`), unquoted by hand. Table 1 and the Table 2 average misprint (91.64 vs 91.93) verified. |
+| 7 | `2606.27380` presentation-coaching survey (BEA) | low; `related_concepts: []` | Accepted in triage. Survey format correct. CosyVoice 2 mis-grouped as non-autoregressive in §2, verified; noted as a factual correction. Review flag queued. |
+| 8 | `2607.00946` emotion steering geometry (arXiv) | low; `emotion-synthesis`, `autoregressive-codec-tts`, `flow-matching` | Follow-up to CoCoEmo `2602.03420` by the same authors (separate work, cross-linked). Prior-publication notice (ICML 2026 workshop) found at pre-flight; kept arXiv, flag queued. Docling shifted Table 2 one column; rebuilt table verified against the PDF row by row. |
+
+- Corpus at **1,069** pages. Q3: 42 ingested, 356 accepted remaining (355 in the sweep), 229
+  rejected.
+
 ---
 
 ## Manual Verification Queue
@@ -362,6 +412,9 @@ after the session batch is complete: check the paper page and resolve each flag 
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2026.iwslt-1.12` | `related_concepts` empty | Evaluation of four pretrained cross-lingual cloning systems with reused, unvalidated automatic scorers and no human raters; no slug qualifies under the evaluation-paper rules (precedents `2604.11803`, `2606.14004`), so the page will not reach any concept YAML at integration. **Resolved 2026-11-11 (user): add `zero-shot-tts`** (option B over the evaluation-paper rule), **a one-off, not a precedent**: the next benchmark of others' systems is judged under the standing rule. Concept bullet added to Wiki Connections, QC passes. |
+| `2606.27380` | `related_concepts` empty | Presentation-coaching survey (accepted in triage); zero-shot cloning (§5.2.2) and tempo/emphasis controls (§5.1.1) are mentioned but not reviewed, so no slug meets the coverage rule. Agent's fallback if a slug is wanted: `zero-shot-tts`. **Resolved 2026-11-11 (user): add `zero-shot-tts`, a one-off, not a precedent** (coverage rule for surveys stands). Concept bullet added, QC passes. |
+| `2607.00946` | Workshop notice, venue kept arXiv | First page says "Published at ICML 2026 Workshop on Machine Learning for Audio" (PMLR line is the ICML style default). Treated as a non-archival workshop presentation (`2603.19831` precedent): ingested from arXiv, venue arXiv, no `url_peer_reviewed`; both dates are Q3. **Resolved 2026-11-11 (user): keep as arXiv preprint** (option A); no change. |
 
 ---
 

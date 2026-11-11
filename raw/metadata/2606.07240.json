@@ -23,10 +23,10 @@
   "version_date": "2026-06-05",
   "version_estimated": true,
   "conference_date": "2026-07-01",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.07240",
+  "ingested_date": "2026-11-11",
+  "url": "https://aclanthology.org/2026.iwslt-1.8",
   "pdf_url": "https://aclanthology.org/2026.iwslt-1.8.pdf",
-  "pdf_path": "raw/papers/2606.07240.pdf",
+  "pdf_path": "raw/papers/2606.07240.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Cross-lingual voice cloning aims to generate speech in a target language while preserving speaker identity from a source-language reference. This task is central to speech translation and is the focus of the IWSLT 2026 Cross-Lingual Voice Cloning track. A key challenge is maintaining intelligibility and naturalness in the presence of accent variation and domain-specific vocabulary. We build on a multilingual text-to-speech model, FishAudio-S2-Pro, and introduce language tag prompting to improve language control and reduce accent leakage. We further apply reinforcement learning (RL) fine-tuning for task adaptation and observe improvements in intelligibility. Finally, we propose a reference-conditioned lexical matching method that improves pronunciation of domain-specific terms when lexical overlap is present. Results show that language prompting provides the largest gains, while lexical matching yields consistent improvements on matched subsets.",
   "arxiv_comment": null,
@@ -35,9 +35,24 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "KIT's IWSLT 2026 cross-lingual voice cloning submission, a zero-shot speaker-preserving TTS system for speech translation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.07240",
+  "pdf_path_preprint": "raw/papers/2606.07240.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.iwslt-1.8",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-11",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4446180"
+    }
+  ]
 }

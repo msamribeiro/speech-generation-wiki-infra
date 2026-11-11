@@ -130,13 +130,22 @@ column, not just the count. Repeat the check as a sweep at session close.
 Spawn `speech-generation-ingest-agent` in the **foreground** (background agents cannot get
 Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing instructions:
 
+- Run from the infra ingest worktree: agents start in the session's own working directory, which
+  may be a worktree without `raw/` data or `.venv`. Name
+  `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra-ingest` as
+  the directory for all `raw/` paths and the infra commit in the `generation` block, and
+  fast-forward the session worktree to `main` first so the preloaded skill is current (2026-11-11).
+- For a record switched to its peer-reviewed version (section 2), spell out the source-version
+  block: primary `paper.md`, `preprint/` as context only, `url` and `url_preprint` from metadata,
+  no `url_peer_reviewed` and no italic note.
 - Write to the content worktree: set
   `SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`
   (the resolver otherwise returns the trunk content checkout). Never write through `wiki/`.
 - Mitigation B: the agent writes **the paper page only**. Do not update `papers/index.md`,
   `wiki/index.md` counts, `log.md` or metadata; the main session does that (section 5). Paper-page
   assets (0 to 2 architecture figures, only for `architectural-novelty`) are the agent's.
-- Quote every date field and the `id` as strings in YAML.
+- Quote every date field and the `id` as strings in YAML. Write list fields (`task`,
+  `architecture`, `conditioning`, `training`, `field_significance.type`) bracket-unquoted.
 - Use piped `[[id|Name]]` paper links in Wiki Connections (the SKILL.md template still shows the
   bare form; the bare form is only for the ID column of `papers/index.md`).
 - Match `references.json` citations to corpus pages by hand: its `in_corpus` flags are stale or
@@ -413,7 +422,7 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Padding `related_concepts` | Out-of-scope slug added to reach 3 (2026-10-21, before the scope-wins rule) | Step 6 |
 | Org mismatch page vs index | `cleanup.py --org` does not sync the page; strings drift (2026-10-21, three of four papers) | Step 5.1 |
 | One-sided critique of author framing | Agent cites only the comparisons that go against the authors (2026-10-21) | Step 6; ask for the full comparison in the prompt |
-| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost (2026-10-31, five of 18 papers) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
+| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost; values shifted one column or packed several per cell (2026-11-11, three of eight papers) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
 | Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
 | Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
@@ -423,6 +432,8 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`) | Step 4 prompt, step 6 |
 | "Check the PDF" note on page | Agent leaves a reader-facing note about a garbled parse instead of resolving it (2026-10-31, STEB) | Step 4 prompt, step 6 |
 | Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo) | Step 4 prompt, step 6 |
+| Quoted list fields | Agent writes `task: ["TTS"]` and quoted `architecture`/`type` lists; health check and `qc.py` silent (2026-11-11, `2606.07240`) | Step 4 prompt, step 6 (read the frontmatter) |
+| Camera-ready prose quotes preprint numbers | Proceedings table updated but the results prose still quotes the preprint's numbers (2026-11-11, `2604.26136`: fine-tuning results changed sign for French) | Section 2 source version; step 6 (check prose numbers against the primary table) |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve
