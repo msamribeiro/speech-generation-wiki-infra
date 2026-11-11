@@ -216,6 +216,63 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Main-cluster summary written to the Git-ignored local Phase 2 summary log.
 - No commit or push was made for the Phase 1 closure or Phase 2 work.
 
+### evaluation-metrics
+
+**Progress:** 50/50. Three invocations wrote all 50 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2601.02073` through `2602.03420` in order, including the canonical
+  peer-reviewed IWSDS IDs `2026.iwsds-1.10`, `2026.iwsds-1.16`, `2026.iwsds-1.4`, and
+  `2026.iwsds-1.9` without separate preprint aliases.
+- Preserved all 86 page claims with evaluation-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 346 to 366; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2601.05564`; 30 entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (20 IDs):**
+
+- Added the frozen range `2601.05564` through `2603.05413` in order, including the canonical
+  peer-reviewed IDs `2026.abjadnlp-1.6` and `2026.africanlp-main.23` without separate preprint
+  aliases.
+- Preserved all 87 page claims with evaluation-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 366 to 386; the integrated Q1 IDs equal the first 40 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2603.16483`; 10 entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 3 — complete (10 IDs; Phase 1 closure):**
+
+- Added the final frozen range `2603.16483` through `2603.29339` in order.
+- Preserved all 42 available page claims. `2603.29339` has an empty source-page Claims section and
+  was retained as `claims: []` rather than receiving inferred claims.
+- `paper_count` advanced from 386 to 396; the integrated Q1 IDs equal the complete 50-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `evaluation-metrics`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 27 established claim clusters and added one strongly supported cluster:
+  `conversational_evaluation_requires_real_multiturn_context`.
+- The new cluster captures the Q1 evidence that conversational metrics require real multi-turn,
+  multi-speaker, timing, overlap, and interruption context rather than single utterances,
+  transcripts, or synthetically mixed dialogue alone.
+- Back-filled 161 reciprocal evaluation-method-family memberships for 49 Q1 papers across 14 of
+  the 17 existing method families. `2603.29339`, whose source Claims section is empty, is the sole
+  Q1 family outlier.
+- Added two open questions and three Q1 trend notes covering conversational benchmark calibration,
+  evaluation leakage, structured automatic judges, and deployment-context validation.
+- Checked all six reassessment items. None triggered; the full-duplex automatic-metrics item was
+  updated to record that the new Q1 pipelines remain bespoke and do not meet its replication trigger.
+- Concept-scoped Phase 2 health: 0 errors and 21 expected method-family coverage warnings across
+  the full 396-paper concept history.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ## Preflight Validation
 
 - [x] Peer-reviewed-version Q1 migration released on both main branches.
