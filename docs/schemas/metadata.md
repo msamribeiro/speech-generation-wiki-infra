@@ -42,9 +42,11 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
       "commit": "abc1234"
     }
   ],
-  "url": "string — arXiv or proceedings URL",
-  "url_peer_reviewed": "string or null — landing page for a later peer-reviewed version when url identifies the version summarized by the wiki page",
-  "pdf_path": "raw/papers/filename.pdf",
+  "url": "string — landing page of the version the wiki page summarizes (proceedings/journal page or arXiv abstract page)",
+  "url_peer_reviewed": "string or null — peer-reviewed landing page; equals url when the page summarizes the peer-reviewed version, otherwise a later version found after ingest",
+  "url_preprint": "string or null — arXiv abstract page of the preprint when known and url is not that page",
+  "pdf_path": "raw/papers/filename.pdf — PDF of the summarized version (parsed into raw/parsed/{id}/)",
+  "pdf_path_preprint": "string or null — preprint PDF kept as secondary context when pdf_path is the peer-reviewed version (parsed into raw/parsed/{id}/preprint/)",
   "task": ["list — one or more task values; see docs/schemas/vocabulary.md"],
   "relevance_score": 0.95,
   "relevance_note": "string — brief reason for score, especially for borderline cases",
@@ -133,6 +135,37 @@ rejected  → score < 0.40 or human confirmed irrelevant: skip
 ingested  → wiki paper page written
 ```
 
+## Source Version at Ingest
+
+Decided per paper at ingest time (user decision 2026-11-11):
+
+1. **Peer-reviewed version known → ingest it.** When a verified proceedings or journal version
+   exists before the page is written, the page summarizes that version. The preprint, when known,
+   is secondary context only: it may explain or add detail, but every metric, table, figure and
+   claim on the page traces to the peer-reviewed version (invariant 9). Where the preprint
+   reports something the peer-reviewed version does not, leave it out or say explicitly that it
+   comes from the preprint.
+2. **Otherwise ingest the preprint**, and log a later peer-reviewed version as below.
+3. **Already ingested from the preprint:** record `url_peer_reviewed` and the italic page note
+   ("Duplicates and Later Versions"); do not re-ingest unless the user asks.
+
+This is independent of which record ID is canonical (next section): the page keeps the canonical
+ID, and only its source text changes. For a page that summarizes the peer-reviewed version:
+
+| Field | Value |
+|---|---|
+| `url`, `url_peer_reviewed` | Peer-reviewed landing page (identical, so no editorial note) |
+| `url_preprint` | arXiv abstract page, when a preprint is known |
+| `venue`, `venue_type`, `conference_date` / `journal_date` | The peer-reviewed venue; the date rule applies |
+| `pdf_path` / `pdf_path_preprint` | Peer-reviewed PDF / preprint PDF |
+| `raw/parsed/{id}/` / `raw/parsed/{id}/preprint/` | Peer-reviewed parse (primary) / preprint parse (context) |
+
+`source_ids.arxiv`, `preprint_date`, `arxiv_version` and `version_date` remain recorded. The
+abstract card links both versions: `[→ Paper]({url})` and `[→ Preprint]({url_preprint})`.
+Switch an arXiv-canonical record with `scripts/ingest/use_peer_reviewed.py` before ingest. A
+record that came from proceedings and has a known arXiv twin only gains `url_preprint` (and,
+optionally, the preprint PDF and parse for context).
+
 ## Duplicates and Later Versions
 
 One paper has one page (AGENTS.md invariant 4). When two records describe the same work (an arXiv
@@ -180,9 +213,10 @@ relationship (technical report vs peer-reviewed version). Precedent: VibeVoice T
 - ACL Anthology: the proceedings record is canonical (e.g. F5-TTS `2025.acl-long.313`, F-Actor
   `2026.findings-acl.242`).
 - OpenReview (ICLR, NeurIPS, ICML): the arXiv record stays canonical, and the proceedings record is
-  the duplicate.
+  the duplicate (canonical ID only; the source text follows "Source Version at Ingest", falling
+  back to the preprint when the proceedings PDF cannot be retrieved).
 - ISCA (Interspeech): the record already in the corpus stays canonical, whichever source it came
-  from. The 2026-11-01 ISCA fetch kept existing arXiv records canonical; the 2026-11-07 arXiv top-up
+  from (the canonical ID; the source text follows "Source Version at Ingest"). The 2026-11-01 ISCA fetch kept existing arXiv records canonical; the 2026-11-07 arXiv top-up
   kept existing ISCA records canonical. The canonical record gains the duplicate's source ID; when
   an ISCA record gains `source_ids.arxiv`, also copy the arXiv `preprint_date`, `arxiv_version`,
   `version_date` and `version_estimated` (the metadata check requires them, and `published_date`

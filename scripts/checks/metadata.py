@@ -72,6 +72,11 @@ def _check(
                 "peer_reviewed_venue_type_valid",
                 "frozen record has url_peer_reviewed but no valid peer_reviewed_venue_type",
             ))
+    preprint_url = record.get("url_preprint")
+    if preprint_url and not (isinstance(preprint_url, str) and preprint_url.startswith("https://arxiv.org/abs/")):
+        issues.append(issue("url_preprint_valid", f"url_preprint must be an arXiv abstract URL: {preprint_url!r}"))
+    if record.get("pdf_path_preprint") and record.get("pdf_path_preprint") == record.get("pdf_path"):
+        issues.append(issue("pdf_path_preprint_distinct", "pdf_path_preprint equals pdf_path"))
     if record.get("year") != int(pd[:4]) or record.get("month") != int(pd[5:7]):
         issues.append(issue("year_month_match", f"year/month {record.get('year')}/{record.get('month')} do not match published_date {pd}"))
     if not legacy_ok and (record.get("source_ids") or {}).get("arxiv"):

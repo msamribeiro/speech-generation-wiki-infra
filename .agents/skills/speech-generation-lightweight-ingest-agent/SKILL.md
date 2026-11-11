@@ -84,6 +84,14 @@ Read `paper.md` fully — abstract, introduction, and the core method or contrib
 - What the speech generation community specifically uses it for
 - What capability or resource it provides to TTS/VC/SCA work
 
+If `raw/parsed/{ID}/preprint/paper.md` exists, the page summarizes the peer-reviewed version in
+`raw/parsed/{ID}/paper.md`, and the preprint is **secondary context only**: read it to clarify
+the method, but take every metric, table, figure, claim and section citation from the
+peer-reviewed `paper.md`. Never mix numbers across the two versions; if something appears only in
+the preprint, leave it out or state on the page that it comes from the preprint. Never copy
+figures from `preprint/assets/`. Source rule: `docs/schemas/metadata.md`, "Source Version at
+Ingest".
+
 For survey papers (`corpus_role == "survey"`): also read any taxonomy, classification, or framework sections carefully. These are the most reader-valuable parts of a survey stub. Note which organisational scheme the survey uses (e.g. autoregressive vs. non-autoregressive, acoustic model vs. vocoder, text-to-unit vs. end-to-end) and what scope it covers (tasks, architectures, years).
 
 Also read `raw/parsed/{ID}/references.json` to capture any in-corpus papers this paper cites:
@@ -160,6 +168,7 @@ code_available: true | false | null
 demo_available: true | false | null
 url: "{original paper URL from raw/metadata/{ID}.json}"
 url_peer_reviewed: "{later peer-reviewed landing page from metadata; omit when null or identical to url}"
+url_preprint: "{arXiv abstract page from metadata url_preprint; omit when null or identical to url}"
 related_concepts: [{0–4 relevant slugs from the allowed list below — empty list [] if none clearly apply}]
 related_papers: []
 tags: [{for corpus_role == "survey" only: ["survey"]; omit this field for all other corpus_roles}]
@@ -182,13 +191,13 @@ generation:
 - The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!info]` (Citation Stub banner — required, always second), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!caution]` — write prose instead.
 
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Journal | Workshop | Preprint | Technical Report}
-> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set} · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
+> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set and different from url}{ · [→ Preprint]({url_preprint}) when set} · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. One sentence, no bold label.}
 
-{When `url_peer_reviewed` is set, add exactly one italic paragraph here: *This page, its metrics,
+{When `url_peer_reviewed` is set and differs from `url`, add exactly one italic paragraph here: *This page, its metrics,
 and its claims summarize the ingested version. A peer-reviewed version is available at
-[{venue and title}]({url_peer_reviewed}).* Omit the paragraph when the field is absent.}
+[{venue and title}]({url_peer_reviewed}).* Omit the paragraph when the field is absent or equals `url` (the page already summarizes the peer-reviewed version).}
 
 > [!info] Citation Stub
 > This paper is not a speech generation paper but is cited by the corpus. See Context in Speech Generation below for why it is relevant.

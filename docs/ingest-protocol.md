@@ -56,6 +56,15 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   paper enters a quarterly queue. A missing proceedings record is not evidence of absence: the
   ISCA fetch keeps only titles that pass the keyword filter, so match against the full proceedings
   index (`isca.scrape_index`), not against fetched records (6 Interspeech 2026 papers, 2026-11-11).
+- **Ingest the peer-reviewed version when it is known** (`schemas/metadata.md`, "Source Version at
+  Ingest"; user decision 2026-11-11). Decided per paper at ingest time, not in a separate batch:
+  for an arXiv-canonical candidate with a verified proceedings or journal version, run
+  `scripts/ingest/use_peer_reviewed.py` (dry run, then `--apply`), re-parse with
+  `batch_convert.py --ids {id}`, and tell the agent the preprint parse in
+  `raw/parsed/{id}/preprint/` is context only. When the peer-reviewed PDF cannot be retrieved
+  (OpenReview gate, unpublished proceedings), ingest the preprint. For a proceedings-canonical
+  candidate with a known arXiv twin, set `url_preprint`. Pages already written from a preprint get
+  the link and note only; never re-ingest them without the user.
 - Pre-flight each candidate before it enters the list:
   - **ID/title dedup.** Title-match against the whole corpus, then check authors and abstract
     (retitled versions slip past title matching).

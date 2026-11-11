@@ -67,12 +67,21 @@ and the peer-reviewed-version check (2026-11-11, see the Session Log). To resume
    wait for confirmation. Check figure-1 of all 70 ISCA papers for the ISCA logo
    ([[feedback_interspeech_figure_sanity]]). The two Show & Tell demos `interspeech-2026-kato26`
    and `-pine26` are 2-page papers (short parse is expected).
-2. **Peer-reviewed-version batches run after the sweep and before Q3 integration** (user decision
-   2026-11-11; deviation from `docs/ingest-protocol.md` section 2). Do not re-date or add
-   peer-reviewed links during the sweep: that is the peer-reviewed-version stream's Interspeech
-   batch (56 accepted + the 34 re-dated pages; the 6 records verified 2026-11-11 are tabled in the
-   Session Log) and its ICML/IJCAI/ICPR/ICME/ACL batch. EMNLP 2026 (8) and SLT 2026 (8) records stay
-   in Q3 on arXiv dates and are swept now (user decision 2026-11-11).
+2. **Ingest the peer-reviewed version when it is known** (user decision 2026-11-11, supersedes the
+   same day's "batches after the sweep"; rule: `docs/schemas/metadata.md`, "Source Version at
+   Ingest"; procedure: `docs/ingest-protocol.md` section 2). Per paper at ingest time:
+   - **65 arXiv-canonical Interspeech 2026 records**: before each is ingested, switch it with
+     `scripts/ingest/use_peer_reviewed.py` (`--from-duplicate` for the 56 with an ISCA duplicate
+     record; explicit `--url/--pdf-url/--source` from the Session Log table for the 9 without),
+     then `batch_convert.py --ids {id}`. Do this per ingest batch, just ahead of it.
+   - **11 ISCA-canonical records with a known arXiv twin**: set `url_preprint` (by hand or a
+     one-line metadata edit) before ingest; the other 59 ISCA records have no known preprint.
+   - **ICML `2607.09134`, ICME `2608.03021`**: check for retrievable proceedings at pre-flight;
+     otherwise ingest the preprint.
+   - **EMNLP 2026 (8) and SLT 2026 (8)**: no proceedings yet; ingest the preprint, stay Q3 on
+     arXiv dates (user decision 2026-11-11).
+   - Pages already written from a preprint (the 34 re-dated Interspeech pages, Q2 ICML/ICPR/ACL
+     pages) get the link and note through the peer-reviewed-version batches; no re-ingest.
 3. **Excluded from the sweep:** `2607.19859` StellarTTS is an ASRU 2025 paper (Crossref-verified),
    canonical quarter Q4 2025; it is re-dated by the batch, then ingested as a Q4 2025 page. Catch-up
    Q4 integration with `2506.04518` is a `BACKLOG.md` item.
@@ -297,10 +306,12 @@ downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_
   worktrees); no other venue batch has run. Q3-relevant findings:
   - 50 accepted Interspeech 2026 records carry `conference_date` and ISCA source IDs; they only lack
     `url_peer_reviewed`/peer-reviewed venue (the open Interspeech batch).
-  - 6 accepted records were dated 2026-09-27 from the arXiv comment alone, with no ISCA source ID
-    (their titles failed the ISCA fetch's keyword filter, so no ISCA record existed to match).
-    **Verified 2026-11-11 against the ISCA archive index and paper pages**; all stay Q3, no date
-    change. Input for the Interspeech batch:
+  - 9 accepted records were dated 2026-09-27 with no ISCA source ID (6 from the arXiv comment;
+    `2606.18072`, `2606.23285`, `2607.14310` found later the same day by querying metadata
+    directly, which the audit had grouped differently). Their titles failed the ISCA fetch's keyword
+    filter, so no ISCA record existed to match. **Verified 2026-11-11 against the ISCA archive index
+    and paper pages**; all stay Q3, no date change. Inputs for `use_peer_reviewed.py` (landing page
+    `https://www.isca-archive.org/interspeech_2026/{slug}.html`, PDF `{slug}.pdf`):
 
     | arXiv ID | ISCA slug | DOI | Match |
     |---|---|---|---|
@@ -310,6 +321,9 @@ downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_
     | `2606.31365` | `grundhuber26_interspeech` | 10.21437/Interspeech.2026-2406 | exact title, 2/2 authors |
     | `2607.19033` | `wagner26b_interspeech` | 10.21437/Interspeech.2026-2817 | exact title, abstract similarity 0.98; ISCA camera-ready PDF lists only Laurin Wagner, arXiv lists four authors; same work |
     | `2607.22658` | `wang26fa_interspeech` | 10.21437/Interspeech.2026-2938 | exact title; ISCA adds Najim Dehak and Laureano Moro-Velázquez to the 6 arXiv authors |
+    | `2606.18072` | `dai26c_interspeech` | 10.21437/Interspeech.2026-791 | exact title, 8/8 authors |
+    | `2606.23285` | `kando26_interspeech` | 10.21437/Interspeech.2026-999 | exact title, 4/4 authors |
+    | `2607.14310` | `shigabeev26_interspeech` | 10.21437/Interspeech.2026-809 | exact title, 2/2 authors |
 
   - Acceptance-comment-only Q3 records: EMNLP 2026 (8, incl. non-archival SALMA workshop
     `2609.13413`), SLT 2026 (8), ICML 2026 `2607.09134`, ICME 2026 `2608.03021`, ASRU 2025
@@ -320,10 +334,17 @@ downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_
     ACL 2026 date; `2605.16026` is a TASLP extension of an ACL Findings paper (full-version check,
     not a re-date).
 - **User decisions:** EMNLP and SLT 2026 records stay in Q3 on their arXiv dates and are swept
-  now (2026-11-11). The peer-reviewed-version batches run **after** the Q3 sweep and **before** Q3
-  integration (deviation from `docs/ingest-protocol.md` section 2, which applies the rule before
-  queue selection; the migration script edits written pages, and no date freezes until
-  integration).
+  now (2026-11-11). ~~The peer-reviewed-version batches run after the Q3 sweep~~ (superseded the
+  same day by the next decision).
+- **Source version at ingest (user decision 2026-11-11):** when a verified peer-reviewed version is
+  known, the page summarizes it, with the preprint as context only and logged as `url_preprint`;
+  otherwise the preprint is ingested; pages already written from a preprint get the link and note
+  only, no re-ingest. Implemented the same day: `docs/schemas/metadata.md` ("Source Version at
+  Ingest", new fields `url_preprint` and `pdf_path_preprint`, parse layout
+  `raw/parsed/{id}/preprint/`), `docs/ingest-protocol.md` section 2, the ingest, lightweight-ingest
+  and review skills, the metadata health check, and `scripts/ingest/use_peer_reviewed.py` (with
+  `tests/test_use_peer_reviewed.py`; 57 tests pass, agents check passes). Dry runs on `2608.00011`
+  and `2606.10591` matched expectations; nothing applied yet.
 - **ASRU 2025 `2607.19859` StellarTTS:** verified via Crossref (DOI
   10.1109/asru65441.2025.11434642, ASRU 2025 proceedings, conference start 2025-12-06, 9/9
   authors). First posted to arXiv 2026-07-22, months after the conference, so it arrived with the

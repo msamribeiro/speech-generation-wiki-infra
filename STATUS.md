@@ -18,12 +18,14 @@ has a PDF and is parsed (all 7 parse batches done 2026-11-11).
 2. Freeze the 116-paper Q1 2026 integration manifest and begin Phase 1 across its 22 affected
    concepts (453 page-to-concept memberships).
 3. Continue the corpus-wide peer-reviewed-version batches, including the two Q2-held ICML/IJCAI
-   records and historical frozen records, without duplicating the released migration path. By user
-   decision (2026-11-11) the Q3-relevant batches (Interspeech; ICML/IJCAI/ICPR/ICME/ACL) run after
-   the Q3 sweep and before Q3 integration.
+   records and historical frozen records, without duplicating the released migration path. Since
+   2026-11-11 (user decision) a page summarizes the peer-reviewed version when it is known at
+   ingest, with the preprint as context (`docs/schemas/metadata.md`, "Source Version at Ingest");
+   the batches cover pages already written from a preprint (link and note, no re-ingest).
 4. Ingest Q3 2026. Pre-flight is complete (fetch, filter, review, downloads, parse, and the
    peer-reviewed-version check on 2026-11-11); next, the chronological sweep of 363 accepted
-   records (StellarTTS `2607.19859` excluded: ASRU 2025, canonical quarter Q4 2025; catch-up Q4
+   records, switching the 65 arXiv-canonical Interspeech records to their proceedings version just
+   ahead of each batch (StellarTTS `2607.19859` excluded: ASRU 2025, canonical quarter Q4 2025; catch-up Q4
    integration tracked in `BACKLOG.md`). Procedure: `docs/ingest-protocol.md`.
 
 The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;
