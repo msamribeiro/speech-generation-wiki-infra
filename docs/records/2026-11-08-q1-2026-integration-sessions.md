@@ -1,7 +1,7 @@
 # Q1 2026 Integration and Synthesis Session
 
 **Started:** 2026-11-08
-**Status:** Manifest frozen; Phase 1 ready to begin
+**Status:** Phase 1 in progress
 **Evidence scope:** Q1 2026 (`2026-01-01 <= published_date <= 2026-03-31`), layered onto the
 completed Q4-and-earlier claim graphs
 **Evidence cutoff:** 2026-03-31
@@ -115,7 +115,7 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 
 ### subjective-evaluation
 
-**Progress:** 1/52. The first invocation wrote `2601.01459`; 51 remain.
+**Progress:** 5/52. Two invocations have written five entries; 47 remain.
 
 **Batch 1 — next (20 IDs, frozen order):**
 
@@ -147,6 +147,14 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - `paper_count` advanced from 255 to 256; the ID occurs exactly once.
 - Concept-scoped Phase 1 health: 0 errors, 0 warnings.
 - Next frozen ID: `2601.04233`.
+
+**Invocation 2 — complete (4 IDs):**
+
+- Added `2601.04233`, `2601.02073`, `2601.02753`, and `2601.02776` in frozen order.
+- Preserved all 16 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 256 to 260; all five Q1 IDs occur exactly once.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2601.01568`.
 
 ## Preflight Validation
 
