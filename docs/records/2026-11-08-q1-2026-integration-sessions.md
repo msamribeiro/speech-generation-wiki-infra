@@ -318,6 +318,53 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
   the full 276-paper concept history.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
+### spoken-language-model
+
+**Progress:** 34/34. Two invocations wrote all 34 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2505.15727` through `2602.13891` in order, including the canonical
+  peer-reviewed IWSDS IDs `2026.iwsds-1.10`, `2026.iwsds-1.4`, and `2026.iwsds-1.9` without
+  separate preprint aliases.
+- Preserved all 86 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 173 to 193; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2602.23068`; 14 entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (14 IDs; Phase 1 closure):**
+
+- Added the final frozen range `2602.23068` through `2603.25750` in order.
+- Preserved all 63 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 193 to 207; the integrated Q1 IDs equal the complete 34-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `spoken-language-model`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated all 18 established claim clusters and added one emerging cluster:
+  `explicit_reasoning_traces_improve_spoken_response_accuracy`.
+- The new cluster captures the first direct Q1 evidence that generating an intermediate text reasoning
+  trace alongside speech can improve spoken-answer accuracy, while retaining the synthetic-data and
+  English-only limitations that keep the finding emerging.
+- Assigned 25/34 Q1 papers to 56 reciprocal memberships across the seven existing method families and
+  two new families: masked-diffusion speech language models and modular dialogue-state control models.
+  Nine benchmark, evaluation, serving, or tutorial papers remain legitimate architecture-family outliers.
+- The full-duplex family-boundary reassessment triggered: four Q1 systems form a stable explicit
+  dialogue-state-control subgroup. The queue item now watches for matched unified-versus-modular
+  comparisons and another stable subgroup.
+- Added two open questions and three Q1 trend notes covering natural-data reasoning traces,
+  unified-versus-modular turn control, architectural diversification, conversational data curation,
+  and multidimensional interaction evaluation.
+- Concept-scoped Phase 2 health: 0 errors and 48 expected method-family coverage warnings across the
+  full 207-paper concept history, including the nine Q1 architecture-family outliers.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
+  local Phase 2 summary log.
+
 ### zero-shot-tts
 
 **Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
