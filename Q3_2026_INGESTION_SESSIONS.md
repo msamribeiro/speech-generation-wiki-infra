@@ -55,33 +55,31 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-Q3 2026 pre-flight is in progress; no Q3 page has been written by a sweep yet. Done so far: arXiv
-top-up, dedup and filter, review queue cleared, all 224 missing PDFs downloaded (2026-11-07), and
-parse batches 1-5 of 7 (2026-11-07 and 2026-11-08). To resume:
+Q3 2026 pre-flight is complete; no Q3 page has been written by a sweep yet. Done: arXiv top-up,
+dedup and filter, review queue cleared, all 224 missing PDFs downloaded (2026-11-07), all 7 parse
+batches (2026-11-07 to 2026-11-11: **all 364 accepted Q3 records parsed**, plus Q2 `2608.26146`),
+and the peer-reviewed-version check (2026-11-11, see the Session Log). To resume:
 
-1. **Finish parsing: batches 6-7** (80 papers: 57 ISCA and 23 arXiv records, every accepted Q3
-   record with a PDF and no `paper.md`, ordered by `published_date`; batch 6 continues from
-   2026-09-27). Regenerate the list from metadata (the batch files lived in the session
-   scratchpad). The user reviews one batch at a time: run each batch of 40 as two background runs
-   of 20 (`batch_convert.py --workers 2 --ids ...`, 22 to 51 min per run on 2026-11-08), since a
-   single run of 40 can exceed the 2 h background-task limit (batch 2 did). After each batch:
-   post-parse check (paper.md < 100 lines or empty references.json), `citation_index.py`, one log
-   line, then report. Check the figure-1 of all 70 ISCA papers for the ISCA logo at ingest
-   ([[feedback_interspeech_figure_sanity]]). Also parse `2608.26146` (now Q2).
-2. *(done 2026-11-07)* arXiv top-up 2026-08-20 to 2026-09-30.
-3. *(done 2026-11-07)* Download every Q3 accepted record without a PDF.
-4. **Peer-reviewed-version rule:** *implemented 2026-11-08 by the peer-reviewed-version stream*
-   (`docs/records/2026-11-08-peer-reviewed-version-migration.md`, `docs/ingest-protocol.md`
-   section 2); claim membership is the sole freeze authority, so the `date_frozen` question is
-   closed. Only the verified Q1 batch has been applied. The Interspeech, ICML, ACL and other venue
-   batches remain open in `BACKLOG.md`, including the 34 re-dated Interspeech pages and the 10
-   frozen 2025 pages. Do not duplicate that migration here; before the sweep, check what it has
-   covered so far.
-5. **Held papers:** `2606.12940` and `2606.13006` move to Q3 through a peer-reviewed-version batch;
-   ingest them as Q3 papers afterwards. `2606.13006` is already cited (accepted, no page) by
-   `2606.28249` HPRO.
-6. **Start the sweep:** pre-flight per `docs/ingest-protocol.md` section 2, then chronological
-   selection by `published_date`.
+1. **Start the sweep:** 363 accepted Q3 records (364 minus StellarTTS `2607.19859`, see 3). Build a
+   numbered list in `published_date` order with the per-paper pre-flight from
+   `docs/ingest-protocol.md` section 2 (ID/title dedup against the whole corpus, author screen,
+   full-version comments, prior-publication notices on the first page of `paper.md`), show it and
+   wait for confirmation. Check figure-1 of all 70 ISCA papers for the ISCA logo
+   ([[feedback_interspeech_figure_sanity]]). The two Show & Tell demos `interspeech-2026-kato26`
+   and `-pine26` are 2-page papers (short parse is expected).
+2. **Peer-reviewed-version batches run after the sweep and before Q3 integration** (user decision
+   2026-11-11; deviation from `docs/ingest-protocol.md` section 2). Do not re-date or add
+   peer-reviewed links during the sweep: that is the peer-reviewed-version stream's Interspeech
+   batch (56 accepted + the 34 re-dated pages; the 6 records verified 2026-11-11 are tabled in the
+   Session Log) and its ICML/IJCAI/ICPR/ICME/ACL batch. EMNLP 2026 (8) and SLT 2026 (8) records stay
+   in Q3 on arXiv dates and are swept now (user decision 2026-11-11).
+3. **Excluded from the sweep:** `2607.19859` StellarTTS is an ASRU 2025 paper (Crossref-verified),
+   canonical quarter Q4 2025; it is re-dated by the batch, then ingested as a Q4 2025 page. Catch-up
+   Q4 integration with `2506.04518` is a `BACKLOG.md` item.
+4. **Held papers:** `2606.12940` (ICML) and `2606.13006` (IJCAI) move to Q3 through the
+   peer-reviewed-version batch; ingest them as Q3 papers afterwards. `2606.13006` is already cited
+   (accepted, no page) by `2606.28249` HPRO. Six ingested Q2 pages (four ICML, two ICPR) will also
+   move into Q3 then; they need no new pages.
 
 **Side threads (not blocking):** duplicate page pairs in `BACKLOG.md`; OpenReview live fetches are
 blocked by a browser-verification gate, so use the saved-page path (`openreview.py --from-file`).
@@ -286,6 +284,53 @@ downloaded) is logged in the archived Q2 doc's Session Log and in `raw/pipeline_
   content-ingest worktree was fast-forwarded to content `main`. The sibling peer-reviewed-version
   stream landed on `main` during the session and was merged into `work/ingest` at wrap-up; no ingest
   pages were written.
+
+### Session 2026-11-11: parse batches 6-7, peer-reviewed-version check
+
+- **Batch 6** (40 ISCA PDFs, 2026-09-27): 40 done, 0 failed, two runs of 20 (49 min), 0 flagged.
+- **Batch 7** (17 ISCA + 23 arXiv to 2026-09-30, plus Q2 `2608.26146`): 41 done, 0 failed (68 min).
+  `interspeech-2026-kato26_interspeech` and `-pine26_interspeech` are under 100 lines: 2-page
+  Show & Tell demos, all sections present, reference counts match the highest in-text citation.
+  **All 364 accepted Q3 records are parsed.** Citation index: 25,900 entries, 1,473 corpus papers.
+- **Peer-reviewed-version check** (read-only `audit_peer_reviewed_versions.py` against
+  content-ingest). The Q1 batch is released (content `844fb57`, infra `8e25555`, both in the ingest
+  worktrees); no other venue batch has run. Q3-relevant findings:
+  - 50 accepted Interspeech 2026 records carry `conference_date` and ISCA source IDs; they only lack
+    `url_peer_reviewed`/peer-reviewed venue (the open Interspeech batch).
+  - 6 accepted records were dated 2026-09-27 from the arXiv comment alone, with no ISCA source ID
+    (their titles failed the ISCA fetch's keyword filter, so no ISCA record existed to match).
+    **Verified 2026-11-11 against the ISCA archive index and paper pages**; all stay Q3, no date
+    change. Input for the Interspeech batch:
+
+    | arXiv ID | ISCA slug | DOI | Match |
+    |---|---|---|---|
+    | `2606.10591` | `liang26d_interspeech` | 10.21437/Interspeech.2026-3355 | exact title, 4/4 authors |
+    | `2606.19951` | `takagi26_interspeech` | 10.21437/Interspeech.2026-1478 | exact title, 4/4 authors |
+    | `2606.22009` | `koriyama26_interspeech` | 10.21437/Interspeech.2026-1800 | exact title, 1/1 author |
+    | `2606.31365` | `grundhuber26_interspeech` | 10.21437/Interspeech.2026-2406 | exact title, 2/2 authors |
+    | `2607.19033` | `wagner26b_interspeech` | 10.21437/Interspeech.2026-2817 | exact title, abstract similarity 0.98; ISCA camera-ready PDF lists only Laurin Wagner, arXiv lists four authors; same work |
+    | `2607.22658` | `wang26fa_interspeech` | 10.21437/Interspeech.2026-2938 | exact title; ISCA adds Najim Dehak and Laureano Moro-Velázquez to the 6 arXiv authors |
+
+  - Acceptance-comment-only Q3 records: EMNLP 2026 (8, incl. non-archival SALMA workshop
+    `2609.13413`), SLT 2026 (8), ICML 2026 `2607.09134`, ICME 2026 `2608.03021`, ASRU 2025
+    `2607.19859` (would move to Q4 2025 if verified).
+  - Would move into Q3 once verified: held `2606.12940` (ICML) and `2606.13006` (IJCAI); ingested
+    Q2 pages `2603.17837`, `2604.12928`, `2605.27772`, `2606.01479` (ICML) and `2604.09111`,
+    `2604.10413` (ICPR); ACL 2026 pages `2601.04029`, `2603.14432`, `2603.14889` depending on the
+    ACL 2026 date; `2605.16026` is a TASLP extension of an ACL Findings paper (full-version check,
+    not a re-date).
+- **User decisions:** EMNLP and SLT 2026 records stay in Q3 on their arXiv dates and are swept
+  now (2026-11-11). The peer-reviewed-version batches run **after** the Q3 sweep and **before** Q3
+  integration (deviation from `docs/ingest-protocol.md` section 2, which applies the rule before
+  queue selection; the migration script edits written pages, and no date freezes until
+  integration).
+- **ASRU 2025 `2607.19859` StellarTTS:** verified via Crossref (DOI
+  10.1109/asru65441.2025.11434642, ASRU 2025 proceedings, conference start 2025-12-06, 9/9
+  authors). First posted to arXiv 2026-07-22, months after the conference, so it arrived with the
+  Q3 arXiv fetch, but its canonical quarter is Q4 2025. **User decision:** it belongs to Q4 2025
+  and is **excluded from the Q3 sweep** (363 remain). Re-date it through the peer-reviewed-version
+  batch, then ingest it as a Q4 2025 page; the catch-up Q4 integration for it and `2506.04518` is a
+  `BACKLOG.md` item.
 
 ---
 

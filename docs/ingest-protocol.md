@@ -53,7 +53,9 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   a venue, verify the authoritative proceedings landing page, identity, and venue date. Match
   titles and authors because camera-ready titles can change. An acceptance comment is a discovery
   signal, not sufficient evidence for mutation. Once verified, apply the rule above before the
-  paper enters a quarterly queue.
+  paper enters a quarterly queue. A missing proceedings record is not evidence of absence: the
+  ISCA fetch keeps only titles that pass the keyword filter, so match against the full proceedings
+  index (`isca.scrape_index`), not against fetched records (6 Interspeech 2026 papers, 2026-11-11).
 - Pre-flight each candidate before it enters the list:
   - **ID/title dedup.** Title-match against the whole corpus, then check authors and abstract
     (retitled versions slip past title matching).

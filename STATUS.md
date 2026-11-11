@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-11-08
+Last updated: 2026-11-11
 
 The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
 retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 ingestion is complete
@@ -8,7 +8,7 @@ retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 inges
 frontier and Q1 integration. The peer-reviewed-version rule and its verified Q1 batch are complete;
 Q3 fetch coverage is complete (Interspeech 2026
 from ISCA on 2026-11-01; arXiv top-up through 2026-09-30 on 2026-11-07), every accepted Q3 record
-has a PDF, and 284 of 364 are parsed (batches 1-5 of 7).
+has a PDF and is parsed (all 7 parse batches done 2026-11-11).
 
 ---
 
@@ -18,10 +18,13 @@ has a PDF, and 284 of 364 are parsed (batches 1-5 of 7).
 2. Freeze the 116-paper Q1 2026 integration manifest and begin Phase 1 across its 22 affected
    concepts (453 page-to-concept memberships).
 3. Continue the corpus-wide peer-reviewed-version batches, including the two Q2-held ICML/IJCAI
-   records and historical frozen records, without duplicating the released migration path.
-4. Bootstrap and ingest Q3 2026. Fetch, filter, review and PDF download are done (2026-11-07); next,
-   parse batches 6-7 (80 papers, from 2026-09-27, incl. the remaining 57 ISCA PDFs), then work the
-   accepted queue (procedure: `docs/ingest-protocol.md`).
+   records and historical frozen records, without duplicating the released migration path. By user
+   decision (2026-11-11) the Q3-relevant batches (Interspeech; ICML/IJCAI/ICPR/ICME/ACL) run after
+   the Q3 sweep and before Q3 integration.
+4. Ingest Q3 2026. Pre-flight is complete (fetch, filter, review, downloads, parse, and the
+   peer-reviewed-version check on 2026-11-11); next, the chronological sweep of 363 accepted
+   records (StellarTTS `2607.19859` excluded: ASRU 2025, canonical quarter Q4 2025; catch-up Q4
+   integration tracked in `BACKLOG.md`). Procedure: `docs/ingest-protocol.md`.
 
 The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;
 the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 2026-11-01). The completed Q4 integration record is archived at
@@ -36,8 +39,8 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 | Metadata records | 2,024 | 1,069 ingested, 386 accepted, 0 review, 569 rejected (incl. 109 Interspeech 2026 ISCA duplicates and 13 arXiv preprints of ISCA records) |
 | Published paper pages | 1,061 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,455 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,355 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 286 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 in a peer-reviewed-version batch) and 284 Q3 2026; 80 more Q3 PDFs (incl. 57 ISCA) await parse, plus Q2 `2608.26146` and 19 Q4 records |
+| Parsed active papers | 1,436 | Includes ingested papers and accepted papers ready for ingest |
+| Accepted and parsed, ready to ingest | 367 | 3 Q2 2026 (held ICML/IJCAI records that move to Q3 in a peer-reviewed-version batch, and re-dated `2608.26146`) and 364 Q3 2026 (incl. StellarTTS, which moves to Q4 2025); 19 Q4 2026 records await parse |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
@@ -74,10 +77,10 @@ non-authoritative.
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Complete: 116 ingested, 0 accepted after the verified peer-reviewed-version batch | Not started; manifest-ready (22 concepts, 453 memberships) | Not started | Not started |
-| Q2 2026 | Complete: 174 ingested after 16 Q1 pages moved to verified May proceedings dates; 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI); 1 accepted re-dated into Q2 on 2026-11-07 (`2608.26146` Vagdhenu, PDF, not parsed) | Not started | Not started | Not started |
-| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 364 accepted (all with PDFs, 284 parsed) | Not started | Not started | Not started |
+| Q2 2026 | Complete: 174 ingested after 16 Q1 pages moved to verified May proceedings dates; 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI); 1 accepted re-dated into Q2 on 2026-11-07 (`2608.26146` Vagdhenu, parsed 2026-11-11, not yet ingested) | Not started | Not started | Not started |
+| Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 364 accepted (all parsed; 363 in the sweep, StellarTTS moves to Q4 2025) | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-11-08. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-11-11. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
@@ -322,9 +325,9 @@ fetch-coverage gaps; Interspeech 2026 was fetched from ISCA with dedup on 2026-1
 
 ## Repository and setup state
 
-- Infrastructure repository: `main` and `work/ingest` in sync at the 2026-11-07 ingest wrap-up
-  (see `git log`). The content repository was not touched on 2026-11-07 (no pages written); its
-  Q4 integration stream was merged into `main` on 2026-11-01.
+- Infrastructure repository: `main` and `work/ingest` in sync at the 2026-11-11 ingest wrap-up
+  (see `git log`). The content repository was not touched on 2026-11-07 to 2026-11-11 (no pages
+  written); `main` carries the 2026-11-08 peer-reviewed migration (`844fb57`).
 - Ingest sessions write to the content-ingest worktree:
 
 ```bash
