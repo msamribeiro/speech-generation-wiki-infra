@@ -115,7 +115,7 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 
 ### subjective-evaluation
 
-**Progress:** 29/52. Four invocations have written 29 entries; 23 remain.
+**Progress:** 52/52. Six invocations wrote all 52 entries; Phase 1 and Phase 2 are complete.
 
 **Frozen queue prefix (first 20 IDs):**
 
@@ -179,6 +179,42 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Concept-scoped Phase 1 health: 0 errors, 0 warnings.
 - Next frozen ID: `2026.africanlp-main.23`. The remaining 23 entries fit in two invocations
   of 20 and 3 papers.
+
+**Invocation 5 — complete (20 IDs):**
+
+- Added the frozen range `2026.africanlp-main.23` through `2603.22252` in order.
+- Preserved all 88 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 284 to 304; the integrated Q1 IDs equal the first 49 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2603.23938`.
+
+**Invocation 6 — complete (3 IDs; Phase 1 closure):**
+
+- Added `2603.23938`, `2601.13802`, and `2604.01247` in frozen order.
+- Preserved all 15 page claims with concept-specific relevance, limitations, and caveats.
+- `paper_count` advanced from 304 to 307; the integrated Q1 IDs equal the complete 52-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `subjective-evaluation`; Phase 2 synthesis is the next operation.
+
+**Phase 2 — complete:**
+
+- Updated all 17 established claim clusters and added one strongly supported cluster:
+  `conversational_evaluation_requires_interaction_context`.
+- The new cluster captures the Q1 evidence that spoken-dialogue evaluation must retain multi-turn,
+  dual-channel, turn-taking, and paralinguistic context rather than rely on single utterances or
+  transcripts alone.
+- Back-filled 57 reciprocal method-family memberships for 39 Q1 papers across all seven existing
+  architecture families. Thirteen Q1 evaluation or benchmark papers have no architecture label and
+  remain legitimate family outliers.
+- Added two open questions and three Q1 trend notes covering conversational protocol design,
+  deployment usability, structured automatic judges, and low-resource metric confounds.
+- No reassessment items were open or triggered.
+- Concept-scoped Phase 2 health: 0 errors and 74 expected method-family coverage warnings, all for
+  architecture-unspecified papers across the full 307-paper concept history.
+- Main-cluster summary written to the Git-ignored local Phase 2 summary log.
+- No commit or push was made for the Phase 1 closure or Phase 2 work.
 
 ## Preflight Validation
 
