@@ -456,6 +456,53 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### flow-matching
+
+**Progress:** 23/23. Two invocations wrote all 23 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2601.00303` through `2603.16280` in order.
+- Preserved all 83 available page claims. `2601.03888` has an empty source-page Claims section
+  and was retained as `claims: []`.
+- `paper_count` advanced from 125 to 145; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- A first validation caught and corrected list indentation for this file's indented `papers:` style;
+  the corrected concept-scoped Phase 1 health check passed with 0 errors and 0 warnings.
+- Next frozen ID: `2603.16783`; three entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (3 IDs; Phase 1 closure):**
+
+- Added `2603.16783`, `2601.13802`, and `2603.29339` in frozen order.
+- Preserved all nine available page claims. `2603.29339` has an empty source-page Claims section
+  and was retained as `claims: []`.
+- `paper_count` advanced from 145 to 148; the integrated Q1 IDs equal the complete 23-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `flow-matching`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 15 applicable established clusters and added four emerging clusters covering disentangled
+  counterfactual speech, joint audio-visual generation, density-path-conditioned speech editing, and
+  codec-latent bandwidth extension. Twenty established clusters received no qualifying Q1 evidence.
+- The classifier-free-guidance reassessment triggered. Two independent Q1 papers confirmed that naive
+  transfer is insufficient; the cluster was narrowed and changed from contested to strongly supported,
+  and the completed queue item was removed.
+- Assigned all 23 Q1 papers to 28 reciprocal memberships across five of the seven established method
+  families. No Q1 paper remains a family outlier; the historical-guidance and auxiliary-attribute
+  families received no new members.
+- Audited all three reassessment items: one triggered, none are overdue after the completed item was
+  resolved, and two remain open for future continuous-AR and discrete-space-flow evidence.
+- Added two open questions and three Q1 trend notes covering guidance portability, new application
+  domains, one-step training strategies, and the resolved CFG consensus.
+- Concept-scoped Phase 2 health: 0 errors and six expected historical method-family coverage warnings
+  across the full 148-paper concept history.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
+  local Phase 2 summary log.
+
 ### zero-shot-tts
 
 **Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
