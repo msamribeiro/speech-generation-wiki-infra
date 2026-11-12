@@ -411,6 +411,51 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### multilingual-tts
+
+**Progress:** 24/24. Two invocations wrote all 24 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2601.04233` through `2602.09823` in order, including canonical
+  peer-reviewed IDs `2026.abjadnlp-1.6`, `2026.eacl-short.16`, and `2026.loreslm-1.54`
+  without separate preprint aliases.
+- Preserved all 75 available page claims. `2601.03888`, `2601.15621`, and `2603.08823` have
+  empty source-page Claims sections and were retained as `claims: []`.
+- `paper_count` advanced from 105 to 125; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2603.14853`; four entries remain.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (4 IDs; Phase 1 closure):**
+
+- Added the final frozen range `2603.14853` through `2603.29339` in order.
+- Preserved all nine available page claims. `2603.18090` and `2603.29339` have empty source-page
+  Claims sections and were retained as `claims: []`.
+- `paper_count` advanced from 125 to 129; the integrated Q1 IDs equal the complete 24-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `multilingual-tts`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 16 applicable established clusters; code-switching, parameter-efficient extension, and
+  synthetic-parallel-data clusters received no qualifying Q1 evidence and remain unchanged.
+- Added one emerging cluster: `accent_control_without_accented_training_data_is_feasible`, backed by
+  two Q1 approaches using parameter-space accent vectors and phonological rules.
+- Assigned 22/24 Q1 papers to 46 reciprocal memberships across all seven existing architecture
+  families. Two architecture-unspecified application papers remain legitimate family outliers.
+- Audited all eight reassessment items. None triggered; five October 2026 items are overdue because
+  Q1 did not provide the matched, balanced, or cross-family studies named in their triggers.
+- Added two open questions and three Q1 trend notes covering training-free accent control,
+  script-aware extension, low-resource adaptation, evaluation bias, and expanding cross-lingual tasks.
+- Concept-scoped Phase 2 health: 0 errors and 12 expected method-family coverage warnings across the
+  full 129-paper concept history, including the two Q1 architecture-family outliers.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
+  local Phase 2 summary log.
+
 ### zero-shot-tts
 
 **Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
