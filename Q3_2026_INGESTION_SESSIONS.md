@@ -61,6 +61,22 @@ excluded), 231 rejected; corpus 1,084 pages. The Manual Verification Queue has n
 six 2026-11-12 items resolved). Pre-flight (fetch, filter, downloads, all 7 parse batches,
 peer-reviewed-version check) is complete. To resume:
 
+**Session order (user, 2026-11-12): parse first, then ingest oldest first.**
+
+0. **Parse the 19 unparsed accepted records first** (Q4 2026, published 2026-10-05 to 2026-11-02):
+   `2607.03666 2607.10162 2609.27599 2608.16235 2607.29125 2609.29217 2609.11523 2607.23027
+   2608.07462 2609.29889 2607.04140 2609.08703 2607.18317 2608.19515 2607.08409 2609.29768
+   2608.09930 2608.02673 2607.23811`. Six have no PDF yet (`2609.29889 2609.29217 2609.27599
+   2609.29768 2609.11523 2609.08703`, all arXiv): run `scripts/parse/download_pdfs.py` first
+   (`docs/fetch.md`, PDF Download), then one `batch_convert.py --ids ...` run for all 19 and the
+   post-parse checks in `docs/parse.md`; rebuild the citation index and tidy its `- discover` line.
+   Log to `raw/pipeline_log.md`.
+1. **Then ingest oldest first**, by canonical `published_date` across all accepted, parsed records.
+   The oldest are Q2: `2608.26146` Vagdhenu (2026-06-28) comes first. The two Q2 holds
+   (`2606.12940` ICML, `2606.13006` IJCAI, 2026-06-11) stay held unless the user lifts the hold,
+   and StellarTTS `2607.19859` stays out until it is re-dated to Q4 2025. After that the Q3 sweep
+   continues at #25 as below; the newly parsed Q4 2026 records come last.
+
 1. **Continue the sweep at #25:** the remaining 2026-07-02 ACL 2026 papers, in ID order:
    `2604.17358` Still Between Us?, `2604.17852` LLM-Codec, `2604.18159` FreezeEmpath, `2604.22209`
    UniSonate, `2605.11098` AffectCodec, `2605.24618` FC-TTS, `2605.28618` long-form benchmarking,
