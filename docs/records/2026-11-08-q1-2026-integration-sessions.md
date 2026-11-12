@@ -503,6 +503,39 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### voice-conversion
+
+**Progress:** 15/15. One invocation wrote all 15 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (15 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.01568` through `2603.22252` in order.
+- Preserved all 64 available page claims, including four newly structured claims from `2602.14686`
+  on pitch–creak disentanglement and identity preservation.
+- `paper_count` advanced from 117 to 132; the integrated Q1 IDs equal the complete 15-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Used the canonical peer-reviewed EACL ID `2026.eacl-short.16` without adding a duplicate preprint alias.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `voice-conversion`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 17 established clusters and added one strongly supported cluster covering correlations among
+  speaker identity, accent, pitch, creak, and emotion. Non-parallel training and generated-speaker embedding
+  clusters received no qualifying Q1 evidence and remain unchanged.
+- Assigned 14/15 Q1 papers to 25 reciprocal memberships across all seven method families. Architecture-
+  unspecified robustness benchmark `2602.00443` remains the sole Q1 family outlier.
+- Audited all five reassessment items. None triggered; all five remain overdue because Q1 did not provide
+  the matched listener, balanced multilingual, stable family-split, or cross-domain adaptive-attacker studies
+  named in their triggers.
+- Added two open questions and three Q1 trend notes covering spurious versus meaningful attribute coupling,
+  listener-calibrated evaluation, internal steering, and expanding deployment domains.
+- Concept-scoped Phase 2 health: 0 errors and 15 expected method-family coverage warnings across the full
+  132-paper concept history, including the one Q1 architecture-family outlier.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### streaming-tts
 
 **Progress:** 16/16. One invocation wrote all 16 entries; Phase 1 is complete and Phase 2 has not started.
