@@ -25,10 +25,10 @@
   "version_date": "2026-04-13",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2604.11096",
+  "ingested_date": "2026-11-12",
+  "url": "https://aclanthology.org/2026.findings-acl.642",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.642.pdf",
-  "pdf_path": "raw/papers/2604.11096.pdf",
+  "pdf_path": "raw/papers/2604.11096.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Currently, large language models (LLMs) predominantly focus on the text modality. To enable more natural human-AI interaction, speech LLMs are emerging, but building effective end-to-end speech LLMs remains challenging due to limited data and the difficulty in expanding to more languages. In this paper, we introduce Cross-lingual Speech Language Model (CSLM), an efficient training method for cross-lingual speech LLMs based on discrete speech tokens. We propose a novel alignment strategy that achieves cross-modal and cross-lingual alignment through continual pre-training. By conducting instruction fine-tuning following a speech-text interleaved chain-of-modality generation process, we enhance modal alignment at a finer granularity, thereby improving generation quality and reducing latency. CSLM aligns different modalities and languages simultaneously without the need for massive speech data, thus exhibiting good language scalability. Evaluations on cross-modal tasks, mono-lingual conversational tasks, and cross-lingual conversational tasks demonstrate CSLM's strong cross-modal alignment capabilities and general task abilities. (Code is available at: https://github.com/ictnlp/CSLM)",
   "arxiv_comment": "Accepted to Findings of ACL 2026",
@@ -38,9 +38,24 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Efficient training method for cross-lingual speech language models supporting multilingual audio generation",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2604.11096",
+  "pdf_path_preprint": "raw/papers/2604.11096.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.findings-acl.642",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-12",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "b7582db"
+    }
+  ]
 }

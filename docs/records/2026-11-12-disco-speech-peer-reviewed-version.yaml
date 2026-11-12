@@ -1,0 +1,6 @@
+schema_version: 1
+scope: DisCo-Speech, frozen arXiv page with a later ACL 2026 proceedings version found at Q3 sweep pre-flight
+verification_rule: exact normalized title and identical author list against the ACL Anthology record
+entries:
+  - {id: "2512.13251", venue: ACL, venue_type: conference, conference_date: "2026-07-02", doi: "10.18653/v1/2026.acl-long.863", url: "https://aclanthology.org/2026.acl-long.863", verified_by: ACL Anthology proceedings record 2026.acl-long.863 (user-confirmed 2026-11-12)}
+deferred: []

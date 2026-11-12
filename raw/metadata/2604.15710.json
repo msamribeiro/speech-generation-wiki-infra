@@ -31,10 +31,10 @@
   "version_date": "2026-04-17",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2604.15710",
+  "ingested_date": "2026-11-12",
+  "url": "https://aclanthology.org/2026.acl-long.459",
   "pdf_url": "https://aclanthology.org/2026.acl-long.459.pdf",
-  "pdf_path": "raw/papers/2604.15710.pdf",
+  "pdf_path": "raw/papers/2604.15710.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Recent end-to-end spoken dialogue models enable natural interaction. However, as user demands become increasingly complex, models that rely solely on conversational abilities often struggle to cope. Incorporating agentic capabilities is therefore essential: by enabling tool use, these models can extend their knowledge boundaries and better solve real-world tasks. Yet, existing research has largely concentrated on core perception and generation, with comparatively limited exploration of such tool-augmented extensions. To bridge this gap, we present VoxMind, an integrated framework designed to equip end-to-end spoken dialogue models with comprehensive agentic abilities. Leveraging our curated 470-hour AgentChat dataset, we incorporate a \"Think-before-Speak\" mechanism, enabling the model to internalize structured reasoning as a critical prerequisite for planning and response generation. Furthermore, to mitigate latency bottlenecks caused by large-scale tool integration, we propose a Multi-Agent Dynamic Tool Management architecture. By asynchronously delegating retrieval tasks to an auxiliary agent aligned with the main model's reasoning trajectory, this system effectively decouples inference latency from toolset size. Experimental results confirm that VoxMind achieves significant improvements in agent performance: compared with strong baselines, the task completion rate increases from 34.88% to 74.57%, outperforming Gemini-2.5-Pro on spoken agent tasks while preserving general conversational quality. The source code and associated data are publicly available at https://github.com/MM-Speech/VoxMind.",
   "arxiv_comment": "Accepted to ACL 2026 Main Conference.Code and data available at https://github.com/MM-Speech/VoxMind",
@@ -43,9 +43,24 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "End-to-end agentic spoken dialogue system with tool-use capabilities extending LLM-based conversational AI",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2604.15710",
+  "pdf_path_preprint": "raw/papers/2604.15710.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-long.459",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-12",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "b7582db"
+    }
+  ]
 }

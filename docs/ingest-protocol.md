@@ -65,6 +65,14 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   (OpenReview gate, unpublished proceedings), ingest the preprint. For a proceedings-canonical
   candidate with a known arXiv twin, set `url_preprint`. Pages already written from a preprint get
   the link and note only; never re-ingest them without the user.
+  - **arXiv-canonical ACL records** that carry `source_ids.acl` but have no ACL duplicate record:
+    switch with explicit flags (`--url https://aclanthology.org/{acl} --pdf-url
+    https://aclanthology.org/{acl}.pdf --venue ACL --venue-type conference --date {conference date}
+    --source acl={acl} --source doi=10.18653/v1/{acl}`) and confirm the proceedings notice on page 1
+    of the downloaded PDF (2026-11-12, six records).
+  - **ACL-canonical records:** the ACL fetch leaves `source_ids.arxiv` empty. Search the arXiv
+    export API by title words plus first-author surname (an exact-phrase title query misses colons
+    and punctuation) and set `url_preprint` on a match (2026-11-12: 6 of 10 found).
 - Pre-flight each candidate before it enters the list:
   - **ID/title dedup.** Title-match against the whole corpus, then check authors and abstract
     (retitled versions slip past title matching).
@@ -81,6 +89,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     own quarters, cross-linked, neither a duplicate (VibeVoice precedent; `schemas/metadata.md`).
     Do not enrich an integrated page with a later version's results: integration selects by
     quarter, so the new evidence would never reach the claim YAMLs.
+    Apply it with `scripts/migrate_peer_reviewed_versions.py` and a reviewed overrides YAML in
+    `docs/records/` (dry run, then `--apply`); mark the later record `is_duplicate` by hand. The
+    script appends its log lines to the end of `wiki/log.md` and `raw/pipeline_log.md`: move them
+    into the dated section (DisCo-Speech `2512.13251`, 2026-11-12).
   - **Legacy dedup pointers** are not defects: a proceedings record with `status: ingested` and
     `wiki_page_id` set points to the arXiv page, and that arXiv record carries `is_duplicate` and
     `canonical_id` back to it (MaskGCT, MoonCast, LLaMA-Omni, VITA-1.5 and others). Cite and link
@@ -103,7 +115,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     `venue_type: journal` and the card label `Journal`.
   - **Scope doubt** (ASR/translation/diarization-only, non-speech audio, zero metrics): read the
     paper and apply the precedent chain in the session doc; surface the matching precedent
-    explicitly instead of re-deciding from scratch.
+    explicitly instead of re-deciding from scratch. Speech-LM efficiency or architecture work
+    evaluated only on understanding tasks with text output is rejected (FastLongSpeech 2026-07-27;
+    Affinity Pooling `2604.06871`, 2026-11-12); turn-taking and end-of-turn components of spoken
+    dialogue systems are accepted (Phoenix-VAD `2509.20410`; `2503.23439`).
   - **Accepted in human triage:** a record whose box is ticked `accept` in `raw/review_queue.md` is
     in scope by the user's decision even when its filter note calls it tangential. Tell the agent
     not to stop on scope; tagging and significance are still judged normally.
@@ -325,8 +340,12 @@ intentional. Checks the health check does not (fully) cover:
   - `subjective-evaluation`: real human raters; LLM-judge or automated scoring never qualifies.
     Humans rating actual system output count even when the study exists to validate an automatic
     judge (STEB `2606.25529`); humans checking benchmark labels do not (`2605.27772`; user,
-    2026-10-31).
+    2026-10-31). Humans rating transcripts or text responses do not count either (F-Actor
+    `2026.findings-acl.242`, Self-EmoQ `2026.findings-acl.740`, 2026-11-12).
   - `disentanglement`: explicit training mechanism with ablation evidence.
+  - `rlhf-speech`: a paper that runs RL or preference optimization on a speech model; a reward model
+    for speech dialogue earns it even without an RL loop on a dialogue policy (WavReward,
+    SDiaReward; `2026.acl-long.6`, user 2026-11-12). RL on a text-only LLM does not (Self-EmoQ).
   - `self-supervised-speech`: only when the method itself uses a self-supervised speech model
     (HuBERT, WavLM, wav2vec2, w2v-BERT, data2vec-based models such as emotion2vec; user,
     2026-10-24, AffectCodec `2605.23373`), never Whisper (supervised) and never when SSL appears
@@ -416,13 +435,13 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Concept-tag scope mistag | Tag because the paper discusses it, not performs it | Step 6 |
 | Unquoted date or numeric-looking ID | Parsed as date object or float | Step 4 prompt, step 6 |
 | False "inconsistency" on page | Agent misreads per-group vs total or different conditions | Step 6 |
-| Agent self-report contradicts file | Narrated decision differs from the written frontmatter; or the summary names an error on the page without fixing it (2026-10-25, UNISON KL ordering) | Whole of step 6; act on every defect the summary mentions |
+| Agent self-report contradicts file | Narrated decision differs from the written frontmatter; or the summary names an error on the page without fixing it (2026-10-25, UNISON KL ordering; 2026-11-12, VoiceStar MaskGCT bullet) | Whole of step 6; act on every defect the summary mentions |
 | Batch undercount or list drift | 3 agents launched for a batch of 4, or wrong `#` range | Section 3 |
 | Cleanup deferred to batch end | Slipped on 2026-10-18; led to unquoted dates and a skipped log | Section 5 |
 | Padding `related_concepts` | Out-of-scope slug added to reach 3 (2026-10-21, before the scope-wins rule) | Step 6 |
 | Org mismatch page vs index | `cleanup.py --org` does not sync the page; strings drift (2026-10-21, three of four papers) | Step 5.1 |
 | One-sided critique of author framing | Agent cites only the comparisons that go against the authors (2026-10-21) | Step 6; ask for the full comparison in the prompt |
-| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost; values shifted one column or packed several per cell (2026-11-11, three of eight papers) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
+| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost; values shifted one column or packed several per cell (2026-11-11, three of eight papers; 2026-11-12, garbled tables in most ACL papers, one table missing a whole row) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
 | Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
 | Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
@@ -434,6 +453,8 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo) | Step 4 prompt, step 6 |
 | Quoted list fields | Agent writes `task: ["TTS"]` and quoted `architecture`/`type` lists; health check and `qc.py` silent (2026-11-11, `2606.07240`) | Step 4 prompt, step 6 (read the frontmatter) |
 | Camera-ready prose quotes preprint numbers | Proceedings table updated but the results prose still quotes the preprint's numbers (2026-11-11, `2604.26136`: fine-tuning results changed sign for French) | Section 2 source version; step 6 (check prose numbers against the primary table) |
+| Inference stated as fact | Agent writes its own reading of an unstated procedure as a finding (2026-11-12, `2026.findings-acl.940`: test descriptions "derived from the target audio") | Step 4 prompt (hedge or omit), step 6 |
+| Template opening rewritten | Agent replaces the Field Significance `Moderate — ` opening to avoid an em dash (2026-11-12, `2026.findings-acl.199`) | Step 4 prompt, step 6 |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve
