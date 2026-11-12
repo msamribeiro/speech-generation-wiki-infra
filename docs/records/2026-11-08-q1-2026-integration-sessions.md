@@ -503,6 +503,41 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### self-supervised-speech
+
+**Progress:** 17/17. One invocation wrote all 17 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (17 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.09239` through `2602.23765` in order.
+- Preserved all 74 available page claims.
+- `paper_count` advanced from 176 to 193; the integrated Q1 IDs equal the complete 17-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Used the canonical peer-reviewed LoResLM ID `2026.loreslm-1.54` without adding a duplicate
+  preprint alias.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `self-supervised-speech`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 16 established clusters; masked and contrastive pretraining received no qualifying Q1 evidence and
+  remains unchanged. No new cluster was needed because the Q1 findings refine established representation,
+  hierarchy, adaptation, codec, and evaluation claims.
+- The automatic-judge reassessment triggered. Listener-calibrated Q1 studies distinguish task-trained SSL
+  predictors from general-purpose or out-of-domain judges; the claim was narrowed and changed from contested
+  to strongly supported, and the completed queue item was removed.
+- Assigned all 17 Q1 papers to 30 reciprocal memberships across all seven established method families; no Q1
+  paper remains a family outlier.
+- Audited all five reassessment items: one triggered and four remain overdue for matched continuous/discrete,
+  scaling, hybrid-family, or task-conditioned leakage evidence.
+- Added two open questions and three Q1 trend notes covering semantic-supervision placement, evaluator
+  calibration, frozen-backbone reuse, and representation interfaces.
+- Concept-scoped Phase 2 health: 0 errors and 19 expected historical method-family coverage warnings across
+  the full 193-paper concept history.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### emotion-synthesis
 
 **Progress:** 20/21. One Phase 1 invocation has written the first 20 entries; Phase 2 has not started.
