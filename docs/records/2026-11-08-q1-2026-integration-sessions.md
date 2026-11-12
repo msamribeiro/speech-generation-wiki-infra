@@ -503,6 +503,39 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### streaming-tts
+
+**Progress:** 16/16. One invocation wrote all 16 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (16 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.11141` through `2603.18090` in order.
+- Preserved all 54 available page claims. `2601.15621`, `2603.08823`, and `2603.18090`
+  have empty source-page Claims sections and were retained as `claims: []`.
+- `paper_count` advanced from 75 to 91; the integrated Q1 IDs equal the complete 16-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Used the canonical peer-reviewed IWSDS ID `2026.iwsds-1.10` without adding a duplicate preprint alias.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `streaming-tts`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 15 established clusters and added one strongly supported cluster covering modular streaming policies
+  that add low-latency or full-duplex behavior without retraining the core speech backbone. Four established
+  clusters received no qualifying Q1 evidence and remain unchanged.
+- Assigned all 16 Q1 papers to 27 reciprocal memberships across four of the five established method families;
+  no Q1 paper remains a family outlier. The flow-matching family received no qualifying Q1 member.
+- Audited all five reassessment items. None triggered; all five remain overdue because Q1 did not provide the
+  matched hardware, codec-listening, duplex-definition, or one-step continuous-generator studies named in
+  their triggers.
+- Added two open questions and three Q1 trend notes covering modular-policy transfer, deadline-aware serving,
+  backend coordination, long-form input, and language-sensitive chunks.
+- Concept-scoped Phase 2 health: 0 errors and three expected historical method-family coverage warnings across
+  the full 91-paper concept history.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### autoregressive-codec-tts
 
 **Progress:** 16/16. One invocation wrote all 16 entries; Phase 1 is complete and Phase 2 has not started.
