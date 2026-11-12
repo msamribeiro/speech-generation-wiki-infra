@@ -503,6 +503,50 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### emotion-synthesis
+
+**Progress:** 20/21. One Phase 1 invocation has written the first 20 entries; Phase 2 has not started.
+
+**Invocation 1 — complete (20 IDs):**
+
+- Added the frozen range `2601.03888` through `2603.17231` in order.
+- Preserved all 86 available page claims. `2601.03888` has an empty source-page Claims section
+  and was retained as `claims: []`.
+- `paper_count` advanced from 98 to 118; the integrated Q1 IDs equal the first 20 frozen queue
+  IDs exactly, with no missing, extra, or duplicate IDs.
+- Used the canonical peer-reviewed AAAI venue metadata for `2601.12289` while retaining the page's
+  explicit boundary that its claims summarize the ingested version.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Next frozen ID: `2603.22252`; one entry remains.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Invocation 2 — complete (1 ID; Phase 1 closure):**
+
+- Added `2603.22252` with all four page claims.
+- `paper_count` advanced from 118 to 119; the integrated Q1 IDs equal the complete 21-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `emotion-synthesis`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 15 applicable established clusters and added two emerging clusters covering training-free
+  internal-representation steering and the human-to-synthetic emotional-speech domain gap. Fine-grained
+  temporal conditioning and cross-lingual transfer received no qualifying Q1 evidence and remain unchanged.
+- Assigned 14/21 Q1 papers to 28 reciprocal memberships across five of the seven established method
+  families. Seven architecture-unspecified evaluation, dialogue, or representation papers remain legitimate
+  family outliers.
+- Audited all four reassessment items. None triggered; all four October 2026 items remain overdue because
+  Q1 did not provide the matched multilingual, control-strength, or factorial listener studies named in
+  their triggers.
+- Added two open questions and three Q1 trend notes covering internal steering transfer, reward hacking,
+  causal disentanglement, and synthetic-emotion domain shift.
+- Concept-scoped Phase 2 health: 0 errors and 23 expected method-family coverage warnings across the full
+  119-paper concept history, including the seven Q1 architecture-family outliers.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### zero-shot-tts
 
 **Progress:** 41/41. Three invocations wrote all 41 entries; Phase 1 and Phase 2 are complete.
