@@ -503,6 +503,42 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### autoregressive-codec-tts
+
+**Progress:** 16/16. One invocation wrote all 16 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (16 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.03888` through `2603.26364` in order.
+- Preserved all 50 available page claims. `2601.03888`, `2601.15621`, `2603.08823`,
+  `2603.18090`, and `2603.26364` have empty source-page Claims sections and were retained as
+  `claims: []`.
+- `paper_count` advanced from 196 to 212; the integrated Q1 IDs equal the complete 16-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Used the canonical peer-reviewed AbjadNLP ID `2026.abjadnlp-1.6` without adding a duplicate
+  preprint alias.
+- Initial validation caught this older file's indented `papers:` list format; the inserted block was
+  normalized to match it before closure.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `autoregressive-codec-tts`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 13 established clusters and added one strongly supported cluster covering post-hoc null-space
+  weight editing and activation steering for pronunciation, emotion, and accent control. Six established
+  clusters received no qualifying Q1 evidence and remain unchanged.
+- Assigned all 16 Q1 papers to 34 reciprocal memberships across eight of the 14 established method families;
+  no Q1 paper remains a family outlier.
+- Audited all six reassessment items. None triggered and none is overdue; Q1 did not provide the matched
+  architecture, renderer, grouped-decoding, or end-to-end efficiency comparisons named in their triggers.
+- Added two open questions and three Q1 trend notes covering intervention composition, full inference-cost
+  reporting, variable-depth codecs, data diversity, and perceptual checkpoint selection.
+- Concept-scoped Phase 2 health: 0 errors and one expected historical method-family coverage warning across
+  the full 212-paper concept history.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### self-supervised-speech
 
 **Progress:** 17/17. One invocation wrote all 17 entries; Phase 1 is complete and Phase 2 has not started.
