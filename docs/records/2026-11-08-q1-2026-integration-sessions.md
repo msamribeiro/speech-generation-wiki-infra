@@ -106,6 +106,16 @@ python scripts/health_check.py \
   --wiki-dir /Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-q1-integrate
 ```
 
+## Integration Closeout Audit
+
+- Exact frozen-manifest closure: 453/453 memberships across 22/22 concepts, with no missing, extra, duplicate, or out-of-order IDs.
+- Corpus-wide integration health: 0 errors and 366 accepted method-family coverage warnings across 3,345 paper entries and 464 clusters.
+- Reciprocal method-family audit: 0 mismatches across all 23 concept graphs.
+- Initial cluster-coverage audit found one earlier omission: multilingual streaming paper `2603.16924` had high/medium evidence but no cluster reference. It was added as refining evidence to `duration_and_alignment_are_language_sensitive`.
+- Corrected high/medium-relevance cluster coverage: 0 uncovered Q1 papers.
+- Forty-two Q1 family outliers remain intentional evaluation, benchmark, architecture-unspecified, or peripheral-system records already accepted in their per-concept Phase 2 summaries.
+- No push, reconciliation, rendering, snapshot, or report operation was performed.
+
 ## Phase 1 — Concept-Local Evidence
 
 Process the concepts in the table order. Each invocation adds at most 20 new paper pages, preserves
