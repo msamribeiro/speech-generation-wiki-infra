@@ -24,8 +24,8 @@ has a PDF and is parsed (all 7 parse batches done 2026-11-11).
    the batches cover pages already written from a preprint (link and note, no re-ingest).
 4. Ingest Q3 2026. Pre-flight is complete (fetch, filter, review, downloads, parse, and the
    peer-reviewed-version check on 2026-11-11); the chronological sweep is under way (batches 1-10, 37 Q3 pages plus
-   the Q2 straggler Vagdhenu, 2026-11-11 to 2026-11-13; 323 records remain, next at 2026-07-04), switching the 65 arXiv-canonical Interspeech records to their proceedings version just
-   ahead of each batch (StellarTTS `2607.19859` excluded: ASRU 2025, canonical quarter Q4 2025; catch-up Q4
+   the Q2 straggler Vagdhenu, 2026-11-11 to 2026-11-13; 323 records remain, next at 2026-07-04), the next session starts by switching all 65 arXiv-canonical Interspeech records to their ISCA
+   proceedings version and re-parsing them in one bulk run (step 0 of the session doc's Resume Here) (StellarTTS `2607.19859` excluded: ASRU 2025, canonical quarter Q4 2025; catch-up Q4
    integration tracked in `BACKLOG.md`). Procedure: `docs/ingest-protocol.md`.
 
 The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;

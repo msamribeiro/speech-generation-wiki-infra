@@ -65,6 +65,32 @@ Verification Queue: no open items (all 2026-11-13 items resolved). To resume:
 **Session order (user, 2026-11-12, confirmed 2026-11-13): ingest oldest first.** The 19 Q4 2026
 records were downloaded and parsed at the end of the 2026-11-13 session (step 3).
 
+0. **Start the next session by switching all 65 arXiv-canonical Interspeech 2026 records to their
+   ISCA proceedings versions and re-parsing them, in one bulk run before any ingest** (user,
+   2026-11-13; replaces the earlier "just ahead of each batch" plan). All 65 are accepted, dated
+   2026-09-27 (`conference_date`), still have an arXiv `url`, and none has a `preprint/` parse yet.
+   - **56 with an ISCA duplicate record** (`interspeech-2026-*`, `is_duplicate`, `canonical_id` set,
+     and `source_ids.isca` already on the canonical record): `use_peer_reviewed.py --wiki-dir "$WIKI"
+     --id {id} --from-duplicate`.
+   - **9 without an ISCA record**: explicit flags from the verified table in the Session Log
+     ("Session 2026-11-11: parse batches 6-7, peer-reviewed-version check"): `--url
+     https://www.isca-archive.org/interspeech_2026/{slug}.html --pdf-url .../{slug}.pdf --venue
+     Interspeech --venue-type conference --date 2026-09-27 --source isca={slug} --source doi={doi}`.
+     Two have author-list differences recorded there (`2607.19033` wagner26b, `2607.22658` wang26fa):
+     the page follows the ISCA author list.
+   - Order: build the list with a script (accepted, `conference_date` 2026-09-27, arXiv `url`); dry-run
+     every switch first and check that only `url`, `url_peer_reviewed`, `url_preprint`, `pdf_path`,
+     `pdf_path_preprint` (plus venue/source IDs for the 9) change and the date stays 2026-09-27; then
+     `--apply`; spot-check page 1 of a handful of downloaded ISCA PDFs (title, authors, Interspeech
+     2026 header) and all 9 explicit ones.
+   - Re-parse all 65 with `batch_convert.py --workers 2 --ids ...` in the background (about 1.5-2 h;
+     runs of 20-40 if the 2 h background limit is a risk), then the post-parse checks in
+     `docs/parse.md` (lines, reference counts vs the `preprint/` parse; investigate large drops
+     against the PDF), rebuild the citation index and tidy its `- discover` line.
+   - Log one `review | source version switched` line and one `parse` line in `raw/pipeline_log.md`;
+     commit infra with the metadata, log and citation index; then continue with step 1.
+   - The ISCA PDFs often carry the ISCA logo as figure-1: check it before any page embeds it.
+
 1. **Continue the sweep with the next oldest accepted, parsed records** (by canonical
    `published_date`, then ID): `2609.04222` GEPARD tech report (07-04), `2607.01345` TurnNat (07-05),
    then 2026-07-06: `2607.02214` SpeechCombine (re-dated to ICML 2026-07-06 on 2026-11-13; ingest the
@@ -78,9 +104,9 @@ records were downloaded and parsed at the end of the 2026-11-13 session (step 3)
    The two Q2 holds (`2606.12940` ICML, `2606.13006` IJCAI) stay held unless the user lifts the hold.
 2. **Ingest the peer-reviewed version when it is known** (rule: `docs/schemas/metadata.md`, "Source
    Version at Ingest"; procedure: `docs/ingest-protocol.md` section 2). Per paper at ingest time:
-   - **65 arXiv-canonical Interspeech 2026 records**: switch with `use_peer_reviewed.py`
-     (`--from-duplicate` for the 56 with an ISCA duplicate record; explicit flags from the Session
-     Log table for the 9 without), then re-parse, just ahead of each batch.
+   - **65 arXiv-canonical Interspeech 2026 records**: switched in bulk at the start of the next
+     session (step 0), no longer just ahead of each batch. When the sweep reaches them, tell the agent
+     the ISCA parse is primary and `preprint/` is context only.
    - **11 ISCA-canonical records with a known arXiv twin**: set `url_preprint` before ingest.
    - **ICML `2607.09134`, ICME `2608.03021`**: check for retrievable proceedings at pre-flight;
      otherwise ingest the preprint. An ICML acceptance confirmed by an OpenReview duplicate record or
