@@ -171,6 +171,25 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Phase 2 health: 0 errors and seven expected historical family warnings; reciprocal audit: 0 mismatches.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
+### singing
+
+**Progress:** 3/3. One invocation wrote all three entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (3 IDs; Phase 1 closure):**
+
+- Added the complete frozen queue and preserved all 13 source-page claims.
+- `paper_count` advanced from 21 to 24; exact queue closure passed with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings. No commit or push was made.
+
+**Phase 2 — complete:**
+
+- Updated seven established clusters and added one emerging cluster for latent-distribution alignment in cVAE singing synthesis.
+- Assigned all three Q1 papers to six reciprocal memberships across four method families.
+- Audited all five reassessment items. None triggered; all remain due in November 2026.
+- Added two open questions and three Q1 trend notes covering latent transport, scale attribution, factorized control, and unified audio-language models.
+- Phase 2 health: 0 errors and three expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### subjective-evaluation
 
 **Progress:** 52/52. Six invocations wrote all 52 entries; Phase 1 and Phase 2 are complete.
