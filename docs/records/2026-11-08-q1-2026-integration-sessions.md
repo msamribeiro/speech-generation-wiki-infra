@@ -503,6 +503,39 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### prosody-control
+
+**Progress:** 13/13. One invocation wrote all 13 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (13 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.04233` through `2603.21078` in order.
+- Preserved all 51 available page claims. `2603.18090` has an empty source-page Claims section and
+  was retained as `claims: []`.
+- `paper_count` advanced from 115 to 128; the integrated Q1 IDs equal the complete 13-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Used the canonical peer-reviewed IWSDS ID `2026.iwsds-1.3` without adding a duplicate preprint alias.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `prosody-control`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 16 established clusters and added one emerging cluster covering segmental prosodic rules that fail
+  to generalize from familiar to unseen lexical items. Stochastic modeling, scale-driven implicit prosody, and
+  reward-guided post-training received no qualifying Q1 evidence and remain unchanged.
+- Assigned all 13 Q1 papers to 48 reciprocal memberships across 14 of the 15 method families; no Q1 paper
+  remains a family outlier. Reward-optimized prosody received no Q1 member.
+- Audited all seven reassessment items. None triggered; all seven remain overdue because Q1 did not provide
+  the matched frontier, metric-correlation, interface, SSL-layer, prompt-leakage, or stable family-subdivision
+  studies named in their triggers.
+- Added two open questions and three Q1 trend notes covering segmental diagnostics, cross-modal timing,
+  causal mediators, rule-based accent rhythm, and cross-attribute interference.
+- Concept-scoped Phase 2 health: 0 errors and 13 expected historical method-family coverage warnings across
+  the full 128-paper concept history.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### disentanglement
 
 **Progress:** 14/14. One invocation wrote all 14 entries; Phase 1 is complete and Phase 2 has not started.
