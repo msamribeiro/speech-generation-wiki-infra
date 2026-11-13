@@ -503,6 +503,27 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### speaker-adaptation
+
+**Progress:** 13/13. One invocation wrote all 13 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (13 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2506.12537` through `2603.16280` in order and preserved all 57 claims.
+- `paper_count` advanced from 98 to 111; exact queue closure passed with no missing, extra, or duplicate IDs.
+- Used canonical peer-reviewed EACL metadata without a duplicate preprint entry.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated 18 established clusters; personalized assistive voices received no qualifying Q1 evidence and remains unchanged. No new cluster was needed.
+- Assigned all 13 Q1 papers to 25 reciprocal memberships across all seven method families.
+- Audited all five reassessment items. None triggered and all five remain overdue.
+- Added two open questions and three Q1 trend notes on data diversity, representation placement, privacy, and expanding adaptation domains.
+- Phase 2 health: 0 errors and 11 expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### prosody-control
 
 **Progress:** 13/13. One invocation wrote all 13 entries; Phase 1 is complete and Phase 2 has not started.
