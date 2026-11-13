@@ -1,7 +1,8 @@
 {
   "id": "2607.02214",
   "source_ids": {
-    "arxiv": "2607.02214"
+    "arxiv": "2607.02214",
+    "openreview": "SDFeVV01xR"
   },
   "title": "Unlocking Speech-Text Compositional Powers: Instruction-Following Speech Language Models without Instruction Tuning",
   "authors": [
@@ -16,12 +17,12 @@
   "venue_type": "preprint",
   "year": 2026,
   "month": 7,
-  "published_date": "2026-07-02",
+  "published_date": "2026-07-06",
   "preprint_date": "2026-07-02",
   "arxiv_version": 1,
   "version_date": "2026-07-02",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2026-07-06",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2607.02214",
   "pdf_url": "https://arxiv.org/pdf/2607.02214.pdf",
@@ -38,5 +39,6 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_peer_reviewed": "https://openreview.net/forum?id=SDFeVV01xR"
 }

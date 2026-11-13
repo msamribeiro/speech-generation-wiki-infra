@@ -27,10 +27,10 @@
   "version_date": "2026-05-11",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2605.11098",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.findings-acl.442",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.442.pdf",
-  "pdf_path": "raw/papers/2605.11098.pdf",
+  "pdf_path": "raw/papers/2605.11098.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Neural speech codecs provide discrete representations for speech language models, but emotional cues are often degraded during quantization. Existing codecs mainly optimize acoustic reconstruction, leaving emotion expressiveness insufficiently modeled at the representation level. We propose an emotion-guided neural speech codec that explicitly preserves emotional information while maintaining semantic fidelity and prosodic naturalness. Our framework combines emotion-semantic guided latent modulation, relation-preserving emotional-semantic distillation, and emotion-weighted semantic alignment to retain emotionally salient cues under compression. Extensive evaluations across speech reconstruction, emotion recognition, and downstream text-to-speech generation demonstrate improved emotion consistency and perceptual quality without sacrificing content accuracy.",
   "arxiv_comment": "Accepted to ACL Findings 2026",
@@ -39,9 +39,24 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "AffectCodec: emotion-guided neural speech codec explicitly preserving emotional cues during quantization",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2605.11098",
+  "pdf_path_preprint": "raw/papers/2605.11098.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.findings-acl.442",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

@@ -47,10 +47,10 @@
   "version_date": "2026-05-27",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2605.28618",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.findings-acl.112",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.112.pdf",
-  "pdf_path": "raw/papers/2605.28618.pdf",
+  "pdf_path": "raw/papers/2605.28618.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Recent advances in speech generation have enabled high-fidelity synthesis, yet systematic evaluation of models under long-context conditions remains largely underexplored. A comprehensive evaluation benchmark for long-form speech is indispensable for two reasons: 1) existing test scenarios are often confined to limited domains, creating a significant gap with the diverse downstream applications; 2) existing metrics overlook critical long-text factors such as consistency and coherence, failing to generalize reliably. To this end, we propose Swanbench-Speech, a comprehensive benchmark that decomposes long-form speech quality into specific, disentangled dimensions. SwanBench-Speech has three key properties. 1) Rich speech scenarios: Focusing on long-form speech generation and dialog generation, SwanBench-Speech covers acoustics, semantics, and expressiveness challenges, and consists of 1,101 samples spanning 17 common speech scenarios; 2) Comprehensive evaluation dimensions: Along the acoustics, semantics, and expressiveness axes, SwanBench-Speech defines an automated evaluation protocol with seven metrics to provide a comprehensive, accurate, and standardized assessment; 3) Valuable Insights: Through extensive experiments, we reveal that current models still struggle in highly expressive scenarios and exhibit a notable gap in consistency and hierarchy compared to real recordings.",
   "arxiv_comment": "Accepted by ACL 2026(Findings). 36pages, 14figures",
@@ -60,9 +60,24 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Introduces a comprehensive benchmark for long-form speech generation covering diverse scenarios and new metrics for consistency/coherence, directly advancing evaluation of TTS systems.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-06-05",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2605.28618",
+  "pdf_path_preprint": "raw/papers/2605.28618.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.findings-acl.112",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

@@ -26,10 +26,10 @@
   "version_date": "2026-04-19",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2604.17358",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.acl-long.1902",
   "pdf_url": "https://aclanthology.org/2026.acl-long.1902.pdf",
-  "pdf_path": "raw/papers/2604.17358.pdf",
+  "pdf_path": "raw/papers/2604.17358.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "While recent Spoken Language Models (SLMs) have been actively deployed in real-world scenarios, they lack the capability to discern Third-Party Interruptions (TPI) from the primary user's ongoing flow, leaving them vulnerable to contextual failures. To bridge this gap, we introduce TPI-Train, a dataset of 88K instances designed with speaker-aware hard negatives to enforce acoustic cue prioritization for interruption handling, and TPI-Bench, a comprehensive evaluation framework designed to rigorously measure the interruption-handling strategy and precise speaker discrimination in deceptive contexts. Experiments demonstrate that our dataset design mitigates semantic shortcut learning-a critical pitfall where models exploit semantic context while neglecting acoustic signals essential for discerning speaker changes. We believe our work establishes a foundational resource for overcoming text-dominated unimodal reliance in SLMs, paving the way for more robust multi-party spoken interaction. The code for the framework is publicly available at https://tpi-va.github.io",
   "arxiv_comment": "ACL 2026 main conference",
@@ -38,9 +38,24 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Evaluates and improves voice assistant robustness to third-party interruptions; core SCA.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-24",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2604.17358",
+  "pdf_path_preprint": "raw/papers/2604.17358.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-long.1902",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

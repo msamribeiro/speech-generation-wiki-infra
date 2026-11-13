@@ -70,6 +70,11 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     https://aclanthology.org/{acl}.pdf --venue ACL --venue-type conference --date {conference date}
     --source acl={acl} --source doi=10.18653/v1/{acl}`) and confirm the proceedings notice on page 1
     of the downloaded PDF (2026-11-12, six records).
+  - **ICML (OpenReview) acceptances:** an OpenReview duplicate record matching on exact title and
+    authors, or the PMLR proceedings line on page 1, verifies the ICML version. Set
+    `conference_date` (the ICML record date), `url_peer_reviewed` (OpenReview forum) and
+    `source_ids.openreview`, then re-apply the date rule; keep the arXiv PDF as the source while the
+    OpenReview PDF is gated (SpeechCombine `2607.02214`, user 2026-11-13).
   - **ACL-canonical records:** the ACL fetch leaves `source_ids.arxiv` empty. Search the arXiv
     export API by title words plus first-author surname (an exact-phrase title query misses colons
     and punctuation) and set `url_preprint` on a match (2026-11-12: 6 of 10 found).
@@ -143,7 +148,10 @@ column, not just the count. Repeat the check as a sweep at session close.
 ## 4. Per paper: launch the agent
 
 Spawn `speech-generation-ingest-agent` in the **foreground** (background agents cannot get
-Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing instructions:
+Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing instructions. Keep them
+as one standing block copied verbatim into every prompt and add only paper-specific notes; rewriting
+the block per paper silently drops rules (2026-11-13: the scope stop rule and the
+`architectural-novelty` definition were lost on two papers):
 
 - Run from the infra ingest worktree: agents start in the session's own working directory, which
   may be a worktree without `raw/` data or `.venv`. Name
@@ -174,7 +182,8 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
 - Link systems the paper evaluates as baselines when they have pages, even if the reference list
   omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
 - Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
-  reports are `Preprint`; a workshop page names the workshop with its year (`SIGUL 2026`,
+  reports are `Preprint`; ACL pages read `ACL · 2026 · Conference` (main) and
+  `ACL 2026 (Findings) · 2026 · Conference`; a workshop page names the workshop with its year (`SIGUL 2026`,
   `NLPAICS 2026`) when metadata holds the placeholder `workshop`.
 - Spell out the callout limit in the prompt: two at most, the abstract card included; only
   `[!abstract]`, `[!tip]`, `[!important]`, `[!warning]`, never `[!note]`.
@@ -188,6 +197,9 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
   `mimo-v2.5-tts` API is not evidence of MiMo-Audio `2512.23808`).
 - Agent runtimes vary widely: most take 2-7 minutes, some 45 minutes to 3 hours (2026-10-31).
   Wait for the foreground agent; do not relaunch.
+- Quote the `field_significance.type` definitions from the SKILL.md table rather than paraphrasing:
+  a new training objective on an unchanged architecture is `architectural-novelty` (user,
+  2026-11-13, LLM-Codec `2604.17852`).
 - Emit `INGEST_RESULT` JSON including `review_flags` only when a precision-gate judgment call
   (claims, `field_significance`, concept scope, vocabulary gap) is genuinely uncertain.
 
@@ -212,6 +224,9 @@ What it does, and what to check in its output:
      the full title.
    - **Org filled by hand** (`organization` is null on nearly every 2026 record; take it from the
      page or PDF first page). Include every task tag. Exactly one row per ID.
+   - The row's tasks come from the page's `task`, not from metadata; when the agent corrects the
+     filter-assigned `task` (adds `evaluation`, drops `VC` or `multilingual`), the index follows the
+     page and metadata `task` stays as fetched (2026-11-13).
 2. **Counts.** Fix all three paper-count occurrences in `wiki/index.md` (abstract callout, "Browse
    the Papers" line, "Browse all N papers" link). The sole authority is
    `grep -c '^| \[\[' papers/index.md` (also `ls papers/*.md | grep -v index.md | wc -l`; they should
@@ -447,12 +462,13 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
 | Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
 | Stale "proceedings not yet published" note | Session doc said Interspeech 2026 was not on ISCA a month after it was; 51 Q2 records were in fact Q3 (2026-10-26) | Section 2, proceedings check |
-| Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS) | Step 4: copy tagging rules from section 6, not from memory; step 6 |
+| Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS); a rewritten block contradicted the SKILL.md type table and another omitted the scope stop rule, so an environmental-sound-only codec page was written (2026-11-13, `2604.17852`, `2607.01865`) | Step 4: one standing block copied verbatim; step 6 |
 | Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`) | Step 4 prompt, step 6 |
 | "Check the PDF" note on page | Agent leaves a reader-facing note about a garbled parse instead of resolving it (2026-10-31, STEB) | Step 4 prompt, step 6 |
 | Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo) | Step 4 prompt, step 6 |
 | Quoted list fields | Agent writes `task: ["TTS"]` and quoted `architecture`/`type` lists; health check and `qc.py` silent (2026-11-11, `2606.07240`) | Step 4 prompt, step 6 (read the frontmatter) |
 | Camera-ready prose quotes preprint numbers | Proceedings table updated but the results prose still quotes the preprint's numbers (2026-11-11, `2604.26136`: fine-tuning results changed sign for French) | Section 2 source version; step 6 (check prose numbers against the primary table) |
+| Unvalidated metric tagged `evaluation-metrics` | Agent tags the concept for a newly proposed metric never checked against human judgment (2026-11-13, GRAFT D-PER) | Step 6 (proposes AND validates) |
 | Inference stated as fact | Agent writes its own reading of an unstated procedure as a finding (2026-11-12, `2026.findings-acl.940`: test descriptions "derived from the target audio") | Step 4 prompt (hedge or omit), step 6 |
 | Template opening rewritten | Agent replaces the Field Significance `Moderate — ` opening to avoid an em dash (2026-11-12, `2026.findings-acl.199`) | Step 4 prompt, step 6 |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |

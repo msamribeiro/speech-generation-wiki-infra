@@ -23,10 +23,10 @@
   "version_date": "2026-05-29",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.00407",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.acl-short.26",
   "pdf_url": "https://aclanthology.org/2026.acl-short.26.pdf",
-  "pdf_path": "raw/papers/2606.00407.pdf",
+  "pdf_path": "raw/papers/2606.00407.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Speech representations that capture prosodic information can be useful for both understanding and generation. However, speaker characteristics are reflected in acoustic-prosodic features (e.g., pitch). To address privacy concerns from the leakage of identity information, we propose a new self-supervised approach to learning prosody representations that incorporates speaker disentanglement strategies. We evaluate our encoder on three tasks to probe representation capabilities, including pitch reconstruction and detection of different prosodic events. Our encoder outperforms raw prosody and HuBERT-base baselines, achieving strong speaker disentanglement without adverse impact on prosody-related downstream tasks.",
   "arxiv_comment": "Accepted to ACL 2026",
@@ -35,9 +35,24 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Proposes self-supervised privacy-preserving prosody representation learning with speaker disentanglement; useful for generation but the paper trains no TTS/VC system and reports no synthesis-quality evaluation.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.00407",
+  "pdf_path_preprint": "raw/papers/2606.00407.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-short.26",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

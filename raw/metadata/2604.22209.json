@@ -46,10 +46,10 @@
   "version_date": "2026-04-24",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2604.22209",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.acl-long.1293",
   "pdf_url": "https://aclanthology.org/2026.acl-long.1293.pdf",
-  "pdf_path": "raw/papers/2604.22209.pdf",
+  "pdf_path": "raw/papers/2604.22209.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Generative audio modeling has largely been fragmented into specialized tasks, text-to-speech (TTS), text-to-music (TTM), and text-to-audio (TTA), each operating under heterogeneous control paradigms. Unifying these modalities remains a fundamental challenge due to the intrinsic dissonance between structured semantic representations (speech/music) and unstructured acoustic textures (sound effects). In this paper, we introduce UniSonate, a unified flow-matching framework capable of synthesizing speech, music, and sound effects through a standardized, reference-free natural language instruction interface. To reconcile structural disparities, we propose a novel dynamic token injection mechanism that projects unstructured environmental sounds into a structured temporal latent space, enabling precise duration control within a phoneme-driven Multimodal Diffusion Transformer (MM-DiT). Coupled with a multi-stage curriculum learning strategy, this approach effectively mitigates cross-modal optimization conflicts. Extensive experiments demonstrate that UniSonate achieves state-of-the-art performance in instruction-based TTS (WER 1.47%) and TTM (SongEval Coherence 3.18), while maintaining competitive fidelity in TTA. Crucially, we observe positive transfer, where joint training on diverse audio data significantly enhances structural coherence and prosodic expressiveness compared to single-task baselines. Audio samples are available at https://qiangchunyu.github.io/UniSonate/.",
   "arxiv_comment": "Accepted to ACL 2026 main conference (oral)",
@@ -58,9 +58,24 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Unified model for TTS, music, and sound effect generation via heterogeneous text instructions",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2604.22209",
+  "pdf_path_preprint": "raw/papers/2604.22209.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-long.1293",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

@@ -24,10 +24,10 @@
   "version_date": "2026-05-29",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2605.30965",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.acl-long.1774",
   "pdf_url": "https://aclanthology.org/2026.acl-long.1774.pdf",
-  "pdf_path": "raw/papers/2605.30965.pdf",
+  "pdf_path": "raw/papers/2605.30965.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Recent advancements in text-guided audio generation have yielded promising results in diverse domains, including sound effects, speech, and music. However, jointly generating speech with environmental audio remains challenging due to the inherent disparities in their acoustic patterns and temporal dynamics. We propose ImmersiveTTS, an environment-aware text-to-speech (TTS) model that generates natural speech seamlessly integrated within environmental contexts by explicitly modeling cross-modal interactions. Our model builds on a multimodal diffusion transformer and fuses transcript-aligned speech latent with text-conditioned environmental context via joint attention. To enhance semantic consistency, we introduce a domain-specific representation alignment objective tailored to environment-aware TTS, leveraging complementary self-supervised representations from speech and audio encoders. Experimental results show that ImmersiveTTS achieves higher naturalness, intelligibility, and audio fidelity than existing approaches across objective metrics and human listening tests.",
   "arxiv_comment": "Accepted to ACL 2026 main conference. Code is available at https://github.com/jjunak-yun/ImmersiveTTS",
@@ -36,9 +36,24 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "ImmersiveTTS proposes an environment-aware TTS model jointly generating speech with environmental audio, a core architectural TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2605.30965",
+  "pdf_path_preprint": "raw/papers/2605.30965.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-long.1774",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }
