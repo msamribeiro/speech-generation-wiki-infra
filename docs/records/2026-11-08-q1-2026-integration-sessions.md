@@ -113,6 +113,26 @@ Process the concepts in the table order. Each invocation adds at most 20 new pap
 all relevant page claims and limitations, and ends with an exact-ID comparison plus concept-scoped
 Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 queue closes.
 
+### gan-vocoder
+
+**Progress:** 10/10. One invocation wrote all 10 entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (10 IDs; Phase 1 closure):**
+
+- Added the complete frozen queue and preserved all 42 source-page claims.
+- `paper_count` advanced from 82 to 92; exact queue closure passed with no missing, extra, or duplicate IDs.
+- Retained canonical peer-reviewed AAAI metadata for `2601.13758` while keeping evidence bounded to the ingested paper page.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings. No commit or push was made.
+
+**Phase 2 — complete:**
+
+- Updated 12 established clusters; no new cluster or status transition was needed.
+- Assigned all 10 Q1 papers to 22 reciprocal memberships across all seven method families and repaired one historical reciprocal membership.
+- Audited all five reassessment items. None triggered and all five remain overdue.
+- Added two open questions and three Q1 trend notes covering configuration generalization, metric calibration, structured inverse modeling, codec decoders, and metric disagreement.
+- Phase 2 health: 0 errors and three expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### subjective-evaluation
 
 **Progress:** 52/52. Six invocations wrote all 52 entries; Phase 1 and Phase 2 are complete.
