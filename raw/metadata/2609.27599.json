@@ -26,7 +26,7 @@
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.27599",
   "pdf_url": "https://arxiv.org/pdf/2609.27599.pdf",
-  "pdf_path": null,
+  "pdf_path": "raw/papers/2609.27599.pdf",
   "pdf_source": "arxiv",
   "abstract": "Generating controllable and human-like emphasis remains an open challenge in text-to-speech, even when explicit emphasis control signals are provided in the text input, limiting the communicative accuracy of synthetic speech in real-world applications. Reinforcement learning has recently shown promise for post-training TTS systems to align with human preference, yet existing methods have not been applied to word-level prosodic control. We present EmphTTS, a non-autoregressive TTS system that applies Group Relative Policy Optimization (GRPO) to the duration predictor with an emphasis localization reward, enabling direct optimization for word-level emphasis. Evaluations show that EmphTTS achieves the best emphasis controllability and performs the best in emphasis objective evaluation. In subjective preference tests, EmphTTS is significantly preferred over synthetic groundtruth and most baselines. Ablation studies show that GRPO improves emphasis realization beyond supervised-finetuning-based duration modeling and simple speaking-rate adjustment, while alleviating the mismatch between the independently trained duration predictor and TTS model.",
   "arxiv_comment": "5 pages. Submitted to ICASSP 2027",

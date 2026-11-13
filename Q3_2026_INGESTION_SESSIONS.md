@@ -62,9 +62,8 @@ the two held records. Q3: 71 ingested, 324 accepted (323 in the sweep; StellarTT
 rejected (incl. `2607.01865`). Corpus 1,099 pages. Manual
 Verification Queue: no open items (all 2026-11-13 items resolved). To resume:
 
-**Session order (user, 2026-11-12, confirmed 2026-11-13): ingest oldest first.** Parsing the 19
-unparsed Q4 2026 records was deferred on 2026-11-13; do it before the sweep reaches October 2026
-(list below, step 3).
+**Session order (user, 2026-11-12, confirmed 2026-11-13): ingest oldest first.** The 19 Q4 2026
+records were downloaded and parsed at the end of the 2026-11-13 session (step 3).
 
 1. **Continue the sweep with the next oldest accepted, parsed records** (by canonical
    `published_date`, then ID): `2609.04222` GEPARD tech report (07-04), `2607.01345` TurnNat (07-05),
@@ -92,13 +91,9 @@ unparsed Q4 2026 records was deferred on 2026-11-13; do it before the sweep reac
      with an overrides YAML in `docs/records/`). The script appends its two log lines to the END of
      `wiki/log.md` and `raw/pipeline_log.md`: move them into the dated section by hand.
    - Check figure-1 of all 70 ISCA papers for the ISCA logo when the sweep reaches 2026-09-27.
-3. **Parse the 19 unparsed accepted records** (Q4 2026, published 2026-10-05 to 2026-11-02) before
-   the sweep reaches October: `2607.03666 2607.10162 2609.27599 2608.16235 2607.29125 2609.29217
-   2609.11523 2607.23027 2608.07462 2609.29889 2607.04140 2609.08703 2607.18317 2608.19515 2607.08409
-   2609.29768 2608.09930 2608.02673 2607.23811`. Six have no PDF yet (`2609.29889 2609.29217
-   2609.27599 2609.29768 2609.11523 2609.08703`, all arXiv): run `scripts/parse/download_pdfs.py`
-   first (`docs/fetch.md`, PDF Download), then one `batch_convert.py --ids ...` run for all 19 and the
-   post-parse checks in `docs/parse.md`; rebuild the citation index and tidy its `- discover` line.
+3. **Q4 2026 records are ready:** the 6 missing PDFs were downloaded and all 19 Q4 2026 accepted
+   records (published 2026-10-05 to 2026-11-02) were parsed on 2026-11-13 (19 done, 0 failed); they
+   follow the Q3 sweep in date order.
 4. **Excluded from the sweep:** `2607.19859` StellarTTS (ASRU 2025, canonical quarter Q4 2025); it is
    re-dated by the batch, then ingested as a Q4 2025 page. Catch-up Q4 integration with
    `2506.04518` is a `BACKLOG.md` item.

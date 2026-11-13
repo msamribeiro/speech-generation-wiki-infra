@@ -41,8 +41,8 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 | Metadata records | 2,024 | 1,107 ingested, 345 accepted, 0 review, 572 rejected (incl. 109 Interspeech 2026 ISCA duplicates, 13 arXiv preprints of ISCA records, the ACL DisCo_Speech duplicate of `2512.13251`, and the environmental-sound codec `2607.01865` rejected at ingest on 2026-11-13) |
 | Published paper pages | 1,099 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,452 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,433 | Includes ingested papers and accepted papers ready for ingest |
-| Accepted and parsed, ready to ingest | 326 | 2 Q2 2026 (held ICML/IJCAI records that move to Q3 in a peer-reviewed-version batch) and 324 Q3 2026 (incl. StellarTTS, which moves to Q4 2025); 19 Q4 2026 records await parse |
+| Parsed active papers | 1,452 | Every accepted and ingested record (the 19 Q4 2026 records were downloaded and parsed on 2026-11-13) |
+| Accepted and parsed, ready to ingest | 345 | 2 Q2 2026 (held ICML/IJCAI records that move to Q3 in a peer-reviewed-version batch) and 324 Q3 2026 (incl. StellarTTS, which moves to Q4 2025); plus 19 Q4 2026 records, parsed 2026-11-13 |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
