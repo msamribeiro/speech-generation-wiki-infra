@@ -152,6 +152,25 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Phase 2 health: 0 errors and five expected historical family warnings; reciprocal audit: 0 mismatches.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
+### diffusion-tts
+
+**Progress:** 4/4. One invocation wrote all four entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (4 IDs; Phase 1 closure):**
+
+- Added the complete frozen queue and preserved all 20 source-page claims across structured and legacy claim formats.
+- `paper_count` advanced from 58 to 62; exact queue closure passed with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings. No commit or push was made.
+
+**Phase 2 — complete:**
+
+- Updated 14 established clusters, promoted masked discrete diffusion from emerging to strongly supported, and added one emerging bidirectional speech-editing cluster.
+- Assigned all four Q1 papers to five reciprocal memberships across four method families.
+- No reassessment items were present.
+- Added two open questions and three Q1 trend notes covering editing, representation complexity, waveform latents, masked diffusion, and prosody encoders.
+- Phase 2 health: 0 errors and seven expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### subjective-evaluation
 
 **Progress:** 52/52. Six invocations wrote all 52 entries; Phase 1 and Phase 2 are complete.
