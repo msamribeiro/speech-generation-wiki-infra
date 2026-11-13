@@ -503,6 +503,27 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### instruction-conditioned-tts
+
+**Progress:** 11/11. One invocation wrote all 11 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (11 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.01459` through `2603.17231` and preserved 39 claims.
+- `2601.15621` and `2603.08823` have empty source Claims sections and remain `claims: []`.
+- `paper_count` advanced from 57 to 68; exact queue closure passed.
+- Retained peer-reviewed AAAI metadata with ParaMETA's ingested-version evidence boundary.
+- Phase 1 health: 0 errors, 0 warnings. No commit or push was made.
+
+**Phase 2 — complete:**
+
+- Updated 16 established clusters; demographic-bias amplification received no qualifying Q1 evidence and remains unchanged. No new cluster was needed.
+- Assigned all 11 Q1 papers to 34 reciprocal memberships across all nine method families.
+- Audited all four reassessment items. None triggered and all four remain overdue.
+- Added two open questions and three Q1 trend notes covering ambiguity, reward alignment, staged interpretation and rendering, and internal interventions.
+- Phase 2 health: 0 errors and two expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### speaker-adaptation
 
 **Progress:** 13/13. One invocation wrote all 13 entries; Phase 1 is complete and Phase 2 has not started.
