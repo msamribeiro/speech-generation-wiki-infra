@@ -1,7 +1,7 @@
 # Q1 2026 Integration and Synthesis Session
 
 **Started:** 2026-11-08
-**Status:** Phase 1 in progress
+**Status:** Integration complete through Phase 2; reconciliation pending
 **Evidence scope:** Q1 2026 (`2026-01-01 <= published_date <= 2026-03-31`), layered onto the
 completed Q4-and-earlier claim graphs
 **Evidence cutoff:** 2026-03-31
@@ -22,10 +22,9 @@ informally after Phase 1 begins.
    export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-q1-integrate
    ```
 
-3. Continue `subjective-evaluation` Phase 1 from the next frozen ID recorded below.
-4. After every batch, validate the concept with `health_check.py --module integrate --phase 1`,
-   compare actual IDs with the frozen batch, and record the result here.
-5. Do not edit paper pages, the paper catalog, reconciliation state, snapshots, renders, or reports.
+3. Phase 1 is closed at 453/453 frozen memberships across all 22 concepts; all 22 concepts are complete through Phase 2.
+4. The next gated stage is cross-concept reconciliation from the closed concept graph.
+5. Do not edit paper pages, the paper catalog, snapshots, renders, or reports during reconciliation.
 
 ## Ownership and Parallel-Work Gate
 
@@ -188,6 +187,26 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Audited all five reassessment items. None triggered; all remain due in November 2026.
 - Added two open questions and three Q1 trend notes covering latent transport, scale attribution, factorized control, and unified audio-language models.
 - Phase 2 health: 0 errors and three expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
+### transformer-enc-dec-tts
+
+**Progress:** 2/2. One invocation wrote both entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (2 IDs; Phase 1 closure):**
+
+- Added the complete frozen queue and preserved all eight source-page claims.
+- `paper_count` advanced from 33 to 35; exact queue closure passed with no missing, extra, or duplicate IDs.
+- Q1 Phase 1 reached 453/453 frozen memberships across all 22 concepts.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings. No commit or push was made.
+
+**Phase 2 — complete:**
+
+- Updated three established clusters and added one emerging cluster for segmental-prosody lexical generalization failure.
+- Assigned both Q1 papers to reciprocal membership in the transformer encoder–decoder family.
+- Audited all five reassessment items. None triggered and all five remain overdue.
+- Added two open questions and three Q1 trend notes covering causal mediation, voice-quality cues, phonetic probes, and aggregate-metric blind spots.
+- Phase 2 health: 0 errors and one expected historical family warning; reciprocal audit: 0 mismatches.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
 ### subjective-evaluation
