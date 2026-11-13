@@ -133,6 +133,25 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Phase 2 health: 0 errors and three expected historical family warnings; reciprocal audit: 0 mismatches.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
 
+### rlhf-speech
+
+**Progress:** 8/8. One invocation wrote all eight entries; Phase 1 and Phase 2 are complete.
+
+**Invocation 1 — complete (8 IDs; Phase 1 closure):**
+
+- Added the complete frozen queue and preserved all 38 source-page claims across structured and legacy claim formats.
+- `paper_count` advanced from 49 to 57; exact queue closure passed with no missing, extra, or duplicate IDs.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings. No commit or push was made.
+
+**Phase 2 — complete:**
+
+- Updated 11 established clusters; no new cluster or status transition was needed.
+- Assigned all eight Q1 papers to 13 reciprocal memberships across all six method families.
+- Audited both reassessment items. Neither triggered and neither is overdue.
+- Added two open questions and three Q1 trend notes covering reward balancing, judge calibration, generative reward models, and expansion into dialogue and simultaneous translation.
+- Phase 2 health: 0 errors and five expected historical family warnings; reciprocal audit: 0 mismatches.
+- Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
 ### subjective-evaluation
 
 **Progress:** 52/52. Six invocations wrote all 52 entries; Phase 1 and Phase 2 are complete.
