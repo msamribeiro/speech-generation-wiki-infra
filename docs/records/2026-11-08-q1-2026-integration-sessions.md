@@ -503,6 +503,42 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored
   local Phase 2 summary log.
 
+### disentanglement
+
+**Progress:** 14/14. One invocation wrote all 14 entries; Phase 1 is complete and Phase 2 has not started.
+
+**Invocation 1 — complete (14 IDs; Phase 1 closure):**
+
+- Added the complete frozen range `2601.00303` through `2604.01247` in order.
+- Preserved all 59 available page claims.
+- `paper_count` advanced from 116 to 130; the integrated Q1 IDs equal the complete 14-ID frozen
+  queue exactly, with no missing, extra, or duplicate IDs.
+- Used canonical peer-reviewed AAAI and EACL metadata without duplicate preprint entries while retaining
+  ParaMETA's explicit boundary that its claims summarize the ingested version.
+- Initial validation caught this older file's indented `papers:` list format; the inserted block was
+  normalized to match it before closure.
+- Concept-scoped Phase 1 health: 0 errors, 0 warnings.
+- Phase 1 is closed for `disentanglement`; Phase 2 synthesis is the next operation.
+- No commit or push was made; this concept will be committed only after Phase 2 is complete.
+
+**Phase 2 — complete:**
+
+- Updated all 19 established clusters and added one strongly supported cluster covering causal, null-space,
+  and activation-subspace interventions for post-hoc attribute control.
+- The GRL reassessment triggered. Q1 clean ablations show that correctly targeted gradient reversal can reduce
+  leakage without an inherent quality penalty; the claim was narrowed, changed from contested to strongly
+  supported, and the completed queue item was removed.
+- Assigned all 14 Q1 papers to 34 reciprocal memberships across nine of the ten method families; no Q1 paper
+  remains a family outlier. Mutual-information minimization received no qualifying Q1 member.
+- Audited all five reassessment items: one triggered, two October 2026 items remain overdue, and two January
+  2027 items are not yet due.
+- Added two open questions and three Q1 trend notes covering transferable causal subspaces, meaningful versus
+  spurious coupling, GRL placement, and compositional evaluation.
+- Concept-scoped Phase 2 health: 0 errors and 16 expected historical method-family coverage warnings across
+  the full 130-paper concept history.
+- Reciprocal family audit passed with 0 mismatches; main-cluster summary appended to the Git-ignored local
+  Phase 2 summary log.
+
 ### voice-conversion
 
 **Progress:** 15/15. One invocation wrote all 15 entries; Phase 1 is complete and Phase 2 has not started.
