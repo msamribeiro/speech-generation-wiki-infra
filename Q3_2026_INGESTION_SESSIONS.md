@@ -55,64 +55,46 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-**2026-11-13: sweep batches 7-10 done (16 pre-selected papers in four batches A-D), 15 pages
-ingested, 1 rejected at the scope check (`2607.01865`, environmental-sound codec).** Last ingested
-`2607.03985` NouveauVoice (2026-07-04). Q2 straggler Vagdhenu `2608.26146` ingested; Q2 now has only
-the two held records. Q3: 71 ingested, 324 accepted (323 in the sweep; StellarTTS excluded), 232
-rejected (incl. `2607.01865`). Corpus 1,099 pages. Manual
-Verification Queue: no open items (all 2026-11-13 items resolved). To resume:
+**2026-11-14: Interspeech bulk switch done (65 records switched to ISCA and re-parsed), then
+sweep batches 11-14 (16 pre-selected papers, 16 pages).** Last ingested `2607.17900` Harness TTS
+(2026-07-21). Q3: 88 ingested (incl. MOSS-Audio-Tokenizer `2602.10934`, re-dated from Q1 to ICML),
+307 accepted (306 in the sweep; StellarTTS excluded), 233 rejected. Q1 is now 115 ingested (the
+integration manifest drops from 116 to 115). Corpus 1,115 pages. Manual Verification Queue: no open
+items (all six 2026-11-14 items resolved). To resume:
 
-**Session order (user, 2026-11-12, confirmed 2026-11-13): ingest oldest first.** The 19 Q4 2026
-records were downloaded and parsed at the end of the 2026-11-13 session (step 3).
+**Session order (user): ingest oldest first, 16 pre-selected papers in four batches of 4 with one
+confirmation, papers one at a time, batch summary then go-ahead; the verification queue may be
+deferred to the session end and taken one item at a time with short context (user, 2026-11-14).**
 
-0. **DONE 2026-11-14:** all 65 switched (56 `--from-duplicate`, 9 explicit) and re-parsed (65 done,
-   0 failed); citation index rebuilt; infra `31ba253`, `raw/pipeline_log.md` 2026-11-14. Ingest note:
-   `2606.11681` UR-BERT's ISCA camera-ready drops the arXiv appendix (pretraining data, MOS protocol,
-   Tables 5-7); point the agent at `preprint/` for those details. Original plan, for reference:
-   Start the next session by switching all 65 arXiv-canonical Interspeech 2026 records to their
-   ISCA proceedings versions and re-parsing them, in one bulk run before any ingest (user,
-   2026-11-13; replaces the earlier "just ahead of each batch" plan). All 65 are accepted, dated
-   2026-09-27 (`conference_date`), still have an arXiv `url`, and none has a `preprint/` parse yet.
-   - **56 with an ISCA duplicate record** (`interspeech-2026-*`, `is_duplicate`, `canonical_id` set,
-     and `source_ids.isca` already on the canonical record): `use_peer_reviewed.py --wiki-dir "$WIKI"
-     --id {id} --from-duplicate`.
-   - **9 without an ISCA record**: explicit flags from the verified table in the Session Log
-     ("Session 2026-11-11: parse batches 6-7, peer-reviewed-version check"): `--url
-     https://www.isca-archive.org/interspeech_2026/{slug}.html --pdf-url .../{slug}.pdf --venue
-     Interspeech --venue-type conference --date 2026-09-27 --source isca={slug} --source doi={doi}`.
-     Two have author-list differences recorded there (`2607.19033` wagner26b, `2607.22658` wang26fa):
-     the page follows the ISCA author list.
-   - Order: build the list with a script (accepted, `conference_date` 2026-09-27, arXiv `url`); dry-run
-     every switch first and check that only `url`, `url_peer_reviewed`, `url_preprint`, `pdf_path`,
-     `pdf_path_preprint` (plus venue/source IDs for the 9) change and the date stays 2026-09-27; then
-     `--apply`; spot-check page 1 of a handful of downloaded ISCA PDFs (title, authors, Interspeech
-     2026 header) and all 9 explicit ones.
-   - Re-parse all 65 with `batch_convert.py --workers 2 --ids ...` in the background (about 1.5-2 h;
-     runs of 20-40 if the 2 h background limit is a risk), then the post-parse checks in
-     `docs/parse.md` (lines, reference counts vs the `preprint/` parse; investigate large drops
-     against the PDF), rebuild the citation index and tidy its `- discover` line.
-   - Log one `review | source version switched` line and one `parse` line in `raw/pipeline_log.md`;
-     commit infra with the metadata, log and citation index; then continue with step 1.
-   - The ISCA PDFs often carry the ISCA logo as figure-1: check it before any page embeds it.
+0. **DONE 2026-11-14:** all 65 arXiv-canonical Interspeech 2026 records switched to ISCA (56
+   `--from-duplicate`, 9 explicit) and re-parsed (65 done, 0 failed); citation index rebuilt. When
+   the sweep reaches 2026-09-27, tell each agent the ISCA parse is primary and `preprint/` is
+   context only, and check figure-1 for the ISCA logo. `2606.11681` UR-BERT's camera-ready drops
+   the arXiv appendix (pretraining data, MOS protocol, Tables 5-7): point the agent at `preprint/`
+   for those details.
 
 1. **Continue the sweep with the next oldest accepted, parsed records** (by canonical
-   `published_date`, then ID): `2609.04222` GEPARD tech report (07-04), `2607.01345` TurnNat (07-05),
-   then 2026-07-06: `2607.02214` SpeechCombine (re-dated to ICML 2026-07-06 on 2026-11-13; ingest the
-   arXiv PDF, which is the camera-ready; `url_peer_reviewed` -> OpenReview already set), `2607.04941`
-   DuplexChat (SLT demo, "submitted"), `2607.05250` (arXiv comment "Accepted to SPECOM 2026": run the
-   proceedings check), `2607.05365` SPEARBench, `icml-2026-hgKQemfVbS` AgentSteerTTS,
-   `icml-2026-icMRkTnuU7` (ICML-canonical: search arXiv for a twin and set `url_preprint`), then
-   2026-07-07 `2607.06054` BlueMagpie-TTS, `2607.06461` WordVoice, 2026-07-10 `2607.09134` ReGen
-   (ICML: proceedings check), 2026-07-15 `2607.06027`, ... Build a numbered list of 16 with the
-   per-paper pre-flight from `docs/ingest-protocol.md` section 2, show it and wait for confirmation.
-   The two Q2 holds (`2606.12940` ICML, `2606.13006` IJCAI) stay held unless the user lifts the hold.
+   `published_date`, then ID): `2607.09530` FreyaTTS (07-22), `2607.23938` Qwen-Audio-3.0-TTS,
+   `2607.24323` Revisiting Vocos ("Accepted at IWAENC 2026": proceedings check), `2607.24430`
+   (ACM MM 2026), `2607.26541` prosody jailbreaks (ACM MM 2026; scope check under the SLM-safety
+   precedent), `2607.26742` (IberSPEECH, "submitted"), `2607.27768` VocalRender, `2607.15755`
+   AuEmoChat (ACM MM 2026), `2607.29363`, then 2026-08-01 `2026.sigdial-1.14`, `2026.sigdial-1.18`,
+   `2608.00545`, ... **ACM MM 2026 acceptances:** check the proceedings date at pre-flight; a
+   verified ACM MM version re-dates the paper to the conference date and may move it to Q4.
+   Build a numbered list of 16 with the per-paper pre-flight from `docs/ingest-protocol.md`
+   section 2, show it and wait for confirmation. The two Q2 holds (`2606.12940` ICML, `2606.13006`
+   IJCAI) stay held unless the user lifts the hold. Copy the standing prompt block verbatim from
+   protocol section 4 (extract it to a file once per session and paste it unchanged).
 2. **Ingest the peer-reviewed version when it is known** (rule: `docs/schemas/metadata.md`, "Source
    Version at Ingest"; procedure: `docs/ingest-protocol.md` section 2). Per paper at ingest time:
-   - **65 arXiv-canonical Interspeech 2026 records**: switched in bulk at the start of the next
-     session (step 0), no longer just ahead of each batch. When the sweep reaches them, tell the agent
-     the ISCA parse is primary and `preprint/` is context only.
+   - **65 arXiv-canonical Interspeech 2026 records**: switched in bulk on 2026-11-14 (step 0).
+     When the sweep reaches them, tell the agent the ISCA parse is primary and `preprint/` is
+     context only.
    - **11 ISCA-canonical records with a known arXiv twin**: set `url_preprint` before ingest.
-   - **ICML `2607.09134`, ICME `2608.03021`**: check for retrievable proceedings at pre-flight;
+   - **ICML camera-ready on arXiv** (PMLR line on page 1, OpenReview PDF gated): present the page
+     as the ICML version (venue ICML, `url` OpenReview, `url_preprint` arXiv, card `ICML · 2026 ·
+     Conference`; user 2026-11-14, SpeechCombine and ReGen).
+   - **ICME `2608.03021`**: check for retrievable proceedings at pre-flight;
      otherwise ingest the preprint. An ICML acceptance confirmed by an OpenReview duplicate record or
      a PMLR line on page 1 re-dates to the ICML date (2026-07-06) with `url_peer_reviewed` set; the
      arXiv PDF stays the source when the OpenReview PDF is gated (SpeechCombine, 2026-11-13).

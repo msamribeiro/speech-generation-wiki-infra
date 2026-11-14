@@ -58,6 +58,7 @@ Execute the redesigned three-stage pipeline in the wiki content repo. Integratio
   - SALM-Duplex: `2505.15670` (arXiv) and `interspeech-2025-0874` (Interspeech), found 2026-10-17
   - DualCodec: `2505.13000` (arXiv) and `interspeech-2025-0468` (Interspeech), found 2026-10-20 (SpeechJudge ingest)
   - SLAM-Omni: `2412.15649` (arXiv) and `2025.findings-acl.115` (Findings of ACL 2025), found 2026-10-31 (PRIME-Speech `2606.30944` ingest, which cites the Findings version)
+  - Speech-LM survey ("Recent Advances in Speech Language Models: A Survey"): `2410.03751` (arXiv) and `2025.acl-long.682` (ACL), found 2026-11-14 (AgentSteerTTS ingest, which cites the ACL version)
   - LLaMA-Omni2: `2505.02625` (arXiv, Q2 2025) and `2025.acl-long.912` (ACL, Q3 2025; intended canonical), found earlier and confirmed 2026-10-19. Both IDs sit in five concept YAMLs (`autoregressive-codec-tts`, `neural-codec`, `spoken-language-model`, `streaming-tts`, `speech-to-speech`), the published `2025-Q3` snapshot, the registry and the run records. The claims already treat the pair as one data point, so claim content and support thresholds should not change; the cost is the wide edit, the immutable snapshot and its YAML digests, and re-rendering. Do all pairs in one integration-side pass and run the reconcile health check before and after
 - [ ] Decide on a task term for speech generation with no text input (lip/video-to-speech, brain-signal-to-speech), e.g. `V2S`. Pages currently on the `task: [TTS]` fallback (2026-10-19): `2602.11477` (SLD-L2S), `interspeech-2025-1478` (LightL2S), `2025.findings-naacl.130` (DiVISe), `interspeech-2025-1334` (MiSTR, iEEG), `2604.15923` (HiCoDiT); `interspeech-2025-0656` (EEG-based VC) is tagged VC. If added: update `docs/schemas/vocabulary.md`, retag the pages and index rows, and decide whether integration needs a matching concept. Text-driven TTS with visual conditioning stays `TTS`. Deferred by the user; revisit as the count grows
 - [ ] Related vocabulary gap: no task term for speech-understanding speech LLMs with no speech output. Pages on the `task: [SCA]` fallback: `2508.07273` (paralinguistic understanding), `iclr-2026-wbttgzp7MT` (EmotionThinker, speech emotion reasoning; user kept `[SCA]` 2026-10-21). Decide alongside the no-text-input term above
@@ -150,5 +151,8 @@ vocabulary design decision (docs/schemas/vocabulary.md) before any filter/ingest
 - [ ] Define the new controlled-vocabulary term(s) for spoken-dialog-understanding tasks (DST, turn-taking, intent
       tracking) distinct from TTS/VC/SCA generation
 - [ ] Decide whether this is a new `task` value, a new `concept`, or both
+- [ ] Consider a turn-taking concept (user, 2026-11-14): first candidates are the ingested turn-taking evaluation
+      pages TurnNat `2607.01345`, SPEARBench `2607.05365`, `2606.31055` and Phoenix-VAD `2509.20410`, which
+      currently carry only `evaluation-metrics` or speech-LM slugs
 - [ ] Re-review papers previously rejected/flagged under the FAMA/MLC-SLM pattern once the vocabulary exists, to see
       which would now qualify on their own merits (not retroactively, just going forward)

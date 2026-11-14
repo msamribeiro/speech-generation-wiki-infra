@@ -56,6 +56,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   paper enters a quarterly queue. A missing proceedings record is not evidence of absence: the
   ISCA fetch keeps only titles that pass the keyword filter, so match against the full proceedings
   index (`isca.scrape_index`), not against fetched records (6 Interspeech 2026 papers, 2026-11-11).
+  For Springer, IEEE and other DOI-registered proceedings, query Crossref
+  (`api.crossref.org/works?query.bibliographic=...`) and match title and authors; the Crossref
+  `published-online` date of the volume is the proceedings date (SPECOM `2607.05250`, 2026-11-14).
+  Unverifiable acceptance comments stay on the arXiv date (NCMMSC `2607.17615`, user 2026-11-14).
 - **Ingest the peer-reviewed version when it is known** (`schemas/metadata.md`, "Source Version at
   Ingest"; user decision 2026-11-11). Decided per paper at ingest time, not in a separate batch:
   for an arXiv-canonical candidate with a verified proceedings or journal version, run
@@ -74,7 +78,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     authors, or the PMLR proceedings line on page 1, verifies the ICML version. Set
     `conference_date` (the ICML record date), `url_peer_reviewed` (OpenReview forum) and
     `source_ids.openreview`, then re-apply the date rule; keep the arXiv PDF as the source while the
-    OpenReview PDF is gated (SpeechCombine `2607.02214`, user 2026-11-13).
+    OpenReview PDF is gated (SpeechCombine `2607.02214`, user 2026-11-13). When that arXiv PDF is
+    the ICML camera-ready (PMLR line on page 1), present the page as the ICML version: `venue: ICML`,
+    `venue_type: conference`, `url` -> OpenReview forum, `url_preprint` -> arXiv, card `ICML · 2026 ·
+    Conference`, no italic note (user 2026-11-14, SpeechCombine and ReGen `2607.09134`).
   - **ACL-canonical records:** the ACL fetch leaves `source_ids.arxiv` empty. Search the arXiv
     export API by title words plus first-author surname (an exact-phrase title query misses colons
     and punctuation) and set `url_preprint` on a match (2026-11-12: 6 of 10 found).
@@ -167,7 +174,8 @@ the block per paper silently drops rules (2026-11-13: the scope stop rule and th
 - Mitigation B: the agent writes **the paper page only**. Do not update `papers/index.md`,
   `wiki/index.md` counts, `log.md` or metadata; the main session does that (section 5). Paper-page
   assets (0 to 2 architecture figures, only for `architectural-novelty`) are the agent's.
-- Quote every date field and the `id` as strings in YAML. Write list fields (`task`,
+- Quote every date field, the `id` and every `related_papers` ID as strings in YAML (unquoted
+  numeric IDs parse as floats; GEPARD `2609.04222`, 2026-11-14). Write list fields (`task`,
   `architecture`, `conditioning`, `training`, `field_significance.type`) bracket-unquoted.
 - Use piped `[[id|Name]]` paper links in Wiki Connections (the SKILL.md template still shows the
   bare form; the bare form is only for the ID column of `papers/index.md`).
@@ -178,7 +186,8 @@ the block per paper silently drops rules (2026-11-13: the scope stop rule and th
   against the table.
 - List every superlative written on the page ("best", "largest", "outperforms") in the closing
   summary, with the table cells that support it across all rows (a tie is not "best").
-- Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it.
+- Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it;
+  with no affiliation on page 1, use "Independent Researcher" (index and card alike).
 - Link systems the paper evaluates as baselines when they have pages, even if the reference list
   omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
 - Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
@@ -338,7 +347,9 @@ intentional. Checks the health check does not (fully) cover:
     (`2606.31055`, `speech-to-speech` dropped; user, 2026-10-31). A concept also needs evaluated
     evidence: an unevaluated control (ZONOS2 `2606.24320` rate tokens, no `prosody-control`) or a
     benchmark that reuses existing scorers without validating them (no `evaluation-metrics`) does
-    not earn the slug (user, 2026-10-31).
+    not earn the slug (user, 2026-10-31). Newly proposed metrics that are never validated against
+    human judgment do not earn `evaluation-metrics` either (GRAFT `2607.02633`; SPEARBench
+    `2607.05365` and X-Translator `2607.17544`, both removed at QC on 2026-11-14).
   - `spoken-language-model`: an external speech signal consumed by an adapted LLM; benchmarks that
     feed real audio into existing speech LMs and measure them also qualify. AR TTS-LMs consuming
     their own output do not.
