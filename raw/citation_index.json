@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-13",
+  "generated": "2026-11-14",
   "corpus_papers": 1492,
-  "total_out_of_corpus_refs": 59284,
-  "unique_out_of_corpus_before_merge": 27079,
-  "merge_groups_collapsed": 854,
+  "total_out_of_corpus_refs": 59289,
+  "unique_out_of_corpus_before_merge": 27083,
+  "merge_groups_collapsed": 853,
   "override_entries_merged": 50,
-  "entries_merged_away": 960,
-  "unique_out_of_corpus": 26119,
+  "entries_merged_away": 959,
+  "unique_out_of_corpus": 26124,
   "min_citations": 1,
-  "entries_above_threshold": 26119,
+  "entries_above_threshold": 26124,
   "fuzzy_merge_candidates": 8,
   "entries": [
     {
@@ -47304,7 +47304,7 @@
       "arxiv_id": null,
       "doi": null,
       "title": "Multilingual turn-taking prediction using voice activity projection",
-      "raw_sample": "K. Inoue, B. Jiang, E. Ekstedt, T. Kawahara, and G. Skantze, 'Multilingual turn-taking prediction using voice activity projection,' in Proceedings of the 2024 Joint International Conference on Computa",
+      "raw_sample": "K. Inoue, B. Jiang, E. Ekstedt, T. Kawahara, and G. Skantze, 'Multilingual turn-taking prediction using voice activity projection,' in Proceedings of the 2024 LREC-COLING 2024 , N. Calzolari, M.-Y. Ka",
       "year": 2024,
       "citation_count": 5,
       "cited_by": [
@@ -72206,6 +72206,21 @@
         "2411.19770",
         "2508.04996",
         "2510.20677"
+      ],
+      "speech_relevant": true
+    },
+    {
+      "key": "title:towardscrosslanguageprosodytransferfordialog",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "Towards Cross-Language Prosody Transfer for Dialog",
+      "raw_sample": "J. E. Avila and N. G. Ward, 'Towards Cross-Language Prosody Transfer for Dialog,' in Interspeech 2023 , 2023, pp. 2143-2147.",
+      "year": 2023,
+      "citation_count": 3,
+      "cited_by": [
+        "2604.17435",
+        "2606.15266",
+        "interspeech-2026-0390"
       ],
       "speech_relevant": true
     },
@@ -109343,7 +109358,7 @@
       "arxiv_id": null,
       "doi": null,
       "title": "Response timing estimation for spoken dialog systems based on syntactic completeness prediction",
-      "raw_sample": "J. Sakuma, S. Fujie, and T. Kobayashi, 'Response timing estimation for spoken dialog systems based on syntactic completeness prediction,' in 2022 IEEE Spoken Language Technology Workshop (SLT) . IEEE,",
+      "raw_sample": "J. Sakuma, S. Fujie, and T. Kobayashi, 'Response timing estimation for spoken dialog systems based on syntactic completeness prediction,' in 2022 SLT . IEEE, 2023, pp. 369-374.",
       "year": 2023,
       "citation_count": 2,
       "cited_by": [
@@ -112179,20 +112194,6 @@
         "interspeech-2026-0709"
       ],
       "speech_relevant": false
-    },
-    {
-      "key": "title:towardscrosslanguageprosodytransferfordialog",
-      "arxiv_id": null,
-      "doi": null,
-      "title": "Towards Cross-Language Prosody Transfer for Dialog",
-      "raw_sample": "J. E. Avila and N. G. Ward, 'Towards Cross-Language Prosody Transfer for Dialog,' in Interspeech 2023 , 2023, pp. 2143-2147.",
-      "year": 2023,
-      "citation_count": 2,
-      "cited_by": [
-        "2604.17435",
-        "interspeech-2026-0390"
-      ],
-      "speech_relevant": true
     },
     {
       "key": "title:towardsdeeplearningmodelsresistanttoadversarialattacks",
@@ -276329,12 +276330,12 @@
       "speech_relevant": null
     },
     {
-      "key": "raw:mekpenyongiudoheauruanudoheobikudooanyanwuashehuesylvanusrbassey",
+      "key": "raw:linguisticsvolume1longpapersassociationforcomputationallinguistics2022pp69446961",
       "arxiv_id": null,
       "doi": null,
       "title": null,
-      "raw_sample": "M. Ekpenyong, I. Udoh, E.-A. Urua, N. Udoh, E. Obikudo, O. Anyanwu, A. Shehu, E. Sylvanus, R. Bassey, U. Saturday,",
-      "year": null,
+      "raw_sample": "Linguistics (Volume 1: Long Papers) . Association for Computational Linguistics, 2022, pp. 6944-6961. [Online]. Available: https://aclanthology.org/2022.acl-long.393",
+      "year": 2022,
       "citation_count": 1,
       "cited_by": [
         "2607.04515"
@@ -277534,6 +277535,45 @@
       "citation_count": 1,
       "cited_by": [
         "2607.15755"
+      ],
+      "speech_relevant": null
+    },
+    {
+      "key": "raw:cwangschenywuzzhanglzhousliuzchen",
+      "arxiv_id": null,
+      "doi": null,
+      "title": null,
+      "raw_sample": "C. Wang, S. Chen, Y. Wu, Z. Zhang, L. Zhou, S. Liu, Z. Chen,",
+      "year": null,
+      "citation_count": 1,
+      "cited_by": [
+        "2607.16657"
+      ],
+      "speech_relevant": null
+    },
+    {
+      "key": "raw:yliuhwangjlilheszhaoandfweineuralcodec",
+      "arxiv_id": null,
+      "doi": null,
+      "title": null,
+      "raw_sample": "Y. Liu, H. Wang, J. Li, L. He, S. Zhao, and F. Wei, 'Neural codec",
+      "year": null,
+      "citation_count": 1,
+      "cited_by": [
+        "2607.16657"
+      ],
+      "speech_relevant": null
+    },
+    {
+      "key": "raw:languagemodelsarezeroshottexttospeechsynthesizers",
+      "arxiv_id": null,
+      "doi": null,
+      "title": null,
+      "raw_sample": "language models are zero-shot text to speech synthesizers,'",
+      "year": null,
+      "citation_count": 1,
+      "cited_by": [
+        "2607.16657"
       ],
       "speech_relevant": null
     },
@@ -302957,7 +302997,7 @@
       "arxiv_id": null,
       "doi": null,
       "title": "A multimodal dataset for automating language vitality and endangerment assessment in south-south nigeria",
-      "raw_sample": "Fakiyesi, C.-P. Kekai, E. Udoh, S. Ansa, E. Ifesieh, G. Ikhimwin, U. Udoeyo, E. Alexander, E. Okon, M. Ekpe, B. O. Nyong, M. Darah, A. Diffre-Odiete, L. Ejobee, W. Aigbedo, F. Imoudu, C. Manda, M.-e. ",
+      "raw_sample": "M. Ekpenyong, I. Udoh, E.-A. Urua, N. Udoh, E. Obikudo, O. Anyanwu, A. Shehu, E. Sylvanus, R. Bassey, U. Saturday, T. Fakiyesi, C.-P. Kekai, E. Udoh, S. Ansa, E. Ifesieh, G. Ikhimwin, U. Udoeyo, E. Al",
       "year": 2025,
       "citation_count": 1,
       "cited_by": [
@@ -346594,6 +346634,19 @@
       "speech_relevant": false
     },
     {
+      "key": "title:pitchtargetsandtheirrealizationevidencefrommandarinchinese",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "Pitch targets and their realization: Evidence from mandarin chinese",
+      "raw_sample": "Y. Xu and Q. E. Wang, 'Pitch targets and their realization: Evidence from mandarin chinese,' Speech Communication , vol. 33, no. 4, pp. 319-337, 2001.",
+      "year": 2001,
+      "citation_count": 1,
+      "cited_by": [
+        "2606.15266"
+      ],
+      "speech_relevant": false
+    },
+    {
       "key": "title:pitchandspectrumawaresingingqualityassessmentwithbiascorrectionandmodelfusion",
       "arxiv_id": null,
       "doi": null,
@@ -362077,6 +362130,19 @@
       "speech_relevant": false
     },
     {
+      "key": "title:theinterspeech2026challengeontransferofpragmaticintentinspeechtospeechtranslation",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "The interspeech 2026 challenge on transfer of pragmatic intent in speech-to-speech translation",
+      "raw_sample": "N. G. Ward, M. de Korte, J. Vazquez, M. G. Molina, V. Bolado, C. Figueroa, E. Nachmani, J. E. Ortega, and S. Nakamura, 'The interspeech 2026 challenge on transfer of pragmatic intent in speech-to-spee",
+      "year": 2026,
+      "citation_count": 1,
+      "cited_by": [
+        "2606.15266"
+      ],
+      "speech_relevant": true
+    },
+    {
       "key": "title:thejrcacquisamultilingualalignedparallelcorpuswith20languages",
       "arxiv_id": null,
       "doi": null,
@@ -370999,7 +371065,7 @@
       "arxiv_id": null,
       "doi": null,
       "title": "` Ir` oy` ınspeech: A multi-purpose yor` ub´ a speech corpus",
-      "raw_sample": "A. A. Tol´ ul´ op` e ´ Og´ unr` em´ ı, K` ol´ a T´ ub` os´ un, ' ` Ir` oy` ınspeech: A multi-purpose yor` ub´ a speech corpus,' in Proceedings of LREC 2024 , 2024. [Online]. Available: https://aclanth",
+      "raw_sample": "T. ` Og´ unrm´ ı, K. T´ ubos´ un, A. Aremu, I. Orife, and D. I. Adelani, ' ` Ir` oy` ınspeech: A multi-purpose yor` ub´ a speech corpus,' in Proceedings of the 2024 Joint International Conference on C",
       "year": 2024,
       "citation_count": 1,
       "cited_by": [

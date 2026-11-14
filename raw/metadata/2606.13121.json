@@ -15,8 +15,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -26,9 +26,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.13121",
-  "pdf_url": "https://arxiv.org/pdf/2606.13121.pdf",
-  "pdf_path": "raw/papers/2606.13121.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/lee26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lee26c_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.13121.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Simultaneous speech-to-speech translation aims to enable near-real-time communication by minimizing latency, offering a compelling, real-time alternative to the high latency of consecutive translation. However, the excessive pursuit of low latency often results in fragmented chunk-wise speech. Consequently, listeners are subjected to an unnatural acoustic flow punctuated by frequent pauses, which could increase their cognitive load. To bridge this gap, we introduce a fluency-aware optimization framework designed to discover the sweet spot between the low-latency benefits of simultaneous translation and the natural flow of consecutive translation. Our framework minimizes inter-chunk silences by leveraging model-internal signals, including linguistic diversity and induced temporal variability in speech durations. Experiments on short- and long-form benchmarks show that our framework produces natural speech flow while maintaining competitive latency and translation quality.",
   "arxiv_comment": "Proceedings of the 26th Interspeech Conference, Long Paper",
@@ -41,5 +41,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.13121",
+  "pdf_path_preprint": "raw/papers/2606.13121.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/lee26c_interspeech.html"
 }

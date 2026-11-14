@@ -19,8 +19,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -30,9 +30,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.20650",
-  "pdf_url": "https://arxiv.org/pdf/2606.20650.pdf",
-  "pdf_path": "raw/papers/2606.20650.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/wu26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wu26f_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.20650.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Instruction-based controllable speech synthesis enables users to specify emotions through natural language. However, existing approaches often rely on coarse emotion labels and lack explicit modeling of fine-grained intensity. We propose EmoInstruct-TTS, a dual-path instruction-guided framework for emotional speech synthesis. We introduce Emotion2embed, a supervised semantic-acoustic emotion embedding covering 48 emotional states, including fine-grained categories and intensity levels. To infer embeddings from free-form instructions, we design an Instruction-Conditioned Emotion Flow Model (ICE-Flow) that generates acoustically grounded emotion representations. The inferred embeddings are integrated into an LLM-based synthesis pipeline to provide explicit emotional control while preserving semantic planning. Experiments show improved emotional controllability and speech naturalness over strong baselines.",
   "arxiv_comment": "5 pages, 3 figures, 4 tables. Submitted to Interspeech 2026. Audio demos: https://huanyu-lab.github.io/EMOINSTRUCT-TTS",
@@ -45,5 +45,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.20650",
+  "pdf_path_preprint": "raw/papers/2606.20650.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/wu26f_interspeech.html"
 }

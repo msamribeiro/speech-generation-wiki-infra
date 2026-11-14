@@ -13,8 +13,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -24,9 +24,9 @@
   "version_estimated": false,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2607.01965",
-  "pdf_url": "https://arxiv.org/pdf/2607.01965.pdf",
-  "pdf_path": "raw/papers/2607.01965.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/raybarman26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/raybarman26_interspeech.pdf",
+  "pdf_path": "raw/papers/2607.01965.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Neural TTS systems can sound natural across languages, but naturalness does not guarantee the preservation of sound contrasts that distinguish words from their grammatical forms. Standard metrics like MOS do not test for this. We propose a classifier-based framework that audits TTS output against language-specific phonological patterns using human speech as a benchmark. Testing Assamese advanced tongue root (ATR) vowel harmony with Meta's MMS TTS, we show that a classifier trained on human speech transfers to synthesized speech with minimal loss. The faithfulness audit reveals that [+ATR] mid vowels are realized as [-ATR] in 1/3 tokens despite an underlying [+ATR] specification, a bias absent in human speech. At the word level, predicted ATR labels classify harmony more accurately than transcription labels, indicating a gap between intended and produced phonology. The framework offers task-specific diagnostics and generalizes to other phonological contrasts with measurable acoustic cues.",
   "arxiv_comment": "Accepted at Interspeech 2026",
@@ -41,5 +41,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2607.01965",
+  "pdf_path_preprint": "raw/papers/2607.01965.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/raybarman26_interspeech.html"
 }

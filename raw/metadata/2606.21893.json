@@ -34,8 +34,8 @@
     "Caren Chen"
   ],
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -45,9 +45,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.21893",
-  "pdf_url": "https://arxiv.org/pdf/2606.21893.pdf",
-  "pdf_path": "raw/papers/2606.21893.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/wang26y_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wang26y_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.21893.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "We propose AugCodec, a low-bitrate disentangled neural speech codec that leverages data augmentation to decompose speech into three distinct components: semantic, speaker, and prosody tokens. Specifically, we employ tailored augmenta tion strategies to transform speech into distinct variants, each serving as input for extracting tokens that preserve the target attribute while suppressing others. This disentanglement strategy enables substantial reduction in token rate. Further more, we introduce an augmentation loss that aligns semantic encoder outputs between source and voice-converted speech, encouraging speaker-agnostic embeddings while mitigating the acoustic mismatch induced by voice conversion. Experiments on LibriSpeech test-clean demonstrate that AugCodec significantly outperforms state-of-the-art methods in both reconstruction quality and disentanglement, while operating at only 12.5Hz with three token streams.",
   "arxiv_comment": "Accepted by Interspeech 2026",
@@ -60,5 +60,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.21893",
+  "pdf_path_preprint": "raw/papers/2606.21893.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/wang26y_interspeech.html"
 }

@@ -15,8 +15,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -26,9 +26,9 @@
   "version_estimated": false,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2607.04515",
-  "pdf_url": "https://arxiv.org/pdf/2607.04515.pdf",
-  "pdf_path": "raw/papers/2607.04515.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/edet26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/edet26_interspeech.pdf",
+  "pdf_path": "raw/papers/2607.04515.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Efik, a tonal language spoken by about 3 million second language speakers and 1.5 million native speakers in Southeastern Nigeria, remains underrepresented in speech synthesis research. We present the first documented end-to-end text-to-speech study for Efik, introducing a curated single speaker corpus of 2,632 utterances totaling three hours and a comparative evaluation of four neural models (VITS, MMS-TTS, SpeechT5, and Orpheus-TTS) under low resource conditions. Native speakers evaluated the systems using MOS, Nat-MOS, and A-MOS. MMS-TTS achieved the highest MOS of 3.80 +/- 0.63 and produced more stable long form speech, though tonal errors persisted. Other models showed greater tonal and prosodic inconsistencies. These results provide a reproducible baseline and highlight the need for larger corpora and tone aware modeling for tonal African languages.",
   "arxiv_comment": "6 pages, 2 figures. Accepted to Interspeech 2026",
@@ -42,5 +42,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2607.04515",
+  "pdf_path_preprint": "raw/papers/2607.04515.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/edet26_interspeech.html"
 }

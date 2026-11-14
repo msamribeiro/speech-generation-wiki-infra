@@ -1,7 +1,9 @@
 {
   "id": "2607.14310",
   "source_ids": {
-    "arxiv": "2607.14310"
+    "arxiv": "2607.14310",
+    "isca": "shigabeev26_interspeech",
+    "doi": "10.21437/Interspeech.2026-809"
   },
   "title": "Dialogs: a studio-quality expressive conversational Russian speech corpus for dialog assistants",
   "authors": [
@@ -10,8 +12,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -21,9 +23,9 @@
   "version_estimated": false,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2607.14310",
-  "pdf_url": "https://arxiv.org/pdf/2607.14310.pdf",
-  "pdf_path": "raw/papers/2607.14310.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/shigabeev26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/shigabeev26_interspeech.pdf",
+  "pdf_path": "raw/papers/2607.14310.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "We introduce Dialogs, a studio-quality Russian conversational speech corpus for dialog assistants. The dataset contains 20.6 hours of face-to-face acted dialogs recorded in a professional studio (44.1 kHz stereo) and segmented into 11,796 utterances across 3 speakers. Unlike read-speech resources, Dialogs captures turn-taking rhythm and expressive prosody, and provides per-utterance style/emotion labels spanning 12 categories. We validate corpus quality with crowd MOS tests, showing comparable audio quality and intelligibility to strong Russian studio baselines while achieving higher ratings for expressiveness and conversational naturalness. Finally, we train a VITS2 model as a proof of concept, demonstrating that Dialogs supports training expressive, dialog-like TTS despite limited per-speaker data.",
   "arxiv_comment": "4 pages, 1 figure, 5 tables. Interspeech 2026",
@@ -37,5 +39,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2607.14310",
+  "pdf_path_preprint": "raw/papers/2607.14310.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/shigabeev26_interspeech.html"
 }

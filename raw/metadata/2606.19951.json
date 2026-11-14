@@ -1,7 +1,9 @@
 {
   "id": "2606.19951",
   "source_ids": {
-    "arxiv": "2606.19951"
+    "arxiv": "2606.19951",
+    "isca": "takagi26_interspeech",
+    "doi": "10.21437/Interspeech.2026-1478"
   },
   "title": "Investigating Human-Model Discrepancies in Speech Quality Assessment via Acoustic and Prosodic Perturbations",
   "authors": [
@@ -12,8 +14,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -23,9 +25,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.19951",
-  "pdf_url": "https://arxiv.org/pdf/2606.19951.pdf",
-  "pdf_path": "raw/papers/2606.19951.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/takagi26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/takagi26_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.19951.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Mean opinion score (MOS) prediction models are widely used as proxy metrics in text-to-speech (TTS) research, yet their ability to capture quality differences beyond acoustic fidelity remains unclear. We investigate this via controlled perturbations on speech: acoustic degradation, prosodic errors, and manipulation of speaker-specific characteristics such as pitch and speaking rate. We obtained MOS predictions for these speech samples from both human listeners and the model, and analyzed the differences in their perceptual characteristics. Results show that most models track acoustic degradation well, while all are insensitive to prosodic errors despite large subjective score drops. For speaker characteristics, models exhibit a double dissociation: strong mean fundamental frequency (F0) biases absent in human ratings, yet insensitivity to speaking rate and F0 variability that humans notice. These findings highlight limitations of scalar MOS prediction beyond acoustic fidelity.",
   "arxiv_comment": "Accepted to INTERSPEECH 2026",
@@ -38,5 +40,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.19951",
+  "pdf_path_preprint": "raw/papers/2606.19951.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/takagi26_interspeech.html"
 }

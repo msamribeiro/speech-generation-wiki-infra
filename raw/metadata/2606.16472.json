@@ -13,8 +13,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -24,9 +24,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.16472",
-  "pdf_url": "https://arxiv.org/pdf/2606.16472.pdf",
-  "pdf_path": "raw/papers/2606.16472.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/lee26m_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/lee26m_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.16472.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Despite the success of end-to-end (E2E) spoken dialogue systems, maintaining strict context adherence in multi-round conversations remains a challenge. While prior works attribute these failures to models forgetting dialogue history, we highlight an equally critical but overlooked bottleneck: a gap between latent context awareness and active adherence. Although models internally recognize relevant past utterances, strong parametric priors often overshadow these signals during decoding. To bridge this gap, we propose an audio-adapted Context-Aware Decoding (CAD) approach. By leveraging internal attention mechanisms to isolate key historical rounds, our approach contrasts output distributions with and without this key context during inference, directly amplifying multimodal contextual signals. Evaluations on the Audio MultiChallenge benchmark demonstrate significant improvements in Semantic Memory and Self Coherence subtasks, successfully enforcing strict, context-faithful adherence.",
   "arxiv_comment": "Interspeech 2026 Main Track",
@@ -39,5 +39,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.16472",
+  "pdf_path_preprint": "raw/papers/2606.16472.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/lee26m_interspeech.html"
 }

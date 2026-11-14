@@ -1,7 +1,9 @@
 {
   "id": "2606.18072",
   "source_ids": {
-    "arxiv": "2606.18072"
+    "arxiv": "2606.18072",
+    "isca": "dai26c_interspeech",
+    "doi": "10.21437/Interspeech.2026-791"
   },
   "title": "One-Step Token-to-Waveform Generation with MeanFlow in Latent Space",
   "authors": [
@@ -16,8 +18,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -27,9 +29,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.18072",
-  "pdf_url": "https://arxiv.org/pdf/2606.18072.pdf",
-  "pdf_path": "raw/papers/2606.18072.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/dai26c_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/dai26c_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.18072.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Neural audio codecs are central to modern LLM-based Text-to-Speech (TTS) and multimodal systems. As low-bitrate semantic codecs gain prominence, the Token-to-Waveform (Token2Wav) decoder becomes a bottleneck determining both perceptual quality and system efficiency. Conventional multi-step flow-matching decoders offer superior quality but suffer from high inference latency due to iterative sampling, creating a severe quality-speed trade-off. In this paper, we propose a novel Token2Wav architecture that overcomes this limitation by applying MeanFlow in a highly compressed latent space. By modeling the average velocity rather than the instantaneous velocity field, MeanFlow enables true one-step generation. Operating in the latent domain mitigates the memory and stability issues of waveform-level flows, yielding up to a 17$\\times$ improvement in Real-Time Factor (RTF) compared to multi-step baselines with negligible quality degradation. Furthermore, we introduce refinement strategies that mitigate latent mismatch, including decoder-only fine-tuning with the MeanFlow generator frozen and end-to-end joint fine-tuning, improving fidelity without increasing inference-time cost. Code and demo are publicly available.",
   "arxiv_comment": "5 pages, 1 figure",
@@ -43,5 +45,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.18072",
+  "pdf_path_preprint": "raw/papers/2606.18072.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/dai26c_interspeech.html"
 }
