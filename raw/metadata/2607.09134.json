@@ -11,8 +11,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICML",
+  "venue_type": "conference",
   "year": 2026,
   "month": 7,
   "published_date": "2026-07-06",
@@ -22,7 +22,7 @@
   "version_estimated": false,
   "conference_date": "2026-07-06",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2607.09134",
+  "url": "https://openreview.net/forum?id=T8Y9elIrXa",
   "pdf_url": "https://arxiv.org/pdf/2607.09134.pdf",
   "pdf_path": "raw/papers/2607.09134.pdf",
   "pdf_source": "arxiv",
@@ -36,5 +36,6 @@
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "url_peer_reviewed": "https://openreview.net/forum?id=T8Y9elIrXa"
+  "url_peer_reviewed": "https://openreview.net/forum?id=T8Y9elIrXa",
+  "url_preprint": "https://arxiv.org/abs/2607.09134"
 }
