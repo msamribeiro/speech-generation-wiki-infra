@@ -605,6 +605,33 @@ launches); #13 written but held at the scope check. Agent runtimes: 29, 8, 3 and
   ingested, 325 accepted remaining (324 in the sweep, incl. held #13), 231 rejected.
   Corpus-wide ingest health: PASS, 0 errors, 1,167 warnings (unchanged baseline).
 
+### Session 2026-11-14: Interspeech bulk switch, pre-flight, Q3 sweep batch 11
+
+Step 0 done first: all 65 arXiv-canonical Interspeech 2026 records switched to ISCA and re-parsed
+(65 done, 0 failed; see Resume Here step 0). Pre-flight of 16 (user-confirmed with decisions
+A-C): ReGen `2607.09134` re-dated to ICML (07-10 -> 07-06); SPECOM codec `2607.05250` re-dated to
+the LNCS proceedings date (2026-09-19, Springer PDF paywalled, ingest the preprint); DAFx
+`2607.13278` switched to the DAFx26 proceedings PDF and re-parsed (2026-09-01); AgentSteerTTS
+gained `url_preprint` (arXiv `2605.17583`). **A (user): `icml-2026-icMRkTnuU7` is the retitled
+ICML version of ingested MOSS-Audio-Tokenizer `2602.10934`** (identical 10 authors, CAT renamed
+TAC): later-version duplicate, rejected; `2602.10934` (in no claim YAML) re-dated Q1 -> Q3
+(2026-07-06, venue ICML) with page note (Q1 manifest 116 -> 115). **B (user): `2607.16870`
+speaker-inversion paper accepted.** **C (user): Re-Sonance `2607.17615` NCMMSC 2025 unverified,
+ingest the preprint at 07-20.** **ICML card (user, 2026-11-14):** SpeechCombine and ReGen, whose
+arXiv PDF is the ICML camera-ready and whose OpenReview PDF is gated, are presented as the ICML
+version (venue ICML, `url` OpenReview, `url_preprint` arXiv, card `ICML · 2026 · Conference`,
+no italic note). Actual IDs match #1-#4 (4 launches). Agent runtimes: 2.5, 2.5, 3.5 and 3 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 1 | `2609.04222` GEPARD (arXiv tech report) | moderate (`engineering-integration`); `autoregressive-codec-tts`, `streaming-tts`, `zero-shot-tts`, `rlhf-speech` | **Fixed:** `related_papers` IDs unquoted (floats); quoted. Index `task` follows the page (`[TTS]`, filter had `TTS, SCA`). No `multilingual-tts` (5 training languages, English-only evaluation); no `subjective-evaluation` (MOS of unstated provenance kept out of metrics). Tables 5-6 and the §5.5 stress table (rebuilt from the PDF) verified. |
+| 2 | `2607.01345` TurnNat (arXiv) | low (`evaluation-contribution`); `evaluation-metrics` | No `subjective-evaluation` (raters judged edited human-human clips), no `speech-to-speech` (`2606.31055` rule). LLaMA-Omni linked at its page `2409.06666` (legacy pointer). Clean. |
+| 3 | `2607.02214` SpeechCombine (ICML, arXiv camera-ready) | moderate (`engineering-integration`, `conceptual-contribution`); `spoken-language-model`, `speech-to-speech` (cascade voice assistant), `prosody-control`, `emotion-synthesis`, `instruction-conditioned-tts` | Two paper inconsistencies on the page verified in the PDF (Table 2 vs Table 5 at λ = 0.85; SDQA named in §4.2 but absent from Table 1). Clean. |
+| 4 | `2607.04941` DuplexChat (arXiv, "submitted" to SLT demo) | moderate (`dataset-contribution`, `engineering-integration`); `related_concepts` empty | Table III verified. No model trained, so no slug qualifies (empty on the `2604.11803` precedent); queued. |
+
+- Corpus at **1,103** pages. Q3 (by canonical date): 76 ingested (incl. the re-dated MOSS page),
+  319 accepted, 233 rejected.
+
 ---
 
 ## Manual Verification Queue
@@ -633,6 +660,10 @@ after the session batch is complete: check the paper page and resolve each flag 
 | `2607.02633` | Vocabulary gap: pronunciation control | GRAFT: no concept fits per-word pronunciation control (`prosody-control` does not apply). Main session removed the agent's `evaluation-metrics` (D-PER/WS proposed but never validated against human judgment; the listening study is a separate ranking). `zero-shot-tts` omitted (benchmark reference speakers' provenance not stated, so unseen status unverifiable) and `disentanglement` omitted (separation via voice-converted training data, no loss/adversarial mechanism): both per standing rules. Recommendation: no new concept for one paper; note the gap. **Resolved 2026-11-13 (user): no new concept.** |
 | `2607.01865` | **Scope: no speech at all** | Codec with adjustable token temporal resolution (SFI layers in DAC): every experiment reconstructs environmental sound (CochlScene); no speech or music test, no listening test, no downstream TTS/speech LM. The narrow tri-domain codec accept requires genuine speech-reconstruction evidence (2026-11-01 precedent), which is absent. The agent wrote the page anyway (the session prompt had dropped the stop rule); page held in the content worktree, **no index row, log or metadata change**. Recommendation: reject (status `rejected`, delete the held page and its figure). **Resolved 2026-11-13 (user): rejected**; page and figure deleted unpublished, logged in `raw/pipeline_log.md`. |
 
+| `2609.04222` | `field_significance.type` engineering-integration vs architectural-novelty | GEPARD: DPO with CFG-generated chosen trajectories and stop-head Bernoulli terms distils two-pass CFG into single-pass weights. Agent chose `engineering-integration` (length-normalized DPO is standard; the new part is the data recipe). Recommendation: keep (a new preference-data recipe on a standard DPO objective is not a new training objective). |
+| `2607.01345` | `field_significance` low vs moderate; `spoken-language-model` omitted | TurnNat: English-only perturbation benchmark with a 3-rater validation subset; the score is never applied to a dialogue system. Best scorer fine-tunes DualTurn (Qwen backbone reading Mimi audio), which meets the letter of the slug rule. Recommendation: keep low, and keep `spoken-language-model` off (DualTurn is used as a turn-timing scorer, not as a speech LM under evaluation). |
+| `2607.02214` | `field_significance`; `instruction-conditioned-tts` scope | SpeechCombine: base-model speech pre-training plus instruct-minus-base task arithmetic (Chat Vector style). Agent chose moderate, `engineering-integration` + `conceptual-contribution`. `instruction-conditioned-tts` tagged for evaluated instruction-driven emotion and emphasis generation (GenEmo, emphasis F1, Table 2) through a speech LM. Recommendation: keep both. |
+| `2607.04941` | `related_concepts` empty; significance moderate vs low | DuplexChat: 415k h speaker-separated podcast dialogue corpus plus open pipeline; no model trained or evaluated, automatic-only validation on 600 samples. No slug qualifies (`spoken-language-model` needs a trained or evaluated speech LM). Agent chose moderate under the released-at-scale exception (release is URLs plus rebuild code). Recommendation: keep empty (as `2604.11803`), keep moderate. |
 ---
 
 ## Progress
