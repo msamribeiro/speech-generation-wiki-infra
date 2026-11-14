@@ -39,5 +39,6 @@
   "fetched_date": "2026-09-21",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2605.17583"
 }
