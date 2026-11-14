@@ -632,6 +632,19 @@ no italic note). Actual IDs match #1-#4 (4 launches). Agent runtimes: 2.5, 2.5, 
 - Corpus at **1,103** pages. Q3 (by canonical date): 76 ingested (incl. the re-dated MOSS page),
   319 accepted, 233 rejected.
 
+### Session 2026-11-14: Q3 sweep batch 12
+
+Actual IDs match #5-#8 (4 launches). Agent runtimes: 3, 9.5, 6 and 2.5 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 5 | `2607.05365` SPEARBench (arXiv) | low (`evaluation-contribution`, `empirical-benchmark`); `spoken-language-model`, `speech-to-speech` (7 dialogue models' spoken answers measured) | **Fixed:** removed `evaluation-metrics` and its bullet (dialectal entrainment/variance measures proposed but never validated against human judgment; GRAFT precedent). Table III values verified in the PDF. |
+| 6 | `2607.09134` ReGen (ICML, arXiv camera-ready) | moderate (`architectural-novelty`, Figure 1); `flow-matching`, `neural-codec`, `zero-shot-tts`, `self-supervised-speech` (MMS features in the decoder), `gan-vocoder` (adversarial stage ablated, Table 4), `subjective-evaluation` (20 AMT raters) | Agent rebuilt Docling's shifted/mislabelled Tables 4-9 from the PDF; Table 7 spot-checked. Figure viewed. Clean. |
+| 7 | `icml-2026-hgKQemfVbS` AgentSteerTTS (ICML) | moderate (`architectural-novelty`, Figure 4); `instruction-conditioned-tts`, `emotion-synthesis`, `disentanglement` (Table 3 "w/o Adv. Disentanglement" verified), `subjective-evaluation` | IndexTTS and IndexTTS2 are separate Table 2 baselines (both links correct). DMOS = SMOS for every baseline verified in the PDF (stated on the page). Queued: MOS with no rater description. Side thread: the speech-LM survey has two ingested pages, `2025.acl-long.682` and `2410.03751`, neither marked duplicate (add to the `BACKLOG.md` duplicate-pairs item). |
+| 8 | `2607.06054` BlueMagpie-TTS (arXiv) | low (`engineering-integration`); `multilingual-tts` (code-switched synthesis), `flow-matching`, `subjective-evaluation` (10 listeners) | **Fixed:** `diffusion-tts` -> `flow-matching` for the jointly fine-tuned VoxCPM2 LocDiT stack (HoliDubber precedent; `architecture` keeps `diffusion`). The arXiv listing abstract (metadata: nine tokenizers, WER) differs from the only PDF version, v1 (eight tokenizers, CER only); the page follows the v1 PDF. CER values verified. |
+
+- Corpus at **1,107** pages.
+
 ---
 
 ## Manual Verification Queue
@@ -663,6 +676,7 @@ after the session batch is complete: check the paper page and resolve each flag 
 | `2607.01345` | `field_significance` low vs moderate; `spoken-language-model` omitted | TurnNat: English-only perturbation benchmark with a 3-rater validation subset; the score is never applied to a dialogue system. Best scorer fine-tunes DualTurn (Qwen backbone reading Mimi audio), which meets the letter of the slug rule. Recommendation: keep low, and keep `spoken-language-model` off (DualTurn is used as a turn-timing scorer, not as a speech LM under evaluation). |
 | `2607.02214` | `field_significance`; `instruction-conditioned-tts` scope | SpeechCombine: base-model speech pre-training plus instruct-minus-base task arithmetic (Chat Vector style). Agent chose moderate, `engineering-integration` + `conceptual-contribution`. `instruction-conditioned-tts` tagged for evaluated instruction-driven emotion and emphasis generation (GenEmo, emphasis F1, Table 2) through a speech LM. Recommendation: keep both. |
 | `2607.04941` | `related_concepts` empty; significance moderate vs low | DuplexChat: 415k h speaker-separated podcast dialogue corpus plus open pipeline; no model trained or evaluated, automatic-only validation on 600 samples. No slug qualifies (`spoken-language-model` needs a trained or evaluated speech LM). Agent chose moderate under the released-at-scale exception (release is URLs plus rebuild code). Recommendation: keep empty (as `2604.11803`), keep moderate. |
+| `icml-2026-hgKQemfVbS` | `subjective-evaluation` with no rater description | AgentSteerTTS reports seven MOS variants with confidence intervals (Tables 1-2) but never states raters, pool or protocol. Recommendation: keep (MOS with CIs implies a listening test; the page's warning can note the missing protocol). |
 
 ---
 

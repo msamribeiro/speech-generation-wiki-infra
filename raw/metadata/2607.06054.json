@@ -40,7 +40,7 @@
   "version_date": "2026-07-07",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-14",
   "url": "https://arxiv.org/abs/2607.06054",
   "pdf_url": "https://arxiv.org/pdf/2607.06054.pdf",
   "pdf_path": "raw/papers/2607.06054.pdf",
@@ -53,9 +53,21 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "BlueMagpie-TTS proposes a token-efficient tokenizer, language model, and TTS system for Taiwanese-accent code-switching speech, a core multilingual TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-14",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "950d8a6"
+    }
+  ]
 }
