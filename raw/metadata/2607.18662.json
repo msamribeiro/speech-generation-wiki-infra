@@ -19,7 +19,7 @@
   "version_date": "2026-07-19",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-14",
   "url": "https://arxiv.org/abs/2607.18662",
   "pdf_url": "https://arxiv.org/pdf/2607.18662.pdf",
   "pdf_path": "raw/papers/2607.18662.pdf",
@@ -32,9 +32,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Presents a staged depth-pruning distillation recipe to build a compact Hindi TTS model from a large flow-matching teacher under a severe data budget, a core low-resource TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-14",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0b0bffe"
+    }
+  ]
 }

@@ -658,6 +658,21 @@ Actual IDs match #9-#12 (4 launches). Agent runtimes: 42, 26, 4 and 2.5 min.
 
 - Corpus at **1,111** pages.
 
+### Session 2026-11-14: Q3 sweep batch 14
+
+Actual IDs match #13-#16 (4 launches); the 16-paper list is complete (16/16). Agent runtimes:
+2.5, 3, 3 and 3 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 13 | `2607.18662` Staged depth-pruning distillation, Hindi (arXiv, single author) | low (`engineering-integration`); `flow-matching` | **Fixed:** `organization: null` -> "Independent Researcher" (index and card convention, e.g. `2026.nlpaics-1.18`). Teacher IndicF5 has no page; F5-TTS linked at `2025.acl-long.313`. Index task follows the page (`[TTS]`, filter had `multilingual`). Table 4 spot-checked. |
+| 14 | `2607.17544` X-Translator (arXiv) | moderate (`engineering-integration`, `evaluation-contribution`); `speech-to-speech`, `speaker-adaptation` (prompt routing over frozen X-Voice, stated) | **Fixed:** removed `evaluation-metrics` and its bullet (long-gap and purity metrics never validated against human judgment; GRAFT/SPEARBench precedent). UniSS linked at its canonical page `iclr-2026-5o0ZvYzh6B`. Table 2 spot-checked. |
+| 15 | `2607.17615` Re-Sonance (arXiv; NCMMSC 2025 unverified, user decision C) | low (`engineering-integration`); `speech-to-speech` (cascade), `subjective-evaluation` (20 listeners) | Page `task: [TTS]`, not the filter's `VC` (no measured conversion of the input voice); index follows the page. Table 2 deltas verified as absolute differences. |
+| 16 | `2607.17900` Harness TTS (arXiv) | low (`engineering-integration`); `instruction-conditioned-tts` | No `subjective-evaluation` (Gemini judge only); frozen CosyVoice3/VoxCPM2 executors do not earn slugs. Routing table spot-checked. |
+
+- Corpus at **1,115** pages. Q3 (by canonical date): 88 ingested, 307 accepted, 233 rejected.
+  Corpus-wide ingest health: PASS, 0 errors, 1,167 warnings (unchanged baseline); metadata PASS.
+
 ---
 
 ## Manual Verification Queue

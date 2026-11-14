@@ -24,7 +24,7 @@
   "version_date": "2026-07-20",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-14",
   "url": "https://arxiv.org/abs/2607.17615",
   "pdf_url": "https://arxiv.org/pdf/2607.17615.pdf",
   "pdf_path": "raw/papers/2607.17615.pdf",
@@ -36,9 +36,21 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Re-Sonance proposes a three-stage cascaded ASR-LLM-TTS real-time speech conversion system to improve dysarthric speech intelligibility in professional settings, a core assistive speech-conversion contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-14",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "0b0bffe"
+    }
+  ]
 }
