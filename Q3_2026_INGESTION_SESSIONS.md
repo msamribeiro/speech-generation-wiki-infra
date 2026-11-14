@@ -645,6 +645,19 @@ Actual IDs match #5-#8 (4 launches). Agent runtimes: 3, 9.5, 6 and 2.5 min.
 
 - Corpus at **1,107** pages.
 
+### Session 2026-11-14: Q3 sweep batch 13
+
+Actual IDs match #9-#12 (4 launches). Agent runtimes: 42, 26, 4 and 2.5 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 9 | `2607.06461` WordVoice (arXiv) | moderate (`architectural-novelty`, `dataset-contribution`, Figure 3); `prosody-control`, `autoregressive-codec-tts`, `flow-matching`, `multilingual-tts` (zh+en trained and evaluated), `subjective-evaluation` (20 raters) | Backbone is CosyVoice 3 (LLM from Qwen2.5-0.5B, trained). No `disentanglement` (separate embeddings, no mechanism), no `instruction-conditioned-tts` (label controls), no `zero-shot-tts` (unseen speakers not established). Tables 3-5 spot-checked; figure viewed. Clean. |
+| 10 | `2607.06027` Fréchet distance loss (arXiv) | moderate (`architectural-novelty`, Figure 1); `flow-matching` (LoRA-fine-tuned VoxCPM2), `zero-shot-tts` (Seed-TTS test-en), `self-supervised-speech` (wav2vec 2.0 inside the loss), `subjective-evaluation` (13 listeners) | Warning states checkpoint selection on the test set and no supervised-LoRA-only control. Tables II and V spot-checked. Clean. |
+| 11 | `2607.12706` AutoSIFT (arXiv) | moderate (`architectural-novelty`, Figure 1); `flow-matching` (own FM-DiT), `disentanglement` (alignment loss ablated, Table 1), `instruction-conditioned-tts`, `emotion-synthesis`, `multilingual-tts`, `subjective-evaluation` | Tables 1-2 spot-checked. Clean. |
+| 12 | `2607.16870` speaker inversion on speech-LM tokens (arXiv; scope accepted by the user) | moderate (`empirical-benchmark`, `engineering-integration`); `spoken-language-model`, `neural-codec` (token interfaces of Moshi/Mimi, Higgs3, Kimi-Audio, Qwen3-Omni are the object of study) | Table IV minDCF jump (0.6670 / 0.4050 / 0.0885 at 1/2/3 s) verified in the PDF, reported as written. Queued: no task term for privacy attacks (`[SCA]` used). |
+
+- Corpus at **1,111** pages.
+
 ---
 
 ## Manual Verification Queue
@@ -677,6 +690,7 @@ after the session batch is complete: check the paper page and resolve each flag 
 | `2607.02214` | `field_significance`; `instruction-conditioned-tts` scope | SpeechCombine: base-model speech pre-training plus instruct-minus-base task arithmetic (Chat Vector style). Agent chose moderate, `engineering-integration` + `conceptual-contribution`. `instruction-conditioned-tts` tagged for evaluated instruction-driven emotion and emphasis generation (GenEmo, emphasis F1, Table 2) through a speech LM. Recommendation: keep both. |
 | `2607.04941` | `related_concepts` empty; significance moderate vs low | DuplexChat: 415k h speaker-separated podcast dialogue corpus plus open pipeline; no model trained or evaluated, automatic-only validation on 600 samples. No slug qualifies (`spoken-language-model` needs a trained or evaluated speech LM). Agent chose moderate under the released-at-scale exception (release is URLs plus rebuild code). Recommendation: keep empty (as `2604.11803`), keep moderate. |
 | `icml-2026-hgKQemfVbS` | `subjective-evaluation` with no rater description | AgentSteerTTS reports seven MOS variants with confidence intervals (Tables 1-2) but never states raters, pool or protocol. Recommendation: keep (MOS with CIs implies a listening test; the page's warning can note the missing protocol). |
+| `2607.16870` | Vocabulary gap: privacy/security attacks; `neural-codec` scope | No task term for attacks on speech-LM inputs; agent used `[SCA]` (VoxPrivacy `iclr-2026-GNo1qMqgPD` has `[SCA, evaluation]`; `2608.10405` will need the same call). `neural-codec` tagged because the speech-LM tokenizers' speaker leakage is what is measured. Recommendation: keep `[SCA]` and `neural-codec`; no new task term for a three-paper cluster. |
 
 ---
 
