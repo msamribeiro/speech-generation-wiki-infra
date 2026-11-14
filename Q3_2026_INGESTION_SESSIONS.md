@@ -65,8 +65,12 @@ Verification Queue: no open items (all 2026-11-13 items resolved). To resume:
 **Session order (user, 2026-11-12, confirmed 2026-11-13): ingest oldest first.** The 19 Q4 2026
 records were downloaded and parsed at the end of the 2026-11-13 session (step 3).
 
-0. **Start the next session by switching all 65 arXiv-canonical Interspeech 2026 records to their
-   ISCA proceedings versions and re-parsing them, in one bulk run before any ingest** (user,
+0. **DONE 2026-11-14:** all 65 switched (56 `--from-duplicate`, 9 explicit) and re-parsed (65 done,
+   0 failed); citation index rebuilt; infra `31ba253`, `raw/pipeline_log.md` 2026-11-14. Ingest note:
+   `2606.11681` UR-BERT's ISCA camera-ready drops the arXiv appendix (pretraining data, MOS protocol,
+   Tables 5-7); point the agent at `preprint/` for those details. Original plan, for reference:
+   Start the next session by switching all 65 arXiv-canonical Interspeech 2026 records to their
+   ISCA proceedings versions and re-parsing them, in one bulk run before any ingest (user,
    2026-11-13; replaces the earlier "just ahead of each batch" plan). All 65 are accepted, dated
    2026-09-27 (`conference_date`), still have an arXiv `url`, and none has a `preprint/` parse yet.
    - **56 with an ISCA duplicate record** (`interspeech-2026-*`, `is_duplicate`, `canonical_id` set,
