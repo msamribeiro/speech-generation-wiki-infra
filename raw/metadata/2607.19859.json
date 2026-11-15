@@ -1,7 +1,8 @@
 {
   "id": "2607.19859",
   "source_ids": {
-    "arxiv": "2607.19859"
+    "arxiv": "2607.19859",
+    "doi": "10.1109/asru65441.2025.11434642"
   },
   "title": "StellarTTS: Sparse Temporal Embedding for Low-Latency and Robust Speech Synthesis",
   "authors": [
@@ -19,15 +20,15 @@
   "organization": null,
   "venue": "arXiv",
   "venue_type": "preprint",
-  "year": 2026,
-  "month": 7,
-  "published_date": "2026-07-22",
+  "year": 2025,
+  "month": 12,
+  "published_date": "2025-12-06",
   "preprint_date": "2026-07-22",
   "arxiv_version": 1,
   "version_date": "2026-07-22",
   "version_estimated": false,
-  "conference_date": null,
-  "ingested_date": null,
+  "conference_date": "2025-12-06",
+  "ingested_date": "2026-11-15",
   "url": "https://arxiv.org/abs/2607.19859",
   "pdf_url": "https://arxiv.org/pdf/2607.19859.pdf",
   "pdf_path": "raw/papers/2607.19859.pdf",
@@ -39,9 +40,22 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "StellarTTS introduces a sparse temporal embedding stack for a mobile-optimized non-autoregressive TTS framework balancing robustness, latency, and prosody, a core TTS contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_peer_reviewed": "https://doi.org/10.1109/asru65441.2025.11434642",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-15",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "9ae8f42"
+    }
+  ]
 }

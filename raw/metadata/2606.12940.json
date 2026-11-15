@@ -1,7 +1,8 @@
 {
   "id": "2606.12940",
   "source_ids": {
-    "arxiv": "2606.12940"
+    "arxiv": "2606.12940",
+    "openreview": "druaDr7zNI"
   },
   "title": "Self-Guidance: Enhancing Neural Codecs via Decoder Manifold Alignment",
   "authors": [
@@ -13,18 +14,18 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "ICML",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 6,
-  "published_date": "2026-06-11",
+  "month": 7,
+  "published_date": "2026-07-06",
   "preprint_date": "2026-06-11",
   "arxiv_version": 1,
   "version_date": "2026-06-11",
   "version_estimated": true,
-  "conference_date": null,
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.12940",
+  "conference_date": "2026-07-06",
+  "ingested_date": "2026-11-15",
+  "url": "https://openreview.net/forum?id=druaDr7zNI",
   "pdf_url": "https://arxiv.org/pdf/2606.12940.pdf",
   "pdf_path": "raw/papers/2606.12940.pdf",
   "pdf_source": "arxiv",
@@ -35,9 +36,23 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Self-Guidance improves neural speech codec reconstruction fidelity via decoder manifold alignment, core codec infrastructure.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_peer_reviewed": "https://openreview.net/forum?id=druaDr7zNI",
+  "url_preprint": "https://arxiv.org/abs/2606.12940",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-15",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "9ae8f42"
+    }
+  ]
 }

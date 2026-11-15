@@ -82,6 +82,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     the ICML camera-ready (PMLR line on page 1), present the page as the ICML version: `venue: ICML`,
     `venue_type: conference`, `url` -> OpenReview forum, `url_preprint` -> arXiv, card `ICML · 2026 ·
     Conference`, no italic note (user 2026-11-14, SpeechCombine and ReGen `2607.09134`).
+  - **IEEE accepted manuscripts:** an arXiv PDF whose page 1 carries only the IEEE notice ("© IEEE.
+    Personal use of this material is permitted...") is not the proceedings version. When the IEEE
+    Xplore PDF cannot be fetched, ingest the preprint with `url_peer_reviewed` and the italic note;
+    the ICML camera-ready rule does not extend to it (StellarTTS `2607.19859`, user 2026-11-15).
   - **ACL-canonical records:** the ACL fetch leaves `source_ids.arxiv` empty. Search the arXiv
     export API by title words plus first-author surname (an exact-phrase title query misses colons
     and punctuation) and set `url_preprint` on a match (2026-11-12: 6 of 10 found).
@@ -112,9 +116,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   - **Extended/full versions** under an unrelated ID: check `arxiv_comment` for "full version of",
     "extended version", "journal version", especially when the ID prefix disagrees with
     `published_date`. Surface to the user; do not decide alone.
-  - **Prior publication notices** in the PDF itself: skim the first page of `raw/parsed/{id}/paper.md`
-    for "preprint of", "published in" or "final authenticated version" notices, which
-    `arxiv_comment` often omits. If the paper already appeared in proceedings or a journal, look up
+  - **Prior publication notices** in the PDF itself: read page 1 of `raw/papers/{id}.pdf` with
+    `pypdfium2` (Docling often drops page-1 footnotes, so `paper.md` alone missed the PMLR line of
+    `2606.12940`, 2026-11-15) for "preprint of", "published in", "final authenticated version",
+    PMLR/proceedings or copyright notices, which `arxiv_comment` often omits. If the paper already appeared in proceedings or a journal, look up
     the date (Crossref via the DOI), set `conference_date` or `journal_date` and re-apply the date
     rule; the paper may leave the quarter (PACC `2605.18001`, ICICC 2025, 2026-10-23).
     Re-date with `lib/paper_dates.apply_date_rule` (never by hand) and log a `review | re-dated`
@@ -250,7 +255,10 @@ What it does, and what to check in its output:
 
 ## 6. Per paper: QC
 
-Run the scoped health check plus the scripted checks below against the content worktree:
+Run the scoped health check plus the scripted checks below against the content worktree. Every
+`health_check.py` run, scoped or corpus-wide, needs `--wiki-dir "$WIKI"`: without it the script
+reads the stale `wiki/` submodule (2026-11-15: a batch-end run checked 1,099 pages instead of the
+worktree's 1,135):
 
 ```bash
 .venv/bin/python scripts/ingest/qc.py {id} --wiki-dir "$WIKI"
@@ -368,7 +376,9 @@ intentional. Checks the health check does not (fully) cover:
     judge (STEB `2606.25529`); humans checking benchmark labels do not (`2605.27772`; user,
     2026-10-31). Humans rating transcripts or text responses do not count either (F-Actor
     `2026.findings-acl.242`, Self-EmoQ `2026.findings-acl.740`, 2026-11-12).
-  - `disentanglement`: explicit training mechanism with ablation evidence.
+  - `disentanglement`: explicit training mechanism with ablation evidence. A separately pre-trained
+    quantized stream for one factor, ablated against direct fusion, counts as such a mechanism
+    (user, 2026-11-15, MeloCodec `2608.03021`: melody branch plus a timbre-under-pitch-shift test).
   - `rlhf-speech`: a paper that runs RL or preference optimization on a speech model; a reward model
     for speech dialogue earns it even without an RL loop on a dialogue policy (WavReward,
     SDiaReward; `2026.acl-long.6`, user 2026-11-12). RL on a text-only LLM does not (Self-EmoQ).
@@ -383,7 +393,11 @@ intentional. Checks the health check does not (fully) cover:
     the paper says "zero-shot" (user, 2026-10-24: Poly-SVC `2605.12310`, F5-TTS-DPS `2605.23859`),
     and when unseen status cannot be established (base model's training data unknown, targets
     from a common public corpus such as ESD; `2606.05367`, user 2026-10-31).
-  - `autoregressive-codec-tts`: neural-codec-token autoregression, not mel-frame AR models.
+  - `autoregressive-codec-tts`: neural-codec-token autoregression, not mel-frame AR models. For AR
+    generation over continuous latents, apply it only when the paper itself trains and evaluates
+    that codec or VAE as a codec (Locodec `2607.29363`, dots.tts `2606.07080`); a frozen or
+    unevaluated latent space does not earn it (VocalRender `2607.27768`). No backfill of older
+    pages (user, 2026-11-15).
   - A diffusion transformer trained with a flow-matching objective (VoxCPM2 LocDiT) takes
     `flow-matching`, not also `diffusion-tts` (HoliDubber, `2606.26618`; user, 2026-10-31).
 - Surveys: `## Scope and Coverage` section and `tags: ["survey"]`.
@@ -476,7 +490,10 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS); a rewritten block contradicted the SKILL.md type table and another omitted the scope stop rule, so an environmental-sound-only codec page was written (2026-11-13, `2604.17852`, `2607.01865`) | Step 4: one standing block copied verbatim; step 6 |
 | Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`) | Step 4 prompt, step 6 |
 | "Check the PDF" note on page | Agent leaves a reader-facing note about a garbled parse instead of resolving it (2026-10-31, STEB) | Step 4 prompt, step 6 |
-| Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo) | Step 4 prompt, step 6 |
+| Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo; 2026-11-15, "FishAudio S2" table label linked to the Fish Audio S2 report while the reference is a 2024 commercial system) | Step 4 prompt, step 6 |
+| Page-1 notice missing from the parse | Pre-flight grepped `paper.md` and missed a PMLR camera-ready footnote that Docling dropped (2026-11-15, `2606.12940`) | Section 2 (read page 1 of the PDF) |
+| Health check on the stale submodule | `health_check.py` without `--wiki-dir` checks `wiki/` and silently skips the new pages (2026-11-15) | Step 6 (always pass `--wiki-dir`) |
+| Evidence concept dropped at the cap | Agent drops `subjective-evaluation` to fit 6 slugs although nothing inherited is tagged (2026-11-15, Luna-TTS; user kept the agent's choice) | Step 6 |
 | Quoted list fields | Agent writes `task: ["TTS"]` and quoted `architecture`/`type` lists; health check and `qc.py` silent (2026-11-11, `2606.07240`) | Step 4 prompt, step 6 (read the frontmatter) |
 | Camera-ready prose quotes preprint numbers | Proceedings table updated but the results prose still quotes the preprint's numbers (2026-11-11, `2604.26136`: fine-tuning results changed sign for French) | Section 2 source version; step 6 (check prose numbers against the primary table) |
 | Unvalidated metric tagged `evaluation-metrics` | Agent tags the concept for a newly proposed metric never checked against human judgment (2026-11-13, GRAFT D-PER) | Step 6 (proposes AND validates) |
