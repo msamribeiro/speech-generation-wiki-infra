@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-11-15
+Last updated: 2026-11-21
 
 The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
 retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 ingestion is complete
@@ -28,8 +28,8 @@ has a PDF and is parsed (all 7 parse batches done 2026-11-11; the 65 arXiv-canon
 4. Ingest Q3 2026. Pre-flight is complete (fetch, filter, review, downloads, parse, and the
    peer-reviewed-version check on 2026-11-11); the 65 arXiv-canonical Interspeech records were
    switched to ISCA and re-parsed on 2026-11-14. The chronological sweep is under way (batches 1-14
-   on 2026-11-11 to 2026-11-14, batches A-F on 2026-11-15: 30 more pages; 275 Q3 records remain,
-   next at 2026-08-13). StellarTTS `2607.19859` was ingested on 2026-11-15 as a Q4 2025 page (ASRU
+   on 2026-11-11 to 2026-11-14, batches A-F on 2026-11-15, batches G-I on 2026-11-21: 15 more
+   pages and 5 pre-flight scope rejections; 255 Q3 records remain, next at 2026-08-27). StellarTTS `2607.19859` was ingested on 2026-11-15 as a Q4 2025 page (ASRU
    2025) and waits for the catch-up Q4 integration in `BACKLOG.md`; three ACM MM 2026 papers moved
    to Q4 2026 and `2607.12725` was rejected (no speech). Procedure: `docs/ingest-protocol.md`.
 
@@ -43,11 +43,11 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 2,024 | 1,153 ingested, 297 accepted, 0 review, 574 rejected (incl. the DAFx no-speech codec `2607.12725` rejected at pre-flight on 2026-11-15, 109 Interspeech 2026 ISCA duplicates, 13 arXiv preprints of ISCA records, the ACL DisCo_Speech duplicate of `2512.13251`, the environmental-sound codec `2607.01865` rejected at ingest on 2026-11-13, and the ICML duplicate `icml-2026-icMRkTnuU7` of MOSS-Audio-Tokenizer on 2026-11-14) |
-| Published paper pages | 1,145 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
-| Active accepted + ingested corpus | 1,450 | Basis of `scripts/corpus_summary.py` |
-| Parsed active papers | 1,450 | Every accepted and ingested record (the 19 Q4 2026 records were downloaded and parsed on 2026-11-13; 65 Interspeech and 1 DAFx record re-parsed from proceedings PDFs on 2026-11-14; Emo-LiPO `2606.13006` re-parsed from the IJCAI proceedings PDF on 2026-11-15) |
-| Accepted and parsed, ready to ingest | 297 | 275 Q3 2026 and 22 Q4 2026 (19 parsed 2026-11-13 plus three ACM MM 2026 re-dates) |
+| Metadata records | 2,024 | 1,168 ingested, 277 accepted, 0 review, 579 rejected (incl. five pre-flight scope rejections on 2026-11-21 (`2608.14029`, `2608.15369`, `2608.19141`, `2608.19959`, `2608.26005`), the DAFx no-speech codec `2607.12725` rejected at pre-flight on 2026-11-15, 109 Interspeech 2026 ISCA duplicates, 13 arXiv preprints of ISCA records, the ACL DisCo_Speech duplicate of `2512.13251`, the environmental-sound codec `2607.01865` rejected at ingest on 2026-11-13, and the ICML duplicate `icml-2026-icMRkTnuU7` of MOSS-Audio-Tokenizer on 2026-11-14) |
+| Published paper pages | 1,160 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Active accepted + ingested corpus | 1,445 | Basis of `scripts/corpus_summary.py` |
+| Parsed active papers | 1,445 | Every accepted and ingested record (the 19 Q4 2026 records were downloaded and parsed on 2026-11-13; 65 Interspeech and 1 DAFx record re-parsed from proceedings PDFs on 2026-11-14; Emo-LiPO `2606.13006` re-parsed from the IJCAI proceedings PDF on 2026-11-15) |
+| Accepted and parsed, ready to ingest | 277 | 255 Q3 2026 and 22 Q4 2026 (19 parsed 2026-11-13 plus three ACM MM 2026 re-dates) |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
@@ -85,9 +85,9 @@ non-authoritative.
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions; late StellarTTS `2607.19859` (ASRU) ingested 2026-11-15, awaiting catch-up integration | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
 | Q1 2026 | Complete: 115 ingested, 0 accepted (MOSS-Audio-Tokenizer moved to Q3 on 2026-11-14) | Not started; manifest-ready (22 concepts, 448 memberships) | Not started | Not started |
 | Q2 2026 | Complete: 175 ingested (incl. `2608.26146` Vagdhenu, re-dated into Q2 on 2026-11-07, ingested 2026-11-13); 0 accepted (the ICML/IJCAI holds moved to Q3) | Not started | Not started | Not started |
-| Q3 2026 to date | 117 ingested (34 re-dated Interspeech 2026 pages, 53 from sweep batches 1-14, the re-dated MOSS-Audio-Tokenizer page, and 29 Q3 pages from batches A-F on 2026-11-15); 275 accepted (all parsed) | Not started | Not started | Not started |
+| Q3 2026 to date | 132 ingested (34 re-dated Interspeech 2026 pages, 53 from sweep batches 1-14, the re-dated MOSS-Audio-Tokenizer page, 29 Q3 pages from batches A-F on 2026-11-15, and 15 from batches G-I on 2026-11-21); 255 accepted (all parsed) | Not started | Not started | Not started |
 
-Quarter counts above are by canonical `published_date` as of 2026-11-15. Per-quarter ingest
+Quarter counts above are by canonical `published_date` as of 2026-11-21. Per-quarter ingest
 status in `BACKLOG.md` (2026-09-27) predates the paper-date rule and is superseded by these counts.
 
 ## Paper dates
@@ -331,9 +331,9 @@ fetch-coverage gaps; Interspeech 2026 was fetched from ISCA with dedup on 2026-1
 
 ## Repository and setup state
 
-- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-11-15
-  ingest wrap-up (see `git log`). Content `main` carries Q3 sweep batches 1-14 and A-F (84 pages
-  since 2026-11-11, incl. Vagdhenu and StellarTTS).
+- Infrastructure and content repositories: `main` and `work/ingest` in sync at the 2026-11-21
+  ingest wrap-up (see `git log`). Content `main` carries Q3 sweep batches 1-14, A-F and G-I (99
+  pages since 2026-11-11, incl. Vagdhenu and StellarTTS).
 - Ingest sessions write to the content-ingest worktree:
 
 ```bash

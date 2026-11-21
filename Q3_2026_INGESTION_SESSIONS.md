@@ -55,55 +55,53 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-**2026-11-15: 30 pages in six batches (20 pre-selected in four batches of 5, then two more
-batches of 5).** Last ingested `2608.13613` VoiceDesigner (2026-08-12). Q3: 117 ingested, 275
-accepted (all parsed), 234 rejected. Q2 has no accepted records left (the two holds moved to Q3:
-`2606.12940` ICML 07-06, `2606.13006` IJCAI 08-15, both ingested). StellarTTS `2607.19859` ingested
-as a Q4 2025 page (ASRU 2025-12-06; waits for the catch-up Q4 integration in `BACKLOG.md`). Q4 2026:
-22 accepted (19 parsed 2026-11-13 plus the three ACM MM 2026 re-dates `2607.24430`, `2607.26541`,
-`2607.15755`, proceedings date 2026-11-09). Corpus 1,145 pages. Manual Verification Queue: no
-open items (all 17 2026-11-15 items resolved one at a time). To resume:
+**2026-11-21: 15 pages in three batches of 5 (G-I), 5 pre-flight scope rejections.** Last
+ingested `2608.27360` (2026-08-27). Q3: 132 ingested, 255 accepted (all parsed), 239 rejected.
+Q4 2026: 22 accepted. Corpus 1,160 pages. Manual Verification Queue: no open items (all 14
+2026-11-21 items resolved one at a time). To resume:
 
-**Session order (user, 2026-11-15): pre-select by canonical date with full pre-flight, batches of
-5, papers one at a time with cleanup and QC after each, batch summary then go-ahead; the queue
-is taken at the session end, one item at a time.**
+**Session order (user, 2026-11-15, unchanged): pre-select by canonical date with full pre-flight,
+batches of 5, papers one at a time with cleanup and QC after each, batch summary then go-ahead;
+the queue is taken at the session end, one item at a time.** Scope rejections at pre-flight are
+refilled from the next candidates so each batch stays at 5.
 
 1. **Continue the sweep** with the next oldest accepted, parsed records (canonical
-   `published_date`, then ID): `2608.11590` CookVoice (08-13), `2608.12814` FastThaiG2P (G2P only:
-   scope check), `2608.13831` VoiceChat-TTS, `2608.14029` S2Dialog (dialogue retrieval: scope
-   check), `2608.15369` AudioTQ (08-15), ... Pre-flight each per `docs/ingest-protocol.md`
-   section 2, reading page 1 of the PDF with `pypdfium2` (not `paper.md`) for proceedings notices.
+   `published_date`, then ID); list them with the Progress script variant that sorts accepted
+   records without `wiki_page_id`/`is_duplicate`. Pre-flight each per `docs/ingest-protocol.md`
+   section 2 (page 1 of the PDF with `pypdfium2`; for an Interspeech-template preprint, check
+   the full ISCA 2026 index with `isca.scrape_index`).
 2. **Peer-reviewed versions** (rule: `docs/schemas/metadata.md`, "Source Version at Ingest"):
    - The 65 arXiv-canonical Interspeech 2026 records are switched to ISCA and re-parsed: when the
      sweep reaches 2026-09-27, tell the agent the ISCA parse is primary and `preprint/` is context
      only, and check figure-1 for the ISCA logo. `2606.11681` UR-BERT's camera-ready drops the arXiv
      appendix: point the agent at `preprint/` for those details.
    - ICML camera-ready on arXiv (PMLR line on page 1): present as the ICML version. An IEEE
-     accepted-manuscript notice does not count (stay preprint with link and note; user 2026-11-15).
-   - EMNLP 2026 (8) and SLT 2026 (8): ingest the preprint, stay Q3 on arXiv dates.
-   - Pages already written from a preprint get link and note only
-     (`migrate_peer_reviewed_versions.py`; move its appended log lines into the dated section).
+     accepted-manuscript notice does not count (stay preprint with link and note).
+   - EMNLP 2026 and SLT 2026: ingest the preprint, stay Q3 on arXiv dates (EmoTra-TTS
+     `2608.23791` done this way).
+   - Journal versions whose PDF is blocked for scripts (De Gruyter, IEEE Xplore): ingest the
+     preprint with `url_peer_reviewed`, `source_ids.doi` and the italic note (`2204.07228`
+     Phonetica, StellarTTS).
+   - ISMIR 2026 (8-12 Nov) camera-ready notices re-date a paper to Q4 2026 (moot for the rejected
+     `2608.19141`).
 3. **Q4 2026 records** (22) follow the Q3 sweep in date order; the three ACM MM papers were
-   verified in Crossref (DOIs in metadata); the ACM DL PDFs were not fetched, so check retrieval at
-   ingest and otherwise ingest the preprint.
-4. **New rules this session** (in `docs/ingest-protocol.md`): continuous-latent AR takes
-   `autoregressive-codec-tts` only when the paper trains and evaluates that codec itself; a
-   separately pre-trained quantized stream with an ablation counts for `disentanglement`
-   (MeloCodec); always pass `--wiki-dir` to `health_check.py`. One-offs, not precedents: the
-   moderate levels of `2608.10606` and `2608.06718`.
+   verified in Crossref (DOIs in metadata); check ACM DL retrieval at ingest.
+4. **New rules this session:** organization from a funding/acknowledgement note when page 1 has
+   no affiliation (protocol section 4). One-off, not a precedent: none.
 
-**Side threads (not blocking):** duplicate page pairs in `BACKLOG.md` (LLaMA-Omni 2 `2505.02625` /
-`2025.acl-long.912`, intended canonical the ACL one; SLAM-Omni among them); OpenReview live fetches
-are blocked by a browser-verification gate, so use the saved-page path (`openreview.py --from-file`).
+**Side threads (not blocking):** duplicate page pairs in `BACKLOG.md` (DualCodec: `2608.05727`
+links the Interspeech page `interspeech-2025-0468`, the intended canonical); OpenReview live
+fetches are blocked by a browser-verification gate (use `openreview.py --from-file`).
 
 **Agent prompts:** extract the standing block from protocol section 4 to a scratch file once per
 session and paste it verbatim into every prompt, followed by the spelled-out callout limit, the
-quoted SKILL.md `field_significance.type` table and paper-specific notes (source version,
-organization, related pages, triage acceptance, the tagging rules that matter). Agent runtimes on
-2026-11-15: 2-8 min typical; 29-49 min for five papers.
+quoted SKILL.md `field_significance.type` table, the tagging rules and paper-specific notes.
+Agent runtimes on 2026-11-21: 2-6 min typical; 52 and 78 min outliers (VoiceChat-TTS, ISL).
+Recurring catches this session: agents dropping a non-slug field (`conditioning: multilingual`)
+along with a capped slug, and reading a legacy dedup pointer backwards (MaskGCT `2409.00750`).
 
 **Cadence:** see `docs/ingest-protocol.md` section 3; follow whichever cadence the user most
-recently requested (2026-11-15: batches of 5 as above).
+recently requested (2026-11-21: batches of 5 as above).
 
 ---
 
@@ -776,6 +774,78 @@ manuscripts stay preprints, the `disentanglement` precedent, page-1 PDF check at
 `--wiki-dir` on every health check, and three recurring issue classes. Session total: 30 pages
 (sweep-checked: status, one index row and one log line each); corpus 1,145 pages.
 
+### Session 2026-11-21: Q3 sweep batch G (#31-#35, two pre-flight rejections)
+
+Pre-flight of the next five by canonical date (`2608.11590`-`2608.15369`): page 1 of each PDF read
+with `pypdfium2` (no proceedings notices), title/author dedup clean. Scope decisions (user,
+2026-11-21): FastThaiG2P `2608.12814` accepted at low (Phonikud precedent); S2Dialog `2608.14029`
+(dialogue retrieval, no speech generated) and AudioTQ `2608.15369` (non-neural codec, SQNR only)
+rejected, logged in `raw/pipeline_log.md`. The batch was refilled to five with `2608.15690` and
+`2608.15910` (pre-flighted the same way). Actual IDs match the list (5 launches). Agent runtimes:
+4, 2, 52, 3 and 78 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 31 | `2608.11590` CookVoice (UNSW Sydney / Dolby Laboratories) | moderate (`engineering-integration`); `flow-matching`, `singing`, `prosody-control`, `instruction-conditioned-tts`, `multilingual-tts`, `subjective-evaluation` | **Fixed:** author "Dai Jia" -> "Jia Dai" on the page (PDF page 1; metadata left as fetched). Table 2 rebuilt from the PDF by the agent; cells re-checked. `VC` dropped from the page task (no VC metrics). Type flag queued. |
+| 32 | `2608.12814` FastThaiG2P (AWS) | low (`engineering-integration`); `related_concepts` empty | Lexicon (49k LLM entries, 78.8%) and 15x/2 ms claims checked in the text. Empty-slug flag queued. |
+| 33 | `2608.13831` VoiceChat-TTS (NVIDIA) | moderate (`architectural-novelty`, `engineering-integration`); `autoregressive-codec-tts`, `streaming-tts`, `zero-shot-tts`, `speech-to-speech` | Task `[TTS, SCA]` follows CrossOracle `2026.sigdial-1.18`. Tables 1, 3 and 4 checked; figure-1 is the architecture diagram. Full-Duplex-Bench `2503.04721` linked though only v1.5 is cited (info item). |
+| 34 | `2608.15690` Voice cloning for T2AV models (Kandinsky Lab) | moderate (`engineering-integration`); `diffusion-tts`, `speaker-adaptation`, `subjective-evaluation` | `zero-shot-tts` omitted (VCTK speakers not stated unseen, internal training data; `2606.05367` rule). Intro-vs-§2.1 model-size discrepancy (0.6B vs 3B) verified in the PDF. Table 1 rebuilt from the PDF; SECS tie on WavLM-centroid stated. Two flags queued. |
+| 35 | `2608.15910` Iterative Self-Learning (no affiliation in the PDF) | moderate (`architectural-novelty`); `flow-matching`, `emotion-synthesis`, `prosody-control`, `subjective-evaluation` | Organization "Independent Researcher" per rule (funding note names Edinburgh/WASP): raised with the user. Tables II-IV cells checked; figure-1 checked. Type flag queued. |
+
+- Corpus at **1,150** pages. Q3 (by canonical date): 122 ingested, 268 accepted, 236 rejected.
+  Corpus-wide ingest health (`--wiki-dir`): PASS, 0 errors, 1,167 warnings over 1,150 pages.
+
+### Session 2026-11-21: Q3 sweep batch H (#36-#40, two pre-flight rejections)
+
+Pre-flight of the next five by canonical date. Scope decisions (user, 2026-11-21): `2608.19141`
+Geometric Iterative Retrieval (ISMIR 2026 camera-ready; pooled speech+music codec restoration, no
+speech-specific results) and `2608.19959` (SPSC 2026; human vs detector deepfake detection)
+rejected, logged in `raw/pipeline_log.md`. The batch was refilled with `2608.16053` and
+`2608.23791`. EmoTra-TTS is "Accepted to EMNLP 2026": ingested as the preprint per the standing
+EMNLP decision. Actual IDs match the list (5 launches). Agent runtimes: 3, 6, 5, 3 and 5 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 36 | `2608.18661` X2Streaming-TTS (X Square Robot) | moderate (`architectural-novelty`, inference-only on Qwen3-TTS); `streaming-tts`, `autoregressive-codec-tts`, `subjective-evaluation` | Tables 1-4 cells checked; "identical model weights" confirmed (no training stage). `multilingual-tts` off (inference-only, `2606.25672` rule). Figure checked. |
+| 37 | `2605.30748` Chatterbox-Flash (Resemble AI / SNU / KAIST) | moderate (`architectural-novelty`); `diffusion-tts`, `autoregressive-codec-tts`, `zero-shot-tts`, `streaming-tts`, `subjective-evaluation` | Text-vs-table discrepancy on the page verified against the PDF (§3.2 "trails only OmniVoice on WER" but OmniVoice-Emilia 1.57 and ZipVoice 1.64 < 1.67). Luna-TTS `2608.11593` now links it (was unlinked accepted-but-unwritten). `zero-shot-tts` flag queued. |
+| 38 | `2608.17492` FireRedTTS3 (Xiaohongshu) | moderate (`architectural-novelty`, `engineering-integration`); `flow-matching`, `zero-shot-tts`, `multilingual-tts`, `instruction-conditioned-tts`, `prosody-control` | `autoregressive-codec-tts` off (RedAE trained but never evaluated as a codec; 2026-11-15 rule). Table 1 cells checked; Tables 4-5 rebuilt from the PDF by the agent. Two flags queued (`prosody-control` scope, moderate vs high). |
+| 39 | `2608.16053` DuplexGen (Institute of Science Tokyo / Hokkaido University) | moderate (`architectural-novelty`, `dataset-contribution`); `speech-to-speech` only | PDF title "Agentic-DuplexGen" (metadata title kept). Task `[SCA, TTS]` per CrossOracle. Zero-training pipeline confirmed. Flag queued (`spoken-language-model` off; level). |
+| 40 | `2608.23791` EmoTra-TTS (LIGHTSPEED / NUS / NTU) | moderate (`architectural-novelty`); `emotion-synthesis`, `autoregressive-codec-tts`, `flow-matching`, `subjective-evaluation` | **Fixed:** added MaskGCT page `2409.00750` to `related_papers` (agent skipped it reading the legacy dedup pointer backwards). Table 2 cells checked. |
+
+- Corpus at **1,155** pages. Q3 (by canonical date): 127 ingested, 261 accepted, 238 rejected.
+  Corpus-wide ingest health (`--wiki-dir`): PASS, 0 errors, 1,167 warnings over 1,155 pages.
+
+### Session 2026-11-21: Q3 sweep batch I (#41-#45, one pre-flight rejection)
+
+Pre-flight of the next five by canonical date. VoiceMem `2608.26005` (memory for speech LMs,
+speech-in/text-out only) rejected by the user. `2204.07228` (Phonetica): Crossref
+`10.1515/phon-2025-0072`, online 2026-08-27 = existing `journal_date`, stays Q3; the De Gruyter PDF
+is blocked for scripted download, so the arXiv v2 was ingested with `url_peer_reviewed` and the
+italic note (StellarTTS precedent); `source_ids.doi` added. Refill `2608.27360` (Interspeech
+template) checked against the full Interspeech 2026 index (1,379 papers): absent, stays preprint.
+Actual IDs match the list (5 launches). Agent runtimes: 4, 3, 3, 3 and 2 min.
+
+| # | ID | Result | QC catches and fixes |
+|---|---|---|---|
+| 41 | `2608.05727` LILAC (Seoul National University) | moderate (`architectural-novelty`); `neural-codec`, `subjective-evaluation` | Supplement MUSHRA table rebuilt from the PDF by the agent. DualCodec linked as `interspeech-2025-0468` (proceedings ID canonical per the BACKLOG pair rule). Cells checked. Level flag queued. |
+| 42 | `2608.08638` CuteTTS (Shanghai Innovation Institute / OPPO AI Center / Fudan University) | moderate (`architectural-novelty`); 6 slugs incl. `autoregressive-codec-tts` (own VAE, reconstruction evaluated) | **Fixed:** restored `multilingual` in `conditioning` (agent dropped it with the slug at the 6-slot cap). Cap choice queued (`multilingual-tts`, `speaker-adaptation` dropped). |
+| 43 | `2204.07228` FUL representation for multilingual TTS (Newcastle / Oxford / Tencent / Shengrurenxin) | low (`engineering-integration`); `transformer-enc-dec-tts`, `multilingual-tts`, `subjective-evaluation` | Preprint with Phonetica link and note. Prose-vs-table conflict on the page verified (§4.2.2 iMOS 2.45 vs Figure 4 table 3.45). |
+| 44 | `2608.24168` FireRedAudio (Xiaohongshu) | moderate (`architectural-novelty`); `spoken-language-model`, `zero-shot-tts`, `instruction-conditioned-tts`, `multilingual-tts`, `flow-matching` | Tables 4 and 7 rebuilt from the PDF by the agent; Table 5 cells checked. FireRedTTS3 `2608.17492` now links it. Level flag queued. |
+| 45 | `2608.27360` XTTS as a voice anonymizer (ZHAW) | moderate (`engineering-integration`); `voice-conversion`, `autoregressive-codec-tts` (frozen XTTS GPT, steered), `subjective-evaluation` (9-rater CMOS) | Table 2 rebuilt from the PDF by the agent; averages checked. |
+
+- Corpus at **1,160** pages. Q3 (by canonical date): 132 ingested, 255 accepted, 239 rejected.
+  Corpus-wide ingest health (`--wiki-dir`): PASS, 0 errors, 1,167 warnings over 1,160 pages.
+
+### Session 2026-11-21: verification queue and close
+
+All 14 queue items resolved one at a time (see the queue). Page changes: `2608.15910` organization
+"Independent Researcher" -> "University of Edinburgh" (from the funding note; new protocol
+exception); DuplexGen `2608.16053` moderate -> low. Everything else kept as the agents wrote it.
+Session total: 15 pages in three batches (G-I), 5 pre-flight scope rejections (`2608.14029`,
+`2608.15369`, `2608.19141`, `2608.19959`, `2608.26005`) and one journal link (`2204.07228`,
+Phonetica). Corpus 1,160 pages. Cross-links added
+to existing pages: Luna-TTS -> Chatterbox-Flash, FireRedTTS3 -> FireRedAudio.
+
 ---
 
 ## Manual Verification Queue
@@ -826,6 +896,20 @@ after the session batch is complete: check the paper page and resolve each flag 
 | `2608.06718` | `field_significance` moderate -> low (main session) | Counterfactual audits of 11 ALM judges (Boston University): automatic, English-only, synthetic stimuli; humans only check item solvability. Agent chose moderate for breadth (11 judges) and the reusable P/O/J diagnostic. Main session set low under the single-language automated-benchmark rule (as for `2608.06409`). Recommendation: keep low; moderate is the alternative if judge breadth counts as uptake potential. **Resolved 2026-11-15 (user): restored to moderate (breadth of 11 judges plus a negative result on a common evaluation practice, consistent with `2608.10606`); level and opening updated, QC passes. A one-off, not a precedent (user).** |
 | `2608.11593` | 6-slot cap dropped `subjective-evaluation`; level high | Luna-TTS (VUI Labs): agent kept `diffusion-tts`, `zero-shot-tts`, `streaming-tts`, `multilingual-tts`, `emotion-synthesis`, `rlhf-speech` and dropped `subjective-evaluation` (human N-MOS/E-MOS in Table 13, no rater count; internal arena Elo in Table 14). Protocol: at the cap, drop inherited components first and keep evidence concepts such as `subjective-evaluation`; none of the six is inherited. Level high (`[!tip]`): best on all four Seed-TTS-eval columns (0.73/79.7/1.49/76.8), best on 4 of 7 CV3 columns, no ablations, many baseline rows quoted. Recommendation: swap `multilingual-tts` out for `subjective-evaluation` (multilingual coverage is evaluated but not a contribution), keep high. **Resolved 2026-11-15 (user): keep as is (no `subjective-evaluation`; the human test is minor), keep high.** |
 | `2608.11804` | `emotion-synthesis` scope; type boundary | MiDashengLM-Gen (Xiaomi / SJTU; triage-accepted): `emotion-synthesis` rests on CV3-Eval emotion accuracy (Table 6, emotion2vec), but the paper never says which input carries the target emotion. Type `engineering-integration` (LM plus continuous flow-matching head already exists, e.g. DiTAR, uncited). Speech side is TTS-only with no cloning, no human raters. Recommendation: keep both (emotional speech is generated and measured; the open question about the emotion input is stated on the page). **Resolved 2026-11-15 (user): keep both.** |
+| `2608.15910` | Organization with no affiliation in the PDF | Only a funding note (UKRI CDT in NLP, University of Edinburgh, Huawei, WASP); the rule gave "Independent Researcher". **Resolved 2026-11-21 (user): "University of Edinburgh"** from the funding note; page, card and index row changed; protocol section 4 now takes the host institution from a funding/acknowledgement note when page 1 has none. |
+| `2608.11590` | `field_significance.type` | CookVoice: frame-level expansion of all controls plus condition-switching training; each component has precedent. Agent chose `engineering-integration`. **Resolved 2026-11-21 (user): keep.** |
+| `2608.12814` | `related_concepts` empty | FastThaiG2P: the Thai Kokoro-82M fine-tune is measured only by RTF; no slug has evaluated evidence. **Resolved 2026-11-21 (user): keep empty.** |
+| `2608.13831` | Uncited Full-Duplex-Bench link (info) | VoiceChat-TTS evaluates on the original benchmark's subsets but cites only v1.5 `2507.23159`; both linked. **Resolved 2026-11-21 (user): keep both.** |
+| `2608.15690` | `zero-shot-tts` omitted | VCTK benchmark speakers never stated unseen; training corpus internal (`2606.05367` rule). **Resolved 2026-11-21 (user): keep omitted.** |
+| `2608.15690` | `field_significance.type` | Zero-init FiLM + prepended reference latents + split CFG on a T2AV DiT (NAVA precedent). Agent chose `engineering-integration`. **Resolved 2026-11-21 (user): keep.** |
+| `2608.15910` | `field_significance.type` | Iterative inversion-based pseudo-labelling on an unchanged Matcha-TTS. Agent chose `architectural-novelty` (new training procedure). **Resolved 2026-11-21 (user): keep.** |
+| `2605.30748` | `zero-shot-tts` with incomplete unseen evidence | 375K LibriTTS-R training samples without stated test-subset exclusion, plus unitemized private data; Seed-TTS test-en is not in any listed source. **Resolved 2026-11-21 (user): keep** (unseen status holds on Seed-TTS test-en; the page notes the LibriTTS-R gap). |
+| `2608.17492` | `prosody-control` scope | FireRedTTS3: instruction-driven speed/pitch editing measured with RDE, SIM and WER (Table 4). **Resolved 2026-11-21 (user): keep.** |
+| `2608.17492` | `field_significance` moderate vs high | Lowest Seed-TTS-eval averages by hundredths, best on InstructTTSEval, but no ablation of RedAE semantic distillation and no human evaluation. **Resolved 2026-11-21 (user): keep moderate.** |
+| `2608.16053` | Level; single slug | DuplexGen: zero-training pipeline, automatic-only evaluation, 175-min synthetic corpus; only `speech-to-speech` (constrained decoding does not adapt the duplex model). **Resolved 2026-11-21 (user): moved to low, slugs as is**; level and Field Significance opening updated, QC passes. |
+| `2608.05727` | `field_significance` moderate vs high | LILAC: first idempotent-by-construction codec, but single-pass quality only competitive (MUSHRA 51.4 vs DualCodec 74.8) and downstream benefit untested. **Resolved 2026-11-21 (user): keep moderate.** |
+| `2608.08638` | 6-slot cap | CuteTTS: dropped `multilingual-tts` and `speaker-adaptation`, kept `self-supervised-speech` and `subjective-evaluation`; main session restored `multilingual` in `conditioning`. **Resolved 2026-11-21 (user): keep as is.** |
+| `2608.24168` | `field_significance` moderate vs high | FireRedAudio: broad lead (Seed-TTS avg 1.20, InstructTTSEval, MMAU/MMSU) but SIM below specialized TTS, core design not ablated, no human evaluation. **Resolved 2026-11-21 (user): keep moderate** (consistent with FireRedTTS3). |
 
 ---
 

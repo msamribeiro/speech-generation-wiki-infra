@@ -40,7 +40,7 @@
   ],
   "relevance_score": 0.55,
   "relevance_note": "Streaming memory architecture for duplex speech LMs; contributions are memory retrieval/persona accuracy and latency rather than speech generation, so SCA relevance depends on how much speech-side training/evaluation it contains.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-11-07",
   "needs_manual_pdf": false,
   "is_duplicate": false,

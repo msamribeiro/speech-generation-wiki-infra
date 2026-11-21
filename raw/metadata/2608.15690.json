@@ -25,7 +25,7 @@
   "version_date": "2026-08-16",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-21",
   "url": "https://arxiv.org/abs/2608.15690",
   "pdf_url": "https://arxiv.org/pdf/2608.15690.pdf",
   "pdf_path": "raw/papers/2608.15690.pdf",
@@ -37,9 +37,21 @@
   ],
   "relevance_score": 0.75,
   "relevance_note": "Shows a base text-to-audio-video model can be converted into a voice-cloning model by adding a single zero-initialized layer and short fine-tuning, a core TTS/voice-cloning contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-21",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "cb05821"
+    }
+  ]
 }

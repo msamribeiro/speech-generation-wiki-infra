@@ -192,7 +192,9 @@ the block per paper silently drops rules (2026-11-13: the scope stop rule and th
 - List every superlative written on the page ("best", "largest", "outperforms") in the closing
   summary, with the table cells that support it across all rows (a tie is not "best").
 - Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it;
-  with no affiliation on page 1, use "Independent Researcher" (index and card alike).
+  with no affiliation on page 1, use "Independent Researcher" (index and card alike), unless a
+  funding or acknowledgement note names the host institution: then use that institution (user,
+  2026-11-21, `2608.15910`: University of Edinburgh from the funding note).
 - Link systems the paper evaluates as baselines when they have pages, even if the reference list
   omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
 - Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
