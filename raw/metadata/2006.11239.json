@@ -1,0 +1,51 @@
+{
+  "id": "2006.11239",
+  "source_ids": {
+    "arxiv": "2006.11239"
+  },
+  "title": "Denoising Diffusion Probabilistic Models",
+  "authors": [
+    "Jonathan Ho",
+    "Ajay Jain",
+    "Pieter Abbeel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2020,
+  "month": 12,
+  "published_date": "2020-12-16",
+  "preprint_date": "2020-06-19",
+  "arxiv_version": 2,
+  "version_date": "2020-12-16",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2006.11239",
+  "pdf_url": "https://arxiv.org/pdf/2006.11239.pdf",
+  "pdf_path": "raw/papers/2006.11239.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. Our implementation is available at https://github.com/hojonathanho/diffusion",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 23× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "ml-method",
+  "corpus_citation_count": 23,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 3,
+    "Q1_2026": 0,
+    "Q2_2026": 6
+  },
+  "sr_match": false,
+  "ingest_tier": 1
+}

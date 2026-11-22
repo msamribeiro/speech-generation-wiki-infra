@@ -1,0 +1,51 @@
+{
+  "id": "2106.06103",
+  "source_ids": {
+    "arxiv": "2106.06103"
+  },
+  "title": "Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech",
+  "authors": [
+    "Jaehyeon Kim",
+    "Jungil Kong",
+    "Juhee Son"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2021,
+  "month": 6,
+  "published_date": "2021-06-11",
+  "preprint_date": "2021-06-11",
+  "arxiv_version": 1,
+  "version_date": "2021-06-11",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2106.06103",
+  "pdf_url": "https://arxiv.org/pdf/2106.06103.pdf",
+  "pdf_path": "raw/papers/2106.06103.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Several recent end-to-end text-to-speech (TTS) models enabling single-stage training and parallel sampling have been proposed, but their sample quality does not match that of two-stage TTS systems. In this work, we present a parallel end-to-end TTS method that generates more natural sounding audio than current two-stage models. Our method adopts variational inference augmented with normalizing flows and an adversarial training process, which improves the expressive power of generative modeling. We also propose a stochastic duration predictor to synthesize speech with diverse rhythms from input text. With the uncertainty modeling over latent variables and the stochastic duration predictor, our method expresses the natural one-to-many relationship in which a text input can be spoken in multiple ways with different pitches and rhythms. A subjective human evaluation (mean opinion score, or MOS) on the LJ Speech, a single speaker dataset, shows that our method outperforms the best publicly available TTS systems and achieves a MOS comparable to ground truth.",
+  "arxiv_comment": "ICML 2021",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 62× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "tts-vc",
+  "corpus_citation_count": 62,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 36,
+    "Q4_2025": 8,
+    "Q1_2026": 11,
+    "Q2_2026": 7
+  },
+  "sr_match": true,
+  "ingest_tier": 1
+}

@@ -244,6 +244,7 @@ Classifies citation-discovery papers by functional role in the speech synthesis 
 | `foundation-lm` | General-purpose LLM used as TTS/SCA backbone | LLaMA, GPT-4, Qwen |
 | `asr` | Automatic speech recognition system | Whisper, Paraformer |
 | `speaker` | Speaker verification or recognition model | ECAPA-TDNN |
+| `ssl` | Self-supervised speech representation model (added 2026-11-22) | WavLM, HuBERT, wav2vec 2.0 |
 | `dataset` | Training or evaluation corpus | LibriTTS, Common Voice, Emilia |
 | `evaluation` | Benchmark, metric, or evaluation toolkit | UTMOS, VoiceBench, MMAU |
 | `ml-method` | General ML technique | Adam, flow matching, layer norm, FSQ |

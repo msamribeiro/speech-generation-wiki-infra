@@ -1,0 +1,52 @@
+{
+  "id": "2409.09305",
+  "source_ids": {
+    "arxiv": "2409.09305"
+  },
+  "title": "The T05 System for The VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
+  "authors": [
+    "Kaito Baba",
+    "Wataru Nakata",
+    "Yuki Saito",
+    "Hiroshi Saruwatari"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 9,
+  "published_date": "2024-09-14",
+  "preprint_date": "2024-09-14",
+  "arxiv_version": 1,
+  "version_date": "2024-09-14",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2409.09305",
+  "pdf_url": "https://arxiv.org/pdf/2409.09305.pdf",
+  "pdf_path": "raw/papers/2409.09305.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present our system (denoted as T05) for the VoiceMOS Challenge (VMC) 2024. Our system was designed for the VMC 2024 Track 1, which focused on the accurate prediction of naturalness mean opinion score (MOS) for high-quality synthetic speech. In addition to a pretrained self-supervised learning (SSL)-based speech feature extractor, our system incorporates a pretrained image feature extractor to capture the difference of synthetic speech observed in speech spectrograms. We first separately train two MOS predictors that use either of an SSL-based or spectrogram-based feature. Then, we fine-tune the two predictors for better MOS prediction using the fusion of two extracted features. In the VMC 2024 Track 1, our T05 system achieved first place in 7 out of 16 evaluation metrics and second place in the remaining 9 metrics, with a significant difference compared to those ranked third and below. We also report the results of our ablation study to investigate essential factors of our system.",
+  "arxiv_comment": "Accepted by IEEE SLT 2024. Our MOS prediction system (UTMOSv2) is available in https://github.com/sarulab-speech/UTMOSv2",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 24× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "evaluation",
+  "corpus_citation_count": 24,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 1,
+    "Q1_2026": 6,
+    "Q2_2026": 3
+  },
+  "sr_match": true,
+  "ingest_tier": 1
+}

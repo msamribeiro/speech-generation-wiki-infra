@@ -65,6 +65,13 @@ batches of 5 this session), papers one at a time with cleanup and QC after each,
 go-ahead; the queue is taken at the session end, one item at a time.** Scope rejections at
 pre-flight are refilled from the next candidates so each batch stays at 5.
 
+0. **Ask the user at session start which stream this session runs** (user, 2026-11-22): the Q3
+   sweep (item 1) or the citation-discovery catch-up (40 papers from the 2025Q3–2026Q2 refresh:
+   24 Tier 1 full pages, 16 Tier 2 stubs; `discovery_source: citation-discovery`, refresh date
+   2026-11-22 in `relevance_note`; record `docs/records/2026-11-22-discovery-quarterly-top100-2025Q3-2026Q2.md`).
+   Sessions are not mixed. Tier 1 follows the standard cadence; Tier 2 stubs use the lightweight
+   agent in groups (protocol section 3). Four records have no PDF yet (PESQ, STOI, VCTK, LJSpeech;
+   `needs_manual_pdf`): skip them until the user supplies sources.
 1. **Continue the sweep** from the four carried-over reserves (all pre-flighted 2026-11-22):
    `2609.08390` AV-STE (EMNLP 2026; scope accepted by the user 2026-11-22), `2609.08936` AuK
    (Tencent Hunyuan), `2609.08956` TASTE2, `2609.09263` gender-bias audit of S2S models

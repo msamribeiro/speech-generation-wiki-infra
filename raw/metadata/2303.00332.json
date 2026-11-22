@@ -1,0 +1,53 @@
+{
+  "id": "2303.00332",
+  "source_ids": {
+    "arxiv": "2303.00332"
+  },
+  "title": "CAM++: A Fast and Efficient Network for Speaker Verification Using Context-Aware Masking",
+  "authors": [
+    "Hui Wang",
+    "Siqi Zheng",
+    "Yafeng Chen",
+    "Luyao Cheng",
+    "Qian Chen"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 6,
+  "published_date": "2023-06-16",
+  "preprint_date": "2023-03-01",
+  "arxiv_version": 3,
+  "version_date": "2023-06-16",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2303.00332",
+  "pdf_url": "https://arxiv.org/pdf/2303.00332.pdf",
+  "pdf_path": "raw/papers/2303.00332.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Time delay neural network (TDNN) has been proven to be efficient for speaker verification. One of its successful variants, ECAPA-TDNN, achieved state-of-the-art performance at the cost of much higher computational complexity and slower inference speed. This makes it inadequate for scenarios with demanding inference rate and limited computational resources. We are thus interested in finding an architecture that can achieve the performance of ECAPA-TDNN and the efficiency of vanilla TDNN. In this paper, we propose an efficient network based on context-aware masking, namely CAM++, which uses densely connected time delay neural network (D-TDNN) as backbone and adopts a novel multi-granularity pooling to capture contextual information at different levels. Extensive experiments on two public benchmarks, VoxCeleb and CN-Celeb, demonstrate that the proposed architecture outperforms other mainstream speaker verification systems with lower computational cost and faster inference speed.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 22× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "speaker",
+  "corpus_citation_count": 22,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 10,
+    "Q4_2025": 7,
+    "Q1_2026": 1,
+    "Q2_2026": 4
+  },
+  "sr_match": false,
+  "ingest_tier": 2
+}

@@ -70,6 +70,41 @@ With deduplication fixed and the prefilter removed, the index is a usable starti
 
 ---
 
+## Quarter-close refresh
+
+Citation discovery runs at the close of every quarter's ingestion, before that quarter is
+integrated, so the corpus keeps up with what the quarter's papers cite. The 2025Q3–2026Q2 lists were
+first produced by hand on 2026-06-07 and rebuilt with the script below on 2026-11-22.
+
+1. **Rebuild the index** from the current parse: `python scripts/discover/citation_index.py`.
+   Review any new fuzzy candidates; add confirmed duplicates to
+   `raw/citation_merge_overrides.json` and rebuild.
+2. **Count the closing quarter:**
+   `python scripts/discover/citation_quarterly_top.py --quarters 2026Q3 --top-n 100
+   --compare {previous run}.json --output docs/records/{date}-discovery-quarterly-top100-{quarter}`.
+   Citing papers are active, non-duplicate records published in the quarter (canonical
+   `published_date`), excluding earlier citation-discovery records. Every reference is resolved
+   through the deduplicated index, and each candidate is checked against current metadata
+   (arXiv ID, DOI, normalized title, preferring an active record), because the parse-time
+   `in_corpus` flags go stale once a cited paper is ingested.
+3. **Review the candidates that are not in the corpus** with the user and assign tiers using the
+   June rules (`docs/records/2026-06-09-cd-ingest-strategy.md`): Tier 1 full pages for TTS/VC
+   systems, codecs, spoken conversational agents, speech-relevant evaluation and datasets,
+   self-supervised speech models (user, 2026-11-22) and methods central to TTS; Tier 2 stubs for
+   general ML, ASR, general datasets, metrics and tools.
+4. **Onboard:** write a manifest in `docs/records/` and run
+   `python scripts/fetch/citation_discovery_fetch.py --manifest {manifest}`, then set
+   `ingest_tier` and `corpus_role`. Papers without an arXiv version get hand-built metadata from
+   Crossref, DataCite or the publisher (`needs_manual_pdf` when no PDF is retrievable). Download,
+   parse, and ingest Tier 1 pages and Tier 2 stubs; log a `discover` line in `raw/pipeline_log.md`.
+
+The 2026-06-07 run computed per-quarter counts without resolving title-only citations, so papers
+cited mostly by title (WavLM, HuBERT, SoundStream, DAC, VITS) never reached the per-quarter top 100.
+The 2026-11-22 refresh found 40 such papers not in the corpus and onboarded all of them
+(`docs/records/2026-11-22-discovery-quarterly-top100-2025Q3-2026Q2.md`).
+
+---
+
 ## Current state
 
 The index was last rebuilt on 2026-06-07 from 894 parsed papers (875 in-corpus + some reference-only). Summary:

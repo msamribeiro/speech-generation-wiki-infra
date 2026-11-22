@@ -76,6 +76,28 @@
         "title:ongenerativespokenlanguagemodelingfromrawaudio",
         "raw:mohamedetal2021ongenerativespokenlanguagemodelingfromrawaudioinaclvolume9page"
       ]
+    },
+    {
+      "note": "Fréchet Audio Distance (Kilgour et al., Interspeech 2019, arXiv:1812.08466). Cited both under its full title ('a reference-free metric ...') and a shortened one, and the accented 'Fréchet' normalizes differently from 'Fr´ echet'. Confirmed same paper 2026-11-22.",
+      "canonical_key": "arxiv:1812.08466",
+      "merge_keys": [
+        "title:frechetaudiodistanceareferencefreemetricforevaluatingmusicenhancementalgorithms",
+        "title:frchetaudiodistanceareferencefreemetricforevaluatingmusicenhancementalgorithms"
+      ]
+    },
+    {
+      "note": "Adapting Fréchet Audio Distance for Generative Music Evaluation (Gui et al., ICASSP 2024): accent variants of one title. Confirmed same paper 2026-11-22.",
+      "canonical_key": "title:adaptingfrechetaudiodistanceforgenerativemusicevaluation",
+      "merge_keys": [
+        "title:adaptingfrchetaudiodistanceforgenerativemusicevaluation"
+      ]
+    },
+    {
+      "note": "Towards Controllable Speech Synthesis in the Era of Large Language Models (arXiv:2412.06602; EMNLP 2025 page 2025.emnlp-main.40): v1 subtitle 'A Survey', later 'A Systematic Survey'. Confirmed same paper 2026-11-22.",
+      "canonical_key": "title:towardscontrollablespeechsynthesisintheeraoflargelanguagemodelsasystematicsurvey",
+      "merge_keys": [
+        "title:towardscontrollablespeechsynthesisintheeraoflargelanguagemodelsasurvey"
+      ]
     }
   ]
 }

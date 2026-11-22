@@ -1,0 +1,51 @@
+{
+  "id": "2210.15418",
+  "source_ids": {
+    "arxiv": "2210.15418"
+  },
+  "title": "FreeVC: Towards High-Quality Text-Free One-Shot Voice Conversion",
+  "authors": [
+    "Jingyi li",
+    "Weiping tu",
+    "Li xiao"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2022,
+  "month": 10,
+  "published_date": "2022-10-27",
+  "preprint_date": "2022-10-27",
+  "arxiv_version": 1,
+  "version_date": "2022-10-27",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2210.15418",
+  "pdf_url": "https://arxiv.org/pdf/2210.15418.pdf",
+  "pdf_path": "raw/papers/2210.15418.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Voice conversion (VC) can be achieved by first extracting source content information and target speaker information, and then reconstructing waveform with these information. However, current approaches normally either extract dirty content information with speaker information leaked in, or demand a large amount of annotated data for training. Besides, the quality of reconstructed waveform can be degraded by the mismatch between conversion model and vocoder. In this paper, we adopt the end-to-end framework of VITS for high-quality waveform reconstruction, and propose strategies for clean content information extraction without text annotation. We disentangle content information by imposing an information bottleneck to WavLM features, and propose the spectrogram-resize based data augmentation to improve the purity of extracted content information. Experimental results show that the proposed method outperforms the latest VC models trained with annotated data and has greater robustness.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 24× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "tts-vc",
+  "corpus_citation_count": 24,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 20,
+    "Q4_2025": 2,
+    "Q1_2026": 0,
+    "Q2_2026": 2
+  },
+  "sr_match": false,
+  "ingest_tier": 1
+}

@@ -1,0 +1,53 @@
+{
+  "id": "2309.03199",
+  "source_ids": {
+    "arxiv": "2309.03199"
+  },
+  "title": "Matcha-TTS: A fast TTS architecture with conditional flow matching",
+  "authors": [
+    "Shivam Mehta",
+    "Ruibo Tu",
+    "Jonas Beskow",
+    "Éva Székely",
+    "Gustav Eje Henter"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 1,
+  "published_date": "2024-01-09",
+  "preprint_date": "2023-09-06",
+  "arxiv_version": 2,
+  "version_date": "2024-01-09",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2309.03199",
+  "pdf_url": "https://arxiv.org/pdf/2309.03199.pdf",
+  "pdf_path": "raw/papers/2309.03199.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We introduce Matcha-TTS, a new encoder-decoder architecture for speedy TTS acoustic modelling, trained using optimal-transport conditional flow matching (OT-CFM). This yields an ODE-based decoder capable of high output quality in fewer synthesis steps than models trained using score matching. Careful design choices additionally ensure each synthesis step is fast to run. The method is probabilistic, non-autoregressive, and learns to speak from scratch without external alignments. Compared to strong pre-trained baseline models, the Matcha-TTS system has the smallest memory footprint, rivals the speed of the fastest models on long utterances, and attains the highest mean opinion score in a listening test. Please see https://shivammehta25.github.io/Matcha-TTS/ for audio examples, code, and pre-trained models.",
+  "arxiv_comment": "5 pages, 3 figures. Final version, accepted to IEEE ICASSP 2024",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 35× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "tts-vc",
+  "corpus_citation_count": 35,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 22,
+    "Q4_2025": 4,
+    "Q1_2026": 2,
+    "Q2_2026": 7
+  },
+  "sr_match": true,
+  "ingest_tier": 1
+}

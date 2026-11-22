@@ -461,6 +461,22 @@ Wrap-up is a single sequence (the user may call it "wrap it up", "close out", an
 6. **Memory.** Refresh auto-memory last (corpus status, any genuinely new finding). Memory is a
    convenience copy, never the source of truth; promote durable findings here or to a schema first.
 
+## 10. Quarter close
+
+A quarter's ingestion closes when its last accepted record is ingested and its verification queue
+is empty. Before the quarter is handed to integration (user, 2026-11-22):
+
+1. **Citation discovery refresh** for the closing quarter
+   ([citation-discovery.md](citation-discovery.md#quarter-close-refresh)): rebuild the citation
+   index, run `scripts/discover/citation_quarterly_top.py` for the quarter, review the candidates
+   that are not in the corpus with the user, assign tiers, and onboard the approved ones
+   (fetch, parse, ingest Tier 1 pages and Tier 2 stubs).
+2. Record the run in `docs/records/` and the quarter's session doc, and log a `discover` line in
+   `raw/pipeline_log.md`.
+3. Update the quarterly progress table in `STATUS.md` to mark the quarter's ingest complete.
+
+Catch-up: the 2025Q3–2026Q2 refresh ran on 2026-11-22; 2026Q3 is next, at the end of the Q3 sweep.
+
 ---
 
 ## Recurring issue classes

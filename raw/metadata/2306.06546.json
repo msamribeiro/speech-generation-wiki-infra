@@ -1,0 +1,53 @@
+{
+  "id": "2306.06546",
+  "source_ids": {
+    "arxiv": "2306.06546"
+  },
+  "title": "High-Fidelity Audio Compression with Improved RVQGAN",
+  "authors": [
+    "Rithesh Kumar",
+    "Prem Seetharaman",
+    "Alejandro Luebs",
+    "Ishaan Kumar",
+    "Kundan Kumar"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2023,
+  "month": 10,
+  "published_date": "2023-10-26",
+  "preprint_date": "2023-06-11",
+  "arxiv_version": 2,
+  "version_date": "2023-10-26",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": null,
+  "url": "https://arxiv.org/abs/2306.06546",
+  "pdf_url": "https://arxiv.org/pdf/2306.06546.pdf",
+  "pdf_path": "raw/papers/2306.06546.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Language models have been successfully used to model natural signals, such as images, speech, and music. A key component of these models is a high quality neural compression model that can compress high-dimensional natural signals into lower dimensional discrete tokens. To that end, we introduce a high-fidelity universal neural audio compression algorithm that achieves ~90x compression of 44.1 KHz audio into tokens at just 8kbps bandwidth. We achieve this by combining advances in high-fidelity audio generation with better vector quantization techniques from the image domain, along with improved adversarial and reconstruction losses. We compress all domains (speech, environment, music, etc.) with a single universal model, making it widely applicable to generative modeling of all audio. We compare with competing audio compression algorithms, and find our method outperforms them significantly. We provide thorough ablations for every design choice, as well as open-source code and trained model weights. We hope our work can lay the foundation for the next generation of high-fidelity audio modeling.",
+  "arxiv_comment": "Accepted at NeurIPS 2023 (spotlight)",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 74× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "accepted",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "codec",
+  "corpus_citation_count": 74,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 38,
+    "Q4_2025": 17,
+    "Q1_2026": 7,
+    "Q2_2026": 12
+  },
+  "sr_match": false,
+  "ingest_tier": 1
+}
