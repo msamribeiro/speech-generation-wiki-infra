@@ -402,6 +402,10 @@ intentional. Checks the health check does not (fully) cover:
     pages (user, 2026-11-15).
   - A diffusion transformer trained with a flow-matching objective (VoxCPM2 LocDiT) takes
     `flow-matching`, not also `diffusion-tts` (HoliDubber, `2606.26618`; user, 2026-10-31).
+  - Script-to-dialogue speech generation (two-speaker or two-channel dialogue audio rendered
+    from a given script, no speech input) is `task: [TTS]`, not `SCA`; `SCA` stays for systems
+    that converse (speech in, response out). ZipVoice-Dialog, DuplexGen and KABURI-TTS retagged
+    (user, 2026-11-22).
 - Surveys: `## Scope and Coverage` section and `tags: ["survey"]`.
 - No text input (lip-to-speech, brain decoding): use `task: [TTS]` as the standing fallback and
   flag it in the verification queue; do not invent a term. Text-driven TTS with non-text
@@ -495,10 +499,11 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo; 2026-11-15, "FishAudio S2" table label linked to the Fish Audio S2 report while the reference is a 2024 commercial system) | Step 4 prompt, step 6 |
 | Page-1 notice missing from the parse | Pre-flight grepped `paper.md` and missed a PMLR camera-ready footnote that Docling dropped (2026-11-15, `2606.12940`) | Section 2 (read page 1 of the PDF) |
 | Health check on the stale submodule | `health_check.py` without `--wiki-dir` checks `wiki/` and silently skips the new pages (2026-11-15) | Step 6 (always pass `--wiki-dir`) |
+| Non-slug field trimmed with a capped slug | Agent drops `conditioning: multilingual` together with the `multilingual-tts` slug at the 6-slot cap (2026-11-21, CuteTTS) | Step 4 prompt (non-slug fields are never trimmed), step 6 |
 | Evidence concept dropped at the cap | Agent drops `subjective-evaluation` to fit 6 slugs although nothing inherited is tagged (2026-11-15, Luna-TTS; user kept the agent's choice) | Step 6 |
 | Quoted list fields | Agent writes `task: ["TTS"]` and quoted `architecture`/`type` lists; health check and `qc.py` silent (2026-11-11, `2606.07240`) | Step 4 prompt, step 6 (read the frontmatter) |
 | Camera-ready prose quotes preprint numbers | Proceedings table updated but the results prose still quotes the preprint's numbers (2026-11-11, `2604.26136`: fine-tuning results changed sign for French) | Section 2 source version; step 6 (check prose numbers against the primary table) |
-| Unvalidated metric tagged `evaluation-metrics` | Agent tags the concept for a newly proposed metric never checked against human judgment (2026-11-13, GRAFT D-PER) | Step 6 (proposes AND validates) |
+| Unvalidated metric tagged `evaluation-metrics` | Agent tags the concept for a newly proposed metric never checked against human judgment (2026-11-13, GRAFT D-PER; 2026-11-22, phrase-localized LCG `2609.01016`, restored by the user as a one-off) | Step 6 (proposes AND validates) |
 | Inference stated as fact | Agent writes its own reading of an unstated procedure as a finding (2026-11-12, `2026.findings-acl.940`: test descriptions "derived from the target audio") | Step 4 prompt (hedge or omit), step 6 |
 | Template opening rewritten | Agent replaces the Field Significance `Moderate — ` opening to avoid an em dash (2026-11-12, `2026.findings-acl.199`) | Step 4 prompt, step 6 |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |

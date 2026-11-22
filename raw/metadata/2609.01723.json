@@ -25,7 +25,7 @@
   "version_date": "2026-09-01",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-22",
   "url": "https://arxiv.org/abs/2609.01723",
   "pdf_url": "https://arxiv.org/pdf/2609.01723.pdf",
   "pdf_path": "raw/papers/2609.01723.pdf",
@@ -37,9 +37,21 @@
   ],
   "relevance_score": 0.76,
   "relevance_note": "Black-box membership inference attacks against fine-tuned TTS models by querying and comparing generated audio; TTS privacy/security research that engages directly with synthesized output (cf. accepted in-TTS watermarking).",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-07",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "293e02e"
+    }
+  ]
 }

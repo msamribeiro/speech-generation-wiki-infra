@@ -24,7 +24,7 @@
   "version_date": "2026-07-16",
   "version_estimated": false,
   "conference_date": "2026-09-01",
-  "ingested_date": null,
+  "ingested_date": "2026-11-22",
   "url": "https://dafx.de/paper-archive/details/JH-U-JCdFOitz-vQE985ZA",
   "pdf_url": "https://www.dafx.de/paper-archive/2026/papers/DAFx26_paper_42.pdf",
   "pdf_path": "raw/papers/2607.13278.peer-reviewed.pdf",
@@ -37,12 +37,24 @@
   ],
   "relevance_score": 0.78,
   "relevance_note": "Adapts a diffusion-based multi-instrument music synthesis model to voice conversion and singing voice conversion, a core VC/singing contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
   "url_preprint": "https://arxiv.org/abs/2607.13278",
   "pdf_path_preprint": "raw/papers/2607.13278.pdf",
-  "url_peer_reviewed": "https://dafx.de/paper-archive/details/JH-U-JCdFOitz-vQE985ZA"
+  "url_peer_reviewed": "https://dafx.de/paper-archive/details/JH-U-JCdFOitz-vQE985ZA",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-22",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "293e02e"
+    }
+  ]
 }
