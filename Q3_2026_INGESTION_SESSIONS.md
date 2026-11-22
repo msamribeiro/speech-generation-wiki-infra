@@ -933,6 +933,19 @@ dialogue pages ZipVoice-Dialog, DuplexGen and KABURI-TTS retagged `[TTS]` (new p
 privacy/security vocabulary gap was added to `BACKLOG.md`. Session total: 20 pages in batches J-M,
 no rejections; corpus 1,180 pages.
 
+### Session 2026-11-22: citation-discovery refresh, 2025Q3–2026Q2 (after the ingest close)
+
+User asked to redo the quarterly citation counts up to Q2 2026 and to make citation discovery a
+quarter-close step. Rebuilt the citation index, added `scripts/discover/citation_quarterly_top.py`
+and reran the per-quarter top 100: 155 candidates, 115 already in the corpus, 40 not (the
+2026-06-07 run had missed title-only citations, so WavLM, HuBERT, SoundStream, DAC, VITS and
+Voicebox never surfaced). User approved all 40 (24 Tier 1 incl. the SSL models, 16 Tier 2; manual
+metadata for the six without arXiv). 34 fetched, 6 hand-built, 36 PDFs downloaded and parsed
+(0 failures); PESQ, STOI, VCTK and LJSpeech lack PDFs. Three merge overrides added, index rebuilt.
+Procedure documented (protocol section 10, `docs/citation-discovery.md`). The 40 are interleaved
+with the Q3 sweep by session; the user picks the stream at session start. Record:
+`docs/records/2026-11-22-discovery-quarterly-top100-2025Q3-2026Q2.md`.
+
 ---
 
 ## Manual Verification Queue
