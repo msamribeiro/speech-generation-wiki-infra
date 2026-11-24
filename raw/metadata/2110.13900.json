@@ -1,7 +1,8 @@
 {
   "id": "2110.13900",
   "source_ids": {
-    "arxiv": "2110.13900"
+    "arxiv": "2110.13900",
+    "doi": "10.1109/jstsp.2022.3188113"
   },
   "title": "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing",
   "authors": [
@@ -41,14 +42,14 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2022,
-  "month": 6,
-  "published_date": "2022-06-17",
+  "month": 7,
+  "published_date": "2022-07-04",
   "preprint_date": "2021-10-26",
   "arxiv_version": 5,
   "version_date": "2022-06-17",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-24",
   "url": "https://arxiv.org/abs/2110.13900",
   "pdf_url": "https://arxiv.org/pdf/2110.13900.pdf",
   "pdf_path": "raw/papers/2110.13900.pdf",
@@ -58,12 +59,23 @@
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 111× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "ssl",
   "corpus_citation_count": 111,
@@ -74,5 +86,9 @@
     "Q2_2026": 20
   },
   "sr_match": false,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "journal_date": "2022-07-04",
+  "peer_reviewed_venue": "IEEE JSTSP",
+  "peer_reviewed_venue_type": "journal",
+  "url_peer_reviewed": "https://doi.org/10.1109/jstsp.2022.3188113"
 }

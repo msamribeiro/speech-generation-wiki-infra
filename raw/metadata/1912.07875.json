@@ -1,7 +1,8 @@
 {
   "id": "1912.07875",
   "source_ids": {
-    "arxiv": "1912.07875"
+    "arxiv": "1912.07875",
+    "doi": "10.1109/icassp40776.2020.9052942"
   },
   "title": "Libri-Light: A Benchmark for ASR with Limited or No Supervision",
   "authors": [
@@ -36,15 +37,15 @@
   "organization": null,
   "venue": "arXiv",
   "venue_type": "preprint",
-  "year": 2019,
-  "month": 12,
-  "published_date": "2019-12-17",
+  "year": 2020,
+  "month": 5,
+  "published_date": "2020-05-04",
   "preprint_date": "2019-12-17",
   "arxiv_version": 1,
   "version_date": "2019-12-17",
   "version_estimated": false,
-  "conference_date": null,
-  "ingested_date": null,
+  "conference_date": "2020-05-04",
+  "ingested_date": "2026-11-24",
   "url": "https://arxiv.org/abs/1912.07875",
   "pdf_url": "https://arxiv.org/pdf/1912.07875.pdf",
   "pdf_path": "raw/papers/1912.07875.pdf",
@@ -54,12 +55,23 @@
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 25× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-lightweight-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "dataset",
   "corpus_citation_count": 25,
@@ -70,5 +82,8 @@
     "Q2_2026": 2
   },
   "sr_match": false,
-  "ingest_tier": 2
+  "ingest_tier": 2,
+  "peer_reviewed_venue": "ICASSP",
+  "peer_reviewed_venue_type": "conference",
+  "url_peer_reviewed": "https://doi.org/10.1109/icassp40776.2020.9052942"
 }

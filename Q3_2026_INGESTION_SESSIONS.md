@@ -55,10 +55,12 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-**2026-11-22: 20 pages in four pre-selected batches of 5 (J-M), no rejections.** Last ingested
-`2609.07200` KABURI-TTS (2026-09-07). Q3: 152 ingested, 235 accepted (all parsed), 239 rejected.
-Q4 2026: 22 accepted. Corpus 1,180 pages. Manual Verification Queue: no open items (all 12
-2026-11-22 items resolved one at a time). To resume:
+**2026-11-24: citation-discovery stream, 25 pages in five single-tier batches (CD-1 to CD-5: 15
+Tier 1, 10 Tier 2), no rejections.** Q3 sweep untouched since 2026-11-22: last ingested `2609.07200`
+KABURI-TTS (2026-09-07); Q3: 152 ingested, 235 accepted (all parsed), 239 rejected. Q4 2026: 22
+accepted. Citation discovery: 25 of 40 ingested, 11 parsed and left (8 Tier 1, 3 Tier 2), 4 waiting
+for sources. Corpus 1,205 pages. Manual Verification Queue: no open items (all 5 2026-11-24 items
+resolved one at a time). To resume:
 
 **Session order (user, 2026-11-22): pre-select several batches up front with full pre-flight (four
 batches of 5 this session), papers one at a time with cleanup and QC after each, batch summary then
@@ -66,12 +68,20 @@ go-ahead; the queue is taken at the session end, one item at a time.** Scope rej
 pre-flight are refilled from the next candidates so each batch stays at 5.
 
 0. **Ask the user at session start which stream this session runs** (user, 2026-11-22): the Q3
-   sweep (item 1) or the citation-discovery catch-up (40 papers from the 2025Q3–2026Q2 refresh:
-   24 Tier 1 full pages, 16 Tier 2 stubs; `discovery_source: citation-discovery`, refresh date
-   2026-11-22 in `relevance_note`; record `docs/records/2026-11-22-discovery-quarterly-top100-2025Q3-2026Q2.md`).
-   Sessions are not mixed. Tier 1 follows the standard cadence; Tier 2 stubs use the lightweight
-   agent in groups (protocol section 3). Four records have no PDF yet (PESQ, STOI, VCTK, LJSpeech;
-   `needs_manual_pdf`): skip them until the user supplies sources.
+   sweep (item 1) or the citation-discovery catch-up (2025Q3–2026Q2 refresh, record
+   `docs/records/2026-11-22-discovery-quarterly-top100-2025Q3-2026Q2.md`). Sessions are not mixed.
+   **Citation-discovery cadence (user, 2026-11-24):** each batch holds a single tier; Tier 1 one
+   paper at a time with cleanup and QC, Tier 2 stubs 5 in parallel via the lightweight agent (page
+   only, Mitigation B) with cleanup run sequentially afterwards. Peer-reviewed versions are applied
+   to these records before ingest (Option A, user 2026-11-24; protocol section 2). Remaining, all
+   pre-flighted for duplicates on 2026-11-24 but **not yet venue-checked**:
+   - Tier 1 (8): FunCodec `2309.07405` (ICASSP 2024), Voicebox `2306.15687` (NeurIPS 2023), DAC
+     `2306.06546` (NeurIPS 2023, camera-ready on arXiv), Matcha-TTS `2309.03199` (ICASSP 2024),
+     UTMOSv2 `2409.09305` (SLT 2024), SyncLLM `2409.15594` (EMNLP 2024), X-Codec `2408.17175`,
+     SemantiCodec `2405.00233` (IEEE JSTSP).
+   - Tier 2 (3): CAM++ `2303.00332` (already switched to its Interspeech 2023 ISCA PDF and
+     re-parsed), Stable Audio Open `2407.14358`, Qwen3-ASR `2601.21337`.
+   - Waiting for sources (`needs_manual_pdf`): VCTK (Tier 1), PESQ, STOI, LJSpeech (Tier 2).
 1. **Continue the sweep** from the four carried-over reserves (all pre-flighted 2026-11-22):
    `2609.08390` AV-STE (EMNLP 2026; scope accepted by the user 2026-11-22), `2609.08936` AuK
    (Tencent Hunyuan), `2609.08956` TASTE2, `2609.09263` gender-bias audit of S2S models
@@ -946,6 +956,104 @@ Procedure documented (protocol section 10, `docs/citation-discovery.md`). The 40
 with the Q3 sweep by session; the user picks the stream at session start. Record:
 `docs/records/2026-11-22-discovery-quarterly-top100-2025Q3-2026Q2.md`.
 
+### Session 2026-11-24: citation-discovery stream, pre-flight and batch CD-1
+
+**Stream: citation-discovery catch-up** (user choice at session start). Five batches pre-selected,
+one tier per batch (user): CD-1 to CD-3 Tier 1 (15 pages), CD-4 and CD-5 Tier 2 (10 stubs), in
+canonical date order. No duplicates found (title plus author screen against the whole corpus).
+**Peer-reviewed versions (user: Option A, apply the date rule to these not-yet-integrated records
+rather than the June arXiv-date precedent).** Venues verified via page 1, Semantic Scholar and
+Crossref (DBLP sits behind a bot check). Camera-ready already on arXiv, presented as the
+peer-reviewed version (7): VQ-VAE, FastSpeech, DDPM, VITS, ESD (Elsevier OA copy), VAE (ICLR
+2014), Transformer. Switched to the free proceedings PDF with `use_peer_reviewed.py` and re-parsed
+(7, 0 failures): wav2vec 2.0 (NeurIPS), YourTTS (PMLR), DiT (CVF), LibriTTS-R, Conformer, NISQA,
+CAM++ (ISCA). PDF not scriptable (IEEE, OpenReview gate), preprint plus `url_peer_reviewed` (10):
+HuBERT, SoundStream, WavLM, Diff-VC, LoRA, FreeVC, PromptTTS, FLEURS, Libri-Light, DNSMOS. The
+re-dating moved Transformer (NIPS 2017) into CD-4 and CAM++ out to the next session. Logged in
+`raw/pipeline_log.md`. Empty `task: []` is used for SSL and general-ML papers with no task term
+(BERT, ECAPA-TDNN precedent).
+
+| Batch | Tier | Papers |
+|---|---|---|
+| CD-1 | 1 | VQ-VAE `1711.00937`, FastSpeech `1905.09263`, wav2vec 2.0 `2006.11477`, DDPM `2006.11239`, VITS `2106.06103` |
+| CD-2 | 1 | HuBERT `2106.07447`, SoundStream `2107.03312`, ESD `2105.14762`, Diff-VC `2109.13821`, WavLM `2110.13900` |
+| CD-3 | 1 | YourTTS `2112.02418`, FreeVC `2210.15418`, PromptTTS `2211.12171`, LibriTTS-R `2305.18802`, DiT `2212.09748` |
+| CD-4 | 2 | VAE `1312.6114`, LibriSpeech `icassp-2015-librispeech`, MFA `interspeech-2017-1386`, Transformer `1706.03762`, Libri-Light `1912.07875` |
+| CD-5 | 2 | Conformer `2005.08100`, DNSMOS `2010.15258`, NISQA `2104.09494`, LoRA `2106.09685`, FLEURS `2205.12446` |
+
+**Batch CD-1.** Actual IDs match the CD-1 row (5 launches). Agent runtimes: 74, 154, 183, 16 and
+171 min (long; foreground, not relaunched).
+
+| ID | Result | QC catches and fixes |
+|---|---|---|
+| `1711.00937` VQ-VAE (NeurIPS 2017) | foundational (`architectural-novelty`); `task: [codec]`, `neural-codec` | Audio results qualitative except the 49.3% phoneme probe (verified §4.3); no `VC` (samples only), no `disentanglement`. Clean. |
+| `1905.09263` FastSpeech (NeurIPS 2019) | foundational (`architectural-novelty`); `transformer-enc-dec-tts`, `prosody-control`, `subjective-evaluation` | Tables 1-3 verified (Docling garbled 2-3). `prosody-control` rests on qualitative α-scaling figures, kept to match the FastSpeech 2 page. Clean. |
+| `2006.11477` wav2vec 2.0 (NeurIPS 2020, proceedings PDF) | foundational (`architectural-novelty`); `task: []`, `self-supervised-speech` | §5.1 text 5.2/8.6 vs Table 1 4.8/8.2 for 10 min labels verified in the proceedings PDF (p. 5); the page's note stands. Proceedings PDF has no appendices; none cited. Clean. |
+| `2006.11239` DDPM (NeurIPS 2020) | foundational (`architectural-novelty`, `conceptual-contribution`); `task: []`, `architecture: [diffusion]`, `diffusion-tts` | Tables 1-2 lost by Docling, rebuilt from the PDF; values verified. Flow Matching page precedent for the architecture-derived slug. Clean. |
+| `2106.06103` VITS (ICML 2021, PMLR camera-ready) | foundational (`architectural-novelty`); `[VAE, GAN]`, `gan-vocoder`, `subjective-evaluation` | VCTK CMOS −0.270 (appendix text) vs −0.262 (Table 5) verified on PDF p. 14; page uses the table. Clean. |
+
+- Corpus at **1,185** pages.
+
+**Batch CD-2.** Actual IDs match the CD-2 row (5 launches). Agent runtimes: 14, 4, 3, 13 and 5 min.
+
+| ID | Result | QC catches and fixes |
+|---|---|---|
+| `2106.07447` HuBERT (arXiv; IEEE TASLP linked) | foundational (`architectural-novelty`); `task: []`, `self-supervised-speech` | No affiliation anywhere in the PDF, so the rule gives "Independent Researcher" (queued). Ablation values verified in the PDF. |
+| `2107.03312` SoundStream (arXiv; IEEE TASLP linked) | foundational (`architectural-novelty`); `task: [codec]`, `neural-codec`, `gan-vocoder` (new STFT discriminator), `subjective-evaluation` | **Fixed:** `architecture` `[GAN, VAE]` -> `[GAN]` (not variational; EnCodec page precedent). No affiliation in the PDF ("Independent Researcher", queued). §V-D prose vs Table I ViSQOL mismatch verified. |
+| `2105.14762` ESD (Speech Communication, journal OA copy) | high; `task: [VC]`, `voice-conversion`, `emotion-synthesis`, `subjective-evaluation` | **Fixed:** type `[dataset-contribution, conceptual-contribution]` -> `[dataset-contribution]` (the page calls the taxonomy descriptive, not a reframing). Table 5 MCD verified. |
+| `2109.13821` Diff-VC (arXiv; ICLR 2022 linked) | high (`architectural-novelty`); `task: [VC]`, `voice-conversion`, `diffusion-tts`, `zero-shot-tts`, `subjective-evaluation` | Docling dropped the tables (agent said clean); values verified in the PDF text. `zero-shot-tts` on unseen-to-unseen one-shot VC. |
+| `2110.13900` WavLM (arXiv; IEEE JSTSP linked) | high (`architectural-novelty`); `task: []`, `self-supervised-speech` | Org Microsoft from the page-1 internship footnote (host rule). Table I rebuilt from the PDF; values verified. `review_flags`: level high vs foundational (queued). |
+
+- Corpus at **1,190** pages.
+
+**Batch CD-3.** Actual IDs match the CD-3 row (5 launches). Agent runtimes: 4, 3, 3, 3 and 3 min.
+
+| ID | Result | QC catches and fixes |
+|---|---|---|
+| `2112.02418` YourTTS (ICML 2022, PMLR proceedings PDF) | high (`architectural-novelty`); `task: [TTS, VC]`, `[VAE, GAN]`; `zero-shot-tts`, `multilingual-tts`, `voice-conversion`, `speaker-adaptation`, `gan-vocoder`, `subjective-evaluation` (6) | arXiv erratum (SCL gradient never propagated) verified in the preprint and stated as preprint-sourced. Table values verified in the PMLR PDF. |
+| `2210.15418` FreeVC (arXiv; ICASSP 2023 linked) | high (`architectural-novelty`); `task: [VC]`, `[VAE, GAN]`; `voice-conversion`, `self-supervised-speech`, `zero-shot-tts`, `disentanglement` (SR augmentation ablated), `gan-vocoder`, `subjective-evaluation` | Values verified. `review_flags`: level moderate vs high (queued). |
+| `2211.12171` PromptTTS (arXiv; ICASSP 2023 linked) | high (`architectural-novelty`, `dataset-contribution`); `instruction-conditioned-tts`, `transformer-enc-dec-tts`, `prosody-control`, `emotion-synthesis`, `subjective-evaluation` | Prose-vs-Table 6 stage-order swap verified in the PDF. **Fixed:** figure cropped (Docling had included the Table 1 prompt strip). |
+| `2305.18802` LibriTTS-R (Interspeech 2023, ISCA PDF) | high (`dataset-contribution`); `task: [TTS]`, `subjective-evaluation` | **Fixed:** "raises MOS for all six speakers" -> five of six (speaker 19: 4.11 to 4.06), flagged by the agent itself, verified on Table 2. `review_flags`: level moderate vs high (queued). |
+| `2212.09748` DiT (ICCV 2023, CVF PDF) | foundational (`architectural-novelty`); `task: []`, `[diffusion]`, `diffusion-tts` | Table 2 values verified. E2 TTS not linked (no DiT). `review_flags`: level high vs foundational (queued). |
+
+- Corpus at **1,195** pages.
+
+**Batch CD-4 (Tier 2 stubs, 5 in parallel via the lightweight agent, page only; cleanup sequential).**
+Actual IDs match the CD-4 row (5 launches, 1-1.5 min each). All pass the health check. `qc.py`
+flags the required `[!info]` Citation Stub banner as disallowed on every stub (false positive: its
+callout list is the Tier 1 set). The LibriSpeech agent reported a `[!tip]` it did not write
+(self-report wrong, page correct).
+
+| ID | Venue | Org | Notes |
+|---|---|---|---|
+| `1312.6114` VAE | ICLR 2014 | Universiteit van Amsterdam | No slugs; links VITS, VQ-VAE, YourTTS. |
+| `icassp-2015-librispeech` LibriSpeech | ICASSP 2015 | Johns Hopkins University | Links LibriTTS, LibriTTS-R, VALL-E. |
+| `interspeech-2017-1386` MFA | Interspeech 2017 | McGill University / University of Maryland | Links FastSpeech 2, ELLA-V, VALL-E R, MegaTTS 3, Diff-VC. |
+| `1706.03762` Transformer | NeurIPS 2017 | Google Brain / Google Research / University of Toronto | Table 2 EN-FR 41.8 used (§6.1 prose says 41.0). |
+| `1912.07875` Libri-Light | arXiv; ICASSP 2020 linked | Facebook AI / EHESS / ENS / PSL University / CNRS / INRIA | Links wav2vec 2.0, HuBERT, WavLM, AudioLM, VALL-E, SoundStorm. |
+
+- Corpus at **1,200** pages.
+
+**Batch CD-5 (Tier 2 stubs, 5 in parallel, page only).** Actual IDs match the CD-5 row (5
+launches, 1-2 min each). All pass the health check (`[!info]` false positive as in CD-4).
+
+| ID | Venue | Org | Notes |
+|---|---|---|---|
+| `2005.08100` Conformer | Interspeech 2020 (ISCA PDF) | Google | Links Transformer, SoundStorm, Spectron, IndexTTS, HuBERT. |
+| `2010.15258` DNSMOS | arXiv; ICASSP 2021 linked | Microsoft | `task: [evaluation]`, `evaluation-metrics` (validated against P.808 MOS; SpeechBrain stub precedent). Table 2 values verified. |
+| `2104.09494` NISQA | Interspeech 2021 (ISCA PDF) | Technische Universität Berlin / DFKI | `task: [evaluation]`, `evaluation-metrics` (validated against MOS, Table 4). |
+| `2106.09685` LoRA | arXiv; ICLR 2022 linked | Microsoft Corporation | No slugs; links MiniMax-Speech, FillerSpeech, the Africa S2ST page. |
+| `2205.12446` FLEURS | arXiv; IEEE SLT 2022 linked | Meta AI Research / Google Research / Carnegie Mellon University | Links T5Gemma-TTS, AudioPaLM, Step-Audio 2, the S2ST benchmark. |
+
+- Corpus at **1,205** pages. All five pre-selected batches done (15 Tier 1, 10 Tier 2).
+
+### Session 2026-11-24: verification queue
+
+All 5 queue items resolved one at a time (see the queue): HuBERT and SoundStream organizations
+overridden to Facebook AI and Google (one-off); WavLM raised to foundational; FreeVC, LibriTTS-R
+and DiT levels kept; Crossref-derived IEEE journal dates accepted; Diff-VC and LoRA OpenReview links
+confirmed by the user in a browser.
+
 ---
 
 ## Manual Verification Queue
@@ -955,6 +1063,11 @@ after the session batch is complete: check the paper page and resolve each flag 
 
 | Paper ID | Flag | Agent note |
 |----------|------|------------|
+| `2106.07447`, `2107.03312` | Organization "Independent Researcher" | HuBERT and SoundStream PDFs carry no affiliation, funding or acknowledgement institution; the rule gives "Independent Researcher" although the authors were at Facebook AI and Google (fairseq code link; google-research demo URL). Recommendation: override to "Facebook AI" and "Google" (one-off for citation-discovery papers, page plus index row). **Resolved 2026-11-24 (user): override, a one-off; the rule stands.** HuBERT "Facebook AI", SoundStream "Google" on page, card and index row; QC passes. |
+| `2210.15418`, `2305.18802`, `2212.09748` | `field_significance` boundary | FreeVC high (moderate?): short paper, only the SR ablation. LibriTTS-R high (moderate?): one corpus release, restoration method is prior work. DiT foundational (high?): image-only paper whose weight here rests on speech uptake. Recommendation: keep all three as written. **Resolved 2026-11-24 (user): keep all three.** No change. |
+| `2110.13900` | `field_significance` high vs foundational | WavLM extends HuBERT's masked-unit paradigm with a denoising objective; the agent chose high. Recommendation: keep high (HuBERT and wav2vec 2.0 are the paradigm-founding pages). **Resolved 2026-11-24 (user): raised to foundational** (`[!important]`, opening word updated); QC passes. |
+| `2106.07447`, `2107.03312`, `2110.13900` | IEEE journal dates | `journal_date` is the Crossref record-creation date (2021-10-26, 2021-11-23, 2022-07-04), an Early Access proxy, not proof. Confirming needs "Date of Publication" read from IEEE Xplore by hand. No quarter impact. **Resolved 2026-11-24 (user): accept the Crossref dates.** No change. |
+| `2109.13821`, `2106.09685` | OpenReview forum IDs unverified | `url_peer_reviewed` IDs (`8c50f-DoWAu`, `nZeVKeeFYf9`) written from memory; OpenReview's bot gate blocks scripted checks. Diff-VC's ICLR 2022 venue rests on citing references. Needs a browser check. **Resolved 2026-11-24 (user): both links opened in a browser and correct** (Diff-VC and LoRA, ICLR 2022). No change. |
 | `2026.iwslt-1.12` | `related_concepts` empty | Evaluation of four pretrained cross-lingual cloning systems with reused, unvalidated automatic scorers and no human raters; no slug qualifies under the evaluation-paper rules (precedents `2604.11803`, `2606.14004`), so the page will not reach any concept YAML at integration. **Resolved 2026-11-11 (user): add `zero-shot-tts`** (option B over the evaluation-paper rule), **a one-off, not a precedent**: the next benchmark of others' systems is judged under the standing rule. Concept bullet added to Wiki Connections, QC passes. |
 | `2606.27380` | `related_concepts` empty | Presentation-coaching survey (accepted in triage); zero-shot cloning (§5.2.2) and tempo/emphasis controls (§5.1.1) are mentioned but not reviewed, so no slug meets the coverage rule. Agent's fallback if a slug is wanted: `zero-shot-tts`. **Resolved 2026-11-11 (user): add `zero-shot-tts`, a one-off, not a precedent** (coverage rule for surveys stands). Concept bullet added, QC passes. |
 | `2607.00946` | Workshop notice, venue kept arXiv | First page says "Published at ICML 2026 Workshop on Machine Learning for Audio" (PMLR line is the ICML style default). Treated as a non-archival workshop presentation (`2603.19831` precedent): ingested from arXiv, venue arXiv, no `url_peer_reviewed`; both dates are Q3. **Resolved 2026-11-11 (user): keep as arXiv preprint** (option A); no change. |

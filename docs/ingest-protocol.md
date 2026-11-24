@@ -139,6 +139,25 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   - **Accepted in human triage:** a record whose box is ticked `accept` in `raw/review_queue.md` is
     in scope by the user's decision even when its filter note calls it tangential. Tell the agent
     not to stop on scope; tagging and significance are still judged normally.
+- **Citation-discovery records** (older foundational papers; user, 2026-11-24, "Option A"): apply
+  the peer-reviewed-version rule before ingest exactly as for any record not yet in a claim YAML,
+  instead of the June 2026 precedent (arXiv dates, venue only in the card's parenthesis). Verify each
+  venue from page 1 of the PDF, the Semantic Scholar graph API (`api.semanticscholar.org`, `venue`,
+  `journal`, `externalIds.DOI/DBLP`; it rate-limits, so pause several seconds between calls) and
+  Crossref; DBLP's API sits behind a bot check, do not work around it. Three outcomes:
+  - **Camera-ready already on arXiv** (venue line on page 1, or the publisher's open-access copy):
+    set `venue`, `venue_type`, `conference_date`/`journal_date`, `url` and `url_peer_reviewed` to the
+    landing page, `url_preprint` to arXiv; no re-parse (VQ-VAE, FastSpeech, DDPM, VITS, ESD,
+    Transformer). ICLR 2014 papers have only the arXiv version: venue ICLR, `url` stays arXiv (VAE).
+  - **Free proceedings PDF** (NeurIPS, PMLR, CVF, ISCA): switch with `use_peer_reviewed.py` and
+    re-parse (wav2vec 2.0, YourTTS, DiT, LibriTTS-R, Conformer, NISQA, CAM++).
+  - **PDF not scriptable** (IEEE, OpenReview gate): keep the preprint, set the venue date,
+    `peer_reviewed_venue`, `peer_reviewed_venue_type`, `url_peer_reviewed` (DOI, or the OpenReview
+    forum checked by the user in a browser) and `source_ids`; StellarTTS card and italic note. For
+    IEEE journals the Crossref record-creation date stands in for Early Access (user accepted,
+    2026-11-24; no quarter impact for pre-2025 papers).
+  Log the re-dating as `review | re-dated` lines in `raw/pipeline_log.md`; dates can move a paper
+  between batches, so re-sort the list after the venue pass.
 - Number the list. Show it to the user and wait for confirmation.
 
 ## 3. Cadence
@@ -151,6 +170,11 @@ do not silently revert):
   go-ahead.
 - **Tier 2 stubs** (`ingest_tier` set; note the field is `ingest_tier`, not `tier`): groups of 4
   in parallel via the lightweight agent, go-ahead between groups, no per-paper quality pass.
+- **Citation-discovery sessions** (user, 2026-11-24): each pre-selected batch holds a single tier.
+  Tier 1 batches follow the Tier 1 cadence. Tier 2 batches run all 5 stubs in parallel, each agent
+  writing **the page only** (Mitigation B, so parallel agents never race on `papers/index.md` or
+  `log.md`); then run `cleanup.py` for each stub in sequence and `qc.py` on each. `qc.py` reports
+  the required `[!info]` Citation Stub banner as "disallowed" on every stub: a false positive.
 - The user may drop to one-paper-with-go-ahead mid-session. Follow it.
 
 Batch bookkeeping (recurring slip): before reporting a batch complete, count the actual agent
@@ -410,6 +434,16 @@ intentional. Checks the health check does not (fully) cover:
 - No text input (lip-to-speech, brain decoding): use `task: [TTS]` as the standing fallback and
   flag it in the verification queue; do not invent a term. Text-driven TTS with non-text
   conditioning is plain TTS.
+- No task term fits (self-supervised speech models, ASR models, general ML methods, image-only
+  methods): `task: []` and `architecture: []` unless a vocabulary term genuinely fits
+  (`transformer-enc-dec` is FastSpeech-style seq2seq, not an encoder-only model). wav2vec 2.0,
+  HuBERT and WavLM carry `self-supervised-speech` only. Image-only generative methods carry their
+  architecture tag and its architecture-derived slug only (DDPM and DiT `diffusion-tts`, Flow
+  Matching `flow-matching`; 2026-11-24).
+- Organization when the PDF names no institution at all (no affiliation, funding or acknowledgement
+  note): the rule gives "Independent Researcher". For well-known citation-discovery papers the user
+  overrode this once to the known lab (HuBERT "Facebook AI", SoundStream "Google"; 2026-11-24);
+  surface it in the queue, do not override silently.
 
 Fix defects directly (or re-run the agent only when the page needs a rewrite), then re-run the
 health check. Add any `review_flags` to the Manual Verification Queue; do not block the next paper
@@ -522,6 +556,8 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Unvalidated metric tagged `evaluation-metrics` | Agent tags the concept for a newly proposed metric never checked against human judgment (2026-11-13, GRAFT D-PER; 2026-11-22, phrase-localized LCG `2609.01016`, restored by the user as a one-off) | Step 6 (proposes AND validates) |
 | Inference stated as fact | Agent writes its own reading of an unstated procedure as a finding (2026-11-12, `2026.findings-acl.940`: test descriptions "derived from the target audio") | Step 4 prompt (hedge or omit), step 6 |
 | Template opening rewritten | Agent replaces the Field Significance `Moderate — ` opening to avoid an em dash (2026-11-12, `2026.findings-acl.199`) | Step 4 prompt, step 6 |
+| Agent claims a clean parse | Agent reports "Docling parsed every table cleanly" while the tables are missing from `paper.md` (2026-11-24, Diff-VC); values were right only because it read the PDF | Step 6 (check metric values against the PDF text, not the parse) |
+| `qc.py` callout false positive on stubs | `[!info]` Citation Stub banner reported as disallowed (2026-11-24, all 10 stubs) | Section 3 (ignore for Tier 2) |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve

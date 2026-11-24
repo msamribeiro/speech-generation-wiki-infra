@@ -1,7 +1,9 @@
 {
   "id": "2005.08100",
   "source_ids": {
-    "arxiv": "2005.08100"
+    "arxiv": "2005.08100",
+    "isca": "gulati20_interspeech",
+    "doi": "10.21437/Interspeech.2020-3015"
   },
   "title": "Conformer: Convolution-augmented Transformer for Speech Recognition",
   "authors": [
@@ -30,32 +32,43 @@
     "Ruoming Pang"
   ],
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2020,
-  "month": 5,
-  "published_date": "2020-05-16",
+  "month": 10,
+  "published_date": "2020-10-25",
   "preprint_date": "2020-05-16",
   "arxiv_version": 1,
   "version_date": "2020-05-16",
   "version_estimated": false,
-  "conference_date": null,
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2005.08100",
-  "pdf_url": "https://arxiv.org/pdf/2005.08100.pdf",
-  "pdf_path": "raw/papers/2005.08100.pdf",
+  "conference_date": "2020-10-25",
+  "ingested_date": "2026-11-24",
+  "url": "https://www.isca-archive.org/interspeech_2020/gulati20_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2020/gulati20_interspeech.pdf",
+  "pdf_path": "raw/papers/2005.08100.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Recently Transformer and Convolution neural network (CNN) based models have shown promising results in Automatic Speech Recognition (ASR), outperforming Recurrent neural networks (RNNs). Transformer models are good at capturing content-based global interactions, while CNNs exploit local features effectively. In this work, we achieve the best of both worlds by studying how to combine convolution neural networks and transformers to model both local and global dependencies of an audio sequence in a parameter-efficient way. To this regard, we propose the convolution-augmented transformer for speech recognition, named Conformer. Conformer significantly outperforms the previous Transformer and CNN based models achieving state-of-the-art accuracies. On the widely used LibriSpeech benchmark, our model achieves WER of 2.1%/4.3% without using a language model and 1.9%/3.9% with an external language model on test/testother. We also observe competitive performance of 2.7%/6.3% with a small model of only 10M parameters.",
   "arxiv_comment": "Submitted to Interspeech 2020",
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 34× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-lightweight-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "asr",
   "corpus_citation_count": 34,
@@ -66,5 +79,8 @@
     "Q2_2026": 6
   },
   "sr_match": false,
-  "ingest_tier": 2
+  "ingest_tier": 2,
+  "url_preprint": "https://arxiv.org/abs/2005.08100",
+  "pdf_path_preprint": "raw/papers/2005.08100.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2020/gulati20_interspeech.html"
 }
