@@ -218,7 +218,10 @@ the block per paper silently drops rules (2026-11-13: the scope stop rule and th
 - Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it;
   with no affiliation on page 1, use "Independent Researcher" (index and card alike), unless a
   funding or acknowledgement note names the host institution: then use that institution (user,
-  2026-11-21, `2608.15910`: University of Edinburgh from the funding note).
+  2026-11-21, `2608.15910`: University of Edinburgh from the funding note). Before falling back,
+  render page 1 (`pypdfium2`, `page.render(scale=1.5)`) and check the header for institution logos:
+  logo-only affiliations are invisible to text extraction (user, 2026-11-25, AuK `2609.08936`:
+  Shanghai Jiao Tong University, Tencent HY and Shanghai Innovation Institute logos).
 - Link systems the paper evaluates as baselines when they have pages, even if the reference list
   omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
 - Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
@@ -384,9 +387,11 @@ intentional. Checks the health check does not (fully) cover:
     not earn the slug (user, 2026-10-31). Newly proposed metrics that are never validated against
     human judgment do not earn `evaluation-metrics` either (GRAFT `2607.02633`; SPEARBench
     `2607.05365` and X-Translator `2607.17544`, both removed at QC on 2026-11-14).
-  - `spoken-language-model`: an external speech signal consumed by an adapted LLM; benchmarks that
-    feed real audio into existing speech LMs and measure them also qualify. AR TTS-LMs consuming
-    their own output do not.
+  - `spoken-language-model`: an external speech signal consumed by an LLM, whether the paper builds
+    or adapts it or feeds real audio into an existing speech LM and measures its behaviour (SKILL.md
+    usage rule; AV-STE `2609.08390`, frozen Moshi behind a new front end, 2026-11-25). Do not write
+    "adapted LLM only" in a prompt: it contradicts the SKILL.md rule. AR TTS-LMs consuming their
+    own output do not qualify.
   - `speech-to-speech`: must fit a sub-paradigm (dialogue, S2S translation, cascade); codec-level
     audio transforms do not qualify.
   - `multilingual-tts`: the paper's own system trained or adapted across languages, **and** its
@@ -544,7 +549,7 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
 | Stale "proceedings not yet published" note | Session doc said Interspeech 2026 was not on ISCA a month after it was; 51 Q2 records were in fact Q3 (2026-10-26) | Section 2, proceedings check |
 | Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS); a rewritten block contradicted the SKILL.md type table and another omitted the scope stop rule, so an environmental-sound-only codec page was written (2026-11-13, `2604.17852`, `2607.01865`) | Step 4: one standing block copied verbatim; step 6 |
-| Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`) | Step 4 prompt, step 6 |
+| Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`; 2026-11-25, SpeechAnnotator `2609.09947`, which also claimed the metadata accept cited a precedent it does not, and ProPS `2607.05276`) | Step 4 prompt, step 6; queue the scope call, the user decides |
 | "Check the PDF" note on page | Agent leaves a reader-facing note about a garbled parse instead of resolving it (2026-10-31, STEB) | Step 4 prompt, step 6 |
 | Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo; 2026-11-15, "FishAudio S2" table label linked to the Fish Audio S2 report while the reference is a 2024 commercial system) | Step 4 prompt, step 6 |
 | Page-1 notice missing from the parse | Pre-flight grepped `paper.md` and missed a PMLR camera-ready footnote that Docling dropped (2026-11-15, `2606.12940`) | Section 2 (read page 1 of the PDF) |
@@ -558,6 +563,9 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Template opening rewritten | Agent replaces the Field Significance `Moderate — ` opening to avoid an em dash (2026-11-12, `2026.findings-acl.199`) | Step 4 prompt, step 6 |
 | Agent claims a clean parse | Agent reports "Docling parsed every table cleanly" while the tables are missing from `paper.md` (2026-11-24, Diff-VC); values were right only because it read the PDF | Step 6 (check metric values against the PDF text, not the parse) |
 | `qc.py` callout false positive on stubs | `[!info]` Citation Stub banner reported as disallowed (2026-11-24, all 10 stubs) | Section 3 (ignore for Tier 2) |
+| Logo-only affiliation missed | No text affiliation on page 1, so the agent fell back on release links; the institutions were header logos (2026-11-25, AuK `2609.08936`) | Step 4 prompt (render page 1), step 6 |
+| `qc.py` adoption-language false positive | "dominant" in a non-adoption sense ("dominant directions", "Chinese-dominant", "dominant risk") is flagged (2026-11-25, three pages) | Step 6 (read the line; no fix needed) |
+| Unevaluated component given its concept slug | `neural-codec` tagged for a tokenizer the page itself says has no reconstruction metrics (2026-11-25, StepAudio 3 Gen); `flow-matching` for a training-only regularizer (UniStream, removed at the queue) | Step 6 (evaluated-evidence rule) |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve
