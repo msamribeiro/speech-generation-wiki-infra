@@ -25,7 +25,7 @@
   "version_date": "2026-09-13",
   "version_estimated": true,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-26",
   "url": "https://arxiv.org/abs/2606.13989",
   "pdf_url": "https://arxiv.org/pdf/2606.13989.pdf",
   "pdf_path": "raw/papers/2606.13989.pdf",
@@ -37,9 +37,21 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Proposes a revisable CTMC inference stack for guided discrete flow-matching TTS, an alignment-free NAR TTS architectural contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-26",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "96caf8e"
+    }
+  ]
 }

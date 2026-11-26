@@ -125,6 +125,18 @@ Short, decision-oriented memos generated from the claim graph. Implement after c
 - [ ] Create wiki/briefs/ directory in wiki content repo
 - [ ] Generate first briefs: flow-matching-vs-ar-codec-tts, tts-evaluation-metrics-that-matter, best-open-weight-zero-shot-tts
 
+## Datasets and Benchmarks Catalogue [P2 · deferred]
+
+No concept covers datasets or benchmarks: they are marked only by `field_significance.type`
+(`dataset-contribution`, 247 pages; `empirical-benchmark` / `evaluation-contribution`, 446) and
+`task: evaluation`, so a corpus paper such as CVSS-X `2609.13413` surfaces only through a method
+concept (user question, 2026-11-26). Concepts gather claims; datasets mostly need cataloguing.
+
+- [ ] Generate catalogue pages (e.g. `wiki/datasets.md`, `wiki/benchmarks.md`) from existing page
+  tags, listing each resource with domain, languages, size and the papers that use it; no new
+  tagging. Decide scope (corpus-paper datasets only, or also `datasets_train` / `datasets_eval`
+  mentions) and whether it is a script output or a render-agent page
+
 ## Editorial Quality Pass [P2 · deferred]
 
 Targeted quality upgrades for high-value pages. Blocked on Content Stage Implementation — generation tracking requires rendered concept pages to exist first.

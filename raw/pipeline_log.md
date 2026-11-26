@@ -1,3 +1,7 @@
+## 2026-11-26
+
+- review | 2609.18677 (Voice of Reason: Reinforcement Learning for Spoken Math) | 1 paper | re-dated | arXiv comment "Accepted at COLM 2026"; the user verified the paper in the COLM 2026 accepted-paper list and the conference start date (2026-10-06); conference_date set to 2026-10-06, peer_reviewed_venue COLM, and the date rule re-applied, moving published_date 2026-09-16 -> 2026-10-06 (Q3 -> Q4 2026; preprint kept as the source, OpenReview PDF gated) | status: accepted (unchanged)
+
 ## 2026-11-24
 - parse | citation-discovery proceedings versions | 2006.11477, 2112.02418, 2212.09748, 2305.18802, 2005.08100, 2104.09494, 2303.00332 (`batch_convert.py --ids`) | 7 done, 0 failed | preprint parses kept in `preprint/`
 - review | peer-reviewed version at citation-discovery pre-flight, camera-ready already on arXiv (page-1 venue line or OA journal copy), presented as the peer-reviewed version | 1711.00937 (VQ-VAE, NIPS 2017) 2018-05-30 -> 2017-12-04; 1905.09263 (FastSpeech, NeurIPS 2019) 2019-11-20 -> 2019-12-08; 2006.11239 (DDPM, NeurIPS 2020) 2020-12-16 -> 2020-12-06; 2106.06103 (VITS, ICML 2021, PMLR line) 2021-06-11 -> 2021-07-18; 2105.14762 (ESD, Speech Communication, Elsevier OA copy, available online 2021-12-21) 2022-01-10 -> 2021-12-21; 1312.6114 (VAE, ICLR 2014, arXiv is the ICLR paper) 2022-12-10 -> 2014-04-14; 1706.03762 (Transformer, NIPS 2017) 2023-08-02 -> 2017-12-04 | 7 papers | re-dated (Option A, user 2026-11-24) | venues verified via page 1, Semantic Scholar and Crossref (DBLP behind a bot check)

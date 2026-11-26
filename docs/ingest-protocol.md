@@ -60,6 +60,18 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   (`api.crossref.org/works?query.bibliographic=...`) and match title and authors; the Crossref
   `published-online` date of the volume is the proceedings date (SPECOM `2607.05250`, 2026-11-14).
   Unverifiable acceptance comments stay on the arXiv date (NCMMSC `2607.17615`, user 2026-11-14).
+  - **Pending acceptances** (proceedings not yet published or not verifiable: EMNLP, SLT, ISCSLP,
+    NCMMSC, AACL-IJCNLP 2026) keep the preprint card and end Field Significance with one sentence:
+    "The authors state that the paper is accepted to X; this page summarizes the arXiv preprint."
+    (`2608.23791` precedent). A non-archival workshop names itself as such ("accepted to the
+    non-archival SALMA Workshop at EMNLP 2026", CVSS-X `2609.13413`, 2026-11-26).
+  - **OpenReview-gated venues** (COLM, ICLR, ICML): when scripts cannot verify an acceptance, ask
+    the user to check the venue's accepted-paper list in a browser and give the conference start
+    date; on confirmation set `conference_date` and `peer_reviewed_venue`, re-apply the date rule
+    (the paper may leave the quarter) and log `review | re-dated` (COLM 2026 `2609.18677`, start
+    2026-10-06, Q3 -> Q4; user, 2026-11-26). Refill the batch from the reserves.
+  - A venue copyright line on page 1 with no acceptance statement is the submission template, not
+    an acceptance (AAAI 2027 template on `2609.14817`, 2026-11-26).
 - **Ingest the peer-reviewed version when it is known** (`schemas/metadata.md`, "Source Version at
   Ingest"; user decision 2026-11-11). Decided per paper at ingest time, not in a separate batch:
   for an arXiv-canonical candidate with a verified proceedings or journal version, run
@@ -176,6 +188,11 @@ do not silently revert):
   `log.md`); then run `cleanup.py` for each stub in sequence and `qc.py` on each. `qc.py` reports
   the required `[!info]` Citation Stub banner as "disallowed" on every stub: a false positive.
 - The user may drop to one-paper-with-go-ahead mid-session. Follow it.
+
+Batch labels (user, 2026-11-26): `Q{quarter}-b{n}`, with `n` an integer counting across the whole
+quarter's sweep and never restarting per session (the Q3 2026 sweep used integers 1-14, then
+letters A-M, then Q3-A to Q3-D, i.e. 31 batches; it continues at `Q3-b32`). Citation-discovery
+batches keep `CD-{n}`. Paper numbers (`#`) count papers across the quarter and are separate.
 
 Batch bookkeeping (recurring slip): before reporting a batch complete, count the actual agent
 launches against the requested size, and compare the **actual IDs** to the numbered list's `#`
