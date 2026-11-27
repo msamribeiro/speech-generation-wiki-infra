@@ -1,7 +1,8 @@
 {
   "id": "2407.14358",
   "source_ids": {
-    "arxiv": "2407.14358"
+    "arxiv": "2407.14358",
+    "doi": "10.1109/icassp49660.2025.10888461"
   },
   "title": "Stable Audio Open",
   "authors": [
@@ -16,14 +17,14 @@
   "organization": null,
   "venue": "arXiv",
   "venue_type": "preprint",
-  "year": 2024,
-  "month": 7,
-  "published_date": "2024-07-31",
+  "year": 2025,
+  "month": 4,
+  "published_date": "2025-04-06",
   "preprint_date": "2024-07-19",
   "arxiv_version": 2,
   "version_date": "2024-07-31",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2025-04-06",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2407.14358",
   "pdf_url": "https://arxiv.org/pdf/2407.14358.pdf",
@@ -50,5 +51,8 @@
     "Q2_2026": 6
   },
   "sr_match": false,
-  "ingest_tier": 2
+  "ingest_tier": 2,
+  "peer_reviewed_venue": "ICASSP",
+  "peer_reviewed_venue_type": "conference",
+  "url_peer_reviewed": "https://doi.org/10.1109/icassp49660.2025.10888461"
 }

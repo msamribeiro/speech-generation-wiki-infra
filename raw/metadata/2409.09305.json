@@ -1,7 +1,8 @@
 {
   "id": "2409.09305",
   "source_ids": {
-    "arxiv": "2409.09305"
+    "arxiv": "2409.09305",
+    "doi": "10.1109/slt61566.2024.10832315"
   },
   "title": "The T05 System for The VoiceMOS Challenge 2024: Transfer Learning from Deep Image Classifier to Naturalness MOS Prediction of High-Quality Synthetic Speech",
   "authors": [
@@ -15,13 +16,13 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2024,
-  "month": 9,
-  "published_date": "2024-09-14",
+  "month": 12,
+  "published_date": "2024-12-02",
   "preprint_date": "2024-09-14",
   "arxiv_version": 1,
   "version_date": "2024-09-14",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2024-12-02",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2409.09305",
   "pdf_url": "https://arxiv.org/pdf/2409.09305.pdf",
@@ -48,5 +49,8 @@
     "Q2_2026": 3
   },
   "sr_match": true,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "peer_reviewed_venue": "SLT",
+  "peer_reviewed_venue_type": "conference",
+  "url_peer_reviewed": "https://doi.org/10.1109/slt61566.2024.10832315"
 }

@@ -162,12 +162,21 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     landing page, `url_preprint` to arXiv; no re-parse (VQ-VAE, FastSpeech, DDPM, VITS, ESD,
     Transformer). ICLR 2014 papers have only the arXiv version: venue ICLR, `url` stays arXiv (VAE).
   - **Free proceedings PDF** (NeurIPS, PMLR, CVF, ISCA): switch with `use_peer_reviewed.py` and
-    re-parse (wav2vec 2.0, YourTTS, DiT, LibriTTS-R, Conformer, NISQA, CAM++).
-  - **PDF not scriptable** (IEEE, OpenReview gate): keep the preprint, set the venue date,
+    re-parse (wav2vec 2.0, YourTTS, DiT, LibriTTS-R, Conformer, NISQA, CAM++, Voicebox; ACL
+    Anthology: SyncLLM). A record switched this way keeps its arXiv ID as the page ID.
+  - **PDF not scriptable** (IEEE, OpenReview gate, AAAI OJS): keep the preprint, set the venue date,
     `peer_reviewed_venue`, `peer_reviewed_venue_type`, `url_peer_reviewed` (DOI, or the OpenReview
     forum checked by the user in a browser) and `source_ids`; StellarTTS card and italic note. For
     IEEE journals the Crossref record-creation date stands in for Early Access (user accepted,
-    2026-11-24; no quarter impact for pre-2025 papers).
+    2026-11-24; no quarter impact for pre-2025 papers). The AAAI proceedings site
+    (`ojs.aaai.org`) serves its free PDFs behind an Anubis bot check ("Making sure you're not a
+    bot!"): a HEAD request returns `application/pdf` but a GET returns the challenge page, and
+    `use_peer_reviewed.py` refuses it as "not a PDF". Do not work around it; treat AAAI as not
+    scriptable unless the user saves the PDF from a browser as `raw/papers/{id}.peer-reviewed.pdf`
+    (the script then skips the download) (X-Codec `2408.17175`, 2026-11-27). An arXiv comment
+    that says only "submitted to X" is not an acceptance; confirm the published paper in Crossref
+    before recording the venue (FunCodec `2309.07405`). An author "final version" label without
+    a page-1 venue line keeps the preprint card (Matcha-TTS `2309.03199`, user 2026-11-27).
   Log the re-dating as `review | re-dated` lines in `raw/pipeline_log.md`; dates can move a paper
   between batches, so re-sort the list after the venue pass.
 - Number the list. Show it to the user and wait for confirmation.
@@ -239,6 +248,11 @@ the block per paper silently drops rules (2026-11-13: the scope stop rule and th
   render page 1 (`pypdfium2`, `page.render(scale=1.5)`) and check the header for institution logos:
   logo-only affiliations are invisible to text extraction (user, 2026-11-25, AuK `2609.08936`:
   Shanghai Jiao Tong University, Tencent HY and Shanghai Innovation Institute logos).
+- Later corpus papers that build on the paper (Wiki Connections, mostly citation discovery): the
+  main session greps `papers/*.md` in the content worktree for the ID and the system name, reads
+  the matching lines, and pastes the relevant quoted lines into the prompt. The agent's permission
+  check can deny it reading other paper pages (SyncLLM `2409.15594`, 2026-11-27: generic
+  "discusses X" bullets that had to be rewritten by hand).
 - Link systems the paper evaluates as baselines when they have pages, even if the reference list
   omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
 - Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
@@ -435,7 +449,9 @@ intentional. Checks the health check does not (fully) cover:
     2026-10-24, AffectCodec `2605.23373`), never Whisper (supervised) and never when SSL appears
     only in an evaluation metric (WavLM speaker similarity). An SSL model applied only to the
     visual stream (AV-HuBERT as a lip encoder) does not count (HoliDubber `2606.09098`; user,
-    2026-10-31).
+    2026-10-31). A general-audio SSL encoder alone (AudioMAE, BEATs) is not a speech model and
+    does not earn the slug (SemantiCodec `2405.00233`, user 2026-11-27; ALMTokenizer keeps it via
+    wav2vec 2.0).
   - `zero-shot-tts`: the paper's own system is evaluated on prompt-based cloning of speakers unseen
     in training. Omit it when the evaluated voices are in the training or fine-tuning data, even if
     the paper says "zero-shot" (user, 2026-10-24: Poly-SVC `2605.12310`, F5-TTS-DPS `2605.23859`),

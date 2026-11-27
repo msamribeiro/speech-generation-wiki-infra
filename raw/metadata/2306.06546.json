@@ -1,7 +1,8 @@
 {
   "id": "2306.06546",
   "source_ids": {
-    "arxiv": "2306.06546"
+    "arxiv": "2306.06546",
+    "doi": "10.52202/075280-1214"
   },
   "title": "High-Fidelity Audio Compression with Improved RVQGAN",
   "authors": [
@@ -13,18 +14,18 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "NeurIPS",
+  "venue_type": "conference",
   "year": 2023,
-  "month": 10,
-  "published_date": "2023-10-26",
+  "month": 12,
+  "published_date": "2023-12-10",
   "preprint_date": "2023-06-11",
   "arxiv_version": 2,
   "version_date": "2023-10-26",
   "version_estimated": false,
-  "conference_date": null,
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2306.06546",
+  "conference_date": "2023-12-10",
+  "ingested_date": "2026-11-27",
+  "url": "https://papers.nips.cc/paper_files/paper/2023/hash/58d0e78cf042af5876e12661087bea12-Abstract-Conference.html",
   "pdf_url": "https://arxiv.org/pdf/2306.06546.pdf",
   "pdf_path": "raw/papers/2306.06546.pdf",
   "pdf_source": "arxiv",
@@ -33,12 +34,23 @@
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 74× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "d2b09a7"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "codec",
   "corpus_citation_count": 74,
@@ -49,5 +61,7 @@
     "Q2_2026": 12
   },
   "sr_match": false,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "url_peer_reviewed": "https://papers.nips.cc/paper_files/paper/2023/hash/58d0e78cf042af5876e12661087bea12-Abstract-Conference.html",
+  "url_preprint": "https://arxiv.org/abs/2306.06546"
 }

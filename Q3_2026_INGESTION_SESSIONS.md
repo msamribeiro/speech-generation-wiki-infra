@@ -55,13 +55,14 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-**2026-11-26: Q3 sweep, four pre-selected batches Q3-b32 to Q3-b35 (#86-#105), 20 pages, no
-rejections; COLM paper `2609.18677` re-dated to Q4.** Last ingested `2609.20124` (2026-09-17;
-`2609.18856` GrainSpeech, 09-16, closed the session). Q3: 192 ingested, 194 accepted (all parsed),
-239 rejected. Q4 2026: 23 accepted. Citation discovery unchanged since 2026-11-24: 25 of 40
-ingested, 11 parsed and left (8 Tier 1, 3 Tier 2), 4 waiting for sources. Corpus 1,245 pages.
-Manual Verification Queue: no open items (all 7 2026-11-26 items resolved one at a time, all kept).
-**Next batch label: `Q3-b36`; next paper number `#106`** (protocol section 3). To resume:
+**2026-11-27: citation-discovery stream. Venue pass on all 11 parsed records (one at a time in
+chat), then CD-6 (DAC, Voicebox, Matcha-TTS, FunCodec) and CD-7 rows 1-2 (SyncLLM, SemantiCodec):
+6 pages.** Citation discovery: 31 of 40 ingested; left: CD-7 rows 3-4 (UTMOSv2 `2409.09305`,
+X-Codec `2408.17175`), CD-8 Tier 2 (CAM++ `2303.00332`, Stable Audio Open `2407.14358`, Qwen3-ASR
+`2601.21337`), all venue-checked and parsed; 4 records still wait for sources. Q3 sweep unchanged
+since 2026-11-26: 192 ingested, 194 accepted (all parsed), 239 rejected; next batch `Q3-b36`, next
+paper `#106`, from `2609.19334` (2026-09-18). Q4 2026: 23 accepted. Corpus 1,251 pages. Manual
+Verification Queue: no open items (all 3 2026-11-27 items resolved). To resume:
 
 **Session order (user, 2026-11-22, repeated 2026-11-25 and 2026-11-26): pre-select several batches up front with
 full pre-flight (four batches of 5), papers one at a time with cleanup and QC after each, batch
@@ -74,15 +75,26 @@ rejections at pre-flight are refilled from the next candidates so each batch sta
    **Citation-discovery cadence (user, 2026-11-24):** each batch holds a single tier; Tier 1 one
    paper at a time with cleanup and QC, Tier 2 stubs 5 in parallel via the lightweight agent (page
    only, Mitigation B) with cleanup run sequentially afterwards. Peer-reviewed versions are applied
-   to these records before ingest (Option A, user 2026-11-24; protocol section 2). Remaining, all
-   pre-flighted for duplicates on 2026-11-24 but **not yet venue-checked**:
-   - Tier 1 (8): FunCodec `2309.07405` (ICASSP 2024), Voicebox `2306.15687` (NeurIPS 2023), DAC
-     `2306.06546` (NeurIPS 2023, camera-ready on arXiv), Matcha-TTS `2309.03199` (ICASSP 2024),
-     UTMOSv2 `2409.09305` (SLT 2024), SyncLLM `2409.15594` (EMNLP 2024), X-Codec `2408.17175`,
-     SemantiCodec `2405.00233` (IEEE JSTSP).
-   - Tier 2 (3): CAM++ `2303.00332` (already switched to its Interspeech 2023 ISCA PDF and
-     re-parsed), Stable Audio Open `2407.14358`, Qwen3-ASR `2601.21337`.
+   to these records before ingest (Option A, user 2026-11-24; protocol section 2). **Venue pass done
+   2026-11-27** for all remaining parsed records (`raw/pipeline_log.md`). Remaining:
+   - **CD-7 rows 3-4, Tier 1 (one at a time):** UTMOSv2 `2409.09305` (preprint, SLT 2024 note,
+     `https://doi.org/10.1109/slt61566.2024.10832315`), X-Codec `2408.17175` (preprint, AAAI 2025
+     note, OJS page `https://ojs.aaai.org/index.php/AAAI/article/view/34761`). **Ask the user first
+     whether they downloaded the X-Codec AAAI PDF** (OJS is behind a bot check): if saved as
+     `raw/papers/2408.17175.peer-reviewed.pdf`, run `use_peer_reviewed.py --id 2408.17175 --url
+     <OJS page> --pdf-url https://ojs.aaai.org/index.php/AAAI/article/download/34761/36916
+     --venue AAAI --venue-type conference --date 2025-02-25 --source doi=10.1609/aaai.v39i24.34761
+     --apply` (it skips the download when the file exists; first clear `peer_reviewed_venue`,
+     `peer_reviewed_venue_type` and `url_peer_reviewed`, or check the dry run), then re-parse.
+   - **CD-8, Tier 2 (3 stubs in parallel, page only):** CAM++ `2303.00332` (Interspeech 2023 ISCA
+     parse), Stable Audio Open `2407.14358` (preprint, ICASSP 2025 note), Qwen3-ASR `2601.21337`
+     (technical report, preprint).
    - Waiting for sources (`needs_manual_pdf`): VCTK (Tier 1), PESQ, STOI, LJSpeech (Tier 2).
+   **Prompt practice (2026-11-27):** gather later-paper mentions in the main session (grep
+   `papers/*.md` for the ID and name, read the lines) and pass the quoted lines into the prompt; the
+   agent's permission check can deny reading other pages (SyncLLM). Standing block:
+   `cd_prompt_base.md` pattern (protocol section 4 block, callout limit, quoted type table, tagging
+   rules, citation-discovery context with the infra commit).
 1. **Continue the sweep** by canonical date from 2026-09-18 (not yet pre-flighted): `2609.19334`
    tool calls in full-duplex models (to be submitted to ICASSP 2027), `2609.21683` ReACT-TTS
    (ECCV 2026 ABAW workshop: check for proceedings, else preprint plus closing sentence),
@@ -1229,6 +1241,60 @@ edits. The user asked whether a dataset/benchmark tag exists: only `field_signif
 `task: evaluation`, no concept; a generated datasets/benchmarks catalogue page was added to
 `BACKLOG.md` (P2).
 
+### Session 2026-11-27: citation-discovery stream, venue pass and batch CD-6
+
+**Stream: citation-discovery catch-up** (user choice at session start). The 11 parsed records
+remaining from the 2025Q3–2026Q2 refresh were venue-checked one at a time in chat (Option A,
+protocol section 2; page 1, arXiv comment and Crossref; Semantic Scholar rate-limited all session,
+DBLP behind its bot check). Camera-ready already on arXiv (1): DAC (NeurIPS 2023). Switched to the
+free proceedings PDF and re-parsed (2, 0 failures): Voicebox (NeurIPS 2023), SyncLLM (EMNLP 2024,
+ACL Anthology). PDF not scriptable, preprint plus `peer_reviewed_venue` and `url_peer_reviewed`
+(6): Matcha-TTS and FunCodec (ICASSP 2024), UTMOSv2 (SLT 2024), SemantiCodec (IEEE JSTSP, Crossref
+creation date), Stable Audio Open (ICASSP 2025, the corpus's first ICASSP 2025 date, 2025-04-06),
+X-Codec (AAAI 2025). Matcha-TTS: arXiv v2 says "Final version" but page 1 has no venue line; the
+user chose to keep it as the preprint (option 2). FunCodec's arXiv comment says only "submitted";
+Crossref confirms the ICASSP 2024 paper. **X-Codec: the AAAI OJS PDF is free but behind an Anubis
+bot check** (not worked around); the user could not download it this session, so the preprint is
+kept with AAAI as the peer-reviewed venue; a later switch stays possible before ingest (same date,
+re-parse only). Qwen3-ASR is a technical report: no change. CAM++ was switched on 2026-11-24.
+Logged in `raw/pipeline_log.md` (2026-11-27). Re-sorted by the new dates into CD-6 to CD-8
+(CD-6 and CD-7 four Tier 1 papers each, so a batch summary falls after every 4).
+
+| Batch | Tier | Papers |
+|---|---|---|
+| CD-6 | 1 | DAC `2306.06546`, Voicebox `2306.15687`, Matcha-TTS `2309.03199`, FunCodec `2309.07405` |
+| CD-7 | 1 | SyncLLM `2409.15594`, SemantiCodec `2405.00233`, UTMOSv2 `2409.09305`, X-Codec `2408.17175` |
+| CD-8 | 2 | CAM++ `2303.00332`, Stable Audio Open `2407.14358`, Qwen3-ASR `2601.21337` |
+
+**Batch CD-6.** Actual IDs match the CD-6 row (4 launches). Agent runtimes: 4, 4, 3 and 38 min.
+
+| ID | Result | QC catches and fixes |
+|---|---|---|
+| `2306.06546` DAC (NeurIPS 2023, arXiv camera-ready) | high (`architectural-novelty`, `engineering-integration`); `neural-codec`, `gan-vocoder`, `subjective-evaluation` | Tables 2-4 garbled by Docling, rebuilt from the PDF; all cells verified. `gan-vocoder` earned under the 2026-10-24 rule (DAC's own multi-band STFT discriminator, ablated); the rule's "inherited from DAC" exclusion is for later reusers. MUSHRA plot-only, "not reported". Clean. |
+| `2306.15687` Voicebox (NeurIPS 2023, proceedings parse) | foundational (`architectural-novelty`, `evaluation-contribution`); `flow-matching`, `zero-shot-tts`, `multilingual-tts`, `subjective-evaluation` | Tables 2-8 and B3 verified against the camera-ready (all 36 cross-lingual cells). Fixed by hand: em dash after "Foundational" in the callout; "reproducible metric set" (no code or weights released). Metadata `authors` lacks Wei-Ning Hsu; the page uses `authors_full`. |
+| `2309.03199` Matcha-TTS (preprint, ICASSP 2024 note) | high (`architectural-novelty`); `flow-matching`, `transformer-enc-dec-tts`, `subjective-evaluation` | Agent could not locate Table 1 in the PDF; read from page 4 by hand, all cells verified, plus the t-test pairs. Fixed by hand: the abstract card claimed higher naturalness than VITS "with as few as 2 to 10 steps" (MAT-2 3.65 vs VITS 3.71; MAT-2/MAT-4 vs VITS not significant); now highest MOS at 10 steps, lowest WER at 2-10, lowest training memory. |
+| `2309.07405` FunCodec (preprint, ICASSP 2024 note) | moderate (`engineering-integration`, `architectural-novelty`); `neural-codec` | Tables 1 and 6 rebuilt from the PDF; Tables 3-6 verified. Two documented disagreements with the authors (residual combiner wins only at 100 tokens/s; FreqCodec not ahead at 100). Org "Alibaba Group (DAMO Academy)". The paper gives DAC the AudioPaLM arXiv ID; mapped to `2306.06546` (AudioPaLM also genuinely cited). Clean. |
+
+- Corpus at **1,249** pages.
+
+### Session 2026-11-27: batch CD-7, first two papers (user: one more after SyncLLM)
+
+**Batch CD-7 (partial).** Actual IDs match CD-7 rows 1-2. Agent runtimes: 36 and 14 min.
+
+| ID | Result | QC catches and fixes |
+|---|---|---|
+| `2409.15594` SyncLLM (EMNLP 2024, proceedings parse) | high (`architectural-novelty`); task SCA; `spoken-language-model`, `speech-to-speech`, `self-supervised-speech` (HuBERT units), `subjective-evaluation` (32 raters) | Tables 2-7 verified against the proceedings PDF. **The agent's permission check denied reading other paper pages**, so its three later-paper Wiki Connections bullets were generic; rewritten by hand from the eight pages that mention SyncLLM (AV-Dialog, the full-duplex survey, SALM-Duplex; BayLing-Duplex dropped, related-work mention only). |
+| `2405.00233` SemantiCodec (preprint, IEEE JSTSP note) | high (`architectural-novelty`); `neural-codec`, `diffusion-tts`, `subjective-evaluation` | Later-paper mentions gathered by the main session and passed in the prompt (new practice, worked). Tables II and III rebuilt from the PDF; matched-pair comparisons verified across all 11 columns. `diffusion-tts` by the architecture-derived-slug rule (own latent-diffusion decoder). `self-supervised-speech` removed at the queue (AudioMAE). |
+
+- Corpus at **1,251** pages. CD-7 rows 3-4 (UTMOSv2, X-Codec) and CD-8 remain.
+
+### Session 2026-11-27: verification queue
+
+All 3 queue items resolved one at a time (see the queue): DAC and Matcha-TTS kept at high;
+`self-supervised-speech` removed from SemantiCodec (AudioMAE is a general-audio SSL encoder, not a
+speech model; ALMTokenizer earns the slug through wav2vec 2.0). Slug and concept bullet removed,
+health check passes.
+
 ---
 
 ## Manual Verification Queue
@@ -1330,6 +1396,9 @@ after the session batch is complete: check the paper page and resolve each flag 
 | `2606.10581` | `field_significance` type | ParaBridge: on-policy self-distillation, which the paper presents as an instance of existing recipes (GKD, OPSD, X-OPD) applied to paralinguistic dialogue. Recommendation: `engineering-integration`. **Resolved 2026-11-26 (user): keep `architectural-novelty`.** No change. |
 | `2609.13413` | `speech-to-speech` as the only slug | CVSS-X: S2ST corpus scored with ASR-BLEU, UTMOS and speaker similarity; no S2ST model trained or evaluated on it. Recommendation: keep. **Resolved 2026-11-26 (user): keep.** No change. Follow-up: datasets/benchmarks catalogue idea added to `BACKLOG.md`. |
 | `2609.16514` | `flow-matching` on a retrospective | The Evolving Bottleneck: argues for the flow-matching renderer but only restates earlier CosyVoice results. Recommendation: drop (discusses, does not perform). **Resolved 2026-11-26 (user): keep.** No change. |
+| `2306.06546` | `field_significance` high vs foundational | DAC: a refined RVQ-GAN recipe (multi-band STFT discriminator, projected codebooks, quantizer dropout) on the SoundStream/EnCodec family; foundational would rest on later uptake as a tokenizer and baseline. Recommendation: keep high (Grad-TTS position). **Resolved 2026-11-27 (user): keep high.** No change. |
+| `2309.03199` | `field_significance` high vs foundational | Matcha-TTS: OT-CFM with a new U-Net decoder on the Grad-TTS encoder, single-speaker LJ Speech evidence; later used as a backbone. Recommendation: keep high (Voicebox is the foundational flow-matching TTS page). **Resolved 2026-11-27 (user): keep high.** No change. |
+| `2405.00233` | `self-supervised-speech` for a general-audio SSL encoder | SemantiCodec's semantic tokens come from a frozen AudioMAE (self-supervised on AudioSet, not a speech model); the rule says "a self-supervised speech model". ALMTokenizer carries the slug via wav2vec 2.0, not via BEATs alone. Recommendation: remove. **Resolved 2026-11-27 (user): removed** (slug and concept bullet); health check passes. |
 
 ---
 

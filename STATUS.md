@@ -1,6 +1,6 @@
 # Project Status
 
-Last updated: 2026-11-26
+Last updated: 2026-11-27
 
 The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
 retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 ingestion is complete
@@ -37,8 +37,12 @@ has a PDF and is parsed (all 7 parse batches done 2026-11-11; the 65 arXiv-canon
 5. Ingest the 2025Q3–2026Q2 citation-discovery papers, one stream per session alternating with
    the Q3 sweep (user choice at session start). 2026-11-24: 25 of 40 ingested (15 Tier 1 pages, 10
    Tier 2 stubs) after applying each paper's peer-reviewed venue and date (7 camera-ready on arXiv,
-   7 switched to free proceedings PDFs and re-parsed, 10 preprints with the peer-reviewed link);
-   11 parsed records remain and 4 await sources.
+   7 switched to free proceedings PDFs and re-parsed, 10 preprints with the peer-reviewed link).
+   2026-11-27: venue pass on the 11 remaining parsed records (DAC camera-ready on arXiv; Voicebox
+   and SyncLLM switched to proceedings PDFs and re-parsed; six preprints with the peer-reviewed
+   link, X-Codec's AAAI PDF behind a bot check; Qwen3-ASR a technical report), then 6 more pages:
+   31 of 40 ingested, 5 parsed records remain (UTMOSv2, X-Codec, and 3 Tier 2 stubs) and 4 await
+   sources.
 
 The completed Q2 ingest record is archived at `docs/records/2026-11-01-q2-2026-ingestion-sessions.md`;
 the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 2026-11-01). The completed Q4 integration record is archived at
@@ -50,11 +54,11 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 
 | Measure | Current value | Notes |
 |---|---:|---|
-| Metadata records | 2,064 | 1,253 ingested, 232 accepted (incl. 15 of the 40 citation-discovery records onboarded 2026-11-22; 25 ingested 2026-11-24), 0 review, 579 rejected (incl. five pre-flight scope rejections on 2026-11-21 (`2608.14029`, `2608.15369`, `2608.19141`, `2608.19959`, `2608.26005`), the DAFx no-speech codec `2607.12725` rejected at pre-flight on 2026-11-15, 109 Interspeech 2026 ISCA duplicates, 13 arXiv preprints of ISCA records, the ACL DisCo_Speech duplicate of `2512.13251`, the environmental-sound codec `2607.01865` rejected at ingest on 2026-11-13, and the ICML duplicate `icml-2026-icMRkTnuU7` of MOSS-Audio-Tokenizer on 2026-11-14) |
-| Published paper pages | 1,245 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
+| Metadata records | 2,064 | 1,259 ingested, 226 accepted (incl. 15 of the 40 citation-discovery records onboarded 2026-11-22; 25 ingested 2026-11-24, 6 more 2026-11-27), 0 review, 579 rejected (incl. five pre-flight scope rejections on 2026-11-21 (`2608.14029`, `2608.15369`, `2608.19141`, `2608.19959`, `2608.26005`), the DAFx no-speech codec `2607.12725` rejected at pre-flight on 2026-11-15, 109 Interspeech 2026 ISCA duplicates, 13 arXiv preprints of ISCA records, the ACL DisCo_Speech duplicate of `2512.13251`, the environmental-sound codec `2607.01865` rejected at ingest on 2026-11-13, and the ICML duplicate `icml-2026-icMRkTnuU7` of MOSS-Audio-Tokenizer on 2026-11-14) |
+| Published paper pages | 1,251 | Unique content pages; canonical-ID pointers explain the difference from metadata marked ingested |
 | Active accepted + ingested corpus | 1,485 | Basis of `scripts/corpus_summary.py` |
 | Parsed active papers | 1,481 | Every accepted and ingested record except four 2026-11-22 citation-discovery records without a retrievable PDF (PESQ, STOI, VCTK, LJSpeech) (the 19 Q4 2026 records were downloaded and parsed on 2026-11-13; 65 Interspeech and 1 DAFx record re-parsed from proceedings PDFs on 2026-11-14; Emo-LiPO `2606.13006` re-parsed from the IJCAI proceedings PDF on 2026-11-15) |
-| Accepted and parsed, ready to ingest | 228 | 194 Q3 2026, 23 Q4 2026 (incl. COLM `2609.18677`, re-dated 2026-11-26), and 11 parsed citation-discovery papers from the 2025Q3–2026Q2 refresh (8 Tier 1, 3 Tier 2; 25 ingested 2026-11-24; four more records, VCTK as Tier 1 and PESQ, STOI, LJSpeech as Tier 2, await sources); interleaved with the Q3 sweep by session (user 2026-11-22); (19 parsed 2026-11-13 plus three ACM MM 2026 re-dates) |
+| Accepted and parsed, ready to ingest | 222 | 194 Q3 2026, 23 Q4 2026 (incl. COLM `2609.18677`, re-dated 2026-11-26), and 5 parsed citation-discovery papers from the 2025Q3–2026Q2 refresh (2 Tier 1, 3 Tier 2; 25 ingested 2026-11-24, 6 on 2026-11-27; four more records, VCTK as Tier 1 and PESQ, STOI, LJSpeech as Tier 2, await sources); interleaved with the Q3 sweep by session (user 2026-11-22); (19 parsed 2026-11-13 plus three ACM MM 2026 re-dates) |
 | Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
 | Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
 | Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |

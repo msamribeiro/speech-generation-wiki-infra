@@ -1,7 +1,8 @@
 {
   "id": "2405.00233",
   "source_ids": {
-    "arxiv": "2405.00233"
+    "arxiv": "2405.00233",
+    "doi": "10.1109/jstsp.2024.3506286"
   },
   "title": "SemantiCodec: An Ultra Low Bitrate Semantic Audio Codec for General Sound",
   "authors": [
@@ -18,13 +19,13 @@
   "venue_type": "preprint",
   "year": 2024,
   "month": 11,
-  "published_date": "2024-11-28",
+  "published_date": "2024-11-26",
   "preprint_date": "2024-04-30",
   "arxiv_version": 2,
   "version_date": "2024-11-28",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-27",
   "url": "https://arxiv.org/abs/2405.00233",
   "pdf_url": "https://arxiv.org/pdf/2405.00233.pdf",
   "pdf_path": "raw/papers/2405.00233.pdf",
@@ -34,12 +35,23 @@
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 25× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "d2b09a7"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "codec",
   "corpus_citation_count": 25,
@@ -50,5 +62,9 @@
     "Q2_2026": 4
   },
   "sr_match": true,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "peer_reviewed_venue": "IEEE JSTSP",
+  "peer_reviewed_venue_type": "journal",
+  "journal_date": "2024-11-26",
+  "url_peer_reviewed": "https://doi.org/10.1109/jstsp.2024.3506286"
 }

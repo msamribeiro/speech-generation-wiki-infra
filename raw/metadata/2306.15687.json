@@ -1,7 +1,8 @@
 {
   "id": "2306.15687",
   "source_ids": {
-    "arxiv": "2306.15687"
+    "arxiv": "2306.15687",
+    "doi": "10.52202/075280-0618"
   },
   "title": "Voicebox: Text-Guided Multilingual Universal Speech Generation at Scale",
   "authors": [
@@ -30,32 +31,43 @@
     "Wei-Ning Hsu"
   ],
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "NeurIPS",
+  "venue_type": "conference",
   "year": 2023,
-  "month": 10,
-  "published_date": "2023-10-19",
+  "month": 12,
+  "published_date": "2023-12-10",
   "preprint_date": "2023-06-23",
   "arxiv_version": 2,
   "version_date": "2023-10-19",
   "version_estimated": false,
-  "conference_date": null,
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2306.15687",
-  "pdf_url": "https://arxiv.org/pdf/2306.15687.pdf",
-  "pdf_path": "raw/papers/2306.15687.pdf",
+  "conference_date": "2023-12-10",
+  "ingested_date": "2026-11-27",
+  "url": "https://papers.nips.cc/paper_files/paper/2023/hash/2d8911db9ecedf866015091b28946e15-Abstract-Conference.html",
+  "pdf_url": "https://papers.nips.cc/paper_files/paper/2023/file/2d8911db9ecedf866015091b28946e15-Paper-Conference.pdf",
+  "pdf_path": "raw/papers/2306.15687.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Large-scale generative models such as GPT and DALL-E have revolutionized the research community. These models not only generate high fidelity outputs, but are also generalists which can solve tasks not explicitly taught. In contrast, speech generative models are still primitive in terms of scale and task generalization. In this paper, we present Voicebox, the most versatile text-guided generative model for speech at scale. Voicebox is a non-autoregressive flow-matching model trained to infill speech, given audio context and text, trained on over 50K hours of speech that are not filtered or enhanced. Similar to GPT, Voicebox can perform many different tasks through in-context learning, but is more flexible as it can also condition on future context. Voicebox can be used for mono or cross-lingual zero-shot text-to-speech synthesis, noise removal, content editing, style conversion, and diverse sample generation. In particular, Voicebox outperforms the state-of-the-art zero-shot TTS model VALL-E on both intelligibility (5.9% vs 1.9% word error rates) and audio similarity (0.580 vs 0.681) while being up to 20 times faster. Audio samples can be found in \\url{https://voicebox.metademolab.com}.",
   "arxiv_comment": "Accepted to NeurIPS 2023",
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 50× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "d2b09a7"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "tts-vc",
   "corpus_citation_count": 50,
@@ -66,5 +78,8 @@
     "Q2_2026": 5
   },
   "sr_match": true,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "url_preprint": "https://arxiv.org/abs/2306.15687",
+  "pdf_path_preprint": "raw/papers/2306.15687.pdf",
+  "url_peer_reviewed": "https://papers.nips.cc/paper_files/paper/2023/hash/2d8911db9ecedf866015091b28946e15-Abstract-Conference.html"
 }

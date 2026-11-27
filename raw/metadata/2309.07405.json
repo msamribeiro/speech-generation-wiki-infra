@@ -1,7 +1,8 @@
 {
   "id": "2309.07405",
   "source_ids": {
-    "arxiv": "2309.07405"
+    "arxiv": "2309.07405",
+    "doi": "10.1109/icassp48485.2024.10447523"
   },
   "title": "FunCodec: A Fundamental, Reproducible and Integrable Open-source Toolkit for Neural Speech Codec",
   "authors": [
@@ -14,15 +15,15 @@
   "organization": null,
   "venue": "arXiv",
   "venue_type": "preprint",
-  "year": 2023,
-  "month": 10,
-  "published_date": "2023-10-07",
+  "year": 2024,
+  "month": 4,
+  "published_date": "2024-04-14",
   "preprint_date": "2023-09-14",
   "arxiv_version": 2,
   "version_date": "2023-10-07",
   "version_estimated": false,
-  "conference_date": null,
-  "ingested_date": null,
+  "conference_date": "2024-04-14",
+  "ingested_date": "2026-11-27",
   "url": "https://arxiv.org/abs/2309.07405",
   "pdf_url": "https://arxiv.org/pdf/2309.07405.pdf",
   "pdf_path": "raw/papers/2309.07405.pdf",
@@ -32,12 +33,23 @@
   "task": [],
   "relevance_score": null,
   "relevance_note": "Citation-discovered: cited 16× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-11-22",
   "needs_manual_pdf": false,
   "is_duplicate": false,
   "canonical_id": null,
-  "generation_history": [],
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "d2b09a7"
+    }
+  ],
   "discovery_source": "citation-discovery",
   "corpus_role": "codec",
   "corpus_citation_count": 16,
@@ -48,5 +60,8 @@
     "Q2_2026": 0
   },
   "sr_match": true,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "peer_reviewed_venue": "ICASSP",
+  "peer_reviewed_venue_type": "conference",
+  "url_peer_reviewed": "https://doi.org/10.1109/icassp48485.2024.10447523"
 }

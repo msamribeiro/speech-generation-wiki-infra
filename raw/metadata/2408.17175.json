@@ -1,7 +1,8 @@
 {
   "id": "2408.17175",
   "source_ids": {
-    "arxiv": "2408.17175"
+    "arxiv": "2408.17175",
+    "doi": "10.1609/aaai.v39i24.34761"
   },
   "title": "Codec Does Matter: Exploring the Semantic Shortcoming of Codec for Audio Language Model",
   "authors": [
@@ -33,14 +34,14 @@
   "organization": null,
   "venue": "arXiv",
   "venue_type": "preprint",
-  "year": 2024,
-  "month": 11,
-  "published_date": "2024-11-27",
+  "year": 2025,
+  "month": 2,
+  "published_date": "2025-02-25",
   "preprint_date": "2024-08-30",
   "arxiv_version": 3,
   "version_date": "2024-11-27",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2025-02-25",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2408.17175",
   "pdf_url": "https://arxiv.org/pdf/2408.17175.pdf",
@@ -67,5 +68,8 @@
     "Q2_2026": 3
   },
   "sr_match": false,
-  "ingest_tier": 1
+  "ingest_tier": 1,
+  "peer_reviewed_venue": "AAAI",
+  "peer_reviewed_venue_type": "conference",
+  "url_peer_reviewed": "https://ojs.aaai.org/index.php/AAAI/article/view/34761"
 }
