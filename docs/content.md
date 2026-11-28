@@ -253,7 +253,7 @@ generation:
 ---
 
 > [!abstract] {venue} · {year} · {venue_type capitalized}
-> **{First Author} et al.** ({organization}) · [→ Paper]({url}) · Demo: ✓/✗/? · Code: ✓/✗/?
+> **{First Author} et al.** ({organization}) · [→ Paper]({url}){ · [→ Author copy]({url_author_copy}) when set} · Demo: ✓/✗/? · Code: ✓/✗/?
 >
 > {The single most important thing this paper does.}
 
@@ -336,7 +336,7 @@ generation:
 ---
 
 > [!abstract] {venue} · {year} · {venue_type capitalized}
-> **{First Author} et al.** ({organization}) · [→ Paper]({url})
+> **{First Author} et al.** ({organization}) · [→ Paper]({url}){ · [→ Author copy]({url_author_copy}) when set}
 >
 > {The single most important thing this paper does.}
 

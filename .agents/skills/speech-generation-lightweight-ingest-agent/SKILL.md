@@ -169,6 +169,7 @@ demo_available: true | false | null
 url: "{original paper URL from raw/metadata/{ID}.json}"
 url_peer_reviewed: "{later peer-reviewed landing page from metadata; omit when null or identical to url}"
 url_preprint: "{arXiv abstract page from metadata url_preprint; omit when null or identical to url}"
+url_author_copy: "{free copy hosted by an author or their institution, from metadata url_author_copy; omit when null}"
 related_concepts: [{0–4 relevant slugs from the allowed list below — empty list [] if none clearly apply}]
 related_papers: []
 tags: [{for corpus_role == "survey" only: ["survey"]; omit this field for all other corpus_roles}]
@@ -191,7 +192,7 @@ generation:
 - The only permitted callout types in the entire page are: `[!abstract]` (abstract card only), `[!info]` (Citation Stub banner — required, always second), `[!important]` (Field Significance, foundational only), `[!tip]` (Field Significance, high only), `[!warning]` (critical limitations only). Never `[!note]`, `[!caution]` — write prose instead.
 
 > [!abstract] {venue} · {year} · {venue_type — capitalised: Conference | Journal | Workshop | Preprint | Technical Report}
-> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set and different from url}{ · [→ Preprint]({url_preprint}) when set} · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
+> **{First Author et al. or sole author if single}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set and different from url}{ · [→ Preprint]({url_preprint}) when set}{ · [→ Author copy]({url_author_copy}) when set} · Demo: {✓ if true, ✗ if false, ? if null} · Code: {✓ if true, ✗ if false, ? if null}
 >
 > {The single most important thing this paper does. One sentence, no bold label.}
 

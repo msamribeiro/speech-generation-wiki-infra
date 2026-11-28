@@ -1,3 +1,10 @@
+## 2026-11-28
+
+- review | 2408.17175 (X-Codec, AAAI 2025) | 1 paper | switched to the AAAI proceedings PDF (`use_peer_reviewed.py`; the user saved the OJS PDF from a browser past the bot check as `raw/papers/2408.17175.peer-reviewed.pdf`, page 1 AAAI-25 line verified; interim `peer_reviewed_venue` fields cleared) | date unchanged 2025-02-25; re-parsed, preprint parse kept in `preprint/`
+- review | cstr-vctk-2019 (CSTR VCTK Corpus) | 1 record | ingest_tier 1 -> 2 | user, 2026-11-28: datasets without a paper have no experiments to make claims about and stay out of integration, so both paperless datasets are Tier 2 stubs (the 2026-11-22 tiers came from the title-keyword SR flag: "Voice Cloning" in VCTK's title)
+- parse | dataset source text for paperless citation-discovery records | cstr-vctk-2019 (DataShare item metadata https://datashare.ed.ac.uk/server/api/core/items/30e7453c-9ea8-48b4-8e18-f96d0dc62928 and README.txt https://datashare.ed.ac.uk/server/api/core/bitstreams/bb7edd96-5d96-4c0e-8989-1e45597e7b72/content, landing page https://doi.org/10.7488/ds/2645), keithito-ljspeech-2017 (https://keithito.com/LJ-Speech-Dataset/, HTML to text) | 2 done, 0 failed | written by hand as `raw/parsed/{id}/paper.md` with a source note; raw copies in `raw/papers/`; `needs_manual_pdf` false, `pdf_source: dataset-page`
+- parse | public PDFs for the two IEEE citation-discovery records (links supplied by the user, 2026-11-28) | icassp-2010-stoi (https://ceestaal.nl/Taal(2010).pdf, first author's site, the ICASSP 2010 proceedings version with the IEEE footer), icassp-2001-pesq (https://www.recursosvoip.com/docs/english/pap465.pdf, 4-page author-format copy, title and authors match) (`batch_convert.py --ids`) | `pdf_source: author`, `needs_manual_pdf` false; venue stays ICASSP with the DOI as `url` (LibriSpeech author-copy precedent)
+
 ## 2026-11-27
 
 - parse | citation-discovery proceedings versions | 2306.15687, 2409.15594 (`batch_convert.py --ids`) | 2 done, 0 failed | preprint parses kept in `preprint/`

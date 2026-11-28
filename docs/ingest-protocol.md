@@ -177,6 +177,18 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     that says only "submitted to X" is not an acceptance; confirm the published paper in Crossref
     before recording the venue (FunCodec `2309.07405`). An author "final version" label without
     a page-1 venue line keeps the preprint card (Matcha-TTS `2309.03199`, user 2026-11-27).
+  - **Author-hosted free copies** (user, 2026-11-28): when a paywalled paper's text comes from a
+    copy hosted by an author or their institution, set `url_author_copy` (schema:
+    `docs/schemas/metadata.md`); the card adds `[→ Author copy]`. Never for third-party mirrors
+    (PESQ's copy is on a VoIP resources site: `pdf_url` records it, the page shows only the DOI).
+    Percent-encode parentheses in the URL. Ask the user for public copies of IEEE papers; they
+    have no IEEE access either (STOI, PESQ, LibriSpeech).
+  - **Datasets without a paper** (user, 2026-11-28): Tier 2 stub, out of integration (no
+    experiments to claim from). Source text is the dataset's own page, saved verbatim as
+    `raw/parsed/{id}/paper.md` with a source note and raw copies in `raw/papers/`;
+    `pdf_source: dataset-page`, `url` the dataset landing page (VCTK via the DataShare REST API
+    item record and README; LJSpeech from keithito.com). A title-keyword SR flag is not a tier
+    decision (VCTK had been Tier 1 for "Voice Cloning" in its title).
   Log the re-dating as `review | re-dated` lines in `raw/pipeline_log.md`; dates can move a paper
   between batches, so re-sort the list after the venue pass.
 - Number the list. Show it to the user and wait for confirmation.
@@ -529,7 +541,11 @@ Wrap-up is a single sequence (the user may call it "wrap it up", "close out", an
    - `git add -A` can stage symlinked gitignored directories; check `git status` first.
    - Commit messages describe what changed, not when; no session-number prefix.
 5. **Site bump.** Ask once per session before bumping the site submodule (it triggers a live
-   deploy), unless a durable instruction already covers it.
+   deploy), unless a durable instruction already covers it. If the deploy fails, start a fresh run
+   ("Run workflow" on `main`) rather than re-running the failed run: a re-run uploads a second
+   `github-pages` artifact to the same run and `deploy-pages` stops with "Multiple artifacts named
+   github-pages" (2026-11-28). Reproduce build failures locally with `npx quartz build -o <scratch>`
+   in the site repo.
 6. **Memory.** Refresh auto-memory last (corpus status, any genuinely new finding). Memory is a
    convenience copy, never the source of truth; promote durable findings here or to a schema first.
 

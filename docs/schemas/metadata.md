@@ -45,6 +45,7 @@ Every paper in `raw/metadata/` has a JSON file named `{id}.json`.
   "url": "string — landing page of the version the wiki page summarizes (proceedings/journal page or arXiv abstract page)",
   "url_peer_reviewed": "string or null — peer-reviewed landing page; equals url when the page summarizes the peer-reviewed version, otherwise a later version found after ingest",
   "url_preprint": "string or null — arXiv abstract page of the preprint when known and url is not that page",
+  "url_author_copy": "string or null — free copy of a paywalled paper hosted by an author or their institution (personal or lab page, institutional repository); never a third-party mirror. Shown on the card as [→ Author copy]. Set by hand when the copy was used as the source or verified to match it (user, 2026-11-28)",
   "pdf_path": "raw/papers/filename.pdf — PDF of the summarized version (parsed into raw/parsed/{id}/)",
   "pdf_path_preprint": "string or null — preprint PDF kept as secondary context when pdf_path is the peer-reviewed version (parsed into raw/parsed/{id}/preprint/)",
   "task": ["list — one or more task values; see docs/schemas/vocabulary.md"],

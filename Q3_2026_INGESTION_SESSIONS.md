@@ -55,14 +55,13 @@ replaced the fetch-time version date.
 
 ## Next Session — Resume Here
 
-**2026-11-27: citation-discovery stream. Venue pass on all 11 parsed records (one at a time in
-chat), then CD-6 (DAC, Voicebox, Matcha-TTS, FunCodec) and CD-7 rows 1-2 (SyncLLM, SemantiCodec):
-6 pages.** Citation discovery: 31 of 40 ingested; left: CD-7 rows 3-4 (UTMOSv2 `2409.09305`,
-X-Codec `2408.17175`), CD-8 Tier 2 (CAM++ `2303.00332`, Stable Audio Open `2407.14358`, Qwen3-ASR
-`2601.21337`), all venue-checked and parsed; 4 records still wait for sources. Q3 sweep unchanged
-since 2026-11-26: 192 ingested, 194 accepted (all parsed), 239 rejected; next batch `Q3-b36`, next
-paper `#106`, from `2609.19334` (2026-09-18). Q4 2026: 23 accepted. Corpus 1,251 pages. Manual
-Verification Queue: no open items (all 3 2026-11-27 items resolved). To resume:
+**2026-11-28: citation-discovery sources completed, no pages.** All 40 records now have a
+parsed source: VCTK and LJSpeech as Tier 2 stubs from their dataset pages, PESQ and STOI from public
+PDFs, X-Codec switched to its AAAI proceedings PDF. Citation discovery: 31 of 40 ingested, 9 left,
+all venue-checked and parsed (CD-7 rows 3-4, CD-8, CD-9 below); nothing waits on the user. Q3 sweep
+unchanged since 2026-11-26: 192 ingested, 194 accepted (all parsed), 239 rejected; next batch
+`Q3-b36`, next paper `#106`, from `2609.19334` (2026-09-18). Q4 2026: 23 accepted. Corpus 1,251
+pages. Manual Verification Queue: no open items. To resume:
 
 **Session order (user, 2026-11-22, repeated 2026-11-25 and 2026-11-26): pre-select several batches up front with
 full pre-flight (four batches of 5), papers one at a time with cleanup and QC after each, batch
@@ -78,18 +77,16 @@ rejections at pre-flight are refilled from the next candidates so each batch sta
    to these records before ingest (Option A, user 2026-11-24; protocol section 2). **Venue pass done
    2026-11-27** for all remaining parsed records (`raw/pipeline_log.md`). Remaining:
    - **CD-7 rows 3-4, Tier 1 (one at a time):** UTMOSv2 `2409.09305` (preprint, SLT 2024 note,
-     `https://doi.org/10.1109/slt61566.2024.10832315`), X-Codec `2408.17175` (preprint, AAAI 2025
-     note, OJS page `https://ojs.aaai.org/index.php/AAAI/article/view/34761`). **Ask the user first
-     whether they downloaded the X-Codec AAAI PDF** (OJS is behind a bot check): if saved as
-     `raw/papers/2408.17175.peer-reviewed.pdf`, run `use_peer_reviewed.py --id 2408.17175 --url
-     <OJS page> --pdf-url https://ojs.aaai.org/index.php/AAAI/article/download/34761/36916
-     --venue AAAI --venue-type conference --date 2025-02-25 --source doi=10.1609/aaai.v39i24.34761
-     --apply` (it skips the download when the file exists; first clear `peer_reviewed_venue`,
-     `peer_reviewed_venue_type` and `url_peer_reviewed`, or check the dry run), then re-parse.
-   - **CD-8, Tier 2 (3 stubs in parallel, page only):** CAM++ `2303.00332` (Interspeech 2023 ISCA
+     `https://doi.org/10.1109/slt61566.2024.10832315`), X-Codec `2408.17175` (switched 2026-11-28:
+     AAAI 2025 proceedings parse primary, `preprint/` context only; card `AAAI · 2025 ·
+     Conference`, no italic note).
+   - **CD-8, Tier 2 (5 stubs in parallel, page only):** CAM++ `2303.00332` (Interspeech 2023 ISCA
      parse), Stable Audio Open `2407.14358` (preprint, ICASSP 2025 note), Qwen3-ASR `2601.21337`
-     (technical report, preprint).
-   - Waiting for sources (`needs_manual_pdf`): VCTK (Tier 1), PESQ, STOI, LJSpeech (Tier 2).
+     (technical report), PESQ `icassp-2001-pesq` and STOI `icassp-2010-stoi` (ICASSP author-format
+     PDFs; STOI carries `url_author_copy`, so its card gets `[→ Author copy]`).
+   - **CD-9, Tier 2 (2 stubs):** VCTK `cstr-vctk-2019`, LJSpeech `keithito-ljspeech-2017`: source
+     is the dataset page (`paper.md` source note); tell the agent there is no paper, no experiments
+     and no metrics, the card links `url` (the dataset page), and Context describes the dataset.
    **Prompt practice (2026-11-27):** gather later-paper mentions in the main session (grep
    `papers/*.md` for the ID and name, read the lines) and pass the quoted lines into the prompt; the
    agent's permission check can deny reading other pages (SyncLLM). Standing block:
@@ -1294,6 +1291,36 @@ All 3 queue items resolved one at a time (see the queue): DAC and Matcha-TTS kep
 `self-supervised-speech` removed from SemantiCodec (AudioMAE is a general-audio SSL encoder, not a
 speech model; ALMTokenizer earns the slug through wav2vec 2.0). Slug and concept bullet removed,
 health check passes.
+
+### Session 2026-11-28: citation-discovery sources completed (no pages)
+
+All 40 citation-discovery records now have a parsed source; no pages were written. **Datasets
+without a paper (user):** VCTK and LJSpeech are Tier 2 stubs built from their dataset pages, since
+they have no experiments to make claims about and stay out of integration. VCTK moved from Tier 1
+(its 2026-11-22 tier came from the title-keyword SR flag, "Voice Cloning"). Source text written as
+`raw/parsed/{id}/paper.md` with a source note: VCTK from the Edinburgh DataShare item record (REST
+API) and README.txt, LJSpeech from keithito.com; `pdf_source: dataset-page`. LJSpeech's
+`published_date` stays the 2017-01-01 placeholder (the page gives no release date). **PESQ and
+STOI (links from the user):** STOI from the first author's site (the ICASSP 2010 proceedings
+version, IEEE footer on page 1), PESQ from a third-party copy in author format (recursosvoip.com;
+title and authors match); `pdf_source: author`, venue ICASSP with the DOI as `url`; both parsed
+(18 and 14 references). **New field `url_author_copy` (user):** a free copy hosted by an author or
+their institution, never a third-party mirror, shown on the card as `[→ Author copy]` (schema and
+both skill templates). Set for STOI (encoded URL, parentheses break Markdown links) and backfilled
+on LibriSpeech (Daniel Povey's copy; page, card and `wiki/log.md` misc line); PESQ left without it.
+**X-Codec:** the user saved the AAAI OJS PDF from a browser; page 1 verified (AAAI-25 line), interim
+`peer_reviewed_venue` fields cleared, switched with `use_peer_reviewed.py` and re-parsed (53
+references; the AAAI heading-less bibliography issue did not occur). **Site deploy:** the
+2026-11-27 bump's deploy failed with "Multiple artifacts named github-pages"; cause: re-running the
+same workflow run after a first-attempt deploy failure uploads a second artifact. A local
+`npx quartz build` of content 07ecdf3 passed (1,307 files, 211 MB). The user started a fresh run;
+an optional per-attempt artifact name in `deploy.yml` was offered, not applied.
+
+| Batch | Tier | Papers |
+|---|---|---|
+| CD-7 (rows 3-4) | 1 | UTMOSv2 `2409.09305`, X-Codec `2408.17175` (AAAI proceedings parse) |
+| CD-8 | 2 | CAM++ `2303.00332`, Stable Audio Open `2407.14358`, Qwen3-ASR `2601.21337`, PESQ `icassp-2001-pesq`, STOI `icassp-2010-stoi` |
+| CD-9 | 2 | VCTK `cstr-vctk-2019`, LJSpeech `keithito-ljspeech-2017` (dataset-page sources) |
 
 ---
 
