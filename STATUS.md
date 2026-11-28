@@ -1,11 +1,12 @@
 # Project Status
 
-Last updated: 2026-11-08
+Last updated: 2026-11-28
 
-The Q3 and Q4 2025 content cycles are complete through integration, human-reviewed reconciliation,
-retrospective snapshots, field rendering, and quarterly reporting. Q2 2026 ingestion is complete
+The Q3 and Q4 2025 content cycles are complete through quarterly reporting. Q1 2026 is complete
+through integration, human-reviewed reconciliation, rendering, snapshot, and quarterly reporting
+on the dedicated integration branches. Merge and deployment are pending. Q2 2026 ingestion is complete
 (158 ingested after two pages moved to Q3 on 2026-11-01); the active corpus priority is the Q3 2026
-frontier and Q1 integration. The peer-reviewed-version rule and its verified Q1 batch are complete;
+frontier. The peer-reviewed-version rule and its verified Q1 batch are complete;
 Q3 fetch coverage is complete (Interspeech 2026
 from ISCA on 2026-11-01; arXiv top-up through 2026-09-30 on 2026-11-07), every accepted Q3 record
 has a PDF, and 204 of 364 are parsed (batches 1-3 of 7).
@@ -15,8 +16,8 @@ has a PDF, and 204 of 364 are parsed (batches 1-3 of 7).
 ## Current priorities
 
 1. Preserve the published Q4 snapshot and report as immutable historical artifacts.
-2. Freeze the 116-paper Q1 2026 integration manifest and begin Phase 1 across its 22 affected
-   concepts (453 page-to-concept memberships).
+2. Carry the validated Q1 snapshot and report through the content, infrastructure, and site release
+   sequence. See [the Q1 session record](docs/records/2026-11-08-q1-2026-integration-sessions.md).
 3. Continue the corpus-wide peer-reviewed-version batches, including the two Q2-held ICML/IJCAI
    records and historical frozen records, without duplicating the released migration path.
 4. Bootstrap and ingest Q3 2026. Fetch, filter, review and PDF download are done (2026-11-07); next,
@@ -38,14 +39,14 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 | Active accepted + ingested corpus | 1,455 | Basis of `scripts/corpus_summary.py` |
 | Parsed active papers | 1,275 | Includes ingested papers and accepted papers ready for ingest |
 | Accepted and parsed, ready to ingest | 206 | 2 Q2 2026 (held: ICML/IJCAI, move to Q3 under the pending rule) and 204 Q3 2026; 160 more Q3 PDFs (incl. the 70 ISCA) await parse, plus Q2 `2608.26146` and 19 Q4 records |
-| Concept claim YAMLs | 23 | All canonical Q3 concepts represented |
-| Concept paper entries | 2,892 | Corrective Phase 1 and Phase 2 are complete for four late Q4 papers across seven concepts |
-| Claim clusters | 444 | 342 strongly supported, 85 emerging, and 17 contested |
-| Rendered concept pairs | 23/23 present and current for Q4 | Every canonical concept has a current Overview and In Depth page |
-| Current field overview | Complete for Q4 | 23 concepts, 668 unique papers, 2,892 memberships, 444 local clusters, and 11 approved broader claims |
-| Reconciliation state | 388 relationships, 11 broader claims; 3,946 Q4 decisions finalized, 0 pending | Original run and bounded late-evidence corrective refresh complete |
-| Published snapshots | 2 | Retrospective `2025-Q3` and `2025-Q4` snapshots |
-| Published quarterly reports | 2 | `reports/quarterly/2025-Q3.md` and `reports/quarterly/2025-Q4.md` |
+| Concept claim YAMLs | 23 | All canonical concepts represented |
+| Concept paper entries | 3,345 | 453 Q1 memberships across 22 concepts |
+| Claim clusters | 464 | 354 strongly supported, 96 emerging, and 14 contested |
+| Rendered concept pairs | 23/23 current | Every canonical concept has a current Overview and In Depth page |
+| Current field overview | Complete for Q1 | 23 concepts, 783 unique papers, and 11 approved broader claims |
+| Reconciliation state | 658 direct relationships and 11 broader claims | All 5,314 Q1 candidates decided, 0 pending |
+| Published snapshots | 3 | Retrospective `2025-Q3`, `2025-Q4`, and `2026-Q1` snapshots |
+| Published quarterly reports | 3 | Q1 report at `reports/quarterly/2026-Q1.md` on the integration branch |
 
 Live health baseline on 2026-11-01:
 
@@ -73,7 +74,7 @@ non-authoritative.
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
-| Q1 2026 | Complete: 116 ingested, 0 accepted after the verified peer-reviewed-version batch | Not started; manifest-ready (22 concepts, 453 memberships) | Not started | Not started |
+| Q1 2026 | Complete: 116 ingested, including one intentional unassigned paper | Complete: 453 memberships across 22 concepts | Finalized: 919 accepted, 4,395 rejected, 0 pending | Complete on integration branch: concept pairs, overview, snapshot, and report |
 | Q2 2026 | Complete: 174 ingested after 16 Q1 pages moved to verified May proceedings dates; 2 accepted held (`2606.12940` ICML, `2606.13006` IJCAI); 1 accepted re-dated into Q2 on 2026-11-07 (`2608.26146` Vagdhenu, PDF, not parsed) | Not started | Not started | Not started |
 | Q3 2026 to date | 34 ingested (re-dated Interspeech 2026 pages); 364 accepted (all with PDFs, 204 parsed) | Not started | Not started | Not started |
 

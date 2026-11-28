@@ -1,7 +1,7 @@
 # Q1 2026 Integration and Synthesis Session
 
 **Started:** 2026-11-08
-**Status:** Integration complete through Phase 2; reconciliation in progress
+**Status:** Local closeout checked. Content, infrastructure, and site release pending.
 **Evidence scope:** Q1 2026 (`2026-01-01 <= published_date <= 2026-03-31`), layered onto the
 completed Q4-and-earlier claim graphs
 **Evidence cutoff:** 2026-03-31
@@ -13,9 +13,9 @@ informally after Phase 1 begins.
 
 ## Resume Here
 
-1. Use the dedicated worktrees:
-   - infrastructure: `speech-generation-wiki-infra-q1-integrate` at `7808b25`;
-   - content: `speech-generation-wiki-content-q1-integrate` at `844fb57`.
+1. Use the dedicated Q1 integration worktrees:
+   - infrastructure: `speech-generation-wiki-infra-q1-integrate`;
+   - content: `speech-generation-wiki-content-q1-integrate`, with snapshot and report at `2d6cd33`.
 2. Export the explicit content checkout:
 
    ```bash
@@ -23,12 +23,11 @@ informally after Phase 1 begins.
    ```
 
 3. Phase 1 is closed at 453/453 frozen memberships across all 22 concepts; all 22 concepts are complete through Phase 2.
-4. Reconciliation candidate generation is complete. Evaluation is closed at 146 accepted and 869
-   rejected candidates with zero pending. Codec/language-modeling is the next whole-theme triage
-   at 1,274 pending candidates.
-5. Follow `docs/integration-protocol.md` section 6: triage each complete theme, review large semantic
-   acceptance bundles, then close rejections in one categorized theme bundle.
-6. Do not edit paper pages, the paper catalog, snapshots, renders, or reports during reconciliation.
+4. Reconciliation is finalized at 919 accepted, 4,395 rejected, and zero pending.
+5. The 23 concept pairs and field overview are current. The published Q1 snapshot and quarterly
+   report are validated on the content integration branch.
+6. Follow `docs/integration-protocol.md` section 9 for the release and validate the merged content
+   before deploying.
 
 ## Ownership and Parallel-Work Gate
 
@@ -118,7 +117,21 @@ python scripts/health_check.py \
 - Initial cluster-coverage audit found one earlier omission: multilingual streaming paper `2603.16924` had high/medium evidence but no cluster reference. It was added as refining evidence to `duration_and_alignment_are_language_sensitive`.
 - Corrected high/medium-relevance cluster coverage: 0 uncovered Q1 papers.
 - Forty-two Q1 family outliers remain intentional evaluation, benchmark, architecture-unspecified, or peripheral-system records already accepted in their per-concept Phase 2 summaries.
-- No push, reconciliation, rendering, snapshot, or report operation was performed.
+- This audit recorded the end of the concept-local integration stage.
+
+## Local Closeout Checkpoint
+
+- The live Q1 concept memberships exactly match all 453 manifest entries across 22 concepts,
+  including their order. The snapshot contains the same 115 Q1 papers.
+- Verified 1,061 unique paper pages, one catalog row per page, and matching homepage counts.
+- Finalized reconciliation and refreshed the concept renderings and field overview. The immutable
+  snapshot uses content checkpoint `7d721e0` and infrastructure checkpoint `af8eb5e`.
+- The snapshot reproduced byte for byte after publication. The repository report validator passed
+  against the snapshot, report index, and changelog.
+- All 54 tests and all six health modules passed with zero errors. The render and agent modules
+  had zero warnings. The remaining modules report non-blocking corpus and historical warnings.
+- Local closeout covers the two integration branches. Merge, push, site deployment, and branch
+  cleanup are release steps.
 
 ## Phase 1 — Concept-Local Evidence
 
