@@ -160,15 +160,64 @@ Reconciliation begins only after every affected concept has passed Phase 2.
 
 1. Generate one deterministic candidate run from the closed concept graph.
 2. Preserve prior human-reviewed authority; generated similarity candidates are advisory.
-3. Triage candidates into readable semantic themes and broader bundles before human review.
-4. Present the main theme and, for each proposed relationship, explain the category, both claims,
-   their relationship, and why the relationship is worth accepting or rejecting.
+3. Triage the **entire pending theme** before asking for human decisions. Partition it into prior
+   accepted authority, prior rejections, genuinely new candidates, and evidence-changed exceptions.
+4. Present proposed acceptances as semantic groups. For every group, state what subject it covers,
+   the central claim being made, the number of candidates, whether decisions are new or reopened,
+   and the proposed registry action.
 5. Review bundles rather than individual propositions when they share one defensible rationale.
-   Reserve individual review for ambiguous boundaries, reversals of prior authority, and unusual
-   rejections.
+   Reserve individual review for ambiguous boundaries, reversals of human-approved authority, new
+   broader propositions, and unusual rejection exceptions.
 6. Record every candidate as accepted, rejected, or deferred with rationale and a reconsideration
    trigger. Never label agent triage as human review.
 7. Finalize only with zero pending candidates and a passing reconciliation health check.
+
+### Review scale and cadence
+
+Candidate count is not human-review count. The generator preserves every pair with at least two
+shared supporting papers, so a run may contain thousands of candidates even when most decisions
+share one scope-gap rationale. Do not drift into pair-by-pair review merely because the pending
+count is large.
+
+Use these default review units:
+
+- **Existing reviewed authority:** one theme-level bundle, normally 20–50 decisions and larger
+  when the audit is uniform. Verify that core claim, status, confidence, reciprocal target, and
+  human-review status remain valid; surface exceptions separately.
+- **Likely acceptances:** semantic bundles of roughly 10–25 decisions. Combine adjacent small
+  groups when their distinction is explanatory rather than decision-relevant; never pad a bundle
+  with unrelated claims merely to reach a target size.
+- **Likely rejections:** one categorized theme-closure bundle, even when it contains hundreds of
+  candidates. Separate unchanged prior scope gaps, evidence-updated scope gaps, low-semantic-
+  overlap pairs, and any other material category. Give every stored candidate its own rationale
+  and reconsideration trigger even though the person reviews the category in bulk.
+- **Individual decisions:** use only for genuine ambiguity, a proposed reversal of human-approved
+  authority, a new or materially rewritten broader claim, or an exception whose rationale cannot
+  be shared safely.
+
+A prior rejection is reopened only when new evidence closes the proposition-level scope gap, not
+merely because the pair gains shared papers. A prior acceptance is carried forward only after its
+current claims and registry authority are checked; repeated approval must never be inferred from
+an earlier run without that audit.
+
+Every human-review table must include, at minimum:
+
+- semantic group and candidate count;
+- a short description of what the group covers;
+- the central claim or relationship asserted;
+- new-versus-reopened counts when applicable; and
+- the concrete registry effect: existing authority, broader-claim membership, or direct
+  relationship.
+
+After every approved bundle, report theme accepted/rejected/pending counts, full-run pending count,
+and the next review unit. Do not write a human-review disposition until the person explicitly
+approves that bundle. The standard theme sequence is:
+
+1. whole-theme agent triage;
+2. one existing-authority carry-forward bundle;
+3. one or a few semantic acceptance bundles;
+4. one categorized rejection closure; and
+5. reconciliation validation plus a theme checkpoint.
 
 If late evidence changes only derived support for existing reviewed relationships, run a bounded
 corrective refresh. Do not regenerate or silently rewrite the finalized human-review run.

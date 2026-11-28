@@ -1,7 +1,7 @@
 # Q1 2026 Integration and Synthesis Session
 
 **Started:** 2026-11-08
-**Status:** Integration complete through Phase 2; reconciliation pending
+**Status:** Integration complete through Phase 2; reconciliation in progress
 **Evidence scope:** Q1 2026 (`2026-01-01 <= published_date <= 2026-03-31`), layered onto the
 completed Q4-and-earlier claim graphs
 **Evidence cutoff:** 2026-03-31
@@ -23,8 +23,12 @@ informally after Phase 1 begins.
    ```
 
 3. Phase 1 is closed at 453/453 frozen memberships across all 22 concepts; all 22 concepts are complete through Phase 2.
-4. The next gated stage is cross-concept reconciliation from the closed concept graph.
-5. Do not edit paper pages, the paper catalog, snapshots, renders, or reports during reconciliation.
+4. Reconciliation candidate generation is complete. Evaluation is closed at 146 accepted and 869
+   rejected candidates with zero pending. Codec/language-modeling is the next whole-theme triage
+   at 1,274 pending candidates.
+5. Follow `docs/integration-protocol.md` section 6: triage each complete theme, review large semantic
+   acceptance bundles, then close rejections in one categorized theme bundle.
+6. Do not edit paper pages, the paper catalog, snapshots, renders, or reports during reconciliation.
 
 ## Ownership and Parallel-Work Gate
 
@@ -952,6 +956,306 @@ Phase 1 validation. Phase 2 follows immediately after each concept's Phase 1 que
 - Concept-scoped Phase 2 health: 0 errors and 24 expected method-family coverage warnings, all from
   earlier papers in the full 303-paper concept history.
 - Main-cluster summary appended to the Git-ignored local Phase 2 summary log.
+
+## Reconciliation
+
+Candidate generation produced 5,314 deterministic shared-evidence candidates across eight themes.
+Human review began with evaluation. Through bundle 15, evaluation is complete at 146 accepted and
+869 rejected candidates with zero pending. Codecs/language-modeling bundle 1 then reaffirmed 101
+Q4 human-approved decisions and resolved three newly emitted pairs through existing human-approved
+broader claims. The codec theme now has 104 accepted and 1,170 pending candidates; the full run has
+250 accepted, 869 rejected, and 4,195 pending candidates. Reconciliation validation passes with zero
+errors and two expected warnings.
+
+Codecs/language-modeling bundle 2 accepted 15 newly emitted representation and generation-interface
+pairs: seven unified codec, SSL, and language-model links, six semantic-acoustic organization links,
+and two modular-generation or leakage-control links. Fourteen were recorded as conservative `related`
+relationships and the early-RVQ semantic-layer result as a narrower `specialization`. The codec theme
+now has 119 accepted and 1,155 pending candidates; the full run has 265 accepted, 869 rejected, and
+4,180 pending candidates. The registry contains 424 direct relationships and 11 broader claims, and
+reconciliation validation continues to pass with zero errors and two expected warnings.
+
+Codecs/language-modeling bundle 3 accepted 14 newly emitted transfer, reconstruction, and deployment
+pairs: five cross-task token-interface and transfer links, five token-rate and streaming-cost links,
+and four robustness or reconstruction links. Twelve were recorded as conservative `related`
+relationships and two as `supports` relationships. The codec theme now has 133 accepted and 1,141
+pending candidates; the full run has 279 accepted, 869 rejected, and 4,166 pending candidates. The
+registry contains 438 direct relationships and 11 broader claims, and reconciliation validation
+continues to pass with zero errors and two expected warnings.
+
+Codecs/language-modeling bundle 4 closed the theme by rejecting 1,141 candidates in one categorized
+human-review bundle: 629 unchanged prior scope gaps, 283 prior gaps with added shared evidence, two
+individually audited core-claim changes, and 227 newly emitted scope mismatches. Every rejection has
+a candidate-specific rationale and reconsideration trigger. The completed theme contains 133 accepted
+and 1,141 rejected candidates with zero deferred or pending. The full run now has 279 accepted, 2,010
+rejected, and 3,025 pending candidates. Reconciliation validation passes with zero errors and two
+expected warnings; the registry remains at 438 direct relationships and 11 broader claims.
+
+Speaker bundle 1 accepted 78 existing-authority candidates: 67 Q4 human-approved decisions were
+reaffirmed, eight newly emitted pairs resolved through the existing multiattribute-disentanglement
+claim, and three resolved through the existing multidimensional-evaluation claim. The audit covered
+33 direct registry targets and 45 broader-claim resolutions without creating duplicate records. The
+speaker theme now has 78 accepted and 1,184 pending candidates; the full run has 357 accepted, 2,010
+rejected, and 2,947 pending candidates. Reconciliation validation passes with zero errors and two
+expected warnings; the registry remains at 438 direct relationships and 11 broader claims.
+
+Speaker bundle 2 accepted 16 disentanglement and attribute-interference candidates: 14 newly
+emitted pairs and two Q4 rejections reopened after the GRL claim materially strengthened. Eight
+reviewed members were added to the multiattribute-disentanglement broader claim, whose exact member-
+derived evidence was refreshed through the Q1 cutoff, and two direct relationships were added for
+post-hoc steering and style-timbre control. The speaker theme now has 94 accepted and 1,168 pending
+candidates; the full run has 373 accepted, 2,010 rejected, and 2,931 pending candidates. The registry
+contains 440 direct relationships and 11 broader claims, and reconciliation validation passes with
+zero errors and two expected warnings.
+
+Speaker bundle 3 accepted eight newly emitted reference and representation-transfer candidates:
+four non-audio or reference-free identity links, two low-resource or timbre-transfer links, and two
+prompt-leakage or pitch-preservation links. Six were recorded as `related`, one as `refines`, and one
+as `supports`. The speaker theme now has 102 accepted and 1,160 pending candidates; the full run has
+381 accepted, 2,010 rejected, and 2,923 pending candidates. The registry contains 448 direct
+relationships and 11 broader claims, and reconciliation validation passes with zero errors and two
+expected warnings.
+
+Speaker bundle 5 accepted eight newly emitted identity and perceptual trade-off candidates: five
+control-interference or perceptual-cost links, two privacy or metric-validity links, and one style-
+timbre evaluation link. Five were recorded as `tradeoff`, one as `supports`, and two as `refines`.
+Speaker acceptance review is complete at 118 accepted, with 1,144 categorized rejection candidates
+remaining. The full run has 397 accepted, 2,010 rejected, and 2,907 pending candidates. The registry
+contains 464 direct relationships and 11 broader claims, and reconciliation validation passes with
+zero errors and two expected warnings.
+
+Speaker bundle 6 closed the theme by rejecting 1,144 candidates in one categorized human-review
+bundle: 603 unchanged prior scope gaps, 282 prior gaps with added shared evidence, three individually
+audited core-claim changes, and 256 newly emitted scope mismatches. Every rejection has a candidate-
+specific rationale and reconsideration trigger. The completed theme contains 118 accepted and 1,144
+rejected candidates with zero deferred or pending. The full run now has 397 accepted, 3,154 rejected,
+and 1,763 pending candidates. Reconciliation validation passes with zero errors and two expected
+warnings; the registry remains at 464 direct relationships and 11 broader claims.
+
+Controllability bundle 2 accepted 12 newly emitted factorized and post-hoc control candidates: five
+structural-factorization or preservation links, four targeted expressive-control links, and three
+post-hoc or signal-level control links. Nine were recorded as `related`, two as `refines`, and one as
+`supports`. The controllability theme now has 172 accepted and 775 pending candidates; the full run
+has 569 accepted, 3,154 rejected, and 1,591 pending candidates. The registry contains 476 direct
+relationships and 11 broader claims, and reconciliation validation passes with zero errors and two
+expected warnings.
+
+Controllability bundle 3 accepted ten newly emitted emotion and local-prosody candidates: four
+hierarchical emotion or prosody links, three duration, rhythm, or signal-control links, and three
+cross-speaker expressive-transfer links. Nine were recorded as `related` and one as `supports`. The
+controllability theme now has 182 accepted and 765 pending candidates; the full run has 579 accepted,
+3,154 rejected, and 1,581 pending candidates. The registry contains 486 direct relationships and 11
+broader claims, and reconciliation validation passes with zero errors and two expected warnings.
+
+Controllability bundle 4 accepted eight newly emitted cross-lingual expressive-control candidates:
+two language-sensitive timing or conditioning links, three cross-lingual style or representation-
+transfer links, and three low-resource adaptation or leakage-boundary links. Six were recorded as
+`related` and two as `refines`. The controllability theme now has 190 accepted and 757 pending
+candidates; the full run has 587 accepted, 3,154 rejected, and 1,573 pending candidates. The registry
+contains 494 direct relationships and 11 broader claims, and reconciliation validation passes with
+zero errors and two expected warnings.
+
+Controllability bundle 5 accepted ten newly emitted control-boundary and evaluation candidates: two
+prompt or identity-control boundary links, three attribute-separation or perceptual-cost links, and
+five dimension-specific evaluation links. Three were recorded as `related`, two as `refines`, and
+five as `supports`. Controllability acceptance review is complete at 200 accepted, with 747
+categorized rejection candidates remaining. The full run has 597 accepted, 3,154 rejected, and 1,563
+pending candidates. The registry contains 504 direct relationships and 11 broader claims, and
+reconciliation validation passes with zero errors and two expected warnings.
+
+Controllability bundle 6 closed the theme by rejecting 747 candidates in one categorized human-
+review bundle: 357 unchanged prior scope gaps, 178 prior gaps with added shared evidence, two
+individually audited GRL core-claim changes, and 210 newly emitted scope mismatches. Every rejection
+has a candidate-specific rationale and reconsideration trigger. The completed theme contains 200
+accepted and 747 rejected candidates with zero deferred or pending. The full run now has 597 accepted,
+3,901 rejected, and 816 pending candidates. Reconciliation validation passes with zero errors and two
+expected warnings; the registry remains at 504 direct relationships and 11 broader claims.
+
+Robustness bundle 1 accepted 40 existing-authority candidates: 21 multilingual coverage or
+representation-transfer links, 12 unseen-voice or acoustic-robustness links, four scalable-
+supervision links, and three domain-shift evaluation links. Thirty-seven candidates reaffirm existing
+human-approved direct relationships and three resolve through the existing training-diversity and
+unseen-voice-generalization broader claim. No registry record was created or duplicated. The
+robustness theme now has 40 accepted and 178 pending candidates; the full run has 637 accepted, 3,901
+rejected, and 776 pending candidates. Reconciliation validation passes with zero errors and two
+expected warnings; the registry remains at 504 direct relationships and 11 broader claims.
+
+Robustness bundle 2 accepted 13 newly emitted multilingual coverage and pronunciation candidates:
+four multilingual-training or cross-task-transfer links, six pronunciation or language-structure
+links, and three scale or balance-boundary links. Eight were recorded as `related`, three as
+`supports`, and two as `refines`. The robustness theme now has 53 accepted and 165 pending candidates;
+the full run has 650 accepted, 3,901 rejected, and 763 pending candidates. The registry contains 517
+direct relationships and 11 broader claims, and reconciliation validation passes with zero errors and
+two expected warnings.
+
+Robustness bundle 3 accepted 22 domain-shift and leakage candidates: eight language, accent, or
+cloning-leakage links, ten domain-sensitive evaluation links, and four architecture or data-
+robustness links. Ten pairs were newly emitted, while 12 Q4 rejections were reopened after added Q1
+evidence closed the earlier proposition-scope gap. One was recorded as `related`, 14 as `supports`,
+and seven as `refines`. The robustness theme now has 75 accepted and 143 pending candidates; the full
+run has 672 accepted, 3,901 rejected, and 741 pending candidates. The registry contains 539 direct
+relationships and 11 broader claims, and reconciliation validation passes with zero errors and two
+expected warnings.
+
+Robustness bundle 4 accepted three newly emitted conversational-data robustness candidates: one
+turn-taking behavior link, one long-context conversation link, and one data-structure-versus-scale
+link. Two were recorded as `supports` and one as `refines`. Robustness acceptance review is complete
+at 78 accepted, with 140 categorized rejection candidates remaining. The full run has 675 accepted,
+3,901 rejected, and 738 pending candidates. The registry contains 542 direct relationships and 11
+broader claims, and reconciliation validation passes with zero errors and two expected warnings.
+
+Robustness bundle 5 closed the theme by rejecting 140 candidates in one categorized human-review
+bundle: 84 unchanged prior scope gaps, 18 prior gaps with added shared evidence, and 38 newly emitted
+scope mismatches. Every rejection has a candidate-specific rationale and reconsideration trigger. The
+completed theme contains 78 accepted and 140 rejected candidates with zero deferred or pending. The
+full run now has 675 accepted, 4,041 rejected, and 598 pending candidates. Reconciliation validation
+passes with zero errors and two expected warnings; the registry remains at 542 direct relationships
+and 11 broader claims.
+
+Streaming-and-agents bundle 1 accepted 48 authority candidates: 42 Q4 human-approved decisions were
+reaffirmed, five newly emitted pairs resolved through existing broader claims, and one Q4 rejection
+was reversed after Q1 broader authority closed the earlier scope gap. Thirty-six candidates use
+existing direct relationships and 12 resolve through broader claims; no registry record was created
+or duplicated. One legacy agent-proposed equivalent relationship was deliberately bypassed in favor
+of the corrective human-approved specialization record for the same backchannel pair. The theme now
+has 48 accepted and 171 pending candidates; the full run has 723 accepted, 4,041 rejected, and 550
+pending candidates. Reconciliation validation passes with zero errors and two expected warnings; the
+registry remains at 542 direct relationships and 11 broader claims.
+
+Streaming-and-agents bundle 2 accepted 14 responsiveness and streaming-policy candidates: five
+responsiveness or latency-trade-off links, five interruption or backchannel-policy links, and four
+curricula, concurrent-reasoning, or measurement links. Eleven pairs were newly emitted, while three
+Q4 rejections were reopened after added Q1 evidence closed the earlier proposition-scope gap. Eleven
+were recorded as `related` and three as `supports`. The theme now has 62 accepted and 157 pending
+candidates; the full run has 737 accepted, 4,041 rejected, and 536 pending candidates. The registry
+contains 556 direct relationships and 11 broader claims, and reconciliation validation passes with
+zero errors and two expected warnings.
+
+Streaming-and-agents bundle 3 accepted 14 interaction-evaluation and context candidates: six
+backchannel or turn-taking evaluation links, five responsiveness benchmark-coverage links, and three
+context or conversational-memory links. Eleven pairs were newly emitted, while three Q4 rejections
+were reopened after added Q1 evidence closed the earlier proposition-scope gap. Ten were recorded as
+`supports` and four as `related`; one proposed `supports` edge was tightened to `related` to preserve
+the acyclic directed registry. The theme now has 76 accepted and 143 pending candidates; the full run
+has 751 accepted, 4,041 rejected, and 522 pending candidates. The registry contains 570 direct
+relationships and 11 broader claims, and reconciliation validation passes with zero errors and two
+expected warnings.
+
+Streaming-and-agents bundle 4 accepted eight streaming-architecture and training candidates: four
+system-architecture or concurrent-reasoning links, two simultaneous-interaction or measurement
+links, and two curricula, data, or context links. Five pairs were newly emitted, while three Q4
+rejections were reopened after added Q1 evidence closed the earlier proposition-scope gap. Five were
+recorded as `related` and three as `supports`. Streaming-and-agents acceptance review is complete at
+84 accepted, with 135 categorized rejection candidates remaining. The full run has 759 accepted,
+4,041 rejected, and 514 pending candidates. The registry contains 578 direct relationships and 11
+broader claims, and reconciliation validation passes with zero errors and two expected warnings.
+
+Streaming-and-agents bundle 5 closed the theme by rejecting 135 candidates in one categorized human-
+review bundle: 68 unchanged prior scope gaps, 18 prior gaps with added shared evidence, and 49 newly
+emitted scope mismatches. Every rejection has a candidate-specific rationale and reconsideration
+trigger. The completed theme contains 84 accepted and 135 rejected candidates with zero deferred or
+pending. The full run now has 759 accepted, 4,176 rejected, and 379 pending candidates.
+Reconciliation validation passes with zero errors and two expected warnings; the registry remains at
+578 direct relationships and 11 broader claims.
+
+Efficiency bundle 1 accepted 28 existing-authority candidates: six interactive end-to-end latency
+links, 14 parallel or token-efficient decoding links, and eight flow or diffusion acceleration
+links. All 28 exactly reaffirm Q4 human-approved direct relationships; no candidate was new or
+reopened, and no registry record was created. The efficiency theme now has 28 accepted and 177
+pending candidates; the full run has 787 accepted, 4,176 rejected, and 351 pending candidates.
+The registry remains at 578 direct relationships and 11 broader claims.
+
+Efficiency bundle 2 accepted 15 interactive end-to-end latency candidates: six system-architecture
+or shifting-bottleneck links, four streaming-policy or incremental-generation links, and five
+interaction-measurement links. Eleven pairs were newly emitted, while four Q4 rejections were
+reopened after Q1 evidence closed the earlier proposition-scope gap. Seven were recorded as
+`supports`, five as `related`, two as `tradeoff`, and one as `refines`. The efficiency theme now
+has 43 accepted and 162 pending candidates; the full run has 802 accepted, 4,176 rejected, and
+336 pending candidates. The registry contains 593 direct relationships and 11 broader claims.
+
+Efficiency bundle 3 accepted 19 token and generation-efficiency candidates: seven token-rate or
+compact-representation links, five parallel or non-autoregressive-generation links, five flow or
+decoding-acceleration links, and two efficiency-quality validation links. Eleven pairs were newly
+emitted, while eight Q4 rejections were reopened after Q1 evidence closed the earlier proposition-
+scope gap. Ten were recorded as `supports`, six as `related`, and three as `tradeoff`. The efficiency
+theme now has 62 accepted and 143 pending candidates; the full run has 821 accepted, 4,176 rejected,
+and 317 pending candidates. The registry contains 612 direct relationships and 11 broader claims.
+
+Efficiency bundle 4 accepted 18 deployment and quality-boundary candidates: two data-efficient-
+supervision links, seven streaming or architecture-deployment links, four cross-task or
+representation-acceleration links, and five perceptual-quality-boundary links. Three pairs were
+newly emitted, while 15 Q4 rejections were reopened after Q1 evidence closed the earlier proposition-
+scope gap. Seven were recorded as `supports`, four as `related`, and seven as `tradeoff`. Efficiency
+acceptance review is complete at 80 accepted, with 125 categorized rejection candidates remaining.
+The full run has 839 accepted, 4,176 rejected, and 299 pending candidates. The registry contains 630
+direct relationships and 11 broader claims.
+
+Controllability bundle 1 accepted 160 authority candidates: 111 Q4 human-approved decisions were
+reaffirmed, 23 newly emitted pairs resolved through existing reviewed broader claims, and 26 Q4
+rejections were explicitly reversed after later Q1 human review established shared broader
+authority for both endpoints. No registry record was created or duplicated. The controllability
+theme now has 160 accepted and 787 pending candidates; the full run has 557 accepted, 3,154 rejected,
+and 1,603 pending candidates. Reconciliation validation passes with zero errors and two expected
+warnings; the registry remains at 464 direct relationships and 11 broader claims.
+
+Efficiency bundle 5 closed the theme by rejecting 125 candidates in one categorized human-review
+bundle: 90 unchanged prior scope gaps, 13 prior gaps with added shared evidence, and 22 newly
+emitted scope mismatches. Every rejection has a candidate-specific rationale and reconsideration
+trigger. The completed theme contains 80 accepted and 125 rejected candidates with zero deferred or
+pending. The full run now has 839 accepted, 4,301 rejected, and 174 pending candidates. The registry
+remains at 630 direct relationships and 11 broader claims.
+
+Post-training bundle 1 accepted 52 authority candidates: 51 Q4 human-approved decisions were
+reaffirmed, and one newly emitted pair resolved through the existing preference-post-training broader
+claim. Seventeen candidates use existing direct relationships and 35 use the reviewed broader claim;
+no registry record was created or duplicated. The post-training theme now has 52 accepted and 122
+pending candidates. The full run has 891 accepted, 4,301 rejected, and 122 pending candidates, and the
+registry remains at 630 direct relationships and 11 broader claims.
+
+Post-training bundle 2 accepted 16 new reward-design and evaluation relationships on 2026-11-28.
+Four cover reward effectiveness and stability, ten cover evaluator limits, and two cover control
+and quality failure modes. Eight are `supports`, six are `tradeoff`, and two are `related`.
+Post-training now has 68 accepted and 106 pending candidates. The full run has 907 accepted,
+4,301 rejected, and 106 pending. The registry contains 646 direct relationships and 11 broader claims.
+
+Post-training bundle 3 accepted 10 new relationships on 2026-11-28. Two cover streaming translation,
+three cover timing and alignment, and five cover task adaptation and modality transfer. The registry
+adds one specialization, one supports relationship, two refines relationships, and six related links.
+Post-training now has 78 accepted and 96 pending candidates. The full run has 917 accepted,
+4,301 rejected, and 96 pending. The registry contains 656 direct relationships and 11 broader claims.
+
+Post-training bundle 4 accepted two supports relationships on 2026-11-28. The accent-and-rhythm
+pair was new. Q1 evidence on speech reward evaluator collapse reopened the Q4 rejection on proxy
+rewards and listener judgment. Post-training now has 80 accepted and 94 pending candidates.
+The full run has 919 accepted, 4,301 rejected, and 94 pending. The registry contains 658 direct
+relationships and 11 broader claims.
+
+Post-training bundle 5 closed the theme with 94 human-approved rejections: 64 unchanged prior
+scope gaps, 12 prior gaps with added evidence, and 18 newly emitted scope mismatches. Each
+decision includes a rationale and reconsideration trigger. Post-training closed at 80 accepted
+and 94 rejected. Across all eight Q1 themes, 919 were accepted and 4,395 rejected, with zero
+pending or deferred. The registry contains 658 direct relationships and 11 broader claims.
+The Q1 reconciliation run was finalized on 2026-11-28 with zero errors and the existing warning
+for 15 legacy agent proposals.
+
+Speaker bundle 4 accepted eight newly emitted cross-lingual and low-resource transfer candidates:
+four adaptation and language-coverage links, two cross-lingual identity or accent links, and two
+language-sensitive boundary links. Six were recorded as `related`, one as `supports`, and one as
+`refines`. The speaker theme now has 110 accepted and 1,152 pending candidates; the full run has 389
+accepted, 2,010 rejected, and 2,915 pending candidates. The registry contains 456 direct
+relationships and 11 broader claims, and reconciliation validation passes with zero errors and two
+expected warnings.
+
+The review cadence was clarified on 2026-11-15 and promoted to the canonical
+`docs/integration-protocol.md` rather than remaining a chat convention. Future integration sessions
+must triage a whole theme before decisions, carry forward audited authority in one large bundle,
+review likely acceptances in semantic groups of roughly 10–25, and close hundreds of rejections in
+one categorized bundle. Review tables must explain what each semantic group covers, its central
+claim, candidate count, new-versus-reopened split, and concrete registry effect. Progress is reported
+after every approval. Pair-by-pair review is reserved for ambiguity, reversals of human-approved
+authority, new broader propositions, and exceptions that cannot safely share a rationale.
+
+No reconciliation commit or push has been made after the initial candidate-generation checkpoint.
 
 ## Preflight Validation
 
