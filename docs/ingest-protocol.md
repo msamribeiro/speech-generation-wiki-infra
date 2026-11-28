@@ -36,6 +36,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
    (`git log HEAD..origin/main`, `git status`) before any later merge.
 5. Activate tooling: use `.venv/bin/python` directly (background shells do not keep `activate`).
 6. Pre-select the candidate list (section 2) and confirm it with the user before launching anything.
+7. Check plan usage with `python3 scripts/check_limits.py` (one tiny Haiku call; prints the 5-hour
+   and weekly windows with reset times; exit 0 below `--stop` (default 0.85), 2 at or above it, 1 on
+   error). Overage is disabled at org level, so 100% of either window stops work. A Tier 1 page can
+   move the weekly figure several points, so re-check between papers when near the threshold.
 
 ## 2. Candidate selection
 
@@ -517,6 +521,14 @@ If an agent is cut off (session limit, API 5xx), inspect the **standalone conten
 writes (page without index/log/metadata, stray figure assets): complete or reuse by hand, and
 check coverage, not just structure. After a retry, also confirm `INGEST_RESULT` was emitted;
 agents sometimes omit it.
+
+Plan usage limits (verified 2026-11-28, Claude Code 2.1.316): there is no `claude usage`
+subcommand and `/usage` is interactive only. Every `claude -p --output-format stream-json
+--verbose` run emits a `rate_limit_event` whose `rate_limit_info.unifiedWindows` holds `five_hour`
+and `seven_day` objects (`utilization` 0-1, `resetsAt` epoch seconds, `status` `allowed` /
+`allowed_warning`, `surpassedThreshold`). `scripts/check_limits.py` reads it; an unattended loop
+should run it before each paper and stop on exit 2. Utilization only updates between calls, so
+leave headroom for one paper's worth of usage.
 
 ## 9. Session close
 
