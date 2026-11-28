@@ -22,9 +22,9 @@ Status snapshot 2026-09-27 (by `published_date`; accepted = accepted + ingested;
 
 ## Content Stage Implementation [P0 · in-progress]
 
-- [ ] Release Q1 2026 through content, infrastructure, and site in dependency order. Local integration,
-  reconciliation, rendering, snapshot, quarterly report, and closeout checks are complete.
-  See [the Q1 session record](docs/records/2026-11-08-q1-2026-integration-sessions.md).
+- [ ] **Q2 2026 integration** — Reuse the existing integration worktrees, complete canonical-date preflight,
+  and freeze the membership manifest before Phase 1.
+  See [the Q2 integration session record](docs/records/2026-11-28-q2-2026-integration-sessions.md).
 
 Execute the redesigned three-stage pipeline in the wiki content repo. Integration agent spec and schema are complete (2026-06-24); design doc at `docs/design/integration-agent.md`. `_claims/` directory exists; `concepts/_evidence/` removed. YAML validation is covered by the Pipeline Health Suite integrate module (`scripts/checks/integrate.py`, built 2026-07-15).
 

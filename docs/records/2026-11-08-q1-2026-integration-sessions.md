@@ -1,33 +1,29 @@
 # Q1 2026 Integration and Synthesis Session
 
 **Started:** 2026-11-08
-**Status:** Local closeout checked. Content, infrastructure, and site release pending.
+**Status:** Closed and published on 2026-11-28. This is the archived Q1 integration log.
 **Evidence scope:** Q1 2026 (`2026-01-01 <= published_date <= 2026-03-31`), layered onto the
 completed Q4-and-earlier claim graphs
 **Evidence cutoff:** 2026-03-31
-**Owner:** current Codex session until a recorded handoff
 
-This is the authoritative operating record for Q1 integration. Candidate membership is frozen in
-`docs/records/2026-11-08-q1-2026-integration-manifest.json`; do not recompute or expand the set
-informally after Phase 1 begins.
+The [Q1 manifest](2026-11-08-q1-2026-integration-manifest.json) records the frozen membership list.
+The entries below preserve the decisions and checkpoints from the completed cycle.
 
-## Resume Here
+## Release and handoff
 
-1. Use the dedicated Q1 integration worktrees:
-   - infrastructure: `speech-generation-wiki-infra-q1-integrate`;
-   - content: `speech-generation-wiki-content-q1-integrate`, with snapshot and report at `2d6cd33`.
-2. Export the explicit content checkout:
+- Phase 1 and Phase 2 covered 453 memberships across 22 concepts. Human review closed with
+  919 accepted, 4,395 rejected, zero deferred, and zero pending.
+- All 23 concept pairs and the field overview passed render validation. The frozen snapshot
+  contains 783 papers, including 115 published in Q1.
+- Content `cc9ca89`, infrastructure `2b91c3b`, and site `83dd6b7` went to their remote main
+  branches. GitHub Pages deployed successfully, and the
+  [Q1 quarterly report](https://wiki.msamribeiro.com/reports/quarterly/2026-q1) was verified live.
+- The merged release passed all 58 tests and all six health modules with zero errors. The
+  catalog had one row for each of the 1,251 paper pages.
+- Both ingestion branches subsequently matched their remote main branches, with the corrected
+  MOSS paper date in both. The Q1 integration worktrees remain available for reference.
 
-   ```bash
-   export SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-q1-integrate
-   ```
-
-3. Phase 1 is closed at 453/453 frozen memberships across all 22 concepts; all 22 concepts are complete through Phase 2.
-4. Reconciliation is finalized at 919 accepted, 4,395 rejected, and zero pending.
-5. The 23 concept pairs and field overview are current. The published Q1 snapshot and quarterly
-   report are validated on the content integration branch.
-6. Follow `docs/integration-protocol.md` section 9 for the release and validate the merged content
-   before deploying.
+The next cycle has its own [Q2 integration session record](2026-11-28-q2-2026-integration-sessions.md).
 
 ## Ownership and Parallel-Work Gate
 

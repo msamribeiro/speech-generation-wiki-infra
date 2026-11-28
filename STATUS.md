@@ -2,8 +2,8 @@
 
 Last updated: 2026-11-28
 
-The Q3 and Q4 2025 content cycles are complete through quarterly reporting. Q1 2026 is complete
-through reconciliation, rendering, snapshot, and quarterly reporting on the integration branch. Q2 2026 ingestion is complete
+The Q3 and Q4 2025 content cycles are complete through quarterly reporting. Q1 2026 integration
+is closed, and its snapshot and report are published. Q2 2026 ingestion is complete
 (175 ingested, 0 accepted; the two ICML/IJCAI holds moved to Q3 and were ingested on 2026-11-15); the active corpus priority is the Q3 2026
 frontier. The peer-reviewed-version rule and its verified Q1 batch are complete;
 Q3 fetch coverage is complete (Interspeech 2026
@@ -16,8 +16,8 @@ has a PDF and is parsed (all 7 parse batches done 2026-11-11; the 65 arXiv-canon
 ## Current priorities
 
 1. Preserve the published Q4 snapshot and report as immutable historical artifacts.
-2. Release the validated Q1 snapshot and report in content, infrastructure, and site order.
-   See [the Q1 session record](docs/records/2026-11-08-q1-2026-integration-sessions.md).
+2. Complete Q2 integration preflight and freeze the Q2 manifest before evidence extraction.
+   See [the active Q2 integration record](docs/records/2026-11-28-q2-2026-integration-sessions.md).
 3. Continue the corpus-wide peer-reviewed-version batches for historical frozen records, without
    duplicating the released migration path (the two Q2-held ICML/IJCAI records were re-dated and
    ingested on 2026-11-15). Since
@@ -66,7 +66,7 @@ the active Q3 operating record is `Q3_2026_INGESTION_SESSIONS.md` (bootstrapped 
 | Current field overview | Complete for Q1 | 23 concepts, 783 unique papers, and 11 approved broader claims |
 | Reconciliation state | 658 direct relationships and 11 broader claims | All 5,314 Q1 candidates decided, 0 pending |
 | Published snapshots | 3 | Retrospective `2025-Q3`, `2025-Q4`, and `2026-Q1` snapshots |
-| Published quarterly reports | 3 | Q1 report at `reports/quarterly/2026-Q1.md` on the integration branch |
+| Published quarterly reports | 3 | [Q1 report](https://wiki.msamribeiro.com/reports/quarterly/2026-q1) live since 2026-11-28 |
 
 Live health baseline on 2026-11-01:
 
@@ -94,8 +94,8 @@ non-authoritative.
 |---|---|---|---|---|
 | Q3 2025 and earlier | Complete | Complete: 23 concepts, 2,226 entries | Complete: human-reviewed | Complete: field overview, snapshot, and Q3 report; 21/23 concept pairs |
 | Q4 2025 | Complete: 173 eligible pages, 2 intentional Tier-2 exclusions; late StellarTTS `2607.19859` (ASRU) ingested 2026-11-15, awaiting catch-up integration | Complete: all affected concepts plus corrective late evidence, 2,892 entries | Complete: 3,946 decisions finalized; bounded corrective evidence refresh passes | Complete: 23/23 concept pairs, field overview, immutable snapshot, and Q4 report |
-| Q1 2026 | Complete: 116 ingested, including one intentional unassigned paper | Complete: 453 memberships across 22 concepts | Finalized: 919 accepted, 4,395 rejected, 0 pending | Complete on integration branch: concept pairs, overview, snapshot, and report |
-| Q2 2026 | Complete: 175 ingested (incl. `2608.26146` Vagdhenu, re-dated into Q2 on 2026-11-07, ingested 2026-11-13); 0 accepted (the ICML/IJCAI holds moved to Q3) | Not started | Not started | Not started |
+| Q1 2026 | Complete: 116 ingested, including one intentional unassigned paper | Complete: 453 memberships across 22 concepts | Finalized: 919 accepted, 4,395 rejected, 0 pending | Published: concept pairs, overview, snapshot, and report |
+| Q2 2026 | Complete: 175 ingested records, including one dedup pointer; 0 accepted | Session bootstrapped; provisional 623 memberships across 23 concepts | Not started | Not started |
 | Q3 2026 to date | 191 ingested (34 re-dated Interspeech 2026 pages, 53 from sweep batches 1-14, 29 Q3 pages from batches A-F on 2026-11-15, 15 from batches G-I on 2026-11-21, 20 from batches J-M on 2026-11-22, 20 from batches Q3-A to Q3-D on 2026-11-25, and 20 from batches Q3-b32 to Q3-b35 on 2026-11-26); 194 accepted (all parsed) | Not started | Not started | Not started |
 
 Quarter counts above are by canonical `published_date` as of 2026-11-26 (the 25 citation-discovery pages of 2026-11-24 date from 2014 to 2023 and are not counted in these quarter rows). Per-quarter ingest

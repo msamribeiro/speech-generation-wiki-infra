@@ -5,6 +5,17 @@ Each entry records the completion date, a prose summary of the outcome, and the 
 
 ---
 
+## Q1 2026 Content Cycle [completed: 2026-11-28]
+
+Integrated 115 Q1 papers across 453 memberships in 22 concepts and released the updated wiki.
+The [archived Q1 integration log](docs/records/2026-11-08-q1-2026-integration-sessions.md) preserves the review decisions and release checkpoints.
+
+- [x] Complete both integration phases against the frozen manifest.
+- [x] Finalize 5,314 reconciliation decisions: 919 accepted, 4,395 rejected, and zero pending or deferred.
+- [x] Refresh and validate the concept pages and field overview.
+- [x] Freeze the 783-paper snapshot and publish the [Q1 quarterly report](https://wiki.msamribeiro.com/reports/quarterly/2026-q1).
+- [x] Validate the merged release, publish content, infrastructure, and site, and align both ingestion branches.
+
 ## Q4 2025 Content Cycle [completed: 2026-11-01]
 
 Complete the first quarter-over-quarter update after the closed Q3 synthesis program. Scope is
