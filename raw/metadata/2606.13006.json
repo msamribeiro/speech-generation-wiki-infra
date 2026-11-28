@@ -1,7 +1,8 @@
 {
   "id": "2606.13006",
   "source_ids": {
-    "arxiv": "2606.13006"
+    "arxiv": "2606.13006",
+    "doi": "10.24963/ijcai.2026/652"
   },
   "title": "Emo-LiPO: Listwise Preference Optimization for Fine-Grained Emotion Intensity Control in LLM-based Text-to-Speech",
   "authors": [
@@ -15,20 +16,20 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "IJCAI",
+  "venue_type": "conference",
   "year": 2026,
-  "month": 6,
-  "published_date": "2026-06-11",
+  "month": 8,
+  "published_date": "2026-08-15",
   "preprint_date": "2026-06-11",
   "arxiv_version": 1,
   "version_date": "2026-06-11",
   "version_estimated": true,
-  "conference_date": null,
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.13006",
-  "pdf_url": "https://arxiv.org/pdf/2606.13006.pdf",
-  "pdf_path": "raw/papers/2606.13006.pdf",
+  "conference_date": "2026-08-15",
+  "ingested_date": "2026-11-15",
+  "url": "https://www.ijcai.org/proceedings/2026/652",
+  "pdf_url": "https://www.ijcai.org/proceedings/2026/0652.pdf",
+  "pdf_path": "raw/papers/2606.13006.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Large language model (LLM)-based text-to-speech (TTS) systems enable prompt-conditioned emotional control but struggle with fine-grained emotion intensity due to the semantic -- acoustic gap between text and speech. To address this challenge, we formulate emotion intensity control in LLM-based TTS as a learning-to-rank problem and propose Emo-LiPO, a listwise preference optimization framework that aligns prompt-conditioned speech generation with relative emotion intensity expressed in text. Emo-LiPO explicitly models global intensity ordering within each emotion under fixed transcripts, enabling more faithful and continuous emotional expression. We further construct ESD-plus, a multi-speaker dataset with explicit emotion intensity variations, to support fine-grained emotion modeling and evaluation. Experiments on ESD-plus demonstrate that Emo-LiPO significantly improves emotion accuracy and intensity controllability over both supervised- and DPO-based LLM TTS baselines, with particularly pronounced gains at high intensity levels.",
   "arxiv_comment": "Accepted by IJCAI 2026. Emotional TTS, Preference Optimization, Emotion Intensity Control",
@@ -37,9 +38,24 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "Emo-LiPO proposes listwise preference optimization for fine-grained emotion intensity control in LLM-based TTS, a core TTS/RLHF contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.13006",
+  "pdf_path_preprint": "raw/papers/2606.13006.pdf",
+  "url_peer_reviewed": "https://www.ijcai.org/proceedings/2026/652",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-15",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "9ae8f42"
+    }
+  ]
 }

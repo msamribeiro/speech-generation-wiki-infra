@@ -17,8 +17,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -28,9 +28,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.18485",
-  "pdf_url": "https://arxiv.org/pdf/2606.18485.pdf",
-  "pdf_path": "raw/papers/2606.18485.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/ghosh26f_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/ghosh26f_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.18485.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Neural Text-to-Speech (TTS) systems achieve remarkable quality on short utterances but long-form speech generation shows prosodic drift, speaker inconsistencies and sentence boundary artifacts. Existing approaches either compress sequences, increase context length or naively concatenate independently synthesized chunks. We present an inference-time approach called MagpieTTS-LF that enables MagpieTTS to produce coherent long-form speech without model retraining. Our method introduces three key innovations: (1) soft attention priors to guide monotonic alignment while preserving past and future context; (2) a stateful inference algorithm that maintains context across sentence chunks, ensuring prosodic continuity; (3) history-aware text encoding that uses past text for discourse-level prosodic planning. Experiments on long texts show significant improvements in long-range intelligibility, prosodic coherence, speaker consistency, and boundary naturalness compared to other baselines.",
   "arxiv_comment": null,
@@ -43,5 +43,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.18485",
+  "pdf_path_preprint": "raw/papers/2606.18485.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/ghosh26f_interspeech.html"
 }

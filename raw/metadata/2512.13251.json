@@ -1,7 +1,9 @@
 {
   "id": "2512.13251",
   "source_ids": {
-    "arxiv": "2512.13251"
+    "arxiv": "2512.13251",
+    "doi": "10.18653/v1/2026.acl-long.863",
+    "acl": "2026.acl-long.863"
   },
   "title": "DisCo-Speech: Controllable Zero-Shot Speech Generation with A Disentangled Speech Codec",
   "authors": [
@@ -49,5 +51,9 @@
       "model": "claude-sonnet-4-6",
       "commit": "2d38f07"
     }
-  ]
+  ],
+  "conference_date": "2026-07-02",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-long.863",
+  "peer_reviewed_venue": "ACL",
+  "peer_reviewed_venue_type": "conference"
 }

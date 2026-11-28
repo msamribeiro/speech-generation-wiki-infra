@@ -18,8 +18,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -29,9 +29,9 @@
   "version_estimated": false,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2607.00363",
-  "pdf_url": "https://arxiv.org/pdf/2607.00363.pdf",
-  "pdf_path": "raw/papers/2607.00363.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/yu26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/yu26b_interspeech.pdf",
+  "pdf_path": "raw/papers/2607.00363.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Flow Matching (FM) has emerged as a powerful paradigm for speech generation but remains constrained by high inference latency and timbre leakage. To address these bottlenecks, we propose a unified guidance framework that enhances generation efficiency and robustness through two complementary strategies. On the data front, we introduce Data-guidance via heterogeneous augmentation, encouraging the model to disentangle linguistic content from acoustic residue. In parallel, we propose an enhanced Model-guidance mechanism that synergizes trajectory rectification with a novel intrinsic guidance objective. This approach distills conditional knowledge into network weights and straightens inference trajectory path, thereby eliminating Classifier-Free Guidance (CFG) overhead. Experiments demonstrate that our framework accelerates inference by nearly three times while effectively improving speaker similarity compared to state-of-the-art baselines.",
   "arxiv_comment": "Accepted to INTERSPEECH 2026",
@@ -44,5 +44,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2607.00363",
+  "pdf_path_preprint": "raw/papers/2607.00363.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/yu26b_interspeech.html"
 }

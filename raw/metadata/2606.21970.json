@@ -13,8 +13,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -24,9 +24,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.21970",
-  "pdf_url": "https://arxiv.org/pdf/2606.21970.pdf",
-  "pdf_path": "raw/papers/2606.21970.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/jiang26g_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/jiang26g_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.21970.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Full-duplex spoken dialogue models, such as Moshi, enable natural, low-latency voice conversations. However, they remain limited to the audio modality, lacking the facial expressions that are integral to human communication. We present Moshi-Face, the first full-duplex dialogue model that jointly processes the user's audio and facial input while simultaneously generating speech and facial motion. We first construct a vector-quantized variational autoencoder (VQ-VAE) as a face codec that encodes 3D head meshes extracted from facial videos into compact discrete tokens, referred to as face tokens, and conversely reconstructs 3D meshes from these tokens. We then extend Moshi with a Face Transformer module that generates face tokens non-autoregressively, enabling Moshi-Face to produce synchronized audio and face tokens in real time. Experiments show that Moshi-Face achieves audiovisual alignment at low latency while preserving the dialogue quality of the original audio-only model.",
   "arxiv_comment": "Accepted to Interspeech 2026",
@@ -39,5 +39,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.21970",
+  "pdf_path_preprint": "raw/papers/2606.21970.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/jiang26g_interspeech.html"
 }

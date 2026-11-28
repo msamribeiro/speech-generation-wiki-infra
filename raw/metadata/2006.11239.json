@@ -1,0 +1,64 @@
+{
+  "id": "2006.11239",
+  "source_ids": {
+    "arxiv": "2006.11239"
+  },
+  "title": "Denoising Diffusion Probabilistic Models",
+  "authors": [
+    "Jonathan Ho",
+    "Ajay Jain",
+    "Pieter Abbeel"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2020,
+  "month": 12,
+  "published_date": "2020-12-06",
+  "preprint_date": "2020-06-19",
+  "arxiv_version": 2,
+  "version_date": "2020-12-16",
+  "version_estimated": false,
+  "conference_date": "2020-12-06",
+  "ingested_date": "2026-11-24",
+  "url": "https://papers.nips.cc/paper_files/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html",
+  "pdf_url": "https://arxiv.org/pdf/2006.11239.pdf",
+  "pdf_path": "raw/papers/2006.11239.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. Our implementation is available at https://github.com/hojonathanho/diffusion",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 23× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "ingested",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "ml-method",
+  "corpus_citation_count": 23,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 14,
+    "Q4_2025": 3,
+    "Q1_2026": 0,
+    "Q2_2026": 6
+  },
+  "sr_match": false,
+  "ingest_tier": 1,
+  "url_preprint": "https://arxiv.org/abs/2006.11239",
+  "url_peer_reviewed": "https://papers.nips.cc/paper_files/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html"
+}

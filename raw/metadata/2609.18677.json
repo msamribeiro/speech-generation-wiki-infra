@@ -14,13 +14,13 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2026,
-  "month": 9,
-  "published_date": "2026-09-16",
+  "month": 10,
+  "published_date": "2026-10-06",
   "preprint_date": "2026-09-16",
   "arxiv_version": 1,
   "version_date": "2026-09-16",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2026-10-06",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2609.18677",
   "pdf_url": "https://arxiv.org/pdf/2609.18677.pdf",
@@ -37,5 +37,7 @@
   "fetched_date": "2026-11-07",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "peer_reviewed_venue": "COLM",
+  "peer_reviewed_venue_type": "conference"
 }

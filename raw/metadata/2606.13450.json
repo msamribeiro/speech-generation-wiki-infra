@@ -14,8 +14,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -25,9 +25,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.13450",
-  "pdf_url": "https://arxiv.org/pdf/2606.13450.pdf",
-  "pdf_path": "raw/papers/2606.13450.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/udupa26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/udupa26_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.13450.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "While low-latency interaction is critical for spoken dialogue, cascaded architectures are often bottlenecked by reactive turn-completion detection. We propose Endpoint Anticipation, shifting from reactive detection to proactive forecasting of end-of-turn signals. Our speech-based model anticipates endpoints upto 2.56 seconds in advance, enabling speculative execution of LLM and TTS pipelines on partial context. We introduce metrics to quantify the trade-off between realized latency reduction and computational redundancy. Evaluation across conversational and task-oriented datasets shows our model consistently outperforms competitive VAP-based baselines. Integration with the Unmute framework demonstrates a 505 ms average latency reduction with a 28.4% increase in speculative computation, effectively masking sequential bottlenecks to enable complex reasoning in real-time speech-to-speech interaction.",
   "arxiv_comment": "Accepted at Interspeech 2026",
@@ -40,5 +40,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.13450",
+  "pdf_path_preprint": "raw/papers/2606.13450.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/udupa26_interspeech.html"
 }

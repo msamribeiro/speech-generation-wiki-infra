@@ -78,7 +78,8 @@ metrics:
 code_available: true | false | null
 demo_available: true | false | null
 url: "string"
-url_peer_reviewed: "string — preserve/add from metadata when present; otherwise omit"
+url_peer_reviewed: "string — preserve/add from metadata when present and different from url; otherwise omit"
+url_preprint: "string — preserve/add from metadata when present and different from url; otherwise omit"
 related_concepts: [3–6 slugs from allowed list]
 related_papers: [in-corpus IDs cited by this paper]
 field_significance:
@@ -95,11 +96,11 @@ generation:
 ---
 
 > [!abstract] {venue} · {year} · {Capitalised venue_type}
-> **{First Author et al.}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set} · Demo: ✓/✗/? · Code: ✓/✗/?
+> **{First Author et al.}** ({organization, omit if null}) · [→ Paper]({url}){ · [→ Peer-reviewed version]({url_peer_reviewed}) when set and different from url}{ · [→ Preprint]({url_preprint}) when set} · Demo: ✓/✗/? · Code: ✓/✗/?
 >
 > {One sentence: the single most important thing this paper does. No bold label.}
 
-{When `url_peer_reviewed` is set, preserve or add exactly one italic paragraph here stating that
+{When `url_peer_reviewed` is set and differs from `url`, preserve or add exactly one italic paragraph here stating that
 the page, metrics, and claims summarize the ingested version and linking the peer-reviewed version.}
 
 ## Problem
@@ -152,6 +153,10 @@ cat $WIKI/papers/{ID}.md
 cat raw/parsed/{ID}/paper.md
 cat raw/metadata/{ID}.json
 ```
+
+`raw/parsed/{ID}/paper.md` is the version the page summarizes. If `raw/parsed/{ID}/preprint/`
+exists, it is the preprint and is context only: audit metrics, tables, figures and claims against
+the primary `paper.md`, never the preprint (`docs/schemas/metadata.md`, "Source Version at Ingest").
 
 ```bash
 python3 -c "
@@ -209,11 +214,12 @@ Check that the abstract callout:
 - Uses `[!abstract]`
 - Header line: `{venue} · {year} · {Capitalised venue_type}` (e.g. `Conference`, not `conference`)
 - Second line: `**{Author et al.}** ({org}) · [→ Paper]({url})` plus a separate
-  `[→ Peer-reviewed version]({url_peer_reviewed})` link when metadata supplies it, then
+  `[→ Peer-reviewed version]({url_peer_reviewed})` link when metadata supplies it and it differs
+  from `url`, and a `[→ Preprint]({url_preprint})` link when metadata supplies one, then
   `· Demo: {✓/✗/?} · Code: {✓/✗/?}`
 - Body: one sentence summarising the single most important thing the paper does
 
-When `url_peer_reviewed` is set, verify exactly one italic post-callout note explains that the page,
+When `url_peer_reviewed` is set and differs from `url`, verify exactly one italic post-callout note explains that the page,
 metrics, and claims summarize the ingested version. Do not use the peer-reviewed paper's new
 results to rewrite the page unless the invocation explicitly authorizes a re-ingest from it.
 

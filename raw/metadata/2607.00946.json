@@ -21,7 +21,7 @@
   "version_date": "2026-07-01",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-11",
   "url": "https://arxiv.org/abs/2607.00946",
   "pdf_url": "https://arxiv.org/pdf/2607.00946.pdf",
   "pdf_path": "raw/papers/2607.00946.pdf",
@@ -33,9 +33,21 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Presents the first comparative geometric study of speech-LM and conditional-flow-matching modules as activation-steering sites for composable emotion control in TTS.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-11",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4446180"
+    }
+  ]
 }

@@ -34,7 +34,7 @@
   ],
   "relevance_score": 0.8,
   "relevance_note": "Proposes geometric iterative retrieval to improve resynthesis fidelity from coarse RVQ-based neural audio codec tokens, core codec infrastructure.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

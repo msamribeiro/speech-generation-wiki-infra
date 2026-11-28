@@ -1,7 +1,8 @@
 {
   "id": "2607.24430",
   "source_ids": {
-    "arxiv": "2607.24430"
+    "arxiv": "2607.24430",
+    "doi": "10.1145/3767308.3835759"
   },
   "title": "Let Me Look at You: Advanced Facial Expression Modeling for Conversational Speech Synthesis",
   "authors": [
@@ -15,13 +16,13 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2026,
-  "month": 7,
-  "published_date": "2026-07-27",
+  "month": 11,
+  "published_date": "2026-11-09",
   "preprint_date": "2026-07-27",
   "arxiv_version": 1,
   "version_date": "2026-07-27",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2026-11-09",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2607.24430",
   "pdf_url": "https://arxiv.org/pdf/2607.24430.pdf",
@@ -39,5 +40,6 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_peer_reviewed": "https://doi.org/10.1145/3767308.3835759"
 }

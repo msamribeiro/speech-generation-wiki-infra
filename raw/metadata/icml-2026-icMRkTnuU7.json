@@ -50,9 +50,9 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Transformer-based end-to-end discrete audio tokenizer evaluated on speech, sound and music, plus a purely autoregressive TTS model built on its tokens; core codec and TTS contribution.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-09-21",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2602.10934"
 }

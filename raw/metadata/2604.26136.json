@@ -23,10 +23,10 @@
   "version_date": "2026-04-28",
   "version_estimated": true,
   "conference_date": "2026-07-01",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2604.26136",
+  "ingested_date": "2026-11-11",
+  "url": "https://aclanthology.org/2026.iwslt-1.25",
   "pdf_url": "https://aclanthology.org/2026.iwslt-1.25.pdf",
-  "pdf_path": "raw/papers/2604.26136.pdf",
+  "pdf_path": "raw/papers/2604.26136.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Preserving a speaker's voice identity while generating speech in a different language remains a fundamental challenge in spoken language technology, particularly in specialized domains such as scientific communication. In this paper, we address this challenge through our system submission to the International Conference on Spoken Language Translation (IWSLT 2026), the Cross-Lingual Voice Cloning shared task. First, we evaluate several state-of-the-art voice cloning models for cross-lingual speech generation of scientific texts in Arabic, Chinese, and French. Then, we build voice cloning systems based on the OmniVoice foundation model. We employ data augmentation via multi-model ensemble distillation from the ACL 60/60 corpus. We investigate the effect of using this synthetic data for fine-tuning, demonstrating consistent improvements in intelligibility (WER and CER) across languages while preserving speaker similarity.",
   "arxiv_comment": "IWSLT 2026",
@@ -36,9 +36,24 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "Cross-lingual voice cloning for scientific speech synthesis at IWSLT 2026 preserving speaker identity across languages",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2604.26136",
+  "pdf_path_preprint": "raw/papers/2604.26136.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.iwslt-1.25",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-11",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "4446180"
+    }
+  ]
 }

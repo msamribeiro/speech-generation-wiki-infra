@@ -1,0 +1,64 @@
+{
+  "id": "1711.00937",
+  "source_ids": {
+    "arxiv": "1711.00937"
+  },
+  "title": "Neural Discrete Representation Learning",
+  "authors": [
+    "Aaron van den Oord",
+    "Oriol Vinyals",
+    "Koray Kavukcuoglu"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "NeurIPS",
+  "venue_type": "conference",
+  "year": 2017,
+  "month": 12,
+  "published_date": "2017-12-04",
+  "preprint_date": "2017-11-02",
+  "arxiv_version": 2,
+  "version_date": "2018-05-30",
+  "version_estimated": false,
+  "conference_date": "2017-12-04",
+  "ingested_date": "2026-11-24",
+  "url": "https://papers.nips.cc/paper_files/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html",
+  "pdf_url": "https://arxiv.org/pdf/1711.00937.pdf",
+  "pdf_path": "raw/papers/1711.00937.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Learning useful representations without supervision remains a key challenge in machine learning. In this paper, we propose a simple yet powerful generative model that learns such discrete representations. Our model, the Vector Quantised-Variational AutoEncoder (VQ-VAE), differs from VAEs in two key ways: the encoder network outputs discrete, rather than continuous, codes; and the prior is learnt rather than static. In order to learn a discrete latent representation, we incorporate ideas from vector quantisation (VQ). Using the VQ method allows the model to circumvent issues of \"posterior collapse\" -- where the latents are ignored when they are paired with a powerful autoregressive decoder -- typically observed in the VAE framework. Pairing these representations with an autoregressive prior, the model can generate high quality images, videos, and speech as well as doing high quality speaker conversion and unsupervised learning of phonemes, providing further evidence of the utility of the learnt representations.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 43× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "ingested",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "ml-method",
+  "corpus_citation_count": 43,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 26,
+    "Q4_2025": 7,
+    "Q1_2026": 7,
+    "Q2_2026": 3
+  },
+  "sr_match": false,
+  "ingest_tier": 1,
+  "url_preprint": "https://arxiv.org/abs/1711.00937",
+  "url_peer_reviewed": "https://papers.nips.cc/paper_files/paper/2017/hash/7a98af17e63a0ac09ce2e96d03992fbc-Abstract.html"
+}

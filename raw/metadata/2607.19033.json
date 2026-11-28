@@ -1,7 +1,9 @@
 {
   "id": "2607.19033",
   "source_ids": {
-    "arxiv": "2607.19033"
+    "arxiv": "2607.19033",
+    "isca": "wagner26b_interspeech",
+    "doi": "10.21437/Interspeech.2026-2817"
   },
   "title": "Content is What Remains: Invariant Speech Tokenization from Parallel Utterances",
   "authors": [
@@ -12,8 +14,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -23,9 +25,9 @@
   "version_estimated": false,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2607.19033",
-  "pdf_url": "https://arxiv.org/pdf/2607.19033.pdf",
-  "pdf_path": "raw/papers/2607.19033.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/wagner26b_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/wagner26b_interspeech.pdf",
+  "pdf_path": "raw/papers/2607.19033.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Discrete speech tokenizers aim to disentangle semantic from acoustic information, yet targets from self-supervised learning (SSL) models like HuBERT retain non-linguistic variation: speaker identity, prosody, and channel conditions leak into the tokens, inflating entropy. Our key insight is that when enough speakers utter the same words under varying conditions, linguistic content is the only shared factor. We propose PINT (Parallel INvariant Tokenization), which fine-tunes an SSL encoder with alignment losses across parallel utterances and augmentations to distill this shared residual. PINT collapses identical words onto consistent token sequences, drastically reducing conditional entropy. Unlike ASR text, PINT tokens preserve frame-level temporal grounding and serve as drop-in semantic targets for audio codecs. Experiments show a 98.7% relative reduction in speaker probe accuracy (93.1% to 1.2%), a 42% lower ABX error rate, and 27-30% lower LM perplexity versus baselines, confirming that the right invariance is key to efficient learning.",
   "arxiv_comment": "Accepted at Interspeech 2026",
@@ -38,5 +40,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2607.19033",
+  "pdf_path_preprint": "raw/papers/2607.19033.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/wagner26b_interspeech.html"
 }

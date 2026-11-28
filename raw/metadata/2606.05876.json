@@ -17,8 +17,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -28,9 +28,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.05876",
-  "pdf_url": "https://arxiv.org/pdf/2606.05876.pdf",
-  "pdf_path": "raw/papers/2606.05876.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/jiang26h_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/jiang26h_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.05876.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Most neural speech codecs use residual vector quantization (RVQ), in which later VQs contribute less but consume the same bitrate, leading to inefficiency. We propose P2PSynCodec, an ultra-low-bitrate neural speech codec with a plain-to-pseudo synergistic vector quantizer (P2PSVQ). P2PSVQ consists of one plain VQ and multiple pseudo VQs. The plain VQ produces basic tokens by quantization, while the pseudo VQs generate auxiliary tokens by neural prediction and incur zero transmitted bitrate. Thus, speech is decoded from the plain-VQ tokens together with predicted pseudo-VQ tokens, greatly reducing bitrate. Experiments show that P2PSynCodec achieves speech reconstruction quality comparable to competing codecs at 2.0 kbps while operating at only 0.5 kbps, demonstrating high efficiency for ultra-low-bitrate speech coding.",
   "arxiv_comment": "Accepted to INTERSPEECH 2026",
@@ -43,5 +43,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.05876",
+  "pdf_path_preprint": "raw/papers/2606.05876.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/jiang26h_interspeech.html"
 }

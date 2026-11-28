@@ -1,0 +1,65 @@
+{
+  "id": "2212.09748",
+  "source_ids": {
+    "arxiv": "2212.09748",
+    "doi": "10.1109/iccv51070.2023.00387"
+  },
+  "title": "Scalable Diffusion Models with Transformers",
+  "authors": [
+    "William Peebles",
+    "Saining Xie"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICCV",
+  "venue_type": "conference",
+  "year": 2023,
+  "month": 10,
+  "published_date": "2023-10-01",
+  "preprint_date": "2022-12-19",
+  "arxiv_version": 2,
+  "version_date": "2023-03-02",
+  "version_estimated": false,
+  "conference_date": "2023-10-01",
+  "ingested_date": "2026-11-24",
+  "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.html",
+  "pdf_url": "https://openaccess.thecvf.com/content/ICCV2023/papers/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.pdf",
+  "pdf_path": "raw/papers/2212.09748.peer-reviewed.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "We explore a new class of diffusion models based on the transformer architecture. We train latent diffusion models of images, replacing the commonly-used U-Net backbone with a transformer that operates on latent patches. We analyze the scalability of our Diffusion Transformers (DiTs) through the lens of forward pass complexity as measured by Gflops. We find that DiTs with higher Gflops -- through increased transformer depth/width or increased number of input tokens -- consistently have lower FID. In addition to possessing good scalability properties, our largest DiT-XL/2 models outperform all prior diffusion models on the class-conditional ImageNet 512x512 and 256x256 benchmarks, achieving a state-of-the-art FID of 2.27 on the latter.",
+  "arxiv_comment": "Code, project page and videos available at https://www.wpeebles.com/DiT",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 28× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "ingested",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "ml-method",
+  "corpus_citation_count": 28,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 17,
+    "Q4_2025": 5,
+    "Q1_2026": 4,
+    "Q2_2026": 2
+  },
+  "sr_match": false,
+  "ingest_tier": 1,
+  "url_preprint": "https://arxiv.org/abs/2212.09748",
+  "pdf_path_preprint": "raw/papers/2212.09748.pdf",
+  "url_peer_reviewed": "https://openaccess.thecvf.com/content/ICCV2023/html/Peebles_Scalable_Diffusion_Models_with_Transformers_ICCV_2023_paper.html"
+}

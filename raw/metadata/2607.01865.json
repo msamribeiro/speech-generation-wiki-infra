@@ -33,8 +33,8 @@
     "codec"
   ],
   "relevance_score": 0.8,
-  "relevance_note": "Proposes a neural audio codec with adjustable token temporal resolution via sampling-frequency-independent convolutional layers, addressing the acoustic-detail/sequence-length trade-off, core codec infrastructure.",
-  "status": "accepted",
+  "relevance_note": "Proposes a neural audio codec with adjustable token temporal resolution via sampling-frequency-independent convolutional layers, addressing the acoustic-detail/sequence-length trade-off, core codec infrastructure. Rejected at ingest (user, 2026-11-13): every experiment reconstructs environmental sound (CochlScene); no speech or music evaluation, no listening test, no downstream TTS or speech LM, so the narrow codec accept (genuine speech-reconstruction evidence) does not apply.",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

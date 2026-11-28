@@ -12,8 +12,8 @@
   ],
   "authors_full": null,
   "organization": null,
-  "venue": "arXiv",
-  "venue_type": "preprint",
+  "venue": "Interspeech",
+  "venue_type": "conference",
   "year": 2026,
   "month": 9,
   "published_date": "2026-09-27",
@@ -23,9 +23,9 @@
   "version_estimated": true,
   "conference_date": "2026-09-27",
   "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.20457",
-  "pdf_url": "https://arxiv.org/pdf/2606.20457.pdf",
-  "pdf_path": "raw/papers/2606.20457.pdf",
+  "url": "https://www.isca-archive.org/interspeech_2026/makarov26_interspeech.html",
+  "pdf_url": "https://www.isca-archive.org/interspeech_2026/makarov26_interspeech.pdf",
+  "pdf_path": "raw/papers/2606.20457.peer-reviewed.pdf",
   "pdf_source": "arxiv",
   "abstract": "Classifier guidance is a way to control diffusion generation by using a noise-conditioned classifier to steer the sampling process toward a target class. One drawback of classifier guidance is that it requires two separately trained models: a classifier and a diffusion model. We therefore study a more compact alternative in which a conventionally trained speech classifier is repurposed as the backbone for diffusion generation. Starting from a frozen noise-conditioned classifier in log-Mel space, we attach a lightweight subnetwork that reuses intermediate classifier representations and train only this subnetwork under a Denoising Score Matching objective. Our work shows that a pretrained classifier can be repurposed for conditional generation, providing an appealing bridge between discriminative modeling and conditional speech synthesis resulting in high speech quality within a single-backbone model, with reduced memory footprint and computational cost.",
   "arxiv_comment": "Accepted for publication in the Proceedings of Interspeech 2026",
@@ -38,5 +38,8 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.20457",
+  "pdf_path_preprint": "raw/papers/2606.20457.pdf",
+  "url_peer_reviewed": "https://www.isca-archive.org/interspeech_2026/makarov26_interspeech.html"
 }

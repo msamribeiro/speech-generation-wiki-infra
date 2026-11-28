@@ -38,10 +38,10 @@
     "codec"
   ],
   "relevance_score": 0.92,
-  "relevance_note": "DisCo-Speech: zero-shot controllable TTS with a disentangled speech codec separating timbre and prosody; core TTS/codec contribution.",
-  "status": "accepted",
+  "relevance_note": "DisCo-Speech: zero-shot controllable TTS with a disentangled speech codec separating timbre and prosody; core TTS/codec contribution. Duplicate: ACL 2026 proceedings version of the ingested arXiv preprint 2512.13251 (DisCo-Speech), which stays canonical.",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
-  "is_duplicate": false,
-  "canonical_id": null
+  "is_duplicate": true,
+  "canonical_id": "2512.13251"
 }

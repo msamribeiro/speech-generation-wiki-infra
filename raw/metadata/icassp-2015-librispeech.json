@@ -1,0 +1,66 @@
+{
+  "id": "icassp-2015-librispeech",
+  "source_ids": {
+    "doi": "10.1109/ICASSP.2015.7178964"
+  },
+  "title": "Librispeech: An ASR corpus based on public domain audio books",
+  "authors": [
+    "Vassil Panayotov",
+    "Guoguo Chen",
+    "Daniel Povey",
+    "Sanjeev Khudanpur"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "ICASSP",
+  "venue_type": "conference",
+  "year": 2015,
+  "month": 4,
+  "published_date": "2015-04-19",
+  "preprint_date": null,
+  "arxiv_version": null,
+  "version_date": null,
+  "version_estimated": false,
+  "conference_date": "2015-04-19",
+  "ingested_date": "2026-11-24",
+  "url": "https://doi.org/10.1109/ICASSP.2015.7178964",
+  "pdf_url": "https://www.danielpovey.com/files/2015_icassp_librispeech.pdf",
+  "pdf_path": "raw/papers/icassp-2015-librispeech.pdf",
+  "pdf_source": "author",
+  "abstract": "",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 73× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis, 2026-11-22 refresh). No arXiv version; metadata built by hand from Crossref/DataCite/publisher pages. Accepted without filter scoring.",
+  "status": "ingested",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-lightweight-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "dataset",
+  "corpus_citation_count": 73,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 43,
+    "Q4_2025": 13,
+    "Q1_2026": 9,
+    "Q2_2026": 8
+  },
+  "sr_match": false,
+  "ingest_tier": 2,
+  "journal_date": null,
+  "doi": "10.1109/ICASSP.2015.7178964",
+  "url_author_copy": "https://www.danielpovey.com/files/2015_icassp_librispeech.pdf"
+}

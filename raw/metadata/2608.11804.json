@@ -28,7 +28,7 @@
   "version_date": "2026-08-12",
   "version_estimated": false,
   "conference_date": null,
-  "ingested_date": null,
+  "ingested_date": "2026-11-15",
   "url": "https://arxiv.org/abs/2608.11804",
   "pdf_url": "https://arxiv.org/pdf/2608.11804.pdf",
   "pdf_path": "raw/papers/2608.11804.pdf",
@@ -40,9 +40,21 @@
   ],
   "relevance_score": 0.6,
   "relevance_note": "MiDashengLM-Gen proposes end-to-end unified audio scene generation blending speech, music, and sound effects via LLM-driven autoregressive flow matching; speech intelligibility is a stated motivation, but the paper's primary contribution is general audio-scene generation rather than speech synthesis specifically, similar to the UNISON/Audio-Oscar/HoliDubber borderline pattern.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-15",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "9ae8f42"
+    }
+  ]
 }

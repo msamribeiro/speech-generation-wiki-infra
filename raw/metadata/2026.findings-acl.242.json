@@ -24,7 +24,7 @@
   "published_date": "2026-07-02",
   "preprint_date": null,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
+  "ingested_date": "2026-11-12",
   "url": "https://aclanthology.org/2026.findings-acl.242",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.242.pdf",
   "pdf_path": "raw/papers/2026.findings-acl.242.pdf",
@@ -35,9 +35,22 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "F-Actor: instruction-following framework for controllable conversational behavior in full-duplex spoken dialogue models; core SCA contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2601.11329",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-12",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "b7582db"
+    }
+  ]
 }

@@ -1,0 +1,70 @@
+{
+  "id": "2106.07447",
+  "source_ids": {
+    "arxiv": "2106.07447",
+    "doi": "10.1109/taslp.2021.3122291"
+  },
+  "title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+  "authors": [
+    "Wei-Ning Hsu",
+    "Benjamin Bolte",
+    "Yao-Hung Hubert Tsai",
+    "Kushal Lakhotia",
+    "Ruslan Salakhutdinov",
+    "Abdelrahman Mohamed"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2021,
+  "month": 10,
+  "published_date": "2021-10-26",
+  "preprint_date": "2021-06-14",
+  "arxiv_version": 1,
+  "version_date": "2021-06-14",
+  "version_estimated": false,
+  "conference_date": null,
+  "ingested_date": "2026-11-24",
+  "url": "https://arxiv.org/abs/2106.07447",
+  "pdf_url": "https://arxiv.org/pdf/2106.07447.pdf",
+  "pdf_path": "raw/papers/2106.07447.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "Self-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clustering step to provide aligned target labels for a BERT-like prediction loss. A key ingredient of our approach is applying the prediction loss over the masked regions only, which forces the model to learn a combined acoustic and language model over the continuous inputs. HuBERT relies primarily on the consistency of the unsupervised clustering step rather than the intrinsic quality of the assigned cluster labels. Starting with a simple k-means teacher of 100 clusters, and using two iterations of clustering, the HuBERT model either matches or improves upon the state-of-the-art wav2vec 2.0 performance on the Librispeech (960h) and Libri-light (60,000h) benchmarks with 10min, 1h, 10h, 100h, and 960h fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to 19% and 13% relative WER reduction on the more challenging dev-other and test-other evaluation subsets.",
+  "arxiv_comment": null,
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 98× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "ingested",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-24",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "8d6e2db"
+    }
+  ],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "ssl",
+  "corpus_citation_count": 98,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 68,
+    "Q4_2025": 11,
+    "Q1_2026": 10,
+    "Q2_2026": 9
+  },
+  "sr_match": false,
+  "ingest_tier": 1,
+  "journal_date": "2021-10-26",
+  "peer_reviewed_venue": "IEEE TASLP",
+  "peer_reviewed_venue_type": "journal",
+  "url_peer_reviewed": "https://doi.org/10.1109/taslp.2021.3122291"
+}

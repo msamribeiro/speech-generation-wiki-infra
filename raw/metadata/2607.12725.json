@@ -31,7 +31,7 @@
   ],
   "relevance_score": 0.72,
   "relevance_note": "Neural Morphing introduces a training-free token-domain audio-effect technique for controllable voice/audio transformation via RVQ token grain selection in neural audio codecs, relevant codec/voice-transformation infrastructure.",
-  "status": "accepted",
+  "status": "rejected",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,

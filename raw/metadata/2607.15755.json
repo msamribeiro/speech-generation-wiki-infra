@@ -1,7 +1,8 @@
 {
   "id": "2607.15755",
   "source_ids": {
-    "arxiv": "2607.15755"
+    "arxiv": "2607.15755",
+    "doi": "10.1145/3767308.3835562"
   },
   "title": "AuEmoChat: Authentic Emotion Understanding and Rendering for Conversational Speech Synthesis",
   "authors": [
@@ -16,13 +17,13 @@
   "venue": "arXiv",
   "venue_type": "preprint",
   "year": 2026,
-  "month": 7,
-  "published_date": "2026-07-31",
+  "month": 11,
+  "published_date": "2026-11-09",
   "preprint_date": "2026-07-17",
   "arxiv_version": 2,
   "version_date": "2026-07-31",
   "version_estimated": false,
-  "conference_date": null,
+  "conference_date": "2026-11-09",
   "ingested_date": null,
   "url": "https://arxiv.org/abs/2607.15755",
   "pdf_url": "https://arxiv.org/pdf/2607.15755.pdf",
@@ -40,5 +41,6 @@
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_peer_reviewed": "https://doi.org/10.1145/3767308.3835562"
 }

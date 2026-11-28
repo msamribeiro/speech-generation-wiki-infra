@@ -133,6 +133,15 @@ python scripts/health_check.py \
 - Local closeout covers the two integration branches. Merge, push, site deployment, and branch
   cleanup are release steps.
 
+### Release merge and the MOSS publication date
+
+The ingestion worktree re-dated MOSS-Audio-Tokenizer (`2602.10934`) to July 6, 2026, when it
+recorded the ICML version. The Q1 integration worktree had already assigned the summarized arXiv
+v2 to five canonical claim graphs with the February 12, 2026 date. The release merge applies the
+claim-membership freeze once across metadata, the paper page, and the catalog. It records ICML
+2026 and its link as later publication metadata. The frozen Q1 snapshot and its source claims
+retain the original date.
+
 ## Phase 1 — Concept-Local Evidence
 
 Process the concepts in the table order. Each invocation adds at most 20 new paper pages, preserves

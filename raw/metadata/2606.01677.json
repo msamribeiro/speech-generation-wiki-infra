@@ -27,10 +27,10 @@
   "version_date": "2026-06-01",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2606.01677",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.acl-long.1452",
   "pdf_url": "https://aclanthology.org/2026.acl-long.1452.pdf",
-  "pdf_path": "raw/papers/2606.01677.pdf",
+  "pdf_path": "raw/papers/2606.01677.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "We propose UniVocal, a unified framework that implicitly infers vocal modes from text context to pioneer Speech-Singing Code-Switching (SCS) Synthesis - a task where transitions are autonomously driven by textual semantics, akin to seamless human language blending. Unlike single-mode generation or systems relying on switching-control tags, our proposed UniVocal implicitly infers vocal modes solely from text context. To achieve this, we employ a data-efficient two-stage curriculum learning strategy that progressively trains a competitive TTS system to acquire the desired SCS capability. Addressing data scarcity, we introduce a scalable pipeline to synthesize diverse code-switching data that is both semantically and acoustically natural, alongside a new multi-scenario benchmark, SCSBench. To address limitations of semantic tokenizers in capturing acoustic details, we also introduce refined cent token and Chain-of-Thought (CoT) generation for planning prosody before content generation, effectively enhancing empathetic speech generation and singing melody. Experimental results demonstrate that UniVocal achieves state-of-the-art performance on SCSBench while maintaining competitive performance on regular speech and singing tasks. Audio samples are available at https://project-univocal-demo.github.io/demo/. The code and dataset are released at https://github.com/FunAudioLLM/FunResearch/tree/main/UniVocal.",
   "arxiv_comment": "accepted by ACL 2026",
@@ -40,9 +40,24 @@
   ],
   "relevance_score": 0.85,
   "relevance_note": "UniVocal proposes a unified speech-singing code-switching synthesis framework, directly advancing TTS/SVS methodology.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2606.01677",
+  "pdf_path_preprint": "raw/papers/2606.01677.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.acl-long.1452",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

@@ -24,10 +24,10 @@
   "version_date": "2026-04-20",
   "version_estimated": true,
   "conference_date": "2026-07-02",
-  "ingested_date": null,
-  "url": "https://arxiv.org/abs/2604.17852",
+  "ingested_date": "2026-11-13",
+  "url": "https://aclanthology.org/2026.findings-acl.1308",
   "pdf_url": "https://aclanthology.org/2026.findings-acl.1308.pdf",
-  "pdf_path": "raw/papers/2604.17852.pdf",
+  "pdf_path": "raw/papers/2604.17852.peer-reviewed.pdf",
   "pdf_source": "anthology",
   "abstract": "Neural audio codecs are widely used as tokenizers for spoken language models, but they are optimized for waveform reconstruction rather than autoregressive prediction. This mismatch injects acoustically driven uncertainty into the discrete token space and increases language-model perplexity. We propose \\ours, which augments codec training with language-model-facing objectives while keeping both codec and LLM architectures unchanged. \\ours introduces (i) future token prediction with Medusa-style multi-step heads to encourage multi-step predictability, and (ii) semantic alignment that matches audio and text representations via a memory-bank contrastive loss. A differentiable Gumbel bridge enables end-to-end gradients from these objectives to the codec encoder. On SALMon speech coherence, token LMs trained on \\ours reach 61.6% accuracy (+12.1 points over AUV) while reducing perplexity 35. On Codec-SUPERB-tiny, \\ours improves speech Mel distance by 5.0% over AUV while simultaneously achieving the learnability gains, demonstrating that reconstruction fidelity and token predictability can be improved together.",
   "arxiv_comment": "ACL2026 Finding",
@@ -36,9 +36,24 @@
   ],
   "relevance_score": 0.88,
   "relevance_note": "LLM-Codec: augmenting neural audio codec training with LM objectives reducing codec-LM autoregressive perplexity",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-05-19",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "url_preprint": "https://arxiv.org/abs/2604.17852",
+  "pdf_path_preprint": "raw/papers/2604.17852.pdf",
+  "url_peer_reviewed": "https://aclanthology.org/2026.findings-acl.1308",
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-13",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "922fa41"
+    }
+  ]
 }

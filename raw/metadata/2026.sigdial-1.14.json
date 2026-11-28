@@ -19,7 +19,7 @@
   "published_date": "2026-08-01",
   "preprint_date": null,
   "conference_date": "2026-08-01",
-  "ingested_date": null,
+  "ingested_date": "2026-11-15",
   "url": "https://aclanthology.org/2026.sigdial-1.14",
   "pdf_url": "https://aclanthology.org/2026.sigdial-1.14.pdf",
   "pdf_path": "raw/papers/2026.sigdial-1.14.pdf",
@@ -30,9 +30,21 @@
   ],
   "relevance_score": 0.82,
   "relevance_note": "Ping-Ponder: concurrent dual-agent spoken dialogue architecture sharing a belief state to reduce reasoning-induced latency; core SCA contribution.",
-  "status": "accepted",
+  "status": "ingested",
   "fetched_date": "2026-08-23",
   "needs_manual_pdf": false,
   "is_duplicate": false,
-  "canonical_id": null
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-15",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "9ae8f42"
+    }
+  ]
 }

@@ -1,0 +1,4134 @@
+{
+  "generated": "2026-11-22",
+  "quarters": [
+    "2025Q3",
+    "2025Q4",
+    "2026Q1",
+    "2026Q2"
+  ],
+  "top_n": 100,
+  "citing_papers": {
+    "2025Q3": 360,
+    "2025Q4": 175,
+    "2026Q1": 115,
+    "2026Q2": 175
+  },
+  "candidates": 155,
+  "rows": [
+    {
+      "key": "arxiv:2301.02111",
+      "arxiv_id": "2301.02111",
+      "doi": "10.48550/ARXIV.2301.02111",
+      "title": "Neural codec language models are zero-shot text to speech synthesizers",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 220,
+      "index_total": 139,
+      "by_quarter": {
+        "2025Q3": 107,
+        "2025Q4": 38,
+        "2026Q1": 31,
+        "2026Q2": 44
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2301.02111",
+        "page": "2301.02111",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2412.10117",
+      "arxiv_id": "2412.10117",
+      "doi": "10.48550/ARXIV.2412.10117",
+      "title": "Cosyvoice 2: Scalable streaming speech synthesis with large language models",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 218,
+      "index_total": 76,
+      "by_quarter": {
+        "2025Q3": 75,
+        "2025Q4": 57,
+        "2026Q1": 29,
+        "2026Q2": 57
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2412.10117",
+        "page": "2412.10117",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2407.05407",
+      "arxiv_id": "2407.05407",
+      "doi": null,
+      "title": "Cosyvoice: A scalable multilingual zero-shot text-to-speech synthesizer based on supervised semantic tokens",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 189,
+      "index_total": 70,
+      "by_quarter": {
+        "2025Q3": 70,
+        "2025Q4": 48,
+        "2026Q1": 29,
+        "2026Q2": 42
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2407.05407",
+        "page": "2407.05407",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2410.00037",
+      "arxiv_id": "2410.00037",
+      "doi": "10.48550/ARXIV.2410.00037",
+      "title": "Moshi: a speechtext foundation model for real-time dialogue",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 188,
+      "index_total": 212,
+      "by_quarter": {
+        "2025Q3": 64,
+        "2025Q4": 41,
+        "2026Q1": 37,
+        "2026Q2": 46
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2410.00037",
+        "page": "2410.00037",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2212.04356",
+      "arxiv_id": "2212.04356",
+      "doi": "10.48550/ARXIV.2212.04356",
+      "title": "Robust speech recognition via large-scale weak supervision",
+      "year": 2022,
+      "speech_relevant": false,
+      "window_total": 179,
+      "index_total": 298,
+      "by_quarter": {
+        "2025Q3": 84,
+        "2025Q4": 34,
+        "2026Q1": 27,
+        "2026Q2": 34
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2212.04356",
+        "page": "2212.04356",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2406.02430",
+      "arxiv_id": "2406.02430",
+      "doi": "10.48550/ARXIV.2406.02430",
+      "title": "Seedtts: A family of high-quality versatile speech generation models",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 162,
+      "index_total": 60,
+      "by_quarter": {
+        "2025Q3": 62,
+        "2025Q4": 39,
+        "2026Q1": 20,
+        "2026Q2": 41
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2406.02430",
+        "page": "2406.02430",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2210.13438",
+      "arxiv_id": "2210.13438",
+      "doi": null,
+      "title": "High fidelity neural audio compression",
+      "year": 2022,
+      "speech_relevant": false,
+      "window_total": 158,
+      "index_total": 209,
+      "by_quarter": {
+        "2025Q3": 72,
+        "2025Q4": 41,
+        "2026Q1": 21,
+        "2026Q2": 24
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2210.13438",
+        "page": "2210.13438",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2204.02152",
+      "arxiv_id": "2204.02152",
+      "doi": "10.21437/Interspeech.2022-439",
+      "title": "Utmos: Utokyo-sarulab system for voicemos challenge 2022",
+      "year": 2022,
+      "speech_relevant": true,
+      "window_total": 154,
+      "index_total": 239,
+      "by_quarter": {
+        "2025Q3": 72,
+        "2025Q4": 33,
+        "2026Q1": 23,
+        "2026Q2": 26
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2204.02152",
+        "page": "2204.02152",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2410.06885",
+      "arxiv_id": "2410.06885",
+      "doi": null,
+      "title": "F5-tts: A fairytaler that fakes fluent and faithful speech with flow matching",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 149,
+      "index_total": 133,
+      "by_quarter": {
+        "2025Q3": 60,
+        "2025Q4": 35,
+        "2026Q1": 23,
+        "2026Q2": 31
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2025.acl-long.313",
+        "page": "2025.acl-long.313",
+        "matched_by": "title",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1904.02882",
+      "arxiv_id": "1904.02882",
+      "doi": "10.21437/Interspeech.2019-2441",
+      "title": "Libritts: A corpus derived from librispeech for text-to-speech",
+      "year": 2019,
+      "speech_relevant": true,
+      "window_total": 137,
+      "index_total": 202,
+      "by_quarter": {
+        "2025Q3": 77,
+        "2025Q4": 24,
+        "2026Q1": 12,
+        "2026Q2": 24
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1904.02882",
+        "page": "1904.02882",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2010.05646",
+      "arxiv_id": "2010.05646",
+      "doi": "10.5555/3495724.3497152",
+      "title": "HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis",
+      "year": 2010,
+      "speech_relevant": true,
+      "window_total": 117,
+      "index_total": 174,
+      "by_quarter": {
+        "2025Q3": 79,
+        "2025Q4": 18,
+        "2026Q1": 9,
+        "2026Q2": 11
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2010.05646",
+        "page": "2010.05646",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2503.20215",
+      "arxiv_id": "2503.20215",
+      "doi": "10.48550/ARXIV.2503.20215",
+      "title": "Qwen2. 5-omni technical report",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 111,
+      "index_total": 120,
+      "by_quarter": {
+        "2025Q3": 23,
+        "2025Q4": 31,
+        "2026Q1": 28,
+        "2026Q2": 29
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2503.20215",
+        "page": "2503.20215",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2110.13900",
+      "arxiv_id": "2110.13900",
+      "doi": "10.1109/JSTSP.2022.3188113",
+      "title": "WavLM: Largescale self-supervised pre-training for full stack speech processing",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 111,
+      "index_total": 216,
+      "by_quarter": {
+        "2025Q3": 58,
+        "2025Q4": 15,
+        "2026Q1": 18,
+        "2026Q2": 20
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2403.03100",
+      "arxiv_id": "2403.03100",
+      "doi": null,
+      "title": "NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 105,
+      "index_total": 146,
+      "by_quarter": {
+        "2025Q3": 53,
+        "2025Q4": 28,
+        "2026Q1": 9,
+        "2026Q2": 15
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2403.03100",
+        "page": "2403.03100",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2412.02612",
+      "arxiv_id": "2412.02612",
+      "doi": "10.48550/ARXIV.2412.02612",
+      "title": "Glm-4-voice: Towards intelligent and human-like endto-end spoken chatbot",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 101,
+      "index_total": 109,
+      "by_quarter": {
+        "2025Q3": 31,
+        "2025Q4": 26,
+        "2026Q1": 19,
+        "2026Q2": 25
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2412.02612",
+        "page": "2412.02612",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2106.07447",
+      "arxiv_id": "2106.07447",
+      "doi": "10.1109/TASLP.2021.3122291",
+      "title": "HuBERT: Self-supervised speech representation learning by masked prediction of hidden units",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 98,
+      "index_total": 160,
+      "by_quarter": {
+        "2025Q3": 68,
+        "2025Q4": 11,
+        "2026Q1": 10,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2006.04558",
+      "arxiv_id": "2006.04558",
+      "doi": null,
+      "title": "Fastspeech 2: Fast and high-quality end-to-end text to speech",
+      "year": 2006,
+      "speech_relevant": true,
+      "window_total": 91,
+      "index_total": 123,
+      "by_quarter": {
+        "2025Q3": 53,
+        "2025Q4": 17,
+        "2026Q1": 10,
+        "2026Q2": 11
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2006.04558",
+        "page": "2006.04558",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2503.01710",
+      "arxiv_id": "2503.01710",
+      "doi": "10.48550/ARXIV.2503.01710",
+      "title": "Spark-tts: An efficient llm-based text-to-speech model with single-stream decoupled speech tokens",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 91,
+      "index_total": 98,
+      "by_quarter": {
+        "2025Q3": 21,
+        "2025Q4": 29,
+        "2026Q1": 18,
+        "2026Q2": 23
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2503.01710",
+        "page": "2503.01710",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2107.03312",
+      "arxiv_id": "2107.03312",
+      "doi": "10.1109/TASLP.2021.3129994",
+      "title": "Soundstream: An end-to-end neural audio codec",
+      "year": 2021,
+      "speech_relevant": true,
+      "window_total": 87,
+      "index_total": 154,
+      "by_quarter": {
+        "2025Q3": 46,
+        "2025Q4": 20,
+        "2026Q1": 9,
+        "2026Q2": 12
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2409.00750",
+      "arxiv_id": "2409.00750",
+      "doi": null,
+      "title": "Maskgct: Zero-shot text-to-speech with masked generative codec transformer",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 81,
+      "index_total": 114,
+      "by_quarter": {
+        "2025Q3": 29,
+        "2025Q4": 17,
+        "2026Q1": 17,
+        "2026Q2": 18
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2409.00750",
+        "page": "iclr-2025-ExuBFYtCQU",
+        "matched_by": "arxiv",
+        "is_duplicate": true
+      }
+    },
+    {
+      "key": "arxiv:2505.17589",
+      "arxiv_id": "2505.17589",
+      "doi": "10.48550/ARXIV.2505.17589",
+      "title": "Cosyvoice 3: Towards in-the-wild speech generation via scaling-up and post-training",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 80,
+      "index_total": 83,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 16,
+        "2026Q1": 13,
+        "2026Q2": 33
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2505.17589",
+        "page": "2505.17589",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2504.18425",
+      "arxiv_id": "2504.18425",
+      "doi": "10.48550/arXiv.2504.18425",
+      "title": "Kimiaudio technical report",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 77,
+      "index_total": 93,
+      "by_quarter": {
+        "2025Q3": 12,
+        "2025Q4": 22,
+        "2026Q1": 15,
+        "2026Q2": 28
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2504.18425",
+        "page": "2504.18425",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2306.06546",
+      "arxiv_id": "2306.06546",
+      "doi": null,
+      "title": "High-fidelity audio compression with improved rvqgan",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 74,
+      "index_total": 136,
+      "by_quarter": {
+        "2025Q3": 38,
+        "2025Q4": 17,
+        "2026Q1": 7,
+        "2026Q2": 12
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2303.08774",
+      "arxiv_id": "2303.08774",
+      "doi": "10.48550/ARXIV.2303",
+      "title": "Gpt-4 technical report",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 74,
+      "index_total": 85,
+      "by_quarter": {
+        "2025Q3": 35,
+        "2025Q4": 20,
+        "2026Q1": 6,
+        "2026Q2": 13
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2303.08774",
+        "page": "2303.08774",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2407.10759",
+      "arxiv_id": "2407.10759",
+      "doi": "10.48550/arXiv.2407.10759",
+      "title": "Qwen2-audio technical report",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 74,
+      "index_total": 84,
+      "by_quarter": {
+        "2025Q3": 24,
+        "2025Q4": 16,
+        "2026Q1": 17,
+        "2026Q2": 17
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2407.10759",
+        "page": "2407.10759",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "doi:10.1109/ICASSP.2015.7178964",
+      "arxiv_id": null,
+      "doi": "10.1109/ICASSP.2015.7178964",
+      "title": "Librispeech: An ASR corpus based on public domain audio books,",
+      "year": 2015,
+      "speech_relevant": false,
+      "window_total": 73,
+      "index_total": 139,
+      "by_quarter": {
+        "2025Q3": 43,
+        "2025Q4": 13,
+        "2026Q1": 9,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2210.02747",
+      "arxiv_id": "2210.02747",
+      "doi": null,
+      "title": "Flow matching for generative modeling",
+      "year": 2022,
+      "speech_relevant": false,
+      "window_total": 73,
+      "index_total": 112,
+      "by_quarter": {
+        "2025Q3": 33,
+        "2025Q4": 17,
+        "2026Q1": 7,
+        "2026Q2": 16
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2210.02747",
+        "page": "2210.02747",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2502.04128",
+      "arxiv_id": "2502.04128",
+      "doi": "10.48550/ARXIV.2502.04128",
+      "title": "Llasa: Scaling train-time and inferencetime compute for llama-based speech synthesis",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 71,
+      "index_total": 75,
+      "by_quarter": {
+        "2025Q3": 28,
+        "2025Q4": 14,
+        "2026Q1": 12,
+        "2026Q2": 17
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.04128",
+        "page": "2502.04128",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2407.21783",
+      "arxiv_id": "2407.21783",
+      "doi": "10.48550/ARXIV.2407.21783",
+      "title": "The llama 3 herd of models",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 70,
+      "index_total": 87,
+      "by_quarter": {
+        "2025Q3": 37,
+        "2025Q4": 10,
+        "2026Q1": 11,
+        "2026Q2": 12
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2407.21783",
+        "page": "2407.21783",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2306.00814",
+      "arxiv_id": "2306.00814",
+      "doi": null,
+      "title": "Vocos: Closing the gap between time-domain and fourierbased neural vocoders for high-quality audio synthesis",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 66,
+      "index_total": 95,
+      "by_quarter": {
+        "2025Q3": 31,
+        "2025Q4": 17,
+        "2026Q1": 6,
+        "2026Q2": 12
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2306.00814",
+        "page": "2306.00814",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2408.16725",
+      "arxiv_id": "2408.16725",
+      "doi": "10.48550/ARXIV.2408.16725",
+      "title": "Mini-omni: Language models can hear, talk while thinking in streaming",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 66,
+      "index_total": 72,
+      "by_quarter": {
+        "2025Q3": 25,
+        "2025Q4": 16,
+        "2026Q1": 11,
+        "2026Q2": 14
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2408.16725",
+        "page": "2408.16725",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2406.05370",
+      "arxiv_id": "2406.05370",
+      "doi": null,
+      "title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 65,
+      "index_total": 80,
+      "by_quarter": {
+        "2025Q3": 32,
+        "2025Q4": 15,
+        "2026Q1": 5,
+        "2026Q2": 13
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2406.05370",
+        "page": "2406.05370",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2308.16692",
+      "arxiv_id": "2308.16692",
+      "doi": "10.48550/ARXIV.2308",
+      "title": "Speechtokenizer: Unified speech tokenizer for speech large language models",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 64,
+      "index_total": 120,
+      "by_quarter": {
+        "2025Q3": 32,
+        "2025Q4": 17,
+        "2026Q1": 10,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2308.16692",
+        "page": "2308.16692",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2411.00774",
+      "arxiv_id": "2411.00774",
+      "doi": "10.48550/ARXIV.2411.00774",
+      "title": "Freeze-omni: A smart and low latency speech-to-speech dialogue model with frozen llm",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 62,
+      "index_total": 70,
+      "by_quarter": {
+        "2025Q3": 26,
+        "2025Q4": 14,
+        "2026Q1": 12,
+        "2026Q2": 10
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2411.00774",
+        "page": "2411.00774",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2106.06103",
+      "arxiv_id": "2106.06103",
+      "doi": null,
+      "title": "Conditional variational autoencoder with adversarial learning for end-to-end text-to-speech",
+      "year": 2021,
+      "speech_relevant": true,
+      "window_total": 62,
+      "index_total": 101,
+      "by_quarter": {
+        "2025Q3": 36,
+        "2025Q4": 8,
+        "2026Q1": 11,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2305.11000",
+      "arxiv_id": "2305.11000",
+      "doi": null,
+      "title": "Speechgpt: Empowering large language models with intrinsic cross-modal conversational abilities",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 61,
+      "index_total": 81,
+      "by_quarter": {
+        "2025Q3": 30,
+        "2025Q4": 13,
+        "2026Q1": 9,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2305.11000",
+        "page": "2305.11000",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1711.05101",
+      "arxiv_id": "1711.05101",
+      "doi": null,
+      "title": "Decoupled weight decay regularization",
+      "year": 2017,
+      "speech_relevant": false,
+      "window_total": 61,
+      "index_total": 92,
+      "by_quarter": {
+        "2025Q3": 29,
+        "2025Q4": 13,
+        "2026Q1": 11,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1711.05101",
+        "page": "1711.05101",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2206.04658",
+      "arxiv_id": "2206.04658",
+      "doi": null,
+      "title": "Bigvgan: A universal neural vocoder with large-scale training",
+      "year": 2022,
+      "speech_relevant": true,
+      "window_total": 59,
+      "index_total": 81,
+      "by_quarter": {
+        "2025Q3": 26,
+        "2025Q4": 20,
+        "2026Q1": 6,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2206.04658",
+        "page": "2206.04658",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2410.21276",
+      "arxiv_id": "2410.21276",
+      "doi": null,
+      "title": "GPT-4o system card",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 58,
+      "index_total": 71,
+      "by_quarter": {
+        "2025Q3": 16,
+        "2025Q4": 15,
+        "2026Q1": 13,
+        "2026Q2": 14
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2410.21276",
+        "page": "2410.21276",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2409.06666",
+      "arxiv_id": "2409.06666",
+      "doi": "10.48550/arXiv.2409.06666",
+      "title": "Llama-omni: Seamless speech interaction with large language models",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 57,
+      "index_total": 75,
+      "by_quarter": {
+        "2025Q3": 20,
+        "2025Q4": 19,
+        "2026Q1": 12,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2409.06666",
+        "page": "iclr-2025-PYmrUQmMEw",
+        "matched_by": "arxiv",
+        "is_duplicate": true
+      }
+    },
+    {
+      "key": "arxiv:2407.05361",
+      "arxiv_id": "2407.05361",
+      "doi": null,
+      "title": "Emilia: An extensive, multilingual, and diverse speech dataset for large-scale speech generation",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 56,
+      "index_total": 88,
+      "by_quarter": {
+        "2025Q3": 26,
+        "2025Q4": 16,
+        "2026Q1": 8,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2407.05361",
+        "page": "2407.05361",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2312.15185",
+      "arxiv_id": "2312.15185",
+      "doi": null,
+      "title": "Emotion2vec: Self-supervised pre-training for speech emotion representation",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 55,
+      "index_total": 81,
+      "by_quarter": {
+        "2025Q3": 29,
+        "2025Q4": 11,
+        "2026Q1": 9,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2312.15185",
+        "page": "2312.15185",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2006.11477",
+      "arxiv_id": "2006.11477",
+      "doi": null,
+      "title": "wav2vec 2.0: A framework for self-supervised learning of speech representations",
+      "year": 2006,
+      "speech_relevant": false,
+      "window_total": 55,
+      "index_total": 97,
+      "by_quarter": {
+        "2025Q3": 36,
+        "2025Q4": 6,
+        "2026Q1": 3,
+        "2026Q2": 10
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2005.07143",
+      "arxiv_id": "2005.07143",
+      "doi": "10.21437/Interspeech.2020-2650",
+      "title": "Ecapa-tdnn: Emphasized channel attention, propagation and aggregation in tdnn based speaker verification",
+      "year": 2005,
+      "speech_relevant": false,
+      "window_total": 55,
+      "index_total": 90,
+      "by_quarter": {
+        "2025Q3": 27,
+        "2025Q4": 10,
+        "2026Q1": 8,
+        "2026Q2": 10
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2005.07143",
+        "page": "2005.07143",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2408.16532",
+      "arxiv_id": "2408.16532",
+      "doi": null,
+      "title": "Wavtokenizer: An efficient acoustic discrete codec tokenizer for audio language modeling",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 55,
+      "index_total": 75,
+      "by_quarter": {
+        "2025Q3": 20,
+        "2025Q4": 17,
+        "2026Q1": 8,
+        "2026Q2": 10
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2408.16532",
+        "page": "2408.16532",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2412.15115",
+      "arxiv_id": "2412.15115",
+      "doi": null,
+      "title": "Qwen2.5 technical report",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 54,
+      "index_total": 62,
+      "by_quarter": {
+        "2025Q3": 16,
+        "2025Q4": 16,
+        "2026Q1": 11,
+        "2026Q2": 11
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2412.15115",
+        "page": "2412.15115",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2209.03143",
+      "arxiv_id": "2209.03143",
+      "doi": "10.1109/TASLP.2023.3288409",
+      "title": "Audiolm: a language modeling approach to audio generation",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 52,
+      "index_total": 92,
+      "by_quarter": {
+        "2025Q3": 26,
+        "2025Q4": 13,
+        "2026Q1": 7,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2209.03143",
+        "page": "2209.03143",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2406.04904",
+      "arxiv_id": "2406.04904",
+      "doi": "10.48550/arXiv.2406.04904",
+      "title": "Xtts: a massively multilingual zero-shot text-to-speech model",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 51,
+      "index_total": 74,
+      "by_quarter": {
+        "2025Q3": 23,
+        "2025Q4": 11,
+        "2026Q1": 11,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2406.04904",
+        "page": "2406.04904",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2505.09388",
+      "arxiv_id": "2505.09388",
+      "doi": "10.48550/ARXIV.2505.09388",
+      "title": "Qwen3 technical report",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 50,
+      "index_total": 53,
+      "by_quarter": {
+        "2025Q3": 10,
+        "2025Q4": 12,
+        "2026Q1": 12,
+        "2026Q2": 16
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2505.09388",
+        "page": "2505.09388",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1912.06670",
+      "arxiv_id": "1912.06670",
+      "doi": null,
+      "title": "Common voice: A massively-multilingual speech corpus",
+      "year": 2019,
+      "speech_relevant": false,
+      "window_total": 50,
+      "index_total": 89,
+      "by_quarter": {
+        "2025Q3": 22,
+        "2025Q4": 15,
+        "2026Q1": 5,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1912.06670",
+        "page": "1912.06670",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2409.03283",
+      "arxiv_id": "2409.03283",
+      "doi": null,
+      "title": "Fireredtts: A foundation text-to-speech framework for industry-level generative speech applications",
+      "year": null,
+      "speech_relevant": true,
+      "window_total": 50,
+      "index_total": 53,
+      "by_quarter": {
+        "2025Q3": 21,
+        "2025Q4": 14,
+        "2026Q1": 3,
+        "2026Q2": 12
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2409.03283",
+        "page": "2409.03283",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2306.15687",
+      "arxiv_id": "2306.15687",
+      "doi": null,
+      "title": "Voicebox: Text-guided multilingual universal speech generation at scale",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 50,
+      "index_total": 101,
+      "by_quarter": {
+        "2025Q3": 26,
+        "2025Q4": 9,
+        "2026Q1": 10,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2406.18009",
+      "arxiv_id": "2406.18009",
+      "doi": "10.1109/SLT61566.2024.10832320",
+      "title": "E2 tts: Embarrassingly easy fully non-autoregressive zero-shot tts",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 50,
+      "index_total": 79,
+      "by_quarter": {
+        "2025Q3": 27,
+        "2025Q4": 9,
+        "2026Q1": 5,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2406.18009",
+        "page": "2406.18009",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1706.03762",
+      "arxiv_id": "1706.03762",
+      "doi": null,
+      "title": "Attention Is All You Need",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 49,
+      "index_total": 86,
+      "by_quarter": {
+        "2025Q3": 33,
+        "2025Q4": 5,
+        "2026Q1": 5,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2410.17196",
+      "arxiv_id": "2410.17196",
+      "doi": "10.48550/arXiv.2410.17196",
+      "title": "Voicebench: Benchmarking llm-based voice assistants",
+      "year": 2026,
+      "speech_relevant": true,
+      "window_total": 48,
+      "index_total": 58,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 13,
+        "2026Q1": 9,
+        "2026Q2": 13
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2410.17196",
+        "page": "2410.17196",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2311.07919",
+      "arxiv_id": "2311.07919",
+      "doi": "10.48550/arXiv.2311.07919",
+      "title": "Qwen-audio: Advancing universal audio understanding via unified large-scale audio-language models",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 48,
+      "index_total": 57,
+      "by_quarter": {
+        "2025Q3": 29,
+        "2025Q4": 7,
+        "2026Q1": 5,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2311.07919",
+        "page": "2311.07919",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2303.03926",
+      "arxiv_id": "2303.03926",
+      "doi": null,
+      "title": "Speak foreign languages with your own voice: Cross-lingual neural codec language modeling",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 46,
+      "index_total": 49,
+      "by_quarter": {
+        "2025Q3": 25,
+        "2025Q4": 8,
+        "2026Q1": 5,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2303.03926",
+        "page": "2303.03926",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2409.05377",
+      "arxiv_id": "2409.05377",
+      "doi": null,
+      "title": "Bigcodec: Pushing the limits of low-bitrate neural speech codec",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 46,
+      "index_total": 52,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 16,
+        "2026Q1": 8,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2409.05377",
+        "page": "2409.05377",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2501.06282",
+      "arxiv_id": "2501.06282",
+      "doi": "10.48550/ARXIV.2501.06282",
+      "title": "MinMo: A multimodal large language model for seamless voice interaction",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 46,
+      "index_total": 48,
+      "by_quarter": {
+        "2025Q3": 19,
+        "2025Q4": 11,
+        "2026Q1": 8,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2501.06282",
+        "page": "2501.06282",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2304.09116",
+      "arxiv_id": "2304.09116",
+      "doi": null,
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 46,
+      "index_total": 65,
+      "by_quarter": {
+        "2025Q3": 28,
+        "2025Q4": 7,
+        "2026Q1": 4,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2304.09116",
+        "page": "2304.09116",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2403.16973",
+      "arxiv_id": "2403.16973",
+      "doi": "10.18653/v1/2024.acl-long.673",
+      "title": "Voicecraft: Zero-shot speech editing and text-to-speech in the wild",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 45,
+      "index_total": 61,
+      "by_quarter": {
+        "2025Q3": 27,
+        "2025Q4": 15,
+        "2026Q1": 3,
+        "2026Q2": 0
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2403.16973",
+        "page": "2403.16973",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2302.13971",
+      "arxiv_id": "2302.13971",
+      "doi": null,
+      "title": "Llama: Open and efficient foundation language models",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 45,
+      "index_total": 52,
+      "by_quarter": {
+        "2025Q3": 21,
+        "2025Q4": 16,
+        "2026Q1": 4,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2302.13971",
+        "page": "2302.13971",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2305.02765",
+      "arxiv_id": "2305.02765",
+      "doi": null,
+      "title": "Hifi-codec: Group-residual vector quantization for high fidelity audio codec",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 45,
+      "index_total": 50,
+      "by_quarter": {
+        "2025Q3": 22,
+        "2025Q4": 14,
+        "2026Q1": 5,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2305.02765",
+        "page": "2305.02765",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1412.6980",
+      "arxiv_id": "1412.6980",
+      "doi": null,
+      "title": "Adam: A Method for Stochastic Optimization",
+      "year": 2014,
+      "speech_relevant": false,
+      "window_total": 44,
+      "index_total": 58,
+      "by_quarter": {
+        "2025Q3": 27,
+        "2025Q4": 7,
+        "2026Q1": 5,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1412.6980",
+        "page": "1412.6980",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2502.11946",
+      "arxiv_id": "2502.11946",
+      "doi": null,
+      "title": "Step-audio: Unified understanding and generation in intelligent speech interaction",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 44,
+      "index_total": 48,
+      "by_quarter": {
+        "2025Q3": 10,
+        "2025Q4": 12,
+        "2026Q1": 9,
+        "2026Q2": 13
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.11946",
+        "page": "2502.11946",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "title:neuraldiscreterepresentationlearning",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "Neural discrete representation learning",
+      "year": 2017,
+      "speech_relevant": false,
+      "window_total": 43,
+      "index_total": 68,
+      "by_quarter": {
+        "2025Q3": 26,
+        "2025Q4": 7,
+        "2026Q1": 7,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2207.12598",
+      "arxiv_id": "2207.12598",
+      "doi": null,
+      "title": "Classifier-free diffusion guidance",
+      "year": 2022,
+      "speech_relevant": false,
+      "window_total": 42,
+      "index_total": 55,
+      "by_quarter": {
+        "2025Q3": 17,
+        "2025Q4": 12,
+        "2026Q1": 4,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2207.12598",
+        "page": "2207.12598",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2012.03411",
+      "arxiv_id": "2012.03411",
+      "doi": null,
+      "title": "Mls: A large-scale multilingual dataset for speech research",
+      "year": 2012,
+      "speech_relevant": false,
+      "window_total": 39,
+      "index_total": 52,
+      "by_quarter": {
+        "2025Q3": 21,
+        "2025Q4": 10,
+        "2026Q1": 4,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2012.03411",
+        "page": "2012.03411",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1712.05884",
+      "arxiv_id": "1712.05884",
+      "doi": "10.1109/ICASSP.2018.8461368",
+      "title": "Natural TTS synthesis by conditioning wavenet on mel spectrogram predictions",
+      "year": 2018,
+      "speech_relevant": true,
+      "window_total": 39,
+      "index_total": 75,
+      "by_quarter": {
+        "2025Q3": 27,
+        "2025Q4": 2,
+        "2026Q1": 4,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1712.05884",
+        "page": "1712.05884",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2305.09636",
+      "arxiv_id": "2305.09636",
+      "doi": null,
+      "title": "Soundstorm: Efficient parallel audio generation",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 39,
+      "index_total": 43,
+      "by_quarter": {
+        "2025Q3": 19,
+        "2025Q4": 6,
+        "2026Q1": 5,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2305.09636",
+        "page": "2305.09636",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2402.01912",
+      "arxiv_id": "2402.01912",
+      "doi": "10.48550/ARXIV.2402.01912",
+      "title": "Natural Language Guidance of HighFidelity Text-to-Speech with Synthetic Annotations",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 38,
+      "index_total": 41,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 6,
+        "2026Q1": 5,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2402.01912",
+        "page": "2402.01912",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2501.12948",
+      "arxiv_id": "2501.12948",
+      "doi": null,
+      "title": "Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 37,
+      "index_total": 40,
+      "by_quarter": {
+        "2025Q3": 7,
+        "2025Q4": 13,
+        "2026Q1": 8,
+        "2026Q2": 9
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2501.12948",
+        "page": "2501.12948",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1609.03499",
+      "arxiv_id": "1609.03499",
+      "doi": "10.48550/arXiv.1609.03499",
+      "title": "Wavenet: A generative model for raw audio",
+      "year": 2016,
+      "speech_relevant": false,
+      "window_total": 36,
+      "index_total": 45,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 10,
+        "2026Q1": 6,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1609.03499",
+        "page": "1609.03499",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1703.10135",
+      "arxiv_id": "1703.10135",
+      "doi": null,
+      "title": "Tacotron: Towards endto-end speech synthesis",
+      "year": 2017,
+      "speech_relevant": true,
+      "window_total": 36,
+      "index_total": 51,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 8,
+        "2026Q1": 8,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "1703.10135",
+        "page": "1703.10135",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2507.06261",
+      "arxiv_id": "2507.06261",
+      "doi": "10.48550/ARXIV.2507.06261",
+      "title": "Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 36,
+      "index_total": 43,
+      "by_quarter": {
+        "2025Q3": 6,
+        "2025Q4": 9,
+        "2026Q1": 7,
+        "2026Q2": 14
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2507.06261",
+        "page": "2507.06261",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2305.18802",
+      "arxiv_id": "2305.18802",
+      "doi": null,
+      "title": "LibriTTSr: A restored multi-speaker text-to-speech corpus",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 36,
+      "index_total": 57,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 4,
+        "2026Q1": 8,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2312.05187",
+      "arxiv_id": "2312.05187",
+      "doi": "10.48550/ARXIV.2312.05187",
+      "title": "Seamless: Multilingual Expressive and Streaming Speech Translation",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 35,
+      "index_total": 39,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 6,
+        "2026Q1": 3,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2312.05187",
+        "page": "2312.05187",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2306.12925",
+      "arxiv_id": "2306.12925",
+      "doi": "10.48550/ARXIV.2306.12925",
+      "title": "Audiopalm: A large language model that can speak and listen",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 35,
+      "index_total": 40,
+      "by_quarter": {
+        "2025Q3": 17,
+        "2025Q4": 9,
+        "2026Q1": 3,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2306.12925",
+        "page": "2306.12925",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2309.03199",
+      "arxiv_id": "2309.03199",
+      "doi": "10.1109/ICASSP48485.2024.10448291",
+      "title": "Matcha-tts: A fast TTS architecture with conditional flow matching",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 35,
+      "index_total": 70,
+      "by_quarter": {
+        "2025Q3": 22,
+        "2025Q4": 4,
+        "2026Q1": 2,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2411.19842",
+      "arxiv_id": "2411.19842",
+      "doi": null,
+      "title": "Scaling transformers for low-bitrate high-quality speech coding",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 34,
+      "index_total": 43,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 7,
+        "2026Q1": 7,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2411.19842",
+        "page": "iclr-2025-4YpMrGfldX",
+        "matched_by": "arxiv",
+        "is_duplicate": true
+      }
+    },
+    {
+      "key": "arxiv:2411.13577",
+      "arxiv_id": "2411.13577",
+      "doi": null,
+      "title": "WavChat: A survey of spoken dialogue models",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 34,
+      "index_total": 37,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 14,
+        "2026Q1": 5,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2411.13577",
+        "page": "2411.13577",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2106.15561",
+      "arxiv_id": "2106.15561",
+      "doi": null,
+      "title": "A survey on neural speech synthesis",
+      "year": 2021,
+      "speech_relevant": true,
+      "window_total": 34,
+      "index_total": 35,
+      "by_quarter": {
+        "2025Q3": 17,
+        "2025Q4": 8,
+        "2026Q1": 2,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2106.15561",
+        "page": "2106.15561",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2407.04051",
+      "arxiv_id": "2407.04051",
+      "doi": "10.48550/ARX",
+      "title": "Funaudiollm: Voice understanding and generation foundation models for natural interaction between humans and llms",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 34,
+      "index_total": 40,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 11,
+        "2026Q1": 6,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2407.04051",
+        "page": "2407.04051",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "title:perceptualevaluationofspeechqualitypesqanewmethodforspeechqualityassessmentoftelephonenetworksandcodecs",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "Perceptual evaluation of speech quality (pesq)-a new method for speech quality assessment of telephone networks and codecs",
+      "year": 2001,
+      "speech_relevant": false,
+      "window_total": 34,
+      "index_total": 60,
+      "by_quarter": {
+        "2025Q3": 25,
+        "2025Q4": 4,
+        "2026Q1": 3,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2112.02418",
+      "arxiv_id": "2112.02418",
+      "doi": null,
+      "title": "Yourtts: Towards zero-shot multi-speaker tts and zero-shot voice conversion for everyone",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 34,
+      "index_total": 61,
+      "by_quarter": {
+        "2025Q3": 22,
+        "2025Q4": 6,
+        "2026Q1": 4,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2005.08100",
+      "arxiv_id": "2005.08100",
+      "doi": "10.21437/interspeech.2020-3015",
+      "title": "Conformer: Convolution-augmented transformer for speech recognition",
+      "year": 2005,
+      "speech_relevant": false,
+      "window_total": 34,
+      "index_total": 58,
+      "by_quarter": {
+        "2025Q3": 21,
+        "2025Q4": 5,
+        "2026Q1": 2,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2106.09685",
+      "arxiv_id": "2106.09685",
+      "doi": null,
+      "title": "LoRA: Low-rank adaptation of large language models",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 34,
+      "index_total": 71,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 7,
+        "2026Q1": 7,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "title:cstrvctkcorpusenglishmultispeakercorpusforcstrvoicecloningtoolkitversion092",
+      "arxiv_id": null,
+      "doi": "10.57702/bw3hjwag",
+      "title": "CSTR VCTK Corpus: English multi-speaker corpus for cstr voice cloning toolkit (version 0.92)",
+      "year": 2016,
+      "speech_relevant": true,
+      "window_total": 33,
+      "index_total": 178,
+      "by_quarter": {
+        "2025Q3": 17,
+        "2025Q4": 7,
+        "2026Q1": 5,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2507.16632",
+      "arxiv_id": "2507.16632",
+      "doi": "10.48550/ARXIV.2507.16632",
+      "title": "Step-audio 2 technical report",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 33,
+      "index_total": 34,
+      "by_quarter": {
+        "2025Q3": 4,
+        "2025Q4": 8,
+        "2026Q1": 11,
+        "2026Q2": 10
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2507.16632",
+        "page": "2507.16632",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2206.08317",
+      "arxiv_id": "2206.08317",
+      "doi": "10.21437/Interspeech.2022-9996",
+      "title": "Paraformer: Fast and accurate parallel transformer for non-autoregressive end-to-end speech recognition",
+      "year": 2022,
+      "speech_relevant": false,
+      "window_total": 32,
+      "index_total": 45,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 12,
+        "2026Q1": 3,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2206.08317",
+        "page": "2206.08317",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2104.09494",
+      "arxiv_id": "2104.09494",
+      "doi": "10.21437/Interspeech.2021-299",
+      "title": "Nisqa: A deep cnn-self-attention model for multidimensional speech quality prediction with crowdsourced datasets",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 32,
+      "index_total": 55,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 8,
+        "2026Q1": 4,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2305.07243",
+      "arxiv_id": "2305.07243",
+      "doi": null,
+      "title": "Better speech synthesis through scaling",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 32,
+      "index_total": 42,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 5,
+        "2026Q1": 6,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2305.07243",
+        "page": "2305.07243",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2505.07916",
+      "arxiv_id": "2505.07916",
+      "doi": "10.48550/ARXIV.2505.07916",
+      "title": "MiniMax-Speech: Intrinsic zero-shot text-to-speech with a learnable speaker encoder",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 32,
+      "index_total": 33,
+      "by_quarter": {
+        "2025Q3": 11,
+        "2025Q4": 8,
+        "2026Q1": 7,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2505.07916",
+        "page": "2505.07916",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2402.05755",
+      "arxiv_id": "2402.05755",
+      "doi": null,
+      "title": "SpiRit-LM: Interleaved spoken and written language model",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 32,
+      "index_total": 39,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 10,
+        "2026Q1": 5,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2402.05755",
+        "page": "2402.05755",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2402.08093",
+      "arxiv_id": "2402.08093",
+      "doi": "10.48550/arXiv.2402.08093",
+      "title": "BASE TTS: Lessons from building a billion-parameter text-to-speech model on 100k hours of data",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 32,
+      "index_total": 37,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 8,
+        "2026Q1": 2,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2402.08093",
+        "page": "2402.08093",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2410.11190",
+      "arxiv_id": "2410.11190",
+      "doi": "10.48550/ARXIV.2410.11190",
+      "title": "Mini-omni2: Towards open-source gpt4o with vision, speech and duplex capabilities",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 32,
+      "index_total": 32,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 6,
+        "2026Q1": 5,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2410.11190",
+        "page": "2410.11190",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2502.17239",
+      "arxiv_id": "2502.17239",
+      "doi": "10.48550/ARXIV.2502.17239",
+      "title": "Baichuanaudio: A unified framework for end-to-end speech interaction",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 31,
+      "index_total": 36,
+      "by_quarter": {
+        "2025Q3": 9,
+        "2025Q4": 11,
+        "2026Q1": 3,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.17239",
+        "page": "2502.17239",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2407.08551",
+      "arxiv_id": "2407.08551",
+      "doi": null,
+      "title": "Autoregressive speech synthesis without vector quantization",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 31,
+      "index_total": 43,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 8,
+        "2026Q1": 1,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2407.08551",
+        "page": "2407.08551",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2402.03300",
+      "arxiv_id": "2402.03300",
+      "doi": null,
+      "title": "Deepseekmath: Pushing the limits of mathematical reasoning in open language models",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 31,
+      "index_total": 34,
+      "by_quarter": {
+        "2025Q3": 5,
+        "2025Q4": 7,
+        "2026Q1": 8,
+        "2026Q2": 11
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2402.03300",
+        "page": "2402.03300",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2106.06909",
+      "arxiv_id": "2106.06909",
+      "doi": "10.21437/interspeech.2021-1965",
+      "title": "Gigaspeech: An evolving, multidomain asr corpus with 10,000 hours of transcribed audio",
+      "year": 1965,
+      "speech_relevant": false,
+      "window_total": 31,
+      "index_total": 47,
+      "by_quarter": {
+        "2025Q3": 7,
+        "2025Q4": 10,
+        "2026Q1": 8,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2106.06909",
+        "page": "2106.06909",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2412.15649",
+      "arxiv_id": "2412.15649",
+      "doi": null,
+      "title": "Slam-omni: Timbrecontrollable voice interaction system with single-stage training",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 30,
+      "index_total": 34,
+      "by_quarter": {
+        "2025Q3": 7,
+        "2025Q4": 16,
+        "2026Q1": 5,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2412.15649",
+        "page": "2412.15649",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2309.15505",
+      "arxiv_id": "2309.15505",
+      "doi": null,
+      "title": "Finite scalar quantization: Vq-vae made simple",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 30,
+      "index_total": 45,
+      "by_quarter": {
+        "2025Q3": 9,
+        "2025Q4": 11,
+        "2026Q1": 5,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2309.15505",
+        "page": "2309.15505",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2310.00704",
+      "arxiv_id": "2310.00704",
+      "doi": null,
+      "title": "Uniaudio: An audio foundation model toward universal audio generation",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 29,
+      "index_total": 36,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 9,
+        "2026Q1": 3,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2310.00704",
+        "page": "2310.00704",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1905.09263",
+      "arxiv_id": "1905.09263",
+      "doi": null,
+      "title": "Fastspeech: Fast, robust and controllable text to speech",
+      "year": 2019,
+      "speech_relevant": true,
+      "window_total": 29,
+      "index_total": 46,
+      "by_quarter": {
+        "2025Q3": 16,
+        "2025Q4": 6,
+        "2026Q1": 7,
+        "2026Q2": 0
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2105.06337",
+      "arxiv_id": "2105.06337",
+      "doi": null,
+      "title": "Grad-tts: A diffusion probabilistic model for text-to-speech",
+      "year": 2021,
+      "speech_relevant": true,
+      "window_total": 29,
+      "index_total": 44,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 1,
+        "2026Q1": 4,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2105.06337",
+        "page": "2105.06337",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2104.00355",
+      "arxiv_id": "2104.00355",
+      "doi": null,
+      "title": "Speech resynthesis from discrete disentangled self-supervised representations",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 28,
+      "index_total": 42,
+      "by_quarter": {
+        "2025Q3": 19,
+        "2025Q4": 4,
+        "2026Q1": 2,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2104.00355",
+        "page": "2104.00355",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2212.09748",
+      "arxiv_id": "2212.09748",
+      "doi": null,
+      "title": "Scalable diffusion models with transformers",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 28,
+      "index_total": 56,
+      "by_quarter": {
+        "2025Q3": 17,
+        "2025Q4": 5,
+        "2026Q1": 4,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2410.03751",
+      "arxiv_id": "2410.03751",
+      "doi": null,
+      "title": "Recent advances in speech language models: A survey",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 28,
+      "index_total": 38,
+      "by_quarter": {
+        "2025Q3": 11,
+        "2025Q4": 9,
+        "2026Q1": 4,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2410.03751",
+        "page": "2410.03751",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2310.13289",
+      "arxiv_id": "2310.13289",
+      "doi": null,
+      "title": "Salmonn: Towards generic hearing abilities for large language models",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 27,
+      "index_total": 41,
+      "by_quarter": {
+        "2025Q3": 16,
+        "2025Q4": 5,
+        "2026Q1": 2,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2310.13289",
+        "page": "2310.13289",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "title:theljspeechdataset",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "The LJ speech dataset",
+      "year": 2017,
+      "speech_relevant": false,
+      "window_total": 27,
+      "index_total": 50,
+      "by_quarter": {
+        "2025Q3": 19,
+        "2025Q4": 4,
+        "2026Q1": 2,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2502.06490",
+      "arxiv_id": "2502.06490",
+      "doi": null,
+      "title": "Recent advances in discrete speech tokens: A review",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 26,
+      "index_total": 36,
+      "by_quarter": {
+        "2025Q3": 7,
+        "2025Q4": 9,
+        "2026Q1": 2,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.06490",
+        "page": "2502.06490",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2412.19437",
+      "arxiv_id": "2412.19437",
+      "doi": null,
+      "title": "Deepseek-v3 technical report",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 26,
+      "index_total": 32,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 5,
+        "2026Q1": 3,
+        "2026Q2": 10
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2412.19437",
+        "page": "2412.19437",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2410.17799",
+      "arxiv_id": "2410.17799",
+      "doi": "10.48550/ARXIV.2410.17799",
+      "title": "Omniflatten: An end-to-end gpt model for seamless voice conversation",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 26,
+      "index_total": 29,
+      "by_quarter": {
+        "2025Q3": 13,
+        "2025Q4": 5,
+        "2026Q1": 6,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2410.17799",
+        "page": "2410.17799",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2411.09943",
+      "arxiv_id": "2411.09943",
+      "doi": null,
+      "title": "Zero-shot voice conversion with diffusion transformers",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 26,
+      "index_total": 25,
+      "by_quarter": {
+        "2025Q3": 10,
+        "2025Q4": 10,
+        "2026Q1": 3,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2411.09943",
+        "page": "2411.09943",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "doi:10.1016/j.specom.2021.11.006",
+      "arxiv_id": null,
+      "doi": "10.1016/j.specom.2021.11.006",
+      "title": "Emotional voice conversion: Theory, databases and esd",
+      "year": 2021,
+      "speech_relevant": true,
+      "window_total": 25,
+      "index_total": 42,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 6,
+        "2026Q1": 4,
+        "2026Q2": 1
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "doi:10.21437/Interspeech.2017-1386",
+      "arxiv_id": null,
+      "doi": "10.21437/Interspeech.2017-1386",
+      "title": "Montreal Forced Aligner: Trainable Text-Speech Alignment Using Kaldi",
+      "year": 2017,
+      "speech_relevant": false,
+      "window_total": 25,
+      "index_total": 50,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 3,
+        "2026Q1": 3,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2502.05512",
+      "arxiv_id": "2502.05512",
+      "doi": "10.48550/ARXIV.2502.05512",
+      "title": "Indextts: An industrial-level controllable and efficient zero-shot text-to-speech system",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 25,
+      "index_total": 29,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 8,
+        "2026Q1": 2,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.05512",
+        "page": "2502.05512",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2411.01156",
+      "arxiv_id": "2411.01156",
+      "doi": null,
+      "title": "Fish-speech: Leveraging large language models for advanced multilingual text-to-speech synthesis",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 25,
+      "index_total": 33,
+      "by_quarter": {
+        "2025Q3": 6,
+        "2025Q4": 4,
+        "2026Q1": 10,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2411.01156",
+        "page": "2411.01156",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "doi:10.1109/ICASSP40776.2020.9052942",
+      "arxiv_id": null,
+      "doi": "10.1109/ICASSP40776.2020.9052942",
+      "title": "Libri-light: A benchmark for asr with limited or no supervision",
+      "year": 2020,
+      "speech_relevant": false,
+      "window_total": 25,
+      "index_total": 46,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 3,
+        "2026Q1": 2,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2405.00233",
+      "arxiv_id": "2405.00233",
+      "doi": null,
+      "title": "Semanticodec: An ultra low bitrate semantic audio codec for general sound",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 25,
+      "index_total": 42,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 5,
+        "2026Q1": 2,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2406.07855",
+      "arxiv_id": "2406.07855",
+      "doi": null,
+      "title": "Vall-e r: Robust and efficient zero-shot text-to-speech synthesis via monotonic alignment",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 25,
+      "index_total": 31,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 6,
+        "2026Q1": 1,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2406.07855",
+        "page": "2406.07855",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2010.15258",
+      "arxiv_id": "2010.15258",
+      "doi": null,
+      "title": "Dnsmos: A non-intrusive perceptual objective speech quality metric to evaluate noise suppressors",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 24,
+      "index_total": 41,
+      "by_quarter": {
+        "2025Q3": 6,
+        "2025Q4": 7,
+        "2026Q1": 4,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2506.13053",
+      "arxiv_id": "2506.13053",
+      "doi": null,
+      "title": "ZipVoice: Fast and high-quality zero-shot text-tospeech with flow matching",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 24,
+      "index_total": 24,
+      "by_quarter": {
+        "2025Q3": 3,
+        "2025Q4": 8,
+        "2026Q1": 7,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2025Q4",
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2506.13053",
+        "page": "2506.13053",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2409.09305",
+      "arxiv_id": "2409.09305",
+      "doi": null,
+      "title": "The t05 system for the voicemos challenge 2024: Transfer learning from deep image classifier to naturalness mos prediction of high-quality synthetic speech",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 24,
+      "index_total": 45,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 1,
+        "2026Q1": 6,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q3",
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "doi:10.1109/ICASSP49357.2023.10095191",
+      "arxiv_id": null,
+      "doi": "10.1109/ICASSP49357.2023.10095191",
+      "title": "Freevc: Towards high-quality text-free one-shot  voice  conversion",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 24,
+      "index_total": 35,
+      "by_quarter": {
+        "2025Q3": 20,
+        "2025Q4": 2,
+        "2026Q1": 0,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2109.13821",
+      "arxiv_id": "2109.13821",
+      "doi": null,
+      "title": "Diffusion-based voice conversion with fast maximum likelihood sampling scheme",
+      "year": 2021,
+      "speech_relevant": true,
+      "window_total": 24,
+      "index_total": 33,
+      "by_quarter": {
+        "2025Q3": 18,
+        "2025Q4": 5,
+        "2026Q1": 0,
+        "2026Q2": 1
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2502.07243",
+      "arxiv_id": "2502.07243",
+      "doi": null,
+      "title": "Vevo: Controllable zero-shot voice imitation with self-supervised disentanglement",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 24,
+      "index_total": 41,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 7,
+        "2026Q1": 6,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.07243",
+        "page": "iclr-2025-anQDiQZhDP",
+        "matched_by": "arxiv",
+        "is_duplicate": true
+      }
+    },
+    {
+      "key": "arxiv:2211.12171",
+      "arxiv_id": "2211.12171",
+      "doi": "10.1109/ICASSP49357.2023.10096285",
+      "title": "Prompttts: Controllable text-to-speech with text descriptions",
+      "year": 2022,
+      "speech_relevant": true,
+      "window_total": 24,
+      "index_total": 42,
+      "by_quarter": {
+        "2025Q3": 15,
+        "2025Q4": 4,
+        "2026Q1": 3,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2312.15821",
+      "arxiv_id": "2312.15821",
+      "doi": null,
+      "title": "Audiobox: Unified audio generation with natural language prompts",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 24,
+      "index_total": 26,
+      "by_quarter": {
+        "2025Q3": 10,
+        "2025Q4": 5,
+        "2026Q1": 2,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2312.15821",
+        "page": "2312.15821",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2005.14165",
+      "arxiv_id": "2005.14165",
+      "doi": null,
+      "title": "Language models are few-shot learners",
+      "year": 2005,
+      "speech_relevant": false,
+      "window_total": 23,
+      "index_total": 29,
+      "by_quarter": {
+        "2025Q3": 9,
+        "2025Q4": 10,
+        "2026Q1": 1,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2005.14165",
+        "page": "2005.14165",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2408.17175",
+      "arxiv_id": "2408.17175",
+      "doi": "10.1609/aaai.v39i24.34761",
+      "title": "Codec does matter: Exploring the semantic shortcoming of codec for audio language model",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 23,
+      "index_total": 46,
+      "by_quarter": {
+        "2025Q3": 10,
+        "2025Q4": 7,
+        "2026Q1": 3,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2508.19205",
+      "arxiv_id": "2508.19205",
+      "doi": null,
+      "title": "VibeVoice technical report",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 23,
+      "index_total": 5,
+      "by_quarter": {
+        "2025Q3": 5,
+        "2025Q4": 5,
+        "2026Q1": 5,
+        "2026Q2": 8
+      },
+      "in_top_n_of": [
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2508.19205",
+        "page": "2508.19205",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2502.05139",
+      "arxiv_id": "2502.05139",
+      "doi": null,
+      "title": "Meta Audiobox Aesthetics: Unified Automatic Quality Assessment for Speech, Music, and Sound",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 23,
+      "index_total": 26,
+      "by_quarter": {
+        "2025Q3": 7,
+        "2025Q4": 7,
+        "2026Q1": 5,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.05139",
+        "page": "2502.05139",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "title:denoisingdiffusionprobabilisticmodels",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "Denoising diffusion probabilistic models",
+      "year": 2020,
+      "speech_relevant": false,
+      "window_total": 23,
+      "index_total": 38,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 3,
+        "2026Q1": 0,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2312.11805",
+      "arxiv_id": "2312.11805",
+      "doi": null,
+      "title": "Gemini: a family of highly capable multimodal models",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 22,
+      "index_total": 24,
+      "by_quarter": {
+        "2025Q3": 12,
+        "2025Q4": 3,
+        "2026Q1": 1,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2312.11805",
+        "page": "2312.11805",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2502.18924",
+      "arxiv_id": "2502.18924",
+      "doi": null,
+      "title": "Megatts 3: Sparse alignment enhanced latent diffusion transformer for zero-shot speech synthesis",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 22,
+      "index_total": 21,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 6,
+        "2026Q1": 1,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2502.18924",
+        "page": "2502.18924",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2303.00332",
+      "arxiv_id": "2303.00332",
+      "doi": null,
+      "title": "Cam++: A fast and efficient network for speaker verification using context-aware masking",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 22,
+      "index_total": 41,
+      "by_quarter": {
+        "2025Q3": 10,
+        "2025Q4": 7,
+        "2026Q1": 1,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "title:ashorttimeobjectiveintelligibilitymeasurefortimefrequencyweightednoisyspeech",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "A shorttime objective intelligibility measure for time-frequency weighted noisy speech",
+      "year": 2010,
+      "speech_relevant": false,
+      "window_total": 22,
+      "index_total": 32,
+      "by_quarter": {
+        "2025Q3": 14,
+        "2025Q4": 4,
+        "2026Q1": 2,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q3"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2504.08528",
+      "arxiv_id": "2504.08528",
+      "doi": null,
+      "title": "On the landscape of spoken language models: A comprehensive survey",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 21,
+      "index_total": 28,
+      "by_quarter": {
+        "2025Q3": 5,
+        "2025Q4": 4,
+        "2026Q1": 6,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2026Q1",
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2504.08528",
+        "page": "2504.08528",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2505.02625",
+      "arxiv_id": "2505.02625",
+      "doi": null,
+      "title": "Llama-omni2: Llm-based real-time spoken chatbot with autoregressive streaming speech synthesis",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 20,
+      "index_total": 26,
+      "by_quarter": {
+        "2025Q3": 2,
+        "2025Q4": 5,
+        "2026Q1": 8,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2505.02625",
+        "page": "2505.02625",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2106.04624",
+      "arxiv_id": "2106.04624",
+      "doi": null,
+      "title": "SpeechBrain: A General-Purpose Speech Toolkit",
+      "year": 2021,
+      "speech_relevant": false,
+      "window_total": 19,
+      "index_total": 21,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 3,
+        "2026Q1": 2,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2106.04624",
+        "page": "2106.04624",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2406.05551",
+      "arxiv_id": "2406.05551",
+      "doi": null,
+      "title": "Autoregressive diffusion transformer for text-to-speech synthesis",
+      "year": 2024,
+      "speech_relevant": true,
+      "window_total": 19,
+      "index_total": 21,
+      "by_quarter": {
+        "2025Q3": 9,
+        "2025Q4": 8,
+        "2026Q1": 0,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2406.05551",
+        "page": "2406.05551",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "doi:10.1609/aaai.v40i41.40820",
+      "arxiv_id": null,
+      "doi": "10.1609/aaai.v40i41.40820",
+      "title": "Indextts2: A breakthrough in emotionally expressive and duration-controlled auto-regressive zero-shot text-to-speech",
+      "year": 2026,
+      "speech_relevant": true,
+      "window_total": 18,
+      "index_total": 13,
+      "by_quarter": {
+        "2025Q3": 3,
+        "2025Q4": 4,
+        "2026Q1": 7,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2506.21619",
+        "page": "2506.21619",
+        "matched_by": "title",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2506.23325",
+      "arxiv_id": "2506.23325",
+      "doi": null,
+      "title": "XY-Tokenizer: Mitigating the semantic-acoustic conflict in low-bitrate speech codecs",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 17,
+      "index_total": 19,
+      "by_quarter": {
+        "2025Q3": 3,
+        "2025Q4": 5,
+        "2026Q1": 6,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2506.23325",
+        "page": "2506.23325",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:1312.6114",
+      "arxiv_id": "1312.6114",
+      "doi": null,
+      "title": "Auto-encoding variational bayes",
+      "year": 2013,
+      "speech_relevant": false,
+      "window_total": 17,
+      "index_total": 28,
+      "by_quarter": {
+        "2025Q3": 7,
+        "2025Q4": 4,
+        "2026Q1": 1,
+        "2026Q2": 5
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2305.15255",
+      "arxiv_id": "2305.15255",
+      "doi": null,
+      "title": "Spoken question answering and speech continuation using spectrogrampowered llm",
+      "year": 2023,
+      "speech_relevant": false,
+      "window_total": 16,
+      "index_total": 19,
+      "by_quarter": {
+        "2025Q3": 4,
+        "2025Q4": 9,
+        "2026Q1": 1,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2305.15255",
+        "page": "2305.15255",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2309.07405",
+      "arxiv_id": "2309.07405",
+      "doi": null,
+      "title": "Funcodec: A fundamental, reproducible and integrable open-source toolkit for neural speech codec",
+      "year": 2023,
+      "speech_relevant": true,
+      "window_total": 16,
+      "index_total": 28,
+      "by_quarter": {
+        "2025Q3": 8,
+        "2025Q4": 7,
+        "2026Q1": 1,
+        "2026Q2": 0
+      },
+      "in_top_n_of": [
+        "2025Q4"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2507.23159",
+      "arxiv_id": "2507.23159",
+      "doi": null,
+      "title": "Fullduplex-bench v1. 5: Evaluating overlap handling for full-duplex speech models",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 16,
+      "index_total": 22,
+      "by_quarter": {
+        "2025Q3": 4,
+        "2025Q4": 2,
+        "2026Q1": 6,
+        "2026Q2": 4
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2507.23159",
+        "page": "2507.23159",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2409.15594",
+      "arxiv_id": "2409.15594",
+      "doi": null,
+      "title": "Beyond Turn-Based Interfaces: Synchronous LLMs as Full-Duplex Dialogue Agents",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 15,
+      "index_total": 28,
+      "by_quarter": {
+        "2025Q3": 5,
+        "2025Q4": 3,
+        "2026Q1": 6,
+        "2026Q2": 1
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2509.08753",
+      "arxiv_id": "2509.08753",
+      "doi": "10.48550/ARXIV.2509.08753",
+      "title": "Streaming sequence-to-sequence learning with delayed streams modeling",
+      "year": 2025,
+      "speech_relevant": false,
+      "window_total": 11,
+      "index_total": 11,
+      "by_quarter": {
+        "2025Q3": 0,
+        "2025Q4": 1,
+        "2026Q1": 7,
+        "2026Q2": 3
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2509.08753",
+        "page": "2509.08753",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2205.12446",
+      "arxiv_id": "2205.12446",
+      "doi": null,
+      "title": "Fleurs: Few-shot learning evaluation of universal representations of speech",
+      "year": 2022,
+      "speech_relevant": false,
+      "window_total": 11,
+      "index_total": 26,
+      "by_quarter": {
+        "2025Q3": 3,
+        "2025Q4": 0,
+        "2026Q1": 2,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "title:fullduplexbenchabenchmarktoevaluatefullduplexspokendialoguemodelsonturntakingcapabilities",
+      "arxiv_id": null,
+      "doi": null,
+      "title": "Fullduplex-bench: A benchmark to evaluate full-duplex spoken dialogue models on turn-taking capabilities",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 10,
+      "index_total": 8,
+      "by_quarter": {
+        "2025Q3": 3,
+        "2025Q4": 0,
+        "2026Q1": 5,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2503.04721",
+        "page": "2503.04721",
+        "matched_by": "title",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2505.14648",
+      "arxiv_id": "2505.14648",
+      "doi": null,
+      "title": "Voxprofile: A speech foundation model benchmark for characterizing diverse speaker and speech traits",
+      "year": 2025,
+      "speech_relevant": true,
+      "window_total": 7,
+      "index_total": 8,
+      "by_quarter": {
+        "2025Q3": 0,
+        "2025Q4": 0,
+        "2026Q1": 5,
+        "2026Q2": 2
+      },
+      "in_top_n_of": [
+        "2026Q1"
+      ],
+      "corpus": {
+        "status": "ingested",
+        "record": "2505.14648",
+        "page": "2505.14648",
+        "matched_by": "arxiv",
+        "is_duplicate": false
+      }
+    },
+    {
+      "key": "arxiv:2601.21337",
+      "arxiv_id": "2601.21337",
+      "doi": "10.48550/arXiv.2601.21337",
+      "title": "Qwen3-asr technical report",
+      "year": 2026,
+      "speech_relevant": false,
+      "window_total": 7,
+      "index_total": 37,
+      "by_quarter": {
+        "2025Q3": 0,
+        "2025Q4": 0,
+        "2026Q1": 0,
+        "2026Q2": 7
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    },
+    {
+      "key": "arxiv:2407.14358",
+      "arxiv_id": "2407.14358",
+      "doi": null,
+      "title": "Stable audio open",
+      "year": 2024,
+      "speech_relevant": false,
+      "window_total": 7,
+      "index_total": 13,
+      "by_quarter": {
+        "2025Q3": 0,
+        "2025Q4": 0,
+        "2026Q1": 1,
+        "2026Q2": 6
+      },
+      "in_top_n_of": [
+        "2026Q2"
+      ],
+      "corpus": {
+        "status": "not in corpus"
+      }
+    }
+  ]
+}

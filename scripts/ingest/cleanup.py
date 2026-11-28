@@ -95,6 +95,7 @@ def main() -> None:
     main_idx = main_path.read_text()
     updated = re.sub(r"contains \d+ paper", f"contains {count} paper", main_idx)
     updated = re.sub(r"Browse all \d+ papers", f"Browse all {count} papers", updated)
+    updated = re.sub(r"(?m)^> \d+ paper summaries", f"> {count} paper summaries", updated)
     found = re.findall(r"\b(\d+) paper", updated)
     if updated != main_idx:
         writes[main_path] = updated

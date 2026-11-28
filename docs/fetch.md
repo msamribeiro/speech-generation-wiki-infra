@@ -61,7 +61,11 @@ with `.venv/bin/python scripts/health_check.py --module metadata`. Spec:
 
 ## Citation Discovery Workflow
 
-Surfaces candidate papers from the corpus citation graph that are not yet in the corpus.
+Surfaces candidate papers from the corpus citation graph that are not yet in the corpus. The
+standard form is the per-quarter refresh run at each quarter close
+(`scripts/discover/citation_quarterly_top.py`; procedure in
+[citation-discovery.md](citation-discovery.md#quarter-close-refresh)); the steps below are the
+general threshold variant.
 
 1. Read `raw/citation_index.json`.
 2. Filter to `in_corpus: false` entries, sorted by `citation_count` descending.

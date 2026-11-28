@@ -1,0 +1,67 @@
+{
+  "id": "2309.07405",
+  "source_ids": {
+    "arxiv": "2309.07405",
+    "doi": "10.1109/icassp48485.2024.10447523"
+  },
+  "title": "FunCodec: A Fundamental, Reproducible and Integrable Open-source Toolkit for Neural Speech Codec",
+  "authors": [
+    "Zhihao Du",
+    "Shiliang Zhang",
+    "Kai Hu",
+    "Siqi Zheng"
+  ],
+  "authors_full": null,
+  "organization": null,
+  "venue": "arXiv",
+  "venue_type": "preprint",
+  "year": 2024,
+  "month": 4,
+  "published_date": "2024-04-14",
+  "preprint_date": "2023-09-14",
+  "arxiv_version": 2,
+  "version_date": "2023-10-07",
+  "version_estimated": false,
+  "conference_date": "2024-04-14",
+  "ingested_date": "2026-11-27",
+  "url": "https://arxiv.org/abs/2309.07405",
+  "pdf_url": "https://arxiv.org/pdf/2309.07405.pdf",
+  "pdf_path": "raw/papers/2309.07405.pdf",
+  "pdf_source": "arxiv",
+  "abstract": "This paper presents FunCodec, a fundamental neural speech codec toolkit, which is an extension of the open-source speech processing toolkit FunASR. FunCodec provides reproducible training recipes and inference scripts for the latest neural speech codec models, such as SoundStream and Encodec. Thanks to the unified design with FunASR, FunCodec can be easily integrated into downstream tasks, such as speech recognition. Along with FunCodec, pre-trained models are also provided, which can be used for academic or generalized purposes. Based on the toolkit, we further propose the frequency-domain codec models, FreqCodec, which can achieve comparable speech quality with much lower computation and parameter complexity. Experimental results show that, under the same compression ratio, FunCodec can achieve better reconstruction quality compared with other toolkits and released models. We also demonstrate that the pre-trained models are suitable for downstream tasks, including automatic speech recognition and personalized text-to-speech synthesis. This toolkit is publicly available at https://github.com/alibaba-damo-academy/FunCodec.",
+  "arxiv_comment": "5 pages, 3 figures, submitted to ICASSP 2024",
+  "task": [],
+  "relevance_score": null,
+  "relevance_note": "Citation-discovered: cited 16× by in-corpus papers (Q3 2025–Q2 2026 quarterly analysis). Accepted without filter scoring.",
+  "status": "ingested",
+  "fetched_date": "2026-11-22",
+  "needs_manual_pdf": false,
+  "is_duplicate": false,
+  "canonical_id": null,
+  "generation_history": [
+    {
+      "schema_version": 2,
+      "date": "2026-11-27",
+      "op": "ingest",
+      "runtime": "claude-code",
+      "provider": "anthropic",
+      "agent": "speech-generation-ingest-agent",
+      "model": "claude-opus-5-5",
+      "commit": "d2b09a7"
+    }
+  ],
+  "discovery_source": "citation-discovery",
+  "corpus_role": "codec",
+  "corpus_citation_count": 16,
+  "citation_counts_by_quarter": {
+    "Q3_2025": 8,
+    "Q4_2025": 7,
+    "Q1_2026": 1,
+    "Q2_2026": 0
+  },
+  "sr_match": true,
+  "ingest_tier": 1,
+  "peer_reviewed_venue": "ICASSP",
+  "peer_reviewed_venue_type": "conference",
+  "url_peer_reviewed": "https://doi.org/10.1109/icassp48485.2024.10447523"
+}

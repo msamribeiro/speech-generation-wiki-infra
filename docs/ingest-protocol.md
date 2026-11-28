@@ -53,7 +53,54 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   a venue, verify the authoritative proceedings landing page, identity, and venue date. Match
   titles and authors because camera-ready titles can change. An acceptance comment is a discovery
   signal, not sufficient evidence for mutation. Once verified, apply the rule above before the
-  paper enters a quarterly queue.
+  paper enters a quarterly queue. A missing proceedings record is not evidence of absence: the
+  ISCA fetch keeps only titles that pass the keyword filter, so match against the full proceedings
+  index (`isca.scrape_index`), not against fetched records (6 Interspeech 2026 papers, 2026-11-11).
+  For Springer, IEEE and other DOI-registered proceedings, query Crossref
+  (`api.crossref.org/works?query.bibliographic=...`) and match title and authors; the Crossref
+  `published-online` date of the volume is the proceedings date (SPECOM `2607.05250`, 2026-11-14).
+  Unverifiable acceptance comments stay on the arXiv date (NCMMSC `2607.17615`, user 2026-11-14).
+  - **Pending acceptances** (proceedings not yet published or not verifiable: EMNLP, SLT, ISCSLP,
+    NCMMSC, AACL-IJCNLP 2026) keep the preprint card and end Field Significance with one sentence:
+    "The authors state that the paper is accepted to X; this page summarizes the arXiv preprint."
+    (`2608.23791` precedent). A non-archival workshop names itself as such ("accepted to the
+    non-archival SALMA Workshop at EMNLP 2026", CVSS-X `2609.13413`, 2026-11-26).
+  - **OpenReview-gated venues** (COLM, ICLR, ICML): when scripts cannot verify an acceptance, ask
+    the user to check the venue's accepted-paper list in a browser and give the conference start
+    date; on confirmation set `conference_date` and `peer_reviewed_venue`, re-apply the date rule
+    (the paper may leave the quarter) and log `review | re-dated` (COLM 2026 `2609.18677`, start
+    2026-10-06, Q3 -> Q4; user, 2026-11-26). Refill the batch from the reserves.
+  - A venue copyright line on page 1 with no acceptance statement is the submission template, not
+    an acceptance (AAAI 2027 template on `2609.14817`, 2026-11-26).
+- **Ingest the peer-reviewed version when it is known** (`schemas/metadata.md`, "Source Version at
+  Ingest"; user decision 2026-11-11). Decided per paper at ingest time, not in a separate batch:
+  for an arXiv-canonical candidate with a verified proceedings or journal version, run
+  `scripts/ingest/use_peer_reviewed.py` (dry run, then `--apply`), re-parse with
+  `batch_convert.py --ids {id}`, and tell the agent the preprint parse in
+  `raw/parsed/{id}/preprint/` is context only. When the peer-reviewed PDF cannot be retrieved
+  (OpenReview gate, unpublished proceedings), ingest the preprint. For a proceedings-canonical
+  candidate with a known arXiv twin, set `url_preprint`. Pages already written from a preprint get
+  the link and note only; never re-ingest them without the user.
+  - **arXiv-canonical ACL records** that carry `source_ids.acl` but have no ACL duplicate record:
+    switch with explicit flags (`--url https://aclanthology.org/{acl} --pdf-url
+    https://aclanthology.org/{acl}.pdf --venue ACL --venue-type conference --date {conference date}
+    --source acl={acl} --source doi=10.18653/v1/{acl}`) and confirm the proceedings notice on page 1
+    of the downloaded PDF (2026-11-12, six records).
+  - **ICML (OpenReview) acceptances:** an OpenReview duplicate record matching on exact title and
+    authors, or the PMLR proceedings line on page 1, verifies the ICML version. Set
+    `conference_date` (the ICML record date), `url_peer_reviewed` (OpenReview forum) and
+    `source_ids.openreview`, then re-apply the date rule; keep the arXiv PDF as the source while the
+    OpenReview PDF is gated (SpeechCombine `2607.02214`, user 2026-11-13). When that arXiv PDF is
+    the ICML camera-ready (PMLR line on page 1), present the page as the ICML version: `venue: ICML`,
+    `venue_type: conference`, `url` -> OpenReview forum, `url_preprint` -> arXiv, card `ICML · 2026 ·
+    Conference`, no italic note (user 2026-11-14, SpeechCombine and ReGen `2607.09134`).
+  - **IEEE accepted manuscripts:** an arXiv PDF whose page 1 carries only the IEEE notice ("© IEEE.
+    Personal use of this material is permitted...") is not the proceedings version. When the IEEE
+    Xplore PDF cannot be fetched, ingest the preprint with `url_peer_reviewed` and the italic note;
+    the ICML camera-ready rule does not extend to it (StellarTTS `2607.19859`, user 2026-11-15).
+  - **ACL-canonical records:** the ACL fetch leaves `source_ids.arxiv` empty. Search the arXiv
+    export API by title words plus first-author surname (an exact-phrase title query misses colons
+    and punctuation) and set `url_preprint` on a match (2026-11-12: 6 of 10 found).
 - Pre-flight each candidate before it enters the list:
   - **ID/title dedup.** Title-match against the whole corpus, then check authors and abstract
     (retitled versions slip past title matching).
@@ -70,6 +117,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     own quarters, cross-linked, neither a duplicate (VibeVoice precedent; `schemas/metadata.md`).
     Do not enrich an integrated page with a later version's results: integration selects by
     quarter, so the new evidence would never reach the claim YAMLs.
+    Apply it with `scripts/migrate_peer_reviewed_versions.py` and a reviewed overrides YAML in
+    `docs/records/` (dry run, then `--apply`); mark the later record `is_duplicate` by hand. The
+    script appends its log lines to the end of `wiki/log.md` and `raw/pipeline_log.md`: move them
+    into the dated section (DisCo-Speech `2512.13251`, 2026-11-12).
   - **Legacy dedup pointers** are not defects: a proceedings record with `status: ingested` and
     `wiki_page_id` set points to the arXiv page, and that arXiv record carries `is_duplicate` and
     `canonical_id` back to it (MaskGCT, MoonCast, LLaMA-Omni, VITA-1.5 and others). Cite and link
@@ -77,9 +128,10 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
   - **Extended/full versions** under an unrelated ID: check `arxiv_comment` for "full version of",
     "extended version", "journal version", especially when the ID prefix disagrees with
     `published_date`. Surface to the user; do not decide alone.
-  - **Prior publication notices** in the PDF itself: skim the first page of `raw/parsed/{id}/paper.md`
-    for "preprint of", "published in" or "final authenticated version" notices, which
-    `arxiv_comment` often omits. If the paper already appeared in proceedings or a journal, look up
+  - **Prior publication notices** in the PDF itself: read page 1 of `raw/papers/{id}.pdf` with
+    `pypdfium2` (Docling often drops page-1 footnotes, so `paper.md` alone missed the PMLR line of
+    `2606.12940`, 2026-11-15) for "preprint of", "published in", "final authenticated version",
+    PMLR/proceedings or copyright notices, which `arxiv_comment` often omits. If the paper already appeared in proceedings or a journal, look up
     the date (Crossref via the DOI), set `conference_date` or `journal_date` and re-apply the date
     rule; the paper may leave the quarter (PACC `2605.18001`, ICICC 2025, 2026-10-23).
     Re-date with `lib/paper_dates.apply_date_rule` (never by hand) and log a `review | re-dated`
@@ -92,10 +144,53 @@ if it conflicts with a schema or SKILL.md, fix whichever is wrong in the same co
     `venue_type: journal` and the card label `Journal`.
   - **Scope doubt** (ASR/translation/diarization-only, non-speech audio, zero metrics): read the
     paper and apply the precedent chain in the session doc; surface the matching precedent
-    explicitly instead of re-deciding from scratch.
+    explicitly instead of re-deciding from scratch. Speech-LM efficiency or architecture work
+    evaluated only on understanding tasks with text output is rejected (FastLongSpeech 2026-07-27;
+    Affinity Pooling `2604.06871`, 2026-11-12); turn-taking and end-of-turn components of spoken
+    dialogue systems are accepted (Phoenix-VAD `2509.20410`; `2503.23439`).
   - **Accepted in human triage:** a record whose box is ticked `accept` in `raw/review_queue.md` is
     in scope by the user's decision even when its filter note calls it tangential. Tell the agent
     not to stop on scope; tagging and significance are still judged normally.
+- **Citation-discovery records** (older foundational papers; user, 2026-11-24, "Option A"): apply
+  the peer-reviewed-version rule before ingest exactly as for any record not yet in a claim YAML,
+  instead of the June 2026 precedent (arXiv dates, venue only in the card's parenthesis). Verify each
+  venue from page 1 of the PDF, the Semantic Scholar graph API (`api.semanticscholar.org`, `venue`,
+  `journal`, `externalIds.DOI/DBLP`; it rate-limits, so pause several seconds between calls) and
+  Crossref; DBLP's API sits behind a bot check, do not work around it. Three outcomes:
+  - **Camera-ready already on arXiv** (venue line on page 1, or the publisher's open-access copy):
+    set `venue`, `venue_type`, `conference_date`/`journal_date`, `url` and `url_peer_reviewed` to the
+    landing page, `url_preprint` to arXiv; no re-parse (VQ-VAE, FastSpeech, DDPM, VITS, ESD,
+    Transformer). ICLR 2014 papers have only the arXiv version: venue ICLR, `url` stays arXiv (VAE).
+  - **Free proceedings PDF** (NeurIPS, PMLR, CVF, ISCA): switch with `use_peer_reviewed.py` and
+    re-parse (wav2vec 2.0, YourTTS, DiT, LibriTTS-R, Conformer, NISQA, CAM++, Voicebox; ACL
+    Anthology: SyncLLM). A record switched this way keeps its arXiv ID as the page ID.
+  - **PDF not scriptable** (IEEE, OpenReview gate, AAAI OJS): keep the preprint, set the venue date,
+    `peer_reviewed_venue`, `peer_reviewed_venue_type`, `url_peer_reviewed` (DOI, or the OpenReview
+    forum checked by the user in a browser) and `source_ids`; StellarTTS card and italic note. For
+    IEEE journals the Crossref record-creation date stands in for Early Access (user accepted,
+    2026-11-24; no quarter impact for pre-2025 papers). The AAAI proceedings site
+    (`ojs.aaai.org`) serves its free PDFs behind an Anubis bot check ("Making sure you're not a
+    bot!"): a HEAD request returns `application/pdf` but a GET returns the challenge page, and
+    `use_peer_reviewed.py` refuses it as "not a PDF". Do not work around it; treat AAAI as not
+    scriptable unless the user saves the PDF from a browser as `raw/papers/{id}.peer-reviewed.pdf`
+    (the script then skips the download) (X-Codec `2408.17175`, 2026-11-27). An arXiv comment
+    that says only "submitted to X" is not an acceptance; confirm the published paper in Crossref
+    before recording the venue (FunCodec `2309.07405`). An author "final version" label without
+    a page-1 venue line keeps the preprint card (Matcha-TTS `2309.03199`, user 2026-11-27).
+  - **Author-hosted free copies** (user, 2026-11-28): when a paywalled paper's text comes from a
+    copy hosted by an author or their institution, set `url_author_copy` (schema:
+    `docs/schemas/metadata.md`); the card adds `[→ Author copy]`. Never for third-party mirrors
+    (PESQ's copy is on a VoIP resources site: `pdf_url` records it, the page shows only the DOI).
+    Percent-encode parentheses in the URL. Ask the user for public copies of IEEE papers; they
+    have no IEEE access either (STOI, PESQ, LibriSpeech).
+  - **Datasets without a paper** (user, 2026-11-28): Tier 2 stub, out of integration (no
+    experiments to claim from). Source text is the dataset's own page, saved verbatim as
+    `raw/parsed/{id}/paper.md` with a source note and raw copies in `raw/papers/`;
+    `pdf_source: dataset-page`, `url` the dataset landing page (VCTK via the DataShare REST API
+    item record and README; LJSpeech from keithito.com). A title-keyword SR flag is not a tier
+    decision (VCTK had been Tier 1 for "Voice Cloning" in its title).
+  Log the re-dating as `review | re-dated` lines in `raw/pipeline_log.md`; dates can move a paper
+  between batches, so re-sort the list after the venue pass.
 - Number the list. Show it to the user and wait for confirmation.
 
 ## 3. Cadence
@@ -108,7 +203,17 @@ do not silently revert):
   go-ahead.
 - **Tier 2 stubs** (`ingest_tier` set; note the field is `ingest_tier`, not `tier`): groups of 4
   in parallel via the lightweight agent, go-ahead between groups, no per-paper quality pass.
+- **Citation-discovery sessions** (user, 2026-11-24): each pre-selected batch holds a single tier.
+  Tier 1 batches follow the Tier 1 cadence. Tier 2 batches run all 5 stubs in parallel, each agent
+  writing **the page only** (Mitigation B, so parallel agents never race on `papers/index.md` or
+  `log.md`); then run `cleanup.py` for each stub in sequence and `qc.py` on each. `qc.py` reports
+  the required `[!info]` Citation Stub banner as "disallowed" on every stub: a false positive.
 - The user may drop to one-paper-with-go-ahead mid-session. Follow it.
+
+Batch labels (user, 2026-11-26): `Q{quarter}-b{n}`, with `n` an integer counting across the whole
+quarter's sweep and never restarting per session (the Q3 2026 sweep used integers 1-14, then
+letters A-M, then Q3-A to Q3-D, i.e. 31 batches; it continues at `Q3-b32`). Citation-discovery
+batches keep `CD-{n}`. Paper numbers (`#`) count papers across the quarter and are separate.
 
 Batch bookkeeping (recurring slip): before reporting a batch complete, count the actual agent
 launches against the requested size, and compare the **actual IDs** to the numbered list's `#`
@@ -117,15 +222,28 @@ column, not just the count. Repeat the check as a sweep at session close.
 ## 4. Per paper: launch the agent
 
 Spawn `speech-generation-ingest-agent` in the **foreground** (background agents cannot get
-Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing instructions:
+Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing instructions. Keep them
+as one standing block copied verbatim into every prompt and add only paper-specific notes; rewriting
+the block per paper silently drops rules (2026-11-13: the scope stop rule and the
+`architectural-novelty` definition were lost on two papers):
 
+- Run from the infra ingest worktree: agents start in the session's own working directory, which
+  may be a worktree without `raw/` data or `.venv`. Name
+  `/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-infra-ingest` as
+  the directory for all `raw/` paths and the infra commit in the `generation` block, and
+  fast-forward the session worktree to `main` first so the preloaded skill is current (2026-11-11).
+- For a record switched to its peer-reviewed version (section 2), spell out the source-version
+  block: primary `paper.md`, `preprint/` as context only, `url` and `url_preprint` from metadata,
+  no `url_peer_reviewed` and no italic note.
 - Write to the content worktree: set
   `SPEECH_WIKI_CONTENT_DIR=/Users/sribeiro/Documents/Coding/speech-generation-wiki/speech-generation-wiki-content-ingest`
   (the resolver otherwise returns the trunk content checkout). Never write through `wiki/`.
 - Mitigation B: the agent writes **the paper page only**. Do not update `papers/index.md`,
   `wiki/index.md` counts, `log.md` or metadata; the main session does that (section 5). Paper-page
   assets (0 to 2 architecture figures, only for `architectural-novelty`) are the agent's.
-- Quote every date field and the `id` as strings in YAML.
+- Quote every date field, the `id` and every `related_papers` ID as strings in YAML (unquoted
+  numeric IDs parse as floats; GEPARD `2609.04222`, 2026-11-14). Write list fields (`task`,
+  `architecture`, `conditioning`, `training`, `field_significance.type`) bracket-unquoted.
 - Use piped `[[id|Name]]` paper links in Wiki Connections (the SKILL.md template still shows the
   bare form; the bare form is only for the ID column of `papers/index.md`).
 - Match `references.json` citations to corpus pages by hand: its `in_corpus` flags are stale or
@@ -135,11 +253,23 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
   against the table.
 - List every superlative written on the page ("best", "largest", "outperforms") in the closing
   summary, with the table cells that support it across all rows (a tie is not "best").
-- Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it.
+- Set `organization` from the first-page affiliations, institutions joined with " / ", and quote it;
+  with no affiliation on page 1, use "Independent Researcher" (index and card alike), unless a
+  funding or acknowledgement note names the host institution: then use that institution (user,
+  2026-11-21, `2608.15910`: University of Edinburgh from the funding note). Before falling back,
+  render page 1 (`pypdfium2`, `page.render(scale=1.5)`) and check the header for institution logos:
+  logo-only affiliations are invisible to text extraction (user, 2026-11-25, AuK `2609.08936`:
+  Shanghai Jiao Tong University, Tencent HY and Shanghai Innovation Institute logos).
+- Later corpus papers that build on the paper (Wiki Connections, mostly citation discovery): the
+  main session greps `papers/*.md` in the content worktree for the ID and the system name, reads
+  the matching lines, and pastes the relevant quoted lines into the prompt. The agent's permission
+  check can deny it reading other paper pages (SyncLLM `2409.15594`, 2026-11-27: generic
+  "discusses X" bullets that had to be rewritten by hand).
 - Link systems the paper evaluates as baselines when they have pages, even if the reference list
   omits them (OmniVoice on PashtoTTS-Bench; WavTokenizer and SpeechTokenizer on the WER Trap).
 - Card label and `venue_type` follow metadata and convention: arXiv preprints and technical
-  reports are `Preprint`; a workshop page names the workshop with its year (`SIGUL 2026`,
+  reports are `Preprint`; ACL pages read `ACL · 2026 · Conference` (main) and
+  `ACL 2026 (Findings) · 2026 · Conference`; a workshop page names the workshop with its year (`SIGUL 2026`,
   `NLPAICS 2026`) when metadata holds the placeholder `workshop`.
 - Spell out the callout limit in the prompt: two at most, the abstract card included; only
   `[!abstract]`, `[!tip]`, `[!important]`, `[!warning]`, never `[!note]`.
@@ -153,6 +283,9 @@ Write/Edit approved). The prompt is `Ingest paper {id}` plus these standing inst
   `mimo-v2.5-tts` API is not evidence of MiMo-Audio `2512.23808`).
 - Agent runtimes vary widely: most take 2-7 minutes, some 45 minutes to 3 hours (2026-10-31).
   Wait for the foreground agent; do not relaunch.
+- Quote the `field_significance.type` definitions from the SKILL.md table rather than paraphrasing:
+  a new training objective on an unchanged architecture is `architectural-novelty` (user,
+  2026-11-13, LLM-Codec `2604.17852`).
 - Emit `INGEST_RESULT` JSON including `review_flags` only when a precision-gate judgment call
   (claims, `field_significance`, concept scope, vocabulary gap) is genuinely uncertain.
 
@@ -177,6 +310,9 @@ What it does, and what to check in its output:
      the full title.
    - **Org filled by hand** (`organization` is null on nearly every 2026 record; take it from the
      page or PDF first page). Include every task tag. Exactly one row per ID.
+   - The row's tasks come from the page's `task`, not from metadata; when the agent corrects the
+     filter-assigned `task` (adds `evaluation`, drops `VC` or `multilingual`), the index follows the
+     page and metadata `task` stays as fetched (2026-11-13).
 2. **Counts.** Fix all three paper-count occurrences in `wiki/index.md` (abstract callout, "Browse
    the Papers" line, "Browse all N papers" link). The sole authority is
    `grep -c '^| \[\[' papers/index.md` (also `ls papers/*.md | grep -v index.md | wc -l`; they should
@@ -191,7 +327,10 @@ What it does, and what to check in its output:
 
 ## 6. Per paper: QC
 
-Run the scoped health check plus the scripted checks below against the content worktree:
+Run the scoped health check plus the scripted checks below against the content worktree. Every
+`health_check.py` run, scoped or corpus-wide, needs `--wiki-dir "$WIKI"`: without it the script
+reads the stale `wiki/` submodule (2026-11-15: a batch-end run checked 1,099 pages instead of the
+worktree's 1,135):
 
 ```bash
 .venv/bin/python scripts/ingest/qc.py {id} --wiki-dir "$WIKI"
@@ -288,10 +427,14 @@ intentional. Checks the health check does not (fully) cover:
     (`2606.31055`, `speech-to-speech` dropped; user, 2026-10-31). A concept also needs evaluated
     evidence: an unevaluated control (ZONOS2 `2606.24320` rate tokens, no `prosody-control`) or a
     benchmark that reuses existing scorers without validating them (no `evaluation-metrics`) does
-    not earn the slug (user, 2026-10-31).
-  - `spoken-language-model`: an external speech signal consumed by an adapted LLM; benchmarks that
-    feed real audio into existing speech LMs and measure them also qualify. AR TTS-LMs consuming
-    their own output do not.
+    not earn the slug (user, 2026-10-31). Newly proposed metrics that are never validated against
+    human judgment do not earn `evaluation-metrics` either (GRAFT `2607.02633`; SPEARBench
+    `2607.05365` and X-Translator `2607.17544`, both removed at QC on 2026-11-14).
+  - `spoken-language-model`: an external speech signal consumed by an LLM, whether the paper builds
+    or adapts it or feeds real audio into an existing speech LM and measures its behaviour (SKILL.md
+    usage rule; AV-STE `2609.08390`, frozen Moshi behind a new front end, 2026-11-25). Do not write
+    "adapted LLM only" in a prompt: it contradicts the SKILL.md rule. AR TTS-LMs consuming their
+    own output do not qualify.
   - `speech-to-speech`: must fit a sub-paradigm (dialogue, S2S translation, cascade); codec-level
     audio transforms do not qualify.
   - `multilingual-tts`: the paper's own system trained or adapted across languages, **and** its
@@ -305,26 +448,52 @@ intentional. Checks the health check does not (fully) cover:
   - `subjective-evaluation`: real human raters; LLM-judge or automated scoring never qualifies.
     Humans rating actual system output count even when the study exists to validate an automatic
     judge (STEB `2606.25529`); humans checking benchmark labels do not (`2605.27772`; user,
-    2026-10-31).
-  - `disentanglement`: explicit training mechanism with ablation evidence.
+    2026-10-31). Humans rating transcripts or text responses do not count either (F-Actor
+    `2026.findings-acl.242`, Self-EmoQ `2026.findings-acl.740`, 2026-11-12).
+  - `disentanglement`: explicit training mechanism with ablation evidence. A separately pre-trained
+    quantized stream for one factor, ablated against direct fusion, counts as such a mechanism
+    (user, 2026-11-15, MeloCodec `2608.03021`: melody branch plus a timbre-under-pitch-shift test).
+  - `rlhf-speech`: a paper that runs RL or preference optimization on a speech model; a reward model
+    for speech dialogue earns it even without an RL loop on a dialogue policy (WavReward,
+    SDiaReward; `2026.acl-long.6`, user 2026-11-12). RL on a text-only LLM does not (Self-EmoQ).
   - `self-supervised-speech`: only when the method itself uses a self-supervised speech model
     (HuBERT, WavLM, wav2vec2, w2v-BERT, data2vec-based models such as emotion2vec; user,
     2026-10-24, AffectCodec `2605.23373`), never Whisper (supervised) and never when SSL appears
     only in an evaluation metric (WavLM speaker similarity). An SSL model applied only to the
     visual stream (AV-HuBERT as a lip encoder) does not count (HoliDubber `2606.09098`; user,
-    2026-10-31).
+    2026-10-31). A general-audio SSL encoder alone (AudioMAE, BEATs) is not a speech model and
+    does not earn the slug (SemantiCodec `2405.00233`, user 2026-11-27; ALMTokenizer keeps it via
+    wav2vec 2.0).
   - `zero-shot-tts`: the paper's own system is evaluated on prompt-based cloning of speakers unseen
     in training. Omit it when the evaluated voices are in the training or fine-tuning data, even if
     the paper says "zero-shot" (user, 2026-10-24: Poly-SVC `2605.12310`, F5-TTS-DPS `2605.23859`),
     and when unseen status cannot be established (base model's training data unknown, targets
     from a common public corpus such as ESD; `2606.05367`, user 2026-10-31).
-  - `autoregressive-codec-tts`: neural-codec-token autoregression, not mel-frame AR models.
+  - `autoregressive-codec-tts`: neural-codec-token autoregression, not mel-frame AR models. For AR
+    generation over continuous latents, apply it only when the paper itself trains and evaluates
+    that codec or VAE as a codec (Locodec `2607.29363`, dots.tts `2606.07080`); a frozen or
+    unevaluated latent space does not earn it (VocalRender `2607.27768`). No backfill of older
+    pages (user, 2026-11-15).
   - A diffusion transformer trained with a flow-matching objective (VoxCPM2 LocDiT) takes
     `flow-matching`, not also `diffusion-tts` (HoliDubber, `2606.26618`; user, 2026-10-31).
+  - Script-to-dialogue speech generation (two-speaker or two-channel dialogue audio rendered
+    from a given script, no speech input) is `task: [TTS]`, not `SCA`; `SCA` stays for systems
+    that converse (speech in, response out). ZipVoice-Dialog, DuplexGen and KABURI-TTS retagged
+    (user, 2026-11-22).
 - Surveys: `## Scope and Coverage` section and `tags: ["survey"]`.
 - No text input (lip-to-speech, brain decoding): use `task: [TTS]` as the standing fallback and
   flag it in the verification queue; do not invent a term. Text-driven TTS with non-text
   conditioning is plain TTS.
+- No task term fits (self-supervised speech models, ASR models, general ML methods, image-only
+  methods): `task: []` and `architecture: []` unless a vocabulary term genuinely fits
+  (`transformer-enc-dec` is FastSpeech-style seq2seq, not an encoder-only model). wav2vec 2.0,
+  HuBERT and WavLM carry `self-supervised-speech` only. Image-only generative methods carry their
+  architecture tag and its architecture-derived slug only (DDPM and DiT `diffusion-tts`, Flow
+  Matching `flow-matching`; 2026-11-24).
+- Organization when the PDF names no institution at all (no affiliation, funding or acknowledgement
+  note): the rule gives "Independent Researcher". For well-known citation-discovery papers the user
+  overrode this once to the known lab (HuBERT "Facebook AI", SoundStream "Google"; 2026-11-24);
+  surface it in the queue, do not override silently.
 
 Fix defects directly (or re-run the agent only when the page needs a rewrite), then re-run the
 health check. Add any `review_flags` to the Manual Verification Queue; do not block the next paper
@@ -372,9 +541,29 @@ Wrap-up is a single sequence (the user may call it "wrap it up", "close out", an
    - `git add -A` can stage symlinked gitignored directories; check `git status` first.
    - Commit messages describe what changed, not when; no session-number prefix.
 5. **Site bump.** Ask once per session before bumping the site submodule (it triggers a live
-   deploy), unless a durable instruction already covers it.
+   deploy), unless a durable instruction already covers it. If the deploy fails, start a fresh run
+   ("Run workflow" on `main`) rather than re-running the failed run: a re-run uploads a second
+   `github-pages` artifact to the same run and `deploy-pages` stops with "Multiple artifacts named
+   github-pages" (2026-11-28). Reproduce build failures locally with `npx quartz build -o <scratch>`
+   in the site repo.
 6. **Memory.** Refresh auto-memory last (corpus status, any genuinely new finding). Memory is a
    convenience copy, never the source of truth; promote durable findings here or to a schema first.
+
+## 10. Quarter close
+
+A quarter's ingestion closes when its last accepted record is ingested and its verification queue
+is empty. Before the quarter is handed to integration (user, 2026-11-22):
+
+1. **Citation discovery refresh** for the closing quarter
+   ([citation-discovery.md](citation-discovery.md#quarter-close-refresh)): rebuild the citation
+   index, run `scripts/discover/citation_quarterly_top.py` for the quarter, review the candidates
+   that are not in the corpus with the user, assign tiers, and onboard the approved ones
+   (fetch, parse, ingest Tier 1 pages and Tier 2 stubs).
+2. Record the run in `docs/records/` and the quarter's session doc, and log a `discover` line in
+   `raw/pipeline_log.md`.
+3. Update the quarterly progress table in `STATUS.md` to mark the quarter's ingest complete.
+
+Catch-up: the 2025Q3–2026Q2 refresh ran on 2026-11-22; 2026Q3 is next, at the end of the Q3 sweep.
 
 ---
 
@@ -396,22 +585,36 @@ Confirmed repeat offenders; keep this list current (add the date a class was las
 | Concept-tag scope mistag | Tag because the paper discusses it, not performs it | Step 6 |
 | Unquoted date or numeric-looking ID | Parsed as date object or float | Step 4 prompt, step 6 |
 | False "inconsistency" on page | Agent misreads per-group vs total or different conditions | Step 6 |
-| Agent self-report contradicts file | Narrated decision differs from the written frontmatter; or the summary names an error on the page without fixing it (2026-10-25, UNISON KL ordering) | Whole of step 6; act on every defect the summary mentions |
+| Agent self-report contradicts file | Narrated decision differs from the written frontmatter; or the summary names an error on the page without fixing it (2026-10-25, UNISON KL ordering; 2026-11-12, VoiceStar MaskGCT bullet) | Whole of step 6; act on every defect the summary mentions |
 | Batch undercount or list drift | 3 agents launched for a batch of 4, or wrong `#` range | Section 3 |
 | Cleanup deferred to batch end | Slipped on 2026-10-18; led to unquoted dates and a skipped log | Section 5 |
 | Padding `related_concepts` | Out-of-scope slug added to reach 3 (2026-10-21, before the scope-wins rule) | Step 6 |
 | Org mismatch page vs index | `cleanup.py --org` does not sync the page; strings drift (2026-10-21, three of four papers) | Step 5.1 |
 | One-sided critique of author framing | Agent cites only the comparisons that go against the authors (2026-10-21) | Step 6; ask for the full comparison in the prompt |
-| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost (2026-10-31, five of 18 papers) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
+| Docling table numbering | `assets/table-N` does not follow the paper's numbering; labels swapped or garbled; row labels split or lost; values shifted one column or packed several per cell (2026-11-11, three of eight papers; 2026-11-12, garbled tables in most ACL papers, one table missing a whole row) | Step 4 prompt (resolve via `pypdfium2` on the PDF), step 6 |
 | Separator swapped to avoid em dashes | Agent writes `- [[id|Name]]: ...` in Wiki Connections (2026-10-22) | Step 4 prompt (spell out the template), step 6 |
 | Unquoted numeric `related_papers` | `[2010.05646, ...]` parses as floats (2026-10-22) | Step 4 prompt, `qc.py` unquoted check |
 | Dated log section appended at end of `raw/pipeline_log.md` | File is newest-first; 2026-10-23 section landed at the bottom (moved 2026-10-24) | Section 9 |
 | Derived-metric sign reversed | Page defines a gap as "speech minus text" while the table is text minus speech (2026-10-23) | Step 4 prompt, step 6 (check against the table) |
 | Stale "proceedings not yet published" note | Session doc said Interspeech 2026 was not on ISCA a month after it was; 51 Q2 records were in fact Q3 (2026-10-26) | Section 2, proceedings check |
-| Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS) | Step 4: copy tagging rules from section 6, not from memory; step 6 |
-| Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`) | Step 4 prompt, step 6 |
+| Standing prompt drops a protocol exception | Hand-written per-paper prompt omitted the `spoken-language-model` benchmark exception, so the agent excluded it (2026-10-26, COMPASS); a rewritten block contradicted the SKILL.md type table and another omitted the scope stop rule, so an environmental-sound-only codec page was written (2026-11-13, `2604.17852`, `2607.01865`) | Step 4: one standing block copied verbatim; step 6 |
+| Page written despite scope stop | Agent ingests a no-generation paper citing a precedent instead of flagging (2026-10-31, `2606.14004`; 2026-11-25, SpeechAnnotator `2609.09947`, which also claimed the metadata accept cited a precedent it does not, and ProPS `2607.05276`) | Step 4 prompt, step 6; queue the scope call, the user decides |
 | "Check the PDF" note on page | Agent leaves a reader-facing note about a garbled parse instead of resolving it (2026-10-31, STEB) | Step 4 prompt, step 6 |
-| Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo) | Step 4 prompt, step 6 |
+| Speculative product-to-model link | A commercial API linked to a research page of the same brand (2026-10-31, MiMo; 2026-11-15, "FishAudio S2" table label linked to the Fish Audio S2 report while the reference is a 2024 commercial system) | Step 4 prompt, step 6 |
+| Page-1 notice missing from the parse | Pre-flight grepped `paper.md` and missed a PMLR camera-ready footnote that Docling dropped (2026-11-15, `2606.12940`) | Section 2 (read page 1 of the PDF) |
+| Health check on the stale submodule | `health_check.py` without `--wiki-dir` checks `wiki/` and silently skips the new pages (2026-11-15) | Step 6 (always pass `--wiki-dir`) |
+| Non-slug field trimmed with a capped slug | Agent drops `conditioning: multilingual` together with the `multilingual-tts` slug at the 6-slot cap (2026-11-21, CuteTTS) | Step 4 prompt (non-slug fields are never trimmed), step 6 |
+| Evidence concept dropped at the cap | Agent drops `subjective-evaluation` to fit 6 slugs although nothing inherited is tagged (2026-11-15, Luna-TTS; user kept the agent's choice) | Step 6 |
+| Quoted list fields | Agent writes `task: ["TTS"]` and quoted `architecture`/`type` lists; health check and `qc.py` silent (2026-11-11, `2606.07240`) | Step 4 prompt, step 6 (read the frontmatter) |
+| Camera-ready prose quotes preprint numbers | Proceedings table updated but the results prose still quotes the preprint's numbers (2026-11-11, `2604.26136`: fine-tuning results changed sign for French) | Section 2 source version; step 6 (check prose numbers against the primary table) |
+| Unvalidated metric tagged `evaluation-metrics` | Agent tags the concept for a newly proposed metric never checked against human judgment (2026-11-13, GRAFT D-PER; 2026-11-22, phrase-localized LCG `2609.01016`, restored by the user as a one-off) | Step 6 (proposes AND validates) |
+| Inference stated as fact | Agent writes its own reading of an unstated procedure as a finding (2026-11-12, `2026.findings-acl.940`: test descriptions "derived from the target audio") | Step 4 prompt (hedge or omit), step 6 |
+| Template opening rewritten | Agent replaces the Field Significance `Moderate — ` opening to avoid an em dash (2026-11-12, `2026.findings-acl.199`) | Step 4 prompt, step 6 |
+| Agent claims a clean parse | Agent reports "Docling parsed every table cleanly" while the tables are missing from `paper.md` (2026-11-24, Diff-VC); values were right only because it read the PDF | Step 6 (check metric values against the PDF text, not the parse) |
+| `qc.py` callout false positive on stubs | `[!info]` Citation Stub banner reported as disallowed (2026-11-24, all 10 stubs) | Section 3 (ignore for Tier 2) |
+| Logo-only affiliation missed | No text affiliation on page 1, so the agent fell back on release links; the institutions were header logos (2026-11-25, AuK `2609.08936`) | Step 4 prompt (render page 1), step 6 |
+| `qc.py` adoption-language false positive | "dominant" in a non-adoption sense ("dominant directions", "Chinese-dominant", "dominant risk") is flagged (2026-11-25, three pages) | Step 6 (read the line; no fix needed) |
+| Unevaluated component given its concept slug | `neural-codec` tagged for a tokenizer the page itself says has no reconstruction metrics (2026-11-25, StepAudio 3 Gen); `flow-matching` for a training-only regularizer (UniStream, removed at the queue) | Step 6 (evaluated-evidence rule) |
 | Over-broad "best" claims | "Best MCD" true only among a subset of rows; stronger rows elsewhere in the same table (2026-10-23; three more on 2026-10-24, incl. "best" on a tie) | Step 4 prompt: agents list every superlative with its supporting cells; step 6, read the whole table |
 
 ## Known discrepancies to resolve

@@ -1,0 +1,6 @@
+schema_version: 1
+scope: MOSS-Audio-Tokenizer, ingested arXiv page (not in any claim YAML) with a later, retitled ICML 2026 version found at Q3 sweep pre-flight
+verification_rule: identical 10-author list, same opening abstract and claims (CAT renamed TAC), against OpenReview record icml-2026-icMRkTnuU7
+entries:
+  - {id: "2602.10934", venue: ICML, venue_type: conference, conference_date: "2026-07-06", url: "https://openreview.net/forum?id=icMRkTnuU7", verified_by: OpenReview ICML 2026 record icMRkTnuU7 "Scaling Transformers for End-to-End Discrete Audio Tokenization" (user-confirmed 2026-11-14)}
+deferred: []
